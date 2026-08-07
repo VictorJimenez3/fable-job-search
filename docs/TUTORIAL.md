@@ -73,7 +73,7 @@ Then open `http://127.0.0.1:4317/`. Search for a radar role and choose either:
 
 Both modes render through the exact `CV/resume.tex` structure. Models cannot
 write the document, alter its margins/typography/spacing, enlarge text, or pass
-a visibly underfilled page. Their existing local subscription sessions are
+a sparse or bloated evidence portfolio. Their existing local subscription sessions are
 used; the radar does not receive or store their credentials. The report
 includes the fixed score, target-specific omissions, and known Codex token
 usage.
@@ -83,16 +83,29 @@ Drafts, prompts, source context, PDFs, and review reports live only under
 application material. The system preserves the master CV as the evidence bank
 and never auto-submits a resume.
 
+To create a temporary varied-role calibration set for labeling bullets, run:
+
+```bash
+.venv/bin/python scripts/resume_calibration.py --generate --count 8 --serve
+```
+
+The page at `http://127.0.0.1:4321/` displays the rendered PDFs, not the LaTeX
+source. Labels and explanations are stored in the same ignored
+`CV/.resume_studio/calibration/` batch as the generated cases.
+
 Use the sort menu to switch among Radar score, newest posting, and private
 Resume Match. The title-only match is deliberately labeled low-confidence;
 after selecting a role, **Analyze full posting match** fetches the job page and
 recomputes the fixed rubric when readable. The result shows capability
 coverage, gaps, evidence confidence, and private source-backed score.
 
-The generator does not assume a fixed number of experiences or projects. It
-creates a strongest-first candidate portfolio and repeatedly compiles it into
-the unchanged template. A result passes layout only when it is one page, uses
-the available line width, and adding one normal bullet forces overflow. Resume
+The generator does not force every role to use the same entries. It creates a
+strongest-first shortlist, then enforces a 16–20-bullet interview portfolio
+with at most three experiences, three projects, and one leadership entry.
+Every bullet must stay on one visual line; a concise line may end early. Bottom
+density and an extra-bullet compile are diagnostics, not instructions to pad.
+If an enhancement drops a scope-limiting source fact such as `synthetic`,
+`prototype`, or `POC`, that bullet reverts to approved source wording. Resume
 Craft measures the argument and writing; factuality, eligibility, and layout
 remain separate gates that cannot be averaged away.
 

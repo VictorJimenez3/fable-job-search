@@ -57,7 +57,7 @@ from radar.resume_match import (MATCH_VERSION, build_evidence_graph,
                                 posting_eligibility_blocks, score_resume_match)
 
 
-RUBRIC_VERSION = "resume-review-v2"
+RUBRIC_VERSION = "resume-review-v3"
 RUBRIC_WEIGHTS = {
     "target_fit": 30,
     "evidence": 25,
@@ -73,9 +73,24 @@ RUN_TIMEOUT_SECONDS = 12 * 60
 CANONICAL_TEMPLATE = "resume.tex"
 BODY_MARKER = "%-----------EXPERIENCE-----------"
 MAX_STYLE_REDUCTION_PERCENT = 5.0
-MAX_DENSITY_GAP_PT = 24.0
+MAX_DENSITY_GAP_PT = 120.0
 MAX_RIGHT_SLACK_PT = 38.0
 MAX_LINE_EDIT_PASSES = 2
+MIN_TOTAL_BULLETS = 16
+MAX_TOTAL_BULLETS = 20
+PROTECTED_QUALIFIERS = (
+    "proof of concept",
+    "prototype",
+    "synthetic",
+    "simulation",
+    "simulated",
+    "demo",
+)
+PORTFOLIO_CAPS = {
+    "experiences": {"entries": 3, "bullets": 4},
+    "projects": {"entries": 3, "bullets": 2},
+    "leadership": {"entries": 1, "bullets": 1},
+}
 _EVIDENCE_GRAPH_CACHE: Dict[str, Dict[str, Any]] = {}
 _CURRENT_SCORE_CACHE: Dict[str, Any] = {}
 FORBIDDEN_CONTENT_COMMANDS = re.compile(
@@ -107,7 +122,12 @@ def now_iso() -> str:
 
 def write_json(path: Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_suffix(path.suffix + ".tmp")
+    # Resume calibration can run several private cases concurrently.  A fixed
+    # ``file.json.tmp`` name lets otherwise unrelated workers replace or
+    # delete one another's temporary file.
+    tmp = path.with_name(
+        ".%s.%s.%s.tmp" % (path.name, os.getpid(), threading.get_ident())
+    )
     tmp.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n")
     tmp.replace(path)
 
@@ -317,6 +337,48 @@ def _slug(value: str) -> str:
     return value[:48] or "entry"
 
 
+def _resume_tokens(value: str) -> set:
+    plain = _latex_plain(value).lower()
+    tokens = re.findall(r"[a-z0-9]+", plain)
+    ignored = {"a", "an", "and", "the", "to", "for", "of", "with", "via", "in", "on"}
+    return {token for token in tokens if token not in ignored}
+
+
+def _resume_text_similarity(left: str, right: str) -> float:
+    left_tokens = _resume_tokens(left)
+    right_tokens = _resume_tokens(right)
+    if not left_tokens or not right_tokens:
+        return 0.0
+    return len(left_tokens & right_tokens) / len(left_tokens | right_tokens)
+
+
+def _same_resume_bullet(left: str, right: str) -> bool:
+    # Resume variants routinely differ only by an article, tense, or an
+    # abbreviated unit (``2.4s`` versus ``2.4 seconds``).  At 0.80 overlap the
+    # shared technical object, mechanism, and proof are already the same
+    # interview story; keeping both is repetition, not breadth.
+    return _resume_text_similarity(left, right) >= 0.80
+
+
+def _missing_protected_qualifiers(source: str, candidate: str) -> List[str]:
+    """Keep scope-limiting facts when an enhanced bullet is rewritten."""
+    source_plain = _latex_plain(source).lower()
+    candidate_plain = _latex_plain(candidate).lower()
+    missing = []
+    for qualifier in PROTECTED_QUALIFIERS:
+        if qualifier in source_plain and qualifier not in candidate_plain:
+            missing.append(qualifier)
+    # POC is a common compact spelling of proof of concept. Either spelling
+    # preserves the same limitation and should satisfy the guard.
+    if "proof of concept" in missing and re.search(r"\bpoc\b", candidate_plain):
+        missing.remove("proof of concept")
+    if re.search(r"\bpoc\b", source_plain) and not (
+        re.search(r"\bpoc\b", candidate_plain) or "proof of concept" in candidate_plain
+    ):
+        missing.append("POC")
+    return missing
+
+
 def _entry_bullets(source: str, after: int) -> List[str]:
     start = source.find("\\resumeItemListStart", after)
     if start < 0:
@@ -342,11 +404,15 @@ def source_catalog(root: Optional[Path] = None) -> Dict[str, Any]:
     """Build a source-addressable bank from Victor's existing LaTeX only."""
     base = cv_root(root)
     entries: Dict[str, Dict[str, Any]] = {}
-    order = ("resume.tex", "tldp_resume.tex", "cv_full.tex")
-    keys: Dict[Tuple[str, str, str], str] = {}
+    # The canonical resume is the curated baseline and cv_full is the broad
+    # responsibility bank.  Target-specific historical resumes are outputs,
+    # not independent evidence sources; ingesting them created duplicate roles,
+    # projects, and stale claims in generated portfolios.
+    order = ("resume.tex", "cv_full.tex")
+    keys: Dict[Tuple[str, str], str] = {}
 
     def merge_entry(kind: str, company: str, role: str, dates: str, location: str, bullets: List[str], source_name: str) -> None:
-        key = (kind, re.sub(r"\s+", " ", company.lower()), re.sub(r"\s+", " ", role.lower()))
+        key = (re.sub(r"\s+", " ", company.lower()), re.sub(r"\s+", " ", role.lower()))
         entry_id = keys.get(key)
         if entry_id is None:
             entry_id = "%s:%s" % (kind, _slug(company + "-" + role))
@@ -369,13 +435,13 @@ def source_catalog(root: Optional[Path] = None) -> Dict[str, Any]:
         entry = entries[entry_id]
         if source_name not in entry["sources"]:
             entry["sources"].append(source_name)
-        known = {item["text"] for item in entry["bullets"]}
+        known = [item["text"] for item in entry["bullets"]]
         for bullet in bullets:
-            if bullet in known:
+            if any(_same_resume_bullet(bullet, existing) for existing in known):
                 continue
             bullet_id = "%s:b%s" % (entry_id, len(entry["bullets"]) + 1)
             entry["bullets"].append({"id": bullet_id, "text": bullet, "source": source_name})
-            known.add(bullet)
+            known.append(bullet)
 
     project_keys: Dict[str, str] = {}
     for source_name in order:
@@ -407,8 +473,23 @@ def source_catalog(root: Optional[Path] = None) -> Dict[str, Any]:
             if "project" not in _section_at(source, start).lower():
                 continue
             heading = _plain_heading(args[0])
+            bullets = _entry_bullets(source, after)
             key = re.sub(r"\s+", " ", heading.lower())
             entry_id = project_keys.get(key)
+            if entry_id is None:
+                for candidate_id, candidate in entries.items():
+                    if candidate.get("kind") != "project":
+                        continue
+                    heading_match = _resume_text_similarity(heading, str(candidate.get("heading") or "")) >= 0.72
+                    bullet_match = any(
+                        _same_resume_bullet(incoming, existing.get("text", ""))
+                        for incoming in bullets
+                        for existing in candidate.get("bullets", [])
+                    )
+                    if heading_match or bullet_match:
+                        entry_id = candidate_id
+                        project_keys[key] = entry_id
+                        break
             if entry_id is None:
                 entry_id = "project:%s" % _slug(heading)
                 suffix = 2
@@ -427,13 +508,13 @@ def source_catalog(root: Optional[Path] = None) -> Dict[str, Any]:
             entry = entries[entry_id]
             if source_name not in entry["sources"]:
                 entry["sources"].append(source_name)
-            known = {item["text"] for item in entry["bullets"]}
-            for bullet in _entry_bullets(source, after):
-                if bullet in known:
+            known = [item["text"] for item in entry["bullets"]]
+            for bullet in bullets:
+                if any(_same_resume_bullet(bullet, existing) for existing in known):
                     continue
                 bullet_id = "%s:b%s" % (entry_id, len(entry["bullets"]) + 1)
                 entry["bullets"].append({"id": bullet_id, "text": bullet, "source": source_name})
-                known.add(bullet)
+                known.append(bullet)
     return {"template": CANONICAL_TEMPLATE, "entries": entries}
 
 
@@ -702,21 +783,21 @@ def plan_schema(enhance: bool) -> Dict[str, Any]:
             "excluded_evidence": {"type": "array", "items": {"type": "string"}},
             "experiences": {
                 "type": "array",
-                "items": selection(1, 7),
+                "items": selection(2, 5),
                 "minItems": 2,
-                "maxItems": 5,
+                "maxItems": 4,
             },
             "projects": {
                 "type": "array",
-                "items": selection(1, 5),
+                "items": selection(1, 3),
                 "minItems": 1,
-                "maxItems": 6,
+                "maxItems": 4,
             },
             "leadership": {
                 "type": "array",
                 "items": selection(1, 2),
                 "minItems": 0,
-                "maxItems": 2,
+                "maxItems": 1,
             },
             "revision_notes": {"type": "array", "items": {"type": "string"}},
         },
@@ -810,11 +891,14 @@ def run_provider(
     schema_path = run_dir / ("schema_" + label + "_" + provider + ".json")
     write_json(schema_path, schema)
     if provider == "codex":
+        configured_effort = os.environ.get("RESUME_STUDIO_CODEX_EFFORT", "high").strip().lower()
+        if configured_effort not in {"low", "medium", "high", "max"}:
+            configured_effort = "high"
         args = [
             executable,
             "exec",
             "-c",
-            "model_reasoning_effort=" + ("high" if label.startswith("review") else "medium"),
+            "model_reasoning_effort=" + configured_effort,
             "--sandbox",
             "read-only",
             "--ephemeral",
@@ -944,12 +1028,21 @@ Victor-specific guardrails:
 - Use the complete CV/RESUME_TAILORING_PLAYBOOK.md and
   CV/RESUME_BULLET_METHODOLOGY.md. Use CV/cv_full.tex as the responsibility
   bank and the experience dossiers as higher-authority factual sources.
+- CV/resume.tex is authoritative for the immutable contact, education, skills,
+  employer-heading metadata, and dates that the renderer copies. Treat older
+  conflicting metadata in cv_full.tex or target-specific resumes as stale;
+  those files authorize bullet evidence, not replacement template metadata.
+- Preserve qualifiers such as prototype, synthetic, simulation, or demo when
+  they distinguish the work from production or real-user deployment.
 - Employer entries are rendered company-first, then role/title. TLDP is one
   target program, not a generic style.
-- Return a rich, strongest-first candidate portfolio rather than guessing the
-  final count. The deterministic PDF packer will choose the exact number of
-  experiences, projects, leadership entries, and bullets that saturates one
-  page. Do not force three experiences or a fixed project count.
+- Return a selective, strongest-first shortlist: 2-4 experiences with 2-5
+  bullets each, 1-4 projects with 1-3 bullets each, and at most one leadership
+  entry. This is an interview portfolio, not a responsibility dump. Every
+  visible bullet must introduce a distinct, defensible thread.
+- The deterministic curator will cap the final page at 3 experiences, 3
+  projects, one leadership entry, and 20 bullets. Do not pad short bullets or
+  nominate backups merely to reach the bottom margin.
 - Assign priority 1-100 to every bullet based on target relevance, proof,
   distinctiveness, and interview value. Do not inflate every priority.
 - Return source IDs from the supplied catalog. Never return a LaTeX document,
@@ -1015,8 +1108,8 @@ def synthesis_prompt(
     return (
         "You are the senior resume evidence editor synthesizing competing plans for Victor.\n"
         "Use the local CV sources and supplied source IDs. Do not edit files and do not return a LaTeX document. "
-        "CV/resume.tex remains immutable and the harness renders it. Return a broad, strongest-first candidate portfolio; "
-        "the deterministic compile loop will pack the exact one-page combination. Do not force a fixed section count. "
+        "CV/resume.tex remains immutable and the harness renders it. Return a selective, strongest-first shortlist; "
+        "each bullet must earn its place through target fit, proof, and a distinct interview story. "
         + ("You may tighten bullet text but must retain its source_id and facts. " if enhance else "Select source IDs verbatim; do not rewrite bullets. ")
         + "Choose the stronger defensible plan rather than averaging it.\n\n"
         "Job context:\n"
@@ -1042,6 +1135,12 @@ def reviewer_prompt(
         "resume/report. Read only the named CV source files and target posting. "
         "Inspect the proposed LaTeX below. Return JSON only. Do not assign a "
         "numeric score; the harness calculates it.\n\n"
+        "Authority rule: CV/resume.tex is canonical for the immutable contact, "
+        "education, skills, employer-heading metadata, and dates copied by the "
+        "renderer. Do not mark those fields unsupported merely because stale "
+        "metadata differs in cv_full.tex or a historical target resume. Experience "
+        "dossiers remain higher authority for bullet facts, and prototype/synthetic "
+        "qualifiers must remain explicit when relevant.\n\n"
         "For each criterion return pass, partial, or fail plus a short reason:\n"
         "factual: every claim is source-grounded and interview-safe\n"
         "target_fit: the portfolio answers this role's actual needs\n"
@@ -1071,9 +1170,8 @@ def line_editor_prompt(
     return (
         "You are Victor's final one-line resume editor. Preserve every selected entry, bullet source_id, "
         "evidence_id, fact, priority, and section order. Change only bullet text. For wrapped lines, cut filler "
-        "and compress clauses without losing the technical object or proof. For underfilled lines, add only "
-        "high-value facts authorized by the cited evidence until less than approximately ten average characters "
-        "remain. Do not pad, invent, change layout, or return LaTeX beyond inline textbf/emph. Return the complete "
+        "and compress clauses without losing the technical object or proof. A concise line may end early; never "
+        "expand a bullet merely to approach the right margin. Do not pad, invent, change layout, or return LaTeX beyond inline textbf/emph. Return the complete "
         "structured plan under the same schema.\n\nTarget:\n"
         + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
         + "\n\nCurrent plan:\n"
@@ -1101,6 +1199,22 @@ def _normalize_model_fragment(value: Any) -> str:
         .replace("\u2011", "-")
         .replace("\u2013", "--")
         .replace("\u2014", "---")
+        # Models occasionally emit a math-only multiplication command in
+        # prose. The intended glyph is unambiguous and plain ``x`` is safer in
+        # both LaTeX and ATS text extraction.
+        .replace("\\times{}", "x")
+        .replace("\\times", "x")
+    )
+
+
+def _unsupported_inline_commands(value: str) -> List[str]:
+    allowed = {"textbf", "emph"}
+    return sorted(
+        {
+            match.group(1)
+            for match in re.finditer(r"\\([A-Za-z]+)", value)
+            if match.group(1) not in allowed
+        }
     )
 
 
@@ -1118,9 +1232,10 @@ def validate_plan(
     }
     errors: List[str] = []
     normalized = dict(plan)
+    validation_warnings: List[str] = []
     used_entries = set()
     used_bullets = set()
-    for kind, minimum, maximum in (("experiences", 2, 5), ("projects", 1, 6), ("leadership", 0, 2)):
+    for kind, minimum, maximum in (("experiences", 2, 4), ("projects", 1, 4), ("leadership", 0, 1)):
         selections = plan.get(kind)
         if not isinstance(selections, list):
             errors.append("%s must be a list" % kind)
@@ -1151,7 +1266,13 @@ def validate_plan(
                     continue
                 bullet_id = str(bullet.get("source_id") or "")
                 if bullet_id not in bullet_bank:
-                    errors.append("bullet %s does not belong to %s" % (bullet_id, entry_id))
+                    # Providers occasionally hallucinate a neighboring bullet
+                    # number.  There is no safe text to render, so discard it
+                    # while preserving a machine-readable warning; a plan
+                    # still fails below if every bullet for an entry is bad.
+                    validation_warnings.append(
+                        "dropped unknown bullet %s for %s" % (bullet_id, entry_id)
+                    )
                     continue
                 if bullet_id in used_bullets:
                     errors.append("duplicate bullet: %s" % bullet_id)
@@ -1161,15 +1282,39 @@ def validate_plan(
                 if enhance and not text:
                     errors.append("enhanced bullet %s has no text" % bullet_id)
                     continue
+                if enhance:
+                    missing_qualifiers = _missing_protected_qualifiers(
+                        bullet_bank[bullet_id], text
+                    )
+                    if missing_qualifiers:
+                        # The source-addressed wording is already authorized.
+                        # Revert this one bullet instead of discarding an
+                        # otherwise useful plan or allowing scope inflation.
+                        validation_warnings.append(
+                            "reverted enhanced bullet %s after it dropped protected qualifier(s): %s"
+                            % (bullet_id, ", ".join(missing_qualifiers))
+                        )
+                        text = bullet_bank[bullet_id]
                 if FORBIDDEN_CONTENT_COMMANDS.search(text):
                     errors.append("bullet %s contains a forbidden layout command" % bullet_id)
                     continue
+                if enhance:
+                    unsupported_commands = _unsupported_inline_commands(text)
+                    if unsupported_commands:
+                        errors.append(
+                            "bullet %s contains unsupported inline command(s): %s"
+                            % (bullet_id, ", ".join(unsupported_commands))
+                        )
+                        continue
                 cited = [str(value) for value in (bullet.get("evidence_ids") or []) if str(value)]
                 if enhance and graph is not None:
                     unknown = [value for value in cited if value not in evidence_ids]
                     if unknown:
-                        errors.append("bullet %s cites unknown evidence: %s" % (bullet_id, ", ".join(unknown)))
-                        continue
+                        validation_warnings.append(
+                            "dropped unknown evidence for %s: %s"
+                            % (bullet_id, ", ".join(unknown))
+                        )
+                        cited = [value for value in cited if value in evidence_ids]
                     if not cited:
                         errors.append("enhanced bullet %s has no evidence_ids" % bullet_id)
                         continue
@@ -1194,6 +1339,8 @@ def validate_plan(
                 }
             )
         normalized[kind] = normalized_selections
+    if validation_warnings:
+        normalized["validation_warnings"] = validation_warnings
     return normalized, errors
 
 
@@ -1210,13 +1357,21 @@ def expand_candidate_portfolio(
 ) -> Dict[str, Any]:
     """Fill selected entries with safe backup evidence before PDF packing.
 
-    Providers decide the narrative and priorities, but occasionally return a
-    candidate set that already fits. Adding authorized source bullets as
-    lower-priority backups gives the compile loop real alternatives and makes
-    vertical saturation measurable instead of hoping the first draft overflows.
+    Providers decide the narrative and priorities. Most good plans should pass
+    through unchanged: automatically filling every selected entry to its cap
+    rewards padding and can reintroduce evidence the model deliberately left
+    out. Safe backups are added only when a provider returns fewer than the
+    methodology's minimum portfolio size.
     """
     expanded = copy.deepcopy(plan)
-    limits = {"experiences": 7, "projects": 5, "leadership": 2}
+    selected_total = sum(
+        len(entry.get("bullets", []))
+        for section in ("experiences", "projects", "leadership")
+        for entry in expanded.get(section, [])
+    )
+    if selected_total >= MIN_TOTAL_BULLETS:
+        return expanded
+    limits = {"experiences": 6, "projects": 4, "leadership": 1}
     entries = catalog.get("entries", {})
     explicit_exclusions = "\n".join(str(value) for value in plan.get("excluded_evidence", []))
     for section, maximum in limits.items():
@@ -1240,9 +1395,130 @@ def expand_candidate_portfolio(
                     ),
                 })
             backups.sort(key=_bullet_value, reverse=True)
-            capacity = max(0, maximum - len(selection.get("bullets", [])))
+            remaining = max(0, MIN_TOTAL_BULLETS - selected_total)
+            capacity = min(remaining, max(0, maximum - len(selection.get("bullets", []))))
             selection.setdefault("bullets", []).extend(backups[:capacity])
+            selected_total += capacity
     return expanded
+
+
+def curate_candidate_portfolio(candidate_plan: Dict[str, Any]) -> Dict[str, Any]:
+    """Apply the methodology's cognitive limits before compile-time packing.
+
+    The previous packer optimized only for physical page capacity. Victor's
+    template can physically hold roughly thirty one-line bullets, which led to
+    duplicate evidence and an unreadable wall of text. This pass keeps the
+    model's target-aware priorities while imposing a compact interview
+    portfolio before LaTeX enters the loop.
+    """
+    curated = copy.deepcopy(candidate_plan)
+    for section in ("experiences", "projects", "leadership"):
+        cap = PORTFOLIO_CAPS[section]
+        ranked_entries = []
+        for original_index, entry in enumerate(curated.get(section, [])):
+            ranked_bullets = sorted(
+                entry.get("bullets", []), key=_bullet_value, reverse=True
+            )
+            distinct = []
+            local_seen: List[str] = []
+            for bullet in ranked_bullets:
+                text = str(bullet.get("text") or "")
+                if any(_same_resume_bullet(text, existing) for existing in local_seen):
+                    continue
+                distinct.append(bullet)
+                local_seen.append(text)
+                if len(distinct) >= cap["bullets"]:
+                    break
+            if not distinct:
+                continue
+            entry["bullets"] = distinct
+            top_values = [_bullet_value(bullet) for bullet in distinct[:2]]
+            entry_score = sum(top_values) / len(top_values)
+            ranked_entries.append((entry_score, -original_index, entry))
+        winners = sorted(ranked_entries, reverse=True, key=lambda item: (item[0], item[1]))[: cap["entries"]]
+        winner_ids = {id(item[2]) for item in winners}
+        curated[section] = [
+            entry for entry in curated.get(section, []) if id(entry) in winner_ids
+        ]
+
+    seen_texts: List[str] = []
+    for section in ("experiences", "projects", "leadership"):
+        retained_entries = []
+        for entry in curated.get(section, []):
+            retained = []
+            for bullet in entry.get("bullets", []):
+                text = str(bullet.get("text") or "")
+                if any(_same_resume_bullet(text, existing) for existing in seen_texts):
+                    continue
+                retained.append(bullet)
+                seen_texts.append(text)
+            if retained:
+                entry["bullets"] = retained
+                retained_entries.append(entry)
+        curated[section] = retained_entries
+
+    # A final global cap protects against future schema expansion. Remove the
+    # least valuable bullets while retaining at least one bullet per entry.
+    while sum(
+        len(entry.get("bullets", []))
+        for section in ("experiences", "projects", "leadership")
+        for entry in curated.get(section, [])
+    ) > MAX_TOTAL_BULLETS:
+        actions = _removal_actions(curated)
+        bullet_actions = [action for action in actions if action[3] is not None]
+        if not bullet_actions:
+            break
+        _apply_removal(curated, min(bullet_actions, key=lambda item: item[0]))
+    return curated
+
+
+def portfolio_metrics(plan: Dict[str, Any]) -> Dict[str, Any]:
+    counts = {
+        section: {
+            "entries": len(plan.get(section, [])),
+            "bullets": sum(len(entry.get("bullets", [])) for entry in plan.get(section, [])),
+        }
+        for section in ("experiences", "projects", "leadership")
+    }
+    bullets = [
+        bullet
+        for section in ("experiences", "projects", "leadership")
+        for entry in plan.get(section, [])
+        for bullet in entry.get("bullets", [])
+    ]
+    duplicates = []
+    for index, bullet in enumerate(bullets):
+        for other in bullets[index + 1 :]:
+            if _same_resume_bullet(str(bullet.get("text") or ""), str(other.get("text") or "")):
+                duplicates.append([bullet.get("source_id"), other.get("source_id")])
+    violations = []
+    if counts["experiences"]["entries"] < 2:
+        violations.append("resume needs at least two complementary experiences")
+    if counts["projects"]["entries"] < 1:
+        violations.append("resume needs at least one project")
+    for section, cap in PORTFOLIO_CAPS.items():
+        if counts[section]["entries"] > cap["entries"]:
+            violations.append("%s has too many entries" % section)
+        for entry in plan.get(section, []):
+            if len(entry.get("bullets", [])) > cap["bullets"]:
+                violations.append("%s exceeds the per-entry bullet cap" % entry.get("source_id"))
+            if section == "experiences" and len(entry.get("bullets", [])) < 2:
+                violations.append("%s needs at least two distinct bullets" % entry.get("source_id"))
+    if len(bullets) > MAX_TOTAL_BULLETS:
+        violations.append("resume exceeds %s bullets" % MAX_TOTAL_BULLETS)
+    if len(bullets) < MIN_TOTAL_BULLETS:
+        violations.append("resume needs at least %s distinct bullets" % MIN_TOTAL_BULLETS)
+    if duplicates:
+        violations.append("resume contains duplicate or near-duplicate bullets")
+    return {
+        "pass": not violations,
+        "counts": counts,
+        "total_bullets": len(bullets),
+        "min_total_bullets": MIN_TOTAL_BULLETS,
+        "max_total_bullets": MAX_TOTAL_BULLETS,
+        "duplicates": duplicates,
+        "violations": violations,
+    }
 
 
 def merge_edited_bullets(candidate_plan: Dict[str, Any], edited_plan: Dict[str, Any]) -> Dict[str, Any]:
@@ -1311,8 +1587,12 @@ def render_plan(plan: Dict[str, Any], catalog: Dict[str, Any], root: Optional[Pa
 def _bullet_value(bullet: Dict[str, Any]) -> float:
     text = _latex_plain(str(bullet.get("text") or ""))
     priority = float(bullet.get("priority") or 50)
-    metric = 8 if re.search(r"\b\d[\d,.]*\+?%?|\$\d|\b(?:won|selected|grant|fellowship)\b", text, re.I) else 0
-    technical = 5 if re.search(r"\b(architected|engineered|built|implemented|orchestrated|designed|pipeline|system|model|api|cloud|database)\b", text, re.I) else 0
+    # The model's priority is target-aware; deterministic signals are only
+    # tie-breakers. Larger generic bonuses previously overruled an explicitly
+    # higher-ranked biomedical Pandas/SQL bullet in favor of a less relevant
+    # FastAPI bullet merely because it contained more stock technical terms.
+    metric = 2 if re.search(r"\b\d[\d,.]*\+?%?|\$\d|\b(?:won|selected|grant|fellowship)\b", text, re.I) else 0
+    technical = 1 if re.search(r"\b(architected|engineered|built|implemented|orchestrated|designed|pipeline|system|model|api|cloud|database)\b", text, re.I) else 0
     return priority + metric + technical
 
 
@@ -1376,7 +1656,7 @@ def pack_plan_to_page(
     candidate_plan: Dict[str, Any], catalog: Dict[str, Any], run_dir: Path
 ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
     """Compile-search the highest-value one-page subset of a rich plan."""
-    plan = copy.deepcopy(candidate_plan)
+    plan = curate_candidate_portfolio(candidate_plan)
     removed: List[Dict[str, Any]] = []
     attempts = []
     attempt_number = 0
@@ -1388,30 +1668,16 @@ def pack_plan_to_page(
             "overfull": layout.get("overfull"),
             "bullets": sum(len(entry.get("bullets", [])) for section in ("experiences", "projects", "leadership") for entry in plan.get(section, [])),
         })
+        if not layout.get("compiled"):
+            raise RuntimeError(
+                "candidate LaTeX failed to compile; packing cannot treat a syntax error as page overflow"
+            )
         if layout.get("compiled") and layout.get("pages") == 1 and not layout.get("overfull"):
             break
         actions = _removal_actions(plan)
         if not actions:
             break
         removed.append(_apply_removal(plan, min(actions, key=lambda item: item[0])))
-
-    if attempts and attempts[-1].get("pages") == 1:
-        # Re-add the strongest excluded units when they still fit. This closes
-        # the common gap left by one greedy removal without changing styling.
-        for undo in sorted(removed, key=lambda item: (
-            sum(_bullet_value(b) for b in item["value"].get("bullets", []))
-            if item["kind"] == "entry" else _bullet_value(item["value"])
-        ), reverse=True):
-            trial = copy.deepcopy(plan)
-            try:
-                _undo_removal(trial, undo)
-            except StopIteration:
-                continue
-            attempt_number += 1
-            _, layout = _compile_plan_attempt(trial, catalog, run_dir, attempt_number)
-            attempts.append({"attempt": attempt_number, "pages": layout.get("pages"), "overfull": layout.get("overfull"), "readd": True})
-            if layout.get("compiled") and layout.get("pages") == 1 and not layout.get("overfull"):
-                plan = trial
 
     kept_ids = {
         bullet.get("source_id")
@@ -1426,7 +1692,7 @@ def pack_plan_to_page(
         for bullet in entry.get("bullets", [])
     }
     return plan, {
-        "strategy": "compile-measured value-density packing",
+        "strategy": "methodology-capped portfolio with compile-measured overflow removal",
         "attempts": attempts,
         "kept_bullets": len(kept_ids),
         "excluded_bullet_ids": sorted(value for value in all_ids - kept_ids if value),
@@ -1554,11 +1820,16 @@ def bullet_layout_metrics(plan: Dict[str, Any], pdf: Path) -> Dict[str, Any]:
                 anchor = " ".join(tokens[:2])
                 ending = tokens[-1] if tokens else ""
                 matched = None
+                best_overlap = -1.0
                 for line in geometry.get("lines", []):
                     line_tokens = re.findall(r"[a-z0-9]+", str(line.get("text") or "").lower())
-                    if anchor and anchor in " ".join(line_tokens):
+                    line_text = " ".join(line_tokens)
+                    if not anchor or anchor not in line_text:
+                        continue
+                    overlap = len(set(tokens) & set(line_tokens)) / max(1, len(set(tokens)))
+                    if overlap > best_overlap:
                         matched = line
-                        break
+                        best_overlap = overlap
                 if matched:
                     line_tokens = re.findall(r"[a-z0-9]+", str(matched.get("text") or "").lower())
                     wraps = bool(ending and ending not in line_tokens)
@@ -1568,7 +1839,7 @@ def bullet_layout_metrics(plan: Dict[str, Any], pdf: Path) -> Dict[str, Any]:
                         "text": plain,
                         "wraps": wraps,
                         "right_slack_pt": slack,
-                        "horizontal_pass": not wraps and slack <= MAX_RIGHT_SLACK_PT,
+                        "horizontal_pass": not wraps,
                     })
                 else:
                     results.append({
@@ -1714,18 +1985,17 @@ def pdf_layout(
     result["overfull"] = bool(re.search(r"Overfull \\hbox|Output loop---|Fatal error", logs))
     if plan is not None:
         result["horizontal"] = bullet_layout_metrics(plan, pdf)
+        result["portfolio"] = portfolio_metrics(plan)
         if not result["horizontal"].get("pass"):
             result["warnings"].append(
-                "bullet width saturation failed: %s wrap(s), %s underfilled line(s)"
-                % (result["horizontal"].get("wrap_count", 0), result["horizontal"].get("underfilled_line_count", 0))
+                "one-line bullet check failed: %s wrap(s)"
+                % result["horizontal"].get("wrap_count", 0)
             )
         if run_capacity_test:
             try:
                 result["vertical_capacity"] = vertical_capacity_test(run_dir, (run_dir / "resume.tex").read_text())
             except OSError as exc:
                 result["vertical_capacity"] = {"pass": False, "warning": str(exc)}
-            if not result["vertical_capacity"].get("pass"):
-                result["warnings"].append(result["vertical_capacity"].get("warning") or "vertical capacity test failed")
     if result["overfull"]:
         result["warnings"].append("LaTeX log contains an overfull box or fatal layout warning")
     if result["pages"] != 1:
@@ -1733,7 +2003,7 @@ def pdf_layout(
     if not result["text_extractable"]:
         result["warnings"].append("PDF text is not extractable")
     if not result["density_pass"]:
-        result["warnings"].append("page is underfilled relative to CV/resume.pdf")
+        result["warnings"].append("page has extreme unused bottom space relative to CV/resume.pdf")
     return result
 
 
@@ -1753,9 +2023,10 @@ def deterministic_review(job: Dict[str, Any], tex: str, layout: Dict[str, Any]) 
         and not layout.get("overfull")
         and layout.get("density_pass")
         and (layout.get("horizontal") or {}).get("pass")
-        and (layout.get("vertical_capacity") or {}).get("pass")
         and style.get("passed")
     )
+    portfolio = layout.get("portfolio") or portfolio_metrics({})
+    portfolio_gate = bool(portfolio.get("pass"))
     eligibility_blocks = posting_eligibility_blocks(str(job.get("posting_text") or ""))
     if eligibility_blocks:
         eligibility = {"status": "fail", "reason": "; ".join(eligibility_blocks)}
@@ -1773,6 +2044,10 @@ def deterministic_review(job: Dict[str, Any], tex: str, layout: Dict[str, Any]) 
         "style": style,
         "gates": {
             "layout": {"status": "pass" if layout_gate else "fail", "reason": "; ".join(warnings) or "all rendered layout checks passed"},
+            "portfolio": {
+                "status": "pass" if portfolio_gate else "fail",
+                "reason": "; ".join(portfolio.get("violations") or []) or "portfolio is compact and nonredundant",
+            },
             "eligibility": eligibility,
         },
     }
@@ -1793,7 +2068,6 @@ def score_review(agent_review: Dict[str, Any], deterministic: Dict[str, Any]) ->
                 and not layout.get("overfull")
                 and layout.get("density_pass")
                 and (layout.get("horizontal") or {}).get("pass")
-                and (layout.get("vertical_capacity") or {}).get("pass")
                 and style.get("passed")
                 else "fail"
             )
@@ -1832,6 +2106,7 @@ def score_review(agent_review: Dict[str, Any], deterministic: Dict[str, Any]) ->
         },
         "eligibility": deterministic_gates.get("eligibility", {"status": "fail", "reason": "eligibility unavailable"}),
         "layout": deterministic_gates.get("layout", {"status": "fail", "reason": "layout unavailable"}),
+        "portfolio": deterministic_gates.get("portfolio", {"status": "pass", "reason": "portfolio gate unavailable"}),
     }
     hard_fail = any(gate.get("status") == "fail" for gate in gates.values())
     total = round(sum(item["points"] for item in scores.values()), 1)
@@ -1931,7 +2206,7 @@ def run_tailoring(run_dir: Path, job: Dict[str, Any], update, enhance: bool) -> 
         raise RuntimeError("No provider returned a valid source-addressed plan; inspect plan_errors.json")
     candidate_plan = expand_candidate_portfolio(candidate_plan, catalog, enhance)
     write_json(run_dir / "candidate_plan.json", candidate_plan)
-    update("packing", "Compiling candidate combinations to saturate one page")
+    update("packing", "Compiling the selective portfolio within one page")
     plan, packing = pack_plan_to_page(candidate_plan, catalog, run_dir)
     write_json(run_dir / "content_plan.json", plan)
     write_json(run_dir / "layout_packing.json", packing)
@@ -1943,10 +2218,7 @@ def run_tailoring(run_dir: Path, job: Dict[str, Any], update, enhance: bool) -> 
     line_edits: List[Dict[str, Any]] = []
     editable_pool = candidate_plan
     for line_round in range(1, MAX_LINE_EDIT_PASSES + 1):
-        space_pass = (
-            (layout.get("horizontal") or {}).get("pass")
-            and (layout.get("vertical_capacity") or {}).get("pass")
-        )
+        space_pass = (layout.get("horizontal") or {}).get("pass")
         if not enhance or space_pass:
             break
         update(
@@ -2028,6 +2300,7 @@ def run_tailoring(run_dir: Path, job: Dict[str, Any], update, enhance: bool) -> 
         "selected_evidence": synthesis_data.get("selected_evidence", []),
         "excluded_evidence": synthesis_data.get("excluded_evidence", []),
         "revision_notes": synthesis_data.get("revision_notes", []),
+        "validation_warnings": synthesis_data.get("validation_warnings", []),
         "content_plan": {
             "experiences": synthesis_data.get("experiences", []),
             "projects": synthesis_data.get("projects", []),

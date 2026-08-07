@@ -1065,3 +1065,26 @@ Finally, the immutable Resume Craft rubric scores target fit 30, evidence 25,
 clarity 15, portfolio 20, and layout 10. Factuality, eligibility, and layout
 are independent gates. A polished draft cannot average away an unsupported
 claim, an ineligible role, or a failed layout.
+
+## 73. Resume density is a cognitive portfolio constraint, not a page-filling objective (2026-08-06)
+
+Decision #72's rich-portfolio and saturation rules produced physically full
+pages with 25–30 bullets, semantic duplicates, and weak backup evidence. Resume
+Studio now asks models for a selective shortlist and deterministically retains
+16–20 distinct bullets across at most three experiences, three projects, and
+one leadership entry. Target-aware model priority remains primary; generic
+metric and technical signals are tie-breakers. Safe source backups are added
+only below the minimum portfolio size.
+
+One page, unchanged style, extractable text, and one-line bullets remain hard
+layout requirements. A concise line may end before the right margin. Bottom
+density and the one-extra-bullet compile are diagnostics against extreme
+sparsity, not reasons to pad. LaTeX compilation failures stop packing instead
+of being misclassified as overflow and causing evidence deletion.
+
+Enhancement also preserves source scope. Qualifiers such as synthetic,
+prototype, proof of concept, simulation, and demo cannot silently disappear;
+an affected bullet reverts to authorized source wording and records a warning.
+Historical target resumes are outputs rather than evidence-bank inputs, and
+the canonical `CV/resume.tex` remains authoritative for immutable contact,
+education, skills, employer-heading metadata, and dates.

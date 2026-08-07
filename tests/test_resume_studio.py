@@ -15,6 +15,13 @@ def test_response_data_preserves_structured_plan():
     assert data["experiences"][0]["source_id"] == "experience:a"
 
 
+def test_write_json_uses_an_atomic_worker_specific_temp_file(tmp_path):
+    target = tmp_path / "value.json"
+    rs.write_json(target, {"ok": True})
+    assert json.loads(target.read_text()) == {"ok": True}
+    assert list(tmp_path.glob("*.tmp")) == []
+
+
 def test_provider_plan_schema_cannot_return_a_latex_document():
     for enhance in (False, True):
         properties = rs.plan_schema(enhance)["properties"]
@@ -23,14 +30,14 @@ def test_provider_plan_schema_cannot_return_a_latex_document():
         assert "projects" in properties
 
 
-def test_plan_schema_requests_a_rich_dynamic_portfolio():
+def test_plan_schema_requests_a_selective_ranked_shortlist():
     strict = rs.plan_schema(False)
     assert strict["properties"]["experiences"]["minItems"] == 2
-    assert strict["properties"]["experiences"]["maxItems"] == 5
+    assert strict["properties"]["experiences"]["maxItems"] == 4
     assert strict["properties"]["projects"]["minItems"] == 1
-    assert strict["properties"]["projects"]["maxItems"] == 6
+    assert strict["properties"]["projects"]["maxItems"] == 4
     assert strict["properties"]["leadership"]["minItems"] == 0
-    assert strict["properties"]["leadership"]["maxItems"] == 2
+    assert strict["properties"]["leadership"]["maxItems"] == 1
     strict_bullet = strict["properties"]["experiences"]["items"]["properties"]["bullets"]["items"]
     assert "priority" in strict_bullet["properties"]
 
@@ -104,13 +111,95 @@ def test_source_only_plan_uses_catalog_text_and_rejects_layout_commands():
     assert any("forbidden layout command" in error for error in errors)
 
 
-def test_candidate_expansion_adds_authorized_overflow_backups():
+def test_enhancement_that_drops_scope_qualifier_reverts_to_source():
+    catalog = _fixture_catalog()
+    source = catalog["entries"]["experience:item0"]["bullets"][0]
+    source["text"] = "Built a synthetic-data prototype for evaluation"
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    plan["experiences"][0]["bullets"][0].update(
+        {
+            "text": "Built a data system for evaluation",
+            "evidence_ids": [source["id"]],
+            "candidate_rationale": "shorter",
+        }
+    )
+    normalized, errors = rs.validate_plan(plan, catalog, enhance=True)
+    assert not errors
+    assert normalized["experiences"][0]["bullets"][0]["text"] == source["text"]
+    assert any(
+        "reverted enhanced bullet experience:item0:b1 after it dropped protected qualifier(s): prototype, synthetic"
+        in warning
+        for warning in normalized["validation_warnings"]
+    )
+
+
+def test_poc_and_proof_of_concept_are_equivalent_protected_qualifiers():
+    assert not rs._missing_protected_qualifiers(
+        "Architected a proof of concept for retrieval",
+        "Architected a POC for retrieval",
+    )
+
+
+def test_model_math_command_is_normalized_and_other_inline_commands_fail():
+    assert rs._normalize_model_fragment("Delivered 3\\times{} faster retrieval") == "Delivered 3x faster retrieval"
+    assert rs._unsupported_inline_commands("\\textbf{Built} with \\emph{care}") == []
+    assert rs._unsupported_inline_commands("Used \\sqrt{n}") == ["sqrt"]
+
+
+def test_unknown_provider_bullet_is_dropped_with_warning_when_entry_has_valid_text():
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    plan["experiences"][0]["bullets"].append({"source_id": "experience:item0:b999"})
+    normalized, errors = rs.validate_plan(plan, catalog, enhance=False)
+    assert not errors
+    assert len(normalized["experiences"][0]["bullets"]) == 3
+    assert "dropped unknown bullet experience:item0:b999 for experience:item0" in normalized["validation_warnings"]
+
+
+def test_unknown_enhanced_citation_is_dropped_when_authoritative_source_remains():
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    graph = {
+        "nodes": [
+            {"id": bullet["id"], "claim_allowed": True}
+            for entry in catalog["entries"].values()
+            for bullet in entry["bullets"]
+        ]
+    }
+    enhanced = json.loads(json.dumps(plan))
+    enhanced["experiences"][0]["bullets"][0].update(
+        {
+            "text": "\\textbf{Built item} with evidence",
+            "evidence_ids": ["experience:item0:b1", "doc:missing"],
+            "candidate_rationale": "target evidence",
+        }
+    )
+    normalized, errors = rs.validate_plan(enhanced, catalog, enhance=True, graph=graph)
+    assert not errors
+    assert normalized["experiences"][0]["bullets"][0]["evidence_ids"] == ["experience:item0:b1"]
+    assert any("dropped unknown evidence" in warning for warning in normalized["validation_warnings"])
+
+
+def test_candidate_expansion_preserves_complete_selective_plan_without_padding():
     catalog = _fixture_catalog()
     plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
     assert not errors
     expanded = rs.expand_candidate_portfolio(plan, catalog, enhance=True)
-    assert len(expanded["projects"][0]["bullets"]) == 3
-    added = expanded["projects"][0]["bullets"][-1]
+    assert rs.portfolio_metrics(expanded)["total_bullets"] == rs.MIN_TOTAL_BULLETS
+    assert expanded == plan
+
+
+def test_candidate_expansion_adds_authorized_backup_only_below_minimum():
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    plan["experiences"][0]["bullets"].pop()
+    expanded = rs.expand_candidate_portfolio(plan, catalog, enhance=True)
+    assert rs.portfolio_metrics(expanded)["total_bullets"] == rs.MIN_TOTAL_BULLETS
+    added = expanded["experiences"][0]["bullets"][-1]
     assert added["evidence_ids"] == [added["source_id"]]
     assert "overflow pool" in added["candidate_rationale"]
 
@@ -118,7 +207,100 @@ def test_candidate_expansion_adds_authorized_overflow_backups():
     edited["projects"][0]["bullets"][0]["text"] = "edited text"
     merged = rs.merge_edited_bullets(expanded, edited)
     assert merged["projects"][0]["bullets"][0]["text"] == "edited text"
-    assert len(merged["projects"][0]["bullets"]) == 3
+    assert rs.portfolio_metrics(merged)["total_bullets"] == rs.MIN_TOTAL_BULLETS
+
+
+def test_semantic_duplicate_with_abbreviated_unit_is_detected():
+    assert rs._same_resume_bullet(
+        "Engineered computer vision pipeline tracking 7 emotions every 2.4s from gaze and facial expressions",
+        "Engineered a computer vision pipeline tracking 7 emotions every 2.4 seconds from gaze and facial expressions",
+    )
+
+
+def test_target_priority_outweighs_generic_technical_tiebreakers():
+    target_specific = {"priority": 90, "text": "Resolved biomedical version conflicts via Pandas/SQL"}
+    generic = {"priority": 87, "text": "Engineered modular API cloud system architecture"}
+    assert rs._bullet_value(target_specific) > rs._bullet_value(generic)
+
+
+def test_methodology_curator_caps_density_sorts_strength_and_removes_duplicates():
+    plan = _fixture_plan()
+    duplicate = json.loads(json.dumps(plan["experiences"][0]["bullets"][0]))
+    duplicate["source_id"] = "experience:item0:duplicate"
+    duplicate["text"] = "\\textbf{Built an item 0} with evidence"
+    duplicate["priority"] = 1
+    for entry in plan["experiences"]:
+        for index, bullet in enumerate(entry["bullets"]):
+            bullet["text"] = "\\textbf{Built item %s-%s} with evidence and scope" % (
+                entry["source_id"], index
+            )
+            bullet["priority"] = 90 - index
+    plan["experiences"][0]["bullets"].append(duplicate)
+    plan["projects"].append(
+        {
+            "source_id": "project:item-extra",
+            "bullets": [{"source_id": "project:item-extra:b1", "text": "Built extra project", "priority": 1}],
+            "why": "weak extra",
+        }
+    )
+    curated = rs.curate_candidate_portfolio(plan)
+    metrics = rs.portfolio_metrics(curated)
+    assert metrics["pass"] is True
+    assert metrics["total_bullets"] <= rs.MAX_TOTAL_BULLETS
+    assert len(curated["experiences"]) <= 3
+    assert len(curated["projects"]) <= 3
+    assert len(curated["leadership"]) <= 1
+    assert all(len(entry["bullets"]) <= 4 for entry in curated["experiences"])
+    assert all(len(entry["bullets"]) <= 2 for entry in curated["projects"])
+
+
+def test_packer_never_deletes_content_to_recover_from_compile_error(monkeypatch, tmp_path):
+    plan = _fixture_plan()
+    catalog = _fixture_catalog()
+    monkeypatch.setattr(
+        rs,
+        "_compile_plan_attempt",
+        lambda *args, **kwargs: (
+            "bad tex",
+            {"compiled": False, "pages": None, "overfull": False},
+        ),
+    )
+    try:
+        rs.pack_plan_to_page(plan, catalog, tmp_path)
+    except RuntimeError as exc:
+        assert "syntax error as page overflow" in str(exc)
+    else:
+        raise AssertionError("compile failure should stop packing")
+    assert rs.portfolio_metrics(plan)["total_bullets"] == rs.MIN_TOTAL_BULLETS
+
+
+def test_short_one_line_bullet_is_not_failed_for_unused_right_margin(monkeypatch, tmp_path):
+    monkeypatch.setattr(
+        rs,
+        "pdf_line_geometry",
+        lambda pdf: {
+            "page_width": 612.0,
+            "lines": [
+                {
+                    "text": "Built concise system",
+                    "x_min": 60.0,
+                    "x_max": 250.0,
+                    "y_min": 100.0,
+                    "y_max": 109.0,
+                }
+            ],
+        },
+    )
+    plan = {
+        "experiences": [
+            {"bullets": [{"source_id": "b1", "text": "Built concise system"}]}
+        ],
+        "projects": [],
+        "leadership": [],
+    }
+    result = rs.bullet_layout_metrics(plan, tmp_path / "resume.pdf")
+    assert result["underfilled_line_count"] == 1
+    assert result["pass"] is True
 
 
 def test_renderer_keeps_canonical_prefix_and_company_first(tmp_path):

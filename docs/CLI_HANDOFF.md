@@ -207,28 +207,44 @@ Before changing the radar, read these in order:
   anything derived from it. Owner-only Resume Studio now runs locally with
   source-only and enhancement modes; start it with
   `.venv/bin/python scripts/resume_studio.py` and open `http://127.0.0.1:4317/`.
+  For temporary human-feedback calibration across varied radar roles, run
+  `.venv/bin/python scripts/resume_calibration.py --generate --count 6 --serve`
+  and open `http://127.0.0.1:4321/`; generated PDFs and JSONL labels stay under
+  `CV/.resume_studio/calibration/`.
   It uses installed first-party Codex/Claude Code sessions, strips API-key
   environment variables, and stores all output under `CV/.resume_studio/`.
   `CV/resume.tex` / `.pdf` is the exact visual baseline; TLDP is only one
   target artifact. Providers return source-addressed content plans, never full
   LaTeX. The renderer preserves the baseline's header, education, skills,
   margins, typography, and spacing, uses company-first employer headings, and
-  hard-fails an underfilled page or formatting drift. Reports record the fixed
+  enforces a 16–20-bullet, nonredundant interview portfolio with no wrapped
+  bullets or formatting drift. It does not pad good plans to the right or
+  bottom margin. Reports record the fixed
   reviewer score, exclusions, provider calls, and emitted Codex token usage;
   totals are marked incomplete when a provider omits a call's footer.
   Live validation on 2026-07-31 found the Codex subscription session usable;
   the installed Claude client returned an organization-level 403 stating that
   Claude Code subscription access is disabled. The harness fell back to Codex
   and did not request or consume an Anthropic API key.
-- **Resume intelligence v1 is shipped locally (DECISIONS #72):** the Studio
+- **Resume intelligence v1 is shipped locally (DECISIONS #72-73):** the Studio
   builds a source-authority evidence graph from the ignored CV corpus, caches
   public GitHub/Devpost material as corroboration only, and exposes Best,
   Newest, and Resume Match sorts. The full-posting match is fixed-weight and
-  source-explained. Generation produces a rich candidate portfolio and a
-  deterministic compile loop packs the strongest content into one page. It
-  measures actual PDF bullet geometry and requires one additional standard
-  bullet to overflow. Resume Craft cannot override factuality, eligibility,
-  or layout gates.
+  source-explained. Generation produces a selective candidate portfolio and a
+  deterministic curator keeps 16–20 distinct bullets across at most three
+  experiences, three projects, and one leadership entry. It measures actual
+  PDF bullet geometry; bottom density and one-extra-bullet capacity are
+  diagnostics rather than padding targets. Scope qualifiers are protected and
+  compilation errors stop packing instead of deleting content. Resume Craft
+  cannot override factuality, eligibility, or layout gates.
+- **Luna handoff after the 2026-08-06 Sol-high calibration:** add bullet-level
+  lock/unlock controls and revision history to the existing local Studio, then
+  add a one-click “revise from review priorities” thread that preserves source
+  IDs and protected qualifiers. Keep the first pass deterministic/UI-focused;
+  do not change rubric weights, evidence authority, portfolio caps, or CV facts.
+  Add tests for lock persistence, history rollback, and source-signature
+  preservation. Reuse the calibration lab for PDF inspection; do not rerun the
+  three expensive Sol architecture cases unless behavior changes materially.
 - **Radar score v8 is shipped (DECISIONS #70-71):** records retain uncapped raw
   utility, calibrated base, dimension values, reasons, and final score. Goal
   companies can reach 100, but posting wording separates nearby roles; cited

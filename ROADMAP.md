@@ -205,7 +205,7 @@ Rules v3 makes role eligibility title-led and narrows the data-science analyst
 match; unrelated titles mentioned above no longer ride company/JD AI prose
 into alerts.
 
-## CV auto-tailoring — ✅ OWNER-FIRST V1 SHIPPED 2026-07-31 (DECISIONS #67-69, #72)
+## CV auto-tailoring — ✅ OWNER-FIRST V1 SHIPPED 2026-07-31 (DECISIONS #67-69, #72-73)
 
 `CV/` remains local-only (DECISIONS #29). The first implementation is the
 owner-only local Resume Studio in `scripts/resume_studio.py`. Source-only mode
@@ -221,11 +221,15 @@ omits usage metadata.
 The owner workflow now includes the private structured evidence graph, bounded
 GitHub/Devpost corroboration, Resume Match scoring and Best/Newest/Resume Match
 sorting, full-posting re-analysis, dynamic compile-measured page packing, and
-source-addressed custom bullets. Horizontal line geometry and the one-more-
-bullet overflow test are hard layout gates. Resume Craft is a fixed weighted
+source-addressed custom bullets. The methodology curator keeps a selective
+16–20-bullet portfolio, removes semantic duplicates, and hard-fails wrapping;
+bottom density and the one-more-bullet probe are diagnostics rather than
+padding targets. Protected scope qualifiers survive enhancement, and compile
+errors cannot trigger content deletion. Resume Craft is a fixed weighted
 rubric; factuality, eligibility, and layout are separate non-negotiable gates.
 
-Next slices are bullet-level locks/history and interactive revision threads.
+Next Luna-sized slices are bullet-level locks/history and an interactive,
+source-signature-preserving revision thread driven by review priorities.
 Multi-user provider/CV storage remains later; no email/account integration is
 part of the owner-first system.
 

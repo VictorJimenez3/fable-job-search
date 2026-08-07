@@ -241,7 +241,7 @@ subset from the master CV and example résumés without rewriting it.
 **Enhancement mode** may tighten selected bullets while preserving their source
 IDs. In both modes a deterministic renderer uses `CV/resume.tex` unchanged;
 models cannot author the LaTeX document, alter the margins or typography, or
-pass an underfilled page. Employer headings are company-first. Usable installed
+pass a sparse or bloated portfolio. Employer headings are company-first. Usable installed
 first-party Codex and Claude Code sessions provide planning and fixed review;
 one may fail independently and the run degrades to the other without API keys.
 The local harness removes API-key environment variables so this owner workflow
@@ -252,11 +252,29 @@ The role list can be sorted by **Best Radar score**, **Newest**, or the private
 **Resume Match** rubric. Match analysis reports requirement coverage, evidence
 strength, domain relevance, eligibility, distinctiveness, confidence, gaps,
 and source IDs; selected roles can be rechecked against the full posting.
-Generation asks for a rich evidence portfolio, then compiles candidate layouts
-to retain the highest-value content that fits. Actual PDF line widths and a
-one-more-bullet overflow probe guard both horizontal and vertical space. The
+Generation asks for a selective evidence portfolio, then keeps 16–20 distinct
+bullets across at most three experiences, three projects, and one leadership
+entry. Deterministic backups are used only when a draft is genuinely sparse;
+they do not pad a good shortlist. Actual PDF line widths hard-fail wrapping,
+while bottom density and an extra-bullet probe remain diagnostics against
+extreme whitespace. Unsupported inline LaTeX and lost scope qualifiers such as
+`synthetic`, `prototype`, or `POC` are repaired or rejected before packing. The
 reported Resume Craft score is separate from hard factuality, eligibility, and
 layout gates.
+
+For a disposable human-feedback batch across varied roles, use the calibration
+lab:
+
+```bash
+.venv/bin/python scripts/resume_calibration.py --generate --count 8 --serve
+```
+
+It selects distinct data, SWE, AI/ML, specialized-AI, and cloud roles from the
+local job snapshot, writes each run under `CV/.resume_studio/calibration/`, and
+opens a small review page at `http://127.0.0.1:4321/`. The review surface shows
+the rendered PDF and saves good/revise/bad labels plus notes to that ignored
+batch folder. It is a temporary calibration tool, not another application
+workflow.
 
 Optional upgrades:
 - The four NVIDIA NIM keys are wired into a task-aware, budgeted cloud router
