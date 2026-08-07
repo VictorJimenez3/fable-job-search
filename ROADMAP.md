@@ -234,6 +234,12 @@ Multi-user provider/CV storage remains later; no email/account integration is
 part of the owner-first system.
 
 ## Pipeline intelligence
+- **Resume UAT and outcome learning** — future idea: if enough applications,
+  interviews, and eventual outcomes accumulate, compare resume variants and
+  evidence choices against response/interview rates. This would be an
+  observational success-rate loop, not a substitute for human review; it
+  needs sufficient volume and consistent application tracking before the
+  results mean anything.
 - **Response-rate analytics** — per-sector/per-source conversion rates in the
   strategist memo: "healthtech replies 3× more than big tech for you — shift
   volume." Becomes meaningful after ~30 tracked applications.
