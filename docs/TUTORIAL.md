@@ -34,8 +34,10 @@ system as a website, refreshed automatically by every crawl:
   has a paste box for descriptions the radar cannot scrape (graded on the next
   enrich cycle). **Company** has a claim-level cited employer brief, its
   official evidence, a separately labeled culture card, and external research
-  links; **Outreach** has recruiter/alumni links, message templates pre-filled
-  with the role, and saved conversations; **Notes** holds your working notes
+  links; **Outreach** has role-aware public Google searches for university and
+  technical recruiters, likely hiring managers, NJIT alumni, and public hiring
+  posts, plus message templates and saved conversations. These links never
+  scrape LinkedIn; **Notes** holds your working notes
   (keep them non-sensitive because synced web state is public).
 - **Companies**: open-role employers, prioritized by actionable role score,
   with sourced summaries, research freshness, culture signals, and coverage.

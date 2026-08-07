@@ -137,6 +137,11 @@ filtered separately. This is an application-research cue (for example, a
 non-campus AI Engineer role), never an alert or a substitute for verified
 new-grad eligibility.
 
+Each job's **Outreach** tab builds role-aware public Google searches for
+university recruiters, technical recruiters, likely hiring managers, NJIT
+alumni, and public hiring posts. These are outbound links only: the radar never
+scrapes LinkedIn or stores the people/search results it opens.
+
 When signed in as the radar owner, the **Company** tab also offers **research
 + prefetch companies**. It runs a fresh public-source pass plus hosted-model
 synthesis for the opened employer, then concurrently warms up to four likely
@@ -302,6 +307,13 @@ line creates a unique rendered revision; the AI writing partner returns
 source-grounded candidates for approval, and revision history can revert to an
 earlier draft. The current Mac exposes Codex CLI and Claude Code lanes; a Luna
 lane is only available when a local `luna` executable is installed.
+
+Reviewer output is normalized before rendering: repeated selections for one
+source entry are merged so distinct evidence is not silently lost, and
+source-backed ATS wording receives the normal line-compression pass before any
+safe fallback. Workshop metadata is refreshed from the canonical template on
+load while preserving line edits, so older private drafts cannot misplace or
+duplicate education and skills rows after a renderer update.
 
 For a disposable human-feedback batch across varied roles, use the calibration
 lab:

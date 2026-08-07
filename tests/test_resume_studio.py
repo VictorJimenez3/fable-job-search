@@ -148,15 +148,22 @@ def test_enhanced_plan_can_synthesize_multiple_authorized_source_lines():
     ]
 
 
-def test_validation_drops_duplicate_entry_with_auditable_warning():
+def test_validation_merges_distinct_bullets_from_duplicate_entry():
     catalog = _fixture_catalog()
     plan = _fixture_plan()
-    plan["leadership"].append(json.loads(json.dumps(plan["leadership"][0])))
+    duplicate = json.loads(json.dumps(plan["leadership"][0]))
+    duplicate["bullets"] = [{"source_id": "leadership:item0:b2"}]
+    duplicate["why"] = "customer-facing conflict resolution"
+    plan["leadership"].append(duplicate)
     normalized, errors = rs.validate_plan(plan, catalog, enhance=False)
     assert not errors
     assert len(normalized["leadership"]) == 1
+    assert [item["source_id"] for item in normalized["leadership"][0]["bullets"]] == [
+        "leadership:item0:b1",
+        "leadership:item0:b2",
+    ]
     assert normalized["validation_warnings"] == [
-        "dropped duplicate entry: leadership:item0"
+        "merged duplicate entry: leadership:item0"
     ]
 
 
@@ -389,7 +396,24 @@ def test_workshop_front_matter_is_editable_without_changing_the_template(tmp_pat
     tex = rs.render_workshop_plan(plan, catalog, rs.repo_root())
     assert "New Jersey Institute of Technology" in tex
     assert "Python, Rust" in tex
+    assert tex.index("\\section{Technical Skills}") < tex.index("Python, Rust")
+    assert tex.count("\\textbf{Languages:}") == 1
+    assert tex.count("\\textbf{Data \\& Tools:}") == 1
     assert rs.template_style_guard(tex, rs.repo_root())["identical_preamble_header_education_skills"] is False
+
+
+def test_workshop_plan_refreshes_stale_front_matter_indexes_without_losing_edits():
+    plan = _fixture_plan()
+    stale = rs.front_matter_catalog()
+    languages = next(item for item in stale if item["line_id"] == "front:skills:0")
+    languages["template_index"] = 1
+    languages["text"] = "\\textbf{Languages:} Python, Rust"
+    plan["front_matter"] = stale
+    refreshed = rs._workshop_plan(plan, rs.repo_root())
+    updated = next(item for item in refreshed["front_matter"] if item["line_id"] == "front:skills:0")
+    canonical = next(item for item in rs.front_matter_catalog() if item["line_id"] == "front:skills:0")
+    assert updated["template_index"] == canonical["template_index"]
+    assert updated["text"] == "\\textbf{Languages:} Python, Rust"
 
 
 def test_workshop_ai_returns_candidates_without_mutating_the_current_draft(monkeypatch, tmp_path):

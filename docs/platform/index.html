@@ -162,6 +162,11 @@
            font-size:0.8rem; z-index:99; }
   a { color:var(--accent-ink); }
   .rlinks a { display:inline-block; margin:0 0.6rem 0.3rem 0; font-size:0.8rem; }
+  .dork-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:0.45rem; margin-top:0.55rem; }
+  .dork-link { display:block; border:1px solid var(--line); border-radius:7px; padding:0.55rem 0.65rem;
+               background:var(--code); text-decoration:none; }
+  .dork-link b { display:block; color:var(--text); margin-bottom:0.18rem; }
+  .dork-link span { color:var(--muted); font-size:0.72rem; line-height:1.35; }
   @media (prefers-reduced-motion: no-preference) { .card, button.act { transition: border-color .12s; } }
   @media (max-width:700px) {
     header { position:static; }
@@ -748,6 +753,31 @@ function researchLinks(co) {
     <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${q}+new+grad+interview+process">🧭 interview intel</a>
   </div>`;
 }
+function googleSearchURL(query) {
+  return "https://www.google.com/search?" + new URLSearchParams({q:query}).toString();
+}
+function outreachRoleFamily(j) {
+  const text = `${j.title||""} ${j.sector||""}`.toLowerCase();
+  if (/machine learning|deep learning|artificial intelligence|\bai\b/.test(text)) return '"machine learning" OR "AI"';
+  if (/data scientist|data science|data analyst|analytics/.test(text)) return '"data science" OR "analytics"';
+  if (/cloud|platform|backend|infrastructure/.test(text)) return '"software" OR "cloud" OR "platform"';
+  return '"software engineer" OR "technical"';
+}
+function recruiterDorks(j) {
+  const company = `"${String(j.company||"").replaceAll('"','')}"`;
+  const role = outreachRoleFamily(j);
+  const school = `("NJIT" OR "New Jersey Institute of Technology")`;
+  const searches = [
+    ["University recruiting", `site:linkedin.com/in ${company} ("university recruiter" OR "university recruiting" OR "early careers recruiter" OR "campus recruiter")`],
+    ["Technical recruiters", `site:linkedin.com/in ${company} ("technical recruiter" OR "talent acquisition") (${role})`],
+    ["Likely hiring managers", `site:linkedin.com/in ${company} ("engineering manager" OR "data science manager" OR "machine learning manager") (${role})`],
+    ["NJIT alumni at company", `site:linkedin.com/in ${company} ${school} (engineer OR scientist OR analyst)`],
+    ["Public hiring posts", `site:linkedin.com/posts ${company} (hiring OR "open role" OR "new grad") (${role})`],
+  ];
+  return `<div class="dork-grid">${searches.map(([label,query])=>
+    `<a class="dork-link" target="_blank" rel="noopener" href="${esc(googleSearchURL(query))}"><b>${esc(label)} ↗</b><span>${esc(query)}</span></a>`
+  ).join("")}</div>`;
+}
 function claimHTML(d, field, label) {
   const claim = d?.[field];
   if (!claim || !claim.value || claim.value === "Not confirmed")
@@ -953,6 +983,9 @@ function qualityCard(j) {
 
 function wsOutreach(j, w, c, id) {
   return `
+    <div class="sect"><h4>Find the right person</h4>
+      <p class="sub">Targeted public Google searches for recruiter, hiring-manager, alumni, and hiring-post leads. They open search results only; the radar never scrapes LinkedIn.</p>
+      ${recruiterDorks(j)}</div>
     <div class="sect"><h4>Conversations & contacts</h4>
       <ul class="plain" id="wsLinks">${w.links.map((l,i)=>
         `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label||l.url)}</a>
@@ -1198,17 +1231,17 @@ function rTesting() {
     <div class="lane"><h3>What is live</h3><div class="kv">
       <span class="k">Resume Match</span><span>best-fit, newest, and Radar ranking</span>
       <span class="k">evidence graph</span><span>private source IDs + authority hierarchy</span>
-      <span class="k">tailoring modes</span><span>source-only and reviewable AI enhancements</span>
+      <span class="k">tailoring modes</span><span>used bullets, AI tailor, and unrestricted evidence-grounded AI</span>
       <span class="k">layout</span><span>exact CV/resume.tex, 0% scaling, measured 2D packing</span>
       <span class="k">review</span><span>fixed craft rubric + factual, eligibility, and layout gates</span>
     </div></div>
-    <div class="lane"><h3>Scoring calibration v8</h3>
+    <div class="lane"><h3>Scoring calibration v9</h3>
       <p><b>${calibrated.length.toLocaleString()}</b> jobs currently carry the new raw-utility and calibrated-score ledger in production state.</p>
-      <p class="sub">Dimensions can compensate for one another—exceptional company motion or compensation can outweigh a weaker sector fit—but eligibility remains a hard gate. NVIDIA can reach 100; wording and role fit create separation through the 90s.</p></div>
+      <p class="sub">Explicit new-grad evidence is strongest; plausible no-floor roles receive a smaller lift. Dimensions can compensate, eligibility remains a hard gate, and only weaker roles from a crowded company receive the transparent -1/-2 diversity nudge.</p></div>
     <div class="lane"><h3>Non-negotiable QA</h3><div class="gate-row">
       <span class="chip good">company first</span><span class="chip good">one page</span>
-      <span class="chip good">0% format growth</span><span class="chip good">+1 bullet overflows</span>
-      <span class="chip good">~10-char width tolerance</span><span class="chip good">claims cited</span>
+      <span class="chip good">0% format growth</span><span class="chip good">+1 bullet capacity reported</span>
+      <span class="chip good">12pt right-edge safety</span><span class="chip good">claims cited</span>
       </div><p class="sub">A draft is never marked ready unless the PDF compiles and every independent gate passes. The reviewer cannot alter its weights or lower the bar.</p></div>
     <div class="note"><b>Why PDFs are not here:</b> CV/ is personal and gitignored by contract. Production shows the control plane and ranking; actual resume documents remain private on the Mac.</div>
   </aside></div>`;

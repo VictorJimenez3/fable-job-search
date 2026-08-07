@@ -244,6 +244,9 @@ return multiple source-grounded candidates for an explicit user request; and
 each saved/reverted draft renders to a unique private revision artifact. The
 original run and human reference PDFs remain intact. Contact/header metadata,
 layout, evidence authority, and factuality guards remain protected.
+Reviewer duplicate selections now merge without evidence loss, and workshop
+template metadata migrates on load while preserving edits so renderer fixes do
+not corrupt older private drafts.
 Multi-user provider/CV storage remains later; no email/account integration is
 part of the owner-first system.
 
@@ -271,6 +274,11 @@ top of that durable bank.
   real numbers: equity discounting, COL adjustment, side-by-side memo.
 
 ## Reach
+- **Role-aware recruiter search — ✅ SHIPPED.** Every job's Outreach tab builds
+  targeted public Google queries for university recruiters, technical
+  recruiters, likely hiring managers, NJIT alumni, and public LinkedIn hiring
+  posts. They are outbound links only; the radar does not scrape LinkedIn or
+  persist search results.
 - **Referral-finder** — cross NJIT alumni signals against target companies;
   drafts the outreach note into the Networking CRM. (Needs a data source that
   isn't LinkedIn scraping — evaluating SHPE directory + GitHub org members.)

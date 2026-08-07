@@ -272,12 +272,22 @@ Before changing the radar, read these in order:
   visible line, and exposes selection rationale plus observed weekly Codex
   tokens/calls. Codex Plus's weekly allowance is not exposed by the local CLI;
   `CODEX_WEEKLY_LIMIT_TOKENS` is an optional owner-provided comparison limit.
+- **Resume Studio Sol-high UAT hardening is shipped (DECISION #82):** repeated
+  reviewer selections for one entry merge distinct bullets instead of dropping
+  them, supported ATS rewrites reach the margin editor before safe source
+  fallback, and workshop front-matter metadata self-refreshes while preserving
+  existing edits. A fresh unrestricted Mayo run and edited revision compiled as
+  one full page with 24 one-line bullets, zero wraps, and zero near-wraps.
 - **Radar v9 diversity scoring is shipped locally:** explicit new-grad evidence
   is weighted more strongly, plausible no-floor first-role postings get a
   smaller dashboard-only lift, and only weaker roles in a company with at least
   three visible roles receive a transparent -1/-2 concentration nudge. The
   strongest same-company role and raw-utility ties are protected. Platform
   rating explanations now use labeled rows, and Resume Match remains separate.
+- **Role-aware recruiter search is shipped locally:** the per-job Outreach tab
+  generates public Google searches for university recruiters, technical
+  recruiters, likely hiring managers, NJIT alumni, and public hiring posts.
+  This is link construction only and preserves the no-LinkedIn-scraping rule.
 - **Radar score v8 is shipped (DECISIONS #70-71):** records retain uncapped raw
   utility, calibrated base, dimension values, reasons, and final score. Goal
   companies can reach 100, but posting wording separates nearby roles; cited

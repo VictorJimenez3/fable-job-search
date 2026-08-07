@@ -2005,6 +2005,50 @@ def _unsupported_inline_commands(value: str) -> List[str]:
     )
 
 
+def _merge_duplicate_entry_selections(
+    selections: List[Any], validation_warnings: List[str]
+) -> List[Any]:
+    """Combine repeated entry blocks without duplicating their bullets.
+
+    Reviewers sometimes split one source entry into two blocks to express two
+    different reasons. Rendering both would repeat the heading; dropping the
+    latter would discard valid evidence. Merge the blocks before validation so
+    the ordinary source/evidence checks still govern every retained bullet.
+    """
+    merged: List[Any] = []
+    by_source: Dict[str, Dict[str, Any]] = {}
+    for selection in selections:
+        if not isinstance(selection, dict):
+            merged.append(selection)
+            continue
+        entry_id = str(selection.get("source_id") or "")
+        if not entry_id or entry_id not in by_source:
+            cloned = copy.deepcopy(selection)
+            merged.append(cloned)
+            if entry_id:
+                by_source[entry_id] = cloned
+            continue
+        target = by_source[entry_id]
+        known = {
+            str(item.get("source_id") or "")
+            for item in target.get("bullets") or []
+            if isinstance(item, dict)
+        }
+        for bullet in selection.get("bullets") or []:
+            bullet_id = str(bullet.get("source_id") or "") if isinstance(bullet, dict) else ""
+            if bullet_id and bullet_id in known:
+                continue
+            target.setdefault("bullets", []).append(copy.deepcopy(bullet))
+            if bullet_id:
+                known.add(bullet_id)
+        extra_why = str(selection.get("why") or "").strip()
+        current_why = str(target.get("why") or "").strip()
+        if extra_why and extra_why not in current_why:
+            target["why"] = "; ".join(value for value in (current_why, extra_why) if value)
+        validation_warnings.append("merged duplicate entry: %s" % entry_id)
+    return merged
+
+
 def validate_plan(
     plan: Dict[str, Any],
     catalog: Dict[str, Any],
@@ -2034,6 +2078,7 @@ def validate_plan(
             errors.append("%s must be a list" % kind)
             normalized[kind] = []
             continue
+        selections = _merge_duplicate_entry_selections(selections, validation_warnings)
         if len(selections) < minimum or len(selections) > maximum:
             errors.append("%s must contain %s-%s entries" % (kind, minimum, maximum))
         normalized_selections = []
@@ -2611,8 +2656,13 @@ def front_matter_catalog(root: Optional[Path] = None) -> List[Dict[str, Any]]:
                 "argument_index": labels.index(label),
             })
     before_skills = prefix.lower().find("%-----------skills-----------")
-    skills = [call for call in _macro_calls(prefix, "resumeItem", 1) if call[0] > before_skills]
-    for index, (_, args, _) in enumerate(skills):
+    all_items = _macro_calls(prefix, "resumeItem", 1)
+    skills = [
+        (template_index, call)
+        for template_index, call in enumerate(all_items)
+        if call[0] > before_skills
+    ]
+    for index, (template_index, (_, args, _)) in enumerate(skills):
         result.append({
             "line_id": "front:skills:%s" % index,
             "section": "technical skills",
@@ -2622,7 +2672,9 @@ def front_matter_catalog(root: Optional[Path] = None) -> List[Dict[str, Any]]:
             "text": args[0],
             "source_text": args[0],
             "template": "skills",
-            "template_index": index + 1,  # GPA is resumeItem index 0.
+            # _replace_macro_call indexes every parsed call, including macro
+            # definitions in the preamble. Keep the absolute call index.
+            "template_index": template_index,
             "argument_index": 0,
         })
     return result
@@ -2672,9 +2724,20 @@ def _workshop_plan(plan: Dict[str, Any], root: Optional[Path] = None) -> Dict[st
     """Add stable line identities without changing the render contract."""
     value = copy.deepcopy(plan)
     existing_front = value.get("front_matter")
-    if not isinstance(existing_front, list):
-        existing_front = front_matter_catalog(root or repo_root())
-    value["front_matter"] = existing_front
+    canonical_front = front_matter_catalog(root or repo_root())
+    if isinstance(existing_front, list):
+        existing_by_id = {
+            str(item.get("line_id") or ""): item
+            for item in existing_front
+            if isinstance(item, dict) and item.get("line_id")
+        }
+        for item in canonical_front:
+            prior = existing_by_id.get(str(item.get("line_id") or ""))
+            if not prior:
+                continue
+            item["text"] = str(prior.get("text") or item.get("text") or "")
+            item["revision_note"] = str(prior.get("revision_note") or "")
+    value["front_matter"] = canonical_front
     for section in ("experiences", "projects", "leadership"):
         for entry in value.get(section, []):
             for bullet in entry.get("bullets", []):
@@ -3739,17 +3802,6 @@ def run_tailoring(
                 (run_dir / "resume.tex").write_text(chosen)
                 compiled = compile_resume(run_dir)
                 layout = pdf_layout(run_dir, compiled, plan=plan)
-                plan, restored_source_ids = restore_wrapped_source_text(
-                    plan, layout, catalog
-                )
-                if restored_source_ids:
-                    packing["review_source_reversions"] = restored_source_ids
-                    write_json(run_dir / "content_plan.json", plan)
-                    write_json(run_dir / "layout_packing.json", packing)
-                    chosen = render_plan(plan, catalog, repo_root())
-                    (run_dir / "resume.tex").write_text(chosen)
-                    compiled = compile_resume(run_dir)
-                    layout = pdf_layout(run_dir, compiled, plan=plan)
                 preview = render_preview(run_dir)
                 deterministic = deterministic_review(context, chosen, layout)
                 review_plan_applied = True
@@ -3851,7 +3903,7 @@ def run_tailoring(
     codex_records = [item for item in provider_records if item.get("called") and item.get("provider", "").split("/")[-1] == "codex"]
     known_codex = [item["usage_tokens"] for item in codex_records if item.get("usage_tokens") is not None]
     report = {
-        "mode": "enhanced" if enhance else "source-only",
+        "mode": mode_label,
         "pdf_filename": run_pdf_path(run_dir).name,
         "preview_filename": run_preview_path(run_dir).name if preview else "",
         "job": job_summary(job),

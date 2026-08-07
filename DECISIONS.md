@@ -1211,3 +1211,29 @@ raw-utility ties are untouched. The calibrated range keeps 90+ as strong while
 leaving room below 100. Resume Match remains a separate CV/evidence-graph
 score. The platform now formats the established rating explanation as labeled
 reason rows instead of a single separator-delimited string.
+
+## 81. Recruiter discovery uses role-aware public search links, never LinkedIn scraping (2026-08-07)
+
+The Outreach workspace now constructs bounded Google queries for five useful
+lead types: university recruiters, technical recruiters, likely hiring
+managers, NJIT alumni at the company, and public hiring posts. Company names
+are quoted and the role family narrows technical searches to AI/ML, data,
+cloud/platform, or general software work. The browser opens these searches;
+the radar does not fetch, parse, rank, or persist LinkedIn people or post
+results. Saved conversations remain explicit user-added links.
+
+## 82. Resume review and workshop migrations preserve evidence and layout (2026-08-07)
+
+Repeated reviewer blocks for the same source entry are merged before ordinary
+validation, preserving distinct source-addressed bullets while keeping one
+heading and an auditable warning. Reviewer-authored, source-supported ATS
+wording is rendered and offered to the deterministic margin editor before the
+pipeline may restore source text; factuality and final geometry gates are
+unchanged.
+
+Workshop front-matter addresses are regenerated from the current canonical
+template whenever a saved draft is loaded. Existing line text and revision
+notes are overlaid by stable line ID, so a renderer-index correction migrates
+older private state without discarding edits or misplacing education and skills
+rows. Workshop revisions remain additive and never overwrite the original run
+or either human-authored reference PDF.
