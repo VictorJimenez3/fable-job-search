@@ -90,10 +90,13 @@ beside its artifacts.
 
 For an AI-enhanced run, the report's **What changed** block lists rewritten
 source lines and project swaps, while **ATS terms** shows exact supported terms
-that made it into the rendered draft. If the posting text was not captured,
-the report says so instead of pretending the draft was keyword-tailored. A
-completed draft must also leave at least 12pt of right-edge safety on every
-bullet; near-wraps are rejected and remain visible as failed run diagnostics.
+that made it into the rendered draft, supported terms still missing, and
+requirements your evidence cannot support. Space QA labels unused width as
+roomy lines instead of confusing it with whitespace or a wrap. If the posting
+text was not captured, the report says so instead of pretending the draft was
+keyword-tailored. A completed draft must also leave at least 12pt of right-edge
+safety on every bullet; near-wraps are rejected and remain visible as failed
+run diagnostics.
 
 ### Workshop editing
 

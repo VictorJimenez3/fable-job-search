@@ -3870,12 +3870,25 @@ renderReport=function(status){
   let extra=`<div class=\"match-card\"><strong>What changed</strong><div class=\"meta\">${changes.changed_bullet_count||0} bullets rewritten · ${swaps.swapped_in?.length||0} projects swapped in · ${swaps.swapped_out?.length||0} base projects swapped out</div>`;
   if(swaps.swapped_in?.length)extra+=`<div class=\"meta\"><strong>Added:</strong> ${esc(swaps.swapped_in.join(' · '))}</div>`;
   if(swaps.swapped_out?.length)extra+=`<div class=\"meta\"><strong>Removed:</strong> ${esc(swaps.swapped_out.join(' · '))}</div>`;
+  const rewrites=changes.rewritten_bullets||[];
+  if(rewrites.length)extra+=`<details><summary>Show ${rewrites.length} rewritten lines</summary>${rewrites.map(item=>`<div class=\"meta\"><strong>${esc(item.source_id||'line')}</strong><br><s>${esc(item.source_text||'')}</s><br>→ ${esc(item.final_text||'')}</div>`).join('')}</details>`;
   extra+='</div>';
-  if(ats.posting_available)extra+=`<p><strong>ATS terms:</strong> ${ats.covered_count||0}/${ats.supported_count||0} supported exact terms rendered (${ats.exact_coverage_percent||0}%)</p>`;
+  if(ats.posting_available){
+    const missing=(ats.terms||[]).filter(item=>item.supported&&!item.rendered).map(item=>item.term);
+    const unsupported=(ats.terms||[]).filter(item=>!item.supported).map(item=>item.term);
+    extra+=`<p><strong>ATS terms:</strong> ${ats.covered_count||0}/${ats.supported_count||0} supported exact terms rendered (${ats.exact_coverage_percent||0}%)</p>`;
+    if(missing.length)extra+=`<p class=\"meta\"><strong>Supported but missing:</strong> ${esc(missing.join(', '))}</p>`;
+    if(unsupported.length)extra+=`<p class=\"meta\"><strong>Not supported by your evidence:</strong> ${esc(unsupported.join(', '))}</p>`;
+  }
   else if(ats.reason)extra+=`<p class=\"meta\"><strong>ATS:</strong> ${esc(ats.reason)}</p>`;
   const anchor=$(\'report\').querySelector(\'pre\');if(anchor)anchor.insertAdjacentHTML(\'beforebegin\',extra);else $(\'report\').insertAdjacentHTML(\'beforeend\',extra);
 };
 function showView(view){""",
+)
+
+UI_HTML = UI_HTML.replace(
+    "${layout.horizontal.underfilled_line_count||0} underfilled lines · one-more-bullet",
+    "${layout.horizontal.near_wrap_count||0} near-wraps · ${layout.horizontal.underfilled_line_count||0} roomy lines · one-more-bullet",
 )
 
 

@@ -27,6 +27,15 @@ def test_generated_resume_filename_is_company_identifiable():
     assert rs.resume_pdf_filename({"company": "NVIDIA"}) == "nvidia_resume_ai.pdf"
 
 
+def test_resume_report_exposes_change_and_layout_safety_language():
+    assert "What changed" in rs.UI_HTML
+    assert "rewritten lines" in rs.UI_HTML
+    assert "Supported but missing" in rs.UI_HTML
+    assert "near-wraps" in rs.UI_HTML
+    assert "roomy lines" in rs.UI_HTML
+    assert "layout.horizontal.near_wrap_count" in rs.UI_HTML
+
+
 def test_resume_library_keeps_runs_and_legacy_experiments_with_posting_snapshots(tmp_path):
     run = tmp_path / "CV" / ".resume_studio" / "runs" / "0123456789ab"
     run.mkdir(parents=True)
