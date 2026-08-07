@@ -75,9 +75,20 @@ BODY_MARKER = "%-----------EXPERIENCE-----------"
 MAX_STYLE_REDUCTION_PERCENT = 5.0
 MAX_DENSITY_GAP_PT = 24.0
 MAX_RIGHT_SLACK_PT = 38.0
+# A line that ends only a few points before the text block is technically
+# single-line in the PDF, but it is one font/rendering change away from
+# wrapping. Treat that as a failed draft so the model gets a real chance to
+# shorten it or the deterministic source fallback can restore a safer line.
+MIN_RIGHT_SLACK_PT = 12.0
 MAX_LINE_EDIT_PASSES = 2
 MIN_TOTAL_BULLETS = 22
 MAX_TOTAL_BULLETS = 26
+MAX_AUTHORITY_CONTEXT_CHARS = 16000
+MAX_METHODOLOGY_CONTEXT_CHARS = 12000
+MAX_CONTEXT_PROMPT_CHARS = 12000
+MAX_CATALOG_PROMPT_CHARS = 18000
+MAX_GRAPH_PROMPT_CHARS = 28000
+MAX_TARGET_KEYWORDS = 24
 MAX_WORKSHOP_TEXT_CHARS = 900
 MAX_WORKSHOP_REQUEST_CHARS = 3000
 MAX_WORKSHOP_REVISIONS = 100
@@ -88,6 +99,19 @@ PROTECTED_QUALIFIERS = (
     "simulation",
     "simulated",
     "demo",
+)
+TARGET_KEYWORD_TERMS = (
+    "machine learning", "deep learning", "computer vision", "software engineering",
+    "object-oriented", "distributed systems", "data structures", "algorithms",
+    "cloud computing", "natural language processing", "large language models",
+    "generative ai", "retrieval augmented generation", "statistical analysis",
+    "experimental design", "version control", "unit testing", "continuous integration",
+    "linux", "bash", "slurm", "gpu", "cuda", "c++", "c#", "python", "java", "sql",
+    "pytorch", "tensorflow", "scikit-learn", "numpy", "pandas", "fastapi", "flask",
+    "docker", "kubernetes", "aws", "gcp", "google cloud", "alloydb", "postgresql",
+    "postgres", "pgvector", "mongodb", "sqlite", "git", "github", "rest api", "api",
+    "rag", "llm", "gemini", "agentic", "inference", "training", "quantization",
+    "optimization", "hpc", "real-time", "multimodal", "data pipeline", "microservices",
 )
 PORTFOLIO_CAPS = {
     "experiences": {"entries": 3, "bullets": 6},
@@ -1260,16 +1284,137 @@ def job_context(job: Dict[str, Any]) -> Dict[str, Any]:
     return context
 
 
+def _prompt_excerpt(value: str, limit: int) -> str:
+    """Keep prompt authority bounded while retaining document conclusions."""
+    text = str(value or "")
+    if len(text) <= limit:
+        return text
+    head = max(1, round(limit * 0.72))
+    tail = max(1, limit - head)
+    return text[:head] + "\n\n[...middle of source document omitted... ]\n\n" + text[-tail:]
+
+
+def resume_authority_context(root: Optional[Path] = None) -> str:
+    """Inline the CV documents that govern judgment, not just raw bullets.
+
+    The evidence graph indexes every Markdown file, but the frontier calls also
+    need the owner's method and J&J source-of-truth rules in a compact,
+    deterministic block. This avoids asking a model to infer the methodology
+    from whichever 120 graph nodes happen to rank for a posting.
+    """
+    cv = cv_root(root or repo_root())
+    names = (
+        "RESUME_NOTES.md",
+        "JJ_RESUME_CONTEXT.md",
+        "experiences/JJ_SOURCE_OF_TRUTH.md",
+        "experiences/JJ_AI_Data_Science_Intern.md",
+        "experiences/JJ_BULLET_ITERATION_LOG.md",
+        "Victor_Jimenez_Knowledge_Base_v2.md",
+    )
+    parts: List[str] = []
+    remaining = MAX_AUTHORITY_CONTEXT_CHARS
+    for name in names:
+        if remaining <= 0:
+            break
+        try:
+            text = (cv / name).read_text(errors="replace")
+        except OSError:
+            continue
+        excerpt_limit = min(7000, remaining)
+        excerpt = _prompt_excerpt(text, excerpt_limit)
+        parts.append("# " + name + "\n" + excerpt)
+        remaining -= len(excerpt) + len(name) + 4
+    return "\n\n".join(parts)
+
+
+def _keyword_pattern(term: str) -> str:
+    escaped = re.escape(str(term or "").lower())
+    escaped = escaped.replace(r"\ ", r"\s+")
+    escaped = escaped.replace(r"\-", r"[-\s]+")
+    return r"(?<![a-z0-9])" + escaped + r"(?![a-z0-9])"
+
+
+def _keyword_present(term: str, text: str) -> bool:
+    return bool(re.search(_keyword_pattern(term), str(text or "").lower()))
+
+
+def target_keyword_strategy(
+    context: Dict[str, Any], catalog: Dict[str, Any], root: Optional[Path] = None,
+) -> Dict[str, Any]:
+    """Return exact, source-grounded ATS targets for a posting.
+
+    Capability clusters are useful for ranking but are too vague for ATS
+    feedback. This compact strategy names exact technical phrases found in the
+    captured posting, marks whether Victor can defend each one, and gives the
+    model the source IDs it may use. Unsupported terms remain visible as gaps;
+    they are never turned into invented resume claims.
+    """
+    posting = str(context.get("posting_text") or "")
+    if len(posting.strip()) < 300:
+        return {
+            "posting_available": False,
+            "reason": "No full posting text was captured; exact ATS targeting is unavailable until the posting is fetched.",
+            "terms": [],
+            "required_terms": [],
+            "preferred_terms": [],
+        }
+    cv = cv_root(root or repo_root())
+    source_texts: List[Tuple[str, str]] = []
+    for filename in ("resume.tex", "cv_full.tex"):
+        try:
+            source_texts.append(("CV/" + filename, _latex_plain((cv / filename).read_text(errors="replace"))))
+        except OSError:
+            continue
+    for entry in (catalog.get("entries") or {}).values():
+        for bullet in entry.get("bullets", []):
+            source_texts.append((str(bullet.get("id") or ""), _latex_plain(str(bullet.get("text") or ""))))
+
+    sentences = [part.strip() for part in re.split(r"[\n.!?;]+", posting) if part.strip()]
+    terms: List[Dict[str, Any]] = []
+    for term in sorted(TARGET_KEYWORD_TERMS, key=lambda value: (-len(value), value)):
+        if not _keyword_present(term, posting):
+            continue
+        matching_sources = [source_id for source_id, text in source_texts if _keyword_present(term, text)]
+        required = any(
+            _keyword_present(term, sentence)
+            and re.search(r"\b(required|must|minimum|qualifications?|you will)\b", sentence, re.I)
+            for sentence in sentences
+        )
+        preferred = any(
+            _keyword_present(term, sentence)
+            and re.search(r"\b(preferred|nice to have|bonus|ideally)\b", sentence, re.I)
+            for sentence in sentences
+        )
+        terms.append({
+            "term": term,
+            "required": bool(required),
+            "preferred": bool(preferred),
+            "supported": bool(matching_sources),
+            "source_ids": matching_sources[:6],
+        })
+        if len(terms) >= MAX_TARGET_KEYWORDS:
+            break
+    required_terms = [item["term"] for item in terms if item["required"]]
+    preferred_terms = [item["term"] for item in terms if item["preferred"]]
+    return {
+        "posting_available": True,
+        "reason": "Exact terms extracted from the captured posting and checked against the authorized CV corpus.",
+        "terms": terms,
+        "required_terms": required_terms,
+        "preferred_terms": preferred_terms,
+    }
+
+
 def resume_methodology_context(root: Optional[Path] = None) -> str:
     """Inline the two governing methods so model calls stay self-contained."""
     cv = cv_root(root or repo_root())
     parts = []
     for name in ("RESUME_TAILORING_PLAYBOOK.md", "RESUME_BULLET_METHODOLOGY.md"):
         try:
-            parts.append("# " + name + "\n" + (cv / name).read_text())
+            parts.append("# " + name + "\n" + (cv / name).read_text(errors="replace"))
         except OSError:
             continue
-    return "\n\n".join(parts)
+    return _prompt_excerpt("\n\n".join(parts), MAX_METHODOLOGY_CONTEXT_CHARS)
 
 
 def base_prompt(
@@ -1296,6 +1441,11 @@ Victor-specific guardrails:
 - Use the complete CV/RESUME_TAILORING_PLAYBOOK.md and
   CV/RESUME_BULLET_METHODOLOGY.md. Use CV/cv_full.tex as the responsibility
   bank and the experience dossiers as higher-authority factual sources.
+- The target keyword strategy below is an ATS aid, not a license to keyword
+  stuff. Use exact supported terms when they naturally describe an authorized
+  artifact; put unsupported requirements in the gap list rather than inventing
+  them. Skills may carry a supported term, but the strongest terms should also
+  appear in meaningful experience/project lines when evidence allows.
 - CV/resume.tex is authoritative for the immutable contact, education, skills,
   employer-heading metadata, and dates that the renderer copies. Treat older
   conflicting metadata in cv_full.tex or target-specific resumes as stale;
@@ -1318,6 +1468,11 @@ Victor-specific guardrails:
   distinctiveness, and interview value. Do not inflate every priority.
 - Return source IDs from the supplied catalog. Never return a LaTeX document,
   preamble, section command, margin, font size, spacing command, or page break.
+- Projects are deliberately replaceable. Choose the 4-5 strongest projects
+  from the complete source catalog for this target; do not preserve a base-CV
+  project merely because it appeared in CV/resume.tex. Reword supported
+  bullets around the posting's exact terms and explain project swaps in
+  revision_notes.
 """.strip()
     if enhance:
         role_guardrails += (
@@ -1354,12 +1509,17 @@ Victor-specific guardrails:
         "Governing methodology:\n"
         + resume_methodology_context(repo_root())[:MAX_PROMPT_CHARS]
         + "\n\n"
+        "CV authority dossier (read this before choosing or rewriting evidence):\n"
+        + resume_authority_context(repo_root())
+        + "\n\n"
         "Job context:\n"
-        + context_text[:MAX_PROMPT_CHARS]
+        + context_text[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nSource-addressable evidence catalog:\n"
-        + catalog_text[:MAX_PROMPT_CHARS]
+        + catalog_text[:MAX_CATALOG_PROMPT_CHARS]
         + "\n\nTarget-ranked evidence graph nodes (authority and claim_allowed are binding):\n"
-        + graph_text[:MAX_PROMPT_CHARS]
+        + graph_text[:MAX_GRAPH_PROMPT_CHARS]
+        + "\n\nExact ATS keyword strategy:\n"
+        + json.dumps(context.get("target_keywords") or {}, indent=2, ensure_ascii=False)
     )
 
 
@@ -1392,11 +1552,15 @@ def synthesis_prompt(
         + ("You may substantially rewrite or synthesize bullet text from the authorized source bank; preserve the primary source_id, add all supporting source IDs, and retain every scope-limiting qualifier. " if enhance else "Select source IDs verbatim; do not rewrite bullets. ")
         + "Choose the stronger defensible plan rather than averaging it.\n\n"
         "Job context:\n"
-        + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
+        + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nEvidence catalog:\n"
-        + json.dumps(catalog_for_prompt(catalog), indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
+        + json.dumps(catalog_for_prompt(catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
         + "\n\nTarget-ranked evidence graph:\n"
-        + json.dumps(evidence_context(graph, context, str(context.get("posting_text") or "")) if graph else [], indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
+        + json.dumps(evidence_context(graph, context, str(context.get("posting_text") or "")) if graph else [], indent=2, ensure_ascii=False)[:MAX_GRAPH_PROMPT_CHARS]
+        + "\n\nCV authority dossier:\n"
+        + resume_authority_context(repo_root())
+        + "\n\nExact ATS keyword strategy:\n"
+        + json.dumps(context.get("target_keywords") or {}, indent=2, ensure_ascii=False)
         + "\n\nCompeting drafts:\n"
         + json.dumps(packed, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
     )
@@ -1422,6 +1586,8 @@ def reviewer_prompt(
         "human references. You may reorder, replace, or substantially rewrite bullets using one or more authorized "
         "source IDs; source_ids must list every source bullet used to synthesize a line. Remove overlap and unsupported implications; do not solve criticism by "
         "making the page sparse. Then grade the FINAL plan you return, not the input draft. "
+        "Projects are replaceable: correct a weak project choice for the target instead of preserving the base portfolio. "
+        "Use the exact ATS keyword strategy to improve supported keyword coverage, while recording unsupported requirements as missing evidence. "
         "unsupported_claims must describe only claims still present in final_plan.\n\n"
         "Authority rule: CV/resume.tex is canonical for the immutable contact, "
         "education, skills, employer-heading metadata, and dates copied by the "
@@ -1444,13 +1610,17 @@ def reviewer_prompt(
         "Fixed rubric version: "
         + RUBRIC_VERSION
         + "\nTarget context:\n"
-        + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
+        + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nBullet provenance plan:\n"
         + json.dumps(plan or {}, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
         + "\n\nSource-addressable evidence catalog:\n"
-        + json.dumps(catalog_for_prompt(catalog or {}), indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
+        + json.dumps(catalog_for_prompt(catalog or {}), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
         + "\n\nAuthorized evidence context:\n"
-        + json.dumps(graph_context or [], indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
+        + json.dumps(graph_context or [], indent=2, ensure_ascii=False)[:MAX_GRAPH_PROMPT_CHARS]
+        + "\n\nCV authority dossier:\n"
+        + resume_authority_context(repo_root())
+        + "\n\nExact ATS keyword strategy:\n"
+        + json.dumps(context.get("target_keywords") or {}, indent=2, ensure_ascii=False)
     )
 
 
@@ -1461,17 +1631,20 @@ def line_editor_prompt(
     return (
         "You are Victor's final one-line resume editor. This request is self-contained; do not inspect the filesystem "
         "or run commands. Preserve every selected entry, bullet source_id, "
-        "evidence_id, fact, priority, and section order. Change only bullet text. For wrapped lines, cut filler "
-        "and compress clauses without losing the technical object or proof. A concise line may end early; never "
+        "evidence_id, fact, priority, and section order. Change only bullet text. For wrapped or near-wrap lines "
+        "(less than the stated safe right slack), cut filler and compress clauses without losing the technical object, "
+        "supported ATS term, or proof. A concise line may end early; never "
         "expand a bullet merely to approach the right margin. Do not pad, invent, change layout, or return LaTeX beyond inline textbf/emph. Return the complete "
         "structured plan under the same schema.\n\nTarget:\n"
-        + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
+        + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nCurrent plan:\n"
         + json.dumps(plan, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
         + "\n\nRendered bullet geometry:\n"
         + json.dumps((layout.get("horizontal") or {}).get("bullets", []), indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
         + "\n\nRelevant evidence:\n"
-        + json.dumps(evidence_context(graph, context, str(context.get("posting_text") or "")), indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
+        + json.dumps(evidence_context(graph, context, str(context.get("posting_text") or "")), indent=2, ensure_ascii=False)[:MAX_GRAPH_PROMPT_CHARS]
+        + "\n\nExact ATS keyword strategy:\n"
+        + json.dumps(context.get("target_keywords") or {}, indent=2, ensure_ascii=False)
     )
 
 
@@ -1513,7 +1686,7 @@ def workshop_ai_prompt(
         "only include suggestions when a concrete line change is warranted.\n\n"
         "Request:\n" + str(request or "").strip()[:MAX_WORKSHOP_REQUEST_CHARS]
         + "\n\nTarget line and authorized source material:\n"
-        + json.dumps(target, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
+        + json.dumps(target, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nTarget posting:\n"
         + json.dumps({
             "company": context.get("company"), "title": context.get("title"),
@@ -1521,11 +1694,15 @@ def workshop_ai_prompt(
         }, indent=2, ensure_ascii=False)
         + "\n\nMethodology:\n"
         + resume_methodology_context(repo_root())[:MAX_PROMPT_CHARS]
+        + "\n\nCV authority dossier:\n"
+        + resume_authority_context(repo_root())
         + "\n\nAuthorized evidence context:\n"
         + json.dumps(
             evidence_context(graph, context, str(context.get("posting_text") or "")) if graph else [],
             indent=2, ensure_ascii=False,
-        )[:MAX_PROMPT_CHARS]
+        )[:MAX_GRAPH_PROMPT_CHARS]
+        + "\n\nExact ATS keyword strategy:\n"
+        + json.dumps(context.get("target_keywords") or {}, indent=2, ensure_ascii=False)
     )
 
 
@@ -1632,7 +1809,7 @@ def _plan_source_signature(plan: Dict[str, Any]) -> List[Tuple[str, Tuple[str, .
 def _normalize_model_fragment(value: Any) -> str:
     if not isinstance(value, str):
         return ""
-    return (
+    normalized = (
         value.strip()
         .replace("\u2011", "-")
         .replace("\u2013", "--")
@@ -1642,7 +1819,19 @@ def _normalize_model_fragment(value: Any) -> str:
         # both LaTeX and ATS text extraction.
         .replace("\\times{}", "x")
         .replace("\\times", "x")
+        # A few older CV source lines use the invalid-but-common ``texttimes``
+        # spelling. Treat it as the same plain-text multiplication glyph before
+        # inline-command validation so a source-grounded candidate is not
+        # rejected for a formatting artifact in the evidence bank.
+        .replace("\\texttimes{}", "x")
+        .replace("\\texttimes", "x")
     )
+    # Providers sometimes preserve the words but drop a LaTeX escape from a
+    # copied currency, percentage, ampersand, hash, or underscore. These are
+    # ordinary resume prose characters here, never math/layout syntax.
+    for character in ("$", "%", "&", "#", "_"):
+        normalized = re.sub(r"(?<!\\)" + re.escape(character), "\\\\" + character, normalized)
+    return normalized
 
 
 def _unsupported_inline_commands(value: str) -> List[str]:
@@ -1699,7 +1888,11 @@ def validate_plan(
                 errors.append("unknown %s source_id: %s" % (expected_kind, entry_id))
                 continue
             if entry_id in used_entries:
-                errors.append("duplicate entry: %s" % entry_id)
+                # Reviewers occasionally repeat an entry while returning a
+                # complete corrected plan.  The source address is still
+                # unambiguous, so discard only the duplicate and preserve the
+                # rest of the safe plan with an auditable warning.
+                validation_warnings.append("dropped duplicate entry: %s" % entry_id)
                 continue
             used_entries.add(entry_id)
             bullet_bank = {item["id"]: item["text"] for item in entry.get("bullets", [])}
@@ -2035,6 +2228,90 @@ def portfolio_metrics(plan: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
+def content_change_report(
+    plan: Dict[str, Any], catalog: Dict[str, Any], tex: str,
+    keyword_strategy: Optional[Dict[str, Any]] = None,
+) -> Dict[str, Any]:
+    """Make tailoring changes inspectable instead of forcing PDF comparison."""
+    entries = catalog.get("entries") or {}
+    source_bullets = {
+        str(bullet.get("id")): _latex_plain(str(bullet.get("text") or ""))
+        for entry in entries.values()
+        for bullet in entry.get("bullets", [])
+    }
+    base_project_ids = {
+        str(entry.get("id"))
+        for entry in entries.values()
+        if entry.get("kind") == "project" and "resume.tex" in (entry.get("sources") or [])
+    }
+    selected_project_ids = [
+        str(entry.get("source_id")) for entry in plan.get("projects", [])
+    ]
+    rewritten = []
+    selected_bullet_ids = []
+    for section in ("experiences", "projects", "leadership"):
+        for entry in plan.get(section, []):
+            for bullet in entry.get("bullets", []):
+                source_id = str(bullet.get("source_id") or "")
+                selected_bullet_ids.append(source_id)
+                final_text = _latex_plain(str(bullet.get("text") or ""))
+                source_text = source_bullets.get(source_id, "")
+                supporting = [str(value) for value in (bullet.get("source_ids") or []) if str(value)]
+                if final_text != source_text or len(supporting) > 1:
+                    rewritten.append({
+                        "section": section,
+                        "source_id": source_id,
+                        "source_text": source_text,
+                        "final_text": final_text,
+                        "source_ids": supporting or [source_id],
+                        "rationale": str(bullet.get("candidate_rationale") or ""),
+                    })
+
+    keyword_terms = []
+    rendered_text = _latex_plain(tex)
+    for item in (keyword_strategy or {}).get("terms", []):
+        term = str(item.get("term") or "")
+        if not term:
+            continue
+        supported = bool(item.get("supported"))
+        rendered = _keyword_present(term, rendered_text)
+        status = "covered" if supported and rendered else "missing" if supported else "unsupported"
+        keyword_terms.append({
+            "term": term,
+            "required": bool(item.get("required")),
+            "preferred": bool(item.get("preferred")),
+            "supported": supported,
+            "rendered": rendered,
+            "status": status,
+            "source_ids": list(item.get("source_ids") or [])[:6],
+        })
+    supported_terms = [item for item in keyword_terms if item["supported"]]
+    covered_terms = [item for item in supported_terms if item["rendered"]]
+    keyword_coverage = {
+        "posting_available": bool((keyword_strategy or {}).get("posting_available")),
+        "reason": str((keyword_strategy or {}).get("reason") or ""),
+        "supported_count": len(supported_terms),
+        "covered_count": len(covered_terms),
+        "exact_coverage_percent": round(100 * len(covered_terms) / max(1, len(supported_terms))),
+        "required_terms": list((keyword_strategy or {}).get("required_terms") or []),
+        "preferred_terms": list((keyword_strategy or {}).get("preferred_terms") or []),
+        "terms": keyword_terms,
+    }
+    selected_project_set = set(selected_project_ids)
+    swapped_in = [entry_id for entry_id in selected_project_ids if entry_id not in base_project_ids]
+    swapped_out = [entry_id for entry_id in sorted(base_project_ids) if entry_id not in selected_project_set]
+    return {
+        "changed_bullet_count": len(rewritten),
+        "rewritten_bullets": rewritten,
+        "selected_bullet_count": len(selected_bullet_ids),
+        "project_swaps": {
+            "swapped_in": [str(entries.get(entry_id, {}).get("heading") or entry_id) for entry_id in swapped_in],
+            "swapped_out": [str(entries.get(entry_id, {}).get("heading") or entry_id) for entry_id in swapped_out],
+        },
+        "keyword_coverage": keyword_coverage,
+    }
+
+
 def merge_edited_bullets(candidate_plan: Dict[str, Any], edited_plan: Dict[str, Any]) -> Dict[str, Any]:
     """Apply line edits to the rich pool without discarding excluded backups."""
     merged = copy.deepcopy(candidate_plan)
@@ -2061,12 +2338,12 @@ def restore_wrapped_source_text(
     This deterministic fallback preserves facts and avoids another costly
     model call when the source bank already contains a tighter version.
     """
-    wrapped = {
+    unsafe = {
         str(item.get("source_id"))
         for item in (layout.get("horizontal") or {}).get("bullets", [])
-        if item.get("wraps") is True
+        if item.get("wraps") is True or item.get("near_wrap") is True
     }
-    if not wrapped:
+    if not unsafe:
         return plan, []
     source_text = {
         str(bullet.get("id")): str(bullet.get("text") or "")
@@ -2080,7 +2357,7 @@ def restore_wrapped_source_text(
             for bullet in entry.get("bullets", []):
                 source_id = str(bullet.get("source_id") or "")
                 approved = source_text.get(source_id, "")
-                if source_id in wrapped and approved and bullet.get("text") != approved:
+                if source_id in unsafe and approved and bullet.get("text") != approved:
                     bullet["text"] = approved
                     restored_ids.append(source_id)
     return restored, restored_ids
@@ -2691,6 +2968,7 @@ def pdf_content_bottom(pdf: Path) -> Optional[float]:
 
 
 def _latex_plain(value: str) -> str:
+    value = (value or "").replace("\\texttimes{}", "x").replace("\\texttimes", "x")
     value = re.sub(r"\\(?:textbf|emph|underline)\{([^{}]*)\}", r"\1", value or "")
     value = re.sub(r"\\[A-Za-z]+", " ", value)
     value = value.replace("\\&", "&").replace("\\%", "%").replace("\\$", "$")
@@ -2781,7 +3059,8 @@ def bullet_layout_metrics(plan: Dict[str, Any], pdf: Path) -> Dict[str, Any]:
                         "text": plain,
                         "wraps": wraps,
                         "right_slack_pt": slack,
-                        "horizontal_pass": not wraps,
+                        "near_wrap": slack < MIN_RIGHT_SLACK_PT,
+                        "horizontal_pass": not wraps and slack >= MIN_RIGHT_SLACK_PT,
                     })
                 else:
                     results.append({
@@ -2792,9 +3071,11 @@ def bullet_layout_metrics(plan: Dict[str, Any], pdf: Path) -> Dict[str, Any]:
     measurable = [item for item in results if item.get("right_slack_pt") is not None]
     return {
         "max_right_slack_pt": MAX_RIGHT_SLACK_PT,
+        "min_right_slack_pt": MIN_RIGHT_SLACK_PT,
         "measured": len(measurable),
         "bullets": results,
         "wrap_count": sum(item.get("wraps") is True for item in results),
+        "near_wrap_count": sum(item.get("near_wrap") is True for item in results),
         "underfilled_line_count": sum(item.get("right_slack_pt", -1) > MAX_RIGHT_SLACK_PT for item in measurable),
         "pass": bool(results) and all(item.get("horizontal_pass") for item in results),
     }
@@ -2935,8 +3216,11 @@ def pdf_layout(
         result["portfolio"] = portfolio_metrics(plan)
         if not result["horizontal"].get("pass"):
             result["warnings"].append(
-                "one-line bullet check failed: %s wrap(s)"
-                % result["horizontal"].get("wrap_count", 0)
+                "one-line bullet check failed: %s wrap(s), %s near-wrap(s)"
+                % (
+                    result["horizontal"].get("wrap_count", 0),
+                    result["horizontal"].get("near_wrap_count", 0),
+                )
             )
         if run_capacity_test:
             try:
@@ -3107,6 +3391,7 @@ def run_tailoring(run_dir: Path, job: Dict[str, Any], update, enhance: bool) -> 
     write_json(run_dir / "evidence_graph_context.json", graph_context)
     match = resume_match_for_job(job, repo_root(), posting_text=str(context.get("posting_text") or ""))
     context["resume_match"] = match
+    context["target_keywords"] = target_keyword_strategy(context, catalog, repo_root())
     write_json(run_dir / "job_context.json", context)
     mode_label = "enhanced" if enhance else "source-only"
     prompt = base_prompt(context, "an independent resume evidence strategist", catalog, enhance, graph=graph)
@@ -3277,6 +3562,79 @@ def run_tailoring(run_dir: Path, job: Dict[str, Any], update, enhance: bool) -> 
         unresolved.append(
             "Adversarial final plan was not applied: " + "; ".join(review_plan_errors)
         )
+    # The adversarial editor is allowed to change wording and project choices,
+    # so its corrected plan can introduce a new near-wrap after the earlier
+    # line-edit pass. Give the final plan the same measured repair opportunity
+    # before rejecting the run.
+    if enhance and not (layout.get("horizontal") or {}).get("pass"):
+        for final_round in range(1, MAX_LINE_EDIT_PASSES + 1):
+            update(
+                "final_line_editing",
+                "Repairing final-editor near-wraps against the rendered PDF (pass %s/%s)"
+                % (final_round, MAX_LINE_EDIT_PASSES),
+            )
+            label = "final_line_edit" if final_round == 1 else "final_line_edit_%s" % final_round
+            final_edit = run_provider(
+                synthesizer,
+                line_editor_prompt(context, plan, layout, graph),
+                run_dir,
+                label,
+                timeout=6 * 60,
+                schema=plan_schema(True),
+            )
+            line_edits.append(final_edit)
+            write_json(run_dir / (label + ".json"), final_edit)
+            if not final_edit.get("ok"):
+                break
+            edited, edit_errors = validate_plan(
+                final_edit.get("data") or {}, catalog, True, graph=graph
+            )
+            if edit_errors or _plan_source_signature(edited) != _plan_source_signature(plan):
+                write_json(
+                    run_dir / (label + "_errors.json"),
+                    edit_errors or ["final line editor changed selected source IDs"],
+                )
+                break
+            plan, final_packing = pack_plan_to_page(
+                merge_edited_bullets(plan, edited), catalog, run_dir / (label + "_pack")
+            )
+            packing[label + "_pack"] = final_packing
+            write_json(run_dir / "content_plan.json", plan)
+            write_json(run_dir / "layout_packing.json", packing)
+            chosen = render_plan(plan, catalog, repo_root())
+            (run_dir / "resume.tex").write_text(chosen)
+            compiled = compile_resume(run_dir)
+            layout = pdf_layout(run_dir, compiled, plan=plan)
+            plan, restored_source_ids = restore_wrapped_source_text(plan, layout, catalog)
+            if restored_source_ids:
+                packing[label + "_source_reversions"] = restored_source_ids
+                write_json(run_dir / "content_plan.json", plan)
+                write_json(run_dir / "layout_packing.json", packing)
+                chosen = render_plan(plan, catalog, repo_root())
+                (run_dir / "resume.tex").write_text(chosen)
+                compiled = compile_resume(run_dir)
+                layout = pdf_layout(run_dir, compiled, plan=plan)
+            if (layout.get("horizontal") or {}).get("pass"):
+                break
+        preview = render_preview(run_dir)
+        deterministic = deterministic_review(context, chosen, layout)
+    final_horizontal = layout.get("horizontal") or {}
+    if not final_horizontal.get("pass"):
+        rejection = {
+            "reason": "Final resume rejected by the hard one-line bullet gate",
+            "safe_right_slack_pt": MIN_RIGHT_SLACK_PT,
+            "wrap_count": final_horizontal.get("wrap_count", 0),
+            "near_wrap_count": final_horizontal.get("near_wrap_count", 0),
+            "bullets": [
+                item for item in final_horizontal.get("bullets", [])
+                if item.get("wraps") is True or item.get("near_wrap") is True or not item.get("horizontal_pass")
+            ],
+        }
+        write_json(run_dir / "layout_rejection.json", rejection)
+        raise RuntimeError(
+            "final resume rejected: %s wrap(s), %s near-wrap(s); see layout_rejection.json"
+            % (rejection["wrap_count"], rejection["near_wrap_count"])
+        )
     scored = score_review(review, deterministic)
     synthesis_data = plan
     provider_records = [
@@ -3303,6 +3661,9 @@ def run_tailoring(run_dir: Path, job: Dict[str, Any], update, enhance: bool) -> 
         "excluded_evidence": synthesis_data.get("excluded_evidence", []),
         "revision_notes": synthesis_data.get("revision_notes", []),
         "validation_warnings": synthesis_data.get("validation_warnings", []),
+        "content_changes": content_change_report(
+            plan, catalog, chosen, context.get("target_keywords")
+        ),
         "content_plan": {
             "experiences": synthesis_data.get("experiences", []),
             "projects": synthesis_data.get("projects", []),
@@ -3497,6 +3858,25 @@ function showView(view){const bank=view==='library',workshop=view==='workshop';$
 document.addEventListener('click',async event=>{const open=event.target.closest('[data-open-workshop]');if(open){event.preventDefault();return openWorkshop(open.dataset.openWorkshop||open.dataset.run);}const button=event.target.closest('[data-view-posting]');if(!button)return;const card=button.closest('.resume-card'),panel=card.querySelector('.posting-snapshot');if(!panel.classList.contains('hidden')){panel.classList.add('hidden');button.textContent='View posting snapshot';return;}button.disabled=true;try{const r=await fetch(button.dataset.posting),data=await r.json();if(!r.ok)throw new Error(data.error||'Posting snapshot unavailable');panel.innerHTML=`<strong>Saved posting snapshot</strong><pre>${esc(data.posting_text||'Only posting metadata was available for this run.')}</pre>`;panel.classList.remove('hidden');button.textContent='Hide posting snapshot';}catch(error){panel.textContent=error.message;panel.classList.remove('hidden');}finally{button.disabled=false;}});
 $('search').oninput=()=>{clearTimeout(window.searchTimer);window.searchTimer=setTimeout(loadJobs,250)};$('sort').onchange=loadJobs;$('librarySearch').oninput=renderLibrary;$('libraryMode').onchange=renderLibrary;$('analyzeMatch').onclick=analyzeMatch;$('refreshEvidence').onclick=refreshEvidence;$('strict').onclick=()=>start('strict');$('dream').onclick=()=>start('dream');$('tailorTab').onclick=()=>showView('tailor');$('libraryTab').onclick=()=>showView('library');$('selectedLibrary').onclick=()=>showView('library');$('allSaved').onclick=()=>showView('library');$('backToTailor').onclick=()=>showView('tailor');$('workshopBack').onclick=()=>showView('library');$('workshopTailor').onclick=()=>showView('tailor');$('workshopAsk').onclick=()=>askWorkshop('');Promise.all([loadJobs(),loadLibrary()]);
 </script></main></body></html>"""
+
+
+UI_HTML = UI_HTML.replace(
+    "function showView(view){",
+    """const baseRenderReport=renderReport;
+renderReport=function(status){
+  baseRenderReport(status);
+  const report=status.report||{},changes=report.content_changes||{},swaps=changes.project_swaps||{},ats=changes.keyword_coverage||{};
+  if(!report.content_changes)return;
+  let extra=`<div class=\"match-card\"><strong>What changed</strong><div class=\"meta\">${changes.changed_bullet_count||0} bullets rewritten · ${swaps.swapped_in?.length||0} projects swapped in · ${swaps.swapped_out?.length||0} base projects swapped out</div>`;
+  if(swaps.swapped_in?.length)extra+=`<div class=\"meta\"><strong>Added:</strong> ${esc(swaps.swapped_in.join(' · '))}</div>`;
+  if(swaps.swapped_out?.length)extra+=`<div class=\"meta\"><strong>Removed:</strong> ${esc(swaps.swapped_out.join(' · '))}</div>`;
+  extra+='</div>';
+  if(ats.posting_available)extra+=`<p><strong>ATS terms:</strong> ${ats.covered_count||0}/${ats.supported_count||0} supported exact terms rendered (${ats.exact_coverage_percent||0}%)</p>`;
+  else if(ats.reason)extra+=`<p class=\"meta\"><strong>ATS:</strong> ${esc(ats.reason)}</p>`;
+  const anchor=$(\'report\').querySelector(\'pre\');if(anchor)anchor.insertAdjacentHTML(\'beforebegin\',extra);else $(\'report\').insertAdjacentHTML(\'beforeend\',extra);
+};
+function showView(view){""",
+)
 
 
 class StudioHandler(BaseHTTPRequestHandler):

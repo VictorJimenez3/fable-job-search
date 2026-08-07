@@ -254,6 +254,13 @@ Before changing the radar, read these in order:
   revisions, and history rollback creates a new revision without overwriting
   the original. The current machine exposes Codex CLI and Claude Code lanes;
   Luna remains an optional future lane if its local executable is installed.
+- **Resume Studio ATS/change proof is shipped (DECISION #77):** current
+  generation prompts inline the bounded CV authority dossier and exact posting
+  keyword strategy, permit target-aware project swaps, and report rewritten
+  bullets plus keyword coverage. The final PDF gate rejects wraps and any line
+  with less than 12pt of right-edge safety; failed runs remain inspectable
+  instead of being labeled complete. Existing historical PDFs are not
+  retroactively regenerated; start a new run to exercise this contract.
 - **Radar score v8 is shipped (DECISIONS #70-71):** records retain uncapped raw
   utility, calibrated base, dimension values, reasons, and final score. Goal
   companies can reach 100, but posting wording separates nearby roles; cited

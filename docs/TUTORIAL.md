@@ -88,6 +88,13 @@ the previous result. New PDFs use a company-identifiable name such as
 `mayo_clinic_resume_ai.pdf`, and each new run stores a private posting snapshot
 beside its artifacts.
 
+For an AI-enhanced run, the report's **What changed** block lists rewritten
+source lines and project swaps, while **ATS terms** shows exact supported terms
+that made it into the rendered draft. If the posting text was not captured,
+the report says so instead of pretending the draft was keyword-tailored. A
+completed draft must also leave at least 12pt of right-edge safety on every
+bullet; near-wraps are rejected and remain visible as failed run diagnostics.
+
 ### Workshop editing
 
 Open **Workshop** from a saved run in Resume bank. Education and Technical

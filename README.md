@@ -265,6 +265,14 @@ adversarial pass must return an applied corrected plan rather than a complaint
 about an already-rendered draft. The reported Resume Craft score is separate
 from hard factuality, eligibility, and layout gates.
 
+Enhancement prompts also receive the CV authority dossier and an exact-term ATS
+strategy from the captured posting. They may swap projects and rewrite bullets
+around supported posting language, but unsupported requirements remain visible
+gaps rather than invented claims. Completed reports show rewritten lines,
+project swaps, and rendered keyword coverage. A bullet with less than 12pt of
+right-edge safety is treated as a near-wrap and rejected, even if the PDF
+extractor technically reports one line.
+
 Use **Resume bank** in the Studio header to browse every saved run and legacy
 experiment. Each new run keeps a private snapshot of the selected posting,
 remains visible after switching to another role, and names its PDF with the

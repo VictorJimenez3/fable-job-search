@@ -128,6 +128,18 @@ def test_enhanced_plan_can_synthesize_multiple_authorized_source_lines():
     ]
 
 
+def test_validation_drops_duplicate_entry_with_auditable_warning():
+    catalog = _fixture_catalog()
+    plan = _fixture_plan()
+    plan["leadership"].append(json.loads(json.dumps(plan["leadership"][0])))
+    normalized, errors = rs.validate_plan(plan, catalog, enhance=False)
+    assert not errors
+    assert len(normalized["leadership"]) == 1
+    assert normalized["validation_warnings"] == [
+        "dropped duplicate entry: leadership:item0"
+    ]
+
+
 def test_review_schema_requires_a_complete_corrected_plan():
     schema = rs.reviewed_plan_schema(True)
     assert "final_plan" in schema["required"]
@@ -235,6 +247,9 @@ def test_poc_and_proof_of_concept_are_equivalent_protected_qualifiers():
 
 def test_model_math_command_is_normalized_and_other_inline_commands_fail():
     assert rs._normalize_model_fragment("Delivered 3\\times{} faster retrieval") == "Delivered 3x faster retrieval"
+    assert rs._normalize_model_fragment("Delivered 3\\texttimes{} faster retrieval") == "Delivered 3x faster retrieval"
+    assert rs._normalize_model_fragment("Received $8,000 and improved 94%") == "Received \\$8,000 and improved 94\\%"
+    assert rs._normalize_model_fragment("A & B with a_b") == "A \\& B with a\\_b"
     assert rs._unsupported_inline_commands("\\textbf{Built} with \\emph{care}") == []
     assert rs._unsupported_inline_commands("Used \\sqrt{n}") == ["sqrt"]
 
@@ -522,6 +537,73 @@ def test_short_one_line_bullet_is_not_failed_for_unused_right_margin(monkeypatch
     result = rs.bullet_layout_metrics(plan, tmp_path / "resume.pdf")
     assert result["underfilled_line_count"] == 1
     assert result["pass"] is True
+
+
+def test_near_wrap_bullet_fails_with_safe_right_slack(monkeypatch, tmp_path):
+    monkeypatch.setattr(
+        rs,
+        "pdf_line_geometry",
+        lambda pdf: {
+            "page_width": 612.0,
+            "lines": [
+                {
+                    "text": "Built concise system",
+                    "x_min": 60.0,
+                    "x_max": 598.5,
+                    "y_min": 100.0,
+                    "y_max": 109.0,
+                }
+            ],
+        },
+    )
+    result = rs.bullet_layout_metrics(
+        {"experiences": [{"bullets": [{"source_id": "b1", "text": "Built concise system"}]}]},
+        tmp_path / "resume.pdf",
+    )
+    assert result["near_wrap_count"] == 1
+    assert result["pass"] is False
+    assert result["bullets"][0]["horizontal_pass"] is False
+
+
+def test_target_keyword_strategy_marks_supported_and_unsupported_terms(tmp_path):
+    cv = tmp_path / "CV"
+    cv.mkdir()
+    (cv / "resume.tex").write_text("Python SQL PyTorch\\n")
+    (cv / "cv_full.tex").write_text("Python SQL PyTorch\\n")
+    context = {
+        "company": "Example",
+        "title": "ML Engineer",
+        "posting_text": "Qualifications: required Python, SQL, PyTorch, and CUDA experience. "
+        + "The engineer will build reliable systems, collaborate with teams, and document technical work. "
+        + "This posting includes additional context so the captured description is long enough for full-posting analysis. "
+        + "Candidates should explain design decisions, test changes, and communicate tradeoffs clearly to reviewers.",
+    }
+    strategy = rs.target_keyword_strategy(context, _fixture_catalog(), tmp_path)
+    terms = {item["term"]: item for item in strategy["terms"]}
+    assert terms["python"]["supported"] is True
+    assert terms["pytorch"]["supported"] is True
+    assert terms["cuda"]["supported"] is False
+    assert "python" in strategy["required_terms"]
+
+
+def test_content_change_report_exposes_rewrites_and_project_swaps():
+    catalog = _fixture_catalog()
+    catalog["entries"]["project:item0"]["sources"] = ["resume.tex"]
+    catalog["entries"]["project:item1"]["sources"] = ["resume.tex"]
+    catalog["entries"]["project:item2"]["sources"] = ["cv_full.tex"]
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    plan["projects"] = [plan["projects"][1]]
+    plan["projects"].append({
+        "source_id": "project:item2",
+        "bullets": [{"source_id": "project:item2:b1", "text": catalog["entries"]["project:item2"]["bullets"][0]["text"], "priority": 90}],
+        "why": "better target fit",
+    })
+    plan["experiences"][0]["bullets"][0]["text"] = "\\textbf{Rewritten evidence line}"
+    changes = rs.content_change_report(plan, catalog, "Python SQL")
+    assert changes["changed_bullet_count"] == 1
+    assert changes["project_swaps"]["swapped_in"] == ["\\textbf{Project 2} | \\emph{Python}"]
+    assert changes["project_swaps"]["swapped_out"] == ["\\textbf{Project 0} | \\emph{Python}"]
 
 
 def test_renderer_keeps_canonical_prefix_and_company_first(tmp_path):

@@ -231,6 +231,13 @@ qualifiers survive enhancement, and compile errors cannot trigger content
 deletion. Resume Craft is a fixed weighted rubric; factuality, eligibility,
 and layout are separate non-negotiable gates.
 
+The current enhancement contract also receives the bounded CV authority dossier
+and exact-term ATS strategy from the captured posting. It may swap projects and
+rewrite supported evidence around target language; reports expose rewritten
+lines, project swaps, and rendered coverage. Near-wrap lines (under 12pt of
+right-edge safety) are rejected along with actual wraps, so historical PDFs do
+not masquerade as output from the current pipeline.
+
 Resume Studio workshop — ✅ SHIPPED (DECISION #76). Completed runs now expose
 editable education, skills, experience, project, and leadership lines; AI may
 return multiple source-grounded candidates for an explicit user request; and

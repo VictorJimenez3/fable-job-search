@@ -1155,3 +1155,23 @@ private PDF/preview directory, leaving the original company-named run artifact
 untouched. The contact header and canonical visual template remain protected.
 The available local provider lanes are Codex CLI and Claude Code; a Luna lane
 is optional and is not claimed when no local `luna` executable exists.
+
+## 77. Resume Studio must prove target changes and reject near-wraps (2026-08-07)
+
+The prior generation contract could produce a polished-looking PDF whose
+content was effectively the unchanged base resume, and its geometry check
+called a line with only a few points of remaining width a pass. That is not a
+useful tailoring result. Every current run now receives a compact authority
+dossier from the CV methodology, notes, J&J source-of-truth, experience, and
+knowledge documents, plus an exact-term ATS strategy extracted from the saved
+posting. Enhancement prompts may replace projects and rewrite bullets around
+supported terms; unsupported terms remain explicit gaps rather than invented
+claims.
+
+Reports expose rewritten source lines, project swaps, and rendered keyword
+coverage so the user can see what changed without guessing from two PDFs. The
+final layout gate requires every measured bullet to be one line with at least
+12pt of right-edge safety. Wrapped or near-wrapped output is rejected after
+source fallback and line editing, rather than being presented as a completed
+resume. This remains a content-quality gate; the canonical human PDFs and
+their source files are untouched.
