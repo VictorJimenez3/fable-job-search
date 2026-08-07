@@ -252,15 +252,17 @@ The role list can be sorted by **Best Radar score**, **Newest**, or the private
 **Resume Match** rubric. Match analysis reports requirement coverage, evidence
 strength, domain relevance, eligibility, distinctiveness, confidence, gaps,
 and source IDs; selected roles can be rechecked against the full posting.
-Generation asks for a selective evidence portfolio, then keeps 16–20 distinct
-bullets across at most three experiences, three projects, and one leadership
-entry. Deterministic backups are used only when a draft is genuinely sparse;
-they do not pad a good shortlist. Actual PDF line widths hard-fail wrapping,
-while bottom density and an extra-bullet probe remain diagnostics against
-extreme whitespace. Unsupported inline LaTeX and lost scope qualifiers such as
+Generation asks for a full ranked evidence portfolio, then keeps 22–26 distinct
+bullets across three experiences, four projects, and one or two leadership
+entries. Deterministic backups are used only when a draft falls below that
+acceptance floor; they do not reintroduce evidence omitted from a complete
+plan. Actual PDF line widths hard-fail wrapping, and bottom density is a hard
+comparison against the immutable human-authored reference. Unsupported inline
+LaTeX and lost scope qualifiers such as
 `synthetic`, `prototype`, or `POC` are repaired or rejected before packing. The
-reported Resume Craft score is separate from hard factuality, eligibility, and
-layout gates.
+adversarial pass must return an applied corrected plan rather than a complaint
+about an already-rendered draft. The reported Resume Craft score is separate
+from hard factuality, eligibility, and layout gates.
 
 For a disposable human-feedback batch across varied roles, use the calibration
 lab:

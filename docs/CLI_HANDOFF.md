@@ -217,30 +217,32 @@ Before changing the radar, read these in order:
   target artifact. Providers return source-addressed content plans, never full
   LaTeX. The renderer preserves the baseline's header, education, skills,
   margins, typography, and spacing, uses company-first employer headings, and
-  enforces a 16–20-bullet, nonredundant interview portfolio with no wrapped
-  bullets or formatting drift. It does not pad good plans to the right or
-  bottom margin. Reports record the fixed
+  enforces a 22–26-bullet, nonredundant interview portfolio across three
+  experiences and four projects with no wrapped bullets, excessive bottom
+  whitespace, or formatting drift. Reports record the fixed
   reviewer score, exclusions, provider calls, and emitted Codex token usage;
   totals are marked incomplete when a provider omits a call's footer.
   Live validation on 2026-07-31 found the Codex subscription session usable;
   the installed Claude client returned an organization-level 403 stating that
   Claude Code subscription access is disabled. The harness fell back to Codex
   and did not request or consume an Anthropic API key.
-- **Resume intelligence v1 is shipped locally (DECISIONS #72-73):** the Studio
+- **Resume intelligence v1 is shipped locally (DECISIONS #72-74):** the Studio
   builds a source-authority evidence graph from the ignored CV corpus, caches
   public GitHub/Devpost material as corroboration only, and exposes Best,
   Newest, and Resume Match sorts. The full-posting match is fixed-weight and
-  source-explained. Generation produces a selective candidate portfolio and a
-  deterministic curator keeps 16–20 distinct bullets across at most three
-  experiences, three projects, and one leadership entry. It measures actual
-  PDF bullet geometry; bottom density and one-extra-bullet capacity are
-  diagnostics rather than padding targets. Scope qualifiers are protected and
-  compilation errors stop packing instead of deleting content. Resume Craft
-  cannot override factuality, eligibility, or layout gates.
+  source-explained. Generation produces a full ranked candidate portfolio and
+  a deterministic curator keeps 22–26 distinct bullets across three
+  experiences, four projects, and one or two leadership entries. It measures
+  actual PDF bullet geometry and hard-fails excessive bottom whitespace. The
+  paid adversarial pass must return an applied corrected plan, while wrapped
+  rewrites first fall back to approved source text without another model call.
+  Scope qualifiers are protected and compilation errors stop packing instead
+  of deleting content. Resume Craft cannot override factuality, eligibility,
+  or layout gates.
 - **Luna handoff after the 2026-08-06 Sol-high calibration:** add bullet-level
   lock/unlock controls and revision history to the existing local Studio, then
-  add a one-click “revise from review priorities” thread that preserves source
-  IDs and protected qualifiers. Keep the first pass deterministic/UI-focused;
+  add an explicit resume-library/preview surface that separates immutable human
+  references from generated runs. Keep the first pass deterministic/UI-focused;
   do not change rubric weights, evidence authority, portfolio caps, or CV facts.
   Add tests for lock persistence, history rollback, and source-signature
   preservation. Reuse the calibration lab for PDF inspection; do not rerun the

@@ -99,11 +99,13 @@ after selecting a role, **Analyze full posting match** fetches the job page and
 recomputes the fixed rubric when readable. The result shows capability
 coverage, gaps, evidence confidence, and private source-backed score.
 
-The generator does not force every role to use the same entries. It creates a
-strongest-first shortlist, then enforces a 16–20-bullet interview portfolio
-with at most three experiences, three projects, and one leadership entry.
-Every bullet must stay on one visual line; a concise line may end early. Bottom
-density and an extra-bullet compile are diagnostics, not instructions to pad.
+The generator does not force every role to use the same evidence. It creates a
+strongest-first pool, then enforces a 22–26-bullet interview portfolio with
+three experiences, four projects, and one or two leadership entries. Every
+bullet must stay on one visual line, and the page must reach the same bottom
+region as the immutable human reference. The adversarial final pass applies a
+corrected source-addressed plan before the PDF is accepted; it cannot fix a
+weak result by deleting its way to a sparse page.
 If an enhancement drops a scope-limiting source fact such as `synthetic`,
 `prototype`, or `POC`, that bullet reverts to approved source wording. Resume
 Craft measures the argument and writing; factuality, eligibility, and layout

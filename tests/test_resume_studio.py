@@ -30,14 +30,14 @@ def test_provider_plan_schema_cannot_return_a_latex_document():
         assert "projects" in properties
 
 
-def test_plan_schema_requests_a_selective_ranked_shortlist():
+def test_plan_schema_requests_a_full_ranked_candidate_pool():
     strict = rs.plan_schema(False)
-    assert strict["properties"]["experiences"]["minItems"] == 2
-    assert strict["properties"]["experiences"]["maxItems"] == 4
-    assert strict["properties"]["projects"]["minItems"] == 1
-    assert strict["properties"]["projects"]["maxItems"] == 4
-    assert strict["properties"]["leadership"]["minItems"] == 0
-    assert strict["properties"]["leadership"]["maxItems"] == 1
+    assert strict["properties"]["experiences"]["minItems"] == 3
+    assert strict["properties"]["experiences"]["maxItems"] == 3
+    assert strict["properties"]["projects"]["minItems"] == 4
+    assert strict["properties"]["projects"]["maxItems"] == 5
+    assert strict["properties"]["leadership"]["minItems"] == 1
+    assert strict["properties"]["leadership"]["maxItems"] == 2
     strict_bullet = strict["properties"]["experiences"]["items"]["properties"]["bullets"]["items"]
     assert "priority" in strict_bullet["properties"]
 
@@ -45,18 +45,27 @@ def test_plan_schema_requests_a_selective_ranked_shortlist():
     assert {"source_id", "text", "evidence_ids", "candidate_rationale"}.issubset(enhanced_bullet["required"])
 
 
+def test_review_schema_requires_a_complete_corrected_plan():
+    schema = rs.reviewed_plan_schema(True)
+    assert "final_plan" in schema["required"]
+    final_plan = schema["properties"]["final_plan"]
+    assert final_plan["properties"]["experiences"]["minItems"] == 3
+    assert final_plan["properties"]["projects"]["minItems"] == 4
+    assert final_plan["properties"]["leadership"]["minItems"] == 1
+
+
 def _fixture_catalog():
     entries = {}
-    for kind, count in (("experience", 3), ("project", 3), ("leadership", 1)):
+    for kind, count in (("experience", 3), ("project", 4), ("leadership", 1)):
         for index in range(count):
             entry_id = "%s:item%s" % (kind, index)
             entry = {
                 "id": entry_id,
                 "kind": kind,
                 "bullets": [
-                    {"id": "%s:b1" % entry_id, "text": "\\textbf{Built item %s} with evidence" % index},
-                    {"id": "%s:b2" % entry_id, "text": "\\textbf{Improved item %s} with scope" % index},
-                    {"id": "%s:b3" % entry_id, "text": "\\textbf{Presented item %s} to stakeholders" % index},
+                    {"id": "%s:b1" % entry_id, "text": "\\textbf{Built %s item %s} with evidence" % (kind, index)},
+                    {"id": "%s:b2" % entry_id, "text": "\\textbf{Improved %s workflow} across %s systems" % (kind, index + 10)},
+                    {"id": "%s:b3" % entry_id, "text": "\\textbf{Presented %s findings} to %s stakeholders" % (kind, index + 20)},
                 ],
             }
             if kind == "project":
@@ -90,7 +99,7 @@ def _fixture_plan():
         "selected_evidence": [],
         "excluded_evidence": [],
         "experiences": selected("experience", 3, 3),
-        "projects": selected("project", 3, 2),
+        "projects": selected("project", 4, 2),
         "leadership": selected("leadership", 1, 1),
         "revision_notes": [],
     }
@@ -183,16 +192,16 @@ def test_unknown_enhanced_citation_is_dropped_when_authoritative_source_remains(
     assert any("dropped unknown evidence" in warning for warning in normalized["validation_warnings"])
 
 
-def test_candidate_expansion_preserves_complete_selective_plan_without_padding():
+def test_candidate_expansion_builds_balanced_reference_sized_pool():
     catalog = _fixture_catalog()
     plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
     assert not errors
     expanded = rs.expand_candidate_portfolio(plan, catalog, enhance=True)
     assert rs.portfolio_metrics(expanded)["total_bullets"] == rs.MIN_TOTAL_BULLETS
-    assert expanded == plan
+    assert all(len(entry["bullets"]) == 3 for entry in expanded["projects"])
 
 
-def test_candidate_expansion_adds_authorized_backup_only_below_minimum():
+def test_candidate_expansion_adds_authorized_source_backups():
     catalog = _fixture_catalog()
     plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
     assert not errors
@@ -217,24 +226,58 @@ def test_semantic_duplicate_with_abbreviated_unit_is_detected():
     )
 
 
+def test_same_entry_repeated_metric_and_proof_is_detected():
+    assert rs._same_entry_resume_bullet(
+        "Translated 40+ clinician interviews into four hardware revisions",
+        "Led market validation through 40+ interviews, shaping the product roadmap",
+    )
+    assert rs._same_entry_resume_bullet(
+        "Engineered posture pipeline from 10,000+ calibration samples",
+        "Designed calibration workflow collecting 10,000+ motion samples",
+    )
+    assert not rs._same_entry_resume_bullet(
+        "Led a 3-person team building an AlloyDB foundation",
+        "Unified 3 AI systems into one conversation timeline",
+    )
+
+
 def test_target_priority_outweighs_generic_technical_tiebreakers():
     target_specific = {"priority": 90, "text": "Resolved biomedical version conflicts via Pandas/SQL"}
     generic = {"priority": 87, "text": "Engineered modular API cloud system architecture"}
     assert rs._bullet_value(target_specific) > rs._bullet_value(generic)
 
 
+def test_human_reference_density_contract_is_not_sparse():
+    assert rs.MAX_DENSITY_GAP_PT == 24.0
+    assert rs.MIN_TOTAL_BULLETS == 22
+    assert rs.MAX_TOTAL_BULLETS == 26
+
+
+def test_curator_restores_canonical_experience_order():
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    plan["experiences"].reverse()
+    curated = rs.curate_candidate_portfolio(plan, catalog)
+    assert [entry["source_id"] for entry in curated["experiences"]] == [
+        "experience:item0",
+        "experience:item1",
+        "experience:item2",
+    ]
+
+
 def test_methodology_curator_caps_density_sorts_strength_and_removes_duplicates():
-    plan = _fixture_plan()
-    duplicate = json.loads(json.dumps(plan["experiences"][0]["bullets"][0]))
-    duplicate["source_id"] = "experience:item0:duplicate"
-    duplicate["text"] = "\\textbf{Built an item 0} with evidence"
-    duplicate["priority"] = 1
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    plan = rs.expand_candidate_portfolio(plan, catalog, enhance=True)
     for entry in plan["experiences"]:
         for index, bullet in enumerate(entry["bullets"]):
-            bullet["text"] = "\\textbf{Built item %s-%s} with evidence and scope" % (
-                entry["source_id"], index
-            )
             bullet["priority"] = 90 - index
+    duplicate = json.loads(json.dumps(plan["experiences"][0]["bullets"][0]))
+    duplicate["source_id"] = "experience:item0:duplicate"
+    duplicate["text"] = duplicate["text"].replace("Built item", "Built an item")
+    duplicate["priority"] = 1
     plan["experiences"][0]["bullets"].append(duplicate)
     plan["projects"].append(
         {
@@ -248,14 +291,15 @@ def test_methodology_curator_caps_density_sorts_strength_and_removes_duplicates(
     assert metrics["pass"] is True
     assert metrics["total_bullets"] <= rs.MAX_TOTAL_BULLETS
     assert len(curated["experiences"]) <= 3
-    assert len(curated["projects"]) <= 3
-    assert len(curated["leadership"]) <= 1
-    assert all(len(entry["bullets"]) <= 4 for entry in curated["experiences"])
-    assert all(len(entry["bullets"]) <= 2 for entry in curated["projects"])
+    assert len(curated["projects"]) <= 4
+    assert len(curated["leadership"]) <= 2
+    assert all(len(entry["bullets"]) <= 6 for entry in curated["experiences"])
+    assert all(len(entry["bullets"]) <= 3 for entry in curated["projects"])
 
 
 def test_packer_never_deletes_content_to_recover_from_compile_error(monkeypatch, tmp_path):
     plan = _fixture_plan()
+    original_total = rs.portfolio_metrics(plan)["total_bullets"]
     catalog = _fixture_catalog()
     monkeypatch.setattr(
         rs,
@@ -271,7 +315,7 @@ def test_packer_never_deletes_content_to_recover_from_compile_error(monkeypatch,
         assert "syntax error as page overflow" in str(exc)
     else:
         raise AssertionError("compile failure should stop packing")
-    assert rs.portfolio_metrics(plan)["total_bullets"] == rs.MIN_TOTAL_BULLETS
+    assert rs.portfolio_metrics(plan)["total_bullets"] == original_total
 
 
 def test_short_one_line_bullet_is_not_failed_for_unused_right_margin(monkeypatch, tmp_path):
@@ -358,6 +402,37 @@ def test_prompt_applies_ticc_rule_only_to_johnson_context():
     assert "TICC is not a priority" in jnj
     assert "do not apply Johnson & Johnson-specific exclusions" in bms
     assert "Never return a LaTeX document" in jnj
+
+
+def test_reviewer_prompt_edits_the_final_plan_without_sparsifying():
+    prompt = rs.reviewer_prompt(
+        {"company": "Mayo Clinic"},
+        "proposed tex",
+        plan=_fixture_plan(),
+        graph_context=[],
+        catalog=_fixture_catalog(),
+    )
+    assert "complete, strongest-first replacement plan" in prompt
+    assert "do not solve criticism by making the page sparse" in prompt
+    assert "grade the FINAL plan" in prompt
+
+
+def test_wrapped_enhancement_restores_approved_source_text():
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    bullet = plan["projects"][0]["bullets"][0]
+    bullet["text"] = "An overlong enhanced rewrite that wrapped"
+    layout = {
+        "horizontal": {
+            "bullets": [{"source_id": bullet["source_id"], "wraps": True}]
+        }
+    }
+    restored, restored_ids = rs.restore_wrapped_source_text(plan, layout, catalog)
+    assert restored_ids == [bullet["source_id"]]
+    assert restored["projects"][0]["bullets"][0]["text"] == catalog["entries"][
+        "project:item0"
+    ]["bullets"][0]["text"]
 
 
 def test_job_search_and_sort(tmp_path):

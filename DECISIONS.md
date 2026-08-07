@@ -1088,3 +1088,36 @@ an affected bullet reverts to authorized source wording and records a warning.
 Historical target resumes are outputs rather than evidence-bank inputs, and
 the canonical `CV/resume.tex` remains authoritative for immutable contact,
 education, skills, employer-heading metadata, and dates.
+
+## 74. Human-reference fullness and applied final review supersede the sparse shortlist (2026-08-06)
+
+Decision #73 failed its intended outcome. The 16–20-bullet limit and 120-point
+bottom-gap tolerance accepted generated resumes with 17–18 content bullets,
+roughly 54 points of visible unused space, and less meaningful evidence than
+either immutable human-authored reference. A passing process did not make
+those artifacts usable.
+
+Resume Studio now treats `CV/resume.pdf` and `CV/tldp_resume.pdf` as immutable
+quality references as well as formatting references. The final portfolio must
+contain 22–26 distinct bullets, preserve all three established experiences,
+retain four complementary projects and at least one leadership entry, and end
+within 24 PDF points of the general reference. Every bullet remains one visual
+line. Fullness must come from additional source-grounded interview evidence,
+never filler, duplicate phrasings, font reduction, or margin changes.
+
+The adversarial model call is now a final editor rather than a post-hoc
+commentator. It must return a complete corrected source-addressed plan, which
+is validated, packed, rendered, and applied before the run is scored. A
+complete 22+-bullet plan is not automatically expanded, so deterministic
+backups cannot silently restore evidence the final editor excluded. If an
+enhanced line wraps, approved source wording is restored before considering
+another model call. The final editor uses medium reasoning by default while
+the strategist remains high. The strategist receives the governing
+methodology inline, and both calls receive authorized evidence inline so they
+do not spend subscription context rereading the repository. The final editor
+reviews the structured plan rather than duplicating the full LaTeX document.
+
+The corrective Mayo case rendered 23 meaningful bullets across three
+experiences, four projects, and leadership; it had zero wraps, a 2.25-point
+bottom gap, unchanged style, and all factual, target-fit, evidence, clarity,
+portfolio, eligibility, and layout gates passed under `resume-review-v4`.
