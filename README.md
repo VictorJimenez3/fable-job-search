@@ -352,8 +352,11 @@ Optional upgrades:
   Provider/schema failures are marked retryable with exponential backoff, and
   each checkpoint reports ready, pending, retry-waiting, and error counts.
 - Prefer Google Workspace to Notion? The Google Sheets tracker adapter is
-  complete; its one-time OAuth activation is documented in
-  [docs/GOOGLE_SHEETS_SETUP.md](docs/GOOGLE_SHEETS_SETUP.md).
+  complete. Run `python -m radar.main create-google-tracker` once to create the
+  formatted Applications/User Applications workbook. On the Vercel platform,
+  any GitHub-signed-in user can then save, apply, or mark Maybe into rows keyed
+  to their own GitHub login; the backend never exposes another user's rows.
+  Setup is documented in [docs/GOOGLE_SHEETS_SETUP.md](docs/GOOGLE_SHEETS_SETUP.md).
 - `GOOGLE_CSE_KEY` + `GOOGLE_CSE_ID` (free: [programmablesearchengine.google.com](https://programmablesearchengine.google.com)
   → create engine searching `linkedin.com/posts`, then get an API key at
   [developers.google.com/custom-search](https://developers.google.com/custom-search/v1/introduction))

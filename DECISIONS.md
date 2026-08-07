@@ -1256,3 +1256,22 @@ will sponsor or that a future petition will succeed. The official source is
 the [DOL OFLC performance-data page](https://www.dol.gov/agencies/eta/foreign-labor/performance).
 
 Semantic/vector RAG remains intentionally parked and is not part of this change.
+
+## 84. GitHub identity can scope a private shared Google tracker (2026-08-07)
+
+The existing Google Sheets adapter remains the owner/fork automation path, but
+the Vercel platform now has a separate per-user tracker path. GitHub OAuth
+authenticates identity; it does not grant Google access. A single owner-held
+Google refresh token stays server-side, and the private `User Applications`
+tab stores a row key of `GitHub User + Job Radar ID`. The backend filters reads
+to the signed-in login and accepts only save, applied, Maybe, and archive
+actions for that login. No user action commits to the public repository or
+touches another user's tracker rows.
+
+The workbook is created explicitly by `create-google-tracker`, with separate
+Applications, User Applications, and Guide tabs, frozen headers, filters, and
+native Google Sheets formatting. The owner must configure Google OAuth and the
+Vercel/GitHub secrets; GitHub sign-in alone cannot create or authorize a Google
+Sheet. The Sheet remains private, and the public Pages/tokenless path stays
+owner-only. A true user-owned Google account/Sheet connection remains a later
+option if shared storage becomes too large or privacy requirements change.

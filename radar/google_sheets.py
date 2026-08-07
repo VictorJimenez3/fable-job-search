@@ -18,12 +18,20 @@ TOKEN_URL = "https://oauth2.googleapis.com/token"
 SHEETS_API = "https://sheets.googleapis.com/v4/spreadsheets"
 HEADERS = ["Job Radar ID", "Company", "Title", "Stage", "Job URL", "Location",
            "Applied At", "Updated At", "Source", "Board"]
+USER_HEADERS = ["GitHub User", "Job Radar ID", "Company", "Title", "Stage",
+                "Job URL", "Location", "Saved At", "Updated At", "Source", "Profile"]
 STAGES = {"saved", "applied", "oa", "interview", "rejected", "closed"}
 
 
 def configured() -> bool:
     return all(env(name) for name in ("GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET",
                                       "GOOGLE_REFRESH_TOKEN", "GOOGLE_SHEET_ID"))
+
+
+def creation_configured() -> bool:
+    """Whether the Google account can create the initial tracker workbook."""
+    return all(env(name) for name in ("GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET",
+                                      "GOOGLE_REFRESH_TOKEN"))
 
 
 def _access_token() -> str:
@@ -42,9 +50,12 @@ def _tab() -> str:
 
 
 def _range_url(cell_range: str, suffix: str = "") -> str:
-    sheet = env("GOOGLE_SHEET_ID")
-    named_range = quote(f"{_tab()}!{cell_range}", safe="")
-    return f"{SHEETS_API}/{sheet}/values/{named_range}{suffix}"
+    return _range_url_for(env("GOOGLE_SHEET_ID"), _tab(), cell_range, suffix)
+
+
+def _range_url_for(sheet_id: str, tab: str, cell_range: str, suffix: str = "") -> str:
+    named_range = quote(f"{tab}!{cell_range}", safe="")
+    return f"{SHEETS_API}/{sheet_id}/values/{named_range}{suffix}"
 
 
 def _values(token: str) -> list[list[str]]:
@@ -70,6 +81,106 @@ def _append(token: str, rows: list[list[str]]) -> None:
                              headers={"Authorization": f"Bearer {token}"},
                              json={"majorDimension": "ROWS", "values": rows})
     response.raise_for_status()
+
+
+def _put_for(token: str, sheet_id: str, tab: str, cell_range: str,
+             rows: list[list[str]]) -> None:
+    response = requests.put(_range_url_for(sheet_id, tab, cell_range), timeout=30,
+                            params={"valueInputOption": "RAW"},
+                            headers={"Authorization": f"Bearer {token}"},
+                            json={"range": f"{tab}!{cell_range}",
+                                  "majorDimension": "ROWS", "values": rows})
+    response.raise_for_status()
+
+
+def _format_tracker(token: str, spreadsheet_id: str, sheets: list[dict]) -> None:
+    """Apply a restrained native-Sheets layout to the new tracker tabs."""
+    requests.post(f"{SHEETS_API}/{spreadsheet_id}:batchUpdate", timeout=30,
+                  headers={"Authorization": f"Bearer {token}"}, json={"requests": [
+        request for sheet in sheets for request in [
+            {"repeatCell": {"range": {"sheetId": sheet["id"], "startRowIndex": 0,
+                                         "endRowIndex": 1},
+                             "cell": {"userEnteredFormat": {
+                                 "backgroundColor": {"red": 0.92, "green": 0.92, "blue": 0.92},
+                                 "textFormat": {"bold": True}}},
+                             "fields": "userEnteredFormat(backgroundColor,textFormat)"}},
+            {"updateSheetProperties": {"properties": {"sheetId": sheet["id"],
+                                                          "gridProperties": {"frozenRowCount": 1}},
+                                         "fields": "gridProperties.frozenRowCount"}},
+            {"autoResizeDimensions": {"dimensions": {"sheetId": sheet["id"],
+                                                        "dimension": "COLUMNS",
+                                                        "startIndex": 0,
+                                                        "endIndex": sheet["columns"]}}},
+            {"setBasicFilter": {"filter": {"range": {"sheetId": sheet["id"],
+                                                          "startRowIndex": 0,
+                                                          "endRowIndex": 10000,
+                                                          "endColumnIndex": sheet["columns"]}}}},
+            *([{ "setDataValidation": {"range": {"sheetId": sheet["id"],
+                                                    "startRowIndex": 1,
+                                                    "endRowIndex": 10000,
+                                                    "startColumnIndex": sheet["stage_column"],
+                                                    "endColumnIndex": sheet["stage_column"] + 1},
+                                     "rule": {"condition": {"type": "ONE_OF_LIST",
+                                                               "values": [{"userEnteredValue": value}
+                                                                          for value in sheet["stages"]]},
+                                               "showCustomUi": True,
+                                               "strict": False}}}]
+              if sheet.get("stage_column") is not None else []),
+        ]
+    ]}).raise_for_status()
+
+
+def create_tracker(title: str | None = None) -> dict:
+    """Create and style a Job Radar workbook, returning its ID and URL.
+
+    The command is intentionally explicit: it never overwrites an existing
+    sheet and prints the resulting ID so the owner can place it in secrets.
+    """
+    if not creation_configured():
+        raise RuntimeError("GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, and "
+                           "GOOGLE_REFRESH_TOKEN are required to create a tracker")
+    token = _access_token()
+    title = title or env("GOOGLE_TRACKER_TITLE", "Job Radar Tracker")
+    response = requests.post(SHEETS_API, timeout=30,
+                             headers={"Authorization": f"Bearer {token}",
+                                      "Content-Type": "application/json"},
+                             json={"properties": {"title": title}, "sheets": [
+                                 {"properties": {"title": "Applications",
+                                                  "gridProperties": {"rowCount": 10000,
+                                                                      "columnCount": len(HEADERS)}}},
+                                 {"properties": {"title": "User Applications",
+                                                  "gridProperties": {"rowCount": 10000,
+                                                                      "columnCount": len(USER_HEADERS)}}},
+                                 {"properties": {"title": "Guide",
+                                                  "gridProperties": {"rowCount": 20,
+                                                                      "columnCount": 2}}},
+                             ]})
+    response.raise_for_status()
+    created = response.json()
+    spreadsheet_id = created["spreadsheetId"]
+    tabs = {sheet["properties"]["title"]: sheet["properties"]["sheetId"]
+            for sheet in created.get("sheets", [])}
+    _put_for(token, spreadsheet_id, "Applications", "A1:J1", [HEADERS])
+    _put_for(token, spreadsheet_id, "User Applications", "A1:K1", [USER_HEADERS])
+    _put_for(token, spreadsheet_id, "Guide", "A1:B7", [[
+        "Job Radar tracker", "How to use it"],
+        ["Applications", "Owner/fork automation rows; matched by Job Radar ID."],
+        ["User Applications", "Private shared-app rows; backend filters by GitHub User."],
+        ["saved", "Interested / to apply."],
+        ["applied", "Application submitted."],
+        ["oa / interview", "Response stages."],
+        ["rejected / closed", "Terminal or archived workflow stages."],
+    ])
+    _format_tracker(token, spreadsheet_id, [
+        {"id": tabs["Applications"], "columns": len(HEADERS), "stage_column": 3,
+         "stages": sorted(STAGES)},
+        {"id": tabs["User Applications"], "columns": len(USER_HEADERS), "stage_column": 4,
+         "stages": sorted(STAGES | {"maybe", "archived"})},
+        {"id": tabs["Guide"], "columns": 2},
+    ])
+    return {"spreadsheet_id": spreadsheet_id,
+            "url": f"https://docs.google.com/spreadsheets/d/{spreadsheet_id}/edit",
+            "title": title}
 
 
 def _iso(epoch: int | None) -> str:

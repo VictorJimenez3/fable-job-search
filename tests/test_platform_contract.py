@@ -25,3 +25,13 @@ def test_platform_exposes_dol_sponsor_history_context_and_filter():
     assert "DOL sponsor history" in html
     assert "likely historical sponsor" in html
     assert "not a promise that this role sponsors" in html
+
+
+def test_platform_exposes_private_google_tracker_path_for_authenticated_users():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    api = (ROOT / "webapp" / "api" / "tracker.js").read_text()
+    helper = (ROOT / "webapp" / "api" / "_google-tracker.js").read_text()
+    assert 'fetch("/api/tracker")' in html
+    assert "User Applications" in api + helper
+    assert "GitHub User" in helper
+    assert "other users cannot read them" in html

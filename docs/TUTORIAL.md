@@ -10,7 +10,9 @@ new-grad aggregators, scores each posting against your preferences
 (profile.yaml), and delivers each new high-scoring posting as its own assigned
 GitHub issue that pushes to your phone. A separate unassigned master board keeps
 everything together. Checking a box puts the job in the in-house Pipeline and
-mirrors it to your selected tracker (Notion by default; Google Sheets optional). Your MacBook
+mirrors it to your selected tracker (Notion by default; Google Sheets optional).
+On the Vercel platform, any GitHub-signed-in user can use the private
+Google-backed tracker without touching the repository owner's pipeline. Your MacBook
 handles local bulk AI when awake, while a tightly budgeted NVIDIA cloud pass
 handles time-sensitive enrichment nightly. The repo itself is the database.
 

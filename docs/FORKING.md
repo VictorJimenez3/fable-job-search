@@ -1,10 +1,12 @@
 # Run your own Job Radar (forking guide)
 
-This system is single-owner by design: one repo = one person's radar, state,
-and Notion. **Nothing a visitor does on someone else's radar can touch the
-owner's data** — the backend and workflows obey only the repo owner. To get
-your own, fork it. Your fork shares zero state, zero secrets, and zero Notion
-access with the original.
+The crawler/repository state is still single-owner by design: one repo = one
+person's radar, state, and Notion. **Nothing a visitor does on someone else's
+radar can touch the owner's repo data.** The Vercel platform can additionally
+offer a private shared Google Sheets tracker: any GitHub-authenticated visitor
+gets rows keyed to their login, not access to the owner's state or Sheet. To
+run your own full radar, fork it; your fork shares zero state, zero secrets,
+and zero Notion access with the original.
 
 ## 1. Fork (2 min)
 
@@ -58,7 +60,10 @@ Deploy the `webapp/` directory to your own Vercel project, then set env vars:
 | `CANON_HOST` | your Vercel hostname |
 
 Then "Sign in with GitHub" on your Vercel URL gives you instant writes; the
-backend only obeys `RADAR_OWNER`.
+backend only obeys `RADAR_OWNER` for repository/Notion actions. If the shared
+Google tracker is configured, non-owner GitHub users can save, apply, and mark
+Maybe in their own private tracker rows without changing the fork owner's
+pipeline. See [Google Sheets setup](GOOGLE_SHEETS_SETUP.md).
 
 ## 6. Optional: free local AI (any Mac with ≥32GB, ~10 min)
 

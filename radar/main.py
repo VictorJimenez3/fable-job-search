@@ -630,6 +630,21 @@ def sponsorship_refresh_cmd() -> int:
     return rescore_cmd()
 
 
+def create_google_tracker_cmd() -> int:
+    """Create a new, formatted Google Sheets tracker without overwriting one."""
+    from .google_sheets import create_tracker
+    try:
+        tracker = create_tracker()
+    except Exception as exc:
+        print(f"google-tracker: failed — {exc}")
+        return 1
+    print(f"google-tracker: created {tracker['title']}\n"
+          f"  spreadsheet ID: {tracker['spreadsheet_id']}\n"
+          f"  URL: {tracker['url']}\n"
+          "  Set GOOGLE_SHEET_ID to this ID before syncing.")
+    return 0
+
+
 def rescrape_cmd() -> int:
     """Fetch full posting text for current visible jobs using free ATS/HTML APIs."""
     from . import posting
@@ -800,7 +815,7 @@ def main() -> None:
                                         "daily-best", "master-board", "deliver-alerts", "web-action", "enrich",
                                         "email-batch",
                                         "regate", "rescore", "score-health", "rescrape", "repair-feedback",
-                                        "sponsorship-refresh"])
+                                        "sponsorship-refresh", "create-google-tracker"])
     args = ap.parse_args()
     if args.command == "crawl":
         sys.exit(crawl())
@@ -863,6 +878,8 @@ def main() -> None:
         sys.exit(repair_feedback())
     elif args.command == "sponsorship-refresh":
         sys.exit(sponsorship_refresh_cmd())
+    elif args.command == "create-google-tracker":
+        sys.exit(create_google_tracker_cmd())
 
 
 if __name__ == "__main__":

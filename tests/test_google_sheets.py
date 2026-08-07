@@ -33,3 +33,46 @@ def test_sheet_readback_is_id_matched_and_stage_validated(monkeypatch):
     assert gs.sync_from_sheet(entries) == 1
     assert entries[0]["stage"] == "interview" and entries[0]["responded_at"]
     assert entries[1]["stage"] == "applied"
+
+
+def test_create_tracker_builds_three_tabs_and_returns_url(monkeypatch):
+    for name, value in {
+        "GOOGLE_CLIENT_ID": "cid", "GOOGLE_CLIENT_SECRET": "secret",
+        "GOOGLE_REFRESH_TOKEN": "refresh",
+    }.items():
+        monkeypatch.setenv(name, value)
+    monkeypatch.setattr(gs, "_access_token", lambda: "access")
+    writes = []
+    monkeypatch.setattr(gs, "_put_for", lambda token, sheet_id, tab, cell_range, rows:
+                        writes.append((sheet_id, tab, cell_range, rows)))
+
+    class Response:
+        def __init__(self, payload=None):
+            self.payload = payload or {}
+
+        def raise_for_status(self):
+            return None
+
+        def json(self):
+            return self.payload
+
+    calls = []
+
+    def post(url, **kwargs):
+        calls.append((url, kwargs))
+        if url == gs.SHEETS_API:
+            return Response({"spreadsheetId": "new-sheet", "sheets": [
+                {"properties": {"title": "Applications", "sheetId": 1}},
+                {"properties": {"title": "User Applications", "sheetId": 2}},
+                {"properties": {"title": "Guide", "sheetId": 3}},
+            ]})
+        return Response()
+
+    monkeypatch.setattr(gs.requests, "post", post)
+
+    result = gs.create_tracker("Test Tracker")
+
+    assert result["spreadsheet_id"] == "new-sheet"
+    assert result["url"].endswith("/new-sheet/edit")
+    assert [row[1] for row in writes] == ["Applications", "User Applications", "Guide"]
+    assert len(calls) == 2  # create + one formatting batch
