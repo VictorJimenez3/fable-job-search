@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-07 12:23 UTC** · companies polled directly: **1630** (registry 1832) · jobs tracked: **28430** · new this run: **8** · alerts this run: **0**_
+_Last run: **2026-08-07 12:53 UTC** · companies polled directly: **1630** (registry 1832) · jobs tracked: **28446** · new this run: **16** · alerts this run: **1**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -42,6 +42,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 91 🔥 | 18d | Amazon | [Software Development Engineer – Embedded Systems 2026 (US)](https://jobright.ai/jobs/info/6a42b46e6a9c2774b3fa6f87?utm_campaign=Software%20Engineering&utm_source=1103) | Austin, Texas, USA | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 91 🔥 | 24d | Amazon | [Software Development Engineer – Amazon Leo (US)](https://jobright.ai/jobs/info/6a52db4b9fbdab22fe13d4a7?utm_campaign=Software%20Engineering&utm_source=1103) | Sunnyvale, CA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 90 🔥 | 3h | Google | [Software Engineer - Campus](https://www.google.com/about/careers/applications/jobs/results/78703249065943750) | Cambridge, MA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 90 🔥 | 12h | Google | [Software Engineer, Early Career, Campus](https://jobright.ai/jobs/info/6a75b1ccb17cba569035add6?utm_campaign=Software%20Engineering&utm_source=1103) | San Bruno, CA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 90 🔥 | 2d | Qualcomm | [Machine Learning Engineer - Machine Learning Engineering](https://qualcomm.eightfold.ai/careers/job/446717859953) | San Diego, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 90 🔥 | 15d | Amazon | [EFA Network Software Engineer 1 - Annapurna Labs](https://amazon.jobs/en/jobs/10481932/efa-network-software-engineer-i-annapurna-labs) | Seattle, WA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 90 🔥 | 16d | Amazon | [EFA Network Software Engineer I, Annapurna Labs](https://jobright.ai/jobs/info/6a613fb3ab14335fc0f171c5?utm_campaign=Software%20Engineering&utm_source=1103) | Seattle, WA, United States | big_tech | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
@@ -155,6 +156,5 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 81 ⭐ | 3d | TikTok | [Graduate Software Engineer](https://lifeattiktok.com/search/7668566347702569269) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 3d | TikTok | [Frontend Software Engineer Graduate - Global CRM](https://lifeattiktok.com/search/7668561079544154373) | San Jose, CA | big_tech | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 3d | RTX | [Embedded Software Engineer I (Onsite)](https://jobright.ai/jobs/info/6a73a9b21ce9647cdbca9989?utm_campaign=Software%20Engineering&utm_source=1103) | East Hartford, CT, United States | other | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 81 ⭐ | 3d | Texas Sports Academy | [Junior AI Software Engineer](https://apply.workable.com/texas-sports-academy-main/j/CC2A1186D4/apply) | Austin, TX | sports | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
