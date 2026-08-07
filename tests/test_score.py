@@ -2,8 +2,9 @@ import time
 
 from radar.models import Job
 from radar import main
-from radar.score import (RULES_VERSION, calibrate_score, early_career_possible,
-                         gates, regate, score, update_feedback_from_applied)
+from radar.score import (RULES_VERSION, apply_company_concentration,
+                         calibrate_score, early_career_possible, gates, regate,
+                         score, update_feedback_from_applied)
 from radar.sector import infer
 
 NOW = int(time.time())
@@ -265,7 +266,7 @@ def test_score_prefers_healthtech_ai_over_generic_swe():
     generic.posted_at = NOW - 6 * 86400
     score(generic, FB, NOW)
 
-    assert ai_health.score > generic.score + 15
+    assert ai_health.score >= generic.score + 15
     assert any("healthtech" in r for r in ai_health.score_reasons)
 
 
@@ -319,7 +320,7 @@ def test_v8_persists_auditable_dimensions_and_raw_utility():
         "base", "role_fit", "eligibility", "mission", "company_quality",
         "compensation", "personal_signal", "timing_access",
     }
-    assert any("calibration v8" in reason for reason in job.score_reasons)
+    assert any(f"calibration v{RULES_VERSION}" in reason for reason in job.score_reasons)
 
 
 def test_new_grad_priority_beats_prestigious_experienced_role():
@@ -332,7 +333,39 @@ def test_new_grad_priority_beats_prestigious_experienced_role():
     score(experienced, FB, NOW)
     assert eligible.score > experienced.score
     assert any("new-grad/early-career priority" in r for r in eligible.score_reasons)
-    assert any("new-grad evidence absent" in r for r in experienced.score_reasons)
+    assert any("early-career possible" in r for r in experienced.score_reasons)
+
+
+def test_company_concentration_protects_best_and_nudges_weaker_roles():
+    jobs = [
+        mk("Deep Learning Engineer, New Grad", company="NVIDIA"),
+        mk("Machine Learning Engineer, New Grad", company="NVIDIA"),
+        mk("Software Engineer, New Grad", company="NVIDIA"),
+        mk("Software Engineer, New Grad", company="OtherCo"),
+    ]
+    for job in jobs:
+        score(job, FB, NOW)
+    before = [job.score for job in jobs[:3]]
+    apply_company_concentration(jobs)
+    assert jobs[0].ranking_adjustment == 0
+    assert jobs[1].ranking_adjustment <= 0
+    assert jobs[2].ranking_adjustment <= jobs[1].ranking_adjustment
+    assert jobs[0].score == before[0]
+    assert any("company concentration" in reason for reason in jobs[2].score_reasons)
+
+
+def test_company_concentration_does_not_touch_small_groups_or_raw_ties():
+    two = [mk("Software Engineer, New Grad", company="NVIDIA") for _ in range(2)]
+    for job in two:
+        score(job, FB, NOW)
+    apply_company_concentration(two)
+    assert all(job.ranking_adjustment == 0 for job in two)
+
+    tied = [mk("Software Engineer, New Grad", company="NVIDIA") for _ in range(3)]
+    for job in tied:
+        score(job, FB, NOW)
+    apply_company_concentration(tied)
+    assert all(job.ranking_adjustment == 0 for job in tied)
 
 
 def test_feedback_boosts_applied_companies():

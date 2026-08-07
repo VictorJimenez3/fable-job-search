@@ -18,8 +18,9 @@ from .brief import rerank
 from .config import env, profile, seeds
 from .digest import write_outputs
 from .models import Job, norm
-from .score import (RULES_VERSION, early_career_possible, explicit_new_grad,
-                    gates, regate, score, source_new_grad)
+from .score import (RULES_VERSION, apply_company_concentration,
+                    early_career_possible, explicit_new_grad, gates, regate,
+                    score, source_new_grad)
 from .sector import infer
 from .sources import aggregators, hn
 from .sources.ats import FETCHERS
@@ -604,8 +605,12 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int) -> tuple[int, int]:
             rec["score_reasons"].append(
                 "early-career possible: no stated experience floor (not new-grad verified)")
         changed += 1
-        alerts += (not rec.get("closed_at")) and rec["alert_ok"] \
-            and rec["score"] >= profile()["thresholds"]["alert"]
+    apply_company_concentration(jobs_state)
+    alerts = sum(
+        (not rec.get("closed_at")) and rec.get("alert_ok")
+        and rec.get("score", 0) >= profile()["thresholds"]["alert"]
+        for rec in jobs_state.values()
+    )
     return changed, alerts
 
 

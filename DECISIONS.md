@@ -1184,3 +1184,30 @@ filename through `Content-Disposition`, so opening or downloading a preview
 does not fall back to `resume.pdf`. TICC is permanently excluded from the
 source-addressable catalog, model plans, rendered output, and workshop edits;
 the local historical CV files remain unchanged.
+
+## 79. Resume Studio queues durable modes and exposes rationale/usage (2026-08-07)
+
+Tailoring is now a durable queue rather than a single replaceable action. Each
+run has its own ID, posting snapshot, status, artifacts, and workshop history;
+the UI can queue Used bullets, AI tailor, or Unrestricted AI tailor runs and
+keeps them in the bank. Unrestricted means freer source synthesis and original
+wording, not permission to invent facts or remove factual scope qualifiers.
+The workshop embeds the original or latest revision PDF, keeps every visible
+resume line editable, and shows selection rationale, editorial notes, and
+provider usage. The local usage ledger reports observed Codex tokens/calls for
+the current week; because the Codex CLI does not expose a Plus weekly quota,
+the UI states that limitation rather than fabricating a percentage. An owner
+may set `CODEX_WEEKLY_LIMIT_TOKENS` to compare against a known personal limit.
+
+## 80. Radar v9 uses early-career uncertainty and company diversity (2026-08-07)
+
+Explicit new-grad/early-career evidence receives a stronger deterministic
+utility lift. A technical role with no stated experience floor but no explicit
+new-grad proof receives a smaller `early-career possible` lift and remains
+dashboard-only; it is not promoted to alert eligibility. Once a company has
+three or more visible roles, the strongest raw-utility role is protected and
+only weaker same-company roles receive a transparent -1/-2 diversity nudge;
+raw-utility ties are untouched. The calibrated range keeps 90+ as strong while
+leaving room below 100. Resume Match remains a separate CV/evidence-graph
+score. The platform now formats the established rating explanation as labeled
+reason rows instead of a single separator-delimited string.

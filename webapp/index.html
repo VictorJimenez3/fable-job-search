@@ -116,6 +116,11 @@
              color:var(--accent-ink); font-family:ui-monospace,Menlo,monospace; }
   .kv { display:grid; grid-template-columns:auto 1fr; gap:0.15rem 0.8rem; font-size:0.82rem; }
   .kv .k { color:var(--muted); font-family:ui-monospace,Menlo,monospace; font-size:0.7rem; }
+  .score-explanation { margin-top:0.65rem; border-top:1px solid var(--line); padding-top:0.55rem; }
+  .score-explanation summary { cursor:pointer; color:var(--accent); font-weight:600; }
+  .rating-reasons { display:grid; gap:0.35rem; margin-top:0.55rem; }
+  .rating-reason { display:grid; grid-template-columns:8rem 1fr; gap:0.55rem; padding:0.35rem 0.45rem; border-left:2px solid var(--line); background:rgba(255,255,255,.02); }
+  .rating-reason .k { color:var(--muted); font-size:.72rem; text-transform:capitalize; }
   .decision { background:var(--card); border:1px solid var(--line); border-radius:8px;
               padding:0.75rem; margin-top:0.9rem; }
   .decision .facts { display:flex; gap:0.35rem; flex-wrap:wrap; margin-top:0.45rem; }
@@ -885,14 +890,21 @@ function wsCompany(j, w, c, id) {
     <div class="sect"><h4>Explore elsewhere · not dossier evidence</h4>${researchLinks(j.company)}</div>`;
 }
 
+function scoreReasonLabel(reason) {
+  const text = String(reason||"");
+  const labels = [["base utility","baseline"],["role:","role fit"],["sector:","sector fit"],["new-grad/early-career priority","verified early-career"],["early-career possible","plausible first-role"],["new-grad evidence absent","early-career evidence"],["company tier","company quality"],["explicit goal company","goal-company preference"],["company concentration","company diversity"],["compensation","compensation"],["posted","freshness"],["remote","remote access"],["culture fit","culture evidence"],["SHPE","community signal"],["raw utility","calibration"]];
+  const found = labels.find(([prefix]) => text.startsWith(prefix));
+  return found ? found[1] : "other signal";
+}
 function wsFit(j, w, c, id) {
   const dimensions = Object.entries(j.score_dimensions||{});
+  const reasons = (j.score_reasons||[]).map(reason => `<div class="rating-reason"><span class="k">${esc(scoreReasonLabel(reason))}</span><span>${esc(reason)}</span></div>`).join("");
   return `
     <div class="sect"><h4>Posting facts (scraped, no AI needed)</h4>${postingCard(j)}</div>
     <div class="sect"><h4>Why it scored ${j.score??"?"}</h4>
       ${dimensions.length?`<div class="kv">${dimensions.map(([name,value])=>`<span class="k">${esc(name.replaceAll('_',' '))}</span><span>${value>=0?'+':''}${esc(value)}</span>`).join('')}</div>
-      <p class="sub">Uncapped utility ${esc(j.score_raw??'?')} → calibrated ${esc(j.score_calibrated??j.score??'?')} → final ${j.score??'?'} / 100 after posting/quality adjustments. Dimensions may compensate; hard eligibility gates cannot.</p>`:""}
-      <div class="sub">${(j.score_reasons||[]).map(esc).join(" · ")||"–"}</div>
+      <p class="sub">Uncapped utility ${esc(j.score_raw??'?')} → calibrated ${esc(j.score_calibrated??j.score??'?')} → final ${j.score??'?'} / 100. 90+ is strong; final adjustments are shown below. Resume Match is separate and uses your CV evidence graph.</p>`:""}
+      <details class="score-explanation" open><summary>Established rating explanation</summary><div class="rating-reasons">${reasons||"<p class='sub'>No auditable reasons recorded.</p>"}</div></details>
       ${j.llm_note?`<p class="sub">🤖 angle: <i>${esc(j.llm_note)}</i></p>`:""}</div>
     <div class="sect"><h4>Posting verdict (LLM)</h4>${qualityCard(j)}</div>
     <div class="sect"><h4>Job description (paste if the radar can't scrape it)</h4>

@@ -69,8 +69,13 @@ goal_companies:
   - NVIDIA
 
 scoring_v8:
-  eligible_utility: 30
+  eligible_utility: 38
   goal_company_utility: 10
+
+# v9 distinguishes an explicit new-grad signal from a plausible first-role
+# posting. The latter remains dashboard-only but gets a modest utility lift.
+scoring_v9:
+  early_career_possible_utility: 8
 
 locations:
   countries: [US]              # non-US-only postings are gated out

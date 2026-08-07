@@ -10,9 +10,9 @@ The service has two modes:
 
 * ``strict`` selects only existing, human-approved source bullets and runs
   deterministic layout checks against the canonical one-page resume format.
-* ``dream`` runs independent frontier drafts, a synthesis pass, and a fixed
-  reviewer pass. The reviewer returns an applied corrected plan; this module
-  computes the final score from the immutable rubric below.
+* ``dream``/``unrestricted`` run independent frontier drafts, a synthesis pass,
+  and a fixed reviewer pass. The reviewer returns an applied corrected plan;
+  this module computes the final score from the immutable rubric below.
 
 Run with::
 
@@ -92,6 +92,11 @@ MAX_TARGET_KEYWORDS = 24
 MAX_WORKSHOP_TEXT_CHARS = 900
 MAX_WORKSHOP_REQUEST_CHARS = 3000
 MAX_WORKSHOP_REVISIONS = 100
+TAILOR_MODE_ALIASES = {
+    "strict": "used", "source": "used", "source-only": "used", "used": "used",
+    "dream": "ai", "enhanced": "ai", "ai": "ai", "ai-enhanced": "ai",
+    "free": "unrestricted", "unrestricted": "unrestricted",
+}
 FORBIDDEN_RESUME_TERM_RE = re.compile(r"\bticc\b", re.I)
 PROTECTED_QUALIFIERS = (
     "proof of concept",
@@ -154,6 +159,21 @@ def now_iso() -> str:
     return dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
 
 
+def normalize_tailor_mode(mode: str) -> str:
+    normalized = TAILOR_MODE_ALIASES.get(str(mode or "").strip().lower())
+    if not normalized:
+        raise ValueError("mode must be used, ai, or unrestricted")
+    return normalized
+
+
+def tailor_mode_label(mode: str) -> str:
+    return {
+        "used": "Used bullets",
+        "ai": "AI tailor",
+        "unrestricted": "Unrestricted AI tailor",
+    }.get(normalize_tailor_mode(mode), "AI tailor")
+
+
 def write_json(path: Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     # Resume calibration can run several private cases concurrently.  A fixed
@@ -204,9 +224,9 @@ def current_scored_jobs(root: Optional[Path] = None) -> Dict[str, Dict[str, Any]
     from radar import posting, quality
     from radar.models import Job
     import radar.score as score_mod
-    from radar.score import (RULES_VERSION, early_career_possible,
-                             explicit_new_grad, gates, score,
-                             source_new_grad)
+    from radar.score import (RULES_VERSION, apply_company_concentration,
+                             early_career_possible, explicit_new_grad, gates,
+                             score, source_new_grad)
 
     records = copy.deepcopy(load_jobs(base))
     feedback = read_json(feedback_path, {}) or {}
@@ -242,6 +262,7 @@ def current_scored_jobs(root: Optional[Path] = None) -> Dict[str, Dict[str, Any]
             quality.reapply(rec)
         if rec.get("posting"):
             posting.reapply(rec)
+    apply_company_concentration(records)
     _CURRENT_SCORE_CACHE[key] = {"signature": signature, "jobs": records}
     return records
 
@@ -689,6 +710,31 @@ def _library_dir(root: Optional[Path], source: str, entry_id: str) -> Optional[P
     return None
 
 
+def logical_pdf_filename(job: Dict[str, Any], physical: Path) -> str:
+    """Give legacy ``resume.pdf`` runs the same identifiable public name."""
+    if physical.name == "resume.pdf":
+        return resume_pdf_filename(job)
+    return physical.name
+
+
+def artifact_target(directory: Path, filename: str) -> Optional[Path]:
+    """Resolve a public artifact name, including the legacy PDF alias."""
+    target = (directory / Path(filename).name).resolve()
+    if directory.resolve() not in target.parents:
+        return None
+    if target.is_file():
+        return target
+    if target.suffix == ".pdf" and target.name.endswith("_resume_ai.pdf"):
+        legacy = directory / "resume.pdf"
+        if legacy.is_file():
+            return legacy
+    if target.suffix == ".png" and target.name.endswith("_resume_ai-preview.png"):
+        legacy = directory / "resume-preview.png"
+        if legacy.is_file():
+            return legacy
+    return None
+
+
 def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: Path) -> Dict[str, Any]:
     status = read_json(directory / "status.json", {}) or {}
     report = read_json(directory / "report.json", {}) or status.get("report") or {}
@@ -705,32 +751,48 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
     if not isinstance(context, dict):
         context = {}
     mode = str(status.get("mode") or report.get("mode") or "unknown")
-    if mode == "dream":
-        mode = "enhanced"
+    mode = {"strict": "used", "source-only": "used", "dream": "ai", "enhanced": "ai"}.get(mode, mode)
+    public_pdf_name = logical_pdf_filename(job, pdf)
+    public_preview_name = public_pdf_name[:-4] + "-preview.png" if public_pdf_name.endswith(".pdf") else preview.name
     created_at = str(status.get("created_at") or report.get("created_at") or "")
     if not created_at:
         try:
             created_at = dt.datetime.fromtimestamp(directory.stat().st_mtime, dt.timezone.utc).isoformat(timespec="seconds")
         except OSError:
             created_at = ""
+    display_status = str(status.get("status") or ("complete" if report or pdf.exists() else "unknown"))
+    if display_status in {"queued", "running"}:
+        stamp = str(status.get("updated_at") or status.get("created_at") or "")
+        try:
+            age = time.time() - dt.datetime.fromisoformat(stamp.replace("Z", "+00:00")).timestamp()
+        except (ValueError, TypeError, OverflowError):
+            age = 0
+        if age > 30 * 60:
+            display_status = "interrupted"
     artifacts = []
-    for name in (pdf.name, preview.name, "job.json", "job_context.json", "report.json", "content_plan.json", "candidate_plan.json", "layout_packing.json", "resume.tex", "resume.txt", "workshop.json"):
+    for name in (public_pdf_name, public_preview_name, "job.json", "job_context.json", "report.json", "content_plan.json", "candidate_plan.json", "layout_packing.json", "resume.tex", "resume.txt", "workshop.json"):
         if (directory / name).is_file():
             artifacts.append(name)
+    # Keep legacy physical artifacts discoverable while presenting an
+    # identifiable filename to the user. The artifact route resolves the alias.
+    if pdf.is_file() and public_pdf_name not in artifacts:
+        artifacts.append(public_pdf_name)
+    if preview.is_file() and public_preview_name not in artifacts:
+        artifacts.append(public_preview_name)
     return {
         "entry_id": entry_id,
         "source": source,
         "legacy": source != "run",
         "run_id": entry_id if source == "run" else "",
-        "status": str(status.get("status") or ("complete" if report or pdf.exists() else "unknown")),
+        "status": display_status,
         "step": str(status.get("step") or ""),
         "message": str(status.get("message") or ""),
         "mode": mode,
         "created_at": created_at,
         "updated_at": str(status.get("updated_at") or created_at),
         "job": job_summary(job, resume_match),
-        "pdf_filename": pdf.name,
-        "preview_filename": preview.name if preview.is_file() else "",
+        "pdf_filename": public_pdf_name,
+        "preview_filename": public_preview_name if preview.is_file() else "",
         "has_pdf": pdf.is_file(),
         "has_posting_snapshot": bool(str(context.get("posting_text") or job.get("description") or "").strip()),
         "has_workshop": source == "run" and (directory / "content_plan.json").is_file(),
@@ -740,8 +802,8 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
         "validation_warnings": report.get("validation_warnings") or [],
         "artifacts": artifacts,
         "urls": {
-            "pdf": "/artifacts/%s/%s/%s" % (quote(source, safe=""), quote(entry_id, safe=""), quote(pdf.name, safe="")),
-            "preview": "/artifacts/%s/%s/%s" % (quote(source, safe=""), quote(entry_id, safe=""), quote(preview.name, safe="")) if preview.is_file() else "",
+            "pdf": "/artifacts/%s/%s/%s" % (quote(source, safe=""), quote(entry_id, safe=""), quote(public_pdf_name, safe="")),
+            "preview": "/artifacts/%s/%s/%s" % (quote(source, safe=""), quote(entry_id, safe=""), quote(public_preview_name, safe="")) if preview.is_file() else "",
             "posting": "/api/posting?source=%s&id=%s" % (quote(source, safe=""), quote(entry_id, safe="")),
             "workshop": "/api/workshop?id=%s" % quote(entry_id, safe="") if source == "run" and (directory / "content_plan.json").is_file() else "",
         },
@@ -780,6 +842,63 @@ def resume_library(root: Optional[Path] = None, query: str = "", job_id: str = "
         filtered.append(entry)
     filtered.sort(key=lambda item: (item.get("created_at") or "", item.get("entry_id") or ""), reverse=True)
     return filtered[:max(1, min(int(limit or 200), 500))]
+
+
+def studio_usage(root: Optional[Path] = None) -> Dict[str, Any]:
+    """Aggregate observed provider usage from durable run reports.
+
+    Codex CLI does not expose a user's Plus weekly allowance to this local
+    process. We therefore report measured calls/tokens and only calculate a
+    percentage when the owner explicitly supplies CODEX_WEEKLY_LIMIT_TOKENS.
+    """
+    base = studio_root(root)
+    now = dt.datetime.now(dt.timezone.utc)
+    week_start = (now - dt.timedelta(days=now.weekday())).date().isoformat()
+    totals = {"codex_tokens": 0, "codex_calls": 0, "claude_tokens": 0, "claude_calls": 0}
+    runs = 0
+    completed = 0
+    for report_path in (sorted((base / "runs").glob("*/report.json")) if (base / "runs").is_dir() else []):
+        report = read_json(report_path, {}) or {}
+        if not isinstance(report, dict):
+            continue
+        status = read_json(report_path.parent / "status.json", {}) or {}
+        stamp = str(status.get("updated_at") or status.get("created_at") or "")
+        try:
+            updated = dt.datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+        except ValueError:
+            updated = dt.datetime.fromtimestamp(report_path.stat().st_mtime, dt.timezone.utc)
+        if updated.date().isoformat() < week_start:
+            continue
+        runs += 1
+        if status.get("status") == "complete":
+            completed += 1
+        usage = report.get("usage") if isinstance(report.get("usage"), dict) else {}
+        codex_tokens = int(usage.get("codex_tokens") or 0)
+        codex_calls = int(usage.get("codex_calls") or 0)
+        totals["codex_tokens"] += codex_tokens
+        totals["codex_calls"] += codex_calls
+        for provider in report.get("providers") or []:
+            if not isinstance(provider, dict) or not provider.get("called"):
+                continue
+            name = str(provider.get("provider") or "").split("/")[-1]
+            if name == "claude":
+                totals["claude_calls"] += 1
+                totals["claude_tokens"] += int(provider.get("usage_tokens") or 0)
+    configured = os.environ.get("CODEX_WEEKLY_LIMIT_TOKENS", "").strip()
+    limit = int(configured) if configured.isdigit() and int(configured) > 0 else None
+    return {
+        "week_start": week_start,
+        **totals,
+        "runs": runs,
+        "completed_runs": completed,
+        "weekly_limit_tokens": limit,
+        "percent_of_limit": round(100 * totals["codex_tokens"] / limit, 1) if limit else None,
+        "quota_status": "configured" if limit else "unavailable_from_codex_cli",
+        "note": (
+            "Observed local run usage; Codex Plus weekly allowance is not exposed to the local CLI."
+            if not limit else "Observed local run usage compared with CODEX_WEEKLY_LIMIT_TOKENS."
+        ),
+    }
 
 
 def posting_snapshot(root: Optional[Path], source: str, entry_id: str) -> Optional[Dict[str, Any]]:
@@ -1439,6 +1558,7 @@ def base_prompt(
     catalog: Dict[str, Any],
     enhance: bool,
     graph: Optional[Dict[str, Any]] = None,
+    unrestricted: bool = False,
 ) -> str:
     role_guardrails = """
 Victor-specific guardrails:
@@ -1499,6 +1619,15 @@ Victor-specific guardrails:
             "evidence_ids and explain why the candidate improves the benchmark. "
             "Public GitHub/Devpost nodes corroborate breadth but cannot authorize a claim by themselves."
         )
+        if unrestricted:
+            role_guardrails += (
+                "\n- Unrestricted AI mode is the creative workshop pass: depart from the exact wording and ordering of "
+                "the base resume, synthesize across the full authorized CV evidence bank, choose different projects, "
+                "and write original bullets that make a sharper argument for this posting. Do not merely substitute "
+                "keywords. This freedom changes wording and selection, not factuality: every fact still needs an "
+                "authorized source, protected prototype/simulation qualifiers stay intact, and the final page must "
+                "remain honest, readable, and reviewable."
+            )
     else:
         role_guardrails += (
             "\n- Source-only mode is selection, not rewriting. Choose source IDs only; the harness will copy every heading and bullet verbatim."
@@ -1538,7 +1667,7 @@ Victor-specific guardrails:
 
 def synthesis_prompt(
     context: Dict[str, Any], drafts: List[Dict[str, Any]], catalog: Dict[str, Any], enhance: bool,
-    graph: Optional[Dict[str, Any]] = None,
+    graph: Optional[Dict[str, Any]] = None, unrestricted: bool = False,
 ) -> str:
     packed = []
     for draft in drafts:
@@ -1563,6 +1692,7 @@ def synthesis_prompt(
         "to match the full human-authored reference page; each bullet must earn its place through target fit, proof, "
         "and a distinct interview story. "
         + ("You may substantially rewrite or synthesize bullet text from the authorized source bank; preserve the primary source_id, add all supporting source IDs, and retain every scope-limiting qualifier. " if enhance else "Select source IDs verbatim; do not rewrite bullets. ")
+        + ("This is the unrestricted creative pass: write genuinely original, role-specific bullets and make decisive project swaps when the evidence supports them; do not collapse back to base-resume phrasing. " if unrestricted else "")
         + "Choose the stronger defensible plan rather than averaging it.\n\n"
         "Job context:\n"
         + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
@@ -1584,6 +1714,7 @@ def reviewer_prompt(
     plan: Optional[Dict[str, Any]] = None,
     graph_context: Optional[List[Dict[str, Any]]] = None,
     catalog: Optional[Dict[str, Any]] = None,
+    unrestricted: bool = False,
 ) -> str:
     return (
         "You are an adversarial final resume editor. This is a fresh review: do not "
@@ -1600,7 +1731,8 @@ def reviewer_prompt(
         "source IDs; source_ids must list every source bullet used to synthesize a line. Remove overlap and unsupported implications; do not solve criticism by "
         "making the page sparse. Then grade the FINAL plan you return, not the input draft. "
         "Projects are replaceable: correct a weak project choice for the target instead of preserving the base portfolio. "
-        "Use the exact ATS keyword strategy to improve supported keyword coverage, while recording unsupported requirements as missing evidence. "
+        + ("This is an unrestricted creative pass; preserve factual boundaries but prefer a fresh, specific argument over safe base-CV wording. " if unrestricted else "")
+        + "Use the exact ATS keyword strategy to improve supported keyword coverage, while recording unsupported requirements as missing evidence. "
         "unsupported_claims must describe only claims still present in final_plan.\n\n"
         "Authority rule: CV/resume.tex is canonical for the immutable contact, "
         "education, skills, employer-heading metadata, and dates copied by the "
@@ -2660,8 +2792,16 @@ def _workshop_view(run_dir: Path, catalog: Optional[Dict[str, Any]] = None) -> D
     catalog = catalog or source_catalog(repo_root())
     base = run_dir.parents[3] if len(run_dir.parents) > 3 else repo_root()
     state = _workshop_state(run_dir, catalog, root=base)
-    job = read_json(run_dir / "job.json", {}) or {}
     status = read_json(run_dir / "status.json", {}) or {}
+    report = read_json(run_dir / "report.json", {}) or {}
+    job = read_json(run_dir / "job.json", {}) or (
+        report.get("job") if isinstance(report, dict) else None
+    ) or status.get("job") or {}
+    original_pdf_name = logical_pdf_filename(job, run_pdf_path(run_dir))
+    original_preview_name = (
+        original_pdf_name[:-4] + "-preview.png"
+        if original_pdf_name.endswith(".pdf") else run_preview_path(run_dir).name
+    )
     render = state.get("last_render") if isinstance(state.get("last_render"), dict) else {}
     if render.get("revision_id") and render.get("pdf_filename"):
         render = dict(render)
@@ -2689,6 +2829,8 @@ def _workshop_view(run_dir: Path, catalog: Optional[Dict[str, Any]] = None) -> D
         "job": job_summary(job),
         "status": status,
         "mode": status.get("mode"),
+        "pdf_filename": original_pdf_name,
+        "preview_filename": original_preview_name,
         "plan": state["plan"],
         "lines": workshop_lines(state["plan"], catalog),
         "revisions": list(reversed(revisions)),
@@ -2697,8 +2839,13 @@ def _workshop_view(run_dir: Path, catalog: Optional[Dict[str, Any]] = None) -> D
         "providers": {name: bool(path) for name, path in provider_commands().items()},
         "original_pdf_url": (
             "/artifacts/run/%s/%s"
-            % (quote(run_dir.name, safe=""), quote(run_pdf_path(run_dir).name, safe=""))
+            % (quote(run_dir.name, safe=""), quote(original_pdf_name, safe=""))
             if run_pdf_path(run_dir).is_file() else ""
+        ),
+        "original_preview_url": (
+            "/artifacts/run/%s/%s"
+            % (quote(run_dir.name, safe=""), quote(original_preview_name, safe=""))
+            if run_preview_path(run_dir).is_file() else ""
         ),
     }
 
@@ -2754,7 +2901,11 @@ def _workshop_render(
 ) -> Dict[str, Any]:
     revision_dir = run_dir / "workshop" / "revisions" / str(revision["revision_id"])
     revision_dir.mkdir(parents=True, exist_ok=True)
-    job = read_json(run_dir / "job.json", {}) or {}
+    status = read_json(run_dir / "status.json", {}) or {}
+    report = read_json(run_dir / "report.json", {}) or {}
+    job = read_json(run_dir / "job.json", {}) or (
+        report.get("job") if isinstance(report, dict) else None
+    ) or status.get("job") or {}
     pdf_filename = "%s_workshop_%s.pdf" % (
         re.sub(r"[^a-z0-9]+", "_", str(job.get("company") or "resume").lower()).strip("_")[:64] or "resume",
         revision["revision_id"],
@@ -3418,7 +3569,10 @@ def _select_valid_plan(
     return None, all_errors, None
 
 
-def run_tailoring(run_dir: Path, job: Dict[str, Any], update, enhance: bool) -> None:
+def run_tailoring(
+    run_dir: Path, job: Dict[str, Any], update, enhance: bool,
+    unrestricted: bool = False,
+) -> None:
     update("context", "Fetching the posting and preparing the private CV context")
     context = job_context(job)
     write_json(run_dir / "job_context.json", context)
@@ -3431,8 +3585,11 @@ def run_tailoring(run_dir: Path, job: Dict[str, Any], update, enhance: bool) -> 
     context["resume_match"] = match
     context["target_keywords"] = target_keyword_strategy(context, catalog, repo_root())
     write_json(run_dir / "job_context.json", context)
-    mode_label = "enhanced" if enhance else "source-only"
-    prompt = base_prompt(context, "an independent resume evidence strategist", catalog, enhance, graph=graph)
+    mode_label = "unrestricted" if unrestricted else "enhanced" if enhance else "source-only"
+    prompt = base_prompt(
+        context, "an independent resume evidence strategist", catalog, enhance,
+        graph=graph, unrestricted=unrestricted,
+    )
     schema = plan_schema(enhance)
     available = [name for name, path in provider_commands().items() if path]
     if not available:
@@ -3462,7 +3619,10 @@ def run_tailoring(run_dir: Path, job: Dict[str, Any], update, enhance: bool) -> 
     else:
         synthesis = run_provider(
             synthesizer,
-            synthesis_prompt(context, successful, catalog, enhance, graph=graph),
+            synthesis_prompt(
+                context, successful, catalog, enhance, graph=graph,
+                unrestricted=unrestricted,
+            ),
             run_dir,
             "synthesis",
             timeout=4 * 60,
@@ -3536,7 +3696,8 @@ def run_tailoring(run_dir: Path, job: Dict[str, Any], update, enhance: bool) -> 
     review = run_provider(
         reviewer,
         reviewer_prompt(
-            context, chosen, plan=plan, graph_context=graph_context, catalog=catalog
+            context, chosen, plan=plan, graph_context=graph_context, catalog=catalog,
+            unrestricted=unrestricted,
         ),
         run_dir,
         "review",
@@ -3548,7 +3709,8 @@ def run_tailoring(run_dir: Path, job: Dict[str, Any], update, enhance: bool) -> 
         review = run_provider(
             reviewer,
             reviewer_prompt(
-                context, chosen, plan=plan, graph_context=graph_context, catalog=catalog
+                context, chosen, plan=plan, graph_context=graph_context, catalog=catalog,
+                unrestricted=unrestricted,
             ),
             run_dir,
             "review_fallback",
@@ -3763,6 +3925,10 @@ def run_dream(run_dir: Path, job: Dict[str, Any], update) -> None:
     run_tailoring(run_dir, job, update, enhance=True)
 
 
+def run_unrestricted(run_dir: Path, job: Dict[str, Any], update) -> None:
+    run_tailoring(run_dir, job, update, enhance=True, unrestricted=True)
+
+
 class RunManager:
     def __init__(self, root: Optional[Path] = None):
         self.root = root or repo_root()
@@ -3770,8 +3936,7 @@ class RunManager:
         self.lock = threading.Lock()
 
     def start(self, job: Dict[str, Any], mode: str) -> Dict[str, Any]:
-        if mode not in {"strict", "dream"}:
-            raise ValueError("mode must be strict or dream")
+        mode = normalize_tailor_mode(mode)
         run_id = uuid.uuid4().hex[:12]
         run_dir = studio_root(self.root) / "runs" / run_id
         run_dir.mkdir(parents=True, exist_ok=True)
@@ -3810,10 +3975,12 @@ class RunManager:
             self.update(run_id, run_dir, status, step, message, **extra)
 
         try:
-            if mode == "strict":
+            if mode == "used":
                 run_strict(run_dir, job, update)
-            else:
+            elif mode == "ai":
                 run_dream(run_dir, job, update)
+            else:
+                run_unrestricted(run_dir, job, update)
         except Exception as exc:  # keep failure inspectable in the local UI
             trace = traceback.format_exc()
             (run_dir / "error.log").write_text(trace)
@@ -3821,7 +3988,20 @@ class RunManager:
 
     def get(self, run_id: str) -> Optional[Dict[str, Any]]:
         path = studio_root(self.root) / "runs" / run_id / "status.json"
-        return read_json(path)
+        value = read_json(path)
+        if not isinstance(value, dict):
+            return value
+        job = read_json(path.parent / "job.json", {}) or value.get("job") or {}
+        physical = run_pdf_path(path.parent)
+        value = copy.deepcopy(value)
+        value["pdf_filename"] = logical_pdf_filename(job, physical)
+        preview = run_preview_path(path.parent)
+        value["preview_filename"] = (
+            value["pdf_filename"][:-4] + "-preview.png"
+            if value["pdf_filename"].endswith(".pdf") and preview.is_file()
+            else value.get("preview_filename", "")
+        )
+        return value
 
 
 UI_HTML = r"""<!doctype html>
@@ -3832,20 +4012,25 @@ UI_HTML = r"""<!doctype html>
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1250px;margin:0 auto;padding:28px 20px 70px}h1{margin:0 0 6px;font-size:28px}h2{font-size:18px;margin:0 0 12px}.sub{color:var(--muted);margin:0 0 20px}.grid{display:grid;grid-template-columns:410px 1fr;gap:18px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}.jobs{max-height:650px;overflow:auto}.job{width:100%;text-align:left;background:transparent;color:var(--text);border:1px solid transparent;border-radius:8px;padding:10px;margin:4px 0;cursor:pointer}.job:hover,.job.selected{background:#1f2937;border-color:#3b82f6}.job strong{display:block}.job small{color:var(--muted)}input,select,button{font:inherit}input,select{background:#0d1117;border:1px solid var(--line);border-radius:6px;color:var(--text);padding:9px}input{width:100%;margin-bottom:8px}.toolbar{display:grid;grid-template-columns:1fr auto;gap:8px;margin-bottom:10px}.toolbar select{min-width:145px}button{background:#238636;border:1px solid #2ea043;color:#fff;border-radius:6px;padding:9px 12px;cursor:pointer;margin:4px 6px 4px 0}button.secondary{background:#21262d;border-color:var(--line)}button:disabled{opacity:.5;cursor:wait}.selected-card{border:1px solid var(--accent);border-radius:8px;padding:13px;margin:10px 0 16px}.meta{color:var(--muted);font-size:13px}.badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;margin:3px 4px 0 0;font-size:12px}.match-card{margin:10px 0;padding:10px;border-radius:7px;background:#0d1117;border:1px solid var(--line)}.match-card strong{font-size:18px}.status{border-left:3px solid var(--accent);padding:10px 12px;background:#111827;white-space:pre-wrap}.status.complete{border-color:var(--good)}.status.failed{border-color:var(--bad)}.status.running{border-color:var(--warn)}a{color:var(--accent)}pre{white-space:pre-wrap;max-height:360px;overflow:auto;background:#0d1117;border:1px solid var(--line);padding:12px;border-radius:6px;font-size:12px}.score{font-size:27px;margin:4px 0}.preview{display:block;width:100%;max-width:760px;margin:14px auto;border:1px solid var(--line);background:#fff}.hidden{display:none}@media(max-width:850px){.grid{grid-template-columns:1fr}.jobs{max-height:360px}}
 <style>
 .hero{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:22px}.eyebrow{color:var(--accent);font-size:11px;letter-spacing:.12em;font-weight:700}.hero h1{margin-top:4px}.hero-actions{display:flex;gap:8px;flex-wrap:wrap}.hero-actions button{margin:0}.hero-actions button.active{background:var(--accent);border-color:var(--accent);color:#08111d}.grid{grid-template-columns:360px minmax(0,1fr)}.panel{box-shadow:0 12px 35px rgba(0,0,0,.14)}.panel-top,.workspace-heading,.section-title,.library-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.count{color:var(--muted);font-size:12px;padding-top:4px}.hint{color:var(--muted);margin-top:-5px}.notice{background:#10243a;border:1px solid #1f4f7a;border-radius:7px;padding:10px 12px;margin:0 0 14px;color:#c7e5ff}.action-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}.action-card{background:#0d1117;border:1px solid var(--line);border-radius:8px;padding:12px}.action-card h3{font-size:14px;margin:0 0 4px}.action-card p{color:var(--muted);font-size:12px;min-height:36px;margin:0 0 8px}.action-card button{margin:0;width:100%}.section-title{margin-top:20px}.section-title h3{margin:0;font-size:15px}.empty{padding:38px 12px;text-align:center;color:var(--muted)}.library-view{margin-top:18px}.library-toolbar{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:8px;margin:14px 0}.library-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}.resume-card{background:#0d1117;border:1px solid var(--line);border-radius:9px;padding:12px;min-width:0}.resume-card:hover{border-color:#4b6e91}.card-top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.card-top strong{display:block}.card-top small{display:block;color:var(--muted);margin-top:3px}.thumb{display:block;width:100%;height:230px;object-fit:contain;object-position:top center;background:#fff;border:1px solid var(--line);margin:10px 0;border-radius:5px}.thumb-placeholder{height:70px;display:flex;align-items:center;justify-content:center;border:1px dashed var(--line);border-radius:5px;margin:10px 0;color:var(--muted)}.card-meta{color:var(--muted);font-size:12px;line-height:1.55}.card-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.card-actions a,.card-actions button{font-size:12px;margin:0;padding:6px 8px}.card-actions button{background:#21262d;border:1px solid var(--line);color:var(--text);border-radius:6px;cursor:pointer}.posting-snapshot{margin-top:10px}.posting-snapshot pre{max-height:230px;margin:6px 0}.legacy{color:var(--warn)}.hidden{display:none!important}.workshop-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:14px}.workshop-lines{max-height:calc(100vh - 220px);overflow:auto;padding-right:3px}.workshop-entry{border-top:1px solid var(--line);padding:12px 0}.workshop-entry:first-child{border-top:0;padding-top:0}.workshop-entry h4{margin:0 0 8px;font-size:14px}.workshop-line{background:#0d1117;border:1px solid var(--line);border-radius:8px;padding:10px;margin:8px 0}.workshop-line:focus-within{border-color:var(--accent)}.line-meta{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:11px;margin-bottom:6px}.line-text{width:100%;min-height:58px;resize:vertical;line-height:1.4;background:#111827;border:1px solid #263241;border-radius:5px;color:var(--text);padding:8px}.line-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}.line-actions button{font-size:12px;margin:0;padding:6px 8px}.source-note{color:var(--muted);font-size:11px;margin:7px 0 0}.workshop-side{position:sticky;top:16px;align-self:start}.workshop-preview{width:100%;max-height:560px;object-fit:contain;object-position:top;background:#fff;border:1px solid var(--line);border-radius:5px}.chat-box textarea{width:100%;min-height:82px;resize:vertical;background:#0d1117;border:1px solid var(--line);border-radius:6px;color:var(--text);padding:9px}.chat-row{display:flex;gap:8px;margin-top:8px}.chat-row select{flex:0 0 120px}.chat-row button{margin:0;flex:1}.ai-reply{background:#10243a;border:1px solid #1f4f7a;border-radius:7px;padding:10px;margin-top:10px;white-space:pre-wrap}.suggestion{border:1px solid var(--line);border-radius:7px;padding:9px;margin:8px 0}.suggestion .text{font-size:13px}.history-list{max-height:180px;overflow:auto}.history-row{display:flex;justify-content:space-between;gap:8px;align-items:center;border-top:1px solid var(--line);padding:7px 0;font-size:12px}.history-row button{font-size:11px;margin:0;padding:4px 7px;background:#21262d;border-color:var(--line)}@media(max-width:850px){.hero{display:block}.hero-actions{margin-top:12px}.action-grid{grid-template-columns:1fr}.library-toolbar{grid-template-columns:1fr}.workshop-layout{grid-template-columns:1fr}.workshop-side{position:static}}
+ .usage-strip{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 18px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#111827}.usage-strip strong{color:var(--text)}.queue-strip{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px;padding:10px 12px;border:1px solid #3b2e13;border-radius:8px;background:#1b1710}.queue-strip button{margin:0}.mode-tag{color:var(--accent);font-weight:600}.rationale{border-left:3px solid var(--accent);padding:10px 12px;background:#10243a;border-radius:6px;margin:10px 0}.rationale p{margin:5px 0}.rationale ul{margin:6px 0 0 18px;padding:0}.report-details{margin-top:10px}.report-details summary{cursor:pointer;color:var(--accent)}.workshop-preview-frame{width:100%;height:560px;border:1px solid var(--line);border-radius:5px;background:#fff}.preview-fallback{padding:12px;background:#111827;border-radius:6px}.action-card.featured{border-color:var(--accent);box-shadow:0 0 0 1px rgba(88,166,255,.12)}.action-card .micro{min-height:0;margin:4px 0 8px;font-size:11px;color:#b5c7d8}.button-row{display:flex;gap:8px;flex-wrap:wrap}.button-row button{margin:0}.report-meter{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0}.report-meter div{padding:8px;background:#0d1117;border:1px solid var(--line);border-radius:6px}.report-meter strong{display:block;font-size:17px}@media(max-width:850px){.report-meter{grid-template-columns:1fr}}
 </style></head><body><main>
 <header class="hero"><div><div class="eyebrow">PRIVATE RESUME WORKSPACE</div><h1>Resume Studio</h1><p class="sub">Create, compare, and revisit role-specific resumes without losing a run.</p></div><div class="hero-actions"><button id="tailorTab" class="active">New tailoring</button><button id="libraryTab" class="secondary">Resume bank <span id="libraryCount">0</span></button></div></header>
+<div id="usageStrip" class="usage-strip"><strong>Usage</strong><span class="meta">Loading observed local Codex usage…</span></div>
+<div id="queueStrip" class="queue-strip hidden"><span><strong>Tailor queue</strong> <span id="queueSummary" class="meta"></span></span><button id="queueOpen" class="secondary">Open bank</button></div>
 <div id="tailorView" class="grid"><section class="panel"><div class="panel-top"><h2>Postings</h2><span id="jobCount" class="count"></span></div><p class="hint">Choose a role. Saved resumes stay in the bank when you switch.</p><input id="search" placeholder="Search company, title, sector…" autocomplete="off"><div class="toolbar"><select id="sort" aria-label="Sort roles"><option value="best">Best Radar score</option><option value="newest">Newest</option><option value="resume_match">Resume Match</option></select><button id="refreshEvidence" class="secondary" title="Refresh GitHub and Devpost evidence">Refresh evidence</button></div><div id="jobs" class="jobs">Loading roles…</div></section>
-<section class="panel"><div id="empty" class="empty">Select a posting to see its match, saved resumes, and tailoring actions.</div><div id="workspace" class="hidden"><div class="workspace-heading"><div id="selected" class="selected-card"></div><button id="selectedLibrary" class="secondary">View resume bank</button></div><div class="notice">Switching postings never deletes a generated resume. Every run is saved with its posting snapshot.</div><div id="match" class="match-card"></div><button id="analyzeMatch" class="secondary">Analyze full posting match</button><div class="action-grid"><div class="action-card"><h3>Source-only</h3><p>Uses your approved bullets verbatim. Safest comparison baseline.</p><button id="strict">Create source-only resume</button></div><div class="action-card"><h3>AI-enhanced</h3><p>Allows source-grounded bullet improvements with evidence and review.</p><button id="dream">Create AI-enhanced resume</button></div></div><div id="status" class="status hidden"></div><div id="report" class="hidden"></div><div class="section-title"><h3>Saved for this posting</h3><button id="allSaved" class="secondary">See all saved resumes</button></div><div id="selectedResumes"></div></div></section></div>
-<section id="libraryView" class="panel library-view hidden"><div class="library-head"><div><h2>Resume bank</h2><p class="sub">Every generated run and legacy experiment, paired with the posting it used.</p></div><button id="backToTailor" class="secondary">Back to tailoring</button></div><div class="library-toolbar"><input id="librarySearch" placeholder="Filter saved resumes by company or role…" autocomplete="off"><select id="libraryMode" aria-label="Filter resume mode"><option value="all">All modes</option><option value="enhanced">AI-enhanced</option><option value="source-only">Source-only</option></select></div><div id="libraryCards" class="library-grid"></div></section>
+<section class="panel"><div id="empty" class="empty">Select a posting to see its match, saved resumes, and tailoring actions.</div><div id="workspace" class="hidden"><div class="workspace-heading"><div id="selected" class="selected-card"></div><button id="selectedLibrary" class="secondary">View resume bank</button></div><div class="notice">Switching postings never deletes a generated resume. Every run is saved with its posting snapshot. Queue several roles; each gets its own durable draft, posting snapshot, and editor history.</div><div id="match" class="match-card"></div><div class="button-row"><button id="analyzeMatch" class="secondary">Analyze full posting match</button><button id="showScoreReasons" class="secondary">Explain Radar score</button></div><div class="action-grid"><div class="action-card"><h3>Used bullets</h3><p>Approved wording and selections only. Your clean comparison baseline.</p><p class="micro">Lowest creative variance · still queues a complete draft</p><button id="strict">Queue used-bullets tailor</button></div><div class="action-card featured"><h3>AI tailor</h3><p>Role-specific rewrites, project swaps, ATS coverage, and a review pass.</p><p class="micro">Evidence-grounded original wording</p><button id="dream">Queue AI tailor</button></div><div class="action-card"><h3>Unrestricted AI tailor</h3><p>Freer synthesis across your CV evidence bank for a sharper, more original argument.</p><p class="micro">Still factual and layout-safe · human-review flag stays visible</p><button id="unrestricted">Queue unrestricted tailor</button></div></div><div id="scoreReasons" class="rationale hidden"></div><div id="status" class="status hidden"></div><div id="report" class="hidden"></div><div class="section-title"><h3>Saved for this posting</h3><button id="allSaved" class="secondary">See all saved resumes</button></div><div id="selectedResumes"></div></div></section></div>
+<section id="libraryView" class="panel library-view hidden"><div class="library-head"><div><h2>Resume bank</h2><p class="sub">Every generated run and legacy experiment, paired with the posting it used. Nothing is replaced when you queue another tailor.</p></div><button id="backToTailor" class="secondary">Back to tailoring</button></div><div class="library-toolbar"><input id="librarySearch" placeholder="Filter saved resumes by company or role…" autocomplete="off"><select id="libraryMode" aria-label="Filter resume mode"><option value="all">All modes</option><option value="unrestricted">Unrestricted AI</option><option value="ai">AI tailor</option><option value="used">Used bullets</option></select></div><div id="libraryCards" class="library-grid"></div></section>
 <section id="workshopView" class="panel library-view hidden"><div class="library-head"><div><div class="eyebrow">DRAFT WORKSHOP</div><h2 id="workshopTitle">Resume workshop</h2><p id="workshopSubtitle" class="sub">Edit one line at a time. Every save creates a new PDF revision.</p></div><div><button id="workshopBack" class="secondary">Back to bank</button><button id="workshopTailor" class="secondary">Back to posting</button></div></div><div class="notice">The original generated PDF stays untouched. Header, education, and technical skills remain the canonical base; experience, projects, and leadership lines are editable here.</div><div class="workshop-layout"><section class="panel"><div class="section-title"><h3>Editable resume lines</h3><span id="workshopLineCount" class="count"></span></div><div id="workshopLines" class="workshop-lines">Loading workshop…</div></section><aside class="workshop-side"><section class="panel"><div class="section-title"><h3>Preview</h3><span id="workshopSaveStatus" class="meta"></span></div><div id="workshopPreview"></div></section><section class="panel chat-box"><h3>Ask the writing partner</h3><p class="hint">Give it a goal or ask about a specific line. It returns candidates; you choose what to apply.</p><textarea id="workshopRequest" placeholder="e.g. Make the J&J bullets feel more like an AI platform I architected, keep the technical proof, and cut generic wording."></textarea><div class="chat-row"><select id="workshopProvider" aria-label="AI provider"></select><button id="workshopAsk">Ask for candidates</button></div><div id="workshopAiResult"></div></section><section class="panel"><div class="section-title"><h3>Revision history</h3><span class="meta">revert creates a new revision</span></div><div id="workshopHistory" class="history-list"></div></section></aside></div></section>
 <script>
 let selected=null,activeRunId=null,libraryEntries=[],runTimers=new Map(),jobsCache=[],workshopState=null,workshopSuggestions=[];
 const $=id=>document.getElementById(id);
 function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function fmtDate(value){if(!value)return 'date unavailable';const date=new Date(value);return Number.isNaN(date.getTime())?String(value):date.toLocaleString([], {dateStyle:'medium',timeStyle:'short'});}
-function modeLabel(mode){return mode==='enhanced'||mode==='dream'?'AI-enhanced':'Source-only';}
+function modeLabel(mode){return ({used:'Used bullets',strict:'Used bullets','source-only':'Used bullets',ai:'AI tailor',dream:'AI tailor',enhanced:'AI tailor',unrestricted:'Unrestricted AI tailor'})[mode]||'Tailor';}
 function artifactUrl(source,id,name){return '/artifacts/'+encodeURIComponent(source)+'/'+encodeURIComponent(id)+'/'+encodeURIComponent(name);}
 function runArtifact(id,name){return artifactUrl('run',id,name);}
+function renderUsage(usage){if(!usage)return;$('usageStrip').innerHTML=`<strong>Usage</strong><span><strong>${Number(usage.codex_tokens||0).toLocaleString()}</strong> observed Codex tokens · ${usage.codex_calls||0} calls this week · ${usage.runs||0} saved runs</span><span class="meta">${usage.weekly_limit_tokens?`${usage.percent_of_limit}% of configured limit`:'Plus weekly allowance is not exposed by the local CLI'}</span>`;}
+function renderQueue(){const active=libraryEntries.filter(entry=>entry.status==='queued'||entry.status==='running');const queued=active.filter(entry=>entry.status==='queued').length,running=active.filter(entry=>entry.status==='running').length;const strip=$('queueStrip');if(!active.length){strip.classList.add('hidden');return;}strip.classList.remove('hidden');$('queueSummary').textContent=`${queued} queued · ${running} running · ${active.length} total`;}
 function savedFor(job){return libraryEntries.filter(entry=>String(entry.job?.id||'')===String(job?.id||''));}
 function renderJobRows(jobs){
   $('jobCount').textContent=jobs.length+' shown';
@@ -3856,7 +4041,7 @@ async function loadJobs(){
   const q=encodeURIComponent($('search').value),sort=encodeURIComponent($('sort').value);$('jobs').innerHTML='<p class="sub">Scoring roles…</p>';
   try{const r=await fetch('/api/jobs?query='+q+'&sort='+sort);const data=await r.json();if(!r.ok)throw new Error(data.error||'Could not load postings');jobsCache=data.jobs||[];renderJobRows(jobsCache);}catch(error){$('jobs').innerHTML='<p class="sub">'+esc(error.message)+'</p>';}
 }
-function renderMatch(match){if(!match){$('match').innerHTML='<span class="meta">Resume Match not analyzed yet. Full-posting analysis is optional.</span>';return;}const gaps=(match.missing_requirements||[]).join(', ')||'none detected';$('match').innerHTML=`<strong>${match.score}/100 Resume Match</strong> <span class="badge">${esc(match.confidence||'low')} confidence</span><div class="meta">${esc((match.reasons||[]).join(' · '))}</div><div class="meta">Gaps: ${esc(gaps)}</div>`;}
+function renderMatch(match){if(!match){$('match').innerHTML='<span class="meta">Resume Match not analyzed yet. Full-posting analysis is optional.</span>';return;}const gaps=(match.missing_requirements||[]).join(', ')||'none detected';const reasons=(match.reasons||[]).map(reason=>`<li>${esc(reason)}</li>`).join('');$('match').innerHTML=`<strong>${match.score}/100 Resume Match</strong> <span class="badge">${esc(match.confidence||'low')} confidence</span><details class="report-details"><summary>Why this match score</summary><ul>${reasons||'<li>Evidence graph has not returned detailed reasons yet.</li>'}</ul></details><div class="meta">Gaps: ${esc(gaps)}</div>`;}
 function renderCard(entry,compact=false){
   const job=entry.job||{},report=entry.artifacts.includes('report.json')?artifactUrl(entry.source,entry.entry_id,'report.json'):'';const preview=entry.urls.preview?`<img class="thumb" loading="lazy" src="${entry.urls.preview}" alt="${esc(job.company)} resume preview">`:'<div class="thumb-placeholder">Preview appears after the run finishes</div>';const pdf=entry.has_pdf?`<a href="${entry.urls.pdf}" target="_blank" rel="noreferrer">Preview PDF</a>`:'<span class="meta">PDF pending</span>';const posting=entry.has_posting_snapshot?`<button data-view-posting data-posting="${entry.urls.posting}">View posting snapshot</button>`:'<span class="meta">No saved posting text</span>';const workshop=entry.has_workshop?`<button data-open-workshop data-run="${esc(entry.run_id)}">Open workshop</button>`:'';const warning=entry.legacy?'<span class="legacy">legacy experiment</span>':'';return `<article class="resume-card"><div class="card-top"><div><strong>${esc(job.company||'Unknown company')}</strong><small>${esc(job.title||'Untitled role')}</small></div><span class="badge">${modeLabel(entry.mode)}</span></div>${compact?'':preview}<div class="card-meta">${fmtDate(entry.created_at)} · ${esc(entry.status)}${warning?' · '+warning:''}${entry.craft_score!==null&&entry.craft_score!==undefined?' · ':''}${entry.craft_score!==null&&entry.craft_score!==undefined?`Craft ${esc(entry.craft_score)}/100`:''}${job.resume_match?` · Match ${esc(job.resume_match.score)}/100`:''}</div><div class="card-actions">${pdf}${workshop}${report?`<a href="${report}" target="_blank" rel="noreferrer">Report</a>`:''}${posting}</div><div class="posting-snapshot hidden"></div></article>`;
 }
@@ -3866,7 +4051,8 @@ function renderSelectedResumes(){
 function renderLibrary(){
   const query=$('librarySearch').value.toLowerCase().trim(),mode=$('libraryMode').value;const entries=libraryEntries.filter(entry=>{const job=entry.job||{},hay=(String(job.company||'')+' '+String(job.title||'')).toLowerCase();return (!query||query.split(/\s+/).every(part=>hay.includes(part)))&&(mode==='all'||entry.mode===mode);});$('libraryCount').textContent=String(libraryEntries.length);$('libraryCards').innerHTML=entries.length?entries.map(entry=>renderCard(entry)).join(''):'<p class="sub">No saved resumes match this filter.</p>';
 }
-async function loadLibrary(){try{const r=await fetch('/api/library?limit=500');const data=await r.json();if(!r.ok)throw new Error(data.error||'Could not load resume bank');libraryEntries=data.resumes||[];renderLibrary();renderSelectedResumes();renderJobRows(jobsCache);}catch(error){$('libraryCards').innerHTML='<p class="sub">'+esc(error.message)+'</p>';}}
+async function loadLibrary(){try{const r=await fetch('/api/library?limit=500');const data=await r.json();if(!r.ok)throw new Error(data.error||'Could not load resume bank');libraryEntries=data.resumes||[];renderQueue();renderLibrary();renderSelectedResumes();renderJobRows(jobsCache);}catch(error){$('libraryCards').innerHTML='<p class="sub">'+esc(error.message)+'</p>';}}
+async function loadUsage(){try{const r=await fetch('/api/usage');const data=await r.json();if(r.ok)renderUsage(data);}catch(error){$('usageStrip').innerHTML='<strong>Usage</strong><span class="meta">Usage ledger unavailable: '+esc(error.message)+'</span>';}}
 function workshopLineElement(lineId){return Array.from(document.querySelectorAll('[data-line-id]')).find(node=>node.dataset.lineId===lineId);}
 function plainLine(value){return String(value??'').replace(/\\textbf\{([^{}]*)\}/g,'$1').replace(/\\emph\{([^{}]*)\}/g,'$1').replace(/\\(?:large|normalsize|small|scshape)\s*/g,'').replace(/\\(?:%|&|\$)/g,m=>m==='\\%'?'%':m==='\\&'?'&':'$').replace(/\\times\{\}/g,'x');}
 function renderWorkshop(){
@@ -3874,7 +4060,7 @@ function renderWorkshop(){
   const lines=workshopState.lines||[];$('workshopLineCount').textContent=lines.length+' editable lines';const groups=[];lines.forEach(line=>{let group=groups.find(item=>item.entry_id===line.entry_id);if(!group){group={entry_id:line.entry_id,label:line.entry_label,role:line.role,section:line.section,lines:[]};groups.push(group);}group.lines.push(line);});
   $('workshopLines').innerHTML=groups.map(group=>`<div class="workshop-entry"><h4>${esc(group.label)}${group.role?' · '+esc(group.role):''}</h4>${group.lines.map(line=>`<div class="workshop-line"><div class="line-meta"><span>${esc(line.section)} · ${esc(line.line_id)}</span><span>${line.source_ids?.length>1?'synthesized from '+line.source_ids.length+' sources':'source-grounded'}</span></div><textarea class="line-text" data-line-id="${esc(line.line_id)}">${esc(plainLine(line.text))}</textarea><div class="line-actions"><button data-save-line="${esc(line.line_id)}">Save line</button><button class="secondary" data-ask-line="${esc(line.line_id)}">Ask AI about this</button></div>${line.source_text&&line.source_text!==line.text?`<p class="source-note">Base source: ${esc(plainLine(line.source_text))}</p>`:''}</div>`).join('')}</div>`).join('')||'<p class="sub">No editable lines in this draft.</p>';
   const providers=workshopState.providers||{};const choices=Object.keys(providers).filter(name=>providers[name]);$('workshopProvider').innerHTML=choices.length?choices.map(name=>`<option value="${esc(name)}">${esc(name==='codex'?'Codex CLI':name==='claude'?'Claude CLI':name)}</option>`).join(''):'<option value="">No local AI CLI</option>';$('workshopAsk').disabled=!choices.length;
-  const render=workshopState.last_render||{};$('workshopSaveStatus').textContent=render.revision_id?'revision '+render.revision_id:'original generated draft';$('workshopPreview').innerHTML=render.preview_url?`<img class="workshop-preview" src="${render.preview_url}" alt="Workshop resume preview"><p><a href="${render.pdf_url}" target="_blank" rel="noreferrer">Open workshop PDF</a> · <a href="${workshopState.original_pdf_url}" target="_blank" rel="noreferrer">Open original generated PDF</a></p>`:workshopState.original_pdf_url?`<p class="meta">Showing the original generated PDF until you save a workshop revision.</p><a href="${workshopState.original_pdf_url}" target="_blank" rel="noreferrer">Open original generated PDF</a>`:'<p class="sub">Preview is not available yet.</p>';
+  const render=workshopState.last_render||{};$('workshopSaveStatus').textContent=render.revision_id?'revision '+render.revision_id:'original generated draft';const previewUrl=render.preview_url||workshopState.original_preview_url;const pdfUrl=render.pdf_url||workshopState.original_pdf_url;$('workshopPreview').innerHTML=previewUrl?`<img class="workshop-preview" src="${previewUrl}" alt="Rendered resume preview"><iframe class="workshop-preview-frame" src="${pdfUrl}" title="Rendered resume PDF"></iframe><p><a href="${pdfUrl}" target="_blank" rel="noreferrer">Open ${render.revision_id?'workshop':'original'} PDF</a></p>`:pdfUrl?`<div class="preview-fallback"><strong>PDF ready</strong><p class="meta">The browser could not create a thumbnail, but the document is still available.</p><a href="${pdfUrl}" target="_blank" rel="noreferrer">Open resume PDF</a></div>`:'<p class="sub">Preview is not available yet.</p>';
   $('workshopHistory').innerHTML=(workshopState.revisions||[]).map(revision=>`<div class="history-row"><span>${esc(revision.label||revision.kind||'revision')}<br><small>${fmtDate(revision.created_at)}${revision.provider?' · '+esc(revision.provider):''}</small></span><button data-revert-revision="${esc(revision.revision_id)}">Revert</button></div>`).join('')||'<p class="meta">Your first save will appear here.</p>';
   document.querySelectorAll('[data-save-line]').forEach(button=>button.onclick=()=>saveWorkshopLine(button.dataset.saveLine));document.querySelectorAll('[data-ask-line]').forEach(button=>button.onclick=()=>askWorkshop(button.dataset.askLine));document.querySelectorAll('[data-revert-revision]').forEach(button=>button.onclick=()=>revertWorkshop(button.dataset.revertRevision));
 }
@@ -3888,13 +4074,14 @@ async function choose(id){
   const r=await fetch('/api/job?id='+encodeURIComponent(id));const data=await r.json();if(!r.ok){$('match').textContent=data.error||'Posting could not be loaded';return;}selected=data;$('empty').classList.add('hidden');$('workspace').classList.remove('hidden');$('selected').innerHTML=`<strong>${esc(selected.company)} · ${esc(selected.title)}</strong><div class="meta">${esc((selected.locations||[]).join(', '))} · Radar ${selected.score} · <a href="${esc(selected.url)}" target="_blank" rel="noreferrer">open live posting</a></div><div>${(selected.alert_ok?'<span class="badge">alert eligible</span>':'<span class="badge">dashboard role</span>')} ${(selected.early_career_possible?'<span class="badge">early-career possible</span>':'')}</div>`;renderMatch(selected.resume_match);document.querySelectorAll('.job').forEach(b=>b.classList.toggle('selected',b.dataset.id===id));renderSelectedResumes();showView('tailor');}
 async function analyzeMatch(){if(!selected)return;const button=$('analyzeMatch');button.disabled=true;$('match').innerHTML='<span class="meta">Fetching the posting and matching the full evidence graph…</span>';try{const r=await fetch('/api/match',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:selected.id})});const data=await r.json();if(!r.ok)throw new Error(data.error||'Match analysis failed');selected.resume_match=data.resume_match;renderMatch(data.resume_match);}catch(error){$('match').textContent=error.message;}finally{button.disabled=false;}}
 async function refreshEvidence(){const button=$('refreshEvidence');button.disabled=true;button.textContent='Refreshing…';try{const r=await fetch('/api/evidence/refresh',{method:'POST',headers:{'content-type':'application/json'},body:'{}'});const data=await r.json();if(!r.ok)throw new Error(data.error||'Evidence refresh failed');await loadJobs();if(selected)await choose(selected.id);}catch(error){alert(error.message);}finally{button.disabled=false;button.textContent='Refresh evidence';}}
-function setTailorButtons(disabled){['strict','dream'].forEach(id=>$(id).disabled=disabled);}
-async function start(mode){if(!selected)return;setTailorButtons(true);$('status').className='status running';$('status').textContent='Saving this '+modeLabel(mode)+' run for '+selected.company+'…';$('status').classList.remove('hidden');$('report').classList.add('hidden');try{const r=await fetch('/api/run',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:selected.id,mode})});const data=await r.json();if(!r.ok)throw new Error(data.error||'Could not start run');activeRunId=data.run_id;await loadLibrary();watchRun(data.run_id);}catch(error){$('status').className='status failed';$('status').textContent=error.message;setTailorButtons(false);}}
+function setTailorButtons(disabled){['strict','dream','unrestricted'].forEach(id=>$(id).disabled=disabled);}
+async function start(mode){if(!selected)return;const buttons=['strict','dream','unrestricted'];buttons.forEach(id=>$(id).disabled=true);$('status').className='status running';$('status').textContent='Queueing '+modeLabel(mode)+' for '+selected.company+'…';$('status').classList.remove('hidden');$('report').classList.add('hidden');try{const r=await fetch('/api/run',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:selected.id,mode})});const data=await r.json();if(!r.ok)throw new Error(data.error||'Could not queue run');activeRunId=data.run_id;$('status').textContent=selected.company+': queued · run '+data.run_id;await loadLibrary();watchRun(data.run_id);}catch(error){$('status').className='status failed';$('status').textContent=error.message;}finally{buttons.forEach(id=>$(id).disabled=false);}}
 function watchRun(id){if(runTimers.has(id))return;const tick=async()=>{try{const r=await fetch('/api/run?id='+encodeURIComponent(id));const data=await r.json();if(!r.ok)throw new Error(data.error||'Run status unavailable');if(id===activeRunId){$('status').textContent=(data.job?.company?data.job.company+': ':'')+(data.message||data.status);$('status').className='status '+data.status;}if(data.status==='complete'||data.status==='failed'){runTimers.delete(id);if(id===activeRunId){setTailorButtons(false);if(data.status==='complete')renderReport(data);else $('report').classList.add('hidden');}await loadLibrary();return;}const timer=setTimeout(()=>{runTimers.delete(id);tick();},1500);runTimers.set(id,timer);}catch(error){runTimers.delete(id);if(id===activeRunId){$('status').className='status failed';$('status').textContent=error.message;setTailorButtons(false);}}};tick();}
-function renderReport(status){const report=status.report||{};const review=report.review||{},gates=review.gates||{},job=status.job||report.job||{},pdfName=status.pdf_filename||report.pdf_filename||'resume.pdf',previewName=status.preview_filename||report.preview_filename||'';$('report').classList.remove('hidden');let html=`<div class="section-title"><h3>Saved result</h3><span class="badge">${modeLabel(status.mode)}</span></div><p class="meta">${esc(job.company||'')} · ${esc(job.title||'')} · ${fmtDate(status.updated_at||status.created_at)}</p>`;if(review.craft_score!==undefined)html+=`<div class="score">${review.craft_score}/100 craft</div><div>${review.ready?'Ready for human review':'Needs revision or fact verification'}</div><p>${Object.entries(gates).map(([name,gate])=>`<span class="badge">${esc(name)}: ${esc(gate.status)}</span>`).join(' ')}</p>`;if(report.resume_match)html+=`<p><strong>Resume Match:</strong> ${report.resume_match.score}/100 <span class="badge">${esc(report.resume_match.confidence)}</span></p>`;if(report.positioning_thesis)html+=`<p><strong>Thesis:</strong> ${esc(report.positioning_thesis)}</p>`;if(status.mode==='dream'||report.mode==='enhanced')html+=`<p class="meta">AI-enhanced bullets may be synthesized from multiple authorized source lines; edit or revert them in the workshop.</p>`;if(report.format_contract)html+=`<p class="meta"><strong>Format:</strong> CV/resume.tex locked · 0% font-size change · company first</p>`;const layout=review.deterministic?.layout||{};if(layout.horizontal)html+=`<p class="meta"><strong>Space QA:</strong> ${layout.horizontal.measured||0} bullets measured · ${layout.horizontal.wrap_count||0} wraps · ${layout.horizontal.underfilled_line_count||0} underfilled lines · one-more-bullet ${layout.vertical_capacity?.pass?'overflows':'still fits'}</p>`;if(report.usage)html+=`<p class="meta"><strong>Codex usage:</strong> ${Number(report.usage.codex_tokens||0).toLocaleString()} tokens across ${report.usage.codex_calls||0} calls${report.usage.complete?'':' (some call totals unavailable)'}</p>`;html+=`<p><a href="${runArtifact(status.run_id,pdfName)}" target="_blank" rel="noreferrer">Preview PDF</a> · <button class="secondary" data-open-workshop="${esc(status.run_id)}">Open workshop</button> · <a href="/api/posting?source=run&id=${encodeURIComponent(status.run_id)}" target="_blank" rel="noreferrer">Posting snapshot</a> · <a href="${runArtifact(status.run_id,'content_plan.json')}" target="_blank" rel="noreferrer">Source plan</a> · <a href="${runArtifact(status.run_id,'report.json')}" target="_blank" rel="noreferrer">Full report</a></p>`;if(previewName)html+=`<img class="preview" src="${runArtifact(status.run_id,previewName)}" alt="Rendered resume preview">`;html+='<pre>'+esc(JSON.stringify(review,null,2))+'</pre>';$('report').innerHTML=html;document.querySelectorAll('[data-open-workshop]').forEach(button=>button.onclick=()=>openWorkshop(button.dataset.openWorkshop||status.run_id));}
+function renderReport(status){const report=status.report||{};const review=report.review||{},gates=review.gates||{},job=status.job||report.job||{},pdfName=status.pdf_filename||report.pdf_filename||'resume.pdf',previewName=status.preview_filename||report.preview_filename||'';$('report').classList.remove('hidden');let html=`<div class="section-title"><h3>Saved result</h3><span class="badge">${modeLabel(status.mode||report.mode)}</span></div><p class="meta">${esc(job.company||'')} · ${esc(job.title||'')} · ${fmtDate(status.updated_at||status.created_at)}</p>`;if(review.craft_score!==undefined)html+=`<div class="score">${review.craft_score}/100 craft</div><div>${review.ready?'Ready for human review':'Needs revision or fact verification'}</div><p>${Object.entries(gates).map(([name,gate])=>`<span class="badge">${esc(name)}: ${esc(gate.status)}</span>`).join(' ')}</p>`;if(report.resume_match)html+=`<p><strong>Resume Match:</strong> ${report.resume_match.score}/100 <span class="badge">${esc(report.resume_match.confidence)}</span></p>`;if(report.positioning_thesis)html+=`<p><strong>Thesis:</strong> ${esc(report.positioning_thesis)}</p>`;if(status.mode==='ai'||status.mode==='unrestricted'||report.mode==='enhanced'||report.mode==='unrestricted')html+=`<p class="meta">AI tailoring may synthesize authorized source lines; unrestricted drafts are intentionally more original. Edit, compare, or revert in the workshop.</p>`;if(report.format_contract)html+=`<p class="meta"><strong>Format:</strong> CV/resume.tex locked · 0% font-size change · company first</p>`;const layout=review.deterministic?.layout||{};if(layout.horizontal)html+=`<p class="meta"><strong>Space QA:</strong> ${layout.horizontal.measured||0} bullets measured · ${layout.horizontal.wrap_count||0} wraps · ${layout.horizontal.near_wrap_count||0} near-wraps · ${layout.horizontal.underfilled_line_count||0} roomy lines · one-more-bullet ${layout.vertical_capacity?.pass?'overflows':'still fits'}</p>`;if(report.usage)html+=`<p class="meta"><strong>Codex usage:</strong> ${Number(report.usage.codex_tokens||0).toLocaleString()} tokens across ${report.usage.codex_calls||0} calls${report.usage.complete?'':' (some call totals unavailable)'}</p>`;html+=`<p><a href="${runArtifact(status.run_id,pdfName)}" target="_blank" rel="noreferrer">Preview PDF</a> · <button class="secondary" data-open-workshop="${esc(status.run_id)}">Open workshop</button> · <a href="/api/posting?source=run&id=${encodeURIComponent(status.run_id)}" target="_blank" rel="noreferrer">Posting snapshot</a> · <a href="${runArtifact(status.run_id,'content_plan.json')}" target="_blank" rel="noreferrer">Source plan</a> · <a href="${runArtifact(status.run_id,'report.json')}" target="_blank" rel="noreferrer">Full report</a></p>`;if(previewName)html+=`<img class="preview" src="${runArtifact(status.run_id,previewName)}" alt="Rendered resume preview">`;html+='<pre>'+esc(JSON.stringify(review,null,2))+'</pre>';$('report').innerHTML=html;document.querySelectorAll('[data-open-workshop]').forEach(button=>button.onclick=()=>openWorkshop(button.dataset.openWorkshop||status.run_id));}
 function showView(view){const bank=view==='library',workshop=view==='workshop';$('tailorView').classList.toggle('hidden',bank||workshop);$('libraryView').classList.toggle('hidden',!bank);$('workshopView').classList.toggle('hidden',!workshop);$('tailorTab').classList.toggle('active',!bank&&!workshop);$('libraryTab').classList.toggle('active',bank);if(bank)renderLibrary();if(workshop)renderWorkshop();}
 document.addEventListener('click',async event=>{const open=event.target.closest('[data-open-workshop]');if(open){event.preventDefault();return openWorkshop(open.dataset.openWorkshop||open.dataset.run);}const button=event.target.closest('[data-view-posting]');if(!button)return;const card=button.closest('.resume-card'),panel=card.querySelector('.posting-snapshot');if(!panel.classList.contains('hidden')){panel.classList.add('hidden');button.textContent='View posting snapshot';return;}button.disabled=true;try{const r=await fetch(button.dataset.posting),data=await r.json();if(!r.ok)throw new Error(data.error||'Posting snapshot unavailable');panel.innerHTML=`<strong>Saved posting snapshot</strong><pre>${esc(data.posting_text||'Only posting metadata was available for this run.')}</pre>`;panel.classList.remove('hidden');button.textContent='Hide posting snapshot';}catch(error){panel.textContent=error.message;panel.classList.remove('hidden');}finally{button.disabled=false;}});
-$('search').oninput=()=>{clearTimeout(window.searchTimer);window.searchTimer=setTimeout(loadJobs,250)};$('sort').onchange=loadJobs;$('librarySearch').oninput=renderLibrary;$('libraryMode').onchange=renderLibrary;$('analyzeMatch').onclick=analyzeMatch;$('refreshEvidence').onclick=refreshEvidence;$('strict').onclick=()=>start('strict');$('dream').onclick=()=>start('dream');$('tailorTab').onclick=()=>showView('tailor');$('libraryTab').onclick=()=>showView('library');$('selectedLibrary').onclick=()=>showView('library');$('allSaved').onclick=()=>showView('library');$('backToTailor').onclick=()=>showView('tailor');$('workshopBack').onclick=()=>showView('library');$('workshopTailor').onclick=()=>showView('tailor');$('workshopAsk').onclick=()=>askWorkshop('');Promise.all([loadJobs(),loadLibrary()]);
+function explainRadarReason(reason){const text=String(reason||'');if(text.startsWith('raw utility'))return 'Calibration: '+text;const labels=[['base utility','Baseline role utility'],['role:','Role family fit'],['sector:','Sector fit'],['new-grad/early-career priority','Verified early-career signal'],['early-career possible','Plausible first-role signal'],['new-grad evidence absent','No explicit early-career evidence'],['company tier','Company quality'],['explicit goal company','Personal goal-company preference'],['company concentration','Company diversity adjustment'],['compensation','Compensation'],['posted','Freshness'],['remote','Remote access'],['Resume Match','Resume Match']];const label=(labels.find(item=>text.startsWith(item[0]))||[])[1]||'Scoring input';return label+': '+text;}
+$('search').oninput=()=>{clearTimeout(window.searchTimer);window.searchTimer=setTimeout(loadJobs,250)};$('sort').onchange=loadJobs;$('librarySearch').oninput=renderLibrary;$('libraryMode').onchange=renderLibrary;$('analyzeMatch').onclick=analyzeMatch;$('refreshEvidence').onclick=refreshEvidence;$('strict').onclick=()=>start('used');$('dream').onclick=()=>start('ai');$('unrestricted').onclick=()=>start('unrestricted');$('showScoreReasons').onclick=()=>{if(!selected)return;const reasons=selected.score_reasons||[];$('scoreReasons').classList.remove('hidden');$('scoreReasons').innerHTML='<strong>Why Radar gave this role '+esc(selected.score)+'/100</strong><p>Radar is deterministic job fit. Resume Match is a separate CV/evidence alignment score. 90+ is strong; the company-diversity adjustment only nudges weaker duplicates.</p><ul>'+reasons.map(reason=>'<li>'+esc(explainRadarReason(reason))+'</li>').join('')+'</ul>';};$('queueOpen').onclick=()=>showView('library');$('tailorTab').onclick=()=>showView('tailor');$('libraryTab').onclick=()=>showView('library');$('selectedLibrary').onclick=()=>showView('library');$('allSaved').onclick=()=>showView('library');$('backToTailor').onclick=()=>showView('tailor');$('workshopBack').onclick=()=>showView('library');$('workshopTailor').onclick=()=>showView('tailor');$('workshopAsk').onclick=()=>askWorkshop('');Promise.all([loadJobs(),loadLibrary(),loadUsage()]);
 </script></main></body></html>"""
 
 
@@ -3911,6 +4098,13 @@ renderReport=function(status){
   const rewrites=changes.rewritten_bullets||[];
   if(rewrites.length)extra+=`<details><summary>Show ${rewrites.length} rewritten lines</summary>${rewrites.map(item=>`<div class=\"meta\"><strong>${esc(item.source_id||'line')}</strong><br><s>${esc(item.source_text||'')}</s><br>→ ${esc(item.final_text||'')}</div>`).join('')}</details>`;
   extra+='</div>';
+  const plan=report.content_plan||{},selections=[...(plan.experiences||[]),...(plan.projects||[]),...(plan.leadership||[])];
+  const reasons=selections.map(item=>item.why).filter(Boolean).slice(0,8);
+  let rationale=`<div class=\"rationale\"><strong>Why this draft was chosen</strong>`;
+  if(report.positioning_thesis)rationale+=`<p>${esc(report.positioning_thesis)}</p>`;
+  if(reasons.length)rationale+=`<details class=\"report-details\"><summary>Show selection reasoning</summary><ul>${reasons.map(reason=>`<li>${esc(reason)}</li>`).join('')}</ul></details>`;
+  if((report.revision_notes||[]).length)rationale+=`<details class=\"report-details\"><summary>Show editorial notes</summary><ul>${report.revision_notes.slice(0,8).map(note=>`<li>${esc(note)}</li>`).join('')}</ul></details>`;
+  rationale+='</div>';extra+=rationale;
   if(ats.posting_available){
     const missing=(ats.terms||[]).filter(item=>item.supported&&!item.rendered).map(item=>item.term);
     const unsupported=(ats.terms||[]).filter(item=>!item.supported).map(item=>item.term);
@@ -3927,6 +4121,14 @@ function showView(view){""",
 UI_HTML = UI_HTML.replace(
     "${layout.horizontal.underfilled_line_count||0} underfilled lines · one-more-bullet",
     "${layout.horizontal.near_wrap_count||0} near-wraps · ${layout.horizontal.underfilled_line_count||0} roomy lines · one-more-bullet",
+)
+UI_HTML = UI_HTML.replace(
+    "</head>",
+    "<style>.workshop-preview{display:none!important}</style></head>",
+)
+UI_HTML = UI_HTML.replace(
+    "The original generated PDF stays untouched. Header, education, and technical skills remain the canonical base; experience, projects, and leadership lines are editable here.",
+    "The original generated PDF stays untouched. The template shell remains canonical, but every visible resume line—education, skills, experience, projects, and leadership—is editable here.",
 )
 
 
@@ -4004,6 +4206,8 @@ class StudioHandler(BaseHTTPRequestHandler):
                     limit=limit,
                 ),
             })
+        if parsed.path == "/api/usage":
+            return self.send_json(studio_usage(repo_root()))
         if parsed.path == "/api/posting":
             params = parse_qs(parsed.query)
             source = params.get("source", [""])[0]
@@ -4032,11 +4236,14 @@ class StudioHandler(BaseHTTPRequestHandler):
             if len(parts) != 4 or not re.fullmatch(r"[a-f0-9]{12}", parts[2]):
                 return self.send_json({"error": "invalid artifact path"}, HTTPStatus.BAD_REQUEST)
             run_dir = studio_root(repo_root()) / "runs" / parts[2]
-            target = (run_dir / parts[3]).resolve()
-            if run_dir.resolve() not in target.parents or not target.is_file():
+            target = artifact_target(run_dir, parts[3])
+            if target is None:
                 return self.send_json({"error": "artifact not found"}, HTTPStatus.NOT_FOUND)
             content_type = "application/pdf" if target.suffix == ".pdf" else "image/png" if target.suffix == ".png" else "application/json" if target.suffix == ".json" else "text/plain; charset=utf-8"
-            return self.send_bytes(target.read_bytes(), content_type, download_name=target.name if target.suffix == ".pdf" else "")
+            return self.send_bytes(
+                target.read_bytes(), content_type,
+                download_name=Path(parts[3]).name if target.suffix == ".pdf" else "",
+            )
         if parsed.path.startswith("/workshop/"):
             parts = parsed.path.split("/")
             if len(parts) != 5 or not re.fullmatch(r"[a-f0-9]{12}", parts[2]) or not re.fullmatch(r"[a-f0-9]{10}", parts[3]):
@@ -4048,7 +4255,10 @@ class StudioHandler(BaseHTTPRequestHandler):
             if target_dir.resolve() not in target.parents or not target.is_file():
                 return self.send_json({"error": "workshop artifact not found"}, HTTPStatus.NOT_FOUND)
             content_type = "application/pdf" if target.suffix == ".pdf" else "image/png" if target.suffix == ".png" else "application/json" if target.suffix == ".json" else "text/plain; charset=utf-8"
-            return self.send_bytes(target.read_bytes(), content_type, download_name=target.name if target.suffix == ".pdf" else "")
+            return self.send_bytes(
+                target.read_bytes(), content_type,
+                download_name=Path(parts[4]).name if target.suffix == ".pdf" else "",
+            )
         if parsed.path.startswith("/artifacts/"):
             parts = parsed.path.split("/")
             if len(parts) != 5:
@@ -4057,11 +4267,14 @@ class StudioHandler(BaseHTTPRequestHandler):
             directory = _library_dir(repo_root(), source, entry_id)
             if directory is None or Path(filename).name != filename:
                 return self.send_json({"error": "invalid artifact path"}, HTTPStatus.BAD_REQUEST)
-            target = (directory / filename).resolve()
-            if directory.resolve() not in target.parents or not target.is_file():
+            target = artifact_target(directory, filename)
+            if target is None:
                 return self.send_json({"error": "artifact not found"}, HTTPStatus.NOT_FOUND)
             content_type = "application/pdf" if target.suffix == ".pdf" else "image/png" if target.suffix == ".png" else "application/json" if target.suffix == ".json" else "text/plain; charset=utf-8"
-            return self.send_bytes(target.read_bytes(), content_type, download_name=target.name if target.suffix == ".pdf" else "")
+            return self.send_bytes(
+                target.read_bytes(), content_type,
+                download_name=Path(filename).name if target.suffix == ".pdf" else "",
+            )
         self.send_json({"error": "not found"}, HTTPStatus.NOT_FOUND)
 
     def do_POST(self) -> None:

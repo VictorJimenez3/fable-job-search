@@ -66,18 +66,23 @@ From the repository on the Mac, start:
 
 Then open `http://127.0.0.1:4317/`. Search for a radar role and choose either:
 
-- **Use my existing bullets** — selects target-relevant source IDs from the
+- **Used bullets** — selects target-relevant source IDs from the
   master CV and example résumés and copies their text without rewriting.
-- **Reviewable enhancements** — permits substantive source-grounded rewrites
+- **AI tailor** — permits substantive source-grounded rewrites
   and synthesis from multiple authorized lines, then runs the same fixed
   review rubric.
+- **Unrestricted AI tailor** — permits a more original role-specific argument
+  across the authorized evidence bank while preserving factuality and scope
+  qualifiers; it is intentionally marked for human review.
 
-Both modes render through the exact `CV/resume.tex` structure. Models cannot
+All three modes render through the exact `CV/resume.tex` structure. Models cannot
 write the document, alter its margins/typography/spacing, enlarge text, or pass
 a sparse or bloated evidence portfolio. Their existing local subscription sessions are
 used; the radar does not receive or store their credentials. The report
 includes the fixed score, target-specific omissions, and known Codex token
-usage.
+usage. The Studio header shows observed weekly local Codex calls/tokens; the
+Plus weekly allowance is not exposed by the local CLI. Set
+`CODEX_WEEKLY_LIMIT_TOKENS` only when you know the comparison limit.
 
 Drafts, prompts, source context, PDFs, and review reports live only under
 `CV/.resume_studio/`. Review the generated PDF and report before using any

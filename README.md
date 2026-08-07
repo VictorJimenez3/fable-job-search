@@ -236,11 +236,13 @@ Start it from the repository:
 .venv/bin/python scripts/resume_studio.py
 ```
 
-Open `http://127.0.0.1:4317/`. **Existing-bullets mode** selects a target-aware
-subset from the master CV and example résumés without rewriting it.
-**Enhancement mode** may substantially rewrite or synthesize bullets from
-multiple authorized source lines while preserving their evidence IDs. In both
-modes a deterministic renderer uses `CV/resume.tex` unchanged;
+Open `http://127.0.0.1:4317/`. **Used bullets** selects a target-aware subset
+from the master CV and example résumés without rewriting it. **AI tailor** may
+substantially rewrite or synthesize bullets from multiple authorized source
+lines. **Unrestricted AI tailor** is freer to make an original role-specific
+argument across the evidence bank; it still cannot invent facts, remove scope
+qualifiers, or bypass layout review. In all modes a deterministic renderer
+uses `CV/resume.tex` unchanged;
 models cannot author the LaTeX document, alter the margins or typography, or
 pass a sparse or bloated portfolio. Employer headings are company-first. Usable installed
 first-party Codex and Claude Code sessions provide planning and fixed review;
@@ -286,6 +288,13 @@ the local source files remain untouched. Open a saved posting snapshot from
 its card when the source text was captured. Failed and in-progress runs remain
 listed so an interrupted attempt is inspectable rather than silently
 disappearing.
+
+The three tailoring buttons queue independent runs, so switching postings or
+starting another mode does not replace the current draft. The header shows
+observed Codex tokens/calls for the current UTC week and the bank shows queued,
+running, interrupted, and completed runs. Codex Plus's weekly allowance is not
+available through the local CLI; set `CODEX_WEEKLY_LIMIT_TOKENS` only if you
+want the UI to calculate a percentage against a known personal limit.
 
 Open **Workshop** on a completed run to edit education, skills, experience,
 projects, and leadership lines without touching the original PDF. Saving a

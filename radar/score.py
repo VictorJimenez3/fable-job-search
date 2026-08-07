@@ -15,7 +15,7 @@ from .models import Job, norm
 
 # Bumped whenever gate rules change; regate() re-applies the current rules to
 # every stored job whose rules_v is older (demote/promote alert_ok in place).
-RULES_VERSION = 8
+RULES_VERSION = 9
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|manager|head of|sr\.?|vp|chief|"
@@ -522,8 +522,8 @@ def calibrate_score(raw_utility: float) -> int:
         (0.0, 0.0),
         (35.0, 45.0),
         (55.0, 66.0),
-        (70.0, 78.0),
-        (85.0, 88.0),
+        (70.0, 81.0),
+        (85.0, 89.0),
         (100.0, 94.0),
         (115.0, 98.0),
         (125.0, 100.0),
@@ -536,6 +536,71 @@ def calibrate_score(raw_utility: float) -> int:
             ratio = (raw - x0) / (x1 - x0)
             return max(0, min(100, round(y0 + ratio * (y1 - y0))))
     return 100
+
+
+def apply_company_concentration(jobs) -> int:
+    """Diversify crowded employers without suppressing their best role.
+
+    This is a ranking adjustment, not a fit judgment. Once a company has at
+    least three visible roles, its strongest role is protected; only weaker
+    roles from that same company receive -1 or -2. Ties at the raw-utility
+    level are left alone, so a genuinely equivalent NVIDIA role is not hidden
+    merely because it shares an employer.
+    """
+    groups: dict[str, list] = {}
+    values = jobs.values() if isinstance(jobs, dict) else jobs
+    materialized = list(values)
+    for job in materialized:
+        if isinstance(job, dict):
+            prior_adjustment = int(job.get("ranking_adjustment", 0) or 0)
+            base_score = int(job.get("score_calibrated", job.get("score", 0) - prior_adjustment))
+            job["score"] = base_score
+            job["ranking_adjustment"] = 0
+            job["score_reasons"] = [
+                reason for reason in job.get("score_reasons", [])
+                if not str(reason).startswith("company concentration:")
+            ]
+        else:
+            job.score = int(job.score_calibrated)
+            job.ranking_adjustment = 0
+            job.score_reasons = [
+                reason for reason in job.score_reasons
+                if not str(reason).startswith("company concentration:")
+            ]
+        company = norm(getattr(job, "company", "") or job.get("company", "")) if isinstance(job, dict) else norm(job.company)
+        groups.setdefault(company, []).append(job)
+    changed = 0
+    for company, group in groups.items():
+        if not company or len(group) < 3:
+            continue
+        group.sort(key=lambda item: (
+            -float(item.get("score_raw", 0) if isinstance(item, dict) else item.score_raw),
+            -int(item.get("score", 0) if isinstance(item, dict) else item.score),
+            str(item.get("title", "") if isinstance(item, dict) else item.title),
+        ))
+        best_raw = float(group[0].get("score_raw", 0) if isinstance(group[0], dict) else group[0].score_raw)
+        company_name = str(group[0].get("company", company) if isinstance(group[0], dict) else group[0].company)
+        for rank, job in enumerate(group):
+            raw = float(job.get("score_raw", 0) if isinstance(job, dict) else job.score_raw)
+            penalty = 0 if rank == 0 or raw >= best_raw else min(2, rank)
+            reason = None
+            if penalty:
+                reason = (
+                    f"company concentration: {rank + 1} of {len(group)} {company_name} roles; "
+                    f"-{penalty} to show stronger alternatives (best role protected)"
+                )
+            if isinstance(job, dict):
+                job["ranking_adjustment"] = -penalty
+                job["score"] = max(0, int(job.get("score_calibrated", job.get("score", 0))) - penalty)
+                reasons = job.setdefault("score_reasons", [])
+            else:
+                job.ranking_adjustment = -penalty
+                job.score = max(0, int(job.score_calibrated) - penalty)
+                reasons = job.score_reasons
+            if reason and reason not in reasons:
+                reasons.append(reason)
+                changed += 1
+    return changed
 
 
 def score(job: Job, feedback: dict, now: int | None = None) -> None:
@@ -577,6 +642,12 @@ def score(job: Job, feedback: dict, now: int | None = None) -> None:
                     and not new_grad_signal(job.title, job.description)
                     else "new-grad/early-career")
         reasons.append(f"{evidence} priority +{eligibility_pts} (eligibility)")
+    elif early_career_possible(job):
+        eligibility_pts = int(p.get("scoring_v9", {}).get("early_career_possible_utility", 8))
+        dimensions["eligibility"] = eligibility_pts
+        reasons.append(
+            f"early-career possible +{eligibility_pts} (no experience floor; not new-grad verified)"
+        )
     else:
         reasons.append("new-grad evidence absent (below eligible roles)")
 

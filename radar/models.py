@@ -48,6 +48,7 @@ class Job:
     score: int = 0
     score_raw: float = 0.0            # uncapped utility before display calibration
     score_calibrated: int = 0         # pre-verdict calibrated score
+    ranking_adjustment: int = 0       # deterministic diversity adjustment after group ranking
     score_dimensions: dict = field(default_factory=dict)
     score_reasons: list[str] = field(default_factory=list)
     alert_ok: bool = False           # passed gates AND new-grad-eligible

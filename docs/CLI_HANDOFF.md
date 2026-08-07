@@ -266,6 +266,18 @@ Before changing the radar, read these in order:
   the company-identifiable filename to the browser, and TICC is hard-excluded
   from source selection, model plans, rendering, and workshop edits without
   modifying the local CV corpus.
+- **Resume Studio queue/editor/usage is shipped:** Used bullets, AI tailor, and
+  Unrestricted AI tailor are durable queued modes. The bank keeps each posting
+  snapshot and run; the workshop embeds the original/latest PDF, edits every
+  visible line, and exposes selection rationale plus observed weekly Codex
+  tokens/calls. Codex Plus's weekly allowance is not exposed by the local CLI;
+  `CODEX_WEEKLY_LIMIT_TOKENS` is an optional owner-provided comparison limit.
+- **Radar v9 diversity scoring is shipped locally:** explicit new-grad evidence
+  is weighted more strongly, plausible no-floor first-role postings get a
+  smaller dashboard-only lift, and only weaker roles in a company with at least
+  three visible roles receive a transparent -1/-2 concentration nudge. The
+  strongest same-company role and raw-utility ties are protected. Platform
+  rating explanations now use labeled rows, and Resume Match remains separate.
 - **Radar score v8 is shipped (DECISIONS #70-71):** records retain uncapped raw
   utility, calibrated base, dimension values, reasons, and final score. Goal
   companies can reach 100, but posting wording separates nearby roles; cited
