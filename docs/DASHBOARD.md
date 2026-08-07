@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-07 14:40 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **87 shown / 11169 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-08-07 15:35 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **87 shown / 11169 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -13,13 +13,13 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 90 🔥 | 3d | Micron Technology | [Industrial Engineer Intern - Technology & Products Group - Global Indu](https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---Main-Site/Intern---TPG-Global-IE_JR107486) | Boise, ID | semiconductors | simplify |
 | 88 🔥 | 16d | Micron | [Advanced Engineering & Manufacturing Internship (Singapore)](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Fab-10NX-Singapore/Advanced-Engineering---Manufacturing-Internship_JR106775) | 4 Locations | semiconductors | workday |
 | 88 🔥 | 16d | Micron | [Advanced Engineering & Manufacturing Internship](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Fab-10NX-Singapore/Advanced-Engineering---Manufacturing-Internship_JR106775) | 4 Locations | semiconductors | workday |
-| 87 🔥 | 22h | GlobalFoundries | [IP & Design Engineering Intern (Fall 2026)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Texas---Richardson/XMLNAME-1H-University-Intern---PVD-Equipment_JR-2502699) | USA - Texas - Richardson | semiconductors | workday |
-| 87 🔥 | 22h | GlobalFoundries | [Factory Automation Engineering Intern (Fall 2026)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Factory-Automation-Engineering-Intern--Fall-2026-_JR-2503358) | USA - New York - Malta | semiconductors | workday |
+| 87 🔥 | 23h | GlobalFoundries | [IP & Design Engineering Intern (Fall 2026)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Texas---Richardson/XMLNAME-1H-University-Intern---PVD-Equipment_JR-2502699) | USA - Texas - Richardson | semiconductors | workday |
+| 87 🔥 | 23h | GlobalFoundries | [Factory Automation Engineering Intern (Fall 2026)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Factory-Automation-Engineering-Intern--Fall-2026-_JR-2503358) | USA - New York - Malta | semiconductors | workday |
 | 79 ⭐ | 2d | Micron | [Intern - Process Development Engineer, Dry Etch](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--Dry-Etch_JR107326) | Boise, ID - Main Site | semiconductors | workday |
 | 79 ⭐ | 2d | Micron | [Intern - Process Development Engineer, 3D DRAM Dry Etch](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--3D-DRAM-Dry-Etch_JR107330) | Boise, ID - Main Site | semiconductors | workday |
 | 79 ⭐ | 2d | Micron | [Intern - Process Development Engineer, 3D DRAM Photo](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--3D-DRAM-Photo_JR107312) | Boise, ID - Main Site | semiconductors | workday |
 | 79 ⭐ | 2d | Micron | [Intern - Process Development](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development_JR107319) | Boise, ID - Main Site | semiconductors | workday |
-| 77 ⭐ | 6d | GlobalFoundries | [Robotics and Automation Engineering Intern](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/Essex-Junction/Robotics-and-Automation-Engineering-Intern_JR-2603574) | Essex Junction | semiconductors | workday |
+| 77 ⭐ | 7d | GlobalFoundries | [Robotics and Automation Engineering Intern](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/Essex-Junction/Robotics-and-Automation-Engineering-Intern_JR-2603574) | Essex Junction | semiconductors | workday |
 | 76 ⭐ | 15d | Rantec Power Systems Inc. | [PCB Design Engineer Intern](https://rantecpowersystemsinc.applytojob.com/apply/C88xK8WZio/PCB-Design-Engineering-Intern) | San Luis Obispo, CA | energy | simplify |
 | 76 ⭐ | 22d | Solar Turbines | [Gas Turbine Products Engineering Intern](https://cat.wd5.myworkdayjobs.com/en-US/solarturbines/job/San-Diego-California/XMLNAME-2027--Gas-Turbine-Product-Engineering-Internship_R0000382293) | San Diego, CA | energy | simplify |
 | 75 ⭐ | 3d | Tesla | [Cell Engineering Intern - Cell Qualification](https://www.tesla.com/careers/search/job/278620) | Palo Alto, CA | consumer_manufacturing | simplify |
