@@ -92,6 +92,7 @@ MAX_TARGET_KEYWORDS = 24
 MAX_WORKSHOP_TEXT_CHARS = 900
 MAX_WORKSHOP_REQUEST_CHARS = 3000
 MAX_WORKSHOP_REVISIONS = 100
+FORBIDDEN_RESUME_TERM_RE = re.compile(r"\bticc\b", re.I)
 PROTECTED_QUALIFIERS = (
     "proof of concept",
     "prototype",
@@ -414,6 +415,13 @@ def workshop_artifact_url(run_id: str, revision_id: str, filename: str) -> str:
     )
 
 
+def _download_filename(value: Any) -> str:
+    """Return a safe, human-readable filename for inline PDF previews."""
+    name = Path(str(value or "resume.pdf")).name
+    safe = re.sub(r"[^A-Za-z0-9._-]+", "_", name).strip("._")
+    return safe or "resume.pdf"
+
+
 def _resume_tokens(value: str) -> set:
     plain = _latex_plain(value).lower()
     tokens = re.findall(r"[a-z0-9]+", plain)
@@ -512,6 +520,8 @@ def source_catalog(root: Optional[Path] = None) -> Dict[str, Any]:
     keys: Dict[Tuple[str, str], str] = {}
 
     def merge_entry(kind: str, company: str, role: str, dates: str, location: str, bullets: List[str], source_name: str) -> None:
+        if _contains_forbidden_resume_term(company) or _contains_forbidden_resume_term(role):
+            return
         key = (re.sub(r"\s+", " ", company.lower()), re.sub(r"\s+", " ", role.lower()))
         entry_id = keys.get(key)
         if entry_id is None:
@@ -537,6 +547,8 @@ def source_catalog(root: Optional[Path] = None) -> Dict[str, Any]:
             entry["sources"].append(source_name)
         known = [item["text"] for item in entry["bullets"]]
         for bullet in bullets:
+            if _contains_forbidden_resume_term(bullet):
+                continue
             if any(_same_resume_bullet(bullet, existing) for existing in known):
                 continue
             bullet_id = "%s:b%s" % (entry_id, len(entry["bullets"]) + 1)
@@ -573,6 +585,8 @@ def source_catalog(root: Optional[Path] = None) -> Dict[str, Any]:
             if "project" not in _section_at(source, start).lower():
                 continue
             heading = _plain_heading(args[0])
+            if _contains_forbidden_resume_term(heading):
+                continue
             bullets = _entry_bullets(source, after)
             key = re.sub(r"\s+", " ", heading.lower())
             entry_id = project_keys.get(key)
@@ -610,6 +624,8 @@ def source_catalog(root: Optional[Path] = None) -> Dict[str, Any]:
                 entry["sources"].append(source_name)
             known = [item["text"] for item in entry["bullets"]]
             for bullet in bullets:
+                if _contains_forbidden_resume_term(bullet):
+                    continue
                 if any(_same_resume_bullet(bullet, existing) for existing in known):
                     continue
                 bullet_id = "%s:b%s" % (entry_id, len(entry["bullets"]) + 1)
@@ -1487,10 +1503,7 @@ Victor-specific guardrails:
         role_guardrails += (
             "\n- Source-only mode is selection, not rewriting. Choose source IDs only; the harness will copy every heading and bullet verbatim."
         )
-    if "johnson" in str(context.get("company", "")).lower():
-        role_guardrails += "\n- For Johnson & Johnson, TICC is not a priority; exclude it unless the posting makes it clearly relevant."
-    else:
-        role_guardrails += "\n- Evaluate TICC and other leadership evidence against this target; do not apply Johnson & Johnson-specific exclusions."
+    role_guardrails += "\n- TICC is permanently excluded from every resume; never select, rewrite, or mention that activity, even for a TLDP target."
     context_text = json.dumps(context, indent=2, ensure_ascii=False)
     catalog_text = json.dumps(catalog_for_prompt(catalog), indent=2, ensure_ascii=False)
     graph_text = json.dumps(
@@ -1834,6 +1847,21 @@ def _normalize_model_fragment(value: Any) -> str:
     return normalized
 
 
+def _contains_forbidden_resume_term(value: Any) -> bool:
+    return bool(FORBIDDEN_RESUME_TERM_RE.search(str(value or "")))
+
+
+def _project_heading(value: Any) -> str:
+    """Use the Studio's compact pipe separator for project metadata."""
+    heading = str(value or "")
+    return re.sub(r"\s*(?:---|—)\s*", " | ", heading)
+
+
+def _assert_resume_exclusions(tex: str) -> None:
+    if _contains_forbidden_resume_term(tex):
+        raise ValueError("Generated resume contains a permanently excluded resume term")
+
+
 def _unsupported_inline_commands(value: str) -> List[str]:
     allowed = {"textbf", "emph"}
     return sorted(
@@ -1918,6 +1946,9 @@ def validate_plan(
                 text = _normalize_model_fragment(bullet.get("text")) if enhance else bullet_bank[bullet_id]
                 if enhance and not text:
                     errors.append("enhanced bullet %s has no text" % bullet_id)
+                    continue
+                if _contains_forbidden_resume_term(text):
+                    errors.append("bullet %s contains a permanently excluded resume term" % bullet_id)
                     continue
                 if enhance:
                     missing_qualifiers = _missing_protected_qualifiers(
@@ -2305,8 +2336,8 @@ def content_change_report(
         "rewritten_bullets": rewritten,
         "selected_bullet_count": len(selected_bullet_ids),
         "project_swaps": {
-            "swapped_in": [str(entries.get(entry_id, {}).get("heading") or entry_id) for entry_id in swapped_in],
-            "swapped_out": [str(entries.get(entry_id, {}).get("heading") or entry_id) for entry_id in swapped_out],
+            "swapped_in": [_project_heading(entries.get(entry_id, {}).get("heading") or entry_id) for entry_id in swapped_in],
+            "swapped_out": [_project_heading(entries.get(entry_id, {}).get("heading") or entry_id) for entry_id in swapped_out],
         },
         "keyword_coverage": keyword_coverage,
     }
@@ -2386,7 +2417,7 @@ def render_plan(plan: Dict[str, Any], catalog: Dict[str, Any], root: Optional[Pa
     lines.extend(["\\resumeSubHeadingListEnd", "", "%-----------PROJECTS-----------", "\\section{Projects}", "\\resumeSubHeadingListStart", ""])
     for selection in plan["projects"]:
         entry = entries[selection["source_id"]]
-        lines.extend(["    \\resumeProjectHeading", "        {\\large %s}{}" % entry["heading"]])
+        lines.extend(["    \\resumeProjectHeading", "        {\\large %s}{}" % _project_heading(entry["heading"])])
         lines.extend(_render_bullets(selection["bullets"]))
         lines.append("")
     lines.extend(["\\resumeSubHeadingListEnd", ""])
@@ -2405,7 +2436,9 @@ def render_plan(plan: Dict[str, Any], catalog: Dict[str, Any], root: Optional[Pa
             lines.append("")
         lines.extend(["\\resumeSubHeadingListEnd", ""])
     lines.extend(["\\end{document}", ""])
-    return "\n".join(lines)
+    tex = "\n".join(lines)
+    _assert_resume_exclusions(tex)
+    return tex
 
 
 def _replace_macro_call(source: str, macro: str, index: int, args: List[str]) -> str:
@@ -2474,6 +2507,7 @@ def render_workshop_plan(
         if item.get("line_id")
     }
     if not front:
+        _assert_resume_exclusions(tex)
         return tex
     marker = BODY_MARKER
     prefix, body = tex.split(marker, 1)
@@ -2497,7 +2531,9 @@ def render_workshop_plan(
         except (TypeError, ValueError):
             continue
         prefix = _replace_macro_call(prefix, "resumeItem", index, [front[line_id]])
-    return prefix + marker + body
+    rendered = prefix + marker + body
+    _assert_resume_exclusions(rendered)
+    return rendered
 
 
 def _workshop_plan(plan: Dict[str, Any], root: Optional[Path] = None) -> Dict[str, Any]:
@@ -2571,7 +2607,7 @@ def workshop_lines(plan: Dict[str, Any], catalog: Dict[str, Any]) -> List[Dict[s
                     "line_id": str(bullet.get("line_id") or source_id),
                     "section": section,
                     "entry_id": str(entry.get("source_id") or ""),
-                    "entry_label": str(
+                    "entry_label": _project_heading(source_entry.get("heading")) if section == "projects" else str(
                         source_entry.get("company")
                         or source_entry.get("heading")
                         or entry.get("source_id")
@@ -2694,6 +2730,8 @@ def _workshop_validate_text(text: str, original: str, origin: str) -> Tuple[str,
     normalized = _normalize_model_fragment(text)
     if not normalized:
         raise ValueError("A resume line cannot be empty")
+    if _contains_forbidden_resume_term(normalized):
+        raise ValueError("This resume term is permanently excluded")
     if len(_latex_plain(normalized)) > MAX_WORKSHOP_TEXT_CHARS:
         raise ValueError("Resume line is too long; keep the technical proof and cut filler")
     if FORBIDDEN_CONTENT_COMMANDS.search(normalized):
@@ -3246,8 +3284,8 @@ def deterministic_review(job: Dict[str, Any], tex: str, layout: Dict[str, Any]) 
     company = str(job.get("company", "")).lower()
     if "Victor Jimenez" not in tex or "vmj@njit.edu" not in tex:
         warnings.append("canonical owner name/contact header is missing")
-    if "johnson" in company and "ticc" in tex.lower():
-        warnings.append("TICC appears in a Johnson & Johnson draft; review relevance")
+    if _contains_forbidden_resume_term(tex):
+        warnings.append("a permanently excluded resume term appears in the draft")
     layout_gate = (
         layout.get("compiled")
         and layout.get("pages") == 1
@@ -3906,9 +3944,17 @@ class StudioHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(raw)
 
-    def send_bytes(self, raw: bytes, content_type: str, status: int = HTTPStatus.OK) -> None:
+    def send_bytes(
+        self, raw: bytes, content_type: str, status: int = HTTPStatus.OK,
+        download_name: str = "",
+    ) -> None:
         self.send_response(status)
         self.send_header("Content-Type", content_type)
+        if download_name:
+            self.send_header(
+                "Content-Disposition",
+                'inline; filename="%s"' % _download_filename(download_name),
+            )
         self.send_header("Content-Length", str(len(raw)))
         self.end_headers()
         self.wfile.write(raw)
@@ -3990,7 +4036,7 @@ class StudioHandler(BaseHTTPRequestHandler):
             if run_dir.resolve() not in target.parents or not target.is_file():
                 return self.send_json({"error": "artifact not found"}, HTTPStatus.NOT_FOUND)
             content_type = "application/pdf" if target.suffix == ".pdf" else "image/png" if target.suffix == ".png" else "application/json" if target.suffix == ".json" else "text/plain; charset=utf-8"
-            return self.send_bytes(target.read_bytes(), content_type)
+            return self.send_bytes(target.read_bytes(), content_type, download_name=target.name if target.suffix == ".pdf" else "")
         if parsed.path.startswith("/workshop/"):
             parts = parsed.path.split("/")
             if len(parts) != 5 or not re.fullmatch(r"[a-f0-9]{12}", parts[2]) or not re.fullmatch(r"[a-f0-9]{10}", parts[3]):
@@ -4002,7 +4048,7 @@ class StudioHandler(BaseHTTPRequestHandler):
             if target_dir.resolve() not in target.parents or not target.is_file():
                 return self.send_json({"error": "workshop artifact not found"}, HTTPStatus.NOT_FOUND)
             content_type = "application/pdf" if target.suffix == ".pdf" else "image/png" if target.suffix == ".png" else "application/json" if target.suffix == ".json" else "text/plain; charset=utf-8"
-            return self.send_bytes(target.read_bytes(), content_type)
+            return self.send_bytes(target.read_bytes(), content_type, download_name=target.name if target.suffix == ".pdf" else "")
         if parsed.path.startswith("/artifacts/"):
             parts = parsed.path.split("/")
             if len(parts) != 5:
@@ -4015,7 +4061,7 @@ class StudioHandler(BaseHTTPRequestHandler):
             if directory.resolve() not in target.parents or not target.is_file():
                 return self.send_json({"error": "artifact not found"}, HTTPStatus.NOT_FOUND)
             content_type = "application/pdf" if target.suffix == ".pdf" else "image/png" if target.suffix == ".png" else "application/json" if target.suffix == ".json" else "text/plain; charset=utf-8"
-            return self.send_bytes(target.read_bytes(), content_type)
+            return self.send_bytes(target.read_bytes(), content_type, download_name=target.name if target.suffix == ".pdf" else "")
         self.send_json({"error": "not found"}, HTTPStatus.NOT_FOUND)
 
     def do_POST(self) -> None:

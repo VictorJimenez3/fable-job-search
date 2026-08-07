@@ -1175,3 +1175,12 @@ final layout gate requires every measured bullet to be one line with at least
 source fallback and line editing, rather than being presented as a completed
 resume. This remains a content-quality gate; the canonical human PDFs and
 their source files are untouched.
+
+## 78. Resume Studio uses stable filenames and excludes TICC (2026-08-07)
+
+Generated project headings use the compact `|` delimiter even when the source
+LaTeX uses `---`. PDF preview endpoints send the actual company-identifiable
+filename through `Content-Disposition`, so opening or downloading a preview
+does not fall back to `resume.pdf`. TICC is permanently excluded from the
+source-addressable catalog, model plans, rendered output, and workshop edits;
+the local historical CV files remain unchanged.

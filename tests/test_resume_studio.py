@@ -27,6 +27,17 @@ def test_generated_resume_filename_is_company_identifiable():
     assert rs.resume_pdf_filename({"company": "NVIDIA"}) == "nvidia_resume_ai.pdf"
 
 
+def test_project_heading_uses_pipe_separator():
+    heading = r"\\textbf{PostureMax --- 1st Place Overall} | \\emph{Python, Flask}"
+    assert rs._project_heading(heading) == r"\\textbf{PostureMax | 1st Place Overall} | \\emph{Python, Flask}"
+
+
+def test_pdf_preview_download_name_is_safe_and_company_identifiable():
+    assert rs._download_filename("mayo_clinic_rochester_resume_ai.pdf") == "mayo_clinic_rochester_resume_ai.pdf"
+    assert rs._download_filename("../../resume.pdf") == "resume.pdf"
+    assert rs._download_filename("Mayo Clinic resume.pdf") == "Mayo_Clinic_resume.pdf"
+
+
 def test_resume_report_exposes_change_and_layout_safety_language():
     assert "What changed" in rs.UI_HTML
     assert "rewritten lines" in rs.UI_HTML
@@ -663,13 +674,32 @@ def test_provider_usage_tokens_reads_codex_footer(tmp_path):
     assert rs.provider_usage_tokens(stderr) == 51191
 
 
-def test_prompt_applies_ticc_rule_only_to_johnson_context():
+def test_prompt_permanently_excludes_ticc_from_every_target():
     catalog = _fixture_catalog()
     jnj = rs.base_prompt({"company": "Johnson & Johnson"}, "editor", catalog, False)
     bms = rs.base_prompt({"company": "Bristol Myers Squibb"}, "editor", catalog, True)
-    assert "TICC is not a priority" in jnj
-    assert "do not apply Johnson & Johnson-specific exclusions" in bms
+    assert "TICC is permanently excluded" in jnj
+    assert "TICC is permanently excluded" in bms
     assert "Never return a LaTeX document" in jnj
+
+
+def test_ticc_bullet_is_rejected_by_source_addressed_validation():
+    catalog = _fixture_catalog()
+    graph = {
+        "nodes": [
+            {"id": bullet["id"], "claim_allowed": True}
+            for entry in catalog["entries"].values()
+            for bullet in entry["bullets"]
+        ]
+    }
+    plan = _fixture_plan()
+    plan["experiences"][0]["bullets"][0].update({
+        "text": "TICC member",
+        "evidence_ids": ["experience:item0:b1"],
+        "source_ids": ["experience:item0:b1"],
+    })
+    _, errors = rs.validate_plan(plan, catalog, enhance=True, graph=graph)
+    assert any("permanently excluded" in error for error in errors)
 
 
 def test_reviewer_prompt_edits_the_final_plan_without_sparsifying():

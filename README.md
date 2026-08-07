@@ -278,10 +278,14 @@ reports one line.
 Use **Resume bank** in the Studio header to browse every saved run and legacy
 experiment. Each new run keeps a private snapshot of the selected posting,
 remains visible after switching to another role, and names its PDF with the
-company (for example, `mayo_clinic_resume_ai.pdf`). Open a saved posting
-snapshot from its card when the source text was captured. Failed and in-progress
-runs remain listed so an interrupted attempt is inspectable rather than
-silently disappearing.
+company (for example, `mayo_clinic_resume_ai.pdf`). Preview responses also send
+that filename to the browser/Preview app, so downloads do not fall back to
+`resume.pdf`. Project metadata uses `|` as its compact separator. TICC is
+permanently excluded from every generated or workshop-edited resume, while
+the local source files remain untouched. Open a saved posting snapshot from
+its card when the source text was captured. Failed and in-progress runs remain
+listed so an interrupted attempt is inspectable rather than silently
+disappearing.
 
 Open **Workshop** on a completed run to edit education, skills, experience,
 projects, and leadership lines without touching the original PDF. Saving a

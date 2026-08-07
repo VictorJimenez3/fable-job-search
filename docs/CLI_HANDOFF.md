@@ -261,6 +261,11 @@ Before changing the radar, read these in order:
   with less than 12pt of right-edge safety; failed runs remain inspectable
   instead of being labeled complete. Existing historical PDFs are not
   retroactively regenerated; start a new run to exercise this contract.
+- **Resume Studio naming/exclusion polish is shipped:** generated project
+  headings normalize the visual delimiter to `|`, PDF preview responses send
+  the company-identifiable filename to the browser, and TICC is hard-excluded
+  from source selection, model plans, rendering, and workshop edits without
+  modifying the local CV corpus.
 - **Radar score v8 is shipped (DECISIONS #70-71):** records retain uncapped raw
   utility, calibrated base, dimension values, reasons, and final score. Goal
   companies can reach 100, but posting wording separates nearby roles; cited
