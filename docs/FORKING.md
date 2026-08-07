@@ -58,12 +58,14 @@ Deploy the `webapp/` directory to your own Vercel project, then set env vars:
 | `RADAR_REPO` | `<you>/<repo>` |
 | `RADAR_BRANCH` | your default branch |
 | `CANON_HOST` | your Vercel hostname |
+| `GOOGLE_AUTH_CLIENT_ID` / `GOOGLE_AUTH_CLIENT_SECRET` | Google OAuth web client (callback: `https://<your-app>/api/google-callback`) |
 
-Then "Sign in with GitHub" on your Vercel URL gives you instant writes; the
-backend only obeys `RADAR_OWNER` for repository/Notion actions. If the shared
-Google tracker is configured, non-owner GitHub users can save, apply, and mark
-Maybe in their own private tracker rows without changing the fork owner's
-pipeline. See [Google Sheets setup](GOOGLE_SHEETS_SETUP.md).
+Then **Sign in / create account** on your Vercel URL offers GitHub and Google
+OAuth. Users can connect the second provider later from **Tutorial → Accounts &
+login**; there is no password database. If the shared Google tracker is
+configured, every linked account can save, apply, and mark Maybe in its own
+private tracker rows without changing the fork owner's pipeline. See [Google
+Sheets setup](GOOGLE_SHEETS_SETUP.md).
 
 ## 6. Optional: free local AI (any Mac with ≥32GB, ~10 min)
 

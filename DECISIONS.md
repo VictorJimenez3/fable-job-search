@@ -1275,3 +1275,20 @@ Vercel/GitHub secrets; GitHub sign-in alone cannot create or authorize a Google
 Sheet. The Sheet remains private, and the public Pages/tokenless path stays
 owner-only. A true user-owned Google account/Sheet connection remains a later
 option if shared storage becomes too large or privacy requirements change.
+
+## 85. OAuth providers are the account system; Google Sheets is private storage (2026-08-07)
+
+The platform now offers GitHub and Google as OAuth-only login providers. It does
+not implement passwords or store provider tokens in frontend JavaScript. A user
+signs in with one provider, then explicitly connects the other from the signed-in
+Account center. The private `Accounts` tab stores provider-subject links and
+merged-account metadata; a provider already attached elsewhere cannot be silently
+reassigned. Existing tracker rows remain addressable through merged-account
+aliases, preventing a linking operation from duplicating the application funnel.
+
+The visible Google tracker follows the existing Notion Applications vocabulary
+(`Company`, `Stage`, `Position`, `Apply date`, `Text`, `Job URL`, and `Location`)
+with stable IDs and audit metadata beside it. A settings-style Tutorial modal is
+the user-facing entry point for application workflow, account connection, tracker
+behavior, and privacy boundaries. The site owner must provision the OAuth web
+client and private workbook; users never need direct Sheet access.

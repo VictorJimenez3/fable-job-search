@@ -163,11 +163,14 @@ Before changing the radar, read these in order:
   is [`GOOGLE_SHEETS_SETUP.md`](GOOGLE_SHEETS_SETUP.md). Default stays Notion.
 - **Google tracker creation + multi-user sign-in:**
   `python -m radar.main create-google-tracker` creates the formatted
-  Applications/User Applications/Guide workbook. The Vercel `/api/tracker`
-  endpoint lets any authenticated GitHub user save, apply, or mark Maybe in
-  rows keyed to their login; it never returns another user's rows. The Google
-  refresh token stays in Vercel/GitHub secrets. Set `GOOGLE_USER_SHEET_TAB` to
-  `User Applications`; Pages and tokenless issue mode remain owner-only.
+  Applications/User Applications/Accounts/Guide workbook. The Vercel
+  platform offers GitHub and Google OAuth, with explicit second-provider
+  linking from the Tutorial account center and no password database. The
+  `/api/tracker` endpoint filters rows by linked account and never returns
+  another user's rows. The Google refresh token stays in Vercel/GitHub secrets;
+  `GOOGLE_USER_SHEET_TAB` defaults to `User Applications` and
+  `GOOGLE_ACCOUNT_SHEET_TAB` to `Accounts`. Pages and tokenless issue mode
+  remain owner-only.
 - **Multi-user = fork-per-person** (DECISIONS #25, docs/FORKING.md). Owner
   gates exist in three layers: workflow condition, Python handler, Vercel
   backend. The Mac companion is fork-portable too: `JOBRADAR_REPO=<you>/<repo>`

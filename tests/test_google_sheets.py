@@ -64,7 +64,8 @@ def test_create_tracker_builds_three_tabs_and_returns_url(monkeypatch):
             return Response({"spreadsheetId": "new-sheet", "sheets": [
                 {"properties": {"title": "Applications", "sheetId": 1}},
                 {"properties": {"title": "User Applications", "sheetId": 2}},
-                {"properties": {"title": "Guide", "sheetId": 3}},
+                {"properties": {"title": "Accounts", "sheetId": 3}},
+                {"properties": {"title": "Guide", "sheetId": 4}},
             ]})
         return Response()
 
@@ -74,5 +75,5 @@ def test_create_tracker_builds_three_tabs_and_returns_url(monkeypatch):
 
     assert result["spreadsheet_id"] == "new-sheet"
     assert result["url"].endswith("/new-sheet/edit")
-    assert [row[1] for row in writes] == ["Applications", "User Applications", "Guide"]
+    assert [row[1] for row in writes] == ["Applications", "User Applications", "Accounts", "Guide"]
     assert len(calls) == 2  # create + one formatting batch

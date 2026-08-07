@@ -12,12 +12,12 @@ module.exports = async (req, res) => {
   }
   try {
     if (req.method === "GET") {
-      res.status(200).json({ user: s.u, ...(await tracker.userTracker(s.u)) });
+      res.status(200).json({ user: s.u, ...(await tracker.userTracker(s.keys || s.k || s.u)) });
       return;
     }
     if (req.method === "POST") {
       const payload = req.body || {};
-      const result = await tracker.updateUserTracker(s.u, payload);
+      const result = await tracker.updateUserTracker(s.u, s.keys || s.k || s.u, payload);
       res.status(200).json(result);
       return;
     }

@@ -18,8 +18,11 @@ TOKEN_URL = "https://oauth2.googleapis.com/token"
 SHEETS_API = "https://sheets.googleapis.com/v4/spreadsheets"
 HEADERS = ["Job Radar ID", "Company", "Title", "Stage", "Job URL", "Location",
            "Applied At", "Updated At", "Source", "Board"]
-USER_HEADERS = ["GitHub User", "Job Radar ID", "Company", "Title", "Stage",
-                "Job URL", "Location", "Saved At", "Updated At", "Source", "Profile"]
+USER_HEADERS = ["Account ID", "GitHub User", "Job Radar ID", "Company", "Stage",
+                "Position", "Apply date", "Text", "Job URL", "Location", "Saved At",
+                "Updated At", "Source", "Profile"]
+ACCOUNT_HEADERS = ["Account ID", "GitHub ID", "GitHub Login", "Google Subject",
+                   "Google Email", "Created At", "Updated At", "Merged Into", "Status"]
 STAGES = {"saved", "applied", "oa", "interview", "rejected", "closed"}
 
 
@@ -151,6 +154,9 @@ def create_tracker(title: str | None = None) -> dict:
                                  {"properties": {"title": "User Applications",
                                                   "gridProperties": {"rowCount": 10000,
                                                                       "columnCount": len(USER_HEADERS)}}},
+                                 {"properties": {"title": "Accounts",
+                                                  "gridProperties": {"rowCount": 10000,
+                                                                      "columnCount": len(ACCOUNT_HEADERS)}}},
                                  {"properties": {"title": "Guide",
                                                   "gridProperties": {"rowCount": 20,
                                                                       "columnCount": 2}}},
@@ -161,21 +167,26 @@ def create_tracker(title: str | None = None) -> dict:
     tabs = {sheet["properties"]["title"]: sheet["properties"]["sheetId"]
             for sheet in created.get("sheets", [])}
     _put_for(token, spreadsheet_id, "Applications", "A1:J1", [HEADERS])
-    _put_for(token, spreadsheet_id, "User Applications", "A1:K1", [USER_HEADERS])
-    _put_for(token, spreadsheet_id, "Guide", "A1:B7", [[
+    _put_for(token, spreadsheet_id, "User Applications", "A1:N1", [USER_HEADERS])
+    _put_for(token, spreadsheet_id, "Accounts", "A1:I1", [ACCOUNT_HEADERS])
+    _put_for(token, spreadsheet_id, "Guide", "A1:B10", [[
         "Job Radar tracker", "How to use it"],
         ["Applications", "Owner/fork automation rows; matched by Job Radar ID."],
-        ["User Applications", "Private shared-app rows; backend filters by GitHub User."],
+        ["User Applications", "Private shared-app rows; backend filters by Account ID."],
+        ["Accounts", "Private OAuth identity links; never share this workbook publicly."],
+        ["Company / Stage / Position", "Notion-shaped application fields for a familiar board view."],
+        ["Apply date / Job URL / Location", "Application context carried from the radar."],
+        ["Text", "Short source/role context; safe to edit for personal notes."],
         ["saved", "Interested / to apply."],
         ["applied", "Application submitted."],
-        ["oa / interview", "Response stages."],
-        ["rejected / closed", "Terminal or archived workflow stages."],
+        ["oa / interview / rejected / closed", "Response and terminal workflow stages."],
     ])
     _format_tracker(token, spreadsheet_id, [
         {"id": tabs["Applications"], "columns": len(HEADERS), "stage_column": 3,
          "stages": sorted(STAGES)},
         {"id": tabs["User Applications"], "columns": len(USER_HEADERS), "stage_column": 4,
          "stages": sorted(STAGES | {"maybe", "archived"})},
+        {"id": tabs["Accounts"], "columns": len(ACCOUNT_HEADERS)},
         {"id": tabs["Guide"], "columns": 2},
     ])
     return {"spreadsheet_id": spreadsheet_id,

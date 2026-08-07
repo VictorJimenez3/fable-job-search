@@ -1,4 +1,13 @@
-const { envv, seal, unseal, needSetup } = require("./_lib");
+const { envv, seal, unseal, needSetup, session } = require("./_lib");
+const tracker = require("./_google-tracker");
+
+function writeSession(res, payload) {
+  const cookie = seal(payload);
+  res.setHeader("Set-Cookie", [
+    `jr_s=${cookie}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=${30 * 86400}`,
+    "jr_o=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0",
+  ]);
+}
 
 module.exports = async (req, res) => {
   if (needSetup(res)) return;
@@ -9,26 +18,33 @@ module.exports = async (req, res) => {
     res.status(400).send("OAuth state mismatch or expired — go back and sign in again.");
     return;
   }
-  const tr = await fetch("https://github.com/login/oauth/access_token", {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Accept: "application/json" },
-    body: JSON.stringify({
-      client_id: envv("GH_CLIENT_ID"),
-      client_secret: envv("GH_CLIENT_SECRET"),
-      code,
-    }),
-  });
-  const tok = (await tr.json()).access_token;
-  if (!tok) { res.status(400).send("GitHub did not return a token."); return; }
-  const ur = await fetch("https://api.github.com/user", {
-    headers: { Authorization: `Bearer ${tok}`, "User-Agent": "job-radar-platform" },
-  });
-  const user = await ur.json();
-  const cookie = seal({ g: tok, u: user.login });
-  res.setHeader("Set-Cookie", [
-    `jr_s=${cookie}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=${30 * 86400}`,
-    "jr_o=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0",
-  ]);
-  res.writeHead(302, { Location: "/" });
-  res.end();
+  const current = session(req);
+  if (opened.mode === "link" && !current) {
+    res.status(401).send("The original account session expired. Sign in again, then connect accounts.");
+    return;
+  }
+  try {
+    const tr = await fetch("https://github.com/login/oauth/access_token", {
+      method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({client_id: envv("GH_CLIENT_ID"), client_secret: envv("GH_CLIENT_SECRET"), code}),
+    });
+    const tokenBody = await tr.json();
+    const tok = tokenBody.access_token;
+    if (!tr.ok || !tok) { res.status(400).send("GitHub did not return a usable token."); return; }
+    const ur = await fetch("https://api.github.com/user", {
+      headers: { Authorization: `Bearer ${tok}`, Accept: "application/vnd.github+json", "User-Agent": "job-radar-platform" },
+    });
+    if (!ur.ok) { res.status(502).send("GitHub identity lookup failed."); return; }
+    const user = await ur.json();
+    if (!user.id || !user.login) { res.status(502).send("GitHub returned an incomplete identity."); return; }
+    const linked = await tracker.resolveAccount("github", {id: user.id, login: user.login}, current, opened.mode);
+    const github = linked.github || {id: String(user.id), login: user.login};
+    const google = linked.google || current?.google;
+    writeSession(res, {g: tok, u: github.login || google?.email, k: linked.account_id, keys: linked.keys,
+      github, google});
+    res.writeHead(302, { Location: "/" });
+    res.end();
+  } catch (error) {
+    res.status(502).send(`Account sign-in failed: ${String(error.message || error).slice(0, 180)}`);
+  }
 };

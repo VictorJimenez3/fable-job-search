@@ -184,11 +184,11 @@ works with zero setup.
 
 Verify anytime without creating test data: *Actions → notion-verify → Run workflow*.
 
-**Future multi-user email-based applied-detection (not part of Victor's current setup)**
+**Future multi-user email-based applied-detection (separate from OAuth login)**
 
-This path is intentionally parked until the application has a proper
-multi-user privacy/authentication model. Victor's current owner workflow does
-not need `EMAIL_ADDRESS` or `EMAIL_APP_PASSWORD`.
+This path remains parked because OAuth login and private per-account tracking do
+not require inbox access. Victor's current owner workflow does not need
+`EMAIL_ADDRESS` or `EMAIL_APP_PASSWORD`.
 
 The ChemE candidate uses NJIT Google Workspace/Gmail, so this uses IMAP with an App Password
 (Google's supported way to let a non-browser client log in — this is not
@@ -353,9 +353,10 @@ Optional upgrades:
   each checkpoint reports ready, pending, retry-waiting, and error counts.
 - Prefer Google Workspace to Notion? The Google Sheets tracker adapter is
   complete. Run `python -m radar.main create-google-tracker` once to create the
-  formatted Applications/User Applications workbook. On the Vercel platform,
-  any GitHub-signed-in user can then save, apply, or mark Maybe into rows keyed
-  to their own GitHub login; the backend never exposes another user's rows.
+  formatted Applications/User Applications/Accounts workbook. On the Vercel
+  platform, users can sign in with GitHub or Google and explicitly connect the
+  other provider; rows are keyed to their linked account and the backend never
+  exposes another user's rows.
   Setup is documented in [docs/GOOGLE_SHEETS_SETUP.md](docs/GOOGLE_SHEETS_SETUP.md).
 - `GOOGLE_CSE_KEY` + `GOOGLE_CSE_ID` (free: [programmablesearchengine.google.com](https://programmablesearchengine.google.com)
   → create engine searching `linkedin.com/posts`, then get an API key at

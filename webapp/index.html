@@ -104,6 +104,54 @@
   #ws.open { display:block; }
   #wsp { position:absolute; right:0; top:0; bottom:0; width:min(560px,100%);
          background:var(--paper); border-left:2px solid var(--ink); overflow-y:auto; padding:1.1rem; }
+  /* tutorial/account workspace */
+  #tutorial { position:fixed; inset:0; background:rgba(0,0,0,.52); z-index:70;
+              display:none; padding:clamp(.7rem,4vw,2.5rem); place-items:center; }
+  #tutorial.open { display:grid; }
+  #tutorialp { width:min(920px,100%); max-height:min(760px,100%); overflow:hidden;
+               display:grid; grid-template-columns:180px minmax(0,1fr); background:var(--paper);
+               border:1px solid var(--ink); border-radius:12px; box-shadow:0 20px 70px rgba(0,0,0,.35); }
+  .tut-nav { background:var(--card); border-right:1px solid var(--line); padding:.8rem; overflow-y:auto; }
+  .tut-nav h3 { margin:.2rem .4rem .7rem; font-size:.72rem; letter-spacing:.11em;
+                text-transform:uppercase; color:var(--muted); font-family:ui-monospace,Menlo,monospace; }
+  .tut-nav button { width:100%; text-align:left; background:none; border:1px solid transparent;
+                    border-radius:7px; color:var(--muted); padding:.55rem .6rem; cursor:pointer;
+                    font-size:.76rem; margin-bottom:.18rem; }
+  .tut-nav button.on { color:var(--accent-ink); border-color:var(--accent-ink); background:var(--paper); }
+  .tut-main { min-width:0; overflow-y:auto; padding:1.2rem 1.35rem 1.5rem; }
+  .tut-head { display:flex; justify-content:space-between; gap:1rem; align-items:start; }
+  .tut-head h2 { margin:0; font-size:1.25rem; }
+  .tut-close { border:0; background:none; color:var(--muted); cursor:pointer; font-size:1.2rem; }
+  .tut-kicker { color:var(--accent-ink); font:600 .68rem ui-monospace,Menlo,monospace;
+                letter-spacing:.1em; text-transform:uppercase; margin:.25rem 0 .35rem; }
+  .tut-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:.65rem; margin-top:.85rem; }
+  .tut-card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:.75rem; }
+  .tut-card h4 { margin:0 0 .25rem; font-size:.85rem; }
+  .tut-card p { margin:.25rem 0; font-size:.78rem; color:var(--muted); }
+  .tut-steps { counter-reset:step; display:grid; gap:.55rem; margin:.75rem 0; }
+  .tut-step { display:grid; grid-template-columns:1.6rem 1fr; gap:.55rem; align-items:start; font-size:.82rem; }
+  .tut-step::before { counter-increment:step; content:counter(step); display:grid; place-items:center;
+                      width:1.35rem; height:1.35rem; border-radius:50%; background:var(--accent); color:#fff;
+                      font:700 .68rem ui-monospace,Menlo,monospace; }
+  .provider-row { display:flex; flex-wrap:wrap; gap:.45rem; margin:.7rem 0; }
+  .provider { display:inline-flex; align-items:center; gap:.35rem; text-decoration:none; }
+  .provider .mark { width:1.35rem; height:1.35rem; display:grid; place-items:center; border-radius:50%;
+                    background:var(--ink); color:var(--paper); font:700 .7rem ui-monospace,Menlo,monospace; }
+  .provider.google .mark { background:#4285f4; }
+  .identity-list { display:grid; gap:.35rem; margin:.7rem 0; }
+  .identity-row { display:flex; justify-content:space-between; gap:.7rem; align-items:center;
+                 border-bottom:1px solid var(--line); padding:.45rem 0; font-size:.8rem; }
+  .identity-row .state { color:var(--accent-ink); font:600 .68rem ui-monospace,Menlo,monospace; }
+  .tut-note { background:var(--code); border-left:3px solid var(--accent); padding:.6rem .75rem;
+              border-radius:0 6px 6px 0; color:var(--muted); font-size:.78rem; margin:.7rem 0; }
+  @media (max-width:640px) {
+    #tutorialp { grid-template-columns:1fr; max-height:100%; }
+    .tut-nav { border-right:0; border-bottom:1px solid var(--line); display:flex; gap:.25rem;
+               overflow-x:auto; padding:.5rem; }
+    .tut-nav h3 { display:none; }
+    .tut-nav button { width:auto; white-space:nowrap; margin:0; }
+    .tut-main { padding:1rem; }
+  }
   #wsp h2 { margin:0 0 0.2rem; font-size:1.15rem; }
   .sect { margin-top:1.1rem; }
   .wstabs { display:flex; gap:0.25rem; margin-top:0.9rem; border-bottom:1px solid var(--line);
@@ -185,10 +233,14 @@
   <h1>🎯 Job Radar</h1>
   <nav id="nav"></nav>
   <div id="stats"></div>
+  <button class="act" id="tutorialBtn" onclick="openTutorial()">Tutorial</button>
   <button class="act" id="themeBtn" title="theme">◐</button>
 </header>
 <main id="main">Loading the radar state…</main>
 <div id="ws"><div id="wsp"></div></div>
+<div id="tutorial" role="dialog" aria-modal="true" aria-label="Job Radar tutorial" onclick="if(event.target===this)closeTutorial()">
+  <div id="tutorialp"></div>
+</div>
 
 <script>
 "use strict";
@@ -223,7 +275,8 @@ function storedFilter() {
 const S = {           // app state
   jobs:{}, applied:[], culture:{}, research:{}, aiUsage:{}, companies:{},
   registryByCompany:{}, runs:[], scout:{}, web:null,
-  auth:null, backend:false, userTracker:false,
+  auth:null, backend:false, userTracker:false, trackerConfigured:false,
+  authProviders:{github:false,google:false},
   tab:"jobs", filter:{...DEFAULT_FILTER, ...storedFilter()}, shown:250,
   wsTab:"fit",
   testing:{q:"", sort:"resume", shown:40},
@@ -271,6 +324,8 @@ async function boot() {
       const c = await (await fetch("/api/config")).json();
       if (c.repo) REPO = c.repo;
       if (c.branch) BRANCH = c.branch;
+      if (c.auth_providers) S.authProviders = c.auth_providers;
+      S.trackerConfigured = Boolean(c.tracker_configured);
     } else if (ghHost && seg) {
       const d = await (await fetch(`${API}/repos/${REPO}`)).json();
       if (d.default_branch) BRANCH = d.default_branch;
@@ -596,6 +651,81 @@ function startApply(j) {
   }
 }
 
+/* ---------- tutorial + account workspace ------------------------------ */
+const TUTORIAL_TABS = [
+  ["start", "Start here"], ["applications", "Applications"],
+  ["accounts", "Accounts & login"], ["sheets", "Tracker & Sheets"],
+  ["privacy", "Privacy & safety"],
+];
+function providerButton(provider, label) {
+  const ready = Boolean(S.authProviders[provider]);
+  return ready
+    ? `<a class="act primary provider ${provider}" href="/api/login?provider=${provider}"><span class="mark">${provider==='github'?'GH':'G'}</span>${label}</a>`
+    : `<span class="act provider" style="opacity:.55;cursor:not-allowed"><span class="mark">${provider==='github'?'GH':'G'}</span>${label} unavailable</span>`;
+}
+function connectButton(provider, label) {
+  const ready = Boolean(S.authProviders[provider] && S.trackerConfigured);
+  return ready
+    ? `<a class="act provider ${provider}" href="/api/login?provider=${provider}&mode=link"><span class="mark">${provider==='github'?'GH':'G'}</span>${label}</a>`
+    : `<span class="act provider" style="opacity:.55;cursor:not-allowed"><span class="mark">${provider==='github'?'GH':'G'}</span>${label} unavailable</span>`;
+}
+function accountTutorialHTML() {
+  if (!S.auth) return `<div class="tut-kicker">OAuth only</div><h2>Sign in without a password</h2>
+    <p class="sub">Choose a provider you already trust. Job Radar never asks for or stores a password.</p>
+    <div class="provider-row">${providerButton("github", "Continue with GitHub")}${providerButton("google", "Continue with Google")}</div>
+    <div class="tut-note">After signing in with one provider, return here and use <b>Connect</b> to add the other. Do not sign out and create a second account first.</div>
+    <div class="tut-card"><h4>What each provider does</h4><p>GitHub identifies your account and, for the repo owner, enables the existing repository workflow. Google can identify you and powers the private tracker connection. Neither provider gives this page your password.</p></div>`;
+  const providers = S.auth.providers || {};
+  return `<div class="tut-kicker">Account center</div><h2>Your sign-in</h2>
+    <p class="sub">Signed in as <b>${esc(S.auth.login)}</b>. Add the second provider from this signed-in session so both point to one account.</p>
+    <div class="identity-list">
+      <div class="identity-row"><span>GitHub</span><span class="state">${providers.github?'connected':'not connected'}</span></div>
+      <div class="identity-row"><span>Google</span><span class="state">${providers.google?'connected':'not connected'}</span></div>
+    </div>
+    <div class="provider-row">${providers.github?'':connectButton('github','Connect GitHub')}${providers.google?'':connectButton('google','Connect Google')}</div>
+    ${!S.trackerConfigured?'<div class="tut-note">Account linking is waiting for the site owner to configure the private tracker. Login itself still uses the provider securely; no password fallback exists.</div>':''}
+    <div class="tut-card"><h4>One account rule</h4><p>Provider identities are unique. If an identity was already connected elsewhere, the app refuses a silent merge and asks you to prove control of both sides through OAuth.</p></div>
+    <p style="margin-top:1rem"><a class="act" href="/api/logout">Sign out</a></p>`;
+}
+function tutorialContent(tab) {
+  if (tab === "applications") return `<div class="tut-kicker">Using the radar</div><h2>Find, save, apply</h2>
+    <div class="tut-steps"><div class="tut-step"><span><b>Filter the board.</b> Search by company, role family, sector, sponsorship, experience, or score. Open a role for evidence and rationale.</span></div>
+      <div class="tut-step"><span><b>Use Maybe for uncertainty.</b> It keeps a role visible without spending a pipeline slot.</span></div>
+      <div class="tut-step"><span><b>Save to To apply.</b> This is the shortlist. After OAuth login, the mark follows your account across devices.</span></div>
+      <div class="tut-step"><span><b>Click Apply.</b> The employer page opens in a new tab and the radar saves the role first when your tracker is available.</span></div>
+      <div class="tut-step"><span><b>Mark the real stage.</b> Applied means you actually submitted. Later OA, Interview, Rejected, and Closed stages stay visible in Pipeline.</span></div></div>
+    <div class="tut-note">The radar never submits an application for you. It opens the employer’s official application link and records the stage you choose.</div>`;
+  if (tab === "accounts") return accountTutorialHTML();
+  if (tab === "sheets") return `<div class="tut-kicker">Your private tracker</div><h2>Google Sheets, without the Sheet leak</h2>
+    <p class="sub">The app uses a private Google workbook as its durable tracker. You interact with it through the app; you do not need to open Google Sheets or grant this site your Google token.</p>
+    <div class="tut-grid"><div class="tut-card"><h4>Notion-shaped fields</h4><p>Company · Stage · Position · Apply date · Text · Job URL · Location, with timestamps and source metadata beside them.</p></div>
+      <div class="tut-card"><h4>What gets written</h4><p>Track, Maybe, Applied, and Remove become one stable row keyed to your account. Re-clicking updates that row instead of duplicating it.</p></div>
+      <div class="tut-card"><h4>What you can see</h4><p>On reload, the backend filters the private workbook to your account ID. Another GitHub or Google user cannot read your rows through the app.</p></div></div>
+    <div class="tut-note">Google is the storage service, not a second password system. Your provider login identifies you; the backend keeps the Sheet credential server-side.</div>`;
+  if (tab === "privacy") return `<div class="tut-kicker">Trust boundary</div><h2>Why the login is designed this way</h2>
+    <div class="tut-steps"><div class="tut-step"><span><b>No passwords.</b> GitHub and Google own password handling, MFA, recovery, suspicious-login detection, and OAuth consent.</span></div>
+      <div class="tut-step"><span><b>Tokens stay server-side.</b> The session is encrypted and marked httpOnly/Secure; frontend JavaScript cannot read provider tokens.</span></div>
+      <div class="tut-step"><span><b>Explicit linking.</b> Adding a provider requires an active session plus a fresh OAuth consent flow. Existing provider ownership is never silently overwritten.</span></div>
+      <div class="tut-step"><span><b>Private rows.</b> The Sheet is not sent to the browser wholesale. The backend returns only the current account’s tracker rows.</span></div></div>
+    <div class="tut-note">If you ever see a provider you do not recognize, sign out and revoke the app from GitHub or Google account security settings. Never paste an OAuth token into the page.</div>`;
+  return `<div class="tut-kicker">A calmer first run</div><h2>Welcome to Job Radar</h2>
+    <p class="sub">This is the quick map for the parts you will actually use.</p>
+    <div class="tut-grid"><div class="tut-card"><h4>1 · Browse</h4><p>Start in Jobs. Scores are a ranking aid; role details explain the evidence and eligibility.</p></div>
+      <div class="tut-card"><h4>2 · Build a funnel</h4><p>Maybe → To apply → Applied → OA/Interview. Keep decisions explicit.</p></div>
+      <div class="tut-card"><h4>3 · Connect once</h4><p>Use GitHub or Google OAuth, then connect the other provider from Accounts & login.</p></div>
+      <div class="tut-card"><h4>4 · Keep the source of truth</h4><p>The private tracker mirrors a Notion-style application board while the app remains the safe front door.</p></div></div>
+    <div class="tut-note">You can reopen this guide anytime with the <b>Tutorial</b> button in the header.</div>`;
+}
+function openTutorial(tab = S.auth ? "accounts" : "start") {
+  S.tutorialTab = TUTORIAL_TABS.some(([key])=>key===tab) ? tab : "start";
+  $("#tutorialp").innerHTML = `<aside class="tut-nav"><h3>Guide</h3>${TUTORIAL_TABS.map(([key,label])=>
+    `<button class="${S.tutorialTab===key?'on':''}" onclick="S.tutorialTab='${key}';openTutorial('${key}')">${label}</button>`).join('')}</aside>
+    <section class="tut-main"><div class="tut-head"><div></div><button class="tut-close" aria-label="Close tutorial" onclick="closeTutorial()">×</button></div>${tutorialContent(S.tutorialTab)}</section>`;
+  $("#tutorial").classList.add("open");
+}
+function closeTutorial() { $("#tutorial").classList.remove("open"); }
+document.addEventListener("keydown", event => { if (event.key === "Escape") closeTutorial(); });
+
 /* ---------- render ---------- */
 const TABS = [["jobs","Jobs"],["pipeline","Pipeline"],["companies","Companies"],
               ["interview","Interview"],["ai","AI"],["settings","Settings"]];
@@ -606,8 +736,8 @@ function render() {
     `<button class="${S.tab===k?'on':''}" onclick="S.tab='${k}';render()">${l}</button>`).join("") +
     `<button onclick="window.open('https://github.com/${REPO}/issues','_blank')">Issues ↗</button>` +
     (S.backend ? (S.auth
-      ? `<button onclick="location.href='/api/logout'" title="sign out">@${esc(S.auth.login)}${S.auth.owner?"":S.userTracker?" · personal tracker":" · read-only"} ✕</button>`
-      : `<button class="on" onclick="location.href='/api/login'">Sign in with GitHub</button>`) : "");
+      ? `<button class="on" onclick="openTutorial('accounts')" title="account settings">@${esc(S.auth.login)}${S.auth.owner?"":S.userTracker?" · personal tracker":" · account"}</button>`
+      : `<button class="on" onclick="openTutorial('accounts')">Sign in / create account</button>`) : "");
   const byId = appliedById();
   const saved = S.applied.filter(a=>(a.stage||"applied")==="saved");
   const done  = S.applied.filter(a=>(a.stage||"applied")!=="saved");
@@ -1318,22 +1448,17 @@ function rSet() {
   $("#main").innerHTML = `
     ${S.backend?`<div class="sect"><h4>Signed-in mode (recommended)</h4>
       <p class="sub" style="max-width:44rem">${S.auth
-        ? `Signed in as <b>@${esc(S.auth.login)}</b>${S.auth.owner
-            ? " — full write access. Every track/applied click fires instantly, and notes sync across devices."
-            : " — read-only (this radar belongs to the repo owner)."}
-           <a href="/api/logout">Sign out</a>.`
-        : `<a href="/api/login"><b>Sign in with GitHub</b></a> once per browser. GitHub's OAuth
-           hands the backend your identity; your credential is sealed in an httpOnly cookie
-           this page's JavaScript cannot read, and the app secrets live only in Vercel's
-           encrypted env store — never in the repo, never in the frontend.`}</p></div>`:""}
+        ? `Signed in as <b>${esc(S.auth.login)}</b>${S.auth.owner
+            ? " — owner repository controls are enabled."
+            : S.userTracker ? " — your private tracker is connected." : " — connect the private tracker when it is enabled."}
+           Open <button class="jobtitle" onclick="openTutorial('accounts')">Accounts &amp; login</button> to connect GitHub and Google, or <a href="/api/logout">sign out</a>.`
+        : `Choose <button class="jobtitle" onclick="openTutorial('accounts')">Sign in / create account</button> once per browser. GitHub and Google handle credentials; this app has no password database.`}</p></div>`:""}
     <div class="sect"><h4>How auth works (no secrets on this site)</h4>
       <p class="sub" style="max-width:44rem">This is a static page on a <b>public</b> repo, so it
-      holds no secrets — anything embedded here would belong to the whole internet. Instead,
-      <b>track / applied</b> open a prefilled GitHub issue that you submit while logged into
-      GitHub; the radar's backend <b>only obeys the repo owner</b> and ignores everyone else, then
-      auto-closes the issue. Share this URL freely — a friend gets a read-only view and their
-      clicks are ignored by design. Without a token, notes &amp; links live only in this browser
-      (private, but not synced between devices).</p></div>
+      holds no secrets — anything embedded here would belong to the whole internet. On the
+      Vercel platform, OAuth users can use the private Google-backed tracker; each account sees
+      only its own rows. On GitHub Pages, the board remains read-only and notes stay only in that
+      browser. The owner-only repository workflow remains separate from personal tracking.</p></div>
     <div class="sect"><h4>Optional: a token for instant writes + cross-device notes</h4>
       <p class="sub" style="max-width:44rem">Only if you want one-click writes without the GitHub
       hop: a <b>fine-grained</b> token scoped to <span class="mono">${REPO}</span> only, with
@@ -1364,6 +1489,7 @@ window.startApply = startApply; window.jobById = jobById;
 window.setFilter = setFilter; window.clearFilters = clearFilters;
 window.addLink = addLink; window.rmLink = rmLink; window.testPAT = testPAT;
 window.requestCompanyResearch = requestCompanyResearch; window.$ = $;
+window.openTutorial = openTutorial; window.closeTutorial = closeTutorial;
 boot();
 </script>
 </body>

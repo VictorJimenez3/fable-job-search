@@ -52,11 +52,13 @@ system as a website, refreshed automatically by every crawl:
 - **AI**: per-run budget, task mix, provider/model health, grounded-research
   coverage, scout status, and registry stats.
 
-Reading needs nothing. On Vercel, sign in with GitHub once for instant owner
-writes. On the Pages mirror, buttons use prefilled GitHub issues by default;
+Reading needs nothing. On Vercel, use **Tutorial → Accounts & login** to sign
+in with GitHub or Google, then connect the other provider from the same signed-in
+session. There is no password login. On the Pages mirror, buttons use prefilled GitHub issues by default;
 the optional Settings token enables instant writes and cross-device notes.
-GitHub checkboxes keep working exactly as before; both doors lead to the
-same tracker.
+The private Google-backed tracker is filtered per linked account; the Sheet is
+never sent to the browser wholesale. GitHub checkboxes keep working exactly as
+before; both doors lead to the same tracker.
 
 The separate [ChemE internship board](https://job-radar-cheme.vercel.app)
 uses its own jobs, scoring profile, pipeline state, and labeled GitHub issues.

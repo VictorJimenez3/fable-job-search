@@ -16,6 +16,14 @@ const REPO = envv("RADAR_REPO") || "VictorJimenez3/fable-job-search";
 const BRANCH = envv("RADAR_BRANCH") || "claude/newgrad-job-search-system-9gbj9k";
 const PROFILE = envv("RADAR_PROFILE") || "default";
 const AUTH_MODE = envv("AUTH_MODE") || "oauth";
+const CANON_HOST = envv("CANON_HOST") || "job-radar-vmj-8946s-projects.vercel.app";
+
+// Google login uses a separate OAuth web client when available. Falling back
+// to the Sheets client keeps one-person deployments simple, but that client
+// must have this app's HTTPS callback registered in Google Cloud first.
+const GOOGLE_AUTH_CLIENT_ID = () => envv("GOOGLE_AUTH_CLIENT_ID") || envv("GOOGLE_CLIENT_ID");
+const GOOGLE_AUTH_CLIENT_SECRET = () => envv("GOOGLE_AUTH_CLIENT_SECRET") || envv("GOOGLE_CLIENT_SECRET");
+const googleAuthConfigured = () => Boolean(GOOGLE_AUTH_CLIENT_ID() && GOOGLE_AUTH_CLIENT_SECRET());
 
 const key = () => crypto.createHash("sha256").update(envv("SESSION_SECRET")).digest();
 
@@ -50,6 +58,15 @@ function needSetup(res) {
   return false;
 }
 
+function needSessionSetup(res) {
+  const missing = ["SESSION_SECRET"].filter((k) => !envv(k));
+  if (missing.length) {
+    res.status(503).json({ error: "setup needed", missing });
+    return true;
+  }
+  return false;
+}
+
 async function gh(path, token, opts = {}) {
   const r = await fetch("https://api.github.com" + path, {
     ...opts,
@@ -64,4 +81,5 @@ async function gh(path, token, opts = {}) {
 }
 
 module.exports = { OWNER, REPO, BRANCH, PROFILE, AUTH_MODE, envv, seal, unseal,
-                   session, needSetup, gh };
+                   CANON_HOST, GOOGLE_AUTH_CLIENT_ID, GOOGLE_AUTH_CLIENT_SECRET,
+                   googleAuthConfigured, session, needSetup, needSessionSetup, gh };
