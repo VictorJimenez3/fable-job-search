@@ -53,8 +53,8 @@ def render_dashboard(jobs: dict, registry: dict, runs: list) -> str:
         "Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) "
         "after applying — it logs to Notion automatically.",
         "",
-        "| Score | Age | Company | Role | Location | Sector | Src |",
-        "|---|---|---|---|---|---|---|",
+        "| Score | Age | Company | Role | Location | Sector | Sponsor history | Src |",
+        "|---|---|---|---|---|---|---|---|",
     ]
     for j in rows:
         loc = (j.get("locations") or [""])[0][:40]
@@ -63,7 +63,8 @@ def render_dashboard(jobs: dict, registry: dict, runs: list) -> str:
         lines.append(
             f"| {j['score']} {_fire(j['score'])} | {_age(j.get('posted_at'), now)} "
             f"| {j['company'][:38]} | [{j['title'][:70]}]({j['url']}) "
-            f"| {loc} | {j.get('sector') or '—'} | {source_link} |")
+            f"| {loc} | {j.get('sector') or '—'} "
+            f"| {(j.get('sponsorship_history') or {}).get('status') or '—'} | {source_link} |")
     lines += ["", f"_{len(rows)} roles shown (score ≥ {p['thresholds']['dashboard']}, posted ≤30d)._"]
     return "\n".join(lines) + "\n"
 

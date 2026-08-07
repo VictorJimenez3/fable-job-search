@@ -1,0 +1,54 @@
+name: sponsorship history
+
+on:
+  schedule:
+    - cron: "15 5 * * 0"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Refresh DOL history and publish generated state
+        env:
+          RADAR_SPONSORSHIP_QUARTERS: "4"
+        run: |
+          git config user.name "job-radar[bot]"
+          git config user.email "radar@users.noreply.github.com"
+          for attempt in 1 2 3 4; do
+            if ! git pull --rebase origin "${GITHUB_REF_NAME}"; then
+              git rebase --abort || true
+              echo "sponsorship: could not rebase onto current production" >&2
+              exit 1
+            fi
+            python -m radar.main sponsorship-refresh
+            git add state/sponsorship.json state/jobs.json docs/DASHBOARD.md docs/feed.xml
+            if git diff --cached --quiet; then
+              echo "sponsorship: no generated changes"
+              exit 0
+            fi
+            git commit -m "radar: refresh DOL sponsorship history"
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              echo "sponsorship: published on attempt ${attempt}"
+              exit 0
+            fi
+            echo "sponsorship: upstream moved; retrying"
+          done
+          echo "sponsorship: upstream kept moving" >&2
+          exit 1

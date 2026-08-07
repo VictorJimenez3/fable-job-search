@@ -288,6 +288,14 @@ Before changing the radar, read these in order:
   generates public Google searches for university recruiters, technical
   recruiters, likely hiring managers, NJIT alumni, and public hiring posts.
   This is link construction only and preserves the no-LinkedIn-scraping rule.
+- **Official DOL sponsorship context is shipped locally:**
+  `python -m radar.main sponsorship-refresh` downloads the latest quarterly
+  OFLC LCA disclosure workbooks, stores only a compact
+  `state/sponsorship.json` aggregate, and runs a full rescore. The Jobs view
+  and Fit drawer expose likely historical sponsor/no-history/unavailable with
+  explicit caveats. Posting-level visa wording remains primary and this signal
+  does not affect score. GitHub Actions refreshes it weekly. The source is the
+  [DOL OFLC performance-data page](https://www.dol.gov/agencies/eta/foreign-labor/performance).
 - **Radar score v8 is shipped (DECISIONS #70-71):** records retain uncapped raw
   utility, calibrated base, dimension values, reasons, and final score. Goal
   companies can reach 100, but posting wording separates nearby roles; cited

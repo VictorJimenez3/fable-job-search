@@ -204,7 +204,7 @@ let BRANCH = "claude/newgrad-job-search-system-9gbj9k";
 let RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
 const API = "https://api.github.com";
 
-const DEFAULT_FILTER = {q:"", min:45, sector:"", role:"", sectors:[], roles:[], sponsorship:"",
+const DEFAULT_FILTER = {q:"", min:45, sector:"", role:"", sectors:[], roles:[], sponsorship:"", sponsorHistory:"",
   experience:"", career:"", alert:false, lane:"", sort:"best"};
 function storedFilter() {
   try {
@@ -376,6 +376,15 @@ function roleFamily(j) {
 function sponsorStatus(j) {
   return j.posting ? (j.posting.sponsorship || "unknown") : "unread";
 }
+function sponsorHistoryStatus(j) {
+  return j.sponsorship_history?.status || "unavailable";
+}
+function sponsorHistoryBadge(j) {
+  const status = sponsorHistoryStatus(j);
+  return status === "likely" ? ["good", "🧾 DOL sponsor history"]
+    : status === "no-history" ? ["unknown", "🧾 no DOL history"]
+    : ["unknown", "🧾 DOL history unavailable"];
+}
 function experienceStatus(j) {
   if (!j.posting) return "unread";
   if (j.posting.years_min == null) return "unknown";
@@ -384,6 +393,7 @@ function experienceStatus(j) {
 function eligibilityBadges(j) {
   const p = j.posting;
   const sponsor = sponsorStatus(j);
+  const sponsorHistory = sponsorHistoryBadge(j);
   const visa = sponsor === "yes" ? ["good","🛂 sponsorship stated"]
     : sponsor === "no" ? ["bad","🛂 no sponsorship"]
     : sponsor === "unknown" ? ["unknown","🛂 visa not stated"]
@@ -399,6 +409,7 @@ function eligibilityBadges(j) {
     ${program?'<span class="chip marquee">technical program</span>':""}
     ${j.early_career_possible?'<span class="chip unknown" title="No stated experience floor, but not verified new-grad">early-career possible</span>':""}
     <span class="chip ${visa[0]}">${visa[1]}</span>
+    <span class="chip ${sponsorHistory[0]}" title="Company-level historical context from official DOL LCA disclosures; not a promise for this posting">${sponsorHistory[1]}</span>
     <span class="chip ${exp[0]}">${exp[1]}</span>`;
 }
 function setFilter(key, value, fullRender=true) {
@@ -434,6 +445,7 @@ function jobList() {
   if (f.roles?.length) rows = rows.filter(j=>f.roles.includes(roleFamily(j)));
   else rows = rows.filter(j=>roleFamily(j)!=="other");
   if (f.sponsorship) rows = rows.filter(j=>sponsorStatus(j)===f.sponsorship);
+  if (f.sponsorHistory) rows = rows.filter(j=>sponsorHistoryStatus(j)===f.sponsorHistory);
   if (f.experience === "entryfit") rows = rows.filter(j=>experienceStatus(j)!=="experienced");
   else if (f.experience) rows = rows.filter(j=>experienceStatus(j)===f.experience);
   if (f.career === "newgrad") rows = rows.filter(j=>j.explicit_new_grad);
@@ -627,6 +639,12 @@ function rJobs() {
         <option value="no" ${S.filter.sponsorship==="no"?"selected":""}>no sponsorship</option>
         <option value="unknown" ${S.filter.sponsorship==="unknown"?"selected":""}>visa not stated</option>
         <option value="unread" ${S.filter.sponsorship==="unread"?"selected":""}>visa not analyzed</option>
+      </select>
+      <select aria-label="DOL sponsor history" onchange="setFilter('sponsorHistory',this.value)">
+        <option value="">any DOL history</option>
+        <option value="likely" ${S.filter.sponsorHistory==="likely"?"selected":""}>likely historical sponsor</option>
+        <option value="no-history" ${S.filter.sponsorHistory==="no-history"?"selected":""}>no certified history found</option>
+        <option value="unavailable" ${S.filter.sponsorHistory==="unavailable"?"selected":""}>history unavailable</option>
       </select>
       <select aria-label="Experience requirement" onchange="setFilter('experience',this.value)">
         <option value="">any experience</option>
@@ -922,15 +940,32 @@ function wsCompany(j, w, c, id) {
 
 function scoreReasonLabel(reason) {
   const text = String(reason||"");
-  const labels = [["base utility","baseline"],["role:","role fit"],["sector:","sector fit"],["new-grad/early-career priority","verified early-career"],["early-career possible","plausible first-role"],["new-grad evidence absent","early-career evidence"],["company tier","company quality"],["explicit goal company","goal-company preference"],["company concentration","company diversity"],["compensation","compensation"],["posted","freshness"],["remote","remote access"],["culture fit","culture evidence"],["SHPE","community signal"],["raw utility","calibration"]];
+  const labels = [["base utility","baseline"],["role:","role fit"],["sector:","sector fit"],["new-grad/early-career priority","verified early-career"],["early-career possible","plausible first-role"],["new-grad evidence absent","early-career evidence"],["company tier","company quality"],["explicit goal company","goal-company preference"],["company concentration","company diversity"],["compensation","compensation"],["posted","freshness"],["remote","remote access"],["culture fit","culture evidence"],["SHPE","community signal"],["sponsor history:","DOL sponsor context"],["raw utility","calibration"]];
   const found = labels.find(([prefix]) => text.startsWith(prefix));
   return found ? found[1] : "other signal";
+}
+function sponsorshipHistoryCard(j) {
+  const h = j.sponsorship_history || {status:"unavailable"};
+  const coverage = (h.coverage_quarters || []).join(", ") || "not refreshed";
+  const source = h.source_url || "https://www.dol.gov/agencies/eta/foreign-labor/performance";
+  if (h.status === "likely") {
+    const cases = (Number(h.certified_cases)||0) + (Number(h.certified_withdrawn_cases)||0);
+    const workers = (Number(h.certified_workers)||0) + (Number(h.certified_withdrawn_workers)||0);
+    return `<div class="note"><b>Likely historical sponsor</b> · ${cases} certified LCA case${cases===1?"":"s"}${workers?` · ${workers} worker position${workers===1?"":"s"}`:""}<br>
+      <span class="sub">Covered ${esc(coverage)} · latest decision ${esc(h.latest_decision_date||"not recorded")}. This is company-level history, not a promise that this role sponsors or that a future petition will succeed.</span>
+      <br><a href="${esc(source)}" target="_blank" rel="noopener">view official DOL source ↗</a></div>`;
+  }
+  if (h.status === "no-history") return `<div class="note"><b>No certified history found</b> in ${esc(coverage)}.<br>
+    <span class="sub">That is not a finding that the company will not sponsor. Use the posting’s own visa wording first.</span>
+    <br><a href="${esc(source)}" target="_blank" rel="noopener">view official DOL source ↗</a></div>`;
+  return `<div class="note"><b>DOL history unavailable.</b> Refresh the sponsorship database to add company context; the posting facts above remain authoritative.</div>`;
 }
 function wsFit(j, w, c, id) {
   const dimensions = Object.entries(j.score_dimensions||{});
   const reasons = (j.score_reasons||[]).map(reason => `<div class="rating-reason"><span class="k">${esc(scoreReasonLabel(reason))}</span><span>${esc(reason)}</span></div>`).join("");
   return `
     <div class="sect"><h4>Posting facts (scraped, no AI needed)</h4>${postingCard(j)}</div>
+    <div class="sect"><h4>Company sponsorship history · official DOL context</h4>${sponsorshipHistoryCard(j)}</div>
     <div class="sect"><h4>Why it scored ${j.score??"?"}</h4>
       ${dimensions.length?`<div class="kv">${dimensions.map(([name,value])=>`<span class="k">${esc(name.replaceAll('_',' '))}</span><span>${value>=0?'+':''}${esc(value)}</span>`).join('')}</div>
       <p class="sub">Uncapped utility ${esc(j.score_raw??'?')} → calibrated ${esc(j.score_calibrated??j.score??'?')} → final ${j.score??'?'} / 100. 90+ is strong; final adjustments are shown below. Resume Match is separate and uses your CV evidence graph.</p>`:""}

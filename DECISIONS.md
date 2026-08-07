@@ -1237,3 +1237,22 @@ notes are overlaid by stable line ID, so a renderer-index correction migrates
 older private state without discarding edits or misplacing education and skills
 rows. Workshop revisions remain additive and never overwrite the original run
 or either human-authored reference PDF.
+## 83. Official DOL sponsorship history is contextual, not a job promise (2026-08-07)
+
+The radar now refreshes the latest quarterly U.S. Department of Labor OFLC LCA
+public disclosure workbooks into a compact, committed company index. It counts
+certified and certified-withdrawn H-1B, H-1B1, and E-3 cases over the covered
+quarters, then conservatively matches legal-name-stripped employers and
+location-qualified brand names to radar companies. Raw workbooks stay out of
+the repository.
+
+The result is deliberately a separate signal from the posting's deterministic
+visa extraction. A company with historical certified cases is labeled
+`likely`; a company with no matching case in the covered quarters is labeled
+`no-history`; and a missing refresh is `unavailable`. None changes the score,
+eligibility gate, or the candidate's `needs_sponsorship` policy. Every label
+explains that company history is not evidence that this specific requisition
+will sponsor or that a future petition will succeed. The official source is
+the [DOL OFLC performance-data page](https://www.dol.gov/agencies/eta/foreign-labor/performance).
+
+Semantic/vector RAG remains intentionally parked and is not part of this change.

@@ -13,6 +13,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from . import applied as applied_mod
+from . import sponsorship
 from . import discovery, state
 from .brief import rerank
 from .config import env, profile, seeds
@@ -363,6 +364,7 @@ def enrich() -> int:
     score_mod._CULTURE_CACHE = None  # force reload
     score_mod._COMPANY_RESEARCH_CACHE = None
     fb = state.feedback()
+    sponsorship_db = sponsorship.load()
     rescored = 0
     for rec in jobs_state.values():
         if now - rec.get("first_seen", 0) > 14 * 86400:
@@ -378,9 +380,10 @@ def enrich() -> int:
         rec["score_calibrated"] = j.score_calibrated
         rec["score_dimensions"] = j.score_dimensions
         rec["score_version"] = RULES_VERSION
+        rec["score_reasons"] = j.score_reasons
+        sponsorship.annotate_record(rec, sponsorship_db)
         if j.score != old:
             rec["score"] = j.score
-            rec["score_reasons"] = j.score_reasons
             rescored += 1
 
     # quality pass: link liveness + new-grad/role-fit verification (cached
@@ -576,6 +579,7 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int) -> tuple[int, int]:
     score_mod._CULTURE_CACHE = None
     score_mod._CULTURE_MATCH_CACHE = {}
     score_mod._COMPANY_RESEARCH_CACHE = None
+    sponsorship_db = sponsorship.load()
     changed = 0
     alerts = 0
     for rec in jobs_state.values():
@@ -600,6 +604,7 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int) -> tuple[int, int]:
             quality.reapply(rec)
         if rec.get("posting"):
             posting.reapply(rec)
+        sponsorship.annotate_record(rec, sponsorship_db)
         rec["early_career_possible"] = early_career_possible(job, rec.get("posting"))
         if rec["early_career_possible"]:
             rec["score_reasons"].append(
@@ -612,6 +617,17 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int) -> tuple[int, int]:
         for rec in jobs_state.values()
     )
     return changed, alerts
+
+
+def sponsorship_refresh_cmd() -> int:
+    """Refresh official DOL LCA history and rebuild the auditable score view."""
+    from . import sponsorship as sponsorship_mod
+    database = sponsorship_mod.build_alias_index(sponsorship_mod.refresh())
+    state.save("sponsorship.json", database)
+    print("sponsorship: %s companies with certified DOL history across %s; %s rows read"
+          % (database["stats"]["companies_with_certified_history"],
+             ", ".join(database["coverage_quarters"]), database["stats"]["rows_read"]))
+    return rescore_cmd()
 
 
 def rescrape_cmd() -> int:
@@ -783,7 +799,8 @@ def main() -> None:
                                         "marquee-backfill", "reconcile-checkboxes",
                                         "daily-best", "master-board", "deliver-alerts", "web-action", "enrich",
                                         "email-batch",
-                                        "regate", "rescore", "score-health", "rescrape", "repair-feedback"])
+                                        "regate", "rescore", "score-health", "rescrape", "repair-feedback",
+                                        "sponsorship-refresh"])
     args = ap.parse_args()
     if args.command == "crawl":
         sys.exit(crawl())
@@ -844,6 +861,8 @@ def main() -> None:
         sys.exit(rescrape_cmd())
     elif args.command == "repair-feedback":
         sys.exit(repair_feedback())
+    elif args.command == "sponsorship-refresh":
+        sys.exit(sponsorship_refresh_cmd())
 
 
 if __name__ == "__main__":

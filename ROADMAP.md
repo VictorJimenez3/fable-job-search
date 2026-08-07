@@ -282,12 +282,12 @@ top of that durable bank.
 - **Referral-finder** — cross NJIT alumni signals against target companies;
   drafts the outreach note into the Networking CRM. (Needs a data source that
   isn't LinkedIn scraping — evaluating SHPE directory + GitHub org members.)
-- **H-1B/sponsorship cross-check** — join companies against the public DOL
-  LCA disclosure data; add a `sponsors: likely/no-history` column. Cheap,
-  official data. Sponsorship is now a platform filter, so this is the next
-  useful eligibility upgrade: posting wording stays primary evidence, while
-  DOL history is clearly labeled as company-level historical context—not a
-  promise that a particular requisition sponsors.
+- **H-1B/sponsorship cross-check — ✅ SHIPPED 2026-08-07 (DECISION #83).** A
+  weekly refresh joins radar companies to the latest official DOL OFLC LCA
+  disclosure quarters and adds `likely`, `no-history`, or `unavailable`
+  company context to job records, dashboard rows, filters, and the Fit drawer.
+  Posting wording remains the primary per-role evidence; DOL history never
+  adds score points and is explicitly not a promise that a requisition sponsors.
 - **Meta careers adapter** — auth-gated GraphQL today; revisit if they ship a
   public search endpoint. Covered by aggregators meanwhile.
 - **SHPE deep mode** — rep CRM per booth, session planner, live exhibitor sync

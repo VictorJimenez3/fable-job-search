@@ -22,6 +22,12 @@ big tech second, open to everything good).
 The platform is now decision-first: filter by role family, sponsorship, and
 required experience; see honest eligibility facts before opening a posting;
 then use one primary apply link with explicit To apply/Applied tracking.
+Company-level DOL sponsorship history is also visible as separate context: the
+Jobs filter and Fit drawer can show likely historical sponsor, no certified
+history in the covered quarters, or unavailable. It never overrides the
+posting's own visa wording or adds ranking points. Refresh it locally with
+`.venv/bin/python -m radar.main sponsorship-refresh`; the scheduled workflow
+does this weekly from the [official DOL OFLC data page](https://www.dol.gov/agencies/eta/foreign-labor/performance).
 
 The ChemE internship board is intentionally separate from this new-grad
 AI/SWE/DS board. It reads the `claude/cheme-intern-radar` branch and keeps its

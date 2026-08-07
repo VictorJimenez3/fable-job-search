@@ -20,17 +20,21 @@ handles time-sensitive enrichment nightly. The repo itself is the database.
 system as a website, refreshed automatically by every crawl:
 
 - **Jobs**: every role the radar has ever seen, with persistent dropdowns for
-  role family, sponsorship, experience, sector, and pipeline status. Each row
-  shows visa/years badges—including the important difference between "not
-  stated" and "not analyzed"—plus score, salary, culture, and age. The
+  role family, posting sponsorship, official DOL sponsor history, experience,
+  sector, and pipeline status. Each row shows visa/years badges—including the
+  important difference between "not stated" and "not analyzed"—plus historical
+  sponsor context, score, salary, culture, and age. DOL history is company-level
+  context only; the posting's own visa wording remains primary and no-history
+  does not mean a company will not sponsor. The
   **apply ↗** button opens the employer posting; when you are signed in it also
   saves a new role to **To apply** without pretending you submitted it.
 - **Pipeline**: separate Maybe, To apply, Applied, OA, Interview, Rejected, and
   Closed lanes. The selected tracker is read back twice daily; "Maybe" remains
   a platform-only scratch lane.
 - **Per-job workspace** (click the title or details ▸), four tabs: **Fit &
-  eligibility** opens first with role family, sponsorship, required years,
-  location, salary, posting age, score reasons, and the LLM verdict; it also
+  eligibility** opens first with role family, posting sponsorship, DOL sponsor
+  history, required years, location, salary, posting age, score reasons, and the
+  LLM verdict; it also
   has a paste box for descriptions the radar cannot scrape (graded on the next
   enrich cycle). **Company** has a claim-level cited employer brief, its
   official evidence, a separately labeled culture card, and external research
