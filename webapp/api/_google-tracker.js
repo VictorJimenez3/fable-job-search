@@ -14,6 +14,7 @@ const SHEETS_API = "https://sheets.googleapis.com/v4/spreadsheets";
 const DRIVE_FILES_API = "https://www.googleapis.com/drive/v3/files";
 const TRACKER_PROPERTY = "jobRadarTracker";
 const TRACKER_PROPERTY_VALUE = "v1";
+const formattedPersonalTrackers = new Set();
 
 // The personal workbook is intentionally Notion-shaped but does not expose
 // internal account keys because the user owns and can open this Sheet.
@@ -131,6 +132,26 @@ async function formatPersonalTracker(token, spreadsheetId, sheets) {
   if (!r.ok) throw new Error(`Google Sheet format ${r.status}`);
 }
 
+async function repairPersonalTrackerFormat(token, spreadsheetId) {
+  if (formattedPersonalTrackers.has(spreadsheetId)) return;
+  try {
+    const r = await fetch(`${SHEETS_API}/${encodeURIComponent(spreadsheetId)}?fields=sheets(properties(sheetId,title,gridProperties(columnCount)))`, {
+      headers: {Authorization: `Bearer ${token}`},
+    });
+    if (!r.ok) return;
+    const body = await r.json();
+    const sheets = (body.sheets || []).map(sheet => {
+      const properties = sheet.properties || {};
+      return {id: properties.sheetId, title: properties.title,
+        columns: properties.gridProperties?.columnCount || PERSONAL_HEADERS.length};
+    });
+    await formatPersonalTracker(token, spreadsheetId, sheets);
+    formattedPersonalTrackers.add(spreadsheetId);
+  } catch (error) {
+    console.warn(`Google tracker formatting deferred: ${String(error.message || error).slice(0, 120)}`);
+  }
+}
+
 function driveQueryUrl(query) {
   const params = new URLSearchParams({q: query, spaces: "drive", pageSize: "10",
     fields: "files(id,name,createdTime,modifiedTime)"});
@@ -215,6 +236,7 @@ async function ensurePersonalTracker(identity, oauth, currentPersonal = null) {
   if (!spreadsheetId) spreadsheetId = await findPersonalTracker(token, identity.email);
   const created = !spreadsheetId;
   if (created) spreadsheetId = await createPersonalTracker(token, identity.email);
+  if (!created) await repairPersonalTrackerFormat(token, spreadsheetId);
   return {created, personal: {r: refreshToken, s: spreadsheetId,
     e: clean(identity.email, 320).toLowerCase(), sub: String(identity.sub || "")}};
 }
@@ -547,6 +569,7 @@ async function userTracker(accountKeys, personal = null) {
     spreadsheetId = account.googleSheetId;
     googleEmail = account.googleEmail;
   }
+  await repairPersonalTrackerFormat(token, spreadsheetId);
   const rows = await readTab(token, spreadsheetId, personalTab(), `A:${columnName(PERSONAL_HEADERS.length)}`);
   if (!rows.length) return {configured: true, connected: true, needs_google: false,
     google_email: googleEmail, sheet_url: sheetUrl(spreadsheetId), entries: [], maybe: []};
@@ -562,7 +585,7 @@ function rowValues(payload, existing = {}) {
   const now = isoNow();
   const action = payload.action;
   const stage = action === "track" ? "saved" : action === "applied" ? "applied" :
-    action === "maybe" ? "maybe" : "archived";
+    action === "maybe" ? "maybe" : action === "stage" ? clean(payload.stage, 20).toLowerCase() : "archived";
   return [clean(payload.id, 100), clean(payload.company, 200), stage, clean(payload.title, 300),
     stage === "applied" ? (existing.applyDate || now) : (existing.applyDate || ""), clean(payload.text, 500),
     clean(payload.url, 1900), clean(payload.location, 200), existing.savedAt || now, now,
@@ -571,7 +594,10 @@ function rowValues(payload, existing = {}) {
 
 async function updateUserTracker(login, accountKeys, payload, personal = null) {
   const action = payload.action;
-  if (!["track", "applied", "maybe", "untrack"].includes(action)) throw new Error("unsupported tracker action");
+  if (!["track", "applied", "maybe", "stage", "untrack"].includes(action)) throw new Error("unsupported tracker action");
+  if (action === "stage" && !VALID_STAGES.has(clean(payload.stage, 20).toLowerCase())) {
+    throw new Error("unsupported application stage");
+  }
   const id = clean(payload.id, 100);
   if (!id) throw new Error("missing job id");
   let token;

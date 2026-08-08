@@ -31,6 +31,8 @@ def test_platform_exposes_private_google_tracker_path_for_authenticated_users():
     html = (ROOT / "webapp" / "index.html").read_text()
     api = (ROOT / "webapp" / "api" / "tracker.js").read_text()
     helper = (ROOT / "webapp" / "api" / "_google-tracker.js").read_text()
+    action = (ROOT / "webapp" / "api" / "action.js").read_text()
+    main = (ROOT / "radar" / "main.py").read_text()
     assert 'fetch("/api/tracker")' in html
     assert "User Applications" in api + helper
     assert "Google Token Ciphertext" in helper
@@ -38,7 +40,13 @@ def test_platform_exposes_private_google_tracker_path_for_authenticated_users():
     assert "findPersonalTracker" in helper
     assert "personal_tracker" in helper
     assert "s.pt" in api
-    assert "other users cannot read it" in html
+    assert "trackerPanelHTML" in html
+    assert "trackerActionButton" in html
+    assert "Open Google Sheet" in html
+    assert "tracker-quick" in html
+    assert "separate from other users" in html
+    assert "setPipelineStage" in html
+    assert '"stage"' in helper + action + main
 
 
 def test_platform_exposes_oauth_account_center_and_tutorial():

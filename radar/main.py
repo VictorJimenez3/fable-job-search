@@ -707,7 +707,7 @@ def web_action() -> int:
     with open(path) as f:
         payload = _json.load(f).get("client_payload") or {}
     action = payload.get("action")
-    if action not in {"track", "applied", "untrack", "manual-add", "research-company", "feedback", "archive"}:
+    if action not in {"track", "applied", "stage", "untrack", "manual-add", "research-company", "feedback", "archive"}:
         print(f"web-action: unknown action {action!r}")
         return 0
     jobs = state.jobs()
@@ -831,6 +831,30 @@ def web_action() -> int:
             state.save("jobs.json", jobs)
     if job is None:
         print(f"web-action: job {payload.get('id')!r} not found")
+        return 0
+    if action == "stage":
+        stage = str(payload.get("stage") or "").strip().lower()
+        if stage not in {"maybe", "saved", "applied", "oa", "interview", "rejected", "closed"}:
+            print(f"web-action: unsupported stage {stage!r}")
+            return 1
+        untracked.discard(job["id"])
+        existing = next((entry for entry in applied if entry.get("id") == job["id"]), None)
+        if existing is None:
+            changed = applied_mod.record_applied(job, applied, fb, via="platform", stage=stage)
+        else:
+            changed = existing.get("stage", "applied") != stage
+            existing["stage"] = stage
+            existing["via"] = "platform"
+            if stage == "applied":
+                existing["applied_at"] = int(time.time())
+        from .notion_sync import sync_applied
+        synced = sync_applied(applied)
+        shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
+        state.save("applied.json", applied)
+        state.save("shortlist.json", shortlist)
+        state.save("feedback.json", fb)
+        state.save("untracked.json", sorted(untracked))
+        print(f"web-action: stage {job['company']} → {stage} — changed={changed}, notion synced={synced}")
         return 0
     untracked.discard(job["id"])
     changed = applied_mod.record_applied(

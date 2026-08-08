@@ -144,6 +144,19 @@
   .identity-row .state { color:var(--accent-ink); font:600 .68rem ui-monospace,Menlo,monospace; }
   .tut-note { background:var(--code); border-left:3px solid var(--accent); padding:.6rem .75rem;
               border-radius:0 6px 6px 0; color:var(--muted); font-size:.78rem; margin:.7rem 0; }
+  .tracker-banner { display:flex; justify-content:space-between; align-items:center; gap:.8rem;
+                    flex-wrap:wrap; background:var(--code); border:1px solid var(--line);
+                    border-left:3px solid var(--amber); border-radius:0 8px 8px 0;
+                    padding:.65rem .8rem; margin-bottom:.9rem; }
+  .tracker-banner.connected { border-left-color:var(--accent); }
+  .tracker-copy { display:grid; gap:.08rem; min-width:0; }
+  .tracker-copy b { font-size:.82rem; }
+  .tracker-copy .sub { font-size:.74rem; }
+  .tracker-quick { display:inline-flex; align-items:center; gap:.28rem; white-space:nowrap; }
+  .tracker-banner .acts { flex-wrap:wrap; }
+  .stage-control { display:inline-flex; align-items:center; gap:.3rem; color:var(--muted);
+                   font:600 .64rem ui-monospace,Menlo,monospace; text-transform:uppercase; }
+  .stage-control select { min-width:7.2rem; padding:.2rem .35rem; font-size:.68rem; text-transform:none; }
   @media (max-width:640px) {
     #tutorialp { grid-template-columns:1fr; max-height:100%; }
     .tut-nav { border-right:0; border-bottom:1px solid var(--line); display:flex; gap:.25rem;
@@ -727,12 +740,12 @@ async function apiAction(action, job, extra={}) {
   if (!r.ok) throw new Error((await r.json()).error || r.status);
   return true;
 }
-async function trackerAction(action, job) {
+async function trackerAction(action, job, extra={}) {
   const r = await fetch("/api/tracker", {method:"POST",
     headers:{"Content-Type":"application/json"},
     body: JSON.stringify({action, id:job.id, url:job.url, company:job.company,
       title:job.title, location:(job.locations||[])[0] || "", source:job.source,
-      profile:PROFILE})});
+      profile:PROFILE, ...extra})});
   if (!r.ok) throw new Error((await r.json()).error || r.status);
   return true;
 }
@@ -838,6 +851,24 @@ function connectButton(provider, label) {
     ? `<a class="act provider ${provider}" href="/api/login?provider=${provider}&mode=link"><span class="mark">${provider==='github'?'GH':'G'}</span>${label}</a>`
     : `<span class="act provider" style="opacity:.55;cursor:not-allowed"><span class="mark">${provider==='github'?'GH':'G'}</span>${label} unavailable</span>`;
 }
+function trackerOpenButton(label = "Open Google Sheet") {
+  const url = S.trackerMeta?.sheet_url;
+  return url ? `<a class="act primary tracker-quick" aria-label="${esc(label)}" href="${esc(url)}" target="_blank" rel="noopener">📊 ${esc(label)} ↗</a>` : "";
+}
+function trackerActionButton(label = "Connect Google") {
+  return S.userTracker && S.trackerMeta?.sheet_url
+    ? trackerOpenButton(label)
+    : `<button class="act tracker-quick" onclick="openTutorial(&quot;accounts&quot;)">📊 ${esc(label)}</button>`;
+}
+function trackerPanelHTML() {
+  if (!S.backend || !S.auth) return "";
+  const connected = Boolean(S.userTracker && S.trackerMeta?.sheet_url);
+  return `<div class="tracker-banner ${connected?'connected':''}">
+    <div class="tracker-copy"><b>${connected?'Your private Google tracker is connected':'Keep your application funnel in your own Google Sheet'}</b>
+      <span class="sub">${connected?'Saved, applied, and maybe marks live in your Google Drive.':'Connect Google once to create a private tracker; it is separate from other users.'}</span></div>
+    <div class="acts">${trackerActionButton(connected?'Open Google Sheet':'Connect Google')}</div>
+  </div>`;
+}
 function accountTutorialHTML() {
   if (!S.auth) return `<div class="tut-kicker">OAuth only</div><h2>Sign in without a password</h2>
     <p class="sub">Choose a provider you already trust. Job Radar never asks for or stores a password.</p>
@@ -852,7 +883,7 @@ function accountTutorialHTML() {
       <div class="identity-row"><span>Google</span><span class="state">${providers.google?'connected':'not connected'}</span></div>
     </div>
     <div class="provider-row">${providers.github?'':connectButton('github','Connect GitHub')}${(!providers.google || !S.trackerMeta?.connected)?connectButton('google',providers.google?'Authorize Google Sheets':'Connect Google + create my Sheet'):''}</div>
-    ${S.trackerMeta?.connected && S.trackerMeta?.sheet_url ? `<div class="tut-note"><b>Your personal tracker:</b> <a href="${esc(S.trackerMeta.sheet_url)}" target="_blank" rel="noopener">open your Google Sheet ↗</a>${S.trackerMeta.google_email?` · ${esc(S.trackerMeta.google_email)}`:""}</div>` : providers.google ? '<div class="tut-note">Google identity is connected, but Sheets permission is not. Choose <b>Authorize Google Sheets</b> above to create your personal workbook.</div>' : '<div class="tut-note">Connect Google to create a private Sheet in your own Google Drive. GitHub-only accounts do not receive Google storage access.</div>'}
+    ${S.userTracker && S.trackerMeta?.sheet_url ? `<div class="tut-note"><b>Your personal tracker:</b> ${S.trackerMeta.google_email?`${esc(S.trackerMeta.google_email)} · `:""}<div class="acts" style="margin-top:.45rem">${trackerOpenButton()}</div></div>` : providers.google ? '<div class="tut-note">Google identity is connected, but Sheets permission is not. Choose <b>Authorize Google Sheets</b> above to create your personal workbook.</div>' : '<div class="tut-note">Connect Google to create a private Sheet in your own Google Drive. GitHub-only accounts do not receive Google storage access.</div>'}
     <div class="tut-card"><h4>One account rule</h4><p>Provider identities are unique. If an identity was already connected elsewhere, the app refuses a silent merge and asks you to prove control of both sides through OAuth.</p></div>
     <p style="margin-top:1rem"><a class="act" href="/api/logout">Sign out</a></p>`;
 }
@@ -904,6 +935,7 @@ function render() {
   $("#nav").innerHTML = tabs.map(([k,l]) =>
     `<button class="${S.tab===k?'on':''}" onclick="S.tab='${k}';render()">${l}</button>`).join("") +
     `<button onclick="window.open('https://github.com/${REPO}/issues','_blank')">Issues ↗</button>` +
+    (S.backend && S.auth ? trackerActionButton(S.userTracker?"Google Sheet":"Connect Google") : "") +
     (S.backend ? (S.auth
       ? `<button class="on" onclick="openTutorial('accounts')" title="account settings">@${esc(S.auth.login)}${S.auth.owner?"":S.userTracker?" · personal tracker":" · account"}</button>`
       : `<button class="on" onclick="openTutorial('accounts')">Sign in / create account</button>`) : "");
@@ -947,8 +979,8 @@ function rowHTML(j, byId) {
 function rJobs() {
   const sectors = [...new Set(Object.values(S.jobs).map(j=>j.sector).filter(Boolean))].sort();
   // toolbar renders once; typing re-renders only #jobsList so the input keeps focus
-  $("#main").innerHTML = `
-    <div class="filters">
+  $("#main").innerHTML = `${trackerPanelHTML()}
+   <div class="filters">
     <div class="bar">
       <input type="search" placeholder="search roles…" value="${esc(S.filter.q)}"
         oninput="setFilter('q',this.value,false)">
@@ -1006,13 +1038,10 @@ function rJobs() {
       <button class="act" onclick="clearFilters()">reset filters</button>
     </div>
     </div>
-    ${liSavedSearches()}
-    ${S.userTracker?`<div class="note"><b>Personal tracker connected.</b> Your saved, applied, and maybe marks are stored in your private Google Sheet${S.trackerMeta?.sheet_url?` · <a href="${esc(S.trackerMeta.sheet_url)}" target="_blank" rel="noopener">open it ↗</a>`:""}; other users cannot read it.</div>`
-      :canWrite()?"":(S.backend
-      ?`<div class="note"><b>Connect Google</b> from Accounts &amp; login to create your personal tracker in your own Google Drive. GitHub-only sign-in does not grant Sheets access.</div>`
-      :`<div class="note">No token needed: <b>track / applied</b> open a one-click
+   ${liSavedSearches()}
+    ${!S.backend && !canWrite()?`<div class="note">No token needed: <b>track / applied</b> open a one-click
       prefilled GitHub issue (your GitHub login is the auth — only the repo owner is obeyed).
-      Notes &amp; links stay private in this browser.</div>`)}
+      Notes &amp; links stay private in this browser.</div>`:""}
     <div id="jobsList"></div>`;
   renderJobsList();
 }
@@ -1046,16 +1075,48 @@ function renderJobsList() {
       show more (${rows.length-S.shown} left)</button></p>`:"");
 }
 
+const PIPELINE_STAGES = [["maybe","Maybe"],["saved","To apply"],["applied","Applied"],
+  ["oa","Online assessment"],["interview","Interview"],["rejected","Rejected"],["closed","Closed"]];
+function stageControl(id, current) {
+  if (!S.auth || (!S.userTracker && !S.auth.owner)) return "";
+  const safeId = JSON.stringify(id);
+  return `<label class="stage-control" onclick="event.stopPropagation()"><span>stage</span><select aria-label="Change application stage" onchange="setPipelineStage(${safeId},this.value)">
+    ${PIPELINE_STAGES.map(([value,label]) => `<option value="${value}" ${current===value?"selected":""}>${label}</option>`).join("")}</select></label>`;
+}
+async function setPipelineStage(id, stage) {
+  const job = jobById(id);
+  if (!job || !PIPELINE_STAGES.some(([value]) => value === stage)) return;
+  try {
+    if (S.auth && S.userTracker) await trackerAction("stage", job, {stage});
+    else if (S.auth?.owner) await apiAction("stage", job, {stage});
+    else { toast("Connect Google before changing application stages"); return; }
+    if (stage === "maybe") {
+      S.applied = S.applied.filter(entry => entry.id !== id);
+      if (!S.web.maybe.includes(id)) S.web.maybe.push(id);
+    } else {
+      S.web.maybe = S.web.maybe.filter(value => value !== id);
+      const entry = S.applied.find(value => value.id === id);
+      if (entry) entry.stage = stage;
+      else S.applied.push({id, company:job.company, title:job.title, url:job.url, stage, via:"platform"});
+    }
+    saveWeb();
+    toast(`Stage changed to ${stage === "oa" ? "online assessment" : stage}`);
+    render();
+  } catch (error) { toast("Stage update failed: " + error.message.slice(0, 90)); }
+}
 function cardHTML(x) {
+  const tracked = appliedById()[x.id];
+  const current = tracked?.stage || (S.web.maybe.includes(x.id) ? "maybe" : "saved");
   return `<div class="card" onclick='openWS("${x.id}")'>
-    <div class="co">${esc(x.company)}</div><div class="t">${esc(x.title)}</div></div>`;
+    <div class="co">${esc(x.company)}</div><div class="t">${esc(x.title)}</div>
+    <div class="stage-row">${stageControl(x.id, current)}</div></div>`;
 }
 function rPipe() {
   const maybe = S.web.maybe.map(id=>S.jobs[id]).filter(Boolean);
   const stages = [
     ["saved","📝 To apply"],["applied","✅ Applied"],["oa","🧪 OA"],
     ["interview","🗣 Interview"],["rejected","↩ Rejected"],["closed","⏸ Closed"]];
-  $("#main").innerHTML = `<section class="manual-add">
+  $("#main").innerHTML = `${trackerPanelHTML()}<section class="manual-add">
     <h2>Add a role you found yourself</h2>
     <p class="sub">This lives in To apply and mirrors to Notion. It is marked manual, never sent as an alert, and does not pretend to be new-grad evidence.</p>
     <div class="bar"><input id="manualCompany" aria-label="Company" placeholder="Company *">
@@ -1258,7 +1319,8 @@ function openWS(id) {
       <div class="sub">${esc((j.locations||[])[0]||"location unknown")}${j.salary?" · "+esc(j.salary):""}
         · score ${j.score??"?"}${j.score_raw!==undefined?` (raw utility ${j.score_raw})`:""} · scoring v${j.score_version||j.rules_v||"?"} · ${ago(postedTs(j))||"date unknown"} old</div>
       <div class="facts">${eligibilityBadges(j)}</div>
-      <div class="acts" style="margin-top:0.65rem">
+     <div class="acts" style="margin-top:0.65rem">
+        ${a?stageControl(id,a.stage||"saved"):""}
         <button class="act primary" onclick='startApply(jobById("${id}"))'>open application ↗</button>
         ${a?"":`<button class="act" onclick='actTrack(jobById("${id}"))'>save to apply</button>`}
       </div>
@@ -1665,6 +1727,7 @@ function rTesting() {
 
 function rSet() {
   $("#main").innerHTML = `
+    ${trackerPanelHTML()}
     ${S.backend?`<div class="sect"><h4>Signed-in mode (recommended)</h4>
       <p class="sub" style="max-width:44rem">${S.auth
         ? `Signed in as <b>${esc(S.auth.login)}</b>${S.auth.owner
@@ -1708,6 +1771,7 @@ window.actMaybe = actMaybe; window.actTrack = actTrack; window.actApplied = actA
 window.startApply = startApply; window.jobById = jobById;
 window.setFilter = setFilter; window.clearFilters = clearFilters;
 window.addLink = addLink; window.rmLink = rmLink; window.testPAT = testPAT;
+window.setPipelineStage = setPipelineStage;
 window.requestCompanyResearch = requestCompanyResearch; window.$ = $;
 window.openTutorial = openTutorial; window.closeTutorial = closeTutorial;
 window.sendTasteFeedback = sendTasteFeedback; window.reportJob = reportJob;
