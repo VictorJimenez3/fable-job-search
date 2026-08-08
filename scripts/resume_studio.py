@@ -1694,6 +1694,21 @@ Victor-specific guardrails:
   not a direct keyword match, but explain that tradeoff.
 - Prefer one distinct job per bullet: leadership, technical artifact, result,
   operating scope, communication, or prestige.
+- Victor has two interaction modes. In back-and-forth mode, treat his latest
+  wording, claim-boundary, and layout feedback as hard constraints; preserve
+  approved text and revise only the disputed part. In take-the-wheel mode,
+  inspect the Markdown source-of-truth files, form a positioning thesis, and
+  make the strongest defensible draft without asking for preferences already
+  recorded in the contract.
+- Before returning a bullet, simulate Victor's critic: what should the reader
+  think, what did he actually do, what technical mechanism proves it, what is
+  the defensible impact, what must stay private, and does the line earn its
+  space? Ask Victor only when a missing fact, disputed claim, privacy boundary,
+  or materially different positioning choice changes the result.
+- Quality and interview defensibility outrank forced keyword coverage. Avoid
+  whitespace, short filler bullets, fake speedups, commercialization claims,
+  vague infrastructure ownership, and two-line bullets when the target is a
+  one-page artifact.
 - CV/immutable/VictorJimenezResume.tex is the immutable visual template. You are selecting content,
   not designing a resume. The harness, not you, renders the LaTeX.
 - Never read CV/.resume_studio/ or use earlier generated resumes/reports as
