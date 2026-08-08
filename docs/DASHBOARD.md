@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-08-08 20:32 UTC** · companies polled directly: **1654** (registry 1858) · jobs tracked: **34442** · new this run: **3** · alerts this run: **0**_
+_Last run: **2026-08-08 20:51 UTC** · companies polled directly: **1654** (registry 1858) · jobs tracked: **34442** · new this run: **3** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -92,7 +92,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 83 ⭐ | 18d | Hospital for Special Surgery (HSS) | [Education Outcomes and Data Analytics Assistant](https://hss.wd1.myworkdayjobs.com/HSS_Careers/job/New-York-NY/Education-Outcomes-and-Data-Analytics-Assistant_JR2026-105688) | NYC | healthtech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 83 ⭐ | 24d | Citadel | [Software Engineer - University Graduate - US](https://www.citadel.com/careers/details/software-engineer-university-graduate-us/) | Houston, TX +2 | other | no-history | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 83 ⭐ | 24d | Microsoft | [Software Engineer](https://apply.careers.microsoft.com/careers/job/1970393556932425) | Redmond, WA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 82 ⭐ | 21h | WelbeHealth | [AI Engineer 1](https://job-boards.greenhouse.io/welbehealth/jobs/8599687002) | California | healthtech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 82 ⭐ | 22h | WelbeHealth | [AI Engineer 1](https://job-boards.greenhouse.io/welbehealth/jobs/8599687002) | California | healthtech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 82 ⭐ | 3d | Roblox | [[2027] Software Engineer, Early Career](https://careers.roblox.com/jobs/8072244?gh_jid=8072244) | San Mateo, CA, United States | big_tech | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/roblox) |
 | 82 ⭐ | 4d | TikTok | [Backend Engineer Graduate (Code Intelligence & Quality Validation-Agen](https://jobright.ai/jobs/info/6a71a439cb96192a368499ae?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA, United States | big_tech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 82 ⭐ | 4d | Massachusetts General Hospital | [Clinical Research Coordinator/Data Analyst](https://jobright.ai/jobs/info/6a72375102d93145bf89356a?utm_campaign=Data%20Analysis&utm_source=1103) | Boston, MA, United States | healthtech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
