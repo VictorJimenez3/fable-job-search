@@ -1489,3 +1489,22 @@ signed-in `VictorJimenez3` owner sees a compact red in-app diagnostic with the
 failed paths and retry action. This is intentionally a frontend developer
 notice only: it never emails, creates an issue, or exposes failure details to
 other accounts, and it does not change score or delivery behavior.
+
+## 101. Make the positive role sample influence Radar ranking (2026-08-08)
+
+The saved/applied sample was previously exposed mainly through a preference
+tab and tiny exact-company/title boosts. With 253 selected roles, that left the
+actual Radar ordering largely unchanged and made the useful sample feel
+disconnected from ranking. The scorer now rebuilds a deterministic preference
+profile from `applied.json` on every crawl/rescore: confirmed later-stage roles
+weigh more than a save, while closed records contribute nothing.
+
+The profile adds a capped `personal_signal` lift for the observed role-family
+mix, recognized sector mix, repeated employers, and recurring meaningful title
+language. It only refines the four target technical families, never promotes
+off-field or PM rows, never bypasses gates or configured overrides, and appends
+reason strings such as `learned role preference` and `learned company
+preference` to the existing ledger. Explicit feedback is stored separately so
+the old per-save maps cannot double-count the sample or survive an untracked
+role. The UI preference page now explains that it is showing the same Radar
+signals rather than pretending similarity alone changes ranking.
