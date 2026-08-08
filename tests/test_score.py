@@ -183,6 +183,11 @@ def test_pm_family_is_visible_low_scoring_and_never_alertable():
         assert any("role:pm +0" in reason for reason in job.score_reasons), title
 
 
+def test_standalone_pm_does_not_capture_maintenance_or_shift_titles():
+    for title in ["PM Technician", "PM Shift", "PM Administrative Assistant"]:
+        assert role_bucket(title) != "pm", title
+
+
 def test_google_new_grad_favorite_is_100_but_pm_stays_low():
     technical = mk("Software Engineer, New Grad", company="Google")
     score(technical, FB, NOW)

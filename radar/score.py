@@ -92,7 +92,7 @@ ROLE_BUCKETS: dict[str, re.Pattern] = {
     # PM roles are intentionally a visible, low-scoring dashboard lane. They
     # never become alerts, even when a source labels them new-grad.
     "pm": re.compile(
-        r"\b(?:a?pm|associate\s+product\s+manager|technical\s+product\s+manager|"
+        r"\b(?:apm|associate\s+product\s+manager|technical\s+product\s+manager|"
         r"product\s+(?:manager|owner|management)|project\s+manager|"
         r"business(?:\s+systems)?\s+analyst|"
         r"(?:ux\s*/\s*ui|ux|ui|user\s+experience|user\s+interface)\s+(?:researcher|research)|"

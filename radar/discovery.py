@@ -31,7 +31,7 @@ PATTERNS: list[tuple[str, re.Pattern]] = [
 BAD_TOKENS = {"embed", "job", "jobs", "wday", "en-us", "external", "www", "api"}
 PM_DISCOVERY_SOURCES = {"simplify", "jobright_pm", "zapply_pm"}
 PM_TITLE_RE = re.compile(
-    r"\b(?:a?pm|associate\s+product\s+manager|technical\s+product\s+manager|"
+    r"\b(?:apm|associate\s+product\s+manager|technical\s+product\s+manager|"
     r"product\s+(?:manager|owner|management)|project\s+manager|"
     r"business(?:\s+systems)?\s+analyst|"
     r"(?:ux\s*/\s*ui|ux|ui|user\s+experience|user\s+interface)\s+(?:researcher|research)|"
