@@ -155,7 +155,7 @@ def fetch_workday(entry: dict, queries: list[str] | None = None) -> list[Job]:
     seen, out = set(), []
     default_queries = ["new grad", "early career", "leadership development",
                        "graduate program", "rotational program", "emerging talent"]
-    search_queries = list(dict.fromkeys((queries or default_queries) + PM_SEARCH_QUERIES))
+    search_queries = list(dict.fromkeys(queries or default_queries))
     for q in search_queries:
         for offset in (0, 20, 40):
             data = post_json(api, {"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": q})
@@ -268,7 +268,7 @@ def fetch_phenom(entry: dict, queries: list[str] | None = None) -> list[Job]:
     default_queries = ["new grad", "early career", "entry level",
                        "leadership development", "graduate program",
                        "rotational program", "emerging talent"]
-    search_queries = list(dict.fromkeys((queries or default_queries) + PM_SEARCH_QUERIES))
+    search_queries = list(dict.fromkeys(queries or default_queries))
     for q in search_queries:
         payload = {
             "lang": "en_us", "deviceType": "desktop", "country": "us",
