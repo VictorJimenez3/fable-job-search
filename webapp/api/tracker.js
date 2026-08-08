@@ -6,18 +6,14 @@ const tracker = require("./_google-tracker");
 module.exports = async (req, res) => {
   const s = session(req);
   if (!s) { res.status(401).json({ error: "sign in first" }); return; }
-  if (!tracker.configured()) {
-    res.status(503).json({ configured: false, error: "Google tracker metadata storage is not configured" });
-    return;
-  }
   try {
     if (req.method === "GET") {
-      res.status(200).json({ user: s.u, ...(await tracker.userTracker(s.keys || s.k || s.u)) });
+      res.status(200).json({ user: s.u, ...(await tracker.userTracker(s.keys || s.k || s.u, s.pt)) });
       return;
     }
     if (req.method === "POST") {
       const payload = req.body || {};
-      const result = await tracker.updateUserTracker(s.u, s.keys || s.k || s.u, payload);
+      const result = await tracker.updateUserTracker(s.u, s.keys || s.k || s.u, payload, s.pt);
       res.status(200).json(result);
       return;
     }

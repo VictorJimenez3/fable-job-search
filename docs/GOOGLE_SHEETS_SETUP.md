@@ -3,10 +3,12 @@
 The tracker supports two modes. The existing **Applications** tab is the
 owner/fork automation tracker. On Vercel, each user who connects Google gets a
 separate **Applications** workbook created in that user's Google Drive. The
-private owner-controlled **Accounts** tab stores identity links, an encrypted
-refresh-token ciphertext, and each user's Sheet ID so the backend can reconnect
-without exposing tokens to the browser. GitHub-only users can connect Google
-later; GitHub Pages cannot provide this private multi-user mode.
+user's refresh grant and Sheet ID stay inside the encrypted, HttpOnly Vercel
+session cookie; frontend JavaScript cannot read them. The private
+owner-controlled **Accounts** tab is an optional durable identity-linking layer,
+not a prerequisite for creating or using a personal tracker. GitHub-only users
+can connect Google later; GitHub Pages cannot provide this private multi-user
+mode.
 
 ## What the adapter does
 
@@ -19,9 +21,10 @@ later; GitHub Pages cannot provide this private multi-user mode.
   `applied` actions isolated by ownership in Google Drive;
 - a Notion-shaped visible schema: `Company`, `Stage`, `Position`, `Apply date`,
   `Text`, `Job URL`, and `Location`, followed by tracker metadata;
-- an `Accounts` tab that prevents the same GitHub/Google identity from becoming
-  two linked accounts, records explicit OAuth-proven merges, and stores only
-  encrypted Google token material plus Sheet IDs for reconnecting users.
+- Drive marker/title discovery that reconnects an existing app-created workbook
+  after a session expires instead of creating a duplicate;
+- an optional `Accounts` tab that records OAuth-proven GitHub/Google links and
+  encrypted Google token material for durable cross-provider reconnects.
 
 ## One-time authorization
 
@@ -67,8 +70,13 @@ Add repository **variables**:
 - `TRACKER_BACKEND=google_sheets`
 - `GOOGLE_SHEET_TAB=Applications`
 
-For the owner metadata registry, add the same Google values to the Vercel
-project environment and set:
+The Vercel OAuth flow requires `SESSION_SECRET`, `GOOGLE_AUTH_CLIENT_ID`, and
+`GOOGLE_AUTH_CLIENT_SECRET`. No owner refresh token or owner Sheet is required
+for another user to create and use their own tracker.
+
+For the optional owner metadata registry and legacy migration path, add
+`GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REFRESH_TOKEN`, and
+`GOOGLE_SHEET_ID` to the Vercel project environment and set:
 
 - `GOOGLE_USER_SHEET_TAB=User Applications`
 - optionally `GOOGLE_ACCOUNT_SHEET_TAB=Accounts`
@@ -89,8 +97,11 @@ registered. The existing GitHub OAuth callback remains
 The Vercel backend accepts authenticated GitHub or Google users for
 `/api/tracker`. A person signs in with one provider, then opens **Tutorial →
 Accounts & login → Connect Google + create my Sheet** to add Google access.
-Google sign-in itself also requests Sheets access. The app never asks for a
-password, and the user can open their personal Sheet from the Account center.
+Google sign-in itself also requests per-file Drive access. The app never asks
+for a password, and the user can open their personal Sheet from the Account
+center. The encrypted session carries that user's grant only to the Vercel
+backend. If the session expires, Google OAuth finds the same app-created Sheet
+through `drive.file` access before considering creation of another workbook.
 If a provider is already attached to another account, it refuses a silent
 reassignment and only merges after both identities have been proven by OAuth.
 Other users do not create GitHub commits or change the owner's

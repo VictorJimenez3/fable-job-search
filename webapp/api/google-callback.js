@@ -50,7 +50,7 @@ module.exports = async (req, res) => {
     const github = linked.github || current?.github;
     const google = linked.google || googleIdentity;
     writeSession(res, {g: current?.g, u: github?.login || google.email, k: linked.account_id,
-      keys: linked.keys, github, google});
+      keys: linked.keys, github, google, pt: linked.personal_tracker || current?.pt});
     res.writeHead(302, { Location: "/" });
     res.end();
   } catch (error) {

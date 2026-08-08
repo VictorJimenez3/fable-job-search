@@ -41,7 +41,7 @@ module.exports = async (req, res) => {
     const github = linked.github || {id: String(user.id), login: user.login};
     const google = linked.google || current?.google;
     writeSession(res, {g: tok, u: github.login || google?.email, k: linked.account_id, keys: linked.keys,
-      github, google});
+      github, google, pt: linked.personal_tracker || current?.pt});
     res.writeHead(302, { Location: "/" });
     res.end();
   } catch (error) {

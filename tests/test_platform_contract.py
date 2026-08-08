@@ -34,6 +34,10 @@ def test_platform_exposes_private_google_tracker_path_for_authenticated_users():
     assert 'fetch("/api/tracker")' in html
     assert "User Applications" in api + helper
     assert "Google Token Ciphertext" in helper
+    assert "hasPersonalSession" in helper
+    assert "findPersonalTracker" in helper
+    assert "personal_tracker" in helper
+    assert "s.pt" in api
     assert "other users cannot read it" in html
 
 
@@ -49,5 +53,6 @@ def test_platform_exposes_oauth_account_center_and_tutorial():
     assert "https://www.googleapis.com/auth/drive.file" in api
     assert "https://www.googleapis.com/auth/spreadsheets" not in api
     assert "Google Sheet ID" in helper
+    assert "tracker.personalConfigured()" in api
     assert "code_challenge_method" in api
     assert "no password" in html.lower()

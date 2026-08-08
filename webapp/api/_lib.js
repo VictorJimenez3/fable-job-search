@@ -1,8 +1,8 @@
 // Shared session + config for the platform's Vercel backend.
 // Secrets live only in Vercel env vars. Provider tokens never enter frontend
-// JavaScript: the GitHub session is sealed into an httpOnly AES-256-GCM cookie,
-// while per-user Google refresh tokens are encrypted in the private account
-// registry. Repository writes remain owner-only.
+// JavaScript: provider credentials and per-user tracker metadata are sealed
+// into an httpOnly AES-256-GCM cookie. The private account registry is an
+// optional durable identity-linking layer. Repository writes remain owner-only.
 const crypto = require("crypto");
 
 // env values arrive via dashboard paste — strip anything non-printable

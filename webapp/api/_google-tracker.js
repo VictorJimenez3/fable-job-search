@@ -1,15 +1,19 @@
 // Per-account Google Sheets tracker.
 //
-// The owner-controlled workbook remains a private metadata registry so the
-// app can link GitHub and Google identities. User application rows live in a
-// separate workbook created in each user's own Google Drive. Refresh tokens
-// are encrypted before being stored in the private Accounts tab and never
-// enter the browser session or frontend JavaScript.
+// User application rows live in a separate workbook created in each user's
+// own Google Drive. The user's refresh grant and Sheet ID travel only inside
+// the server-sealed, httpOnly session cookie, so the owner registry is an
+// optional account-linking enhancement rather than a single point of failure.
+// Legacy registry tokens remain encrypted and never enter frontend JavaScript.
 const crypto = require("crypto");
-const { envv, seal, unseal, GOOGLE_AUTH_CLIENT_ID, GOOGLE_AUTH_CLIENT_SECRET } = require("./_lib");
+const { envv, seal, unseal, GOOGLE_AUTH_CLIENT_ID, GOOGLE_AUTH_CLIENT_SECRET,
+  googleAuthConfigured } = require("./_lib");
 
 const TOKEN_URL = "https://oauth2.googleapis.com/token";
 const SHEETS_API = "https://sheets.googleapis.com/v4/spreadsheets";
+const DRIVE_FILES_API = "https://www.googleapis.com/drive/v3/files";
+const TRACKER_PROPERTY = "jobRadarTracker";
+const TRACKER_PROPERTY_VALUE = "v1";
 
 // The personal workbook is intentionally Notion-shaped but does not expose
 // internal account keys because the user owns and can open this Sheet.
@@ -24,6 +28,7 @@ const VALID_STAGES = new Set(["saved", "applied", "oa", "interview", "rejected",
 // are still required so the backend can persist account links safely.
 const configured = () => ["GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET", "GOOGLE_REFRESH_TOKEN",
   "GOOGLE_SHEET_ID", "SESSION_SECRET"].every(k => envv(k));
+const personalConfigured = () => Boolean(googleAuthConfigured() && envv("SESSION_SECRET"));
 const accountTab = () => envv("GOOGLE_ACCOUNT_SHEET_TAB") || "Accounts";
 const sharedUserTab = () => envv("GOOGLE_USER_SHEET_TAB") || "User Applications";
 const personalTab = () => envv("GOOGLE_PERSONAL_SHEET_TAB") || "Applications";
@@ -64,6 +69,15 @@ async function personalAccessToken(account) {
   const clientId = GOOGLE_AUTH_CLIENT_ID() || envv("GOOGLE_CLIENT_ID");
   const clientSecret = GOOGLE_AUTH_CLIENT_SECRET() || envv("GOOGLE_CLIENT_SECRET");
   return accessTokenFor(clientId, clientSecret, stored.refreshToken);
+}
+
+function hasPersonalSession(personal) {
+  return Boolean(personal?.r && personal?.s && personal?.sub);
+}
+
+async function personalSessionAccessToken(personal) {
+  if (!hasPersonalSession(personal)) throw new Error("Connect Google first to create your personal tracker");
+  return accessTokenFor(GOOGLE_AUTH_CLIENT_ID(), GOOGLE_AUTH_CLIENT_SECRET(), personal.r);
 }
 
 function rangeUrl(spreadsheetId, range, sheetTab, suffix = "") {
@@ -117,6 +131,50 @@ async function formatPersonalTracker(token, spreadsheetId, sheets) {
   if (!r.ok) throw new Error(`Google Sheet format ${r.status}`);
 }
 
+function driveQueryUrl(query) {
+  const params = new URLSearchParams({q: query, spaces: "drive", pageSize: "10",
+    fields: "files(id,name,createdTime,modifiedTime)"});
+  return `${DRIVE_FILES_API}?${params}`;
+}
+
+function driveQueryValue(value) {
+  return String(value || "").replace(/\\/g, "\\\\").replace(/'/g, "\\'");
+}
+
+async function markPersonalTracker(token, spreadsheetId) {
+  const r = await fetch(`${DRIVE_FILES_API}/${encodeURIComponent(spreadsheetId)}?fields=id`, {
+    method: "PATCH", headers: authHeaders(token),
+    body: JSON.stringify({appProperties: {[TRACKER_PROPERTY]: TRACKER_PROPERTY_VALUE}}),
+  });
+  if (!r.ok) console.warn(`Google tracker marker unavailable (${r.status}); title discovery remains enabled`);
+}
+
+async function validTrackerCandidate(token, spreadsheetId) {
+  try {
+    const rows = await readTab(token, spreadsheetId, personalTab(),
+      `A1:${columnName(PERSONAL_HEADERS.length)}1`);
+    return PERSONAL_HEADERS.every((header, index) => String(rows[0]?.[index] || "") === header);
+  } catch { return false; }
+}
+
+async function findPersonalTracker(token, label) {
+  const title = `Job Radar — ${String(label || "Applications").slice(0, 100)}`;
+  const queries = [
+    `trashed = false and appProperties has { key='${TRACKER_PROPERTY}' and value='${TRACKER_PROPERTY_VALUE}' }`,
+    `trashed = false and mimeType = 'application/vnd.google-apps.spreadsheet' and name = '${driveQueryValue(title)}'`,
+  ];
+  for (const query of queries) {
+    const r = await fetch(driveQueryUrl(query), {headers: {Authorization: `Bearer ${token}`}});
+    if (!r.ok) continue;
+    const files = (await r.json()).files || [];
+    files.sort((a, b) => String(b.modifiedTime || "").localeCompare(String(a.modifiedTime || "")));
+    for (const file of files) {
+      if (file.id && await validTrackerCandidate(token, file.id)) return file.id;
+    }
+  }
+  return "";
+}
+
 async function createPersonalTracker(token, label) {
   const title = `Job Radar — ${String(label || "Applications").slice(0, 100)}`;
   const r = await fetch(SHEETS_API, { method: "POST", headers: authHeaders(token),
@@ -142,7 +200,23 @@ async function createPersonalTracker(token, label) {
     ["Privacy", "This workbook is created in your Google Drive and is not shared with other users."],
   ]);
   await formatPersonalTracker(token, spreadsheetId, sheets);
+  await markPersonalTracker(token, spreadsheetId);
   return spreadsheetId;
+}
+
+async function ensurePersonalTracker(identity, oauth, currentPersonal = null) {
+  const sameIdentity = currentPersonal?.sub === String(identity.sub || "");
+  const refreshToken = String(oauth.refreshToken || (sameIdentity ? currentPersonal?.r : "") || "").trim();
+  if (!refreshToken) throw new Error("Google did not provide durable tracker access. Reconnect and approve Drive access.");
+  const token = oauth.accessToken || await accessTokenFor(
+    GOOGLE_AUTH_CLIENT_ID(), GOOGLE_AUTH_CLIENT_SECRET(), refreshToken);
+  let spreadsheetId = sameIdentity ? String(currentPersonal?.s || "") : "";
+  if (spreadsheetId && !await validTrackerCandidate(token, spreadsheetId)) spreadsheetId = "";
+  if (!spreadsheetId) spreadsheetId = await findPersonalTracker(token, identity.email);
+  const created = !spreadsheetId;
+  if (created) spreadsheetId = await createPersonalTracker(token, identity.email);
+  return {created, personal: {r: refreshToken, s: spreadsheetId,
+    e: clean(identity.email, 320).toLowerCase(), sub: String(identity.sub || "")}};
 }
 
 function isoNow() { return new Date().toISOString().replace(/\.\d{3}Z$/, "Z"); }
@@ -315,40 +389,37 @@ async function migrateLegacyRows(ownerToken, account, accounts, targetToken, tar
   }
 }
 
-async function attachGoogleTracker(ownerToken, account, accounts, identity, oauth) {
-  const refreshToken = String(oauth.refreshToken || "").trim();
-  if (!refreshToken) {
-    if (account.googleTokenCiphertext && account.googleSheetId) return;
-    throw new Error("Google Sheets permission was not granted. Reconnect Google and approve Sheets access.");
-  }
-  const clientId = GOOGLE_AUTH_CLIENT_ID() || envv("GOOGLE_CLIENT_ID");
-  const clientSecret = GOOGLE_AUTH_CLIENT_SECRET() || envv("GOOGLE_CLIENT_SECRET");
-  const userToken = oauth.accessToken || await accessTokenFor(clientId, clientSecret, refreshToken);
-  let spreadsheetId = account.googleSheetId;
-  const created = !spreadsheetId;
-  if (!spreadsheetId) {
-    spreadsheetId = await createPersonalTracker(userToken, identity.email);
-  }
-  account.googleTokenCiphertext = seal({version: 1, refreshToken});
-  account.googleSheetId = spreadsheetId;
+async function attachGoogleTracker(ownerToken, account, accounts, identity, oauth, currentPersonal = null) {
+  const stored = unseal(account.googleTokenCiphertext || "");
+  const refreshToken = String(oauth.refreshToken || stored?.refreshToken || "").trim();
+  const knownPersonal = currentPersonal || (account.googleSheetId && account.googleSub && refreshToken
+    ? {r: refreshToken, s: account.googleSheetId, e: account.googleEmail, sub: account.googleSub}
+    : null);
+  const {personal, created} = await ensurePersonalTracker(identity,
+    {...oauth, refreshToken}, knownPersonal);
+  account.googleTokenCiphertext = seal({version: 1, refreshToken: personal.r});
+  account.googleSheetId = personal.s;
   account.googleConnectedAt = account.googleConnectedAt || isoNow();
   // Persist the new Sheet ID before migration so a retry cannot silently
   // create a second personal workbook if the legacy copy is interrupted.
   await saveAccount(ownerToken, account);
-  if (created) await migrateLegacyRows(ownerToken, account, accounts, userToken, spreadsheetId);
+  if (created) {
+    const userToken = oauth.accessToken || await personalSessionAccessToken(personal);
+    await migrateLegacyRows(ownerToken, account, accounts, userToken, personal.s);
+  }
+}
+
+function personalTrackerFromAccount(account, oauth = {}) {
+  const stored = unseal(account?.googleTokenCiphertext || "");
+  const refreshToken = String(oauth.refreshToken || stored?.refreshToken || "").trim();
+  if (!refreshToken || !account?.googleSheetId || !account?.googleSub) return null;
+  return {r: refreshToken, s: account.googleSheetId, e: account.googleEmail, sub: account.googleSub};
 }
 
 // Resolve or link an OAuth identity. Linking is explicit and requires an
 // existing authenticated session. Google OAuth also provisions that user's
 // own Sheet during the same server-side callback.
-async function resolveAccount(provider, identity, current, mode = "login", oauth = {}) {
-  const fallback = providerKey(provider, identity);
-  if (!configured()) {
-    if (mode === "link") throw new Error("private tracker setup is required before linking accounts");
-    return {account_id: current?.k || fallback, keys: [current?.k, current?.u, fallback].filter(Boolean),
-      github: current?.github || (provider === "github" ? identity : undefined),
-      google: current?.google || (provider === "google" ? identity : undefined)};
-  }
+async function resolveAccountWithRegistry(provider, identity, current, mode = "login", oauth = {}) {
   const token = await accessToken();
   const data = await readAccounts(token);
   const now = isoNow();
@@ -401,7 +472,7 @@ async function resolveAccount(provider, identity, current, mode = "login", oauth
   }
 
   if (provider === "google") {
-    await attachGoogleTracker(token, currentAccount, data.accounts, identity, oauth);
+    await attachGoogleTracker(token, currentAccount, data.accounts, identity, oauth, current?.pt);
     currentAccount.updatedAt = now;
     await saveAccount(token, currentAccount);
   }
@@ -411,7 +482,45 @@ async function resolveAccount(provider, identity, current, mode = "login", oauth
   const google = currentAccount.googleSub
     ? {sub: currentAccount.googleSub, email: currentAccount.googleEmail} : undefined;
   return {account_id: currentAccount.id, keys: keysFor(currentAccount, data.accounts), github, google,
-    google_sheet_url: currentAccount.googleSheetId ? sheetUrl(currentAccount.googleSheetId) : ""};
+    google_sheet_url: currentAccount.googleSheetId ? sheetUrl(currentAccount.googleSheetId) : "",
+    personal_tracker: personalTrackerFromAccount(currentAccount, oauth)};
+}
+
+function registryUnavailable(error) {
+  return /^(Google token|Google did not return an access token|Google Sheet (read|update|append)|Google account tab|Google account registry)/
+    .test(String(error?.message || error || ""));
+}
+
+async function resolveAccountWithoutRegistry(provider, identity, current, mode, oauth) {
+  if (mode === "link" && !current) throw new Error("sign in before connecting another account");
+  if (provider === "google" && current?.google?.sub && current.google.sub !== String(identity.sub || "")) {
+    throw new Error("A different Google account is already connected. Sign out before switching accounts.");
+  }
+  if (provider === "github" && current?.github?.id &&
+      String(current.github.id) !== String(identity.id || "")) {
+    throw new Error("A different GitHub account is already connected. Sign out before switching accounts.");
+  }
+  const fallback = providerKey(provider, identity);
+  const personal = provider === "google"
+    ? (await ensurePersonalTracker(identity, oauth, current?.pt)).personal
+    : (current?.pt || null);
+  const github = provider === "github" ? identity : current?.github;
+  const google = provider === "google" ? identity : current?.google;
+  return {account_id: current?.k || deterministicAccountId(provider, identity),
+    keys: [...new Set([current?.k, current?.u, fallback].filter(Boolean))], github, google,
+    google_sheet_url: personal?.s ? sheetUrl(personal.s) : "", personal_tracker: personal};
+}
+
+async function resolveAccount(provider, identity, current, mode = "login", oauth = {}) {
+  if (configured()) {
+    try {
+      return await resolveAccountWithRegistry(provider, identity, current, mode, oauth);
+    } catch (error) {
+      if (!registryUnavailable(error)) throw error;
+      console.warn("Google account registry unavailable; continuing with the user's own tracker session");
+    }
+  }
+  return resolveAccountWithoutRegistry(provider, identity, current, mode, oauth);
 }
 
 async function trackerContext(accountKeys) {
@@ -420,20 +529,31 @@ async function trackerContext(accountKeys) {
   return {ownerToken, data, account: accountForKeys(data, accountKeys)};
 }
 
-async function userTracker(accountKeys) {
-  if (!configured()) return {configured: false, connected: false, needs_google: true, entries: [], maybe: []};
-  const {account} = await trackerContext(accountKeys);
-  if (!account?.googleSheetId || !account.googleTokenCiphertext) {
-    return {configured: false, connected: false, needs_google: true, entries: [], maybe: []};
+async function userTracker(accountKeys, personal = null) {
+  let token;
+  let spreadsheetId;
+  let googleEmail;
+  if (hasPersonalSession(personal)) {
+    token = await personalSessionAccessToken(personal);
+    spreadsheetId = personal.s;
+    googleEmail = personal.e;
+  } else {
+    if (!configured()) return {configured: false, connected: false, needs_google: true, entries: [], maybe: []};
+    const {account} = await trackerContext(accountKeys);
+    if (!account?.googleSheetId || !account.googleTokenCiphertext) {
+      return {configured: false, connected: false, needs_google: true, entries: [], maybe: []};
+    }
+    token = await personalAccessToken(account);
+    spreadsheetId = account.googleSheetId;
+    googleEmail = account.googleEmail;
   }
-  const token = await personalAccessToken(account);
-  const rows = await readTab(token, account.googleSheetId, personalTab(), `A:${columnName(PERSONAL_HEADERS.length)}`);
+  const rows = await readTab(token, spreadsheetId, personalTab(), `A:${columnName(PERSONAL_HEADERS.length)}`);
   if (!rows.length) return {configured: true, connected: true, needs_google: false,
-    google_email: account.googleEmail, sheet_url: sheetUrl(account.googleSheetId), entries: [], maybe: []};
+    google_email: googleEmail, sheet_url: sheetUrl(spreadsheetId), entries: [], maybe: []};
   const columns = columnMap(rows[0]);
   const mine = rows.slice(1).filter(row => at(row, columns, "job radar id") && VALID_STAGES.has(stageOf(row, columns)));
-  return {configured: true, connected: true, needs_google: false, google_email: account.googleEmail,
-    sheet_url: sheetUrl(account.googleSheetId),
+  return {configured: true, connected: true, needs_google: false, google_email: googleEmail,
+    sheet_url: sheetUrl(spreadsheetId),
     entries: mine.filter(row => !["maybe", "archived"].includes(stageOf(row, columns))).map(row => entryFromRow(row, columns)),
     maybe: mine.filter(row => stageOf(row, columns) === "maybe").map(row => at(row, columns, "job radar id"))};
 }
@@ -449,18 +569,26 @@ function rowValues(payload, existing = {}) {
     clean(payload.source, 100), clean(payload.profile, 50)];
 }
 
-async function updateUserTracker(login, accountKeys, payload) {
-  if (!configured()) throw new Error("personal Google tracker setup is not configured");
+async function updateUserTracker(login, accountKeys, payload, personal = null) {
   const action = payload.action;
   if (!["track", "applied", "maybe", "untrack"].includes(action)) throw new Error("unsupported tracker action");
   const id = clean(payload.id, 100);
   if (!id) throw new Error("missing job id");
-  const {account} = await trackerContext(accountKeys);
-  if (!account?.googleSheetId || !account.googleTokenCiphertext) {
-    throw new Error("Connect Google first to create your personal tracker");
+  let token;
+  let spreadsheetId;
+  if (hasPersonalSession(personal)) {
+    token = await personalSessionAccessToken(personal);
+    spreadsheetId = personal.s;
+  } else {
+    if (!configured()) throw new Error("Connect Google first to create your personal tracker");
+    const {account} = await trackerContext(accountKeys);
+    if (!account?.googleSheetId || !account.googleTokenCiphertext) {
+      throw new Error("Connect Google first to create your personal tracker");
+    }
+    token = await personalAccessToken(account);
+    spreadsheetId = account.googleSheetId;
   }
-  const token = await personalAccessToken(account);
-  const rows = await readTab(token, account.googleSheetId, personalTab(), `A:${columnName(PERSONAL_HEADERS.length)}`);
+  const rows = await readTab(token, spreadsheetId, personalTab(), `A:${columnName(PERSONAL_HEADERS.length)}`);
   const headers = rows[0]?.length ? rows[0] : PERSONAL_HEADERS;
   const columns = columnMap(headers);
   const jobColumn = columns["job radar id"];
@@ -469,11 +597,11 @@ async function updateUserTracker(login, accountKeys, payload) {
   const existingRow = rowNumber > 1 ? rows[rowNumber - 1] : [];
   const existing = {savedAt: at(existingRow, columns, "saved at"), applyDate: at(existingRow, columns, "apply date")};
   const values = rowValues(payload, existing);
-  if (rowNumber > 1) await putRange(token, account.googleSheetId, personalTab(),
+  if (rowNumber > 1) await putRange(token, spreadsheetId, personalTab(),
     `A${rowNumber}:${columnName(PERSONAL_HEADERS.length)}${rowNumber}`, [values]);
-  else await appendRange(token, account.googleSheetId, personalTab(), `A:${columnName(PERSONAL_HEADERS.length)}`, [values]);
-  return {ok: true, stage: values[2], sheet_url: sheetUrl(account.googleSheetId)};
+  else await appendRange(token, spreadsheetId, personalTab(), `A:${columnName(PERSONAL_HEADERS.length)}`, [values]);
+  return {ok: true, stage: values[2], sheet_url: sheetUrl(spreadsheetId)};
 }
 
-module.exports = { configured, userTracker, updateUserTracker, resolveAccount,
-  PERSONAL_HEADERS, ACCOUNT_HEADERS };
+module.exports = { configured, personalConfigured, hasPersonalSession, userTracker,
+  updateUserTracker, resolveAccount, PERSONAL_HEADERS, ACCOUNT_HEADERS };

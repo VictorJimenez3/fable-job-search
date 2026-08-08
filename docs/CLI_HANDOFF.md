@@ -188,8 +188,11 @@ Before changing the radar, read these in order:
   OAuth app must be External + In production; a test-user list is not the public
   deployment path. GitHub users can explicitly connect Google later from the
   Tutorial account center. The private Accounts registry stores only encrypted
-  refresh-token ciphertext and Sheet IDs; `/api/tracker` reads only the current
-  user's workbook. `GOOGLE_ACCOUNT_SHEET_TAB` remains
+  refresh-token ciphertext and Sheet IDs when available, but is no longer a
+  prerequisite or single point of failure. The current user's encrypted
+  HttpOnly session carries their own grant and Sheet ID; Drive marker/title
+  discovery reconnects the same workbook after reauthentication.
+  `/api/tracker` reads only the current user's workbook. `GOOGLE_ACCOUNT_SHEET_TAB` remains
   `Accounts`; `GOOGLE_PERSONAL_SHEET_TAB` defaults to `Applications`. Pages and
   tokenless issue mode remain owner-only.
 - **Multi-user = fork-per-person** (DECISIONS #25, docs/FORKING.md). Owner

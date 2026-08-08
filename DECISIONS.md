@@ -1351,3 +1351,23 @@ bypass: users authorize their own workbook, and Google can still apply its
 basic brand-verification requirements. Existing users must consent again after
 the scope change; no new client, API key, or refresh-token architecture is
 needed.
+
+## 89. Personal Google trackers cannot depend on the owner registry (2026-08-08)
+
+Public Google sign-in previously refreshed the owner-controlled metadata
+workbook before it could provision the signing-in user's workbook. An expired
+or malformed owner grant therefore broke every user's callback even when that
+user had just granted valid access. That owner dependency is now optional.
+
+The user's refresh grant, Google subject, and personal Sheet ID live only in the
+AES-GCM-sealed, HttpOnly session cookie and are sent back only to the Vercel
+backend. The backend uses that user's token for `/api/tracker`. After a session
+expires, the `drive.file` grant searches only files created or opened by this
+app, validates the tracker header, and reuses the marked workbook before
+creating one. This avoids duplicate Sheets without broad Drive access.
+
+The private `Accounts` tab remains a best-effort durable cross-provider linking
+and legacy-migration layer. If it is healthy, existing merge protections and
+aliases still apply. If its owner token is unavailable, a user can still sign
+in with Google, create or reconnect their own tracker, and use it normally. No
+new API key, OAuth client, database, or user-managed secret is required.

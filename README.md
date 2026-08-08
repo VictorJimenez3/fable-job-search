@@ -365,9 +365,11 @@ Optional upgrades:
   owner metadata/automation workbook. On the Vercel platform, Google sign-in
   or **Connect Google + create my Sheet** requests the least-privilege
   `drive.file` permission and creates a separate Applications workbook in that
-  user's Google Drive. The backend
-  stores only encrypted token metadata in the private Accounts registry and
-  never exposes another user's rows or token.
+  user's Google Drive. The encrypted HttpOnly session carries that user's
+  tracker grant and Sheet ID to the backend; the private Accounts registry is
+  an optional account-linking enhancement, not a dependency for public users.
+  Existing trackers are rediscovered in Drive after reauthentication, and the
+  backend never exposes another user's rows or token.
   Setup is documented in [docs/GOOGLE_SHEETS_SETUP.md](docs/GOOGLE_SHEETS_SETUP.md).
 - `GOOGLE_CSE_KEY` + `GOOGLE_CSE_ID` (free: [programmablesearchengine.google.com](https://programmablesearchengine.google.com)
   → create engine searching `linkedin.com/posts`, then get an API key at
