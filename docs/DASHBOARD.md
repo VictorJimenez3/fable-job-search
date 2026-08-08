@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-08 16:03 UTC** · companies polled directly: **1654** (registry 1858) · jobs tracked: **34422** · new this run: **32** · alerts this run: **0**_
+_Last run: **2026-08-08 16:07 UTC** · companies polled directly: **1654** (registry 1858) · jobs tracked: **34424** · new this run: **2** · alerts this run: **1**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -77,7 +77,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 90 🔥 | 26d | Amazon Web Services (AWS) | [DFT Design Engineer I, AWS Machine Learning Acceleration](https://jobright.ai/jobs/info/695496685bb7de448ef78f90?utm_campaign=Software%20Engineering&utm_source=1103) | Austin, TX, United States | big_tech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 89 🔥 | 17h | WelbeHealth | [AI Engineer 1](https://job-boards.greenhouse.io/welbehealth/jobs/8599687002) | California | healthtech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 89 🔥 | 17h | Tesla | [Data Labeler - Tesla AI](https://www.tesla.com/careers/search/job/279543) | Tempe, AZ | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 89 🔥 | 3d | Roblox | [[2027] Software Engineer, Early Career](https://careers.roblox.com/jobs/8072244?gh_jid=8072244) | San Mateo, CA, United States | big_tech | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/roblox) |
 | 89 🔥 | 3d | WHOOP | [iOS Engineer](https://jobright.ai/jobs/info/6a73795132ebbc14ffb4f2bc?utm_campaign=Software%20Engineering&utm_source=1103) | Boston, MA, United States | healthtech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 89 🔥 | 4d | TikTok | [Machine Learning Engineer Graduate - Commerce Ads - 2027 Start](https://lifeattiktok.com/search/7669711968024430853) | San Jose, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 89 🔥 | 4d | TikTok | [Machine Learning Engineer Graduate - Ads Signal & Measurement](https://lifeattiktok.com/search/7669700358734170373) | San Jose, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
@@ -92,6 +91,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 89 🔥 | 24d | Citadel | [Software Engineer - University Graduate - US](https://www.citadel.com/careers/details/software-engineer-university-graduate-us/) | Houston, TX +2 | other | no-history | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 89 🔥 | 24d | Microsoft | [Software Engineer](https://apply.careers.microsoft.com/careers/job/1970393556932425) | Redmond, WA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 89 🔥 | 28d | Neuralink | [Software Engineer, BCI Applications](https://jobright.ai/jobs/info/6a52e53a8ef95364ead904ac?utm_campaign=Software%20Engineering&utm_source=1103) | Austin, Texas, United States | healthtech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
+| 88 🔥 | 3d | Roblox | [[2027] Software Engineer, Early Career](https://careers.roblox.com/jobs/8072244?gh_jid=8072244) | San Mateo, CA, United States | big_tech | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/roblox) |
 | 88 🔥 | 4d | TikTok | [Backend Engineer Graduate (Code Intelligence & Quality Validation-Agen](https://jobright.ai/jobs/info/6a71a439cb96192a368499ae?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA, United States | big_tech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 88 🔥 | 5d | TikTok | [Backend Software Engineer New Grad - Feed Safety](https://lifeattiktok.com/search/7663028952600807733) | Seattle, WA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 88 🔥 | 6d | TikTok | [Backend Software Engineer Graduate (Feed Safety) - 2027 Start](https://jobright.ai/jobs/info/6a6ffdc6160eda5948e8d14c?utm_campaign=Software%20Engineering&utm_source=1103) | Seattle, WA, United States | big_tech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
