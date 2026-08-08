@@ -10,6 +10,7 @@
 - Comment commands:
     applied <url or id>   log a confirmed application immediately
     skip <company or id>  negative feedback (downranks similar roles)
+    feedback <id> <up|down> <reason>  structured owner taste feedback
     untrack <id or url>   remove from the in-house pipeline and archive Notion
     track <ats> <token> [Company Name]   manually add a company to the registry
 """
@@ -29,6 +30,9 @@ CHECKED = re.compile(r"^- \[[xX]\] .*?<!--radar:([a-f0-9]{16})-->", re.M)
 CMD_SAVE = re.compile(r"^save\s+(\S+)", re.I | re.M)
 CMD_APPLIED = re.compile(r"^applied\s+(\S+)", re.I | re.M)
 CMD_SKIP = re.compile(r"^skip\s+(.+?)\s*$", re.I | re.M)
+CMD_FEEDBACK = re.compile(
+    r"^feedback\s+([a-f0-9]{16})\s+(up|down)\s+"
+    r"(company|role|both|eligibility|location|other)\s*$", re.I | re.M)
 CMD_UNTRACK = re.compile(r"^untrack\s+(\S+)", re.I | re.M)
 CMD_TRACK = re.compile(r"^track\s+(\w+)\s+(\S+)(?:\s+(.+))?", re.I | re.M)
 CMD_CULTURE = re.compile(r"^culture\s+(.+?)\s*$", re.I | re.M)
@@ -136,6 +140,7 @@ def handle_event(event_path: str) -> None:
     untracked = set(state.load("untracked.json", []))
     fb = state.feedback()
     changed = 0
+    taste_changed = False
 
     labels = [l["name"] for l in (event.get("issue") or {}).get("labels", [])]
     # tokenless platform path: a freshly opened issue whose body carries
@@ -190,6 +195,12 @@ def handle_event(event_path: str) -> None:
             if comp and comp not in fb["negative_companies"]:
                 fb["negative_companies"].append(comp)
                 changed += 1
+        from . import taste
+        for m in CMD_FEEDBACK.finditer(body):
+            job = jobs.get(m.group(1))
+            if job and taste.record_feedback(fb, job, m.group(2), m.group(3)):
+                changed += 1
+                taste_changed = True
         for m in CMD_UNTRACK.finditer(body):
             if remove_tracking(m.group(1).strip(), applied, untracked):
                 changed += 1
@@ -227,6 +238,8 @@ def handle_event(event_path: str) -> None:
         state.save("applied.json", applied)
         state.save("shortlist.json", shortlist)
         state.save("feedback.json", fb)
+        if taste_changed:
+            taste.write_report(fb)
     state.save("untracked.json", sorted(untracked))
     if changed or pulled or synced:
         print(f"applied: recorded {changed} change(s), pulled {pulled}, "

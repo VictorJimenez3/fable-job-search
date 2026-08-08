@@ -1,0 +1,50 @@
+name: radar-report-sync
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: radar-report-sync
+  cancel-in-progress: false
+
+jobs:
+  report:
+    # Only issues carrying the platform marker enter this workflow. The
+    # reporter's GitHub login is taken from the event, never from issue text.
+    if: contains(github.event.issue.body, 'radar-report:')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Record report and notify owner at threshold
+        env:
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m radar.main report-sync
+      - name: Commit report log
+        run: |
+          git config user.name "job-radar[bot]"
+          git config user.email "radar@users.noreply.github.com"
+          git add state/reports.json docs/REPORTS.md
+          if git diff --cached --quiet; then
+            echo "no report changes"; exit 0
+          fi
+          git commit -m "radar: record community posting report"
+          for i in 1 2 3 4; do
+            git push && exit 0
+            git pull --rebase --autostash || true
+            sleep $((i * 2))
+          done
+          git push

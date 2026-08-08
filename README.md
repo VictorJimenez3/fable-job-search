@@ -128,6 +128,31 @@ every ~30 min (GitHub Actions cron)
 4. A twice-daily reconcile sweep re-reads every radar issue and tracks any
    checked box the event pipeline missed — a tick is never lost.
 
+### Taste, similar roles, and posting review
+
+The owner-only **Taste** tab uses saved and applied roles as a transparent
+sample. It shows the companies, role families, and title language represented
+in that sample, explains the existing score reasons that came from prior
+engagement, and offers **Similar jobs to inspect**. Similarity is a discovery
+aid; it does not silently rewrite the Radar score.
+
+When a score feels wrong, the role drawer has fixed-category **more like this**
+and **less like this** feedback. Owner feedback is idempotent, capped, and
+stored in `state/feedback.json`; the generated `docs/FEEDBACK.md` makes the
+learned company/title signals and recent events auditable. Eligibility and
+location feedback is logged without overriding deterministic eligibility gates.
+The repository is public, so this is an audit trail rather than a private
+journal. No email is sent by this feature.
+
+The owner can **archive** an expired, filled, duplicate, or wrong posting from
+the role drawer after GitHub sign-in. Archive is a soft, recoverable status that
+survives future crawls and keeps the historical record. Other GitHub users get
+a **Report this posting** control that opens a structured issue; the workflow
+uses the issue author's GitHub login, counts each person once, and adds the
+posting to the owner's review queue after three distinct reporters. Reports
+never auto-delete or auto-archive a role. The generated queue is
+`docs/REPORTS.md`.
+
 The weekly strategy memo now includes an **auto-tracked funnel** (applied → OA
 → interview → rejected → auto-closed) and your response rate, overall and by
 sector — built entirely from what the watcher reads, so you can see which

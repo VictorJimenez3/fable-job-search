@@ -1371,3 +1371,33 @@ and legacy-migration layer. If it is healthy, existing merge protections and
 aliases still apply. If its owner token is unavailable, a user can still sign
 in with Google, create or reconnect their own tracker, and use it normally. No
 new API key, OAuth client, database, or user-managed secret is required.
+
+## 90. Taste feedback and small-scale community moderation are auditable (2026-08-08)
+
+The platform now turns saved/applied roles into an explicit, inspectable sample
+for the repository owner's search preferences. Saved/applied state already
+contributes the existing bounded engagement signals; the new owner-only Taste
+tab explains those contributions and surfaces similar jobs as a discovery aid.
+Similarity is intentionally advisory and does not replace or silently bypass
+the deterministic Radar score.
+
+Explicit role feedback uses fixed categories rather than arbitrary score edits:
+company fit, role fit, both, eligibility, location, or other. Only company and
+title feedback changes capped learned signals; eligibility and location feedback
+is recorded for review but cannot override gates. The structured source of truth
+is `state/feedback.json`, while `docs/FEEDBACK.md` is generated audit output.
+Because this is a public repository, the UI labels it as an audit trail rather
+than private notes, and the feature has no email delivery path.
+
+Posting removal is a soft owner archive, not a destructive delete. After GitHub
+owner authentication, an expired, filled, duplicate, or wrong posting can be
+marked `manual_archived`; the marker is preserved when a future crawl refreshes
+the posting and the historical record remains available.
+
+Other users report stale postings by creating a structured GitHub issue. The
+workflow takes identity from the issue author, not from user-supplied body text,
+deduplicates each GitHub login per posting, and shows the owner a review item
+after three distinct reporters. It comments to the owner at that threshold but
+does not automatically archive anything. This manual threshold is appropriate
+for the current small scale; automated moderation can be reconsidered once the
+volume and false-positive rate justify it.

@@ -2,7 +2,7 @@
 
 jobs.json      {job_id: record}                — everything ever seen, with score
 companies.json {ats:token: registry entry}     — the self-expanding company registry
-feedback.json  {company_boosts, token_boosts, negative} — learned taste
+feedback.json  {company_boosts, token_boosts, negative, taste_events} — learned taste
 applied.json   [{id, company, title, url, applied_at, notion_synced, ...}]
 runs.json      [{ts, new_jobs, alerts, sources: {...}}]  — last 200 run summaries
 """
@@ -45,7 +45,8 @@ def companies() -> dict:
 
 
 def feedback() -> dict:
-    return load("feedback.json", {"company_boosts": {}, "token_boosts": {}, "negative_companies": []})
+    return load("feedback.json", {"company_boosts": {}, "token_boosts": {},
+                                    "negative_companies": [], "taste_events": []})
 
 
 def applied() -> list:

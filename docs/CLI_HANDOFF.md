@@ -53,6 +53,21 @@ Before changing the radar, read these in order:
 - **CI hygiene:** the two exact-template Resume Studio tests now skip only on
   GitHub Actions when the intentionally local-only `CV/resume.tex` is absent;
   they continue to run on Victor's Mac where the private CV exists.
+- **Taste loop:** saved/applied roles are shown as an owner-only positive
+  sample in the platform's **Taste** tab. The tab explains existing
+  engagement-related score reasons and offers advisory **Similar jobs to
+  inspect** results; similarity never becomes an opaque replacement score.
+  Fixed-category explicit feedback is stored in `state/feedback.json` and
+  rendered through `python -m radar.main taste-report` to `docs/FEEDBACK.md`.
+  Only the owner API or the owner-authenticated issue command can write it;
+  the public repository warning is intentional and no email is sent.
+- **Posting moderation:** owner archive is a soft, recoverable
+  `manual_archived` marker that is carried through future crawls and keeps the
+  historical job. Non-owners report expired/filled/duplicate/wrong postings
+  through structured GitHub issues. `radar-report` workflow events use the
+  issue author's GitHub login, deduplicate by distinct reporter, and add a
+  three-distinct-reporter item to `docs/REPORTS.md` plus an owner review
+  comment; they never auto-archive.
 
 - GitHub Actions is the production runtime; it uses Python 3.12. On Victor's
   Mac, system Python is 3.9 but the repo's `.venv` has the dependencies —
@@ -107,7 +122,9 @@ Before changing the radar, read these in order:
   rescrape` rechecks visible dashboard roles through free ATS JSON/HTML
   endpoints and labels unreadable requirements instead of guessing;
   manual commands: `python -m radar.main regate` /
-  `repair-feedback`. The taste model filters `FEEDBACK_STOPWORDS`. The
+  `repair-feedback`, `taste-report`, and `report-sync` (the latter is the
+  GitHub issue workflow entrypoint). The taste model filters
+  `FEEDBACK_STOPWORDS`. The
   marquee list is duplicated in `webapp/index.html` (`S.marquee`) — keep
   both copies in sync.
 - **Early-career possible is deliberately separate from new grad:** a target
