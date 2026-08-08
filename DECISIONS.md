@@ -1292,3 +1292,22 @@ with stable IDs and audit metadata beside it. A settings-style Tutorial modal is
 the user-facing entry point for application workflow, account connection, tracker
 behavior, and privacy boundaries. The site owner must provision the OAuth web
 client and private workbook; users never need direct Sheet access.
+
+## 86. Google OAuth provisions one user-owned tracker per connected account (2026-08-07)
+
+The shared `User Applications` workbook was the wrong multi-user boundary for
+the product goal: a user's Google sign-in must mean that their applications live
+in their own Google Drive. The Vercel Google OAuth flow therefore requests
+`openid email profile` plus the Sheets scope with offline access. On first Google
+sign-in or explicit GitHub → Google connection, the backend creates a private
+`Applications` workbook using that user's OAuth token and stores the workbook ID
+plus encrypted refresh-token ciphertext in the owner-controlled private
+`Accounts` registry. No new API key or OAuth client is required.
+
+The backend chooses the Sheet from the authenticated account record, never from
+browser input, and returns only that Sheet's rows. GitHub-only users can still
+use repository-owner functionality where authorized, but must connect Google to
+get personal Sheets storage. Existing shared-tab rows are migrated into the
+owner's first personal workbook when the account can be matched, so this change
+does not intentionally discard the earlier tracker funnel. The old shared tab
+remains as a migration/legacy surface and is not used for new user rows.

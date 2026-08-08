@@ -41,9 +41,14 @@ module.exports = (req, res) => {
     res.setHeader("Set-Cookie",
       `jr_go=${state}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=600`);
     const params = new URLSearchParams({client_id: GOOGLE_AUTH_CLIENT_ID(),
-      redirect_uri: redirect, response_type: "code", scope: "openid email profile",
-      state, code_challenge: challenge, code_challenge_method: "S256",
-      prompt: mode === "link" ? "consent select_account" : "select_account"});
+      redirect_uri: redirect, response_type: "code",
+      // Google identity and Sheets access are one explicit consent flow. The
+      // refresh token is needed to keep the user's own tracker working after
+      // the short-lived access token expires.
+      scope: "openid email profile https://www.googleapis.com/auth/spreadsheets",
+      access_type: "offline", include_granted_scopes: "true", state,
+      code_challenge: challenge, code_challenge_method: "S256",
+      prompt: "consent select_account"});
     res.writeHead(302, {Location: `https://accounts.google.com/o/oauth2/v2/auth?${params}`});
     res.end();
     return;

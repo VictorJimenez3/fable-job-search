@@ -22,7 +22,8 @@ USER_HEADERS = ["Account ID", "GitHub User", "Job Radar ID", "Company", "Stage",
                 "Position", "Apply date", "Text", "Job URL", "Location", "Saved At",
                 "Updated At", "Source", "Profile"]
 ACCOUNT_HEADERS = ["Account ID", "GitHub ID", "GitHub Login", "Google Subject",
-                   "Google Email", "Created At", "Updated At", "Merged Into", "Status"]
+                   "Google Email", "Created At", "Updated At", "Merged Into", "Status",
+                   "Google Token Ciphertext", "Google Sheet ID", "Google Connected At"]
 STAGES = {"saved", "applied", "oa", "interview", "rejected", "closed"}
 
 
@@ -168,12 +169,13 @@ def create_tracker(title: str | None = None) -> dict:
             for sheet in created.get("sheets", [])}
     _put_for(token, spreadsheet_id, "Applications", "A1:J1", [HEADERS])
     _put_for(token, spreadsheet_id, "User Applications", "A1:N1", [USER_HEADERS])
-    _put_for(token, spreadsheet_id, "Accounts", "A1:I1", [ACCOUNT_HEADERS])
-    _put_for(token, spreadsheet_id, "Guide", "A1:B10", [[
+    _put_for(token, spreadsheet_id, "Accounts", f"A1:{chr(64 + len(ACCOUNT_HEADERS))}1", [ACCOUNT_HEADERS])
+    _put_for(token, spreadsheet_id, "Guide", "A1:B11", [[
         "Job Radar tracker", "How to use it"],
         ["Applications", "Owner/fork automation rows; matched by Job Radar ID."],
-        ["User Applications", "Private shared-app rows; backend filters by Account ID."],
-        ["Accounts", "Private OAuth identity links; never share this workbook publicly."],
+        ["User Applications", "Legacy shared-app rows retained for migration only."],
+        ["Accounts", "Private identity links plus encrypted Google token metadata; never share this workbook publicly."],
+        ["Google users", "Each connected Google account receives its own Applications workbook in Drive."],
         ["Company / Stage / Position", "Notion-shaped application fields for a familiar board view."],
         ["Apply date / Job URL / Location", "Application context carried from the radar."],
         ["Text", "Short source/role context; safe to edit for personal notes."],

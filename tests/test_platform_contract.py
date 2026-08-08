@@ -33,17 +33,20 @@ def test_platform_exposes_private_google_tracker_path_for_authenticated_users():
     helper = (ROOT / "webapp" / "api" / "_google-tracker.js").read_text()
     assert 'fetch("/api/tracker")' in html
     assert "User Applications" in api + helper
-    assert "GitHub User" in helper
-    assert "other users cannot read them" in html
+    assert "Google Token Ciphertext" in helper
+    assert "other users cannot read it" in html
 
 
 def test_platform_exposes_oauth_account_center_and_tutorial():
     html = (ROOT / "webapp" / "index.html").read_text()
     api = "\n".join((ROOT / "webapp" / "api" / name).read_text()
-                      for name in ["login.js", "callback.js", "google-callback.js", "config.js"])
+                  for name in ["login.js", "callback.js", "google-callback.js", "config.js"])
+    helper = (ROOT / "webapp" / "api" / "_google-tracker.js").read_text()
     assert "openTutorial('accounts')" in html
     assert "Tracker & Sheets" in html
     assert "Connect Google" in html
     assert "openid email profile" in api
+    assert "https://www.googleapis.com/auth/spreadsheets" in api
+    assert "Google Sheet ID" in helper
     assert "code_challenge_method" in api
     assert "no password" in html.lower()

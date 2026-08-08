@@ -1,13 +1,12 @@
 # Google Sheets tracker setup
 
 The tracker supports two modes. The existing **Applications** tab is the
-owner/fork automation tracker. The **User Applications** tab powers the shared
-Vercel platform: any user who signs in with GitHub or Google gets rows keyed to
-one linked account, while the backend keeps the Google credentials and filters
-rows before returning them. The private **Accounts** tab stores only OAuth
-identity links and merge metadata. Users never receive the Sheet URL or the
-Google token. GitHub Pages cannot provide this private multi-user mode; use the
-Vercel platform URL.
+owner/fork automation tracker. On Vercel, each user who connects Google gets a
+separate **Applications** workbook created in that user's Google Drive. The
+private owner-controlled **Accounts** tab stores identity links, an encrypted
+refresh-token ciphertext, and each user's Sheet ID so the backend can reconnect
+without exposing tokens to the browser. GitHub-only users can connect Google
+later; GitHub Pages cannot provide this private multi-user mode.
 
 ## What the adapter does
 
@@ -16,12 +15,13 @@ Vercel platform URL.
 - stage readback for `saved`, `applied`, `oa`, `interview`, `rejected`, and
   `closed`;
 - the same main/ChemE application model; no second Notion database is created;
-- a private shared-user tab keyed by `Account ID` + `Job Radar ID`, with
-  `maybe`, `saved`, and `applied` actions isolated per linked account;
+- one private workbook per connected Google account, with `maybe`, `saved`, and
+  `applied` actions isolated by ownership in Google Drive;
 - a Notion-shaped visible schema: `Company`, `Stage`, `Position`, `Apply date`,
   `Text`, `Job URL`, and `Location`, followed by tracker metadata;
 - an `Accounts` tab that prevents the same GitHub/Google identity from becoming
-  two linked accounts and records explicit, OAuth-proven merges.
+  two linked accounts, records explicit OAuth-proven merges, and stores only
+  encrypted Google token material plus Sheet IDs for reconnecting users.
 
 ## One-time authorization
 
@@ -29,21 +29,23 @@ Vercel platform URL.
 2. Enable **Google Sheets API** and **Google Drive API**.
 3. Configure the OAuth consent screen. Add the Google account that will own the
    tracker as a test user if the app remains in testing.
-4. Create an OAuth client (Desktop app is simplest for a one-person setup).
-5. Complete one consent flow with scope
-   `https://www.googleapis.com/auth/spreadsheets`, then exchange the returned
-   authorization code for a refresh token.
-6. Create the workbook automatically after exporting the refresh token:
+4. Create a **Web application** OAuth client and register
+   `https://<your-canon-host>/api/google-callback` as an authorized redirect URI.
+5. The Vercel login flow requests `openid email profile` plus
+   `https://www.googleapis.com/auth/spreadsheets` with offline access. Each user
+   consents once; the resulting refresh token is used to create and maintain
+   that user's own workbook. No user runs the local creator command.
+6. The owner-only local command remains available for the legacy automation
+   workbook and metadata registry:
 
    ```bash
    .venv/bin/python -m radar.main create-google-tracker
    ```
 
    The command creates `Applications`, `User Applications`, `Accounts`, and `Guide` tabs,
-   freezes and formats the headers, adds filters, and prints the spreadsheet
-   ID/URL. It never overwrites an existing workbook. If you prefer to create
-   one manually, keep those two tab names and copy the spreadsheet ID from the
-   URL between `/d/` and `/edit`.
+   freezes and formats the headers, adds filters, and prints the metadata
+   workbook ID/URL. It never overwrites an existing workbook. User-owned
+   workbooks are created automatically by Google OAuth during sign-in.
 
 Add GitHub Actions **secrets**:
 
@@ -57,11 +59,12 @@ Add repository **variables**:
 - `TRACKER_BACKEND=google_sheets`
 - `GOOGLE_SHEET_TAB=Applications`
 
-For the shared tracker, add the same Google values to the Vercel project
-environment and set:
+For the owner metadata registry, add the same Google values to the Vercel
+project environment and set:
 
 - `GOOGLE_USER_SHEET_TAB=User Applications`
 - optionally `GOOGLE_ACCOUNT_SHEET_TAB=Accounts`
+- optionally `GOOGLE_PERSONAL_SHEET_TAB=Applications` (the per-user workbook tab)
 
 For OAuth login, add a Google **Web application** OAuth client with this
 callback URL and add its values to Vercel:
@@ -75,14 +78,15 @@ variables are absent, the backend falls back to `GOOGLE_CLIENT_ID` and
 registered. The existing GitHub OAuth callback remains
 `https://<your-canon-host>/api/callback`.
 
-The Vercel backend accepts any authenticated GitHub or Google user for
+The Vercel backend accepts authenticated GitHub or Google users for
 `/api/tracker`. A person signs in with one provider, then opens **Tutorial →
-Accounts & login → Connect** to add the other. The app never asks for a
-password. If a provider is already attached to another account, it refuses a
-silent reassignment and only merges after both identities have been proven by
-OAuth. Users do not need to open Sheets: the app is the filtered front door.
-The owner continues using the repository/Notion or `Applications` flow; other
-users do not create GitHub commits or change the owner's `state/applied.json`.
+Accounts & login → Connect Google + create my Sheet** to add Google access.
+Google sign-in itself also requests Sheets access. The app never asks for a
+password, and the user can open their personal Sheet from the Account center.
+If a provider is already attached to another account, it refuses a silent
+reassignment and only merges after both identities have been proven by OAuth.
+Other users do not create GitHub commits or change the owner's
+`state/applied.json`.
 
 Then run **reconcile-checkboxes** and **cheme-reconcile-checkboxes** manually.
 The adapter creates the header row and syncs each board's own entries by Job

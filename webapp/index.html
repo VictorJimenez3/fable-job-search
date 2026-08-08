@@ -275,7 +275,7 @@ function storedFilter() {
 const S = {           // app state
   jobs:{}, applied:[], culture:{}, research:{}, aiUsage:{}, companies:{},
   registryByCompany:{}, runs:[], scout:{}, web:null,
-  auth:null, backend:false, userTracker:false, trackerConfigured:false,
+  auth:null, backend:false, userTracker:false, trackerConfigured:false, trackerMeta:null,
   authProviders:{github:false,google:false},
   tab:"jobs", filter:{...DEFAULT_FILTER, ...storedFilter()}, shown:250,
   wsTab:"fit",
@@ -340,19 +340,20 @@ async function boot() {
     fetchJSON("state/runs.json", []), fetchJSON("state/scout.json", {}),
     ownerView ? fetchJSON("state/web_state.json", null) : Promise.resolve(null),
   ]);
-  // Anyone who is not the authenticated owner must never receive the owner's
-  // shared applied.json. Their
-  // private tracker rows come from the authenticated Google Sheets endpoint.
-  if (S.auth && !S.auth.owner) {
-    applied = [];
-    web = null;
+  // The owner still receives the repository pipeline, while every signed-in
+  // account can also have a personal Google Sheet. Non-owners never receive
+  // the owner's applied.json; their rows come only from their own Sheet.
+  if (S.auth) {
     try {
       const trackerResponse = await fetch("/api/tracker");
       if (trackerResponse.ok) {
         const tracker = await trackerResponse.json();
-        applied = tracker.entries || [];
-        web = {maybe: tracker.maybe || [], jobs: {}};
+        S.trackerMeta = tracker;
         S.userTracker = Boolean(tracker.configured);
+        if (!S.auth.owner) {
+          applied = tracker.entries || [];
+          web = {maybe: tracker.maybe || [], jobs: {}};
+        }
       }
     } catch { S.userTracker = false; }
   }
@@ -542,7 +543,7 @@ function ago(ts){
 /* ---------- actions ---------- */
 async function actMaybe(j) {
   const i = S.web.maybe.indexOf(j.id);
-  if (S.auth && !S.auth.owner && S.userTracker) {
+  if (S.auth && S.userTracker) {
     try { if (!await doWrite(i>=0 ? "untrack" : "maybe", j)) return; }
     catch(e) { toast("Tracker update failed: "+e.message.slice(0,90)); return; }
   }
@@ -600,10 +601,18 @@ async function requestCompanyResearch(j) {
   } catch(e) { toast("Research request failed: "+e.message.slice(0,100)); }
 }
 async function doWrite(action, job) {   // best available write path
-  if (S.auth && S.auth.owner) return apiAction(action, job);
+  if (S.auth && S.auth.owner) {
+    if (action === "maybe") return S.userTracker ? trackerAction(action, job) : true;
+    const result = await apiAction(action, job);
+    if (S.userTracker) {
+      try { await trackerAction(action, job); }
+      catch (error) { toast(`Repository saved; personal Sheet sync failed: ${error.message.slice(0,80)}`); }
+    }
+    return result;
+  }
   if (S.auth && S.userTracker) return trackerAction(action, job);
   if (token()) return dispatch(action, job);
-  if (S.backend) { toast("Your personal Google tracker is not configured yet");
+  if (S.backend) { toast("Connect Google to create your personal tracker");
                    return false; }
   return issueCmd(action === "track" ? "save" : action === "untrack" ? "untrack" : "applied", job);
 }
@@ -664,7 +673,7 @@ function providerButton(provider, label) {
     : `<span class="act provider" style="opacity:.55;cursor:not-allowed"><span class="mark">${provider==='github'?'GH':'G'}</span>${label} unavailable</span>`;
 }
 function connectButton(provider, label) {
-  const ready = Boolean(S.authProviders[provider] && S.trackerConfigured);
+  const ready = Boolean(S.authProviders[provider] && (provider !== "google" || S.trackerConfigured));
   return ready
     ? `<a class="act provider ${provider}" href="/api/login?provider=${provider}&mode=link"><span class="mark">${provider==='github'?'GH':'G'}</span>${label}</a>`
     : `<span class="act provider" style="opacity:.55;cursor:not-allowed"><span class="mark">${provider==='github'?'GH':'G'}</span>${label} unavailable</span>`;
@@ -673,8 +682,8 @@ function accountTutorialHTML() {
   if (!S.auth) return `<div class="tut-kicker">OAuth only</div><h2>Sign in without a password</h2>
     <p class="sub">Choose a provider you already trust. Job Radar never asks for or stores a password.</p>
     <div class="provider-row">${providerButton("github", "Continue with GitHub")}${providerButton("google", "Continue with Google")}</div>
-    <div class="tut-note">After signing in with one provider, return here and use <b>Connect</b> to add the other. Do not sign out and create a second account first.</div>
-    <div class="tut-card"><h4>What each provider does</h4><p>GitHub identifies your account and, for the repo owner, enables the existing repository workflow. Google can identify you and powers the private tracker connection. Neither provider gives this page your password.</p></div>`;
+    <div class="tut-note">Google sign-in also asks for Sheets access so the app can create your private tracker in your Google Drive. GitHub-only users can connect Google later.</div>
+    <div class="tut-card"><h4>What each provider does</h4><p>GitHub identifies your account and, for the repo owner, enables the existing repository workflow. Google identifies you and authorizes your own Sheets tracker. Neither provider gives this page your password.</p></div>`;
   const providers = S.auth.providers || {};
   return `<div class="tut-kicker">Account center</div><h2>Your sign-in</h2>
     <p class="sub">Signed in as <b>${esc(S.auth.login)}</b>. Add the second provider from this signed-in session so both point to one account.</p>
@@ -682,8 +691,8 @@ function accountTutorialHTML() {
       <div class="identity-row"><span>GitHub</span><span class="state">${providers.github?'connected':'not connected'}</span></div>
       <div class="identity-row"><span>Google</span><span class="state">${providers.google?'connected':'not connected'}</span></div>
     </div>
-    <div class="provider-row">${providers.github?'':connectButton('github','Connect GitHub')}${providers.google?'':connectButton('google','Connect Google')}</div>
-    ${!S.trackerConfigured?'<div class="tut-note">Account linking is waiting for the site owner to configure the private tracker. Login itself still uses the provider securely; no password fallback exists.</div>':''}
+    <div class="provider-row">${providers.github?'':connectButton('github','Connect GitHub')}${providers.google?'':connectButton('google','Connect Google + create my Sheet')}</div>
+    ${providers.google && S.trackerMeta?.sheet_url ? `<div class="tut-note"><b>Your personal tracker:</b> <a href="${esc(S.trackerMeta.sheet_url)}" target="_blank" rel="noopener">open your Google Sheet ↗</a>${S.trackerMeta.google_email?` · ${esc(S.trackerMeta.google_email)}`:""}</div>` : providers.google ? '<div class="tut-note">Google is connected. Your personal tracker is being prepared; reload this page in a moment.</div>' : '<div class="tut-note">Connect Google to create a private Sheet in your own Google Drive. GitHub-only accounts do not receive Google storage access.</div>'}
     <div class="tut-card"><h4>One account rule</h4><p>Provider identities are unique. If an identity was already connected elsewhere, the app refuses a silent merge and asks you to prove control of both sides through OAuth.</p></div>
     <p style="margin-top:1rem"><a class="act" href="/api/logout">Sign out</a></p>`;
 }
@@ -696,17 +705,17 @@ function tutorialContent(tab) {
       <div class="tut-step"><span><b>Mark the real stage.</b> Applied means you actually submitted. Later OA, Interview, Rejected, and Closed stages stay visible in Pipeline.</span></div></div>
     <div class="tut-note">The radar never submits an application for you. It opens the employer’s official application link and records the stage you choose.</div>`;
   if (tab === "accounts") return accountTutorialHTML();
-  if (tab === "sheets") return `<div class="tut-kicker">Your private tracker</div><h2>Google Sheets, without the Sheet leak</h2>
-    <p class="sub">The app uses a private Google workbook as its durable tracker. You interact with it through the app; you do not need to open Google Sheets or grant this site your Google token.</p>
+  if (tab === "sheets") return `<div class="tut-kicker">Your private tracker</div><h2>Google Sheets in your own Drive</h2>
+    <p class="sub">When you connect Google, Job Radar creates an Applications workbook owned by that Google account. The app uses the Sheet as durable storage while keeping the OAuth token server-side.</p>
     <div class="tut-grid"><div class="tut-card"><h4>Notion-shaped fields</h4><p>Company · Stage · Position · Apply date · Text · Job URL · Location, with timestamps and source metadata beside them.</p></div>
-      <div class="tut-card"><h4>What gets written</h4><p>Track, Maybe, Applied, and Remove become one stable row keyed to your account. Re-clicking updates that row instead of duplicating it.</p></div>
-      <div class="tut-card"><h4>What you can see</h4><p>On reload, the backend filters the private workbook to your account ID. Another GitHub or Google user cannot read your rows through the app.</p></div></div>
-    <div class="tut-note">Google is the storage service, not a second password system. Your provider login identifies you; the backend keeps the Sheet credential server-side.</div>`;
+      <div class="tut-card"><h4>One Sheet per user</h4><p>GitHub-only users can connect Google later. Google-only users get their own Sheet during sign-in. A different user never shares your workbook.</p></div>
+      <div class="tut-card"><h4>Stable updates</h4><p>Track, Maybe, Applied, and Remove update one Job Radar ID instead of duplicating rows. You can open your Sheet from Accounts &amp; login.</p></div></div>
+    <div class="tut-note">Google login and Google Sheets access are one explicit OAuth consent flow. The app never receives your Google password or exposes your refresh token to the page.</div>`;
   if (tab === "privacy") return `<div class="tut-kicker">Trust boundary</div><h2>Why the login is designed this way</h2>
     <div class="tut-steps"><div class="tut-step"><span><b>No passwords.</b> GitHub and Google own password handling, MFA, recovery, suspicious-login detection, and OAuth consent.</span></div>
       <div class="tut-step"><span><b>Tokens stay server-side.</b> The session is encrypted and marked httpOnly/Secure; frontend JavaScript cannot read provider tokens.</span></div>
       <div class="tut-step"><span><b>Explicit linking.</b> Adding a provider requires an active session plus a fresh OAuth consent flow. Existing provider ownership is never silently overwritten.</span></div>
-      <div class="tut-step"><span><b>Private rows.</b> The Sheet is not sent to the browser wholesale. The backend returns only the current account’s tracker rows.</span></div></div>
+      <div class="tut-step"><span><b>Private rows.</b> The backend returns only rows from the current account’s own Google Sheet; it never reads another user’s Sheet.</span></div></div>
     <div class="tut-note">If you ever see a provider you do not recognize, sign out and revoke the app from GitHub or Google account security settings. Never paste an OAuth token into the page.</div>`;
   return `<div class="tut-kicker">A calmer first run</div><h2>Welcome to Job Radar</h2>
     <p class="sub">This is the quick map for the parts you will actually use.</p>
@@ -838,10 +847,9 @@ function rJobs() {
     </div>
     </div>
     ${liSavedSearches()}
-    ${S.userTracker?`<div class="note"><b>Personal tracker connected.</b> Your saved, applied, and maybe marks are stored under <b>@${esc(S.auth.login)}</b> in the private Google Sheet; other users cannot read them.</div>`
+    ${S.userTracker?`<div class="note"><b>Personal tracker connected.</b> Your saved, applied, and maybe marks are stored in your private Google Sheet${S.trackerMeta?.sheet_url?` · <a href="${esc(S.trackerMeta.sheet_url)}" target="_blank" rel="noopener">open it ↗</a>`:""}; other users cannot read it.</div>`
       :canWrite()?"":(S.backend
-      ?`<div class="note"><b>Sign in with GitHub</b> (top right) once — every click is automatic
-        after that. The shared personal tracker must be configured by the site owner first.</div>`
+      ?`<div class="note"><b>Connect Google</b> from Accounts &amp; login to create your personal tracker in your own Google Drive. GitHub-only sign-in does not grant Sheets access.</div>`
       :`<div class="note">No token needed: <b>track / applied</b> open a one-click
       prefilled GitHub issue (your GitHub login is the auth — only the repo owner is obeyed).
       Notes &amp; links stay private in this browser.</div>`)}
@@ -1449,16 +1457,17 @@ function rSet() {
     ${S.backend?`<div class="sect"><h4>Signed-in mode (recommended)</h4>
       <p class="sub" style="max-width:44rem">${S.auth
         ? `Signed in as <b>${esc(S.auth.login)}</b>${S.auth.owner
-            ? " — owner repository controls are enabled."
-            : S.userTracker ? " — your private tracker is connected." : " — connect the private tracker when it is enabled."}
+          ? ` — owner repository controls are enabled${S.userTracker?"; personal Google tracker connected":""}.`
+            : S.userTracker ? " — your personal Google tracker is connected." : " — connect Google to create your personal tracker."}
            Open <button class="jobtitle" onclick="openTutorial('accounts')">Accounts &amp; login</button> to connect GitHub and Google, or <a href="/api/logout">sign out</a>.`
         : `Choose <button class="jobtitle" onclick="openTutorial('accounts')">Sign in / create account</button> once per browser. GitHub and Google handle credentials; this app has no password database.`}</p></div>`:""}
     <div class="sect"><h4>How auth works (no secrets on this site)</h4>
       <p class="sub" style="max-width:44rem">This is a static page on a <b>public</b> repo, so it
       holds no secrets — anything embedded here would belong to the whole internet. On the
-      Vercel platform, OAuth users can use the private Google-backed tracker; each account sees
-      only its own rows. On GitHub Pages, the board remains read-only and notes stay only in that
-      browser. The owner-only repository workflow remains separate from personal tracking.</p></div>
+      Vercel platform, each user who connects Google gets a separate Sheet in that Google Drive;
+      the backend returns only that user’s rows. On GitHub Pages, the board remains read-only and
+      notes stay only in that browser. The owner-only repository workflow remains separate from
+      personal tracking.</p></div>
     <div class="sect"><h4>Optional: a token for instant writes + cross-device notes</h4>
       <p class="sub" style="max-width:44rem">Only if you want one-click writes without the GitHub
       hop: a <b>fine-grained</b> token scoped to <span class="mono">${REPO}</span> only, with

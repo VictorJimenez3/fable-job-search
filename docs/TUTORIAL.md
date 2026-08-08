@@ -11,8 +11,8 @@ new-grad aggregators, scores each posting against your preferences
 GitHub issue that pushes to your phone. A separate unassigned master board keeps
 everything together. Checking a box puts the job in the in-house Pipeline and
 mirrors it to your selected tracker (Notion by default; Google Sheets optional).
-On the Vercel platform, any GitHub-signed-in user can use the private
-Google-backed tracker without touching the repository owner's pipeline. Your MacBook
+On the Vercel platform, each user can connect Google to create a private
+Google-backed tracker in their own Drive without touching the repository owner's pipeline. GitHub-only users can connect Google later. Your MacBook
 handles local bulk AI when awake, while a tightly budgeted NVIDIA cloud pass
 handles time-sensitive enrichment nightly. The repo itself is the database.
 
@@ -53,12 +53,13 @@ system as a website, refreshed automatically by every crawl:
   coverage, scout status, and registry stats.
 
 Reading needs nothing. On Vercel, use **Tutorial → Accounts & login** to sign
-in with GitHub or Google, then connect the other provider from the same signed-in
-session. There is no password login. On the Pages mirror, buttons use prefilled GitHub issues by default;
+in with GitHub or Google. Google consent includes Sheets access and creates your
+personal workbook; if you started with GitHub, use **Connect Google + create my
+Sheet** from the same signed-in session. There is no password login. On the Pages mirror, buttons use prefilled GitHub issues by default;
 the optional Settings token enables instant writes and cross-device notes.
-The private Google-backed tracker is filtered per linked account; the Sheet is
-never sent to the browser wholesale. GitHub checkboxes keep working exactly as
-before; both doors lead to the same tracker.
+The private Google-backed tracker is one workbook per connected Google account;
+the Sheet is never sent to the browser wholesale. GitHub checkboxes keep working
+exactly as before; Vercel writes to the connected user’s Sheet.
 
 The separate [ChemE internship board](https://job-radar-cheme.vercel.app)
 uses its own jobs, scoring profile, pipeline state, and labeled GitHub issues.

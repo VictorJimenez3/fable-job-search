@@ -44,7 +44,9 @@ module.exports = async (req, res) => {
       res.status(403).send("Google did not provide a verified email identity."); return;
     }
     const googleIdentity = {sub: identity.sub, email: identity.email};
-    const linked = await tracker.resolveAccount("google", googleIdentity, current, opened.mode);
+    const linked = await tracker.resolveAccount("google", googleIdentity, current, opened.mode, {
+      accessToken: tokenBody.access_token, refreshToken: tokenBody.refresh_token,
+    });
     const github = linked.github || current?.github;
     const google = linked.google || googleIdentity;
     writeSession(res, {g: current?.g, u: github?.login || google.email, k: linked.account_id,

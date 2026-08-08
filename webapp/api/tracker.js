@@ -1,4 +1,4 @@
-// GET/POST personal tracker rows for any authenticated GitHub user.
+// GET/POST personal tracker rows for any authenticated account.
 // This is separate from the owner-only repository state/actions.
 const { session } = require("./_lib");
 const tracker = require("./_google-tracker");
@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
   const s = session(req);
   if (!s) { res.status(401).json({ error: "sign in first" }); return; }
   if (!tracker.configured()) {
-    res.status(503).json({ configured: false, error: "shared Google tracker is not configured" });
+    res.status(503).json({ configured: false, error: "Google tracker metadata storage is not configured" });
     return;
   }
   try {

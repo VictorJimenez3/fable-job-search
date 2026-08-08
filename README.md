@@ -95,7 +95,7 @@ every ~30 min (GitHub Actions cron)
 1. **Check a box on an alert issue or the master board to track a job.** It
    appears in the in-house Pipeline immediately with the not-yet-applied status
    and is mirrored to your selected external tracker (Notion by default;
-   Google Sheets remains optional/legacy)
+   Google Sheets is available as a per-user Vercel tracker)
    (`stage_saved` in profile.yaml, default "Not started") and improves future
    ranking.
 2. **When you apply, the inbox becomes the source of truth.** The email-based
@@ -352,11 +352,12 @@ Optional upgrades:
   Provider/schema failures are marked retryable with exponential backoff, and
   each checkpoint reports ready, pending, retry-waiting, and error counts.
 - Prefer Google Workspace to Notion? The Google Sheets tracker adapter is
-  complete. Run `python -m radar.main create-google-tracker` once to create the
-  formatted Applications/User Applications/Accounts workbook. On the Vercel
-  platform, users can sign in with GitHub or Google and explicitly connect the
-  other provider; rows are keyed to their linked account and the backend never
-  exposes another user's rows.
+  complete. Run `python -m radar.main create-google-tracker` once only for the
+  owner metadata/automation workbook. On the Vercel platform, Google sign-in
+  or **Connect Google + create my Sheet** requests Sheets permission and creates
+  a separate Applications workbook in that user's Google Drive. The backend
+  stores only encrypted token metadata in the private Accounts registry and
+  never exposes another user's rows or token.
   Setup is documented in [docs/GOOGLE_SHEETS_SETUP.md](docs/GOOGLE_SHEETS_SETUP.md).
 - `GOOGLE_CSE_KEY` + `GOOGLE_CSE_ID` (free: [programmablesearchengine.google.com](https://programmablesearchengine.google.com)
   → create engine searching `linkedin.com/posts`, then get an API key at

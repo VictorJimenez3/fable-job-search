@@ -35,7 +35,7 @@ def test_sheet_readback_is_id_matched_and_stage_validated(monkeypatch):
     assert entries[1]["stage"] == "applied"
 
 
-def test_create_tracker_builds_three_tabs_and_returns_url(monkeypatch):
+def test_create_tracker_builds_metadata_tabs_and_returns_url(monkeypatch):
     for name, value in {
         "GOOGLE_CLIENT_ID": "cid", "GOOGLE_CLIENT_SECRET": "secret",
         "GOOGLE_REFRESH_TOKEN": "refresh",
@@ -76,4 +76,6 @@ def test_create_tracker_builds_three_tabs_and_returns_url(monkeypatch):
     assert result["spreadsheet_id"] == "new-sheet"
     assert result["url"].endswith("/new-sheet/edit")
     assert [row[1] for row in writes] == ["Applications", "User Applications", "Accounts", "Guide"]
+    assert "Google Token Ciphertext" in gs.ACCOUNT_HEADERS
+    assert "Google Sheet ID" in gs.ACCOUNT_HEADERS
     assert len(calls) == 2  # create + one formatting batch

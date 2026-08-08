@@ -19,11 +19,11 @@ none block anything currently running.
    products, customers, mission, business, technical work, locations, visa
    context, candidate relevance, and interview focus. Unsupported legacy
    culture estimates remain labeled and no longer affect ranking.
-3. **Google collaboration and pluggable tracking — ✅ CODE SHIPPED / AUTH
-   PENDING.** `TRACKER_BACKEND=notion|google_sheets` selects a first-class
-   tracker with stable-ID upsert and stage readback. Notion now reads manual
-   status changes back too. Google activation needs the one-time OAuth values
-   in `docs/GOOGLE_SHEETS_SETUP.md`; Notion remains active until then.
+3. **Google collaboration and pluggable tracking — ✅ SHIPPED.**
+   `TRACKER_BACKEND=notion|google_sheets` selects a first-class tracker with
+   stable-ID upsert and stage readback. On Vercel, Google OAuth provisions one
+   private Applications workbook per connected user; GitHub-only users can
+   connect Google later. Notion remains the default owner/fork backend.
 4. **Interview workspace — ✅ V1 SHIPPED.** OA/Interview applications now have
    their own workspace with cited company context, likely focus, and a prep
    checklist. A manual company-name packet and independent interview-process
