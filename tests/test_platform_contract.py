@@ -105,6 +105,17 @@ def test_platform_job_rows_cycle_saved_green_then_excluded_red():
     assert "Excluded from active Jobs" in html
 
 
+def test_platform_role_field_buttons_cycle_to_red_exclusion_without_disappearing():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    assert "function cycleRoleFilter" in html
+    assert "roleFilterState" in html
+    assert "excludedRoles" in html
+    assert 'class="toggle ${state}"' in html
+    assert "button.toggle.excluded" in html
+    assert "twice turns red and excludes" in html
+    assert "f.excludedRoles.includes(roleFamily(j))" in html
+
+
 def test_platform_boots_progressively_and_keeps_owner_diagnostics_in_app():
     html = (ROOT / "webapp" / "index.html").read_text()
     assert 'id="bootNotice"' in html

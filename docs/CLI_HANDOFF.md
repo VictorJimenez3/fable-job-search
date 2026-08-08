@@ -75,6 +75,10 @@ Before changing the radar, read these in order:
   stale panel from blanking the site. The signed-in `VictorJimenez3` owner gets
   a compact red in-app developer notice with retry/details when a request
   fails; it sends no email and creates no issue automatically.
+- **Role-field filter controls:** each Jobs role-field button remains visible
+  while cycling neutral → selected → red excluded. A third click clears the
+  exclusion; the red state filters that role family out without hiding the
+  button.
 - **CI hygiene:** the two exact-template Resume Studio tests now skip only on
   GitHub Actions when the intentionally local-only `CV/resume.tex` is absent;
   they continue to run on Victor's Mac where the private CV exists.

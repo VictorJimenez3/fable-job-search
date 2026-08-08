@@ -31,6 +31,8 @@ optional research, tracker, and culture panels hydrate, so one stale state file
 does not blank the whole page. If a load fails, only the signed-in
 `VictorJimenez3` owner view receives a compact in-app developer notice with a
 retry action; it never sends an email or creates an issue automatically.
+In Jobs, role-field buttons stay visible and cycle neutral → selected → red
+excluded; click the red state again to clear that exclusion.
 Company-level DOL sponsorship history is also visible as separate context: the
 Jobs filter and Fit drawer can show likely historical sponsor, no certified
 history in the covered quarters, or unavailable. It never overrides the

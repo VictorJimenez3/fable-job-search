@@ -86,6 +86,7 @@
   button.toggle { background:none; border:1px solid var(--line); color:var(--muted);
     border-radius:999px; padding:0.15rem 0.5rem; cursor:pointer; font-size:0.68rem; }
   button.toggle.on { color:var(--accent-ink); border-color:var(--accent-ink); background:var(--paper); }
+  button.toggle.excluded { color:var(--danger); border-color:var(--danger); background:rgba(163,58,46,.08); }
   .acts { display:flex; gap:0.3rem; }
   .filters { padding:0.65rem; margin-bottom:0.75rem; background:var(--card);
              border:1px solid var(--line); border-radius:8px; }
@@ -312,7 +313,7 @@ let RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
 const API = "https://api.github.com";
 
 const DEFAULT_FILTER = {q:"", min:45, sector:"", role:"", sectors:[], roles:[], sponsorship:"", sponsorHistory:"",
-  experience:"", career:"", alert:false, lane:"", sort:"best", showExcluded:false};
+  excludedRoles:[], experience:"", career:"", alert:false, lane:"", sort:"best", showExcluded:false};
 function storedFilter() {
   try {
     const f = JSON.parse(localStorage.getItem("jr_filters") || "{}");
@@ -322,6 +323,7 @@ function storedFilter() {
       localStorage.setItem("jr_filters", JSON.stringify(f));
     }
     if (!Array.isArray(f.roles)) f.roles = f.role ? [f.role] : [];
+    if (!Array.isArray(f.excludedRoles)) f.excludedRoles = [];
     if (!Array.isArray(f.sectors)) f.sectors = f.sector ? [f.sector] : [];
     return f;
   }
@@ -688,6 +690,26 @@ function toggleFilter(key, value) {
   S.filter[key] = values; S.filter.role = ""; S.filter.sector = "";
   S.shown = 250; localStorage.setItem("jr_filters", JSON.stringify(S.filter)); render();
 }
+function roleFilterState(value) {
+  if (S.filter.excludedRoles?.includes(value)) return "excluded";
+  return S.filter.roles?.includes(value) ? "on" : "";
+}
+function cycleRoleFilter(value) {
+  const included = Array.isArray(S.filter.roles) ? S.filter.roles : [];
+  const excluded = Array.isArray(S.filter.excludedRoles) ? S.filter.excludedRoles : [];
+  if (included.includes(value)) {
+    S.filter.roles = included.filter(item => item !== value);
+    S.filter.excludedRoles = [...new Set([...excluded, value])];
+  } else if (excluded.includes(value)) {
+    S.filter.excludedRoles = excluded.filter(item => item !== value);
+  } else {
+    S.filter.roles = [...new Set([...included, value])];
+  }
+  S.filter.role = "";
+  S.shown = 250;
+  localStorage.setItem("jr_filters", JSON.stringify(S.filter));
+  render();
+}
 function clearFilters() {
   S.filter = {...DEFAULT_FILTER}; S.shown = 250;
   localStorage.removeItem("jr_filters"); render();
@@ -709,6 +731,7 @@ function jobList() {
   if (f.sectors?.length) rows = rows.filter(j=>f.sectors.includes(j.sector));
   if (f.roles?.length) rows = rows.filter(j=>f.roles.includes(roleFamily(j)));
   else rows = rows.filter(j=>roleFamily(j)!=="other");
+  if (f.excludedRoles?.length) rows = rows.filter(j=>!f.excludedRoles.includes(roleFamily(j)));
   if (f.sponsorship) rows = rows.filter(j=>sponsorStatus(j)===f.sponsorship);
   if (f.sponsorHistory) rows = rows.filter(j=>sponsorHistoryStatus(j)===f.sponsorHistory);
   if (f.experience === "entryfit") rows = rows.filter(j=>experienceStatus(j)!=="experienced");
@@ -1223,7 +1246,8 @@ function rJobs() {
       <span class="sub" id="jobsCount"></span>
     </div>
     <div class="togglebar"><span class="label">role fields</span>
-      ${Object.entries(ROLE_LABELS).map(([k,l])=>`<button class="toggle ${S.filter.roles?.includes(k)?"on":""}" onclick="toggleFilter('roles','${k}')">${l}</button>`).join("")}
+      ${Object.entries(ROLE_LABELS).map(([k,l])=>{const state=roleFilterState(k); const hint=state==="on"?"selected · click again to exclude":state==="excluded"?"excluded · click again to clear":"click once to show"; return `<button class="toggle ${state}" aria-pressed="${state==="on"}" title="${hint}" onclick="cycleRoleFilter('${k}')">${l}</button>`;}).join("")}
+      <span class="sub">click once to show · twice turns red and excludes · again clears</span>
     </div>
     <div class="togglebar" style="margin-top:0.45rem"><span class="label">sectors</span>
       ${sectors.map(s=>`<button class="toggle ${S.filter.sectors?.includes(s)?"on":""}" onclick="toggleFilter('sectors','${s}')">${s}</button>`).join("")}
