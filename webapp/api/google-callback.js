@@ -1,14 +1,15 @@
 const { envv, unseal, session, CANON_HOST, authReturnHost, sessionCookies,
+  sessionHandoffLocation,
   GOOGLE_AUTH_CLIENT_ID, GOOGLE_AUTH_CLIENT_SECRET, googleAuthConfigured,
-  needSessionSetup } = require("./_lib");
+  needSessionSetup, authLog } = require("./_lib");
 const tracker = require("./_google-tracker");
 
 function writeSession(res, payload) {
   res.setHeader("Set-Cookie", sessionCookies(payload));
 }
-function callbackLocation(opened) {
+function callbackLocation(opened, payload) {
   const host = authReturnHost(opened?.return_host);
-  return host ? `https://${host}/?auth=connected` : "/?auth=connected";
+  return host ? sessionHandoffLocation(host, payload, "connected") : "/?auth=connected";
 }
 
 module.exports = async (req, res) => {
@@ -17,6 +18,8 @@ module.exports = async (req, res) => {
   const { code, state } = req.query;
   const cookieState = (/(?:^|;\s*)jr_go=([^;]+)/.exec(req.headers.cookie || "") || [])[1];
   const opened = state && state === cookieState ? unseal(state) : null;
+  authLog("google-callback", {stateValid: Boolean(opened), mode: opened?.mode || "",
+    returnHost: authReturnHost(opened?.return_host) || ""});
   if (!code || !opened || Date.now() - opened.t > 10 * 60 * 1000 || !opened.verifier) {
     res.status(400).send("Google OAuth state mismatch or expired — go back and sign in again.");
     return;
@@ -49,9 +52,10 @@ module.exports = async (req, res) => {
     });
     const github = linked.github || current?.github;
     const google = linked.google || googleIdentity;
-    writeSession(res, {g: current?.g, u: github?.login || google.email, k: linked.account_id,
-      keys: linked.keys, github, google, pt: linked.personal_tracker || current?.pt});
-    res.writeHead(302, { Location: callbackLocation(opened) });
+    const payload = {g: current?.g, u: github?.login || google.email, k: linked.account_id,
+      keys: linked.keys, github, google, pt: linked.personal_tracker || current?.pt};
+    writeSession(res, payload);
+    res.writeHead(302, { Location: callbackLocation(opened, payload) });
     res.end();
   } catch (error) {
     res.status(502).send(`Account sign-in failed: ${String(error.message || error).slice(0, 180)}`);

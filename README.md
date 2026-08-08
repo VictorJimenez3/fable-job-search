@@ -64,7 +64,8 @@ does not request Gmail scope and the platform never reads internship emails.
 The shortcut and the original Vercel URL are two doors to the same platform.
 OAuth still uses the original callback host for provider compatibility, then a
 short-lived encrypted handoff gives the other door its own secure session
-cookie. If a browser was already signed in through the old URL, opening the
+cookie. The handoff travels in a redirect fragment, is cleared immediately,
+and does not depend on cross-site cookie settings. If a browser was already signed in through the old URL, opening the
 shortcut now carries that session over and opens **Account center** instead of
 showing an “already signed in” error. Signing out clears both doors.
 

@@ -1,10 +1,12 @@
 // Keep the memorable Vercel alias and the OAuth callback host signed in
-// together without putting provider tokens in localStorage, the DOM, or a URL.
-// The canonical host issues an opaque, encrypted ticket to an allowlisted
-// alias; that alias immediately exchanges it for its own httpOnly cookie.
+// together without putting provider tokens in localStorage or the DOM. The
+// canonical host issues an opaque, encrypted ticket to an allowlisted alias;
+// the alias immediately exchanges it for its own httpOnly cookie. Tickets can
+// arrive in a redirect fragment (the reliable OAuth path) or through the
+// legacy same-site GET handoff.
 const {
   CANON_HOST, requestHost, authReturnHost, session,
-  seal, unseal, sessionCookies,
+  seal, unseal, sessionCookies, authLog,
 } = require("./_lib");
 
 const MAX_AGE_MS = 60 * 1000;
@@ -37,6 +39,7 @@ module.exports = (req, res) => {
     const target = allowOrigin(res, req.headers.origin || "");
     if (!target) { res.status(403).json({error: "unsupported auth handoff target"}); return; }
     const current = session(req);
+    authLog("handoff-get", {host: requestHost(req), target, hasSession: Boolean(current)});
     if (!current) { res.status(401).json({error: "not signed in"}); return; }
     const ticket = seal({kind: "job-radar-session-handoff", t: Date.now(), target, session: current});
     res.status(200).json({ticket, expires_in: MAX_AGE_MS / 1000});
@@ -46,7 +49,11 @@ module.exports = (req, res) => {
   if (req.method === "POST") {
     const target = authReturnHost(requestHost(req));
     const opened = unseal(req.body?.ticket || "");
-    if (!target || !opened || opened.kind !== "job-radar-session-handoff" ||
+    const accepted = Boolean(target && opened && opened.kind === "job-radar-session-handoff" &&
+      opened.target === target && opened.session && Number.isFinite(opened.t) &&
+      Date.now() - opened.t <= MAX_AGE_MS);
+    authLog("handoff-post", {host: requestHost(req), target, accepted});
+    if (!accepted ||
         opened.target !== target || !opened.session ||
         !Number.isFinite(opened.t) || Date.now() - opened.t > MAX_AGE_MS) {
       res.status(400).json({error: "expired or invalid auth handoff"});

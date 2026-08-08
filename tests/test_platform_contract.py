@@ -101,9 +101,13 @@ def test_platform_keeps_oauth_sessions_in_sync_across_vercel_doors():
     assert "auth_host" in api
     assert "session-handoff" in api
     assert "authReturnHost" in api
+    assert "sessionHandoffLocation" in api
     assert "sessionCookies" in api
     assert "return_host" in api
+    assert "session_handoff" in api + html
     assert "auth=already-signed-in" in api + html
+    assert "takeSessionHandoffTicket" in html
+    assert "applySessionHandoff" in html
     assert "credentials:\"include\"" in html
     assert "Signed out on both Job Radar URLs" in html
     assert "provider tokens never enter" in html

@@ -429,7 +429,27 @@ const toast = m => { const t=document.createElement("div"); t.className="toast";
 // OAuth callbacks stay on the canonical Vercel host because GitHub/Google
 // each accept one callback URL. The two app aliases use an opaque, short-lived
 // handoff to mint their own host-scoped cookie; provider tokens never enter
-// this page, localStorage, or the URL.
+// this page or localStorage. The redirect fragment is consumed and removed
+// before the ticket is sent to the alias API.
+function takeSessionHandoffTicket() {
+  try {
+    const ticket = new URLSearchParams(location.hash.replace(/^#/, "")).get("session_handoff");
+    if (!ticket) return "";
+    history.replaceState({}, document.title, location.pathname + location.search);
+    return ticket;
+  } catch { return ""; }
+}
+async function applySessionHandoff(ticket) {
+  if (!ticket) return false;
+  try {
+    const applied = await fetch("/api/session-handoff", {method:"POST", credentials:"same-origin",
+      headers:{"Content-Type":"application/json"}, body:JSON.stringify({ticket})});
+    return applied.ok;
+  } catch (error) {
+    console.warn("[radar auth] redirect session handoff failed", error);
+    return false;
+  }
+}
 async function syncCanonicalSession() {
   if (!S.backend || !S.authHost || location.hostname.toLowerCase() === S.authHost.toLowerCase()) return false;
   try {
@@ -455,7 +475,10 @@ function finishAuthReturn() {
   if (!state) return;
   try { history.replaceState({}, document.title, location.pathname + location.hash); } catch {}
   if (state === "signed-out") { toast("Signed out on both Job Radar URLs"); return; }
-  if (!S.auth) return;
+  if (!S.auth) {
+    toast("Sign-in finished, but this browser could not complete the secure handoff. Try again or use the original URL.");
+    return;
+  }
   openTutorial("accounts");
   toast(state === "already-signed-in"
     ? "You were already signed in; your account is now available on this URL."
@@ -573,6 +596,9 @@ async function boot() {
   S.boot.errors = [];
   normalizeWebState();
   renderBootNotice();
+  // This runs before /api/me so an OAuth callback can establish the alias
+  // cookie even when the browser blocks cross-host cookies.
+  await applySessionHandoff(takeSessionHandoffTicket());
   try {
     // Backend detection: on Vercel /api/me exists (401 = present, not signed
     // in). On GitHub Pages it 404s and the app falls back to tokenless mode.

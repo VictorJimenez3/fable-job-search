@@ -1,12 +1,13 @@
-const { envv, unseal, needSetup, session, authReturnHost, sessionCookies } = require("./_lib");
+const { envv, unseal, needSetup, session, authReturnHost,
+  sessionHandoffLocation, sessionCookies, authLog } = require("./_lib");
 const tracker = require("./_google-tracker");
 
 function writeSession(res, payload) {
   res.setHeader("Set-Cookie", sessionCookies(payload));
 }
-function callbackLocation(opened) {
+function callbackLocation(opened, payload) {
   const host = authReturnHost(opened?.return_host);
-  return host ? `https://${host}/?auth=connected` : "/?auth=connected";
+  return host ? sessionHandoffLocation(host, payload, "connected") : "/?auth=connected";
 }
 
 module.exports = async (req, res) => {
@@ -14,6 +15,8 @@ module.exports = async (req, res) => {
   const { code, state } = req.query;
   const cookieState = (/(?:^|;\s*)jr_o=([^;]+)/.exec(req.headers.cookie || "") || [])[1];
   const opened = state && state === cookieState ? unseal(state) : null;
+  authLog("github-callback", {stateValid: Boolean(opened), mode: opened?.mode || "",
+    returnHost: authReturnHost(opened?.return_host) || ""});
   if (!code || !opened || Date.now() - opened.t > 10 * 60 * 1000) {
     res.status(400).send("OAuth state mismatch or expired — go back and sign in again.");
     return;
@@ -40,9 +43,10 @@ module.exports = async (req, res) => {
     const linked = await tracker.resolveAccount("github", {id: user.id, login: user.login}, current, opened.mode);
     const github = linked.github || {id: String(user.id), login: user.login};
     const google = linked.google || current?.google;
-    writeSession(res, {g: tok, u: github.login || google?.email, k: linked.account_id, keys: linked.keys,
-      github, google, pt: linked.personal_tracker || current?.pt});
-    res.writeHead(302, { Location: callbackLocation(opened) });
+    const payload = {g: tok, u: github.login || google?.email, k: linked.account_id, keys: linked.keys,
+      github, google, pt: linked.personal_tracker || current?.pt};
+    writeSession(res, payload);
+    res.writeHead(302, { Location: callbackLocation(opened, payload) });
     res.end();
   } catch (error) {
     res.status(502).send(`Account sign-in failed: ${String(error.message || error).slice(0, 180)}`);
