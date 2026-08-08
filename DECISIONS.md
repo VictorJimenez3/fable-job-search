@@ -1579,3 +1579,20 @@ Internship GitHub email batches are off by default and can be enabled by the
 owner in Settings; new-grad batches have a separate toggle and default on.
 This setting controls outbound GitHub notification surfaces, not inbox
 reading or application-email detection.
+
+## 105. Keep the memorable Vercel alias signed in with the OAuth host (2026-08-08)
+
+The memorable `job-radar-newgrad.vercel.app` alias originally redirected OAuth
+to the older Vercel host, but each host has its own secure cookie. A browser
+already signed in on the older URL therefore saw a raw “Already signed in” 409
+when it clicked GitHub from the shortcut, while the shortcut itself remained
+anonymous.
+
+The original host remains the single GitHub/Google callback host so existing
+OAuth registrations and bookmarks do not change. It now returns the browser to
+the initiating alias and exposes only a 60-second, AES-GCM-sealed handoff
+ticket to an allowlisted sibling host. The sibling exchanges that opaque ticket
+for its own httpOnly/Secure session cookie; provider tokens never enter the
+frontend, URL, or localStorage. The frontend also attempts the same handoff on
+boot so an existing old-host session becomes available when someone simply
+opens the shortcut. Signing out clears the callback host and the shortcut.

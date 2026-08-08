@@ -92,6 +92,23 @@ def test_platform_exposes_oauth_account_center_and_tutorial():
     assert "no password" in html.lower()
 
 
+def test_platform_keeps_oauth_sessions_in_sync_across_vercel_doors():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    api_names = ["_lib.js", "login.js", "callback.js", "google-callback.js",
+                 "logout.js", "session-handoff.js", "config.js"]
+    api = "\n".join((ROOT / "webapp" / "api" / name).read_text() for name in api_names)
+    assert "job-radar-newgrad.vercel.app" in api
+    assert "auth_host" in api
+    assert "session-handoff" in api
+    assert "authReturnHost" in api
+    assert "sessionCookies" in api
+    assert "return_host" in api
+    assert "auth=already-signed-in" in api + html
+    assert "credentials:\"include\"" in html
+    assert "Signed out on both Job Radar URLs" in html
+    assert "provider tokens never enter" in html
+
+
 def test_platform_exposes_owner_taste_and_community_moderation_paths():
     html = (ROOT / "webapp" / "index.html").read_text()
     action = (ROOT / "webapp" / "api" / "action.js").read_text()

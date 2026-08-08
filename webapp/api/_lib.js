@@ -23,6 +23,34 @@ const normalizeProfile = value => {
 const AUTH_MODE = envv("AUTH_MODE") || "oauth";
 const CANON_HOST = envv("CANON_HOST") || "job-radar-vmj-8946s-projects.vercel.app";
 
+// OAuth providers still use one callback host, but the public Vercel shortcut
+// should not strand a session on that host. These are the only sibling hosts
+// allowed to receive a short-lived, encrypted session handoff. Forks with a
+// different alias can set AUTH_ALIAS_HOSTS to a comma-separated host list.
+function normalizeHost(value) {
+  let raw = String(value || "").trim().toLowerCase();
+  if (!raw) return "";
+  try {
+    if (/^https?:\/\//i.test(raw)) {
+      const url = new URL(raw);
+      if (url.protocol !== "https:") return "";
+      raw = url.host;
+    }
+  } catch { return ""; }
+  return raw.replace(/\.$/, "");
+}
+const AUTH_HOSTS = new Set([
+  CANON_HOST,
+  "job-radar-newgrad.vercel.app",
+  ...envv("AUTH_ALIAS_HOSTS").split(","),
+].map(normalizeHost).filter(Boolean));
+function requestHost(req) { return normalizeHost(req?.headers?.host); }
+function authHost(value) { return AUTH_HOSTS.has(normalizeHost(value)) ? normalizeHost(value) : ""; }
+function authReturnHost(value) {
+  const host = authHost(value);
+  return host && host !== CANON_HOST ? host : "";
+}
+
 // Google login uses a separate OAuth web client when available. Falling back
 // to the Sheets client keeps one-person deployments simple, but that client
 // must have this app's HTTPS callback registered in Google Cloud first.
@@ -51,6 +79,21 @@ function unseal(tok) {
 function session(req) {
   const m = /(?:^|;\s*)jr_s=([^;]+)/.exec(req.headers.cookie || "");
   return m ? unseal(m[1]) : null;
+}
+
+function sessionCookies(payload) {
+  return [
+    `jr_s=${seal(payload)}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=${30 * 86400}`,
+    "jr_o=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0",
+    "jr_go=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0",
+  ];
+}
+function clearSessionCookies() {
+  return [
+    "jr_s=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0",
+    "jr_o=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0",
+    "jr_go=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0",
+  ];
 }
 
 function needSetup(res) {
@@ -88,4 +131,6 @@ async function gh(path, token, opts = {}) {
 module.exports = { OWNER, REPO, BRANCH, PROFILE, AUTH_MODE, envv, seal, unseal,
                    VALID_PROFILES, normalizeProfile,
                    CANON_HOST, GOOGLE_AUTH_CLIENT_ID, GOOGLE_AUTH_CLIENT_SECRET,
-                   googleAuthConfigured, session, needSetup, needSessionSetup, gh };
+                   googleAuthConfigured, requestHost, authHost, authReturnHost,
+                   session, sessionCookies, clearSessionCookies,
+                   needSetup, needSessionSetup, gh };

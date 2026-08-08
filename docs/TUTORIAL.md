@@ -91,7 +91,9 @@ toggle and default to on. GitHub issue/board surfaces remain available without
 email delivery.
 
 Reading needs nothing. On Vercel, use **Tutorial → Accounts & login** to sign
-in with GitHub or Google. Google consent includes least-privilege Drive file
+in with GitHub or Google. The memorable shortcut and the original Vercel URL
+stay signed in together; OAuth may briefly use the original callback host, but
+the account center returns you to the URL you started from. Google consent includes least-privilege Drive file
 access and creates your personal workbook with separate Applications,
 Internships, and Preferences tabs; if you started with GitHub, use **Connect Google + create my
 Sheet** from the same signed-in session. There is no password login. On the Pages mirror, buttons use prefilled GitHub issues by default;
