@@ -1,6 +1,6 @@
 # 🎯 Job Radar — internship dashboard
 
-_Last run: **2026-08-08 20:02 UTC** · companies polled directly: **63** (registry 703) · jobs tracked: **4670** · new this run: **365** · alerts this run: **2**_
+_Last run: **2026-08-08 20:20 UTC** · companies polled directly: **63** (registry 703) · jobs tracked: **4670** · new this run: **365** · alerts this run: **2**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -101,8 +101,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 59  | 26d | Akunacapital | [Platform Engineer Intern, Summer 2027](https://www.dreamworkhq.com/job/69cfc521-f26e-43c5-99c6-0ccc7aeb8b47?utm_source=github&utm_campaign=gh-tech-internships) | Chicago, IL | other | — | [Dreamwork tech internship board](https://github.com/dreamworkhq/Tech-Internships-2027) |
 | 59  | 26d | Akunacapital | [Software Engineer Intern - Full Stack Web, Summer 2027](https://www.dreamworkhq.com/job/d0a0ccb9-6770-4149-9d1c-4fc318cf0100?utm_source=github&utm_campaign=gh-tech-internships) | Chicago, IL | other | — | [Dreamwork tech internship board](https://github.com/dreamworkhq/Tech-Internships-2027) |
 | 59  | 26d | Akunacapital | [Software Engineer Intern - C# .NET Desktop, Summer 2027](https://www.dreamworkhq.com/job/2cba63a4-3cfe-46e4-8381-a6c59bc6f5d8?utm_source=github&utm_campaign=gh-tech-internships) | Chicago, IL | other | — | [Dreamwork tech internship board](https://github.com/dreamworkhq/Tech-Internships-2027) |
-| 58  | 18h | ByteDance | [Software Development Engineer Intern - Network Automation - 2027 Summe](https://jobs.bytedance.com/en/position/7671147251943213317/detail) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
-| 58  | 21h | TikTok | [Frontend Engineer Intern - Ads Interface](https://lifeattiktok.com/search/7671211313289398581) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
+| 58  | 19h | ByteDance | [Software Development Engineer Intern - Network Automation - 2027 Summe](https://jobs.bytedance.com/en/position/7671147251943213317/detail) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
+| 58  | 22h | TikTok | [Frontend Engineer Intern - Ads Interface](https://lifeattiktok.com/search/7671211313289398581) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 57  | 1d | TikTok | [Software Engineer Intern - Global E-Commerce Search Infrastructure](https://lifeattiktok.com/search/7662594807715072261) | Seattle, WA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 57  | 1d | TikTok | [Fullstack Software Engineer Intern - Global E-Commerce](https://lifeattiktok.com/search/7670700387322300677) | Seattle, WA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 57  | 1d | ByteDance | [Machine Learning Research Scientist Intern - Seed AI for Science - Ato](https://jobs.bytedance.com/en/position/7670855041951795509/detail) | Seattle, WA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
