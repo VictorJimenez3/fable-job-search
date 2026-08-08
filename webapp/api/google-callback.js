@@ -1,14 +1,14 @@
-const { envv, seal, unseal, session, CANON_HOST,
+const { envv, unseal, session, CANON_HOST, authReturnHost, sessionCookies,
   GOOGLE_AUTH_CLIENT_ID, GOOGLE_AUTH_CLIENT_SECRET, googleAuthConfigured,
   needSessionSetup } = require("./_lib");
 const tracker = require("./_google-tracker");
 
 function writeSession(res, payload) {
-  const cookie = seal(payload);
-  res.setHeader("Set-Cookie", [
-    `jr_s=${cookie}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=${30 * 86400}`,
-    "jr_go=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0",
-  ]);
+  res.setHeader("Set-Cookie", sessionCookies(payload));
+}
+function callbackLocation(opened) {
+  const host = authReturnHost(opened?.return_host);
+  return host ? `https://${host}/?auth=connected` : "/?auth=connected";
 }
 
 module.exports = async (req, res) => {
@@ -51,7 +51,7 @@ module.exports = async (req, res) => {
     const google = linked.google || googleIdentity;
     writeSession(res, {g: current?.g, u: github?.login || google.email, k: linked.account_id,
       keys: linked.keys, github, google, pt: linked.personal_tracker || current?.pt});
-    res.writeHead(302, { Location: "/" });
+    res.writeHead(302, { Location: callbackLocation(opened) });
     res.end();
   } catch (error) {
     res.status(502).send(`Account sign-in failed: ${String(error.message || error).slice(0, 180)}`);

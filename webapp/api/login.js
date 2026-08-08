@@ -1,6 +1,6 @@
 const crypto = require("crypto");
 const { envv, seal, needSetup, needSessionSetup, session, CANON_HOST,
-  GOOGLE_AUTH_CLIENT_ID, googleAuthConfigured } = require("./_lib");
+  requestHost, authReturnHost, GOOGLE_AUTH_CLIENT_ID, googleAuthConfigured } = require("./_lib");
 
 function b64url(buffer) { return buffer.toString("base64url"); }
 function pkce() {
@@ -11,19 +11,31 @@ function pkce() {
 function modeOf(req) { return req.query?.mode === "link" ? "link" : "login"; }
 
 // The app answers on several Vercel aliases, but each OAuth provider accepts
-// one callback URL. Login always begins on the canonical host.
+// one callback URL. Login still begins on the canonical host; return_host
+// lets the callback send the browser back to the URL the user chose.
 module.exports = (req, res) => {
   if (needSessionSetup(res)) return;
-  if (req.headers.host !== CANON_HOST) {
-    const suffix = req.url || "/api/login";
+  const provider = String(req.query?.provider || "github").toLowerCase();
+  const mode = modeOf(req);
+  const currentHost = requestHost(req);
+  const returnHost = currentHost === CANON_HOST
+    ? authReturnHost(req.query?.return_host)
+    : authReturnHost(currentHost);
+  if (currentHost !== CANON_HOST) {
+    const forwarded = new URLSearchParams({provider});
+    if (mode === "link") forwarded.set("mode", "link");
+    if (returnHost) forwarded.set("return_host", returnHost);
+    const suffix = `/api/login?${forwarded.toString()}`;
     res.writeHead(302, { Location: `https://${CANON_HOST}${suffix}` });
     res.end();
     return;
   }
-  const provider = String(req.query?.provider || "github").toLowerCase();
-  const mode = modeOf(req);
   if (mode === "login" && session(req)) {
-    res.status(409).send("Already signed in. Open Account center to connect another provider.");
+    const destination = returnHost
+      ? `https://${returnHost}/?auth=already-signed-in`
+      : "/?auth=already-signed-in";
+    res.writeHead(302, {Location: destination});
+    res.end();
     return;
   }
   if (mode === "link" && !session(req)) {
@@ -36,7 +48,7 @@ module.exports = (req, res) => {
       return;
     }
     const {verifier, challenge} = pkce();
-    const state = seal({ t: Date.now(), mode, verifier });
+    const state = seal({ t: Date.now(), mode, verifier, return_host: returnHost });
     const redirect = `https://${CANON_HOST}/api/google-callback`;
     res.setHeader("Set-Cookie",
       `jr_go=${state}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=600`);
@@ -63,7 +75,7 @@ module.exports = (req, res) => {
       "Re-paste just the Client ID value from the GitHub OAuth app page, then redeploy." });
     return;
   }
-  const state = seal({ t: Date.now(), mode });
+  const state = seal({ t: Date.now(), mode, return_host: returnHost });
   const redirect = `https://${CANON_HOST}/api/callback`;
   res.setHeader("Set-Cookie",
     `jr_o=${state}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=600`);

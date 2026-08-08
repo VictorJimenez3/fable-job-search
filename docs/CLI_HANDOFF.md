@@ -138,11 +138,17 @@ Before changing the radar, read these in order:
 - **The platform has two permanent doors** (DECISIONS #27): Vercel
   (`job-radar-newgrad.vercel.app` — the memorable public shortcut; the
   existing `job-radar-vmj-8946s-projects.vercel.app` URL remains active for
-  GitHub OAuth and old bookmarks, with instant writes) and GitHub Pages
+  GitHub OAuth and old bookmarks, with instant writes). Both Vercel doors now
+  exchange a short-lived encrypted session handoff, so an existing old-host
+  login is recognized on the shortcut and sign-out clears both hosts. GitHub
+  Pages
   (victorjimenez3.github.io/fable-job-search/platform/ — tokenless, what
   forks get). `webapp/index.html` is canonical; `docs/platform/index.html`
   is a byte copy. Jobs tab shows posting age and sorts by best-match or
   newest-first.
+  Forks with an additional Vercel alias should list its hostname in the
+  comma-separated `AUTH_ALIAS_HOSTS` environment variable; Victor's memorable
+  alias is built in.
 - **The ChemE profile is a separate production board** at
   `job-radar-cheme.vercel.app`, backed by `claude/cheme-intern-radar` and
   `RADAR_PROFILE=cheme`. The default production branch owns the three

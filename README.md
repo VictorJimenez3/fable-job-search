@@ -7,7 +7,7 @@ compute path; internships have their own sources, state, cadence, tracker tab,
 and notification setting.
 
 **[→ 🖥️ The Platform](https://job-radar-newgrad.vercel.app)**
-(easy public shortcut; existing Vercel URL remains active) ·
+(easy public shortcut; existing Vercel URL remains active and sign-in stays in sync) ·
 **[→ 🧪 ChemE internship board](https://job-radar-cheme.vercel.app)**
 (independent jobs and pipeline; same Notion Applications database) ·
 **[→ Pages mirror](https://victorjimenez3.github.io/fable-job-search/platform/)**
@@ -60,6 +60,13 @@ Internship email batches are **off by default**. The owner can opt into them
 from Settings; the same preference controls new-grad batches (new-grad starts
 enabled). This is GitHub notification delivery, not inbox access: Google OAuth
 does not request Gmail scope and the platform never reads internship emails.
+
+The shortcut and the original Vercel URL are two doors to the same platform.
+OAuth still uses the original callback host for provider compatibility, then a
+short-lived encrypted handoff gives the other door its own secure session
+cookie. If a browser was already signed in through the old URL, opening the
+shortcut now carries that session over and opens **Account center** instead of
+showing an “already signed in” error. Signing out clears both doors.
 
 Subscribe to the RSS feed at:
 `https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/claude/newgrad-job-search-system-9gbj9k/docs/feed.xml`

@@ -355,7 +355,7 @@ const S = {           // app state
     new_grad:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, expectedGraduation:""},
     internship:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, expectedGraduation:""},
   }, notifications:{new_grad_email:true, internship_email:false},
-  auth:null, backend:false, userTracker:false, trackerConfigured:false, trackerMeta:null,
+  auth:null, backend:false, authHost:"", userTracker:false, trackerConfigured:false, trackerMeta:null,
   authProviders:{github:false,google:false},
   tab:"jobs", filter:{...DEFAULT_FILTER, ...storedFilter()}, shown:250,
   wsTab:"fit",
@@ -425,6 +425,42 @@ const $ = sel => document.querySelector(sel);
 const esc = s => (s??"").toString().replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const toast = m => { const t=document.createElement("div"); t.className="toast"; t.textContent=m;
   document.body.appendChild(t); setTimeout(()=>t.remove(), 3200); };
+
+// OAuth callbacks stay on the canonical Vercel host because GitHub/Google
+// each accept one callback URL. The two app aliases use an opaque, short-lived
+// handoff to mint their own host-scoped cookie; provider tokens never enter
+// this page, localStorage, or the URL.
+async function syncCanonicalSession() {
+  if (!S.backend || !S.authHost || location.hostname.toLowerCase() === S.authHost.toLowerCase()) return false;
+  try {
+    const handoff = await fetch(`https://${S.authHost}/api/session-handoff`, {credentials:"include", cache:"no-store"});
+    if (handoff.status === 401 || handoff.status === 403 || !handoff.ok) return false;
+    const payload = await handoff.json();
+    const applied = await fetch("/api/session-handoff", {method:"POST", credentials:"same-origin",
+      headers:{"Content-Type":"application/json"}, body:JSON.stringify({ticket:payload.ticket})});
+    return applied.ok;
+  } catch (error) {
+    console.warn("[radar auth] canonical session handoff unavailable", error);
+    return false;
+  }
+}
+function authReturnState() {
+  try {
+    const value = new URLSearchParams(location.search).get("auth");
+    return ["connected", "already-signed-in", "signed-out"].includes(value) ? value : "";
+  } catch { return ""; }
+}
+function finishAuthReturn() {
+  const state = authReturnState();
+  if (!state) return;
+  try { history.replaceState({}, document.title, location.pathname + location.hash); } catch {}
+  if (state === "signed-out") { toast("Signed out on both Job Radar URLs"); return; }
+  if (!S.auth) return;
+  openTutorial("accounts");
+  toast(state === "already-signed-in"
+    ? "You were already signed in; your account is now available on this URL."
+    : "Signed in — your account center is ready.");
+}
 
 /* ---------- theme ---------- */
 $("#themeBtn").onclick = () => {
@@ -556,8 +592,16 @@ async function boot() {
       const c = await configResponse.json();
       if (c.repo) REPO = c.repo;
       if (c.branch) BRANCH = c.branch;
+      if (c.auth_host) S.authHost = c.auth_host;
       if (c.auth_providers) S.authProviders = c.auth_providers;
       S.trackerConfigured = Boolean(c.tracker_configured);
+      // A session created on the canonical OAuth host is intentionally
+      // copied to this alias only after the backend proves both hosts belong
+      // to the same configured app.
+      if (await syncCanonicalSession()) {
+        const refreshed = await fetch("/api/me", {cache:"no-store"});
+        if (refreshed.ok) S.auth = await refreshed.json();
+      }
     } else if (ghHost && seg) {
       const d = await (await fetch(`${API}/repos/${REPO}`)).json();
       if (d.default_branch) BRANCH = d.default_branch;
@@ -612,6 +656,7 @@ async function boot() {
   await Promise.allSettled([...optionalLoads, trackerLoad]);
   S.boot.phase = "ready";
   render();
+  finishAuthReturn();
   S.boot.inFlight = false;
 }
 
@@ -1273,7 +1318,7 @@ function accountTutorialHTML() {
     <div class="tut-card"><h4>What each provider does</h4><p>GitHub identifies your account and, for the repo owner, enables the existing repository workflow. Google identifies you and authorizes your own Sheets tracker. Neither provider gives this page your password.</p></div>`;
   const providers = S.auth.providers || {};
   return `<div class="tut-kicker">Account center</div><h2>Your sign-in</h2>
-    <p class="sub">Signed in as <b>${esc(S.auth.login)}</b>. Add the second provider from this signed-in session so both point to one account.</p>
+    <p class="sub">Signed in as <b>${esc(S.auth.login)}</b>. This session is available from both the memorable shortcut and the original Vercel URL. Add the second provider from this signed-in session so both point to one account.</p>
     ${S.auth.owner ? '<div class="tut-note"><b>Notion is your default tracker.</b> Google Sheets is an optional personal mirror you can enable from the expanded tracker options below.</div>' : ''}
     <div class="identity-list">
       <div class="identity-row"><span>GitHub</span><span class="state">${providers.github?'connected':'not connected'}</span></div>
@@ -1302,6 +1347,7 @@ function tutorialContent(tab) {
   if (tab === "privacy") return `<div class="tut-kicker">Trust boundary</div><h2>Why the login is designed this way</h2>
     <div class="tut-steps"><div class="tut-step"><span><b>No passwords.</b> GitHub and Google own password handling, MFA, recovery, suspicious-login detection, and OAuth consent.</span></div>
       <div class="tut-step"><span><b>Tokens stay server-side.</b> The session is encrypted and marked httpOnly/Secure; frontend JavaScript cannot read provider tokens.</span></div>
+      <div class="tut-step"><span><b>Aliases stay in sync.</b> The OAuth callback host gives the other Job Radar URL a short-lived encrypted handoff, then that URL mints its own secure cookie. No provider token is placed in the page or URL.</span></div>
       <div class="tut-step"><span><b>Explicit linking.</b> Adding a provider requires an active session plus a fresh OAuth consent flow. Existing provider ownership is never silently overwritten.</span></div>
       <div class="tut-step"><span><b>Private rows.</b> The backend returns only rows from the current account’s own Google Sheet; it never reads another user’s Sheet.</span></div></div>
     <div class="tut-note">If you ever see a provider you do not recognize, sign out and revoke the app from GitHub or Google account security settings. Never paste an OAuth token into the page.</div>`;
