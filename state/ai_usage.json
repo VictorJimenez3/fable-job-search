@@ -1,22 +1,6 @@
 {
- "events": [
-  {
-   "at": "2026-08-08T11:25:51+00:00",
-   "completion_tokens": 877,
-   "detail": "",
-   "endpoint": "local",
-   "lane": "local",
-   "latency_ms": 116604,
-   "max_tokens": 2200,
-   "model": "qwen2.5:32b",
-   "prompt_chars": 5955,
-   "prompt_tokens": 1457,
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  }
- ],
- "generated_at": 1786188351,
+ "events": [],
+ "generated_at": 1786188361,
  "history": [
   {
    "attempts": [
@@ -3204,22 +3188,12 @@
   }
  ],
  "limits": {
-  "logical_calls": 1,
-  "requests": 1
+  "logical_calls": 10000,
+  "requests": 10000
  },
- "logical_calls": 1,
- "models": {
-  "local": {
-   "errors": 0,
-   "model": "qwen2.5:32b",
-   "ok": 1,
-   "requests": 1,
-   "tokens": 2334
-  }
- },
- "provider": "local",
- "requests": 1,
- "task_calls": {
-  "company_research": 1
- }
+ "logical_calls": 0,
+ "models": {},
+ "provider": "nvidia-router",
+ "requests": 0,
+ "task_calls": {}
 }
