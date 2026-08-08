@@ -37,8 +37,8 @@ system as a website, refreshed automatically by every crawl:
   a platform-only scratch lane.
 - **Per-job workspace** (click the title or details ▸), four tabs: **Fit &
   eligibility** opens first with role family, posting sponsorship, DOL sponsor
-  history, required years, location, salary, posting age, score reasons, and the
-  LLM verdict; it also
+  history, required years, location, salary, posting age, score reasons, a short
+  why for each score section, and the LLM verdict; it also
   has a paste box for descriptions the radar cannot scrape (graded on the next
   enrich cycle). **Company** has a claim-level cited employer brief, its
   official evidence, a separately labeled culture card, and external research

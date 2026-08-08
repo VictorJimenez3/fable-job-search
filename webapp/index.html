@@ -186,6 +186,16 @@
   .kv .k { color:var(--muted); font-family:ui-monospace,Menlo,monospace; font-size:0.7rem; }
   .score-explanation { margin-top:0.65rem; border-top:1px solid var(--line); padding-top:0.55rem; }
   .score-explanation summary { cursor:pointer; color:var(--accent); font-weight:600; }
+  .score-summary { margin:0.5rem 0 0; color:var(--ink); font-size:.82rem; line-height:1.4; }
+  .score-dimensions { display:grid; gap:.42rem; margin-top:.55rem; }
+  .score-dimension { padding:.42rem .5rem; border-left:2px solid var(--line); background:rgba(255,255,255,.02); }
+  .score-dimension-head { display:flex; align-items:baseline; justify-content:space-between; gap:.7rem; font-weight:600; }
+  .score-dimension-points { color:var(--accent-ink); font:600 .72rem ui-monospace,Menlo,monospace; white-space:nowrap; }
+  .score-dimension-what, .score-dimension-why { display:block; font-size:.74rem; line-height:1.35; }
+  .score-dimension-what { color:var(--muted); margin-top:.1rem; }
+  .score-dimension-why { margin-top:.12rem; }
+  .score-dimension-why b, .score-final-note b { color:var(--accent-ink); }
+  .score-final-note { margin:.5rem 0 0; font-size:.76rem; line-height:1.35; }
   .rating-reasons { display:grid; gap:0.35rem; margin-top:0.55rem; }
   .rating-reason { display:grid; grid-template-columns:8rem 1fr; gap:0.55rem; padding:0.35rem 0.45rem; border-left:2px solid var(--line); background:rgba(255,255,255,.02); }
   .rating-reason .k { color:var(--muted); font-size:.72rem; text-transform:capitalize; }
@@ -1450,6 +1460,113 @@ function scoreReasonLabel(reason) {
   const found = labels.find(([prefix]) => text.startsWith(prefix));
   return found ? found[1] : "other signal";
 }
+const SCORE_DIMENSION_META = {
+  base: {label:"Baseline", what:"Starting points for a posting that passed the keep checks."},
+  role_fit: {label:"Role fit", what:"How closely the title and posting wording match target work."},
+  eligibility: {label:"Early-career evidence", what:"Proof that this is a realistic new-grad or first-role path."},
+  mission: {label:"Sector / mission", what:"Priority sectors and program mission signals."},
+  company_quality: {label:"Company quality", what:"Company strength, goals, momentum, and culture evidence."},
+  compensation: {label:"Compensation", what:"Published pay signals; this bonus is intentionally capped."},
+  personal_signal: {label:"Your signals", what:"Saved, applied, skipped, feedback, or community history."},
+  timing_access: {label:"Timing / access", what:"Posting freshness and remote access."},
+};
+function scoreReasonTexts(j) {
+  return Array.isArray(j.score_reasons) ? j.score_reasons.map(reason => String(reason||"")) : [];
+}
+function scorePoints(value) {
+  const points = Number(value);
+  if (!Number.isFinite(points)) return String(value??"?");
+  return `${points>=0?"+":""}${points} pts`;
+}
+function scoreReasonWithoutPoints(reason) {
+  return String(reason||"").replace(/\s+[+-]?\d+(?:\.\d+)?(?:\s|$).*$/, "").trim();
+}
+function scorePrettyName(value) {
+  return String(value||"").replaceAll("_", " ").replace(/\b\w/g, letter => letter.toUpperCase());
+}
+function scoreDimensionWhy(j, name, value) {
+  const reasons = scoreReasonTexts(j);
+  const points = Number(value);
+  const positive = Number.isFinite(points) && points > 0;
+  const roleReason = reasons.find(reason => /^role:/i.test(reason));
+  const roleBucket = roleReason ? roleReason.replace(/^role:/i, "").replace(/\s+[+-]?\d+.*$/, "").trim() : "";
+  if (name === "base") return positive ? "Every kept role starts here." : "No baseline points recorded.";
+  if (name === "role_fit") {
+    if (/^pm$/i.test(roleBucket)) return positive ? "PM-family lane: base role weight is 0; shown points come from extra wording signals." : "PM-family research lane; its configured role weight stays at 0.";
+    const wording = reasons.filter(reason => /wording$|technical leadership program/.test(reason))
+      .map(scoreReasonWithoutPoints).slice(0, 2);
+    if (roleBucket && wording.length) return `Matched ${scorePrettyName(roleBucket)} work; ${wording.join(" and ")}.`;
+    if (roleBucket && positive) return `Matched ${scorePrettyName(roleBucket)} target work.`;
+    if (roleBucket) return `Matched ${scorePrettyName(roleBucket)}, but no extra role points applied.`;
+    return positive ? "Posting wording matched a target role." : "No role-fit bonus recorded.";
+  }
+  if (name === "eligibility") {
+    const verified = reasons.find(reason => /(?:trusted new-grad board|new-grad\/early-career) priority/.test(reason));
+    if (verified) return /trusted new-grad board/.test(verified) ? "A trusted new-grad board supplied the evidence." : "The posting showed new-grad or early-career evidence.";
+    if (reasons.some(reason => reason.startsWith("early-career possible"))) return "No experience floor, but new-grad proof is missing.";
+    return "No verified new-grad or early-career evidence; this is the main limiter.";
+  }
+  if (name === "mission") {
+    const sector = reasons.find(reason => /^sector:/.test(reason));
+    const program = reasons.some(reason => reason.startsWith("target healthcare program company"));
+    const sectorName = sector ? scorePrettyName(sector.replace(/^sector:/, "").replace(/\s+\+?\d+.*$/, "")) : "";
+    if (sectorName && program) return `${sectorName} priority plus a target program signal.`;
+    if (sectorName) return `${sectorName} is a priority sector; points taper across roles.`;
+    if (program) return "Target healthcare program company matched.";
+    return "No priority-sector or program-mission signal.";
+  }
+  if (name === "company_quality") {
+    const signals = [];
+    if (reasons.some(reason => reason.startsWith("company tier:"))) signals.push("marquee tier");
+    if (reasons.some(reason => reason.startsWith("explicit goal company"))) signals.push("goal-company preference");
+    if (reasons.some(reason => reason.startsWith("cited "))) signals.push("cited company evidence");
+    if (reasons.some(reason => reason.startsWith("culture fit"))) signals.push("culture signal");
+    if (!signals.length) return positive ? "Company evidence added a small boost." : "No cited company or preference bonus.";
+    return `${points < 0 ? "Lowered by" : positive ? "Boosted by" : "No net boost from"} ${signals.join(", ")}.`;
+  }
+  if (name === "compensation") {
+    const pay = reasons.find(reason => reason.startsWith("compensation ceiling"));
+    return pay ? "Published high-end pay cleared the bonus threshold." : "No pay bonus: salary is missing or below the threshold.";
+  }
+  if (name === "personal_signal") {
+    const signals = [];
+    if (reasons.some(reason => reason.startsWith("you've engaged with"))) signals.push("your company history");
+    if (reasons.some(reason => reason.startsWith("previously skipped"))) signals.push("a previous skip");
+    if (reasons.some(reason => reason.startsWith("title matches your history"))) signals.push("title history");
+    if (reasons.some(reason => reason.startsWith("SHPE"))) signals.push("community signal");
+    return signals.length ? `${positive ? "Boosted by" : "Lowered by"} ${signals.join(", ")}.` : "No saved, applied, or feedback signal yet.";
+  }
+  if (name === "timing_access") {
+    const fresh = reasons.some(reason => reason.startsWith("posted "));
+    const remote = reasons.some(reason => reason.startsWith("remote "));
+    if (fresh && remote) return "Fresh posting plus remote access made it easier to act on.";
+    if (fresh) return "Fresh posting added actionability.";
+    if (remote) return "Remote access added actionability.";
+    return "No freshness or remote-access bonus.";
+  }
+  return positive ? "Available signals added points." : "No points from the available signals.";
+}
+function scoreSummary(j, dimensions) {
+  const reasons = scoreReasonTexts(j);
+  if (reasons.some(reason => /^role:pm\b/i.test(reason))) return "PM-family research lane: role weight is 0; other signals are shown for comparison.";
+  const eligibility = Number(dimensions.eligibility);
+  if (!Number.isFinite(eligibility) || eligibility <= 0) return "Main limiter: no verified new-grad evidence. The rows below show what still helped.";
+  const score = Number(j.score);
+  if (score >= 90) return "Strong: early-career evidence stacks with fit, company, or timing signals.";
+  if (score >= 66) return "Alert range: early-career evidence plus enough fit signals.";
+  return "Below the alert range: some key evidence or bonuses are missing.";
+}
+function scoreFinalWhy(j) {
+  const reasons = scoreReasonTexts(j);
+  const override = reasons.find(reason => reason.startsWith("configured score override:"));
+  if (override) {
+    const target = override.match(/->\s*(\d+)/)?.[1];
+    return target ? `Configured preference override set this role to ${target}.` : "Configured preference override set the final score for this company and role type.";
+  }
+  if (reasons.some(reason => reason.startsWith("technical program display floor"))) return "Technical-program floor lifted the calibrated score to the alert threshold.";
+  if (reasons.some(reason => reason.startsWith("company concentration:"))) return "Company-diversity adjustment nudged this role down after comparing several roles from the same employer.";
+  return "";
+}
 function sponsorshipHistoryCard(j) {
   const h = j.sponsorship_history || {status:"unavailable"};
   const coverage = (h.coverage_quarters || []).join(", ") || "not refreshed";
@@ -1468,14 +1585,20 @@ function sponsorshipHistoryCard(j) {
 }
 function wsFit(j, w, c, id) {
   const dimensions = Object.entries(j.score_dimensions||{});
+  const dimensionRows = dimensions.map(([name, value]) => {
+    const meta = SCORE_DIMENSION_META[name] || {label:scorePrettyName(name), what:"Scoring signals recorded for this role."};
+    return `<div class="score-dimension"><div class="score-dimension-head"><span>${esc(meta.label)}</span><span class="score-dimension-points">${esc(scorePoints(value))}</span></div>
+      <span class="score-dimension-what">${esc(meta.what)}</span><span class="score-dimension-why"><b>Why:</b> ${esc(scoreDimensionWhy(j, name, value))}</span></div>`;
+  }).join("");
   const reasons = (j.score_reasons||[]).map(reason => `<div class="rating-reason"><span class="k">${esc(scoreReasonLabel(reason))}</span><span>${esc(reason)}</span></div>`).join("");
+  const finalWhy = scoreFinalWhy(j);
   return `
     <div class="sect"><h4>Posting facts (scraped, no AI needed)</h4>${postingCard(j)}</div>
     <div class="sect"><h4>Company sponsorship history · official DOL context</h4>${sponsorshipHistoryCard(j)}</div>
     <div class="sect"><h4>Why it scored ${j.score??"?"}</h4>
-      ${dimensions.length?`<div class="kv">${dimensions.map(([name,value])=>`<span class="k">${esc(name.replaceAll('_',' '))}</span><span>${value>=0?'+':''}${esc(value)}</span>`).join('')}</div>
-      <p class="sub">Uncapped utility ${esc(j.score_raw??'?')} → calibrated ${esc(j.score_calibrated??j.score??'?')} → final ${j.score??'?'} / 100. 90+ is strong; final adjustments are shown below. Resume Match is separate and uses your CV evidence graph.</p>`:""}
-      <details class="score-explanation" open><summary>Established rating explanation</summary><div class="rating-reasons">${reasons||"<p class='sub'>No auditable reasons recorded.</p>"}</div></details>
+      ${dimensions.length?`<p class="score-summary">${esc(scoreSummary(j, Object.fromEntries(dimensions)))}</p><div class="score-dimensions">${dimensionRows}</div>
+      <p class="sub">Positive helps; zero means no signal; negative lowers. Uncapped utility ${esc(j.score_raw??'?')} → calibrated ${esc(j.score_calibrated??j.score??'?')} → final ${j.score??'?'} / 100. Resume Match is separate and uses your CV evidence graph.</p>${finalWhy?`<p class="score-final-note"><b>Final adjustment:</b> ${esc(finalWhy)}</p>`:""}`:""}
+      <details class="score-explanation" open><summary>Exact reason ledger</summary><div class="rating-reasons">${reasons||"<p class='sub'>No auditable reasons recorded.</p>"}</div></details>
       ${j.llm_note?`<p class="sub">🤖 angle: <i>${esc(j.llm_note)}</i></p>`:""}</div>
     ${tasteFeedbackCard(j)}
     ${moderationCard(j)}

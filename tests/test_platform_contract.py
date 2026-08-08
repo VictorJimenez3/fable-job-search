@@ -85,3 +85,12 @@ def test_platform_pm_family_matches_backend_product_management_titles():
     assert r"product\s+(?:manager|owner|management)" in html
     assert (ROOT / "webapp" / "index.html").read_bytes() == \
         (ROOT / "docs" / "platform" / "index.html").read_bytes()
+
+
+def test_platform_explains_each_score_dimension_without_hiding_the_ledger():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    assert "SCORE_DIMENSION_META" in html
+    assert "scoreDimensionWhy" in html
+    assert "Positive helps; zero means no signal; negative lowers." in html
+    assert "Exact reason ledger" in html
+    assert "Configured preference override set the final score" in html

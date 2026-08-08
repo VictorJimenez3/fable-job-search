@@ -62,6 +62,10 @@ Before changing the radar, read these in order:
 - **Frontend:** the Jobs role-field toggles include `Product / project
   management`; `docs/platform/index.html` remains a byte-for-byte copy of
   `webapp/index.html`.
+- **Score transparency:** each score dimension now shows its points, what it
+  measures, and one compact plain-English why; the exact rule ledger remains
+  available below it. This is presentation-only: score values and weights are
+  unchanged.
 - **CI hygiene:** the two exact-template Resume Studio tests now skip only on
   GitHub Actions when the intentionally local-only `CV/resume.tex` is absent;
   they continue to run on Victor's Mac where the private CV exists.

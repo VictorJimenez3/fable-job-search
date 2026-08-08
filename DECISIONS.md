@@ -1456,3 +1456,13 @@ matcher now accepts `APM` plus the explicit Product Manager, Product Owner,
 Product Management, Project Manager, analyst, researcher, and architect forms
 requested for this lane. This removes false PM labeling without changing the
 weight or notification behavior of genuine PM-family postings.
+
+## 95. Explain score sections in the drawer without changing ranking (2026-08-08)
+
+The job drawer now gives each stored score dimension a compact plain-English
+summary: what the section measures, its point contribution, and why the role
+received that contribution (including missing evidence when a section is low).
+The exact `score_reasons` strings remain available as the audit ledger, and
+final overrides or diversity adjustments are called out separately. This is a
+presentation change only: scoring weights, PM behavior, Google's configured
+technical new-grad `100`, and delivery rules are unchanged.
