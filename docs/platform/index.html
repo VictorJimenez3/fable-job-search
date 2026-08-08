@@ -1889,12 +1889,13 @@ function wsCompany(j, w, c, id) {
 
 function scoreReasonLabel(reason) {
   const text = String(reason||"");
-  const labels = [["base utility","baseline"],["role:","role fit"],["sector:","sector fit"],["new-grad/early-career priority","verified early-career"],["early-career possible","plausible first-role"],["new-grad evidence absent","early-career evidence"],["mid-level title penalty","mid-level demotion"],["company tier","company quality"],["explicit goal company","goal-company preference"],["duplicate role variant","duplicate posting"],["similar role sibling","similar-role adjustment"],["company concentration","company diversity"],["learned from","learned preferences"],["learned role preference","learned role preference"],["learned sector preference","learned sector preference"],["learned company preference","learned company preference"],["learned title signals","learned title language"],["explicit company feedback","explicit feedback"],["explicit title feedback","explicit feedback"],["compensation","compensation"],["posted","freshness"],["remote","remote access"],["culture fit","culture evidence"],["SHPE","community signal"],["sponsor history:","DOL sponsor context"],["raw utility","calibration"]];
+  const labels = [["base internship utility","baseline"],["base utility","baseline"],["technical internship role","flat technical role"],["role:","role fit"],["sector:","sector fit"],["new-grad/early-career priority","verified early-career"],["early-career possible","plausible first-role"],["new-grad evidence absent","early-career evidence"],["mid-level title penalty","mid-level demotion"],["company tier","company quality"],["recognized employer","employer signal"],["cited employer/work evidence","cited employer evidence"],["explicit goal company","goal-company preference"],["duplicate role variant","duplicate posting"],["similar role sibling","similar-role adjustment"],["company concentration","company diversity"],["learned from","learned preferences"],["learned role preference","learned role preference"],["learned sector preference","learned sector preference"],["learned company preference","learned company preference"],["learned title signals","learned title language"],["explicit company feedback","explicit feedback"],["explicit title feedback","explicit feedback"],["graduation eligibility","student eligibility"],["student eligibility","student eligibility"],["compensation ceiling","compensation"],["compensation","compensation"],["work-quality","work quality"],["work evidence","work quality"],["posted","freshness"],["remote","remote access"],["culture fit","culture evidence"],["SHPE","community signal"],["sponsor history:","DOL sponsor context"],["raw utility","calibration"]];
   const found = labels.find(([prefix]) => text.startsWith(prefix));
   return found ? found[1] : "other signal";
 }
 const CONFIGURABLE_SCORE_DIMENSIONS = ["role_fit","mission","company_quality","compensation","personal_signal","timing_access"];
 function scorePreferenceEnabled(name) {
+  if (S.lane === "internship") return true;
   if (["base","eligibility"].includes(name)) return true;
   return S.scorePreferences?.enabled_dimensions?.[name] !== false;
 }
@@ -1902,6 +1903,10 @@ function scorePreferenceLabel(name) {
   return SCORE_DIMENSION_META[name]?.label || scorePrettyName(name);
 }
 async function saveScorePreferences() {
+  if (S.lane === "internship") {
+    toast("Internship scores use the neutral friend-facing rubric.");
+    return;
+  }
   if (!S.auth?.owner) return;
   const preferences = {
     version: 1,
@@ -1924,13 +1929,14 @@ async function saveScorePreferences() {
 }
 const SCORE_DIMENSION_META = {
   base: {label:"Baseline", what:"Starting points for a posting that passed the keep checks.", locked:true},
-  role_fit: {label:"Role fit", what:"How closely the title and posting wording match target work.", configurable:true},
+  role_fit: {label:"Role fit", what:"New-grad role alignment; internship families use one flat technical-role baseline.", configurable:true},
   eligibility: {label:"Early-career evidence", what:"Proof that this is a realistic new-grad or first-role path.", locked:true},
   mission: {label:"Sector / mission", what:"Priority sectors and program mission signals.", configurable:true},
-  company_quality: {label:"Company quality", what:"Company strength, goals, momentum, and culture evidence.", configurable:true},
-  compensation: {label:"Compensation", what:"Published pay signals; this bonus is intentionally capped.", configurable:true},
+  company_quality: {label:"Company / employer signal", what:"New-grad company strength; internships use neutral employer recognition and cited evidence.", configurable:true},
+  compensation: {label:"Compensation", what:"Published pay signals, including annualized hourly internship rates; capped.", configurable:true},
   personal_signal: {label:"Your signals", what:"Saved, applied, skipped, feedback, or community history.", configurable:true},
   timing_access: {label:"Timing / access", what:"Posting freshness and remote access.", configurable:true},
+  work_quality: {label:"Work quality", what:"Mentorship, ownership, technical depth, production impact, and return-offer evidence.", configurable:false},
 };
 function scoreReasonTexts(j) {
   return Array.isArray(j.score_reasons) ? j.score_reasons.map(reason => String(reason||"")) : [];
@@ -1954,6 +1960,7 @@ function scoreDimensionWhy(j, name, value) {
   const roleBucket = roleReason ? roleReason.replace(/^role:/i, "").replace(/\s+[+-]?\d+.*$/, "").trim() : "";
   if (name === "base") return positive ? "Every kept role starts here." : "No baseline points recorded.";
   if (name === "role_fit") {
+    if (j.profile === "internship") return positive ? "All target technical internship families start equally; no personal role preference is used." : "No flat technical-internship baseline recorded.";
     if (/^pm$/i.test(roleBucket)) return positive ? "PM-family lane: base role weight is 0; shown points come from extra wording signals." : "PM-family research lane; its configured role weight stays at 0.";
     const wording = reasons.filter(reason => /wording$|technical leadership program/.test(reason))
       .map(scoreReasonWithoutPoints).slice(0, 2);
@@ -1963,6 +1970,11 @@ function scoreDimensionWhy(j, name, value) {
     return positive ? "Posting wording matched a target role." : "No role-fit bonus recorded.";
   }
   if (name === "eligibility") {
+    if (j.profile === "internship") {
+      if (reasons.some(reason => reason.startsWith("graduation eligibility evidence"))) return "The posting states a graduation window or class-year requirement.";
+      if (reasons.some(reason => reason.startsWith("student eligibility is open"))) return "The posting is open to students or identifies an internship path, but gives no exact cohort window.";
+      return "No clear student or graduation evidence was available; the role remains visible but receives no eligibility lift.";
+    }
     const midlevel = reasons.find(reason => reason.startsWith("mid-level title penalty"));
     if (midlevel) return "Level-II/L4-style title: kept for research, but it is not treated as a realistic new-grad target.";
     const verified = reasons.find(reason => /(?:trusted new-grad board|new-grad\/early-career) priority/.test(reason));
@@ -1980,6 +1992,11 @@ function scoreDimensionWhy(j, name, value) {
     return "No priority-sector or program-mission signal.";
   }
   if (name === "company_quality") {
+    if (j.profile === "internship") {
+      if (reasons.some(reason => reason.startsWith("recognized employer"))) return "Neutral employer-recognition tier, optionally strengthened by cited company evidence.";
+      if (reasons.some(reason => reason.startsWith("cited employer/work evidence"))) return "Cited employer/work evidence added a bounded signal; unknown employers are not penalized.";
+      return "No neutral employer-recognition or cited company signal was available.";
+    }
     const signals = [];
     if (reasons.some(reason => reason.startsWith("company tier:"))) signals.push("marquee tier");
     if (reasons.some(reason => reason.startsWith("explicit goal company"))) signals.push("goal-company preference");
@@ -1989,8 +2006,16 @@ function scoreDimensionWhy(j, name, value) {
     return `${points < 0 ? "Lowered by" : positive ? "Boosted by" : "No net boost from"} ${signals.join(", ")}.`;
   }
   if (name === "compensation") {
+    if (j.profile === "internship") {
+      const pay = reasons.find(reason => reason.startsWith("compensation ceiling"));
+      return pay ? "Published pay is compared on a common annualized scale; hourly rates are normalized." : "No published pay was available, so this dimension contributes zero rather than guessing.";
+    }
     const pay = reasons.find(reason => reason.startsWith("compensation ceiling"));
     return pay ? "Published high-end pay cleared the bonus threshold." : "No pay bonus: salary is missing or below the threshold.";
+  }
+  if (name === "work_quality") {
+    const work = reasons.filter(reason => /^(?:mentorship|hands-on|production|technical depth|return-offer)/.test(reason));
+    return work.length ? `General work-quality signals: ${work.map(scoreReasonWithoutPoints).join(", ")}.` : "No work-quality evidence was available in the posting text.";
   }
   if (name === "personal_signal") {
     const signals = [];
@@ -2003,6 +2028,9 @@ function scoreDimensionWhy(j, name, value) {
     return signals.length ? `${positive ? "Boosted by" : "Lowered by"} ${signals.join(", ")}.` : "No saved, applied, or feedback signal yet.";
   }
   if (name === "timing_access") {
+    if (j.profile === "internship") {
+      return reasons.some(reason => reason.startsWith("posted ")) ? "Freshness improves actionability; location and remote status do not change the neutral internship score." : "No posting-date signal was available.";
+    }
     const fresh = reasons.some(reason => reason.startsWith("posted "));
     const remote = reasons.some(reason => reason.startsWith("remote "));
     if (fresh && remote) return "Fresh posting plus remote access made it easier to act on.";
@@ -2014,6 +2042,12 @@ function scoreDimensionWhy(j, name, value) {
 }
 function scoreSummary(j, dimensions) {
   const reasons = scoreReasonTexts(j);
+  if (j.profile === "internship") {
+    const score = Number(j.score);
+    if (score >= 80) return "Strong neutral opportunity: pay, employer signal, work quality, and/or student evidence stack up.";
+    if (Number(dimensions.eligibility) <= 0) return "Visible for research, but student or graduation evidence is still unclear.";
+    return "Neutral internship rubric: pay, employer signal, work quality, student evidence, and freshness; no saved preferences.";
+  }
   if (reasons.some(reason => /^role:pm\b/i.test(reason))) return "PM-family research lane: role weight is 0; other signals are shown for comparison.";
   if (reasons.some(reason => reason.startsWith("mid-level title penalty"))) return "Research-only: this level-II/L4-style role is kept visible but scored below true new-grad targets.";
   const eligibility = Number(dimensions.eligibility);
@@ -2391,6 +2425,7 @@ function toggleScorePreference(name, enabled) {
   if (status) status.textContent = "Unsaved · choose Save score sections to publish";
 }
 function scoreControlsHTML() {
+  if (S.lane === "internship") return `<div class="note"><b>Neutral internship scoring.</b> This lane ignores Victor's saved roles, sectors, feedback, score switches, remote preference, and role-family weights. It compares public pay, employer signal, work quality, student evidence, and freshness instead.</div>`;
   if (!S.auth?.owner) return `<div class="note"><b>Owner-only score controls.</b> Sign in as @VictorJimenez3 to change which optional evidence sections affect the shared Radar score.</div>`;
   const rows = CONFIGURABLE_SCORE_DIMENSIONS.map(name => `<label class="score-control-row">
     <input type="checkbox" ${scorePreferenceEnabled(name)?"checked":""} onchange='toggleScorePreference("${name}",this.checked)'>

@@ -85,6 +85,15 @@ and **Internships** tabs plus **Preferences**. Switching lanes changes which
 tab is read and written. The app requests Drive file access only; it does not
 request Gmail scope or read internship email.
 
+Internship scores are intentionally neutral for friends rather than
+personalized to Victor. Technical role families start evenly; the rubric then
+uses normalized published pay, recognized or cited employer signal,
+mentorship, ownership, technical depth, production/user impact, return-offer
+evidence, student eligibility, and freshness. Saved roles, sectors, remote
+preference, feedback, applied history, and new-grad role weights are ignored in
+this lane. Missing pay, work evidence, or employer recognition contributes zero
+instead of a penalty, and **Why it scored** exposes the exact reasons.
+
 Internship email batches are off by default. The owner can enable
 **internship batches** in Settings; **new-grad batches** have a separate
 toggle and default to on. GitHub issue/board surfaces remain available without

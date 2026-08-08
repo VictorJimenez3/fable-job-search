@@ -9,9 +9,9 @@ from radar.models import Job
 from radar.sources import aggregators, ats
 
 
-def job(title="Software Engineering Intern", *, source="greenhouse", description="",
+def job(title="Software Engineering Intern", *, company="Acme", source="greenhouse", description="",
         locations=None, **kwargs):
-    return Job(company="Acme", title=title, url="https://example.test/job/1",
+    return Job(company=company, title=title, url="https://example.test/job/1",
                source=source, locations=locations or ["New York, NY"],
                description=description, **kwargs)
 
@@ -93,9 +93,81 @@ def test_internship_score_has_auditable_reasons(monkeypatch):
     annotate(posting)
     score(posting, int(time.time()))
     assert posting.score > 0
-    assert any("role:swe" in reason for reason in posting.score_reasons)
+    assert any("flat across role families" in reason for reason in posting.score_reasons)
     assert any("graduation eligibility" in reason for reason in posting.score_reasons)
-    assert any("remote" in reason for reason in posting.score_reasons)
+    assert not any("remote" in reason for reason in posting.score_reasons)
+    assert "personal_signal" not in posting.score_dimensions
+
+
+def test_internship_score_is_neutral_across_role_sector_and_remote_preferences(monkeypatch):
+    monkeypatch.setenv("RADAR_PROFILE", "internship")
+    from radar import config
+    monkeypatch.setattr(config, "_profile_cache", {})
+    details = "Current undergraduate students graduating in 2028. Work with mentors to ship customer-facing features."
+    ai = job(title="Machine Learning Intern", description=details, remote=False)
+    swe = job(title="Software Engineering Intern", description=details, remote=True)
+    ai.sector = "healthtech"
+    swe.sector = "other"
+    annotate(ai)
+    annotate(swe)
+    score(ai, int(time.time()))
+    score(swe, int(time.time()))
+    assert ai.score == swe.score
+    assert ai.score_dimensions == swe.score_dimensions
+    assert all("sector" not in reason.lower() for reason in ai.score_reasons)
+    assert all("preference" not in reason.lower() for reason in ai.score_reasons)
+
+
+def test_internship_score_rewards_pay_prestige_and_work_without_personal_signals(monkeypatch):
+    monkeypatch.setenv("RADAR_PROFILE", "internship")
+    from radar import config
+    monkeypatch.setattr(config, "_profile_cache", {})
+    now = int(time.time())
+    strong = job(
+        title="Software Engineering Intern", company="NVIDIA",
+        salary="$45/hour", description=(
+            "Current undergraduate students graduating in 2028. "
+            "Mentorship and professional development. Own and deploy production systems at scale. "
+            "Return offer possible."
+        ), posted_at=now,
+    )
+    ordinary = job(
+        title="Data Science Intern", company="Acme Labs", salary="$18/hour",
+        description="Current undergraduate students graduating in 2028.", posted_at=now - 8 * 86400,
+    )
+    annotate(strong)
+    annotate(ordinary)
+    score(strong, now)
+    score(ordinary, now)
+    assert strong.score > ordinary.score
+    assert strong.score_dimensions["compensation"] > ordinary.score_dimensions["compensation"]
+    assert strong.score_dimensions["company_quality"] > ordinary.score_dimensions["company_quality"]
+    assert strong.score_dimensions["work_quality"] > ordinary.score_dimensions["work_quality"]
+    assert any("compensation ceiling" in reason for reason in strong.score_reasons)
+    assert any("recognized employer tier" in reason for reason in strong.score_reasons)
+    assert any("hands-on ownership" in reason for reason in strong.score_reasons)
+    assert not any(any(token in reason.lower() for token in
+                       ("saved/applied", "feedback", "victor", "your "))
+                   for reason in strong.score_reasons)
+
+
+def test_internship_annotation_preserves_cohort_and_work_evidence_on_rescore(monkeypatch):
+    monkeypatch.setenv("RADAR_PROFILE", "internship")
+    from radar import config
+    monkeypatch.setattr(config, "_profile_cache", {})
+    original = job(description=(
+        "Summer 2027 Software Engineering Intern. "
+        "Applicants should be in the class of 2028. Mentorship and production work."
+    ))
+    annotate(original)
+    saved = dict(original.internship_eligibility)
+    rehydrated = Job(company=original.company, title=original.title, url=original.url,
+                     source=original.source, locations=original.locations,
+                     internship_eligibility=saved)
+    annotate(rehydrated)
+    assert rehydrated.internship_eligibility["status"] == "explicit"
+    assert rehydrated.internship_eligibility["graduation_start"] == "2028-01-01"
+    assert rehydrated.internship_eligibility["work_quality"]["points"] > 0
 
 
 def test_curated_internship_source_parsers_are_lane_tagged():

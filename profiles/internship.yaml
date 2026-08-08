@@ -8,31 +8,101 @@ candidate:
   degree: bachelors
   needs_sponsorship: false
 
-roles:
-  ai_ml: 34
-  data_science: 31
-  swe: 30
-  data_eng: 27
-  pm: 12
-
-sectors:
-  healthtech: 8
-  sports: 8
-  video_games: 8
-  ai_lab: 10
-  big_tech: 9
-  edtech: 7
-  fintech: 6
-  other: 0
-
-bonuses:
-  explicit_internship_title: 30
-  student_eligibility: 12
-  curated_source: 10
-  fresh_24h: 6
-  fresh_72h: 3
+internship_scoring:
+  # This is a friend-facing opportunity rubric, not Victor's candidate
+  # profile. Every technical role family starts equally; differences come
+  # from public opportunity evidence, not saved/applied preferences.
+  base: 17
+  flat_technical_role: 10
+  explicit_eligibility: 14
+  open_eligibility: 8
+  employer_signal_cap: 15
+  work_quality_cap: 16
+  fresh_24h: 3
+  fresh_72h: 2
   fresh_7d: 1
-  remote: 2
+  prestige_points:
+    1: 12
+    2: 8
+    3: 4
+  # Broad recognition tiers are intentionally separate from the owner's
+  # marquee list. Unknown employers receive no penalty; cited research can
+  # add a small, auditable employer/work signal when available.
+  prestige_tiers:
+    1:
+      - Google
+      - Alphabet
+      - Meta
+      - Microsoft
+      - Amazon
+      - Apple
+      - NVIDIA
+      - OpenAI
+      - Anthropic
+      - DeepMind
+      - Netflix
+      - Databricks
+      - Snowflake
+      - Palantir
+      - Stripe
+      - SpaceX
+      - Tesla
+      - Uber
+      - Airbnb
+      - Jane Street
+      - Citadel
+    2:
+      - Adobe
+      - Salesforce
+      - Oracle
+      - Intel
+      - AMD
+      - Qualcomm
+      - Broadcom
+      - Cisco
+      - IBM
+      - Bloomberg
+      - LinkedIn
+      - ByteDance
+      - TikTok
+      - Roblox
+      - DoorDash
+      - Pinterest
+      - Reddit
+      - Atlassian
+      - Coinbase
+      - Dropbox
+      - Zoom
+      - ServiceNow
+      - Workday
+      - Capital One
+      - JPMorgan Chase
+      - Goldman Sachs
+      - Morgan Stanley
+      - Visa
+      - Mastercard
+      - American Express
+      - Johnson & Johnson
+      - Pfizer
+      - Merck
+      - Genentech
+      - Regeneron
+      - Eli Lilly
+      - Moderna
+      - Medtronic
+      - Intuitive Surgical
+      - Stryker
+      - Nike
+      - ESPN
+      - Fanatics
+      - Sony Interactive Entertainment
+      - Nintendo
+      - Electronic Arts
+      - Epic Games
+      - Duolingo
+      - Coursera
+      - Khan Academy
+      - IXL Learning
 
 thresholds:
   alert: 60
