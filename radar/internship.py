@@ -314,7 +314,7 @@ def analyze(job: Job | dict, description: str | None = None) -> dict:
     title_signal = bool(INTERNSHIP_TITLE_RE.search(title))
     body_signal = _has_student_or_internship_evidence(desc or "")
     internship_signal = (
-        "experienced_title" if title_signal and EXPERIENCED_TITLE_RE.search(title)
+        "experienced_title" if EXPERIENCED_TITLE_RE.search(title)
         else "title" if title_signal
         else "body" if body_signal
         else "unknown"
