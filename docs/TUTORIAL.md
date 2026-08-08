@@ -32,6 +32,9 @@ system as a website, refreshed automatically by every crawl:
   does not mean a company will not sponsor. The
   **apply ↗** button opens the employer posting; when you are signed in it also
   saves a new role to **To apply** without pretending you submitted it.
+  You can also click a Jobs row once to save it (green), then click that saved
+  row again to exclude it (red). Turn on **show excluded** to restore a red row;
+  this is a reversible view preference, not a score or notification change.
 - **Pipeline**: separate Maybe, To apply, Applied, OA, Interview, Rejected, and
   Closed lanes. The selected tracker is read back twice daily; "Maybe" remains
   a platform-only scratch lane.

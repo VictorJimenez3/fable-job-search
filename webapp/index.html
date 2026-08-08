@@ -54,6 +54,11 @@
   .job { display:flex; gap:0.7rem; padding:0.55rem 0.4rem; border-bottom:1px solid var(--line);
          align-items:baseline; flex-wrap:wrap; }
   .job:hover { background:var(--card); }
+  .job.selected { background:rgba(46,125,91,.08); border-left:3px solid var(--accent); padding-left:.25rem; }
+  .job.excluded { background:rgba(163,58,46,.08); border-left:3px solid var(--danger); padding-left:.25rem; }
+  .job.excluded .score { color:var(--danger); border-color:var(--danger); background:none; }
+  .job.excluded .co, .job.excluded .jobtitle { color:var(--danger); }
+  .job[tabindex] { cursor:pointer; }
   .score { min-width:2.2rem; text-align:center; font-weight:700; font-size:0.85rem;
            border-radius:5px; padding:0.1rem 0.2rem; background:var(--code); }
   .score.hot { color:var(--accent-ink); border:1px solid var(--accent-ink); background:none; }
@@ -71,6 +76,7 @@
   .chip.marquee { color:var(--amber); border-color:var(--amber); }
   .chip.saved { color:var(--amber); border-color:var(--amber); }
   .chip.applied { color:var(--accent-ink); border-color:var(--accent-ink); }
+  .chip.excluded { color:var(--danger); border-color:var(--danger); }
   .chip.maybe { color:var(--muted); }
   .chip.good { color:var(--accent-ink); border-color:var(--accent-ink); }
   .chip.bad { color:var(--danger); border-color:var(--danger); }
@@ -296,7 +302,7 @@ let RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
 const API = "https://api.github.com";
 
 const DEFAULT_FILTER = {q:"", min:45, sector:"", role:"", sectors:[], roles:[], sponsorship:"", sponsorHistory:"",
-  experience:"", career:"", alert:false, lane:"", sort:"best"};
+  experience:"", career:"", alert:false, lane:"", sort:"best", showExcluded:false};
 function storedFilter() {
   try {
     const f = JSON.parse(localStorage.getItem("jr_filters") || "{}");
@@ -425,6 +431,8 @@ async function boot() {
   }
   S.web = web || JSON.parse(localStorage.getItem("jr_web") || '{"maybe":[],"jobs":{}}');
   S.web.maybe = S.web.maybe || []; S.web.jobs = S.web.jobs || {};
+  S.web.excluded = Array.isArray(S.web.excluded)
+    ? [...new Set(S.web.excluded.filter(id => typeof id === "string" && id))] : [];
   render();
 }
 
@@ -493,6 +501,7 @@ function saveWeb() {                       // debounce web_state commits
 
 /* ---------- derived ---------- */
 const appliedById = () => Object.fromEntries(S.applied.map(a=>[a.id,a]));
+function isExcluded(id) { return (S.web.excluded||[]).includes(id); }
 function laneOf(id, byId) {
   const a = byId[id];
   if (a) return a.stage || "applied";
@@ -582,6 +591,7 @@ function isOpenRelevant(j) {
 function jobList() {
   const byId = appliedById(); const f = S.filter; const q = norm(f.q);
   let rows = Object.values(S.jobs).filter(isOpenRelevant);
+  if (!f.showExcluded) rows = rows.filter(j=>!isExcluded(j.id));
   rows = rows.filter(j=>byId[j.id] || S.web.maybe.includes(j.id) || S.web.jobs[j.id]
     || !postedTs(j) || Date.now()/1000-postedTs(j) <= 365*86400);
   if (f.alert) rows = rows.filter(j=>j.alert_ok);
@@ -598,9 +608,9 @@ function jobList() {
   if (q) rows = rows.filter(j=>norm(j.company+" "+j.title).includes(q));
   if (f.lane) rows = rows.filter(j=>laneOf(j.id,byId)===f.lane);
   if (f.sort === "new")
-    rows.sort((a,b)=>postedTs(b)-postedTs(a) || (b.score||0)-(a.score||0));
+    rows.sort((a,b)=>(isExcluded(a.id)?1:0)-(isExcluded(b.id)?1:0) || postedTs(b)-postedTs(a) || (b.score||0)-(a.score||0));
   else
-    rows.sort((a,b)=>(b.score||0)-(a.score||0) || postedTs(b)-postedTs(a));
+    rows.sort((a,b)=>(isExcluded(a.id)?1:0)-(isExcluded(b.id)?1:0) || (b.score||0)-(a.score||0) || postedTs(b)-postedTs(a));
   return rows;
 }
 function postedTs(j){ return j.posted_at || j.first_seen || 0; }
@@ -751,6 +761,27 @@ function moderationCard(job) {
 }
 
 /* ---------- actions ---------- */
+const rowActions = new Set();
+function cycleJobSelectionKey(event, job) {
+  if (event.key !== "Enter" && event.key !== " ") return;
+  event.preventDefault(); cycleJobSelection(event, job);
+}
+async function cycleJobSelection(event, job) {
+  if (event?.target?.closest?.("button,a,input,select,textarea,label")) return;
+  if (!job || rowActions.has(job.id)) return;
+  rowActions.add(job.id);
+  try {
+    if (isExcluded(job.id)) {
+      S.web.excluded = S.web.excluded.filter(id => id !== job.id);
+      saveWeb(); render(); toast("Restored to active Jobs"); return;
+    }
+    if (appliedById()[job.id]) {
+      S.web.excluded = [...new Set([...S.web.excluded, job.id])];
+      saveWeb(); render(); toast("Excluded from active Jobs · show excluded to undo"); return;
+    }
+    await actTrack(job);
+  } finally { rowActions.delete(job.id); }
+}
 async function actMaybe(j) {
   const i = S.web.maybe.indexOf(j.id);
   if (S.auth && S.userTracker && trackerBackend() === "google") {
@@ -1027,9 +1058,19 @@ function render() {
 
 function rowHTML(j, byId) {
   const lane = laneOf(j.id, byId);
+  const excluded = isExcluded(j.id);
+  const selected = Boolean(byId[j.id]) && !excluded;
+  const rowState = excluded ? "excluded" : selected ? "selected" : "";
+  const rowLabel = excluded
+    ? `${j.company} — ${j.title}. Excluded from active Jobs. Click to restore.`
+    : selected
+      ? `${j.company} — ${j.title}. Saved. Click again to exclude from active Jobs.`
+      : `${j.company} — ${j.title}. Click to save to To apply.`;
   const mq = S.marquee.has(norm(j.company));
   const c = S.culture[norm(j.company)];
-  return `<div class="job">
+  return `<div class="job ${rowState}" tabindex="0" aria-label="${esc(rowLabel)}"
+      onclick='cycleJobSelection(event,S.jobs["${j.id}"])'
+      onkeydown='cycleJobSelectionKey(event,S.jobs["${j.id}"])'>
     <span class="score ${j.score>=85?'hot':''}">${j.score??"–"}</span>
     <div class="body">
       <span class="co">${esc(j.company)}</span> —
@@ -1041,7 +1082,7 @@ function rowHTML(j, byId) {
     </div>
     ${j.explicit_new_grad?'<span class="chip applied">new grad</span>':""}
     ${mq?'<span class="chip marquee">marquee</span>':""}
-    ${lane?`<span class="chip ${lane}">${lane==="saved"?"to apply":lane}</span>`:""}
+    ${excluded?'<span class="chip excluded">excluded</span>':lane?`<span class="chip ${lane}">${lane==="saved"?"to apply":lane}</span>`:""}
    <div class="acts">
       ${lane ? stageControl(j.id, lane) : ""}
       ${lane && lane!=="maybe" ? "" : `<button class="act" onclick='actMaybe(S.jobs["${j.id}"])'>${lane==="maybe"?"un-maybe":"maybe"}</button>`}
@@ -1053,6 +1094,7 @@ function rowHTML(j, byId) {
 
 function rJobs() {
   const sectors = [...new Set(Object.values(S.jobs).map(j=>j.sector).filter(Boolean))].sort();
+  const excludedCount = Object.values(S.jobs).filter(j=>isExcluded(j.id)).length;
   // toolbar renders once; typing re-renders only #jobsList so the input keeps focus
   $("#main").innerHTML = `${trackerPanelHTML()}
    <div class="filters">
@@ -1098,6 +1140,8 @@ function rJobs() {
       </select>
       <label class="sub" title="Off by default: show all matching roles, including strong dashboard-only matches"><input type="checkbox" ${S.filter.alert?"checked":""}
         onchange="setFilter('alert',this.checked)"> alert-worthy only</label>
+      ${excludedCount?`<label class="sub" title="Excluded rows stay red and can be restored by clicking them"><input type="checkbox" ${S.filter.showExcluded?"checked":""}
+        onchange="setFilter('showExcluded',this.checked)"> show excluded (${excludedCount})</label>`:""}
       <select aria-label="Pipeline status" onchange="setFilter('lane',this.value)">
         <option value="">any status</option>
         <option value="maybe" ${S.filter.lane==="maybe"?"selected":""}>maybe</option>
@@ -1113,6 +1157,7 @@ function rJobs() {
       <button class="act" onclick="clearFilters()">reset filters</button>
     </div>
     </div>
+   ${excludedCount?`<div class="note"><span class="chip excluded">${excludedCount} excluded</span> Hidden from the normal Jobs list; turn on “show excluded” to restore one.</div>`:""}
    ${liSavedSearches()}
     ${!S.backend && !canWrite()?`<div class="note">No token needed: <b>track / applied</b> open a one-click
       prefilled GitHub issue (your GitHub login is the auth — only the repo owner is obeyed).
@@ -1956,6 +2001,7 @@ async function testPAT() {
 window.S = S; window.render = render; window.openWS = openWS; window.closeWS = closeWS;
 window.renderJobsList = renderJobsList; window.renderCosList = renderCosList;
 window.actMaybe = actMaybe; window.actTrack = actTrack; window.actApplied = actApplied;
+window.cycleJobSelection = cycleJobSelection; window.cycleJobSelectionKey = cycleJobSelectionKey;
 window.startApply = startApply; window.jobById = jobById;
 window.setFilter = setFilter; window.clearFilters = clearFilters;
 window.addLink = addLink; window.rmLink = rmLink; window.testPAT = testPAT;

@@ -66,6 +66,10 @@ Before changing the radar, read these in order:
   measures, and one compact plain-English why; the exact rule ledger remains
   available below it. This is presentation-only: score values and weights are
   unchanged.
+- **Row selection:** a Jobs row click saves once and turns green; clicking the
+  saved row again marks it red and hides it from active Jobs. **Show excluded**
+  reveals it for a reversible restore. This state is view-only and does not
+  change score, crawler, tracker history, or notification delivery.
 - **CI hygiene:** the two exact-template Resume Studio tests now skip only on
   GitHub Actions when the intentionally local-only `CV/resume.tex` is absent;
   they continue to run on Victor's Mac where the private CV exists.
