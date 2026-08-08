@@ -95,6 +95,11 @@ def test_internship_gates_keep_target_roles_but_separate_alert_evidence():
     annotate(ordinary_experienced)
     assert ordinary_experienced.internship_eligibility["internship_signal"] == "experienced_title"
 
+    rehydrated_experienced = job(title="Senior Software Engineer")
+    rehydrated_experienced.internship_eligibility = {"internship_signal": "unknown"}
+    annotate(rehydrated_experienced)
+    assert rehydrated_experienced.internship_eligibility["internship_signal"] == "experienced_title"
+
     assert gates(job(title="Senior Software Engineering Intern"))[0] is False
     assert gates(job(locations=["London, United Kingdom"]))[0] is False
 
