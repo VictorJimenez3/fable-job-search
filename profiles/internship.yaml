@@ -1,0 +1,76 @@
+# Friend-facing technical internship lane. This is intentionally separate
+# from Victor's new-grad candidate profile; a viewer's graduation date is a
+# private matching preference, not shared crawler state.
+lane: internship
+
+candidate:
+  level: intern
+  degree: bachelors
+  needs_sponsorship: false
+
+roles:
+  ai_ml: 34
+  data_science: 31
+  swe: 30
+  data_eng: 27
+  pm: 12
+
+sectors:
+  healthtech: 8
+  sports: 8
+  video_games: 8
+  ai_lab: 10
+  big_tech: 9
+  edtech: 7
+  fintech: 6
+  other: 0
+
+bonuses:
+  explicit_internship_title: 30
+  student_eligibility: 12
+  curated_source: 10
+  fresh_24h: 6
+  fresh_72h: 3
+  fresh_7d: 1
+  remote: 2
+
+thresholds:
+  alert: 60
+  dashboard: 35
+  max_posting_age_days: 30
+  pay_bank: 150000
+
+locations:
+  countries: [US]
+  remote_ok: true
+
+# Queries are deliberately bounded and independent from the faster new-grad
+# workflow. Full-board ATS adapters still provide direct coverage where a
+# tenant exposes internship postings without search metadata.
+workday_queries:
+  - internship
+  - intern
+  - co-op
+  - undergraduate
+  - student
+  - summer analyst
+
+aggregator_sources:
+  - simplify_internship
+  - speedyapply_internship
+  - zapply_internship
+  - dreamwork_internship
+
+notion:
+  stage_applied: Applied
+  stage_saved: Waiting for a referral
+  stage_oa: OA
+  stage_interview: Interview
+  stage_rejected: Rejected
+  stage_closed: CLOSED
+  position_map:
+    ai_ml: AI/ML Software Engineer
+    data_science: Data Science
+    data_eng: Data Engineer
+    swe: Software Engineer
+    pm: Software Engineer

@@ -14,24 +14,48 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from .config import STATE_DIR
+from .config import STATE_DIR, profile_id
 
 
-def _path(name: str) -> Path:
-    return STATE_DIR / name
+def _prefix(namespace: str | None = None) -> str:
+    """Keep the legacy new-grad filenames, prefixing only new lanes."""
+    mode = namespace or profile_id()
+    return "intern_" if mode == "internship" else ""
 
 
-def load(name: str, default):
-    p = _path(name)
+def _path(name: str, namespace: str | None = None, *, shared: bool = False) -> Path:
+    return STATE_DIR / (name if shared else f"{_prefix(namespace)}{name}")
+
+
+def load(name: str, default, namespace: str | None = None):
+    p = _path(name, namespace)
     if not p.exists():
         return default
     with open(p) as f:
         return json.load(f)
 
 
-def save(name: str, obj) -> None:
+def save(name: str, obj, namespace: str | None = None) -> None:
     STATE_DIR.mkdir(parents=True, exist_ok=True)
-    p = _path(name)
+    p = _path(name, namespace)
+    tmp = p.with_suffix(".tmp")
+    with open(tmp, "w") as f:
+        json.dump(obj, f, indent=1, sort_keys=True, ensure_ascii=False)
+        f.write("\n")
+    tmp.replace(p)
+
+
+def load_shared(name: str, default):
+    p = _path(name, shared=True)
+    if not p.exists():
+        return default
+    with open(p) as f:
+        return json.load(f)
+
+
+def save_shared(name: str, obj) -> None:
+    STATE_DIR.mkdir(parents=True, exist_ok=True)
+    p = _path(name, shared=True)
     tmp = p.with_suffix(".tmp")
     with open(tmp, "w") as f:
         json.dump(obj, f, indent=1, sort_keys=True, ensure_ascii=False)

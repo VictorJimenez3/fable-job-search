@@ -9,6 +9,10 @@ SOURCE_INFO = {
     "speedyapply": ("SpeedyApply college jobs", "https://github.com/speedyapply/2027-SWE-College-Jobs"),
     "zapply": ("Zapply new-grad data science / ML board", "https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027"),
     "zapply_pm": ("Zapply new-grad jobs PM board", "https://github.com/zapplyjobs/New-Grad-Jobs-2027"),
+    "simplify_internship": ("Simplify internship board", "https://github.com/SimplifyJobs/Summer2027-Internships"),
+    "speedyapply_internship": ("SpeedyApply internship board", "https://github.com/speedyapply/2027-SWE-College-Jobs"),
+    "zapply_internship": ("Zapply internship board", "https://github.com/zapplyjobs/Internships-2027"),
+    "dreamwork_internship": ("Dreamwork tech internship board", "https://github.com/dreamworkhq/Tech-Internships-2027"),
     "hn": ("Hacker News Who Is Hiring", "https://news.ycombinator.com/item?id=40789211"),
 }
 

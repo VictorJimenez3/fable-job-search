@@ -20,6 +20,7 @@ const formattedPersonalTrackers = new Set();
 // internal account keys because the user owns and can open this Sheet.
 const PERSONAL_HEADERS = ["Job Radar ID", "Company", "Stage", "Position", "Apply date",
   "Text", "Job URL", "Location", "Saved At", "Updated At", "Source", "Profile"];
+const PREFERENCE_HEADERS = ["Preference", "Value", "Updated At"];
 const ACCOUNT_HEADERS = ["Account ID", "GitHub ID", "GitHub Login", "Google Subject",
   "Google Email", "Created At", "Updated At", "Merged Into", "Status",
   "Google Token Ciphertext", "Google Sheet ID", "Google Connected At"];
@@ -33,6 +34,10 @@ const personalConfigured = () => Boolean(googleAuthConfigured() && envv("SESSION
 const accountTab = () => envv("GOOGLE_ACCOUNT_SHEET_TAB") || "Accounts";
 const sharedUserTab = () => envv("GOOGLE_USER_SHEET_TAB") || "User Applications";
 const personalTab = () => envv("GOOGLE_PERSONAL_SHEET_TAB") || "Applications";
+const internshipTab = () => "Internships";
+const preferencesTab = () => "Preferences";
+const tabForProfile = profile => String(profile || "new_grad").toLowerCase() === "internship"
+  ? internshipTab() : personalTab();
 const ownerSheetId = () => envv("GOOGLE_SHEET_ID");
 const authHeaders = token => ({ Authorization: `Bearer ${token}`, "Content-Type": "application/json" });
 
@@ -108,9 +113,9 @@ async function appendRange(token, spreadsheetId, sheetTab, range, values) {
 }
 
 async function formatPersonalTracker(token, spreadsheetId, sheets) {
-  const app = sheets.find(sheet => sheet.title === personalTab());
+  const apps = sheets.filter(sheet => [personalTab(), internshipTab()].includes(sheet.title));
   const guide = sheets.find(sheet => sheet.title === "Guide");
-  const requests = [app, guide].filter(Boolean).flatMap(sheet => [
+  const requests = [...apps, guide].filter(Boolean).flatMap(sheet => [
     { repeatCell: { range: { sheetId: sheet.id, startRowIndex: 0, endRowIndex: 1 },
       cell: { userEnteredFormat: { backgroundColor: { red: 0.92, green: 0.92, blue: 0.92 },
         textFormat: { bold: true } } }, fields: "userEnteredFormat(backgroundColor,textFormat)" } },
@@ -119,7 +124,7 @@ async function formatPersonalTracker(token, spreadsheetId, sheets) {
     { autoResizeDimensions: { dimensions: { sheetId: sheet.id, dimension: "COLUMNS", startIndex: 0,
       endIndex: sheet.columns } } },
   ]);
-  if (app) {
+  for (const app of apps) {
     requests.push({ setBasicFilter: { filter: { range: { sheetId: app.id, startRowIndex: 0,
       endRowIndex: 10000, endColumnIndex: PERSONAL_HEADERS.length } } } });
     requests.push({ setDataValidation: { range: { sheetId: app.id, startRowIndex: 1,
@@ -130,6 +135,32 @@ async function formatPersonalTracker(token, spreadsheetId, sheets) {
   const r = await fetch(`${SHEETS_API}/${spreadsheetId}:batchUpdate`, {
     method: "POST", headers: authHeaders(token), body: JSON.stringify({ requests }) });
   if (!r.ok) throw new Error(`Google Sheet format ${r.status}`);
+}
+
+async function ensurePersonalTabs(token, spreadsheetId) {
+  const r = await fetch(`${SHEETS_API}/${encodeURIComponent(spreadsheetId)}?fields=sheets(properties(sheetId,title,gridProperties(columnCount)))`, {
+    headers: {Authorization: `Bearer ${token}`},
+  });
+  if (!r.ok) return;
+  const body = await r.json();
+  const sheets = body.sheets || [];
+  const titles = new Set(sheets.map(sheet => sheet.properties?.title));
+  const missing = [internshipTab(), preferencesTab()].filter(title => !titles.has(title));
+  if (!missing.length) return;
+  const requests = missing.map(title => ({addSheet: {properties: {
+    title, gridProperties: {rowCount: title === preferencesTab() ? 20 : 10000,
+      columnCount: title === preferencesTab() ? PREFERENCE_HEADERS.length : PERSONAL_HEADERS.length},
+  }}}));
+  const created = await fetch(`${SHEETS_API}/${encodeURIComponent(spreadsheetId)}:batchUpdate`, {
+    method: "POST", headers: authHeaders(token), body: JSON.stringify({requests}),
+  });
+  if (!created.ok && created.status !== 400) throw new Error(`Google Sheet tabs ${created.status}`);
+  if (missing.includes(internshipTab())) {
+    await putRange(token, spreadsheetId, internshipTab(), `A1:${columnName(PERSONAL_HEADERS.length)}1`, [PERSONAL_HEADERS]);
+  }
+  if (missing.includes(preferencesTab())) {
+    await putRange(token, spreadsheetId, preferencesTab(), `A1:${columnName(PREFERENCE_HEADERS.length)}1`, [PREFERENCE_HEADERS]);
+  }
 }
 
 async function repairPersonalTrackerFormat(token, spreadsheetId) {
@@ -201,6 +232,8 @@ async function createPersonalTracker(token, label) {
   const r = await fetch(SHEETS_API, { method: "POST", headers: authHeaders(token),
     body: JSON.stringify({ properties: { title }, sheets: [
       { properties: { title: personalTab(), gridProperties: { rowCount: 10000, columnCount: PERSONAL_HEADERS.length } } },
+      { properties: { title: internshipTab(), gridProperties: { rowCount: 10000, columnCount: PERSONAL_HEADERS.length } } },
+      { properties: { title: preferencesTab(), gridProperties: { rowCount: 20, columnCount: PREFERENCE_HEADERS.length } } },
       { properties: { title: "Guide", gridProperties: { rowCount: 20, columnCount: 2 } } },
     ] }) });
   if (!r.ok) throw new Error(`Google Sheet create ${r.status}`);
@@ -208,16 +241,21 @@ async function createPersonalTracker(token, label) {
   const spreadsheetId = created.spreadsheetId;
   const sheets = (created.sheets || []).map(sheet => ({
     id: sheet.properties.sheetId, title: sheet.properties.title,
-    columns: sheet.properties.title === personalTab() ? PERSONAL_HEADERS.length : 2,
+    columns: [personalTab(), internshipTab()].includes(sheet.properties.title)
+      ? PERSONAL_HEADERS.length : sheet.properties.title === preferencesTab() ? PREFERENCE_HEADERS.length : 2,
   }));
   await putRange(token, spreadsheetId, personalTab(), `A1:${columnName(PERSONAL_HEADERS.length)}1`, [PERSONAL_HEADERS]);
-  await putRange(token, spreadsheetId, "Guide", "A1:B7", [
+  await putRange(token, spreadsheetId, internshipTab(), `A1:${columnName(PERSONAL_HEADERS.length)}1`, [PERSONAL_HEADERS]);
+  await putRange(token, spreadsheetId, preferencesTab(), `A1:${columnName(PREFERENCE_HEADERS.length)}1`, [PREFERENCE_HEADERS]);
+  await putRange(token, spreadsheetId, "Guide", "A1:B9", [
     ["Job Radar personal tracker", "How it works"],
-    ["Applications", "Your private application funnel; edits here are readable by the app."],
+    ["Applications", "Your private new-grad application funnel."],
+    ["Internships", "Your separate private internship funnel."],
     ["Stage", "saved → applied → oa → interview → rejected/closed."],
     ["Job Radar ID", "Stable ID used to update a row instead of duplicating it."],
     ["Apply date", "Filled when you mark a role applied; safe to edit manually."],
     ["Text", "Short role context carried from the radar; add personal notes if useful."],
+    ["Expected graduation", "Set in Preferences to match freshman/sophomore/junior/senior eligibility."],
     ["Privacy", "This workbook is created in your Google Drive and is not shared with other users."],
   ]);
   await formatPersonalTracker(token, spreadsheetId, sheets);
@@ -236,7 +274,10 @@ async function ensurePersonalTracker(identity, oauth, currentPersonal = null) {
   if (!spreadsheetId) spreadsheetId = await findPersonalTracker(token, identity.email);
   const created = !spreadsheetId;
   if (created) spreadsheetId = await createPersonalTracker(token, identity.email);
-  if (!created) await repairPersonalTrackerFormat(token, spreadsheetId);
+  if (!created) {
+    await ensurePersonalTabs(token, spreadsheetId);
+    await repairPersonalTrackerFormat(token, spreadsheetId);
+  }
   return {created, personal: {r: refreshToken, s: spreadsheetId,
     e: clean(identity.email, 320).toLowerCase(), sub: String(identity.sub || "")}};
 }
@@ -551,7 +592,13 @@ async function trackerContext(accountKeys) {
   return {ownerToken, data, account: accountForKeys(data, accountKeys)};
 }
 
-async function userTracker(accountKeys, personal = null) {
+function preferenceValue(rows, name) {
+  const columns = columnMap(rows[0] || PREFERENCE_HEADERS);
+  const row = rows.slice(1).find(item => at(item, columns, "preference") === name);
+  return row ? at(row, columns, "value") : "";
+}
+
+async function userTracker(accountKeys, personal = null, profile = "new_grad") {
   let token;
   let spreadsheetId;
   let googleEmail;
@@ -569,14 +616,26 @@ async function userTracker(accountKeys, personal = null) {
     spreadsheetId = account.googleSheetId;
     googleEmail = account.googleEmail;
   }
+  await ensurePersonalTabs(token, spreadsheetId);
   await repairPersonalTrackerFormat(token, spreadsheetId);
-  const rows = await readTab(token, spreadsheetId, personalTab(), `A:${columnName(PERSONAL_HEADERS.length)}`);
+  const tab = tabForProfile(profile);
+  const rows = await readTab(token, spreadsheetId, tab, `A:${columnName(PERSONAL_HEADERS.length)}`);
+  let preferences = [];
+  try { preferences = await readTab(token, spreadsheetId, preferencesTab(), `A:${columnName(PREFERENCE_HEADERS.length)}`); } catch {}
+  const expectedGraduation = preferenceValue(preferences, "expected_graduation");
   if (!rows.length) return {configured: true, connected: true, needs_google: false,
-    google_email: googleEmail, sheet_url: sheetUrl(spreadsheetId), entries: [], maybe: []};
+    google_email: googleEmail, sheet_url: sheetUrl(spreadsheetId), profile,
+    expected_graduation: expectedGraduation, entries: [], maybe: []};
   const columns = columnMap(rows[0]);
-  const mine = rows.slice(1).filter(row => at(row, columns, "job radar id") && VALID_STAGES.has(stageOf(row, columns)));
+  const lane = String(profile || "new_grad").toLowerCase() === "internship" ? "internship" : "new_grad";
+  const mine = rows.slice(1).filter(row => {
+    const rowProfile = at(row, columns, "profile").toLowerCase();
+    const sameLane = lane === "internship" ? rowProfile === "internship" || tab === internshipTab()
+      : !rowProfile || rowProfile === "new_grad" || rowProfile === "default";
+    return at(row, columns, "job radar id") && VALID_STAGES.has(stageOf(row, columns)) && sameLane;
+  });
   return {configured: true, connected: true, needs_google: false, google_email: googleEmail,
-    sheet_url: sheetUrl(spreadsheetId),
+    sheet_url: sheetUrl(spreadsheetId), profile, expected_graduation: expectedGraduation,
     entries: mine.filter(row => !["maybe", "archived"].includes(stageOf(row, columns))).map(row => entryFromRow(row, columns)),
     maybe: mine.filter(row => stageOf(row, columns) === "maybe").map(row => at(row, columns, "job radar id"))};
 }
@@ -589,17 +648,22 @@ function rowValues(payload, existing = {}) {
   return [clean(payload.id, 100), clean(payload.company, 200), stage, clean(payload.title, 300),
     stage === "applied" ? (existing.applyDate || now) : (existing.applyDate || ""), clean(payload.text, 500),
     clean(payload.url, 1900), clean(payload.location, 200), existing.savedAt || now, now,
-    clean(payload.source, 100), clean(payload.profile, 50)];
+    clean(payload.source, 100), clean(payload.profile || "new_grad", 50)];
 }
 
 async function updateUserTracker(login, accountKeys, payload, personal = null) {
   const action = payload.action;
-  if (!["track", "applied", "maybe", "stage", "untrack"].includes(action)) throw new Error("unsupported tracker action");
+  if (!["track", "applied", "maybe", "stage", "untrack", "preferences"].includes(action)) throw new Error("unsupported tracker action");
+  const profile = String(payload.profile || "new_grad").toLowerCase() === "internship" ? "internship" : "new_grad";
+  if (action === "preferences") {
+    const value = clean(payload.expected_graduation, 20);
+    if (value && !/^20\d{2}-(0[1-9]|1[0-2])$/.test(value)) throw new Error("expected graduation must be YYYY-MM");
+  }
   if (action === "stage" && !VALID_STAGES.has(clean(payload.stage, 20).toLowerCase())) {
     throw new Error("unsupported application stage");
   }
   const id = clean(payload.id, 100);
-  if (!id) throw new Error("missing job id");
+  if (action !== "preferences" && !id) throw new Error("missing job id");
   let token;
   let spreadsheetId;
   if (hasPersonalSession(personal)) {
@@ -614,20 +678,37 @@ async function updateUserTracker(login, accountKeys, payload, personal = null) {
     token = await personalAccessToken(account);
     spreadsheetId = account.googleSheetId;
   }
-  const rows = await readTab(token, spreadsheetId, personalTab(), `A:${columnName(PERSONAL_HEADERS.length)}`);
-  const headers = rows[0]?.length ? rows[0] : PERSONAL_HEADERS;
-  const columns = columnMap(headers);
-  const jobColumn = columns["job radar id"];
-  const rowIndex = rows.slice(1).findIndex(row => String(row[jobColumn] || "") === id);
-  const rowNumber = rowIndex + 2;
-  const existingRow = rowNumber > 1 ? rows[rowNumber - 1] : [];
-  const existing = {savedAt: at(existingRow, columns, "saved at"), applyDate: at(existingRow, columns, "apply date")};
-  const values = rowValues(payload, existing);
-  if (rowNumber > 1) await putRange(token, spreadsheetId, personalTab(),
-    `A${rowNumber}:${columnName(PERSONAL_HEADERS.length)}${rowNumber}`, [values]);
-  else await appendRange(token, spreadsheetId, personalTab(), `A:${columnName(PERSONAL_HEADERS.length)}`, [values]);
-  return {ok: true, stage: values[2], sheet_url: sheetUrl(spreadsheetId)};
+  await ensurePersonalTabs(token, spreadsheetId);
+  if (action === "preferences") {
+    const rows = await readTab(token, spreadsheetId, preferencesTab(), `A:${columnName(PREFERENCE_HEADERS.length)}`);
+    const headers = rows[0]?.length ? rows[0] : PREFERENCE_HEADERS;
+    const columns = columnMap(headers);
+    const rowIndex = rows.slice(1).findIndex(row => at(row, columns, "preference") === "expected_graduation");
+    const values = ["expected_graduation", clean(payload.expected_graduation, 20), isoNow()];
+    if (rowIndex >= 0) {
+      const rowNumber = rowIndex + 2;
+      await putRange(token, spreadsheetId, preferencesTab(),
+        `A${rowNumber}:${columnName(PREFERENCE_HEADERS.length)}${rowNumber}`, [values]);
+    } else {
+      await appendRange(token, spreadsheetId, preferencesTab(), `A:${columnName(PREFERENCE_HEADERS.length)}`, [values]);
+    }
+    return {ok: true, profile, expected_graduation: values[1], sheet_url: sheetUrl(spreadsheetId)};
+  }
+  const tab = tabForProfile(profile);
+  const laneRows = await readTab(token, spreadsheetId, tab, `A:${columnName(PERSONAL_HEADERS.length)}`);
+  const laneHeaders = laneRows[0]?.length ? laneRows[0] : PERSONAL_HEADERS;
+  const laneColumns = columnMap(laneHeaders);
+  const laneRowIndex = laneRows.slice(1).findIndex(row => String(row[laneColumns["job radar id"]] || "") === id);
+  const laneRowNumber = laneRowIndex + 2;
+  const laneExistingRow = laneRowNumber > 1 ? laneRows[laneRowNumber - 1] : [];
+  const laneExisting = {savedAt: at(laneExistingRow, laneColumns, "saved at"), applyDate: at(laneExistingRow, laneColumns, "apply date")};
+  const laneValues = rowValues(payload, laneExisting);
+  if (laneRowNumber > 1) await putRange(token, spreadsheetId, tab,
+    `A${laneRowNumber}:${columnName(PERSONAL_HEADERS.length)}${laneRowNumber}`, [laneValues]);
+  else await appendRange(token, spreadsheetId, tab, `A:${columnName(PERSONAL_HEADERS.length)}`, [laneValues]);
+  return {ok: true, stage: laneValues[2], profile, sheet_url: sheetUrl(spreadsheetId)};
 }
 
 module.exports = { configured, personalConfigured, hasPersonalSession, userTracker,
-  updateUserTracker, resolveAccount, PERSONAL_HEADERS, ACCOUNT_HEADERS };
+  updateUserTracker, resolveAccount, PERSONAL_HEADERS, ACCOUNT_HEADERS, PREFERENCE_HEADERS,
+  tabForProfile, internshipTab, preferencesTab };

@@ -6,7 +6,7 @@ import time
 from datetime import datetime, timezone
 from xml.sax.saxutils import escape
 
-from .config import DOCS_DIR, github_repo, profile
+from .config import DOCS_DIR, github_repo, profile, profile_id
 from .provenance import info
 
 
@@ -44,7 +44,7 @@ def render_dashboard(jobs: dict, registry: dict, runs: list) -> str:
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     lines = [
-        "# 🎯 Job Radar — live dashboard",
+        f"# 🎯 Job Radar — {'internship' if profile_id() == 'internship' else 'new-grad'} dashboard",
         "",
         f"_Last run: **{ts}** · companies polled directly: **{active}** "
         f"(registry {len(registry)}) · jobs tracked: **{len(jobs)}** · "
@@ -88,9 +88,9 @@ def render_rss(alert_history: list) -> str:
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<rss version="2.0"><channel>'
-        f"<title>Job Radar — new grad alerts</title>"
+        f"<title>Job Radar — {'internship' if profile_id() == 'internship' else 'new grad'} alerts</title>"
         f"<link>https://github.com/{repo}</link>"
-        f"<description>High-scoring new-grad AI/SWE/DS roles, minutes after posting.</description>"
+        f"<description>High-scoring {'internship' if profile_id() == 'internship' else 'new-grad AI/SWE/DS'} roles.</description>"
         + "".join(items) + "</channel></rss>\n")
 
 

@@ -35,6 +35,12 @@ none block anything currently running.
    crawls. Other GitHub users can report stale postings through issues, with
    distinct-login deduplication and a three-reporter owner review threshold;
    automatic deletion remains deliberately deferred until scale warrants it.
+6. **Technical internship lane — ✅ SHIPPED 2026-08-08 (DECISION #104).** The
+   main platform now switches between isolated new-grad and internship lanes.
+   Internship sources, ATS queries, scoring/gates, graduation-aware
+   freshman/sophomore/junior/senior matching, state, dashboards, GitHub
+   surfaces, and Google tracker tabs are separate. New-grad remains the
+   priority compute path; internship email batches are opt-in.
 
 ## Deliberately deferred by Victor
 
