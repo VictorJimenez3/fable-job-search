@@ -968,7 +968,8 @@ function rowHTML(j, byId) {
     ${j.explicit_new_grad?'<span class="chip applied">new grad</span>':""}
     ${mq?'<span class="chip marquee">marquee</span>':""}
     ${lane?`<span class="chip ${lane}">${lane==="saved"?"to apply":lane}</span>`:""}
-    <div class="acts">
+   <div class="acts">
+      ${lane ? stageControl(j.id, lane) : ""}
       ${lane && lane!=="maybe" ? "" : `<button class="act" onclick='actMaybe(S.jobs["${j.id}"])'>${lane==="maybe"?"un-maybe":"maybe"}</button>`}
       ${lane ? `<button class="act" onclick='actUntrack(S.jobs["${j.id}"])'>remove</button>` : `<button class="act" onclick='actTrack(S.jobs["${j.id}"])'>save</button>`}
       <button class="act primary" onclick='startApply(S.jobs["${j.id}"])'>apply ↗</button>
