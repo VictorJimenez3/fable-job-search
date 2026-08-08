@@ -43,6 +43,9 @@ def test_platform_exposes_private_google_tracker_path_for_authenticated_users():
     assert "trackerPanelHTML" in html
     assert "trackerActionButton" in html
     assert "Open Google Sheet" in html
+    assert "Notion is your default tracker" in html
+    assert "optional mirror" in html
+    assert 'jr_tracker_backend' in html
     assert "tracker-quick" in html
     assert "separate from other users" in html
     assert "setPipelineStage" in html

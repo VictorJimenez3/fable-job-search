@@ -203,10 +203,13 @@ Before changing the radar, read these in order:
   secrets only in GitHub Actions. The UI is asynchronous (normally 1–3 minutes
   for the first result, then warmed drawers) and is not available to visitors,
   Pages/PAT write paths, or non-owner OAuth sessions.
-- **Tracker selection/readback (DECISIONS #40):** Notion now pulls manual stage
-  changes by owned page ID. `TRACKER_BACKEND=google_sheets` selects the
-  OAuth-refresh-token Sheets adapter (stable ID upsert + stage readback); setup
-  is [`GOOGLE_SHEETS_SETUP.md`](GOOGLE_SHEETS_SETUP.md). Default stays Notion.
+- **Tracker selection/readback (DECISIONS #40, #92):** Notion now pulls manual
+  stage changes by owned page ID. `TRACKER_BACKEND=google_sheets` remains the
+  server-side Sheets adapter, while the Vercel owner UI explicitly defaults to
+  Notion for `VictorJimenez3`. The expanded owner Tracker options can enable a
+  connected Google Sheet as an optional personal mirror; other signed-in users
+  still use their own Google tracker. Setup is
+  [`GOOGLE_SHEETS_SETUP.md`](GOOGLE_SHEETS_SETUP.md).
 - **Google tracker creation + multi-user sign-in:**
   `python -m radar.main create-google-tracker` creates the owner metadata and
   legacy automation workbook. The Vercel platform offers GitHub and Google

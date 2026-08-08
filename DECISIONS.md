@@ -1419,3 +1419,15 @@ email. To make the direct-company layer improve over time, official ATS links
 from PM-source rows mark their registry entry as `pm_interest`; those entries
 are prioritized for probing and for the active-company polling cap. This is a
 bounded recall improvement rather than a new ranking signal.
+
+## 92. Victor's owner tracker is Notion-first with an explicit Sheets mirror (2026-08-08)
+
+The repository owner's GitHub workflow already treats the shared Notion
+Applications database as the durable primary record. The Vercel UI also
+exposes a per-account Google Sheet after OAuth, but merely having that grant
+must not silently change where Victor's actions go. The owner surface now
+states **Notion is your default tracker** and keeps Google Sheets behind an
+expanded Tracker options control. Victor may enable the Sheet as an explicit
+personal mirror; non-owner accounts continue to use their own private Google
+tracker. This preserves the existing Notion history while keeping the Google
+integration available without forcing it.

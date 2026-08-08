@@ -107,8 +107,11 @@ every ~30 min (GitHub Actions cron)
 
 1. **Check a box on an alert issue or the master board to track a job.** It
    appears in the in-house Pipeline immediately with the not-yet-applied status
-   and is mirrored to your selected external tracker (Notion by default;
-   Google Sheets is available as a per-user Vercel tracker)
+   and is mirrored to your selected external tracker. For Victor's
+   `VictorJimenez3` account, Notion is the default primary tracker; Google
+   Sheets is an optional personal mirror under the expanded Tracker options.
+   Other Vercel users can use their own Google-backed tracker without touching
+   the repository owner's Notion pipeline.
    (`stage_saved` in profile.yaml, default "Not started") and improves future
    ranking.
 2. **When you apply, the inbox becomes the source of truth.** The email-based

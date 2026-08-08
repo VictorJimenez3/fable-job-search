@@ -154,6 +154,13 @@
   .tracker-copy .sub { font-size:.74rem; }
   .tracker-quick { display:inline-flex; align-items:center; gap:.28rem; white-space:nowrap; }
   .tracker-banner .acts { flex-wrap:wrap; }
+  .tracker-options { width:100%; border-top:1px solid var(--line); margin-top:.35rem; padding-top:.45rem; }
+  .tracker-options summary { cursor:pointer; color:var(--accent-ink); font:600 .7rem ui-monospace,Menlo,monospace;
+                             letter-spacing:.03em; }
+  .tracker-choice { display:flex; flex-wrap:wrap; gap:.55rem; margin:.45rem 0; }
+  .tracker-choice label { display:inline-flex; align-items:center; gap:.3rem; font-size:.76rem; cursor:pointer; }
+  .tracker-choice input { accent-color:var(--accent); }
+  .tracker-choice small { color:var(--muted); font-size:.68rem; }
   .stage-control { display:inline-flex; align-items:center; gap:.3rem; color:var(--muted);
                    font:600 .64rem ui-monospace,Menlo,monospace; text-transform:uppercase; }
   .stage-control select { min-width:7.2rem; padding:.2rem .35rem; font-size:.68rem; text-transform:none; }
@@ -311,6 +318,26 @@ const S = {           // app state
 };
 const norm = s => (s||"").toLowerCase().replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();
 const token = () => localStorage.getItem("jr_pat") || "";
+function trackerBackend() {
+  // Victor's repository workflow is Notion-first. Google Sheets is an
+  // explicit, optional personal mirror; it must never become the default just
+  // because a Google grant happens to be present in the session.
+  if (S.auth?.owner) {
+    try { return localStorage.getItem("jr_tracker_backend") === "google" && S.userTracker ? "google" : "notion"; }
+    catch { return "notion"; }
+  }
+  return S.userTracker ? "google" : "notion";
+}
+function trackerLabel() { return trackerBackend() === "google" ? "Google Sheets" : "Notion"; }
+function setTrackerBackend(choice) {
+  if (!S.auth?.owner) return;
+  const next = choice === "google" && S.userTracker ? "google" : "notion";
+  try { localStorage.setItem("jr_tracker_backend", next); } catch {}
+  toast(next === "google"
+    ? "Google Sheets mirror enabled; Notion remains your primary record"
+    : "Notion is your default tracker");
+  render();
+}
 const $ = sel => document.querySelector(sel);
 const esc = s => (s??"").toString().replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const toast = m => { const t=document.createElement("div"); t.className="toast"; t.textContent=m;
@@ -716,7 +743,7 @@ function moderationCard(job) {
 /* ---------- actions ---------- */
 async function actMaybe(j) {
   const i = S.web.maybe.indexOf(j.id);
-  if (S.auth && S.userTracker) {
+  if (S.auth && S.userTracker && trackerBackend() === "google") {
     try { if (!await doWrite(i>=0 ? "untrack" : "maybe", j)) return; }
     catch(e) { toast("Tracker update failed: "+e.message.slice(0,90)); return; }
   }
@@ -724,7 +751,7 @@ async function actMaybe(j) {
   saveWeb(); render();
 }
 async function actUntrack(j) {
-  if (!j || !confirm(`Remove this job from ${S.userTracker?"your Google tracker":"the in-house tracker"}?`)) return false;
+  if (!j || !confirm(`Remove this job from ${trackerLabel()}?`)) return false;
   try { if (await doWrite("untrack", j)) {
     S.applied = S.applied.filter(a=>a.id!==j.id);
     S.web.maybe = S.web.maybe.filter(x=>x!==j.id); saveWeb();
@@ -774,10 +801,11 @@ async function requestCompanyResearch(j) {
   } catch(e) { toast("Research request failed: "+e.message.slice(0,100)); }
 }
 async function doWrite(action, job) {   // best available write path
+  const googleMirror = S.userTracker && trackerBackend() === "google";
   if (S.auth && S.auth.owner) {
-    if (action === "maybe") return S.userTracker ? trackerAction(action, job) : true;
+    if (action === "maybe") return googleMirror ? trackerAction(action, job) : true;
     const result = await apiAction(action, job);
-    if (S.userTracker) {
+    if (googleMirror) {
       try { await trackerAction(action, job); }
       catch (error) { toast(`Repository saved; personal Sheet sync failed: ${error.message.slice(0,80)}`); }
     }
@@ -799,7 +827,9 @@ async function actTrack(j, quiet=false) {
   try { if (await doWrite("track", j)) {
     S.applied.push({id:j.id, company:j.company, title:j.title, url:j.url, stage:"saved", via:"platform"});
     S.web.maybe = S.web.maybe.filter(x=>x!==j.id); saveWeb();
-    if (!quiet) toast(S.userTracker ? "Saved to your Google tracker" : "Saved to To apply → Notion syncs in ~1 min"); render(); return true; } }
+    if (!quiet) toast(trackerBackend() === "google"
+      ? "Saved to To apply + your Google Sheets mirror"
+      : "Saved to To apply → Notion syncs in ~1 min"); render(); return true; } }
   catch(e){ toast("Failed: "+e.message.slice(0,90)); }
   return false;
 }
@@ -814,7 +844,9 @@ async function actApplied(j) {
     if (a) a.stage = "applied";
     else S.applied.push({id:j.id, company:j.company, title:j.title, url:j.url, stage:"applied", via:"platform"});
     S.web.maybe = S.web.maybe.filter(x=>x!==j.id); saveWeb();
-    toast(S.userTracker ? "Marked applied in your Google tracker" : "Marked applied → Notion status updates in ~1 min"); render(); return true; } }
+    toast(trackerBackend() === "google"
+      ? "Marked applied + mirrored to Google Sheets"
+      : "Marked applied → Notion status updates in ~1 min"); render(); return true; } }
   catch(e){ toast("Failed: "+e.message.slice(0,90)); }
   return false;
 }
@@ -856,12 +888,43 @@ function trackerOpenButton(label = "Open Google Sheet") {
   return url ? `<a class="act primary tracker-quick" aria-label="${esc(label)}" href="${esc(url)}" target="_blank" rel="noopener">📊 ${esc(label)} ↗</a>` : "";
 }
 function trackerActionButton(label = "Connect Google") {
+  if (S.auth?.owner) {
+    if (trackerBackend() === "google" && S.userTracker && S.trackerMeta?.sheet_url) {
+      return trackerOpenButton("Open Google Sheet");
+    }
+    return `<button class="act tracker-quick" onclick="openTutorial(&quot;accounts&quot;)">▦ ${esc(label || "Notion tracker · options")}</button>`;
+  }
   return S.userTracker && S.trackerMeta?.sheet_url
     ? trackerOpenButton(label)
     : `<button class="act tracker-quick" onclick="openTutorial(&quot;accounts&quot;)">📊 ${esc(label)}</button>`;
 }
+function ownerTrackerOptionsHTML() {
+  if (!S.auth?.owner) return "";
+  const connected = Boolean(S.userTracker && S.trackerMeta?.sheet_url);
+  const active = trackerBackend();
+  return `<details class="tracker-options">
+    <summary>Tracker options</summary>
+    <div class="tracker-choice" role="group" aria-label="Owner tracker options">
+      <label><input type="radio" name="ownerTracker" ${active === "notion" ? "checked" : ""} onchange="setTrackerBackend('notion')"> Notion <small>default</small></label>
+      <label><input type="radio" name="ownerTracker" ${active === "google" ? "checked" : ""} ${connected ? "" : "disabled"} onchange="setTrackerBackend('google')"> Google Sheets <small>optional mirror</small></label>
+    </div>
+    ${connected
+      ? `<div class="acts" style="margin-top:.3rem">${trackerOpenButton("Open optional Google Sheet")}</div>`
+      : `<div class="sub">Google Sheets is not connected. <button class="act" onclick="openTutorial('accounts')">Connect Google</button> to make it available here.</div>`}
+    <div class="sub" style="margin-top:.35rem">Notion remains the primary owner record; the optional Sheet mirrors future platform actions.</div>
+  </details>`;
+}
 function trackerPanelHTML() {
   if (!S.backend || !S.auth) return "";
+  if (S.auth.owner) {
+    const mirror = trackerBackend() === "google" && S.userTracker;
+    return `<div class="tracker-banner ${mirror ? "connected" : ""}">
+      <div class="tracker-copy"><b>${mirror ? "Notion primary · Google Sheets mirror on" : "Notion is your default tracker"}</b>
+        <span class="sub">Saved, applied, and stage changes use your Notion Applications database${mirror ? "; the optional Sheet is mirrored too" : "."}</span></div>
+      <div class="acts"><button class="act tracker-quick" onclick="openTutorial('accounts')">▦ Tracker options</button></div>
+      ${ownerTrackerOptionsHTML()}
+    </div>`;
+  }
   const connected = Boolean(S.userTracker && S.trackerMeta?.sheet_url);
   return `<div class="tracker-banner ${connected?'connected':''}">
     <div class="tracker-copy"><b>${connected?'Your private Google tracker is connected':'Keep your application funnel in your own Google Sheet'}</b>
@@ -878,12 +941,13 @@ function accountTutorialHTML() {
   const providers = S.auth.providers || {};
   return `<div class="tut-kicker">Account center</div><h2>Your sign-in</h2>
     <p class="sub">Signed in as <b>${esc(S.auth.login)}</b>. Add the second provider from this signed-in session so both point to one account.</p>
+    ${S.auth.owner ? '<div class="tut-note"><b>Notion is your default tracker.</b> Google Sheets is an optional personal mirror you can enable from the expanded tracker options below.</div>' : ''}
     <div class="identity-list">
       <div class="identity-row"><span>GitHub</span><span class="state">${providers.github?'connected':'not connected'}</span></div>
       <div class="identity-row"><span>Google</span><span class="state">${providers.google?'connected':'not connected'}</span></div>
     </div>
     <div class="provider-row">${providers.github?'':connectButton('github','Connect GitHub')}${(!providers.google || !S.trackerMeta?.connected)?connectButton('google',providers.google?'Authorize Google Sheets':'Connect Google + create my Sheet'):''}</div>
-    ${S.userTracker && S.trackerMeta?.sheet_url ? `<div class="tut-note"><b>Your personal tracker:</b> ${S.trackerMeta.google_email?`${esc(S.trackerMeta.google_email)} · `:""}<div class="acts" style="margin-top:.45rem">${trackerOpenButton()}</div></div>` : providers.google ? '<div class="tut-note">Google identity is connected, but Sheets permission is not. Choose <b>Authorize Google Sheets</b> above to create your personal workbook.</div>' : '<div class="tut-note">Connect Google to create a private Sheet in your own Google Drive. GitHub-only accounts do not receive Google storage access.</div>'}
+    ${S.auth.owner ? ownerTrackerOptionsHTML() : S.userTracker && S.trackerMeta?.sheet_url ? `<div class="tut-note"><b>Your personal tracker:</b> ${S.trackerMeta.google_email?`${esc(S.trackerMeta.google_email)} · `:""}<div class="acts" style="margin-top:.45rem">${trackerOpenButton()}</div></div>` : providers.google ? '<div class="tut-note">Google identity is connected, but Sheets permission is not. Choose <b>Authorize Google Sheets</b> above to create your personal workbook.</div>' : '<div class="tut-note">Connect Google to create a private Sheet in your own Google Drive. GitHub-only accounts do not receive Google storage access.</div>'}
     <div class="tut-card"><h4>One account rule</h4><p>Provider identities are unique. If an identity was already connected elsewhere, the app refuses a silent merge and asks you to prove control of both sides through OAuth.</p></div>
     <p style="margin-top:1rem"><a class="act" href="/api/logout">Sign out</a></p>`;
 }
@@ -935,7 +999,7 @@ function render() {
   $("#nav").innerHTML = tabs.map(([k,l]) =>
     `<button class="${S.tab===k?'on':''}" onclick="S.tab='${k}';render()">${l}</button>`).join("") +
     `<button onclick="window.open('https://github.com/${REPO}/issues','_blank')">Issues ↗</button>` +
-    (S.backend && S.auth ? trackerActionButton(S.userTracker?"Google Sheet":"Connect Google") : "") +
+    (S.backend && S.auth ? trackerActionButton(S.auth.owner ? "Notion tracker · options" : S.userTracker?"Google Sheet":"Connect Google") : "") +
     (S.backend ? (S.auth
       ? `<button class="on" onclick="openTutorial('accounts')" title="account settings">@${esc(S.auth.login)}${S.auth.owner?"":S.userTracker?" · personal tracker":" · account"}</button>`
       : `<button class="on" onclick="openTutorial('accounts')">Sign in / create account</button>`) : "");

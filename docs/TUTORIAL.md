@@ -10,8 +10,9 @@ new-grad aggregators, scores each posting against your preferences
 (profile.yaml), and delivers each new high-scoring posting as its own assigned
 GitHub issue that pushes to your phone. A separate unassigned master board keeps
 everything together. Checking a box puts the job in the in-house Pipeline and
-mirrors it to your selected tracker (Notion by default; Google Sheets optional).
-On the Vercel platform, each user can connect Google to create a private
+mirrors it to your selected tracker. For Victor's `VictorJimenez3` account,
+Notion is the default primary tracker; Google Sheets is an optional personal
+mirror in the expanded Tracker options. On the Vercel platform, each user can connect Google to create a private
 Google-backed tracker in their own Drive without touching the repository owner's pipeline. GitHub-only users can connect Google later. Your MacBook
 handles local bulk AI when awake, while a tightly budgeted NVIDIA cloud pass
 handles time-sensitive enrichment nightly. The repo itself is the database.
@@ -189,7 +190,9 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
    > ☐ 🔥 **Tempus** — [ML Engineer, New Grad](…) · Chicago, IL · `88` · **health technology** — precision-medicine data platform
 3. Interested? **Tap the checkbox.** Within a minute a GitHub Action fires and
    the job appears in your Notion Applications database with status
-   **Not started**. (It also teaches the ranker you like companies like this.)
+   **Not started**. Victor can expand **Tracker options** to enable a Google
+   Sheets mirror; it is never enabled merely because Google is connected.
+   (The action also teaches the ranker you like companies like this.)
 4. When you actually apply, open the entry in Notion and **change its status
    yourself** (Applied, etc.). The radar never guesses whether you applied.
    For a live posting you find outside the radar, open the platform's
