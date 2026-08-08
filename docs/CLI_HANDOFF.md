@@ -29,11 +29,12 @@ Before changing the radar, read these in order:
   implementation behavior.
 - Add or update tests for scoring gates, source parsing, state migration, or
   output behavior that changes.
-- Do not hand-edit generated runtime outputs (`state/*.json`,
-  `docs/DASHBOARD.md`, or `docs/feed.xml`) except for a deliberate repair with
+- Do not hand-edit generated runtime outputs (`state/*.json`, including the
+  internship `state/intern_*.json` namespace, `docs/DASHBOARD.md`,
+  `docs/feed.xml`, or `docs/internships/`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
-## Current operational facts (verified 2026-07-18)
+## Current operational facts (verified 2026-08-08)
 
 ### Latest change (verified 2026-08-08)
 
@@ -56,6 +57,17 @@ Before changing the radar, read these in order:
   same PM-family query fan-out; Amazon drops its technical category restriction
   only for those PM queries. This preserves recall where PM evidence is
   strongest without pushing the full crawl past its time budget.
+- **Technical internship lane (DECISION #104):** the main platform now has a
+  visible New-grad / Internships switch. Internship state is namespaced as
+  `state/intern_*.json`; the lane reads curated Simplify, SpeedyApply, Zapply,
+  and Dreamwork GitHub feeds plus internship-specific ATS searches. Its
+  two-hour crawl, alert delivery, master board, checkbox reconcile, and
+  `docs/internships/` outputs are separate and lower-budget so new-grad
+  compute remains first. A viewer's expected graduation month is stored only
+  in the private Google Preferences tab/local browser and drives deterministic
+  freshman/sophomore/junior/senior matching. Internship email batches default
+  off; new-grad batches default on; both are owner toggles and neither uses
+  Gmail scope.
 - **Google preference:** `profile.yaml` contains a data-driven score override
   that makes Google technical new-grad roles `100`, with `pm` explicitly
   excluded. The reason is printed in `score_reasons`; rules version is now 12.
@@ -260,7 +272,8 @@ Before changing the radar, read these in order:
   `python -m radar.main create-google-tracker` creates the owner metadata and
   legacy automation workbook. The Vercel platform offers GitHub and Google
   OAuth; Google consent requests the least-privilege `drive.file` scope and
-  creates one Applications workbook in that user's own Drive. The Google Cloud
+  creates one workbook in that user's own Drive with separate Applications,
+  Internships, and Preferences tabs. The Google Cloud
   OAuth app must be External + In production; a test-user list is not the public
   deployment path. GitHub users can explicitly connect Google later from the
   Tutorial account center. The private Accounts registry stores only encrypted
@@ -270,7 +283,8 @@ Before changing the radar, read these in order:
   discovery reconnects the same workbook after reauthentication.
   `/api/tracker` reads only the current user's workbook. `GOOGLE_ACCOUNT_SHEET_TAB` remains
   `Accounts`; `GOOGLE_PERSONAL_SHEET_TAB` defaults to `Applications`. Pages and
-  tokenless issue mode remain owner-only.
+  tokenless issue mode remain owner-only. The OAuth grant is Drive-only, not
+  Gmail.
 - **Multi-user = fork-per-person** (DECISIONS #25, docs/FORKING.md). Owner
   gates exist in three layers: workflow condition, Python handler, Vercel
   backend. The Mac companion is fork-portable too: `JOBRADAR_REPO=<you>/<repo>`

@@ -24,6 +24,10 @@ JOBRIGHT_PM_URL = (
 SPEEDY_URL = "https://raw.githubusercontent.com/speedyapply/2027-SWE-College-Jobs/main/NEW_GRAD_USA.md"
 ZAPPLY_URL = "https://raw.githubusercontent.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027/main/README.md"
 ZAPPLY_PM_URL = "https://raw.githubusercontent.com/zapplyjobs/New-Grad-Jobs-2027/main/README.md"
+SIMPLIFY_INTERNSHIP_URL = "https://raw.githubusercontent.com/SimplifyJobs/Summer2027-Internships/dev/.github/scripts/listings.json"
+SPEEDY_INTERNSHIP_URL = "https://raw.githubusercontent.com/speedyapply/2027-SWE-College-Jobs/main/README.md"
+ZAPPLY_INTERNSHIP_URL = "https://raw.githubusercontent.com/zapplyjobs/Internships-2027/main/README.md"
+DREAMWORK_INTERNSHIP_URL = "https://raw.githubusercontent.com/dreamworkhq/Tech-Internships-2027/main/data/listings.json"
 
 # Aggregator ``active`` is the source's current availability signal. Its
 # posted/updated timestamp is often stale (especially for evergreen new-grad
@@ -61,6 +65,14 @@ def fetch_simplify() -> list[Job]:
 
 def fetch_vansh() -> list[Job]:
     return _simplify_like(VANSH_URL, "vansh")
+
+
+def fetch_simplify_internship() -> list[Job]:
+    """Parse Simplify's structured internship listings without scraping JDs."""
+    jobs = _simplify_like(SIMPLIFY_INTERNSHIP_URL, "simplify_internship")
+    for job in jobs:
+        job.profile = "internship"
+    return jobs
 
 
 _JR_ROW = re.compile(
@@ -169,6 +181,29 @@ def fetch_speedyapply() -> list[Job]:
     return out
 
 
+def fetch_speedyapply_internship() -> list[Job]:
+    """Read the internship table embedded in SpeedyApply's public README."""
+    md = get_text(SPEEDY_INTERNSHIP_URL)
+    now = int(time.time())
+    out = []
+    for m in _SP_ROW.finditer(md):
+        company, title, loc, salary, link, age_d = (g.strip() for g in m.groups())
+        age = int(age_d)
+        if age * 86400 > MAX_AGE_S:
+            continue
+        if not re.search(r"\b(intern(ship)?|co-?op|student)\b", title, re.I):
+            # The root README also contains a new-grad table. Keep this
+            # adapter explicitly internship-only so the lanes cannot bleed.
+            continue
+        out.append(Job(
+            company=company, title=title, url=link, source="speedyapply_internship",
+            source_url=info("speedyapply_internship")[1],
+            locations=[loc] if loc else [], posted_at=now - age * 86400,
+            salary=salary, remote="remote" in loc.lower(), profile="internship",
+        ))
+    return out
+
+
 _ZAPPLY_ROW = re.compile(
     r"^\|\s*\*{0,2}([^|*]+?)\*{0,2}\s*\|\s*\*{0,2}([^|*]+?)\*{0,2}\s*\|"
     r"\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|[^|]*\|\s*[^\n]*?\((https?://[^)]+)\)", re.M)
@@ -222,4 +257,62 @@ def fetch_zapply_pm() -> list[Job]:
                        source_url=info("zapply_pm")[1],
                        locations=[loc.strip()] if loc.strip() else [],
                        remote="remote" in loc.lower()))
+    return out
+
+
+def fetch_zapply_internship() -> list[Job]:
+    """Read Zapply's broad internship table; the internship gates do the rest."""
+    md = get_text(ZAPPLY_INTERNSHIP_URL)
+    out = []
+    for company, title, loc, link in _ZAPPLY_GENERAL_ROW.findall(md):
+        company = company.strip()
+        title = re.sub(r"<[^>]+>", "", title).strip()
+        if company.strip("-") == "" or not title or not link:
+            continue
+        out.append(Job(
+            company=company, title=title, url=link.strip(), source="zapply_internship",
+            source_url=info("zapply_internship")[1],
+            locations=[loc.strip()] if loc.strip() else [],
+            remote="remote" in loc.lower(), profile="internship",
+        ))
+    return out
+
+
+def _iso_epoch(value) -> int | None:
+    if not value:
+        return None
+    if isinstance(value, (int, float)):
+        return int(value)
+    try:
+        return int(datetime.fromisoformat(str(value).replace("Z", "+00:00")).timestamp())
+    except ValueError:
+        return None
+
+
+def fetch_dreamwork_internship() -> list[Job]:
+    """Parse Dreamwork's machine-readable verified internship listings."""
+    payload = get_json(DREAMWORK_INTERNSHIP_URL)
+    rows = payload if isinstance(payload, list) else payload.get("listings", [])
+    out = []
+    for row in rows:
+        company = str(row.get("company") or row.get("companyName") or "").strip()
+        title = str(row.get("title") or "").strip()
+        url = str(row.get("url") or row.get("applyUrl") or "").strip()
+        if not company or not title or not url:
+            continue
+        location = row.get("location") or row.get("locations") or ""
+        if isinstance(location, list):
+            locations = [str(x).strip() for x in location if str(x).strip()]
+        else:
+            locations = [str(location).strip()] if str(location).strip() else []
+        salary = ""
+        if row.get("salaryMin") or row.get("salaryMax"):
+            salary = f"${row.get('salaryMin', '?')}–${row.get('salaryMax', '?')}"
+        out.append(Job(
+            company=company, title=title, url=url, source="dreamwork_internship",
+            source_url=info("dreamwork_internship")[1], locations=locations,
+            posted_at=_iso_epoch(row.get("postedAt") or row.get("firstIndexedAt")),
+            salary=salary, remote="remote" in str(row.get("remoteType") or "").lower(),
+            profile="internship",
+        ))
     return out

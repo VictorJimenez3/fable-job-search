@@ -65,9 +65,35 @@ system as a website, refreshed automatically by every crawl:
 - **AI**: per-run budget, task mix, provider/model health, grounded-research
   coverage, scout status, and registry stats.
 
+### New-grad and internship lanes
+
+Use the lane switch at the top of the platform to choose **New-grad** or
+**Internships**. New-grad is the default and remains the priority compute
+lane. Internship jobs, Pipeline entries, web notes, alert history, master
+boards, and generated dashboards use their own `intern_*` state and never
+appear in the active new-grad list.
+
+In **Settings**, enter an expected graduation month such as `May 2029`. The
+internship lane uses that date together with an internship's start term to
+label likely freshman, sophomore, junior, or senior fit. A posting with no
+clear class-year or graduation evidence remains visible as **unknown/open**;
+it is not silently filtered out. The cohort dropdown in Jobs lets you filter
+match, mismatch, open, or unknown roles.
+
+If Google is connected, the private workbook has separate **Applications**
+and **Internships** tabs plus **Preferences**. Switching lanes changes which
+tab is read and written. The app requests Drive file access only; it does not
+request Gmail scope or read internship email.
+
+Internship email batches are off by default. The owner can enable
+**internship batches** in Settings; **new-grad batches** have a separate
+toggle and default to on. GitHub issue/board surfaces remain available without
+email delivery.
+
 Reading needs nothing. On Vercel, use **Tutorial → Accounts & login** to sign
-in with GitHub or Google. Google consent includes per-file Sheets access and
-creates your personal workbook; if you started with GitHub, use **Connect Google + create my
+in with GitHub or Google. Google consent includes least-privilege Drive file
+access and creates your personal workbook with separate Applications,
+Internships, and Preferences tabs; if you started with GitHub, use **Connect Google + create my
 Sheet** from the same signed-in session. There is no password login. On the Pages mirror, buttons use prefilled GitHub issues by default;
 the optional Settings token enables instant writes and cross-device notes.
 The private Google-backed tracker is one workbook per connected Google account;

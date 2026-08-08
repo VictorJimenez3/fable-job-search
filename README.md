@@ -1,9 +1,10 @@
 # 🎯 Job Radar
 
-A self-expanding, always-on radar for **new-grad AI / SWE / DS roles**, with a
-separate low-priority PM-family research lane, tuned for speed (apply within
-24h of posting) and personalized ranking (healthtech first, big tech second,
-open to everything good).
+A self-expanding, always-on radar for **new-grad AI / SWE / DS roles** plus a
+separate technical **internship lane**, with a low-priority PM-family research
+lane inside new-grad. New-grad remains the default and highest-priority
+compute path; internships have their own sources, state, cadence, tracker tab,
+and notification setting.
 
 **[→ 🖥️ The Platform](https://job-radar-vmj-8946s-projects.vercel.app)**
 (sign in with GitHub once → every click writes instantly) ·
@@ -45,6 +46,20 @@ AI/SWE/DS board. It reads the `claude/cheme-intern-radar` branch and keeps its
 own generated state and GitHub board labels, while both profiles use the one
 repository-level `NOTION_TOKEN` and therefore the same Notion Applications
 database.
+
+The main platform's **New-grad / Internships** switch is a second, isolated
+technical lane for friends. Internship postings come from curated public
+GitHub boards (Simplify, SpeedyApply, Zapply, and Dreamwork) plus internship
+searches on the existing ATS registry. A viewer can set an expected graduation
+month in Settings; the lane derives freshman/sophomore/junior/senior fit from
+the posting's internship start term and keeps unclear eligibility visible as
+unknown instead of silently rejecting it. New-grad and internship Jobs,
+Pipeline, web state, alert history, and GitHub surfaces never share a list.
+
+Internship email batches are **off by default**. The owner can opt into them
+from Settings; the same preference controls new-grad batches (new-grad starts
+enabled). This is GitHub notification delivery, not inbox access: Google OAuth
+does not request Gmail scope and the platform never reads internship emails.
 
 Subscribe to the RSS feed at:
 `https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/claude/newgrad-job-search-system-9gbj9k/docs/feed.xml`
@@ -115,11 +130,20 @@ every ~30 min (GitHub Actions cron)
       · docs/feed.xml — RSS for instant notifications in any feed reader
 ```
 
+The internship lane runs independently every two hours on its own
+`internship-radar.yml` workflow, with a smaller deterministic ATS budget so it
+cannot starve the new-grad crawl. It writes `state/intern_*.json` and
+`docs/internships/`; its alert issues, master board, checkbox reconcile, and
+opt-in email batch use internship-specific labels. The normal new-grad crawl
+and its ranking remain the priority whenever compute is constrained.
+
 ### Tracking and applied logging
 
-1. **Check a box on an alert issue or the master board to track a job.** It
+1. **Choose a lane, then check a box on its alert issue or master board to track
+   a job.** It
    appears in the in-house Pipeline immediately with the not-yet-applied status
-   and is mirrored to your selected external tracker. For Victor's
+   and is mirrored to your selected external tracker. The internship lane is
+   never mixed into the new-grad Jobs or Pipeline view. For Victor's
    `VictorJimenez3` account, Notion is the default primary tracker; Google
    Sheets is an optional personal mirror under the expanded Tracker options.
    Other Vercel users can use their own Google-backed tracker without touching
@@ -139,6 +163,11 @@ every ~30 min (GitHub Actions cron)
    It only ever moves a job *forward*, so a stray late email can't undo a
    later stage. You can still change anything in Notion/Sheets by hand; the
    twice-daily readback now brings those stage edits into the radar.
+
+   Internship notification batches are disabled unless the owner explicitly
+   enables **internship batches** in Settings. New-grad batches have their own
+   toggle and default to enabled. Neither toggle grants Gmail access or
+   changes the posting crawler.
 3. For a job found outside the radar, use **Pipeline → Add a role you found
    yourself** to save its company, title, live link, and optional location to
    the in-house **To apply** lane and Notion. It is explicitly marked manual,
@@ -434,12 +463,15 @@ Optional upgrades:
   complete. Run `python -m radar.main create-google-tracker` once only for the
   owner metadata/automation workbook. On the Vercel platform, Google sign-in
   or **Connect Google + create my Sheet** requests the least-privilege
-  `drive.file` permission and creates a separate Applications workbook in that
-  user's Google Drive. The encrypted HttpOnly session carries that user's
+  `drive.file` permission and creates a separate workbook in that user's
+  Google Drive with distinct **Applications**, **Internships**, and
+  **Preferences** tabs. The encrypted HttpOnly session carries that user's
   tracker grant and Sheet ID to the backend; the private Accounts registry is
   an optional account-linking enhancement, not a dependency for public users.
   Existing trackers are rediscovered in Drive after reauthentication, and the
   backend never exposes another user's rows or token.
+  OAuth requests Drive file access only—never Gmail access. The internship
+  email toggle controls GitHub alert batches, not inbox reading.
   Setup is documented in [docs/GOOGLE_SHEETS_SETUP.md](docs/GOOGLE_SHEETS_SETUP.md).
 - `GOOGLE_CSE_KEY` + `GOOGLE_CSE_ID` (free: [programmablesearchengine.google.com](https://programmablesearchengine.google.com)
   → create engine searching `linkedin.com/posts`, then get an API key at

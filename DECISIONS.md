@@ -1552,3 +1552,30 @@ when a conservative title-overlap check finds a stronger sibling, the weaker
 posting receives a bounded `-1` to `-3` adjustment in addition to the existing
 small crowded-company guard. Both adjustments are reason strings, so the owner
 can see why two NVIDIA variants are close but not artificially tied.
+
+## 104. Technical internships are a separate, graduation-aware platform lane (2026-08-08)
+
+Victor asked for internship support that friends can use without turning the
+new-grad product into a mixed board or an internship email stream. The main
+platform therefore has an explicit **New-grad / Internships** switch. The
+internship lane has its own profile, curated public GitHub sources, ATS search
+terms, score/gate module, workflow cadence, state namespace (`intern_*`),
+dashboard directory, GitHub labels, master board, and checkbox reconcile. The
+new-grad crawl remains the priority compute path; the internship crawl is
+lower-budget, deterministic, and does not require the optional AI pass.
+
+Internship eligibility is evidence-first and auditable. A posting can state an
+exact graduation window or class years; otherwise the lane derives likely
+freshman/sophomore/junior/senior fit from its start term and the viewer's
+expected graduation month. Missing evidence stays visible as open/unknown and
+never becomes an unexplained rejection. The expected graduation preference is
+viewer-specific and lives in the private Google Preferences tab (with a local
+fallback), never in shared crawler state.
+
+Google tracker workbooks now have separate `Applications`, `Internships`, and
+`Preferences` tabs, and the selected lane reads/writes only its own tab. The
+platform keeps OAuth least-privilege: it requests Drive file access, not Gmail.
+Internship GitHub email batches are off by default and can be enabled by the
+owner in Settings; new-grad batches have a separate toggle and default on.
+This setting controls outbound GitHub notification surfaces, not inbox
+reading or application-email detection.

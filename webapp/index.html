@@ -33,6 +33,9 @@
            border-bottom:2px solid var(--ink); flex-wrap:wrap; position:sticky; top:0;
            background:var(--paper); z-index:30; }
   header h1 { font-size:1.05rem; margin:0; white-space:nowrap; }
+  #laneSwitch { display:flex; gap:0.2rem; padding:0.16rem; border:1px solid var(--line); border-radius:7px; background:var(--card); }
+  #laneSwitch button { border:0; background:transparent; color:var(--muted); border-radius:5px; padding:0.25rem 0.55rem; cursor:pointer; font-size:0.72rem; }
+  #laneSwitch button.on { background:var(--accent); color:#fff; }
   nav { display:flex; gap:0.25rem; flex-wrap:wrap; }
   nav button { background:none; border:1px solid transparent; color:var(--muted);
                padding:0.3rem 0.65rem; border-radius:5px; cursor:pointer; font-size:0.8rem; }
@@ -294,6 +297,7 @@
 <body>
 <header>
   <h1>🎯 Job Radar</h1>
+  <div id="laneSwitch" aria-label="Radar lane"></div>
   <nav id="nav"></nav>
   <div id="stats"></div>
   <button class="act" id="tutorialBtn" onclick="openTutorial()">Tutorial</button>
@@ -314,21 +318,28 @@
 // (used to fill outreach templates) and, if self-hosting on Vercel, the env
 // vars documented in docs/FORKING.md.
 const ME = { name: "Victor", school: "NJIT", grad: "CS '26" };
-const PROFILE = "default";
+const PROFILE = "new_grad";
 let REPO = "VictorJimenez3/fable-job-search";
 let BRANCH = "claude/newgrad-job-search-system-9gbj9k";
 let RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
 const API = "https://api.github.com";
 
+const LANE_CONFIG = {
+  new_grad:{label:"New-grad", jobs:"state/jobs.json", applied:"state/applied.json", feedback:"state/feedback.json",
+    companies:"state/companies.json", runs:"state/runs.json", web:"state/web_state.json"},
+  internship:{label:"Internships", jobs:"state/intern_jobs.json", applied:"state/intern_applied.json", feedback:"state/intern_feedback.json",
+    companies:"state/intern_companies.json", runs:"state/intern_runs.json", web:"state/intern_web_state.json"},
+};
 const DEFAULT_FILTER = {q:"", min:45, sector:"", role:"", sectors:[], roles:[], sponsorship:"", sponsorHistory:"",
-  excludedRoles:[], experience:"", career:"", alert:false, lane:"", sort:"best", showExcluded:false};
-function storedFilter() {
+  excludedRoles:[], experience:"", career:"", cohort:"", alert:false, lane:"", sort:"best", showExcluded:false};
+function storedFilter(lane="new_grad") {
   try {
-    const f = JSON.parse(localStorage.getItem("jr_filters") || "{}");
+    const key = lane === "new_grad" ? "jr_filters" : `jr_filters_${lane}`;
+    const f = JSON.parse(localStorage.getItem(key) || "{}");
     if (f._alertFilterVersion !== 3) {
       f.alert = false;
       f._alertFilterVersion = 3;
-      localStorage.setItem("jr_filters", JSON.stringify(f));
+      localStorage.setItem(key, JSON.stringify(f));
     }
     if (!Array.isArray(f.roles)) f.roles = f.role ? [f.role] : [];
     if (!Array.isArray(f.excludedRoles)) f.excludedRoles = [];
@@ -340,6 +351,10 @@ function storedFilter() {
 const S = {           // app state
   jobs:{}, applied:[], feedback:{}, reports:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, scorePreferences:{},
   registryByCompany:{}, runs:[], scout:{}, web:null,
+  lane:"new_grad", lanes:{
+    new_grad:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, expectedGraduation:""},
+    internship:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, expectedGraduation:""},
+  }, notifications:{new_grad_email:true, internship_email:false},
   auth:null, backend:false, userTracker:false, trackerConfigured:false, trackerMeta:null,
   authProviders:{github:false,google:false},
   tab:"jobs", filter:{...DEFAULT_FILTER, ...storedFilter()}, shown:250,
@@ -353,6 +368,37 @@ const S = {           // app state
     "playstation","sony interactive entertainment","nintendo","electronic arts",
     "epic games","duolingo","coursera","khan academy","ixl learning"]),  // mirror of profile.yaml marquee_companies
 };
+function laneName() { return S.lane; }
+function laneLabel() { return LANE_CONFIG[S.lane]?.label || "New-grad"; }
+function laneState(mode=S.lane) { return S.lanes[mode] || S.lanes.new_grad; }
+function setLaneValue(mode, key, value) {
+  laneState(mode)[key] = value;
+  if (mode === S.lane) S[key] = value;
+}
+function normalizeLaneWeb(mode, web) {
+  const fallback = (() => { try { return JSON.parse(localStorage.getItem(`jr_web_${mode}`) || '{"maybe":[],"jobs":{},"excluded":[]}'); } catch { return {maybe:[],jobs:{},excluded:[]}; } })();
+  const target = laneState(mode);
+  target.web = web || target.web || fallback;
+  target.web.maybe = Array.isArray(target.web.maybe) ? target.web.maybe : [];
+  target.web.jobs = target.web.jobs || {};
+  target.web.excluded = Array.isArray(target.web.excluded)
+    ? [...new Set(target.web.excluded.filter(id => typeof id === "string" && id))] : [];
+  if (mode === S.lane) S.web = target.web;
+}
+function activateLane(mode, rerender=true) {
+  if (!LANE_CONFIG[mode]) mode = "new_grad";
+  S.lane = mode;
+  const d = laneState(mode);
+  ["jobs","applied","feedback","culture","research","aiUsage","companies","runs","scout"].forEach(key => { S[key] = d[key]; });
+  normalizeLaneWeb(mode, d.web);
+  S.filter = {...DEFAULT_FILTER, ...storedFilter(mode)};
+  S.shown = 250;
+  try { localStorage.setItem("jr_active_lane", mode); } catch {}
+  if (S.auth && !S.auth.owner && S.userTracker) loadTrackerState(mode);
+  if (rerender) render();
+}
+try { S.lane = LANE_CONFIG[localStorage.getItem("jr_active_lane")] ? localStorage.getItem("jr_active_lane") : "new_grad"; } catch {}
+activateLane(S.lane, false);
 const norm = s => (s||"").toLowerCase().replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();
 const token = () => localStorage.getItem("jr_pat") || "";
 function trackerBackend() {
@@ -442,15 +488,11 @@ async function loadState(path, fallback, {critical=false, allowMissing=false}={}
   }
 }
 function localWebState() {
-  try { return JSON.parse(localStorage.getItem("jr_web") || '{"maybe":[],"jobs":{}}'); }
-  catch { return {maybe:[], jobs:{}}; }
+  try { return JSON.parse(localStorage.getItem(`jr_web_${S.lane}`) || '{"maybe":[],"jobs":{},"excluded":[]}'); }
+  catch { return {maybe:[], jobs:{}, excluded:[]}; }
 }
 function normalizeWebState(web) {
-  S.web = web || localWebState();
-  S.web.maybe = Array.isArray(S.web.maybe) ? S.web.maybe : [];
-  S.web.jobs = S.web.jobs || {};
-  S.web.excluded = Array.isArray(S.web.excluded)
-    ? [...new Set(S.web.excluded.filter(id => typeof id === "string" && id))] : [];
+  normalizeLaneWeb(S.lane, web || localWebState());
 }
 function rebuildCompanyRegistry() {
   for (const entry of Object.values(S.companies || {})) {
@@ -458,21 +500,25 @@ function rebuildCompanyRegistry() {
     if (!S.registryByCompany[key] || entry.status === "active") S.registryByCompany[key] = entry;
   }
 }
-async function loadTrackerState() {
+async function loadTrackerState(mode=S.lane) {
   if (!S.auth) return;
   try {
-    const trackerResponse = await fetch("/api/tracker");
+    const trackerResponse = mode === "new_grad"
+      ? await fetch("/api/tracker")
+      : await fetch(`/api/tracker?profile=${encodeURIComponent(mode)}`);
     if (!trackerResponse.ok) {
       if (trackerResponse.status >= 500) throw new Error(`${trackerResponse.status} tracker request failed`);
       return;
     }
     const tracker = await trackerResponse.json();
-    S.trackerMeta = tracker;
+    S.trackerMeta = {...(S.trackerMeta || {}), ...tracker, profile:mode};
     S.userTracker = Boolean(tracker.configured);
+    laneState(mode).expectedGraduation = tracker.expected_graduation || laneState(mode).expectedGraduation || "";
     if (!S.auth.owner) {
-      S.applied = tracker.entries || [];
-      normalizeWebState({maybe:tracker.maybe || [], jobs:{}});
-      render();
+      setLaneValue(mode, "applied", tracker.entries || []);
+      const web = laneState(mode).web || {jobs:{}, excluded:[]};
+      normalizeLaneWeb(mode, {...web, maybe:tracker.maybe || []});
+      if (mode === S.lane) render();
     }
   } catch (error) {
     S.userTracker = false;
@@ -522,8 +568,13 @@ async function boot() {
   S.boot.phase = "jobs";
   render();
   const jobsResult = await loadState("state/jobs.json", {}, {critical:true});
-  S.jobs = jobsResult.value;
+  setLaneValue("new_grad", "jobs", jobsResult.value);
+  laneState("new_grad").ready = jobsResult.ok;
   S.boot.jobsReady = jobsResult.ok;
+  const internshipJobs = await loadState("state/intern_jobs.json", {}, {allowMissing:true});
+  setLaneValue("internship", "jobs", internshipJobs.value);
+  laneState("internship").ready = internshipJobs.ok;
+  if (S.lane === "internship") activateLane("internship", false);
   S.boot.phase = "optional";
   render();
 
@@ -531,23 +582,30 @@ async function boot() {
   // own request, so one stale or malformed panel cannot blank the radar.
   const ownerView = Boolean(S.auth?.owner);
   const optional = [
-    ["applied", "state/applied.json", [] , ownerView],
-    ["feedback", "state/feedback.json", {}, ownerView],
-    ["reports", "state/reports.json", {}, ownerView],
-    ["culture", "state/culture.json", {}, true],
-    ["research", "state/company_research.json", {}, true],
-    ["scorePreferences", "state/score_preferences.json", {}, true],
-    ["aiUsage", "state/ai_usage.json", {}, true],
-    ["companies", "state/companies.json", {}, true],
-    ["runs", "state/runs.json", [], true],
-    ["scout", "state/scout.json", {}, true],
-    ["web", "state/web_state.json", null, ownerView],
-  ].filter(([, , , enabled]) => enabled);
-  const optionalLoads = optional.map(async ([key, path, fallback]) => {
-    const result = await loadState(path, fallback, {allowMissing: path === "state/reports.json"});
-    if (key === "web") normalizeWebState(result.value);
-    else S[key] = result.value;
-    if (key === "companies") rebuildCompanyRegistry();
+    ["new_grad", "applied", "state/applied.json", [] , ownerView],
+    ["new_grad", "feedback", "state/feedback.json", {}, ownerView],
+    ["new_grad", "reports", "state/reports.json", {}, ownerView],
+    ["new_grad", "culture", "state/culture.json", {}, true],
+    ["new_grad", "research", "state/company_research.json", {}, true],
+    ["new_grad", "scorePreferences", "state/score_preferences.json", {}, true],
+    ["new_grad", "aiUsage", "state/ai_usage.json", {}, true],
+    ["new_grad", "companies", "state/companies.json", {}, true],
+    ["new_grad", "runs", "state/runs.json", [], true],
+    ["new_grad", "scout", "state/scout.json", {}, true],
+    ["new_grad", "web", "state/web_state.json", null, ownerView],
+    ["internship", "applied", "state/intern_applied.json", [], ownerView],
+    ["internship", "feedback", "state/intern_feedback.json", {}, ownerView],
+    ["internship", "companies", "state/intern_companies.json", {}, ownerView],
+    ["internship", "runs", "state/intern_runs.json", [], ownerView],
+    ["internship", "web", "state/intern_web_state.json", null, ownerView],
+    ["shared", "notifications", "state/notification_preferences.json", {new_grad_email:true, internship_email:false}, true],
+  ].filter(([, , , , enabled]) => enabled);
+  const optionalLoads = optional.map(async ([mode, key, path, fallback]) => {
+    const result = await loadState(path, fallback, {allowMissing: path === "state/reports.json" || path.includes("intern_") || path.includes("notification_preferences")});
+    if (mode === "shared") S.notifications = result.value;
+    else if (key === "web") normalizeLaneWeb(mode, result.value);
+    else setLaneValue(mode, key, result.value);
+    if (key === "companies" && mode === S.lane) rebuildCompanyRegistry();
     render();
   });
   const trackerLoad = loadTrackerState();
@@ -570,7 +628,7 @@ async function dispatch(action, job, extra={}) {
     body: JSON.stringify({event_type:"radar-web",
       client_payload:{action, id: job.id, url: job.url, company: job.company,
         title: job.title, location: (job.locations||[])[0] || "",
-        profile:PROFILE, ...extra}})});
+        profile:S.lane, ...extra}})});
   return true;
 }
 // Tokenless write path: open a prefilled GitHub issue — your GitHub login is
@@ -579,13 +637,13 @@ function issueCmd(cmd, job) {
   const ref = cmd === "applied" ? (job.url || job.id) : job.id;
   const u = `https://github.com/${REPO}/issues/new?title=${
     encodeURIComponent(`radar: ${cmd} ${job.company}`)}&body=${
-    encodeURIComponent(`radar-profile: ${PROFILE}\n${cmd} ${ref}`)}`;
+    encodeURIComponent(`radar-profile: ${S.lane}\n${cmd} ${ref}`)}`;
   window.open(u, "_blank");
   toast("Hit 'Create' on GitHub — it processes & auto-closes in ~1 min");
   return false;
 }
 function issueFeedback(job, vote, reason) {
-  const body = `radar-profile: ${PROFILE}\nfeedback ${job.id} ${vote} ${reason}`;
+  const body = `radar-profile: ${S.lane}\nfeedback ${job.id} ${vote} ${reason}`;
   const u = `https://github.com/${REPO}/issues/new?title=${
     encodeURIComponent(`radar: feedback ${job.company}`)}&body=${encodeURIComponent(body)}`;
   window.open(u, "_blank");
@@ -594,12 +652,12 @@ function issueFeedback(job, vote, reason) {
 }
 let saveTimer=null;
 function saveWeb() {                       // debounce web_state commits
-  localStorage.setItem("jr_web", JSON.stringify(S.web));   // instant local mirror
+  localStorage.setItem(`jr_web_${S.lane}`, JSON.stringify(S.web));   // instant local mirror
   if (S.auth && S.auth.owner) {
     clearTimeout(saveTimer);
     saveTimer = setTimeout(async () => {
       try { const r = await fetch("/api/webstate", {method:"PUT",
-              headers:{"Content-Type":"application/json"}, body: JSON.stringify(S.web)});
+              headers:{"Content-Type":"application/json"}, body: JSON.stringify({profile:S.lane,state:S.web})});
             if (!r.ok) throw new Error(r.status); }
       catch(e) { toast("Cloud save failed (kept locally): " + e.message); }
     }, 1500);
@@ -610,11 +668,12 @@ function saveWeb() {                       // debounce web_state commits
   saveTimer = setTimeout(async () => {
     try {
       let sha;
-      const cur = await fetch(`${API}/repos/${REPO}/contents/state/web_state.json?ref=${BRANCH}`,
+      const webPath = S.lane === "internship" ? "state/intern_web_state.json" : "state/web_state.json";
+      const cur = await fetch(`${API}/repos/${REPO}/contents/${webPath}?ref=${BRANCH}`,
         {headers:{Authorization:`Bearer ${token()}`}});
       if (cur.ok) sha = (await cur.json()).sha;
       const content = btoa(unescape(encodeURIComponent(JSON.stringify(S.web, null, 1))));
-      await gh(`/repos/${REPO}/contents/state/web_state.json`, {method:"PUT",
+      await gh(`/repos/${REPO}/contents/${webPath}`, {method:"PUT",
         body: JSON.stringify({message:"platform: workspace update", content, sha, branch:BRANCH})});
     } catch(e) { toast("Cloud save failed (kept locally): " + e.message.slice(0,80)); }
   }, 1500);
@@ -665,6 +724,36 @@ function experienceStatus(j) {
   if (j.posting.years_min == null) return "unknown";
   return j.posting.years_min <= 0 ? "entry" : "experienced";
 }
+function expectedGraduation() {
+  try { return laneState("internship").expectedGraduation || S.trackerMeta?.expected_graduation || localStorage.getItem("jr_expected_graduation") || ""; }
+  catch { return laneState("internship").expectedGraduation || S.trackerMeta?.expected_graduation || ""; }
+}
+function internshipCohortMatch(j) {
+  const e = j.internship_eligibility || {};
+  const expected = expectedGraduation();
+  if (!expected) return "unknown";
+  if (e.graduation_start && e.graduation_end) {
+    return e.graduation_start.slice(0,7) <= expected && expected <= e.graduation_end.slice(0,7) ? "match" : "mismatch";
+  }
+  if (e.class_years?.length && e.term_start) {
+    const start = new Date(`${e.term_start}T00:00:00Z`);
+    const grad = new Date(`${expected}-01T00:00:00Z`);
+    const months = (grad.getUTCFullYear()-start.getUTCFullYear())*12 + grad.getUTCMonth()-start.getUTCMonth();
+    const standing = months>=0&&months<12?"senior":months<24?"junior":months<36?"sophomore":months<48?"freshman":"";
+    return e.class_years.includes(standing) ? "match" : "mismatch";
+  }
+  return e.status === "open" ? "open" : "unknown";
+}
+function internshipCohortBadge(j) {
+  if (S.lane !== "internship") return "";
+  const e = j.internship_eligibility || {};
+  const match = internshipCohortMatch(j);
+  const classes = (e.class_years||[]).join(", ");
+  const grad = e.graduation_start ? `class of ${e.graduation_start.slice(0,4)}–${(e.graduation_end||e.graduation_start).slice(0,4)}` : "eligibility not stated";
+  const detail = classes || grad;
+  const label = match === "match" ? "✓ cohort match" : match === "mismatch" ? "cohort mismatch" : match === "open" ? "open to enrolled students" : detail;
+  return `<span class="chip ${match==='match'?'good':match==='mismatch'?'bad':'unknown'}" title="${esc(detail)}">🎓 ${esc(label)}</span>`;
+}
 function eligibilityBadges(j) {
   const p = j.posting;
   const sponsor = sponsorStatus(j);
@@ -681,6 +770,7 @@ function eligibilityBadges(j) {
   else exp = ["unknown","⏳ experience not stated"];
   const program = TECH_PROGRAM_TITLE.test(j.title || "");
   return `<span class="chip">${esc(ROLE_LABELS[roleFamily(j)])}</span>
+    ${internshipCohortBadge(j)}
     ${program?'<span class="chip marquee">technical program</span>':""}
     ${j.early_career_possible?'<span class="chip unknown" title="No stated experience floor, but not verified new-grad">early-career possible</span>':""}
     <span class="chip ${visa[0]}">${visa[1]}</span>
@@ -689,7 +779,7 @@ function eligibilityBadges(j) {
 }
 function setFilter(key, value, fullRender=true) {
   S.filter[key] = value; S.shown = 250;
-  localStorage.setItem("jr_filters", JSON.stringify(S.filter));
+  localStorage.setItem(S.lane === "new_grad" ? "jr_filters" : `jr_filters_${S.lane}`, JSON.stringify(S.filter));
   if (fullRender) render(); else renderJobsList();
 }
 function toggleFilter(key, value) {
@@ -697,7 +787,7 @@ function toggleFilter(key, value) {
   const i = values.indexOf(value);
   if (i >= 0) values.splice(i, 1); else values.push(value);
   S.filter[key] = values; S.filter.role = ""; S.filter.sector = "";
-  S.shown = 250; localStorage.setItem("jr_filters", JSON.stringify(S.filter)); render();
+  S.shown = 250; localStorage.setItem(S.lane === "new_grad" ? "jr_filters" : `jr_filters_${S.lane}`, JSON.stringify(S.filter)); render();
 }
 function roleFilterState(value) {
   if (S.filter.excludedRoles?.includes(value)) return "excluded";
@@ -716,15 +806,16 @@ function cycleRoleFilter(value) {
   }
   S.filter.role = "";
   S.shown = 250;
-  localStorage.setItem("jr_filters", JSON.stringify(S.filter));
+  localStorage.setItem(S.lane === "new_grad" ? "jr_filters" : `jr_filters_${S.lane}`, JSON.stringify(S.filter));
   render();
 }
 function clearFilters() {
   S.filter = {...DEFAULT_FILTER}; S.shown = 250;
-  localStorage.removeItem("jr_filters"); render();
+  localStorage.removeItem(S.lane === "new_grad" ? "jr_filters" : `jr_filters_${S.lane}`); render();
 }
 function isOpenRelevant(j) {
   if (j.closed_at) return false;
+  if (S.lane === "internship") return true;
   const hardReject = /^(intern\/co-op\/contract|senior\+ title|PhD-targeted title|requires clearance|non-US location|requires [1-9]\+ years(?: \(not new-grad\))?|not an AI\/SWE\/DS role)$/i;
   return !(j.score_reasons||[]).some(reason =>
     hardReject.test(String(reason).replace(/^re-gate v\d+:\s*/i,"")));
@@ -747,6 +838,7 @@ function jobList() {
   else if (f.experience) rows = rows.filter(j=>experienceStatus(j)===f.experience);
   if (f.career === "newgrad") rows = rows.filter(j=>j.explicit_new_grad);
   else if (f.career === "possible") rows = rows.filter(j=>j.early_career_possible);
+  if (S.lane === "internship" && f.cohort) rows = rows.filter(j=>internshipCohortMatch(j)===f.cohort);
   if (q) rows = rows.filter(j=>norm(j.company+" "+j.title).includes(q));
   if (f.lane) rows = rows.filter(j=>laneOf(j.id,byId)===f.lane);
   if (f.sort === "new")
@@ -966,16 +1058,17 @@ async function apiAction(action, job, extra={}) {
   const r = await fetch("/api/action", {method:"POST",
     headers:{"Content-Type":"application/json"},
     body: JSON.stringify({action, id:role.id, url:role.url, company:role.company,
-      title:role.title, location:(role.locations||[])[0] || "", ...extra})});
+      title:role.title, location:(role.locations||[])[0] || "", profile:S.lane, ...extra})});
   if (!r.ok) throw new Error((await r.json()).error || r.status);
   return true;
 }
 async function trackerAction(action, job, extra={}) {
+  job = job || {};
   const r = await fetch("/api/tracker", {method:"POST",
     headers:{"Content-Type":"application/json"},
     body: JSON.stringify({action, id:job.id, url:job.url, company:job.company,
       title:job.title, location:(job.locations||[])[0] || "", source:job.source,
-      profile:PROFILE, ...extra})});
+      profile:S.lane, ...extra})});
   if (!r.ok) throw new Error((await r.json()).error || r.status);
   return true;
 }
@@ -1117,13 +1210,50 @@ function ownerTrackerOptionsHTML() {
     <div class="sub" style="margin-top:.35rem">Notion remains the primary owner record; the optional Sheet mirrors future platform actions.</div>
   </details>`;
 }
+async function saveExpectedGraduation(value) {
+  value = String(value || "").trim();
+  if (value && !/^20\d{2}-(0[1-9]|1[0-2])$/.test(value)) { toast("Use a graduation month in YYYY-MM format"); return; }
+  laneState("internship").expectedGraduation = value;
+  try { localStorage.setItem("jr_expected_graduation", value); } catch {}
+  if (S.auth && S.userTracker) {
+    try { await trackerAction("preferences", null, {expected_graduation:value}); toast("Graduation date saved to your private Google tracker"); }
+    catch (error) { toast("Saved on this device; Google preference sync failed: " + error.message.slice(0,70)); }
+  } else toast(value ? "Graduation date saved on this device" : "Graduation date cleared");
+  render();
+}
+async function setEmailPreference(key, enabled) {
+  if (!S.auth?.owner) return;
+  try {
+    await apiAction("notification-preference", null, {key, enabled: Boolean(enabled)});
+    S.notifications[key] = Boolean(enabled);
+    toast(`${key === "internship_email" ? "Internship" : "New-grad"} email ${enabled ? "enabled" : "disabled"}`);
+    render();
+  } catch (error) { toast("Notification setting failed: " + error.message.slice(0,90)); }
+}
+function laneSettingsHTML() {
+  if (S.lane !== "internship") return `<div class="note"><b>New-grad lane.</b> This is the default high-priority board. Use the lane switch above to view internships separately.</div>`;
+  const value = expectedGraduation();
+  return `<section class="lane" style="margin-bottom:.8rem"><h3>Internship matching</h3>
+    <p class="sub">Set an expected graduation month to identify freshman, sophomore, junior, and senior matches. The date is private to your account/device and never changes the shared crawler ranking.</p>
+    <div class="bar"><label class="sub" for="expectedGraduation">expected graduation</label>
+      <input id="expectedGraduation" type="month" value="${esc(value)}" onchange="saveExpectedGraduation(this.value)">
+      ${value?`<span class="chip good">matching enabled</span>`:`<span class="chip unknown">set a date for cohort badges</span>`}</div>
+    <p class="sub">Exact graduation windows win. If a posting only says “junior” or “sophomore,” the lane derives standing from the internship start term; unclear postings remain unknown.</p></section>`;
+}
+function notificationSettingsHTML() {
+  if (!S.auth?.owner) return "";
+  return `<section class="lane" style="margin-top:.8rem"><h3>Board email preferences</h3>
+    <p class="sub">These are shared GitHub alert-batch controls, not private Gmail mail. Internship email stays off until you explicitly opt in.</p>
+    <div class="bar"><label class="sub"><input type="checkbox" ${S.notifications.new_grad_email?"checked":""} onchange="setEmailPreference('new_grad_email',this.checked)"> new-grad batches</label>
+      <label class="sub"><input type="checkbox" ${S.notifications.internship_email?"checked":""} onchange="setEmailPreference('internship_email',this.checked)"> internship batches</label></div></section>`;
+}
 function trackerPanelHTML() {
   if (!S.backend || !S.auth) return "";
   if (S.auth.owner) {
     const mirror = trackerBackend() === "google" && S.userTracker;
     return `<div class="tracker-banner ${mirror ? "connected" : ""}">
       <div class="tracker-copy"><b>${mirror ? "Notion primary · Google Sheets mirror on" : "Notion is your default tracker"}</b>
-        <span class="sub">Saved, applied, and stage changes use your Notion Applications database${mirror ? "; the optional Sheet is mirrored too" : "."}</span></div>
+        <span class="sub">Saved, applied, and stage changes use your Notion Applications database for the ${laneLabel()} lane${mirror ? "; the optional Sheet is mirrored too" : "."}</span></div>
       <div class="acts"><button class="act tracker-quick" onclick="openTutorial('accounts')">▦ Tracker options</button></div>
       ${ownerTrackerOptionsHTML()}
     </div>`;
@@ -1131,7 +1261,7 @@ function trackerPanelHTML() {
   const connected = Boolean(S.userTracker && S.trackerMeta?.sheet_url);
   return `<div class="tracker-banner ${connected?'connected':''}">
     <div class="tracker-copy"><b>${connected?'Your private Google tracker is connected':'Keep your application funnel in your own Google Sheet'}</b>
-      <span class="sub">${connected?'Saved, applied, and maybe marks live in your Google Drive.':'Connect Google once to create a private tracker; it is separate from other users.'}</span></div>
+      <span class="sub">${connected?`Saved, applied, and maybe marks live in your private Google Drive ${S.lane === "internship" ? "Internships" : "Applications"} tab.`:'Connect Google once to create a private tracker; it is separate from other users.'}</span></div>
     <div class="acts">${trackerActionButton(connected?'Open Google Sheet':'Connect Google')}</div>
   </div>`;
 }
@@ -1139,7 +1269,7 @@ function accountTutorialHTML() {
   if (!S.auth) return `<div class="tut-kicker">OAuth only</div><h2>Sign in without a password</h2>
     <p class="sub">Choose a provider you already trust. Job Radar never asks for or stores a password.</p>
     <div class="provider-row">${providerButton("github", "Continue with GitHub")}${providerButton("google", "Continue with Google")}</div>
-    <div class="tut-note">Google sign-in also asks for Sheets access so the app can create your private tracker in your Google Drive. GitHub-only users can connect Google later.</div>
+    <div class="tut-note">Google sign-in asks for least-privilege Drive file access so the app can create your private Applications, Internships, and Preferences tabs in your Google Drive. It does not request Gmail access. GitHub-only users can connect Google later.</div>
     <div class="tut-card"><h4>What each provider does</h4><p>GitHub identifies your account and, for the repo owner, enables the existing repository workflow. Google identifies you and authorizes your own Sheets tracker. Neither provider gives this page your password.</p></div>`;
   const providers = S.auth.providers || {};
   return `<div class="tut-kicker">Account center</div><h2>Your sign-in</h2>
@@ -1164,11 +1294,11 @@ function tutorialContent(tab) {
     <div class="tut-note">The radar never submits an application for you. It opens the employer’s official application link and records the stage you choose.</div>`;
   if (tab === "accounts") return accountTutorialHTML();
   if (tab === "sheets") return `<div class="tut-kicker">Your private tracker</div><h2>Google Sheets in your own Drive</h2>
-    <p class="sub">When you connect Google, Job Radar creates an Applications workbook owned by that Google account. The app uses the Sheet as durable storage while keeping the OAuth token server-side.</p>
+    <p class="sub">When you connect Google, Job Radar creates a workbook owned by that Google account with separate Applications, Internships, and Preferences tabs. The app uses the selected lane tab as durable storage while keeping the OAuth token server-side.</p>
     <div class="tut-grid"><div class="tut-card"><h4>Notion-shaped fields</h4><p>Company · Stage · Position · Apply date · Text · Job URL · Location, with timestamps and source metadata beside them.</p></div>
       <div class="tut-card"><h4>One Sheet per user</h4><p>GitHub-only users can connect Google later. Google-only users get their own Sheet during sign-in. A different user never shares your workbook.</p></div>
       <div class="tut-card"><h4>Stable updates</h4><p>Track, Maybe, Applied, and Remove update one Job Radar ID instead of duplicating rows. You can open your Sheet from Accounts &amp; login.</p></div></div>
-    <div class="tut-note">Google login and Google Sheets access are one explicit OAuth consent flow. The app never receives your Google password or exposes your refresh token to the page.</div>`;
+    <div class="tut-note">Google login and Google Sheets access are one explicit OAuth consent flow. The app never receives your Google password, Gmail messages, or exposes your refresh token to the page.</div>`;
   if (tab === "privacy") return `<div class="tut-kicker">Trust boundary</div><h2>Why the login is designed this way</h2>
     <div class="tut-steps"><div class="tut-step"><span><b>No passwords.</b> GitHub and Google own password handling, MFA, recovery, suspicious-login detection, and OAuth consent.</span></div>
       <div class="tut-step"><span><b>Tokens stay server-side.</b> The session is encrypted and marked httpOnly/Secure; frontend JavaScript cannot read provider tokens.</span></div>
@@ -1196,8 +1326,15 @@ document.addEventListener("keydown", event => { if (event.key === "Escape") clos
 /* ---------- render ---------- */
 const TABS = [["jobs","Jobs"],["pipeline","Pipeline"],["companies","Companies"],
               ["interview","Interview"],["ai","AI"],["settings","Settings"]];
+function renderLaneSwitch() {
+  const el = $("#laneSwitch");
+  if (!el) return;
+  el.innerHTML = Object.entries(LANE_CONFIG).map(([key, lane]) =>
+    `<button class="${S.lane===key?'on':''}" aria-pressed="${S.lane===key}" onclick="activateLane('${key}')">${lane.label}</button>`).join("");
+}
 function render() {
   renderBootNotice();
+  renderLaneSwitch();
   const tabs = S.auth?.owner ? [...TABS.slice(0,-1), ["taste","My job preferences"], ["testing","Testing"], TABS.at(-1)] : TABS;
   if (["testing","taste"].includes(S.tab) && !S.auth?.owner) S.tab = "jobs";
   $("#nav").innerHTML = tabs.map(([k,l]) =>
@@ -1256,7 +1393,7 @@ function rowHTML(j, byId) {
 }
 
 function rJobs() {
-  if (!S.boot.jobsReady && S.boot.phase === "jobs") {
+  if (!laneState().ready && S.boot.phase === "jobs") {
     $("#main").innerHTML = `<div class="note"><b>Loading Jobs…</b><br>
       The radar shell is ready. Jobs are loading from the repository in a separate step;
       the other panels will hydrate after the board is available.</div>`;
@@ -1265,7 +1402,7 @@ function rJobs() {
   const sectors = [...new Set(Object.values(S.jobs).map(j=>j.sector).filter(Boolean))].sort();
   const excludedCount = Object.values(S.jobs).filter(j=>isExcluded(j.id)).length;
   // toolbar renders once; typing re-renders only #jobsList so the input keeps focus
-  $("#main").innerHTML = `${trackerPanelHTML()}
+  $("#main").innerHTML = `${laneSettingsHTML()}${trackerPanelHTML()}
    <div class="filters">
     <div class="bar">
       <input type="search" placeholder="search roles…" value="${esc(S.filter.q)}"
@@ -1308,6 +1445,12 @@ function rJobs() {
         <option value="newgrad" ${S.filter.career==="newgrad"?"selected":""}>verified new grad</option>
         <option value="possible" ${S.filter.career==="possible"?"selected":""}>early-career possible</option>
       </select>
+      ${S.lane === "internship" ? `<select aria-label="Internship cohort match" onchange="setFilter('cohort',this.value)">
+        <option value="">any cohort fit</option>
+        <option value="match" ${S.filter.cohort==="match"?"selected":""}>matches your graduation date</option>
+        <option value="mismatch" ${S.filter.cohort==="mismatch"?"selected":""}>outside your graduation date</option>
+        <option value="open" ${S.filter.cohort==="open"?"selected":""}>open to enrolled students</option>
+        <option value="unknown" ${S.filter.cohort==="unknown"?"selected":""}>eligibility unknown</option></select>` : ""}
       <label class="sub" title="Off by default: show all matching roles, including strong dashboard-only matches"><input type="checkbox" ${S.filter.alert?"checked":""}
         onchange="setFilter('alert',this.checked)"> alert-worthy only</label>
       ${excludedCount?`<label class="sub" title="Excluded rows stay red and can be restored by clicking them"><input type="checkbox" ${S.filter.showExcluded?"checked":""}
@@ -1406,7 +1549,7 @@ function rPipe() {
   const stages = [
     ["saved","📝 To apply"],["applied","✅ Applied"],["oa","🧪 OA"],
     ["interview","🗣 Interview"],["rejected","↩ Rejected"],["closed","⏸ Closed"]];
-  $("#main").innerHTML = `${trackerPanelHTML()}<section class="manual-add">
+  $("#main").innerHTML = `${laneSettingsHTML()}${trackerPanelHTML()}<section class="manual-add">
     <h2>Add a role you found yourself</h2>
     <p class="sub">This lives in To apply and mirrors to Notion. It is marked manual, never sent as an alert, and does not pretend to be new-grad evidence.</p>
     <div class="bar"><input id="manualCompany" aria-label="Company" placeholder="Company *">
@@ -2190,7 +2333,7 @@ function scoreControlsHTML() {
 
 function rSet() {
   $("#main").innerHTML = `
-    ${trackerPanelHTML()}
+    ${laneSettingsHTML()}${notificationSettingsHTML()}${trackerPanelHTML()}
     <div class="sect"><h4>Radar score controls</h4>${scoreControlsHTML()}</div>
     <div class="sect"><h4>Company pace evidence</h4>
       <p class="sub" style="max-width:48rem">Pace is not guessed from startup/corporate labels, prestige, or your own expectation. New company research must cite at least two observable operating indicators—such as release cadence, on-call/incident load, launch cycles, planning horizon, or an explicit operating rhythm—then assigns a 1–5 measure. If the evidence is not strong enough, pace stays <b>Not confirmed</b> and contributes zero.</p></div>

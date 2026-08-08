@@ -52,6 +52,29 @@ def test_platform_exposes_private_google_tracker_path_for_authenticated_users():
     assert '"stage"' in helper + action + main
 
 
+def test_platform_exposes_isolated_internship_lane_and_graduation_preferences():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    helper = (ROOT / "webapp" / "api" / "_google-tracker.js").read_text()
+    tracker = (ROOT / "webapp" / "api" / "tracker.js").read_text()
+    workflow = (ROOT / ".github" / "workflows" / "internship-radar.yml").read_text()
+    batch = (ROOT / ".github" / "workflows" / "internship-alert-batch.yml").read_text()
+    assert 'id="laneSwitch"' in html
+    assert "Internships" in html
+    assert "state/intern_jobs.json" in html
+    assert "state/intern_web_state.json" in html
+    assert "expectedGraduation" in html
+    assert "freshman" in html and "sophomore" in html and "junior" in html and "senior" in html
+    assert '"Internships"' in helper
+    assert '"Preferences"' in helper
+    assert "expected_graduation" in helper
+    assert "profile=${encodeURIComponent(mode)}" in html
+    assert "profileOf" in tracker
+    assert "RADAR_PROFILE: internship" in workflow
+    assert "RADAR_PROFILE: internship" in batch
+    assert "RADAR_DEFER_DELIVERY" in workflow
+    assert "internship_email" in html + (ROOT / "radar/board.py").read_text()
+
+
 def test_platform_exposes_oauth_account_center_and_tutorial():
     html = (ROOT / "webapp" / "index.html").read_text()
     api = "\n".join((ROOT / "webapp" / "api" / name).read_text()

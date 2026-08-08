@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 
 from ..http import get_json, post_json
 from ..models import Job
+from ..config import profile_id
 
 
 # Query-driven career sites need title synonyms because a search for only
@@ -89,7 +90,9 @@ def fetch_lever(entry: dict) -> list[Job]:
     out = []
     for j in data:
         cats = j.get("categories") or {}
-        if (cats.get("commitment") or "").lower().startswith(("intern", "part")):
+        commitment = (cats.get("commitment") or "").lower()
+        is_internship = profile_id() == "internship" and commitment.startswith("intern")
+        if profile_id() != "internship" and commitment.startswith(("intern", "part")):
             continue
         loc = cats.get("location") or ""
         all_locs = [loc] + (j.get("additionalPlainLocations") or [])
@@ -100,6 +103,11 @@ def fetch_lever(entry: dict) -> list[Job]:
             posted_at=int(j["createdAt"] / 1000) if j.get("createdAt") else None,
             description=(j.get("descriptionPlain") or "")[:4000],
             remote=(j.get("workplaceType") or "").lower() == "remote" or "remote" in loc.lower(),
+            internship_eligibility=(
+                {"status": "open", "source_signal": True,
+                 "evidence": [f"ATS commitment: {cats.get('commitment')}".strip()]}
+                if is_internship else {}
+            ),
         ))
     return out
 
@@ -112,7 +120,9 @@ def fetch_ashby(entry: dict) -> list[Job]:
     for j in data.get("jobs", []):
         if not j.get("isListed", True):
             continue
-        if (j.get("employmentType") or "").lower() in {"intern", "internship", "parttime", "contract"}:
+        employment_type = (j.get("employmentType") or "").lower()
+        is_internship = profile_id() == "internship" and employment_type in {"intern", "internship"}
+        if profile_id() != "internship" and employment_type in {"intern", "internship", "parttime", "contract"}:
             continue
         locs = [j.get("location") or ""]
         locs += [s.get("location", "") for s in (j.get("secondaryLocations") or [])]
@@ -125,6 +135,11 @@ def fetch_ashby(entry: dict) -> list[Job]:
             posted_at=_iso_epoch(j.get("publishedAt")),
             description=(j.get("descriptionPlain") or _plain(j.get("descriptionHtml")))[:4000],
             remote=bool(j.get("isRemote")) or any("remote" in l.lower() for l in locs),
+            internship_eligibility=(
+                {"status": "open", "source_signal": True,
+                 "evidence": [f"ATS employment type: {j.get('employmentType')}".strip()]}
+                if is_internship else {}
+            ),
         ))
     return out
 
@@ -173,6 +188,13 @@ def fetch_workday(entry: dict, queries: list[str] | None = None) -> list[Job]:
                     locations=[loc] if loc else [],
                     posted_at=_workday_posted(j.get("postedOn")),
                     remote="remote" in loc.lower(),
+                    internship_eligibility=(
+                        {"status": "open", "source_signal": True,
+                         "evidence": [f"Workday internship search: {q}"]}
+                        if profile_id() == "internship" and re.search(
+                            r"\b(intern|co-?op|undergraduate|student|summer analyst)\b", q, re.I)
+                        else {}
+                    ),
                 ))
             if len(postings) < 20:
                 break

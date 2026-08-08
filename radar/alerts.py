@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 
 import requests
 
-from .config import env, github_repo
+from .config import env, github_repo, profile_id
 
 API = "https://api.github.com"
 LABEL = "radar-alerts"
@@ -26,9 +26,14 @@ def _headers() -> dict:
             "X-GitHub-Api-Version": "2022-11-28"}
 
 
+def lane_label() -> str:
+    return "radar-internships" if profile_id() == "internship" else "radar-new-grad"
+
+
 def _alert_title(job: dict) -> str:
     stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    return f"🎯 {job['company']} — {job['title'][:72]} · {stamp}"
+    prefix = "🎓 Internship" if profile_id() == "internship" else "🎯"
+    return f"{prefix} {job['company']} — {job['title'][:72]} · {stamp}"
 
 
 def format_line(j: dict, culture_map: dict | None = None) -> str:
@@ -52,8 +57,17 @@ def format_line(j: dict, culture_map: dict | None = None) -> str:
     found = f" · found via [{source_label}]({source_url})" if source_url else f" · found via {source_label}"
     ptags = summary_tags(j.get("posting"))
     ptags = f" · {ptags}" if ptags else ""
+    cohort = ""
+    if profile_id() == "internship":
+        eligibility = j.get("internship_eligibility") or {}
+        classes = ", ".join(eligibility.get("class_years") or [])
+        grad = ""
+        if eligibility.get("graduation_start"):
+            grad = f"classes {eligibility['graduation_start'][:4]}–{eligibility['graduation_end'][:4]}"
+        cohort_text = ", ".join(x for x in (classes, grad) if x) or "eligibility not stated"
+        cohort = f" · **cohort:** {cohort_text}"
     return (f"- [ ] {fire}**{j['company']}** — [{j['title'][:80]}]({j['url']}) · "
-            f"{loc}{salary} · `{j['score']}`{ptags} · **{industry}** — {what}{snapshot_text}{ctag}{found}{note} "
+            f"{loc}{salary} · `{j['score']}`{ptags}{cohort} · **{industry}** — {what}{snapshot_text}{ctag}{found}{note} "
             f"<!--radar:{j['id']}-->")
 
 
@@ -64,6 +78,16 @@ HEADER = (
     "actually apply, change its status in Notion. Comment `applied <url>` to "
     "log an application directly, including jobs found outside the radar.\n"
     "Comment `skip <company>` to downrank similar roles.\n")
+
+
+def header() -> str:
+    if profile_id() == "internship":
+        return (
+            "Internship roles appear in the separate Internship lane.\n\n"
+            "**☑️ Check a box to track a role** — it lands in the internship pipeline. "
+            "Internship email batches are disabled unless the board owner opts in.\n"
+        )
+    return HEADER
 
 
 def post_alerts(new_alerts: list[dict]) -> str | None:
@@ -100,8 +124,8 @@ def post_alerts(new_alerts: list[dict]) -> str | None:
         r = requests.post(
             f"{API}/repos/{repo}/issues", headers=_headers(), timeout=REQUEST_TIMEOUT,
             json={"title": _alert_title(job),
-                  "body": HEADER + format_line(job, culture_map) + "\n",
-                  "labels": [LABEL], "assignees": []})
+                  "body": header() + format_line(job, culture_map) + "\n",
+                  "labels": [LABEL, lane_label()], "assignees": []})
         r.raise_for_status()
         last_url = r.json().get("html_url") or last_url
     return last_url

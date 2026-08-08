@@ -28,9 +28,9 @@ are. Match the change to the doc that owns it:
 
 Topic-specific runbooks that already exist — extend these, don't fork them:
 `docs/AI_SETUP.md` (LLM enablement), `docs/FORKING.md`, `docs/SHPE.md`,
-`docs/CULTURE.md`. `docs/DASHBOARD.md`, `docs/feed.xml`, `docs/platform/`,
-and `state/*.json` are **generated** — never hand-edit except a documented
-repair.
+`docs/CULTURE.md`. `docs/DASHBOARD.md`, `docs/feed.xml`,
+`docs/internships/`, `docs/platform/`, and `state/*.json` are **generated** —
+never hand-edit except a documented repair.
 
 ## House rules (from DECISIONS — violate none)
 - Scoring is deterministic and auditable: every point/demotion appends a
@@ -63,6 +63,8 @@ GitHub/Vercel access controls remain the enforcement mechanism.
 
 ## Where things live (map)
 - `radar/main.py` — pipeline entry (`crawl`, `enrich`, `regate`, …)
+- `radar/internship.py` / `radar/internship_radar.py` — isolated internship
+  gates, graduation matching, scoring, and crawl entrypoint
 - `radar/score.py` — gates + scoring + `regate` (rules version stamp)
 - `radar/posting.py` — deterministic sponsorship/years scraping (no LLM)
 - `radar/quality.py` — LLM verdicts + SPA-host fetch + pasted-JD grading
