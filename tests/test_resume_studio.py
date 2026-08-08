@@ -4,6 +4,7 @@ from pathlib import Path
 import pytest
 
 from scripts import resume_studio as rs
+from scripts import resume_lock
 
 
 def test_extract_json_handles_provider_wrapper_and_fences():
@@ -27,6 +28,7 @@ def test_write_json_uses_an_atomic_worker_specific_temp_file(tmp_path):
 def test_generated_resume_filename_is_company_identifiable():
     assert rs.resume_pdf_filename({"company": "Johnson & Johnson"}) == "johnson_johnson_resume_ai.pdf"
     assert rs.resume_pdf_filename({"company": "NVIDIA"}) == "nvidia_resume_ai.pdf"
+    assert rs.resume_pdf_filename({}) == "company_resume_ai.pdf"
 
 
 def test_project_heading_uses_pipe_separator():
@@ -34,9 +36,17 @@ def test_project_heading_uses_pipe_separator():
     assert rs._project_heading(heading) == r"\\textbf{PostureMax | 1st Place Overall} | \\emph{Python, Flask}"
 
 
+def test_future_one_page_prefix_suppresses_footer_number_without_mutating_template():
+    template = "\\fancyfoot[C]{\\footnotesize\\thepage}\n" + rs.BODY_MARKER
+    generated = rs._generated_one_page_prefix(template)
+    assert rs.GENERATED_ONE_PAGE_FOOTER in generated
+    assert rs.CANONICAL_PAGE_FOOTER not in generated
+    assert rs.CANONICAL_PAGE_FOOTER in template
+
+
 def test_pdf_preview_download_name_is_safe_and_company_identifiable():
     assert rs._download_filename("mayo_clinic_rochester_resume_ai.pdf") == "mayo_clinic_rochester_resume_ai.pdf"
-    assert rs._download_filename("../../resume.pdf") == "resume.pdf"
+    assert rs._download_filename("../../resume.pdf") == "company_resume_ai.pdf"
     assert rs._download_filename("Mayo Clinic resume.pdf") == "Mayo_Clinic_resume.pdf"
 
 
@@ -47,6 +57,51 @@ def test_resume_report_exposes_change_and_layout_safety_language():
     assert "near-wraps" in rs.UI_HTML
     assert "roomy lines" in rs.UI_HTML
     assert "layout.horizontal.near_wrap_count" in rs.UI_HTML
+
+
+def test_resume_studio_exposes_a_canonical_lock_and_private_render_boundary(tmp_path):
+    lock = rs.canonical_resume_lock(tmp_path)
+    assert lock["locked"] is True
+    assert {item["name"] for item in lock["files"]} == {
+        "CV/immutable/VictorJimenezResume.tex",
+        "CV/immutable/VictorJimenezResume.pdf",
+        "CV/immutable/og_resume.tex",
+        "CV/immutable/og_resume.pdf",
+        "CV/immutable/tldp_resume.tex",
+        "CV/immutable/tldp_resume.pdf",
+    }
+    private = tmp_path / "CV" / ".resume_studio" / "runs" / "0123456789ab"
+    rs.assert_resume_workspace(private, tmp_path)
+    with pytest.raises(RuntimeError, match="canonical resume files are locked"):
+        rs.assert_resume_workspace(tmp_path / "CV", tmp_path)
+    assert "Canonical resumes locked" in rs.UI_HTML
+    assert "CV/immutable/VictorJimenezResume.tex locked" in rs.UI_HTML
+    assert "resume_lock.py unlock" in rs.UI_HTML
+    assert "company_resume_ai.pdf" in rs.UI_HTML
+    assert "Advanced mode: unrestricted AI tailor" in rs.UI_HTML
+    assert "Raw review data" in rs.UI_HTML
+    assert "Evidence review" in rs.UI_HTML
+    assert "/api/evidence/review" in rs.UI_HTML
+
+
+def test_owner_resume_lock_uses_read_only_files_and_pin_gate(tmp_path, monkeypatch):
+    cv_root = tmp_path / "CV"
+    immutable = cv_root / "immutable"
+    immutable.mkdir(parents=True)
+    for relative in resume_lock.PROTECTED_RELATIVE_PATHS:
+        path = cv_root / relative
+        path.write_text("protected")
+
+    status = resume_lock.lock_files(cv_root)
+    assert status["locked"] is True
+    assert all(not path.stat().st_mode & 0o200 for path in immutable.iterdir())
+
+    monkeypatch.setattr(resume_lock, "_verify_pin", lambda pin: pin == "accepted")
+    with pytest.raises(PermissionError):
+        resume_lock.unlock_files("wrong", cv_root)
+    unlocked = resume_lock.unlock_files("accepted", cv_root)
+    assert unlocked["locked"] is False
+    assert all(path.stat().st_mode & 0o200 for path in immutable.iterdir())
 
 
 def test_resume_library_keeps_runs_and_legacy_experiments_with_posting_snapshots(tmp_path):
@@ -402,7 +457,8 @@ def test_workshop_front_matter_is_editable_without_changing_the_template(tmp_pat
     tex = rs.render_workshop_plan(plan, catalog, rs.repo_root())
     assert "New Jersey Institute of Technology" in tex
     assert "Python, Rust" in tex
-    assert tex.index("\\section{Technical Skills}") < tex.index("Python, Rust")
+    skills_section = "\\section{Technical Skills}" if "\\section{Technical Skills}" in tex else "\\section{Skills}"
+    assert tex.index(skills_section) < tex.index("Python, Rust")
     assert tex.count("\\textbf{Languages:}") == 1
     assert tex.count("\\textbf{Data \\& Tools:}") == 1
     assert rs.template_style_guard(tex, rs.repo_root())["identical_preamble_header_education_skills"] is False
@@ -622,7 +678,8 @@ def test_near_wrap_bullet_fails_with_safe_right_slack(monkeypatch, tmp_path):
 def test_target_keyword_strategy_marks_supported_and_unsupported_terms(tmp_path):
     cv = tmp_path / "CV"
     cv.mkdir()
-    (cv / "resume.tex").write_text("Python SQL PyTorch\\n")
+    (cv / "immutable").mkdir()
+    (cv / "immutable" / "resume.tex").write_text("Python SQL PyTorch\\n")
     (cv / "cv_full.tex").write_text("Python SQL PyTorch\\n")
     context = {
         "company": "Example",
@@ -663,7 +720,8 @@ def test_content_change_report_exposes_rewrites_and_project_swaps():
 def test_renderer_keeps_canonical_prefix_and_company_first(tmp_path):
     cv = tmp_path / "CV"
     cv.mkdir()
-    (cv / "resume.tex").write_text(
+    (cv / "immutable").mkdir()
+    (cv / "immutable" / "VictorJimenezResume.tex").write_text(
         "\\documentclass{article}\n"
         "\\begin{document}\n"
         "Victor Jimenez | vmj@njit.edu\n"

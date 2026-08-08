@@ -55,6 +55,8 @@ if str(SCRIPT_REPO_ROOT) not in sys.path:
 from radar.resume_match import (MATCH_VERSION, build_evidence_graph,
                                 evidence_context, job_match_hash,
                                 posting_eligibility_blocks, score_resume_match)
+from radar.evidence_review import (BLOCKING_STATUSES, REVIEW_STATUSES,
+                                   load_reviews, review_path, review_summary)
 
 
 RUBRIC_VERSION = "resume-review-v4"
@@ -70,7 +72,18 @@ STATUS_MULTIPLIER = {"pass": 1.0, "partial": 0.5, "fail": 0.0}
 MAX_POSTING_CHARS = 12000
 MAX_PROMPT_CHARS = 42000
 RUN_TIMEOUT_SECONDS = 12 * 60
-CANONICAL_TEMPLATE = "resume.tex"
+CANONICAL_TEMPLATE = "immutable/VictorJimenezResume.tex"
+CANONICAL_PDF = "immutable/VictorJimenezResume.pdf"
+CANONICAL_PAGE_FOOTER = r"\fancyfoot[C]{\footnotesize\thepage}"
+GENERATED_ONE_PAGE_FOOTER = r"\fancyfoot[C]{}"
+CANONICAL_RESUME_FILES = (
+    "immutable/VictorJimenezResume.tex",
+    "immutable/VictorJimenezResume.pdf",
+    "immutable/og_resume.tex",
+    "immutable/og_resume.pdf",
+    "immutable/tldp_resume.tex",
+    "immutable/tldp_resume.pdf",
+)
 BODY_MARKER = "%-----------EXPERIENCE-----------"
 MAX_STYLE_REDUCTION_PERCENT = 5.0
 MAX_DENSITY_GAP_PT = 24.0
@@ -153,6 +166,51 @@ def cv_root(root: Optional[Path] = None) -> Path:
 
 def studio_root(root: Optional[Path] = None) -> Path:
     return cv_root(root) / ".resume_studio"
+
+
+def canonical_resume_lock(root: Optional[Path] = None) -> Dict[str, Any]:
+    """Describe the immutable files that Resume Studio is never allowed to write."""
+    cv = cv_root(root).resolve()
+    return {
+        "locked": True,
+        "message": (
+            "VictorJimenezResume and historical CV references are filesystem-locked. "
+            "New tailoring runs and workshop revisions are private copies."
+        ),
+        "unlock": {
+            "required": True,
+            "command": ".venv/bin/python scripts/resume_lock.py unlock",
+            "note": "Unlock requires the owner PIN at an interactive prompt; lock again after deliberate edits.",
+        },
+        "files": [
+            {
+                "name": "CV/%s" % name,
+                "kind": "source" if name.endswith(".tex") else "reference PDF",
+                "exists": (cv / name).is_file(),
+            }
+            for name in CANONICAL_RESUME_FILES
+        ],
+    }
+
+
+def assert_resume_workspace(run_dir: Path, root: Optional[Path] = None) -> None:
+    """Reject render targets inside the canonical CV directory.
+
+    The Studio's only writable CV area is ``CV/.resume_studio``.  Keeping this
+    check at the rendering boundary protects against a future caller passing
+    ``CV/`` (or another canonical subdirectory) as a compile target.
+    Temporary test directories and other non-CV workspaces remain valid.
+    """
+    candidate = Path(run_dir).resolve()
+    cv = cv_root(root or repo_root()).resolve()
+    private = studio_root(root or repo_root()).resolve()
+    inside_cv = candidate == cv or cv in candidate.parents
+    inside_private = candidate == private or private in candidate.parents
+    if inside_cv and not inside_private:
+        raise RuntimeError(
+            "Resume Studio cannot render inside CV/; canonical resume files are locked. "
+            "Use a private CV/.resume_studio run directory."
+        )
 
 
 def now_iso() -> str:
@@ -280,6 +338,72 @@ def evidence_graph(root: Optional[Path] = None, refresh_public: bool = False) ->
     return _EVIDENCE_GRAPH_CACHE[key]
 
 
+def evidence_review_view(root: Optional[Path] = None, limit: int = 120) -> Dict[str, Any]:
+    """Return a compact, reviewable claim queue for the private UI."""
+    graph = evidence_graph(root)
+    nodes = []
+    for node in graph.get("nodes", []):
+        text = str(node.get("text") or "").strip()
+        if not text:
+            continue
+        nodes.append({
+            key: node.get(key)
+            for key in (
+                "id", "source", "heading", "text", "authority", "claim_allowed",
+                "source_kind", "review_status", "review_note", "blocked_reason",
+            )
+        })
+    nodes.sort(key=lambda node: (
+        node.get("review_status") != "unreviewed",
+        not bool(node.get("claim_allowed")),
+        -int(node.get("authority") or 0),
+        str(node.get("source") or ""),
+    ))
+    return {
+        "version": graph.get("version"),
+        "hash": graph.get("hash"),
+        "summary": graph.get("review_summary") or review_summary(graph),
+        "claims": nodes[: max(1, min(int(limit or 120), 500))],
+        "review_file": str(review_path(studio_root(root or repo_root()))),
+    }
+
+
+def update_evidence_review(
+    node_id: str,
+    status: str,
+    note: str = "",
+    claim_allowed: bool = False,
+    root: Optional[Path] = None,
+) -> Dict[str, Any]:
+    """Persist one user review and invalidate the in-process graph cache."""
+    status = str(status or "").strip().lower()
+    if status not in REVIEW_STATUSES:
+        raise ValueError("invalid evidence review status")
+    node_id = str(node_id or "").strip()
+    if not node_id:
+        raise ValueError("evidence node id is required")
+    graph = evidence_graph(root)
+    if not any(str(node.get("id") or "") == node_id for node in graph.get("nodes", [])):
+        raise ValueError("evidence node not found")
+    note = str(note or "").strip()
+    if len(note) > 2000:
+        raise ValueError("evidence review note is too long")
+    reviews = load_reviews(studio_root(root or repo_root()))
+    claims = reviews.setdefault("claims", {})
+    claims[node_id] = {
+        "status": status,
+        "note": note,
+        "reviewed_by": "Victor",
+        "reviewed_at": dt.datetime.now(dt.timezone.utc).isoformat(),
+    }
+    if status == "confirmed" and claim_allowed:
+        claims[node_id]["claim_allowed"] = True
+    write_json(review_path(studio_root(root or repo_root())), reviews)
+    key = str((root or repo_root()).resolve())
+    _EVIDENCE_GRAPH_CACHE.pop(key, None)
+    return evidence_review_view(root)
+
+
 def _match_cache_path(root: Optional[Path] = None) -> Path:
     return studio_root(root or repo_root()) / "resume_matches.json"
 
@@ -395,13 +519,11 @@ def _slug(value: str) -> str:
 def resume_pdf_filename(job: Dict[str, Any]) -> str:
     """Return the human-readable filename shown for a generated resume.
 
-    Runs already have unique directories, but ``resume.pdf`` made it
-    impossible to identify an artifact after downloading or opening several
-    drafts.  Keep the company in the filename while leaving the run directory
-    as the collision boundary.
+    Every new PDF includes a company slug and a use-case suffix so opening
+    several drafts cannot hide which role each artifact belongs to.
     """
-    company = re.sub(r"[^a-z0-9]+", "_", str(job.get("company") or "resume").lower()).strip("_")
-    return "%s_resume_ai.pdf" % (company[:64] or "resume")
+    company = re.sub(r"[^a-z0-9]+", "_", str(job.get("company") or "company").lower()).strip("_")
+    return "%s_resume_ai.pdf" % (company[:64] or "company")
 
 
 def run_pdf_path(run_dir: Path) -> Path:
@@ -438,9 +560,11 @@ def workshop_artifact_url(run_id: str, revision_id: str, filename: str) -> str:
 
 def _download_filename(value: Any) -> str:
     """Return a safe, human-readable filename for inline PDF previews."""
-    name = Path(str(value or "resume.pdf")).name
+    name = Path(str(value or "company_resume_ai.pdf")).name
     safe = re.sub(r"[^A-Za-z0-9._-]+", "_", name).strip("._")
-    return safe or "resume.pdf"
+    if safe == "resume.pdf":
+        return "company_resume_ai.pdf"
+    return safe or "company_resume_ai.pdf"
 
 
 def _resume_tokens(value: str) -> set:
@@ -537,7 +661,7 @@ def source_catalog(root: Optional[Path] = None) -> Dict[str, Any]:
     # responsibility bank.  Target-specific historical resumes are outputs,
     # not independent evidence sources; ingesting them created duplicate roles,
     # projects, and stale claims in generated portfolios.
-    order = ("resume.tex", "cv_full.tex")
+    order = (CANONICAL_TEMPLATE, "cv_full.tex")
     keys: Dict[Tuple[str, str], str] = {}
 
     def merge_entry(kind: str, company: str, role: str, dates: str, location: str, bullets: List[str], source_name: str) -> None:
@@ -1409,7 +1533,7 @@ def job_context(job: Dict[str, Any]) -> Dict[str, Any]:
     context["posting_text"] = fetch_job_description(job)
     context["local_sources"] = [
         "CV/cv_full.tex",
-        "CV/tldp_resume.tex",
+        "CV/immutable/tldp_resume.tex",
         "CV/RESUME_TAILORING_PLAYBOOK.md",
         "CV/RESUME_BULLET_METHODOLOGY.md",
         "CV/RESUME_NOTES.md",
@@ -1495,7 +1619,7 @@ def target_keyword_strategy(
         }
     cv = cv_root(root or repo_root())
     source_texts: List[Tuple[str, str]] = []
-    for filename in ("resume.tex", "cv_full.tex"):
+    for filename in (CANONICAL_TEMPLATE, "cv_full.tex"):
         try:
             source_texts.append(("CV/" + filename, _latex_plain((cv / filename).read_text(errors="replace"))))
         except OSError:
@@ -1570,7 +1694,7 @@ Victor-specific guardrails:
   not a direct keyword match, but explain that tradeoff.
 - Prefer one distinct job per bullet: leadership, technical artifact, result,
   operating scope, communication, or prestige.
-- CV/resume.tex is the immutable visual template. You are selecting content,
+- CV/immutable/VictorJimenezResume.tex is the immutable visual template. You are selecting content,
   not designing a resume. The harness, not you, renders the LaTeX.
 - Never read CV/.resume_studio/ or use earlier generated resumes/reports as
   evidence. They are outputs, not authority.
@@ -1582,7 +1706,7 @@ Victor-specific guardrails:
   artifact; put unsupported requirements in the gap list rather than inventing
   them. Skills may carry a supported term, but the strongest terms should also
   appear in meaningful experience/project lines when evidence allows.
-- CV/resume.tex is authoritative for the immutable contact, education, skills,
+- CV/immutable/VictorJimenezResume.tex is authoritative for the immutable contact, education, skills,
   employer-heading metadata, and dates that the renderer copies. Treat older
   conflicting metadata in cv_full.tex or target-specific resumes as stale;
   those files authorize bullet evidence, not replacement template metadata.
@@ -1606,7 +1730,7 @@ Victor-specific guardrails:
   preamble, section command, margin, font size, spacing command, or page break.
 - Projects are deliberately replaceable. Choose the 4-5 strongest projects
   from the complete source catalog for this target; do not preserve a base-CV
-  project merely because it appeared in CV/resume.tex. Reword supported
+  project merely because it appeared in CV/immutable/VictorJimenezResume.tex. Reword supported
   bullets around the posting's exact terms and explain project swaps in
   revision_notes.
 """.strip()
@@ -1688,7 +1812,7 @@ def synthesis_prompt(
         "You are the senior resume evidence editor synthesizing competing plans for Victor.\n"
         "This request is self-contained. Do not inspect the filesystem or run commands; use the supplied source IDs "
         "and evidence only. Do not edit files and do not return a LaTeX document. "
-        "CV/resume.tex remains immutable and the harness renders it. Return a rich, strongest-first ranked pool sized "
+        "CV/immutable/VictorJimenezResume.tex remains immutable and the harness renders it. Return a rich, strongest-first ranked pool sized "
         "to match the full human-authored reference page; each bullet must earn its place through target fit, proof, "
         "and a distinct interview story. "
         + ("You may substantially rewrite or synthesize bullet text from the authorized source bank; preserve the primary source_id, add all supporting source IDs, and retain every scope-limiting qualifier. " if enhance else "Select source IDs verbatim; do not rewrite bullets. ")
@@ -1734,7 +1858,7 @@ def reviewer_prompt(
         + ("This is an unrestricted creative pass; preserve factual boundaries but prefer a fresh, specific argument over safe base-CV wording. " if unrestricted else "")
         + "Use the exact ATS keyword strategy to improve supported keyword coverage, while recording unsupported requirements as missing evidence. "
         "unsupported_claims must describe only claims still present in final_plan.\n\n"
-        "Authority rule: CV/resume.tex is canonical for the immutable contact, "
+        "Authority rule: CV/immutable/VictorJimenezResume.tex is canonical for the immutable contact, "
         "education, skills, employer-heading metadata, and dates copied by the "
         "renderer. Do not mark those fields unsupported merely because stale "
         "metadata differs in cv_full.tex or a historical target resume. Experience "
@@ -2576,8 +2700,8 @@ def render_plan(plan: Dict[str, Any], catalog: Dict[str, Any], root: Optional[Pa
     template_path = cv_root(root) / CANONICAL_TEMPLATE
     template = template_path.read_text()
     if BODY_MARKER not in template:
-        raise ValueError("CV/resume.tex is missing the experience marker")
-    prefix = template.split(BODY_MARKER, 1)[0].rstrip()
+        raise ValueError("CV/immutable/VictorJimenezResume.tex is missing the experience marker")
+    prefix = _generated_one_page_prefix(template)
     entries = catalog["entries"]
     lines = [prefix, "", BODY_MARKER, "\\section{Experience}", "\\resumeSubHeadingListStart", ""]
     for selection in plan["experiences"]:
@@ -2616,6 +2740,17 @@ def render_plan(plan: Dict[str, Any], catalog: Dict[str, Any], root: Optional[Pa
     tex = "\n".join(lines)
     _assert_resume_exclusions(tex)
     return tex
+
+
+def _generated_one_page_prefix(template: str) -> str:
+    """Prepare a future one-page copy without changing protected references."""
+    prefix = template.split(BODY_MARKER, 1)[0].rstrip()
+    footer_count = prefix.count(CANONICAL_PAGE_FOOTER)
+    if footer_count == 0:
+        return prefix
+    if footer_count != 1:
+        raise ValueError("canonical resume template must contain exactly one page footer")
+    return prefix.replace(CANONICAL_PAGE_FOOTER, GENERATED_ONE_PAGE_FOOTER, 1)
 
 
 def _replace_macro_call(source: str, macro: str, index: int, args: List[str]) -> str:
@@ -3175,6 +3310,7 @@ def template_style_guard(tex: str, root: Optional[Path] = None) -> Dict[str, Any
     template = (cv_root(root) / CANONICAL_TEMPLATE).read_text()
     template_prefix = template.split(BODY_MARKER, 1)[0].rstrip()
     generated_prefix = tex.split(BODY_MARKER, 1)[0].rstrip() if BODY_MARKER in tex else ""
+    generated_prefix = generated_prefix.replace(GENERATED_ONE_PAGE_FOOTER, CANONICAL_PAGE_FOOTER, 1)
     body = tex.split(BODY_MARKER, 1)[1] if BODY_MARKER in tex else tex
     renderer_commands = {"\\section", "\\begin", "\\end", "\\large"}
     forbidden = sorted(
@@ -3334,6 +3470,7 @@ def bullet_layout_metrics(plan: Dict[str, Any], pdf: Path) -> Dict[str, Any]:
 
 
 def vertical_capacity_test(run_dir: Path, tex: str) -> Dict[str, Any]:
+    assert_resume_workspace(run_dir)
     qa_dir = run_dir / "qa_vertical_capacity"
     qa_dir.mkdir(exist_ok=True)
     sentinel = (
@@ -3361,6 +3498,7 @@ def vertical_capacity_test(run_dir: Path, tex: str) -> Dict[str, Any]:
 
 
 def render_preview(run_dir: Path) -> Optional[str]:
+    assert_resume_workspace(run_dir)
     pdftoppm = shutil.which("pdftoppm")
     pdf = run_pdf_path(run_dir)
     if not pdftoppm or not pdf.exists():
@@ -3380,6 +3518,7 @@ def render_preview(run_dir: Path) -> Optional[str]:
 
 
 def compile_resume(run_dir: Path) -> Dict[str, Any]:
+    assert_resume_workspace(run_dir)
     tex = run_dir / "resume.tex"
     if not tex.exists():
         return {"compiled": False, "error": "resume.tex was not produced"}
@@ -3415,6 +3554,7 @@ def pdf_layout(
     plan: Optional[Dict[str, Any]] = None,
     run_capacity_test: bool = True,
 ) -> Dict[str, Any]:
+    assert_resume_workspace(run_dir)
     result = {
         "compiled": bool(compile_info.get("compiled")),
         "pages": None,
@@ -3449,7 +3589,7 @@ def pdf_layout(
         except (OSError, subprocess.SubprocessError):
             result["warnings"].append("pdftotext failed")
     result["content_bottom_pt"] = pdf_content_bottom(pdf)
-    reference_pdf = cv_root(repo_root()) / "resume.pdf"
+    reference_pdf = cv_root(repo_root()) / CANONICAL_PDF
     result["reference_content_bottom_pt"] = pdf_content_bottom(reference_pdf) if reference_pdf.exists() else None
     if result["content_bottom_pt"] is not None and result["reference_content_bottom_pt"] is not None:
         result["density_gap_pt"] = round(result["reference_content_bottom_pt"] - result["content_bottom_pt"], 2)
@@ -3486,7 +3626,7 @@ def pdf_layout(
     if not result["text_extractable"]:
         result["warnings"].append("PDF text is not extractable")
     if not result["density_pass"]:
-        result["warnings"].append("page has extreme unused bottom space relative to CV/resume.pdf")
+        result["warnings"].append("page has extreme unused bottom space relative to CV/immutable/VictorJimenezResume.pdf")
     return result
 
 
@@ -3494,7 +3634,7 @@ def deterministic_review(job: Dict[str, Any], tex: str, layout: Dict[str, Any]) 
     warnings = list(layout.get("warnings", []))
     style = template_style_guard(tex, repo_root())
     if not style.get("passed"):
-        warnings.append("generated resume changed or bypassed the canonical CV/resume.tex formatting")
+        warnings.append("generated resume changed or bypassed the canonical CV/immutable/VictorJimenezResume.tex formatting")
     company = str(job.get("company", "")).lower()
     if "Victor Jimenez" not in tex or "vmj@njit.edu" not in tex:
         warnings.append("canonical owner name/contact header is missing")
@@ -3705,7 +3845,7 @@ def run_tailoring(
     write_json(run_dir / "layout_packing.json", packing)
     chosen = render_plan(plan, catalog, repo_root())
     (run_dir / "resume.tex").write_text(chosen)
-    update("rendering", "Compiling through the immutable CV/resume.tex template")
+    update("rendering", "Compiling through the protected general resume template")
     compiled = compile_resume(run_dir)
     layout = pdf_layout(run_dir, compiled, plan=plan)
     line_edits: List[Dict[str, Any]] = []
@@ -3923,7 +4063,7 @@ def run_tailoring(
         },
         "layout_packing": packing,
         "format_contract": {
-            "template": "CV/resume.tex",
+            "template": "CV/" + CANONICAL_TEMPLATE,
             "model_can_write_latex_document": False,
             "font_size_reduction_percent": 0.0,
             "font_size_increase_percent": 0.0,
@@ -4105,6 +4245,11 @@ function renderLibrary(){
 }
 async function loadLibrary(){try{const r=await fetch('/api/library?limit=500');const data=await r.json();if(!r.ok)throw new Error(data.error||'Could not load resume bank');libraryEntries=data.resumes||[];renderQueue();renderLibrary();renderSelectedResumes();renderJobRows(jobsCache);}catch(error){$('libraryCards').innerHTML='<p class="sub">'+esc(error.message)+'</p>';}}
 async function loadUsage(){try{const r=await fetch('/api/usage');const data=await r.json();if(r.ok)renderUsage(data);}catch(error){$('usageStrip').innerHTML='<strong>Usage</strong><span class="meta">Usage ledger unavailable: '+esc(error.message)+'</span>';}}
+async function loadProtection(){try{const r=await fetch('/api/locks');const data=await r.json();if(!r.ok)throw new Error(data.error||'Lock status unavailable');const present=(data.files||[]).filter(item=>item.exists).map(item=>item.name.replace('CV/',''));$('protectionStrip').innerHTML='<strong>Canonical resumes locked</strong><span>'+esc(data.message||'Studio writes private copies only.')+'</span><span class="meta">Protected: '+esc(present.join(', ')||'canonical CV files')+'</span>';}catch(error){$('protectionStrip').innerHTML='<strong>Canonical resumes locked</strong><span class="meta">'+esc(error.message)+'</span>';}}
+let evidenceClaims=[],evidenceFilter='unreviewed';
+function renderEvidenceReview(data){const summary=data.summary||{},counts=summary.counts||{};const filtered=evidenceClaims.filter(item=>evidenceFilter==='all'||(item.review_status||'unreviewed')===evidenceFilter);let html='<div class="meta">'+(summary.nodes||0)+' indexed evidence records · '+(summary.usable_claims||0)+' usable now · '+(summary.default_blocked||0)+' blocked by default · '+(counts.rejected||0)+' rejected</div><div class="button-row"><select id="evidenceFilter" aria-label="Evidence review filter"><option value="unreviewed">Needs review</option><option value="confirmed">Confirmed</option><option value="rejected">Rejected</option><option value="superseded">Superseded</option><option value="all">All</option></select></div>';html+=filtered.slice(0,24).map(item=>{const id=encodeURIComponent(item.id||'');const status=item.review_status||'unreviewed';return '<article class="evidence-card"><div class="line-meta"><span>'+esc(item.heading||'Evidence')+'</span><span>'+esc(status)+' · authority '+esc(item.authority||0)+'</span></div><div>'+esc(item.text||'')+'</div><p class="source-note">'+esc(item.source||'')+'</p><div class="line-actions"><button data-evidence-id="'+id+'" data-evidence-status="confirmed">Confirm</button><button data-evidence-id="'+id+'" data-evidence-status="rejected">Reject</button></div></article>';}).join('')||'<p class="meta">No records match this filter.</p>';$('evidenceReview').innerHTML=html;const filter=$('evidenceFilter');if(filter)filter.value=evidenceFilter;if(filter)filter.onchange=()=>{evidenceFilter=filter.value;renderEvidenceReview(data);};}
+async function loadEvidenceReview(){try{const r=await fetch('/api/evidence');const data=await r.json();if(!r.ok)throw new Error(data.error||'Evidence review unavailable');evidenceClaims=data.claims||[];renderEvidenceReview(data);}catch(error){$('evidenceReview').innerHTML='<p class="meta">'+esc(error.message)+'</p>';}}
+async function reviewEvidence(id,status){try{const r=await fetch('/api/evidence/review',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({node_id:id,status,claim_allowed:status==='confirmed'})});const data=await r.json();if(!r.ok)throw new Error(data.error||'Could not save evidence review');evidenceClaims=data.claims||[];renderEvidenceReview(data);}catch(error){alert(error.message);}}
 function workshopLineElement(lineId){return Array.from(document.querySelectorAll('[data-line-id]')).find(node=>node.dataset.lineId===lineId);}
 function plainLine(value){return String(value??'').replace(/\\textbf\{([^{}]*)\}/g,'$1').replace(/\\emph\{([^{}]*)\}/g,'$1').replace(/\\(?:large|normalsize|small|scshape)\s*/g,'').replace(/\\(?:%|&|\$)/g,m=>m==='\\%'?'%':m==='\\&'?'&':'$').replace(/\\times\{\}/g,'x');}
 function renderWorkshop(){
@@ -4131,10 +4276,42 @@ async function start(mode){if(!selected)return;const buttons=['strict','dream','
 function watchRun(id){if(runTimers.has(id))return;const tick=async()=>{try{const r=await fetch('/api/run?id='+encodeURIComponent(id));const data=await r.json();if(!r.ok)throw new Error(data.error||'Run status unavailable');if(id===activeRunId){$('status').textContent=(data.job?.company?data.job.company+': ':'')+(data.message||data.status);$('status').className='status '+data.status;}if(data.status==='complete'||data.status==='failed'){runTimers.delete(id);if(id===activeRunId){setTailorButtons(false);if(data.status==='complete')renderReport(data);else $('report').classList.add('hidden');}await loadLibrary();return;}const timer=setTimeout(()=>{runTimers.delete(id);tick();},1500);runTimers.set(id,timer);}catch(error){runTimers.delete(id);if(id===activeRunId){$('status').className='status failed';$('status').textContent=error.message;setTailorButtons(false);}}};tick();}
 function renderReport(status){const report=status.report||{};const review=report.review||{},gates=review.gates||{},job=status.job||report.job||{},pdfName=status.pdf_filename||report.pdf_filename||'resume.pdf',previewName=status.preview_filename||report.preview_filename||'';$('report').classList.remove('hidden');let html=`<div class="section-title"><h3>Saved result</h3><span class="badge">${modeLabel(status.mode||report.mode)}</span></div><p class="meta">${esc(job.company||'')} · ${esc(job.title||'')} · ${fmtDate(status.updated_at||status.created_at)}</p>`;if(review.craft_score!==undefined)html+=`<div class="score">${review.craft_score}/100 craft</div><div>${review.ready?'Ready for human review':'Needs revision or fact verification'}</div><p>${Object.entries(gates).map(([name,gate])=>`<span class="badge">${esc(name)}: ${esc(gate.status)}</span>`).join(' ')}</p>`;if(report.resume_match)html+=`<p><strong>Resume Match:</strong> ${report.resume_match.score}/100 <span class="badge">${esc(report.resume_match.confidence)}</span></p>`;if(report.positioning_thesis)html+=`<p><strong>Thesis:</strong> ${esc(report.positioning_thesis)}</p>`;if(status.mode==='ai'||status.mode==='unrestricted'||report.mode==='enhanced'||report.mode==='unrestricted')html+=`<p class="meta">AI tailoring may synthesize authorized source lines; unrestricted drafts are intentionally more original. Edit, compare, or revert in the workshop.</p>`;if(report.format_contract)html+=`<p class="meta"><strong>Format:</strong> CV/resume.tex locked · 0% font-size change · company first</p>`;const layout=review.deterministic?.layout||{};if(layout.horizontal)html+=`<p class="meta"><strong>Space QA:</strong> ${layout.horizontal.measured||0} bullets measured · ${layout.horizontal.wrap_count||0} wraps · ${layout.horizontal.near_wrap_count||0} near-wraps · ${layout.horizontal.underfilled_line_count||0} roomy lines · one-more-bullet ${layout.vertical_capacity?.pass?'overflows':'still fits'}</p>`;if(report.usage)html+=`<p class="meta"><strong>Codex usage:</strong> ${Number(report.usage.codex_tokens||0).toLocaleString()} tokens across ${report.usage.codex_calls||0} calls${report.usage.complete?'':' (some call totals unavailable)'}</p>`;html+=`<p><a href="${runArtifact(status.run_id,pdfName)}" target="_blank" rel="noreferrer">Preview PDF</a> · <button class="secondary" data-open-workshop="${esc(status.run_id)}">Open workshop</button> · <a href="/api/posting?source=run&id=${encodeURIComponent(status.run_id)}" target="_blank" rel="noreferrer">Posting snapshot</a> · <a href="${runArtifact(status.run_id,'content_plan.json')}" target="_blank" rel="noreferrer">Source plan</a> · <a href="${runArtifact(status.run_id,'report.json')}" target="_blank" rel="noreferrer">Full report</a></p>`;if(previewName)html+=`<img class="preview" src="${runArtifact(status.run_id,previewName)}" alt="Rendered resume preview">`;html+='<pre>'+esc(JSON.stringify(review,null,2))+'</pre>';$('report').innerHTML=html;document.querySelectorAll('[data-open-workshop]').forEach(button=>button.onclick=()=>openWorkshop(button.dataset.openWorkshop||status.run_id));}
 function showView(view){const bank=view==='library',workshop=view==='workshop';$('tailorView').classList.toggle('hidden',bank||workshop);$('libraryView').classList.toggle('hidden',!bank);$('workshopView').classList.toggle('hidden',!workshop);$('tailorTab').classList.toggle('active',!bank&&!workshop);$('libraryTab').classList.toggle('active',bank);if(bank)renderLibrary();if(workshop)renderWorkshop();}
-document.addEventListener('click',async event=>{const open=event.target.closest('[data-open-workshop]');if(open){event.preventDefault();return openWorkshop(open.dataset.openWorkshop||open.dataset.run);}const button=event.target.closest('[data-view-posting]');if(!button)return;const card=button.closest('.resume-card'),panel=card.querySelector('.posting-snapshot');if(!panel.classList.contains('hidden')){panel.classList.add('hidden');button.textContent='View posting snapshot';return;}button.disabled=true;try{const r=await fetch(button.dataset.posting),data=await r.json();if(!r.ok)throw new Error(data.error||'Posting snapshot unavailable');panel.innerHTML=`<strong>Saved posting snapshot</strong><pre>${esc(data.posting_text||'Only posting metadata was available for this run.')}</pre>`;panel.classList.remove('hidden');button.textContent='Hide posting snapshot';}catch(error){panel.textContent=error.message;panel.classList.remove('hidden');}finally{button.disabled=false;}});
+document.addEventListener('click',async event=>{const evidence=event.target.closest('[data-evidence-status]');if(evidence){event.preventDefault();return reviewEvidence(decodeURIComponent(evidence.dataset.evidenceId||''),evidence.dataset.evidenceStatus||'');}const open=event.target.closest('[data-open-workshop]');if(open){event.preventDefault();return openWorkshop(open.dataset.openWorkshop||open.dataset.run);}const button=event.target.closest('[data-view-posting]');if(!button)return;const card=button.closest('.resume-card'),panel=card.querySelector('.posting-snapshot');if(!panel.classList.contains('hidden')){panel.classList.add('hidden');button.textContent='View posting snapshot';return;}button.disabled=true;try{const r=await fetch(button.dataset.posting),data=await r.json();if(!r.ok)throw new Error(data.error||'Posting snapshot unavailable');panel.innerHTML=`<strong>Saved posting snapshot</strong><pre>${esc(data.posting_text||'Only posting metadata was available for this run.')}</pre>`;panel.classList.remove('hidden');button.textContent='Hide posting snapshot';}catch(error){panel.textContent=error.message;panel.classList.remove('hidden');}finally{button.disabled=false;}});
 function explainRadarReason(reason){const text=String(reason||'');if(text.startsWith('raw utility'))return 'Calibration: '+text;const labels=[['base utility','Baseline role utility'],['role:','Role family fit'],['sector:','Sector fit'],['new-grad/early-career priority','Verified early-career signal'],['early-career possible','Plausible first-role signal'],['new-grad evidence absent','No explicit early-career evidence'],['company tier','Company quality'],['explicit goal company','Personal goal-company preference'],['company concentration','Company diversity adjustment'],['compensation','Compensation'],['posted','Freshness'],['remote','Remote access'],['Resume Match','Resume Match']];const label=(labels.find(item=>text.startsWith(item[0]))||[])[1]||'Scoring input';return label+': '+text;}
-$('search').oninput=()=>{clearTimeout(window.searchTimer);window.searchTimer=setTimeout(loadJobs,250)};$('sort').onchange=loadJobs;$('librarySearch').oninput=renderLibrary;$('libraryMode').onchange=renderLibrary;$('analyzeMatch').onclick=analyzeMatch;$('refreshEvidence').onclick=refreshEvidence;$('strict').onclick=()=>start('used');$('dream').onclick=()=>start('ai');$('unrestricted').onclick=()=>start('unrestricted');$('showScoreReasons').onclick=()=>{if(!selected)return;const reasons=selected.score_reasons||[];$('scoreReasons').classList.remove('hidden');$('scoreReasons').innerHTML='<strong>Why Radar gave this role '+esc(selected.score)+'/100</strong><p>Radar is deterministic job fit. Resume Match is a separate CV/evidence alignment score. 90+ is strong; the company-diversity adjustment only nudges weaker duplicates.</p><ul>'+reasons.map(reason=>'<li>'+esc(explainRadarReason(reason))+'</li>').join('')+'</ul>';};$('queueOpen').onclick=()=>showView('library');$('tailorTab').onclick=()=>showView('tailor');$('libraryTab').onclick=()=>showView('library');$('selectedLibrary').onclick=()=>showView('library');$('allSaved').onclick=()=>showView('library');$('backToTailor').onclick=()=>showView('tailor');$('workshopBack').onclick=()=>showView('library');$('workshopTailor').onclick=()=>showView('tailor');$('workshopAsk').onclick=()=>askWorkshop('');Promise.all([loadJobs(),loadLibrary(),loadUsage()]);
+ $('search').oninput=()=>{clearTimeout(window.searchTimer);window.searchTimer=setTimeout(loadJobs,250)};$('sort').onchange=loadJobs;$('librarySearch').oninput=renderLibrary;$('libraryMode').onchange=renderLibrary;$('analyzeMatch').onclick=analyzeMatch;$('refreshEvidence').onclick=refreshEvidence;$('strict').onclick=()=>start('used');$('dream').onclick=()=>start('ai');$('unrestricted').onclick=()=>start('unrestricted');$('showScoreReasons').onclick=()=>{if(!selected)return;const reasons=selected.score_reasons||[];$('scoreReasons').classList.remove('hidden');$('scoreReasons').innerHTML='<strong>Why Radar gave this role '+esc(selected.score)+'/100</strong><p>Radar is deterministic job fit. Resume Match is a separate CV/evidence alignment score. 90+ is strong; the company-diversity adjustment only nudges weaker duplicates.</p><ul>'+reasons.map(reason=>'<li>'+esc(explainRadarReason(reason))+'</li>').join('')+'</ul>';};$('queueOpen').onclick=()=>showView('library');$('tailorTab').onclick=()=>showView('tailor');$('libraryTab').onclick=()=>showView('library');$('selectedLibrary').onclick=()=>showView('library');$('allSaved').onclick=()=>showView('library');$('backToTailor').onclick=()=>showView('tailor');$('workshopBack').onclick=()=>showView('library');$('workshopTailor').onclick=()=>showView('tailor');$('workshopAsk').onclick=()=>askWorkshop('');Promise.all([loadJobs(),loadLibrary(),loadUsage(),loadProtection(),loadEvidenceReview()]);
 </script></main></body></html>"""
+
+
+UI_HTML = UI_HTML.replace(
+    '<div id="usageStrip" class="usage-strip"><strong>Usage</strong><span class="meta">Loading observed local Codex usage…</span></div>',
+    '<details class="utility-details"><summary>Safety and usage</summary><div id="protectionStrip" class="protection-strip"><strong>Canonical resumes locked</strong><span>Studio creates private copies only; protected CV/immutable/ artifacts are never overwritten.</span><span class="meta">Owner edits require: .venv/bin/python scripts/resume_lock.py unlock</span></div><div id="usageStrip" class="usage-strip"><strong>Usage</strong><span class="meta">Loading observed local Codex usage…</span></div></details>',
+)
+UI_HTML = UI_HTML.replace("CV/resume.tex locked", "CV/immutable/VictorJimenezResume.tex locked")
+UI_HTML = UI_HTML.replace("||'resume.pdf',previewName", "||'company_resume_ai.pdf',previewName")
+UI_HTML = UI_HTML.replace(
+    '</details>\n<div id="queueStrip"',
+    '</details><details class="evidence-review-details"><summary>Evidence review</summary><div class="meta evidence-review-hint">Local sources are usable by default. Review only stale, disputed, or public records; public evidence stays blocked until you confirm it.</div><div id="evidenceReview"><span class="meta">Loading indexed evidence…</span></div></details>\n<div id="queueStrip"',
+)
+UI_HTML = UI_HTML.replace(
+    '<h2>Postings</h2><span id="jobCount" class="count"></span></div><p class="hint">Choose a role. Saved resumes stay in the bank when you switch.</p>',
+    '<h2>1. Choose a posting</h2><span id="jobCount" class="count"></span></div><p class="hint">Select a role, then choose one draft mode. Saved resumes stay in the bank when you switch.</p>',
+)
+UI_HTML = UI_HTML.replace(
+    '<div id="match" class="match-card"></div><div class="button-row"><button id="analyzeMatch" class="secondary">Analyze full posting match</button><button id="showScoreReasons" class="secondary">Explain Radar score</button></div>',
+    '<div id="match" class="match-card"></div><details class="secondary-tools"><summary>Optional analysis</summary><div class="button-row"><button id="analyzeMatch" class="secondary">Analyze full posting match</button><button id="showScoreReasons" class="secondary">Explain Radar score</button></div></details>',
+)
+UI_HTML = UI_HTML.replace(
+    '<div class="action-grid"><div class="action-card"><h3>Used bullets</h3><p>Approved wording and selections only. Your clean comparison baseline.</p><p class="micro">Lowest creative variance · still queues a complete draft</p><button id="strict">Queue used-bullets tailor</button></div><div class="action-card featured"><h3>AI tailor</h3><p>Role-specific rewrites, project swaps, ATS coverage, and a review pass.</p><p class="micro">Evidence-grounded original wording</p><button id="dream">Queue AI tailor</button></div><div class="action-card"><h3>Unrestricted AI tailor</h3><p>Freer synthesis across your CV evidence bank for a sharper, more original argument.</p><p class="micro">Still factual and layout-safe · human-review flag stays visible</p><button id="unrestricted">Queue unrestricted tailor</button></div></div>',
+    '<div class="action-grid"><div class="action-card"><h3>1. Used bullets</h3><p>Approved wording and selections only. Your clean comparison baseline.</p><p class="micro">Lowest creative variance</p><button id="strict">Create used-bullets draft</button></div><div class="action-card featured"><h3>2. AI tailor</h3><p>Role-specific rewrites, project swaps, ATS coverage, and a review pass.</p><p class="micro">Evidence-grounded original wording</p><button id="dream">Create AI-tailored draft</button></div></div><details class="advanced-mode"><summary>Advanced mode: unrestricted AI tailor</summary><div class="action-card"><p>Freer synthesis across your CV evidence bank. It remains factual, source-grounded, and layout-safe.</p><button id="unrestricted">Create unrestricted draft</button></div></details>',
+)
+UI_HTML = UI_HTML.replace(
+    '<div class="section-title"><h3>Saved for this posting</h3><button id="allSaved" class="secondary">See all saved resumes</button></div><div id="selectedResumes"></div>',
+    '<div class="section-title"><h3>Saved for this posting</h3><button id="allSaved" class="secondary">Open resume bank</button></div><details class="saved-inline"><summary>Show saved drafts for this posting</summary><div id="selectedResumes"></div></details>',
+)
+UI_HTML = UI_HTML.replace(
+    "html+='<pre>'+esc(JSON.stringify(review,null,2))+'</pre>'",
+    "html+='<details class=\"report-details\"><summary>Raw review data</summary><pre>'+esc(JSON.stringify(review,null,2))+'</pre></details>'",
+)
 
 
 UI_HTML = UI_HTML.replace(
@@ -4176,7 +4353,7 @@ UI_HTML = UI_HTML.replace(
 )
 UI_HTML = UI_HTML.replace(
     "</head>",
-    "<style>.workshop-preview{display:none!important}</style></head>",
+    "<style>.workshop-preview{display:none!important}.utility-details{margin:0 0 16px;border:1px solid var(--line);border-radius:8px;background:#111827}.utility-details summary{cursor:pointer;padding:10px 12px;color:var(--muted)}.utility-details[open] summary{border-bottom:1px solid var(--line)}.protection-strip{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 12px;color:#d7f9df;background:#102a1a;border-bottom:1px solid #245c34}.protection-strip strong{color:var(--good)}.evidence-review-details{margin:0 0 16px;border:1px solid var(--line);border-radius:8px;background:#111827;padding:0 10px}.evidence-review-details summary{cursor:pointer;color:var(--accent);padding:9px 2px}.evidence-review-hint{padding:0 2px 8px}.evidence-card{border-top:1px solid var(--line);padding:10px 0;font-size:12px}.evidence-card:first-of-type{border-top:0}.secondary-tools,.advanced-mode,.saved-inline{margin:10px 0;border:1px solid var(--line);border-radius:7px;padding:0 10px;background:#111827}.secondary-tools summary,.advanced-mode summary,.saved-inline summary{cursor:pointer;color:var(--accent);padding:9px 2px}.secondary-tools .button-row,.advanced-mode .action-card,.saved-inline>div{margin-bottom:8px}.report-details pre{margin-top:8px}</style></head>",
 )
 UI_HTML = UI_HTML.replace(
     "The original generated PDF stays untouched. Header, education, and technical skills remain the canonical base; experience, projects, and leadership lines are editable here.",
@@ -4260,6 +4437,10 @@ class StudioHandler(BaseHTTPRequestHandler):
             })
         if parsed.path == "/api/usage":
             return self.send_json(studio_usage(repo_root()))
+        if parsed.path == "/api/locks":
+            return self.send_json(canonical_resume_lock(repo_root()))
+        if parsed.path == "/api/evidence":
+            return self.send_json(evidence_review_view(repo_root()))
         if parsed.path == "/api/posting":
             params = parse_qs(parsed.query)
             source = params.get("source", [""])[0]
@@ -4332,7 +4513,7 @@ class StudioHandler(BaseHTTPRequestHandler):
     def do_POST(self) -> None:
         parsed = urlparse(self.path)
         if parsed.path not in {
-            "/api/run", "/api/match", "/api/evidence/refresh",
+            "/api/run", "/api/match", "/api/evidence/refresh", "/api/evidence/review",
             "/api/workshop/edit", "/api/workshop/ai", "/api/workshop/revert",
         }:
             return self.send_json({"error": "not found"}, HTTPStatus.NOT_FOUND)
@@ -4349,7 +4530,16 @@ class StudioHandler(BaseHTTPRequestHandler):
                     "nodes": len(graph.get("nodes", [])),
                     "hash": graph.get("hash"),
                     "public_refresh_errors": graph.get("public_refresh_errors", []),
+                    "public_refresh_warnings": graph.get("public_refresh_warnings", []),
                 })
+            if parsed.path == "/api/evidence/review":
+                return self.send_json(update_evidence_review(
+                    node_id=str(body.get("node_id") or ""),
+                    status=str(body.get("status") or ""),
+                    note=str(body.get("note") or ""),
+                    claim_allowed=bool(body.get("claim_allowed")),
+                    root=repo_root(),
+                ))
             if parsed.path == "/api/workshop/edit":
                 result = workshop_apply_edit(
                     repo_root(), str(body.get("run_id") or ""),
