@@ -28,6 +28,13 @@ none block anything currently running.
    their own workspace with cited company context, likely focus, and a prep
    checklist. A manual company-name packet and independent interview-process
    sources remain later enhancements.
+5. **Taste and moderation loop — ✅ SHIPPED 2026-08-08.** Saved/applied roles
+   form an explainable owner sample; the platform exposes similar roles as an
+   advisory discovery surface and fixed-category feedback as capped,
+   auditable company/title signals. Owner archive is recoverable and survives
+   crawls. Other GitHub users can report stale postings through issues, with
+   distinct-login deduplication and a three-reporter owner review threshold;
+   automatic deletion remains deliberately deferred until scale warrants it.
 
 ## Deliberately deferred by Victor
 

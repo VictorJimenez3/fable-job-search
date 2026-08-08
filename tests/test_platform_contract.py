@@ -56,3 +56,14 @@ def test_platform_exposes_oauth_account_center_and_tutorial():
     assert "tracker.personalConfigured()" in api
     assert "code_challenge_method" in api
     assert "no password" in html.lower()
+
+
+def test_platform_exposes_owner_taste_and_community_moderation_paths():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    action = (ROOT / "webapp" / "api" / "action.js").read_text()
+    workflow = (ROOT / ".github" / "workflows" / "report-sync.yml").read_text()
+    assert "Taste" in html
+    assert "Similar jobs to inspect" in html
+    assert "feedback" in action and "archive" in action
+    assert "radar-report:" in html and "three distinct" in html
+    assert "github.event.issue.user" in workflow or "radar-report:" in workflow

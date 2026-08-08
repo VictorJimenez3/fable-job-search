@@ -55,7 +55,7 @@ jobs:
         run: |
           git config user.name "job-radar[bot]"
           git config user.email "radar@users.noreply.github.com"
-          git add state
+          git add state docs/FEEDBACK.md
           if git diff --cached --quiet; then
             echo "no changes"; exit 0
           fi

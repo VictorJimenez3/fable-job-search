@@ -196,10 +196,17 @@ def crawl() -> int:
     # ---- persist ----
     for j in new_jobs:
         rec = j.to_record()
+        old_record = jobs_state.get(j.id)
         old_manual = manual_upgrades.get(j.id)
         rec["first_seen"] = old_manual.get("first_seen", now) if old_manual else now
         if old_manual:
             rec["manual_added"] = True
+        if old_record and old_record.get("manual_archived"):
+            rec["manual_archived"] = True
+            rec["closed_at"] = old_record.get("closed_at", now)
+            rec["archived_at"] = old_record.get("archived_at", rec["closed_at"])
+            rec["archived_by"] = old_record.get("archived_by", "owner")
+            rec["archive_reason"] = old_record.get("archive_reason", "owner archived")
         rec["rules_v"] = RULES_VERSION
         rec["explicit_new_grad"] = explicit_new_grad(j.title) or source_new_grad(j)
         rec["early_career_possible"] = early_career_possible(j, rec.get("posting"))
@@ -610,6 +617,11 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int) -> tuple[int, int]:
         if rec["early_career_possible"]:
             rec["score_reasons"].append(
                 "early-career possible: no stated experience floor (not new-grad verified)")
+        if rec.get("manual_archived"):
+            rec["alert_ok"] = False
+            line = f"owner archive: {rec.get('archive_reason', 'removed from active board')}"
+            if line not in rec["score_reasons"]:
+                rec["score_reasons"].append(line)
         changed += 1
     apply_company_concentration(jobs_state)
     alerts = sum(
@@ -695,7 +707,7 @@ def web_action() -> int:
     with open(path) as f:
         payload = _json.load(f).get("client_payload") or {}
     action = payload.get("action")
-    if action not in {"track", "applied", "untrack", "manual-add", "research-company"}:
+    if action not in {"track", "applied", "untrack", "manual-add", "research-company", "feedback", "archive"}:
         print(f"web-action: unknown action {action!r}")
         return 0
     jobs = state.jobs()
@@ -705,6 +717,34 @@ def web_action() -> int:
     applied = state.applied()
     shortlist = state.shortlist()
     fb = state.feedback()
+    if action == "feedback":
+        from . import taste
+        job = jobs.get(payload.get("id")) or hist.get(payload.get("id")) \
+            or next((j for j in jobs.values() if j.get("url") == payload.get("url")), None)
+        if job is None:
+            print(f"web-action: feedback job {payload.get('id')!r} not found")
+            return 0
+        changed = taste.record_feedback(fb, job, payload.get("vote"), payload.get("reason"))
+        if changed:
+            state.save("feedback.json", fb)
+            taste.write_report(fb)
+        print(f"web-action: feedback {job['company']} — changed={changed}")
+        return 0
+    if action == "archive":
+        if job is None:
+            print(f"web-action: archive job {payload.get('id')!r} not found")
+            return 0
+        reason = str(payload.get("reason") or "owner archived").strip()[:120]
+        now = int(time.time())
+        job.update({"manual_archived": True, "closed_at": now, "archived_at": now,
+                    "archived_by": "owner", "archive_reason": reason, "alert_ok": False})
+        line = f"owner archive: {reason}"
+        reasons = job.setdefault("score_reasons", [])
+        if line not in reasons:
+            reasons.append(line)
+        state.save("jobs.json", jobs)
+        print(f"web-action: archive {job['company']} — {reason}")
+        return 0
     untracked = set(state.load("untracked.json", []))
     if action == "untrack":
         changed = applied_mod.remove_tracking(payload.get("id") or payload.get("url", ""), applied, untracked)
@@ -807,6 +847,16 @@ def web_action() -> int:
     return 0
 
 
+def report_sync() -> int:
+    """Record a community stale-posting report from a GitHub issue."""
+    path = env("GITHUB_EVENT_PATH")
+    if not path:
+        print("report-sync: GITHUB_EVENT_PATH not set")
+        return 1
+    from . import reports
+    return reports.handle_event(path)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(prog="radar")
     ap.add_argument("command", choices=["crawl", "applied-sync", "seed", "notion-backfill",
@@ -816,6 +866,7 @@ def main() -> None:
                                         "daily-best", "master-board", "deliver-alerts", "web-action", "enrich",
                                         "email-batch",
                                         "regate", "rescore", "score-health", "rescrape", "repair-feedback",
+                                        "taste-report", "report-sync",
                                         "sponsorship-refresh", "create-google-tracker"])
     args = ap.parse_args()
     if args.command == "crawl":
@@ -877,6 +928,12 @@ def main() -> None:
         sys.exit(rescrape_cmd())
     elif args.command == "repair-feedback":
         sys.exit(repair_feedback())
+    elif args.command == "taste-report":
+        from .taste import write_report
+        write_report(state.feedback())
+        print("taste-report: wrote docs/FEEDBACK.md")
+    elif args.command == "report-sync":
+        sys.exit(report_sync())
     elif args.command == "sponsorship-refresh":
         sys.exit(sponsorship_refresh_cmd())
     elif args.command == "create-google-tracker":

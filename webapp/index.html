@@ -204,6 +204,15 @@
   .testing-role summary { cursor:pointer; color:var(--accent-ink); font-size:0.75rem;
                           font-family:ui-monospace,"SF Mono",Menlo,monospace; }
   .testing-role .kv { margin-top:0.35rem; }
+  .taste-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:.9rem; }
+  .taste-grid h4 { margin:.65rem 0 .25rem; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase;
+                  color:var(--accent-ink); font-family:ui-monospace,Menlo,monospace; }
+  .taste-list { display:grid; gap:.45rem; }
+  .taste-role { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:.25rem .5rem;
+                align-items:center; padding:.5rem 0; border-bottom:1px solid var(--line); font-size:.8rem; }
+  .taste-role:last-child { border-bottom:0; }
+  .taste-role p { grid-column:1/-1; margin:0; }
+  .taste-role button { justify-self:start; }
   .gate-row { display:flex; flex-wrap:wrap; gap:0.3rem; margin-top:0.45rem; }
   .toast { position:fixed; bottom:1rem; left:50%; transform:translateX(-50%);
            background:var(--ink); color:var(--paper); padding:0.5rem 1rem; border-radius:6px;
@@ -273,7 +282,7 @@ function storedFilter() {
   catch { return {}; }
 }
 const S = {           // app state
-  jobs:{}, applied:[], culture:{}, research:{}, aiUsage:{}, companies:{},
+  jobs:{}, applied:[], feedback:{}, reports:{}, culture:{}, research:{}, aiUsage:{}, companies:{},
   registryByCompany:{}, runs:[], scout:{}, web:null,
   auth:null, backend:false, userTracker:false, trackerConfigured:false, trackerMeta:null,
   authProviders:{github:false,google:false},
@@ -333,8 +342,10 @@ async function boot() {
   } catch {}
   RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
   const ownerView = Boolean(S.auth?.owner);
-  let [jobs, applied, culture, research, aiUsage, companies, runs, scout, web] = await Promise.all([
+  let [jobs, applied, feedback, reports, culture, research, aiUsage, companies, runs, scout, web] = await Promise.all([
     fetchJSON("state/jobs.json", {}), ownerView ? fetchJSON("state/applied.json", []) : Promise.resolve([]),
+    ownerView ? fetchJSON("state/feedback.json", {}) : Promise.resolve({}),
+    ownerView ? fetchJSON("state/reports.json", {}) : Promise.resolve({}),
     fetchJSON("state/culture.json", {}), fetchJSON("state/company_research.json", {}),
     fetchJSON("state/ai_usage.json", {}), fetchJSON("state/companies.json", {}),
     fetchJSON("state/runs.json", []), fetchJSON("state/scout.json", {}),
@@ -357,7 +368,7 @@ async function boot() {
       }
     } catch { S.userTracker = false; }
   }
-  Object.assign(S, {jobs, applied, culture, research, aiUsage, companies, runs, scout});
+  Object.assign(S, {jobs, applied, feedback, reports, culture, research, aiUsage, companies, runs, scout});
   for (const entry of Object.values(companies)) {
     const key = norm(entry.name);
     if (!S.registryByCompany[key] || entry.status === "active") S.registryByCompany[key] = entry;
@@ -375,12 +386,12 @@ async function gh(path, opts={}) {
   if (!r.ok && r.status !== 409) throw new Error(`${r.status} ${await r.text()}`);
   return r;
 }
-async function dispatch(action, job) {
+async function dispatch(action, job, extra={}) {
   await gh(`/repos/${REPO}/dispatches`, {method:"POST",
     body: JSON.stringify({event_type:"radar-web",
       client_payload:{action, id: job.id, url: job.url, company: job.company,
         title: job.title, location: (job.locations||[])[0] || "",
-        profile:PROFILE}})});
+        profile:PROFILE, ...extra}})});
   return true;
 }
 // Tokenless write path: open a prefilled GitHub issue — your GitHub login is
@@ -392,6 +403,14 @@ function issueCmd(cmd, job) {
     encodeURIComponent(`radar-profile: ${PROFILE}\n${cmd} ${ref}`)}`;
   window.open(u, "_blank");
   toast("Hit 'Create' on GitHub — it processes & auto-closes in ~1 min");
+  return false;
+}
+function issueFeedback(job, vote, reason) {
+  const body = `radar-profile: ${PROFILE}\nfeedback ${job.id} ${vote} ${reason}`;
+  const u = `https://github.com/${REPO}/issues/new?title=${
+    encodeURIComponent(`radar: feedback ${job.company}`)}&body=${encodeURIComponent(body)}`;
+  window.open(u, "_blank");
+  toast("Hit 'Create' on GitHub — owner feedback processes in ~1 min");
   return false;
 }
 let saveTimer=null;
@@ -541,6 +560,144 @@ function ago(ts){
   if (d < 1)  return Math.max(1, Math.round(d*24)) + "h";
   if (d < 60) return Math.round(d) + "d";
   return Math.round(d/30) + "mo";
+}
+
+/* ---------- taste model ----------------------------------------------- */
+// This is a recommendation surface, not a second opaque score. Saved and
+// applied roles are the sample; explicit feedback is fixed-category and the
+// deterministic crawler remains the only source of the Radar score.
+const TASTE_STOPWORDS = new Set([
+  "engineer","engineering","software","the","and","of","for","a","an",
+  "new","grad","early","career","level","full","time","remote","onsite",
+  "hybrid","associate","analyst","manager","product","project","owner",
+  "business","solutions","architect","architecture","researcher","research",
+]);
+function tasteTokens(title) {
+  return new Set(norm(title).split(" ").filter(t => t.length > 2 && !TASTE_STOPWORDS.has(t)));
+}
+function tasteSample() {
+  const sample = [], seen = new Set();
+  for (const entry of S.applied) {
+    const j = S.jobs[entry.id] || entry;
+    if (!j || seen.has(j.id)) continue;
+    seen.add(j.id); sample.push({job:j, weight:(entry.stage||"saved")==="saved"?2:3,
+      stage:entry.stage||"saved"});
+  }
+  return sample;
+}
+function tasteCounts(sample) {
+  const companies = {}, roles = {}, tokens = {};
+  for (const {job,weight} of sample) {
+    const company = norm(job.company);
+    if (company) companies[company] = (companies[company]||0) + weight;
+    const role = roleFamily(job);
+    roles[role] = (roles[role]||0) + weight;
+    for (const t of tasteTokens(job.title)) tokens[t] = (tokens[t]||0) + weight;
+  }
+  const rank = obj => Object.entries(obj).sort((a,b)=>b[1]-a[1] || a[0].localeCompare(b[0]));
+  return {companies:rank(companies), roles:rank(roles), tokens:rank(tokens)};
+}
+function similarityFor(job, sample) {
+  const jt = tasteTokens(job.title), jr = roleFamily(job), js = norm(job.sector);
+  let best = {score:0, why:""};
+  for (const {job:source} of sample) {
+    const overlap = [...jt].filter(t=>tasteTokens(source.title).has(t));
+    let score = Math.min(8, overlap.length * 2);
+    const why = [];
+    if (norm(job.company) === norm(source.company)) { score += 7; why.push("same company"); }
+    if (jr === roleFamily(source)) { score += 3; why.push(ROLE_LABELS[jr] || "same field"); }
+    if (js && js === norm(source.sector)) { score += 1; why.push("same sector"); }
+    if (overlap.length) why.push("shared " + overlap.slice(0,3).join(", "));
+    if (score > best.score) best = {score, why:why.join(" · ")};
+  }
+  return best;
+}
+function tasteContribution(job) {
+  const reasons = (job.score_reasons||[]).filter(reason =>
+    /you've engaged with|title matches your history|previously skipped/.test(String(reason)));
+  const points = reasons.reduce((sum, reason) => {
+    const m = String(reason).match(/([+-]\d+)(?:$|\s|\))/);
+    return sum + (m ? Number(m[1]) : 0);
+  }, 0);
+  return {points, reasons};
+}
+function feedbackFor(id) {
+  const events = S.feedback?.taste_events || [];
+  return [...events].reverse().find(event=>event.job_id===id) || null;
+}
+function tasteFeedbackCard(job) {
+  const prior = feedbackFor(job.id);
+  if (!S.auth?.owner && S.backend) return `<div class="note"><b>Owner-only ranking feedback.</b>
+    Sign in as @${esc("VictorJimenez3")} to change the shared taste model. The repository is public, so feedback is an audit trail, not a private journal.</div>`;
+  const upOptions = [["company","Company fit"],["role","Role fit"],["both","Company and role fit"]];
+  const downOptions = [["company","Not interested in company"],["role","Wrong kind of role"],
+    ["eligibility","Not eligible / too senior"],["location","Location or work authorization"],
+    ["other","Not for me"]];
+  const optionsHTML = (options, id, fallback) => `<select id="${id}" aria-label="${fallback}">${options.map(([k,l])=>
+    `<option value="${k}" ${prior?.vote===fallback && prior?.reason===k?"selected": ""}>${l}</option>`).join("")}</select>`;
+  return `<div class="sect"><h4>Ranking feedback</h4>
+    <p class="sub">Use this when the score feels wrong. Saved roles already teach the model; this adds one explicit, capped signal for the next rescore.</p>
+    <div class="bar">${optionsHTML(upOptions, `tasteUpReason-${job.id}`, "up")}
+      <button class="act primary" onclick='sendTasteFeedback(jobById("${job.id}"),"up","tasteUpReason-${job.id}")'>more like this</button></div>
+    <div class="bar">${optionsHTML(downOptions, `tasteDownReason-${job.id}`, "down")}
+      <button class="act" onclick='sendTasteFeedback(jobById("${job.id}"),"down","tasteDownReason-${job.id}")'>less like this</button></div>
+    ${prior?`<p class="sub">Last recorded: <b>${prior.vote==="up"?"more like this":"less like this"}</b> · ${esc(prior.reason)}</p>`:""}
+    <p class="sub">Only @${esc("VictorJimenez3")} can write this feedback. ${S.backend?"It is stored as structured state":"GitHub will open an owner-authenticated issue"} and rendered in <span class="mono">docs/FEEDBACK.md</span>.</p></div>`;
+}
+async function sendTasteFeedback(job, vote, selectorId) {
+  if (!job) return;
+  const selected = $(`#${selectorId || `taste${vote === "up" ? "Up" : "Down"}Reason-${job.id}`}`)?.value;
+  const allowed = vote === "up" ? new Set(["company","role","both"])
+    : new Set(["company","role","eligibility","location","other"]);
+  const reason = allowed.has(selected) ? selected : (vote === "up" ? "both" : "other");
+  try {
+    if (S.auth?.owner) await apiAction("feedback", job, {vote, reason});
+    else if (token()) await dispatch("feedback", job, {vote, reason});
+    else if (!S.backend) { issueFeedback(job, vote, reason); return; }
+    else { toast("Sign in as the repository owner to send ranking feedback"); return; }
+    S.feedback = S.feedback || {};
+    S.feedback.taste_events = S.feedback.taste_events || [];
+    S.feedback.taste_events.push({job_id:job.id, company:job.company, title:job.title, vote, reason});
+    toast("Feedback queued · rankings update on the next rescore");
+    openWS(job.id);
+  } catch (error) { toast("Feedback failed: " + error.message.slice(0,90)); }
+}
+function reportJob(job) {
+  if (!job) return;
+  const type = $(`#reportType-${job.id}`)?.value || "other";
+  const body = `radar-report: ${job.id}\nreport-type: ${type}\n\nPosting: ${job.url||""}`;
+  const u = `https://github.com/${REPO}/issues/new?title=${
+    encodeURIComponent(`radar: report ${job.company}`)}&body=${encodeURIComponent(body)}`;
+  window.open(u, "_blank");
+  toast("Create the GitHub issue to log this report");
+}
+async function archiveJob(job) {
+  if (!job || !S.auth?.owner) return;
+  const reason = $(`#archiveReason-${job.id}`)?.value || "expired";
+  if (!confirm(`Archive ${job.company} — ${job.title}? It will leave active views but remain recoverable in history.`)) return;
+  try {
+    await apiAction("archive", job, {reason});
+    job.manual_archived = true; job.closed_at = Math.floor(Date.now()/1000);
+    job.archive_reason = reason; job.alert_ok = false;
+    toast("Archived from active rankings; history preserved");
+    closeWS(); render();
+  } catch (error) { toast("Archive failed: " + error.message.slice(0,90)); }
+}
+function moderationCard(job) {
+  if (S.auth?.owner) return `<div class="sect"><h4>Owner moderation</h4>
+    <p class="sub">Archive expired or filled postings from active views. This is a recoverable archive, not a destructive history delete.</p>
+    <div class="bar"><select id="archiveReason-${job.id}" aria-label="Archive reason">
+      <option value="expired">expired / removed</option><option value="filled">filled</option>
+      <option value="duplicate">duplicate</option><option value="wrong">wrong posting</option>
+      <option value="other">other</option></select>
+      <button class="act" onclick='archiveJob(jobById("${job.id}"))'>archive from board</button></div></div>`;
+  return `<div class="sect"><h4>Report this posting</h4>
+    <p class="sub">If it is stale or filled, create a GitHub report. Reports are counted once per GitHub user; three distinct reporters bring it to the owner for review.</p>
+    <div class="bar"><select id="reportType-${job.id}" aria-label="Report type">
+      <option value="expired">expired / removed</option><option value="filled">filled</option>
+      <option value="duplicate">duplicate</option><option value="wrong">wrong posting</option>
+      <option value="other">other</option></select>
+      <button class="act" onclick='reportJob(jobById("${job.id}"))'>report via GitHub</button></div></div>`;
 }
 
 /* ---------- actions ---------- */
@@ -742,8 +899,8 @@ document.addEventListener("keydown", event => { if (event.key === "Escape") clos
 const TABS = [["jobs","Jobs"],["pipeline","Pipeline"],["companies","Companies"],
               ["interview","Interview"],["ai","AI"],["settings","Settings"]];
 function render() {
-  const tabs = S.auth?.owner ? [...TABS.slice(0,-1), ["testing","Testing"], TABS.at(-1)] : TABS;
-  if (S.tab === "testing" && !S.auth?.owner) S.tab = "jobs";
+  const tabs = S.auth?.owner ? [...TABS.slice(0,-1), ["taste","Taste"], ["testing","Testing"], TABS.at(-1)] : TABS;
+  if (["testing","taste"].includes(S.tab) && !S.auth?.owner) S.tab = "jobs";
   $("#nav").innerHTML = tabs.map(([k,l]) =>
     `<button class="${S.tab===k?'on':''}" onclick="S.tab='${k}';render()">${l}</button>`).join("") +
     `<button onclick="window.open('https://github.com/${REPO}/issues','_blank')">Issues ↗</button>` +
@@ -759,7 +916,7 @@ function render() {
     `<span><b>${saved.length}</b>to apply</span>` +
     `<span><b>${done.length}</b>applied</span>`;
   ({jobs:rJobs, pipeline:rPipe, companies:rCos, interview:rInterview,
-    ai:rAI, testing:rTesting, settings:rSet})[S.tab]();
+    ai:rAI, taste:rTaste, testing:rTesting, settings:rSet})[S.tab]();
 }
 
 function rowHTML(j, byId) {
@@ -913,6 +1070,52 @@ function rPipe() {
   </div>
   <p class="sub">Stages reflect the radar pipeline and are pushed to Notion. The scheduled
   readback pass keeps changes made directly in Notion in sync too.</p>`;
+}
+
+function rTaste() {
+  if (!S.auth?.owner) { S.tab="jobs"; rJobs(); return; }
+  const sample = tasteSample(), counts = tasteCounts(sample);
+  const savedIds = new Set(sample.map(item=>item.job.id));
+  const similar = Object.values(S.jobs).filter(j => isOpenRelevant(j) && roleFamily(j)!=="other" && !savedIds.has(j.id))
+    .map(job=>({job, ...similarityFor(job, sample)})).filter(row=>row.score>0)
+    .sort((a,b)=>b.score-a.score || (b.job.score||0)-(a.job.score||0)).slice(0,18);
+  const shifts = Object.values(S.jobs).map(job=>({job, ...tasteContribution(job)}))
+    .filter(row=>row.points!==0).sort((a,b)=>b.points-a.points || (b.job.score||0)-(a.job.score||0)).slice(0,12);
+  const events = [...(S.feedback?.taste_events||[])].reverse().slice(0,8);
+  const reports = Object.values(S.reports||{}).filter(entry=>entry.reports?.length)
+    .sort((a,b)=>b.reports.length-a.reports.length).slice(0,12);
+  const chips = (items, label) => items.length
+    ? `<div class="gate-row">${items.slice(0,8).map(([name,value])=>`<span class="chip ${value>0?'good':'bad'}">${esc(name.replaceAll('_',' '))} ${value>0?'+':''}${value}</span>`).join('')}</div>`
+    : `<p class="sub">No ${label} yet — save a few roles first.</p>`;
+  $("#main").innerHTML = `<section class="testing-hero">
+    <span class="chip good">owner only · @${esc(S.auth.login)}</span>
+    <h2>Taste &amp; similar roles</h2>
+    <p class="sub">Your saved roles are a positive sample, not a replacement for the Radar score. This view explains the small capped shifts they already create and surfaces nearby roles you may want to inspect.</p>
+  </section>
+  <div class="taste-grid">
+    <section class="lane"><h3>Your sample · ${sample.length} saved/applied roles</h3>
+      <p class="sub">Applied roles count slightly more than To apply. Maybe roles stay exploratory and do not teach the model.</p>
+      <h4>Companies</h4>${chips(counts.companies,"companies")}
+      <h4 style="margin-top:.8rem">Role fields</h4>${chips(counts.roles,"role fields")}
+      <h4 style="margin-top:.8rem">Recurring title language</h4>${chips(counts.tokens,"title signals")}
+    </section>
+    <section class="lane"><h3>What the score is doing</h3>
+      <p class="sub">These are raw utility contributions already present in each job’s auditable reason ledger — not a secret second score.</p>
+      ${shifts.length?`<div class="taste-list">${shifts.map(({job,points,reasons})=>`<div class="taste-role"><b>${esc(job.company)} — ${esc(job.title)}</b><span class="chip ${points>0?'good':'bad'}">taste ${points>0?'+':''}${points} utility</span><p class="sub">Radar ${job.score??"?"} · ${esc(reasons.join(' · '))}</p><button class="act" onclick='openWS("${job.id}")'>open role</button></div>`).join('')}</div>`:'<p class="sub">No stored role has a current taste contribution yet. Save a few roles, then the next rescore will show it here.</p>'}
+    </section>
+  </div>
+  <section class="lane" style="margin-top:.9rem"><h3>Similar jobs to inspect</h3>
+    <p class="sub">Similarity uses saved company, role field, sector, and meaningful title terms. It is a recommendation aid and does not change the Radar score.</p>
+    ${similar.length?`<div class="taste-list">${similar.map(({job,score,why})=>`<div class="taste-role"><b>${esc(job.company)} — ${esc(job.title)}</b><span class="chip">similarity ${score}</span><span class="chip">Radar ${job.score??"?"}</span><p class="sub">${esc(why||"shares a saved-role signal")}</p><button class="act" onclick='openWS("${job.id}")'>open role</button></div>`).join('')}</div>`:'<p class="sub">Save or apply to a few roles and this list will become useful.</p>'}
+  </section>
+  <section class="lane" style="margin-top:.9rem"><h3>Community review queue</h3>
+    <p class="sub">Three distinct GitHub reporters move a posting here for your review. Their reports never archive a job automatically.</p>
+    ${reports.length?`<div class="taste-list">${reports.map(entry=>{const count=new Set(entry.reports.map(r=>(r.github_user||"").toLowerCase())).size; const needs=count>=3; return `<div class="taste-role"><b>${esc(entry.company)} — ${esc(entry.title)}</b><span class="chip ${needs?'bad':'unknown'}">${count} reporter${count===1?'':'s'}${needs?' · review':''}</span><p class="sub">${esc([...new Set(entry.reports.map(r=>r.report_type))].join(', '))}</p><button class="act" onclick='openWS("${entry.job_id}")'>review role</button></div>`;}).join('')}</div>`:'<p class="sub">No community reports yet.</p>'}
+  </section>
+  <section class="lane" style="margin-top:.9rem"><h3>Explicit feedback</h3>
+    <p class="sub">Fixed-category feedback is owner-only, idempotent, and written to structured state plus the generated <span class="mono">docs/FEEDBACK.md</span> audit.</p>
+    ${events.length?`<div class="taste-list">${events.map(e=>`<div class="taste-role"><b>${e.vote==='up'?'more like this':'less like this'}</b> · ${esc(e.company)} — ${esc(e.title)}<p class="sub">${esc(e.reason)}${e.effects?.length?' · '+esc(e.effects.join('; ')):''}</p></div>`).join('')}</div>`:'<p class="sub">Nothing explicit yet. Use the feedback controls inside a role’s details drawer when a ranking feels off.</p>'}
+  </section>`;
 }
 
 // LinkedIn jobs search with the filters encoded in the URL — no scraping
@@ -1147,6 +1350,8 @@ function wsFit(j, w, c, id) {
       <p class="sub">Uncapped utility ${esc(j.score_raw??'?')} → calibrated ${esc(j.score_calibrated??j.score??'?')} → final ${j.score??'?'} / 100. 90+ is strong; final adjustments are shown below. Resume Match is separate and uses your CV evidence graph.</p>`:""}
       <details class="score-explanation" open><summary>Established rating explanation</summary><div class="rating-reasons">${reasons||"<p class='sub'>No auditable reasons recorded.</p>"}</div></details>
       ${j.llm_note?`<p class="sub">🤖 angle: <i>${esc(j.llm_note)}</i></p>`:""}</div>
+    ${tasteFeedbackCard(j)}
+    ${moderationCard(j)}
     <div class="sect"><h4>Posting verdict (LLM)</h4>${qualityCard(j)}</div>
     <div class="sect"><h4>Job description (paste if the radar can't scrape it)</h4>
       <textarea placeholder="paste the posting text here — the next enrich cycle grades it against your profile"
@@ -1505,6 +1710,8 @@ window.setFilter = setFilter; window.clearFilters = clearFilters;
 window.addLink = addLink; window.rmLink = rmLink; window.testPAT = testPAT;
 window.requestCompanyResearch = requestCompanyResearch; window.$ = $;
 window.openTutorial = openTutorial; window.closeTutorial = closeTutorial;
+window.sendTasteFeedback = sendTasteFeedback; window.reportJob = reportJob;
+window.archiveJob = archiveJob;
 boot();
 </script>
 </body>

@@ -50,6 +50,9 @@ system as a website, refreshed automatically by every crawl:
   with sourced summaries, research freshness, culture signals, and coverage.
 - **Interview**: OA/interview applications with cited company context and a
   role-prep checklist.
+- **Taste** (owner only): a readable view of the saved/applied-role sample,
+  explainable score contributions, similar roles to inspect, and explicit
+  ranking feedback. It is a recommendation aid, not a second opaque scorer.
 - **AI**: per-run budget, task mix, provider/model health, grounded-research
   coverage, scout status, and registry stats.
 
@@ -61,6 +64,14 @@ the optional Settings token enables instant writes and cross-device notes.
 The private Google-backed tracker is one workbook per connected Google account;
 the Sheet is never sent to the browser wholesale. GitHub checkboxes keep working
 exactly as before; Vercel writes to the connected user’s Sheet.
+
+Inside a role drawer, the repository owner can submit fixed-category ranking
+feedback or archive an expired/filled posting after GitHub sign-in. Feedback is
+written to the structured state and the generated `docs/FEEDBACK.md` audit;
+archive is recoverable and does not erase the crawler history. Other GitHub
+users can report a stale posting through a prefilled issue. Reports are
+deduplicated by the issue author's GitHub login, and three distinct reporters
+bring the posting to the owner's review queue without automatic deletion.
 
 The separate [ChemE internship board](https://job-radar-cheme.vercel.app)
 uses its own jobs, scoring profile, pipeline state, and labeled GitHub issues.
