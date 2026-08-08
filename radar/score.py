@@ -75,7 +75,7 @@ STRONG_NEW_GRAD_RE = re.compile(
     r"entry[- ]level|college\s+grad|20(?:25|26|27)\s+grad|class\s+of\s+20(?:25|26|27)|"
     r"graduate\s+(?:software|engineer|program|scheme)|rotational\s+program|"
     r"graduate\s+program|emerging\s+talent|future\s+talent)\b", re.I)
-TRUSTED_NEW_GRAD_SOURCES = {"simplify", "vansh", "jobright", "speedyapply"}
+TRUSTED_NEW_GRAD_SOURCES = {"simplify", "vansh", "jobright", "jobright_pm", "speedyapply"}
 
 ROLE_BUCKETS: dict[str, re.Pattern] = {
     "ai_ml": re.compile(
@@ -93,7 +93,7 @@ ROLE_BUCKETS: dict[str, re.Pattern] = {
     # never become alerts, even when a source labels them new-grad.
     "pm": re.compile(
         r"\b(?:a?pm|associate\s+product\s+manager|technical\s+product\s+manager|"
-        r"product\s+(?:manager|owner)|project\s+manager|"
+        r"product\s+(?:manager|owner|management)|project\s+manager|"
         r"business(?:\s+systems)?\s+analyst|"
         r"(?:ux\s*/\s*ui|ux|ui|user\s+experience|user\s+interface)\s+(?:researcher|research)|"
         r"solutions?\s+architect(?:ure)?)\b", re.I),
@@ -194,11 +194,12 @@ def new_grad_signal(title: str, description: str = "") -> bool:
 
 def source_new_grad(job: Job) -> bool:
     """Treat dedicated new-grad aggregators as strong provenance evidence."""
-    # Zapply's broad board is noisy globally, but this pipeline only admits its
-    # PM-family rows. Give those rows provisional visibility evidence; the PM
+    # The broad Zapply board is noisy globally, but this pipeline only admits
+    # its PM-family rows. The dedicated Jobright PM board is a new-grad board;
+    # both sources give PM rows provisional visibility evidence while the PM
     # gate below still makes them dashboard-only and never alertable.
     return (job.source.lower() in TRUSTED_NEW_GRAD_SOURCES
-            or (job.source.lower() == "zapply_pm" and role_bucket(job.title) == "pm"))
+            or (job.source.lower() in {"zapply_pm"} and role_bucket(job.title) == "pm"))
 
 
 def gates(job: Job) -> tuple[bool, bool, list[str]]:

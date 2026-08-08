@@ -29,6 +29,25 @@ PATTERNS: list[tuple[str, re.Pattern]] = [
 ]
 
 BAD_TOKENS = {"embed", "job", "jobs", "wday", "en-us", "external", "www", "api"}
+PM_DISCOVERY_SOURCES = {"simplify", "jobright_pm", "zapply_pm"}
+PM_TITLE_RE = re.compile(
+    r"\b(?:a?pm|associate\s+product\s+manager|technical\s+product\s+manager|"
+    r"product\s+(?:manager|owner|management)|project\s+manager|"
+    r"business(?:\s+systems)?\s+analyst|"
+    r"(?:ux\s*/\s*ui|ux|ui|user\s+experience|user\s+interface)\s+(?:researcher|research)|"
+    r"solutions?\s+architect(?:ure)?)\b", re.I)
+
+
+def _pm_interest(job) -> bool:
+    """Whether a breadth row is a useful PM signal for ATS backfill."""
+    return job.source.lower() in PM_DISCOVERY_SOURCES and bool(PM_TITLE_RE.search(job.title or ""))
+
+
+def _mark_pm_interest(entry: dict, source: str) -> None:
+    entry["pm_interest"] = True
+    sources = set(entry.get("pm_sources") or [])
+    sources.add(source)
+    entry["pm_sources"] = sorted(sources)
 
 
 def extract(url: str) -> tuple[str, str, dict] | None:
@@ -92,13 +111,19 @@ def seed_registry(registry: dict, seeds: list[dict]) -> int:
 def harvest(registry: dict, jobs: list, max_new: int = 200) -> int:
     """Mine ATS identifiers from job URLs; add unseen ones as candidates."""
     added = 0
-    for job in jobs:
+    # PM feeds are intentionally first: their official ATS links should seed
+    # direct-company polling even when the general technical feeds fill the
+    # harvest budget first.
+    ordered_jobs = sorted(enumerate(jobs), key=lambda item: (not _pm_interest(item[1]), item[0]))
+    for _, job in ordered_jobs:
         found = extract(job.url)
         if not found:
             continue
         ats, token, extra = found
         k = key(ats, token, extra)
         if k in registry:
+            if _pm_interest(job):
+                _mark_pm_interest(registry[k], job.source)
             continue
         registry[k] = {
             "name": job.company or token, "ats": ats, "token": token,
@@ -106,6 +131,8 @@ def harvest(registry: dict, jobs: list, max_new: int = 200) -> int:
             "status": "new", "origin": f"harvest:{job.source}",
             "first_seen": int(time.time()), "failures": 0, "last_ok": 0,
         }
+        if _pm_interest(job):
+            _mark_pm_interest(registry[k], job.source)
         added += 1
         if added >= max_new:
             break
@@ -118,9 +145,10 @@ def probe_new(registry: dict, budget: int = 30) -> tuple[int, int]:
     endpoints get fixed, WAFs relent, and code improves between runs."""
     ok = bad = 0
     candidates = [e for e in registry.values() if e["status"] == "new"]
-    candidates.sort(key=lambda e: e["first_seen"])
+    candidates.sort(key=lambda e: (not e.get("pm_interest", False), e["first_seen"]))
     retries = [e for e in registry.values()
                if e["status"] == "invalid" and e.get("probe_attempts", 1) < 3]
+    retries.sort(key=lambda e: (not e.get("pm_interest", False), e.get("first_seen", 0)))
     for e in (candidates + retries)[:budget]:
         e["probe_attempts"] = e.get("probe_attempts", 0) + 1
         if probe(e):

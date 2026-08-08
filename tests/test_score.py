@@ -171,6 +171,7 @@ def test_pm_family_is_visible_low_scoring_and_never_alertable():
         "Business Analyst, New Grad",
         "UX/UI Researcher, New Grad",
         "Solutions Architect, New Grad",
+        "Associate - Digital Product Management, New Grad",
     ]
     for title in titles:
         job = mk(title, source="simplify")

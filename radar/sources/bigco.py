@@ -14,7 +14,23 @@ import time
 from ..http import get_json, post_json
 from ..models import Job
 
-QUERIES = ["new grad", "early career", "university grad"]
+TECH_QUERIES = ["new grad", "early career", "university grad"]
+PM_QUERIES = [
+    "associate product manager",
+    "apm",
+    "product manager",
+    "technical product manager",
+    "product owner",
+    "project manager",
+    "business analyst",
+    "business systems analyst",
+    "ux researcher",
+    "user experience researcher",
+    "ui researcher",
+    "solutions architect",
+    "product management",
+]
+QUERIES = TECH_QUERIES + PM_QUERIES
 
 # Several big-co WAFs reject non-browser user agents; identify as a browser
 # for these bespoke endpoints only (standard ATS APIs keep the honest UA).
@@ -59,13 +75,18 @@ def fetch_tesla(entry: dict) -> list[Job]:
 def fetch_amazon(entry: dict) -> list[Job]:
     out, seen = [], set()
     for q in QUERIES:
+        params = {"base_query": q, "offset": 0, "result_limit": 40,
+                  "country": "USA", "sort": "recent"}
+        # Amazon's technical category filters hide PM-family roles. Keep them
+        # for the technical search terms, but let the explicit PM searches
+        # query the full US board; normal gates still remove senior/off-field
+        # noise and the PM score remains zero.
+        if q not in PM_QUERIES:
+            params["category[]"] = ["software-development",
+                                     "machine-learning-science",
+                                     "data-science"]
         data = get_json("https://www.amazon.jobs/en/search.json",
-                        params={"base_query": q, "offset": 0, "result_limit": 40,
-                                "country": "USA", "sort": "recent",
-                                "category[]": ["software-development",
-                                               "machine-learning-science",
-                                               "data-science"]},
-                        headers=BROWSER_HEADERS)
+                        params=params, headers=BROWSER_HEADERS)
         for j in data.get("jobs") or []:
             jid = j.get("id_icims") or j.get("id")
             if jid in seen:
@@ -145,7 +166,7 @@ def _apple_csrf() -> dict:
 def fetch_apple(entry: dict) -> list[Job]:
     headers = _apple_csrf()
     out, seen = [], set()
-    for q in QUERIES[:2]:
+    for q in QUERIES:
         data = post_json("https://jobs.apple.com/api/role/search",
                          {"query": q, "filters": {"range": {"standardWeeklyHours": {"start": None, "end": None}}},
                           "page": 1, "locale": "en-us", "sort": "newest"},
@@ -180,7 +201,21 @@ def fetch_apple(entry: dict) -> list[Job]:
 def fetch_google(entry: dict) -> list[Job]:
     """Best-effort: careers.google.com's SPA API. Allowed to die gracefully."""
     out, seen = [], set()
-    for q in ["early career software engineer", "new grad"]:
+    for q in [
+        "early career software engineer",
+        "new grad",
+        "associate product manager",
+        "product manager early career",
+        "technical product manager",
+        "product owner",
+        "business analyst",
+        "business systems analyst",
+        "ux researcher",
+        "user experience researcher",
+        "ui researcher",
+        "solutions architect early career",
+        "product management",
+    ]:
         data = get_json("https://careers.google.com/api/v3/search/",
                         params={"q": q, "location": "United States", "page": 1},
                         headers=BROWSER_HEADERS)

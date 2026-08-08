@@ -17,6 +17,10 @@ JOBRIGHT_URLS = [
     "https://raw.githubusercontent.com/jobright-ai/2026-Software-Engineer-New-Grad/master/README.md",
     "https://raw.githubusercontent.com/jobright-ai/2026-Data-Analysis-New-Grad/master/README.md",
 ]
+JOBRIGHT_PM_URL = (
+    "https://raw.githubusercontent.com/jobright-ai/2026-Product-Management-New-Grad/"
+    "master/README.md"
+)
 SPEEDY_URL = "https://raw.githubusercontent.com/speedyapply/2027-SWE-College-Jobs/main/NEW_GRAD_USA.md"
 ZAPPLY_URL = "https://raw.githubusercontent.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027/main/README.md"
 ZAPPLY_PM_URL = "https://raw.githubusercontent.com/zapplyjobs/New-Grad-Jobs-2027/main/README.md"
@@ -105,6 +109,37 @@ def fetch_jobright() -> list[Job]:
     return out
 
 
+def fetch_jobright_pm() -> list[Job]:
+    """Read Jobright's dedicated, seven-day Product Management board.
+
+    Jobright's PM repository contains a few product-adjacent titles (for
+    example product demonstrators). Keep the source useful without making the
+    scoring lane broader: only the same explicit PM-family title vocabulary
+    used by ``role_bucket`` is admitted here.
+    """
+    md = get_text(JOBRIGHT_PM_URL)
+    out, prev_company = [], ""
+    for m in _JR_ROW.finditer(md):
+        company, title, link, loc, model, date_s = (g.strip() for g in m.groups())
+        if company in _CONTINUATION_GLYPHS:
+            company = prev_company
+        if not company or company in _CONTINUATION_GLYPHS:
+            continue
+        prev_company = company
+        if not _PM_TITLE.search(title):
+            continue
+        posted = _md_date_to_epoch(date_s)
+        if posted and time.time() - posted > MAX_AGE_S:
+            continue
+        out.append(Job(
+            company=company, title=title, url=link, source="jobright_pm",
+            source_url=info("jobright_pm")[1],
+            locations=[loc] if loc else [], posted_at=posted,
+            remote="remote" in f"{loc} {model}".lower(),
+        ))
+    return out
+
+
 _SP_ROW = re.compile(
     r'^\|\s*<a href="[^"]*"><strong>([^<]+)</strong></a>\s*'    # company
     r"\|\s*([^|]+?)\s*"                                          # position
@@ -144,7 +179,7 @@ _ZAPPLY_GENERAL_ROW = re.compile(
     r".*?\((https?://[^)]+)\)", re.M)
 _PM_TITLE = re.compile(
     r"\b(?:a?pm|associate\s+product\s+manager|technical\s+product\s+manager|"
-    r"product\s+(?:manager|owner)|project\s+manager|"
+    r"product\s+(?:manager|owner|management)|project\s+manager|"
     r"business(?:\s+systems)?\s+analyst|"
     r"(?:ux\s*/\s*ui|ux|ui|user\s+experience|user\s+interface)\s+(?:researcher|research)|"
     r"solutions?\s+architect(?:ure)?)\b", re.I)

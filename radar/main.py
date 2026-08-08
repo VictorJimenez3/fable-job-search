@@ -24,13 +24,14 @@ from .score import (RULES_VERSION, apply_company_concentration,
                     score, source_new_grad)
 from .sector import infer
 from .sources import aggregators, hn
-from .sources.ats import FETCHERS
+from .sources.ats import FETCHERS, PM_SEARCH_QUERIES
 
 
 AGG_SOURCES = {
     "simplify": aggregators.fetch_simplify,
     "vansh": aggregators.fetch_vansh,
     "jobright": aggregators.fetch_jobright,
+    "jobright_pm": aggregators.fetch_jobright_pm,
     "speedyapply": aggregators.fetch_speedyapply,
     "zapply": aggregators.fetch_zapply,
     "zapply_pm": aggregators.fetch_zapply_pm,
@@ -40,7 +41,7 @@ AGG_SOURCES = {
 
 def _fetch_aggregators(disabled: set[str]) -> tuple[list[Job], dict]:
     jobs, stats = [], {}
-    with ThreadPoolExecutor(max_workers=6) as ex:
+    with ThreadPoolExecutor(max_workers=8) as ex:
         futs = {ex.submit(fn): name for name, fn in AGG_SOURCES.items() if name not in disabled}
         for fut in as_completed(futs):
             name = futs[fut]
@@ -56,7 +57,8 @@ def _fetch_aggregators(disabled: set[str]) -> tuple[list[Job], dict]:
 def _select_companies(registry: dict, cap: int) -> list[dict]:
     active = [e for e in registry.values() if e["status"] == "active"]
     sector_rank = {"healthtech": 0, "ai_lab": 1, "big_tech": 2, "edtech": 3, "fintech": 4}
-    active.sort(key=lambda e: (0 if e["origin"] == "seed" else 1,
+    active.sort(key=lambda e: (0 if e.get("pm_interest") else 1,
+                               0 if e["origin"] == "seed" else 1,
                                sector_rank.get(e.get("sector", ""), 5),
                                -e.get("last_ok", 0)))
     return active[:cap]
@@ -67,12 +69,14 @@ def _fetch_ats(registry: dict, disabled: set[str]) -> tuple[list[Job], dict]:
         return [], {"ats": "disabled"}
     cap = int(env("RADAR_MAX_COMPANIES", "800"))
     entries = _select_companies(registry, cap)
-    wd_queries = profile().get("workday_queries")
+    wd_queries = list(dict.fromkeys(
+        (profile().get("workday_queries") or []) + PM_SEARCH_QUERIES
+    ))
     jobs, ok, fail = [], 0, 0
 
     def one(entry: dict) -> list[Job]:
         fn = FETCHERS[entry["ats"]]
-        return fn(entry, wd_queries) if entry["ats"] == "workday" else fn(entry)
+        return fn(entry, wd_queries) if entry["ats"] in {"workday", "phenom"} else fn(entry)
 
     with ThreadPoolExecutor(max_workers=int(env("RADAR_WORKERS", "12"))) as ex:
         futs = {ex.submit(one, e): e for e in entries}

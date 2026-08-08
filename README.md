@@ -45,8 +45,12 @@ remove them from the in-house board. SWEList uses that same New-Grad-Positions
 feed, so it is covered by the same ingestion path.
 
 The PM-family lane uses the existing SimplifyJobs New-Grad-Positions PM section,
-targeted Workday searches on the same company registry, and a PM-only parser for
-the public [Zapply New-Grad Jobs 2027 board](https://github.com/zapplyjobs/New-Grad-Jobs-2027).
+Jobright's dedicated [Product Management new-grad board](https://github.com/jobright-ai/2026-Product-Management-New-Grad),
+the public [Zapply New-Grad Jobs 2027 board](https://github.com/zapplyjobs/New-Grad-Jobs-2027),
+and direct title searches across the same Workday/Phenom and bespoke big-company
+career APIs used by the technical radar. PM-originated official ATS links are
+prioritized for company backfill, so the lane can grow into direct company
+coverage rather than depending on a single GitHub list.
 Product manager, technical product manager, product owner, project manager,
 business analyst, UX/UI researcher, and solutions architecture titles are
 dashboard-visible with role weight `0`, never enter alert eligibility, and never
@@ -58,7 +62,7 @@ enter alert email/RSS delivery.
 every ~30 min (GitHub Actions cron)
 │
 ├─ 1. BREADTH: pull new-grad aggregators
-│     [SimplifyJobs/New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) · vanshb03 · jobright-ai (SWE + Data) · speedyapply · [Zapply DS/ML](https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027) · [Zapply PM breadth](https://github.com/zapplyjobs/New-Grad-Jobs-2027) · HN Who-is-Hiring
+│     [SimplifyJobs/New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) · vanshb03 · jobright-ai (SWE + Data + [PM](https://github.com/jobright-ai/2026-Product-Management-New-Grad)) · speedyapply · [Zapply DS/ML](https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027) · [Zapply PM breadth](https://github.com/zapplyjobs/New-Grad-Jobs-2027) · HN Who-is-Hiring
 │
 ├─ 2. DISCOVERY: mine every job URL for ATS tokens
 │     (Greenhouse / Lever / Ashby / Workday / SmartRecruiters / Recruitee)
