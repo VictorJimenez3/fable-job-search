@@ -92,6 +92,8 @@ def test_internship_scoring_is_neutral_and_has_coverage_checks():
     assert "compensation_points:" in profile
     assert "prestige_points:" in profile
     assert "python -m radar.main rescore" in workflow
+    assert "rescore_only" in workflow
+    assert "Rescore stored internship state only" in workflow
     assert "score-health" in workflow
     assert "neutral friend-facing rubric" in html
     assert "work_quality" in html

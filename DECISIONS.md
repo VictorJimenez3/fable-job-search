@@ -1683,3 +1683,13 @@ display score capped below the normal internship threshold. A phrase such as
 "full-time offer" inside a real internship is not demoted because positive
 internship/student evidence wins. Rules v5 rebuilds the stored snapshot so the
 classification is auditable rather than silently deleting possible leads.
+
+## 111. Provide a deterministic internship rescore-only recovery path (2026-08-08)
+
+The internship workflow normally crawls public ATS and aggregator sources
+before rescoring. Those external requests can stall independently of the
+deterministic scorer, which should not block a rules migration. Manual
+dispatch now accepts `rescore_only`; it rebuilds stored internship records,
+publishes the generated snapshot, runs score-health, and delivers the normal
+surfaces without performing source fetches. Scheduled runs retain the full
+crawl path.

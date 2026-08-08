@@ -3,7 +3,13 @@ name: internship radar
 on:
   schedule:
     - cron: "17 */2 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      rescore_only:
+        description: "Rebuild stored internship scores without external source crawling"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -27,6 +33,7 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - name: Crawl and publish internship state
+        if: ${{ !inputs.rescore_only }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
@@ -50,6 +57,29 @@ jobs:
               exit 0
             fi
             git commit -m "radar: internship crawl $(date -u +'%Y-%m-%d %H:%M')"
+            if git push; then exit 0; fi
+            git pull --rebase --autostash || true
+            sleep $((i * 2))
+          done
+          exit 1
+      - name: Rescore stored internship state only
+        if: ${{ inputs.rescore_only }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          RADAR_PROFILE: internship
+          RADAR_DOCS_DIR: docs/internships
+        run: |
+          git config user.name "job-radar[bot]"
+          git config user.email "radar@users.noreply.github.com"
+          python -m radar.main rescore
+          git add state/intern_*.json docs/internships
+          if git diff --cached --quiet; then
+            echo "internship rescore: no generated-state changes"
+            exit 0
+          fi
+          git commit -m "radar: internship rescore $(date -u +'%Y-%m-%d %H:%M')"
+          for i in 1 2 3; do
             if git push; then exit 0; fi
             git pull --rebase --autostash || true
             sleep $((i * 2))
