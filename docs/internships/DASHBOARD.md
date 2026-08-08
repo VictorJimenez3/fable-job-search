@@ -1,6 +1,6 @@
 # 🎯 Job Radar — internship dashboard
 
-_Last run: **2026-08-08 20:20 UTC** · companies polled directly: **63** (registry 703) · jobs tracked: **4670** · new this run: **365** · alerts this run: **2**_
+_Last run: **2026-08-08 20:50 UTC** · companies polled directly: **77** (registry 709) · jobs tracked: **4774** · new this run: **104** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -130,6 +130,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 56  | 3d | Qualcomm | [AI Integration & Interoperability Intern](https://qualcomm.eightfold.ai/careers/job/446716226621) | Cheektowaga, NY | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 56  | 3d | TikTok | [Machine Learning Engineer Intern - Data-Global E-Commerce-Search](https://lifeattiktok.com/search/7668415591670417717) | Seattle, WA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 56  | 3d | TikTok | [Data Science Intern - TikTok Product](https://lifeattiktok.com/search/7669683639101884725) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
+| 56  | 4d | Pfizer | [Graduaat / Bachelorstage: Optimalisatie van data-opzoeking binnen Temp](https://pfizer.wd1.myworkdayjobs.com/en-US/PfizerCareers/job/Belgium---Puurs/Graduaat---Bachelorstage--Optimalisatie-van-data-opzoeking-binnen-Temperature---Relative-Humidity--TRH--met-AI_4961266) | Belgium - Puurs | healthtech | — | [Direct company / ATS monitoring](https://pfizer.wd1.myworkdayjobs.com/en-US/PfizerCareers/job/Belgium---Puurs/Graduaat---Bachelorstage--Optimalisatie-van-data-opzoeking-binnen-Temperature---Relative-Humidity--TRH--met-AI_4961266) |
 | 56  | 4d | TikTok | [Research Engineer Intern - Agentic Systems & AI Infrastructure - Tikto](https://lifeattiktok.com/search/7667935568626043141) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 56  | 4d | TikTok | [Frontend Engineer Intern - Global CRM](https://lifeattiktok.com/search/7669711026846058757) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 56  | 4d | TikTok | [Backend Software Engineer Intern - LIVE Foundation Governance Engineer](https://lifeattiktok.com/search/7667935150530840837) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
@@ -154,7 +155,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 56  | 4d | TikTok | [Machine Learning Engineer Intern - Commercial AI-CRM and Transaction](https://lifeattiktok.com/search/7669702702763018501) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 56  | 4d | TikTok | [Software Engineer Intern - Global CRM](https://lifeattiktok.com/search/7669711844487399685) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 56  | 4d | American Express | [Product Management Intern](https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26011916) | NYC | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
-| 56  | 5d | TikTok | [Research Engineer Intern - Monetization Technology - Business Integrit](https://lifeattiktok.com/search/7668204394458466565) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
-| 56  | 5d | ByteDance | [AI Perception Intern - Pico](https://jobs.bytedance.com/en/position/7665457718334425349/detail) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
+| 56  | 5d | Medtronic | [Sr. Software DevOps Engineer](https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Mounds-View-Minnesota-United-States-of-America/Sr-Software-DevOps-Engineer_R68509-2) | 2 Locations | healthtech | — | [Direct company / ATS monitoring](https://medtronic.wd1.myworkdayjobs.com/en-US/MedtronicCareers/job/Mounds-View-Minnesota-United-States-of-America/Sr-Software-DevOps-Engineer_R68509-2) |
 
 _150 roles shown (score ≥ 35, posted ≤30d)._
