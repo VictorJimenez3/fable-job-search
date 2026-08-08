@@ -116,7 +116,10 @@ def analyze(job: Job | dict, description: str | None = None) -> dict:
 
     class_years: list[str] = []
     for match in CLASS_RE.finditer(text):
-        label = _CLASS_NAMES[match.group("class").lower()]
+        # ``first year`` and ``first-year`` are equivalent in real postings;
+        # normalize the separator before looking up the auditable standing.
+        raw_class = match.group("class").lower().replace(" ", "-")
+        label = _CLASS_NAMES[raw_class]
         if label not in class_years:
             class_years.append(label)
 

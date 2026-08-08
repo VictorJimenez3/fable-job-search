@@ -53,6 +53,11 @@ def test_class_years_are_derived_from_internship_start_and_graduation_date():
     assert match(eligibility, "2030-05") == "mismatch"
 
 
+def test_first_year_synonym_maps_to_freshman():
+    eligibility = analyze(job(description="Open to first year students."))
+    assert eligibility["class_years"] == ["freshman"]
+
+
 def test_unknown_or_open_eligibility_never_hides_a_role():
     posting = job(title="Data Science Intern")
     eligibility = analyze(posting)
