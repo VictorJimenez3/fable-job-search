@@ -1,21 +1,6 @@
 {
- "events": [
-  {
-   "at": "2026-08-08T08:34:15+00:00",
-   "completion_tokens": 1176,
-   "detail": "task schema validation failed",
-   "endpoint": "local",
-   "lane": "local",
-   "latency_ms": 142256,
-   "max_tokens": 2200,
-   "model": "qwen2.5:32b",
-   "prompt_chars": 4545,
-   "prompt_tokens": 1101,
-   "status": "invalid",
-   "task": "company_research"
-  }
- ],
- "generated_at": 1786178055,
+ "events": [],
+ "generated_at": 1786178074,
  "history": [
   {
    "attempts": [
@@ -1111,19 +1096,9 @@
   "logical_calls": 1,
   "requests": 1
  },
- "logical_calls": 1,
- "models": {
-  "local": {
-   "errors": 1,
-   "model": "qwen2.5:32b",
-   "ok": 0,
-   "requests": 1,
-   "tokens": 2277
-  }
- },
+ "logical_calls": 0,
+ "models": {},
  "provider": "local",
- "requests": 1,
- "task_calls": {
-  "company_research": 1
- }
+ "requests": 0,
+ "task_calls": {}
 }
