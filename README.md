@@ -67,6 +67,11 @@ unknown employers and missing pay/work evidence receive zero for that signal,
 not a penalty. The drawer shows the dimensions and exact reasons behind each
 score.
 
+Prestige is an explicit general-opportunity dimension in this lane: Google,
+NVIDIA, Microsoft, OpenAI, Anthropic, and comparable big-tech or AI-lab
+employers intentionally occupy the top end of the friend-facing chart. This
+is a broad "crackedness" signal, not Victor's personal company preference.
+
 Internship email batches are **off by default**. The owner can opt into them
 from Settings; the same preference controls new-grad batches (new-grad starts
 enabled). This is GitHub notification delivery, not inbox access: Google OAuth

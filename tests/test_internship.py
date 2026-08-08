@@ -141,10 +141,10 @@ def test_internship_score_rewards_pay_prestige_and_work_without_personal_signals
     score(ordinary, now)
     assert strong.score > ordinary.score
     assert strong.score_dimensions["compensation"] > ordinary.score_dimensions["compensation"]
-    assert strong.score_dimensions["company_quality"] > ordinary.score_dimensions["company_quality"]
+    assert strong.score_dimensions["prestige"] > ordinary.score_dimensions["prestige"]
     assert strong.score_dimensions["work_quality"] > ordinary.score_dimensions["work_quality"]
     assert any("compensation ceiling" in reason for reason in strong.score_reasons)
-    assert any("recognized employer tier" in reason for reason in strong.score_reasons)
+    assert any("prestige tier" in reason and "crackedness" in reason for reason in strong.score_reasons)
     assert any("hands-on ownership" in reason for reason in strong.score_reasons)
     assert not any(any(token in reason.lower() for token in
                        ("saved/applied", "feedback", "victor", "your "))
@@ -171,12 +171,30 @@ def test_internship_score_uses_full_opportunity_scale(monkeypatch):
     for posting in (google, exceptional):
         annotate(posting)
         score(posting, now)
-    assert google.score >= 80
-    assert google.score_dimensions["company_quality"] == 24
+    assert google.score >= 90
+    assert google.score_dimensions["prestige"] == 32
+    assert google.score_dimensions["company_quality"] == 0
     assert google.score_dimensions["compensation"] == 25
     assert exceptional.score == 100
     assert exceptional.score_raw > exceptional.score
     assert any("score cap applied" in reason for reason in exceptional.score_reasons)
+
+
+def test_internship_prestige_is_separate_from_personal_company_preferences(monkeypatch):
+    monkeypatch.setenv("RADAR_PROFILE", "internship")
+    from radar import config
+    monkeypatch.setattr(config, "_profile_cache", {})
+    now = int(time.time())
+    google = job(company="Google", salary="$30/hour", description="Students may apply.")
+    unknown = job(company="Acme Labs", salary="$30/hour", description="Students may apply.")
+    for posting in (google, unknown):
+        annotate(posting)
+        score(posting, now)
+    assert google.score_dimensions["prestige"] == 32
+    assert unknown.score_dimensions["prestige"] == 0
+    assert google.score > unknown.score
+    assert not any(token in " ".join(google.score_reasons).lower()
+                   for token in ("victor", "saved/applied", "personal_signal"))
 
 
 def test_internship_annotation_preserves_cohort_and_work_evidence_on_rescore(monkeypatch):

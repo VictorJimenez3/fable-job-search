@@ -94,6 +94,11 @@ preference, feedback, applied history, and new-grad role weights are ignored in
 this lane. Missing pay, work evidence, or employer recognition contributes zero
 instead of a penalty, and **Why it scored** exposes the exact reasons.
 
+Prestige is its own general-opportunity dimension: Google, NVIDIA, Microsoft,
+OpenAI, Anthropic, and comparable big-tech or AI-lab employers receive a
+strong top-end signal. It measures broad technical "crackedness," not Victor's
+saved company preferences.
+
 Internship email batches are off by default. The owner can enable
 **internship batches** in Settings; **new-grad batches** have a separate
 toggle and default to on. GitHub issue/board surfaces remain available without

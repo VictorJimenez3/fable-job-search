@@ -1652,3 +1652,20 @@ exceptional pay, eligibility, employer, work, and freshness evidence can reach
 100. Unknown or missing evidence still contributes zero, never an invented
 bonus, and raw utility plus a visible cap reason remain in the audit ledger.
 New-grad scoring is unchanged.
+
+## 109. Internship prestige is an explicit general-opportunity dimension (2026-08-08)
+
+The v3 scale made employer recognition visible, but it still conflated two
+different signals: broad technical prestige and cited company research. The
+internship lane now stores them separately. A friend-facing prestige tier
+captures general employer "crackedness" for major technology companies and AI
+labs; tier-one employers such as Google, NVIDIA, Microsoft, OpenAI, and
+Anthropic receive a deliberately top-end contribution. Cited employer/work
+evidence remains a smaller, independent dimension and unknown employers are
+never penalized.
+
+This makes a well-paid, student-eligible Google internship score above 90
+without importing Victor's saved company preferences, while still allowing
+posting-specific work, pay, eligibility, and freshness evidence to separate
+roles at the same employer. `radar.internship.RULES_VERSION` is now 4 and the
+workflow rebuilds every stored internship score before publishing.

@@ -80,7 +80,7 @@ def test_internship_scoring_is_neutral_and_has_coverage_checks():
     scorer = (ROOT / "radar" / "internship.py").read_text()
     profile = (ROOT / "profiles" / "internship.yaml").read_text()
     workflow = (ROOT / ".github" / "workflows" / "internship-radar.yml").read_text()
-    assert "RULES_VERSION = 3" in scorer
+    assert "RULES_VERSION = 4" in scorer
     assert "flat across role families" in scorer
     assert "preference_profile" not in scorer
     assert "personal_signal" not in scorer
@@ -90,10 +90,13 @@ def test_internship_scoring_is_neutral_and_has_coverage_checks():
     assert "prestige_tiers:" in profile
     assert "work_quality_cap:" in profile
     assert "compensation_points:" in profile
+    assert "prestige_points:" in profile
     assert "python -m radar.main rescore" in workflow
     assert "score-health" in workflow
     assert "neutral friend-facing rubric" in html
     assert "work_quality" in html
+    assert "Prestige / crackedness" in html
+    assert 'name === "prestige"' in html
 
 
 def test_platform_exposes_oauth_account_center_and_tutorial():

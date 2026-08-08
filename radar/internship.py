@@ -13,7 +13,7 @@ from .config import profile
 from .models import Job
 from .score import FOREIGN_HINTS, company_momentum_signal, role_bucket
 
-RULES_VERSION = 3
+RULES_VERSION = 4
 
 INTERNSHIP_RE = re.compile(r"\b(intern(ship)?|co-?op|undergraduate|student worker|summer analyst)\b", re.I)
 STUDENT_RE = re.compile(r"\b(current|rising|enrolled|undergraduate|college|university)\s+students?\b", re.I)
@@ -115,8 +115,8 @@ def _matches_company(company: str, configured: str) -> bool:
     return bool(alias and (name == alias or name.startswith(alias + " ")))
 
 
-def _employer_signal(company: str) -> tuple[int, list[str]]:
-    """Use a friend-facing employer signal, never Victor's saved preferences."""
+def _prestige_signal(company: str) -> tuple[int, list[str]]:
+    """Score broad technical-employer prestige, never Victor's preferences."""
     cfg = _scoring_config()
     tiers = cfg.get("prestige_tiers", {}) or {}
     tier_points = cfg.get("prestige_points", {}) or {}
@@ -127,15 +127,25 @@ def _employer_signal(company: str) -> tuple[int, list[str]]:
         if any(_matches_company(company, value) for value in names):
             points = int(tier_points.get(tier, tier_points.get(str(tier), 0)) or 0)
             if points:
-                reasons.append(f"recognized employer tier {tier} +{points}")
+                reasons.append(f"prestige tier {tier} (crackedness signal) +{points}")
             break
 
+    return max(0, points), reasons
+
+
+def _employer_signal(company: str) -> tuple[int, list[str]]:
+    """Use only bounded cited employer/work evidence, never preferences."""
+    cfg = _scoring_config()
+    points = 0
+    reasons: list[str] = []
+
     # Existing cited research is a general work/employer signal, not a Victor
-    # preference. Keep it bounded so a stale dossier cannot dominate pay.
+    # preference. Keep it separate and bounded so a stale dossier cannot
+    # masquerade as broad prestige or dominate pay.
     cited, _cited_reasons = company_momentum_signal(company)
     cited_bonus = min(4, max(0, int(cited)))
-    cap = int(cfg.get("employer_signal_cap", 15))
-    applied_cited = max(0, min(cited_bonus, cap - points))
+    cap = int(cfg.get("employer_signal_cap", 8))
+    applied_cited = max(0, min(cited_bonus, cap))
     if applied_cited:
         points += applied_cited
         reasons.append(f"cited employer/work evidence +{applied_cited}")
@@ -360,6 +370,7 @@ def score(job: Job, now: int) -> None:
         "base": base,
         "role_fit": flat_role,
         "eligibility": 0,
+        "prestige": 0,
         "company_quality": 0,
         "compensation": 0,
         "work_quality": 0,
@@ -373,6 +384,10 @@ def score(job: Job, now: int) -> None:
     eligibility_points, eligibility_reasons = _eligibility_signal(job)
     dimensions["eligibility"] = eligibility_points
     reasons.extend(eligibility_reasons)
+
+    prestige_points, prestige_reasons = _prestige_signal(job.company)
+    dimensions["prestige"] = prestige_points
+    reasons.extend(prestige_reasons)
 
     employer_points, employer_reasons = _employer_signal(job.company)
     dimensions["company_quality"] = employer_points
