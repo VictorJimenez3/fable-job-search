@@ -12,19 +12,28 @@ internship_scoring:
   # This is a friend-facing opportunity rubric, not Victor's candidate
   # profile. Every technical role family starts equally; differences come
   # from public opportunity evidence, not saved/applied preferences.
-  base: 17
-  flat_technical_role: 10
-  explicit_eligibility: 14
-  open_eligibility: 8
-  employer_signal_cap: 15
-  work_quality_cap: 16
+  # The display is a real 0–100 opportunity scale, not a low additive
+  # confidence score. Missing evidence still contributes zero.
+  base: 5
+  flat_technical_role: 15
+  explicit_eligibility: 18
+  open_eligibility: 14
+  employer_signal_cap: 24
+  work_quality_cap: 20
+  compensation_points:
+    120000: 25
+    100000: 21
+    80000: 17
+    60000: 12
+    40000: 7
+    0: 3
   fresh_24h: 3
   fresh_72h: 2
   fresh_7d: 1
   prestige_points:
-    1: 12
-    2: 8
-    3: 4
+    1: 24
+    2: 16
+    3: 8
   # Broad recognition tiers are intentionally separate from the owner's
   # marquee list. Unknown employers receive no penalty; cited research can
   # add a small, auditable employer/work signal when available.

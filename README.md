@@ -56,8 +56,9 @@ the posting's internship start term and keeps unclear eligibility visible as
 unknown instead of silently rejecting it. New-grad and internship Jobs,
 Pipeline, web state, alert history, and GitHub surfaces never share a list.
 
-Internships use a separate neutral, friend-facing score. It starts technical
-role families evenly and compares public opportunity evidence: normalized pay,
+Internships use a separate neutral, friend-facing 0–100 score. It starts
+technical role families evenly and compares public opportunity evidence:
+normalized pay,
 recognized or cited employer signal, mentorship and structured learning,
 hands-on ownership, technical depth, production/user impact, return-offer
 path, student evidence, and freshness. It does not use Victor's saved roles,

@@ -1635,3 +1635,20 @@ dominate compensation or eligibility. `radar.internship.RULES_VERSION` is now
 and the internship workflow rebuilds every stored score and runs `score-health`
 before publishing its separate snapshot. New-grad scoring and its priority
 compute path are unchanged.
+
+## 108. Internship scores use the full opportunity scale (2026-08-08)
+
+The first neutral internship rubric was directionally correct but compressed
+the live board into a 27–68 band: even a Google internship with top published
+pay and a tier-one employer signal displayed as 67 because the additive weights
+were too small and missing work/freshness evidence left too little headroom.
+
+Internship rules v3 keep the same preference isolation and evidence discipline,
+but use a genuine 0–100 display scale. The rubric gives larger, explicit
+contributions to flat technical-role access, student evidence, employer signal,
+annualized compensation, work quality, and freshness. A strong Google-like
+posting with high pay and recognized employer evidence can reach the 80s;
+exceptional pay, eligibility, employer, work, and freshness evidence can reach
+100. Unknown or missing evidence still contributes zero, never an invented
+bonus, and raw utility plus a visible cap reason remain in the audit ledger.
+New-grad scoring is unchanged.
