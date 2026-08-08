@@ -136,8 +136,9 @@ Before changing the radar, read these in order:
   docs/DASHBOARD.md, RSS, and the platform website. Twice-daily reconcile sweep
   guarantees no checked box is ever lost.
 - **The platform has two permanent doors** (DECISIONS #27): Vercel
-  (job-radar-vmj-8946s-projects.vercel.app — GitHub OAuth, instant writes,
-  Victor's daily driver) and GitHub Pages
+  (`job-radar-newgrad.vercel.app` — the memorable public shortcut; the
+  existing `job-radar-vmj-8946s-projects.vercel.app` URL remains active for
+  GitHub OAuth and old bookmarks, with instant writes) and GitHub Pages
   (victorjimenez3.github.io/fable-job-search/platform/ — tokenless, what
   forks get). `webapp/index.html` is canonical; `docs/platform/index.html`
   is a byte copy. Jobs tab shows posting age and sorts by best-match or
