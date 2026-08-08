@@ -110,6 +110,8 @@ def test_platform_boots_progressively_and_keeps_owner_diagnostics_in_app():
     assert 'id="bootNotice"' in html
     assert 'Loading the radar shell' in html
     assert "function loadState" in html
+    assert 'allowMissing && r.status === 404' in html
+    assert 'path === "state/reports.json"' in html
     assert "Promise.allSettled" in html
     assert 'loadState("state/jobs.json", {}, {critical:true})' in html
     assert "retry failed loads" in html

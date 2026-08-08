@@ -411,9 +411,17 @@ function renderBootNotice() {
     <div class="bar" style="margin:.55rem 0 0"><button class="act" onclick="retryBoot()">retry failed loads</button></div>
   </div>`;
 }
-async function loadState(path, fallback, {critical=false}={}) {
+async function loadState(path, fallback, {critical=false, allowMissing=false}={}) {
   try {
     const r = await fetch(RAW + path, {cache:"no-cache"});
+    // The community-report log is created lazily by the first report-sync
+    // workflow run. A missing log therefore means "no reports yet", not a
+    // broken panel; malformed or unavailable existing files still surface to
+    // the owner diagnostic below.
+    if (allowMissing && r.status === 404) {
+      clearBootError(path);
+      return {value:fallback, ok:true};
+    }
     if (!r.ok) throw new Error(`${r.status} ${r.statusText || "request failed"}`);
     const value = await r.json();
     clearBootError(path);
@@ -525,7 +533,7 @@ async function boot() {
     ["web", "state/web_state.json", null, ownerView],
   ].filter(([, , , enabled]) => enabled);
   const optionalLoads = optional.map(async ([key, path, fallback]) => {
-    const result = await loadState(path, fallback);
+    const result = await loadState(path, fallback, {allowMissing: path === "state/reports.json"});
     if (key === "web") normalizeWebState(result.value);
     else S[key] = result.value;
     if (key === "companies") rebuildCompanyRegistry();
