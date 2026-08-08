@@ -1,41 +1,23 @@
 {
- "events": [],
- "generated_at": 1786188361,
- "history": [
+ "events": [
   {
-   "attempts": [
-    {
-     "at": "2026-08-08T09:17:22+00:00",
-     "completion_tokens": 1085,
-     "detail": "task schema validation failed",
-     "endpoint": "local",
-     "lane": "local",
-     "latency_ms": 137254,
-     "max_tokens": 2200,
-     "model": "qwen2.5:32b",
-     "prompt_chars": 5006,
-     "prompt_tokens": 1378,
-     "status": "invalid",
-     "task": "company_research"
-    }
-   ],
-   "generated_at": 1786180642,
-   "logical_calls": 1,
-   "models": {
-    "local": {
-     "errors": 1,
-     "model": "qwen2.5:32b",
-     "ok": 0,
-     "requests": 1,
-     "tokens": 2463
-    }
-   },
-   "provider": "local",
-   "requests": 1,
-   "task_calls": {
-    "company_research": 1
-   }
-  },
+   "at": "2026-08-08T11:28:53+00:00",
+   "completion_tokens": 1270,
+   "detail": "",
+   "endpoint": "local",
+   "lane": "local",
+   "latency_ms": 156885,
+   "max_tokens": 2200,
+   "model": "qwen2.5:32b",
+   "prompt_chars": 5116,
+   "prompt_tokens": 1377,
+   "selected": true,
+   "status": "ok",
+   "task": "company_research"
+  }
+ ],
+ "generated_at": 1786188534,
+ "history": [
   {
    "attempts": [
     {
@@ -3185,15 +3167,60 @@
    "task_calls": {
     "company_research": 1
    }
+  },
+  {
+   "attempts": [
+    {
+     "at": "2026-08-08T11:28:53+00:00",
+     "completion_tokens": 1270,
+     "detail": "",
+     "endpoint": "local",
+     "lane": "local",
+     "latency_ms": 156885,
+     "max_tokens": 2200,
+     "model": "qwen2.5:32b",
+     "prompt_chars": 5116,
+     "prompt_tokens": 1377,
+     "selected": true,
+     "status": "ok",
+     "task": "company_research"
+    }
+   ],
+   "generated_at": 1786188534,
+   "logical_calls": 1,
+   "models": {
+    "local": {
+     "errors": 0,
+     "model": "qwen2.5:32b",
+     "ok": 1,
+     "requests": 1,
+     "tokens": 2647
+    }
+   },
+   "provider": "local",
+   "requests": 1,
+   "task_calls": {
+    "company_research": 1
+   }
   }
  ],
  "limits": {
-  "logical_calls": 10000,
-  "requests": 10000
+  "logical_calls": 1,
+  "requests": 1
  },
- "logical_calls": 0,
- "models": {},
- "provider": "nvidia-router",
- "requests": 0,
- "task_calls": {}
+ "logical_calls": 1,
+ "models": {
+  "local": {
+   "errors": 0,
+   "model": "qwen2.5:32b",
+   "ok": 1,
+   "requests": 1,
+   "tokens": 2647
+  }
+ },
+ "provider": "local",
+ "requests": 1,
+ "task_calls": {
+  "company_research": 1
+ }
 }
