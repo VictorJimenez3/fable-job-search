@@ -72,6 +72,12 @@ NVIDIA, Microsoft, OpenAI, Anthropic, and comparable big-tech or AI-lab
 employers intentionally occupy the top end of the friend-facing chart. This
 is a broad "crackedness" signal, not Victor's personal company preference.
 
+The lane is conservative about employment type. Explicit full-time-only
+wording with no internship, student, or graduation evidence is marked
+**full-time wording · review only**, cannot alert, and is capped below the
+normal internship board threshold. Ambiguous postings remain visible because
+missing an oddly labeled internship is worse than reviewing an outlier.
+
 Internship email batches are **off by default**. The owner can opt into them
 from Settings; the same preference controls new-grad batches (new-grad starts
 enabled). This is GitHub notification delivery, not inbox access: Google OAuth

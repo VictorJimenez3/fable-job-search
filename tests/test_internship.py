@@ -85,6 +85,37 @@ def test_internship_gates_keep_target_roles_but_separate_alert_evidence():
     assert gates(job(locations=["London, United Kingdom"]))[0] is False
 
 
+def test_explicit_full_time_outliers_are_review_only_but_not_deleted(monkeypatch):
+    monkeypatch.setenv("RADAR_PROFILE", "internship")
+    from radar import config
+    monkeypatch.setattr(config, "_profile_cache", {})
+    posting = job(
+        title="Software Engineer, Full-Time",
+        company="Google",
+        description="Build distributed systems for our production platform.",
+    )
+    annotate(posting)
+    keep, alert_ok, reasons = gates(posting)
+    assert keep and not alert_ok
+    assert posting.internship_eligibility["employment_signal"] == "full_time_only"
+    assert any("full-time-only" in reason for reason in reasons)
+    score(posting, int(time.time()))
+    assert posting.score == 34
+    assert posting.score_raw > posting.score
+    assert any("full-time review cap applied" in reason for reason in posting.score_reasons)
+
+
+def test_full_time_return_offer_does_not_demote_a_real_internship():
+    posting = job(
+        title="Software Engineering Intern",
+        description="Current students may apply; strong interns may receive a full-time offer.",
+    )
+    annotate(posting)
+    keep, alert_ok, _ = gates(posting)
+    assert keep and alert_ok
+    assert posting.internship_eligibility["employment_signal"] == "internship_or_student"
+
+
 def test_internship_score_has_auditable_reasons(monkeypatch):
     monkeypatch.setenv("RADAR_PROFILE", "internship")
     from radar import config

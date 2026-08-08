@@ -40,7 +40,7 @@ none block anything currently running.
    Internship sources, ATS queries, scoring/gates, graduation-aware
    freshman/sophomore/junior/senior matching, state, dashboards, GitHub
    surfaces, and Google tracker tabs are separate. New-grad remains the
-   priority compute path; internship email batches are opt-in. Its v4 score is
+   priority compute path; internship email batches are opt-in. Its v5 score is
    a neutral friend-facing 0–100 opportunity rubric with flat role-family weights,
    explicit prestige/crackedness, normalized pay, employer/work evidence, student evidence, and freshness;
    Victor's new-grad preferences never rank friends' internships.

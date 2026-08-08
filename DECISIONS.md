@@ -1669,3 +1669,17 @@ without importing Victor's saved company preferences, while still allowing
 posting-specific work, pay, eligibility, and freshness evidence to separate
 roles at the same employer. `radar.internship.RULES_VERSION` is now 4 and the
 workflow rebuilds every stored internship score before publishing.
+
+## 110. Keep full-time outliers reviewable without alerting them (2026-08-08)
+
+The internship source set includes broad ATS boards, so some records have no
+internship keyword even though they came from an internship search. The lane
+must favor false positives over false negatives: ambiguous roles stay in the
+snapshot and remain inspectable. A stronger signal is explicit full-time or
+permanent wording with no internship, student, class-year, graduation, or term
+evidence. Those records now carry `employment_signal: full_time_only`, remain
+stored, receive a visible review-only badge, cannot alert, and have their
+display score capped below the normal internship threshold. A phrase such as
+"full-time offer" inside a real internship is not demoted because positive
+internship/student evidence wins. Rules v5 rebuilds the stored snapshot so the
+classification is auditable rather than silently deleting possible leads.
