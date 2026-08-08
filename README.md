@@ -6,8 +6,8 @@ lane inside new-grad. New-grad remains the default and highest-priority
 compute path; internships have their own sources, state, cadence, tracker tab,
 and notification setting.
 
-**[→ 🖥️ The Platform](https://job-radar-vmj-8946s-projects.vercel.app)**
-(sign in with GitHub once → every click writes instantly) ·
+**[→ 🖥️ The Platform](https://job-radar-newgrad.vercel.app)**
+(easy public shortcut; existing Vercel URL remains active) ·
 **[→ 🧪 ChemE internship board](https://job-radar-cheme.vercel.app)**
 (independent jobs and pipeline; same Notion Applications database) ·
 **[→ Pages mirror](https://victorjimenez3.github.io/fable-job-search/platform/)**
