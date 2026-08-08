@@ -35,6 +35,25 @@ Before changing the radar, read these in order:
 
 ## Current operational facts (verified 2026-07-18)
 
+### Latest change (verified 2026-08-08)
+
+- **PM dashboard lane:** `pm` is a zero-weight role bucket for Product
+  Manager, Technical Product Manager, Product Owner, Project Manager, Business
+  Analyst, UX/UI Researcher, and Solutions Architect titles. These rows remain
+  dashboard-visible and filterable, but `gates()` always leaves them
+  `alert_ok=false`, so they cannot create alert issues, alert batches, or RSS
+  delivery. The existing Simplify PM feed and same-company Workday boards are
+  augmented by the PM-only Zapply GitHub board parser (`zapply_pm`).
+- **Google preference:** `profile.yaml` contains a data-driven score override
+  that makes Google technical new-grad roles `100`, with `pm` explicitly
+  excluded. The reason is printed in `score_reasons`; rules version is now 10.
+- **Frontend:** the Jobs role-field toggles include `Product / project
+  management`; `docs/platform/index.html` remains a byte-for-byte copy of
+  `webapp/index.html`.
+- **CI hygiene:** the two exact-template Resume Studio tests now skip only on
+  GitHub Actions when the intentionally local-only `CV/resume.tex` is absent;
+  they continue to run on Victor's Mac where the private CV exists.
+
 - GitHub Actions is the production runtime; it uses Python 3.12. On Victor's
   Mac, system Python is 3.9 but the repo's `.venv` has the dependencies —
   run tests with `.venv/bin/python -m pytest tests/`. CI commits state every

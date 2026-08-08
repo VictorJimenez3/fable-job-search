@@ -432,12 +432,15 @@ function laneOf(id, byId) {
 const ROLE_LABELS = {
   ai_ml:"AI / machine learning", swe:"Software engineering",
   data_science:"Data science", data_eng:"Data engineering",
-  analytics:"Analytics / BI", other:"Adjacent / unclassified",
+  analytics:"Analytics / BI", pm:"Product / project management",
+  other:"Adjacent / unclassified",
 };
+const PM_TITLE = /\b(?:a?pm|associate\s+product\s+manager|technical\s+product\s+manager|product\s+(?:manager|owner)|project\s+manager|business(?:\s+systems)?\s+analyst|(?:ux\s*\/\s*ui|ux|ui|user\s+experience|user\s+interface)\s+(?:researcher|research)|solutions?\s+architect(?:ure)?)\b/i;
 const OFF_FIELD_TITLE = /\b(safeguards?|trust\s*(and|&)\s*safety|policy|counsel|legal|paralegal|compliance|recruit(er|ing)|talent\s+(acquisition|management|operations|partner)|people\s+(ops|operations)|human\s+resources|sales|account\s+(executive|manager)|business\s+(development|operations|analyst)|go[- ]to[- ]market|gtm|partnerships?|marketing|brand|communications?|public\s+relations|finance|financial\s+analyst|accounting|payroll|procurement|revenue|solutions?\s+(engineer|architect|consultant)|(?:technology|technical)\s+consultant|field\s+engineer|customer\s+(success|support|experience)|technical\s+support|support\s+(engineer|specialist)|help\s?desk|success\s+engineer|ai\s+governance|governance\s+and\s+advisory|(ux|ui|visual|graphic|product)\s+design(er)?|(product|program|project)\s+manager|product\s+(owner|marketing)|chief\s+of\s+staff|executive\s+assistant|administrative|workplace|facilities)\b/i;
 const TECH_PROGRAM_TITLE = /\b(tldp|dsldp|eldp)\b|\b(leadership\s+(development\s+)?program|rotational\s+program|graduate\s+program(?:me)?|emerging\s+talent|future\s+talent)\b.*\b(technology|digital|data|ai|ml|software|engineering|it|analytics|cloud|devops|cyber)\b|\b(technology|digital|data|ai|ml|software|engineering|it|analytics|cloud|devops|cyber)\b.*\b(leadership|rotational|graduate|emerging\s+talent|future\s+talent)\b/i;
 function roleFamily(j) {
   const t = norm(j.title);
+  if (PM_TITLE.test(t)) return "pm";
   if (OFF_FIELD_TITLE.test(t)) return "other";
   if (/\b(machine learning|ml engineer|ml|artificial intelligence|ai engineer|ai|applied scientist|research engineer|research scientist|deep learning|llm|gen ai|generative ai|nlp|computer vision|perception)\b/.test(t)) return "ai_ml";
   if (/\b(data engineer|data platform|data infrastructure|etl|analytics engineer)\b/.test(t)) return "data_eng";
@@ -921,7 +924,9 @@ function liJobsURL(keywords, days=7) {
 }
 function liSavedSearches() {  // mirror of profile.yaml roles buckets
   const qs = ["new grad software engineer", "machine learning engineer new grad",
-              "data scientist entry level", "ai engineer new grad", "data engineer new grad"];
+              "data scientist entry level", "ai engineer new grad", "data engineer new grad",
+              "associate product manager new grad", "technical product manager entry level",
+              "business analyst new grad"];
   return `<details class="sub" style="margin:-0.3rem 0 0.9rem">
     <summary>🔗 LinkedIn saved searches (entry-level + date filters in the URL)</summary>
     <div class="rlinks" style="margin-top:0.4rem">${qs.map(q=>
@@ -946,6 +951,7 @@ function googleSearchURL(query) {
 }
 function outreachRoleFamily(j) {
   const text = `${j.title||""} ${j.sector||""}`.toLowerCase();
+  if (roleFamily(j)==="pm") return '"product manager" OR "product owner" OR "business analyst"';
   if (/machine learning|deep learning|artificial intelligence|\bai\b/.test(text)) return '"machine learning" OR "AI"';
   if (/data scientist|data science|data analyst|analytics/.test(text)) return '"data science" OR "analytics"';
   if (/cloud|platform|backend|infrastructure/.test(text)) return '"software" OR "cloud" OR "platform"';

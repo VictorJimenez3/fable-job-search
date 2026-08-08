@@ -3,8 +3,8 @@ import time
 from radar.models import Job
 from radar import main
 from radar.score import (RULES_VERSION, apply_company_concentration,
-                         calibrate_score, early_career_possible, gates, regate,
-                         score, update_feedback_from_applied)
+                         calibrate_score, early_career_possible, gates, role_bucket,
+                         regate, score, update_feedback_from_applied)
 from radar.sector import infer
 
 NOW = int(time.time())
@@ -160,6 +160,51 @@ def test_gates_generic_analyst_titles_do_not_count_as_data_science():
     for title in ["Data Analyst", "Product Analyst", "Quantitative Analyst",
                   "Analytics Engineer"]:
         assert gates(mk(title))[0] is True, title
+
+
+def test_pm_family_is_visible_low_scoring_and_never_alertable():
+    titles = [
+        "Product Manager, New Grad",
+        "Technical Product Manager, New Grad",
+        "Product Owner, New Grad",
+        "Project Manager, New Grad",
+        "Business Analyst, New Grad",
+        "UX/UI Researcher, New Grad",
+        "Solutions Architect, New Grad",
+    ]
+    for title in titles:
+        job = mk(title, source="simplify")
+        keep, alert_ok, reasons = gates(job)
+        assert keep and not alert_ok, title
+        assert role_bucket(title) == "pm", title
+        assert any("PM-family role" in reason for reason in reasons), title
+        score(job, FB, NOW)
+        assert any("role:pm +0" in reason for reason in job.score_reasons), title
+
+
+def test_google_new_grad_favorite_is_100_but_pm_stays_low():
+    technical = mk("Software Engineer, New Grad", company="Google")
+    score(technical, FB, NOW)
+    assert technical.score == 100
+    assert any("Google new-grad -> 100" in reason for reason in technical.score_reasons)
+
+    pm = mk("Product Manager, New Grad", company="Google", source="simplify")
+    score(pm, FB, NOW)
+    assert pm.score < 100
+    assert any("role:pm +0" in reason for reason in pm.score_reasons)
+
+
+def test_google_override_survives_company_concentration():
+    jobs = [
+        mk("Deep Learning Engineer, New Grad", company="Google"),
+        mk("Machine Learning Engineer, New Grad", company="Google"),
+        mk("Software Engineer, New Grad", company="Google"),
+    ]
+    for job in jobs:
+        score(job, FB, NOW)
+    apply_company_concentration(jobs)
+    assert all(job.score == 100 for job in jobs)
+    assert all(job.ranking_adjustment == 0 for job in jobs)
 
 
 def test_gates_ai_customer_roles_are_dashboard_only():

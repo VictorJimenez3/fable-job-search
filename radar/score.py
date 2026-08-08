@@ -15,12 +15,17 @@ from .models import Job, norm
 
 # Bumped whenever gate rules change; regate() re-applies the current rules to
 # every stored job whose rules_v is older (demote/promote alert_ok in place).
-RULES_VERSION = 9
+RULES_VERSION = 10
 
 SENIOR_RE = re.compile(
-    r"\b(senior|staff|principal|lead(er)?|director|manager|head of|sr\.?|vp|chief|"
-    r"architect|distinguished|fellow|executive|iii|iv|"
+    r"\b(senior|staff|principal|lead(er)?|director|head of|sr\.?|vp|chief|"
+    r"distinguished|fellow|executive|iii|iv|"
     r"engineer\s+[3-9]|l[5-9]|level\s+[3-9])\b", re.I)
+# Generic engineering managers and architects stay hard-gated. The requested
+# PM-family titles are kept as dashboard-only research records, including
+# entry-level Product/Project Manager and Solutions Architect postings.
+MANAGER_RE = re.compile(r"\bmanager\b", re.I)
+ARCHITECT_RE = re.compile(r"\barchitect(?:ure)?\b", re.I)
 # Typically 1-3 yrs experience: worth seeing on the dashboard, never an alert.
 MIDLEVEL_RE = re.compile(r"\b(ii|l4|engineer\s+2|level\s+2|mid([- ]level)?)\b", re.I)
 # Roles outside Victor's field. Title-only, demote-only (alert_ok=False, job
@@ -84,6 +89,14 @@ ROLE_BUCKETS: dict[str, re.Pattern] = {
         r"software|swe\b|backend|back[- ]end|full[- ]?stack|front[- ]?end|platform engineer|"
         r"infrastructure|site reliability|devops|mobile|\bios\b|android|\bdeveloper\b|systems engineer|"
         r"security engineer|cloud engineer|embedded", re.I),
+    # PM roles are intentionally a visible, low-scoring dashboard lane. They
+    # never become alerts, even when a source labels them new-grad.
+    "pm": re.compile(
+        r"\b(?:a?pm|associate\s+product\s+manager|technical\s+product\s+manager|"
+        r"product\s+(?:manager|owner)|project\s+manager|"
+        r"business(?:\s+systems)?\s+analyst|"
+        r"(?:ux\s*/\s*ui|ux|ui|user\s+experience|user\s+interface)\s+(?:researcher|research)|"
+        r"solutions?\s+architect(?:ure)?)\b", re.I),
 }
 
 PROGRAM_RE = re.compile(
@@ -115,7 +128,7 @@ US_HINTS = re.compile(
 
 
 def role_bucket(title: str, description: str = "") -> str | None:
-    for bucket in ("ai_ml", "data_science", "data_eng", "swe"):
+    for bucket in ("ai_ml", "data_science", "data_eng", "swe", "pm"):
         if ROLE_BUCKETS[bucket].search(title):
             return bucket
     if description:
@@ -181,18 +194,27 @@ def new_grad_signal(title: str, description: str = "") -> bool:
 
 def source_new_grad(job: Job) -> bool:
     """Treat dedicated new-grad aggregators as strong provenance evidence."""
-    return job.source.lower() in TRUSTED_NEW_GRAD_SOURCES
+    # Zapply's broad board is noisy globally, but this pipeline only admits its
+    # PM-family rows. Give those rows provisional visibility evidence; the PM
+    # gate below still makes them dashboard-only and never alertable.
+    return (job.source.lower() in TRUSTED_NEW_GRAD_SOURCES
+            or (job.source.lower() == "zapply_pm" and role_bucket(job.title) == "pm"))
 
 
 def gates(job: Job) -> tuple[bool, bool, list[str]]:
     """Returns (keep_at_all, alert_eligible, reasons)."""
     t = job.title
     text = f"{t}\n{job.description[:1500]}"
+    bucket = role_bucket(t)
     program = leadership_program_signal(job.company, t, job.description)
     new_grad = new_grad_signal(t, job.description) or source_new_grad(job)
     if INTERN_RE.search(t):
         return False, False, ["intern/co-op/contract"]
     if SENIOR_RE.search(t):
+        return False, False, ["senior+ title"]
+    if MANAGER_RE.search(t) and bucket != "pm":
+        return False, False, ["senior+ title"]
+    if ARCHITECT_RE.search(t) and bucket != "pm":
         return False, False, ["senior+ title"]
     if PHD_RE.search(t):
         return False, False, ["PhD-targeted title"]
@@ -207,7 +229,7 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
     # non-technical title into a target role (e.g. Safety Editor at OpenAI or
     # a Biology Research Associate at Anthropic). Descriptions still inform
     # entry-level and experience gates; role-family eligibility is title-led.
-    if role_bucket(t) is None and not program:
+    if bucket is None and not program:
         if OFF_FIELD_RE.search(t):
             return True, False, ["off-field title (dashboard only)"]
         if re.search(r"\banalyst\b", t, re.I):
@@ -234,6 +256,9 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
             reasons.append("mid-level title (dashboard only)")
     if not alert_eligible and not reasons:
         reasons.append("seniority unclear (dashboard only)")
+    if bucket == "pm":
+        alert_eligible = False
+        reasons.append("PM-family role (dashboard only)")
     return True, alert_eligible, reasons
 
 
@@ -252,6 +277,8 @@ def early_career_possible(job: Job, posting: dict | None = None) -> bool:
     the main gates exclude.
     """
     title = job.title or ""
+    if role_bucket(title) == "pm":
+        return False
     if (new_grad_signal(title, job.description) or source_new_grad(job)
             or leadership_program_signal(job.company, title, job.description)):
         return False
@@ -582,7 +609,15 @@ def apply_company_concentration(jobs) -> int:
         company_name = str(group[0].get("company", company) if isinstance(group[0], dict) else group[0].company)
         for rank, job in enumerate(group):
             raw = float(job.get("score_raw", 0) if isinstance(job, dict) else job.score_raw)
-            penalty = 0 if rank == 0 or raw >= best_raw else min(2, rank)
+            reasons_before = job.get("score_reasons", []) if isinstance(job, dict) else job.score_reasons
+            override_protected = any(
+                str(reason).startswith("configured score override:")
+                for reason in reasons_before
+            )
+            penalty = (
+                0 if rank == 0 or raw >= best_raw or override_protected
+                else min(2, rank)
+            )
             reason = None
             if penalty:
                 reason = (
@@ -736,6 +771,20 @@ def score(job: Job, feedback: dict, now: int | None = None) -> None:
         if display < floor:
             reasons.append(f"technical program display floor +{floor - display}")
             display = floor
+
+    # Explicit, profile-driven favorites are data, not company-name branches
+    # in the scorer. PM-family roles stay low per the friend-facing contract.
+    for override in p.get("score_overrides", []):
+        if (norm(override.get("company", "")) == norm(job.company)
+                and override.get("when") == "new_grad"
+                and new_grad
+                and bucket not in set(override.get("exclude_buckets", []))):
+            target = int(override.get("score", display))
+            if target != display:
+                reasons.append(
+                    f"configured score override: {job.company} new-grad -> {target}")
+            display = target
+            break
 
     job.score_raw = raw_utility
     job.score_calibrated = display

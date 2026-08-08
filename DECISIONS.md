@@ -1311,3 +1311,27 @@ get personal Sheets storage. Existing shared-tab rows are migrated into the
 owner's first personal workbook when the account can be matched, so this change
 does not intentionally discard the earlier tracker funnel. The old shared tab
 remains as a migration/legacy surface and is not used for new user rows.
+
+## 87. PM roles are a dashboard-only research lane (2026-08-08)
+
+Victor asked to let a friend use the platform for Product Manager, Technical
+Product Manager, Product Owner, Project Manager, Business Analyst, UX/UI
+Researcher, and Solutions Architecture new-grad searches without changing the
+main radar's ranking priorities or notification trust. The implementation uses
+one `pm` role bucket with weight `0`, keeps matching US postings in the board,
+and forces `alert_ok=false` after all normal eligibility checks. Therefore PM
+rows can be opened, filtered, saved, and applied manually, but cannot create
+individual alert issues, master-board alert rows, alert batches, or RSS items.
+
+Breadth comes from the existing SimplifyJobs New-Grad-Positions PM section and
+targeted queries against the same active Workday company registry, plus a
+PM-only parser for Zapply's public New-Grad-Jobs-2027 GitHub board. Zapply is
+noisy globally, so only the parser's PM rows receive provisional new-grad
+visibility evidence; the PM gate remains dashboard-only either way. Solutions
+Architect titles are allowed into this lane only so an entry-level/new-grad
+posting is visible; generic non-PM architect and manager titles remain hard
+gated.
+
+Victor also explicitly chose Google technical new-grad roles to display at
+100. That is a profile-configured, auditable score override excluded for PM
+roles, so the friend-facing PM lane remains low even at Google.

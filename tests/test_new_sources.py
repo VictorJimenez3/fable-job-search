@@ -3,7 +3,7 @@ API's documented/observed responses. Live behavior is verified in CI runs."""
 from unittest.mock import patch
 
 from radar.discovery import extract
-from radar.sources import ats, bigco
+from radar.sources import aggregators, ats, bigco
 
 
 def test_greenhouse_records_the_official_board_source():
@@ -114,6 +114,19 @@ def test_extract_new_ats_patterns():
         ("icims", "careers-gdms", {})
     got = extract("https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210767161")
     assert got == ("oracle_orc", "jpmc", {"host": "jpmc.fa.oraclecloud.com", "site": "CX_1001"})
+
+
+def test_zapply_pm_board_only_keeps_requested_pm_titles():
+    md = """
+| **Acme** | Associate Product Manager, New Grad | New York, NY | 2h |  | [<img src=\"images/apply.png\">](https://acme.example/jobs/1) |
+| **Acme** | Software Engineer, New Grad | New York, NY | 2h |  | [<img src=\"images/apply.png\">](https://acme.example/jobs/2) |
+| **Acme** | UX/UI Researcher, New Grad | Remote | 1d |  | [<img src=\"images/apply.png\">](https://acme.example/jobs/3) |
+"""
+    with patch.object(aggregators, "get_text", return_value=md):
+        jobs = aggregators.fetch_zapply_pm()
+    assert [job.title for job in jobs] == [
+        "Associate Product Manager, New Grad", "UX/UI Researcher, New Grad"]
+    assert all(job.source == "zapply_pm" for job in jobs)
 
 
 def test_all_new_fetchers_registered():

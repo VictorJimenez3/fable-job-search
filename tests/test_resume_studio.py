@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from scripts import resume_studio as rs
 
 
@@ -380,6 +382,10 @@ def test_workshop_edit_creates_revision_without_overwriting_original_plan(monkey
     assert len(json.loads((run_dir / "workshop.json").read_text())["revisions"]) == 2
 
 
+@pytest.mark.skipif(
+    not (rs.repo_root() / "CV" / rs.CANONICAL_TEMPLATE).is_file(),
+    reason="CV/ is local-only; exact-template workshop test runs on the owner Mac",
+)
 def test_workshop_front_matter_is_editable_without_changing_the_template(tmp_path):
     front = rs.front_matter_catalog()
     assert {item["line_id"] for item in front} >= {
@@ -402,6 +408,10 @@ def test_workshop_front_matter_is_editable_without_changing_the_template(tmp_pat
     assert rs.template_style_guard(tex, rs.repo_root())["identical_preamble_header_education_skills"] is False
 
 
+@pytest.mark.skipif(
+    not (rs.repo_root() / "CV" / rs.CANONICAL_TEMPLATE).is_file(),
+    reason="CV/ is local-only; exact-template workshop test runs on the owner Mac",
+)
 def test_workshop_plan_refreshes_stale_front_matter_indexes_without_losing_edits():
     plan = _fixture_plan()
     stale = rs.front_matter_catalog()

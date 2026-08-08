@@ -22,7 +22,8 @@ handles time-sensitive enrichment nightly. The repo itself is the database.
 system as a website, refreshed automatically by every crawl:
 
 - **Jobs**: every role the radar has ever seen, with persistent dropdowns for
-  role family, posting sponsorship, official DOL sponsor history, experience,
+  role family—including the low-priority **Product / project management**
+  lane—posting sponsorship, official DOL sponsor history, experience,
   sector, and pipeline status. Each row shows visa/years badges—including the
   important difference between "not stated" and "not analyzed"—plus historical
   sponsor context, score, salary, culture, and age. DOL history is company-level
@@ -209,7 +210,10 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
   clearance/off-field roles (US-only). Technical graduate and rotational
   leadership programs are a dedicated exception. Eligible roles then use an
   auditable point rubric prioritizing AI/ML and data science above SWE/systems;
-  every score has printed reasons. This runs in the cloud with zero API keys.
+  PM-family rows have role weight `0`, remain dashboard-only, and never enter
+  alert email/RSS delivery. Google technical new-grad roles have an explicit
+  profile-driven `100` favorite override with a printed reason. Every score has
+  printed reasons. This runs in the cloud with zero API keys.
 - **Your MacBook is the bulk AI worker for radar enrichment.** A background job (launchd, every 2 hours
   while the laptop is awake) pulls the latest state, runs **qwen3:30b through
   Ollama locally** (free, private, ~19 GB on disk), and pushes back:
