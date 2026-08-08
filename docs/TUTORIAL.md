@@ -35,6 +35,10 @@ system as a website, refreshed automatically by every crawl:
   You can also click a Jobs row once to save it (green), then click that saved
   row again to exclude it (red). Turn on **show excluded** to restore a red row;
   this is a reversible view preference, not a score or notification change.
+- **Progressive loading**: the shell and Jobs board appear first, then optional
+  repository panels load independently. If a state source fails, the rest of
+  the site remains usable. Only the signed-in `VictorJimenez3` owner sees the
+  in-app developer notice and retry details; no email or automatic issue is sent.
 - **Pipeline**: separate Maybe, To apply, Applied, OA, Interview, Rejected, and
   Closed lanes. The selected tracker is read back twice daily; "Maybe" remains
   a platform-only scratch lane.

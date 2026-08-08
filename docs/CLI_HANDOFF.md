@@ -70,6 +70,11 @@ Before changing the radar, read these in order:
   saved row again marks it red and hides it from active Jobs. **Show excluded**
   reveals it for a reversible restore. This state is view-only and does not
   change score, crawler, tracker history, or notification delivery.
+- **Progressive frontend boot:** the shell and Jobs milestone render before
+  optional state files hydrate independently, preventing one malformed or
+  stale panel from blanking the site. The signed-in `VictorJimenez3` owner gets
+  a compact red in-app developer notice with retry/details when a request
+  fails; it sends no email and creates no issue automatically.
 - **CI hygiene:** the two exact-template Resume Studio tests now skip only on
   GitHub Actions when the intentionally local-only `CV/resume.tex` is absent;
   they continue to run on Victor's Mac where the private CV exists.

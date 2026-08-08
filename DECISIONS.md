@@ -1476,3 +1476,16 @@ hiding it from the normal active list. A **show excluded** control restores the
 row, and clicking it again clears the marker. Exclusion is intentionally a
 view preference rather than a score, crawler, tracker-history, or notification
 mutation, so an accidental second click is recoverable and auditable.
+
+## 97. Render the radar progressively with an owner-only load diagnostic (2026-08-08)
+
+The platform previously waited for one `Promise.all` containing Jobs plus every
+optional state file before rendering anything. A malformed, slow, or missing
+optional file could therefore look like a total site failure. The boot sequence
+now renders the shell, loads the critical Jobs board, and then hydrates tracker,
+research, culture, company, and other panels independently; each failure falls
+back to an empty/default panel while the remaining site stays usable. The
+signed-in `VictorJimenez3` owner sees a compact red in-app diagnostic with the
+failed paths and retry action. This is intentionally a frontend developer
+notice only: it never emails, creates an issue, or exposes failure details to
+other accounts, and it does not change score or delivery behavior.
