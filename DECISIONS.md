@@ -1401,3 +1401,21 @@ after three distinct reporters. It comments to the owner at that threshold but
 does not automatically archive anything. This manual threshold is appropriate
 for the current small scale; automated moderation can be reconsidered once the
 volume and false-positive rate justify it.
+
+## 91. PM recall uses dedicated breadth plus prioritized direct backfill (2026-08-08)
+
+The first PM lane depended on Simplify, one broad Zapply parser, and a partial
+Workday query list. That left high-signal early-career PM openings on other
+GitHub boards and on career sites whose search taxonomy did not use the exact
+words “new grad.” The lane now ingests Jobright's dedicated Product Management
+new-grad board, keeps Zapply and Simplify coverage, and fans out the requested
+PM-family synonyms across Workday, Phenom, Amazon, Microsoft, Apple, and Google.
+
+PM rows remain a dashboard-only research lane: `roles.pm` is still `0`, the
+PM gate still appends an auditable dashboard-only reason and forces
+`alert_ok=false`, and the Google technical new-grad `100` override still
+excludes `pm`. No PM source can create an alert issue, alert batch, RSS item, or
+email. To make the direct-company layer improve over time, official ATS links
+from PM-source rows mark their registry entry as `pm_interest`; those entries
+are prioritized for probing and for the active-company polling cap. This is a
+bounded recall improvement rather than a new ranking signal.

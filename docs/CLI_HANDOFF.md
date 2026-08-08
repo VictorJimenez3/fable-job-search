@@ -42,8 +42,18 @@ Before changing the radar, read these in order:
   Analyst, UX/UI Researcher, and Solutions Architect titles. These rows remain
   dashboard-visible and filterable, but `gates()` always leaves them
   `alert_ok=false`, so they cannot create alert issues, alert batches, or RSS
-  delivery. The existing Simplify PM feed and same-company Workday boards are
-  augmented by the PM-only Zapply GitHub board parser (`zapply_pm`).
+  delivery. The lane reads Simplify's PM section, Jobright's dedicated
+  seven-day PM board (`jobright_pm`), and Zapply's PM breadth board
+  (`zapply_pm`). PM-originated official ATS links are marked in the company
+  registry and prioritized both when probing new boards and when selecting the
+  active-company polling cap.
+- **PM direct coverage:** Workday and Phenom receive explicit PM title
+  searches (APM, product manager/owner, project manager, business analyst,
+  UX/UI researcher, solutions architect, and product management). Amazon,
+  Microsoft, Apple, and Google receive the same PM-family query fan-out;
+  Amazon drops its technical category restriction only for those PM queries.
+  This broadens recall while preserving the existing hard gates and zero-weight
+  PM scoring policy.
 - **Google preference:** `profile.yaml` contains a data-driven score override
   that makes Google technical new-grad roles `100`, with `pm` explicitly
   excluded. The reason is printed in `score_reasons`; rules version is now 10.

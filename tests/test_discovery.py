@@ -1,4 +1,5 @@
 from radar.discovery import extract, harvest, key, seed_registry
+from radar.main import _select_companies
 from radar.models import Job
 
 
@@ -40,6 +41,31 @@ def test_harvest_and_seed_registry():
     assert added == 1  # plaid once; stripe already seeded
     assert reg["lever:plaid"]["origin"] == "harvest:simplify"
     assert reg["lever:plaid"]["status"] == "new"
+
+
+def test_pm_harvest_is_prioritized_and_marks_direct_company_interest():
+    reg = {}
+    jobs = [
+        Job(company="Technical Co", title="Software Engineer, New Grad",
+            url="https://boards.greenhouse.io/technicalco/jobs/1", source="simplify"),
+        Job(company="Product Co", title="Associate Product Manager, New Grad",
+            url="https://boards.greenhouse.io/productco/jobs/2", source="zapply_pm"),
+    ]
+    assert harvest(reg, jobs, max_new=1) == 1
+    assert "greenhouse:productco" in reg
+    assert reg["greenhouse:productco"]["pm_interest"] is True
+    assert reg["greenhouse:productco"]["pm_sources"] == ["zapply_pm"]
+
+
+def test_pm_interest_companies_win_the_direct_polling_cap():
+    entries = [
+        {"name": "Technical Co", "status": "active", "origin": "seed",
+         "sector": "ai_lab", "last_ok": 100},
+        {"name": "Product Co", "status": "active", "origin": "harvest:zapply_pm",
+         "sector": "", "last_ok": 1, "pm_interest": True},
+    ]
+    registry = {str(i): entry for i, entry in enumerate(entries)}
+    assert _select_companies(registry, 1)[0]["name"] == "Product Co"
 
 
 def test_multiple_fanatics_department_boards_can_be_seeded():

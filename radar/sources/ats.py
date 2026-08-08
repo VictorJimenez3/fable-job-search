@@ -15,6 +15,28 @@ from ..http import get_json, post_json
 from ..models import Job
 
 
+# Query-driven career sites need title synonyms because a search for only
+# "new grad" misses early-career PM openings that are filed under a business
+# or product taxonomy. Standard ATS adapters already return their full board;
+# these terms are for Workday/Phenom and are intentionally kept separate from
+# the profile's scoring vocabulary.
+PM_SEARCH_QUERIES = [
+    "associate product manager",
+    "apm",
+    "product manager",
+    "technical product manager",
+    "product owner",
+    "project manager",
+    "business analyst",
+    "business systems analyst",
+    "ux researcher",
+    "user experience researcher",
+    "ui researcher",
+    "solutions architect",
+    "product management",
+]
+
+
 def _plain(html_text: str | None) -> str:
     """HTML (possibly entity-escaped, à la Greenhouse `content`) → plain text."""
     if not html_text:
@@ -131,8 +153,10 @@ def fetch_workday(entry: dict, queries: list[str] | None = None) -> list[Job]:
     base = f"https://{tenant}.{host}.myworkdayjobs.com"
     api = f"{base}/wday/cxs/{tenant}/{site}/jobs"
     seen, out = set(), []
-    for q in (queries or ["new grad", "early career", "leadership development",
-                          "graduate program", "rotational program", "emerging talent"]):
+    default_queries = ["new grad", "early career", "leadership development",
+                       "graduate program", "rotational program", "emerging talent"]
+    search_queries = list(dict.fromkeys((queries or default_queries) + PM_SEARCH_QUERIES))
+    for q in search_queries:
         for offset in (0, 20, 40):
             data = post_json(api, {"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": q})
             postings = data.get("jobPostings") or []
@@ -241,9 +265,11 @@ def fetch_phenom(entry: dict, queries: list[str] | None = None) -> list[Job]:
     host = entry["extra"]["host"].rstrip("/")
     refnum = entry["extra"]["refnum"]
     out, seen = [], set()
-    for q in (queries or ["new grad", "early career", "entry level",
-                          "leadership development", "graduate program",
-                          "rotational program", "emerging talent"]):
+    default_queries = ["new grad", "early career", "entry level",
+                       "leadership development", "graduate program",
+                       "rotational program", "emerging talent"]
+    search_queries = list(dict.fromkeys((queries or default_queries) + PM_SEARCH_QUERIES))
+    for q in search_queries:
         payload = {
             "lang": "en_us", "deviceType": "desktop", "country": "us",
             "pageName": "search-results", "ddoKey": "refineSearch",

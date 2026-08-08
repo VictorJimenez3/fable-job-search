@@ -129,6 +129,47 @@ def test_zapply_pm_board_only_keeps_requested_pm_titles():
     assert all(job.source == "zapply_pm" for job in jobs)
 
 
+def test_jobright_pm_board_only_keeps_requested_pm_titles():
+    md = """
+| **[Acme](https://acme.example)** | **[Associate Product Manager, New Grad](https://jobright.ai/jobs/1)** | New York, NY, United States | Hybrid | Aug 07 |
+| ↳ | **[Product Demonstrator PT](https://jobright.ai/jobs/2)** | New York, NY, United States | On Site | Aug 07 |
+| **[Acme](https://acme.example)** | **[Software Engineer, New Grad](https://jobright.ai/jobs/3)** | New York, NY, United States | Hybrid | Aug 07 |
+"""
+    with patch.object(aggregators, "get_text", return_value=md):
+        jobs = aggregators.fetch_jobright_pm()
+    assert [job.title for job in jobs] == ["Associate Product Manager, New Grad"]
+    assert jobs[0].source == "jobright_pm"
+    assert jobs[0].source_url == aggregators.info("jobright_pm")[1]
+
+
+def test_query_driven_ats_include_pm_synonyms():
+    calls = []
+
+    def fake_post(url, payload, **kwargs):
+        calls.append(payload["searchText"])
+        return {"jobPostings": []}
+
+    entry = {"name": "Acme", "ats": "workday", "token": "acme",
+             "extra": {"host": "wd5", "site": "External"}}
+    with patch.object(ats, "post_json", side_effect=fake_post):
+        ats.fetch_workday(entry, queries=["new grad"])
+    assert set(ats.PM_SEARCH_QUERIES).issubset(calls)
+
+
+def test_amazon_pm_queries_skip_technical_category_filter():
+    calls = []
+
+    def fake_get(url, params=None, **kwargs):
+        calls.append(params)
+        return {"jobs": []}
+
+    with patch.object(bigco, "get_json", side_effect=fake_get):
+        bigco.fetch_amazon({})
+    by_query = {p["base_query"]: p for p in calls}
+    assert "category[]" in by_query[bigco.TECH_QUERIES[0]]
+    assert "category[]" not in by_query[bigco.PM_QUERIES[0]]
+
+
 def test_all_new_fetchers_registered():
     for name in ("eightfold", "icims", "oracle_orc", "phenom",
                  "tesla", "amazon", "microsoft", "apple", "google"):
