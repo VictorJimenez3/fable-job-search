@@ -75,3 +75,10 @@ def test_platform_exposes_owner_taste_and_community_moderation_paths():
     assert "feedback" in action and "archive" in action
     assert "radar-report:" in html and "three distinct" in html
     assert "github.event.issue.user" in workflow or "radar-report:" in workflow
+
+
+def test_platform_pm_family_matches_backend_product_management_titles():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    assert r"product\s+(?:manager|owner|management)" in html
+    assert (ROOT / "webapp" / "index.html").read_bytes() == \
+        (ROOT / "docs" / "platform" / "index.html").read_bytes()
