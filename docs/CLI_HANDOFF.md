@@ -67,7 +67,14 @@ Before changing the radar, read these in order:
   in the private Google Preferences tab/local browser and drives deterministic
   freshman/sophomore/junior/senior matching. Internship email batches default
   off; new-grad batches default on; both are owner toggles and neither uses
-  Gmail scope.
+  Gmail scope. Internship rules v2 uses a neutral friend-facing rubric: role
+  families are flat, while normalized pay, neutral employer recognition/cited
+  evidence, work quality, student evidence, and freshness contribute. Victor's
+  new-grad preferences, feedback, remote setting, and personal-signal sample
+  are excluded. Unknown pay, employers, and work evidence are zero signals,
+  not penalties. The crawl workflow rebuilds every stored internship score and
+  runs `score-health` before delivery so the separate `intern_*` snapshot cannot
+  publish stale score versions.
 - **Google preference:** `profile.yaml` contains a data-driven score override
   that makes Google technical new-grad roles `100`, with `pm` explicitly
   excluded. The reason is printed in `score_reasons`; rules version is now 12.

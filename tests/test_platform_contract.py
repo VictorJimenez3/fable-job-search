@@ -75,6 +75,25 @@ def test_platform_exposes_isolated_internship_lane_and_graduation_preferences():
     assert "internship_email" in html + (ROOT / "radar/board.py").read_text()
 
 
+def test_internship_scoring_is_neutral_and_has_coverage_checks():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    scorer = (ROOT / "radar" / "internship.py").read_text()
+    profile = (ROOT / "profiles" / "internship.yaml").read_text()
+    workflow = (ROOT / ".github" / "workflows" / "internship-radar.yml").read_text()
+    assert "flat across role families" in scorer
+    assert "preference_profile" not in scorer
+    assert "personal_signal" not in scorer
+    assert "remote +" not in scorer
+    assert "curated internship source" not in scorer
+    assert "internship_scoring:" in profile
+    assert "prestige_tiers:" in profile
+    assert "work_quality_cap:" in profile
+    assert "python -m radar.main rescore" in workflow
+    assert "score-health" in workflow
+    assert "neutral friend-facing rubric" in html
+    assert "work_quality" in html
+
+
 def test_platform_exposes_oauth_account_center_and_tutorial():
     html = (ROOT / "webapp" / "index.html").read_text()
     api = "\n".join((ROOT / "webapp" / "api" / name).read_text()

@@ -1613,3 +1613,25 @@ the fragment with `history.replaceState` before exchanging it, and the ticket
 contains only the encrypted session payload—not a provider token in plaintext.
 The credentialed GET remains as a best-effort convenience for a plain visit to
 the alias, but login completion no longer depends on it.
+
+## 107. Internship ranking is neutral and opportunity-focused (2026-08-08)
+
+The internship lane is for friends with different career preferences, so it
+must not reuse Victor's new-grad personalization. Internship technical role
+families therefore receive the same starting role contribution; sector,
+remote status, curated-source provenance, saved/applied history, feedback,
+and `personal_signal` are not ranking inputs. The separate deterministic rubric
+prioritizes generally useful opportunity evidence: published compensation on a
+common annualized scale, a broad recognition tier or bounded cited employer
+signal, mentorship/structured learning, hands-on ownership, technical depth,
+production or user impact, return-offer evidence, student/graduation evidence,
+and freshness.
+
+The rubric is intentionally auditable and conservative. Unknown employers,
+missing pay, and missing work-quality evidence receive zero for that dimension,
+not a penalty; employer and work evidence are capped so one noisy signal cannot
+dominate compensation or eligibility. `radar.internship.RULES_VERSION` is now
+2, the persisted `work_quality` evidence survives description-free rescoring,
+and the internship workflow rebuilds every stored score and runs `score-health`
+before publishing its separate snapshot. New-grad scoring and its priority
+compute path are unchanged.

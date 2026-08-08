@@ -38,8 +38,10 @@ def rescore() -> int:
     threshold = int(profile().get("thresholds", {}).get("alert", 60))
     for record in jobs_state.values():
         job = _job_from_record(record)
-        if not job.internship_eligibility:
-            annotate(job)
+        # Re-run the parser on every repair so new work-quality evidence is
+        # captured. annotate() preserves the last trusted cohort parse when
+        # the state record has no persisted job description.
+        annotate(job)
         keep, alert_ok, reasons = gates(job)
         score(job, now)
         record.update({
@@ -49,6 +51,7 @@ def rescore() -> int:
             "score_raw": job.score_raw,
             "score_calibrated": job.score_calibrated,
             "score_dimensions": job.score_dimensions,
+            "score_dimensions_raw": job.score_dimensions_raw,
             "score_reasons": job.score_reasons + reasons,
             "alert_ok": bool(keep and alert_ok and not record.get("manual_archived")),
             "rules_v": RULES_VERSION,

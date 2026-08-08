@@ -43,6 +43,7 @@ jobs:
           git config user.email "radar@users.noreply.github.com"
           for i in 1 2 3 4; do
             python -m radar.main crawl
+            python -m radar.main rescore
             git add state/intern_*.json docs/internships
             if git diff --cached --quiet; then
               echo "internship crawl: no generated-state changes"
@@ -54,6 +55,10 @@ jobs:
             sleep $((i * 2))
           done
           exit 1
+      - name: Verify internship score coverage
+        env:
+          RADAR_PROFILE: internship
+        run: python -m radar.main score-health
       - name: Deliver separate internship tracking surfaces
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

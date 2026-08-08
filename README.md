@@ -56,6 +56,16 @@ the posting's internship start term and keeps unclear eligibility visible as
 unknown instead of silently rejecting it. New-grad and internship Jobs,
 Pipeline, web state, alert history, and GitHub surfaces never share a list.
 
+Internships use a separate neutral, friend-facing score. It starts technical
+role families evenly and compares public opportunity evidence: normalized pay,
+recognized or cited employer signal, mentorship and structured learning,
+hands-on ownership, technical depth, production/user impact, return-offer
+path, student evidence, and freshness. It does not use Victor's saved roles,
+sectors, remote preference, feedback, applied history, or new-grad weights;
+unknown employers and missing pay/work evidence receive zero for that signal,
+not a penalty. The drawer shows the dimensions and exact reasons behind each
+score.
+
 Internship email batches are **off by default**. The owner can opt into them
 from Settings; the same preference controls new-grad batches (new-grad starts
 enabled). This is GitHub notification delivery, not inbox access: Google OAuth
