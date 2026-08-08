@@ -31,6 +31,9 @@ internship_scoring:
   fresh_24h: 3
   fresh_72h: 2
   fresh_7d: 1
+  # Keep explicit full-time outliers discoverable, but below the normal board
+  # threshold and out of alerts unless positive internship evidence appears.
+  full_time_review_cap: 34
   prestige_points:
     1: 32
     2: 21

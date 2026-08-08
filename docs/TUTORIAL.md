@@ -99,6 +99,11 @@ OpenAI, Anthropic, and comparable big-tech or AI-lab employers receive a
 strong top-end signal. It measures broad technical "crackedness," not Victor's
 saved company preferences.
 
+Full-time protection is deliberately one-sided: clear full-time-only wording
+without internship or student evidence becomes review-only and cannot alert,
+but remains in the data so an incorrectly labeled internship is not silently
+lost. Ambiguous roles stay visible.
+
 Internship email batches are off by default. The owner can enable
 **internship batches** in Settings; **new-grad batches** have a separate
 toggle and default to on. GitHub issue/board surfaces remain available without

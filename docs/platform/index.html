@@ -825,6 +825,12 @@ function internshipCohortBadge(j) {
   const label = match === "match" ? "✓ cohort match" : match === "mismatch" ? "cohort mismatch" : match === "open" ? "open to enrolled students" : detail;
   return `<span class="chip ${match==='match'?'good':match==='mismatch'?'bad':'unknown'}" title="${esc(detail)}">🎓 ${esc(label)}</span>`;
 }
+function internshipEmploymentBadge(j) {
+  if (S.lane !== "internship") return "";
+  const signal = (j.internship_eligibility || {}).employment_signal;
+  if (signal === "full_time_only") return '<span class="chip bad" title="Explicit full-time wording with no internship or student evidence; kept visible for review, never alert-eligible">⚠️ full-time wording · review only</span>';
+  return "";
+}
 function eligibilityBadges(j) {
   const p = j.posting;
   const sponsor = sponsorStatus(j);
@@ -842,6 +848,7 @@ function eligibilityBadges(j) {
   const program = TECH_PROGRAM_TITLE.test(j.title || "");
   return `<span class="chip">${esc(ROLE_LABELS[roleFamily(j)])}</span>
     ${internshipCohortBadge(j)}
+    ${internshipEmploymentBadge(j)}
     ${program?'<span class="chip marquee">technical program</span>':""}
     ${j.early_career_possible?'<span class="chip unknown" title="No stated experience floor, but not verified new-grad">early-career possible</span>':""}
     <span class="chip ${visa[0]}">${visa[1]}</span>
@@ -1889,7 +1896,7 @@ function wsCompany(j, w, c, id) {
 
 function scoreReasonLabel(reason) {
   const text = String(reason||"");
-  const labels = [["base internship utility","baseline"],["base utility","baseline"],["technical internship role","flat technical role"],["role:","role fit"],["sector:","sector fit"],["new-grad/early-career priority","verified early-career"],["early-career possible","plausible first-role"],["new-grad evidence absent","early-career evidence"],["mid-level title penalty","mid-level demotion"],["company tier","company quality"],["prestige tier","prestige / crackedness"],["recognized employer","employer signal"],["cited employer/work evidence","cited employer evidence"],["explicit goal company","goal-company preference"],["duplicate role variant","duplicate posting"],["similar role sibling","similar-role adjustment"],["company concentration","company diversity"],["learned from","learned preferences"],["learned role preference","learned role preference"],["learned sector preference","learned sector preference"],["learned company preference","learned company preference"],["learned title signals","learned title language"],["explicit company feedback","explicit feedback"],["explicit title feedback","explicit feedback"],["graduation eligibility","student eligibility"],["student eligibility","student eligibility"],["compensation ceiling","compensation"],["compensation","compensation"],["work-quality","work quality"],["work evidence","work quality"],["internship score cap applied","score cap"],["posted","freshness"],["remote","remote access"],["culture fit","culture evidence"],["SHPE","community signal"],["sponsor history:","DOL sponsor context"],["raw utility","calibration"]];
+  const labels = [["base internship utility","baseline"],["base utility","baseline"],["technical internship role","flat technical role"],["role:","role fit"],["sector:","sector fit"],["new-grad/early-career priority","verified early-career"],["early-career possible","plausible first-role"],["new-grad evidence absent","early-career evidence"],["mid-level title penalty","mid-level demotion"],["company tier","company quality"],["prestige tier","prestige / crackedness"],["recognized employer","employer signal"],["cited employer/work evidence","cited employer evidence"],["full-time-only signal","full-time review"],["full-time review cap applied","full-time review"],["explicit goal company","goal-company preference"],["duplicate role variant","duplicate posting"],["similar role sibling","similar-role adjustment"],["company concentration","company diversity"],["learned from","learned preferences"],["learned role preference","learned role preference"],["learned sector preference","learned sector preference"],["learned company preference","learned company preference"],["learned title signals","learned title language"],["explicit company feedback","explicit feedback"],["explicit title feedback","explicit feedback"],["graduation eligibility","student eligibility"],["student eligibility","student eligibility"],["compensation ceiling","compensation"],["compensation","compensation"],["work-quality","work quality"],["work evidence","work quality"],["internship score cap applied","score cap"],["posted","freshness"],["remote","remote access"],["culture fit","culture evidence"],["SHPE","community signal"],["sponsor history:","DOL sponsor context"],["raw utility","calibration"]];
   const found = labels.find(([prefix]) => text.startsWith(prefix));
   return found ? found[1] : "other signal";
 }
@@ -2051,6 +2058,7 @@ function scoreSummary(j, dimensions) {
   const reasons = scoreReasonTexts(j);
   if (j.profile === "internship") {
     const score = Number(j.score);
+    if ((j.internship_eligibility||{}).employment_signal === "full_time_only") return "Review only: explicit full-time wording was detected without internship or student evidence. It stays visible so an incorrectly labeled opportunity is not lost, but it cannot alert.";
     if (score >= 80) return "Strong neutral opportunity: prestige, pay, work quality, and/or student evidence stack up.";
     if (Number(dimensions.eligibility) <= 0) return "Visible for research, but student or graduation evidence is still unclear.";
     return "Neutral internship rubric: prestige/crackedness, pay, work quality, student evidence, and freshness; no saved preferences.";

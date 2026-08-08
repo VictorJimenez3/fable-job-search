@@ -13,9 +13,10 @@ from .config import profile
 from .models import Job
 from .score import FOREIGN_HINTS, company_momentum_signal, role_bucket
 
-RULES_VERSION = 4
+RULES_VERSION = 5
 
 INTERNSHIP_RE = re.compile(r"\b(intern(ship)?|co-?op|undergraduate|student worker|summer analyst)\b", re.I)
+FULL_TIME_RE = re.compile(r"\bfull[- ]time\b|\bpermanent\s+(?:employee|role|position)\b|\bregular\s+employee\b", re.I)
 STUDENT_RE = re.compile(r"\b(current|rising|enrolled|undergraduate|college|university)\s+students?\b", re.I)
 CLASS_RE = re.compile(
     r"\b(?P<rising>rising\s+)?(?P<class>freshman|freshmen|first[- ]year|"
@@ -250,12 +251,21 @@ def _evidence(text: str, patterns: list[re.Pattern]) -> list[str]:
     return list(dict.fromkeys(found))[:4]
 
 
+def _has_student_or_internship_evidence(text: str) -> bool:
+    """Use broad positive evidence so a full-time return offer is not misread."""
+    return bool(INTERNSHIP_RE.search(text) or STUDENT_RE.search(text)
+                or GRAD_CONTEXT_RE.search(text) or CLASS_RE.search(text)
+                or TERM_RE.search(text))
+
+
 def analyze(job: Job | dict, description: str | None = None) -> dict:
     title = job.title if isinstance(job, Job) else job.get("title", "")
     desc = description if description is not None else (
         job.description if isinstance(job, Job) else job.get("description", ""))
     text = f"{title}\n{desc or ''}"
     term_start = _term_start(text)
+    full_time_only = bool(FULL_TIME_RE.search(text)
+                          and not _has_student_or_internship_evidence(text))
 
     # Only years near graduation language count as explicit graduation
     # evidence. A summer term year by itself is the internship start year.
@@ -293,6 +303,9 @@ def analyze(job: Job | dict, description: str | None = None) -> dict:
         "graduation_start": grad_start,
         "graduation_end": grad_end,
         "term_start": term_start.isoformat() if term_start else None,
+        "employment_signal": "full_time_only" if full_time_only else (
+            "internship_or_student" if _has_student_or_internship_evidence(text)
+            else "unknown"),
         "evidence": evidence,
     }
 
@@ -346,6 +359,8 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
     bucket = role_bucket(job.title, job.description or "")
     if not bucket:
         return False, False, ["not a target technical internship role"]
+    if (job.internship_eligibility or {}).get("employment_signal") == "full_time_only":
+        return True, False, ["explicit full-time-only signal: review only"]
     source_signal = bool(job.internship_eligibility.get("source_signal")) or job.source in {
         "simplify_internship", "speedyapply_internship", "zapply_internship", "dreamwork_internship"
     }
@@ -411,10 +426,16 @@ def score(job: Job, now: int) -> None:
     else:
         reasons.append("posting age unknown +0")
 
-    value = round(sum(dimensions.values()), 1)
+    raw_value = round(sum(dimensions.values()), 1)
+    value = raw_value
     if value > 100:
         reasons.append(f"internship score cap applied -{value - 100:g}")
-    job.score_raw = value
+    if (job.internship_eligibility or {}).get("employment_signal") == "full_time_only":
+        review_cap = int(cfg.get("full_time_review_cap", 34))
+        if value > review_cap:
+            reasons.append(f"full-time review cap applied -{value - review_cap:g}")
+            value = review_cap
+    job.score_raw = raw_value
     job.score_calibrated = max(0, min(100, round(value)))
     job.score = job.score_calibrated
     job.score_dimensions = dimensions
@@ -432,7 +453,7 @@ def annotate(job: Job) -> dict:
     # evidence, while still refreshing it whenever fresh text is available.
     if not job.description:
         for key in ("status", "class_years", "graduation_start", "graduation_end",
-                    "term_start", "evidence"):
+                    "term_start", "employment_signal", "evidence"):
             if key in source_evidence:
                 parsed[key] = source_evidence[key]
     # ATS adapters can know that a posting came from an internship-specific
