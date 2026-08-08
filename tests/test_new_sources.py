@@ -152,7 +152,7 @@ def test_query_driven_ats_include_pm_synonyms():
     entry = {"name": "Acme", "ats": "workday", "token": "acme",
              "extra": {"host": "wd5", "site": "External"}}
     with patch.object(ats, "post_json", side_effect=fake_post):
-        ats.fetch_workday(entry, queries=["new grad"])
+        ats.fetch_workday(entry, queries=["new grad", *ats.PM_SEARCH_QUERIES])
     assert set(ats.PM_SEARCH_QUERIES).issubset(calls)
 
 

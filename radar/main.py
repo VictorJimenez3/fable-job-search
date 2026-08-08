@@ -38,6 +38,8 @@ AGG_SOURCES = {
     "hn": hn.fetch_hn,
 }
 
+PM_BACKFILL_ATS = {"workday", "phenom"}
+
 
 def _fetch_aggregators(disabled: set[str]) -> tuple[list[Job], dict]:
     jobs, stats = [], {}
@@ -64,19 +66,31 @@ def _select_companies(registry: dict, cap: int) -> list[dict]:
     return active[:cap]
 
 
+def _pm_backfill_ids(entries: list[dict], cap: int) -> set[int]:
+    """Bound the expensive PM query fan-out to prioritized query-driven ATSs."""
+    candidates = [e for e in entries if e.get("ats") in PM_BACKFILL_ATS]
+    return {id(e) for e in candidates[:max(0, cap)]}
+
+
 def _fetch_ats(registry: dict, disabled: set[str]) -> tuple[list[Job], dict]:
     if "ats" in disabled:
         return [], {"ats": "disabled"}
     cap = int(env("RADAR_MAX_COMPANIES", "800"))
     entries = _select_companies(registry, cap)
     wd_queries = list(dict.fromkeys(
-        (profile().get("workday_queries") or []) + PM_SEARCH_QUERIES
+        profile().get("workday_queries") or []
     ))
+    pm_queries = list(dict.fromkeys(wd_queries + PM_SEARCH_QUERIES))
+    pm_backfill_ids = _pm_backfill_ids(
+        entries, int(env("RADAR_PM_BACKFILL_COMPANIES", "200")))
     jobs, ok, fail = [], 0, 0
 
     def one(entry: dict) -> list[Job]:
         fn = FETCHERS[entry["ats"]]
-        return fn(entry, wd_queries) if entry["ats"] in {"workday", "phenom"} else fn(entry)
+        if entry["ats"] in PM_BACKFILL_ATS:
+            queries = pm_queries if id(entry) in pm_backfill_ids else wd_queries
+            return fn(entry, queries)
+        return fn(entry)
 
     with ThreadPoolExecutor(max_workers=int(env("RADAR_WORKERS", "12"))) as ex:
         futs = {ex.submit(one, e): e for e in entries}

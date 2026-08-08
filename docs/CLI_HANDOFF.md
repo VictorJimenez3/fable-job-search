@@ -49,11 +49,13 @@ Before changing the radar, read these in order:
   active-company polling cap.
 - **PM direct coverage:** Workday and Phenom receive explicit PM title
   searches (APM, product manager/owner, project manager, business analyst,
-  UX/UI researcher, solutions architect, and product management). Amazon,
-  Microsoft, Apple, and Google receive the same PM-family query fan-out;
-  Amazon drops its technical category restriction only for those PM queries.
-  This broadens recall while preserving the existing hard gates and zero-weight
-  PM scoring policy.
+  UX/UI researcher, solutions architect, and product management) for the
+  PM-prioritized slice of the registry. The slice defaults to 200 companies and
+  is controlled by `RADAR_PM_BACKFILL_COMPANIES`; all other direct ATS polling
+  keeps the normal query list. Amazon, Microsoft, Apple, and Google receive the
+  same PM-family query fan-out; Amazon drops its technical category restriction
+  only for those PM queries. This preserves recall where PM evidence is
+  strongest without pushing the full crawl past its time budget.
 - **Google preference:** `profile.yaml` contains a data-driven score override
   that makes Google technical new-grad roles `100`, with `pm` explicitly
   excluded. The reason is printed in `score_reasons`; rules version is now 10.

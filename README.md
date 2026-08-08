@@ -49,8 +49,10 @@ Jobright's dedicated [Product Management new-grad board](https://github.com/jobr
 the public [Zapply New-Grad Jobs 2027 board](https://github.com/zapplyjobs/New-Grad-Jobs-2027),
 and direct title searches across the same Workday/Phenom and bespoke big-company
 career APIs used by the technical radar. PM-originated official ATS links are
-prioritized for company backfill, so the lane can grow into direct company
-coverage rather than depending on a single GitHub list.
+prioritized for company backfill; the expensive full PM synonym fan-out is
+bounded to 200 Workday/Phenom companies by default
+(`RADAR_PM_BACKFILL_COMPANIES`), so the lane can grow into direct company
+coverage without starving the normal crawl.
 Product manager, technical product manager, product owner, project manager,
 business analyst, UX/UI researcher, and solutions architecture titles are
 dashboard-visible with role weight `0`, never enter alert eligibility, and never
@@ -457,7 +459,8 @@ python -m radar.main crawl         # full cycle (respects RADAR_* env vars)
 ```
 
 Useful env vars: `RADAR_DISABLE_SOURCES=ats,hn`, `RADAR_PROBE_BUDGET`,
-`RADAR_MAX_COMPANIES`, `RADAR_MAX_ALERTS`, `RADAR_WORKERS`.
+`RADAR_MAX_COMPANIES`, `RADAR_PM_BACKFILL_COMPANIES`, `RADAR_MAX_ALERTS`,
+`RADAR_WORKERS`.
 
 Other one-off CLI commands: `notion-verify`, `email-verify` (connectivity checks,
 create nothing), `email-watch` (run one detection cycle manually).

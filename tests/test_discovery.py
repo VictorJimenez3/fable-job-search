@@ -1,5 +1,5 @@
 from radar.discovery import extract, harvest, key, seed_registry
-from radar.main import _select_companies
+from radar.main import _pm_backfill_ids, _select_companies
 from radar.models import Job
 
 
@@ -66,6 +66,20 @@ def test_pm_interest_companies_win_the_direct_polling_cap():
     ]
     registry = {str(i): entry for i, entry in enumerate(entries)}
     assert _select_companies(registry, 1)[0]["name"] == "Product Co"
+
+
+def test_pm_direct_backfill_is_bounded_to_query_cap():
+    entries = [
+        {"name": "PM Co 1", "ats": "workday", "pm_interest": True},
+        {"name": "PM Co 2", "ats": "phenom", "pm_interest": True},
+        {"name": "PM Co 3", "ats": "workday", "pm_interest": True},
+        {"name": "Greenhouse Co", "ats": "greenhouse", "pm_interest": True},
+    ]
+    got = _pm_backfill_ids(entries, 2)
+    assert id(entries[0]) in got
+    assert id(entries[1]) in got
+    assert id(entries[2]) not in got
+    assert id(entries[3]) not in got
 
 
 def test_multiple_fanatics_department_boards_can_be_seeded():

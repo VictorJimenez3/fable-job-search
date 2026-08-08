@@ -1431,3 +1431,18 @@ expanded Tracker options control. Victor may enable the Sheet as an explicit
 personal mirror; non-owner accounts continue to use their own private Google
 tracker. This preserves the existing Notion history while keeping the Google
 integration available without forcing it.
+
+## 93. Bound expensive PM direct backfill after production timing check (2026-08-08)
+
+The first full production crawl with every PM synonym sent to every active
+Workday/Phenom company exceeded the 25-minute GitHub Actions job budget and was
+cancelled before publishing generated state. The dedicated PM GitHub boards and
+bespoke big-company endpoints remain broad, while the extra Workday/Phenom PM
+synonyms now run only for the first 200 PM-prioritized companies by default,
+controlled by `RADAR_PM_BACKFILL_COMPANIES`. The normal direct query list still
+runs across the active registry, and PM-source ATS links continue to move the
+most relevant companies to the front of both probe and polling order.
+
+This is an operational bound, not a ranking change: PM weight remains `0`, PM
+rows remain dashboard-only with `alert_ok=false`, and no PM row enters email,
+alert-issue, batch, or RSS delivery.
