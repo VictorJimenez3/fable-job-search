@@ -53,7 +53,10 @@ GitHub boards (Simplify, SpeedyApply, Zapply, and Dreamwork) plus internship
 searches on the existing ATS registry. A viewer can set an expected graduation
 month in Settings; the lane derives freshman/sophomore/junior/senior fit from
 the posting's internship start term and keeps unclear eligibility visible as
-unknown instead of silently rejecting it. New-grad and internship Jobs,
+unknown instead of silently rejecting it. The default internship list uses
+positive title or posting-body evidence (intern, co-op, seasonal terms, or
+student/graduation language); uncertain source-only rows remain behind a
+review toggle. New-grad and internship Jobs,
 Pipeline, web state, alert history, and GitHub surfaces never share a list.
 
 Internships use a separate neutral, friend-facing 0–100 score. It starts
@@ -75,7 +78,8 @@ is a broad "crackedness" signal, not Victor's personal company preference.
 The lane is conservative about employment type. Explicit full-time-only
 wording with no internship, student, or graduation evidence is marked
 **full-time wording · review only**, cannot alert, and is capped below the
-normal internship board threshold. Ambiguous postings remain visible because
+normal internship board threshold. Senior/staff-style titles and rows without
+positive internship evidence stay available through the review toggle because
 missing an oddly labeled internship is worse than reviewing an outlier.
 
 Internship email batches are **off by default**. The owner can opt into them

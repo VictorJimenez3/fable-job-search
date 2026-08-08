@@ -13,9 +13,23 @@ from .config import profile
 from .models import Job
 from .score import FOREIGN_HINTS, company_momentum_signal, role_bucket
 
-RULES_VERSION = 5
+RULES_VERSION = 6
 
 INTERNSHIP_RE = re.compile(r"\b(intern(ship)?|co-?op|undergraduate|student worker|summer analyst)\b", re.I)
+INTERNSHIP_TITLE_RE = re.compile(
+    r"\b(?:intern(?:ship)?|co[- ]?op|cooperative education|student worker|summer analyst)\b"
+    r"|\b(?:summer|fall|spring|winter)\b"
+    r"|\b20\d{2}\s+(?:summer|fall|spring|winter)\b",
+    re.I,
+)
+EXPERIENCED_TITLE_RE = re.compile(
+    r"\b(?:sr\.?|senior|staff|principal|lead|director|manager|head of|vp|chief|"
+    r"ph\.?d|postdoc)\b",
+    re.I,
+)
+INTERNSHIP_SOURCE_NAMES = {
+    "simplify_internship", "speedyapply_internship", "zapply_internship", "dreamwork_internship",
+}
 FULL_TIME_RE = re.compile(r"\bfull[- ]time\b|\bpermanent\s+(?:employee|role|position)\b|\bregular\s+employee\b", re.I)
 STUDENT_RE = re.compile(r"\b(current|rising|enrolled|undergraduate|college|university)\s+students?\b", re.I)
 CLASS_RE = re.compile(
@@ -297,6 +311,14 @@ def analyze(job: Job | dict, description: str | None = None) -> dict:
     open_student = bool(STUDENT_RE.search(text))
     status = "explicit" if explicit else ("open" if open_student or INTERNSHIP_RE.search(text) else "unknown")
     evidence = _evidence(text, [GRAD_CONTEXT_RE, CLASS_RE, TERM_RE, INTERNSHIP_RE])
+    title_signal = bool(INTERNSHIP_TITLE_RE.search(title))
+    body_signal = _has_student_or_internship_evidence(desc or "")
+    internship_signal = (
+        "experienced_title" if title_signal and EXPERIENCED_TITLE_RE.search(title)
+        else "title" if title_signal
+        else "body" if body_signal
+        else "unknown"
+    )
     return {
         "status": status,
         "class_years": class_years,
@@ -306,6 +328,7 @@ def analyze(job: Job | dict, description: str | None = None) -> dict:
         "employment_signal": "full_time_only" if full_time_only else (
             "internship_or_student" if _has_student_or_internship_evidence(text)
             else "unknown"),
+        "internship_signal": internship_signal,
         "evidence": evidence,
     }
 
@@ -354,22 +377,20 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
         pass
     elif job.locations and FOREIGN_HINTS.search(" | ".join(job.locations)):
         return False, False, ["non-US-only internship"]
-    if re.search(r"\b(senior|staff|principal|lead|director|manager|head of|vp|chief|ph\.?d|postdoc)\b", job.title, re.I):
+    if EXPERIENCED_TITLE_RE.search(job.title):
         return False, False, ["experienced or doctoral internship title"]
     bucket = role_bucket(job.title, job.description or "")
     if not bucket:
         return False, False, ["not a target technical internship role"]
     if (job.internship_eligibility or {}).get("employment_signal") == "full_time_only":
         return True, False, ["explicit full-time-only signal: review only"]
-    source_signal = bool(job.internship_eligibility.get("source_signal")) or job.source in {
-        "simplify_internship", "speedyapply_internship", "zapply_internship", "dreamwork_internship"
-    }
-    if not (INTERNSHIP_RE.search(text) or source_signal):
-        return True, False, ["student/internship evidence not stated: dashboard only"]
-    if INTERNSHIP_RE.search(job.title):
-        reasons.append("explicit internship/co-op title")
+    signal = (job.internship_eligibility or {}).get("internship_signal", "unknown")
+    if signal in {"unknown", "source_only"}:
+        return True, False, ["internship signal review: no positive title or posting evidence"]
+    if signal == "title":
+        reasons.append("internship title evidence")
     else:
-        reasons.append("internship source evidence")
+        reasons.append("internship/student posting evidence")
     if job.internship_eligibility.get("status") == "explicit":
         reasons.append("graduation/class-year eligibility evidence")
     elif job.internship_eligibility.get("status") == "unknown":
@@ -453,19 +474,22 @@ def annotate(job: Job) -> dict:
     # evidence, while still refreshing it whenever fresh text is available.
     if not job.description:
         for key in ("status", "class_years", "graduation_start", "graduation_end",
-                    "term_start", "employment_signal", "evidence"):
+                    "term_start", "employment_signal", "internship_signal", "evidence"):
             if key in source_evidence:
                 parsed[key] = source_evidence[key]
     # ATS adapters can know that a posting came from an internship-specific
     # commitment/search even when the title and description are terse. Keep
     # that provenance through the parser instead of trusting every posting in
     # an internship crawl equally.
-    if source_evidence.get("source_signal"):
+    source_signal = bool(source_evidence.get("source_signal")) or job.source in INTERNSHIP_SOURCE_NAMES
+    if source_signal:
         parsed["source_signal"] = True
         parsed["evidence"] = list(dict.fromkeys(
             (source_evidence.get("evidence") or []) + parsed.get("evidence", [])))[:4]
         if parsed["status"] == "unknown":
             parsed["status"] = "open"
+        if parsed.get("internship_signal") == "unknown":
+            parsed["internship_signal"] = "source_only"
     work_points, work_reasons = _work_quality_signal(job)
     parsed["work_quality"] = {"points": work_points, "reasons": work_reasons}
     job.internship_eligibility = parsed

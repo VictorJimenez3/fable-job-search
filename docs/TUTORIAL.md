@@ -102,7 +102,9 @@ saved company preferences.
 Full-time protection is deliberately one-sided: clear full-time-only wording
 without internship or student evidence becomes review-only and cannot alert,
 but remains in the data so an incorrectly labeled internship is not silently
-lost. Ambiguous roles stay visible.
+lost. The normal internship list is cleaned to positive title/body evidence;
+source-only, unknown, and senior-style outliers stay available through the
+**include review-only / no-title rows** filter.
 
 Internship email batches are off by default. The owner can enable
 **internship batches** in Settings; **new-grad batches** have a separate
