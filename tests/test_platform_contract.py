@@ -103,3 +103,17 @@ def test_platform_job_rows_cycle_saved_green_then_excluded_red():
     assert ".job.selected" in html and ".job.excluded" in html
     assert "show excluded" in html
     assert "Excluded from active Jobs" in html
+
+
+def test_platform_boots_progressively_and_keeps_owner_diagnostics_in_app():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    assert 'id="bootNotice"' in html
+    assert 'Loading the radar shell' in html
+    assert "function loadState" in html
+    assert "Promise.allSettled" in html
+    assert 'loadState("state/jobs.json", {}, {critical:true})' in html
+    assert "retry failed loads" in html
+    assert "ownerDevMode" in html
+    assert 'victorjimenez3' in html
+    assert "No email or external issue was sent" in html
+    assert "fetchJSON" not in html

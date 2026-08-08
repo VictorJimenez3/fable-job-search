@@ -223,6 +223,15 @@
   .table-scroll { overflow-x:auto; margin-top:0.6rem; }
   .note { background:var(--card); border-left:3px solid var(--amber); padding:0.6rem 0.8rem;
           border-radius:0 5px 5px 0; font-size:0.85rem; margin-bottom:0.9rem; }
+  #bootNotice { max-width:72rem; margin:0 auto; padding:0 1rem; }
+  .boot-notice { background:rgba(163,58,46,.08); border:1px solid var(--danger);
+                 border-left:4px solid var(--danger); border-radius:0 6px 6px 0;
+                 padding:.65rem .8rem; margin:1rem 0 0; font-size:.82rem; }
+  .boot-notice strong { color:var(--danger); }
+  .boot-notice details { margin-top:.35rem; }
+  .boot-notice summary { cursor:pointer; color:var(--danger); font-family:ui-monospace,"SF Mono",Menlo,monospace;
+                          font-size:.72rem; }
+  .boot-notice ul { margin:.35rem 0 0 1.1rem; padding:0; }
   .testing-hero { border:1px solid var(--accent-ink); border-radius:10px; padding:0.9rem;
                   margin-bottom:0.9rem; background:var(--card); }
   .testing-hero h2 { margin:0 0 0.25rem; font-size:1.1rem; }
@@ -281,7 +290,8 @@
   <button class="act" id="tutorialBtn" onclick="openTutorial()">Tutorial</button>
   <button class="act" id="themeBtn" title="theme">◐</button>
 </header>
-<main id="main">Loading the radar state…</main>
+<div id="bootNotice" hidden></div>
+<main id="main"><div class="note" id="bootStatus">Loading the radar shell…</div></main>
 <div id="ws"><div id="wsp"></div></div>
 <div id="tutorial" role="dialog" aria-modal="true" aria-label="Job Radar tutorial" onclick="if(event.target===this)closeTutorial()">
   <div id="tutorialp"></div>
@@ -325,6 +335,7 @@ const S = {           // app state
   tab:"jobs", filter:{...DEFAULT_FILTER, ...storedFilter()}, shown:250,
   wsTab:"fit",
   testing:{q:"", sort:"resume", shown:40},
+  boot:{phase:"starting", jobsReady:false, inFlight:false, errors:[]},
   marquee:new Set(["meta","apple","amazon","netflix","google","microsoft","nvidia",
     "anthropic","openai","deepmind","genentech","moderna","regeneron",
     "vertex pharmaceuticals","eli lilly","merck","medtronic","intuitive surgical","stryker",
@@ -367,26 +378,118 @@ $("#themeBtn").onclick = () => {
 };
 
 /* ---------- data ---------- */
-async function fetchJSON(path, fallback) {
-  try { const r = await fetch(RAW + path, {cache:"no-cache"});
-        if (!r.ok) return fallback; return await r.json(); }
-  catch { return fallback; }
+function ownerDevMode() {
+  return Boolean(S.auth?.owner && norm(S.auth.login) === "victorjimenez3");
+}
+function recordBootError(path, error, critical=false) {
+  const message = error instanceof Error ? error.message : String(error || "unknown error");
+  S.boot.errors = [...S.boot.errors.filter(item => item.path !== path), {path, message, critical}];
+  console.error(`[radar boot] ${critical ? "critical" : "optional"} ${path}: ${message}`);
+  renderBootNotice();
+}
+function clearBootError(path) {
+  S.boot.errors = S.boot.errors.filter(item => item.path !== path);
+  renderBootNotice();
+}
+function renderBootNotice() {
+  const box = $("#bootNotice");
+  if (!box) return;
+  if (!ownerDevMode() || !S.boot.errors.length) {
+    box.hidden = true; box.innerHTML = ""; return;
+  }
+  const critical = S.boot.errors.some(item => item.critical);
+  const first = critical
+    ? "The Jobs state did not load; the radar shell is still available."
+    : "Some optional radar panels did not load; the available parts remain usable.";
+  const rows = S.boot.errors.slice(0, 8).map(item =>
+    `<li><span class="mono">${esc(item.path)}</span> — ${esc(item.message.slice(0,120))}</li>`).join("");
+  box.hidden = false;
+  box.innerHTML = `<div class="boot-notice" role="status" aria-live="polite">
+    <strong>Radar developer notice · @${esc(S.auth.login)}</strong>
+    <div>${first} No email or external issue was sent.</div>
+    <details><summary>${S.boot.errors.length} load problem${S.boot.errors.length===1?"":"s"} · details</summary><ul>${rows}</ul></details>
+    <div class="bar" style="margin:.55rem 0 0"><button class="act" onclick="retryBoot()">retry failed loads</button></div>
+  </div>`;
+}
+async function loadState(path, fallback, {critical=false}={}) {
+  try {
+    const r = await fetch(RAW + path, {cache:"no-cache"});
+    if (!r.ok) throw new Error(`${r.status} ${r.statusText || "request failed"}`);
+    const value = await r.json();
+    clearBootError(path);
+    return {value, ok:true};
+  } catch (error) {
+    recordBootError(path, error, critical);
+    return {value:fallback, ok:false};
+  }
+}
+function localWebState() {
+  try { return JSON.parse(localStorage.getItem("jr_web") || '{"maybe":[],"jobs":{}}'); }
+  catch { return {maybe:[], jobs:{}}; }
+}
+function normalizeWebState(web) {
+  S.web = web || localWebState();
+  S.web.maybe = Array.isArray(S.web.maybe) ? S.web.maybe : [];
+  S.web.jobs = S.web.jobs || {};
+  S.web.excluded = Array.isArray(S.web.excluded)
+    ? [...new Set(S.web.excluded.filter(id => typeof id === "string" && id))] : [];
+}
+function rebuildCompanyRegistry() {
+  for (const entry of Object.values(S.companies || {})) {
+    const key = norm(entry.name);
+    if (!S.registryByCompany[key] || entry.status === "active") S.registryByCompany[key] = entry;
+  }
+}
+async function loadTrackerState() {
+  if (!S.auth) return;
+  try {
+    const trackerResponse = await fetch("/api/tracker");
+    if (!trackerResponse.ok) {
+      if (trackerResponse.status >= 500) throw new Error(`${trackerResponse.status} tracker request failed`);
+      return;
+    }
+    const tracker = await trackerResponse.json();
+    S.trackerMeta = tracker;
+    S.userTracker = Boolean(tracker.configured);
+    if (!S.auth.owner) {
+      S.applied = tracker.entries || [];
+      normalizeWebState({maybe:tracker.maybe || [], jobs:{}});
+      render();
+    }
+  } catch (error) {
+    S.userTracker = false;
+    recordBootError("/api/tracker", error, false);
+  }
+}
+async function retryBoot() {
+  if (S.boot.inFlight) return;
+  await boot();
 }
 async function boot() {
-  // Backend detection: on Vercel /api/me exists (401 = present, not signed
-  // in). On GitHub Pages it 404s and the app falls back to tokenless mode.
+  if (S.boot.inFlight) return;
+  S.boot.inFlight = true;
+  S.boot.phase = "starting";
+  S.boot.jobsReady = false;
+  S.boot.errors = [];
+  normalizeWebState();
+  renderBootNotice();
   try {
+    // Backend detection: on Vercel /api/me exists (401 = present, not signed
+    // in). On GitHub Pages it 404s and the app falls back to tokenless mode.
     const r = await fetch("/api/me");
     S.backend = r.status !== 404;
     if (r.ok) S.auth = await r.json();
-  } catch { S.backend = false; }
+    else if (r.status >= 500) recordBootError("/api/me", new Error(`${r.status} session request failed`));
+  } catch (error) { S.backend = false; recordBootError("/api/me", error); }
   // fork-portable repo resolution (see docs/FORKING.md)
   try {
     const ghHost = location.hostname.match(/^([a-z0-9-]+)\.github\.io$/i);
     const seg = location.pathname.split("/").filter(Boolean)[0];
     if (ghHost && seg) REPO = `${ghHost[1]}/${seg}`;
     if (S.backend) {
-      const c = await (await fetch("/api/config")).json();
+      const configResponse = await fetch("/api/config");
+      if (!configResponse.ok) throw new Error(`${configResponse.status} config request failed`);
+      const c = await configResponse.json();
       if (c.repo) REPO = c.repo;
       if (c.branch) BRANCH = c.branch;
       if (c.auth_providers) S.authProviders = c.auth_providers;
@@ -395,45 +498,44 @@ async function boot() {
       const d = await (await fetch(`${API}/repos/${REPO}`)).json();
       if (d.default_branch) BRANCH = d.default_branch;
     }
-  } catch {}
+  } catch (error) { recordBootError("/api/config", error); }
   RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
-  const ownerView = Boolean(S.auth?.owner);
-  let [jobs, applied, feedback, reports, culture, research, aiUsage, companies, runs, scout, web] = await Promise.all([
-    fetchJSON("state/jobs.json", {}), ownerView ? fetchJSON("state/applied.json", []) : Promise.resolve([]),
-    ownerView ? fetchJSON("state/feedback.json", {}) : Promise.resolve({}),
-    ownerView ? fetchJSON("state/reports.json", {}) : Promise.resolve({}),
-    fetchJSON("state/culture.json", {}), fetchJSON("state/company_research.json", {}),
-    fetchJSON("state/ai_usage.json", {}), fetchJSON("state/companies.json", {}),
-    fetchJSON("state/runs.json", []), fetchJSON("state/scout.json", {}),
-    ownerView ? fetchJSON("state/web_state.json", null) : Promise.resolve(null),
-  ]);
-  // The owner still receives the repository pipeline, while every signed-in
-  // account can also have a personal Google Sheet. Non-owners never receive
-  // the owner's applied.json; their rows come only from their own Sheet.
-  if (S.auth) {
-    try {
-      const trackerResponse = await fetch("/api/tracker");
-      if (trackerResponse.ok) {
-        const tracker = await trackerResponse.json();
-        S.trackerMeta = tracker;
-        S.userTracker = Boolean(tracker.configured);
-        if (!S.auth.owner) {
-          applied = tracker.entries || [];
-          web = {maybe: tracker.maybe || [], jobs: {}};
-        }
-      }
-    } catch { S.userTracker = false; }
-  }
-  Object.assign(S, {jobs, applied, feedback, reports, culture, research, aiUsage, companies, runs, scout});
-  for (const entry of Object.values(companies)) {
-    const key = norm(entry.name);
-    if (!S.registryByCompany[key] || entry.status === "active") S.registryByCompany[key] = entry;
-  }
-  S.web = web || JSON.parse(localStorage.getItem("jr_web") || '{"maybe":[],"jobs":{}}');
-  S.web.maybe = S.web.maybe || []; S.web.jobs = S.web.jobs || {};
-  S.web.excluded = Array.isArray(S.web.excluded)
-    ? [...new Set(S.web.excluded.filter(id => typeof id === "string" && id))] : [];
+  normalizeWebState();
+  S.boot.phase = "jobs";
   render();
+  const jobsResult = await loadState("state/jobs.json", {}, {critical:true});
+  S.jobs = jobsResult.value;
+  S.boot.jobsReady = jobsResult.ok;
+  S.boot.phase = "optional";
+  render();
+
+  // Jobs are the critical board. Every other repository state hydrates in its
+  // own request, so one stale or malformed panel cannot blank the radar.
+  const ownerView = Boolean(S.auth?.owner);
+  const optional = [
+    ["applied", "state/applied.json", [] , ownerView],
+    ["feedback", "state/feedback.json", {}, ownerView],
+    ["reports", "state/reports.json", {}, ownerView],
+    ["culture", "state/culture.json", {}, true],
+    ["research", "state/company_research.json", {}, true],
+    ["aiUsage", "state/ai_usage.json", {}, true],
+    ["companies", "state/companies.json", {}, true],
+    ["runs", "state/runs.json", [], true],
+    ["scout", "state/scout.json", {}, true],
+    ["web", "state/web_state.json", null, ownerView],
+  ].filter(([, , , enabled]) => enabled);
+  const optionalLoads = optional.map(async ([key, path, fallback]) => {
+    const result = await loadState(path, fallback);
+    if (key === "web") normalizeWebState(result.value);
+    else S[key] = result.value;
+    if (key === "companies") rebuildCompanyRegistry();
+    render();
+  });
+  const trackerLoad = loadTrackerState();
+  await Promise.allSettled([...optionalLoads, trackerLoad]);
+  S.boot.phase = "ready";
+  render();
+  S.boot.inFlight = false;
 }
 
 /* ---------- write paths ---------- */
@@ -1035,6 +1137,7 @@ document.addEventListener("keydown", event => { if (event.key === "Escape") clos
 const TABS = [["jobs","Jobs"],["pipeline","Pipeline"],["companies","Companies"],
               ["interview","Interview"],["ai","AI"],["settings","Settings"]];
 function render() {
+  renderBootNotice();
   const tabs = S.auth?.owner ? [...TABS.slice(0,-1), ["taste","Taste"], ["testing","Testing"], TABS.at(-1)] : TABS;
   if (["testing","taste"].includes(S.tab) && !S.auth?.owner) S.tab = "jobs";
   $("#nav").innerHTML = tabs.map(([k,l]) =>
@@ -1048,7 +1151,7 @@ function render() {
   const saved = S.applied.filter(a=>(a.stage||"applied")==="saved");
   const done  = S.applied.filter(a=>(a.stage||"applied")!=="saved");
   $("#stats").innerHTML =
-    `<span><b>${Object.keys(S.jobs).length}</b>jobs seen</span>` +
+    `<span><b>${S.boot.jobsReady ? Object.keys(S.jobs).length : "…"}</b>${S.boot.jobsReady ? "jobs seen" : "loading jobs"}</span>` +
     `<span><b>${S.web.maybe.length}</b>maybe</span>` +
     `<span><b>${saved.length}</b>to apply</span>` +
     `<span><b>${done.length}</b>applied</span>`;
@@ -1093,6 +1196,12 @@ function rowHTML(j, byId) {
 }
 
 function rJobs() {
+  if (!S.boot.jobsReady && S.boot.phase === "jobs") {
+    $("#main").innerHTML = `<div class="note"><b>Loading Jobs…</b><br>
+      The radar shell is ready. Jobs are loading from the repository in a separate step;
+      the other panels will hydrate after the board is available.</div>`;
+    return;
+  }
   const sectors = [...new Set(Object.values(S.jobs).map(j=>j.sector).filter(Boolean))].sort();
   const excludedCount = Object.values(S.jobs).filter(j=>isExcluded(j.id)).length;
   // toolbar renders once; typing re-renders only #jobsList so the input keeps focus
@@ -2010,6 +2119,7 @@ window.requestCompanyResearch = requestCompanyResearch; window.$ = $;
 window.openTutorial = openTutorial; window.closeTutorial = closeTutorial;
 window.sendTasteFeedback = sendTasteFeedback; window.reportJob = reportJob;
 window.archiveJob = archiveJob;
+window.retryBoot = retryBoot;
 boot();
 </script>
 </body>
