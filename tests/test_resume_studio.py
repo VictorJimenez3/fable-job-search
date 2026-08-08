@@ -138,6 +138,51 @@ def test_owner_resume_lock_uses_read_only_files_and_pin_gate(tmp_path, monkeypat
     assert all(path.stat().st_mode & 0o200 for path in immutable.iterdir())
 
 
+def test_resume_studio_exposes_a_canonical_lock_and_private_render_boundary(tmp_path):
+    lock = rs.canonical_resume_lock(tmp_path)
+    assert lock["locked"] is True
+    assert {item["name"] for item in lock["files"]} == {
+        "CV/immutable/VictorJimenezResume.tex",
+        "CV/immutable/VictorJimenezResume.pdf",
+        "CV/immutable/og_resume.tex",
+        "CV/immutable/og_resume.pdf",
+        "CV/immutable/tldp_resume.tex",
+        "CV/immutable/tldp_resume.pdf",
+    }
+    private = tmp_path / "CV" / ".resume_studio" / "runs" / "0123456789ab"
+    rs.assert_resume_workspace(private, tmp_path)
+    with pytest.raises(RuntimeError, match="canonical resume files are locked"):
+        rs.assert_resume_workspace(tmp_path / "CV", tmp_path)
+    assert "Canonical resumes locked" in rs.UI_HTML
+    assert "CV/immutable/VictorJimenezResume.tex locked" in rs.UI_HTML
+    assert "resume_lock.py unlock" in rs.UI_HTML
+    assert "company_resume_ai.pdf" in rs.UI_HTML
+    assert "Advanced mode: unrestricted AI tailor" in rs.UI_HTML
+    assert "Raw review data" in rs.UI_HTML
+    assert "Evidence review" in rs.UI_HTML
+    assert "/api/evidence/review" in rs.UI_HTML
+
+
+def test_owner_resume_lock_uses_read_only_files_and_pin_gate(tmp_path, monkeypatch):
+    cv_root = tmp_path / "CV"
+    immutable = cv_root / "immutable"
+    immutable.mkdir(parents=True)
+    for relative in resume_lock.PROTECTED_RELATIVE_PATHS:
+        path = cv_root / relative
+        path.write_text("protected")
+
+    status = resume_lock.lock_files(cv_root)
+    assert status["locked"] is True
+    assert all(not path.stat().st_mode & 0o200 for path in immutable.iterdir())
+
+    monkeypatch.setattr(resume_lock, "_verify_pin", lambda pin: pin == "accepted")
+    with pytest.raises(PermissionError):
+        resume_lock.unlock_files("wrong", cv_root)
+    unlocked = resume_lock.unlock_files("accepted", cv_root)
+    assert unlocked["locked"] is False
+    assert all(path.stat().st_mode & 0o200 for path in immutable.iterdir())
+
+
 def test_resume_library_keeps_runs_and_legacy_experiments_with_posting_snapshots(tmp_path):
     run = tmp_path / "CV" / ".resume_studio" / "runs" / "0123456789ab"
     run.mkdir(parents=True)
