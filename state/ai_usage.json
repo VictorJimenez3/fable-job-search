@@ -1,22 +1,6 @@
 {
- "events": [
-  {
-   "at": "2026-08-08T09:58:01+00:00",
-   "completion_tokens": 1239,
-   "detail": "",
-   "endpoint": "local",
-   "lane": "local",
-   "latency_ms": 150279,
-   "max_tokens": 2200,
-   "model": "qwen2.5:32b",
-   "prompt_chars": 3197,
-   "prompt_tokens": 1191,
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  }
- ],
- "generated_at": 1786183082,
+ "events": [],
+ "generated_at": 1786183101,
  "history": [
   {
    "attempts": [
@@ -3972,19 +3956,9 @@
   "logical_calls": 1,
   "requests": 1
  },
- "logical_calls": 1,
- "models": {
-  "local": {
-   "errors": 0,
-   "model": "qwen2.5:32b",
-   "ok": 1,
-   "requests": 1,
-   "tokens": 2430
-  }
- },
+ "logical_calls": 0,
+ "models": {},
  "provider": "local",
- "requests": 1,
- "task_calls": {
-  "company_research": 1
- }
+ "requests": 0,
+ "task_calls": {}
 }
