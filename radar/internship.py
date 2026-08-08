@@ -474,9 +474,12 @@ def annotate(job: Job) -> dict:
     # evidence, while still refreshing it whenever fresh text is available.
     if not job.description:
         for key in ("status", "class_years", "graduation_start", "graduation_end",
-                    "term_start", "employment_signal", "internship_signal", "evidence"):
+                    "term_start", "employment_signal", "evidence"):
             if key in source_evidence:
                 parsed[key] = source_evidence[key]
+        stored_signal = source_evidence.get("internship_signal")
+        if parsed.get("internship_signal") == "unknown" and stored_signal not in {None, "unknown"}:
+            parsed["internship_signal"] = stored_signal
     # ATS adapters can know that a posting came from an internship-specific
     # commitment/search even when the title and description are terse. Keep
     # that provenance through the parser instead of trusting every posting in
