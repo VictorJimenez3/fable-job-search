@@ -331,7 +331,7 @@ const LANE_CONFIG = {
     companies:"state/intern_companies.json", runs:"state/intern_runs.json", web:"state/intern_web_state.json"},
 };
 const DEFAULT_FILTER = {q:"", min:45, sector:"", role:"", sectors:[], roles:[], sponsorship:"", sponsorHistory:"",
-  excludedRoles:[], experience:"", career:"", cohort:"", alert:false, lane:"", sort:"best", showExcluded:false};
+  excludedRoles:[], experience:"", career:"", cohort:"", alert:false, lane:"", sort:"best", showExcluded:false, review:false};
 function storedFilter(lane="new_grad") {
   try {
     const key = lane === "new_grad" ? "jr_filters" : `jr_filters_${lane}`;
@@ -831,6 +831,13 @@ function internshipEmploymentBadge(j) {
   if (signal === "full_time_only") return '<span class="chip bad" title="Explicit full-time wording with no internship or student evidence; kept visible for review, never alert-eligible">⚠️ full-time wording · review only</span>';
   return "";
 }
+function internshipSignalBadge(j) {
+  if (S.lane !== "internship") return "";
+  const signal = (j.internship_eligibility || {}).internship_signal;
+  if (signal === "experienced_title") return '<span class="chip bad" title="Senior/staff/lead-style title; kept out of the clean internship list for review">⚠️ experienced title · review only</span>';
+  if (signal === "source_only" || signal === "unknown") return '<span class="chip unknown" title="No positive internship marker in the title or posting text; turn on the review filter to inspect it">review: no internship evidence</span>';
+  return "";
+}
 function eligibilityBadges(j) {
   const p = j.posting;
   const sponsor = sponsorStatus(j);
@@ -849,6 +856,7 @@ function eligibilityBadges(j) {
   return `<span class="chip">${esc(ROLE_LABELS[roleFamily(j)])}</span>
     ${internshipCohortBadge(j)}
     ${internshipEmploymentBadge(j)}
+    ${internshipSignalBadge(j)}
     ${program?'<span class="chip marquee">technical program</span>':""}
     ${j.early_career_possible?'<span class="chip unknown" title="No stated experience floor, but not verified new-grad">early-career possible</span>':""}
     <span class="chip ${visa[0]}">${visa[1]}</span>
@@ -902,6 +910,7 @@ function jobList() {
   const byId = appliedById(); const f = S.filter; const q = norm(f.q);
   let rows = Object.values(S.jobs).filter(isOpenRelevant);
   if (!f.showExcluded) rows = rows.filter(j=>!isExcluded(j.id));
+  if (S.lane === "internship" && !f.review) rows = rows.filter(j=>["title","body"].includes((j.internship_eligibility||{}).internship_signal));
   rows = rows.filter(j=>byId[j.id] || S.web.maybe.includes(j.id) || S.web.jobs[j.id]
     || !postedTs(j) || Date.now()/1000-postedTs(j) <= 365*86400);
   if (f.alert) rows = rows.filter(j=>j.alert_ok);
@@ -1532,6 +1541,8 @@ function rJobs() {
         <option value="unknown" ${S.filter.cohort==="unknown"?"selected":""}>eligibility unknown</option></select>` : ""}
       <label class="sub" title="Off by default: show all matching roles, including strong dashboard-only matches"><input type="checkbox" ${S.filter.alert?"checked":""}
         onchange="setFilter('alert',this.checked)"> alert-worthy only</label>
+      ${S.lane === "internship" ? `<label class="sub" title="The clean list requires a positive internship title or posting signal. Include review-only and uncertain rows when auditing the source feed."><input type="checkbox" ${S.filter.review?"checked":""}
+        onchange="setFilter('review',this.checked)"> include review-only / no-title rows</label>` : ""}
       ${excludedCount?`<label class="sub" title="Excluded rows stay red and can be restored by clicking them"><input type="checkbox" ${S.filter.showExcluded?"checked":""}
         onchange="setFilter('showExcluded',this.checked)"> show excluded (${excludedCount})</label>`:""}
       <select aria-label="Pipeline status" onchange="setFilter('lane',this.value)">
@@ -1896,7 +1907,7 @@ function wsCompany(j, w, c, id) {
 
 function scoreReasonLabel(reason) {
   const text = String(reason||"");
-  const labels = [["base internship utility","baseline"],["base utility","baseline"],["technical internship role","flat technical role"],["role:","role fit"],["sector:","sector fit"],["new-grad/early-career priority","verified early-career"],["early-career possible","plausible first-role"],["new-grad evidence absent","early-career evidence"],["mid-level title penalty","mid-level demotion"],["company tier","company quality"],["prestige tier","prestige / crackedness"],["recognized employer","employer signal"],["cited employer/work evidence","cited employer evidence"],["full-time-only signal","full-time review"],["full-time review cap applied","full-time review"],["explicit goal company","goal-company preference"],["duplicate role variant","duplicate posting"],["similar role sibling","similar-role adjustment"],["company concentration","company diversity"],["learned from","learned preferences"],["learned role preference","learned role preference"],["learned sector preference","learned sector preference"],["learned company preference","learned company preference"],["learned title signals","learned title language"],["explicit company feedback","explicit feedback"],["explicit title feedback","explicit feedback"],["graduation eligibility","student eligibility"],["student eligibility","student eligibility"],["compensation ceiling","compensation"],["compensation","compensation"],["work-quality","work quality"],["work evidence","work quality"],["internship score cap applied","score cap"],["posted","freshness"],["remote","remote access"],["culture fit","culture evidence"],["SHPE","community signal"],["sponsor history:","DOL sponsor context"],["raw utility","calibration"]];
+  const labels = [["base internship utility","baseline"],["base utility","baseline"],["technical internship role","flat technical role"],["role:","role fit"],["sector:","sector fit"],["new-grad/early-career priority","verified early-career"],["early-career possible","plausible first-role"],["new-grad evidence absent","early-career evidence"],["mid-level title penalty","mid-level demotion"],["company tier","company quality"],["prestige tier","prestige / crackedness"],["recognized employer","employer signal"],["cited employer/work evidence","cited employer evidence"],["full-time-only signal","full-time review"],["full-time review cap applied","full-time review"],["internship signal review","internship evidence review"],["experienced or doctoral internship title","experienced title review"],["explicit goal company","goal-company preference"],["duplicate role variant","duplicate posting"],["similar role sibling","similar-role adjustment"],["company concentration","company diversity"],["learned from","learned preferences"],["learned role preference","learned role preference"],["learned sector preference","learned sector preference"],["learned company preference","learned company preference"],["learned title signals","learned title language"],["explicit company feedback","explicit feedback"],["explicit title feedback","explicit feedback"],["graduation eligibility","student eligibility"],["student eligibility","student eligibility"],["compensation ceiling","compensation"],["compensation","compensation"],["work-quality","work quality"],["work evidence","work quality"],["internship score cap applied","score cap"],["posted","freshness"],["remote","remote access"],["culture fit","culture evidence"],["SHPE","community signal"],["sponsor history:","DOL sponsor context"],["raw utility","calibration"]];
   const found = labels.find(([prefix]) => text.startsWith(prefix));
   return found ? found[1] : "other signal";
 }

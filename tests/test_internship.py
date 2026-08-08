@@ -79,7 +79,16 @@ def test_internship_gates_keep_target_roles_but_separate_alert_evidence():
 
     curated = job(title="Software Engineer", source="simplify_internship")
     annotate(curated)
-    assert gates(curated)[0:2] == (True, True)
+    assert gates(curated)[0:2] == (True, False)
+
+    for title in ("Software Engineer Intern", "Summer 2027 Software Engineer", "Software Engineer Co-op"):
+        posting = job(title=title, source="greenhouse")
+        annotate(posting)
+        assert gates(posting)[0:2] == (True, True)
+
+    experienced = job(title="Sr. Software Engineer Intern")
+    annotate(experienced)
+    assert gates(experienced)[0:2] == (False, False)
 
     assert gates(job(title="Senior Software Engineering Intern"))[0] is False
     assert gates(job(locations=["London, United Kingdom"]))[0] is False
@@ -289,7 +298,8 @@ def test_direct_ats_internship_metadata_is_preserved(monkeypatch):
         lever_job = ats.fetch_lever({"name": "Acme", "token": "acme"})[0]
     annotate(lever_job)
     assert lever_job.internship_eligibility["source_signal"] is True
-    assert gates(lever_job)[0:2] == (True, True)
+    assert lever_job.internship_eligibility["internship_signal"] == "source_only"
+    assert gates(lever_job)[0:2] == (True, False)
 
 
 def test_state_namespace_isolated_by_lane(tmp_path, monkeypatch):

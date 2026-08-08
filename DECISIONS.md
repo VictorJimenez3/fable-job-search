@@ -1693,3 +1693,15 @@ dispatch now accepts `rescore_only`; it rebuilds stored internship records,
 publishes the generated snapshot, runs score-health, and delivers the normal
 surfaces without performing source fetches. Scheduled runs retain the full
 crawl path.
+
+## 112. Clean the default internship board with positive posting evidence (2026-08-08)
+
+The internship source set is intentionally recall-heavy, but source provenance
+alone was allowing ordinary ATS roles such as senior engineers and managers to
+surface in the main list. Rules v6 classifies each posting using auditable
+signals: an internship/co-op or seasonal title, positive student/internship
+language in the posting body, source-only provenance, unknown evidence, or an
+experienced title (including `Sr.`/senior). Only title/body evidence is alert
+eligible and shown by default. Source-only, unknown, full-time-only, and
+experienced-title records remain stored for false-negative safety and can be
+audited with the review-only filter; experienced titles are never alertable.
