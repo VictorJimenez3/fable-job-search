@@ -22,7 +22,10 @@ open to everything good).
 
 The platform is now decision-first: filter by role family, sponsorship, and
 required experience; see honest eligibility facts before opening a posting;
-then use one primary apply link with explicit To apply/Applied tracking.
+then use one primary apply link with explicit To apply/Applied tracking. In the
+Jobs list, click a row once to save it (green); click the saved row again to
+exclude it from active Jobs (red). Exclusions are view-only and reversible, so
+they do not change the score, crawler, tracker history, or notifications.
 Company-level DOL sponsorship history is also visible as separate context: the
 Jobs filter and Fit drawer can show likely historical sponsor, no certified
 history in the covered quarters, or unavailable. It never overrides the

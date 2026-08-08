@@ -1466,3 +1466,13 @@ The exact `score_reasons` strings remain available as the audit ledger, and
 final overrides or diversity adjustments are called out separately. This is a
 presentation change only: scoring weights, PM behavior, Google's configured
 technical new-grad `100`, and delivery rules are unchanged.
+
+## 96. Use a reversible two-click Jobs row selection (2026-08-08)
+
+The Jobs list now treats a row click as a small selection cycle: the first
+click uses the existing save-to-To-apply path and colors the row green; the next
+click records a local `web_state.excluded` marker and colors the row red while
+hiding it from the normal active list. A **show excluded** control restores the
+row, and clicking it again clears the marker. Exclusion is intentionally a
+view preference rather than a score, crawler, tracker-history, or notification
+mutation, so an accidental second click is recoverable and auditable.

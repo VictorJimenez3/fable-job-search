@@ -94,3 +94,12 @@ def test_platform_explains_each_score_dimension_without_hiding_the_ledger():
     assert "Positive helps; zero means no signal; negative lowers." in html
     assert "Exact reason ledger" in html
     assert "Configured preference override set the final score" in html
+
+
+def test_platform_job_rows_cycle_saved_green_then_excluded_red():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    assert "cycleJobSelection" in html
+    assert "S.web.excluded" in html
+    assert ".job.selected" in html and ".job.excluded" in html
+    assert "show excluded" in html
+    assert "Excluded from active Jobs" in html
