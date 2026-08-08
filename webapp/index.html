@@ -201,7 +201,15 @@
   .score-dimension-what, .score-dimension-why { display:block; font-size:.74rem; line-height:1.35; }
   .score-dimension-what { color:var(--muted); margin-top:.1rem; }
   .score-dimension-why { margin-top:.12rem; }
+  .score-dimension.disabled { opacity:.58; border-left-style:dashed; }
   .score-dimension-why b, .score-final-note b { color:var(--accent-ink); }
+  .score-controls { border:1px solid var(--line); border-radius:8px; padding:.55rem .7rem; }
+  .score-controls summary { cursor:pointer; color:var(--accent-ink); font-weight:600; }
+  .score-control-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(16rem,1fr)); gap:.35rem .8rem; margin:.55rem 0; }
+  .score-control-row { display:flex; gap:.45rem; align-items:flex-start; padding:.35rem; border:1px solid var(--line); border-radius:6px; }
+  .score-control-row input { margin-top:.12rem; accent-color:var(--accent-ink); }
+  .score-control-row span { display:grid; gap:.12rem; font-size:.78rem; }
+  .score-control-row small { color:var(--muted); line-height:1.3; }
   .score-final-note { margin:.5rem 0 0; font-size:.76rem; line-height:1.35; }
   .rating-reasons { display:grid; gap:0.35rem; margin-top:0.55rem; }
   .rating-reason { display:grid; grid-template-columns:8rem 1fr; gap:0.55rem; padding:0.35rem 0.45rem; border-left:2px solid var(--line); background:rgba(255,255,255,.02); }
@@ -330,7 +338,7 @@ function storedFilter() {
   catch { return {}; }
 }
 const S = {           // app state
-  jobs:{}, applied:[], feedback:{}, reports:{}, culture:{}, research:{}, aiUsage:{}, companies:{},
+  jobs:{}, applied:[], feedback:{}, reports:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, scorePreferences:{},
   registryByCompany:{}, runs:[], scout:{}, web:null,
   auth:null, backend:false, userTracker:false, trackerConfigured:false, trackerMeta:null,
   authProviders:{github:false,google:false},
@@ -528,6 +536,7 @@ async function boot() {
     ["reports", "state/reports.json", {}, ownerView],
     ["culture", "state/culture.json", {}, true],
     ["research", "state/company_research.json", {}, true],
+    ["scorePreferences", "state/score_preferences.json", {}, true],
     ["aiUsage", "state/ai_usage.json", {}, true],
     ["companies", "state/companies.json", {}, true],
     ["runs", "state/runs.json", [], true],
@@ -953,10 +962,11 @@ async function actUntrack(j) {
   return false;
 }
 async function apiAction(action, job, extra={}) {
+  const role = job || {};
   const r = await fetch("/api/action", {method:"POST",
     headers:{"Content-Type":"application/json"},
-    body: JSON.stringify({action, id:job.id, url:job.url, company:job.company,
-      title:job.title, location:(job.locations||[])[0] || "", ...extra})});
+    body: JSON.stringify({action, id:role.id, url:role.url, company:role.company,
+      title:role.title, location:(role.locations||[])[0] || "", ...extra})});
   if (!r.ok) throw new Error((await r.json()).error || r.status);
   return true;
 }
@@ -1529,6 +1539,7 @@ function claimHTML(d, field, label) {
 const PROFILE_COLUMNS = [
   ["Company", "name"], ["Industry", "industry"],
   ["AI/DS Prestige Tier", "ai_ds_prestige_tier"], ["Pace of Work", "pace_of_work"],
+  ["Pace measure", "pace_score"],
   ["WLB Rating", "wlb_rating"], ["Culture Vibe", "culture_vibe"],
   ["PTO Days", "pto_days"], ["Shutdowns", "shutdowns"],
   ["Est. New Grad Tech Pay", "estimated_new_grad_tech_pay"],
@@ -1637,6 +1648,8 @@ function wsCompany(j, w, c, id) {
         ${claimHTML(d,"mission","mission")}
         ${claimHTML(d,"business_model","business / stage")}
         ${claimHTML(d,"technical_work","technical work")}
+        ${claimHTML(d,"pace_score","pace measure (1–5)")}
+        ${claimHTML(d,"pace_evidence","pace evidence")}
         ${claimHTML(d,"locations","locations")}
         ${claimHTML(d,"sponsorship_context","visa context")}
         ${claimHTML(d,"why_it_matters","why it may matter")}
@@ -1665,15 +1678,44 @@ function scoreReasonLabel(reason) {
   const found = labels.find(([prefix]) => text.startsWith(prefix));
   return found ? found[1] : "other signal";
 }
+const CONFIGURABLE_SCORE_DIMENSIONS = ["role_fit","mission","company_quality","compensation","personal_signal","timing_access"];
+function scorePreferenceEnabled(name) {
+  if (["base","eligibility"].includes(name)) return true;
+  return S.scorePreferences?.enabled_dimensions?.[name] !== false;
+}
+function scorePreferenceLabel(name) {
+  return SCORE_DIMENSION_META[name]?.label || scorePrettyName(name);
+}
+async function saveScorePreferences() {
+  if (!S.auth?.owner) return;
+  const preferences = {
+    version: 1,
+    enabled_dimensions: Object.fromEntries([
+      ["base", true], ["eligibility", true],
+      ...CONFIGURABLE_SCORE_DIMENSIONS.map(name => [name, scorePreferenceEnabled(name)]),
+    ]),
+  };
+  try {
+    await apiAction("score-preferences", null, {preferences});
+    S.scorePreferences = preferences;
+    const status = $("#scorePrefsStatus");
+    if (status) status.textContent = "Saved · the board is rebuilding now";
+    toast("Score sections saved · Radar is rescoring");
+  } catch (error) {
+    const status = $("#scorePrefsStatus");
+    if (status) status.textContent = "Save failed — your local choices were not published";
+    toast("Score controls failed: " + error.message.slice(0,90));
+  }
+}
 const SCORE_DIMENSION_META = {
-  base: {label:"Baseline", what:"Starting points for a posting that passed the keep checks."},
-  role_fit: {label:"Role fit", what:"How closely the title and posting wording match target work."},
-  eligibility: {label:"Early-career evidence", what:"Proof that this is a realistic new-grad or first-role path."},
-  mission: {label:"Sector / mission", what:"Priority sectors and program mission signals."},
-  company_quality: {label:"Company quality", what:"Company strength, goals, momentum, and culture evidence."},
-  compensation: {label:"Compensation", what:"Published pay signals; this bonus is intentionally capped."},
-  personal_signal: {label:"Your signals", what:"Saved, applied, skipped, feedback, or community history."},
-  timing_access: {label:"Timing / access", what:"Posting freshness and remote access."},
+  base: {label:"Baseline", what:"Starting points for a posting that passed the keep checks.", locked:true},
+  role_fit: {label:"Role fit", what:"How closely the title and posting wording match target work.", configurable:true},
+  eligibility: {label:"Early-career evidence", what:"Proof that this is a realistic new-grad or first-role path.", locked:true},
+  mission: {label:"Sector / mission", what:"Priority sectors and program mission signals.", configurable:true},
+  company_quality: {label:"Company quality", what:"Company strength, goals, momentum, and culture evidence.", configurable:true},
+  compensation: {label:"Compensation", what:"Published pay signals; this bonus is intentionally capped.", configurable:true},
+  personal_signal: {label:"Your signals", what:"Saved, applied, skipped, feedback, or community history.", configurable:true},
+  timing_access: {label:"Timing / access", what:"Posting freshness and remote access.", configurable:true},
 };
 function scoreReasonTexts(j) {
   return Array.isArray(j.score_reasons) ? j.score_reasons.map(reason => String(reason||"")) : [];
@@ -1794,8 +1836,9 @@ function wsFit(j, w, c, id) {
   const dimensions = Object.entries(j.score_dimensions||{});
   const dimensionRows = dimensions.map(([name, value]) => {
     const meta = SCORE_DIMENSION_META[name] || {label:scorePrettyName(name), what:"Scoring signals recorded for this role."};
-    return `<div class="score-dimension"><div class="score-dimension-head"><span>${esc(meta.label)}</span><span class="score-dimension-points">${esc(scorePoints(value))}</span></div>
-      <span class="score-dimension-what">${esc(meta.what)}</span><span class="score-dimension-why"><b>Why:</b> ${esc(scoreDimensionWhy(j, name, value))}</span></div>`;
+    const enabled = scorePreferenceEnabled(name);
+    return `<div class="score-dimension${enabled?'':' disabled'}"><div class="score-dimension-head"><span>${esc(meta.label)}${enabled?'':' · excluded'}</span><span class="score-dimension-points">${esc(scorePoints(value))}</span></div>
+      <span class="score-dimension-what">${esc(meta.what)}</span><span class="score-dimension-why"><b>Why:</b> ${esc(enabled ? scoreDimensionWhy(j, name, value) : "Owner excluded this optional section from the score.")}</span></div>`;
   }).join("");
   const reasons = (j.score_reasons||[]).map(reason => `<div class="rating-reason"><span class="k">${esc(scoreReasonLabel(reason))}</span><span>${esc(reason)}</span></div>`).join("");
   const finalWhy = scoreFinalWhy(j);
@@ -2120,9 +2163,32 @@ function rTesting() {
   </aside></div>`;
 }
 
+function toggleScorePreference(name, enabled) {
+  S.scorePreferences = S.scorePreferences || {version:1, enabled_dimensions:{}};
+  S.scorePreferences.enabled_dimensions = S.scorePreferences.enabled_dimensions || {};
+  S.scorePreferences.enabled_dimensions[name] = Boolean(enabled);
+  const status = $("#scorePrefsStatus");
+  if (status) status.textContent = "Unsaved · choose Save score sections to publish";
+}
+function scoreControlsHTML() {
+  if (!S.auth?.owner) return `<div class="note"><b>Owner-only score controls.</b> Sign in as @VictorJimenez3 to change which optional evidence sections affect the shared Radar score.</div>`;
+  const rows = CONFIGURABLE_SCORE_DIMENSIONS.map(name => `<label class="score-control-row">
+    <input type="checkbox" ${scorePreferenceEnabled(name)?"checked":""} onchange='toggleScorePreference("${name}",this.checked)'>
+    <span><b>${esc(scorePreferenceLabel(name))}</b><small>${esc(SCORE_DIMENSION_META[name].what)}</small></span>
+  </label>`).join("");
+  return `<details class="score-controls" open><summary>Score sections · choose what counts</summary>
+    <p class="sub">These switches remove a section's points from the shared Radar utility and rescore the board. Baseline and early-career evidence stay on because they define what the score means; AI/ML role preference and learned personal signals remain separate and auditable.</p>
+    <div class="score-control-list">${rows}</div>
+    <div class="bar"><button class="act primary" onclick="saveScorePreferences()">Save score sections</button><span id="scorePrefsStatus" class="sub">Current published settings apply after the next rescore.</span></div>
+  </details>`;
+}
+
 function rSet() {
   $("#main").innerHTML = `
     ${trackerPanelHTML()}
+    <div class="sect"><h4>Radar score controls</h4>${scoreControlsHTML()}</div>
+    <div class="sect"><h4>Company pace evidence</h4>
+      <p class="sub" style="max-width:48rem">Pace is not guessed from startup/corporate labels, prestige, or your own expectation. New company research must cite at least two observable operating indicators—such as release cadence, on-call/incident load, launch cycles, planning horizon, or an explicit operating rhythm—then assigns a 1–5 measure. If the evidence is not strong enough, pace stays <b>Not confirmed</b> and contributes zero.</p></div>
     ${S.backend?`<div class="sect"><h4>Signed-in mode (recommended)</h4>
       <p class="sub" style="max-width:44rem">${S.auth
         ? `Signed in as <b>${esc(S.auth.login)}</b>${S.auth.owner
@@ -2172,6 +2238,7 @@ window.requestCompanyResearch = requestCompanyResearch; window.$ = $;
 window.openTutorial = openTutorial; window.closeTutorial = closeTutorial;
 window.sendTasteFeedback = sendTasteFeedback; window.reportJob = reportJob;
 window.archiveJob = archiveJob;
+window.saveScorePreferences = saveScorePreferences; window.toggleScorePreference = toggleScorePreference;
 window.retryBoot = retryBoot;
 boot();
 </script>

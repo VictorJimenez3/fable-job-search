@@ -110,6 +110,22 @@ def test_web_action_track_records_saved(tmp_state, tmp_path, monkeypatch):
     assert state.applied()[0]["stage"] == "applied"
 
 
+def test_web_action_saves_score_section_preferences_and_requests_rescore(tmp_state, tmp_path, monkeypatch):
+    from radar.main import web_action
+    event = tmp_path / "dispatch.json"
+    event.write_text(json.dumps({"client_payload": {
+        "action": "score-preferences",
+        "preferences": {"enabled_dimensions": {"compensation": False}},
+    }}))
+    monkeypatch.setenv("GITHUB_EVENT_PATH", str(event))
+    calls = []
+    monkeypatch.setattr("radar.main.rescore_cmd", lambda: calls.append(True) or 0)
+    assert web_action() == 0
+    assert state.score_preferences()["enabled_dimensions"]["compensation"] is False
+    assert state.score_preferences()["enabled_dimensions"]["eligibility"] is True
+    assert calls == [True]
+
+
 def test_web_action_company_research_is_one_job_owner_workflow(tmp_state, tmp_path, monkeypatch):
     from radar.main import web_action
     state.save("jobs.json", {JOB["id"]: JOB})

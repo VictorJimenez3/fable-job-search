@@ -34,6 +34,8 @@ culture_criteria: >
 roles:
   # max one bucket counts (the best match). points: title-keyword buckets
   # New-grad evidence is a gate; these weights order the eligible roles.
+  # AI/ML is the owner's strongest lane even when the external market has
+  # more generic SWE postings; availability must not masquerade as preference.
   ai_ml: 26
   data_science: 23
   swe: 20

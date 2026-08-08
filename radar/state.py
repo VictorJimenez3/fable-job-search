@@ -5,6 +5,8 @@ companies.json {ats:token: registry entry}     — the self-expanding company re
 feedback.json  {company_boosts, token_boosts, explicit_*, negative, taste_events}
               — explicit feedback; the implicit positive sample is applied.json
 applied.json   [{id, company, title, url, applied_at, notion_synced, ...}]
+score_preferences.json {enabled_dimensions, version, updated_at}
+              — owner-selected optional score sections
 runs.json      [{ts, new_jobs, alerts, sources: {...}}]  — last 200 run summaries
 """
 from __future__ import annotations
@@ -50,6 +52,17 @@ def feedback() -> dict:
                                     "explicit_company_boosts": {},
                                     "explicit_token_boosts": {},
                                     "negative_companies": [], "taste_events": []})
+
+
+def score_preferences() -> dict:
+    return load("score_preferences.json", {
+        "version": 1,
+        "enabled_dimensions": {
+            "base": True, "role_fit": True, "eligibility": True,
+            "mission": True, "company_quality": True, "compensation": True,
+            "personal_signal": True, "timing_access": True,
+        },
+    })
 
 
 def applied() -> list:

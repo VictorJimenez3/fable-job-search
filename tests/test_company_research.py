@@ -70,6 +70,29 @@ def test_parser_accepts_estimated_profile_fields():
     assert parsed["pto_days"]["value"].startswith("Estimated:")
 
 
+def test_parser_requires_two_cited_operating_cues_for_pace():
+    body = {field: {"value": "Not confirmed", "source_ids": [], "confidence": "low"}
+            for field in research.FIELDS}
+    body["summary"] = {"value": "Builds clinical software", "source_ids": ["S1"],
+                        "confidence": "high"}
+    body["products"] = {"value": "Care platform", "source_ids": ["S1"],
+                        "confidence": "medium"}
+    body["pace_of_work"] = {"value": "Very fast", "source_ids": ["S1"],
+                            "confidence": "high"}
+    body["pace_band"] = {"value": "very fast", "source_ids": ["S1"],
+                          "confidence": "high"}
+    body["pace_score"] = {"value": "5", "source_ids": ["S1"],
+                           "confidence": "high"}
+    body["pace_evidence"] = {"value": "weekly releases; on-call incident response",
+                              "source_ids": ["S1"], "confidence": "high"}
+    parsed = research.parse_synthesis(json.dumps(body), {"S1"})
+    assert parsed["pace_score"]["value"] == "5"
+
+    body["pace_evidence"]["value"] = "fast"
+    ungrounded = research.parse_synthesis(json.dumps(body), {"S1"})
+    assert ungrounded["pace_score"]["value"] == "Not confirmed"
+
+
 def test_prune_removes_sources_rejected_by_active_profile(monkeypatch):
     records = {}
     for title, url in (("Software Engineer", "https://jobs.example/good"),

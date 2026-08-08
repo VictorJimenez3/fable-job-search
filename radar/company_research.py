@@ -21,14 +21,15 @@ from .http import get
 from .models import norm
 
 SCHEMA_V = 1
-PROMPT_V = 2
+PROMPT_V = 3
 REFRESH_SECONDS = 60 * 86400
 RETRY_BASE_SECONDS = 2 * 60
 RETRY_MAX_SECONDS = 6 * 3600
 FIELDS = ("summary", "products", "customers", "mission", "business_model",
           "size_stage", "technical_work", "locations", "sponsorship_context",
           "why_it_matters", "interview_focus", "industry", "ai_ds_prestige_tier",
-          "pace_of_work", "wlb_rating", "culture_vibe", "pto_days", "shutdowns",
+          "pace_of_work", "pace_band", "pace_score", "pace_evidence",
+          "wlb_rating", "culture_vibe", "pto_days", "shutdowns",
           "estimated_new_grad_tech_pay", "rotational_program_name")
 PROFILE_FIELDS = ("industry", "ai_ds_prestige_tier", "pace_of_work", "wlb_rating",
                   "culture_vibe", "pto_days", "shutdowns",
@@ -212,7 +213,10 @@ def _profile_defaults(record: dict, sector: str = "") -> None:
     defaults = {
         "industry": f"{label.title()} / technology (estimated)",
         "ai_ds_prestige_tier": "Tier 3 — not yet ranked from company-specific data (estimated)",
-        "pace_of_work": "Moderate-to-fast (estimated)",
+        "pace_of_work": "Not confirmed — no direct operating-cadence evidence",
+        "pace_band": "Not confirmed",
+        "pace_score": "Not confirmed",
+        "pace_evidence": "No direct operating-cadence evidence captured.",
         "wlb_rating": "3/5 (estimated)",
         "culture_vibe": "Technology team; company-specific culture research pending (estimated)",
         "pto_days": "15–20 days (estimated)",
@@ -223,7 +227,8 @@ def _profile_defaults(record: dict, sector: str = "") -> None:
     for field, value in defaults.items():
         claim = record.get(field) or {}
         if not claim or str(claim.get("value", "")).lower() in _UNKNOWN:
-            record[field] = _claim(value, confidence="estimated")
+            confidence = "unknown" if field.startswith("pace") else "estimated"
+            record[field] = _claim(value, confidence=confidence)
 
 
 def prepare_external_sources(records: dict, company: str, job_urls: list[str],
@@ -453,6 +458,25 @@ def parse_synthesis(raw: str | None, source_ids: set[str]) -> dict | None:
         else:
             result[field] = {"value": value, "source_ids": ids, "confidence": confidence}
             valid_claims += 1
+    # Pace is a measured company-context field, not a candidate preference.
+    # A numeric claim needs cited sources and at least two observable cues in
+    # the accompanying evidence string; otherwise it is explicitly unknown.
+    pace_score = result.get("pace_score", _claim("Not confirmed"))
+    pace_evidence = result.get("pace_evidence", _claim("Not confirmed"))
+    try:
+        numeric_pace = float(str(pace_score.get("value") or "").strip())
+    except (TypeError, ValueError):
+        numeric_pace = None
+    evidence_text = str(pace_evidence.get("value") or "")
+    evidence_cues = len([part for part in re.split(r";|\n", evidence_text) if len(part.strip()) >= 12])
+    if (numeric_pace is None or not 1 <= numeric_pace <= 5
+            or not pace_score.get("source_ids")
+            or pace_score.get("confidence") not in {"high", "medium"}
+            or len(pace_evidence.get("source_ids") or []) == 0
+            or evidence_cues < 2):
+        for field in ("pace_of_work", "pace_band", "pace_score", "pace_evidence"):
+            result[field] = _claim("Not confirmed")
+
     # A response that cannot ground even a summary plus one detail should not
     # replace a previous good dossier.
     return result if valid_claims >= 2 and result["summary"]["value"] != "Not confirmed" else None
@@ -470,12 +494,22 @@ Candidate priorities (use only for why_it_matters/interview_focus): {criteria}
 
 Use the supplied sources first. The first two output items are a plain-English
 2-3 sentence explanation of what the company does and how it makes money.
-For the profile fields, fill every field. Exact PTO, WLB, pace, and pay are
-often not public: give a conservative company-specific estimate and prefix it
-with "Estimated:"; never invent a precise policy. For rotational programs,
-write "None found in research" if no program source appears. Keep every value
-useful to someone unfamiliar with the company. Estimates may have confidence
-"estimated" and do not require a source ID; sourced facts must cite IDs.
+For the profile fields, fill every field. Exact PTO, WLB, and pay are often
+not public: give a conservative company-specific estimate and prefix it with
+"Estimated:"; never invent a precise policy. Pace is different: do not use
+the candidate priorities, company prestige, company size, startup/corporate
+labels, or generic adjectives to infer it. Measure pace only from observable
+operating evidence in the supplied sources using this fixed rubric:
+1 = deliberate / long planning cycles; 2 = measured; 3 = mixed or moderate;
+4 = fast; 5 = very fast / unusually rapid iteration. A pace score is valid
+only when at least two observable indicators are named in pace_evidence (for
+example release cadence, incident/on-call load, launch cycles, planning
+horizon, or explicit operating rhythm) and those indicators cite source IDs.
+Otherwise return "Not confirmed" for pace_of_work, pace_band, pace_score, and
+pace_evidence. Do not guess. For rotational programs, write "None found in
+research" if no program source appears. Keep every value useful to someone
+unfamiliar with the company. Estimates may have confidence "estimated" and
+do not require a source ID; sourced facts must cite IDs.
 
 {blocks}
 

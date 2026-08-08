@@ -1508,3 +1508,28 @@ preference` to the existing ledger. Explicit feedback is stored separately so
 the old per-save maps cannot double-count the sample or survive an untracked
 role. The UI preference page now explains that it is showing the same Radar
 signals rather than pretending similarity alone changes ranking.
+
+## 102. Keep AI preference explicit, measure company pace, and expose score controls (2026-08-08)
+
+The positive role sample must not confuse market availability with owner
+preference: generic SWE postings are more numerous, but AI/ML remains the
+strongest configured technical lane and the sample can add positive signals
+without penalizing an underrepresented lane. Eligibility remains the hard
+priority over company prestige.
+
+Company pace is not allowed to follow a candidate-supplied label such as
+“Johnson & Johnson is fast,” nor a shallow startup-versus-enterprise prior.
+Company research prompt v3 therefore excludes candidate priorities, size,
+prestige, and generic adjectives from pace classification. It requires a
+cited 1–5 pace measure plus at least two observable operating indicators such
+as release cadence, on-call/incident load, launch cycles, planning horizon, or
+explicit operating rhythm. Missing or weak evidence stays `Not confirmed` and
+does not affect ranking; legacy free-form pace claims remain displayable but
+are no longer score inputs.
+
+The owner can turn optional score sections on or off from Settings. Baseline
+and early-career eligibility remain locked on so the score keeps its meaning;
+role fit, sector/mission, company quality, compensation, personal signals, and
+timing/access are configurable in `state/score_preferences.json`. A saved
+control change triggers a deterministic full rescore, preserves the raw
+dimension audit, and records disabled contributions in `score_reasons`.

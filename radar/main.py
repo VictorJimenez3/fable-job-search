@@ -21,7 +21,8 @@ from .digest import write_outputs
 from .models import Job, norm
 from .score import (RULES_VERSION, apply_company_concentration,
                     build_preference_profile, early_career_possible,
-                    explicit_new_grad, gates, regate, score, source_new_grad)
+                    explicit_new_grad, gates, load_score_preferences,
+                    normalize_score_preferences, regate, score, source_new_grad)
 from .sector import infer
 from .sources import aggregators, hn
 from .sources.ats import FETCHERS, PM_SEARCH_QUERIES
@@ -139,6 +140,7 @@ def crawl() -> int:
         print(f"re-gate: rules v{RULES_VERSION} flipped alert_ok on {n_regated} stored job(s)")
     fb = state.feedback()
     preference_profile = build_preference_profile(state.applied(), jobs_state)
+    score_preferences = load_score_preferences()
     print(f"preferences: learned from {preference_profile['sample_count']} saved/applied role(s)")
     seed_sectors = {norm(s["name"]): s.get("sector", "other") for s in seeds()}
 
@@ -180,7 +182,7 @@ def crawl() -> int:
             dropped += 1
             continue
         j.alert_ok = alert_eligible
-        score(j, fb, now, preference_profile)
+        score(j, fb, now, preference_profile, score_preferences)
         j.score_reasons += reasons
         if existing is not None:
             manual_upgrades[jid] = existing
@@ -394,6 +396,7 @@ def enrich() -> int:
     score_mod._CULTURE_CACHE = None  # force reload
     score_mod._COMPANY_RESEARCH_CACHE = None
     fb = state.feedback()
+    score_preferences = score_mod.load_score_preferences()
     sponsorship_db = sponsorship.load()
     rescored = 0
     for rec in jobs_state.values():
@@ -405,10 +408,11 @@ def enrich() -> int:
                 remote=rec.get("remote", False), ats=rec.get("ats", ""),
                 sector=rec.get("sector", ""))
         old = rec.get("score", 0)
-        score(j, fb, now, preference_profile)
+        score(j, fb, now, preference_profile, score_preferences)
         rec["score_raw"] = j.score_raw
         rec["score_calibrated"] = j.score_calibrated
         rec["score_dimensions"] = j.score_dimensions
+        rec["score_dimensions_raw"] = j.score_dimensions_raw
         rec["score_version"] = RULES_VERSION
         rec["score_reasons"] = j.score_reasons
         sponsorship.annotate_record(rec, sponsorship_db)
@@ -611,6 +615,7 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int,
     score_mod._CULTURE_CACHE = None
     score_mod._CULTURE_MATCH_CACHE = {}
     score_mod._COMPANY_RESEARCH_CACHE = None
+    score_preferences = score_mod.load_score_preferences()
     sponsorship_db = sponsorship.load()
     changed = 0
     alerts = 0
@@ -621,12 +626,13 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int,
                   remote=bool(rec.get("remote")), posted_at=rec.get("posted_at"),
                   ats=rec.get("ats", ""), sector=rec.get("sector", ""))
         keep, alert_eligible, gate_reasons = gates(job)
-        score(job, fb, now, preference_profile)
+        score(job, fb, now, preference_profile, score_preferences)
         job.score_reasons += gate_reasons
         rec["score"] = job.score
         rec["score_raw"] = job.score_raw
         rec["score_calibrated"] = job.score_calibrated
         rec["score_dimensions"] = job.score_dimensions
+        rec["score_dimensions_raw"] = job.score_dimensions_raw
         rec["score_reasons"] = job.score_reasons
         rec["alert_ok"] = bool(keep and alert_eligible)
         rec["explicit_new_grad"] = explicit_new_grad(job.title) or source_new_grad(job)
@@ -731,9 +737,15 @@ def web_action() -> int:
     with open(path) as f:
         payload = _json.load(f).get("client_payload") or {}
     action = payload.get("action")
-    if action not in {"track", "applied", "stage", "untrack", "manual-add", "research-company", "feedback", "archive"}:
+    if action not in {"track", "applied", "stage", "untrack", "manual-add", "research-company", "feedback", "archive", "score-preferences"}:
         print(f"web-action: unknown action {action!r}")
         return 0
+    if action == "score-preferences":
+        preferences = normalize_score_preferences(payload.get("preferences"))
+        preferences["updated_at"] = int(time.time())
+        state.save("score_preferences.json", preferences)
+        print("web-action: score preferences saved; rebuilding the score board")
+        return rescore_cmd()
     jobs = state.jobs()
     hist = {a["id"]: a for a in state.load("alert_history.json", [])}
     job = jobs.get(payload.get("id")) or hist.get(payload.get("id")) \
@@ -838,7 +850,8 @@ def web_action() -> int:
             manual.sector = infer(manual.company, seed_sectors)
             _, _, reasons = gates(manual)
             preference_profile = build_preference_profile(state.applied(), jobs)
-            score(manual, fb, int(time.time()), preference_profile)
+            score(manual, fb, int(time.time()), preference_profile,
+                  load_score_preferences())
             job = manual.to_record()
             job.update({
                 "first_seen": int(time.time()), "rules_v": RULES_VERSION,

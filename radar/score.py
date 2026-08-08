@@ -14,10 +14,9 @@ from .models import Job, norm
 
 # ---------- hard gates ----------
 
-# Bumped whenever gate rules change; regate() re-applies the current rules to
-# every stored job whose rules_v is older (demote/promote alert_ok in place).
-# Bump for the empirical saved/applied-role preference model.
-RULES_VERSION = 11
+# Bumped whenever gate rules or the deterministic ranking equation changes;
+# stored jobs are rebuilt from source evidence under the new version.
+RULES_VERSION = 12
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|head of|sr\.?|vp|chief|"
@@ -367,6 +366,47 @@ _CULTURE_MATCH_CACHE: dict[tuple[int, str], dict | None] = {}
 _COMPANY_RESEARCH_CACHE: dict | None = None
 _SHPE_CACHE: set | None = None
 
+SCORE_DIMENSIONS = (
+    "base", "role_fit", "eligibility", "mission", "company_quality",
+    "compensation", "personal_signal", "timing_access",
+)
+# Baseline and early-career eligibility are not optional preferences: removing
+# either would make a score stop answering the product's core question.
+CONFIGURABLE_SCORE_DIMENSIONS = (
+    "role_fit", "mission", "company_quality", "compensation",
+    "personal_signal", "timing_access",
+)
+SCORE_PREFERENCES_VERSION = 1
+
+
+def default_score_preferences() -> dict:
+    return {
+        "version": SCORE_PREFERENCES_VERSION,
+        "enabled_dimensions": {name: True for name in SCORE_DIMENSIONS},
+    }
+
+
+def normalize_score_preferences(value: dict | None) -> dict:
+    """Return the safe owner configuration used by every scorer entrypoint."""
+    result = default_score_preferences()
+    if not isinstance(value, dict):
+        return result
+    enabled = value.get("enabled_dimensions")
+    if isinstance(enabled, dict):
+        for name in CONFIGURABLE_SCORE_DIMENSIONS:
+            if name in enabled:
+                result["enabled_dimensions"][name] = bool(enabled[name])
+    return result
+
+
+def load_score_preferences() -> dict:
+    """Load owner controls without making state required for library callers."""
+    try:
+        from . import state
+        return normalize_score_preferences(state.load("score_preferences.json", {}))
+    except Exception:
+        return default_score_preferences()
+
 
 def _shpe_companies() -> set:
     global _SHPE_CACHE
@@ -435,12 +475,25 @@ def _supported_field(record: dict, name: str) -> str:
     return str(field.get("value") or "")
 
 
+def _supported_number(record: dict, name: str, low: float, high: float) -> float | None:
+    """Read a bounded numeric claim only when its dossier evidence is cited."""
+    field = record.get(name)
+    if not isinstance(field, dict):
+        return None
+    if field.get("confidence") not in {"high", "medium"} or not field.get("source_ids"):
+        return None
+    try:
+        value = float(str(field.get("value") or "").strip())
+    except (TypeError, ValueError):
+        return None
+    return value if low <= value <= high else None
+
+
 def company_momentum_signal(company: str) -> tuple[int, list[str]]:
-    """Score cited scale, technical intensity, prestige, and pace generically."""
+    """Score cited company context; pace requires the objective 1–5 measure."""
     record = _company_record(company)
     prestige = _supported_field(record, "ai_ds_prestige_tier")
     scale = _supported_field(record, "size_stage")
-    pace = _supported_field(record, "pace_of_work")
     technical = _supported_field(record, "technical_work")
     points = 0
     reasons: list[str] = []
@@ -450,12 +503,19 @@ def company_momentum_signal(company: str) -> tuple[int, list[str]]:
     elif re.search(r"\b(strong|leading|recognized|highly regarded)\b", prestige, re.I):
         points += 2
         reasons.append("cited technical reputation +2")
-    if re.search(r"\b(fast[- ]paced|rapid iteration|high[- ]growth|rapidly growing|high velocity)\b", pace, re.I):
-        points += 2
-        reasons.append("cited company momentum +2")
-    elif re.search(r"\b(slow|bureaucratic|limited innovation)\b", pace, re.I):
-        points -= 2
-        reasons.append("cited low company momentum -2")
+    pace_score = _supported_number(record, "pace_score", 1, 5)
+    if pace_score is not None:
+        pace_points = {1: -2, 2: -1, 3: 0, 4: 2, 5: 3}[round(pace_score)]
+        band = {
+            1: "deliberate", 2: "measured", 3: "mixed/moderate",
+            4: "fast", 5: "very fast",
+        }[round(pace_score)]
+        if pace_points:
+            points += pace_points
+        reasons.append(
+            f"cited pace measure {round(pace_score)}/5 ({band}) "
+            f"{'+' if pace_points > 0 else ''}{pace_points}"
+        )
     if re.search(r"\b(frontier|cutting[- ]edge|large[- ]scale|distributed training|core AI|AI/ML infrastructure|research)\b", technical, re.I):
         points += 2
         reasons.append("cited technical intensity +2")
@@ -826,7 +886,8 @@ def apply_company_concentration(jobs) -> int:
 
 
 def score(job: Job, feedback: dict, now: int | None = None,
-          preference_profile: dict | None = None) -> None:
+          preference_profile: dict | None = None,
+          score_preferences: dict | None = None) -> None:
     """Build uncapped dimension utility, then calibrate it for display."""
     p = profile()
     now = now or int(time.time())
@@ -988,6 +1049,22 @@ def score(job: Job, feedback: dict, now: int | None = None,
         dimensions["personal_signal"] += 2
         reasons.append("SHPE 2026 exhibitor +2")
 
+    # Keep the unweighted contributions for audit/debugging, then apply the
+    # owner's optional section switches. The stored score_dimensions remain
+    # the actual points used in raw utility, so the equation is inspectable.
+    raw_dimensions = dict(dimensions)
+    score_preferences = normalize_score_preferences(score_preferences)
+    enabled = score_preferences["enabled_dimensions"]
+    for name in CONFIGURABLE_SCORE_DIMENSIONS:
+        if enabled.get(name, True):
+            continue
+        points = dimensions.get(name, 0)
+        if points:
+            reasons.append(
+                f"score section disabled: {name} ({'+' if points > 0 else ''}{points} excluded)"
+            )
+        dimensions[name] = 0
+
     raw_utility = round(sum(dimensions.values()), 1)
     display = calibrate_score(raw_utility)
     if program:
@@ -1013,6 +1090,7 @@ def score(job: Job, feedback: dict, now: int | None = None,
     job.score_raw = raw_utility
     job.score_calibrated = display
     job.score_dimensions = dimensions
+    job.score_dimensions_raw = raw_dimensions
     job.score = display
     reasons.append(f"raw utility {raw_utility:g}; calibration v{RULES_VERSION} -> {display}/100")
     job.score_reasons = reasons

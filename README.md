@@ -166,6 +166,20 @@ location feedback is logged without overriding deterministic eligibility gates.
 The repository is public, so this is an audit trail rather than a private
 journal. No email is sent by this feature.
 
+The owner-only **Settings → Radar score controls** panel can switch optional
+score sections on or off for the whole board. Baseline and early-career
+eligibility remain on; role fit, sector/mission, company quality,
+compensation, personal signals, and timing/access are reversible owner
+preferences stored in `state/score_preferences.json`. Every disabled section
+is named in the score ledger and the board is fully rescored after saving.
+
+AI/ML remains the strongest configured role lane; a larger volume of generic
+SWE postings does not teach the sample that AI is unwanted. Company pace is
+also kept separate from preference: new research uses a cited 1–5 operating
+pace measure with at least two observable indicators. Unsupported pace remains
+**Not confirmed** and contributes zero rather than following startup,
+corporate, or candidate-supplied labels.
+
 The owner can **archive** an expired, filled, duplicate, or wrong posting from
 the role drawer after GitHub sign-in. Archive is a soft, recoverable status that
 survives future crawls and keeps the historical record. Other GitHub users get

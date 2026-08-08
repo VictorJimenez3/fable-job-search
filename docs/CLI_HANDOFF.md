@@ -58,7 +58,7 @@ Before changing the radar, read these in order:
   strongest without pushing the full crawl past its time budget.
 - **Google preference:** `profile.yaml` contains a data-driven score override
   that makes Google technical new-grad roles `100`, with `pm` explicitly
-  excluded. The reason is printed in `score_reasons`; rules version is now 11.
+  excluded. The reason is printed in `score_reasons`; rules version is now 12.
 - **Frontend:** the Jobs role-field toggles include `Product / project
   management`; `docs/platform/index.html` remains a byte-for-byte copy of
   `webapp/index.html`.
@@ -94,6 +94,15 @@ Before changing the radar, read these in order:
   `python -m radar.main taste-report` to `docs/FEEDBACK.md`.
   Only the owner API or the owner-authenticated issue command can write it;
   the public repository warning is intentional and no email is sent.
+- **Owner score controls and objective pace:** `state/score_preferences.json`
+  stores the optional score sections Victor has enabled. Baseline and
+  early-career evidence are locked on; role fit, sector/mission, company
+  quality, compensation, personal signals, and timing/access can be toggled
+  from the owner Settings panel. The platform dispatches an owner-only
+  `score-preferences` action and rescoring publishes the new ledger. Company
+  pace no longer scores from free-form “fast/slow” dossier adjectives: prompt
+  v3 requires a cited 1–5 measure plus two observable operating cues, and
+  unsupported pace is `Not confirmed`/zero.
 - **Posting moderation:** owner archive is a soft, recoverable
   `manual_archived` marker that is carried through future crawls and keeps the
   historical job. Non-owners report expired/filled/duplicate/wrong postings

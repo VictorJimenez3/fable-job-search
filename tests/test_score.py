@@ -4,8 +4,9 @@ from radar.models import Job
 from radar import main
 from radar.score import (RULES_VERSION, apply_company_concentration,
                          build_preference_profile, calibrate_score,
-                         early_career_possible, gates, preference_signal,
-                         role_bucket, regate, score, update_feedback_from_applied)
+                         company_momentum_signal, early_career_possible, gates,
+                         preference_signal, role_bucket, regate, score,
+                         update_feedback_from_applied)
 from radar.sector import infer
 
 NOW = int(time.time())
@@ -46,6 +47,15 @@ def test_current_role_order_puts_general_swe_above_data_engineering():
     assert any("role:data_eng" in r for r in data.score_reasons)
 
 
+def test_ai_role_preference_is_not_erased_by_a_larger_swe_market():
+    ai = mk("Machine Learning Engineer, New Grad")
+    swe = mk("Software Engineer, New Grad")
+    score(ai, FB, NOW)
+    score(swe, FB, NOW)
+    assert ai.score_dimensions["role_fit"] > swe.score_dimensions["role_fit"]
+    assert any("role:ai_ml" in r for r in ai.score_reasons)
+
+
 def test_saved_role_sample_changes_radar_personal_signal_and_is_auditable():
     sample = []
     jobs = {}
@@ -65,6 +75,20 @@ def test_saved_role_sample_changes_radar_personal_signal_and_is_auditable():
                for reason in favored.score_reasons)
     assert any("learned company preference: OpenAI" in reason
                for reason in favored.score_reasons)
+
+
+def test_owner_can_disable_optional_score_section():
+    enabled = mk("Software Engineer, New Grad", salary="$220k")
+    disabled = mk("Software Engineer, New Grad", salary="$220k")
+    score(enabled, FB, NOW)
+    score(disabled, FB, NOW, score_preferences={
+        "enabled_dimensions": {"compensation": False},
+    })
+    assert enabled.score_dimensions["compensation"] > 0
+    assert disabled.score_dimensions["compensation"] == 0
+    assert disabled.score_dimensions_raw["compensation"] == enabled.score_dimensions["compensation"]
+    assert any("score section disabled: compensation" in r for r in disabled.score_reasons)
+    assert disabled.score_raw < enabled.score_raw
 
 
 def test_untracking_the_positive_sample_removes_its_learned_signal():
@@ -382,6 +406,24 @@ def test_v8_role_wording_separates_same_goal_company(monkeypatch):
     assert 90 <= hardware.score < frontier.score
     assert frontier.score_raw > hardware.score_raw
     assert frontier.score_dimensions["compensation"] > hardware.score_dimensions["compensation"]
+
+
+def test_objective_pace_measure_is_scored_only_when_cited(monkeypatch):
+    from radar import score as score_module
+    monkeypatch.setattr(score_module, "_COMPANY_RESEARCH_CACHE", {
+        "fastco": {
+            "pace_of_work": {"confidence": "high", "source_ids": ["p"], "value": "Fast"},
+            "pace_score": {"confidence": "high", "source_ids": ["p"], "value": "5"},
+        },
+        "unknownco": {
+            "pace_of_work": {"confidence": "estimated", "source_ids": [], "value": "Fast"},
+            "pace_score": {"confidence": "estimated", "source_ids": [], "value": "5"},
+        },
+    })
+    fast_points, fast_reasons = company_momentum_signal("FastCo")
+    unknown_points, unknown_reasons = company_momentum_signal("UnknownCo")
+    assert fast_points >= 3 and any("pace measure 5/5" in r for r in fast_reasons)
+    assert unknown_points == 0 and not any("pace measure" in r for r in unknown_reasons)
 
 
 def test_v8_superpower_can_beat_sector_without_named_exception():
