@@ -1533,3 +1533,22 @@ role fit, sector/mission, company quality, compensation, personal signals, and
 timing/access are configurable in `state/score_preferences.json`. A saved
 control change triggers a deterministic full rescore, preserves the raw
 dimension audit, and records disabled contributions in `score_reasons`.
+
+## 103. Spread score headroom and distinguish duplicate role variants (2026-08-08)
+
+The prior calibration compressed many high-utility roles into the mid/high 90s,
+while a level-II title could still inherit the full verified-new-grad utility
+before its alert gate demoted it. Rules v13 widens the stable 0–100 mapping so
+the 60s through 90s carry useful distinctions, reserves 100 for configured or
+exceptional matches, and applies a profile-driven `-28` locked eligibility
+contribution to level-II/L4/mid-level titles. They remain visible for research,
+but cannot present as true new-grad targets or alert candidates.
+
+Company diversity now distinguishes exact and near duplicates. Same-company,
+same-title postings are retained as location/requisition choices and tie with
+the strongest displayed variant, including Google-style multi-location rows.
+Non-identical titles are compared only inside the same company and role bucket;
+when a conservative title-overlap check finds a stronger sibling, the weaker
+posting receives a bounded `-1` to `-3` adjustment in addition to the existing
+small crowded-company guard. Both adjustments are reason strings, so the owner
+can see why two NVIDIA variants are close but not artificially tied.

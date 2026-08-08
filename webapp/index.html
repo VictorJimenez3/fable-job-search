@@ -1674,7 +1674,7 @@ function wsCompany(j, w, c, id) {
 
 function scoreReasonLabel(reason) {
   const text = String(reason||"");
-  const labels = [["base utility","baseline"],["role:","role fit"],["sector:","sector fit"],["new-grad/early-career priority","verified early-career"],["early-career possible","plausible first-role"],["new-grad evidence absent","early-career evidence"],["company tier","company quality"],["explicit goal company","goal-company preference"],["company concentration","company diversity"],["learned from","learned preferences"],["learned role preference","learned role preference"],["learned sector preference","learned sector preference"],["learned company preference","learned company preference"],["learned title signals","learned title language"],["explicit company feedback","explicit feedback"],["explicit title feedback","explicit feedback"],["compensation","compensation"],["posted","freshness"],["remote","remote access"],["culture fit","culture evidence"],["SHPE","community signal"],["sponsor history:","DOL sponsor context"],["raw utility","calibration"]];
+  const labels = [["base utility","baseline"],["role:","role fit"],["sector:","sector fit"],["new-grad/early-career priority","verified early-career"],["early-career possible","plausible first-role"],["new-grad evidence absent","early-career evidence"],["mid-level title penalty","mid-level demotion"],["company tier","company quality"],["explicit goal company","goal-company preference"],["duplicate role variant","duplicate posting"],["similar role sibling","similar-role adjustment"],["company concentration","company diversity"],["learned from","learned preferences"],["learned role preference","learned role preference"],["learned sector preference","learned sector preference"],["learned company preference","learned company preference"],["learned title signals","learned title language"],["explicit company feedback","explicit feedback"],["explicit title feedback","explicit feedback"],["compensation","compensation"],["posted","freshness"],["remote","remote access"],["culture fit","culture evidence"],["SHPE","community signal"],["sponsor history:","DOL sponsor context"],["raw utility","calibration"]];
   const found = labels.find(([prefix]) => text.startsWith(prefix));
   return found ? found[1] : "other signal";
 }
@@ -1748,6 +1748,8 @@ function scoreDimensionWhy(j, name, value) {
     return positive ? "Posting wording matched a target role." : "No role-fit bonus recorded.";
   }
   if (name === "eligibility") {
+    const midlevel = reasons.find(reason => reason.startsWith("mid-level title penalty"));
+    if (midlevel) return "Level-II/L4-style title: kept for research, but it is not treated as a realistic new-grad target.";
     const verified = reasons.find(reason => /(?:trusted new-grad board|new-grad\/early-career) priority/.test(reason));
     if (verified) return /trusted new-grad board/.test(verified) ? "A trusted new-grad board supplied the evidence." : "The posting showed new-grad or early-career evidence.";
     if (reasons.some(reason => reason.startsWith("early-career possible"))) return "No experience floor, but new-grad proof is missing.";
@@ -1798,6 +1800,7 @@ function scoreDimensionWhy(j, name, value) {
 function scoreSummary(j, dimensions) {
   const reasons = scoreReasonTexts(j);
   if (reasons.some(reason => /^role:pm\b/i.test(reason))) return "PM-family research lane: role weight is 0; other signals are shown for comparison.";
+  if (reasons.some(reason => reason.startsWith("mid-level title penalty"))) return "Research-only: this level-II/L4-style role is kept visible but scored below true new-grad targets.";
   const eligibility = Number(dimensions.eligibility);
   if (!Number.isFinite(eligibility) || eligibility <= 0) return "Main limiter: no verified new-grad evidence. The rows below show what still helped.";
   const score = Number(j.score);
@@ -1813,6 +1816,8 @@ function scoreFinalWhy(j) {
     return target ? `Configured preference override set this role to ${target}.` : "Configured preference override set the final score for this company and role type.";
   }
   if (reasons.some(reason => reason.startsWith("technical program display floor"))) return "Technical-program floor lifted the calibrated score to the alert threshold.";
+  if (reasons.some(reason => reason.startsWith("duplicate role variant:"))) return "Duplicate posting: same company and title, so location/requisition variants stay tied.";
+  if (reasons.some(reason => reason.startsWith("similar role sibling:"))) return "Similar-role adjustment separated this posting from a stronger sibling with a related title.";
   if (reasons.some(reason => reason.startsWith("company concentration:"))) return "Company-diversity adjustment nudged this role down after comparing several roles from the same employer.";
   return "";
 }

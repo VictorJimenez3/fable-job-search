@@ -16,7 +16,7 @@ from .models import Job, norm
 
 # Bumped whenever gate rules or the deterministic ranking equation changes;
 # stored jobs are rebuilt from source evidence under the new version.
-RULES_VERSION = 12
+RULES_VERSION = 13
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|head of|sr\.?|vp|chief|"
@@ -547,6 +547,49 @@ def _title_tokens(title: str) -> set[str]:
     return {w for w in norm(title).split() if len(w) > 2 and w not in stop}
 
 
+_SIBLING_TITLE_STOPWORDS = {
+    "engineer", "engineering", "software", "developer", "development",
+    "scientist", "science", "analyst", "new", "grad", "graduate", "college",
+    "early", "career", "campus", "class", "full", "time", "role", "roles",
+    "position", "positions", "year", "years", "level", "i", "ii", "iii",
+}
+
+
+def _sibling_title_tokens(title: str) -> set[str]:
+    """Return distinctive title words for near-duplicate role comparison.
+
+    This deliberately ignores employment-shape and early-career wording. The
+    comparison is only used inside one employer and role bucket, so shared
+    domain words such as ``inference`` or ``compiler`` identify a meaningful
+    sibling without treating every software role as a duplicate.
+    """
+    return {
+        token for token in norm(title).split()
+        if len(token) > 2
+        and not any(char.isdigit() for char in token)
+        and token not in _SIBLING_TITLE_STOPWORDS
+        and token not in FEEDBACK_STOPWORDS
+    }
+
+
+def _title_similarity(left: str, right: str) -> float:
+    """Return a conservative token-overlap score for role siblings."""
+    a = _sibling_title_tokens(left)
+    b = _sibling_title_tokens(right)
+    if not a or not b:
+        return 0.0
+    shared = len(a & b)
+    if shared < 2:
+        return 0.0
+    # Containment catches a longer, more specific requisition beside its
+    # shorter sibling; Jaccard keeps broad shared wording from matching.
+    containment = shared / min(len(a), len(b))
+    jaccard = shared / len(a | b)
+    if containment >= 0.8 or jaccard >= 0.5:
+        return max(containment, jaccard)
+    return 0.0
+
+
 # The owner-facing saved/applied list is a positive sample, not a second set
 # of hard rules.  Keep its influence bounded and explain every contribution.
 # This model deliberately uses only structured title/company/sector fields;
@@ -794,13 +837,15 @@ def calibrate_score(raw_utility: float) -> int:
     """Map uncapped utility onto a stable, non-percentile 0-100 scale."""
     anchors = (
         (0.0, 0.0),
-        (35.0, 45.0),
-        (55.0, 66.0),
-        (70.0, 81.0),
-        (85.0, 89.0),
-        (100.0, 94.0),
-        (115.0, 98.0),
-        (125.0, 100.0),
+        (30.0, 40.0),
+        (50.0, 55.0),
+        (65.0, 70.0),
+        (80.0, 80.0),
+        (95.0, 88.0),
+        (110.0, 93.0),
+        (125.0, 97.0),
+        (140.0, 99.0),
+        (150.0, 100.0),
     )
     raw = max(0.0, float(raw_utility))
     if raw >= anchors[-1][0]:
@@ -813,15 +858,16 @@ def calibrate_score(raw_utility: float) -> int:
 
 
 def apply_company_concentration(jobs) -> int:
-    """Diversify crowded employers without suppressing their best role.
+    """Diversify crowded employers while preserving true duplicate variants.
 
-    This is a ranking adjustment, not a fit judgment. Once a company has at
-    least three visible roles, its strongest role is protected; only weaker
-    roles from that same company receive -1 or -2. Ties at the raw-utility
-    level are left alone, so a genuinely equivalent NVIDIA role is not hidden
-    merely because it shares an employer.
+    The adjustment is a ranking aid, not a fit judgment. Exact same-company,
+    same-title postings are location/requisition variants and tie with the
+    strongest variant. For non-identical titles, only a weaker near-duplicate
+    is nudged, then the existing broad company guard keeps a crowded employer
+    from filling the whole top of the board. Every change is recorded.
     """
     groups: dict[str, list] = {}
+    exact_groups: dict[tuple[str, str], list] = {}
     values = jobs.values() if isinstance(jobs, dict) else jobs
     materialized = list(values)
     for job in materialized:
@@ -832,18 +878,130 @@ def apply_company_concentration(jobs) -> int:
             job["ranking_adjustment"] = 0
             job["score_reasons"] = [
                 reason for reason in job.get("score_reasons", [])
-                if not str(reason).startswith("company concentration:")
+                if not str(reason).startswith((
+                    "company concentration:",
+                    "similar role sibling:",
+                    "duplicate role variant:",
+                ))
             ]
         else:
             job.score = int(job.score_calibrated)
             job.ranking_adjustment = 0
             job.score_reasons = [
                 reason for reason in job.score_reasons
-                if not str(reason).startswith("company concentration:")
+                if not str(reason).startswith((
+                    "company concentration:",
+                    "similar role sibling:",
+                    "duplicate role variant:",
+                ))
             ]
         company = norm(getattr(job, "company", "") or job.get("company", "")) if isinstance(job, dict) else norm(job.company)
+        title = str(job.get("title", "") if isinstance(job, dict) else job.title)
         groups.setdefault(company, []).append(job)
+        exact_groups.setdefault((company, norm(title)), []).append(job)
+
     changed = 0
+    exact_duplicate_jobs: set[int] = set()
+    # A same-title posting at another location/requisition is not a weaker
+    # sibling. Tie its displayed score to the strongest variant, but keep each
+    # posting so the owner can choose the location that works.
+    for (company, title), duplicate_group in exact_groups.items():
+        if not company or not title or len(duplicate_group) < 2:
+            continue
+        best_score = max(
+            int(item.get("score_calibrated", item.get("score", 0)) if isinstance(item, dict)
+                else item.score_calibrated)
+            for item in duplicate_group
+        )
+        locations = set()
+        for item in duplicate_group:
+            exact_duplicate_jobs.add(id(item))
+            locations_value = item.get("locations", []) if isinstance(item, dict) else item.locations
+            locations.update(str(location) for location in (locations_value or []) if location)
+        company_name = str(duplicate_group[0].get("company", company)
+                           if isinstance(duplicate_group[0], dict) else duplicate_group[0].company)
+        reason = (
+            f"duplicate role variant: {len(duplicate_group)} {company_name} postings share this title; "
+            f"tied at {best_score}/100 across {max(1, len(locations))} location set(s)"
+        )
+        for item in duplicate_group:
+            if isinstance(item, dict):
+                item["score"] = best_score
+                item["ranking_adjustment"] = 0
+                reasons = item.setdefault("score_reasons", [])
+            else:
+                item.score = best_score
+                item.ranking_adjustment = 0
+                reasons = item.score_reasons
+            if reason not in reasons:
+                reasons.append(reason)
+                changed += 1
+
+    # Near-duplicate sibling penalties are intentionally small. A 1–4 raw
+    # point edge gets -1; a more material 5–10 point edge gets -2; only a much
+    # stronger sibling reaches -3. This leaves adjacent roles close while
+    # stopping a family of almost-identical postings from occupying the top.
+    sibling_penalties: dict[int, tuple[int, str]] = {}
+    for company, group in groups.items():
+        if not company or len(group) < 2:
+            continue
+        for current in group:
+            if id(current) in exact_duplicate_jobs:
+                continue
+            current_title = str(current.get("title", "") if isinstance(current, dict) else current.title)
+            current_bucket = role_bucket(current_title)
+            if not current_bucket:
+                continue
+            current_reasons = current.get("score_reasons", []) if isinstance(current, dict) else current.score_reasons
+            if any(str(reason).startswith("configured score override:") for reason in current_reasons):
+                continue
+            current_raw = float(current.get("score_raw", 0) if isinstance(current, dict) else current.score_raw)
+            stronger = []
+            for candidate in group:
+                if candidate is current:
+                    continue
+                candidate_title = str(candidate.get("title", "") if isinstance(candidate, dict) else candidate.title)
+                if role_bucket(candidate_title) != current_bucket:
+                    continue
+                candidate_raw = float(candidate.get("score_raw", 0) if isinstance(candidate, dict) else candidate.score_raw)
+                if candidate_raw <= current_raw:
+                    continue
+                similarity = _title_similarity(current_title, candidate_title)
+                if similarity:
+                    stronger.append((candidate_raw, similarity, candidate_title, candidate))
+            if not stronger:
+                continue
+            best_raw, similarity, best_title, _ = max(stronger, key=lambda item: (item[0], item[1], item[2]))
+            gap = best_raw - current_raw
+            penalty = 1 if gap <= 4 else 2 if gap <= 10 else 3
+            sibling_penalties[id(current)] = (penalty, best_title)
+
+    # Apply sibling adjustments even when the company only has two visible
+    # postings. Google-style configured favorites remain protected; their
+    # explicit override is a stronger signal than diversity spacing.
+    for job in materialized:
+        penalty, sibling_title = sibling_penalties.get(id(job), (0, ""))
+        if not penalty:
+            continue
+        reasons = job.get("score_reasons", []) if isinstance(job, dict) else job.score_reasons
+        if any(str(reason).startswith("configured score override:") for reason in reasons):
+            continue
+        if isinstance(job, dict):
+            job["ranking_adjustment"] = -penalty
+            job["score"] = max(0, int(job.get("score_calibrated", job.get("score", 0))) - penalty)
+            reasons = job.setdefault("score_reasons", [])
+        else:
+            job.ranking_adjustment = -penalty
+            job.score = max(0, int(job.score_calibrated) - penalty)
+            reasons = job.score_reasons
+        sibling_reason = (
+            f"similar role sibling: stronger {sibling_title}; -{penalty} "
+            f"to separate the near-duplicate"
+        )
+        if sibling_reason not in reasons:
+            reasons.append(sibling_reason)
+            changed += 1
+
     for company, group in groups.items():
         if not company or len(group) < 3:
             continue
@@ -855,22 +1013,36 @@ def apply_company_concentration(jobs) -> int:
         best_raw = float(group[0].get("score_raw", 0) if isinstance(group[0], dict) else group[0].score_raw)
         company_name = str(group[0].get("company", company) if isinstance(group[0], dict) else group[0].company)
         for rank, job in enumerate(group):
+            if id(job) in exact_duplicate_jobs:
+                # The duplicate pass already tied these postings. Do not let
+                # the employer-level pass undo that tie.
+                if isinstance(job, dict):
+                    job["ranking_adjustment"] = 0
+                else:
+                    job.ranking_adjustment = 0
+                continue
             raw = float(job.get("score_raw", 0) if isinstance(job, dict) else job.score_raw)
             reasons_before = job.get("score_reasons", []) if isinstance(job, dict) else job.score_reasons
             override_protected = any(
                 str(reason).startswith("configured score override:")
                 for reason in reasons_before
             )
-            penalty = (
-                0 if rank == 0 or raw >= best_raw or override_protected
+            broad_penalty = (
+                0 if id(job) in exact_duplicate_jobs or rank == 0 or raw >= best_raw or override_protected
                 else min(2, rank)
             )
-            reason = None
-            if penalty:
+            sibling_penalty = sibling_penalties.get(id(job), (0, ""))[0]
+            if override_protected:
+                sibling_penalty = 0
+            penalty = broad_penalty + sibling_penalty
+            reasons = reasons_before
+            if broad_penalty:
                 reason = (
                     f"company concentration: {rank + 1} of {len(group)} {company_name} roles; "
-                    f"-{penalty} to show stronger alternatives (best role protected)"
+                    f"-{broad_penalty} to show stronger alternatives (best role protected)"
                 )
+            else:
+                reason = None
             if isinstance(job, dict):
                 job["ranking_adjustment"] = -penalty
                 job["score"] = max(0, int(job.get("score_calibrated", job.get("score", 0))) - penalty)
@@ -919,7 +1091,18 @@ def score(job: Job, feedback: dict, now: int | None = None,
     b = p["bonuses"]
     program = leadership_program_signal(job.company, job.title, job.description)
     new_grad = new_grad_signal(job.title, job.description) or source_new_grad(job)
-    if new_grad or program:
+    midlevel = bool(MIDLEVEL_RE.search(job.title))
+    if midlevel:
+        # Keep the posting for research, but make the dashboard score reflect
+        # the same reality as the gate: a level-II/L4 role is not a realistic
+        # new-grad target even when its title also says "early career".
+        midlevel_penalty = int(
+            p.get("scoring_v10", {}).get("midlevel_utility_penalty", -28))
+        dimensions["eligibility"] = midlevel_penalty
+        reasons.append(
+            f"mid-level title penalty {midlevel_penalty} (dashboard only; no new-grad target)"
+        )
+    elif new_grad or program:
         eligibility_pts = int(p.get("scoring_v8", {}).get("eligible_utility", 30))
         dimensions["eligibility"] = eligibility_pts
         evidence = ("trusted new-grad board" if source_new_grad(job)
@@ -1079,6 +1262,7 @@ def score(job: Job, feedback: dict, now: int | None = None,
         if (norm(override.get("company", "")) == norm(job.company)
                 and override.get("when") == "new_grad"
                 and new_grad
+                and not midlevel
                 and bucket not in set(override.get("exclude_buckets", []))):
             target = int(override.get("score", display))
             if target != display:

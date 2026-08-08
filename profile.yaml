@@ -88,6 +88,12 @@ scoring_v8:
 scoring_v9:
   early_career_possible_utility: 8
 
+# v10 keeps level-II/L4 and comparable mid-level titles visible for research,
+# but prevents them from inheriting the verified-new-grad utility even when a
+# posting also uses early-career wording.
+scoring_v10:
+  midlevel_utility_penalty: -28
+
 locations:
   countries: [US]              # non-US-only postings are gated out
   remote_ok: true

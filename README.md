@@ -236,6 +236,14 @@ manual repair command. CI also checks score coverage, and a six-hour scheduled
 maintenance workflow repairs the generated snapshot if a writer missed a
 version stamp.
 
+The score scale intentionally has room between the extremes: 100 is reserved
+for configured favorites or a genuinely exceptional raw match, while the
+60s–90s distinguish plausible, strong, and standout roles. Level-II/L4-style
+postings remain visible for research but receive a locked score demotion and
+never become alerts. Exact same-company/title variants (often the same role in
+different locations) tie with the strongest variant; non-identical near-sibling
+roles receive only a small, reasoned deduction when a stronger sibling exists.
+
 Other comment commands: `skip <company>` (downrank similar roles),
 `track <ats> <token> [Name]` (force-add a company to the crawl registry).
 

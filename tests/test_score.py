@@ -159,6 +159,16 @@ def test_gates_demote_midlevel_but_keep_visible():
         assert any("mid-level title" in r for r in reasons), title
 
 
+def test_midlevel_title_cannot_inherit_new_grad_score():
+    target = mk("Software Engineer, New Grad")
+    midlevel = mk("Software Engineer II, Early Career")
+    score(target, FB, NOW)
+    score(midlevel, FB, NOW)
+    assert midlevel.score < target.score
+    assert midlevel.score_dimensions["eligibility"] == -28
+    assert any("mid-level title penalty -28" in r for r in midlevel.score_reasons)
+
+
 def test_gates_off_field_beats_marquee():
     # DECISIONS #31: field fit outranks the Shams rule — a marquee Safeguards/
     # policy/sales title never alerts, but stays on the dashboard
@@ -381,9 +391,9 @@ def test_v8_calibration_is_monotonic_and_reserves_top_end():
     raw_values = [0, 35, 55, 70, 85, 100, 115, 125, 150]
     scores = [calibrate_score(value) for value in raw_values]
     assert scores == sorted(scores)
-    assert calibrate_score(55) == 66
-    assert calibrate_score(100) == 94
-    assert calibrate_score(125) == 100
+    assert calibrate_score(55) == 60
+    assert calibrate_score(100) == 90
+    assert calibrate_score(125) == 97
 
 
 def test_v8_role_wording_separates_same_goal_company(monkeypatch):
@@ -402,7 +412,8 @@ def test_v8_role_wording_separates_same_goal_company(monkeypatch):
     frontier.sector = hardware.sector = "big_tech"
     score(frontier, fb, NOW)
     score(hardware, fb, NOW)
-    assert frontier.score == 100
+    assert frontier.score > hardware.score
+    assert frontier.score >= 95
     assert 90 <= hardware.score < frontier.score
     assert frontier.score_raw > hardware.score_raw
     assert frontier.score_dimensions["compensation"] > hardware.score_dimensions["compensation"]
@@ -493,6 +504,38 @@ def test_company_concentration_does_not_touch_small_groups_or_raw_ties():
     assert all(job.ranking_adjustment == 0 for job in tied)
 
 
+def test_exact_title_variants_tie_without_a_diversity_penalty():
+    jobs = [
+        mk("Software Engineer, New Grad", company="Google", locations=["New York, NY"]),
+        mk("Software Engineer, New Grad", company="Google", locations=["Mountain View, CA"]),
+    ]
+    score(jobs[0], FB, NOW)
+    score(jobs[1], FB, NOW)
+    jobs[1].score_calibrated -= 4  # model a location-specific difference before grouping
+    jobs[1].score -= 4
+    apply_company_concentration(jobs)
+    assert jobs[0].score == jobs[1].score
+    assert all(job.ranking_adjustment == 0 for job in jobs)
+    assert all(any("duplicate role variant" in reason for reason in job.score_reasons)
+               for job in jobs)
+
+
+def test_near_duplicate_weaker_sibling_gets_small_transparent_deduction():
+    stronger = mk(
+        "Deep Learning Software Engineer - Inference - New Grad",
+        company="NVIDIA", salary="$220k-$260k")
+    weaker = mk(
+        "Deep Learning Software Engineer - Inference - New College Grad",
+        company="NVIDIA")
+    score(stronger, FB, NOW)
+    score(weaker, FB, NOW)
+    assert stronger.score_raw > weaker.score_raw
+    apply_company_concentration([stronger, weaker])
+    assert stronger.ranking_adjustment == 0
+    assert weaker.ranking_adjustment < 0
+    assert any("similar role sibling" in reason for reason in weaker.score_reasons)
+
+
 def test_feedback_boosts_applied_companies():
     fb = {"company_boosts": {}, "token_boosts": {}, "negative_companies": []}
     update_feedback_from_applied(fb, "Commure", "Machine Learning Engineer")
@@ -508,7 +551,8 @@ def test_negative_feedback_penalizes():
     j2 = mk("Software Engineer, New Grad")
     score(j, fb, NOW)
     score(j2, FB, NOW)
-    assert j.score == j2.score - 10
+    assert j.score < j2.score
+    assert j.score_raw == j2.score_raw - 10
 
 
 def test_feedback_stopwords_never_learned_and_inert():

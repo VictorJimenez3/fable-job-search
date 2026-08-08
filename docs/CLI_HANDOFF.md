@@ -169,6 +169,20 @@ Before changing the radar, read these in order:
   `FEEDBACK_STOPWORDS`. The
   marquee list is duplicated in `webapp/index.html` (`S.marquee`) — keep
   both copies in sync.
+- **Score calibration and sibling variants (rules v13, 2026-08-08):** the
+  0–100 calibration now leaves useful separation through the 60s, 70s, 80s,
+  and 90s instead of flattening too many raw utilities at the top. A
+  level-II/L4/mid-level title receives the profile-driven `-28` locked
+  eligibility contribution even when its wording also says early career; it
+  stays dashboard-visible but cannot alert. Same-company/title postings are
+  treated as exact location/requisition variants and tied to the strongest
+  displayed score without a diversity penalty. Different but conservatively
+  similar titles are compared only within the same company and role bucket;
+  weaker siblings get a bounded `-1` to `-3` adjustment, then the existing
+  company-concentration guard prevents a crowded employer from filling the
+  whole top. All of these are visible in the score reason ledger. Do not
+  hand-edit `state/jobs.json`; run `python -m radar.main rescore` after a
+  scoring change.
 - **Early-career possible is deliberately separate from new grad:** a target
   technical title with no stated experience floor, but no verified campus/new-
   grad evidence, gets an explicit Jobs badge and filter. It stays dashboard-
