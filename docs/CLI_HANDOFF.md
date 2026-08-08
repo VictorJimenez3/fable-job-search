@@ -50,6 +50,9 @@ Before changing the radar, read these in order:
 - **Frontend:** the Jobs role-field toggles include `Product / project
   management`; `docs/platform/index.html` remains a byte-for-byte copy of
   `webapp/index.html`.
+- **CI hygiene:** the two exact-template Resume Studio tests now skip only on
+  GitHub Actions when the intentionally local-only `CV/resume.tex` is absent;
+  they continue to run on Victor's Mac where the private CV exists.
 
 - GitHub Actions is the production runtime; it uses Python 3.12. On Victor's
   Mac, system Python is 3.9 but the repo's `.venv` has the dependencies —
