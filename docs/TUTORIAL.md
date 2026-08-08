@@ -58,7 +58,7 @@ system as a website, refreshed automatically by every crawl:
   with sourced summaries, research freshness, culture signals, and coverage.
 - **Interview**: OA/interview applications with cited company context and a
   role-prep checklist.
-- **Taste** (owner only): a readable view of the saved/applied-role sample,
+- **My job preferences** (owner only): a readable view of the saved/applied-role sample,
   explainable score contributions, similar roles to inspect, and explicit
   ranking feedback. It is a recommendation aid, not a second opaque scorer.
 - **AI**: per-run budget, task mix, provider/model health, grounded-research

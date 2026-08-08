@@ -73,7 +73,10 @@ def test_platform_exposes_owner_taste_and_community_moderation_paths():
     html = (ROOT / "webapp" / "index.html").read_text()
     action = (ROOT / "webapp" / "api" / "action.js").read_text()
     workflow = (ROOT / ".github" / "workflows" / "report-sync.yml").read_text()
-    assert "Taste" in html
+    assert "My job preferences" in html
+    assert "tasteSimilarityCandidates" in html
+    assert "slice(0, 1500)" in html
+    assert "source.titleTokens.has" in html
     assert "Similar jobs to inspect" in html
     assert "feedback" in action and "archive" in action
     assert "radar-report:" in html and "three distinct" in html

@@ -90,7 +90,7 @@ every ~30 min (GitHub Actions cron)
 │
 ├─ 4. RANK: verified new-grad/early-career fit first, then AI/ML and data
 │     science, then general SWE, then data engineering and systems; sector, company tier,
-│     freshness, and learned taste refine the order. Technical graduate,
+│     freshness, and learned job preferences refine the order. Technical graduate,
 │     rotational, and leadership programs (J&J TLDP, Merck IT/emerging-talent,
 │     BMS digital programs, etc.) are a dedicated high-priority path. Marquee
 │     companies, salary, aggregators, and healthtech no longer bypass the
@@ -147,9 +147,9 @@ every ~30 min (GitHub Actions cron)
 4. A twice-daily reconcile sweep re-reads every radar issue and tracks any
    checked box the event pipeline missed — a tick is never lost.
 
-### Taste, similar roles, and posting review
+### My job preferences, similar roles, and posting review
 
-The owner-only **Taste** tab uses saved and applied roles as a transparent
+The owner-only **My job preferences** tab uses saved and applied roles as a transparent
 sample. It shows the companies, role families, and title language represented
 in that sample, explains the existing score reasons that came from prior
 engagement, and offers **Similar jobs to inspect**. Similarity is a discovery

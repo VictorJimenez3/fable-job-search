@@ -773,37 +773,57 @@ function tasteSample() {
   for (const entry of S.applied) {
     const j = S.jobs[entry.id] || entry;
     if (!j || seen.has(j.id)) continue;
-    seen.add(j.id); sample.push({job:j, weight:(entry.stage||"saved")==="saved"?2:3,
-      stage:entry.stage||"saved"});
+    seen.add(j.id);
+    sample.push({job:j, weight:(entry.stage||"saved")==="saved"?2:3,
+      stage:entry.stage||"saved", company:norm(j.company), role:roleFamily(j),
+      sector:norm(j.sector), titleTokens:tasteTokens(j.title)});
   }
   return sample;
 }
 function tasteCounts(sample) {
   const companies = {}, roles = {}, tokens = {};
-  for (const {job,weight} of sample) {
-    const company = norm(job.company);
+  for (const {job,weight,company,role,titleTokens} of sample) {
     if (company) companies[company] = (companies[company]||0) + weight;
-    const role = roleFamily(job);
     roles[role] = (roles[role]||0) + weight;
-    for (const t of tasteTokens(job.title)) tokens[t] = (tokens[t]||0) + weight;
+    for (const t of titleTokens) tokens[t] = (tokens[t]||0) + weight;
   }
   const rank = obj => Object.entries(obj).sort((a,b)=>b[1]-a[1] || a[0].localeCompare(b[0]));
   return {companies:rank(companies), roles:rank(roles), tokens:rank(tokens)};
 }
 function similarityFor(job, sample) {
-  const jt = tasteTokens(job.title), jr = roleFamily(job), js = norm(job.sector);
+  const jt = tasteTokens(job.title), jr = roleFamily(job), js = norm(job.sector), jc = norm(job.company);
   let best = {score:0, why:""};
-  for (const {job:source} of sample) {
-    const overlap = [...jt].filter(t=>tasteTokens(source.title).has(t));
+  for (const source of sample) {
+    const overlap = [...jt].filter(t=>source.titleTokens.has(t));
     let score = Math.min(8, overlap.length * 2);
     const why = [];
-    if (norm(job.company) === norm(source.company)) { score += 7; why.push("same company"); }
-    if (jr === roleFamily(source)) { score += 3; why.push(ROLE_LABELS[jr] || "same field"); }
-    if (js && js === norm(source.sector)) { score += 1; why.push("same sector"); }
+    if (jc && jc === source.company) { score += 7; why.push("same company"); }
+    if (jr === source.role) { score += 3; why.push(ROLE_LABELS[jr] || "same field"); }
+    if (js && js === source.sector) { score += 1; why.push("same sector"); }
     if (overlap.length) why.push("shared " + overlap.slice(0,3).join(", "));
     if (score > best.score) best = {score, why:why.join(" · ")};
   }
   return best;
+}
+function tasteSimilarityCandidates(sample, savedIds) {
+  const companies = new Set(sample.map(source=>source.company).filter(Boolean));
+  const roles = new Set(sample.map(source=>source.role));
+  const sectors = new Set(sample.map(source=>source.sector).filter(Boolean));
+  const titleTokens = new Set(sample.flatMap(source=>[...source.titleTokens]));
+  return Object.values(S.jobs)
+    .filter(job => isOpenRelevant(job) && roleFamily(job)!=="other" && !savedIds.has(job.id))
+    .map(job => {
+      const company = norm(job.company), role = roleFamily(job), sector = norm(job.sector);
+      const tokens = tasteTokens(job.title);
+      const overlap = [...tokens].filter(token=>titleTokens.has(token)).length;
+      const hint = (companies.has(company)?7:0) + (roles.has(role)?3:0) +
+        (sectors.has(sector)?1:0) + Math.min(8, overlap * 2);
+      return {job, hint};
+    })
+    .filter(row=>row.hint>0)
+    .sort((a,b)=>b.hint-a.hint || (b.job.score||0)-(a.job.score||0) || postedTs(b.job)-postedTs(a.job))
+    .slice(0, 1500)
+    .map(row=>row.job);
 }
 function tasteContribution(job) {
   const reasons = (job.score_reasons||[]).filter(reason =>
@@ -1169,7 +1189,7 @@ const TABS = [["jobs","Jobs"],["pipeline","Pipeline"],["companies","Companies"],
               ["interview","Interview"],["ai","AI"],["settings","Settings"]];
 function render() {
   renderBootNotice();
-  const tabs = S.auth?.owner ? [...TABS.slice(0,-1), ["taste","Taste"], ["testing","Testing"], TABS.at(-1)] : TABS;
+  const tabs = S.auth?.owner ? [...TABS.slice(0,-1), ["taste","My job preferences"], ["testing","Testing"], TABS.at(-1)] : TABS;
   if (["testing","taste"].includes(S.tab) && !S.auth?.owner) S.tab = "jobs";
   $("#nav").innerHTML = tabs.map(([k,l]) =>
     `<button class="${S.tab===k?'on':''}" onclick="S.tab='${k}';render()">${l}</button>`).join("") +
@@ -1398,7 +1418,7 @@ function rTaste() {
   if (!S.auth?.owner) { S.tab="jobs"; rJobs(); return; }
   const sample = tasteSample(), counts = tasteCounts(sample);
   const savedIds = new Set(sample.map(item=>item.job.id));
-  const similar = Object.values(S.jobs).filter(j => isOpenRelevant(j) && roleFamily(j)!=="other" && !savedIds.has(j.id))
+  const similar = tasteSimilarityCandidates(sample, savedIds)
     .map(job=>({job, ...similarityFor(job, sample)})).filter(row=>row.score>0)
     .sort((a,b)=>b.score-a.score || (b.job.score||0)-(a.job.score||0)).slice(0,18);
   const shifts = Object.values(S.jobs).map(job=>({job, ...tasteContribution(job)}))
@@ -1411,8 +1431,8 @@ function rTaste() {
     : `<p class="sub">No ${label} yet — save a few roles first.</p>`;
   $("#main").innerHTML = `<section class="testing-hero">
     <span class="chip good">owner only · @${esc(S.auth.login)}</span>
-    <h2>Taste &amp; similar roles</h2>
-    <p class="sub">Your saved roles are a positive sample, not a replacement for the Radar score. This view explains the small capped shifts they already create and surfaces nearby roles you may want to inspect.</p>
+    <h2>My job preferences &amp; similar roles</h2>
+    <p class="sub">This is a transparent summary of your saved and applied roles. It explains small preference signals already present in the Radar score and shows nearby jobs to inspect; it does not replace the Radar score.</p>
   </section>
   <div class="taste-grid">
     <section class="lane"><h3>Your sample · ${sample.length} saved/applied roles</h3>

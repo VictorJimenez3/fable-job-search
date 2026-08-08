@@ -82,8 +82,8 @@ Before changing the radar, read these in order:
 - **CI hygiene:** the two exact-template Resume Studio tests now skip only on
   GitHub Actions when the intentionally local-only `CV/resume.tex` is absent;
   they continue to run on Victor's Mac where the private CV exists.
-- **Taste loop:** saved/applied roles are shown as an owner-only positive
-  sample in the platform's **Taste** tab. The tab explains existing
+- **My job preferences loop:** saved/applied roles are shown as an owner-only
+  positive sample in the platform's **My job preferences** tab. The tab explains existing
   engagement-related score reasons and offers advisory **Similar jobs to
   inspect** results; similarity never becomes an opaque replacement score.
   Fixed-category explicit feedback is stored in `state/feedback.json` and
