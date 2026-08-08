@@ -609,7 +609,15 @@ def apply_company_concentration(jobs) -> int:
         company_name = str(group[0].get("company", company) if isinstance(group[0], dict) else group[0].company)
         for rank, job in enumerate(group):
             raw = float(job.get("score_raw", 0) if isinstance(job, dict) else job.score_raw)
-            penalty = 0 if rank == 0 or raw >= best_raw else min(2, rank)
+            reasons_before = job.get("score_reasons", []) if isinstance(job, dict) else job.score_reasons
+            override_protected = any(
+                str(reason).startswith("configured score override:")
+                for reason in reasons_before
+            )
+            penalty = (
+                0 if rank == 0 or raw >= best_raw or override_protected
+                else min(2, rank)
+            )
             reason = None
             if penalty:
                 reason = (

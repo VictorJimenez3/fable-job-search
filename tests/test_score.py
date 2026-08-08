@@ -194,6 +194,19 @@ def test_google_new_grad_favorite_is_100_but_pm_stays_low():
     assert any("role:pm +0" in reason for reason in pm.score_reasons)
 
 
+def test_google_override_survives_company_concentration():
+    jobs = [
+        mk("Deep Learning Engineer, New Grad", company="Google"),
+        mk("Machine Learning Engineer, New Grad", company="Google"),
+        mk("Software Engineer, New Grad", company="Google"),
+    ]
+    for job in jobs:
+        score(job, FB, NOW)
+    apply_company_concentration(jobs)
+    assert all(job.score == 100 for job in jobs)
+    assert all(job.ranking_adjustment == 0 for job in jobs)
+
+
 def test_gates_ai_customer_roles_are_dashboard_only():
     for title in ["AI Success Engineer", "AI Governance and Advisory Associate"]:
         keep, alert_ok, reasons = gates(mk(title, company="OpenAI"))
