@@ -13,7 +13,7 @@ from .config import profile
 from .models import Job
 from .score import FOREIGN_HINTS, company_momentum_signal, role_bucket
 
-RULES_VERSION = 2
+RULES_VERSION = 3
 
 INTERNSHIP_RE = re.compile(r"\b(intern(ship)?|co-?op|undergraduate|student worker|summer analyst)\b", re.I)
 STUDENT_RE = re.compile(r"\b(current|rising|enrolled|undergraduate|college|university)\s+students?\b", re.I)
@@ -94,18 +94,18 @@ def _compensation_signal(salary: str) -> tuple[int, list[str]]:
     maximum, basis = _annualized_pay(salary)
     if maximum is None:
         return 0, ["compensation not stated +0"]
-    if maximum >= 120000:
-        points = 20
-    elif maximum >= 100000:
-        points = 16
-    elif maximum >= 80000:
-        points = 12
-    elif maximum >= 60000:
-        points = 8
-    elif maximum >= 40000:
-        points = 4
-    else:
-        points = 2
+    configured = _scoring_config().get("compensation_points", {}) or {}
+    bands = []
+    for threshold, points_value in configured.items():
+        try:
+            bands.append((float(threshold), int(points_value)))
+        except (TypeError, ValueError):
+            continue
+    if not bands:
+        bands = [(120000, 25), (100000, 21), (80000, 17),
+                 (60000, 12), (40000, 7), (0, 3)]
+    points = next((points_value for threshold, points_value in sorted(bands, reverse=True)
+                   if maximum >= threshold), 0)
     return points, [f"compensation ceiling ~${maximum:,}/year ({basis}) +{points}"]
 
 
@@ -397,6 +397,8 @@ def score(job: Job, now: int) -> None:
         reasons.append("posting age unknown +0")
 
     value = round(sum(dimensions.values()), 1)
+    if value > 100:
+        reasons.append(f"internship score cap applied -{value - 100:g}")
     job.score_raw = value
     job.score_calibrated = max(0, min(100, round(value)))
     job.score = job.score_calibrated

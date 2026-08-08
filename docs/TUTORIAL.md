@@ -85,8 +85,8 @@ and **Internships** tabs plus **Preferences**. Switching lanes changes which
 tab is read and written. The app requests Drive file access only; it does not
 request Gmail scope or read internship email.
 
-Internship scores are intentionally neutral for friends rather than
-personalized to Victor. Technical role families start evenly; the rubric then
+Internship scores are intentionally neutral 0–100 scores for friends rather
+than personalized to Victor. Technical role families start evenly; the rubric then
 uses normalized published pay, recognized or cited employer signal,
 mentorship, ownership, technical depth, production/user impact, return-offer
 evidence, student eligibility, and freshness. Saved roles, sectors, remote

@@ -67,7 +67,7 @@ Before changing the radar, read these in order:
   in the private Google Preferences tab/local browser and drives deterministic
   freshman/sophomore/junior/senior matching. Internship email batches default
   off; new-grad batches default on; both are owner toggles and neither uses
-  Gmail scope. Internship rules v2 uses a neutral friend-facing rubric: role
+  Gmail scope. Internship rules v3 uses a neutral friend-facing 0–100 rubric: role
   families are flat, while normalized pay, neutral employer recognition/cited
   evidence, work quality, student evidence, and freshness contribute. Victor's
   new-grad preferences, feedback, remote setting, and personal-signal sample

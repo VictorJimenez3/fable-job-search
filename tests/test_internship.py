@@ -151,6 +151,34 @@ def test_internship_score_rewards_pay_prestige_and_work_without_personal_signals
                    for reason in strong.score_reasons)
 
 
+def test_internship_score_uses_full_opportunity_scale(monkeypatch):
+    monkeypatch.setenv("RADAR_PROFILE", "internship")
+    from radar import config
+    monkeypatch.setattr(config, "_profile_cache", {})
+    now = int(time.time())
+    google = job(
+        company="Google", salary="$60/hour", posted_at=now - 20 * 86400,
+        description="Current undergraduate students may apply.",
+    )
+    exceptional = job(
+        company="NVIDIA", salary="$65/hour", posted_at=now,
+        description=(
+            "Applicants graduating in 2028. Mentorship and professional development. "
+            "Own and deploy production systems at scale. Research architecture and performance. "
+            "Return offer possible."
+        ),
+    )
+    for posting in (google, exceptional):
+        annotate(posting)
+        score(posting, now)
+    assert google.score >= 80
+    assert google.score_dimensions["company_quality"] == 24
+    assert google.score_dimensions["compensation"] == 25
+    assert exceptional.score == 100
+    assert exceptional.score_raw > exceptional.score
+    assert any("score cap applied" in reason for reason in exceptional.score_reasons)
+
+
 def test_internship_annotation_preserves_cohort_and_work_evidence_on_rescore(monkeypatch):
     monkeypatch.setenv("RADAR_PROFILE", "internship")
     from radar import config
