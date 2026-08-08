@@ -202,7 +202,8 @@ to visitors and does not expose or spend provider credentials in the browser.
 Scoring is published in three places: the live Vercel dashboard reads
 `state/jobs.json`, the generated [dashboard](docs/DASHBOARD.md) lists the current
 score, and each job's **Why it scored** drawer shows the auditable equation
-reasons plus the scoring version. Every crawl now rebuilds all active stored
+reasons plus a short plain-English why for every score section and the scoring
+version; expand **Exact reason ledger** for the rule strings. Every crawl now rebuilds all active stored
 postings before publishing those files; `python -m radar.main rescore` is the
 manual repair command. CI also checks score coverage, and a six-hour scheduled
 maintenance workflow repairs the generated snapshot if a writer missed a
