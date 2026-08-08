@@ -78,6 +78,8 @@ def test_platform_exposes_owner_taste_and_community_moderation_paths():
     assert "slice(0, 1500)" in html
     assert "source.titleTokens.has" in html
     assert "Similar jobs to inspect" in html
+    assert "The Radar learns bounded preference points" in html
+    assert "learned title signals" in html
     assert "feedback" in action and "archive" in action
     assert "radar-report:" in html and "three distinct" in html
     assert "github.event.issue.user" in workflow or "radar-report:" in workflow

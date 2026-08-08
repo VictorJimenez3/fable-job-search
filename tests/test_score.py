@@ -3,8 +3,9 @@ import time
 from radar.models import Job
 from radar import main
 from radar.score import (RULES_VERSION, apply_company_concentration,
-                         calibrate_score, early_career_possible, gates, role_bucket,
-                         regate, score, update_feedback_from_applied)
+                         build_preference_profile, calibrate_score,
+                         early_career_possible, gates, preference_signal,
+                         role_bucket, regate, score, update_feedback_from_applied)
 from radar.sector import infer
 
 NOW = int(time.time())
@@ -43,6 +44,37 @@ def test_current_role_order_puts_general_swe_above_data_engineering():
     assert swe.score > data.score
     assert any("role:swe" in r for r in swe.score_reasons)
     assert any("role:data_eng" in r for r in data.score_reasons)
+
+
+def test_saved_role_sample_changes_radar_personal_signal_and_is_auditable():
+    sample = []
+    jobs = {}
+    for i in range(10):
+        jid = f"{i:016x}"
+        sample.append({"id": jid, "company": "OpenAI", "title": "Research Engineer",
+                       "stage": "saved"})
+        jobs[jid] = {"company": "OpenAI", "title": "Research Engineer",
+                     "sector": "ai_lab"}
+    profile = build_preference_profile(sample, jobs)
+    favored = mk("Research Engineer, New Grad", company="OpenAI")
+    unknown = mk("Data Engineer, New Grad", company="Unfamiliar")
+    score(favored, FB, NOW, profile)
+    score(unknown, FB, NOW, profile)
+    assert favored.score_dimensions["personal_signal"] > unknown.score_dimensions["personal_signal"]
+    assert any("learned from 10 saved/applied roles" in reason
+               for reason in favored.score_reasons)
+    assert any("learned company preference: OpenAI" in reason
+               for reason in favored.score_reasons)
+
+
+def test_untracking_the_positive_sample_removes_its_learned_signal():
+    sample = [{"id": "1" * 16, "company": "OpenAI", "title": "Research Engineer",
+               "stage": "saved"}] * 8
+    jobs = {"1" * 16: {"company": "OpenAI", "title": "Research Engineer", "sector": "ai_lab"}}
+    learned = build_preference_profile(sample, jobs)
+    candidate = mk("Research Engineer, New Grad", company="OpenAI")
+    assert preference_signal(candidate, learned)[0] > 0
+    assert preference_signal(candidate, build_preference_profile([], {})) == (0, [])
 
 
 def test_gates_direct_ats_needs_entry_signal():

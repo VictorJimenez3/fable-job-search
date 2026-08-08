@@ -59,8 +59,9 @@ system as a website, refreshed automatically by every crawl:
 - **Interview**: OA/interview applications with cited company context and a
   role-prep checklist.
 - **My job preferences** (owner only): a readable view of the saved/applied-role sample,
-  explainable score contributions, similar roles to inspect, and explicit
-  ranking feedback. It is a recommendation aid, not a second opaque scorer.
+  explainable learned contributions inside the Radar score, similar roles to
+  inspect, and explicit ranking feedback. The sample changes only the bounded
+  personal-signal dimension; it never overrides eligibility gates.
 - **AI**: per-run budget, task mix, provider/model health, grounded-research
   coverage, scout status, and registry stats.
 

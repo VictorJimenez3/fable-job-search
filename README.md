@@ -149,11 +149,14 @@ every ~30 min (GitHub Actions cron)
 
 ### My job preferences, similar roles, and posting review
 
-The owner-only **My job preferences** tab uses saved and applied roles as a transparent
-sample. It shows the companies, role families, and title language represented
-in that sample, explains the existing score reasons that came from prior
-engagement, and offers **Similar jobs to inspect**. Similarity is a discovery
-aid; it does not silently rewrite the Radar score.
+The owner-only **My job preferences** tab uses saved and applied roles as a
+transparent positive sample. The Radar now learns a bounded preference lift
+from that sample: repeated employers, role-family mix, recognized sector mix,
+and recurring meaningful title language. Each lift is included in the
+`personal_signal` dimension and written into the job's exact reason ledger;
+hard eligibility gates and configured score overrides still win. The tab
+explains the learned contributions and offers **Similar jobs to inspect** as a
+discovery aid.
 
 When a score feels wrong, the role drawer has fixed-category **more like this**
 and **less like this** feedback. Owner feedback is idempotent, capped, and

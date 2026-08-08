@@ -58,14 +58,15 @@ Before changing the radar, read these in order:
   strongest without pushing the full crawl past its time budget.
 - **Google preference:** `profile.yaml` contains a data-driven score override
   that makes Google technical new-grad roles `100`, with `pm` explicitly
-  excluded. The reason is printed in `score_reasons`; rules version is now 10.
+  excluded. The reason is printed in `score_reasons`; rules version is now 11.
 - **Frontend:** the Jobs role-field toggles include `Product / project
   management`; `docs/platform/index.html` remains a byte-for-byte copy of
   `webapp/index.html`.
 - **Score transparency:** each score dimension now shows its points, what it
   measures, and one compact plain-English why; the exact rule ledger remains
-  available below it. This is presentation-only: score values and weights are
-  unchanged.
+  available below it. The deterministic scorer now also adds bounded learned
+  preference points from the owner’s saved/applied sample inside
+  `personal_signal`; every learned contribution remains in that ledger.
 - **Row selection:** a Jobs row click saves once and turns green; clicking the
   saved row again marks it red and hides it from active Jobs. **Show excluded**
   reveals it for a reversible restore. This state is view-only and does not
@@ -82,12 +83,15 @@ Before changing the radar, read these in order:
 - **CI hygiene:** the two exact-template Resume Studio tests now skip only on
   GitHub Actions when the intentionally local-only `CV/resume.tex` is absent;
   they continue to run on Victor's Mac where the private CV exists.
-- **My job preferences loop:** saved/applied roles are shown as an owner-only
-  positive sample in the platform's **My job preferences** tab. The tab explains existing
-  engagement-related score reasons and offers advisory **Similar jobs to
-  inspect** results; similarity never becomes an opaque replacement score.
-  Fixed-category explicit feedback is stored in `state/feedback.json` and
-  rendered through `python -m radar.main taste-report` to `docs/FEEDBACK.md`.
+- **Learned Radar preferences:** the owner’s saved/applied roles now form a
+  bounded positive sample for the deterministic `personal_signal` score
+  dimension. Repeated employers, role-family mix, recognized sectors, and
+  meaningful title language add auditable `learned ...` reason strings;
+  untracking a role removes its implicit influence on the next rescore. The
+  **My job preferences** tab explains these contributions and still offers
+  advisory **Similar jobs to inspect** results. Fixed-category explicit
+  feedback remains in `state/feedback.json` and is rendered through
+  `python -m radar.main taste-report` to `docs/FEEDBACK.md`.
   Only the owner API or the owner-authenticated issue command can write it;
   the public repository warning is intentional and no email is sent.
 - **Posting moderation:** owner archive is a soft, recoverable

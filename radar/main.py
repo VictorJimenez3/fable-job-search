@@ -20,8 +20,8 @@ from .config import env, profile, seeds
 from .digest import write_outputs
 from .models import Job, norm
 from .score import (RULES_VERSION, apply_company_concentration,
-                    early_career_possible, explicit_new_grad, gates, regate,
-                    score, source_new_grad)
+                    build_preference_profile, early_career_possible,
+                    explicit_new_grad, gates, regate, score, source_new_grad)
 from .sector import infer
 from .sources import aggregators, hn
 from .sources.ats import FETCHERS, PM_SEARCH_QUERIES
@@ -138,6 +138,8 @@ def crawl() -> int:
     if n_regated:
         print(f"re-gate: rules v{RULES_VERSION} flipped alert_ok on {n_regated} stored job(s)")
     fb = state.feedback()
+    preference_profile = build_preference_profile(state.applied(), jobs_state)
+    print(f"preferences: learned from {preference_profile['sample_count']} saved/applied role(s)")
     seed_sectors = {norm(s["name"]): s.get("sector", "other") for s in seeds()}
 
     from . import culture
@@ -178,7 +180,7 @@ def crawl() -> int:
             dropped += 1
             continue
         j.alert_ok = alert_eligible
-        score(j, fb, now)
+        score(j, fb, now, preference_profile)
         j.score_reasons += reasons
         if existing is not None:
             manual_upgrades[jid] = existing
@@ -235,7 +237,8 @@ def crawl() -> int:
     # The equation is not only for newly discovered rows. Rebuild every active
     # stored posting before generated state is published so Vercel, dashboard,
     # alerts, and the Mac companion all see the same current ranking.
-    full_rescored, current_alerts = _rebuild_scores(jobs_state, fb, now)
+    full_rescored, current_alerts = _rebuild_scores(
+        jobs_state, fb, now, preference_profile)
     print(f"scoring: rebuilt {full_rescored} active posting(s) with rules v{RULES_VERSION}; "
           f"{current_alerts} currently alert-eligible")
 
@@ -358,6 +361,7 @@ def enrich() -> int:
         return 0
     jobs_state = state.jobs()
     applied = state.applied()
+    preference_profile = build_preference_profile(applied, jobs_state)
     web = state.load("web_state.json", {})
     now = int(time.time())
 
@@ -401,7 +405,7 @@ def enrich() -> int:
                 remote=rec.get("remote", False), ats=rec.get("ats", ""),
                 sector=rec.get("sector", ""))
         old = rec.get("score", 0)
-        score(j, fb, now)
+        score(j, fb, now, preference_profile)
         rec["score_raw"] = j.score_raw
         rec["score_calibrated"] = j.score_calibrated
         rec["score_dimensions"] = j.score_dimensions
@@ -569,8 +573,9 @@ def rescore_cmd() -> int:
     """
     jobs_state = state.jobs()
     fb = state.feedback()
+    preference_profile = build_preference_profile(state.applied(), jobs_state)
     now = int(time.time())
-    changed, alerts = _rebuild_scores(jobs_state, fb, now)
+    changed, alerts = _rebuild_scores(jobs_state, fb, now, preference_profile)
 
     state.save("jobs.json", jobs_state)
     registry = state.companies()
@@ -596,7 +601,8 @@ def score_health_cmd() -> int:
     return 0
 
 
-def _rebuild_scores(jobs_state: dict, fb: dict, now: int) -> tuple[int, int]:
+def _rebuild_scores(jobs_state: dict, fb: dict, now: int,
+                    preference_profile: dict | None = None) -> tuple[int, int]:
     """Apply the current deterministic equation to every active stored job."""
     from . import culture, posting, quality
     import radar.score as score_mod
@@ -615,7 +621,7 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int) -> tuple[int, int]:
                   remote=bool(rec.get("remote")), posted_at=rec.get("posted_at"),
                   ats=rec.get("ats", ""), sector=rec.get("sector", ""))
         keep, alert_eligible, gate_reasons = gates(job)
-        score(job, fb, now)
+        score(job, fb, now, preference_profile)
         job.score_reasons += gate_reasons
         rec["score"] = job.score
         rec["score_raw"] = job.score_raw
@@ -831,7 +837,8 @@ def web_action() -> int:
                          ats="greenhouse" if "greenhouse.io" in url else "")
             manual.sector = infer(manual.company, seed_sectors)
             _, _, reasons = gates(manual)
-            score(manual, fb, int(time.time()))
+            preference_profile = build_preference_profile(state.applied(), jobs)
+            score(manual, fb, int(time.time()), preference_profile)
             job = manual.to_record()
             job.update({
                 "first_seen": int(time.time()), "rules_v": RULES_VERSION,

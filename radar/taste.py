@@ -1,10 +1,10 @@
-"""Small, auditable preference updates from the owner-facing Taste surface.
+"""Small, auditable preference updates from the owner-facing preference surface.
 
-Saved/applied roles are already the implicit positive sample through
-``record_applied``.  This module adds explicit, fixed-category feedback
-without accepting arbitrary scoring instructions from the browser.  The
-structured state remains ``state/feedback.json``; ``docs/FEEDBACK.md`` is a
-human-readable generated audit for the repository owner.
+Saved/applied roles are the implicit positive sample rebuilt by ``score.py``.
+This module adds explicit, fixed-category feedback without accepting arbitrary
+scoring instructions from the browser. The structured state remains
+``state/feedback.json``; ``docs/FEEDBACK.md`` is a human-readable generated
+audit for the repository owner.
 """
 from __future__ import annotations
 
@@ -42,6 +42,19 @@ def _token_delta(feedback: dict, title: str, delta: int) -> list[str]:
     return changed
 
 
+def _explicit_token_delta(feedback: dict, title: str, delta: int) -> list[str]:
+    """Mirror title feedback into the post-sample explicit signal map."""
+    boosts = feedback.setdefault("explicit_token_boosts", {})
+    changed = []
+    for token in sorted(_title_tokens(title)):
+        old = int(boosts.get(token, 0) or 0)
+        new = max(-4, min(4, old + delta))
+        if new != old:
+            boosts[token] = new
+            changed.append(token)
+    return changed
+
+
 def record_feedback(feedback: dict, job: dict, vote: str, reason: str) -> bool:
     """Apply one owner feedback event; duplicate submissions are idempotent."""
     vote = str(vote or "").lower().strip()
@@ -62,9 +75,12 @@ def record_feedback(feedback: dict, job: dict, vote: str, reason: str) -> bool:
         if reason in {"company", "both"} and company:
             companies = feedback.setdefault("company_boosts", {})
             companies[company] = min(int(companies.get(company, 0) or 0) + 2, 8)
+            explicit = feedback.setdefault("explicit_company_boosts", {})
+            explicit[company] = min(int(explicit.get(company, 0) or 0) + 2, 8)
             effects.append(f"company +2 ({company})")
         if reason in {"role", "both"}:
             tokens = _token_delta(feedback, job.get("title", ""), 1)
+            _explicit_token_delta(feedback, job.get("title", ""), 1)
             if tokens:
                 effects.append("title tokens +1 (" + ", ".join(tokens) + ")")
     elif reason == "company" and company:
@@ -74,6 +90,7 @@ def record_feedback(feedback: dict, job: dict, vote: str, reason: str) -> bool:
             effects.append(f"company -10 ({company})")
     elif reason == "role":
         tokens = _token_delta(feedback, job.get("title", ""), -1)
+        _explicit_token_delta(feedback, job.get("title", ""), -1)
         if tokens:
             effects.append("title tokens -1 (" + ", ".join(tokens) + ")")
 

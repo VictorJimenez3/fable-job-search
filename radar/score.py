@@ -5,6 +5,7 @@ Every point awarded is recorded in job.score_reasons so ranking is auditable.
 """
 from __future__ import annotations
 
+import math
 import re
 import time
 
@@ -15,7 +16,8 @@ from .models import Job, norm
 
 # Bumped whenever gate rules change; regate() re-applies the current rules to
 # every stored job whose rules_v is older (demote/promote alert_ok in place).
-RULES_VERSION = 10
+# Bump for the empirical saved/applied-role preference model.
+RULES_VERSION = 11
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|head of|sr\.?|vp|chief|"
@@ -485,6 +487,190 @@ def _title_tokens(title: str) -> set[str]:
     return {w for w in norm(title).split() if len(w) > 2 and w not in stop}
 
 
+# The owner-facing saved/applied list is a positive sample, not a second set
+# of hard rules.  Keep its influence bounded and explain every contribution.
+# This model deliberately uses only structured title/company/sector fields;
+# posting prose is too repetitive to be a reliable preference label.
+PREFERENCE_MODEL_VERSION = 1
+PREFERENCE_MIN_SAMPLE = 8
+_PREFERENCE_ROLES = ("ai_ml", "data_science", "swe", "data_eng")
+_PREFERENCE_SECTORS = ("healthtech", "sports", "video games", "ai lab",
+                       "big tech", "edtech", "fintech")
+_PREFERENCE_STAGE_WEIGHTS = {
+    "saved": 1.0,
+    "applied": 2.0,
+    "oa": 2.5,
+    "interview": 3.0,
+    "rejected": 1.5,
+    "closed": 0.0,
+}
+_PREFERENCE_TITLE_STOPWORDS = {
+    "software", "engineer", "engineering", "developer", "scientist",
+    "analyst", "associate", "junior", "new", "grad", "graduate",
+    "early", "career", "campus", "college", "class", "level", "full",
+    "time", "remote", "onsite", "hybrid", "multiple", "position",
+    "positions", "role", "roles", "year", "years", "united", "states",
+    "america", "us", "usa",
+}
+
+
+def _preference_title_tokens(title: str) -> set[str]:
+    """Return meaningful title concepts for the implicit positive sample."""
+    return {
+        token for token in norm(title).split()
+        if len(token) > 2 and not any(char.isdigit() for char in token)
+        and token not in _PREFERENCE_TITLE_STOPWORDS
+        and token not in FEEDBACK_STOPWORDS
+    }
+
+
+def _sample_weight(entry: dict) -> float:
+    stage = str(entry.get("stage") or "saved").lower().strip()
+    return _PREFERENCE_STAGE_WEIGHTS.get(stage, 1.0)
+
+
+def build_preference_profile(sample: list[dict] | None,
+                             jobs_state: dict | None = None) -> dict:
+    """Build a bounded, deterministic profile from saved/applied roles.
+
+    The profile is rebuilt from source state on every crawl/rescore, so
+    removing a saved role actually removes its learned influence.  Confirmed
+    applications and later funnel stages count more than a simple save, while
+    closed records contribute nothing.  ``jobs_state`` supplies sector values
+    that are intentionally not duplicated in ``applied.json`` history.
+    """
+    jobs_state = jobs_state or {}
+    roles: dict[str, float] = {}
+    sectors: dict[str, float] = {}
+    companies: dict[str, float] = {}
+    title_tokens: dict[str, float] = {}
+    sample_count = 0
+    weighted_count = 0.0
+    for entry in sample or []:
+        if not isinstance(entry, dict):
+            continue
+        weight = _sample_weight(entry)
+        if weight <= 0:
+            continue
+        record = jobs_state.get(str(entry.get("id") or ""), {})
+        if not isinstance(record, dict):
+            record = {}
+        title = str(entry.get("title") or record.get("title") or "").strip()
+        company = norm(entry.get("company") or record.get("company") or "")
+        if not title or not company:
+            continue
+        sample_count += 1
+        weighted_count += weight
+        companies[company] = companies.get(company, 0.0) + weight
+        bucket = role_bucket(title)
+        if bucket in _PREFERENCE_ROLES:
+            roles[bucket] = roles.get(bucket, 0.0) + weight
+        sector = norm(entry.get("sector") or record.get("sector") or "")
+        if sector:
+            sectors[sector] = sectors.get(sector, 0.0) + weight
+        for token in _preference_title_tokens(title):
+            title_tokens[token] = title_tokens.get(token, 0.0) + weight
+    return {
+        "version": PREFERENCE_MODEL_VERSION,
+        "sample_count": sample_count,
+        "weighted_count": round(weighted_count, 2),
+        "roles": roles,
+        "sectors": sectors,
+        "companies": companies,
+        "title_tokens": title_tokens,
+    }
+
+
+def preference_signal(job: Job, preference_profile: dict | None) -> tuple[int, list[str]]:
+    """Return the capped score lift from the owner's positive role sample."""
+    if not preference_profile or int(preference_profile.get("sample_count", 0)) < PREFERENCE_MIN_SAMPLE:
+        return 0, []
+    sample_count = int(preference_profile["sample_count"])
+    roles = preference_profile.get("roles", {})
+    role_total = sum(float(value or 0) for value in roles.values())
+    sectors = preference_profile.get("sectors", {})
+    companies = preference_profile.get("companies", {})
+    title_tokens = preference_profile.get("title_tokens", {})
+    parts: list[int] = []
+    reasons: list[str] = []
+
+    bucket = role_bucket(job.title, job.description)
+    # Learned enthusiasm must never make an off-field or PM research row look
+    # like a target technical role. Gates decide visibility; this model only
+    # refines rows already in one of the four target families.
+    if bucket not in _PREFERENCE_ROLES:
+        return 0, []
+    configured_roles = profile().get("roles", {})
+    configured_role_total = sum(
+        max(0.0, float(configured_roles.get(name, 0) or 0))
+        for name in _PREFERENCE_ROLES
+    )
+    if bucket in _PREFERENCE_ROLES and role_total and configured_role_total:
+        observed = float(roles.get(bucket, 0) or 0) / role_total
+        expected = max(0.0, float(configured_roles.get(bucket, 0) or 0)) / configured_role_total
+        # A sparse positive sample is evidence for what Victor chose, not
+        # proof that an underrepresented field is unwanted. Explicit
+        # "less like this" feedback is the downrank path.
+        role_points = max(0, min(3, round((observed - expected) * 12)))
+        if role_points:
+            parts.append(role_points)
+            reasons.append(
+                f"learned role preference: {bucket} {round(observed * 100)}% of sample "
+                f"{'+' if role_points > 0 else ''}{role_points}"
+            )
+
+    configured_sectors = profile().get("sectors", {})
+    recognized_total = sum(float(sectors.get(name, 0) or 0) for name in _PREFERENCE_SECTORS)
+    configured_sector_total = sum(
+        max(0.0, float(configured_sectors.get(name.replace(" ", "_"), 0) or 0))
+        for name in _PREFERENCE_SECTORS
+    )
+    sector = norm(job.sector or "")
+    if sector in _PREFERENCE_SECTORS and recognized_total and configured_sector_total:
+        observed = float(sectors.get(sector, 0) or 0) / recognized_total
+        expected = max(0.0, float(configured_sectors.get(sector.replace(" ", "_"), 0) or 0)) / configured_sector_total
+        sector_points = max(0, min(3, round((observed - expected) * 10)))
+        if sector_points:
+            parts.append(sector_points)
+            reasons.append(
+                f"learned sector preference: {sector} {round(observed * 100)}% of recognized sample "
+                f"{'+' if sector_points > 0 else ''}{sector_points}"
+            )
+
+    company = norm(job.company)
+    company_count = float(companies.get(company, 0) or 0)
+    if company_count:
+        company_points = min(5, max(1, int(math.log2(company_count + 1))))
+        parts.append(company_points)
+        reasons.append(
+            f"learned company preference: {job.company} appears in "
+            f"{round(company_count)} saved/applied roles +{company_points}"
+        )
+
+    matched_tokens = sorted(
+        ((token, float(title_tokens.get(token, 0) or 0))
+         for token in _preference_title_tokens(job.title)
+         if float(title_tokens.get(token, 0) or 0) >= 2),
+        key=lambda item: (-item[1], item[0]),
+    )
+    if matched_tokens:
+        token_points = round(min(
+            4.0,
+            sum(min(1.25, 0.25 * math.log2(count + 1) + 0.25)
+                for _, count in matched_tokens[:5]),
+        ))
+        if token_points:
+            parts.append(token_points)
+            labels = ", ".join(token for token, _ in matched_tokens[:3])
+            reasons.append(f"learned title signals: {labels} +{token_points}")
+
+    if not parts:
+        return 0, []
+    points = max(-8, min(12, sum(parts)))
+    reasons.insert(0, f"learned from {sample_count} saved/applied roles")
+    return points, reasons
+
+
 def _salary_max(salary: str) -> int | None:
     if not salary:
         return None
@@ -639,7 +825,8 @@ def apply_company_concentration(jobs) -> int:
     return changed
 
 
-def score(job: Job, feedback: dict, now: int | None = None) -> None:
+def score(job: Job, feedback: dict, now: int | None = None,
+          preference_profile: dict | None = None) -> None:
     """Build uncapped dimension utility, then calibrate it for display."""
     p = profile()
     now = now or int(time.time())
@@ -736,23 +923,59 @@ def score(job: Job, feedback: dict, now: int | None = None) -> None:
         reasons.append(f"remote +{b['remote']}")
 
     comp = norm(job.company)
-    cb = feedback.get("company_boosts", {}).get(comp, 0)
-    if cb:
-        cb = min(cb, b["feedback_company_max"])
-        dimensions["personal_signal"] += cb
-        reasons.append(f"you've engaged with {job.company} +{cb}")
-    if comp in feedback.get("negative_companies", []):
+    use_preference_model = bool(
+        preference_profile
+        and int(preference_profile.get("sample_count", 0)) >= PREFERENCE_MIN_SAMPLE
+    )
+    if use_preference_model:
+        learned_points, learned_reasons = preference_signal(job, preference_profile)
+        dimensions["personal_signal"] += learned_points
+        reasons.extend(learned_reasons)
+
+        # Explicit feedback is kept separate from the implicit sample.  The
+        # legacy company/token maps are intentionally not added here: older
+        # versions populated them for every save, which would double-count the
+        # same 253-role sample and would survive after a role is untracked.
+        explicit_company = feedback.get("explicit_company_boosts", {}).get(comp, 0)
+        if explicit_company:
+            explicit_company = max(-b["feedback_company_max"],
+                                   min(explicit_company, b["feedback_company_max"]))
+            dimensions["personal_signal"] += explicit_company
+            reasons.append(
+                f"explicit company feedback {'+' if explicit_company > 0 else ''}{explicit_company}"
+            )
+        explicit_tokens = feedback.get("explicit_token_boosts", {})
+        explicit_title = sum(explicit_tokens.get(tok, 0) for tok in _title_tokens(job.title))
+        explicit_title = max(min(explicit_title, b["feedback_tokens_max"]), -6)
+        if explicit_title:
+            dimensions["personal_signal"] += explicit_title
+            reasons.append(
+                f"explicit title feedback {'+' if explicit_title > 0 else ''}{explicit_title}"
+            )
+    else:
+        # Compatibility path for library callers and older state repairs that
+        # have not supplied the source sample yet.
+        cb = feedback.get("company_boosts", {}).get(comp, 0)
+        if cb:
+            cb = min(cb, b["feedback_company_max"])
+            dimensions["personal_signal"] += cb
+            reasons.append(f"you've engaged with {job.company} +{cb}")
+        if comp in feedback.get("negative_companies", []):
+            dimensions["personal_signal"] -= 10
+            reasons.append("previously skipped -10")
+
+        tb = 0
+        boosts = feedback.get("token_boosts", {})
+        for tok in _title_tokens(job.title):
+            tb += boosts.get(tok, 0)
+        tb = max(min(tb, b["feedback_tokens_max"]), -6)
+        if tb:
+            dimensions["personal_signal"] += tb
+            reasons.append(f"title matches your history {'+' if tb > 0 else ''}{tb}")
+
+    if use_preference_model and comp in feedback.get("negative_companies", []):
         dimensions["personal_signal"] -= 10
         reasons.append("previously skipped -10")
-
-    tb = 0
-    boosts = feedback.get("token_boosts", {})
-    for tok in _title_tokens(job.title):
-        tb += boosts.get(tok, 0)
-    tb = max(min(tb, b["feedback_tokens_max"]), -6)
-    if tb:
-        dimensions["personal_signal"] += tb
-        reasons.append(f"title matches your history {'+' if tb > 0 else ''}{tb}")
 
     d = _culture_dossier(job.company)
     if d and d.get("source") == "seed" and d.get("fit") is not None:

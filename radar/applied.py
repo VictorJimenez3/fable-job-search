@@ -91,6 +91,7 @@ def record_applied(job: dict, applied: list, fb: dict, via: str, stage: str = "a
     applied.append({
         "id": job["id"], "company": job["company"], "title": job["title"],
         "url": job.get("url", ""), "locations": job.get("locations", []),
+        "sector": job.get("sector", ""),
         "score": job.get("score"), "source": job.get("source"),
         "applied_at": int(time.time()), "via": via, "stage": stage,
         "notion_synced": False,

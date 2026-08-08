@@ -755,10 +755,9 @@ function ago(ts){
   return Math.round(d/30) + "mo";
 }
 
-/* ---------- taste model ----------------------------------------------- */
-// This is a recommendation surface, not a second opaque score. Saved and
-// applied roles are the sample; explicit feedback is fixed-category and the
-// deterministic crawler remains the only source of the Radar score.
+/* ---------- learned ranking signals ----------------------------------- */
+// Saved and applied roles are the positive sample for the deterministic Radar
+// score. This page explains the same bounded signals; it is not the scorer.
 const TASTE_STOPWORDS = new Set([
   "engineer","engineering","software","the","and","of","for","a","an",
   "new","grad","early","career","level","full","time","remote","onsite",
@@ -827,7 +826,7 @@ function tasteSimilarityCandidates(sample, savedIds) {
 }
 function tasteContribution(job) {
   const reasons = (job.score_reasons||[]).filter(reason =>
-    /you've engaged with|title matches your history|previously skipped/.test(String(reason)));
+    /you've engaged with|title matches your history|learned (from|role preference|sector preference|company preference|title signals)|explicit (company|title) feedback|previously skipped/.test(String(reason)));
   const points = reasons.reduce((sum, reason) => {
     const m = String(reason).match(/([+-]\d+)(?:$|\s|\))/);
     return sum + (m ? Number(m[1]) : 0);
@@ -1432,7 +1431,7 @@ function rTaste() {
   $("#main").innerHTML = `<section class="testing-hero">
     <span class="chip good">owner only · @${esc(S.auth.login)}</span>
     <h2>My job preferences &amp; similar roles</h2>
-    <p class="sub">This is a transparent summary of your saved and applied roles. It explains small preference signals already present in the Radar score and shows nearby jobs to inspect; it does not replace the Radar score.</p>
+    <p class="sub">The Radar learns bounded preference points from this saved/applied sample — role family, sector, recurring title language, and employers you repeatedly chose. This page explains those points; it does not create a separate score.</p>
   </section>
   <div class="taste-grid">
     <section class="lane"><h3>Your sample · ${sample.length} saved/applied roles</h3>
@@ -1442,12 +1441,12 @@ function rTaste() {
       <h4 style="margin-top:.8rem">Recurring title language</h4>${chips(counts.tokens,"title signals")}
     </section>
     <section class="lane"><h3>What the score is doing</h3>
-      <p class="sub">These are raw utility contributions already present in each job’s auditable reason ledger — not a secret second score.</p>
-      ${shifts.length?`<div class="taste-list">${shifts.map(({job,points,reasons})=>`<div class="taste-role"><b>${esc(job.company)} — ${esc(job.title)}</b><span class="chip ${points>0?'good':'bad'}">taste ${points>0?'+':''}${points} utility</span><p class="sub">Radar ${job.score??"?"} · ${esc(reasons.join(' · '))}</p><button class="act" onclick='openWS("${job.id}")'>open role</button></div>`).join('')}</div>`:'<p class="sub">No stored role has a current taste contribution yet. Save a few roles, then the next rescore will show it here.</p>'}
+      <p class="sub">These are the learned preference contributions already present in each job’s auditable Radar reason ledger.</p>
+      ${shifts.length?`<div class="taste-list">${shifts.map(({job,points,reasons})=>`<div class="taste-role"><b>${esc(job.company)} — ${esc(job.title)}</b><span class="chip ${points>0?'good':'bad'}">learned ${points>0?'+':''}${points} utility</span><p class="sub">Radar ${job.score??"?"} · ${esc(reasons.join(' · '))}</p><button class="act" onclick='openWS("${job.id}")'>open role</button></div>`).join('')}</div>`:'<p class="sub">No stored role has a learned preference contribution yet. Save a few roles, then the next rescore will show it here.</p>'}
     </section>
   </div>
   <section class="lane" style="margin-top:.9rem"><h3>Similar jobs to inspect</h3>
-    <p class="sub">Similarity uses saved company, role field, sector, and meaningful title terms. It is a recommendation aid and does not change the Radar score.</p>
+    <p class="sub">Similarity uses saved company, role field, sector, and meaningful title terms. The Radar score now also uses the bounded learned signals shown above.</p>
     ${similar.length?`<div class="taste-list">${similar.map(({job,score,why})=>`<div class="taste-role"><b>${esc(job.company)} — ${esc(job.title)}</b><span class="chip">similarity ${score}</span><span class="chip">Radar ${job.score??"?"}</span><p class="sub">${esc(why||"shares a saved-role signal")}</p><button class="act" onclick='openWS("${job.id}")'>open role</button></div>`).join('')}</div>`:'<p class="sub">Save or apply to a few roles and this list will become useful.</p>'}
   </section>
   <section class="lane" style="margin-top:.9rem"><h3>Community review queue</h3>
@@ -1662,7 +1661,7 @@ function wsCompany(j, w, c, id) {
 
 function scoreReasonLabel(reason) {
   const text = String(reason||"");
-  const labels = [["base utility","baseline"],["role:","role fit"],["sector:","sector fit"],["new-grad/early-career priority","verified early-career"],["early-career possible","plausible first-role"],["new-grad evidence absent","early-career evidence"],["company tier","company quality"],["explicit goal company","goal-company preference"],["company concentration","company diversity"],["compensation","compensation"],["posted","freshness"],["remote","remote access"],["culture fit","culture evidence"],["SHPE","community signal"],["sponsor history:","DOL sponsor context"],["raw utility","calibration"]];
+  const labels = [["base utility","baseline"],["role:","role fit"],["sector:","sector fit"],["new-grad/early-career priority","verified early-career"],["early-career possible","plausible first-role"],["new-grad evidence absent","early-career evidence"],["company tier","company quality"],["explicit goal company","goal-company preference"],["company concentration","company diversity"],["learned from","learned preferences"],["learned role preference","learned role preference"],["learned sector preference","learned sector preference"],["learned company preference","learned company preference"],["learned title signals","learned title language"],["explicit company feedback","explicit feedback"],["explicit title feedback","explicit feedback"],["compensation","compensation"],["posted","freshness"],["remote","remote access"],["culture fit","culture evidence"],["SHPE","community signal"],["sponsor history:","DOL sponsor context"],["raw utility","calibration"]];
   const found = labels.find(([prefix]) => text.startsWith(prefix));
   return found ? found[1] : "other signal";
 }
@@ -1736,6 +1735,8 @@ function scoreDimensionWhy(j, name, value) {
   }
   if (name === "personal_signal") {
     const signals = [];
+    if (reasons.some(reason => reason.startsWith("learned "))) signals.push("your saved/applied sample");
+    if (reasons.some(reason => reason.startsWith("explicit "))) signals.push("explicit feedback");
     if (reasons.some(reason => reason.startsWith("you've engaged with"))) signals.push("your company history");
     if (reasons.some(reason => reason.startsWith("previously skipped"))) signals.push("a previous skip");
     if (reasons.some(reason => reason.startsWith("title matches your history"))) signals.push("title history");
