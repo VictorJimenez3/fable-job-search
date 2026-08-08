@@ -1,8 +1,9 @@
 # 🎯 Job Radar
 
-A self-expanding, always-on radar for **new-grad AI / SWE / DS roles**, tuned for
-speed (apply within 24h of posting) and personalized ranking (healthtech first,
-big tech second, open to everything good).
+A self-expanding, always-on radar for **new-grad AI / SWE / DS roles**, with a
+separate low-priority PM-family research lane, tuned for speed (apply within
+24h of posting) and personalized ranking (healthtech first, big tech second,
+open to everything good).
 
 **[→ 🖥️ The Platform](https://job-radar-vmj-8946s-projects.vercel.app)**
 (sign in with GitHub once → every click writes instantly) ·
@@ -43,13 +44,21 @@ its stale timestamps keep old listings out of alert email, but do not silently
 remove them from the in-house board. SWEList uses that same New-Grad-Positions
 feed, so it is covered by the same ingestion path.
 
+The PM-family lane uses the existing SimplifyJobs New-Grad-Positions PM section,
+targeted Workday searches on the same company registry, and a PM-only parser for
+the public [Zapply New-Grad Jobs 2027 board](https://github.com/zapplyjobs/New-Grad-Jobs-2027).
+Product manager, technical product manager, product owner, project manager,
+business analyst, UX/UI researcher, and solutions architecture titles are
+dashboard-visible with role weight `0`, never enter alert eligibility, and never
+enter alert email/RSS delivery.
+
 ## How it works
 
 ```
 every ~30 min (GitHub Actions cron)
 │
 ├─ 1. BREADTH: pull new-grad aggregators
-│     [SimplifyJobs/New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) · vanshb03 · jobright-ai (SWE + Data) · speedyapply · [Zapply DS/ML](https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027) · HN Who-is-Hiring
+│     [SimplifyJobs/New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) · vanshb03 · jobright-ai (SWE + Data) · speedyapply · [Zapply DS/ML](https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027) · [Zapply PM breadth](https://github.com/zapplyjobs/New-Grad-Jobs-2027) · HN Who-is-Hiring
 │
 ├─ 2. DISCOVERY: mine every job URL for ATS tokens
 │     (Greenhouse / Lever / Ashby / Workday / SmartRecruiters / Recruitee)
@@ -70,8 +79,8 @@ every ~30 min (GitHub Actions cron)
 │     BMS digital programs, etc.) are a dedicated high-priority path. Marquee
 │     companies, salary, aggregators, and healthtech no longer bypass the
 │     new-grad gate. FIELD FIT still outranks everything: description boilerplate
-│     cannot promote unrelated roles; off-field titles (safeguards/policy/sales/PM/...)
-│     and generic analysts go dashboard-only; mid-level titles (II/L4) and
+│     cannot promote unrelated roles; off-field titles and PM-family roles go
+│     dashboard-only; generic analysts, mid-level titles (II/L4), and
 │     required 1+ years do too. None become alerts. Rule bumps
 │     re-gate the stored jobs automatically (score.RULES_VERSION).
 │     Optional configured-LLM re-rank + per-job application angle.
@@ -383,7 +392,9 @@ company by commenting `culture <company>` on an alert issue.
 
 Everything subjective lives in [`profile.yaml`](profile.yaml): sector weights,
 role weights, alert threshold, freshness bonuses, location policy, the
-narrative Claude uses. Edit and push — next run picks it up. Seed companies:
+narrative Claude uses, and explicit favorite score overrides. PM-family weight
+is intentionally zero and its no-alert behavior is a gate, not a notification
+setting. Edit and push — next run picks it up. Seed companies:
 [`data/companies_seed.yaml`](data/companies_seed.yaml).
 
 ## Operating notes

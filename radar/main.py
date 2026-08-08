@@ -33,6 +33,7 @@ AGG_SOURCES = {
     "jobright": aggregators.fetch_jobright,
     "speedyapply": aggregators.fetch_speedyapply,
     "zapply": aggregators.fetch_zapply,
+    "zapply_pm": aggregators.fetch_zapply_pm,
     "hn": hn.fetch_hn,
 }
 

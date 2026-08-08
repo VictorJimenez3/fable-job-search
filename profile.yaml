@@ -38,7 +38,16 @@ roles:
   data_science: 23
   swe: 20
   data_eng: 17
-  # titles must match at least one bucket to be considered a tech role at all
+  pm: 0             # visible dashboard research lane; never alertable
+  # titles must match at least one bucket to be considered a target role at all
+
+# Explicit favorites are data, not company-name branches in radar/score.py.
+# PM-family roles are excluded so the friend-facing lane stays low.
+score_overrides:
+  - company: Google
+    when: new_grad
+    score: 100
+    exclude_buckets: [pm]
 
 sectors:
   healthtech: 16
@@ -202,6 +211,10 @@ workday_queries:             # search terms used against Workday tenants
   - graduate program
   - rotational program
   - emerging talent
+  - product manager
+  - product owner
+  - business analyst
+  - solutions architect
 
 notion:
   # database_id is no longer used for lookup — the Applications database is
