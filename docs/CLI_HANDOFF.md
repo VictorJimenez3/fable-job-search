@@ -77,6 +77,8 @@ Before changing the radar, read these in order:
   publish stale score versions. Explicit full-time-only wording without
   internship/student evidence is review-only, capped below the board threshold,
   and never alerted; ambiguous roles remain discoverable.
+  If an external source crawl stalls, dispatch `internship-radar` with its
+  `rescore_only` input to migrate the stored snapshot without fetching sources.
 - **Google preference:** `profile.yaml` contains a data-driven score override
   that makes Google technical new-grad roles `100`, with `pm` explicitly
   excluded. The reason is printed in `score_reasons`; rules version is now 12.
