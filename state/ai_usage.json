@@ -1,58 +1,23 @@
 {
  "events": [
   {
-   "at": "2026-08-08T12:48:41+00:00",
-   "completion_tokens": 1151,
+   "at": "2026-08-08T12:51:31+00:00",
+   "completion_tokens": 1265,
    "detail": "",
    "endpoint": "local",
    "lane": "local",
-   "latency_ms": 152065,
+   "latency_ms": 151663,
    "max_tokens": 2200,
    "model": "qwen2.5:32b",
-   "prompt_chars": 5409,
-   "prompt_tokens": 1528,
+   "prompt_chars": 4545,
+   "prompt_tokens": 1101,
    "selected": true,
    "status": "ok",
    "task": "company_research"
   }
  ],
- "generated_at": 1786193321,
+ "generated_at": 1786193491,
  "history": [
-  {
-   "attempts": [
-    {
-     "at": "2026-08-08T09:33:08+00:00",
-     "completion_tokens": 1208,
-     "detail": "",
-     "endpoint": "local",
-     "lane": "local",
-     "latency_ms": 146808,
-     "max_tokens": 2200,
-     "model": "qwen2.5:32b",
-     "prompt_chars": 3186,
-     "prompt_tokens": 1186,
-     "selected": true,
-     "status": "ok",
-     "task": "company_research"
-    }
-   ],
-   "generated_at": 1786181588,
-   "logical_calls": 1,
-   "models": {
-    "local": {
-     "errors": 0,
-     "model": "qwen2.5:32b",
-     "ok": 1,
-     "requests": 1,
-     "tokens": 2394
-    }
-   },
-   "provider": "local",
-   "requests": 1,
-   "task_calls": {
-    "company_research": 1
-   }
-  },
   {
    "attempts": [
     {
@@ -2165,6 +2130,41 @@
    "task_calls": {
     "company_research": 1
    }
+  },
+  {
+   "attempts": [
+    {
+     "at": "2026-08-08T12:51:31+00:00",
+     "completion_tokens": 1265,
+     "detail": "",
+     "endpoint": "local",
+     "lane": "local",
+     "latency_ms": 151663,
+     "max_tokens": 2200,
+     "model": "qwen2.5:32b",
+     "prompt_chars": 4545,
+     "prompt_tokens": 1101,
+     "selected": true,
+     "status": "ok",
+     "task": "company_research"
+    }
+   ],
+   "generated_at": 1786193491,
+   "logical_calls": 1,
+   "models": {
+    "local": {
+     "errors": 0,
+     "model": "qwen2.5:32b",
+     "ok": 1,
+     "requests": 1,
+     "tokens": 2366
+    }
+   },
+   "provider": "local",
+   "requests": 1,
+   "task_calls": {
+    "company_research": 1
+   }
   }
  ],
  "limits": {
@@ -2178,7 +2178,7 @@
    "model": "qwen2.5:32b",
    "ok": 1,
    "requests": 1,
-   "tokens": 2679
+   "tokens": 2366
   }
  },
  "provider": "local",
