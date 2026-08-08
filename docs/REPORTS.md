@@ -5,4 +5,5 @@
 
 | reporters | posting | report types | owner review |
 | ---: | --- | --- | --- |
-| 0 | No reports yet |  |  |
+| 1 | Apple — Generative AI Applied Scientist, SIML... | other | watch |
+|  | reporters: @VictorJimenez3 |  |  |
