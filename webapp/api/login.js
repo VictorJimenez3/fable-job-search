@@ -1,6 +1,8 @@
 const crypto = require("crypto");
 const { envv, seal, needSetup, needSessionSetup, session, CANON_HOST,
-  requestHost, authReturnHost, GOOGLE_AUTH_CLIENT_ID, googleAuthConfigured } = require("./_lib");
+  requestHost, authReturnHost, sessionHandoffLocation,
+  authLog,
+  GOOGLE_AUTH_CLIENT_ID, googleAuthConfigured } = require("./_lib");
 
 function b64url(buffer) { return buffer.toString("base64url"); }
 function pkce() {
@@ -21,6 +23,9 @@ module.exports = (req, res) => {
   const returnHost = currentHost === CANON_HOST
     ? authReturnHost(req.query?.return_host)
     : authReturnHost(currentHost);
+  const current = currentHost === CANON_HOST ? session(req) : null;
+  authLog("login", {host: currentHost, provider, mode, returnHost: returnHost || "",
+    hasSession: Boolean(current), redirectedToCanonical: currentHost !== CANON_HOST});
   if (currentHost !== CANON_HOST) {
     const forwarded = new URLSearchParams({provider});
     if (mode === "link") forwarded.set("mode", "link");
@@ -30,9 +35,9 @@ module.exports = (req, res) => {
     res.end();
     return;
   }
-  if (mode === "login" && session(req)) {
+  if (mode === "login" && current) {
     const destination = returnHost
-      ? `https://${returnHost}/?auth=already-signed-in`
+      ? sessionHandoffLocation(returnHost, current, "already-signed-in")
       : "/?auth=already-signed-in";
     res.writeHead(302, {Location: destination});
     res.end();

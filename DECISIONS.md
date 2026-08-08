@@ -1596,3 +1596,20 @@ for its own httpOnly/Secure session cookie; provider tokens never enter the
 frontend, URL, or localStorage. The frontend also attempts the same handoff on
 boot so an existing old-host session becomes available when someone simply
 opens the shortcut. Signing out clears the callback host and the shortcut.
+
+## 106. Make the alias handoff independent of browser cross-site cookie policy (2026-08-08)
+
+The first alias-sync implementation used a credentialed fetch from the
+memorable Vercel URL to the callback host. That is valid server logic, but
+browser cookie policy can withhold the callback host's `SameSite=Lax` cookie
+from that cross-origin request. In production the symptom was a loop of
+`/api/login` → `/api/me` → `/api/session-handoff` with no OAuth callback and no
+authenticated alias session.
+
+The callback host now seals the freshly established session into a 60-second
+fragment ticket when it returns to an alias. The existing-session path uses the
+same ticket, so GitHub and Google both follow one transport. The alias removes
+the fragment with `history.replaceState` before exchanging it, and the ticket
+contains only the encrypted session payload—not a provider token in plaintext.
+The credentialed GET remains as a best-effort convenience for a plain visit to
+the alias, but login completion no longer depends on it.

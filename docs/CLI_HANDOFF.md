@@ -139,8 +139,9 @@ Before changing the radar, read these in order:
   (`job-radar-newgrad.vercel.app` — the memorable public shortcut; the
   existing `job-radar-vmj-8946s-projects.vercel.app` URL remains active for
   GitHub OAuth and old bookmarks, with instant writes). Both Vercel doors now
-  exchange a short-lived encrypted session handoff, so an existing old-host
-  login is recognized on the shortcut and sign-out clears both hosts. GitHub
+  exchange a short-lived encrypted session handoff in a cleared redirect
+  fragment, so an existing old-host login is recognized on the shortcut even
+  when cross-host cookies are blocked, and sign-out clears both hosts. GitHub
   Pages
   (victorjimenez3.github.io/fable-job-search/platform/ — tokenless, what
   forks get). `webapp/index.html` is canonical; `docs/platform/index.html`

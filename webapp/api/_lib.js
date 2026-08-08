@@ -50,6 +50,15 @@ function authReturnHost(value) {
   const host = authHost(value);
   return host && host !== CANON_HOST ? host : "";
 }
+function sessionHandoffLocation(host, payload, authState = "connected") {
+  const target = authReturnHost(host);
+  if (!target || !payload) return "";
+  const ticket = seal({kind: "job-radar-session-handoff", t: Date.now(), target, session: payload});
+  // A fragment is not sent in HTTP requests or referrers. The frontend
+  // consumes it once, clears it with replaceState, then POSTs the opaque
+  // ticket to the target host to mint its own httpOnly cookie.
+  return `https://${target}/?auth=${encodeURIComponent(authState)}#session_handoff=${encodeURIComponent(ticket)}`;
+}
 
 // Google login uses a separate OAuth web client when available. Falling back
 // to the Sheets client keeps one-person deployments simple, but that client
@@ -95,6 +104,9 @@ function clearSessionCookies() {
     "jr_go=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0",
   ];
 }
+function authLog(event, details = {}) {
+  try { console.info(`[job-radar auth] ${event}`, details); } catch {}
+}
 
 function needSetup(res) {
   const missing = ["GH_CLIENT_ID", "GH_CLIENT_SECRET", "SESSION_SECRET"]
@@ -132,5 +144,7 @@ module.exports = { OWNER, REPO, BRANCH, PROFILE, AUTH_MODE, envv, seal, unseal,
                    VALID_PROFILES, normalizeProfile,
                    CANON_HOST, GOOGLE_AUTH_CLIENT_ID, GOOGLE_AUTH_CLIENT_SECRET,
                    googleAuthConfigured, requestHost, authHost, authReturnHost,
+                   sessionHandoffLocation,
                    session, sessionCookies, clearSessionCookies,
+                   authLog,
                    needSetup, needSessionSetup, gh };
