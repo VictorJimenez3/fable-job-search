@@ -1,6 +1,6 @@
 # 🎯 Job Radar — internship dashboard
 
-_Last run: **2026-08-08 18:58 UTC** · companies polled directly: **21** (registry 335) · jobs tracked: **2831** · new this run: **1625** · alerts this run: **6**_
+_Last run: **2026-08-08 19:02 UTC** · companies polled directly: **38** (registry 435) · jobs tracked: **3344** · new this run: **513** · alerts this run: **8**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -53,6 +53,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 65  | 3d | TikTok | [Machine Learning Engineer Intern - Data-Global E-Commerce-Search](https://lifeattiktok.com/search/7668415591670417717) | Seattle, WA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 65  | 3d | General Dynamics Information Technolog | [Artificial Intelligence/Machine Learning Intern](https://gdit.wd5.myworkdayjobs.com/external_career_site/job/USA-VA-Falls-Church---3150-Fairview-Park-Dr-VAS095/GDIT-2027-Summer-AI---ML-Internship_RQ225401) | Falls Church, VA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 65  | 3d | RTX | [Machine Learning Researcher Intern/Co-op](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-CT-EAST-HARTFORD-RTRC-K--411-Silver-Ln--RTRC-K/Fall-2026--Intern-Coop--Machine-Learning-Researcher_01864471) | East Hartford, CT | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
+| 65  | 3d | Cloudflare | [U.S. Public Policy and AI Innovation Intern (Fall 2026)](https://boards.greenhouse.io/cloudflare/jobs/8105728?gh_jid=8105728) | In-Office | big_tech | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/cloudflare) |
 | 65  | 4d | Microsoft | [Software Engineer: AI/ML & LLM Intern Opportunities for University Stu](https://apply.careers.microsoft.com/careers/job/1970393556922929) | Washington, DC | big_tech | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 65  | 4d | TikTok | [Research Engineer Intern - Agentic Systems & AI Infrastructure - Tikto](https://lifeattiktok.com/search/7667935568626043141) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 65  | 4d | TikTok | [Machine Learning Engineer Intern - Commerce Ads - Summer 2027](https://lifeattiktok.com/search/7669711968043092229) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
@@ -106,6 +107,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 10d | Cloudflare | [Research Engineer Intern](https://boards.greenhouse.io/cloudflare/jobs/8089379) | Austin, TX | big_tech | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 64  | 10d | Modal | [Machine Learning Research Intern](https://jobs.ashbyhq.com/modal/38888294-6bc7-4dab-b072-6d0f0c2ed79a/application?embed=true) | SF | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 64  | 10d | Tesla | [Charging Data Modeling Intern - Charging Data Modeling - Machine Learn](https://www.tesla.com/careers/search/job/278249) | Palo Alto, CA | big_tech | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
+| 64  | 11d | Cloudflare | [Research Engineer Intern (Fall 2026)](https://boards.greenhouse.io/cloudflare/jobs/8089379?gh_jid=8089379) | In-Office | big_tech | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/cloudflare) |
 | 64  | 11d | LUZCO TECHNOLOGIES LLC | [AI Solutions Co-op](https://recruiting.paylocity.com/Recruiting/Jobs/Details/4361617) | St. Louis, MO | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 64  | 11d | Prophet | [AI Engineer Intern - AI Foundry & Digital Growth](https://job-boards.greenhouse.io/prophet/jobs/4689859005) | NYC | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 64  | 12d | Nokia | [Architecture AI Co-op](https://fa-evmr-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/36722) | Naperville, IL | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
@@ -148,13 +150,11 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | ? | Rivian and Volkswagen Group Technologi | [Data Engineering Intern - AI & Analyt...](https://jobs.ashbyhq.com/rivianvw.tech/3864f83a-7b29-4c96-b00e-436d60c0508a) | Palo Alto, California | other | — | [Zapply internship board](https://github.com/zapplyjobs/Internships-2027) |
 | 64  | ? | Yotta Labs | [Research Engineer Intern - AI Systems](https://jobs.ashbyhq.com/yotta/09821a51-fbe6-42a7-a566-0d2b5d40fae3) | United States | other | — | [Zapply internship board](https://github.com/zapplyjobs/Internships-2027) |
 | 64  | ? | Intuitive | [Computer Vision Engineering Intern - ...](https://jobs.smartrecruiters.com/Intuitive/744000133458290) | Sunnyvale, CA | other | — | [Zapply internship board](https://github.com/zapplyjobs/Internships-2027) |
+| 64  | ? | Intel | [AI Software Engineering Intern](https://intel.wd1.myworkdayjobs.com/External/job/US-Arizona-Phoenix/AI-Software-Engineering-Intern_JR0282641) | US, Arizona, Phoenix | other | — | [Zapply internship board](https://github.com/zapplyjobs/Internships-2027) |
 | 64  | ? | Fortinet | [AI Intern](https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/22741) | Sunnyvale, CA, United ... | other | — | [Zapply internship board](https://github.com/zapplyjobs/Internships-2027) |
 | 64  | ? | Together AI | [Systems Research Engineer Intern - GP...](https://job-boards.greenhouse.io/togetherai/jobs/5157559007) | San Francisco | ai_lab | — | [Zapply internship board](https://github.com/zapplyjobs/Internships-2027) |
 | 64  | ? | Institute for Foundation Models | [AI Research Internship - WM](https://jobs.lever.co/ifm-us/3eec355c-6dde-4a3e-8cdf-b2a8930d5678) | Sunnyvale, CA | other | — | [Zapply internship board](https://github.com/zapplyjobs/Internships-2027) |
 | 64  | ? | IMC Trading | [Machine Learning Research Intern - Su...](https://job-boards.eu.greenhouse.io/imc/jobs/4907430101) | Chicago, United States | other | — | [Zapply internship board](https://github.com/zapplyjobs/Internships-2027) |
 | 64  | ? | PlusAI | [Machine Learning Engineer Intern](https://jobs.lever.co/plus-2/5d71c173-fef1-409f-b3f0-750e3b828266) | Santa Clara, CA | other | — | [Zapply internship board](https://github.com/zapplyjobs/Internships-2027) |
-| 64  | ? | Workato | [Intern, AI Engineering](https://www.workato.com/careers?gh_jid=8492935002#open-roles) | San Francisco, California | other | — | [Zapply internship board](https://github.com/zapplyjobs/Internships-2027) |
-| 64  | ? | Eragon | [Applied AI Intern](https://jobs.ashbyhq.com/eragon/0b90ea4a-8684-4ae1-a7cc-c998db6e862e) | San Francisco | other | — | [Zapply internship board](https://github.com/zapplyjobs/Internships-2027) |
-| 64  | ? | ByteDance | [AI Network Automation Engineer intern...](https://joinbytedance.com/search/7670690923748870405) | San Jose, California | other | — | [Zapply internship board](https://github.com/zapplyjobs/Internships-2027) |
 
 _150 roles shown (score ≥ 35, posted ≤30d)._
