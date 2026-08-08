@@ -27,15 +27,23 @@ later; GitHub Pages cannot provide this private multi-user mode.
 
 1. Create or select a project in Google Cloud Console.
 2. Enable **Google Sheets API** and **Google Drive API**.
-3. Configure the OAuth consent screen. Add the Google account that will own the
-   tracker as a test user if the app remains in testing.
-4. Create a **Web application** OAuth client and register
+3. Configure the OAuth consent screen as an **External** app. Under **Data
+   Access**, add only `https://www.googleapis.com/auth/drive.file`; do not add
+   the broader `spreadsheets` scope. `drive.file` is Google's recommended
+   non-sensitive, per-file scope for an app that creates and manages its own
+   Sheets workbook.
+4. Set the publishing status to **In production**. This is what makes the
+   OAuth client available to arbitrary Google accounts; a test-user list is
+   only for development. Google may still request basic brand verification if
+   you want the app's name/logo shown on the consent screen, but this narrow
+   scope avoids sensitive-scope verification.
+5. Create a **Web application** OAuth client and register
    `https://<your-canon-host>/api/google-callback` as an authorized redirect URI.
-5. The Vercel login flow requests `openid email profile` plus
-   `https://www.googleapis.com/auth/spreadsheets` with offline access. Each user
+6. The Vercel login flow requests `openid email profile` plus
+   `https://www.googleapis.com/auth/drive.file` with offline access. Each user
    consents once; the resulting refresh token is used to create and maintain
-   that user's own workbook. No user runs the local creator command.
-6. The owner-only local command remains available for the legacy automation
+   only that user's own workbook. No user runs the local creator command.
+7. The owner-only local command remains available for the legacy automation
    workbook and metadata registry:
 
    ```bash

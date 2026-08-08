@@ -42,10 +42,11 @@ module.exports = (req, res) => {
       `jr_go=${state}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=600`);
     const params = new URLSearchParams({client_id: GOOGLE_AUTH_CLIENT_ID(),
       redirect_uri: redirect, response_type: "code",
-      // Google identity and Sheets access are one explicit consent flow. The
-      // refresh token is needed to keep the user's own tracker working after
-      // the short-lived access token expires.
-      scope: "openid email profile https://www.googleapis.com/auth/spreadsheets",
+      // Google identity and the user's per-file Sheets access are one explicit
+      // consent flow. drive.file is the least-privilege scope: the backend
+      // creates and maintains only this app's tracker workbook, rather than
+      // requesting access to every spreadsheet in the user's Drive.
+      scope: "openid email profile https://www.googleapis.com/auth/drive.file",
       access_type: "offline", include_granted_scopes: "true", state,
       code_challenge: challenge, code_challenge_method: "S256",
       prompt: "consent select_account"});

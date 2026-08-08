@@ -183,11 +183,13 @@ Before changing the radar, read these in order:
 - **Google tracker creation + multi-user sign-in:**
   `python -m radar.main create-google-tracker` creates the owner metadata and
   legacy automation workbook. The Vercel platform offers GitHub and Google
-  OAuth; Google consent includes Sheets access and creates one Applications
-  workbook in that user's own Drive. GitHub users can explicitly connect Google
-  later from the Tutorial account center. The private Accounts registry stores
-  only encrypted refresh-token ciphertext and Sheet IDs; `/api/tracker` reads
-  only the current user's workbook. `GOOGLE_ACCOUNT_SHEET_TAB` remains
+  OAuth; Google consent requests the least-privilege `drive.file` scope and
+  creates one Applications workbook in that user's own Drive. The Google Cloud
+  OAuth app must be External + In production; a test-user list is not the public
+  deployment path. GitHub users can explicitly connect Google later from the
+  Tutorial account center. The private Accounts registry stores only encrypted
+  refresh-token ciphertext and Sheet IDs; `/api/tracker` reads only the current
+  user's workbook. `GOOGLE_ACCOUNT_SHEET_TAB` remains
   `Accounts`; `GOOGLE_PERSONAL_SHEET_TAB` defaults to `Applications`. Pages and
   tokenless issue mode remain owner-only.
 - **Multi-user = fork-per-person** (DECISIONS #25, docs/FORKING.md). Owner

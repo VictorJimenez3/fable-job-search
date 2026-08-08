@@ -363,8 +363,9 @@ Optional upgrades:
 - Prefer Google Workspace to Notion? The Google Sheets tracker adapter is
   complete. Run `python -m radar.main create-google-tracker` once only for the
   owner metadata/automation workbook. On the Vercel platform, Google sign-in
-  or **Connect Google + create my Sheet** requests Sheets permission and creates
-  a separate Applications workbook in that user's Google Drive. The backend
+  or **Connect Google + create my Sheet** requests the least-privilege
+  `drive.file` permission and creates a separate Applications workbook in that
+  user's Google Drive. The backend
   stores only encrypted token metadata in the private Accounts registry and
   never exposes another user's rows or token.
   Setup is documented in [docs/GOOGLE_SHEETS_SETUP.md](docs/GOOGLE_SHEETS_SETUP.md).

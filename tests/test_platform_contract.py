@@ -46,7 +46,8 @@ def test_platform_exposes_oauth_account_center_and_tutorial():
     assert "Tracker & Sheets" in html
     assert "Connect Google" in html
     assert "openid email profile" in api
-    assert "https://www.googleapis.com/auth/spreadsheets" in api
+    assert "https://www.googleapis.com/auth/drive.file" in api
+    assert "https://www.googleapis.com/auth/spreadsheets" not in api
     assert "Google Sheet ID" in helper
     assert "code_challenge_method" in api
     assert "no password" in html.lower()

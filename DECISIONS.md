@@ -1335,3 +1335,19 @@ gated.
 Victor also explicitly chose Google technical new-grad roles to display at
 100. That is a profile-configured, auditable score override excluded for PM
 roles, so the friend-facing PM lane remains low even at Google.
+
+## 88. Public Google tracker OAuth uses per-file access (2026-08-08)
+
+The public Vercel flow must work for arbitrary Google accounts, not only an
+allowlisted development tester. The user-owned tracker only needs to create and
+maintain the workbook Job Radar creates, so the OAuth request now uses Google's
+least-privilege `drive.file` scope instead of the broader sensitive
+`spreadsheets` scope. Google Sheets create/read/write endpoints support
+`drive.file`; the backend never needs to list or access a user's other Sheets.
+
+The required Google-side state is External + In production with `drive.file`
+listed in Data Access. This is a product/privacy improvement, not a test-user
+bypass: users authorize their own workbook, and Google can still apply its
+basic brand-verification requirements. Existing users must consent again after
+the scope change; no new client, API key, or refresh-token architecture is
+needed.

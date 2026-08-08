@@ -54,8 +54,8 @@ system as a website, refreshed automatically by every crawl:
   coverage, scout status, and registry stats.
 
 Reading needs nothing. On Vercel, use **Tutorial → Accounts & login** to sign
-in with GitHub or Google. Google consent includes Sheets access and creates your
-personal workbook; if you started with GitHub, use **Connect Google + create my
+in with GitHub or Google. Google consent includes per-file Sheets access and
+creates your personal workbook; if you started with GitHub, use **Connect Google + create my
 Sheet** from the same signed-in session. There is no password login. On the Pages mirror, buttons use prefilled GitHub issues by default;
 the optional Settings token enables instant writes and cross-device notes.
 The private Google-backed tracker is one workbook per connected Google account;
