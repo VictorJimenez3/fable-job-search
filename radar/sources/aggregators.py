@@ -178,7 +178,7 @@ _ZAPPLY_GENERAL_ROW = re.compile(
     r"\s*\*{0,2}([^|*]+?)\*{0,2}\s*\|\s*([^|]+?)\s*\|"
     r".*?\((https?://[^)]+)\)", re.M)
 _PM_TITLE = re.compile(
-    r"\b(?:a?pm|associate\s+product\s+manager|technical\s+product\s+manager|"
+    r"\b(?:apm|associate\s+product\s+manager|technical\s+product\s+manager|"
     r"product\s+(?:manager|owner|management)|project\s+manager|"
     r"business(?:\s+systems)?\s+analyst|"
     r"(?:ux\s*/\s*ui|ux|ui|user\s+experience|user\s+interface)\s+(?:researcher|research)|"

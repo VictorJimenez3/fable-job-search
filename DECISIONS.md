@@ -1446,3 +1446,13 @@ most relevant companies to the front of both probe and polling order.
 This is an operational bound, not a ranking change: PM weight remains `0`, PM
 rows remain dashboard-only with `alert_ok=false`, and no PM row enters email,
 alert-issue, batch, or RSS delivery.
+
+## 94. Require explicit PM-family wording for abbreviation matches (2026-08-08)
+
+The first production PM harvest exposed a small precision bug: matching the
+standalone abbreviation `PM` also classified maintenance and shift titles such
+as “PM Technician” and “PM Shift” as product/project-management roles. The PM
+matcher now accepts `APM` plus the explicit Product Manager, Product Owner,
+Product Management, Project Manager, analyst, researcher, and architect forms
+requested for this lane. This removes false PM labeling without changing the
+weight or notification behavior of genuine PM-family postings.
