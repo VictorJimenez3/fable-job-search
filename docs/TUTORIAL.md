@@ -191,15 +191,17 @@ Drafts, prompts, source context, PDFs, and review reports live only under
 application material. The system preserves the master CV as the evidence bank
 and never auto-submits a resume. Use **Resume bank** in the header to revisit
 any saved run or legacy experiment; selecting another posting does not remove
-the previous result. New PDFs use a company-identifiable name such as
+the previous result. Select **View audit** on a saved run to rehydrate the
+same visual audit used for new runs. New PDFs use a company-identifiable name such as
 `mayo_clinic_resume_ai.pdf`, and the preview response preserves that name when
 the file is opened or downloaded. Project headings use `|` separators. TICC is
 never emitted by generation or workshop editing, even when it appears in a
 local historical source; the source files themselves are not changed. Each new
 run stores a private posting snapshot beside its artifacts.
 
-For an AI-enhanced run, the report's **What changed** block lists rewritten
-source lines and project swaps, while **ATS terms** shows exact supported terms
+For an AI-enhanced run, the report's **What changed** block lists meaningful
+rewritten source lines and project swaps; near-copy paraphrases are suppressed
+and the authorized source wording is retained. **ATS terms** shows exact supported terms
 that made it into the rendered draft, supported terms still missing, and
 requirements your evidence cannot support. Space QA labels unused width as
 roomy lines instead of confusing it with whitespace or a wrap. If the posting
