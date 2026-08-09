@@ -9,7 +9,7 @@ the LLM quality pass layers on top when a provider is available.
 
 Stored on the record as rec["posting"]:
   {analyzed_at, fetched (bool), fetch_status, sponsorship: yes|no|unknown,
-   sponsorship_note, years_min, years_note, education_required,
+   sponsorship_note, years_min, years_note, education_required (bachelors|masters|phd),
    education_note, education_mismatch, intern_counts}
 Alert effects (demote-only, reasons logged):
   - years_min >= 1          -> alert_ok False ("wants N+ yrs") and a large
@@ -75,7 +75,7 @@ INTERN_COUNTS_RE = re.compile(
     r"academic,?\s+internship|internship,?\s+academic)", re.I)
 
 DEGREE_TERMS_RE = re.compile(
-    r"\b(ph\.?d\.?|doctorate|doctoral|master(?:'s|s)?|m\.?s\.?|m\.?sc\.?|"
+    r"\b(bachelor(?:'s|s)?|b\.?s\.?|undergraduate|ph\.?d\.?|doctorate|doctoral|master(?:'s|s)?|m\.?s\.?|m\.?sc\.?|"
     r"graduate\s+degree|advanced\s+degree)\b", re.I)
 EDUCATION_REQUIRED_RE = re.compile(
     r"\b(required|required for|must have|must hold|minimum of|minimum|"
@@ -91,6 +91,8 @@ def _degree_level(term: str) -> str:
     low = term.lower().replace(".", "")
     if "phd" in low or "doctor" in low:
         return "phd"
+    if "bachelor" in low or low in {"bs", "undergraduate"}:
+        return "bachelors"
     return "masters"
 
 
@@ -186,7 +188,18 @@ def reapply(rec: dict) -> None:
         label = "PhD" if degree == "phd" else "master's degree"
         line = f"posting: requires {label} (bachelor's profile) (dashboard only) -{penalty}"
         if line not in reasons:
-            rec["score"] = max(0, rec.get("score", 0) - penalty)
+            before = rec.get("score", 0)
+            rec["score"] = max(0, before - penalty)
+            # Keep a strong mismatch visible for human review. It remains
+            # dashboard-only and the penalty is still substantial; weaker
+            # roles are not lifted just because they need a higher degree.
+            floor = int(profile().get("thresholds", {}).get("dashboard", 45))
+            if before >= floor and rec["score"] < floor:
+                lift = floor - rec["score"]
+                rec["score"] = floor
+                reasons.append(
+                    f"posting: degree mismatch visibility floor +{lift} (still dashboard-only)"
+                )
             reasons.append(line)
     if p.get("sponsorship") == "no" and needs_sponsorship() and rec.get("alert_ok"):
         rec["alert_ok"] = False

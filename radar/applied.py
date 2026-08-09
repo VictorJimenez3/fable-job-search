@@ -21,7 +21,7 @@ import re
 import time
 
 from . import state
-from .config import env
+from .config import env, profile_id
 from .models import norm
 from .notion_sync import sync_applied, sync_from_notion
 from .score import update_feedback_from_applied
@@ -81,6 +81,7 @@ def culture_generate_one(name: str, dossiers: dict) -> bool:
 def record_applied(job: dict, applied: list, fb: dict, via: str, stage: str = "applied") -> bool:
     existing = next((a for a in applied if a["id"] == job["id"]), None)
     if existing:
+        existing.setdefault("profile", job.get("profile") or profile_id())
         # An applied signal promotes a saved entry; anything else is a dupe.
         if stage == "applied" and existing.get("stage", "applied") != "applied":
             existing["stage"] = "applied"
@@ -93,6 +94,7 @@ def record_applied(job: dict, applied: list, fb: dict, via: str, stage: str = "a
         "url": job.get("url", ""), "locations": job.get("locations", []),
         "sector": job.get("sector", ""),
         "score": job.get("score"), "source": job.get("source"),
+        "profile": job.get("profile") or profile_id(),
         "applied_at": int(time.time()), "via": via, "stage": stage,
         "notion_synced": False,
     })
@@ -302,7 +304,12 @@ def reconcile_checkboxes() -> int:
         if not issues:
             break
         for issue in issues:
-            checked |= set(CHECKED.findall(issue.get("body") or ""))
+            issue_labels = {label.get("name") for label in issue.get("labels", [])}
+            issue_body = issue.get("body") or ""
+            is_internship = "radar-internships" in issue_labels or "radar-profile: internship" in issue_body
+            if (profile_id() == "internship") != is_internship:
+                continue
+            checked |= set(CHECKED.findall(issue_body))
             if issue.get("comments"):
                 cr = requests.get(issue["comments_url"], params={"per_page": 100},
                                   headers=headers, timeout=30)

@@ -11,7 +11,7 @@ from __future__ import annotations
 import time
 from pathlib import Path
 
-from .config import DOCS_DIR
+from .config import DOCS_DIR, profile_id
 from .models import norm
 from .score import FEEDBACK_STOPWORDS, _title_tokens
 
@@ -175,7 +175,8 @@ def render_report(feedback: dict) -> str:
 
 
 def write_report(feedback: dict, path: Path | None = None) -> Path:
-    destination = path or (DOCS_DIR / "FEEDBACK.md")
+    destination = path or (DOCS_DIR / "internships" / "FEEDBACK.md"
+                           if profile_id() == "internship" else DOCS_DIR / "FEEDBACK.md")
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(render_report(feedback))
     return destination

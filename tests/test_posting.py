@@ -58,6 +58,14 @@ def test_analyze_required_degree_and_bachelor_mismatch():
     assert a["education_mismatch"] is True
 
 
+def test_analyze_required_bachelors_degree():
+    text = ("Bachelor's degree in computer science is required. "
+            "The team builds production systems. " + PAD)
+    a = posting.analyze(text)
+    assert a["education_required"] == "bachelors"
+    assert a["education_mismatch"] is False
+
+
 def test_preferred_degree_does_not_trigger_mismatch():
     text = ("Master's degree preferred; bachelor's degree or equivalent is accepted. "
             "The team builds production systems. " + PAD)
@@ -90,8 +98,9 @@ def test_apply_demotes_degree_mismatch_heavily():
                                "education_required": "phd",
                                "education_mismatch": True}, fetched=True, now=NOW)
     assert rec["alert_ok"] is False
-    assert rec["score"] == 30
+    assert rec["score"] == 45
     assert any("requires PhD" in r and "-60" in r for r in rec["score_reasons"])
+    assert any("visibility floor" in r for r in rec["score_reasons"])
 
 
 def test_apply_keeps_zero_to_two_new_grad_range():

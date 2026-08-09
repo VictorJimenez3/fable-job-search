@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.client_payload.profile == 'cheme' && 'claude/cheme-intern-radar' || 'claude/newgrad-job-search-system-9gbj9k' }}
+          ref: ${{ github.event.client_payload.profile == 'cheme' && 'claude/cheme-intern-radar' || github.event.repository.default_branch }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -33,6 +33,7 @@ jobs:
           GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
           GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
           GOOGLE_SHEET_TAB: ${{ vars.GOOGLE_SHEET_TAB }}
+          RADAR_PROFILE: ${{ github.event.client_payload.profile == 'internship' && 'internship' || github.event.client_payload.profile == 'cheme' && 'cheme' || 'new_grad' }}
           # The research action is owner-only at the Vercel boundary; hosted
           # model credentials remain workflow secrets and are never sent to a
           # visitor's browser.
@@ -59,7 +60,7 @@ jobs:
         run: |
           git config user.name "job-radar[bot]"
           git config user.email "radar@users.noreply.github.com"
-          git add state docs/FEEDBACK.md
+          git add state docs/FEEDBACK.md docs/internships/FEEDBACK.md
           if git diff --cached --quiet; then
             echo "no changes"; exit 0
           fi

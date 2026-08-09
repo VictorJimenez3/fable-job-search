@@ -1,12 +1,13 @@
 # 🎯 Job Radar
 
-A self-expanding, always-on radar for **new-grad AI / SWE / DS roles**, with a
-separate low-priority PM-family research lane, tuned for speed (apply within
-24h of posting) and personalized ranking (healthtech first, big tech second,
-open to everything good).
+A self-expanding, always-on radar for **new-grad AI / SWE / DS roles** plus a
+separate technical **internship lane**, with a low-priority PM-family research
+lane inside new-grad. New-grad remains the default and highest-priority
+compute path; internships have their own sources, state, cadence, tracker tab,
+and notification setting.
 
-**[→ 🖥️ The Platform](https://job-radar-vmj-8946s-projects.vercel.app)**
-(sign in with GitHub once → every click writes instantly) ·
+**[→ 🖥️ The Platform](https://job-radar-newgrad.vercel.app)**
+(easy public shortcut; existing Vercel URL remains active) ·
 **[→ 🧪 ChemE internship board](https://job-radar-cheme.vercel.app)**
 (independent jobs and pipeline; same Notion Applications database) ·
 **[→ Pages mirror](https://victorjimenez3.github.io/fable-job-search/platform/)**
@@ -20,9 +21,13 @@ open to everything good).
 **[→ RSS feed](docs/feed.xml)** ·
 **[→ Cross-CLI handoff notes](docs/CLI_HANDOFF.md)**
 
-The platform is now decision-first: filter by role family, sponsorship, and
-required experience; see honest eligibility facts before opening a posting;
-then use one primary apply link with explicit To apply/Applied tracking. In the
+The platform is now decision-first: filter by role family, sponsorship,
+required experience, and minimum degree; see honest eligibility facts before opening a posting;
+then use one primary apply link with explicit To apply/Applied tracking. A
+required master's or PhD is shown directly on the role, receives a substantial
+auditable score dock, and becomes dashboard-only rather than alertable; strong
+matches remain visible at the dashboard floor for human review in case the
+posting is mistaken. In the
 Jobs list, click a row once to save it (green); click the saved row again to
 exclude it from active Jobs (red). Exclusions are view-only and reversible, so
 they do not change the score, crawler, tracker history, or notifications.
@@ -45,6 +50,20 @@ AI/SWE/DS board. It reads the `claude/cheme-intern-radar` branch and keeps its
 own generated state and GitHub board labels, while both profiles use the one
 repository-level `NOTION_TOKEN` and therefore the same Notion Applications
 database.
+
+The main platform's **New-grad / Internships** switch is a second, isolated
+technical lane for friends. Internship postings come from curated public
+GitHub boards (Simplify, SpeedyApply, Zapply, and Dreamwork) plus internship
+searches on the existing ATS registry. A viewer can set an expected graduation
+month in Settings; the lane derives freshman/sophomore/junior/senior fit from
+the posting's internship start term and keeps unclear eligibility visible as
+unknown instead of silently rejecting it. New-grad and internship Jobs,
+Pipeline, web state, alert history, and GitHub surfaces never share a list.
+
+Internship email batches are **off by default**. The owner can opt into them
+from Settings; the same preference controls new-grad batches (new-grad starts
+enabled). This is GitHub notification delivery, not inbox access: Google OAuth
+does not request Gmail scope and the platform never reads internship emails.
 
 Subscribe to the RSS feed at:
 `https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/claude/newgrad-job-search-system-9gbj9k/docs/feed.xml`
@@ -115,17 +134,26 @@ every ~30 min (GitHub Actions cron)
       · docs/feed.xml — RSS for instant notifications in any feed reader
 ```
 
+The internship lane runs independently every two hours on its own
+`internship-radar.yml` workflow, with a smaller deterministic ATS budget so it
+cannot starve the new-grad crawl. It writes `state/intern_*.json` and
+`docs/internships/`; its alert issues, master board, checkbox reconcile, and
+opt-in email batch use internship-specific labels. The normal new-grad crawl
+and its ranking remain the priority whenever compute is constrained.
+
 ### Tracking and applied logging
 
-1. **Check a box on an alert issue or the master board to track a job.** It
+1. **Choose a lane, then check a box on its alert issue or master board to track
+   a job.** It
    appears in the in-house Pipeline immediately with the not-yet-applied status
-   and is mirrored to your selected external tracker. For Victor's
+   and is mirrored to your selected external tracker. The internship lane is
+   never mixed into the new-grad Jobs or Pipeline view. For Victor's
    `VictorJimenez3` account, Notion is the default primary tracker; Google
    Sheets is an optional personal mirror under the expanded Tracker options.
    Other Vercel users can use their own Google-backed tracker without touching
    the repository owner's Notion pipeline.
    (`stage_saved` in profile.yaml, default "Not started") and improves future
-   ranking.
+   ranking within that lane.
 2. **When you apply, the inbox becomes the source of truth.** The email-based
    watcher is currently parked as a future multi-user capability. When that
    capability is enabled, it reads application-lifecycle emails
@@ -139,6 +167,11 @@ every ~30 min (GitHub Actions cron)
    It only ever moves a job *forward*, so a stray late email can't undo a
    later stage. You can still change anything in Notion/Sheets by hand; the
    twice-daily readback now brings those stage edits into the radar.
+
+   Internship notification batches are disabled unless the owner explicitly
+   enables **internship batches** in Settings. New-grad batches have their own
+   toggle and default to enabled. Neither toggle grants Gmail access or
+   changes the posting crawler.
 3. For a job found outside the radar, use **Pipeline → Add a role you found
    yourself** to save its company, title, live link, and optional location to
    the in-house **To apply** lane and Notion. It is explicitly marked manual,
@@ -298,42 +331,88 @@ Resume Studio is the private Victor-first application harness. It reads the
 radar's local job snapshot plus the ignored `CV/` directory and writes all
 prompts, drafts, PDFs, and review reports under `CV/.resume_studio/`.
 
+The canonical `CV/immutable/VictorJimenezResume.tex`,
+`CV/immutable/VictorJimenezResume.pdf`, and the historical
+`CV/immutable/og_resume.*` and `CV/immutable/tldp_resume.*` pairs are locked
+from Studio writes. Editing any protected artifact requires the owner PIN
+through the local lock command. Every generated draft and
+every Workshop revision is rendered in its own private directory, so selecting
+another posting or editing a draft cannot overwrite a canonical resume. The
+Studio header exposes this protection state.
+
 Start it from the repository:
 
 ```bash
 .venv/bin/python scripts/resume_studio.py
 ```
 
-Open `http://127.0.0.1:4317/`. **Used bullets** selects a target-aware subset
-from the master CV and example résumés without rewriting it. **AI tailor** may
-substantially rewrite or synthesize bullets from multiple authorized source
-lines. **Unrestricted AI tailor** is freer to make an original role-specific
-argument across the evidence bank; it still cannot invent facts, remove scope
-qualifiers, or bypass layout review. In all modes a deterministic renderer
-uses `CV/resume.tex` unchanged;
-models cannot author the LaTeX document, alter the margins or typography, or
-pass a sparse or bloated portfolio. Employer headings are company-first. Usable installed
-first-party Codex and Claude Code sessions provide planning and fixed review;
-one may fail independently and the run degrades to the other without API keys.
-The local harness removes API-key environment variables so this owner workflow
-does not silently spend API credits. Nothing from `CV/` is sent to GitHub
-Actions or committed to the public repository.
+Open `http://127.0.0.1:4317/`. The main screen has two clear choices: **Used
+bullets** selects a target-aware subset from the master CV and example résumés
+without rewriting it; **AI tailor** may substantially rewrite or synthesize
+bullets from multiple authorized source lines. **Unrestricted AI tailor** is
+available under an Advanced mode disclosure for freer role-specific synthesis;
+it still cannot invent facts, remove scope qualifiers, or bypass layout review.
+In all modes a deterministic renderer uses
+`CV/immutable/VictorJimenezResume.tex` as the protected layout shell. Future
+generated one-page copies suppress the
+footer page number at render time, while protected historical references
+remain unchanged. Models cannot author the LaTeX document, alter the margins
+or typography, or bypass the duplicate, factual, one-line, and compile gates.
+Employer headings are company-first. The harness uses the first-party Codex CLI
+pinned to `gpt-5.6-luna` as its primary writer/synthesizer and Claude Code as an
+independent critic when installed.
+There is no local-model, Ollama, arbitrary-endpoint, or API fallback. If an
+independent critic is unavailable, the run remains a private draft instead of
+claiming readiness. The local harness removes API-key environment variables so
+this owner workflow does not silently spend API credits. Nothing from `CV/` is
+sent to GitHub Actions or committed to the public repository.
+
+Portfolio selection is whole-resume first. If a project adds a genuinely unique
+capability, the one-page packer protects core experience and reclaims flexible
+space in this order: coursework, the HackMIT acceptance-pool/selection proof
+line, then aggregated Awards. Removing the HackMIT line removes only prestige
+context, never the project's technical implementation bullets.
+
+The private **Evidence review** panel is the source-of-truth maintenance loop
+for tailoring. It indexes the Markdown dossiers, resume sources, and bounded
+GitHub/Devpost project evidence with source IDs and authority levels. Public
+repository metadata and README text are corroboration only until Victor
+explicitly confirms a record; **Reject** or **Supersede** blocks it from future
+match context and generation. GitHub rate limits retain the last cached README
+with a stale-data warning instead of silently dropping project evidence. This
+keeps the knowledge base reversible as facts, project names, metrics, and
+preferences change.
 
 The role list can be sorted by **Best Radar score**, **Newest**, or the private
 **Resume Match** rubric. Match analysis reports requirement coverage, evidence
 strength, domain relevance, eligibility, distinctiveness, confidence, gaps,
 and source IDs; selected roles can be rechecked against the full posting.
-Generation asks for a full ranked evidence portfolio, then keeps 22–26 distinct
-bullets across three experiences, four projects, and one or two leadership
-entries. Deterministic backups are used only when a draft falls below that
-acceptance floor; they do not reintroduce evidence omitted from a complete
-plan. Actual PDF line widths hard-fail wrapping, and bottom density is a hard
-comparison against the immutable human-authored reference. Unsupported inline
-LaTeX and lost scope qualifiers such as
-`synthetic`, `prototype`, or `POC` are repaired or rejected before packing. The
-adversarial pass must return an applied corrected plan rather than a complaint
-about an already-rendered draft. The reported Resume Craft score is separate
-from hard factuality, eligibility, and layout gates.
+Generation asks for a ranked evidence portfolio with adaptive sections. There
+is no required leadership section, project count, or bullet floor: the writer
+must choose complementary evidence and the renderer removes only duplicate or
+overflowing content. It never pads a page with weak lines. Actual PDF line
+widths hard-fail wrapping, while normal bottom clearance is an informational
+warning when no additional authorized evidence earns the space. Unsupported
+inline LaTeX and lost scope qualifiers such as `synthetic`, `prototype`, or
+`POC` are repaired or rejected before packing. Independent critics return
+critique-only reports; Codex may revise against them, but the owner must review
+the gate report and approve a ready draft before it leaves `awaiting_review`.
+There is no composite Resume Craft score.
+
+Tailoring permission is not a reason to create churn. The writer compares every
+substantive swap, exclusion, rewrite, or reorder with the canonical/current
+benchmark and keeps it only when the expected hiring-value gain is meaningful.
+Reports expose a decision_ledger with the current evidence, replacement or
+exclusion, target signal, rationale, and important signal lost. The independent
+critic audits low-value paraphrase, keyword-only choices, lost metrics,
+redundant evidence, stronger unused bullets that were ignored, and unexplained
+breaks from reverse chronology.
+
+Before wording is polished, the harness also compares the whole portfolio for
+breadth, project overlap, unused technical alternatives, and discretionary
+leadership. Coursework and the aggregated Awards line can be reclaimed before
+strong technical evidence is deleted. Reports expose these checks and a short
+owner summary so a tailored draft is explainable rather than merely different.
 
 Enhancement prompts also receive the CV authority dossier and an exact-term ATS
 strategy from the captured posting. They may swap projects and rewrite bullets
@@ -349,27 +428,29 @@ Use **Resume bank** in the Studio header to browse every saved run and legacy
 experiment. Each new run keeps a private snapshot of the selected posting,
 remains visible after switching to another role, and names its PDF with the
 company (for example, `mayo_clinic_resume_ai.pdf`). Preview responses also send
-that filename to the browser/Preview app, so downloads do not fall back to
-`resume.pdf`. Project metadata uses `|` as its compact separator. TICC is
+that filename to the browser/Preview app, so downloads do not fall back to a
+generic filename. Project metadata uses `|` as its compact separator. TICC is
 permanently excluded from every generated or workshop-edited resume, while
 the local source files remain untouched. Open a saved posting snapshot from
 its card when the source text was captured. Failed and in-progress runs remain
 listed so an interrupted attempt is inspectable rather than silently
 disappearing.
 
-The three tailoring buttons queue independent runs, so switching postings or
-starting another mode does not replace the current draft. The header shows
-observed Codex tokens/calls for the current UTC week and the bank shows queued,
-running, interrupted, and completed runs. Codex Plus's weekly allowance is not
-available through the local CLI; set `CODEX_WEEKLY_LIMIT_TOKENS` only if you
-want the UI to calculate a percentage against a known personal limit.
+The tailoring modes queue independent runs, so switching postings or starting
+another mode does not replace the current draft. The header shows observed
+first-party provider usage for the current UTC week and the bank shows queued,
+running, interrupted, awaiting-review, and completed runs. A draft becomes
+complete only through the owner checkpoint; workshop edits and revisions remain
+private run artifacts. Codex Plus's weekly allowance is not available through
+the local CLI; set `CODEX_WEEKLY_LIMIT_TOKENS` only if you want the UI to
+calculate a percentage against a known personal limit.
 
-Open **Workshop** on a completed run to edit education, skills, experience,
+Open **Workshop** on an approved or awaiting-review run to edit education, skills, experience,
 projects, and leadership lines without touching the original PDF. Saving a
 line creates a unique rendered revision; the AI writing partner returns
 source-grounded candidates for approval, and revision history can revert to an
-earlier draft. The current Mac exposes Codex CLI and Claude Code lanes; a Luna
-lane is only available when a local `luna` executable is installed.
+earlier draft. The current Mac exposes Codex CLI and Claude Code lanes; Luna is
+the Codex model pin (`gpt-5.6-luna`), not a separate executable.
 
 Reviewer output is normalized before rendering: repeated selections for one
 source entry are merged so distinct evidence is not silently lost, and
@@ -412,10 +493,13 @@ Optional upgrades:
   complete. Run `python -m radar.main create-google-tracker` once only for the
   owner metadata/automation workbook. On the Vercel platform, Google sign-in
   or **Connect Google + create my Sheet** requests the least-privilege
-  `drive.file` permission and creates a separate Applications workbook in that
-  user's Google Drive. The encrypted HttpOnly session carries that user's
+  `drive.file` permission and creates a separate workbook in that user's
+  Google Drive with distinct **Applications**, **Internships**, and
+  **Preferences** tabs. The encrypted HttpOnly session carries that user's
   tracker grant and Sheet ID to the backend; the private Accounts registry is
   an optional account-linking enhancement, not a dependency for public users.
+  OAuth requests Drive file access only—never Gmail access. The internship
+  email toggle controls GitHub alert batches, not inbox reading.
   Existing trackers are rediscovered in Drive after reauthentication, and the
   backend never exposes another user's rows or token.
   Setup is documented in [docs/GOOGLE_SHEETS_SETUP.md](docs/GOOGLE_SHEETS_SETUP.md).

@@ -65,6 +65,31 @@ system as a website, refreshed automatically by every crawl:
 - **AI**: per-run budget, task mix, provider/model health, grounded-research
   coverage, scout status, and registry stats.
 
+### New-grad and internship lanes
+
+Use the lane switch at the top of the platform to choose **New-grad** or
+**Internships**. New-grad is the default and remains the priority compute
+lane. Internship jobs, Pipeline entries, web notes, alert history, master
+boards, and generated dashboards use their own `intern_*` state and never
+appear in the active new-grad list.
+
+In **Settings**, enter an expected graduation month such as `May 2029`. The
+internship lane uses that date together with an internship's start term to
+label likely freshman, sophomore, junior, or senior fit. A posting with no
+clear class-year or graduation evidence remains visible as **unknown/open**;
+it is not silently filtered out. The cohort dropdown in Jobs lets you filter
+match, mismatch, open, or unknown roles.
+
+If Google is connected, the private workbook has separate **Applications**
+and **Internships** tabs plus **Preferences**. Switching lanes changes which
+tab is read and written. The app requests Drive file access only; it does not
+request Gmail scope or read internship email.
+
+Internship email batches are off by default. The owner can enable
+**internship batches** in Settings; **new-grad batches** have a separate
+toggle and default to on. GitHub issue/board surfaces remain available without
+email delivery.
+
 Reading needs nothing. On Vercel, use **Tutorial → Accounts & login** to sign
 in with GitHub or Google. Google consent includes per-file Sheets access and
 creates your personal workbook; if you started with GitHub, use **Connect Google + create my
@@ -101,24 +126,30 @@ Then open `http://127.0.0.1:4317/`. Search for a radar role and choose either:
 - **Used bullets** — selects target-relevant source IDs from the
   master CV and example résumés and copies their text without rewriting.
 - **AI tailor** — permits substantive source-grounded rewrites
-  and synthesis from multiple authorized lines, then runs the same fixed
-  review rubric.
-- **Unrestricted AI tailor** — permits a more original role-specific argument
-  across the authorized evidence bank while preserving factuality and scope
-  qualifiers; it is intentionally marked for human review.
+  and synthesis from multiple authorized lines, then runs independent
+  critique and deterministic gates.
+- **Unrestricted AI tailor** — an advanced disclosed mode for a more original
+  role-specific argument across the authorized evidence bank while preserving
+  factuality and scope qualifiers; it is intentionally marked for human review.
 
-All three modes render through the exact `CV/resume.tex` structure. Models cannot
-write the document, alter its margins/typography/spacing, enlarge text, or pass
-a sparse or bloated evidence portfolio. Their existing local subscription sessions are
-used; the radar does not receive or store their credentials. The report
-includes the fixed score, target-specific omissions, and known Codex token
-usage. The Studio header shows observed weekly local Codex calls/tokens; the
-Plus weekly allowance is not exposed by the local CLI. Set
-`CODEX_WEEKLY_LIMIT_TOKENS` only when you know the comparison limit.
+The normal screen keeps Used bullets and AI tailor prominent; optional analysis,
+usage, saved drafts, unrestricted mode, and raw review data are collapsed until
+you open them. All modes render through the exact
+`CV/immutable/VictorJimenezResume.tex` structure. Models cannot write the
+document, alter its margins/typography/spacing, or bypass factual, duplicate,
+one-line, and compile gates. Codex writes/synthesizes with the `gpt-5.6-luna`
+model pin; Claude independently critiques when its first-party subscription CLI
+is installed. There is no local-model or API fallback. The report includes separate gates,
+target-specific omissions, and observed provider usage; it has no composite
+craft score. A run stays `awaiting_review` until Victor approves a ready draft.
 
-Drafts, prompts, source context, PDFs, and review reports live only under
-`CV/.resume_studio/`. Review the generated PDF and report before using any
-application material. The system preserves the master CV as the evidence bank
+The canonical `CV/immutable/VictorJimenezResume.tex`,
+`CV/immutable/VictorJimenezResume.pdf`, historical `og_resume.*`, and TLDP
+pair are locked
+from Studio writes; the header shows that
+protection state. Drafts, prompts, source context, PDFs, and review reports live
+only under `CV/.resume_studio/`. Review the generated PDF and report before
+using any application material. The system preserves the master CV as the evidence bank
 and never auto-submits a resume. Use **Resume bank** in the header to revisit
 any saved run or legacy experiment; selecting another posting does not remove
 the previous result. New PDFs use a company-identifiable name such as
@@ -165,16 +196,17 @@ recomputes the fixed rubric when readable. The result shows capability
 coverage, gaps, evidence confidence, and private source-backed score.
 
 The generator does not force every role to use the same evidence. It creates a
-strongest-first pool, then enforces a 22–26-bullet interview portfolio with
-three experiences, four projects, and one or two leadership entries. Every
-bullet must stay on one visual line, and the page must reach the same bottom
-region as the immutable human reference. The adversarial final pass applies a
-corrected source-addressed plan before the PDF is accepted; it cannot fix a
-weak result by deleting its way to a sparse page.
+strongest-first adaptive pool: leadership, projects, and bullet count are
+chosen for the target, and no weak backup lines are added to fill space.
+Every retained bullet must stay on one visual line. Normal bottom clearance is
+informational when no additional authorized line earns the space. Independent
+critics return critique-only gate data; Codex may revise against it, but the
+owner approval checkpoint is required before a draft is marked complete.
 If an enhancement drops a scope-limiting source fact such as `synthetic`,
 `prototype`, or `POC`, that bullet reverts to approved source wording. Resume
-Craft measures the argument and writing; factuality, eligibility, and layout
-remain separate gates that cannot be averaged away.
+quality is visible as separate factuality, target-fit, evidence,
+distinctiveness, clarity, privacy, portfolio, layout, and independent-review
+gates that cannot be averaged away.
 
 ## The places you look
 

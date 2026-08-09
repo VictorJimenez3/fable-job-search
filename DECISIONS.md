@@ -1153,8 +1153,9 @@ candidate rewrites without applying them automatically. Manual saves, applied
 AI candidates, and reverts append a full plan revision and render into a unique
 private PDF/preview directory, leaving the original company-named run artifact
 untouched. The contact header and canonical visual template remain protected.
-The available local provider lanes are Codex CLI and Claude Code; a Luna lane
-is optional and is not claimed when no local `luna` executable exists.
+The available first-party provider lanes are Codex CLI and Claude Code. Codex
+is pinned to the `gpt-5.6-luna` model; Luna is not a separate executable or
+provider lane.
 
 ## 77. Resume Studio must prove target changes and reject near-wraps (2026-08-07)
 
@@ -1490,6 +1491,58 @@ failed paths and retry action. This is intentionally a frontend developer
 notice only: it never emails, creates an issue, or exposes failure details to
 other accounts, and it does not change score or delivery behavior.
 
+## 98. Canonical resume artifacts are structurally locked from Studio (2026-08-08)
+
+Victor reported a second accidental overwrite of a canonical `resume.pdf`.
+Resume Studio now treats `CV/resume.tex`, `CV/resume.pdf`,
+`CV/tldp_resume.tex`, and `CV/tldp_resume.pdf` as locked reference artifacts.
+The rendering boundary rejects any target inside `CV/` unless it is beneath
+the private `CV/.resume_studio/` workspace; generated runs and Workshop
+revisions remain isolated copies. The UI makes this protection visible and
+keeps the two normal tailoring choices—Used bullets and AI tailor—prominent;
+Unrestricted AI tailor and raw review data are disclosed as advanced details.
+
+This protects the canonical artifacts from Studio regressions without
+silently selecting a replacement resume. Historical recovery remains an
+explicit human choice: the local CV Git history and saved Studio runs are
+inspectable, but no older project set is restored automatically.
+
+## 99. Make resume knowledge source-addressed, reviewable, and reversible (2026-08-08)
+
+Victor authorized a continuously improving personal evidence system rather than
+another opaque tailoring prompt. Resume Studio now indexes the ignored Markdown
+corpus and bounded public GitHub/Devpost material into a source-addressed graph.
+Every record carries its source, authority, and whether it is allowed to support
+a claim. Public project material is corroboration only by default; an explicit
+Confirm can promote a record, while Reject and Supersede block it from future
+ranked context and generation. The private Evidence review panel is the human
+maintenance loop, and its decisions live in an ignored JSON ledger so mistakes
+are reversible without changing canonical resume files.
+
+The public refresh also captures repository README text because metadata alone
+is too shallow for technical tailoring. If GitHub's unauthenticated API is rate
+limited, the last cached README is retained with stale-data metadata rather than
+being silently erased. Graph exploration tools may help inspect project code,
+but they do not independently authorize resume claims; source review remains the
+factuality boundary.
+
+## 100. Put protected resume references under an immutable path (2026-08-08)
+
+Victor reported that a root-level `resume.pdf` had been overwritten and asked for
+the protected artifacts to be visibly separated. The current general and TLDP
+source/PDF pairs now live under `CV/immutable/`. Resume Studio reads
+`CV/immutable/resume.tex` as its visual template and compares against
+`CV/immutable/resume.pdf`; its lock manifest reports the new paths. The CV
+Makefile's `resume` and `tldp_resume` targets verify the files and never compile
+over them, while `open-*` targets open the protected PDFs in Skim.
+
+The move was byte-preserving. The historical general resume with the MIT
+multi-agent project and optimized `10x`/`90%` bullets was found in private CV
+commit `c166b1f`, opened read-only in Skim from a temporary worktree, and was not
+made canonical automatically because its rendered second page has substantial
+unused space. A future restoration must be an explicit, separately named draft
+or promotion decision.
+
 ## 101. Make the positive role sample influence Radar ranking (2026-08-08)
 
 The saved/applied sample was previously exposed mainly through a preference
@@ -1508,3 +1561,173 @@ preference` to the existing ledger. Explicit feedback is stored separately so
 the old per-save maps cannot double-count the sample or survive an untracked
 role. The UI preference page now explains that it is showing the same Radar
 signals rather than pretending similarity alone changes ranking.
+
+## 102. Give every new resume an identifiable filename (2026-08-08)
+
+Victor explicitly rejected generic `resume.pdf` names after recovering an older
+draft. The protected general reference pair is now named
+`CV/immutable/og_resume.tex` / `CV/immutable/og_resume.pdf`; the TLDP pair keeps
+its use-case name. New Resume Studio PDFs use a company-and-use-case pattern
+such as `nvidia_resume_ai.pdf`, and calibration PDFs use a company-and-family
+pattern such as `nvidia_specialized_ai_resume.pdf`. Legacy `resume.pdf` paths
+remain read-only compatibility fallbacks for old private runs and tests; new
+artifacts are never created with that generic public name.
+
+## 103. Suppress page numbers only on future generated one-pagers (2026-08-08)
+
+Victor asked to remove the bottom page number from future one-page resumes while
+preserving older artifacts exactly. Resume Studio now suppresses the footer
+number in the generated copy of the canonical layout shell at render time. The
+protected `CV/immutable/` references and previously generated PDFs are not
+rewritten, so historical comparisons remain stable.
+
+## 104. Technical internships are a separate, graduation-aware platform lane (2026-08-08)
+
+Victor asked for internship support that friends can use without turning the
+new-grad product into a mixed board or an internship email stream. The main
+platform therefore has an explicit **New-grad / Internships** switch. The
+internship lane has its own profile, curated public GitHub sources, ATS search
+terms, score/gate module, workflow cadence, state namespace (`intern_*`),
+dashboard directory, GitHub labels, master board, and checkbox reconcile. The
+new-grad crawl remains the priority compute path; the internship crawl is
+lower-budget, deterministic, and does not require the optional AI pass.
+
+Internship eligibility is evidence-first and auditable. A posting can state an
+exact graduation window or class years; otherwise the lane derives likely
+freshman/sophomore/junior/senior fit from its start term and the viewer's
+expected graduation month. Missing evidence stays visible as open/unknown and
+never becomes an unexplained rejection. The expected graduation preference is
+viewer-specific and lives in the private Google Preferences tab (with a local
+fallback), never in shared crawler state.
+
+Google tracker workbooks now have separate `Applications`, `Internships`, and
+`Preferences` tabs, and the selected lane reads/writes only its own tab. The
+platform keeps OAuth least-privilege: it requests Drive file access, not Gmail.
+Internship GitHub email batches are off by default and can be enabled by the
+owner in Settings; new-grad batches have a separate toggle and default on.
+This setting controls outbound GitHub notification surfaces, not inbox
+reading or application-email detection.
+
+## 105. VictorJimenezResume is the PIN-gated protected default (2026-08-08)
+
+Victor promoted the `ogv2` general résumé to the default artifact and requested a
+name that can never be confused with a generic `resume.pdf`. The protected pair
+is now `CV/immutable/VictorJimenezResume.tex` and
+`CV/immutable/VictorJimenezResume.pdf`; the prior `og_resume` pair remains a
+historical comparison reference. Resume Studio uses the new pair as its
+canonical visual template and never renders into `CV/`.
+
+The local lock applies read-only permissions and macOS `uchg` flags to the new
+default plus the historical protected pairs. Deliberate edits require the
+interactive owner-PIN unlock command and should be followed by `lock`. This is
+an operational owner-confirmation gate, not a cryptographic boundary against a
+privileged local process.
+
+## 106. Resume Studio becomes an adaptive evidence workshop with an owner gate (2026-08-08)
+
+The first Resume Studio contract overfit the protected reference resume: it
+forced three experiences, four projects, a leadership section, a 22–26 bullet
+portfolio, bottom-density parity, and a reviewer that returned a replacement
+plan. That behavior encouraged filler and let one generation/review lane grade
+its own work, which is the opposite of Victor's quality loop.
+
+The harness now treats the immutable `VictorJimenezResume` pair as a visual
+shell and the Markdown corpus as a ranked, source-addressable evidence graph.
+Portfolio sections and counts are adaptive; the agent may omit leadership or
+projects when they do not strengthen the target, while duplicate, weak, and
+overflowing lines are removed deterministically. One-line geometry, factual
+exclusions, source qualifiers, and compile integrity remain hard gates.
+Normal bottom clearance is informational when no additional authorized line
+earns the space.
+
+Codex, pinned to `gpt-5.6-luna`, is the primary planning/revision writer. Claude
+is an independent critic lane when its first-party subscription CLI is installed. Local
+models, Ollama, arbitrary endpoints, and API fallbacks are forbidden. Critics
+return critique-only gate data; they do not return plans or self-score. A
+generated artifact is `awaiting_review` until Victor inspects its evidence
+ledger, content diff, critique, gate report, and PDF, then explicitly approves
+the private run. Approval never writes a canonical CV file.
+
+Evidence review is reversible and explicit: `confirmed` and `public_safe` may
+be promoted, while `disputed`, `rejected`, `superseded`, and
+`private_do_not_publish` are blocked. Stale historical claims in older resume
+references are visual benchmarks only, not factual authority.
+
+## 107. Tailoring optimizes marginal hiring value, not difference from base (2026-08-08)
+
+Resume Studio keeps its adaptive portfolio selection, evidence-graph retrieval,
+creative take-the-wheel mode, independent critique, immutable canonical
+resume, and owner approval. The refinement is a judgment layer: a substantive
+change is worthwhile only when its expected hiring-value gain meaningfully
+outweighs the evidence and readability it removes.
+
+The prompts now compare candidates with the canonical/current benchmark across
+target relevance, evidence strength, technical impressiveness, specificity,
+differentiation, accurate ATS terminology, breadth, redundancy, structural
+cost, and information lost. Thresholds vary by action: reordering is cheap;
+rewriting, removing metrics, replacing a strong project/experience, or
+breaking reverse chronology requires progressively stronger justification.
+The system does not infer unsupported requirements from adjacent experience.
+
+Plans record substantive swaps, exclusions, rewrites, and unusual reorders in a
+decision ledger. The independent critic can return decision feedback for
+paraphrase churn, keyword-only choices, lost metrics, redundant award/title/
+bullet evidence, missed stronger unused evidence, or unexplained chronology
+changes. This remains an audit aid rather than a deterministic score or a
+blanket rule to preserve the base resume.
+
+## 108. Resume Studio checks the portfolio before it polishes bullets (2026-08-08)
+
+The canonical comparison is now whole-resume first. For technical SWE roles,
+the tailoring harness treats Resident Assistant leadership as discretionary,
+keeps a strong fifth J&J experience bullet when the page can carry it, and
+compares an agents/RAG project against the already-selected experience before
+spending a project slot on the same story. Coursework and the aggregated
+Awards line are flexible space reserves before strong technical evidence is
+removed.
+
+Generation reports now include deterministic portfolio diagnostics, including
+signal-family overlap, unused technical alternatives, leadership competition,
+and a short owner summary. The independent critic also returns an explicit
+portfolio comparison with preserved, gained, and lost strengths. These are
+auditing instruments, not a rigid score or a forced project choice; a
+substantive exception remains allowed when its hiring-value gain is explained.
+
+The final geometry pass also has a narrow deterministic fallback: after model
+line editing, it may test shorter source-authorized compressions and keep one
+only when a compiled PDF measurably improves the complete resume's one-line
+safety. Provider section slips are repaired only when a known catalog source
+kind proves the correct section; unknown source IDs and unsupported claims
+still fail validation.
+
+## 109. Flexible portfolio reserves protect core experience (2026-08-08)
+
+Resume Studio now evaluates an added project at the whole-resume level: it may
+enter only when it adds unique capability coverage, and the space must come
+from lower-value or redundant evidence rather than shrinking core experiences.
+The deterministic one-page packer uses Victor's preferred reserve order when
+space is needed: coursework first, then the HackMIT acceptance-pool/selection
+proof bullet, then the aggregated Awards line. The HackMIT line is treated as
+prestige context and can be removed without removing the project's technical
+implementation bullets. This is an explicit packing order, not a blanket rule
+to add projects or remove Awards; the model still chooses the strongest whole
+portfolio and records substantive tradeoffs.
+
+## 110. Promote strong candidate lines into Markdown memory (2026-08-09)
+
+Resume Studio retains private run artifacts for audit, but future evidence
+retrieval is Markdown-first. A generated line that Victor approves, identifies
+as uniquely strong, or that captures a reusable positioning lesson should be
+promoted into the relevant dossier or iteration log with source support and an
+explicit status: approved, bench, or superseded. Model output alone does not
+authorize a fact, and rejected wording must not silently re-enter future drafts.
+The J&J technical-creation and Gemini/ADK orchestration anchors are the
+current example of preserved alternatives.
+
+## 111. Minimum-degree mismatches stay visible but cannot alert (2026-08-08)
+
+Posting analysis now records bachelor's, master's, and PhD minimums. A required
+master's or PhD is a substantial deterministic score penalty and forces
+dashboard-only status, but a formerly strong mismatch is held at the dashboard
+threshold after the penalty. This preserves a review path for malformed or
+mistaken postings without allowing an advanced-degree role into alerts.

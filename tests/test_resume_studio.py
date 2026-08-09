@@ -148,6 +148,49 @@ def test_run_manager_snapshots_job_and_assigns_named_pdf(tmp_path):
     assert json.loads((run_dir / "job.json").read_text())["company"] == "Acme Labs"
 
 
+def test_run_manager_exposes_owner_checkpoint_instead_of_marking_draft_complete(monkeypatch, tmp_path):
+    manager = rs.RunManager(tmp_path)
+    manager.executor.shutdown(wait=False)
+
+    def fake_dream(run_dir, job, update):
+        update("awaiting_review", "critique ready")
+
+    monkeypatch.setattr(rs, "run_dream", fake_dream)
+    run_id = "0123456789ab"
+    run_dir = tmp_path / "CV" / ".resume_studio" / "runs" / run_id
+    run_dir.mkdir(parents=True)
+    rs.write_json(run_dir / "status.json", {"run_id": run_id, "status": "queued"})
+    manager._worker(run_id, run_dir, {"id": "job-1"}, "ai")
+    assert json.loads((run_dir / "status.json").read_text())["status"] == "awaiting_review"
+
+
+def test_approve_run_requires_ready_gates_and_records_owner_checkpoint(tmp_path):
+    run_id = "0123456789ab"
+    run_dir = tmp_path / "CV" / ".resume_studio" / "runs" / run_id
+    run_dir.mkdir(parents=True)
+    rs.write_json(run_dir / "status.json", {
+        "run_id": run_id, "status": "awaiting_review", "step": "reviewing",
+    })
+    (run_dir / "google_resume_ai.pdf").write_bytes(b"%PDF-1.4\n")
+    report = {"review": {"ready": True}, "approval_state": "awaiting_review"}
+    rs.write_json(run_dir / "report.json", report)
+    result = rs.approve_run(tmp_path, run_id)
+    assert result["status"] == "complete"
+    saved = json.loads((run_dir / "report.json").read_text())
+    assert saved["approval_state"] == "approved"
+    assert saved["approved_by"] == "Victor"
+
+
+def test_approve_run_does_not_override_failed_quality_gates(tmp_path):
+    run_id = "0123456789ab"
+    run_dir = tmp_path / "CV" / ".resume_studio" / "runs" / run_id
+    run_dir.mkdir(parents=True)
+    rs.write_json(run_dir / "status.json", {"run_id": run_id, "status": "awaiting_review"})
+    rs.write_json(run_dir / "report.json", {"review": {"ready": False}})
+    with pytest.raises(ValueError, match="quality gates"):
+        rs.approve_run(tmp_path, run_id)
+
+
 def test_provider_plan_schema_cannot_return_a_latex_document():
     for enhance in (False, True):
         properties = rs.plan_schema(enhance)["properties"]
@@ -156,20 +199,24 @@ def test_provider_plan_schema_cannot_return_a_latex_document():
         assert "projects" in properties
 
 
-def test_plan_schema_requests_a_full_ranked_candidate_pool():
+def test_plan_schema_requests_an_adaptive_ranked_candidate_pool():
     strict = rs.plan_schema(False)
-    assert strict["properties"]["experiences"]["minItems"] == 3
-    assert strict["properties"]["experiences"]["maxItems"] == 3
-    assert strict["properties"]["projects"]["minItems"] == 4
-    assert strict["properties"]["projects"]["maxItems"] == 5
-    assert strict["properties"]["leadership"]["minItems"] == 1
-    assert strict["properties"]["leadership"]["maxItems"] == 2
+    assert strict["properties"]["experiences"]["minItems"] == 0
+    assert strict["properties"]["experiences"]["maxItems"] == rs.PORTFOLIO_CAPS["experiences"]["entries"]
+    assert strict["properties"]["projects"]["minItems"] == 0
+    assert strict["properties"]["projects"]["maxItems"] == rs.PORTFOLIO_CAPS["projects"]["entries"]
+    assert strict["properties"]["leadership"]["minItems"] == 0
+    assert strict["properties"]["leadership"]["maxItems"] == rs.PORTFOLIO_CAPS["leadership"]["entries"]
     strict_bullet = strict["properties"]["experiences"]["items"]["properties"]["bullets"]["items"]
     assert "priority" in strict_bullet["properties"]
 
     enhanced_bullet = rs.plan_schema(True)["properties"]["experiences"]["items"]["properties"]["bullets"]["items"]
     assert {"source_id", "text", "evidence_ids", "candidate_rationale"}.issubset(enhanced_bullet["required"])
     assert "source_ids" in enhanced_bullet["required"]
+    assert "decision_ledger" in strict["properties"]
+    assert "decision_ledger" in strict["required"]
+    assert "front_matter_policy" in strict["properties"]
+    assert "front_matter_policy" in strict["required"]
 
 
 def test_enhanced_plan_can_synthesize_multiple_authorized_source_lines():
@@ -224,13 +271,13 @@ def test_validation_merges_distinct_bullets_from_duplicate_entry():
     ]
 
 
-def test_review_schema_requires_a_complete_corrected_plan():
+def test_review_schema_is_critique_only_and_does_not_return_a_replacement_plan():
     schema = rs.reviewed_plan_schema(True)
-    assert "final_plan" in schema["required"]
-    final_plan = schema["properties"]["final_plan"]
-    assert final_plan["properties"]["experiences"]["minItems"] == 3
-    assert final_plan["properties"]["projects"]["minItems"] == 4
-    assert final_plan["properties"]["leadership"]["minItems"] == 1
+    assert "final_plan" not in schema["properties"]
+    assert {"blocking_issues", "line_feedback", "unsupported_claims"}.issubset(schema["required"])
+    assert "decision_feedback" in schema["required"]
+    assert "portfolio_comparison" in schema["required"]
+    assert set(rs.REVIEW_CRITERIA).issubset(schema["properties"]["criteria"]["required"])
 
 
 def _fixture_catalog():
@@ -349,6 +396,31 @@ def test_unknown_provider_bullet_is_dropped_with_warning_when_entry_has_valid_te
     assert "dropped unknown bullet experience:item0:b999 for experience:item0" in normalized["validation_warnings"]
 
 
+def test_entry_level_bullet_source_is_recovered_from_exact_supporting_id():
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    graph = {
+        "nodes": [
+            {"id": bullet["id"], "claim_allowed": True}
+            for entry in catalog["entries"].values()
+            for bullet in entry["bullets"]
+        ]
+    }
+    enhanced = json.loads(json.dumps(plan))
+    enhanced["experiences"][0]["bullets"][0].update({
+        "source_id": "experience:item0",
+        "source_ids": ["experience:item0:b1"],
+        "evidence_ids": ["experience:item0:b1"],
+        "text": "\\textbf{Built item} with evidence",
+        "candidate_rationale": "provider used the parent entry ID",
+    })
+    normalized, errors = rs.validate_plan(enhanced, catalog, enhance=True, graph=graph)
+    assert not errors
+    assert normalized["experiences"][0]["bullets"][0]["source_id"] == "experience:item0:b1"
+    assert any("normalized entry-level bullet source experience:item0" in warning for warning in normalized["validation_warnings"])
+
+
 def test_unknown_enhanced_citation_is_dropped_when_authoritative_source_remains():
     catalog = _fixture_catalog()
     plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
@@ -379,8 +451,8 @@ def test_candidate_expansion_builds_balanced_reference_sized_pool():
     plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
     assert not errors
     expanded = rs.expand_candidate_portfolio(plan, catalog, enhance=True)
-    assert rs.portfolio_metrics(expanded)["total_bullets"] == rs.MIN_TOTAL_BULLETS
-    assert all(len(entry["bullets"]) == 3 for entry in expanded["projects"])
+    assert rs.portfolio_metrics(expanded)["total_bullets"] == 18
+    assert all(len(entry["bullets"]) == 2 for entry in expanded["projects"])
 
 
 def test_candidate_expansion_adds_authorized_source_backups():
@@ -389,16 +461,15 @@ def test_candidate_expansion_adds_authorized_source_backups():
     assert not errors
     plan["experiences"][0]["bullets"].pop()
     expanded = rs.expand_candidate_portfolio(plan, catalog, enhance=True)
-    assert rs.portfolio_metrics(expanded)["total_bullets"] == rs.MIN_TOTAL_BULLETS
+    assert rs.portfolio_metrics(expanded)["total_bullets"] == 17
     added = expanded["experiences"][0]["bullets"][-1]
-    assert added["evidence_ids"] == [added["source_id"]]
-    assert "overflow pool" in added["candidate_rationale"]
+    assert added["source_id"].endswith(":b2")
 
     edited = json.loads(json.dumps(plan))
     edited["projects"][0]["bullets"][0]["text"] = "edited text"
     merged = rs.merge_edited_bullets(expanded, edited)
     assert merged["projects"][0]["bullets"][0]["text"] == "edited text"
-    assert rs.portfolio_metrics(merged)["total_bullets"] == rs.MIN_TOTAL_BULLETS
+    assert rs.portfolio_metrics(merged)["total_bullets"] == 17
 
 
 def test_workshop_edit_creates_revision_without_overwriting_original_plan(monkeypatch, tmp_path):
@@ -549,22 +620,22 @@ def test_target_priority_outweighs_generic_technical_tiebreakers():
     assert rs._bullet_value(target_specific) > rs._bullet_value(generic)
 
 
-def test_human_reference_density_contract_is_not_sparse():
+def test_adaptive_portfolio_uses_safety_ceiling_instead_of_density_floor():
     assert rs.MAX_DENSITY_GAP_PT == 24.0
-    assert rs.MIN_TOTAL_BULLETS == 22
-    assert rs.MAX_TOTAL_BULLETS == 26
+    assert rs.MIN_TOTAL_BULLETS == 0
+    assert rs.MAX_TOTAL_BULLETS == rs.MAX_RENDERED_BULLETS
 
 
-def test_curator_restores_canonical_experience_order():
+def test_curator_preserves_agent_experience_order():
     catalog = _fixture_catalog()
     plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
     assert not errors
     plan["experiences"].reverse()
     curated = rs.curate_candidate_portfolio(plan, catalog)
     assert [entry["source_id"] for entry in curated["experiences"]] == [
-        "experience:item0",
-        "experience:item1",
         "experience:item2",
+        "experience:item1",
+        "experience:item0",
     ]
 
 
@@ -593,10 +664,10 @@ def test_methodology_curator_caps_density_sorts_strength_and_removes_duplicates(
     assert metrics["pass"] is True
     assert metrics["total_bullets"] <= rs.MAX_TOTAL_BULLETS
     assert len(curated["experiences"]) <= 3
-    assert len(curated["projects"]) <= 4
-    assert len(curated["leadership"]) <= 2
-    assert all(len(entry["bullets"]) <= 6 for entry in curated["experiences"])
-    assert all(len(entry["bullets"]) <= 3 for entry in curated["projects"])
+    assert len(curated["projects"]) <= rs.PORTFOLIO_CAPS["projects"]["entries"]
+    assert len(curated["leadership"]) <= rs.PORTFOLIO_CAPS["leadership"]["entries"]
+    assert all(len(entry["bullets"]) <= rs.PORTFOLIO_CAPS["experiences"]["bullets"] for entry in curated["experiences"])
+    assert all(len(entry["bullets"]) <= rs.PORTFOLIO_CAPS["projects"]["bullets"] for entry in curated["projects"])
 
 
 def test_packer_never_deletes_content_to_recover_from_compile_error(monkeypatch, tmp_path):
@@ -715,6 +786,161 @@ def test_content_change_report_exposes_rewrites_and_project_swaps():
     assert changes["changed_bullet_count"] == 1
     assert changes["project_swaps"]["swapped_in"] == ["\\textbf{Project 2} | \\emph{Python}"]
     assert changes["project_swaps"]["swapped_out"] == ["\\textbf{Project 0} | \\emph{Python}"]
+    assert "changed" in changes["experience_order"]
+
+
+def test_content_change_report_uses_immutable_canonical_project_sources():
+    catalog = _fixture_catalog()
+    catalog["entries"]["project:item0"]["sources"] = ["immutable/VictorJimenezResume.tex"]
+    catalog["entries"]["project:item1"]["sources"] = ["immutable/VictorJimenezResume.tex"]
+    catalog["entries"]["project:item2"]["sources"] = ["cv_full.tex"]
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    plan["projects"] = [plan["projects"][1], {
+        "source_id": "project:item2",
+        "bullets": [{"source_id": "project:item2:b1", "priority": 90}],
+        "why": "stronger target evidence",
+    }]
+    changes = rs.content_change_report(plan, catalog, "")
+    assert changes["project_swaps"]["swapped_in"] == ["\\textbf{Project 2} | \\emph{Python}"]
+    assert changes["project_swaps"]["swapped_out"] == ["\\textbf{Project 0} | \\emph{Python}"]
+
+
+def test_portfolio_diagnostics_flags_leadership_and_repeated_agents_story():
+    catalog = _fixture_catalog()
+    catalog["entries"]["experience:item0"]["bullets"][0]["text"] = "Built an agentic RAG FastAPI backend"
+    catalog["entries"]["project:item0"]["heading"] = "Multi-Agent Workspace | RAG"
+    catalog["entries"]["project:item0"]["bullets"][0]["text"] = "Built agents and retrieval APIs"
+    catalog["entries"]["project:item1"]["heading"] = "Spatial System | Flask"
+    catalog["entries"]["project:item1"]["bullets"][0]["text"] = "Built a Flask backend with secure access control"
+    catalog["entries"]["leadership:item0"]["bullets"][0]["text"] = "Led students through community programs"
+    plan = {
+        "experiences": [{
+            "source_id": "experience:item0",
+            "bullets": [{"source_id": "experience:item0:b1", "text": "Built an agentic RAG FastAPI backend"}],
+        }],
+        "projects": [{
+            "source_id": "project:item0",
+            "bullets": [{"source_id": "project:item0:b1", "text": "Built agents and retrieval APIs"}],
+        }],
+        "leadership": [{
+            "source_id": "leadership:item0",
+            "bullets": [{"source_id": "leadership:item0:b1", "text": "Led students through community programs"}],
+        }],
+    }
+    diagnostics = rs.portfolio_diagnostics(plan, catalog)
+    assert diagnostics["project_overlap"][0]["severity"] == "high"
+    assert diagnostics["leadership_competition"]
+    assert diagnostics["warnings"]
+
+
+def test_front_matter_policy_reclaims_only_sanctioned_optional_lines(tmp_path):
+    cv = tmp_path / "CV"
+    immutable = cv / "immutable"
+    immutable.mkdir(parents=True)
+    (immutable / "VictorJimenezResume.tex").write_text(
+        "\\documentclass{article}\n\\begin{document}\n"
+        "Victor Jimenez | vmj@njit.edu\n"
+        "%-----------EDUCATION-----------\n"
+        "\\resumeSubheading{School}{Location}{Degree}{Dates}\n"
+        "\\resumeItem{\\textbf{GPA:} 3.5}\n"
+        "\\resumeItem{\\textbf{Coursework:} Data Structures, Linear Algebra}\n"
+        "%-----------SKILLS-----------\n"
+        "\\resumeItem{\\textbf{Languages:} Python}\n"
+        "\\resumeItem{\\textbf{Awards:} HackRU}\n"
+        + rs.BODY_MARKER
+        + "\nold body\n\\end{document}\n"
+    )
+    catalog = _fixture_catalog()
+    plan = {
+        "experiences": [], "projects": [], "leadership": [],
+        "front_matter_policy": {"coursework": "omit", "awards": "omit"},
+    }
+    tex = rs.render_plan(plan, catalog, tmp_path)
+    assert "Coursework:" not in tex
+    assert "Awards:" not in tex
+    assert "GPA:" in tex
+    guard = rs.template_style_guard(tex, tmp_path, plan["front_matter_policy"])
+    assert guard["passed"] is True
+
+
+def test_flexible_content_reclaim_order_protects_technical_evidence():
+    plan = {
+        "experiences": [],
+        "projects": [{
+            "source_id": "project:hackmit",
+            "bullets": [
+                {"source_id": "project:hackmit:b1", "text": "Built secure workspace"},
+                {"source_id": "project:hackmit:b2", "text": "Selected for HackMIT from a 13% acceptance pool"},
+            ],
+        }],
+        "leadership": [],
+        "front_matter_policy": {"coursework": "keep", "awards": "keep"},
+    }
+
+    first = rs._reclaim_flexible_content(plan)
+    assert first["field"] == "coursework"
+    assert plan["front_matter_policy"]["coursework"] == "omit"
+
+    second = rs._reclaim_flexible_content(plan)
+    assert second["kind"] == "deferred_bullet_removal"
+    removed = rs._apply_removal(plan, second["action"])
+    assert removed["value"]["source_id"] == "project:hackmit:b2"
+    assert len(plan["projects"][0]["bullets"]) == 1
+
+    third = rs._reclaim_flexible_content(plan)
+    assert third["field"] == "awards"
+    assert plan["front_matter_policy"]["awards"] == "omit"
+
+
+def test_validation_preserves_and_normalizes_decision_ledger():
+    catalog = _fixture_catalog()
+    plan = _fixture_plan()
+    plan["decision_ledger"] = [{
+        "action": "swap",
+        "current_evidence": "Project 0: generic project evidence",
+        "replacement_or_exclusion": "Project 2: stronger systems evidence",
+        "target_signal": "backend engineering",
+        "why_stronger": "adds a materially stronger implementation thread",
+        "signal_lost": "one project-specific signal",
+        "unexpected": "discarded",
+    }]
+    normalized, errors = rs.validate_plan(plan, catalog, enhance=False)
+    assert not errors
+    assert normalized["decision_ledger"][0]["action"] == "swap"
+    assert "unexpected" not in normalized["decision_ledger"][0]
+
+
+def test_validation_rebuckets_known_entries_returned_under_wrong_section():
+    catalog = _fixture_catalog()
+    plan = _fixture_plan()
+    misplaced = plan["experiences"].pop()
+    plan["projects"].append(misplaced)
+    normalized, errors = rs.validate_plan(plan, catalog, enhance=False)
+    assert not errors
+    assert any(item["source_id"] == "experience:item2" for item in normalized["experiences"])
+    assert all(item["source_id"] != "experience:item2" for item in normalized["projects"])
+    assert any("reclassified experience:item2" in warning for warning in normalized["validation_warnings"])
+
+
+def test_prompts_teach_marginal_hiring_value_without_a_preserve_base_rule():
+    catalog = _fixture_catalog()
+    base = rs.base_prompt({"company": "Example"}, "editor", catalog, True)
+    synthesis = rs.synthesis_prompt({"company": "Example"}, [{"provider": "codex", "data": _fixture_plan()}], catalog, True)
+    review = rs.reviewer_prompt({"company": "Example"}, "resume", plan=_fixture_plan(), catalog=catalog)
+    revision = rs.revision_prompt({"company": "Example"}, _fixture_plan(), {"decision_feedback": []}, catalog)
+    for prompt in (base, synthesis, review, revision):
+        assert "hiring-value gain" in prompt or "hiring value" in prompt
+        assert "decision_ledger" in prompt or "decision_feedback" in prompt
+    assert "do not apply a blanket" in review
+    assert "Resident Assistant" in base
+    assert "project slot" in synthesis
+
+
+def test_owner_notes_current_regression_benchmark_reaches_provider_context():
+    context = rs.resume_authority_context(rs.repo_root())
+    assert "Google SWE regression benchmark" in context
+    assert "keep Quantum Stock Simulator omitted" in context
 
 
 def test_renderer_keeps_canonical_prefix_and_company_first(tmp_path):
@@ -741,19 +967,56 @@ def test_renderer_keeps_canonical_prefix_and_company_first(tmp_path):
     assert guard["font_size_reduction_percent"] == 0.0
 
 
+def test_renderer_omits_sections_the_adaptive_plan_does_not_need(tmp_path):
+    cv = tmp_path / "CV"
+    cv.mkdir()
+    (cv / "immutable").mkdir()
+    (cv / "immutable" / "VictorJimenezResume.tex").write_text(
+        "\\documentclass{article}\n\\begin{document}\n"
+        "Victor Jimenez | vmj@njit.edu\n"
+        + rs.BODY_MARKER
+        + "\nold body\n\\end{document}\n"
+    )
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    plan["experiences"] = []
+    plan["leadership"] = []
+    tex = rs.render_plan(plan, catalog, tmp_path)
+    body = tex.split(rs.BODY_MARKER, 1)[1]
+    assert "\\section{Experience}" not in body
+    assert "Leadership \\& Extracurriculars" not in body
+    assert "\\section{Projects}" in body
+
+
 def test_provider_transcript_uses_final_structured_response(tmp_path):
     stdout = tmp_path / "stdout.txt"
     stderr = tmp_path / "stderr.txt"
     stdout.write_text("")
+    final = {
+        "positioning_thesis": "targeted engineer",
+        "selected_evidence": [], "excluded_evidence": [],
+        "experiences": [{"source_id": "experience:a"}],
+        "projects": [{"source_id": "project:a"}],
+        "leadership": [], "revision_notes": [],
+    }
     stderr.write_text(
         "intermediate\n"
         + json.dumps({"experiences": [], "projects": []})
         + "\n"
-        + json.dumps({"experiences": [{"source_id": "experience:a"}], "projects": [{"source_id": "project:a"}]})
+        + json.dumps(final)
         + "\n"
     )
     data = rs.provider_data_from_files(stdout, stderr, "draft")
     assert data["experiences"][0]["source_id"] == "experience:a"
+
+
+def test_provider_policy_pins_luna_to_codex_model_not_a_provider_lane(monkeypatch):
+    monkeypatch.setattr(rs.shutil, "which", lambda name: "/usr/bin/" + name)
+    commands = rs.provider_commands()
+    assert set(commands) == {"codex", "claude"}
+    assert "luna" not in commands
+    assert rs.CODEX_LUNA_MODEL == "gpt-5.6-luna"
 
 
 def test_provider_error_result_is_not_usable():
@@ -794,7 +1057,7 @@ def test_ticc_bullet_is_rejected_by_source_addressed_validation():
     assert any("permanently excluded" in error for error in errors)
 
 
-def test_reviewer_prompt_edits_the_final_plan_without_sparsifying():
+def test_reviewer_prompt_is_independent_and_does_not_sparsify_by_rule():
     prompt = rs.reviewer_prompt(
         {"company": "Mayo Clinic"},
         "proposed tex",
@@ -802,9 +1065,25 @@ def test_reviewer_prompt_edits_the_final_plan_without_sparsifying():
         graph_context=[],
         catalog=_fixture_catalog(),
     )
-    assert "complete, strongest-first replacement plan" in prompt
-    assert "do not solve criticism by making the page sparse" in prompt
-    assert "grade the FINAL plan" in prompt
+    assert "independent adversarial resume critic" in prompt
+    assert "Do not return a replacement plan" in prompt
+    assert "Sections and bullet counts are adaptive" in prompt
+
+
+def test_gate_report_never_calls_a_single_provider_review_ready():
+    critique = {"provider": "codex", "data": {
+        "criteria": {name: {"status": "pass", "reason": "ok"} for name in rs.REVIEW_CRITERIA},
+        "blocking_issues": [], "unsupported_claims": [], "missing_evidence": [],
+        "revision_priorities": [], "line_feedback": [],
+    }}
+    deterministic = {"gates": {
+        "factual": {"status": "pass", "reason": "ok"},
+        "layout": {"status": "pass", "reason": "ok"},
+        "portfolio": {"status": "pass", "reason": "ok"},
+    }}
+    result = rs.score_review(critique, deterministic, independent_available=False)
+    assert result["ready"] is False
+    assert result["gates"]["independent_review"]["status"] == "fail"
 
 
 def test_wrapped_enhancement_restores_approved_source_text():
@@ -851,7 +1130,7 @@ def test_fetch_job_description_uses_spa_reader(monkeypatch):
     assert "deep learning inference" in result
 
 
-def test_score_review_is_calculated_by_fixed_rubric():
+def test_score_review_returns_separate_gates_without_a_composite_score():
     agent = {
         "provider": "codex",
         "data": {
@@ -859,8 +1138,9 @@ def test_score_review_is_calculated_by_fixed_rubric():
                 "factual": {"status": "pass"},
                 "target_fit": {"status": "partial"},
                 "evidence": {"status": "pass"},
+                "distinctiveness": {"status": "pass"},
                 "clarity": {"status": "pass"},
-                "portfolio": {"status": "fail"},
+                "privacy": {"status": "pass"},
             },
             "unsupported_claims": [],
         },
@@ -877,11 +1157,13 @@ def test_score_review_is_calculated_by_fixed_rubric():
             "eligibility": {"status": "pass", "reason": "verified"},
         },
     }
-    result = rs.score_review(agent, deterministic)
-    assert result["craft_score"] == 65
+    result = rs.score_review(agent, deterministic, independent_available=True)
+    assert result["craft_score"] is None
     assert result["ready"] is False
-    assert result["criteria"]["layout"]["points"] == 10
+    assert result["score"] is None
     assert result["gates"]["factual"]["status"] == "pass"
+    assert result["gates"]["target_fit"]["status"] == "partial"
+    assert result["decision_feedback"] == []
 
 
 def test_score_review_hard_fails_unsupported_claims():

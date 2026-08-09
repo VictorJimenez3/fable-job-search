@@ -11,8 +11,9 @@ The service has two modes:
 * ``strict`` selects only existing, human-approved source bullets and runs
   deterministic layout checks against the canonical one-page resume format.
 * ``dream``/``unrestricted`` run independent frontier drafts, a synthesis pass,
-  and a fixed reviewer pass. The reviewer returns an applied corrected plan;
-  this module computes the final score from the immutable rubric below.
+  and separate critique lanes. Codex may apply critique in bounded revision
+  rounds; the reviewer never mutates or self-grades the plan, and the module
+  reports separate quality gates instead of a composite craft score.
 
 Run with::
 
@@ -33,6 +34,7 @@ import json
 import os
 import re
 import shutil
+import signal
 import subprocess
 import sys
 import threading
@@ -59,15 +61,11 @@ from radar.evidence_review import (BLOCKING_STATUSES, REVIEW_STATUSES,
                                    load_reviews, review_path, review_summary)
 
 
-RUBRIC_VERSION = "resume-review-v4"
-RUBRIC_WEIGHTS = {
-    "target_fit": 30,
-    "evidence": 25,
-    "clarity": 15,
-    "portfolio": 20,
-    "layout": 10,
-}
-REVIEW_CRITERIA = ("factual", "target_fit", "evidence", "clarity", "portfolio")
+RUBRIC_VERSION = "resume-gates-v1"
+CODEX_LUNA_MODEL = "gpt-5.6-luna"
+REVIEW_CRITERIA = (
+    "factual", "target_fit", "evidence", "distinctiveness", "clarity", "privacy",
+)
 STATUS_MULTIPLIER = {"pass": 1.0, "partial": 0.5, "fail": 0.0}
 MAX_POSTING_CHARS = 12000
 MAX_PROMPT_CHARS = 42000
@@ -94,8 +92,12 @@ MAX_RIGHT_SLACK_PT = 38.0
 # shorten it or the deterministic source fallback can restore a safer line.
 MIN_RIGHT_SLACK_PT = 12.0
 MAX_LINE_EDIT_PASSES = 2
-MIN_TOTAL_BULLETS = 22
-MAX_TOTAL_BULLETS = 26
+# These are provider-output safety limits, not portfolio requirements.  The
+# page packer decides how much evidence the target can honestly carry.
+MAX_CANDIDATE_BULLETS = 60
+MAX_RENDERED_BULLETS = 40
+MIN_TOTAL_BULLETS = 0
+MAX_TOTAL_BULLETS = MAX_RENDERED_BULLETS
 MAX_AUTHORITY_CONTEXT_CHARS = 16000
 MAX_METHODOLOGY_CONTEXT_CHARS = 12000
 MAX_CONTEXT_PROMPT_CHARS = 12000
@@ -133,15 +135,29 @@ TARGET_KEYWORD_TERMS = (
     "optimization", "hpc", "real-time", "multimodal", "data pipeline", "microservices",
 )
 PORTFOLIO_CAPS = {
-    "experiences": {"entries": 3, "bullets": 6},
-    "projects": {"entries": 4, "bullets": 3},
-    "leadership": {"entries": 2, "bullets": 1},
+    # Provider safety ceilings.  None of these are required for a valid plan.
+    "experiences": {"entries": 8, "bullets": 10},
+    "projects": {"entries": 12, "bullets": 8},
+    "leadership": {"entries": 4, "bullets": 4},
 }
-EXPERIENCE_BULLET_CAPS = (6, 4, 4)
+EXPERIENCE_BULLET_CAPS = (10, 10, 10, 10, 10, 10, 10, 10)
 PORTFOLIO_FLOORS = {
-    "experiences": {"entries": 3, "bullets": 3},
-    "projects": {"entries": 4, "bullets": 2},
-    "leadership": {"entries": 1, "bullets": 1},
+    "experiences": {"entries": 0, "bullets": 0},
+    "projects": {"entries": 0, "bullets": 0},
+    "leadership": {"entries": 0, "bullets": 0},
+}
+PORTFOLIO_SIGNAL_PATTERNS = {
+    "ai_orchestration": r"\b(?:agentic|agents?|gemini|adk|llm|large language)\b",
+    "retrieval_search": r"\b(?:rag|lightrag|retrieval|vector search|knowledge[- ]graph|pgvector)\b",
+    "backend_api": r"\b(?:fastapi|flask|rest endpoints?|apis?|web app|backend|websocket)\b",
+    "cloud_data": r"\b(?:google cloud|alloydb|sql|pandas|sqlite|database|schema|data pipeline|firebase|cache)\b",
+    "ml_modeling": r"\b(?:machine learning|deep learning|pytorch|scikit|xgboost|model training|classification|clustering|linear[- ]algebra)\b",
+    "computer_vision_multimodal": r"\b(?:computer vision|emotions?|facial|gaze|multimodal|transcript|audio)\b",
+    "security_access": r"\b(?:jwt|secure|security|encrypted|tenseal|ckks|role[- ]based|access control|authentication)\b",
+    "algorithms_validation": r"\b(?:algorithm|roc[- ]auc|recall|validation|resampling|brownian|qubit|quantum|stratified)\b",
+    "systems_reliability": r"\b(?:resilient|dropout|real[- ]time|streaming|ingestion|hpc|slurm|bash|gpu|hardware)\b",
+    "external_validation": r"\b(?:won|selected|hackmit|hackhers|hacknjit|hackru|hacknyu|1st place|fellowship|competitors?)\b",
+    "people_leadership": r"\b(?:led|leadership|students|team|interviews?|community|stakeholders?)\b",
 }
 _EVIDENCE_GRAPH_CACHE: Dict[str, Dict[str, Any]] = {}
 _CURRENT_SCORE_CACHE: Dict[str, Any] = {}
@@ -396,8 +412,12 @@ def update_evidence_review(
         "reviewed_by": "Victor",
         "reviewed_at": dt.datetime.now(dt.timezone.utc).isoformat(),
     }
-    if status == "confirmed" and claim_allowed:
+    if status in {"confirmed", "public_safe"} and claim_allowed:
         claims[node_id]["claim_allowed"] = True
+    elif status not in {"confirmed", "public_safe"}:
+        # A stale true flag must not survive a downgrade to disputed,
+        # rejected, superseded, or private-only evidence.
+        claims[node_id].pop("claim_allowed", None)
     write_json(review_path(studio_root(root or repo_root())), reviews)
     key = str((root or repo_root()).resolve())
     _EVIDENCE_GRAPH_CACHE.pop(key, None)
@@ -532,7 +552,7 @@ def run_pdf_path(run_dir: Path) -> Path:
     configured = str(status.get("pdf_filename") or "").strip()
     if configured:
         return run_dir / Path(configured).name
-    named = sorted(run_dir.glob("*_resume_ai.pdf"))
+    named = sorted(run_dir.glob("*_resume_ai*.pdf"))
     if named:
         return named[0]
     return run_dir / "resume.pdf"
@@ -716,7 +736,14 @@ def source_catalog(root: Optional[Path] = None) -> Dict[str, Any]:
                 role, dates, company, location = args
             else:
                 company, dates, role, location = args
-            kind = "leadership" if "leadership" in section or "extracurricular" in section else "experience"
+            role_text = _plain_heading(role).lower()
+            kind = (
+                "leadership"
+                if "leadership" in section
+                or "extracurricular" in section
+                or "resident assistant" in role_text
+                else "experience"
+            )
             merge_entry(
                 kind,
                 _plain_heading(company),
@@ -785,6 +812,239 @@ def catalog_for_prompt(catalog: Dict[str, Any]) -> List[Dict[str, Any]]:
         item = {key: value for key, value in entry.items() if key not in {"sources"}}
         packed.append(item)
     return packed
+
+
+def _canonical_source_name(value: Any) -> str:
+    normalized = str(value or "").replace("\\", "/").strip()
+    if normalized.startswith("CV/"):
+        normalized = normalized[3:]
+    return normalized
+
+
+def _is_canonical_source(value: Any) -> bool:
+    """Recognize the immutable benchmark without treating generated output as authority."""
+    normalized = _canonical_source_name(value)
+    # ``resume.tex`` is retained only for small historical test fixtures. The
+    # real catalog uses the immutable filename above.
+    return normalized in {CANONICAL_TEMPLATE, "resume.tex"}
+
+
+def canonical_resume_benchmark(catalog: Dict[str, Any]) -> Dict[str, Any]:
+    """Return compact canonical structure for marginal-change comparisons.
+
+    This is a benchmark, not a preservation rule. It tells the model what the
+    current resume proves so that a creative swap can explain what it gains
+    and what evidence it gives up.
+    """
+    experiences = []
+    projects = []
+    canonical_bullets = []
+    for entry in (catalog.get("entries") or {}).values():
+        canonical = [
+            bullet for bullet in (entry.get("bullets") or [])
+            if _is_canonical_source(bullet.get("source"))
+        ]
+        if not canonical:
+            continue
+        bullet_ids = [str(item.get("id") or "") for item in canonical]
+        if entry.get("kind") == "experience":
+            experiences.append({
+                "source_id": str(entry.get("id") or ""),
+                "company": str(entry.get("company") or ""),
+                "role": str(entry.get("role") or ""),
+                "dates": str(entry.get("dates") or ""),
+                "bullet_ids": bullet_ids,
+            })
+        elif entry.get("kind") == "project":
+            projects.append({
+                "source_id": str(entry.get("id") or ""),
+                "heading": str(entry.get("heading") or ""),
+                "bullet_ids": bullet_ids,
+            })
+        for bullet in canonical:
+            canonical_bullets.append({
+                "source_id": str(bullet.get("id") or ""),
+                "entry_id": str(entry.get("id") or ""),
+                "section": str(entry.get("kind") or ""),
+                "text": str(bullet.get("text") or ""),
+            })
+    return {
+        "template": CANONICAL_TEMPLATE,
+        "experience_order": experiences,
+        "projects": projects,
+        "canonical_bullets": canonical_bullets,
+    }
+
+
+def _portfolio_signal_families(text: Any) -> List[str]:
+    plain = _latex_plain(str(text or ""))
+    return [
+        family for family, pattern in PORTFOLIO_SIGNAL_PATTERNS.items()
+        if re.search(pattern, plain, flags=re.I)
+    ]
+
+
+def portfolio_diagnostics(
+    plan: Dict[str, Any], catalog: Dict[str, Any],
+) -> Dict[str, Any]:
+    """Compare the whole selected portfolio, not just isolated bullets.
+
+    This is a review instrument rather than a composite score. It exposes
+    breadth, overlap, and stronger unused alternatives so a writer or
+    independent critic can catch a technically polished but strategically
+    weaker draft.
+    """
+    entries = catalog.get("entries") or {}
+    selected: Dict[str, Dict[str, Any]] = {}
+    selected_families: Dict[str, List[str]] = {}
+    section_by_id: Dict[str, str] = {}
+    for section in ("experiences", "projects", "leadership"):
+        for selection in plan.get(section, []) or []:
+            entry_id = str(selection.get("source_id") or "")
+            entry = entries.get(entry_id) or {}
+            text = " ".join([
+                str(entry.get("heading") or ""),
+                str(entry.get("company") or ""),
+                str(entry.get("role") or ""),
+                " ".join(str(item.get("text") or "") for item in selection.get("bullets", [])),
+            ])
+            selected[entry_id] = {
+                "source_id": entry_id,
+                "section": section,
+                "label": _project_heading(entry.get("heading")) if entry.get("kind") == "project" else str(
+                    entry.get("company") or entry.get("role") or entry_id
+                ),
+            }
+            selected_families[entry_id] = _portfolio_signal_families(text)
+            section_by_id[entry_id] = section
+
+    selected_experience_families = set(
+        family
+        for entry_id, families in selected_families.items()
+        if section_by_id.get(entry_id) == "experiences"
+        for family in families
+    )
+    selected_project_ids = [
+        str(selection.get("source_id") or "")
+        for selection in plan.get("projects", []) or []
+    ]
+    selected_project_families = set(
+        family
+        for entry_id, families in selected_families.items()
+        if section_by_id.get(entry_id) == "projects"
+        for family in families
+    )
+    overlap_families = {
+        "ai_orchestration", "retrieval_search", "backend_api", "cloud_data",
+        "ml_modeling", "computer_vision_multimodal", "security_access",
+        "algorithms_validation", "systems_reliability",
+    }
+    project_overlap = []
+    for entry_id in selected_project_ids:
+        families = set(selected_families.get(entry_id, []))
+        # Awards and people signals are useful, but should not by themselves
+        # make two technically different projects look redundant.
+        shared = sorted(families & selected_experience_families & overlap_families)
+        distinct = sorted(families - selected_experience_families)
+        if len(shared) >= 2:
+            project_overlap.append({
+                "source_id": entry_id,
+                "label": selected.get(entry_id, {}).get("label", entry_id),
+                "shared_with_experience": shared,
+                "distinct_from_experience": distinct,
+                "severity": "high" if len(distinct) <= 1 else "review",
+            })
+
+    unused_projects = []
+    for entry_id, entry in entries.items():
+        if entry.get("kind") != "project" or str(entry_id) in selected:
+            continue
+        text = " ".join([
+            str(entry.get("heading") or ""),
+            " ".join(str(item.get("text") or "") for item in entry.get("bullets", [])),
+        ])
+        families = set(_portfolio_signal_families(text))
+        unique_to_alternative = sorted(families - selected_experience_families - selected_project_families)
+        unused_projects.append({
+            "source_id": str(entry_id),
+            "label": _project_heading(entry.get("heading") or entry_id),
+            "signal_families": sorted(families),
+            "unique_to_alternative": unique_to_alternative,
+            "technical_alternative": bool(
+                families & {
+                    "backend_api", "cloud_data", "ml_modeling",
+                    "computer_vision_multimodal", "security_access",
+                    "algorithms_validation", "systems_reliability",
+                }
+            ),
+        })
+    unused_projects.sort(
+        key=lambda item: (
+            not bool(item["unique_to_alternative"]),
+            not item["technical_alternative"],
+            -len(item["unique_to_alternative"]),
+            item["label"],
+        )
+    )
+    leadership_ids = [
+        str(selection.get("source_id") or "")
+        for selection in plan.get("leadership", []) or []
+    ]
+    leadership_competition = []
+    if leadership_ids:
+        # Advisory by design: leadership may still be justified for a target,
+        # but the plan must explain retaining it when a credible technical
+        # project is available for the same page space.
+        leadership_competition = [
+            item for item in unused_projects if item["technical_alternative"]
+        ][:6]
+
+    canonical = canonical_resume_benchmark(catalog)
+    canonical_project_ids = [
+        str(item.get("source_id") or "") for item in canonical.get("projects", [])
+    ]
+    selected_families_all = sorted({
+        family for families in selected_families.values() for family in families
+    })
+    warnings = []
+    blocking_warnings = []
+    if leadership_competition:
+        warning = (
+            "Leadership competes with stronger unused technical project alternatives; "
+            "retain it only if the alternatives are genuinely weaker for this target."
+        )
+        warnings.append(warning)
+        ledger_text = " ".join(
+            str(item.get(field) or "").lower()
+            for item in (plan.get("decision_ledger") or [])
+            if isinstance(item, dict)
+            for field in ("action", "current_evidence", "replacement_or_exclusion", "why_stronger")
+        )
+        if "leadership" not in ledger_text and "resident assistant" not in ledger_text and "ra" not in ledger_text:
+            blocking_warnings.append(warning)
+    high_overlap = [item for item in project_overlap if item["severity"] == "high"]
+    if high_overlap and unused_projects:
+        warnings.append(
+            "At least one selected project repeats multiple experience signal families; "
+            "compare it against unused projects before expanding the repeated story."
+        )
+    if canonical_project_ids and not set(canonical_project_ids) <= set(selected_project_ids):
+        warnings.append(
+            "The tailored portfolio differs from the canonical project set; every dropped "
+            "strong project needs a clear replacement or explicit tradeoff."
+        )
+    return {
+        "selected_entry_families": selected_families,
+        "selected_signal_families": selected_families_all,
+        "selected_signal_family_count": len(selected_families_all),
+        "project_overlap": project_overlap,
+        "unused_project_alternatives": unused_projects[:8],
+        "leadership_competition": leadership_competition,
+        "canonical_project_ids": canonical_project_ids,
+        "selected_project_ids": selected_project_ids,
+        "warnings": warnings,
+        "blocking_warnings": blocking_warnings,
+    }
 
 
 def job_matches(job: Dict[str, Any], query: str) -> bool:
@@ -978,7 +1238,10 @@ def studio_usage(root: Optional[Path] = None) -> Dict[str, Any]:
     base = studio_root(root)
     now = dt.datetime.now(dt.timezone.utc)
     week_start = (now - dt.timedelta(days=now.weekday())).date().isoformat()
-    totals = {"codex_tokens": 0, "codex_calls": 0, "claude_tokens": 0, "claude_calls": 0}
+    totals = {
+        "codex_tokens": 0, "codex_calls": 0,
+        "claude_tokens": 0, "claude_calls": 0,
+    }
     runs = 0
     completed = 0
     for report_path in (sorted((base / "runs").glob("*/report.json")) if (base / "runs").is_dir() else []):
@@ -1133,7 +1396,14 @@ def fetch_job_description(job: Dict[str, Any]) -> str:
 
 
 def provider_commands() -> Dict[str, Optional[str]]:
-    return {"codex": shutil.which("codex"), "claude": shutil.which("claude")}
+    # These are first-party subscription CLIs only.  Do not add Ollama,
+    # arbitrary OpenAI-compatible endpoints, or local model servers here.
+    # Luna is the Codex model selected for this harness, not a separate local
+    # executable. Claude remains the independent provider lane.
+    return {
+        "codex": shutil.which("codex"),
+        "claude": shutil.which("claude"),
+    }
 
 
 def subscription_environment(run_dir: Path) -> Dict[str, str]:
@@ -1209,7 +1479,7 @@ def useful_provider_data(data: Dict[str, Any], label: str) -> bool:
             isinstance(value, dict) and str(value.get("status", "")).lower() in STATUS_MULTIPLIER
             for value in criteria.values()
         )
-    return bool(data.get("experiences")) and bool(data.get("projects"))
+    return all(key in data for key in ("experiences", "projects", "leadership", "positioning_thesis"))
 
 
 def plan_schema(enhance: bool) -> Dict[str, Any]:
@@ -1237,8 +1507,33 @@ def plan_schema(enhance: bool) -> Dict[str, Any]:
         "required": bullet_required,
         "additionalProperties": False,
     }
+    decision_ledger_item = {
+        "type": "object",
+        "properties": {
+            "action": {"type": "string"},
+            "current_evidence": {"type": "string"},
+            "replacement_or_exclusion": {"type": "string"},
+            "target_signal": {"type": "string"},
+            "why_stronger": {"type": "string"},
+            "signal_lost": {"type": "string"},
+        },
+        "required": [
+            "action", "current_evidence", "replacement_or_exclusion",
+            "target_signal", "why_stronger", "signal_lost",
+        ],
+        "additionalProperties": False,
+    }
+    front_matter_policy = {
+        "type": "object",
+        "properties": {
+            "coursework": {"type": "string", "enum": ["keep", "omit"]},
+            "awards": {"type": "string", "enum": ["keep", "omit"]},
+        },
+        "required": ["coursework", "awards"],
+        "additionalProperties": False,
+    }
 
-    def selection(min_bullets: int, max_bullets: int) -> Dict[str, Any]:
+    def selection(max_bullets: int) -> Dict[str, Any]:
         return {
             "type": "object",
             "properties": {
@@ -1246,7 +1541,7 @@ def plan_schema(enhance: bool) -> Dict[str, Any]:
                 "bullets": {
                     "type": "array",
                     "items": bullet,
-                    "minItems": min_bullets,
+                    "minItems": 1,
                     "maxItems": max_bullets,
                 },
                 "why": {"type": "string"},
@@ -1271,23 +1566,27 @@ def plan_schema(enhance: bool) -> Dict[str, Any]:
             "excluded_evidence": {"type": "array", "items": {"type": "string"}},
             "experiences": {
                 "type": "array",
-                "items": selection(3, 6),
-                "minItems": 3,
-                "maxItems": 3,
+                "items": selection(10),
+                "minItems": 0,
+                "maxItems": PORTFOLIO_CAPS["experiences"]["entries"],
             },
             "projects": {
                 "type": "array",
-                "items": selection(2, 3),
-                "minItems": 4,
-                "maxItems": 5,
+                "items": selection(8),
+                "minItems": 0,
+                "maxItems": PORTFOLIO_CAPS["projects"]["entries"],
             },
             "leadership": {
                 "type": "array",
-                "items": selection(1, 1),
-                "minItems": 1,
-                "maxItems": 2,
+                "items": selection(4),
+                "minItems": 0,
+                "maxItems": PORTFOLIO_CAPS["leadership"]["entries"],
             },
             "revision_notes": {"type": "array", "items": {"type": "string"}},
+            "decision_ledger": {
+                "type": "array", "maxItems": 40, "items": decision_ledger_item,
+            },
+            "front_matter_policy": front_matter_policy,
         },
         "required": [
             "positioning_thesis",
@@ -1297,6 +1596,8 @@ def plan_schema(enhance: bool) -> Dict[str, Any]:
             "projects",
             "leadership",
             "revision_notes",
+            "decision_ledger",
+            "front_matter_policy",
         ],
         "additionalProperties": False,
     }
@@ -1320,26 +1621,73 @@ def review_schema() -> Dict[str, Any]:
                 "required": list(REVIEW_CRITERIA),
                 "additionalProperties": False,
             },
+            "blocking_issues": {"type": "array", "items": {"type": "string"}},
+            "line_feedback": {
+                "type": "array",
+                "maxItems": 20,
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "source_id": {"type": "string"},
+                        "issue": {"type": "string"},
+                        "recommendation": {"type": "string"},
+                        "severity": {"type": "string"},
+                    },
+                    "required": ["source_id", "issue", "recommendation", "severity"],
+                    "additionalProperties": False,
+                },
+            },
             "unsupported_claims": {"type": "array", "items": {"type": "string"}},
             "missing_evidence": {"type": "array", "items": {"type": "string"}},
             "revision_priorities": {"type": "array", "items": {"type": "string"}},
+            "decision_feedback": {
+                "type": "array", "maxItems": 20,
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "action": {"type": "string"},
+                        "current_evidence": {"type": "string"},
+                        "replacement_or_exclusion": {"type": "string"},
+                        "issue": {"type": "string"},
+                        "recommendation": {"type": "string"},
+                        "severity": {"type": "string"},
+                    },
+                    "required": [
+                        "action", "current_evidence", "replacement_or_exclusion",
+                        "issue", "recommendation", "severity",
+                    ],
+                    "additionalProperties": False,
+                },
+            },
+            "portfolio_comparison": {
+                "type": "object",
+                "properties": {
+                    "status": {"type": "string"},
+                    "reason": {"type": "string"},
+                    "preserved_strengths": {"type": "array", "items": {"type": "string"}},
+                    "gained_strengths": {"type": "array", "items": {"type": "string"}},
+                    "lost_strengths": {"type": "array", "items": {"type": "string"}},
+                },
+                "required": [
+                    "status", "reason", "preserved_strengths",
+                    "gained_strengths", "lost_strengths",
+                ],
+                "additionalProperties": False,
+            },
         },
-        "required": ["criteria", "unsupported_claims", "missing_evidence", "revision_priorities"],
+        "required": [
+            "criteria", "blocking_issues", "line_feedback", "unsupported_claims",
+            "missing_evidence", "revision_priorities",
+            "decision_feedback",
+            "portfolio_comparison",
+        ],
         "additionalProperties": False,
     }
 
 
 def reviewed_plan_schema(enhance: bool) -> Dict[str, Any]:
-    """Return one structured contract for critique plus the corrected plan.
-
-    The old pipeline paid for an adversarial review but only displayed its
-    complaints.  Requiring a complete corrected plan makes that same call do
-    useful final-edit work without adding a third frontier-model pass.
-    """
-    schema = review_schema()
-    schema["properties"]["final_plan"] = plan_schema(enhance)
-    schema["required"].append("final_plan")
-    return schema
+    """Backward-compatible name for the critique-only contract."""
+    return review_schema()
 
 
 def workshop_schema() -> Dict[str, Any]:
@@ -1404,6 +1752,27 @@ def provider_usage_tokens(stderr_path: Path) -> Optional[int]:
     return int(matches[-1].replace(",", "")) if matches else None
 
 
+def stop_provider_process(proc: subprocess.Popen) -> None:
+    """Stop a provider and children after a usable answer or timeout."""
+    try:
+        if proc.poll() is not None:
+            return
+        if os.name == "posix":
+            os.killpg(os.getpgid(proc.pid), signal.SIGTERM)
+        else:
+            proc.terminate()
+        proc.wait(timeout=5)
+    except (OSError, subprocess.TimeoutExpired):
+        try:
+            if os.name == "posix":
+                os.killpg(os.getpgid(proc.pid), signal.SIGKILL)
+            else:
+                proc.kill()
+            proc.wait(timeout=5)
+        except (OSError, subprocess.TimeoutExpired):
+            pass
+
+
 def run_provider(
     provider: str,
     prompt: str,
@@ -1437,6 +1806,8 @@ def run_provider(
             executable,
             "exec",
             "-c",
+            "model=" + CODEX_LUNA_MODEL,
+            "-c",
             "model_reasoning_effort=" + configured_effort,
             "--sandbox",
             "read-only",
@@ -1447,7 +1818,7 @@ def run_provider(
             str(stdout_path),
             "-",
         ]
-    else:
+    elif provider == "claude":
         args = [
             executable,
             "-p",
@@ -1459,6 +1830,8 @@ def run_provider(
             "--add-dir",
             str(cv_root(repo_root())),
         ]
+    else:
+        return {"provider": provider, "ok": False, "error": "unsupported provider lane"}
     started = time.time()
     stdout_path.touch()
     try:
@@ -1471,6 +1844,7 @@ def run_provider(
                 stdout=out,
                 stderr=err,
                 text=True,
+                start_new_session=(os.name == "posix"),
             )
             try:
                 proc.stdin.write(prompt)
@@ -1479,10 +1853,21 @@ def run_provider(
                 pass
             timed_out = False
             while proc.poll() is None:
+                recovered = provider_data_from_files(stdout_path, stderr_path, label)
+                if recovered is not None:
+                    stop_provider_process(proc)
+                    return {
+                        "provider": provider,
+                        "ok": True,
+                        "elapsed_seconds": round(time.time() - started, 1),
+                        "data": recovered,
+                        "usage_tokens": provider_usage_tokens(stderr_path),
+                        "stdout_path": str(stdout_path),
+                        "stderr_path": str(stderr_path),
+                    }
                 if time.time() - started >= timeout:
                     timed_out = True
-                    proc.kill()
-                    proc.wait(timeout=5)
+                    stop_provider_process(proc)
                     break
                 time.sleep(0.25)
         data = provider_data_from_files(stdout_path, stderr_path, label)
@@ -1534,10 +1919,15 @@ def job_context(job: Dict[str, Any]) -> Dict[str, Any]:
     context["local_sources"] = [
         "CV/cv_full.tex",
         "CV/immutable/tldp_resume.tex",
+        "CV/immutable/og_resume.tex (visual benchmark only)",
+        "CV/AGENTS.md",
+        "CV/CLAUDE.md",
+        "CV/README.md",
         "CV/RESUME_TAILORING_PLAYBOOK.md",
         "CV/RESUME_BULLET_METHODOLOGY.md",
         "CV/RESUME_NOTES.md",
         "CV/JJ_RESUME_CONTEXT.md",
+        "CV/Victor_Jimenez_Knowledge_Base_v2.md",
         "CV/experiences/",
     ]
     return context
@@ -1563,12 +1953,22 @@ def resume_authority_context(root: Optional[Path] = None) -> str:
     """
     cv = cv_root(root or repo_root())
     names = (
+        # Method and owner-authored context come first. Historical resumes
+        # are bounded benchmarks, never an instruction to copy their shape.
         "RESUME_NOTES.md",
+        # Owner-authored notes contain current claim boundaries and regression
+        # benchmarks; give them the first context window so important middle
+        # sections are not lost to the bounded authority excerpt.
+        "RESUME_TAILORING_PLAYBOOK.md",
+        "RESUME_BULLET_METHODOLOGY.md",
         "JJ_RESUME_CONTEXT.md",
         "experiences/JJ_SOURCE_OF_TRUTH.md",
         "experiences/JJ_AI_Data_Science_Intern.md",
         "experiences/JJ_BULLET_ITERATION_LOG.md",
         "Victor_Jimenez_Knowledge_Base_v2.md",
+        "immutable/VictorJimenezResume.tex",
+        "immutable/tldp_resume.tex",
+        "immutable/og_resume.tex",
     )
     parts: List[str] = []
     remaining = MAX_AUTHORITY_CONTEXT_CHARS
@@ -1581,7 +1981,10 @@ def resume_authority_context(root: Optional[Path] = None) -> str:
             continue
         excerpt_limit = min(7000, remaining)
         excerpt = _prompt_excerpt(text, excerpt_limit)
-        parts.append("# " + name + "\n" + excerpt)
+        label = name
+        if name.startswith("immutable/") and name != CANONICAL_TEMPLATE:
+            label += " [visual benchmark only; do not reuse claims or metadata]"
+        parts.append("# " + label + "\n" + excerpt)
         remaining -= len(excerpt) + len(name) + 4
     return "\n\n".join(parts)
 
@@ -1716,6 +2119,9 @@ Victor-specific guardrails:
 - Use the complete CV/RESUME_TAILORING_PLAYBOOK.md and
   CV/RESUME_BULLET_METHODOLOGY.md. Use CV/cv_full.tex as the responsibility
   bank and the experience dossiers as higher-authority factual sources.
+- The immutable historical og_resume/tldp_resume files are visual and wording
+  benchmarks only. They contain superseded claims; never copy a claim from
+  them unless a current authority source independently supports it.
 - The target keyword strategy below is an ATS aid, not a license to keyword
   stuff. Use exact supported terms when they naturally describe an authorized
   artifact; put unsupported requirements in the gap list rather than inventing
@@ -1729,25 +2135,74 @@ Victor-specific guardrails:
   they distinguish the work from production or real-user deployment.
 - Employer entries are rendered company-first, then role/title. TLDP is one
   target program, not a generic style.
-- Return a rich but ranked candidate pool: all 3 established experiences with
-  3-6 bullets each, 4-5 projects with 2-3 bullets each, and 1-2 leadership
-  entries with one bullet each. Every bullet must introduce a distinct,
-  defensible interview thread; lower-ranked candidates are useful packing
-  alternatives, not permission to repeat the same story.
-- Victor's immutable human references contain 24-26 meaningful bullets and
-  reach the bottom of the page. The deterministic packer targets that same
-  evidence density while capping the final page at 3 experiences, 4 projects,
-  2 leadership entries, and 26 bullets. A large blank bottom region is a hard
-  failure. Fill space with distinct evidence, never filler wording.
+- Return a rich but ranked candidate pool. Choose the number of experiences,
+  projects, leadership items, and bullets that best support this role. There
+  is no required leadership section, project count, or bullet floor. Every
+  selected bullet must introduce a distinct, defensible interview thread;
+  lower-ranked candidates are packing alternatives, not filler.
+- Choose the portfolio before polishing individual lines. Compare the
+  whole-resume signal: technical breadth, project differentiation, external
+  validation, and the number of distinct interview stories. A good bullet can
+  still be the wrong portfolio choice if it repeats a stronger experience
+  story or displaces a better project.
+- For technical software-engineering roles, Resident Assistant/community
+  leadership is discretionary. Select it only when it adds a needed,
+  otherwise-uncovered signal and no stronger unused project or technical
+  evidence earns the space. Do not use RA to fill a page while a materially
+  stronger technical alternative is available.
+- If an experience already proves agents, RAG, or retrieval, a project using
+  those tools must add a clearly distinct engineering surface—such as access
+  control, document processing at scale, caching, or a different product
+  boundary—or yield its slot to a stronger nonredundant project. Keep a strong
+  fifth experience bullet when the page can carry it.
+- Coursework, the HackMIT acceptance-pool proof bullet, and the aggregated
+  Awards skill line are flexible reserves. Keep them by default, but when page
+  space is genuinely needed, reclaim them in this order: coursework first,
+  then the HackMIT acceptance/selection bullet if present, then Awards. This
+  reserve policy must run before deleting strong technical experience/project
+  evidence. Record the tradeoff in decision_ledger or the packing report.
+- Victor's immutable human references are quality and visual benchmarks, not a
+  mandatory portfolio shape. Use available page space for strong evidence when
+  it genuinely earns space; if measured capacity can carry a verified unused
+  bullet with real hiring value, prefer that over avoidable whitespace. Accept
+  bottom clearance only when no useful authorized line fits. Never pad a page
+  or preserve a weak category just to imitate a reference's density.
 - Assign priority 1-100 to every bullet based on target relevance, proof,
   distinctiveness, and interview value. Do not inflate every priority.
 - Return source IDs from the supplied catalog. Never return a LaTeX document,
   preamble, section command, margin, font size, spacing command, or page break.
-- Projects are deliberately replaceable. Choose the 4-5 strongest projects
-  from the complete source catalog for this target; do not preserve a base-CV
-  project merely because it appeared in CV/immutable/VictorJimenezResume.tex. Reword supported
-  bullets around the posting's exact terms and explain project swaps in
+- Projects are deliberately replaceable. Choose only the strongest projects
+  needed for this target; do not preserve a base-CV project merely because it
+  appeared in CV/immutable/VictorJimenezResume.tex. Reword supported bullets
+  around the posting's exact terms and explain swaps or omissions in
   revision_notes.
+- Creative permission is not itself a reason to change content. Compare every
+  substantive candidate change with the canonical/current benchmark and make
+  it only when the expected hiring-value gain is meaningful. Consider target
+  relevance, evidence strength, technical impressiveness, specificity,
+  differentiation, accurate ATS terminology, breadth, redundancy,
+  readability/structural cost, and the information lost by removing the
+  current evidence. Prefer high-value project swaps, stronger unused bullets,
+  newly exposed technical dimensions, useful reordering, and redundancy
+  reduction over paraphrase churn.
+- Use action-specific thresholds: reordering has a low threshold; surfacing an
+  unused verified bullet has a moderate threshold; rewriting wording has a
+  moderate-to-high threshold; removing a strong metric or specific claim has a
+  high threshold; removing a strong project or experience has a high
+  threshold; and breaking reverse chronology or another resume convention has
+  a very high threshold. Preserve conventional reverse-chronological job
+  order unless a deliberate exception has a strong, recorded reason.
+- Do not infer an AI-productivity-tools requirement merely from building AI
+  systems. If the supplied evidence does not satisfy a requirement, leave it
+  as a gap rather than stretching adjacent experience.
+- Return a concise decision_ledger for every substantive swap, exclusion,
+  removal, rewrite, or nonstandard reorder. Each item must state the current
+  evidence, replacement or exclusion, target signal, why the change is
+  stronger, and important signal lost. Leave it empty when no substantive
+  change is justified.
+- Return front_matter_policy with coursework and awards set to keep unless
+  reclaiming that flexible space is preferable to removing strong technical
+  evidence.
 """.strip()
     if enhance:
         role_guardrails += (
@@ -1779,6 +2234,7 @@ Victor-specific guardrails:
         indent=2,
         ensure_ascii=False,
     )
+    benchmark_text = json.dumps(canonical_resume_benchmark(catalog), indent=2, ensure_ascii=False)
     return (
         "You are the "
         + role
@@ -1797,6 +2253,8 @@ Victor-specific guardrails:
         + context_text[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nSource-addressable evidence catalog:\n"
         + catalog_text[:MAX_CATALOG_PROMPT_CHARS]
+        + "\n\nCanonical/current benchmark (comparison point, not a preservation rule):\n"
+        + benchmark_text[:MAX_CATALOG_PROMPT_CHARS]
         + "\n\nTarget-ranked evidence graph nodes (authority and claim_allowed are binding):\n"
         + graph_text[:MAX_GRAPH_PROMPT_CHARS]
         + "\n\nExact ATS keyword strategy:\n"
@@ -1821,22 +2279,28 @@ def synthesis_prompt(
                 "projects": data.get("projects", []),
                 "leadership": data.get("leadership", []),
                 "revision_notes": data.get("revision_notes", []),
+                "decision_ledger": data.get("decision_ledger", []),
+                "front_matter_policy": data.get("front_matter_policy", {}),
             }
         )
     return (
         "You are the senior resume evidence editor synthesizing competing plans for Victor.\n"
         "This request is self-contained. Do not inspect the filesystem or run commands; use the supplied source IDs "
         "and evidence only. Do not edit files and do not return a LaTeX document. "
-        "CV/immutable/VictorJimenezResume.tex remains immutable and the harness renders it. Return a rich, strongest-first ranked pool sized "
-        "to match the full human-authored reference page; each bullet must earn its place through target fit, proof, "
-        "and a distinct interview story. "
+        "CV/immutable/VictorJimenezResume.tex remains immutable and the harness renders it. Return a strongest-first "
+        "ranked evidence pool with adaptive sections and no filler. Choose the number of entries and bullets that best "
+        "support the target; each retained bullet must earn its place through target fit, proof, and a distinct "
+        "interview story. Use a verified unused bullet when measured page capacity can carry it and it adds hiring "
+        "value; normal bottom clearance is acceptable only when no additional evidence is useful. "
         + ("You may substantially rewrite or synthesize bullet text from the authorized source bank; preserve the primary source_id, add all supporting source IDs, and retain every scope-limiting qualifier. " if enhance else "Select source IDs verbatim; do not rewrite bullets. ")
         + ("This is the unrestricted creative pass: write genuinely original, role-specific bullets and make decisive project swaps when the evidence supports them; do not collapse back to base-resume phrasing. " if unrestricted else "")
-        + "Choose the stronger defensible plan rather than averaging it.\n\n"
+        + "Choose the stronger defensible plan rather than averaging it. Judge the whole portfolio before individual wording: preserve strong fifth experience bullets when space permits, remove Resident Assistant before a stronger unused technical project, and do not spend a project slot repeating an experience's agents/RAG/retrieval story unless the project adds a materially distinct engineering surface. If the rendered page needs room for a distinct project or bullet, use flexible reserves before substantive evidence: coursework first, then the HackMIT acceptance-pool bullet when present, then Awards. Do not change an already strong line merely to make the draft look tailored. Compare each substantive swap, exclusion, rewrite, or reorder with the canonical/current benchmark and record the hiring-value gain and important signal lost in decision_ledger. High-value changes include stronger unused evidence, a materially better project, a newly exposed technical dimension, useful ordering, accurate ATS terminology, and reduced redundancy; low-value paraphrase churn is not a goal. Preserve reverse-chronological job order unless the exception is genuinely stronger and explicitly recorded. \n\n"
         "Job context:\n"
         + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nEvidence catalog:\n"
         + json.dumps(catalog_for_prompt(catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
+        + "\n\nCanonical/current benchmark (comparison point, not a preservation rule):\n"
+        + json.dumps(canonical_resume_benchmark(catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
         + "\n\nTarget-ranked evidence graph:\n"
         + json.dumps(evidence_context(graph, context, str(context.get("posting_text") or "")) if graph else [], indent=2, ensure_ascii=False)[:MAX_GRAPH_PROMPT_CHARS]
         + "\n\nCV authority dossier:\n"
@@ -1856,23 +2320,18 @@ def reviewer_prompt(
     unrestricted: bool = False,
 ) -> str:
     return (
-        "You are an adversarial final resume editor. This is a fresh review: do not "
-        "trust the generation agents, their explanations, or any score they may "
-        "have claimed. This request is self-contained: do not inspect the filesystem, "
-        "run commands, or read any prior generated resume/report. Use only the target, "
-        "plan, catalog, and authorized evidence supplied below. Inspect the proposed content "
-        "plan, correct it, and return JSON only. "
-        "Do not assign a numeric score; the harness calculates it. final_plan must be a "
-        "complete, strongest-first replacement plan. Keep all three established experiences, "
-        "four or five complementary projects, and one or two leadership entries so the "
-        "deterministic packer can produce the same full-page evidence density as Victor's "
-        "human references. You may reorder, replace, or substantially rewrite bullets using one or more authorized "
-        "source IDs; source_ids must list every source bullet used to synthesize a line. Remove overlap and unsupported implications; do not solve criticism by "
-        "making the page sparse. Then grade the FINAL plan you return, not the input draft. "
-        "Projects are replaceable: correct a weak project choice for the target instead of preserving the base portfolio. "
+        "You are an independent adversarial resume critic. This is a fresh review: do not "
+        "trust the generation agent, its explanations, or any score it may have claimed. "
+        "This request is self-contained: do not inspect the filesystem, run commands, or "
+        "read prior generated reports. Use only the target, proposed plan, rendered text, "
+        "catalog, and authorized evidence supplied below. Return critique JSON only. "
+        "Do not return a replacement plan and do not mutate any line. Identify the highest-value "
+        "blocking issues and line-level recommendations for the separate writer to apply. "
+        "Sections and bullet counts are adaptive: do not penalize an omitted leadership or "
+        "project section unless the target argument genuinely needs that evidence. "
         + ("This is an unrestricted creative pass; preserve factual boundaries but prefer a fresh, specific argument over safe base-CV wording. " if unrestricted else "")
         + "Use the exact ATS keyword strategy to improve supported keyword coverage, while recording unsupported requirements as missing evidence. "
-        "unsupported_claims must describe only claims still present in final_plan.\n\n"
+        "unsupported_claims must describe only claims present in the proposed plan.\n\n"
         "Authority rule: CV/immutable/VictorJimenezResume.tex is canonical for the immutable contact, "
         "education, skills, employer-heading metadata, and dates copied by the "
         "renderer. Do not mark those fields unsupported merely because stale "
@@ -1884,13 +2343,34 @@ def reviewer_prompt(
         "target_fit: the portfolio answers this role's actual needs\n"
         "evidence: bullets contain concrete objects, scope, outcomes, or stakes\n"
         "clarity: a recruiter can understand the argument in a six-second skim\n"
-        "portfolio: selected items are complementary and exclusions are sensible\n"
-        "A final plan with 22-26 one-line, distinct bullets is intentionally benchmarked to "
-        "Victor's human references. Do not call it unclear merely because of bullet count; "
-        "penalize actual repetition, weak hierarchy, or hard-to-parse writing.\n"
+        "distinctiveness: selected items are complementary and exclusions are sensible\n"
+        "privacy: private or startup-sensitive details stay out of publishable copy\n"
+        "Do not penalize a draft merely because it is shorter than a human reference. Penalize "
+        "actual repetition, weak hierarchy, sparse reasoning, or hard-to-parse writing.\n"
+        "Audit the proposed plan against the canonical/current benchmark, but do not apply a blanket "
+        "preserve-the-base rule. Creative changes are justified only by meaningful expected hiring-value "
+        "gain. Specifically inspect the decision_ledger for low-value paraphrase churn, keyword-only "
+        "choices, removal of a strong metric or specific technical signal, failure to surface stronger "
+        "unused evidence, repeated evidence across Awards/title/bullet, and a break from reverse "
+        "chronological job order without a strong recorded reason. For each substantive issue, return "
+        "decision_feedback with the action, current evidence, replacement or exclusion, the issue, a "
+        "concrete recommendation, and severity. Do not manufacture feedback when the change is clearly "
+        "higher-value than the benchmark.\n"
+        "Treat the following as a portfolio-level review, not a bullet spelling exercise: compare "
+        "technical breadth and distinct interview stories across the entire resume; flag a selected RA "
+        "section when a stronger unused technical project exists; flag a project that repeats the "
+        "experience's agents/RAG/retrieval story without a distinct surface; and flag a removed strong "
+        "fifth experience bullet when the page has room or flexible coursework/awards could have been "
+        "cut first. Also flag avoidable whitespace when a verified unused bullet would fit cleanly and add "
+        "real hiring value. The writer may still overrule a flag with source-grounded reasoning.\n"
         "Also return unsupported_claims (array), missing_evidence (array), and "
         "revision_priorities (array). Never make the test easier because the "
-        "draft is polished.\n\n"
+        "draft is polished. Include blocking_issues and line_feedback with source IDs.\n\n"
+        "Also return portfolio_comparison: an overall pass/partial/fail judgment "
+        "against the canonical/current resume, with preserved_strengths, "
+        "gained_strengths, and lost_strengths. A tailored resume may win, tie, "
+        "or lose; do not assume change is improvement or that the base is always "
+        "right.\n\n"
         "Fixed rubric version: "
         + RUBRIC_VERSION
         + "\nTarget context:\n"
@@ -1899,12 +2379,59 @@ def reviewer_prompt(
         + json.dumps(plan or {}, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
         + "\n\nSource-addressable evidence catalog:\n"
         + json.dumps(catalog_for_prompt(catalog or {}), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
+        + "\n\nCanonical/current benchmark (comparison point, not a preservation rule):\n"
+        + json.dumps(canonical_resume_benchmark(catalog or {}), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
+        + "\n\nDeterministic portfolio diagnostics:\n"
+        + json.dumps(portfolio_diagnostics(plan or {}, catalog or {}), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
         + "\n\nAuthorized evidence context:\n"
         + json.dumps(graph_context or [], indent=2, ensure_ascii=False)[:MAX_GRAPH_PROMPT_CHARS]
         + "\n\nCV authority dossier:\n"
         + resume_authority_context(repo_root())
         + "\n\nExact ATS keyword strategy:\n"
         + json.dumps(context.get("target_keywords") or {}, indent=2, ensure_ascii=False)
+    )
+
+
+def revision_prompt(
+    context: Dict[str, Any], plan: Dict[str, Any], critique: Dict[str, Any],
+    catalog: Dict[str, Any], graph: Optional[Dict[str, Any]] = None,
+    unrestricted: bool = False,
+) -> str:
+    """Ask the writer to apply independent criticism without self-grading."""
+    return (
+        "You are Codex, the revision writer for Victor's resume studio. An independent "
+        "critic reviewed the proposed resume below. Apply the highest-value corrections "
+        "to produce a complete replacement plan. You may change sections, project choices, "
+        "bullet count, ordering, and wording when the supplied evidence supports it. Do not "
+        "blindly follow a critic that conflicts with source authority. Preserve every factual "
+        "scope qualifier and cite all fact-bearing source/evidence IDs. Do not return LaTeX. "
+        "Do not assign a score; return only the structured plan requested by the schema. "
+        "Apply only corrections with meaningful expected hiring-value gain. Keep strong existing "
+        "evidence when a proposed replacement is merely a paraphrase or keyword match; retain "
+        "important metrics and technical specificity unless the replacement clearly wins. Preserve "
+        "reverse-chronological job order by default. Update decision_ledger for every substantive "
+        "swap, exclusion, removal, rewrite, or nonstandard reorder, including the important signal "
+        "lost. Re-evaluate the whole portfolio before revising a line: a stronger unused technical "
+        "project outranks Resident Assistant for a technical SWE role, and an experience's agents/RAG "
+        "evidence should not be duplicated by a project unless its engineering surface is distinct. "
+        "The ledger is an audit trail, not permission to create churn. "
+        + ("This is the unrestricted creative pass; make a sharper role-specific argument rather than reverting to base-CV wording. " if unrestricted else "")
+        + "\n\nTarget context:\n"
+        + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
+        + "\n\nCurrent plan:\n"
+        + json.dumps(plan, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
+        + "\n\nIndependent critique:\n"
+        + json.dumps(critique, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
+        + "\n\nAuthorized evidence:\n"
+        + json.dumps(evidence_context(graph, context, str(context.get("posting_text") or "")) if graph else [], indent=2, ensure_ascii=False)[:MAX_GRAPH_PROMPT_CHARS]
+        + "\n\nSource catalog:\n"
+        + json.dumps(catalog_for_prompt(catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
+        + "\n\nCanonical/current benchmark (comparison point, not a preservation rule):\n"
+        + json.dumps(canonical_resume_benchmark(catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
+        + "\n\nDeterministic portfolio diagnostics:\n"
+        + json.dumps(portfolio_diagnostics(plan, catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
+        + "\n\nMethodology:\n"
+        + resume_methodology_context(repo_root())[:MAX_METHODOLOGY_CONTEXT_CHARS]
     )
 
 
@@ -1917,8 +2444,10 @@ def line_editor_prompt(
         "or run commands. Preserve every selected entry, bullet source_id, "
         "evidence_id, fact, priority, and section order. Change only bullet text. For wrapped or near-wrap lines "
         "(less than the stated safe right slack), cut filler and compress clauses without losing the technical object, "
-        "supported ATS term, or proof. A concise line may end early; never "
-        "expand a bullet merely to approach the right margin. Do not pad, invent, change layout, or return LaTeX beyond inline textbf/emph. Return the complete "
+        "supported ATS term, or proof. The minimum safe right slack is 12pt: every returned bullet must clear that "
+        "threshold, and a near-wrap is still a failure even when the PDF technically stays on one line. Prefer a "
+        "short, readable line that ends early; never "
+        "expand a bullet merely to approach the right margin. Preserve decision_ledger and front_matter_policy unchanged. Do not pad, invent, change layout, or return LaTeX beyond inline textbf/emph. Return the complete "
         "structured plan under the same schema.\n\nTarget:\n"
         + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nCurrent plan:\n"
@@ -2209,10 +2738,59 @@ def validate_plan(
     errors: List[str] = []
     normalized = dict(plan)
     validation_warnings: List[str] = []
+    raw_ledger = plan.get("decision_ledger")
+    if not isinstance(raw_ledger, list):
+        raw_ledger = []
+    normalized["decision_ledger"] = []
+    for item in raw_ledger[:40]:
+        if not isinstance(item, dict):
+            validation_warnings.append("dropped malformed decision ledger item")
+            continue
+        normalized["decision_ledger"].append({
+            field: str(item.get(field) or "").strip()
+            for field in (
+                "action", "current_evidence", "replacement_or_exclusion",
+                "target_signal", "why_stronger", "signal_lost",
+            )
+        })
+    raw_front_matter = plan.get("front_matter_policy")
+    if not isinstance(raw_front_matter, dict):
+        raw_front_matter = {}
+    normalized["front_matter_policy"] = {
+        "coursework": "omit" if str(raw_front_matter.get("coursework") or "").lower() == "omit" else "keep",
+        "awards": "omit" if str(raw_front_matter.get("awards") or "").lower() == "omit" else "keep",
+    }
+    # Providers occasionally place a known source under the wrong resume
+    # section while preserving the source ID and evidence. Rebucket only when
+    # the catalog proves the source kind; unknown IDs remain validation errors
+    # and no claim text is altered.
+    section_for_kind = {
+        "experience": "experiences",
+        "project": "projects",
+        "leadership": "leadership",
+    }
+    rebucketed = {section: [] for section in ("experiences", "projects", "leadership")}
+    for section in ("experiences", "projects", "leadership"):
+        for selection in plan.get(section, []) or []:
+            source_id = str(selection.get("source_id") or "") if isinstance(selection, dict) else ""
+            entry = entries.get(source_id) or {}
+            target_section = section_for_kind.get(str(entry.get("kind") or ""), section)
+            if target_section != section:
+                validation_warnings.append(
+                    "reclassified %s from %s to %s based on catalog kind"
+                    % (source_id, section, target_section)
+                )
+            rebucketed[target_section].append(selection)
+    for section, selections in rebucketed.items():
+        normalized[section] = selections
     used_entries = set()
     used_bullets = set()
-    for kind, minimum, maximum in (("experiences", 3, 3), ("projects", 4, 5), ("leadership", 1, 2)):
-        selections = plan.get(kind)
+    for kind, minimum, maximum in (
+        ("experiences", 0, PORTFOLIO_CAPS["experiences"]["entries"]),
+        ("projects", 0, PORTFOLIO_CAPS["projects"]["entries"]),
+        ("leadership", 0, PORTFOLIO_CAPS["leadership"]["entries"]),
+    ):
+        selections = normalized.get(kind)
         if not isinstance(selections, list):
             errors.append("%s must be a list" % kind)
             normalized[kind] = []
@@ -2246,6 +2824,25 @@ def validate_plan(
                     errors.append("invalid bullet selection for %s" % entry_id)
                     continue
                 bullet_id = str(bullet.get("source_id") or "")
+                if bullet_id not in bullet_bank:
+                    # Some providers understand ``source_id`` as the parent
+                    # entry ID even though the schema asks for a bullet ID.
+                    # Recover only when the same object supplies an exact
+                    # catalog bullet in source_ids/evidence_ids; never guess
+                    # from prose or position.
+                    references = []
+                    for field in ("source_ids", "evidence_ids"):
+                        value = bullet.get(field) or []
+                        if not isinstance(value, list):
+                            value = [value]
+                        references.extend(str(item or "") for item in value)
+                    replacement = next((value for value in references if value in bullet_bank), "")
+                    if replacement:
+                        validation_warnings.append(
+                            "normalized entry-level bullet source %s to %s for %s"
+                            % (bullet_id, replacement, entry_id)
+                        )
+                        bullet_id = replacement
                 if bullet_id not in bullet_bank:
                     # Providers occasionally hallucinate a neighboring bullet
                     # number.  There is no safe text to render, so discard it
@@ -2313,7 +2910,10 @@ def validate_plan(
                     supporting_ids = []
                     for supporting_id in raw_supporting_ids:
                         normalized_id = str(supporting_id or "")
-                        if normalized_id in all_bullet_bank and normalized_id not in supporting_ids:
+                        if (
+                            (normalized_id in all_bullet_bank or normalized_id in evidence_ids)
+                            and normalized_id not in supporting_ids
+                        ):
                             supporting_ids.append(normalized_id)
                         elif normalized_id:
                             validation_warnings.append(
@@ -2341,6 +2941,15 @@ def validate_plan(
                 }
             )
         normalized[kind] = normalized_selections
+    total_bullets = sum(
+        len(entry.get("bullets", []))
+        for section in ("experiences", "projects", "leadership")
+        for entry in normalized.get(section, [])
+    )
+    if total_bullets == 0:
+        errors.append("plan must select at least one evidence bullet")
+    if total_bullets > MAX_CANDIDATE_BULLETS:
+        errors.append("plan exceeds the %s-bullet candidate safety limit" % MAX_CANDIDATE_BULLETS)
     if validation_warnings:
         normalized["validation_warnings"] = validation_warnings
     return normalized, errors
@@ -2357,132 +2966,25 @@ def _render_bullets(bullets: List[Dict[str, str]]) -> List[str]:
 def expand_candidate_portfolio(
     plan: Dict[str, Any], catalog: Dict[str, Any], enhance: bool
 ) -> Dict[str, Any]:
-    """Build a balanced, source-safe packing pool from selected entries.
+    """Preserve the agent's rich, ranked pool without adding filler.
 
-    The human references use 24-26 meaningful bullets. Providers rank the
-    target narrative. When they return fewer than the 22-bullet acceptance
-    floor, this pass adds authorized source-text alternatives one per entry per
-    round. A complete model plan passes through unchanged so omitted evidence
-    is not silently reintroduced. This avoids both the old 30-bullet dump and
-    the later 16-20-bullet sparse page.
+    Older versions filled every short plan from source backups to imitate the
+    human reference's density.  That made leadership and low-signal bullets
+    mandatory.  Selection is now the agent's editorial decision; the page
+    packer only removes evidence when the rendered artifact cannot fit.
     """
-    expanded = copy.deepcopy(plan)
-    source_order = {
-        entry_id: index
-        for index, entry_id in enumerate((catalog.get("entries") or {}).keys())
-    }
-    expanded["experiences"] = sorted(
-        expanded.get("experiences", []),
-        key=lambda entry: source_order.get(str(entry.get("source_id")), 10**6),
-    )
-    selected_total = sum(
-        len(entry.get("bullets", []))
-        for section in ("experiences", "projects", "leadership")
-        for entry in expanded.get(section, [])
-    )
-    if selected_total >= MIN_TOTAL_BULLETS:
-        return expanded
-    entries = catalog.get("entries", {})
-    explicit_exclusions = "\n".join(str(value) for value in plan.get("excluded_evidence", []))
-    queues: List[Tuple[str, Dict[str, Any], List[Dict[str, Any]]]] = []
-    for section in ("experiences", "projects", "leadership"):
-        for entry_index, selection in enumerate(expanded.get(section, [])):
-            maximum = (
-                EXPERIENCE_BULLET_CAPS[min(entry_index, len(EXPERIENCE_BULLET_CAPS) - 1)]
-                if section == "experiences"
-                else PORTFOLIO_CAPS[section]["bullets"]
-            )
-            entry = entries.get(selection.get("source_id")) or {}
-            selected = {str(item.get("source_id")) for item in selection.get("bullets", [])}
-            backups = []
-            for source in entry.get("bullets", []):
-                source_id = str(source.get("id") or "")
-                if not source_id or source_id in selected or source_id in explicit_exclusions:
-                    continue
-                text = str(source.get("text") or "")
-                backups.append({
-                    "source_id": source_id,
-                    "text": text,
-                    "evidence_ids": [source_id],
-                    "priority": max(20, min(55, round(_bullet_value({"text": text, "priority": 38})))),
-                    "candidate_rationale": (
-                        "Authorized source-text backup added by the deterministic overflow pool"
-                        if enhance else ""
-                    ),
-                })
-            backups.sort(key=_bullet_value, reverse=True)
-            capacity = max(0, maximum - len(selection.get("bullets", [])))
-            queues.append((section, selection, backups[:capacity]))
-
-    # Round-robin filling preserves the references' portfolio breadth instead
-    # of exhausting one experience before projects receive any alternatives.
-    while selected_total < MAX_TOTAL_BULLETS:
-        added = False
-        for _, selection, backups in queues:
-            if selected_total >= MAX_TOTAL_BULLETS:
-                break
-            if not backups:
-                continue
-            selection.setdefault("bullets", []).append(backups.pop(0))
-            selected_total += 1
-            added = True
-        if not added:
-            break
-    return expanded
+    return copy.deepcopy(plan)
 
 
 def curate_candidate_portfolio(
     candidate_plan: Dict[str, Any], catalog: Optional[Dict[str, Any]] = None
 ) -> Dict[str, Any]:
-    """Apply the human-reference limits before compile-time packing."""
-    curated = copy.deepcopy(candidate_plan)
-    source_order = {
-        entry_id: index
-        for index, entry_id in enumerate(((catalog or {}).get("entries") or {}).keys())
-    }
-    if catalog:
-        curated["experiences"] = sorted(
-            curated.get("experiences", []),
-            key=lambda entry: source_order.get(str(entry.get("source_id")), 10**6),
-        )
-    for section in ("experiences", "projects", "leadership"):
-        cap = PORTFOLIO_CAPS[section]
-        ranked_entries = []
-        for original_index, entry in enumerate(curated.get(section, [])):
-            bullet_cap = (
-                EXPERIENCE_BULLET_CAPS[min(original_index, len(EXPERIENCE_BULLET_CAPS) - 1)]
-                if section == "experiences"
-                else cap["bullets"]
-            )
-            ranked_bullets = sorted(
-                entry.get("bullets", []), key=_bullet_value, reverse=True
-            )
-            distinct = []
-            local_seen: List[str] = []
-            for bullet in ranked_bullets:
-                text = str(bullet.get("text") or "")
-                if any(_same_entry_resume_bullet(text, existing) for existing in local_seen):
-                    continue
-                distinct.append(bullet)
-                local_seen.append(text)
-                if len(distinct) >= bullet_cap:
-                    break
-            if not distinct:
-                continue
-            entry["bullets"] = distinct
-            top_values = [_bullet_value(bullet) for bullet in distinct[:2]]
-            entry_score = sum(top_values) / len(top_values)
-            ranked_entries.append((entry_score, -original_index, entry))
-        winners = sorted(ranked_entries, reverse=True, key=lambda item: (item[0], item[1]))[: cap["entries"]]
-        winner_ids = {id(item[2]) for item in winners}
-        curated[section] = [
-            entry for entry in curated.get(section, []) if id(entry) in winner_ids
-        ]
-        if section == "experiences" and catalog:
-            curated[section].sort(
-                key=lambda entry: source_order.get(str(entry.get("source_id")), 10**6)
-            )
+    """Remove only duplicate evidence before compile-time packing.
 
+    Section choice and ordering are editorial decisions owned by the agent,
+    not deterministic defaults inherited from the general resume.
+    """
+    curated = copy.deepcopy(candidate_plan)
     seen_texts: List[str] = []
     for section in ("experiences", "projects", "leadership"):
         retained_entries = []
@@ -2499,19 +3001,6 @@ def curate_candidate_portfolio(
                 retained_entries.append(entry)
         curated[section] = retained_entries
 
-    # A final global cap protects against future schema expansion. Section and
-    # per-entry floors in _removal_actions preserve the balanced shape of both
-    # immutable human references.
-    while sum(
-        len(entry.get("bullets", []))
-        for section in ("experiences", "projects", "leadership")
-        for entry in curated.get(section, [])
-    ) > MAX_TOTAL_BULLETS:
-        actions = _removal_actions(curated)
-        bullet_actions = [action for action in actions if action[3] is not None]
-        if not bullet_actions:
-            break
-        _apply_removal(curated, min(bullet_actions, key=lambda item: item[0]))
     return curated
 
 
@@ -2535,29 +3024,12 @@ def portfolio_metrics(plan: Dict[str, Any]) -> Dict[str, Any]:
             if _same_resume_bullet(str(bullet.get("text") or ""), str(other.get("text") or "")):
                 duplicates.append([bullet.get("source_id"), other.get("source_id")])
     violations = []
-    for section, floor in PORTFOLIO_FLOORS.items():
-        if counts[section]["entries"] < floor["entries"]:
-            violations.append(
-                "%s needs at least %s entries"
-                % (section, floor["entries"])
-            )
     for section, cap in PORTFOLIO_CAPS.items():
         if counts[section]["entries"] > cap["entries"]:
             violations.append("%s has too many entries" % section)
         for entry_index, entry in enumerate(plan.get(section, [])):
-            bullet_cap = (
-                EXPERIENCE_BULLET_CAPS[min(entry_index, len(EXPERIENCE_BULLET_CAPS) - 1)]
-                if section == "experiences"
-                else cap["bullets"]
-            )
-            if len(entry.get("bullets", [])) > bullet_cap:
+            if len(entry.get("bullets", [])) > cap["bullets"]:
                 violations.append("%s exceeds the per-entry bullet cap" % entry.get("source_id"))
-            floor = PORTFOLIO_FLOORS[section]["bullets"]
-            if len(entry.get("bullets", [])) < floor:
-                violations.append(
-                    "%s needs at least %s distinct bullets"
-                    % (entry.get("source_id"), floor)
-                )
     if len(bullets) > MAX_TOTAL_BULLETS:
         violations.append("resume exceeds %s bullets" % MAX_TOTAL_BULLETS)
     if len(bullets) < MIN_TOTAL_BULLETS:
@@ -2568,7 +3040,7 @@ def portfolio_metrics(plan: Dict[str, Any]) -> Dict[str, Any]:
         "pass": not violations,
         "counts": counts,
         "total_bullets": len(bullets),
-        "min_total_bullets": MIN_TOTAL_BULLETS,
+        "min_total_bullets": None,
         "max_total_bullets": MAX_TOTAL_BULLETS,
         "duplicates": duplicates,
         "violations": violations,
@@ -2581,6 +3053,7 @@ def content_change_report(
 ) -> Dict[str, Any]:
     """Make tailoring changes inspectable instead of forcing PDF comparison."""
     entries = catalog.get("entries") or {}
+    benchmark = canonical_resume_benchmark(catalog)
     source_bullets = {
         str(bullet.get("id")): _latex_plain(str(bullet.get("text") or ""))
         for entry in entries.values()
@@ -2589,13 +3062,24 @@ def content_change_report(
     base_project_ids = {
         str(entry.get("id"))
         for entry in entries.values()
-        if entry.get("kind") == "project" and "resume.tex" in (entry.get("sources") or [])
+        if entry.get("kind") == "project"
+        and (
+            any(_is_canonical_source(source) for source in (entry.get("sources") or []))
+            or str(entry.get("id") or "") in {
+                str(item.get("source_id") or "") for item in benchmark.get("projects", [])
+            }
+        )
     }
     selected_project_ids = [
         str(entry.get("source_id")) for entry in plan.get("projects", [])
     ]
     rewritten = []
     selected_bullet_ids = []
+    selected_entry_ids = {
+        str(entry.get("source_id") or "")
+        for section in ("experiences", "projects", "leadership")
+        for entry in plan.get(section, [])
+    }
     for section in ("experiences", "projects", "leadership"):
         for entry in plan.get(section, []):
             for bullet in entry.get("bullets", []):
@@ -2647,15 +3131,137 @@ def content_change_report(
     selected_project_set = set(selected_project_ids)
     swapped_in = [entry_id for entry_id in selected_project_ids if entry_id not in base_project_ids]
     swapped_out = [entry_id for entry_id in sorted(base_project_ids) if entry_id not in selected_project_set]
+    front_matter_policy = {
+        "coursework": "omit" if str((plan.get("front_matter_policy") or {}).get("coursework") or "keep") == "omit" else "keep",
+        "awards": "omit" if str((plan.get("front_matter_policy") or {}).get("awards") or "keep") == "omit" else "keep",
+    }
+    canonical_bullet_by_id = {
+        str(item.get("source_id") or ""): item
+        for item in benchmark.get("canonical_bullets", [])
+        if str(item.get("source_id") or "")
+    }
+    selected_bullet_set = set(selected_bullet_ids)
+    added_bullets = [
+        {
+            "source_id": source_id,
+            "entry_id": next(
+                (
+                    str(entry.get("source_id") or "")
+                    for section in ("experiences", "projects", "leadership")
+                    for entry in plan.get(section, [])
+                    if any(str(item.get("source_id") or "") == source_id for item in entry.get("bullets", []))
+                ),
+                "",
+            ),
+            "text": source_bullets.get(source_id, ""),
+        }
+        for source_id in selected_bullet_ids
+        if source_id not in canonical_bullet_by_id
+    ]
+    removed_bullets = [
+        {
+            "source_id": source_id,
+            "entry_id": item.get("entry_id", ""),
+            "section": item.get("section", ""),
+            "text": _latex_plain(str(item.get("text") or "")),
+        }
+        for source_id, item in canonical_bullet_by_id.items()
+        if source_id not in selected_bullet_set
+    ]
+    canonical_experience_ids = [
+        str(item.get("source_id") or "")
+        for item in benchmark.get("experience_order", [])
+        if str(item.get("source_id") or "")
+    ]
+    selected_experience_ids = [
+        str(entry.get("source_id") or "")
+        for entry in plan.get("experiences", [])
+    ]
     return {
         "changed_bullet_count": len(rewritten),
         "rewritten_bullets": rewritten,
         "selected_bullet_count": len(selected_bullet_ids),
+        "canonical_bullet_count": len(canonical_bullet_by_id),
+        "added_bullets": added_bullets,
+        "removed_canonical_bullets": removed_bullets,
         "project_swaps": {
             "swapped_in": [_project_heading(entries.get(entry_id, {}).get("heading") or entry_id) for entry_id in swapped_in],
             "swapped_out": [_project_heading(entries.get(entry_id, {}).get("heading") or entry_id) for entry_id in swapped_out],
         },
+        "experience_order": {
+            "canonical": canonical_experience_ids,
+            "selected": selected_experience_ids,
+            "changed": selected_experience_ids != canonical_experience_ids,
+        },
+        "decision_ledger": [
+            {
+                field: str(item.get(field) or "")
+                for field in (
+                    "action", "current_evidence", "replacement_or_exclusion",
+                    "target_signal", "why_stronger", "signal_lost",
+                )
+            }
+            for item in (plan.get("decision_ledger") or [])
+            if isinstance(item, dict)
+        ][:40],
+        "front_matter_policy": front_matter_policy,
+        "removed_front_matter": [
+            field for field, state in front_matter_policy.items() if state == "omit"
+        ],
+        "portfolio_diagnostics": portfolio_diagnostics(plan, catalog),
         "keyword_coverage": keyword_coverage,
+    }
+
+
+def owner_change_summary(
+    plan: Dict[str, Any], catalog: Dict[str, Any], changes: Dict[str, Any],
+) -> Dict[str, Any]:
+    """Produce the short explanation Victor should see before opening the PDF."""
+    entries = catalog.get("entries") or {}
+    project_names = [
+        _project_heading(entries.get(str(item.get("source_id") or ""), {}).get("heading") or item.get("source_id"))
+        for item in plan.get("projects", []) or []
+    ]
+    removed_projects = list((changes.get("project_swaps") or {}).get("swapped_out") or [])
+    ledger = [
+        item for item in changes.get("decision_ledger", [])
+        if isinstance(item, dict)
+    ]
+    diagnostics = changes.get("portfolio_diagnostics") or {}
+    leadership_competition = diagnostics.get("leadership_competition") or []
+    if plan.get("leadership") and leadership_competition:
+        headline = "Technical portfolio selected first; leadership was retained only as an explicit tradeoff."
+    elif plan.get("leadership"):
+        headline = "Portfolio selected first; leadership adds a target-relevant signal not covered elsewhere."
+    else:
+        headline = "Technical portfolio selected first; leadership was omitted because stronger technical evidence filled the page."
+    preserved_fifth = any(
+        str(bullet.get("source_id") or "").endswith(":b4")
+        for entry in plan.get("experiences", []) or []
+        if "johnson-johnson" in str(entry.get("source_id") or "")
+        for bullet in entry.get("bullets", [])
+    )
+    return {
+        "headline": headline,
+        "projects_kept": project_names,
+        "projects_removed": removed_projects,
+        "leadership_included": bool(plan.get("leadership")),
+        "strong_fifth_experience_preserved": preserved_fifth,
+        "front_matter_tradeoffs": list(changes.get("removed_front_matter") or []),
+        "portfolio_warnings": list(diagnostics.get("warnings") or [])[:6],
+        "redundant_project_flags": [
+            str(item.get("label") or item.get("source_id") or "")
+            for item in (diagnostics.get("project_overlap") or [])
+            if item.get("severity") == "high"
+        ][:6],
+        "key_decisions": [
+            {
+                "action": str(item.get("action") or ""),
+                "why": str(item.get("why_stronger") or ""),
+                "signal_lost": str(item.get("signal_lost") or ""),
+            }
+            for item in ledger[:6]
+        ],
     }
 
 
@@ -2717,29 +3323,37 @@ def render_plan(plan: Dict[str, Any], catalog: Dict[str, Any], root: Optional[Pa
     if BODY_MARKER not in template:
         raise ValueError("CV/immutable/VictorJimenezResume.tex is missing the experience marker")
     prefix = _generated_one_page_prefix(template)
+    prefix = _apply_front_matter_policy(prefix, plan.get("front_matter_policy"), root)
     entries = catalog["entries"]
-    lines = [prefix, "", BODY_MARKER, "\\section{Experience}", "\\resumeSubHeadingListStart", ""]
-    for selection in plan["experiences"]:
-        entry = entries[selection["source_id"]]
-        lines.extend(
-            [
-                "    \\resumeSubheading",
-                "    {\\large %s}{%s}" % (entry["company"], entry["dates"]),
-                "    {%s}{%s}" % (entry["role"], entry["location"]),
-            ]
-        )
-        lines.extend(_render_bullets(selection["bullets"]))
-        lines.append("")
-    lines.extend(["\\resumeSubHeadingListEnd", "", "%-----------PROJECTS-----------", "\\section{Projects}", "\\resumeSubHeadingListStart", ""])
-    for selection in plan["projects"]:
-        entry = entries[selection["source_id"]]
-        lines.extend(["    \\resumeProjectHeading", "        {\\large %s}{}" % _project_heading(entry["heading"])])
-        lines.extend(_render_bullets(selection["bullets"]))
-        lines.append("")
-    lines.extend(["\\resumeSubHeadingListEnd", ""])
-    if plan.get("leadership"):
+    lines = [prefix, "", BODY_MARKER]
+    experiences = plan.get("experiences") or []
+    projects = plan.get("projects") or []
+    leadership = plan.get("leadership") or []
+    if experiences:
+        lines.extend(["\\section{Experience}", "\\resumeSubHeadingListStart", ""])
+        for selection in experiences:
+            entry = entries[selection["source_id"]]
+            lines.extend(
+                [
+                    "    \\resumeSubheading",
+                    "    {\\large %s}{%s}" % (entry["company"], entry["dates"]),
+                    "    {%s}{%s}" % (entry["role"], entry["location"]),
+                ]
+            )
+            lines.extend(_render_bullets(selection["bullets"]))
+            lines.append("")
+        lines.extend(["\\resumeSubHeadingListEnd", ""])
+    if projects:
+        lines.extend(["%-----------PROJECTS-----------", "\\section{Projects}", "\\resumeSubHeadingListStart", ""])
+        for selection in projects:
+            entry = entries[selection["source_id"]]
+            lines.extend(["    \\resumeProjectHeading", "        {\\large %s}{}" % _project_heading(entry["heading"])])
+            lines.extend(_render_bullets(selection["bullets"]))
+            lines.append("")
+        lines.extend(["\\resumeSubHeadingListEnd", ""])
+    if leadership:
         lines.extend(["%-----------LEADERSHIP-----------", "\\section{Leadership \\& Extracurriculars}", "\\resumeSubHeadingListStart", ""])
-        for selection in plan["leadership"]:
+        for selection in leadership:
             entry = entries[selection["source_id"]]
             lines.extend(
                 [
@@ -2807,6 +3421,31 @@ def front_matter_catalog(root: Optional[Path] = None) -> List[Dict[str, Any]]:
             })
     before_skills = prefix.lower().find("%-----------skills-----------")
     all_items = _macro_calls(prefix, "resumeItem", 1)
+    education_start = prefix.lower().find("%-----------education-----------")
+    education_items = [
+        (template_index, call)
+        for template_index, call in enumerate(all_items)
+        if education_start >= 0 and call[0] > education_start and call[0] < before_skills
+    ]
+    for key, label, position in (
+        ("gpa", "GPA", 0),
+        ("coursework", "Coursework", 1),
+    ):
+        if position >= len(education_items):
+            continue
+        template_index, (_, args, _) = education_items[position]
+        result.append({
+            "line_id": "front:education:" + key,
+            "section": "education",
+            "entry_id": "front:education",
+            "entry_label": "Education",
+            "role": label,
+            "text": args[0],
+            "source_text": args[0],
+            "template": "education",
+            "template_index": template_index,
+            "argument_index": 0,
+        })
     skills = [
         (template_index, call)
         for template_index, call in enumerate(all_items)
@@ -2828,6 +3467,49 @@ def front_matter_catalog(root: Optional[Path] = None) -> List[Dict[str, Any]]:
             "argument_index": 0,
         })
     return result
+
+
+def _apply_front_matter_policy(
+    prefix: str, policy: Optional[Dict[str, Any]], root: Optional[Path] = None,
+) -> str:
+    """Remove only optional coursework/award lines when the plan earns the space."""
+    policy = policy if isinstance(policy, dict) else {}
+    omit_ids = set()
+    omit_awards = str(policy.get("awards") or "keep").lower() == "omit"
+    if str(policy.get("coursework") or "keep").lower() == "omit":
+        omit_ids.add("front:education:coursework")
+    if omit_awards:
+        omit_ids.add("front:skills:4")
+    if not omit_ids:
+        return prefix
+    catalog = {
+        str(item.get("line_id") or ""): item
+        for item in front_matter_catalog(root or repo_root())
+    }
+    if omit_awards:
+        # Keep the policy stable even if a future canonical skills list moves
+        # the aggregated Awards line away from its current fifth position.
+        award_lines = [
+            item for item in catalog.values()
+            if "Awards:" in _latex_plain(str(item.get("text") or ""))
+        ]
+        if award_lines:
+            omit_ids.discard("front:skills:4")
+            omit_ids.add(str(award_lines[0].get("line_id") or "front:skills:4"))
+    calls = _macro_calls(prefix, "resumeItem", 1)
+    removals = []
+    for line_id in omit_ids:
+        item = catalog.get(line_id)
+        if not item:
+            continue
+        try:
+            call = calls[int(item.get("template_index"))]
+        except (IndexError, TypeError, ValueError):
+            continue
+        removals.append((call[0], call[2]))
+    for start, end in sorted(removals, reverse=True):
+        prefix = prefix[:start] + prefix[end:]
+    return prefix
 
 
 def render_workshop_plan(
@@ -2855,10 +3537,15 @@ def render_workshop_plan(
             prefix, "resumeSubheading", 0,
             [front[key] for key in education_keys],
         )
-    # resumeItem index 0 is the Education GPA; the next four are skills.
+    # Education GPA/coursework and skills are editable text lines; the
+    # automatic tailoring policy only omits the optional lines when needed.
     for item in plan.get("front_matter", []):
         line_id = str(item.get("line_id") or "")
-        if not line_id.startswith("front:skills:"):
+        if not (
+            line_id.startswith("front:education:gpa")
+            or line_id.startswith("front:education:coursework")
+            or line_id.startswith("front:skills:")
+        ):
             continue
         try:
             index = int(str(item.get("template_index")))
@@ -2982,7 +3669,9 @@ def _workshop_state(
     plan = current.get("plan") if isinstance(current.get("plan"), dict) else None
     if plan is None:
         plan = read_json(run_dir / "content_plan.json", {}) or {}
-    if not isinstance(plan, dict) or not plan.get("experiences"):
+    if not isinstance(plan, dict) or not any(
+        plan.get(section) for section in ("experiences", "projects", "leadership")
+    ):
         raise RuntimeError("This run has no completed content plan yet")
     base = root or (run_dir.parents[3] if len(run_dir.parents) > 3 else repo_root())
     value = {
@@ -3206,21 +3895,95 @@ def _bullet_value(bullet: Dict[str, Any]) -> float:
 
 def _removal_actions(plan: Dict[str, Any]) -> List[Tuple[float, str, int, Optional[int]]]:
     actions: List[Tuple[float, str, int, Optional[int]]] = []
+    total_bullets = sum(
+        len(entry.get("bullets", []))
+        for section in ("experiences", "projects", "leadership")
+        for entry in plan.get(section, [])
+    )
+    # Packing may remove weak evidence, but it must never turn a valid plan into
+    # an empty resume or leave a selected entry with a heading and no bullet.
+    can_remove = total_bullets > 1
     for section in ("experiences", "projects", "leadership"):
         entries = plan.get(section, [])
         minimum_entries = PORTFOLIO_FLOORS[section]["entries"]
         minimum_bullets = PORTFOLIO_FLOORS[section]["bullets"]
         for entry_index, entry in enumerate(entries):
             bullets = entry.get("bullets", [])
-            if len(bullets) > minimum_bullets:
+            if can_remove and len(bullets) > max(1, minimum_bullets):
                 for bullet_index, bullet in enumerate(bullets):
                     actions.append((_bullet_value(bullet), section, entry_index, bullet_index))
-            if len(entries) > minimum_entries:
+            if can_remove and len(entries) > minimum_entries:
                 # Removing an entry saves its heading too, so compare value per
                 # vertical unit rather than raw total value.
                 density = sum(_bullet_value(bullet) for bullet in bullets) / max(1, len(bullets) + 1)
                 actions.append((density, section, entry_index, None))
     return actions
+
+
+def _hackmit_acceptance_removal(plan: Dict[str, Any]) -> Optional[Tuple[float, str, int, int]]:
+    """Locate the low-signal HackMIT selection proof reserve.
+
+    The acceptance-pool line is useful prestige context, but once the project
+    itself is selected it is less valuable than another distinct technical
+    bullet. Keep this narrow: only the HackMIT acceptance/selection bullet is
+    eligible, never the project's implementation evidence.
+    """
+    for section in ("projects",):
+        for entry_index, entry in enumerate(plan.get(section, [])):
+            for bullet_index, bullet in enumerate(entry.get("bullets", [])):
+                text = _latex_plain(str(bullet.get("text") or ""))
+                lowered = text.lower()
+                if "hackmit" in lowered and "acceptance" in lowered:
+                    return (0.0, section, entry_index, bullet_index)
+    return None
+
+
+def _reclaim_flexible_content(plan: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """Use flexible content in Victor's preferred order before strong evidence.
+
+    Coursework is the first reserve. The HackMIT acceptance-pool line is the
+    next reserve because it duplicates the project's prestige context without
+    adding a new technical capability. Awards are flexible too, but remain
+    ahead of removing substantive technical evidence only after that project
+    proof has been considered.
+    """
+    policy = plan.setdefault("front_matter_policy", {"coursework": "keep", "awards": "keep"})
+    if str(policy.get("coursework") or "keep") == "keep":
+        policy["coursework"] = "omit"
+        return {
+            "kind": "front_matter",
+            "field": "coursework",
+            "reason": "reclaimed flexible coursework space before removing strong resume evidence",
+        }
+    hackmit_action = _hackmit_acceptance_removal(plan)
+    if hackmit_action:
+        return {
+            "kind": "deferred_bullet_removal",
+            "action": hackmit_action,
+            "reason": "removed redundant HackMIT selection proof before substantive technical evidence",
+        }
+    if str(policy.get("awards") or "keep") == "keep":
+        policy["awards"] = "omit"
+        return {
+            "kind": "front_matter",
+            "field": "awards",
+            "reason": "reclaimed flexible award-line space before removing strong resume evidence",
+        }
+    return None
+
+
+def _reclaim_optional_front_matter(plan: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """Backward-compatible front-matter-only reserve helper."""
+    policy = plan.setdefault("front_matter_policy", {"coursework": "keep", "awards": "keep"})
+    for field in ("coursework", "awards"):
+        if str(policy.get(field) or "keep") == "keep":
+            policy[field] = "omit"
+            return {
+                "kind": "front_matter",
+                "field": field,
+                "reason": "reclaimed flexible %s space before removing strong resume evidence" % field,
+            }
+    return None
 
 
 def _apply_removal(
@@ -3285,6 +4048,14 @@ def pack_plan_to_page(
             )
         if layout.get("compiled") and layout.get("pages") == 1 and not layout.get("overfull"):
             break
+        flexible_removal = _reclaim_flexible_content(plan)
+        if flexible_removal:
+            if flexible_removal.get("kind") == "deferred_bullet_removal":
+                removed.append(_apply_removal(plan, flexible_removal["action"]))
+                removed[-1]["reason"] = flexible_removal.get("reason", "")
+            else:
+                removed.append(flexible_removal)
+            continue
         actions = _removal_actions(plan)
         if not actions:
             break
@@ -3294,10 +4065,9 @@ def pack_plan_to_page(
         layout.get("compiled")
         and layout.get("pages") == 1
         and not layout.get("overfull")
-        and layout.get("density_pass")
     ):
         raise RuntimeError(
-            "candidate portfolio could not meet the immutable one-page density reference"
+            "candidate portfolio could not meet the one-page render contract"
         )
 
     kept_ids = {
@@ -3313,19 +4083,171 @@ def pack_plan_to_page(
         for bullet in entry.get("bullets", [])
     }
     return plan, {
-        "strategy": "human-reference-density portfolio with compile-measured overflow removal",
+        "strategy": "adaptive evidence portfolio with compile-measured overflow removal",
         "attempts": attempts,
         "kept_bullets": len(kept_ids),
         "excluded_bullet_ids": sorted(value for value in all_ids - kept_ids if value),
+        "removed_front_matter": [
+            item for item in removed if item.get("kind") == "front_matter"
+        ],
         "style_change_percent": 0.0,
+        "density_warning": (
+            "normal bottom clearance remains because no additional authorized evidence was packed"
+            if not layout.get("density_pass") else ""
+        ),
     }
 
 
-def template_style_guard(tex: str, root: Optional[Path] = None) -> Dict[str, Any]:
+def _horizontal_safety_score(layout: Dict[str, Any]) -> Tuple[int, int, float]:
+    horizontal = layout.get("horizontal") or {}
+    slacks = [
+        float(item.get("right_slack_pt"))
+        for item in horizontal.get("bullets", [])
+        if isinstance(item.get("right_slack_pt"), (int, float))
+    ]
+    minimum_slack = min(slacks) if slacks else 0.0
+    return (
+        int(horizontal.get("wrap_count") or 0),
+        int(horizontal.get("near_wrap_count") or 0),
+        -minimum_slack,
+    )
+
+
+def _line_compaction_candidates(text: str, source_text: str) -> List[str]:
+    """Return conservative, evidence-preserving alternatives for a tight line."""
+    current = str(text or "")
+    source_plain = _latex_plain(source_text).lower()
+    candidates: List[str] = []
+    seen = {current}
+
+    def add(value: str) -> None:
+        value = str(value or "")
+        if value in seen or len(_latex_plain(value)) >= len(_latex_plain(current)):
+            return
+        seen.add(value)
+        candidates.append(value)
+
+    # Prefer terminology already authorized by the source bullet. These are
+    # common resume compressions, not new claims.
+    if "poc" in source_plain:
+        add(re.sub(r"\bproof of concept\b", "POC", current, flags=re.I))
+    if "rag" in source_plain:
+        add(re.sub(r"\bretrieval[- ]augmented generation\b", "RAG", current, flags=re.I))
+    add(re.sub(r"\blearned features\b", "features", current, flags=re.I))
+    add(re.sub(r"\bacross RNN/LLM architectures\b", "in RNN/LLM architectures", current, flags=re.I))
+
+    # Articles are the safest generic deletion when the line is otherwise
+    # unchanged; generate one-at-a-time variants so the result remains
+    # readable and the geometry pass decides whether the edit is worthwhile.
+    for match in re.finditer(r"\b(?:a|an|the)\s+", current, flags=re.I):
+        add(current[:match.start()] + current[match.end():])
+    return candidates
+
+
+def compact_plan_to_geometry(
+    plan: Dict[str, Any], layout: Dict[str, Any], catalog: Dict[str, Any], run_dir: Path,
+) -> Tuple[Dict[str, Any], Dict[str, Any], List[Dict[str, Any]]]:
+    """Make a final conservative compaction pass after model line editing.
+
+    The model remains responsible for judgment and wording. This fallback only
+    tries shorter, source-authorized variants for lines that still fail the
+    measured one-line gate, and accepts a variant only when a real PDF compile
+    improves the complete resume's horizontal safety.
+    """
+    best_plan = copy.deepcopy(plan)
+    best_layout = layout
+    applied: List[Dict[str, Any]] = []
+    source_text = {
+        str(bullet.get("id")): str(bullet.get("text") or "")
+        for entry in (catalog.get("entries") or {}).values()
+        for bullet in entry.get("bullets", [])
+        if bullet.get("id")
+    }
+    attempt = 0
+    for _ in range(4):
+        unsafe_ids = [
+            str(item.get("source_id") or "")
+            for item in (best_layout.get("horizontal") or {}).get("bullets", [])
+            if not item.get("horizontal_pass")
+        ]
+        if not unsafe_ids:
+            break
+        changed = False
+        for source_id in unsafe_ids:
+            current_bullet = None
+            for section in ("experiences", "projects", "leadership"):
+                for entry in best_plan.get(section, []) or []:
+                    for bullet in entry.get("bullets", []) or []:
+                        if str(bullet.get("source_id") or "") == source_id:
+                            current_bullet = bullet
+                            break
+                    if current_bullet:
+                        break
+                if current_bullet:
+                    break
+            if not current_bullet:
+                continue
+            current_text = str(current_bullet.get("text") or "")
+            candidates = _line_compaction_candidates(current_text, source_text.get(source_id, ""))
+            for candidate_text in candidates:
+                trial = copy.deepcopy(best_plan)
+                replaced = False
+                for section in ("experiences", "projects", "leadership"):
+                    for entry in trial.get(section, []) or []:
+                        for bullet in entry.get("bullets", []) or []:
+                            if str(bullet.get("source_id") or "") == source_id:
+                                bullet["text"] = candidate_text
+                                replaced = True
+                                break
+                        if replaced:
+                            break
+                    if replaced:
+                        break
+                if not replaced:
+                    continue
+                attempt += 1
+                attempt_dir = run_dir / "line_compaction_search" / ("attempt-%02d" % attempt)
+                attempt_dir.mkdir(parents=True, exist_ok=True)
+                tex = render_plan(trial, catalog, repo_root())
+                (attempt_dir / "resume.tex").write_text(tex)
+                compiled = compile_resume(attempt_dir)
+                if not compiled.get("compiled"):
+                    continue
+                candidate_layout = pdf_layout(
+                    attempt_dir, compiled, plan=trial, run_capacity_test=False,
+                )
+                if _horizontal_safety_score(candidate_layout) < _horizontal_safety_score(best_layout):
+                    applied.append({
+                        "source_id": source_id,
+                        "from": current_text,
+                        "to": candidate_text,
+                        "reason": "measured conservative compaction improved one-line safety",
+                    })
+                    best_plan = trial
+                    best_layout = candidate_layout
+                    changed = True
+                    break
+            if changed:
+                break
+        if not changed:
+            break
+    return best_plan, best_layout, applied
+
+
+def template_style_guard(
+    tex: str, root: Optional[Path] = None,
+    front_matter_policy: Optional[Dict[str, Any]] = None,
+) -> Dict[str, Any]:
     template = (cv_root(root) / CANONICAL_TEMPLATE).read_text()
     template_prefix = template.split(BODY_MARKER, 1)[0].rstrip()
     generated_prefix = tex.split(BODY_MARKER, 1)[0].rstrip() if BODY_MARKER in tex else ""
     generated_prefix = generated_prefix.replace(GENERATED_ONE_PAGE_FOOTER, CANONICAL_PAGE_FOOTER, 1)
+    if isinstance(front_matter_policy, dict):
+        # Coursework and the aggregated Awards line are the only sanctioned
+        # front-matter removals. Compare against the same policy applied to
+        # the canonical prefix so this flexibility does not look like format
+        # drift to the deterministic gate.
+        template_prefix = _apply_front_matter_policy(template_prefix, front_matter_policy, root).rstrip()
     body = tex.split(BODY_MARKER, 1)[1] if BODY_MARKER in tex else tex
     renderer_commands = {"\\section", "\\begin", "\\end", "\\large"}
     forbidden = sorted(
@@ -3337,6 +4259,7 @@ def template_style_guard(tex: str, root: Optional[Path] = None) -> Dict[str, Any
         "passed": passed,
         "canonical_template": "CV/" + CANONICAL_TEMPLATE,
         "identical_preamble_header_education_skills": identical,
+        "allowed_front_matter_policy": front_matter_policy or {"coursework": "keep", "awards": "keep"},
         "font_size_reduction_percent": 0.0 if identical else None,
         "font_size_increase_percent": 0.0 if identical else None,
         "allowed_max_reduction_percent": MAX_STYLE_REDUCTION_PERCENT,
@@ -3552,6 +4475,23 @@ def compile_resume(run_dir: Path) -> Dict[str, Any]:
         (run_dir / "tectonic.stdout.txt").write_text(proc.stdout or "")
         compiled_pdf = run_dir / "resume.pdf"
         pdf = run_pdf_path(run_dir)
+        # Tectonic emits ``resume.pdf`` from ``resume.tex``. Give every
+        # generated attempt a role-specific filename before it becomes an
+        # artifact, so internal layout searches cannot create ambiguous PDFs.
+        if pdf.name == "resume.pdf":
+            for parent in (run_dir, *run_dir.parents):
+                status = read_json(parent / "status.json", {}) or {}
+                job = status.get("job") if isinstance(status, dict) else None
+                if not isinstance(job, dict):
+                    job = read_json(parent / "job.json", {}) or {}
+                if not isinstance(job, dict) or not job.get("company"):
+                    continue
+                stem = Path(resume_pdf_filename(job)).stem
+                suffix = ""
+                if parent != run_dir:
+                    suffix = "_" + re.sub(r"[^A-Za-z0-9_-]+", "_", run_dir.name)
+                pdf = run_dir / (stem + suffix + ".pdf")
+                break
         if proc.returncode != 0 or not compiled_pdf.exists():
             return {"compiled": False, "error": "LaTeX compilation failed", "exit_code": proc.returncode}
         if pdf != compiled_pdf:
@@ -3640,14 +4580,24 @@ def pdf_layout(
         result["warnings"].append("strict one-page target is not met")
     if not result["text_extractable"]:
         result["warnings"].append("PDF text is not extractable")
-    if not result["density_pass"]:
-        result["warnings"].append("page has extreme unused bottom space relative to CV/immutable/VictorJimenezResume.pdf")
+    if result["density_gap_pt"] is not None and not result["density_pass"]:
+        result["warnings"].append(
+            "informational: bottom clearance differs from the human reference; no filler was added"
+        )
     return result
 
 
-def deterministic_review(job: Dict[str, Any], tex: str, layout: Dict[str, Any]) -> Dict[str, Any]:
+def deterministic_review(
+    job: Dict[str, Any], tex: str, layout: Dict[str, Any],
+    plan: Optional[Dict[str, Any]] = None, catalog: Optional[Dict[str, Any]] = None,
+) -> Dict[str, Any]:
     warnings = list(layout.get("warnings", []))
-    style = template_style_guard(tex, repo_root())
+    policy = plan.get("front_matter_policy") if isinstance(plan, dict) else None
+    style = (
+        template_style_guard(tex, repo_root(), policy)
+        if isinstance(policy, dict)
+        else template_style_guard(tex, repo_root())
+    )
     if not style.get("passed"):
         warnings.append("generated resume changed or bypassed the canonical CV/immutable/VictorJimenezResume.tex formatting")
     company = str(job.get("company", "")).lower()
@@ -3659,12 +4609,19 @@ def deterministic_review(job: Dict[str, Any], tex: str, layout: Dict[str, Any]) 
         layout.get("compiled")
         and layout.get("pages") == 1
         and not layout.get("overfull")
-        and layout.get("density_pass")
         and (layout.get("horizontal") or {}).get("pass")
         and style.get("passed")
     )
     portfolio = layout.get("portfolio") or portfolio_metrics({})
     portfolio_gate = bool(portfolio.get("pass"))
+    portfolio_diagnostics_value = (
+        portfolio_diagnostics(plan, catalog)
+        if isinstance(plan, dict) and isinstance(catalog, dict)
+        else {}
+    )
+    portfolio_warnings = list(portfolio_diagnostics_value.get("blocking_warnings") or [])
+    if portfolio_warnings:
+        portfolio_gate = False
     eligibility_blocks = posting_eligibility_blocks(str(job.get("posting_text") or ""))
     if eligibility_blocks:
         eligibility = {"status": "fail", "reason": "; ".join(eligibility_blocks)}
@@ -3673,7 +4630,8 @@ def deterministic_review(job: Dict[str, Any], tex: str, layout: Dict[str, Any]) 
     elif job.get("early_career_possible"):
         eligibility = {"status": "partial", "reason": "Early-career possible; posting eligibility needs confirmation"}
     else:
-        eligibility = {"status": "fail", "reason": "Radar does not currently verify new-grad eligibility"}
+        eligibility = {"status": "partial", "reason": "Resume Studio does not independently verify posting eligibility"}
+    factual_status = "fail" if _contains_forbidden_resume_term(tex) else "pass"
     return {
         "rubric_version": RUBRIC_VERSION,
         "hard_fail": not layout_gate,
@@ -3681,85 +4639,100 @@ def deterministic_review(job: Dict[str, Any], tex: str, layout: Dict[str, Any]) 
         "layout": layout,
         "style": style,
         "gates": {
+            "factual": {
+                "status": factual_status,
+                "reason": "permanently excluded resume term detected" if factual_status == "fail" else "no deterministic forbidden claim detected",
+            },
             "layout": {"status": "pass" if layout_gate else "fail", "reason": "; ".join(warnings) or "all rendered layout checks passed"},
             "portfolio": {
                 "status": "pass" if portfolio_gate else "fail",
-                "reason": "; ".join(portfolio.get("violations") or []) or "portfolio is compact and nonredundant",
+                "reason": "; ".join(
+                    list(portfolio.get("violations") or []) + portfolio_warnings
+                ) or "portfolio is compact and nonredundant",
             },
             "eligibility": eligibility,
         },
+        "portfolio_diagnostics": portfolio_diagnostics_value,
     }
 
 
-def score_review(agent_review: Dict[str, Any], deterministic: Dict[str, Any]) -> Dict[str, Any]:
+def score_review(
+    agent_review: Dict[str, Any], deterministic: Dict[str, Any],
+    independent_available: bool = False,
+) -> Dict[str, Any]:
+    """Combine independent critique and deterministic gates without self-scoring.
+
+    This intentionally returns no composite craft score.  A draft may be
+    useful while still awaiting Victor or an independent provider; that state
+    must remain visible instead of being converted into a flattering number.
+    """
     data = agent_review.get("data") or {}
     criteria = data.get("criteria") if isinstance(data.get("criteria"), dict) else data
-    scores = {}
-    for name, weight in RUBRIC_WEIGHTS.items():
-        if name == "layout":
-            layout = deterministic.get("layout") or {}
-            style = deterministic.get("style") or {}
-            status = (
-                "pass"
-                if layout.get("compiled")
-                and layout.get("pages") == 1
-                and not layout.get("overfull")
-                and layout.get("density_pass")
-                and (layout.get("horizontal") or {}).get("pass")
-                and style.get("passed")
-                else "fail"
-            )
-        else:
-            raw = criteria.get(name, {}) if isinstance(criteria, dict) else {}
-            if isinstance(raw, str):
-                status = raw.lower()
-            elif isinstance(raw, dict):
-                status = str(raw.get("status", "fail")).lower()
-            else:
-                status = "fail"
-            if status not in STATUS_MULTIPLIER:
-                status = "fail"
-        scores[name] = {
-            "status": status,
-            "points": round(weight * STATUS_MULTIPLIER[status], 1),
-            "weight": weight,
-        }
     unsupported = data.get("unsupported_claims", [])
     if not isinstance(unsupported, list):
         unsupported = [str(unsupported)]
-    factual_raw = criteria.get("factual", {}) if isinstance(criteria, dict) else {}
-    factual_status = (
-        str(factual_raw.get("status", "fail")).lower()
-        if isinstance(factual_raw, dict) else str(factual_raw).lower()
-    )
-    if factual_status not in STATUS_MULTIPLIER:
-        factual_status = "fail"
+    decision_feedback = data.get("decision_feedback", [])
+    if not isinstance(decision_feedback, list):
+        decision_feedback = []
+    portfolio_comparison = data.get("portfolio_comparison")
+    if not isinstance(portfolio_comparison, dict):
+        portfolio_comparison = {
+            "status": "unknown",
+            "reason": "independent portfolio comparison was not returned",
+            "preserved_strengths": [],
+            "gained_strengths": [],
+            "lost_strengths": [],
+        }
     deterministic_gates = deterministic.get("gates") or {}
-    gates = {
-        "factual": {
-            "status": "fail" if unsupported else factual_status,
-            "reason": "unsupported claims reported" if unsupported else (
-                factual_raw.get("reason", "") if isinstance(factual_raw, dict) else "reviewer factual verdict"
-            ),
-        },
-        "eligibility": deterministic_gates.get("eligibility", {"status": "fail", "reason": "eligibility unavailable"}),
-        "layout": deterministic_gates.get("layout", {"status": "fail", "reason": "layout unavailable"}),
-        "portfolio": deterministic_gates.get("portfolio", {"status": "pass", "reason": "portfolio gate unavailable"}),
+    gates = {}
+    for name in REVIEW_CRITERIA:
+        raw = criteria.get(name, {}) if isinstance(criteria, dict) else {}
+        status = raw.get("status") if isinstance(raw, dict) else raw
+        status = str(status or "fail").lower()
+        if status not in STATUS_MULTIPLIER:
+            status = "fail"
+        reason = raw.get("reason", "") if isinstance(raw, dict) else ""
+        gates[name] = {"status": status, "reason": reason}
+    if unsupported:
+        gates["factual"] = {"status": "fail", "reason": "independent critic reported unsupported claims"}
+    if "factual" in deterministic_gates and deterministic_gates["factual"].get("status") == "fail":
+        gates["factual"] = deterministic_gates["factual"]
+    gates["layout"] = deterministic_gates.get("layout", {"status": "fail", "reason": "layout unavailable"})
+    gates["portfolio"] = deterministic_gates.get("portfolio", {"status": "fail", "reason": "portfolio unavailable"})
+    if "eligibility" in deterministic_gates:
+        gates["eligibility"] = deterministic_gates["eligibility"]
+    gates["independent_review"] = {
+        "status": "pass" if independent_available else "fail",
+        "reason": "independent provider critique completed" if independent_available else "no independent provider critique was available",
     }
-    hard_fail = any(gate.get("status") == "fail" for gate in gates.values())
-    total = round(sum(item["points"] for item in scores.values()), 1)
+    comparison_status = str(portfolio_comparison.get("status") or "unknown").lower()
+    if comparison_status not in {"pass", "partial", "fail"}:
+        comparison_status = "fail"
+    gates["portfolio_comparison"] = {
+        "status": comparison_status,
+        "reason": str(portfolio_comparison.get("reason") or "portfolio comparison unavailable"),
+    }
+    blocking = data.get("blocking_issues", [])
+    if not isinstance(blocking, list):
+        blocking = [str(blocking)]
+    required_gates = ("factual", "target_fit", "evidence", "distinctiveness", "clarity", "privacy", "layout", "portfolio", "independent_review", "portfolio_comparison")
+    hard_fail = bool(blocking) or any(gates.get(name, {}).get("status") != "pass" for name in required_gates)
     return {
         "rubric_version": RUBRIC_VERSION,
-        "craft_score": total,
-        "score": total,
-        "ready": total >= 80 and not hard_fail,
+        "craft_score": None,
+        "score": None,
+        "ready": not hard_fail,
         "hard_fail": hard_fail,
-        "criteria": scores,
         "gates": gates,
         "unsupported_claims": unsupported,
         "missing_evidence": data.get("missing_evidence", []),
         "revision_priorities": data.get("revision_priorities", []),
+        "blocking_issues": blocking,
+        "line_feedback": data.get("line_feedback", []),
+        "decision_feedback": decision_feedback[:20],
+        "portfolio_comparison": portfolio_comparison,
         "reviewer": agent_review.get("provider"),
+        "independent_review": independent_available,
         "deterministic": deterministic,
     }
 
@@ -3770,6 +4743,49 @@ def make_report(run_dir: Path, payload: Dict[str, Any]) -> None:
     current = read_json(status_path, {}) or {}
     current["report"] = payload
     write_json(status_path, current)
+
+
+def approve_run(root: Optional[Path], run_id: str) -> Dict[str, Any]:
+    """Promote a privately rendered draft only after the owner checkpoint.
+
+    Provider output and a compiled PDF are still drafts until Victor approves
+    the gate report. This endpoint changes only private run metadata; it never
+    writes a canonical CV file or copies anything into ``CV/immutable``.
+    """
+    run_dir = _workshop_run_dir(root or repo_root(), run_id)
+    if run_dir is None:
+        raise ValueError("run not found")
+    status = read_json(run_dir / "status.json", {}) or {}
+    report = read_json(run_dir / "report.json", {}) or status.get("report") or {}
+    if not isinstance(report, dict):
+        raise ValueError("run has no review report")
+    if str(status.get("status") or "") == "complete" and report.get("approval_state") == "approved":
+        return status
+    if str(status.get("status") or "") != "awaiting_review":
+        raise ValueError("run is not waiting for owner review")
+    review = report.get("review") if isinstance(report.get("review"), dict) else {}
+    if review.get("ready") is not True:
+        raise ValueError("draft cannot be approved while one or more quality gates fail")
+    if not run_pdf_path(run_dir).is_file():
+        raise ValueError("run has no rendered PDF")
+    approved_at = now_iso()
+    report["approval_state"] = "approved"
+    report["approved_by"] = "Victor"
+    report["approved_at"] = approved_at
+    make_report(run_dir, report)
+    current = read_json(run_dir / "status.json", {}) or status
+    current.update({
+        "status": "complete",
+        "step": "approved",
+        "message": "Victor approved the draft after reviewing its gate report",
+        "updated_at": approved_at,
+        "approval_state": "approved",
+        "approved_by": "Victor",
+        "approved_at": approved_at,
+        "report": report,
+    })
+    write_json(run_dir / "status.json", current)
+    return current
 
 
 def _select_valid_plan(
@@ -3793,16 +4809,39 @@ def run_tailoring(
 ) -> None:
     update("context", "Fetching the posting and preparing the private CV context")
     context = job_context(job)
-    write_json(run_dir / "job_context.json", context)
     catalog = source_catalog(repo_root())
-    write_json(run_dir / "evidence_catalog.json", catalog_for_prompt(catalog))
     graph = evidence_graph(repo_root())
     graph_context = evidence_context(graph, context, str(context.get("posting_text") or ""))
-    write_json(run_dir / "evidence_graph_context.json", graph_context)
     match = resume_match_for_job(job, repo_root(), posting_text=str(context.get("posting_text") or ""))
     context["resume_match"] = match
     context["target_keywords"] = target_keyword_strategy(context, catalog, repo_root())
+    context["provider_policy"] = {
+        "allowed_lanes": [name for name, path in provider_commands().items() if path],
+        "codex_model": CODEX_LUNA_MODEL,
+        "local_models_allowed": False,
+        "api_fallback_allowed": False,
+    }
     write_json(run_dir / "job_context.json", context)
+    write_json(run_dir / "evidence_catalog.json", catalog_for_prompt(catalog))
+    write_json(run_dir / "evidence_graph_context.json", graph_context)
+    markdown_sources = sorted({
+        str(node.get("source") or "")
+        for node in graph.get("nodes", [])
+        if str(node.get("source") or "").lower().endswith(".md")
+    })
+    write_json(run_dir / "brief.json", {
+        "positioning_thesis": "",
+        "job": job_summary(job),
+        "posting_text_available": bool(context.get("posting_text")),
+        "target_keywords": context.get("target_keywords"),
+        "provider_policy": context["provider_policy"],
+        "evidence_graph": {
+            "version": graph.get("version"),
+            "hash": graph.get("hash"),
+            "review_summary": graph.get("review_summary") or {},
+            "markdown_sources": markdown_sources,
+        },
+    })
     mode_label = "unrestricted" if unrestricted else "enhanced" if enhance else "source-only"
     prompt = base_prompt(
         context, "an independent resume evidence strategist", catalog, enhance,
@@ -3811,8 +4850,8 @@ def run_tailoring(
     schema = plan_schema(enhance)
     available = [name for name, path in provider_commands().items() if path]
     if not available:
-        raise RuntimeError("Neither codex nor claude is installed")
-    update("drafting", "Building independent %s evidence plans: %s" % (mode_label, ", ".join(available)))
+        raise RuntimeError("No approved Codex or Claude Code subscription CLI is installed")
+    update("drafting", "Building adaptive %s evidence plans with: %s" % (mode_label, ", ".join(available)))
     with concurrent.futures.ThreadPoolExecutor(max_workers=len(available)) as pool:
         futures = {
             pool.submit(run_provider, provider, prompt, run_dir, "draft", RUN_TIMEOUT_SECONDS, schema): provider
@@ -3823,65 +4862,73 @@ def run_tailoring(
         write_json(run_dir / (draft.get("provider", "unknown") + "_draft.json"), draft)
     successful = [draft for draft in drafts if draft.get("ok")]
     if not successful:
-        raise RuntimeError("Frontier agents returned no usable evidence plan; inspect *_draft.json")
-    update("synthesis", "Selecting the strongest source-grounded evidence plan")
-    synthesizer = successful[0].get("provider") or ("codex" if provider_commands().get("codex") else "claude")
-    if len(successful) == 1:
+        raise RuntimeError("Approved provider lanes returned no usable evidence plan; inspect *_draft.json")
+
+    writer = "codex" if any(item.get("provider") == "codex" for item in successful) else successful[0].get("provider")
+    update("synthesis", "Codex is synthesizing the strongest adaptive evidence plan")
+    if len(successful) == 1 and successful[0].get("provider") == writer:
         synthesis = {
-            "provider": synthesizer,
-            "ok": True,
-            "skipped": True,
-            "reason": "Only one usable frontier provider was available; reused its structured plan instead of asking it to synthesize itself.",
+            "provider": writer, "ok": True, "skipped": True,
+            "reason": "Only one usable planning lane was available; its plan was preserved for independent-review status.",
             "data": successful[0].get("data") or {},
         }
     else:
         synthesis = run_provider(
-            synthesizer,
-            synthesis_prompt(
-                context, successful, catalog, enhance, graph=graph,
-                unrestricted=unrestricted,
-            ),
-            run_dir,
-            "synthesis",
-            timeout=4 * 60,
-            schema=schema,
+            writer,
+            synthesis_prompt(context, successful, catalog, enhance, graph=graph, unrestricted=unrestricted),
+            run_dir, "synthesis", timeout=4 * 60, schema=schema,
         )
     write_json(run_dir / "synthesis.json", synthesis)
     candidates = [synthesis] + successful
-    candidate_plan, plan_errors, chosen_record = _select_valid_plan(candidates, catalog, enhance, graph=graph)
+    candidate_plan, plan_errors, _ = _select_valid_plan(candidates, catalog, enhance, graph=graph)
     if candidate_plan is None:
         write_json(run_dir / "plan_errors.json", plan_errors)
-        raise RuntimeError("No provider returned a valid source-addressed plan; inspect plan_errors.json")
+        raise RuntimeError("No provider returned a valid adaptive source-addressed plan; inspect plan_errors.json")
     candidate_plan = expand_candidate_portfolio(candidate_plan, catalog, enhance)
     write_json(run_dir / "candidate_plan.json", candidate_plan)
-    update("packing", "Packing a full, meaningful portfolio against the human reference page")
+    write_json(run_dir / "brief.json", {
+        "positioning_thesis": candidate_plan.get("positioning_thesis", ""),
+        "selected_evidence": candidate_plan.get("selected_evidence", []),
+        "excluded_evidence": candidate_plan.get("excluded_evidence", []),
+        "revision_notes": candidate_plan.get("revision_notes", []),
+        "decision_ledger": candidate_plan.get("decision_ledger", []),
+        "front_matter_policy": candidate_plan.get("front_matter_policy", {"coursework": "keep", "awards": "keep"}),
+        "job": job_summary(job),
+        "target_keywords": context.get("target_keywords"),
+        "provider_policy": context["provider_policy"],
+        "evidence_graph": {
+            "version": graph.get("version"),
+            "hash": graph.get("hash"),
+            "review_summary": graph.get("review_summary") or {},
+            "markdown_sources": markdown_sources,
+        },
+    })
+
+    def render_candidate(value: Dict[str, Any], attempt_root: Path) -> Tuple[str, Dict[str, Any], Optional[str]]:
+        attempt_root.mkdir(parents=True, exist_ok=True)
+        tex_value = render_plan(value, catalog, repo_root())
+        (attempt_root / "resume.tex").write_text(tex_value)
+        compiled_value = compile_resume(attempt_root)
+        layout_value = pdf_layout(attempt_root, compiled_value, plan=value)
+        preview_value = render_preview(attempt_root)
+        return tex_value, layout_value, preview_value
+
+    update("packing", "Packing the strongest role-specific evidence without portfolio floors")
     plan, packing = pack_plan_to_page(candidate_plan, catalog, run_dir)
     write_json(run_dir / "content_plan.json", plan)
     write_json(run_dir / "layout_packing.json", packing)
-    chosen = render_plan(plan, catalog, repo_root())
-    (run_dir / "resume.tex").write_text(chosen)
-    update("rendering", "Compiling through the protected general resume template")
-    compiled = compile_resume(run_dir)
-    layout = pdf_layout(run_dir, compiled, plan=plan)
+    chosen, layout, preview = render_candidate(plan, run_dir)
     line_edits: List[Dict[str, Any]] = []
+    line_compactions: List[Dict[str, Any]] = []
     editable_pool = candidate_plan
     for line_round in range(1, MAX_LINE_EDIT_PASSES + 1):
-        space_pass = (layout.get("horizontal") or {}).get("pass")
-        if not enhance or space_pass:
+        if not enhance or (layout.get("horizontal") or {}).get("pass"):
             break
-        update(
-            "line_editing",
-            "Optimizing rendered bullets against the actual margins (pass %s/%s)"
-            % (line_round, MAX_LINE_EDIT_PASSES),
-        )
         label = "line_edit" if line_round == 1 else "line_edit_%s" % line_round
+        update("line_editing", "Repairing rendered one-line geometry (pass %s/%s)" % (line_round, MAX_LINE_EDIT_PASSES))
         line_edit = run_provider(
-            synthesizer,
-            line_editor_prompt(context, plan, layout, graph),
-            run_dir,
-            label,
-            timeout=6 * 60,
-            schema=schema,
+            writer, line_editor_prompt(context, plan, layout, graph), run_dir, label,
+            timeout=6 * 60, schema=plan_schema(True),
         )
         line_edits.append(line_edit)
         write_json(run_dir / (label + ".json"), line_edit)
@@ -3889,174 +4936,178 @@ def run_tailoring(
             break
         edited, edit_errors = validate_plan(line_edit.get("data") or {}, catalog, True, graph=graph)
         if edit_errors or _plan_source_signature(edited) != _plan_source_signature(plan):
-            write_json(
-                run_dir / (label + "_errors.json"),
-                edit_errors or ["line editor changed selected source IDs"],
-            )
+            write_json(run_dir / (label + "_errors.json"), edit_errors or ["line editor changed selected source IDs"])
             break
-        # Width expansion can change vertical fit. Preserve the rich excluded
-        # pool, merge only the accepted text edits, and rerun the same packer.
         editable_pool = merge_edited_bullets(editable_pool, edited)
-        plan, line_packing = pack_plan_to_page(
-            editable_pool, catalog, run_dir / (label + "_pack")
-        )
+        plan, line_packing = pack_plan_to_page(editable_pool, catalog, run_dir / (label + "_pack"))
         packing[label + "_pack"] = line_packing
         write_json(run_dir / "content_plan.json", plan)
         write_json(run_dir / "layout_packing.json", packing)
-        chosen = render_plan(plan, catalog, repo_root())
-        (run_dir / "resume.tex").write_text(chosen)
-        compiled = compile_resume(run_dir)
-        layout = pdf_layout(run_dir, compiled, plan=plan)
-    preview = render_preview(run_dir)
-    deterministic = deterministic_review(context, chosen, layout)
-    update("reviewing", "Running the adversarial final editor")
-    reviewer = "claude" if synthesizer == "codex" and provider_commands().get("claude") else synthesizer
-    review = run_provider(
-        reviewer,
-        reviewer_prompt(
-            context, chosen, plan=plan, graph_context=graph_context, catalog=catalog,
-            unrestricted=unrestricted,
-        ),
-        run_dir,
-        "review",
-        timeout=8 * 60,
-        schema=reviewed_plan_schema(enhance),
-    )
-    if not review.get("ok") and reviewer != synthesizer:
-        reviewer = synthesizer
-        review = run_provider(
-            reviewer,
-            reviewer_prompt(
-                context, chosen, plan=plan, graph_context=graph_context, catalog=catalog,
-                unrestricted=unrestricted,
-            ),
-            run_dir,
-            "review_fallback",
-            timeout=8 * 60,
-            schema=reviewed_plan_schema(enhance),
-        )
-    write_json(run_dir / "review_agent.json", review)
-    review_plan_applied = False
-    review_plan_errors: List[str] = []
-    if review.get("ok"):
-        reviewed_raw = (review.get("data") or {}).get("final_plan")
-        if isinstance(reviewed_raw, dict):
-            reviewed_plan, review_plan_errors = validate_plan(
-                reviewed_raw, catalog, enhance, graph=graph
-            )
-            if not review_plan_errors:
-                update("finalizing", "Applying the adversarial content corrections and repacking")
-                reviewed_pool = expand_candidate_portfolio(reviewed_plan, catalog, enhance)
-                plan, review_packing = pack_plan_to_page(
-                    reviewed_pool, catalog, run_dir / "review_pack"
-                )
-                packing["review_pack"] = review_packing
-                write_json(run_dir / "content_plan.json", plan)
-                write_json(run_dir / "layout_packing.json", packing)
-                chosen = render_plan(plan, catalog, repo_root())
-                (run_dir / "resume.tex").write_text(chosen)
-                compiled = compile_resume(run_dir)
-                layout = pdf_layout(run_dir, compiled, plan=plan)
-                preview = render_preview(run_dir)
-                deterministic = deterministic_review(context, chosen, layout)
-                review_plan_applied = True
-        else:
-            review_plan_errors = ["adversarial final editor returned no final_plan"]
-    if review_plan_errors:
-        write_json(run_dir / "review_plan_errors.json", review_plan_errors)
-        review_data = review.setdefault("data", {})
-        unresolved = review_data.setdefault("unsupported_claims", [])
-        unresolved.append(
-            "Adversarial final plan was not applied: " + "; ".join(review_plan_errors)
-        )
-    # The adversarial editor is allowed to change wording and project choices,
-    # so its corrected plan can introduce a new near-wrap after the earlier
-    # line-edit pass. Give the final plan the same measured repair opportunity
-    # before rejecting the run.
+        chosen, layout, preview = render_candidate(plan, run_dir)
+
     if enhance and not (layout.get("horizontal") or {}).get("pass"):
-        for final_round in range(1, MAX_LINE_EDIT_PASSES + 1):
-            update(
-                "final_line_editing",
-                "Repairing final-editor near-wraps against the rendered PDF (pass %s/%s)"
-                % (final_round, MAX_LINE_EDIT_PASSES),
-            )
-            label = "final_line_edit" if final_round == 1 else "final_line_edit_%s" % final_round
-            final_edit = run_provider(
-                synthesizer,
-                line_editor_prompt(context, plan, layout, graph),
-                run_dir,
-                label,
-                timeout=6 * 60,
-                schema=plan_schema(True),
-            )
-            line_edits.append(final_edit)
-            write_json(run_dir / (label + ".json"), final_edit)
-            if not final_edit.get("ok"):
-                break
-            edited, edit_errors = validate_plan(
-                final_edit.get("data") or {}, catalog, True, graph=graph
-            )
-            if edit_errors or _plan_source_signature(edited) != _plan_source_signature(plan):
-                write_json(
-                    run_dir / (label + "_errors.json"),
-                    edit_errors or ["final line editor changed selected source IDs"],
-                )
-                break
-            plan, final_packing = pack_plan_to_page(
-                merge_edited_bullets(plan, edited), catalog, run_dir / (label + "_pack")
-            )
-            packing[label + "_pack"] = final_packing
+        update("line_compacting", "Applying measured conservative fallbacks to remaining tight lines")
+        compacted, compact_layout, line_compactions = compact_plan_to_geometry(
+            plan, layout, catalog, run_dir,
+        )
+        if line_compactions:
+            plan = compacted
+            packing["line_compaction"] = {
+                "applied": line_compactions,
+                "horizontal": compact_layout.get("horizontal", {}),
+            }
             write_json(run_dir / "content_plan.json", plan)
             write_json(run_dir / "layout_packing.json", packing)
-            chosen = render_plan(plan, catalog, repo_root())
-            (run_dir / "resume.tex").write_text(chosen)
-            compiled = compile_resume(run_dir)
-            layout = pdf_layout(run_dir, compiled, plan=plan)
-            plan, restored_source_ids = restore_wrapped_source_text(plan, layout, catalog)
-            if restored_source_ids:
-                packing[label + "_source_reversions"] = restored_source_ids
-                write_json(run_dir / "content_plan.json", plan)
-                write_json(run_dir / "layout_packing.json", packing)
-                chosen = render_plan(plan, catalog, repo_root())
-                (run_dir / "resume.tex").write_text(chosen)
-                compiled = compile_resume(run_dir)
-                layout = pdf_layout(run_dir, compiled, plan=plan)
-            if (layout.get("horizontal") or {}).get("pass"):
-                break
-        preview = render_preview(run_dir)
-        deterministic = deterministic_review(context, chosen, layout)
-    final_horizontal = layout.get("horizontal") or {}
-    if not final_horizontal.get("pass"):
+            chosen, layout, preview = render_candidate(plan, run_dir)
+            write_json(run_dir / "line_compaction.json", line_compactions)
+
+    def combined_critique(records: List[Dict[str, Any]]) -> Dict[str, Any]:
+        if not records:
+            return {"provider": "", "ok": False, "data": {
+                "criteria": {name: {"status": "fail", "reason": "no independent critic available"} for name in REVIEW_CRITERIA},
+                "blocking_issues": ["Independent review was unavailable."],
+                "line_feedback": [], "unsupported_claims": [], "missing_evidence": [],
+                "revision_priorities": ["Obtain an independent provider critique before calling this ready."],
+                "decision_feedback": [],
+                "portfolio_comparison": {
+                    "status": "unknown",
+                    "reason": "independent portfolio comparison was unavailable",
+                    "preserved_strengths": [],
+                    "gained_strengths": [],
+                    "lost_strengths": [],
+                },
+            }}
+        data = copy.deepcopy(records[0].get("data") or {})
+        data.setdefault("blocking_issues", [])
+        data.setdefault("line_feedback", [])
+        data.setdefault("unsupported_claims", [])
+        data.setdefault("missing_evidence", [])
+        data.setdefault("revision_priorities", [])
+        data.setdefault("decision_feedback", [])
+        data.setdefault("portfolio_comparison", {
+            "status": "unknown",
+            "reason": "missing independent portfolio comparison",
+            "preserved_strengths": [],
+            "gained_strengths": [],
+            "lost_strengths": [],
+        })
+        criteria = data.setdefault("criteria", {})
+        for record in records[1:]:
+            other = record.get("data") or {}
+            data["blocking_issues"].extend(other.get("blocking_issues") or [])
+            data["line_feedback"].extend(other.get("line_feedback") or [])
+            data["unsupported_claims"].extend(other.get("unsupported_claims") or [])
+            data["missing_evidence"].extend(other.get("missing_evidence") or [])
+            data["revision_priorities"].extend(other.get("revision_priorities") or [])
+            data["decision_feedback"].extend(other.get("decision_feedback") or [])
+            current_comparison = data.get("portfolio_comparison") or {}
+            other_comparison = other.get("portfolio_comparison") or {}
+            if str(other_comparison.get("status") or "") == "fail" or (
+                str(current_comparison.get("status") or "") == "unknown"
+                and other_comparison
+            ):
+                data["portfolio_comparison"] = copy.deepcopy(other_comparison)
+            for name in REVIEW_CRITERIA:
+                left = criteria.get(name) or {"status": "fail", "reason": "missing critique"}
+                right = (other.get("criteria") or {}).get(name) or {"status": "fail", "reason": "missing critique"}
+                order = {"fail": 0, "partial": 1, "pass": 2}
+                if order.get(str(right.get("status")), 0) < order.get(str(left.get("status")), 0):
+                    criteria[name] = right
+                elif right.get("reason") and right.get("reason") not in str(left.get("reason") or ""):
+                    left["reason"] = "; ".join(value for value in (str(left.get("reason") or ""), str(right.get("reason") or "")) if value)
+                    criteria[name] = left
+        for key in ("blocking_issues", "unsupported_claims", "missing_evidence", "revision_priorities"):
+            data[key] = list(dict.fromkeys(str(value) for value in data.get(key) or []))
+        data["line_feedback"] = list({json.dumps(item, sort_keys=True): item for item in data.get("line_feedback") or []}.values())[:20]
+        data["decision_feedback"] = list({
+            json.dumps(item, sort_keys=True): item
+            for item in data.get("decision_feedback") or []
+            if isinstance(item, dict)
+        }.values())[:20]
+        comparison = data.get("portfolio_comparison") or {}
+        for field in ("preserved_strengths", "gained_strengths", "lost_strengths"):
+            if not isinstance(comparison.get(field), list):
+                comparison[field] = []
+        data["portfolio_comparison"] = comparison
+        return {"provider": "+".join(str(item.get("provider") or "") for item in records), "ok": True, "data": data}
+
+    def critique_current(round_label: str) -> Tuple[Dict[str, Any], List[Dict[str, Any]], bool]:
+        critic_lanes = [name for name in ("claude",) if name in available and name != writer]
+        if not critic_lanes:
+            critique = combined_critique([])
+            write_json(run_dir / (round_label + ".json"), critique)
+            return critique, [], False
+        update("reviewing", "Running independent critique lanes: %s" % ", ".join(critic_lanes))
+        with concurrent.futures.ThreadPoolExecutor(max_workers=len(critic_lanes)) as pool:
+            futures = {
+                pool.submit(
+                    run_provider, provider,
+                    reviewer_prompt(context, chosen, plan=plan, graph_context=graph_context, catalog=catalog, unrestricted=unrestricted),
+                    run_dir, round_label + "_" + provider, timeout=8 * 60, schema=review_schema(),
+                ): provider for provider in critic_lanes
+            }
+            records = [future.result() for future in concurrent.futures.as_completed(futures)]
+        for record in records:
+            write_json(run_dir / (round_label + "_" + str(record.get("provider") or "unknown") + ".json"), record)
+        usable = [record for record in records if record.get("ok")]
+        critique = combined_critique(usable)
+        write_json(run_dir / (round_label + ".json"), critique)
+        return critique, usable, bool(usable)
+
+    critique, critique_records, independent_available = critique_current("critique")
+    revision_records: List[Dict[str, Any]] = []
+    revision_log: List[Dict[str, Any]] = []
+    for revision_round in range(1, 3):
+        critique_data = critique.get("data") or {}
+        statuses = [str((critique_data.get("criteria") or {}).get(name, {}).get("status") or "fail") for name in REVIEW_CRITERIA]
+        if not enhance or not independent_available or (not critique_data.get("blocking_issues") and all(status == "pass" for status in statuses)):
+            break
+        label = "revision" if revision_round == 1 else "revision_%s" % revision_round
+        update("revising", "Codex is applying independent critique (pass %s/2)" % revision_round)
+        revision = run_provider(
+            writer, revision_prompt(context, plan, critique, catalog, graph=graph, unrestricted=unrestricted),
+            run_dir, label, timeout=8 * 60, schema=plan_schema(True),
+        )
+        revision_records.append(revision)
+        write_json(run_dir / (label + ".json"), revision)
+        if not revision.get("ok"):
+            revision_log.append({"round": revision_round, "status": "failed", "reason": revision.get("error", "provider failed")})
+            break
+        revised_plan, revision_errors = validate_plan(revision.get("data") or {}, catalog, True, graph=graph)
+        if revision_errors:
+            revision_log.append({"round": revision_round, "status": "rejected", "errors": revision_errors})
+            write_json(run_dir / (label + "_errors.json"), revision_errors)
+            break
+        plan, revision_packing = pack_plan_to_page(revised_plan, catalog, run_dir / (label + "_pack"))
+        packing[label + "_pack"] = revision_packing
+        write_json(run_dir / "content_plan.json", plan)
+        write_json(run_dir / "layout_packing.json", packing)
+        chosen, layout, preview = render_candidate(plan, run_dir)
+        revision_log.append({"round": revision_round, "status": "applied", "provider": writer})
+        critique, new_records, independent_available = critique_current(label + "_critique")
+        critique_records.extend(new_records)
+    write_json(run_dir / "revision_log.json", revision_log)
+    deterministic = deterministic_review(context, chosen, layout, plan=plan, catalog=catalog)
+    if not (layout.get("horizontal") or {}).get("pass"):
         rejection = {
             "reason": "Final resume rejected by the hard one-line bullet gate",
             "safe_right_slack_pt": MIN_RIGHT_SLACK_PT,
-            "wrap_count": final_horizontal.get("wrap_count", 0),
-            "near_wrap_count": final_horizontal.get("near_wrap_count", 0),
-            "bullets": [
-                item for item in final_horizontal.get("bullets", [])
-                if item.get("wraps") is True or item.get("near_wrap") is True or not item.get("horizontal_pass")
-            ],
+            "wrap_count": (layout.get("horizontal") or {}).get("wrap_count", 0),
+            "near_wrap_count": (layout.get("horizontal") or {}).get("near_wrap_count", 0),
+            "bullets": [item for item in (layout.get("horizontal") or {}).get("bullets", []) if item.get("wraps") or item.get("near_wrap") or not item.get("horizontal_pass")],
         }
         write_json(run_dir / "layout_rejection.json", rejection)
-        raise RuntimeError(
-            "final resume rejected: %s wrap(s), %s near-wrap(s); see layout_rejection.json"
-            % (rejection["wrap_count"], rejection["near_wrap_count"])
-        )
-    scored = score_review(review, deterministic)
+        raise RuntimeError("final resume rejected: %s wrap(s), %s near-wrap(s); see layout_rejection.json" % (rejection["wrap_count"], rejection["near_wrap_count"]))
+    scored = score_review(critique, deterministic, independent_available=independent_available)
     synthesis_data = plan
-    provider_records = [
-        {"provider": d.get("provider"), "ok": d.get("ok"), "called": True, "elapsed_seconds": d.get("elapsed_seconds"), "usage_tokens": d.get("usage_tokens")}
-        for d in drafts
-    ] + [
-        {"provider": "synthesis/" + synthesizer, "ok": synthesis.get("ok"), "called": not synthesis.get("skipped"), "skipped": bool(synthesis.get("skipped")), "usage_tokens": synthesis.get("usage_tokens")},
-    ] + [
-        {"provider": "line-edit-%s/%s" % (index, synthesizer), "ok": item.get("ok"), "called": True, "usage_tokens": item.get("usage_tokens")}
-        for index, item in enumerate(line_edits, 1)
-    ] + [
-        {"provider": "review/" + reviewer, "ok": review.get("ok"), "called": True, "usage_tokens": review.get("usage_tokens")},
-    ]
-    codex_records = [item for item in provider_records if item.get("called") and item.get("provider", "").split("/")[-1] == "codex"]
-    known_codex = [item["usage_tokens"] for item in codex_records if item.get("usage_tokens") is not None]
+    provider_records = []
+    for record in drafts + [synthesis] + line_edits + revision_records + critique_records:
+        provider_records.append({
+            "provider": record.get("provider"), "ok": record.get("ok"), "called": not record.get("skipped", False),
+            "elapsed_seconds": record.get("elapsed_seconds"), "usage_tokens": record.get("usage_tokens"),
+        })
+    known_by_provider = {name: [int(item.get("usage_tokens")) for item in provider_records if item.get("called") and str(item.get("provider") or "").split("/")[-1] == name and item.get("usage_tokens") is not None] for name in ("codex", "claude")}
+    changes = content_change_report(plan, catalog, chosen, context.get("target_keywords"))
     report = {
         "mode": mode_label,
         "pdf_filename": run_pdf_path(run_dir).name,
@@ -4067,61 +5118,45 @@ def run_tailoring(
         "selected_evidence": synthesis_data.get("selected_evidence", []),
         "excluded_evidence": synthesis_data.get("excluded_evidence", []),
         "revision_notes": synthesis_data.get("revision_notes", []),
+        "decision_ledger": synthesis_data.get("decision_ledger", []),
+        "front_matter_policy": synthesis_data.get("front_matter_policy", {"coursework": "keep", "awards": "keep"}),
+        "line_compactions": line_compactions,
         "validation_warnings": synthesis_data.get("validation_warnings", []),
-        "content_changes": content_change_report(
-            plan, catalog, chosen, context.get("target_keywords")
-        ),
-        "content_plan": {
-            "experiences": synthesis_data.get("experiences", []),
-            "projects": synthesis_data.get("projects", []),
-            "leadership": synthesis_data.get("leadership", []),
-        },
+        "content_changes": changes,
+        "portfolio_diagnostics": changes.get("portfolio_diagnostics", {}),
+        "owner_summary": owner_change_summary(plan, catalog, changes),
+        "content_plan": {section: synthesis_data.get(section, []) for section in ("experiences", "projects", "leadership")},
         "layout_packing": packing,
-        "format_contract": {
-            "template": "CV/" + CANONICAL_TEMPLATE,
-            "model_can_write_latex_document": False,
-            "font_size_reduction_percent": 0.0,
-            "font_size_increase_percent": 0.0,
-            "allowed_max_reduction_percent": MAX_STYLE_REDUCTION_PERCENT,
-        },
+        "format_contract": {"template": "CV/" + CANONICAL_TEMPLATE, "model_can_write_latex_document": False, "font_size_reduction_percent": 0.0, "font_size_increase_percent": 0.0, "allowed_max_reduction_percent": MAX_STYLE_REDUCTION_PERCENT},
         "providers": provider_records,
+        "provider_policy": context["provider_policy"],
+        "evidence_graph": {
+            "version": graph.get("version"),
+            "hash": graph.get("hash"),
+            "review_summary": graph.get("review_summary") or {},
+            "markdown_sources": markdown_sources,
+        },
         "usage": {
-            "codex_tokens": sum(known_codex),
-            "codex_calls": len(codex_records),
-            "complete": len(known_codex) == len(codex_records),
-            "known_calls": len(known_codex),
+            **{name + "_tokens": sum(values) for name, values in known_by_provider.items()},
+            **{name + "_calls": sum(1 for item in provider_records if item.get("called") and str(item.get("provider") or "").split("/")[-1] == name) for name in ("codex", "claude")},
+            "codex_complete": all(item.get("usage_tokens") is not None for item in provider_records if item.get("called") and str(item.get("provider") or "").split("/")[-1] == "codex"),
         },
         "review": scored,
-        "review_plan_applied": review_plan_applied,
-        "review_plan_errors": review_plan_errors,
+        "critique": critique,
+        "independent_review": {"available": independent_available, "providers": [item.get("provider") for item in critique_records]},
+        "approval_state": "awaiting_review",
         "artifacts": [
-            "resume.tex",
-            run_pdf_path(run_dir).name,
-            "resume.txt",
-            run_preview_path(run_dir).name if preview else None,
-            "job.json",
-            "report.json",
-            "job_context.json",
-            "evidence_catalog.json",
-            "evidence_graph_context.json",
-            "candidate_plan.json",
-            "content_plan.json",
-            "layout_packing.json",
+            "resume.tex", run_pdf_path(run_dir).name, "resume.txt", run_preview_path(run_dir).name if preview else None,
+            "job.json", "report.json", "job_context.json", "brief.json", "evidence_catalog.json", "evidence_graph_context.json",
+            "candidate_plan.json", "content_plan.json", "layout_packing.json", "critique.json", "revision_log.json",
             *[("line_edit.json" if index == 1 else "line_edit_%s.json" % index) for index in range(1, len(line_edits) + 1)],
-            "review_agent.json",
+            *[("revision.json" if index == 1 else "revision_%s.json" % index) for index in range(1, len(revision_records) + 1)],
         ],
     }
     report["artifacts"] = [artifact for artifact in report["artifacts"] if artifact]
     make_report(run_dir, report)
-    # The first completed draft is immediately addressable in the workshop;
-    # later edits create separate revision artifacts and never overwrite this
-    # original generated PDF.
     _workshop_state(run_dir, catalog)
-    update(
-        "complete",
-        "%s tailored draft and adversarial final edit are ready" % mode_label.capitalize(),
-        report=report,
-    )
+    update("awaiting_review", "Draft and independent critique are ready for Victor's review", report=report)
 
 
 def run_strict(run_dir: Path, job: Dict[str, Any], update) -> None:
@@ -4178,7 +5213,11 @@ class RunManager:
 
     def _worker(self, run_id: str, run_dir: Path, job: Dict[str, Any], mode: str) -> None:
         def update(step: str, message: str, **extra: Any) -> None:
-            status = "complete" if step == "complete" else "running"
+            status = (
+                "complete" if step == "complete"
+                else "awaiting_review" if step == "awaiting_review"
+                else "running"
+            )
             self.update(run_id, run_dir, status, step, message, **extra)
 
         try:
@@ -4304,8 +5343,36 @@ UI_HTML = UI_HTML.replace(
 UI_HTML = UI_HTML.replace("CV/resume.tex locked", "CV/immutable/VictorJimenezResume.tex locked")
 UI_HTML = UI_HTML.replace("||'resume.pdf',previewName", "||'company_resume_ai.pdf',previewName")
 UI_HTML = UI_HTML.replace(
+    "if(data.status==='complete'||data.status==='failed')",
+    "if(data.status==='complete'||data.status==='awaiting_review'||data.status==='failed')",
+)
+UI_HTML = UI_HTML.replace(
+    "claim_allowed:status==='confirmed'",
+    "claim_allowed:status==='confirmed'||status==='public_safe'",
+)
+UI_HTML = UI_HTML.replace(
+    "function renderUsage(usage){if(!usage)return;$('usageStrip').innerHTML=`<strong>Usage</strong><span><strong>${Number(usage.codex_tokens||0).toLocaleString()}</strong> observed Codex tokens · ${usage.codex_calls||0} calls this week · ${usage.runs||0} saved runs</span><span class=\"meta\">${usage.weekly_limit_tokens?`${usage.percent_of_limit}% of configured limit`:'Plus weekly allowance is not exposed by the local CLI'}</span>;}",
+    "function renderUsage(usage){if(!usage)return;$('usageStrip').innerHTML=`<strong>Usage</strong><span><strong>${Number(usage.codex_tokens||0).toLocaleString()}</strong> Codex · ${Number(usage.claude_tokens||0).toLocaleString()} Claude observed tokens · ${usage.runs||0} saved runs</span><span class=\"meta\">Codex model: gpt-5.6-luna · first-party subscription CLIs only; no local-model or API fallback</span>`;}",
+)
+UI_HTML = UI_HTML.replace(
+    "observed Codex tokens · ${usage.codex_calls||0} calls this week",
+    "observed Codex tokens · ${usage.codex_calls||0} calls this week · Codex model gpt-5.6-luna",
+)
+UI_HTML = UI_HTML.replace(
+    "if(review.craft_score!==undefined)",
+    "if(review.craft_score!==undefined&&review.craft_score!==null)",
+)
+UI_HTML = UI_HTML.replace(
     '</details>\n<div id="queueStrip"',
     '</details><details class="evidence-review-details"><summary>Evidence review</summary><div class="meta evidence-review-hint">Local sources are usable by default. Review only stale, disputed, or public records; public evidence stays blocked until you confirm it.</div><div id="evidenceReview"><span class="meta">Loading indexed evidence…</span></div></details>\n<div id="queueStrip"',
+)
+UI_HTML = UI_HTML.replace(
+    '<option value="confirmed">Confirmed</option><option value="rejected">Rejected</option><option value="superseded">Superseded</option>',
+    '<option value="confirmed">Confirmed</option><option value="public_safe">Public safe</option><option value="disputed">Disputed</option><option value="private_do_not_publish">Private only</option><option value="rejected">Rejected</option><option value="superseded">Superseded</option>',
+)
+UI_HTML = UI_HTML.replace(
+    '<button data-evidence-id="\'+id+\'" data-evidence-status="confirmed">Confirm</button><button data-evidence-id="\'+id+\'" data-evidence-status="rejected">Reject</button>',
+    '<button data-evidence-id="\'+id+\'" data-evidence-status="confirmed">Confirm</button><button data-evidence-id="\'+id+\'" data-evidence-status="public_safe">Public safe</button><button data-evidence-id="\'+id+\'" data-evidence-status="disputed">Dispute</button><button data-evidence-id="\'+id+\'" data-evidence-status="private_do_not_publish">Private only</button><button data-evidence-id="\'+id+\'" data-evidence-status="rejected">Reject</button>',
 )
 UI_HTML = UI_HTML.replace(
     '<h2>Postings</h2><span id="jobCount" class="count"></span></div><p class="hint">Choose a role. Saved resumes stay in the bank when you switch.</p>',
@@ -4339,9 +5406,19 @@ renderReport=function(status){
   let extra=`<div class=\"match-card\"><strong>What changed</strong><div class=\"meta\">${changes.changed_bullet_count||0} bullets rewritten · ${swaps.swapped_in?.length||0} projects swapped in · ${swaps.swapped_out?.length||0} base projects swapped out</div>`;
   if(swaps.swapped_in?.length)extra+=`<div class=\"meta\"><strong>Added:</strong> ${esc(swaps.swapped_in.join(' · '))}</div>`;
   if(swaps.swapped_out?.length)extra+=`<div class=\"meta\"><strong>Removed:</strong> ${esc(swaps.swapped_out.join(' · '))}</div>`;
-  const rewrites=changes.rewritten_bullets||[];
-  if(rewrites.length)extra+=`<details><summary>Show ${rewrites.length} rewritten lines</summary>${rewrites.map(item=>`<div class=\"meta\"><strong>${esc(item.source_id||'line')}</strong><br><s>${esc(item.source_text||'')}</s><br>→ ${esc(item.final_text||'')}</div>`).join('')}</details>`;
-  extra+='</div>';
+  const owner=report.owner_summary||{};
+  if(owner.headline)extra+=`<p><strong>Portfolio read:</strong> ${esc(owner.headline)}</p>`;
+  if(owner.strong_fifth_experience_preserved)extra+=`<div class=\"meta\">Preserved the strong fifth J&amp;J experience bullet.</div>`;
+  if((owner.front_matter_tradeoffs||[]).length)extra+=`<div class=\"meta\"><strong>Space reclaimed:</strong> ${esc(owner.front_matter_tradeoffs.join(', '))}</div>`;
+  if((report.line_compactions||[]).length)extra+=`<details><summary>Measured line safety edits (${report.line_compactions.length})</summary>${report.line_compactions.map(item=>`<div class=\"meta\"><strong>${esc(item.source_id||'line')}</strong><br><s>${esc(item.from||'')}</s><br>→ ${esc(item.to||'')}</div>`).join('')}</details>`;
+  if((owner.redundant_project_flags||[]).length)extra+=`<details><summary>Portfolio overlap flagged (${owner.redundant_project_flags.length})</summary><div class=\"meta\">${owner.redundant_project_flags.map(item=>esc(item)).join(' · ')}</div></details>`;
+  if((owner.portfolio_warnings||[]).length)extra+=`<details><summary>Portfolio checks (${owner.portfolio_warnings.length})</summary>${owner.portfolio_warnings.map(item=>`<div class=\"meta\">${esc(item)}</div>`).join('')}</details>`;
+ const rewrites=changes.rewritten_bullets||[];
+ if(rewrites.length)extra+=`<details><summary>Show ${rewrites.length} rewritten lines</summary>${rewrites.map(item=>`<div class=\"meta\"><strong>${esc(item.source_id||'line')}</strong><br><s>${esc(item.source_text||'')}</s><br>→ ${esc(item.final_text||'')}</div>`).join('')}</details>`;
+  const ledger=changes.decision_ledger||[];
+  if(ledger.length)extra+=`<details><summary>Decision ledger (${ledger.length})</summary>${ledger.map(item=>`<div class=\"meta\"><strong>${esc(item.action||'change')}</strong> · ${esc(item.target_signal||'target signal')}<br><s>${esc(item.current_evidence||'')}</s><br>→ ${esc(item.replacement_or_exclusion||'')}<br><strong>Why:</strong> ${esc(item.why_stronger||'')} ${item.signal_lost?`<br><strong>Signal lost:</strong> ${esc(item.signal_lost)}`:''}</div>`).join('')}</details>`;
+  if((changes.removed_canonical_bullets||[]).length)extra+=`<details><summary>Removed canonical evidence (${changes.removed_canonical_bullets.length})</summary>${changes.removed_canonical_bullets.map(item=>`<div class=\"meta\"><strong>${esc(item.source_id||'line')}</strong><br>${esc(item.text||'')}</div>`).join('')}</details>`;
+ extra+='</div>';
   const plan=report.content_plan||{},selections=[...(plan.experiences||[]),...(plan.projects||[]),...(plan.leadership||[])];
   const reasons=selections.map(item=>item.why).filter(Boolean).slice(0,8);
   let rationale=`<div class=\"rationale\"><strong>Why this draft was chosen</strong>`;
@@ -4359,6 +5436,19 @@ renderReport=function(status){
   else if(ats.reason)extra+=`<p class=\"meta\"><strong>ATS:</strong> ${esc(ats.reason)}</p>`;
   const anchor=$(\'report\').querySelector(\'pre\');if(anchor)anchor.insertAdjacentHTML(\'beforebegin\',extra);else $(\'report\').insertAdjacentHTML(\'beforeend\',extra);
 };
+const baseCheckpointRenderReport=renderReport;
+renderReport=function(status){
+  baseCheckpointRenderReport(status);
+  const report=status.report||{},review=report.review||{},gates=review.gates||{};
+  let checkpoint=`<div class="match-card"><strong>${status.status==='awaiting_review'?'Owner checkpoint':'Approval record'}</strong><div class="meta">${review.ready===true?'All required gates pass; inspect the diff before approval.':'This draft is not ready for approval yet.'}</div><p>${Object.entries(gates).map(([name,gate])=>`<span class="badge">${esc(name)}: ${esc(gate.status||'unknown')}</span>`).join(' ')}</p>`;
+  if(status.status==='awaiting_review'&&review.ready===true)checkpoint+=`<button data-approve-run="${esc(status.run_id)}">Approve final PDF</button><span class="meta">Approval only changes this private run to complete.</span>`;
+  else if(status.status==='awaiting_review')checkpoint+=`<p class="meta">Open the workshop or inspect the critique below; a failed gate keeps this run in draft state.</p>`;
+  else if(report.approval_state==='approved')checkpoint+=`<p class="meta">Approved by ${esc(report.approved_by||'Victor')} · ${esc(report.approved_at||'')}</p>`;
+  checkpoint+='</div>';
+  $('report').insertAdjacentHTML('afterbegin',checkpoint);
+};
+async function approveRun(id){const button=document.querySelector('[data-approve-run]');if(button)button.disabled=true;try{const r=await fetch('/api/run/approve',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({run_id:id})});const data=await r.json();if(!r.ok)throw new Error(data.error||'Approval failed');if(id===activeRunId){$('status').className='status complete';$('status').textContent='Draft approved and saved in the private resume bank';renderReport(data);}await loadLibrary();}catch(error){if(button)button.disabled=false;alert(error.message);}}
+document.addEventListener('click',event=>{const approve=event.target.closest('[data-approve-run]');if(approve){event.preventDefault();approveRun(approve.dataset.approveRun||'');}});
 function showView(view){""",
 )
 
@@ -4528,7 +5618,7 @@ class StudioHandler(BaseHTTPRequestHandler):
     def do_POST(self) -> None:
         parsed = urlparse(self.path)
         if parsed.path not in {
-            "/api/run", "/api/match", "/api/evidence/refresh", "/api/evidence/review",
+            "/api/run", "/api/run/approve", "/api/match", "/api/evidence/refresh", "/api/evidence/review",
             "/api/workshop/edit", "/api/workshop/ai", "/api/workshop/revert",
         }:
             return self.send_json({"error": "not found"}, HTTPStatus.NOT_FOUND)
@@ -4579,6 +5669,8 @@ class StudioHandler(BaseHTTPRequestHandler):
                     str(body.get("revision_id") or ""),
                 )
                 return self.send_json(result)
+            if parsed.path == "/api/run/approve":
+                return self.send_json(approve_run(repo_root(), str(body.get("run_id") or "")))
             job_id = str(body.get("job_id") or "")
             job = current_scored_jobs(repo_root()).get(job_id)
             if not job:

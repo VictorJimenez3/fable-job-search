@@ -132,8 +132,9 @@ def build_payload(entry: dict, schema: dict) -> dict:
     if props.get("Apply date") == "date" and entry.get("stage", "applied") == "applied":
         payload_props["Apply date"] = {"date": {"start": datetime.now(timezone.utc).strftime("%Y-%m-%d")}}
     if props.get("Text") == "rich_text":
+        lane = entry.get("profile") or "new_grad"
         payload_props["Text"] = {"rich_text": [{"text": {"content":
-            f"{entry['title'][:150]} · via JobRadar (score {entry.get('score', '?')}, "
+            f"{entry['title'][:150]} · via JobRadar ({lane}; score {entry.get('score', '?')}, "
             f"source {entry.get('source', '?')})"}}]}
     if entry.get("url") and props.get("Job URL") == "url":
         payload_props["Job URL"] = {"url": entry["url"][:1900]}

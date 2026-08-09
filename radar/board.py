@@ -17,9 +17,9 @@ from datetime import datetime, timezone
 
 import requests
 
-from .alerts import API, LABEL, _headers, format_line
+from .alerts import API, LABEL, _headers, format_line, lane_label
 from . import state
-from .config import env, github_owner, github_repo, profile
+from .config import env, github_owner, github_repo, profile, profile_id
 
 MASTER_TITLE = "📌 Job Radar — master board (every open role, one place)"
 MASTER_LABEL = "radar-master"
@@ -27,6 +27,21 @@ DAILY_LABEL = "radar-daily"
 BATCH_LABEL = "radar-email-batch"
 PAGE_LIMIT = 55000  # per body/comment, under GitHub's 65536 cap
 REQUEST_TIMEOUT = (5, 20)
+
+
+def master_label() -> str:
+    return "radar-internship-master" if profile_id() == "internship" else MASTER_LABEL
+
+
+def batch_label() -> str:
+    return "radar-internship-email" if profile_id() == "internship" else BATCH_LABEL
+
+
+def email_enabled() -> bool:
+    defaults = {"new_grad_email": True, "internship_email": False}
+    preferences = state.load_shared("notification_preferences.json", defaults)
+    key = "internship_email" if profile_id() == "internship" else "new_grad_email"
+    return bool(preferences.get(key, defaults[key]))
 
 MASTER_HEADER = (
     "Every alert-worthy open role the radar currently knows, best first — "
@@ -89,7 +104,7 @@ def update_master_board(jobs_state: dict, applied: list) -> str | None:
     body = MASTER_HEADER.format(count=len(lines), stamp=stamp) + "\n" + pages[0]
 
     r = requests.get(f"{API}/repos/{repo}/issues",
-                     params={"labels": MASTER_LABEL, "state": "open", "per_page": 5},
+                     params={"labels": master_label(), "state": "open", "per_page": 5},
                      headers=_headers(), timeout=REQUEST_TIMEOUT)
     r.raise_for_status()
     found = r.json()
@@ -103,7 +118,7 @@ def update_master_board(jobs_state: dict, applied: list) -> str | None:
     else:
         r = requests.post(f"{API}/repos/{repo}/issues", headers=_headers(), timeout=REQUEST_TIMEOUT,
                           json={"title": MASTER_TITLE, "body": body,
-                                "labels": [LABEL, MASTER_LABEL], "assignees": []})
+                                "labels": [LABEL, lane_label(), master_label()], "assignees": []})
         r.raise_for_status()
         issue = r.json()
 
@@ -150,6 +165,9 @@ def update_master_board(jobs_state: dict, applied: list) -> str | None:
 
 def post_daily_best(jobs_state: dict, top_n: int = 10) -> str | None:
     """Create today's 🏆 best-of issue (idempotent; closes yesterday's)."""
+    if not email_enabled():
+        print(f"daily-best: {profile_id()} email is disabled")
+        return None
     token = env("GITHUB_TOKEN")
     if not token:
         print("board: GITHUB_TOKEN not set — skipping daily best")
@@ -205,6 +223,9 @@ def email_batch_rows(alert_history: list[dict], sent_ids: set[str], now: int,
 
 def post_email_batch(alert_history: list[dict], limit: int | None = None) -> str | None:
     """Send a periodic multi-job GitHub email and remember delivered rows."""
+    if not email_enabled():
+        print(f"email-batch: {profile_id()} email is disabled")
+        return None
     token = env("GITHUB_TOKEN")
     if not token:
         print("email-batch: GITHUB_TOKEN not set — skipping")
@@ -229,14 +250,15 @@ def post_email_batch(alert_history: list[dict], limit: int | None = None) -> str
     rows = pending[:limit]
     repo = github_repo()
     stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    title = f"📬 Job Radar batch — {stamp} ({len(rows)} roles)"
+    title_prefix = "Internship" if profile_id() == "internship" else "Job Radar"
+    title = f"📬 {title_prefix} batch — {stamp} ({len(rows)} roles)"
     from .culture import load as culture_load
     body = (f"The radar found **{len(rows)}** new roles since the last batch. "
             "They are ordered by score, then recency. Check a box to track one.\n\n"
             + "\n".join(format_line(row, culture_load()) for row in rows) + "\n")
     response = requests.post(f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,
                              json={"title": title, "body": body,
-                                   "labels": [LABEL, BATCH_LABEL],
+                                   "labels": [LABEL, lane_label(), batch_label()],
                                    "assignees": [github_owner()]})
     response.raise_for_status()
     sent_ids.update(row["id"] for row in rows)

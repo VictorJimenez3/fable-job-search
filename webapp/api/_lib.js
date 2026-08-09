@@ -14,7 +14,12 @@ const envv = (k) => (process.env[k] || "").replace(/[^\x21-\x7E]/g, "");
 const OWNER = envv("RADAR_OWNER") || "VictorJimenez3";
 const REPO = envv("RADAR_REPO") || "VictorJimenez3/fable-job-search";
 const BRANCH = envv("RADAR_BRANCH") || "claude/newgrad-job-search-system-9gbj9k";
-const PROFILE = envv("RADAR_PROFILE") || "default";
+const PROFILE = envv("RADAR_PROFILE") || "new_grad";
+const VALID_PROFILES = new Set(["new_grad", "internship", "cheme"]);
+const normalizeProfile = value => {
+  const normalized = String(value || "new_grad").trim().toLowerCase();
+  return normalized === "default" || normalized === "" ? "new_grad" : normalized;
+};
 const AUTH_MODE = envv("AUTH_MODE") || "oauth";
 const CANON_HOST = envv("CANON_HOST") || "job-radar-vmj-8946s-projects.vercel.app";
 
@@ -81,5 +86,6 @@ async function gh(path, token, opts = {}) {
 }
 
 module.exports = { OWNER, REPO, BRANCH, PROFILE, AUTH_MODE, envv, seal, unseal,
+                   VALID_PROFILES, normalizeProfile,
                    CANON_HOST, GOOGLE_AUTH_CLIENT_ID, GOOGLE_AUTH_CLIENT_SECRET,
                    googleAuthConfigured, session, needSetup, needSessionSetup, gh };

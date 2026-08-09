@@ -35,6 +35,12 @@ none block anything currently running.
    crawls. Other GitHub users can report stale postings through issues, with
    distinct-login deduplication and a three-reporter owner review threshold;
    automatic deletion remains deliberately deferred until scale warrants it.
+6. **Technical internship lane — ✅ SHIPPED 2026-08-08 (DECISION #104).** The
+   main platform now switches between isolated new-grad and internship lanes.
+   Internship sources, ATS queries, scoring/gates, graduation-aware
+   freshman/sophomore/junior/senior matching, state, dashboards, GitHub
+   surfaces, and Google tracker tabs are separate. New-grad remains the
+   priority compute path; internship email batches are opt-in.
 
 ## Deliberately deferred by Victor
 
@@ -212,13 +218,13 @@ Rules v3 makes role eligibility title-led and narrows the data-science analyst
 match; unrelated titles mentioned above no longer ride company/JD AI prose
 into alerts.
 
-## CV auto-tailoring — ✅ OWNER-FIRST V1 SHIPPED 2026-07-31 (DECISIONS #67-69, #72-74)
+## CV auto-tailoring — ✅ OWNER-FIRST V2 HARNESS SHIPPED 2026-08-08 (DECISIONS #67-69, #72-74, #98-99, #106)
 
 `CV/` remains local-only (DECISIONS #29). The first implementation is the
 owner-only local Resume Studio in `scripts/resume_studio.py`. Source-only mode
 selects existing evidence IDs; enhancement mode permits reviewable substantive
 rewrites and multi-source synthesis anchored to those IDs. Both render through
-the exact `CV/resume.tex` format
+the exact `CV/immutable/VictorJimenezResume.tex` format
 with company-first headings, immutable typography/margins/spacing, and a hard
 page-density test (DECISIONS #69). Victor's installed first-party Codex and
 Claude Code clients perform planning and fixed adversarial review. Human stays
@@ -226,17 +232,21 @@ the author (DECISIONS §6): drafts are reviewed, never auto-submitted. Reports
 expose known Codex token usage and do not imply an exact total when a provider
 omits usage metadata.
 
+The canonical general and TLDP source/PDF files are structurally locked from
+Studio rendering under `CV/immutable/`; only private `CV/.resume_studio/` directories are writable
+targets. The UI keeps Used bullets and AI tailor as the primary choices and
+places advanced modes and diagnostics behind disclosures.
+
 The owner workflow now includes the private structured evidence graph, bounded
 GitHub/Devpost corroboration, Resume Match scoring and Best/Newest/Resume Match
 sorting, full-posting re-analysis, dynamic compile-measured page packing, and
-source-addressed custom bullets. The methodology curator keeps a full
-22–26-bullet portfolio across three experiences and four projects, removes
-semantic duplicates, and hard-fails wrapping or excessive bottom whitespace
-against the immutable human reference. The adversarial pass returns an applied
-corrected plan instead of review notes for an unchanged PDF. Protected scope
-qualifiers survive enhancement, and compile errors cannot trigger content
-deletion. Resume Craft is a fixed weighted rubric; factuality, eligibility,
-and layout are separate non-negotiable gates.
+source-addressed custom bullets. Portfolio structure is adaptive: there is no
+forced section, project count, or density floor, while duplicate, weak, and
+overflowing lines are removed without inventing backups. The independent
+reviewer returns critique-only gate data; Codex may revise against it, but a
+draft remains `awaiting_review` until Victor approves it. Protected scope
+qualifiers survive enhancement, compile errors cannot trigger content deletion,
+and there is no composite Resume Craft score.
 
 The current enhancement contract also receives the bounded CV authority dossier
 and exact-term ATS strategy from the captured posting. It may swap projects and
@@ -244,6 +254,27 @@ rewrite supported evidence around target language; reports expose rewritten
 lines, project swaps, and rendered coverage. Near-wrap lines (under 12pt of
 right-edge safety) are rejected along with actual wraps, so historical PDFs do
 not masquerade as output from the current pipeline.
+
+The marginal hiring-value refinement (2026-08-08) preserves adaptive and
+take-the-wheel tailoring while adding a canonical/current comparison point.
+Substantive swaps, exclusions, rewrites, and unusual reorders are recorded in a
+decision_ledger; the independent critic can return decision_feedback when a
+change loses stronger evidence, adds only keyword similarity, creates
+redundancy, or breaks chronology without a strong reason. This is an audit
+layer, not a rigid numeric craft score or a blanket preserve-base rule.
+
+The portfolio-first refinement checks composition before line polish. It flags
+project overlap, unused technical alternatives, and leadership competing for
+technical page space; it also lets the report explain when coursework or the
+aggregated Awards line was reclaimed before strong evidence.
+
+The evidence maintenance loop is now shipped locally (DECISION #99). Resume
+Markdown files are indexed as source-addressed records, public GitHub README
+material is bounded corroboration, and the collapsed Studio Evidence review
+panel records explicit Confirm/Public-safe/Disputed/Private/Reject/Supersede
+decisions. Public material stays blocked until a human confirmation; rejected
+or private records are excluded from ranked context and future generation.
+Refreshes preserve cached README records through GitHub rate limits.
 
 Resume Studio workshop — ✅ SHIPPED (DECISION #76). Completed runs now expose
 editable education, skills, experience, project, and leadership lines; AI may

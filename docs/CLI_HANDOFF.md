@@ -29,13 +29,20 @@ Before changing the radar, read these in order:
   implementation behavior.
 - Add or update tests for scoring gates, source parsing, state migration, or
   output behavior that changes.
-- Do not hand-edit generated runtime outputs (`state/*.json`,
-  `docs/DASHBOARD.md`, or `docs/feed.xml`) except for a deliberate repair with
+- Do not hand-edit generated runtime outputs (`state/*.json`, including the
+  internship `state/intern_*.json` namespace, `docs/DASHBOARD.md`,
+  `docs/feed.xml`, or `docs/internships/`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
-## Current operational facts (verified 2026-07-18)
+## Current operational facts (verified 2026-08-08)
 
 ### Latest change (verified 2026-08-08)
+
+- **Minimum-degree evidence:** posting analysis now extracts bachelor's,
+  master's, and PhD minimums. Jobs rows show the minimum degree beside visa
+  and experience; a master's/PhD mismatch remains dashboard-only with a large
+  auditable penalty, while a formerly strong mismatch is held at the dashboard
+  floor so it is not silently lost if the posting is wrong.
 
 - **PM dashboard lane:** `pm` is a zero-weight role bucket for Product
   Manager, Technical Product Manager, Product Owner, Project Manager, Business
@@ -56,6 +63,17 @@ Before changing the radar, read these in order:
   same PM-family query fan-out; Amazon drops its technical category restriction
   only for those PM queries. This preserves recall where PM evidence is
   strongest without pushing the full crawl past its time budget.
+- **Technical internship lane (DECISION #104):** the main platform now has a
+  visible New-grad / Internships switch. Internship state is namespaced as
+  `state/intern_*.json`; the lane reads curated Simplify, SpeedyApply, Zapply,
+  and Dreamwork GitHub feeds plus internship-specific ATS searches. Its
+  two-hour crawl, alert delivery, master board, checkbox reconcile, and
+  `docs/internships/` outputs are separate and lower-budget so new-grad
+  compute remains first. A viewer's expected graduation month is stored only
+  in the private Google Preferences tab/local browser and drives deterministic
+  freshman/sophomore/junior/senior matching. Internship email batches default
+  off; new-grad batches default on; both are owner toggles and neither uses
+  Gmail scope.
 - **Google preference:** `profile.yaml` contains a data-driven score override
   that makes Google technical new-grad roles `100`, with `pm` explicitly
   excluded. The reason is printed in `score_reasons`; rules version is now 11.
@@ -81,7 +99,7 @@ Before changing the radar, read these in order:
   exclusion; the red state filters that role family out without hiding the
   button.
 - **CI hygiene:** the two exact-template Resume Studio tests now skip only on
-  GitHub Actions when the intentionally local-only `CV/resume.tex` is absent;
+  GitHub Actions when the intentionally local-only `CV/immutable/VictorJimenezResume.tex` is absent;
   they continue to run on Victor's Mac where the private CV exists.
 - **Learned Radar preferences:** the owner’s saved/applied roles now form a
   bounded positive sample for the deterministic `personal_signal` score
@@ -115,8 +133,9 @@ Before changing the radar, read these in order:
   docs/DASHBOARD.md, RSS, and the platform website. Twice-daily reconcile sweep
   guarantees no checked box is ever lost.
 - **The platform has two permanent doors** (DECISIONS #27): Vercel
-  (job-radar-vmj-8946s-projects.vercel.app — GitHub OAuth, instant writes,
-  Victor's daily driver) and GitHub Pages
+  (`job-radar-newgrad.vercel.app` — the memorable public shortcut; the
+  existing `job-radar-vmj-8946s-projects.vercel.app` URL remains active for
+  GitHub OAuth and old bookmarks, with instant writes) and GitHub Pages
   (victorjimenez3.github.io/fable-job-search/platform/ — tokenless, what
   forks get). `webapp/index.html` is canonical; `docs/platform/index.html`
   is a byte copy. Jobs tab shows posting age and sorts by best-match or
@@ -245,9 +264,11 @@ Before changing the radar, read these in order:
   prerequisite or single point of failure. The current user's encrypted
   HttpOnly session carries their own grant and Sheet ID; Drive marker/title
   discovery reconnects the same workbook after reauthentication.
-  `/api/tracker` reads only the current user's workbook. `GOOGLE_ACCOUNT_SHEET_TAB` remains
-  `Accounts`; `GOOGLE_PERSONAL_SHEET_TAB` defaults to `Applications`. Pages and
-  tokenless issue mode remain owner-only.
+  `/api/tracker` reads only the current user's workbook. New workbooks contain
+  separate `Applications`, `Internships`, and `Preferences` tabs;
+  `GOOGLE_ACCOUNT_SHEET_TAB` remains `Accounts` and
+  `GOOGLE_PERSONAL_SHEET_TAB` defaults to `Applications`. Pages and tokenless
+  issue mode remain owner-only. The OAuth grant is Drive-only, not Gmail.
 - **Multi-user = fork-per-person** (DECISIONS #25, docs/FORKING.md). Owner
   gates exist in three layers: workflow condition, Python handler, Vercel
   backend. The Mac companion is fork-portable too: `JOBRADAR_REPO=<you>/<repo>`
@@ -300,29 +321,48 @@ Before changing the radar, read these in order:
   `CV/.resume_studio/calibration/`.
   It uses installed first-party Codex/Claude Code sessions, strips API-key
   environment variables, and stores all output under `CV/.resume_studio/`.
-  `CV/resume.tex` / `.pdf` is the exact visual baseline; TLDP is only one
-  target artifact. Providers return source-addressed content plans, never full
+  `CV/immutable/VictorJimenezResume.tex` / `.pdf` is the exact visual baseline; TLDP is only one
+  target artifact. New generated one-page copies suppress the footer page number
+  at render time; the protected historical PDFs are not retroactively changed.
+  Providers return source-addressed content plans, never full
   LaTeX. The renderer preserves the baseline's header, education, skills,
   margins, typography, and spacing, uses company-first employer headings, and
-  enforces a 22–26-bullet, nonredundant interview portfolio across three
-  experiences and four projects with no wrapped bullets, excessive bottom
-  whitespace, or formatting drift. Reports record the fixed
-  reviewer score, exclusions, provider calls, and emitted Codex token usage;
+  chooses an adaptive, nonredundant interview portfolio with no forced
+  section, project, or bullet count. It rejects wrapped bullets and formatting
+  drift while treating normal bottom clearance as informational. Reports record
+  separate gates, exclusions, provider calls, and emitted Codex token usage;
   totals are marked incomplete when a provider omits a call's footer.
   Live validation on 2026-07-31 found the Codex subscription session usable;
   the installed Claude client returned an organization-level 403 stating that
   Claude Code subscription access is disabled. The harness fell back to Codex
   and did not request or consume an Anthropic API key.
+- **Marginal hiring-value refinement (2026-08-08):** adaptive/take-the-wheel
+  tailoring remains intact, but substantive changes now compare against the
+  canonical/current benchmark. A decision_ledger records swaps, exclusions,
+  rewrites, and unusual reorders with their target signal, rationale, and
+  signal lost. The independent critic returns decision_feedback for low-value
+  paraphrase churn, lost metrics, redundant evidence, missed stronger unused
+  bullets, keyword-only choices, or unexplained chronology changes.
+- **Portfolio-first refinement (2026-08-08):** deterministic diagnostics now
+  inspect composition before line polish, flagging project overlap, unused
+  technical alternatives, and leadership competing for technical page space.
+  Reports include a short owner summary; coursework and the aggregated Awards
+  line are sanctioned flexible reserves before strong technical evidence is
+  removed.
+- **Geometry/provider hardening (2026-08-09):** after model line editing, the
+  renderer may test only shorter source-authorized variants and retain them
+  only when compiled geometry improves. Known catalog entries returned under a
+  wrong section are safely rebucketed with a warning; unknown IDs still fail.
 - **Resume intelligence v1 is shipped locally (DECISIONS #72-74):** the Studio
   builds a source-authority evidence graph from the ignored CV corpus, caches
   public GitHub/Devpost material as corroboration only, and exposes Best,
   Newest, and Resume Match sorts. The full-posting match is fixed-weight and
   source-explained. Generation produces a full ranked candidate portfolio and
-  a deterministic curator keeps 22–26 distinct bullets across three
-  experiences, four projects, and one or two leadership entries. It measures
-  actual PDF bullet geometry and hard-fails excessive bottom whitespace. The
-  paid adversarial pass must return an applied corrected plan, while wrapped
-  rewrites first fall back to approved source text without another model call.
+  a deterministic curator removes duplicate or overflow evidence from the
+  agent's adaptive portfolio. It measures actual PDF bullet geometry and
+  hard-fails wraps. The independent pass returns critique-only data, while
+  wrapped rewrites first fall back to approved source text without another
+  model call.
   Scope qualifiers are protected and compilation errors stop packing instead
   of deleting content. Resume Craft cannot override factuality, eligibility,
   or layout gates.
@@ -340,7 +380,8 @@ Before changing the radar, read these in order:
   leadership; AI suggestions are opt-in, manual/AI saves render unique PDF
   revisions, and history rollback creates a new revision without overwriting
   the original. The current machine exposes Codex CLI and Claude Code lanes;
-  Luna remains an optional future lane if its local executable is installed.
+  Codex is pinned to `gpt-5.6-luna`; Luna is a model selection, not a separate
+  executable or provider lane.
 - **Resume Studio ATS/change proof is shipped (DECISION #77):** current
   generation prompts inline the bounded CV authority dossier and exact posting
   keyword strategy, permit target-aware project swaps, and report rewritten
@@ -359,6 +400,51 @@ Before changing the radar, read these in order:
   visible line, and exposes selection rationale plus observed weekly Codex
   tokens/calls. Codex Plus's weekly allowance is not exposed by the local CLI;
   `CODEX_WEEKLY_LIMIT_TOKENS` is an optional owner-provided comparison limit.
+- **Resume Studio canonical-file lock is shipped (DECISION #98):** the local
+  Studio exposes a lock status and refuses to render anywhere inside `CV/`
+  except the private `CV/.resume_studio/` workspace. The canonical
+  `immutable/VictorJimenezResume.tex` / `immutable/VictorJimenezResume.pdf`, the historical `og_resume` pair, and the TLDP source/PDF are never Studio write
+  targets. The main UI keeps Used bullets and AI tailor visible while placing
+  Unrestricted AI tailor and raw review data behind disclosures. No legacy
+  project set was restored automatically; the local CV Git history and saved
+  runs remain available for explicit comparison.
+- **VictorJimenezResume is now the protected default (DECISION #105):** Resume
+  Studio reads `CV/immutable/VictorJimenezResume.tex` and compares against
+  `VictorJimenezResume.pdf`; the old `og_resume` pair remains historical. The
+  protected files use read-only permissions plus macOS `uchg` flags. Deliberate
+  edits require the interactive owner-PIN command
+  `.venv/bin/python scripts/resume_lock.py unlock`, followed by `lock`.
+- **Resume Studio evidence review is shipped (DECISION #99):** the private
+  graph indexes the Markdown corpus plus bounded public GitHub/Devpost
+  corroboration, with source IDs, authority, and reversible review statuses.
+  Public records remain non-authorizing until Victor confirms them; rejected or
+  superseded records are removed from ranked context. The GitHub refresh keeps
+  cached README evidence when the unauthenticated API is rate-limited, and
+  reports that condition as stale-data metadata instead of discarding it.
+- **Resume Studio harness v2 is the current contract (DECISION #106):** the
+  candidate portfolio is adaptive; no leadership, project, or bullet-count
+  floor is forced, and no weak backup bullets are added to fill a page. Codex
+  is the primary writer/synthesizer, while Claude is an independent critique
+  lane using a first-party subscription CLI. Codex is pinned to
+  `gpt-5.6-luna`; local models, Ollama, arbitrary endpoints, and API fallbacks
+  are forbidden. The
+  critic returns critique-only gates and line feedback; it cannot replace the
+  plan or grade itself. A compiled draft remains `awaiting_review` until
+  Victor approves a ready gate report, and approval changes only private run
+  metadata. Normal bottom clearance is informational; wraps, compile errors,
+  forbidden claims, duplicate evidence, and missing independent review block
+  readiness.
+- **Resume Studio flexible portfolio reserves (DECISION #109):** when an added
+  project contributes unique capability coverage, the one-page packer protects
+  core experience and reclaims flexible content first in this order: coursework,
+  the HackMIT acceptance-pool/selection bullet, then the aggregated Awards
+  line. The HackMIT reserve removes only its prestige proof, never the
+  project's implementation bullets.
+- **Durable candidate-line memory (DECISION #110):** strong or reusable lines
+  from private tailoring runs must be promoted into the relevant Markdown
+  dossier/iteration log with source support and an `approved`, `bench`, or
+  `superseded` status. Future evidence retrieval is Markdown-first; old PDFs
+  remain audit artifacts, not authority.
 - **Resume Studio Sol-high UAT hardening is shipped (DECISION #82):** repeated
   reviewer selections for one entry merge distinct bullets instead of dropping
   them, supported ATS rewrites reach the margin editor before safe source

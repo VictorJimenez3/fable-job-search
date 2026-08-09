@@ -16,8 +16,9 @@ from . import applied as applied_mod
 from . import sponsorship
 from . import discovery, state
 from .brief import rerank
-from .config import env, profile, seeds
+from .config import env, profile, profile_id, seeds
 from .digest import write_outputs
+from .internship import RULES_VERSION as INTERNSHIP_RULES_VERSION
 from .models import Job, norm
 from .score import (RULES_VERSION, apply_company_concentration,
                     build_preference_profile, early_career_possible,
@@ -38,13 +39,21 @@ AGG_SOURCES = {
     "hn": hn.fetch_hn,
 }
 
+AGG_SOURCES_INTERNSHIP = {
+    "simplify_internship": aggregators.fetch_simplify_internship,
+    "speedyapply_internship": aggregators.fetch_speedyapply_internship,
+    "zapply_internship": aggregators.fetch_zapply_internship,
+    "dreamwork_internship": aggregators.fetch_dreamwork_internship,
+}
+
 PM_BACKFILL_ATS = {"workday", "phenom"}
 
 
 def _fetch_aggregators(disabled: set[str]) -> tuple[list[Job], dict]:
     jobs, stats = [], {}
+    sources = AGG_SOURCES_INTERNSHIP if profile_id() == "internship" else AGG_SOURCES
     with ThreadPoolExecutor(max_workers=8) as ex:
-        futs = {ex.submit(fn): name for name, fn in AGG_SOURCES.items() if name not in disabled}
+        futs = {ex.submit(fn): name for name, fn in sources.items() if name not in disabled}
         for fut in as_completed(futs):
             name = futs[fut]
             try:
@@ -123,6 +132,9 @@ def scrub_glyph_companies(jobs_state: dict) -> int:
 
 
 def crawl() -> int:
+    if profile_id() == "internship":
+        from .internship_radar import crawl as internship_crawl
+        return internship_crawl()
     t0 = time.time()
     now = int(t0)
     p = profile()
@@ -549,6 +561,9 @@ def regate_cmd() -> int:
     local dry runs (point RADAR_STATE_DIR at a scratch copy) and manual
     repairs. Rewrites jobs.json and the generated docs.
     """
+    if profile_id() == "internship":
+        from .internship_radar import regate as internship_regate
+        return internship_regate()
     jobs_state = state.jobs()
     flipped = regate(jobs_state)
     state.save("jobs.json", jobs_state)
@@ -571,6 +586,9 @@ def rescore_cmd() -> int:
     scoring-priority changes. It preserves the posting and quality evidence,
     then reapplies their audited demotions after deterministic scoring.
     """
+    if profile_id() == "internship":
+        from .internship_radar import rescore as internship_rescore
+        return internship_rescore()
     jobs_state = state.jobs()
     fb = state.feedback()
     preference_profile = build_preference_profile(state.applied(), jobs_state)
@@ -588,6 +606,19 @@ def rescore_cmd() -> int:
 
 def score_health_cmd() -> int:
     """Fail loudly if generated jobs state is not covered by current scoring."""
+    if profile_id() == "internship":
+        internship_rules = INTERNSHIP_RULES_VERSION
+        jobs_state = state.jobs()
+        missing = [jid for jid, rec in jobs_state.items()
+                   if rec.get("score_version") != internship_rules
+                   or rec.get("rules_v") != internship_rules
+                   or not isinstance(rec.get("score_reasons"), list)]
+        if missing:
+            print(f"score-health: FAIL {len(missing)} record(s) need internship rules v{internship_rules}; "
+                  f"first ids: {', '.join(missing[:10])}")
+            return 1
+        print(f"score-health: PASS {len(jobs_state)} record(s) covered by internship rules v{internship_rules}")
+        return 0
     jobs_state = state.jobs()
     missing = [jid for jid, rec in jobs_state.items()
                if rec.get("score_version") != RULES_VERSION
@@ -731,8 +762,22 @@ def web_action() -> int:
     with open(path) as f:
         payload = _json.load(f).get("client_payload") or {}
     action = payload.get("action")
-    if action not in {"track", "applied", "stage", "untrack", "manual-add", "research-company", "feedback", "archive"}:
+    if action not in {"track", "applied", "stage", "untrack", "manual-add", "research-company", "feedback", "archive", "notification-preference"}:
         print(f"web-action: unknown action {action!r}")
+        return 0
+    if action == "notification-preference":
+        key = str(payload.get("key") or "").strip()
+        if key not in {"new_grad_email", "internship_email"} or not isinstance(payload.get("enabled"), bool):
+            print("web-action: invalid notification preference")
+            return 1
+        preferences = state.load_shared("notification_preferences.json", {
+            "new_grad_email": True, "internship_email": False,
+        })
+        preferences[key] = payload["enabled"]
+        preferences["updated_at"] = int(time.time())
+        preferences["updated_by"] = "owner"
+        state.save_shared("notification_preferences.json", preferences)
+        print(f"web-action: notification {key}={payload['enabled']}")
         return 0
     jobs = state.jobs()
     hist = {a["id"]: a for a in state.load("alert_history.json", [])}
@@ -751,8 +796,11 @@ def web_action() -> int:
         changed = taste.record_feedback(fb, job, payload.get("vote"), payload.get("reason"))
         if changed:
             state.save("feedback.json", fb)
-            taste.write_report(fb)
-        print(f"web-action: feedback {job['company']} — changed={changed}")
+            report_path = taste.write_report(fb)
+        else:
+            report_path = None
+        print(f"web-action: feedback {job['company']} — changed={changed}"
+              + (f" ({report_path})" if report_path else ""))
         return 0
     if action == "archive":
         if job is None:
@@ -834,15 +882,25 @@ def web_action() -> int:
             seed_sectors = {norm(s["name"]): s.get("sector", "other") for s in seeds()}
             manual = Job(company=company, title=title, url=url, source="manual",
                          source_url=url, locations=[location] if location else [],
-                         ats="greenhouse" if "greenhouse.io" in url else "")
+                         ats="greenhouse" if "greenhouse.io" in url else "",
+                         profile=profile_id())
             manual.sector = infer(manual.company, seed_sectors)
-            _, _, reasons = gates(manual)
-            preference_profile = build_preference_profile(state.applied(), jobs)
-            score(manual, fb, int(time.time()), preference_profile)
+            if profile_id() == "internship":
+                from .internship import annotate as annotate_internship
+                from .internship import gates as internship_gates
+                from .internship import score as internship_score
+                annotate_internship(manual)
+                _, _, reasons = internship_gates(manual)
+                internship_score(manual, int(time.time()))
+            else:
+                _, _, reasons = gates(manual)
+                preference_profile = build_preference_profile(state.applied(), jobs)
+                score(manual, fb, int(time.time()), preference_profile)
             job = manual.to_record()
+            rules_version = INTERNSHIP_RULES_VERSION if profile_id() == "internship" else RULES_VERSION
             job.update({
-                "first_seen": int(time.time()), "rules_v": RULES_VERSION,
-                "score_version": RULES_VERSION, "explicit_new_grad": False,
+                "first_seen": int(time.time()), "rules_v": rules_version,
+                "score_version": rules_version, "explicit_new_grad": False,
                 "alert_ok": False, "manual_added": True,
                 "score_reasons": job["score_reasons"] + reasons + [
                     "manual entry: user-added; never alert eligible"],

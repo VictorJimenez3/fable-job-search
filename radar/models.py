@@ -54,6 +54,8 @@ class Job:
     alert_ok: bool = False           # passed gates AND new-grad-eligible
     llm_note: str = ""
     posting: dict = field(default_factory=dict)  # scraped-text analysis (radar/posting.py)
+    profile: str = "new_grad"
+    internship_eligibility: dict = field(default_factory=dict)
 
     @property
     def id(self) -> str:
@@ -69,4 +71,6 @@ class Job:
         d["description"] = ""  # never persist descriptions; keeps state small
         if not d["posting"]:
             del d["posting"]   # only persist the key when analysis exists
+        if not d["internship_eligibility"]:
+            del d["internship_eligibility"]
         return d

@@ -23,7 +23,9 @@ jobs:
       (github.event_name == 'issue_comment' ||
        github.event.action == 'opened' ||
        contains(join(github.event.issue.labels.*.name, ','), 'radar-alerts') ||
-       contains(join(github.event.issue.labels.*.name, ','), 'radar-cheme'))
+       contains(join(github.event.issue.labels.*.name, ','), 'radar-cheme') ||
+       contains(join(github.event.issue.labels.*.name, ','), 'radar-internships') ||
+       contains(github.event.issue.body, 'radar-profile: internship'))
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -49,13 +51,15 @@ jobs:
           GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
           GOOGLE_SHEET_TAB: ${{ vars.GOOGLE_SHEET_TAB }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # close command issues, post replies
+          RADAR_PROFILE: >-
+            ${{ (contains(join(github.event.issue.labels.*.name, ','), 'radar-internships') || contains(github.event.issue.body, 'radar-profile: internship')) && 'internship' || (contains(join(github.event.issue.labels.*.name, ','), 'radar-cheme') || contains(github.event.issue.body, 'radar-profile: cheme')) && 'cheme' || 'new_grad' }}
         run: python -m radar.main applied-sync
 
       - name: Commit state
         run: |
           git config user.name "job-radar[bot]"
           git config user.email "radar@users.noreply.github.com"
-          git add state docs/FEEDBACK.md
+          git add state docs/FEEDBACK.md docs/internships/FEEDBACK.md
           if git diff --cached --quiet; then
             echo "no changes"; exit 0
           fi
