@@ -213,11 +213,11 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
     A dead link found while fetching closes the job (same semantics as the
     quality pass). Budget counts fetches, not successes.
     """
-    from . import company_research, quality, state  # late imports avoid cycles
+    from . import company_research, lifecycle, quality, state  # late imports avoid cycles
     if env("RADAR_SCRAPE_DISABLE"):
         return {}
     budget = int(env("RADAR_SCRAPE_LIMIT", "20")) if budget is None else budget
-    stats = {"inline": 0, "fetched": 0, "closed": 0, "demoted": 0,
+    stats = {"inline": 0, "fetched": 0, "closed": 0, "filled": 0, "demoted": 0,
              "unreadable": 0, "research_sources": 0}
     research = company_research.load()
     research_changed = company_research.prune_irrelevant_sources(research, jobs_state)
@@ -231,14 +231,16 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
         stats["fetched"] += 1
         if alive is False:
             stats["closed"] += 1
+            status = lifecycle.status_from_dead_text(text)
+            if status == lifecycle.FILLED:
+                stats["filled"] += 1
             if is_job:
-                target.alert_ok = False
-                target.score_reasons.append("posting gone (link checked)")
+                lifecycle.mark_terminal(target, status, now,
+                                        "posting gone (link checked); definitive dead-page evidence")
             else:
-                target["alert_ok"] = False
-                target.setdefault("closed_at", now)
-                if "posting gone (link checked)" not in target.get("score_reasons", []):
-                    target.setdefault("score_reasons", []).append("posting gone (link checked)")
+                lifecycle.mark_terminal(
+                    target, status, now,
+                    "posting gone (link checked); definitive dead-page evidence")
             return
         if alive is None or len(text or "") < 200:
             stats["unreadable"] += 1
@@ -333,7 +335,7 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
             return missing and now - last_check >= 7 * 86400
 
         stored = [r for r in jobs_state.values()
-                  if not r.get("closed_at") and r.get("url")
+                  if not lifecycle.is_terminal(r) and r.get("url")
                   and (r.get("alert_ok") or (
                       r.get("id") in tracked_ids
                       and company_research.job_is_relevant(r)

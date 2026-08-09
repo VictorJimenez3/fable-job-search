@@ -194,6 +194,47 @@ def archive_page(token: str, page_id: str) -> None:
     r.raise_for_status()
 
 
+def archive_terminal_pages(applied: list, jobs: dict) -> int:
+    """Soft-archive owner Notion pages whose public posting is terminal.
+
+    Local ``applied.json`` entries remain intact so Pipeline history and the
+    posting-timeline dataset survive. The Notion page is moved to trash rather
+    than permanently deleted, and the local marker makes the operation
+    idempotent. This function intentionally only uses the repository owner's
+    NOTION_TOKEN; other signed-in users never share this path.
+    """
+    token = env("NOTION_TOKEN")
+    if not token or not applied:
+        return 0
+    from . import lifecycle
+
+    archived = 0
+    for entry in applied:
+        record = jobs.get(entry.get("id"))
+        if not record or not lifecycle.is_terminal(record):
+            continue
+        if entry.get("notion_archived"):
+            continue
+        page_id = page_id_from_url(entry.get("notion_page", ""))
+        if not page_id:
+            # A queued, never-synced entry has no Notion page to archive yet.
+            continue
+        try:
+            archive_page(token, page_id)
+        except Exception as exc:
+            entry["notion_archive_error"] = str(exc)[:240]
+            print(f"notion: could not archive terminal page for {entry.get('company')}: {exc}")
+            continue
+        now = int(time.time())
+        entry["notion_archived"] = True
+        entry["notion_archived_at"] = now
+        entry["notion_archive_status"] = lifecycle.status_of(record)
+        entry["notion_archive_reason"] = lifecycle.lifecycle_reason(record)
+        entry.pop("notion_archive_error", None)
+        archived += 1
+    return archived
+
+
 PAGE_ID_RE = re.compile(r"([0-9a-f]{32})\s*$", re.I)
 
 
@@ -314,12 +355,15 @@ def _sync_applied_notion(applied: list) -> int:
     """Push unsynced entries to Notion (and patch stage changes). Returns count."""
     token = env("NOTION_TOKEN")
     if not token:
-        pending = sum(1 for a in applied if not a.get("notion_synced"))
+        pending = sum(1 for a in applied
+                      if not a.get("notion_synced") and not a.get("notion_archived"))
         if pending:
             print(f"notion: NOTION_TOKEN not set — {pending} tracked entries queued locally")
         return 0
-    pending = [a for a in applied if not a.get("notion_synced")]
-    promotions = [a for a in applied if _needs_stage_patch(a)]
+    pending = [a for a in applied
+               if not a.get("notion_synced") and not a.get("notion_archived")]
+    promotions = [a for a in applied
+                  if not a.get("notion_archived") and _needs_stage_patch(a)]
     if not pending and not promotions:
         return 0
     try:

@@ -18,7 +18,7 @@ from datetime import datetime, timezone
 import requests
 
 from .alerts import API, LABEL, _headers, format_line, lane_label
-from . import state
+from . import lifecycle, state
 from .config import env, github_owner, github_repo, profile, profile_id
 
 MASTER_TITLE = "📌 Job Radar — master board (every open role, one place)"
@@ -56,7 +56,8 @@ MASTER_HEADER = (
 def _open_rows(jobs_state: dict, now: int, max_age_days: int = 30) -> list[dict]:
     thr = profile()["thresholds"]["alert"]
     rows = [r for r in jobs_state.values()
-            if r.get("alert_ok") and r.get("score", 0) >= thr
+            if not lifecycle.is_terminal(r)
+            and r.get("alert_ok") and r.get("score", 0) >= thr
             and now - r.get("first_seen", now) <= max_age_days * 86400]
     rows.sort(key=lambda r: -r.get("score", 0))
     return rows
@@ -178,7 +179,8 @@ def post_daily_best(jobs_state: dict, top_n: int = 10) -> str | None:
     title = f"🏆 Best of {today}"
 
     rows = [r for r in jobs_state.values()
-            if r.get("alert_ok") and now - r.get("first_seen", 0) <= 86400]
+            if not lifecycle.is_terminal(r)
+            and r.get("alert_ok") and now - r.get("first_seen", 0) <= 86400]
     rows.sort(key=lambda r: -r.get("score", 0))
     rows = rows[:top_n]
     if not rows:
@@ -212,11 +214,19 @@ def post_daily_best(jobs_state: dict, top_n: int = 10) -> str | None:
 
 
 def email_batch_rows(alert_history: list[dict], sent_ids: set[str], now: int,
-                     limit: int = 15) -> list[dict]:
+                     limit: int = 15, jobs_state: dict | None = None) -> list[dict]:
     """Choose unsent alerts: importance first, then freshness."""
-    rows = [a for a in alert_history
-            if a.get("id") not in sent_ids
-            and 0 < now - a.get("alerted_at", 0) <= 14 * 86400]
+    rows = []
+    for a in alert_history:
+        if (a.get("id") in sent_ids
+                or not (0 < now - a.get("alerted_at", 0) <= 14 * 86400)):
+            continue
+        current = (jobs_state or {}).get(a.get("id"))
+        if jobs_state is not None and (current is None or lifecycle.is_terminal(current)):
+            continue
+        if jobs_state is None and lifecycle.is_terminal(a):
+            continue
+        rows.append(a)
     rows.sort(key=lambda a: (-a.get("score", 0), -a.get("alerted_at", 0)))
     return rows[:limit]
 
@@ -234,7 +244,12 @@ def post_email_batch(alert_history: list[dict], limit: int | None = None) -> str
     limit = int(env("RADAR_EMAIL_BATCH_SIZE", "15")) if limit is None else limit
     notification = state.load("notification_state.json", {})
     sent_ids = set(notification.get("email_batch_sent_ids", []))
-    pending = email_batch_rows(alert_history, sent_ids, now, 1000)
+    jobs_state = state.jobs()
+    # A caller can supply a standalone alert history before the first jobs
+    # snapshot exists (used by tests and by a fresh install). Once state has
+    # rows, missing/terminal IDs are treated as no longer deliverable.
+    pending = email_batch_rows(alert_history, sent_ids, now, 1000,
+                               jobs_state if jobs_state else None)
     if not pending:
         print("email-batch: no unsent alerts")
         return None
