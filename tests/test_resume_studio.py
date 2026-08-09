@@ -57,6 +57,10 @@ def test_resume_report_exposes_change_and_layout_safety_language():
     assert "near-wraps" in rs.UI_HTML
     assert "roomy lines" in rs.UI_HTML
     assert "layout.horizontal.near_wrap_count" in rs.UI_HTML
+    assert "ATS overlay" in rs.UI_HTML
+    assert "Provider flow, model, and usage" in rs.UI_HTML
+    assert "Measured page use" in rs.UI_HTML
+    assert "Experience chronology preserved" in rs.UI_HTML
 
 
 def test_resume_studio_exposes_a_canonical_lock_and_private_render_boundary(tmp_path):
@@ -78,7 +82,8 @@ def test_resume_studio_exposes_a_canonical_lock_and_private_render_boundary(tmp_
     assert "CV/immutable/VictorJimenezResume.tex locked" in rs.UI_HTML
     assert "resume_lock.py unlock" in rs.UI_HTML
     assert "company_resume_ai.pdf" in rs.UI_HTML
-    assert "Advanced mode: unrestricted AI tailor" in rs.UI_HTML
+    assert "Take-the-wheel" in rs.UI_HTML
+    assert "How the modes differ" in rs.UI_HTML
     assert "Raw review data" in rs.UI_HTML
     assert "Evidence review" in rs.UI_HTML
     assert "/api/evidence/review" in rs.UI_HTML
@@ -217,6 +222,104 @@ def test_plan_schema_requests_an_adaptive_ranked_candidate_pool():
     assert "decision_ledger" in strict["required"]
     assert "front_matter_policy" in strict["properties"]
     assert "front_matter_policy" in strict["required"]
+
+
+def test_space_expansion_schema_is_source_addressed_and_cannot_return_a_new_section():
+    schema = rs.space_expansion_schema()
+    assert set(schema["required"]) == {"additions", "decision"}
+    addition = schema["properties"]["additions"]["items"]
+    assert set(addition["required"]) >= {
+        "entry_id", "placement", "source_id", "source_ids", "evidence_ids", "text", "priority", "target_signal", "why",
+    }
+    assert "experiences" not in schema["properties"]
+    assert addition["properties"]["source_ids"]["minItems"] == 1
+
+
+def test_experience_order_is_canonical_even_when_portfolio_priority_arrives_reversed():
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    plan["experiences"].reverse()
+    ordered = rs.enforce_experience_order(plan, catalog)
+    assert [entry["source_id"] for entry in ordered["experiences"]] == [
+        "experience:item0", "experience:item1", "experience:item2",
+    ]
+
+
+def test_space_expansion_accepts_only_unused_authorized_meaningful_source_lines():
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    plan["experiences"][0]["bullets"].pop()
+    graph = {
+        "nodes": [
+            {"id": bullet["id"], "claim_allowed": True}
+            for entry in catalog["entries"].values()
+            for bullet in entry["bullets"]
+        ]
+    }
+    data = {
+        "additions": [
+            {
+                "entry_id": "experience:item0",
+                "source_id": "experience:item0:b3",
+                "source_ids": ["experience:item0:b3"],
+                "evidence_ids": ["experience:item0:b3"],
+                "text": catalog["entries"]["experience:item0"]["bullets"][2]["text"],
+                "priority": 90,
+                "target_signal": "communication",
+                "why": "Adds a distinct presentation signal.",
+            },
+            {
+                "entry_id": "experience:item0",
+                "source_id": "experience:item0:b2",
+                "source_ids": ["experience:item0:b2"],
+                "evidence_ids": ["experience:item0:b2"],
+                "text": "short",
+                "priority": 80,
+                "target_signal": "filler",
+                "why": "Uses space.",
+            },
+        ],
+        "decision": "Use only distinct evidence.",
+    }
+    additions, errors = rs._validate_space_additions(data, plan, catalog, graph)
+    assert [item["source_id"] for item in additions] == ["experience:item0:b3"]
+    assert any("repeats selected bullet" in error for error in errors)
+
+
+def test_space_expansion_can_propose_a_unique_unused_project_as_a_trial_entry():
+    catalog = _fixture_catalog()
+    catalog["entries"]["project:item0"]["bullets"][2]["text"] = "Built a distinct project workflow with measurable technical depth"
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    plan["projects"] = [entry for entry in plan["projects"] if entry["source_id"] != "project:item0"]
+    graph = {
+        "nodes": [
+            {"id": bullet["id"], "claim_allowed": True}
+            for entry in catalog["entries"].values()
+            for bullet in entry["bullets"]
+        ]
+    }
+    data = {
+        "additions": [{
+            "entry_id": "project:item0",
+            "placement": "new_entry",
+            "source_id": "project:item0:b3",
+            "source_ids": ["project:item0:b3"],
+            "evidence_ids": ["project:item0:b3"],
+            "text": catalog["entries"]["project:item0"]["bullets"][2]["text"],
+            "priority": 95,
+            "target_signal": "technical breadth",
+            "why": "Adds a distinct project capability if the heading cost fits.",
+        }],
+        "decision": "Trial the distinct project.",
+    }
+    additions, errors = rs._validate_space_additions(data, plan, catalog, graph)
+    assert not errors
+    trial = rs._append_space_addition(plan, additions[0])
+    assert any(entry["source_id"] == "project:item0" for entry in trial["projects"])
+    assert trial["projects"][-1]["bullets"][0]["source_id"] == "project:item0:b3"
 
 
 def test_enhanced_plan_can_synthesize_multiple_authorized_source_lines():

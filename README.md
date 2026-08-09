@@ -346,12 +346,15 @@ Start it from the repository:
 .venv/bin/python scripts/resume_studio.py
 ```
 
-Open `http://127.0.0.1:4317/`. The main screen has two clear choices: **Used
-bullets** selects a target-aware subset from the master CV and example résumés
-without rewriting it; **AI tailor** may substantially rewrite or synthesize
-bullets from multiple authorized source lines. **Unrestricted AI tailor** is
-available under an Advanced mode disclosure for freer role-specific synthesis;
-it still cannot invent facts, remove scope qualifiers, or bypass layout review.
+Open `http://127.0.0.1:4317/`. The main screen makes **Take-the-wheel** the
+primary choice: it may select a materially stronger portfolio and substantially
+rewrite or synthesize bullets when the evidence supports a real hiring-value
+gain. **AI tailor** makes the same role-aware decisions with a more conservative
+change threshold. **Used bullets** is the clean comparison baseline: it selects
+approved source wording with the least creative variance. All three modes still
+use the same evidence graph, factual gates, chronological job order, one-page
+contract, and owner review; take-the-wheel is creative permission, not permission
+to invent facts, remove scope qualifiers, or bypass layout review.
 In all modes a deterministic renderer uses
 `CV/immutable/VictorJimenezResume.tex` as the protected layout shell. Future
 generated one-page copies suppress the
@@ -391,8 +394,12 @@ Generation asks for a ranked evidence portfolio with adaptive sections. There
 is no required leadership section, project count, or bullet floor: the writer
 must choose complementary evidence and the renderer removes only duplicate or
 overflowing content. It never pads a page with weak lines. Actual PDF line
-widths hard-fail wrapping, while normal bottom clearance is an informational
-warning when no additional authorized evidence earns the space. Unsupported
+widths hard-fail wrapping. When a compiled draft has room for another standard
+line, a separate measured-space pass asks for verified unused evidence; it may
+append a distinct bullet or trial a unique project/experience entry, and keeps it
+only if the original selected evidence remains intact and the new content earns
+the space. Remaining clearance is explained as a measured decision, not hidden
+behind a vague density warning. Unsupported
 inline LaTeX and lost scope qualifiers such as `synthetic`, `prototype`, or
 `POC` are repaired or rejected before packing. Independent critics return
 critique-only reports; Codex may revise against them, but the owner must review
@@ -423,6 +430,16 @@ missing versus terms the evidence does not support. Space QA distinguishes
 roomy lines from near-wraps; a bullet with less than 12pt of right-edge safety
 is treated as a near-wrap and rejected, even if the PDF extractor technically
 reports one line.
+
+The report is intentionally visual and auditable. **What changed** shows green
+additions, amber rewrites, and red removals; the **ATS overlay** highlights
+supported terms over the final bullets while leaving the downloadable PDF clean;
+**Provider flow** shows each Codex/Claude lane, model label, elapsed time, and
+observed tokens; and the measured-space card shows bottom geometry, whether one
+more standard line fit, candidates considered, and candidates held back. The
+header and report show current-run usage plus the observed current-week ledger.
+Codex Plus does not expose its true weekly allowance to the local CLI, so a
+percentage appears only when `CODEX_WEEKLY_LIMIT_TOKENS` is configured.
 
 Use **Resume bank** in the Studio header to browse every saved run and legacy
 experiment. Each new run keeps a private snapshot of the selected posting,

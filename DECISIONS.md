@@ -1731,3 +1731,27 @@ master's or PhD is a substantial deterministic score penalty and forces
 dashboard-only status, but a formerly strong mismatch is held at the dashboard
 threshold after the penalty. This preserves a review path for malformed or
 mistaken postings without allowing an advanced-degree role into alerts.
+
+## 112. Resume Studio makes measured space and tailoring work visible (2026-08-09)
+
+The primary UI mode is now Take-the-wheel: it preserves the adaptive portfolio,
+evidence graph, independent critique, factual gates, reverse-chronological job
+order, immutable canonical resume, and owner approval while permitting
+substantial role-specific restructuring when the expected hiring-value gain is
+real. AI tailor remains a more conservative adaptive mode, and Used bullets is
+the low-variance comparison baseline. The distinction is editorial freedom,
+not a change in evidence authority or permission to invent.
+
+After a compiled one-page draft passes hard layout checks, measured vertical
+capacity can trigger a separate Codex expansion call. It may append an unused
+verified bullet or trial a unique project/experience entry, but the harness
+keeps the addition only when the original selected evidence survives and the
+candidate earns the heading/line cost. The report records candidates, applied
+additions, rejected additions, measured bottom geometry, and the one-more-line
+decision; weak filler is never added merely to make the page look full.
+
+The run report is also a visual audit surface: it shows a green/amber/red text
+diff, a clean-PDF ATS highlight overlay, provider/model flow, elapsed time,
+current-run tokens, and observed weekly usage. Codex Plus's actual weekly
+allowance remains unavailable to the local CLI; an owner-provided
+`CODEX_WEEKLY_LIMIT_TOKENS` value may supply a comparison percentage.

@@ -121,20 +121,23 @@ From the repository on the Mac, start:
 .venv/bin/python scripts/resume_studio.py
 ```
 
-Then open `http://127.0.0.1:4317/`. Search for a radar role and choose either:
+Then open `http://127.0.0.1:4317/`. Search for a radar role and choose the
+mode that matches how much editorial control you want:
 
-- **Used bullets** — selects target-relevant source IDs from the
-  master CV and example résumés and copies their text without rewriting.
-- **AI tailor** — permits substantive source-grounded rewrites
-  and synthesis from multiple authorized lines, then runs independent
-  critique and deterministic gates.
-- **Unrestricted AI tailor** — an advanced disclosed mode for a more original
-  role-specific argument across the authorized evidence bank while preserving
-  factuality and scope qualifiers; it is intentionally marked for human review.
+- **Take-the-wheel** — the primary mode. It can make a substantial portfolio
+  change, surface deeper unused evidence, or write a new role-specific line
+  when the expected hiring-value gain is real.
+- **AI tailor** — the same evidence graph and review process with a higher bar
+  for replacing an already-strong line; useful when you want adaptive tailoring
+  with less creative variance.
+- **Used bullets** — selects target-relevant approved source IDs and wording
+  without creative rewriting; use it as the clean comparison baseline.
 
-The normal screen keeps Used bullets and AI tailor prominent; optional analysis,
-usage, saved drafts, unrestricted mode, and raw review data are collapsed until
-you open them. All modes render through the exact
+Take-the-wheel is not an unguarded writer: all modes share source authority,
+factual and qualifier checks, chronological job order, one-page compilation,
+one-line geometry, and owner approval. The normal screen puts Take-the-wheel
+first, followed by AI tailor and Used bullets; the mode guide explains the
+tradeoff in place. All modes render through the exact
 `CV/immutable/VictorJimenezResume.tex` structure. Models cannot write the
 document, alter its margins/typography/spacing, or bypass factual, duplicate,
 one-line, and compile gates. Codex writes/synthesizes with the `gpt-5.6-luna`
@@ -162,12 +165,17 @@ run stores a private posting snapshot beside its artifacts.
 For an AI-enhanced run, the report's **What changed** block lists rewritten
 source lines and project swaps, while **ATS terms** shows exact supported terms
 that made it into the rendered draft, supported terms still missing, and
-requirements your evidence cannot support. Space QA labels unused width as
-roomy lines instead of confusing it with whitespace or a wrap. If the posting
-text was not captured, the report says so instead of pretending the draft was
-keyword-tailored. A completed draft must also leave at least 12pt of right-edge
-safety on every bullet; near-wraps are rejected and remain visible as failed
-run diagnostics.
+requirements your evidence cannot support. The visual audit adds a green/amber/
+red text diff, an ATS-highlighted review overlay (the downloadable PDF remains
+clean), provider/model flow, elapsed time, current-run tokens, and observed
+weekly usage. Space QA measures the bottom geometry and tests whether one more
+standard line fits. If it does, a separate evidence pass may add a strong unused
+bullet or trial a unique project/experience entry; it keeps the addition only if
+the original evidence survives and the new content earns the space. If the
+posting text was not captured, the report says so instead of pretending the
+draft was keyword-tailored. A completed draft must also leave at least 12pt of
+right-edge safety on every bullet; near-wraps are rejected and remain visible
+as failed run diagnostics.
 
 ### Workshop editing
 

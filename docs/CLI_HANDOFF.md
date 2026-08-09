@@ -329,8 +329,9 @@ Before changing the radar, read these in order:
   margins, typography, and spacing, uses company-first employer headings, and
   chooses an adaptive, nonredundant interview portfolio with no forced
   section, project, or bullet count. It rejects wrapped bullets and formatting
-  drift while treating normal bottom clearance as informational. Reports record
-  separate gates, exclusions, provider calls, and emitted Codex token usage;
+  drift while treating bottom clearance as a measured expansion decision.
+  Reports record separate gates, exclusions, provider calls, emitted Codex token
+  usage, elapsed time, and the visual tailoring audit;
   totals are marked incomplete when a provider omits a call's footer.
   Live validation on 2026-07-31 found the Codex subscription session usable;
   the installed Claude client returned an organization-level 403 stating that
@@ -395,17 +396,17 @@ Before changing the radar, read these in order:
   from source selection, model plans, rendering, and workshop edits without
   modifying the local CV corpus.
 - **Resume Studio queue/editor/usage is shipped:** Used bullets, AI tailor, and
-  Unrestricted AI tailor are durable queued modes. The bank keeps each posting
-  snapshot and run; the workshop embeds the original/latest PDF, edits every
-  visible line, and exposes selection rationale plus observed weekly Codex
-  tokens/calls. Codex Plus's weekly allowance is not exposed by the local CLI;
+  Take-the-wheel are durable queued modes. The bank keeps each posting snapshot
+  and run; the workshop embeds the original/latest PDF, edits every visible
+  line, and exposes selection rationale plus observed weekly Codex tokens/calls.
+  Codex Plus's weekly allowance is not exposed by the local CLI;
   `CODEX_WEEKLY_LIMIT_TOKENS` is an optional owner-provided comparison limit.
 - **Resume Studio canonical-file lock is shipped (DECISION #98):** the local
   Studio exposes a lock status and refuses to render anywhere inside `CV/`
   except the private `CV/.resume_studio/` workspace. The canonical
   `immutable/VictorJimenezResume.tex` / `immutable/VictorJimenezResume.pdf`, the historical `og_resume` pair, and the TLDP source/PDF are never Studio write
-  targets. The main UI keeps Used bullets and AI tailor visible while placing
-  Unrestricted AI tailor and raw review data behind disclosures. No legacy
+  targets. The main UI makes Take-the-wheel the primary option, followed by AI
+  tailor and Used bullets; raw review data stays behind disclosures. No legacy
   project set was restored automatically; the local CV Git history and saved
   runs remain available for explicit comparison.
 - **VictorJimenezResume is now the protected default (DECISION #105):** Resume
