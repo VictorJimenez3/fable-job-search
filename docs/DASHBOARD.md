@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-08-09 04:55 UTC** · companies polled directly: **1654** (registry 1858) · jobs tracked: **34502** · new this run: **5** · alerts this run: **0**_
+_Last run: **2026-08-09 05:23 UTC** · companies polled directly: **1654** (registry 1858) · jobs tracked: **34502** · new this run: **5** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -142,7 +142,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 80 ⭐ | 23d | Chamber Cardio | [Data Analyst](https://jobs.ashbyhq.com/chambercardio/eb5a8d6e-def9-4ea6-a76f-b64995ad5711/application?embed=true) | Remote in USA | healthtech | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 80 ⭐ | 24d | Qualcomm | [Software Product Application Engineer](https://jobright.ai/jobs/info/6a50aad95165966a1161aba2?utm_campaign=Software%20Engineering&utm_source=1103) | San Diego, CA, United States | big_tech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 80 ⭐ | 26d | Qualcomm | [#Display Software Engineer](https://jobright.ai/jobs/info/6a56d78621f64463ad3572f0?utm_campaign=Software%20Engineering&utm_source=1103) | San Diego, CA, United States | big_tech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 79 ⭐ | 6h | SentiLink | [Applied Scientist New Grad - Multiple Teams](https://jobs.ashbyhq.com/sentilink/cbe2397c-5e7a-4649-a8c0-07e5d1204e82/application?embed=true) | Remote in USA | other | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 79 ⭐ | 7h | SentiLink | [Applied Scientist New Grad - Multiple Teams](https://jobs.ashbyhq.com/sentilink/cbe2397c-5e7a-4649-a8c0-07e5d1204e82/application?embed=true) | Remote in USA | other | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 79 ⭐ | 1d | interface.ai | [Software Engineer](https://jobs.ashbyhq.com/interface-ai/abbcf39d-cac3-49ee-9279-82a59821c300/application?embed=true) | SF | ai_lab | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 79 ⭐ | 3d | Salesforce | [Software Engineer College Grad](https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Software-Engineering-AMTS--College-Grad-_JR355250-1) | Palo Alto, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 79 ⭐ | 4d | CompleteCare, Inc. | [Junior Software Engineer](https://jobright.ai/jobs/info/6a73987932ebbc14ffb4fef8?utm_campaign=Software%20Engineering&utm_source=1103) | Maitland, FL, United States | healthtech | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
