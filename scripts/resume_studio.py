@@ -5877,6 +5877,8 @@ UI_HTML = UI_HTML.replace(
 UI_HTML = UI_HTML.replace("CV/resume.tex locked", "CV/immutable/VictorJimenezResume.tex locked")
 UI_HTML = UI_HTML.replace("||'resume.pdf',previewName", "||'company_resume_ai.pdf',previewName")
 UI_HTML = UI_HTML.replace("||report.pdf_filename||'resume.pdf'", "||report.pdf_filename||'company_resume_ai.pdf'")
+UI_HTML = UI_HTML.replace('<option value="unrestricted">Unrestricted AI</option>', '<option value="unrestricted">Take-the-wheel</option>')
+UI_HTML = UI_HTML.replace('unrestricted drafts are intentionally more original', 'Take-the-wheel drafts are intentionally more original')
 UI_HTML = UI_HTML.replace(
     "if(data.status==='complete'||data.status==='failed')",
     "if(data.status==='complete'||data.status==='awaiting_review'||data.status==='failed')",
