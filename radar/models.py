@@ -57,6 +57,16 @@ class Job:
     posting: dict = field(default_factory=dict)  # scraped-text analysis (radar/posting.py)
     profile: str = "new_grad"
     internship_eligibility: dict = field(default_factory=dict)
+    # Posting lifecycle is separate from application stage. Terminal records
+    # stay in state for timeline analysis while the active platform hides them.
+    posting_status: str = "open"
+    posting_status_changed_at: int | None = None
+    posting_status_reason: str = ""
+    closed_at: int | None = None
+    last_closed_at: int | None = None
+    last_seen_at: int | None = None
+    lifecycle_checked_at: int | None = None
+    lifecycle_events: list[dict] = field(default_factory=list)
 
     @property
     def id(self) -> str:
@@ -74,4 +84,9 @@ class Job:
             del d["posting"]   # only persist the key when analysis exists
         if not d["internship_eligibility"]:
             del d["internship_eligibility"]
+        for key in ("posting_status_changed_at", "posting_status_reason", "closed_at",
+                    "last_closed_at", "last_seen_at", "lifecycle_checked_at",
+                    "lifecycle_events"):
+            if d.get(key) in (None, "", []):
+                d.pop(key, None)
         return d

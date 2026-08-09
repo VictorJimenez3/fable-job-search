@@ -252,6 +252,28 @@ posting to the owner's review queue after three distinct reporters. Reports
 never auto-delete or auto-archive a role. The generated queue is
 `docs/REPORTS.md`.
 
+### Automatic posting lifecycle and history
+
+The deterministic crawler now marks a posting **filled** when its dead page
+explicitly says the role was filled; other definitive dead links and safely
+expired source gaps become **expired**. Terminal postings leave active Jobs,
+dashboard, RSS, master-board, and alert delivery, but are retained in the
+platform's **History** tab with `closed_at`, `last_seen_at`, lifecycle events,
+and the exact reason ledger. State retention is two years by default
+(`RADAR_HISTORY_DAYS`, minimum one year), so the record can support future
+seasonal posting-timeline analysis. `RADAR_LIFECYCLE_ACTIVE_DAYS` defaults to
+45 and `RADAR_LIFECYCLE_UNSEEN_GRACE_DAYS` to 14; a transient fetch failure
+never closes a role, and an all-source outage does not count as a source gap.
+
+For Victor, tracked terminal roles are soft-archived to the personal Notion
+Applications database (Notion trash remains recoverable), while the local
+Pipeline/history record stays. Other signed-in users never touch Victor's
+Notion: their private Google Sheet gets a separate **Posting Status** column
+(`open`, `expired`, or `filled`) and the platform shows an in-app tracker
+notice. Application **Stage** is preserved, so an expired posting does not
+erase an OA/interview record. `python -m radar.main lifecycle` runs the same
+reconciliation and Notion-archive repair without crawling sources.
+
 The weekly strategy memo now includes an **auto-tracked funnel** (applied → OA
 → interview → rejected → auto-closed) and your response rate, overall and by
 sector — built entirely from what the watcher reads, so you can see which
@@ -367,7 +389,8 @@ strong fit for your M1 Max with 64GB unified memory; override with
 launchd agent that, **whenever the laptop is on**, every 2 hours: pulls the
 repo, then locally (free, private) generates culture dossiers, re-ranks
 recent jobs, runs the weekly company scout, and runs the **quality pass** —
-re-checks alert-worthy postings' links (dead → closed everywhere) and has
+re-checks alert-worthy postings' links (dead → expired/filled in active views,
+with the record retained in history) and has
 the LLM verify each is really new-grad and really a technical role
 (verified-bad → demoted with the reason logged, marquee included since
 DECISIONS #31), grades any job descriptions you pasted into the platform's
@@ -562,7 +585,10 @@ python -m radar.main crawl         # full cycle (respects RADAR_* env vars)
 
 Useful env vars: `RADAR_DISABLE_SOURCES=ats,hn`, `RADAR_PROBE_BUDGET`,
 `RADAR_MAX_COMPANIES`, `RADAR_PM_BACKFILL_COMPANIES`, `RADAR_MAX_ALERTS`,
-`RADAR_WORKERS`.
+`RADAR_WORKERS`, `RADAR_LIFECYCLE_ACTIVE_DAYS=45`,
+`RADAR_LIFECYCLE_UNSEEN_GRACE_DAYS=14`, and `RADAR_HISTORY_DAYS=730`.
 
 Other one-off CLI commands: `notion-verify`, `email-verify` (connectivity checks,
-create nothing), `email-watch` (run one detection cycle manually).
+create nothing), `email-watch` (run one detection cycle manually), and
+`lifecycle` (reconcile stale state plus retry terminal Notion archives without
+source discovery).

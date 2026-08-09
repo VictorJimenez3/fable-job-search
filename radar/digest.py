@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from xml.sax.saxutils import escape
 
 from .config import DOCS_DIR, github_repo, profile, profile_id
+from . import lifecycle
 from .provenance import info
 
 
@@ -30,6 +31,7 @@ def render_dashboard(jobs: dict, registry: dict, runs: list) -> str:
     p = profile()
     cutoff = now - 30 * 86400
     rows = [j for j in jobs.values()
+            if not lifecycle.is_terminal(j)
             if j["score"] >= p["thresholds"]["dashboard"]
             and (j.get("posted_at") or j.get("first_seen", now)) >= cutoff]
     # Alert-eligible roles are the actual user-facing matches. Dashboard-only
@@ -69,10 +71,15 @@ def render_dashboard(jobs: dict, registry: dict, runs: list) -> str:
     return "\n".join(lines) + "\n"
 
 
-def render_rss(alert_history: list) -> str:
+def render_rss(alert_history: list, jobs: dict | None = None) -> str:
     repo = github_repo()
     items = []
     for a in alert_history[-100:][::-1]:
+        current = (jobs or {}).get(a.get("id"))
+        if jobs is not None and (current is None or lifecycle.is_terminal(current)):
+            continue
+        if jobs is None and lifecycle.is_terminal(a):
+            continue
         pub = datetime.fromtimestamp(a.get("alerted_at", 0), timezone.utc).strftime("%a, %d %b %Y %H:%M:%S GMT")
         title = "[{}] {} — {}".format(a["score"], a["company"], a["title"])
         loc = (a.get("locations") or ["?"])[0]
@@ -97,4 +104,4 @@ def render_rss(alert_history: list) -> str:
 def write_outputs(jobs: dict, registry: dict, runs: list, alert_history: list) -> None:
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     (DOCS_DIR / "DASHBOARD.md").write_text(render_dashboard(jobs, registry, runs))
-    (DOCS_DIR / "feed.xml").write_text(render_rss(alert_history))
+    (DOCS_DIR / "feed.xml").write_text(render_rss(alert_history, jobs))

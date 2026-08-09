@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 
 import requests
 
-from . import state
+from . import lifecycle, state
 from .llm import complete as llm_complete
 from .config import env, github_owner, github_repo
 
@@ -35,7 +35,9 @@ def build_memo() -> str:
 
     week_alerts = [a for a in alert_history if now - a.get("alerted_at", 0) <= WEEK]
     week_applied = [a for a in applied if now - a.get("applied_at", 0) <= WEEK]
-    fresh = [j for j in jobs.values() if j.get("posted_at") and now - j["posted_at"] <= WEEK]
+    fresh = [j for j in jobs.values()
+             if not lifecycle.is_terminal(j)
+             and j.get("posted_at") and now - j["posted_at"] <= WEEK]
     ht_hiring = Counter(j["company"] for j in fresh if j.get("sector") == "healthtech")
     sector_heat = Counter(j.get("sector") or "other" for j in fresh)
 
@@ -45,7 +47,8 @@ def build_memo() -> str:
     # best still-open, un-applied, alertable jobs right now
     applied_ids = {a["id"] for a in applied}
     live = sorted((j for j in jobs.values()
-                   if j.get("alert_ok") and j["id"] not in applied_ids
+                   if not lifecycle.is_terminal(j)
+                   and j.get("alert_ok") and j["id"] not in applied_ids
                    and (j.get("posted_at") or now) >= now - 14 * 86400),
                   key=lambda j: -j["score"])[:10]
 

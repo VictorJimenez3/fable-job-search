@@ -12,6 +12,7 @@ from datetime import datetime, timezone
 
 import requests
 
+from . import lifecycle
 from .config import env, github_repo, profile_id
 
 API = "https://api.github.com"
@@ -99,6 +100,7 @@ def post_alerts(new_alerts: list[dict]) -> str | None:
     in-memory "sent" flag.  Closed issues count too: intentionally closing a
     tracking issue must not make a later delivery recreate it.
     """
+    new_alerts = [job for job in new_alerts if not lifecycle.is_terminal(job)]
     if not new_alerts:
         return None
     token = env("GITHUB_TOKEN")

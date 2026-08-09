@@ -28,7 +28,7 @@ import re
 import time
 from urllib.parse import urlsplit
 
-from . import http, llm
+from . import http, lifecycle, llm
 from .config import env
 
 # phrases that mean the posting is gone even when the page returns 200
@@ -291,6 +291,9 @@ def reapply(rec: dict) -> None:
         line = "quality: posting gone (link checked)"
         if line not in reasons:
             reasons.append(line)
+        lifecycle.mark_terminal(
+            rec, q.get("dead_status") or lifecycle.EXPIRED,
+            q.get("checked_at", int(time.time())), line)
         return
     reasons = rec.setdefault("score_reasons", [])
     q["_posting"] = rec.get("posting") or {}
@@ -313,7 +316,8 @@ def verify(rec: dict, domains: dict | None = None) -> bool:
     else:
         alive, text = fetch_posting(rec.get("url", ""))
     if alive is False:
-        q.update({"checked_at": now, "live": False})
+        q.update({"checked_at": now, "live": False,
+                  "dead_status": lifecycle.status_from_dead_text(text)})
         reapply(rec)
         return True
     if alive is None or len(text) < 200:
@@ -414,7 +418,7 @@ def _candidates(jobs_state: dict, now: int,
     rows = [r for r in jobs_state.values()
             if r.get("alert_ok")
             and r.get("score", 0) >= minimum
-            and not r.get("closed_at")
+            and not lifecycle.is_terminal(r)
             and now - r.get("first_seen", 0) <= 30 * 86400]
     rows.sort(key=lambda r: (
         r.get("id") not in priority_ids,

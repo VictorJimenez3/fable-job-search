@@ -352,8 +352,8 @@ const S = {           // app state
   jobs:{}, applied:[], feedback:{}, reports:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, scorePreferences:{},
   registryByCompany:{}, runs:[], scout:{}, web:null,
   lane:"new_grad", lanes:{
-    new_grad:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, expectedGraduation:""},
-    internship:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, expectedGraduation:""},
+    new_grad:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, expectedGraduation:"", lifecycleNotice:null},
+    internship:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, expectedGraduation:"", lifecycleNotice:null},
   }, notifications:{new_grad_email:true, internship_email:false},
   auth:null, backend:false, authHost:"", userTracker:false, trackerConfigured:false, trackerMeta:null,
   authProviders:{github:false,google:false},
@@ -577,6 +577,7 @@ async function loadTrackerState(mode=S.lane) {
       setLaneValue(mode, "applied", tracker.entries || []);
       const web = laneState(mode).web || {jobs:{}, excluded:[]};
       normalizeLaneWeb(mode, {...web, maybe:tracker.maybe || []});
+      laneState(mode).lifecycleNotice = await syncTrackerLifecycle(mode);
       if (mode === S.lane) render();
     }
   } catch (error) {
@@ -752,6 +753,25 @@ function saveWeb() {                       // debounce web_state commits
 
 /* ---------- derived ---------- */
 const appliedById = () => Object.fromEntries(S.applied.map(a=>[a.id,a]));
+function postingStatus(j) {
+  const status = String(j?.posting_status || "").toLowerCase();
+  return ["expired", "filled"].includes(status) ? status : j?.closed_at ? "expired" : "open";
+}
+function isTerminalPosting(j) { return postingStatus(j) !== "open" || Boolean(j?.manual_archived); }
+function postingStatusLabel(status) { return status === "filled" ? "filled" : "expired"; }
+function postingStatusBadge(j) {
+  const status = postingStatus(j);
+  return status === "open" ? "" : `<span class="chip bad" title="Removed from active Jobs; retained in History">posting ${postingStatusLabel(status)}</span>`;
+}
+function lifecycleReason(j) {
+  return j?.posting_status_reason || j?.archive_reason || "posting removed from active views";
+}
+function lifecycleWhen(j) {
+  return j?.posting_status_changed_at || j?.closed_at || j?.last_closed_at || j?.first_seen;
+}
+function lifecycleDate(value) {
+  return value ? new Date(Number(value) * 1000).toLocaleDateString() : "unknown date";
+}
 function isExcluded(id) { return (S.web.excluded||[]).includes(id); }
 function laneOf(id, byId) {
   const a = byId[id];
@@ -900,7 +920,7 @@ function clearFilters() {
   localStorage.removeItem(S.lane === "new_grad" ? "jr_filters" : `jr_filters_${S.lane}`); render();
 }
 function isOpenRelevant(j) {
-  if (j.closed_at) return false;
+  if (isTerminalPosting(j)) return false;
   if (S.lane === "internship") return true;
   const hardReject = /^(intern\/co-op\/contract|senior\+ title|PhD-targeted title|requires clearance|non-US location|requires [1-9]\+ years(?: \(not new-grad\))?|not an AI\/SWE\/DS role)$/i;
   return !(j.score_reasons||[]).some(reason =>
@@ -1157,7 +1177,39 @@ async function trackerAction(action, job, extra={}) {
       title:job.title, location:(job.locations||[])[0] || "", source:job.source,
       profile:S.lane, ...extra})});
   if (!r.ok) throw new Error((await r.json()).error || r.status);
-  return true;
+  try { return await r.json(); } catch { return {ok:true}; }
+}
+async function syncTrackerLifecycle(mode=S.lane) {
+  if (!S.auth || S.auth.owner || !S.userTracker) return null;
+  const target = laneState(mode);
+  let changed = 0;
+  const statuses = {};
+  for (const entry of target.applied || []) {
+    const job = target.jobs?.[entry.id];
+    if (!job) continue;
+    const status = postingStatus(job);
+    if ((entry.posting_status || "open") === status) continue;
+    try {
+      const result = await trackerAction("posting-status", job,
+        {profile:mode, posting_status:status});
+      entry.posting_status = status;
+      if (result?.changed) {
+        changed += 1;
+        statuses[status] = (statuses[status] || 0) + 1;
+      }
+    } catch (error) {
+      console.warn("[radar tracker] posting lifecycle sync deferred", error);
+    }
+  }
+  return changed ? {count:changed, statuses, at:Date.now()} : null;
+}
+function lifecycleNoticeHTML() {
+  if (S.auth?.owner || !S.userTracker) return "";
+  const notice = laneState().lifecycleNotice;
+  if (!notice?.count) return "";
+  const parts = Object.entries(notice.statuses || {}).map(([status,count]) =>
+    `${count} ${postingStatusLabel(status)}`).join(" and ");
+  return `<div class="note"><b>Private tracker update:</b> ${esc(parts)} posting${notice.count === 1 ? "" : "s"} were marked in your Google Sheet. They are hidden from active Jobs but remain in <b>History</b>.</div>`;
 }
 function canWrite() { return Boolean((S.auth && (S.auth.owner || S.userTracker)) || token()); }
 function canResearchCompany() { return Boolean(S.auth && S.auth.owner); }
@@ -1346,9 +1398,9 @@ function trackerPanelHTML() {
     </div>`;
   }
   const connected = Boolean(S.userTracker && S.trackerMeta?.sheet_url);
-  return `<div class="tracker-banner ${connected?'connected':''}">
+  return `${lifecycleNoticeHTML()}<div class="tracker-banner ${connected?'connected':''}">
     <div class="tracker-copy"><b>${connected?'Your private Google tracker is connected':'Keep your application funnel in your own Google Sheet'}</b>
-      <span class="sub">${connected?`Saved, applied, and maybe marks live in your private Google Drive ${S.lane === "internship" ? "Internships" : "Applications"} tab.`:'Connect Google once to create a private tracker; it is separate from other users.'}</span></div>
+      <span class="sub">${connected?`Saved, applied, and maybe marks live in your private Google Drive ${S.lane === "internship" ? "Internships" : "Applications"} tab. Posting Status is separate from your application Stage.`:'Connect Google once to create a private tracker; it is separate from other users.'}</span></div>
     <div class="acts">${trackerActionButton(connected?'Open Google Sheet':'Connect Google')}</div>
   </div>`;
 }
@@ -1382,9 +1434,9 @@ function tutorialContent(tab) {
   if (tab === "accounts") return accountTutorialHTML();
   if (tab === "sheets") return `<div class="tut-kicker">Your private tracker</div><h2>Google Sheets in your own Drive</h2>
     <p class="sub">When you connect Google, Job Radar creates a workbook owned by that Google account with separate Applications, Internships, and Preferences tabs. The app uses the selected lane tab as durable storage while keeping the OAuth token server-side.</p>
-    <div class="tut-grid"><div class="tut-card"><h4>Notion-shaped fields</h4><p>Company · Stage · Position · Apply date · Text · Job URL · Location, with timestamps and source metadata beside them.</p></div>
+    <div class="tut-grid"><div class="tut-card"><h4>Notion-shaped fields</h4><p>Company · Stage · Position · Apply date · Text · Job URL · Location · Posting Status, with timestamps and source metadata beside them.</p></div>
       <div class="tut-card"><h4>One Sheet per user</h4><p>GitHub-only users can connect Google later. Google-only users get their own Sheet during sign-in. A different user never shares your workbook.</p></div>
-      <div class="tut-card"><h4>Stable updates</h4><p>Track, Maybe, Applied, and Remove update one Job Radar ID instead of duplicating rows. You can open your Sheet from Accounts &amp; login.</p></div></div>
+      <div class="tut-card"><h4>Stable updates</h4><p>Track, Maybe, Applied, and Remove update one Job Radar ID instead of duplicating rows. If a public posting expires or is filled, its separate Posting Status is updated without overwriting your application Stage.</p></div></div>
     <div class="tut-note">Google login and Google Sheets access are one explicit OAuth consent flow. The app never receives your Google password, Gmail messages, or exposes your refresh token to the page.</div>`;
   if (tab === "privacy") return `<div class="tut-kicker">Trust boundary</div><h2>Why the login is designed this way</h2>
     <div class="tut-steps"><div class="tut-step"><span><b>No passwords.</b> GitHub and Google own password handling, MFA, recovery, suspicious-login detection, and OAuth consent.</span></div>
@@ -1412,7 +1464,7 @@ function closeTutorial() { $("#tutorial").classList.remove("open"); }
 document.addEventListener("keydown", event => { if (event.key === "Escape") closeTutorial(); });
 
 /* ---------- render ---------- */
-const TABS = [["jobs","Jobs"],["pipeline","Pipeline"],["companies","Companies"],
+const TABS = [["jobs","Jobs"],["pipeline","Pipeline"],["history","History"],["companies","Companies"],
               ["interview","Interview"],["ai","AI"],["settings","Settings"]];
 function renderLaneSwitch() {
   const el = $("#laneSwitch");
@@ -1440,7 +1492,7 @@ function render() {
     `<span><b>${S.web.maybe.length}</b>maybe</span>` +
     `<span><b>${saved.length}</b>to apply</span>` +
     `<span><b>${done.length}</b>applied</span>`;
-  ({jobs:rJobs, pipeline:rPipe, companies:rCos, interview:rInterview,
+  ({jobs:rJobs, pipeline:rPipe, history:rHistory, companies:rCos, interview:rInterview,
     ai:rAI, taste:rTaste, testing:rTesting, settings:rSet})[S.tab]();
 }
 
@@ -1632,6 +1684,7 @@ function cardHTML(x) {
   const current = tracked?.stage || (S.web.maybe.includes(x.id) ? "maybe" : "saved");
   return `<div class="card" onclick='openWS("${x.id}")'>
     <div class="co">${esc(x.company)}</div><div class="t">${esc(x.title)}</div>
+    <div class="facts">${postingStatusBadge(x)}</div>
     <div class="stage-row">${stageControl(x.id, current)}</div></div>`;
 }
 function rPipe() {
@@ -1649,11 +1702,37 @@ function rPipe() {
       <button class="act primary" onclick="addManualJob()">add to To apply + Notion</button></div>
   </section><div class="lanes">
     <div class="lane"><h3>🤔 Maybe (${maybe.length})</h3>${maybe.map(cardHTML).join("")||'<span class="sub">Park jobs here from the Jobs tab.</span>'}</div>
-    ${stages.map(([key,label])=>{ const rows=S.applied.filter(a=>(a.stage||"applied")===key);
+  ${stages.map(([key,label])=>{ const rows=S.applied.filter(a=>(a.stage||"applied")===key);
       return `<div class="lane"><h3>${label} (${rows.length})</h3>${rows.map(cardHTML).join("")||'<span class="sub">Nothing here yet.</span>'}</div>`; }).join("")}
   </div>
   <p class="sub">Stages reflect the radar pipeline and are pushed to Notion. The scheduled
   readback pass keeps changes made directly in Notion in sync too.</p>`;
+}
+
+function rHistory() {
+  const query = norm(S.filter.q);
+  let rows = Object.values(S.jobs).filter(isTerminalPosting);
+  if (query) rows = rows.filter(job => norm(`${job.company} ${job.title} ${postingStatus(job)} ${lifecycleReason(job)}`).includes(query));
+  rows.sort((a,b) => (lifecycleWhen(b)||0) - (lifecycleWhen(a)||0));
+  const counts = rows.reduce((out, job) => {
+    const status = postingStatus(job); out[status] = (out[status] || 0) + 1; return out;
+  }, {});
+  const rowsHTML = rows.slice(0, S.shown).map(job => {
+    const events = (job.lifecycle_events || []).slice().reverse().slice(0, 4);
+    return `<article class="lane" style="margin-bottom:.65rem">
+      <div class="bar"><b>${esc(job.company)} — ${esc(job.title)}</b>${postingStatusBadge(job)}</div>
+      <p class="sub">${lifecycleDate(lifecycleWhen(job))} · first seen ${lifecycleDate(job.first_seen)} · last source sighting ${lifecycleDate(job.last_seen_at)} · score ${job.score ?? "–"}</p>
+      <p class="sub"><b>Why:</b> ${esc(lifecycleReason(job))}</p>
+      ${events.length ? `<details><summary>${events.length} lifecycle event${events.length === 1 ? "" : "s"}</summary><ul class="plain">${events.map(event => `<li>${esc(event.status)} · ${lifecycleDate(event.at)} · ${esc(event.reason || "")}</li>`).join("")}</ul></details>` : ""}
+      <div class="acts"><a class="act" href="${esc(job.url || "#")}" target="_blank" rel="noopener">posting ↗</a><button class="act" onclick='openWS("${job.id}")'>details ▸</button></div>
+    </article>`;
+  }).join("");
+  $("#main").innerHTML = `<section class="testing-hero"><span class="chip unknown">retained history · hidden from active Jobs</span>
+    <h2>Posting history</h2><p class="sub">Expired and filled postings remain in repository state for timeline analysis and future seasonal prediction. They are not scored into active alerts, boards, dashboards, or feeds. Default retention is two years.</p>
+    <div class="bar"><input type="search" placeholder="search history…" value="${esc(S.filter.q)}" oninput="setFilter('q',this.value,false)">
+      <span class="chip">${counts.expired || 0} expired</span><span class="chip">${counts.filled || 0} filled</span><span class="sub">${rows.length} retained rows</span></div></section>
+    <div class="lanes">${rowsHTML || '<section class="lane"><p class="sub">No expired or filled postings in this lane yet.</p></section>'}</div>
+    ${rows.length > S.shown ? `<p><button class="act" onclick="S.shown+=250;rHistory()">show more (${rows.length-S.shown} left)</button></p>` : ""}`;
 }
 
 function rTaste() {
