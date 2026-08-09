@@ -5781,6 +5781,9 @@ class RunManager:
             if value["pdf_filename"].endswith(".pdf") and preview.is_file()
             else value.get("preview_filename", "")
         )
+        report = read_json(path.parent / "report.json", {}) or {}
+        if isinstance(report, dict) and report:
+            value["report"] = report
         return value
 
 
@@ -5879,6 +5882,10 @@ UI_HTML = UI_HTML.replace("||'resume.pdf',previewName", "||'company_resume_ai.pd
 UI_HTML = UI_HTML.replace("||report.pdf_filename||'resume.pdf'", "||report.pdf_filename||'company_resume_ai.pdf'")
 UI_HTML = UI_HTML.replace('<option value="unrestricted">Unrestricted AI</option>', '<option value="unrestricted">Take-the-wheel</option>')
 UI_HTML = UI_HTML.replace('unrestricted drafts are intentionally more original', 'Take-the-wheel drafts are intentionally more original')
+UI_HTML = UI_HTML.replace(
+    r'''${report?`<a href="${report}" target="_blank" rel="noreferrer">Report</a>`:''}''',
+    r'''${report?(entry.source==='run'?`<button class="secondary" data-open-saved-report="${esc(entry.entry_id)}">View audit</button>`:`<a href="${report}" target="_blank" rel="noreferrer">Report</a>`):''}''',
+)
 UI_HTML = UI_HTML.replace(
     "if(data.status==='complete'||data.status==='failed')",
     "if(data.status==='complete'||data.status==='awaiting_review'||data.status==='failed')",
@@ -6048,6 +6055,31 @@ renderReport=function(status){
   panel+=`<div class="audit-card"><h4>ATS overlay <span class="meta">(review view; the downloadable PDF stays clean)</span></h4><p class="meta">Highlighted terms are supported and rendered in the final text. Missing or unsupported terms remain visible in the full report instead of being stretched.</p><div class="ats-overlay">${atsHtml}</div></div></section>`;
   $('report').insertAdjacentHTML('afterbegin',panel);
 };
+function showView(view){''',
+)
+
+UI_HTML = UI_HTML.replace(
+    "function showView(view){",
+    r'''async function openSavedReport(runId){
+  try{
+    const response=await fetch('/api/run?id='+encodeURIComponent(runId));
+    const data=await response.json();
+    if(!response.ok)throw new Error(data.error||'Saved report unavailable');
+    if(!data.report)throw new Error('This older run has no saved report data. Open its JSON report instead.');
+    activeRunId=runId;
+    $('empty').classList.add('hidden');
+    $('workspace').classList.remove('hidden');
+    $('status').className='status '+(data.status||'awaiting_review');
+    $('status').textContent='Loaded saved audit for '+(data.job?.company||data.report.job?.company||'this run');
+    $('status').classList.remove('hidden');
+    showView('tailor');
+    renderReport(data);
+  }catch(error){alert(error.message);}
+}
+document.addEventListener('click',event=>{
+  const saved=event.target.closest('[data-open-saved-report]');
+  if(saved){event.preventDefault();openSavedReport(saved.dataset.openSavedReport||'');}
+});
 function showView(view){''',
 )
 
