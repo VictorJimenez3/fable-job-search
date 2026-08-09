@@ -1,120 +1,6 @@
 {
- "events": [
-  {
-   "at": "2026-08-09T16:18:44+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
-   "endpoint": "nvidia:deepseek",
-   "lane": "api",
-   "latency_ms": 2118,
-   "max_tokens": 2200,
-   "model": "deepseek-ai/deepseek-v4-pro",
-   "prompt_chars": 5511,
-   "prompt_tokens": 0,
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-09T16:18:48+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 404: {'status': 404, 'title': 'Not Found', 'detail': \"Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc':",
-   "endpoint": "nvidia:kimi",
-   "lane": "api",
-   "latency_ms": 6100,
-   "max_tokens": 2200,
-   "model": "moonshotai/kimi-k2.6",
-   "prompt_chars": 5511,
-   "prompt_tokens": 0,
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-09T16:18:52+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
-   "endpoint": "nvidia:deepseek",
-   "lane": "api",
-   "latency_ms": 10083,
-   "max_tokens": 2200,
-   "model": "deepseek-ai/deepseek-v4-pro",
-   "prompt_chars": 4305,
-   "prompt_tokens": 0,
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-09T16:18:56+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 404: {'status': 404, 'title': 'Not Found', 'detail': \"Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc':",
-   "endpoint": "nvidia:kimi",
-   "lane": "api",
-   "latency_ms": 14120,
-   "max_tokens": 2200,
-   "model": "moonshotai/kimi-k2.6",
-   "prompt_chars": 4305,
-   "prompt_tokens": 0,
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-09T16:18:58+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 503: {'error': {'message': 'ResourceExhausted: Worker local total request limit reached (33/32)', 'typ",
-   "endpoint": "nvidia:nemotron",
-   "lane": "api",
-   "latency_ms": 16338,
-   "max_tokens": 2200,
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
-   "prompt_chars": 5511,
-   "prompt_tokens": 0,
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-09T16:19:14+00:00",
-   "completion_tokens": 1140,
-   "detail": "",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 32082,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 5511,
-   "prompt_tokens": 1601,
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-09T16:19:18+00:00",
-   "completion_tokens": 1014,
-   "detail": "task schema validation failed",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 36075,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 4305,
-   "prompt_tokens": 1343,
-   "status": "invalid",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-09T16:20:09+00:00",
-   "completion_tokens": 0,
-   "detail": "ReadTimeout: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=75)",
-   "endpoint": "nvidia:nemotron",
-   "lane": "api",
-   "latency_ms": 87116,
-   "max_tokens": 2200,
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
-   "prompt_chars": 4305,
-   "prompt_tokens": 0,
-   "status": "error",
-   "task": "company_research"
-  }
- ],
- "generated_at": 1786292410,
+ "events": [],
+ "generated_at": 1786292432,
  "history": [
   {
    "attempts": [
@@ -11858,40 +11744,9 @@
   "logical_calls": 10000,
   "requests": 10000
  },
- "logical_calls": 2,
- "models": {
-  "nvidia:deepseek": {
-   "errors": 2,
-   "model": "deepseek-ai/deepseek-v4-pro",
-   "ok": 0,
-   "requests": 2,
-   "tokens": 0
-  },
-  "nvidia:glm": {
-   "errors": 1,
-   "model": "z-ai/glm-5.2",
-   "ok": 1,
-   "requests": 2,
-   "tokens": 5098
-  },
-  "nvidia:kimi": {
-   "errors": 2,
-   "model": "moonshotai/kimi-k2.6",
-   "ok": 0,
-   "requests": 2,
-   "tokens": 0
-  },
-  "nvidia:nemotron": {
-   "errors": 2,
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
-   "ok": 0,
-   "requests": 2,
-   "tokens": 0
-  }
- },
+ "logical_calls": 0,
+ "models": {},
  "provider": "nvidia-router",
- "requests": 9,
- "task_calls": {
-  "company_research": 2
- }
+ "requests": 0,
+ "task_calls": {}
 }
