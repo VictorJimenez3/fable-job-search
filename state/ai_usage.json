@@ -1,42 +1,106 @@
 {
- "events": [],
- "generated_at": 1786233017,
- "history": [
+ "events": [
   {
-   "attempts": [
-    {
-     "at": "2026-08-08T11:31:49+00:00",
-     "completion_tokens": 1236,
-     "detail": "",
-     "endpoint": "local",
-     "lane": "local",
-     "latency_ms": 149917,
-     "max_tokens": 2200,
-     "model": "qwen2.5:32b",
-     "prompt_chars": 4918,
-     "prompt_tokens": 1196,
-     "selected": true,
-     "status": "ok",
-     "task": "company_research"
-    }
-   ],
-   "generated_at": 1786188709,
-   "logical_calls": 1,
-   "models": {
-    "local": {
-     "errors": 0,
-     "model": "qwen2.5:32b",
-     "ok": 1,
-     "requests": 1,
-     "tokens": 2432
-    }
-   },
-   "provider": "local",
-   "requests": 1,
-   "task_calls": {
-    "company_research": 1
-   }
+   "at": "2026-08-09T00:12:45+00:00",
+   "completion_tokens": 92,
+   "detail": "task schema validation failed",
+   "endpoint": "local",
+   "lane": "local",
+   "latency_ms": 18346,
+   "max_tokens": 2200,
+   "model": "qwen3:30b",
+   "prompt_chars": 7075,
+   "prompt_tokens": 1661,
+   "status": "invalid",
+   "task": "company_research"
   },
+  {
+   "at": "2026-08-09T00:13:06+00:00",
+   "completion_tokens": 0,
+   "detail": "per-run AI budget reached",
+   "endpoint": "none",
+   "lane": "router",
+   "latency_ms": 0,
+   "max_tokens": 240,
+   "model": "",
+   "prompt_chars": 4837,
+   "prompt_tokens": 0,
+   "status": "budget_skipped",
+   "task": "quality"
+  },
+  {
+   "at": "2026-08-09T00:13:07+00:00",
+   "completion_tokens": 0,
+   "detail": "per-run AI budget reached",
+   "endpoint": "none",
+   "lane": "router",
+   "latency_ms": 0,
+   "max_tokens": 240,
+   "model": "",
+   "prompt_chars": 6439,
+   "prompt_tokens": 0,
+   "status": "budget_skipped",
+   "task": "quality"
+  },
+  {
+   "at": "2026-08-09T00:13:10+00:00",
+   "completion_tokens": 0,
+   "detail": "per-run AI budget reached",
+   "endpoint": "none",
+   "lane": "router",
+   "latency_ms": 0,
+   "max_tokens": 240,
+   "model": "",
+   "prompt_chars": 4519,
+   "prompt_tokens": 0,
+   "status": "budget_skipped",
+   "task": "quality"
+  },
+  {
+   "at": "2026-08-09T00:13:11+00:00",
+   "completion_tokens": 0,
+   "detail": "per-run AI budget reached",
+   "endpoint": "none",
+   "lane": "router",
+   "latency_ms": 0,
+   "max_tokens": 240,
+   "model": "",
+   "prompt_chars": 5047,
+   "prompt_tokens": 0,
+   "status": "budget_skipped",
+   "task": "quality"
+  },
+  {
+   "at": "2026-08-09T00:13:13+00:00",
+   "completion_tokens": 0,
+   "detail": "per-run AI budget reached",
+   "endpoint": "none",
+   "lane": "router",
+   "latency_ms": 0,
+   "max_tokens": 240,
+   "model": "",
+   "prompt_chars": 5047,
+   "prompt_tokens": 0,
+   "status": "budget_skipped",
+   "task": "quality"
+  },
+  {
+   "at": "2026-08-09T00:13:15+00:00",
+   "completion_tokens": 0,
+   "detail": "per-run AI budget reached",
+   "endpoint": "none",
+   "lane": "router",
+   "latency_ms": 0,
+   "max_tokens": 600,
+   "model": "",
+   "prompt_chars": 594,
+   "prompt_tokens": 0,
+   "status": "budget_skipped",
+   "task": "discovery"
+  }
+ ],
+ "generated_at": 1786234395,
+ "history": [
   {
    "attempts": [
     {
@@ -4305,15 +4369,145 @@
    "task_calls": {
     "company_research": 1
    }
+  },
+  {
+   "attempts": [
+    {
+     "at": "2026-08-09T00:12:45+00:00",
+     "completion_tokens": 92,
+     "detail": "task schema validation failed",
+     "endpoint": "local",
+     "lane": "local",
+     "latency_ms": 18346,
+     "max_tokens": 2200,
+     "model": "qwen3:30b",
+     "prompt_chars": 7075,
+     "prompt_tokens": 1661,
+     "status": "invalid",
+     "task": "company_research"
+    },
+    {
+     "at": "2026-08-09T00:13:06+00:00",
+     "completion_tokens": 0,
+     "detail": "per-run AI budget reached",
+     "endpoint": "none",
+     "lane": "router",
+     "latency_ms": 0,
+     "max_tokens": 240,
+     "model": "",
+     "prompt_chars": 4837,
+     "prompt_tokens": 0,
+     "status": "budget_skipped",
+     "task": "quality"
+    },
+    {
+     "at": "2026-08-09T00:13:07+00:00",
+     "completion_tokens": 0,
+     "detail": "per-run AI budget reached",
+     "endpoint": "none",
+     "lane": "router",
+     "latency_ms": 0,
+     "max_tokens": 240,
+     "model": "",
+     "prompt_chars": 6439,
+     "prompt_tokens": 0,
+     "status": "budget_skipped",
+     "task": "quality"
+    },
+    {
+     "at": "2026-08-09T00:13:10+00:00",
+     "completion_tokens": 0,
+     "detail": "per-run AI budget reached",
+     "endpoint": "none",
+     "lane": "router",
+     "latency_ms": 0,
+     "max_tokens": 240,
+     "model": "",
+     "prompt_chars": 4519,
+     "prompt_tokens": 0,
+     "status": "budget_skipped",
+     "task": "quality"
+    },
+    {
+     "at": "2026-08-09T00:13:11+00:00",
+     "completion_tokens": 0,
+     "detail": "per-run AI budget reached",
+     "endpoint": "none",
+     "lane": "router",
+     "latency_ms": 0,
+     "max_tokens": 240,
+     "model": "",
+     "prompt_chars": 5047,
+     "prompt_tokens": 0,
+     "status": "budget_skipped",
+     "task": "quality"
+    },
+    {
+     "at": "2026-08-09T00:13:13+00:00",
+     "completion_tokens": 0,
+     "detail": "per-run AI budget reached",
+     "endpoint": "none",
+     "lane": "router",
+     "latency_ms": 0,
+     "max_tokens": 240,
+     "model": "",
+     "prompt_chars": 5047,
+     "prompt_tokens": 0,
+     "status": "budget_skipped",
+     "task": "quality"
+    },
+    {
+     "at": "2026-08-09T00:13:15+00:00",
+     "completion_tokens": 0,
+     "detail": "per-run AI budget reached",
+     "endpoint": "none",
+     "lane": "router",
+     "latency_ms": 0,
+     "max_tokens": 600,
+     "model": "",
+     "prompt_chars": 594,
+     "prompt_tokens": 0,
+     "status": "budget_skipped",
+     "task": "discovery"
+    }
+   ],
+   "generated_at": 1786234395,
+   "logical_calls": 12,
+   "models": {
+    "local": {
+     "errors": 1,
+     "model": "qwen3:30b",
+     "ok": 0,
+     "requests": 1,
+     "tokens": 1753
+    }
+   },
+   "provider": "local",
+   "requests": 1,
+   "task_calls": {
+    "company_research": 2,
+    "quality": 10
+   }
   }
  ],
  "limits": {
-  "logical_calls": 10000,
-  "requests": 10000
+  "logical_calls": 12,
+  "requests": 24
  },
- "logical_calls": 0,
- "models": {},
- "provider": "nvidia-router",
- "requests": 0,
- "task_calls": {}
+ "logical_calls": 12,
+ "models": {
+  "local": {
+   "errors": 1,
+   "model": "qwen3:30b",
+   "ok": 0,
+   "requests": 1,
+   "tokens": 1753
+  }
+ },
+ "provider": "local",
+ "requests": 1,
+ "task_calls": {
+  "company_research": 2,
+  "quality": 10
+ }
 }
