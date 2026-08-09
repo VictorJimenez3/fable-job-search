@@ -119,6 +119,24 @@ Before changing the radar, read these in order:
   issue author's GitHub login, deduplicate by distinct reporter, and add a
   three-distinct-reporter item to `docs/REPORTS.md` plus an owner review
   comment; they never auto-archive.
+- **Automatic posting lifecycle:** `radar/lifecycle.py` classifies definitive
+  dead-page evidence as `expired` or `filled`, records `closed_at`,
+  `posting_status_reason`, `last_seen_at`, and bounded `lifecycle_events`, then
+  suppresses terminal rows from active dashboards, RSS, alert issues, email
+  batches, and the master board. Source-gap fallback is conservative: 45 days
+  of active age plus a 14-day unseen grace window. Terminal state is retained
+  for 730 days by default (`RADAR_HISTORY_DAYS`, minimum 365) and is visible in
+  the platform's hidden-by-default **History** tab for future timeline work.
+- **Tracker cleanup/notification:** the owner crawl, `enrich`, `rescrape`, `rescore`,
+  `regate`, `notion-backfill`, and `python -m radar.main lifecycle` retry
+  soft-archive of terminal tracked pages to the owner's Notion trash. Other
+  signed-in users never touch that Notion database; `/api/tracker` syncs their
+  private Google Sheet's separate `Posting Status` column and the Pipeline shows
+  an in-app update while preserving application `Stage`.
+- **Lifecycle knobs:** `RADAR_LIFECYCLE_ACTIVE_DAYS=45`,
+  `RADAR_LIFECYCLE_UNSEEN_GRACE_DAYS=14`, `RADAR_HISTORY_DAYS=730`, and
+  `RADAR_INTERNSHIP_SCRAPE_LIMIT=10` are optional overrides. A transient fetch
+  failure is `unavailable`, not terminal evidence.
 
 - GitHub Actions is the production runtime; it uses Python 3.12. On Victor's
   Mac, system Python is 3.9 but the repo's `.venv` has the dependencies —

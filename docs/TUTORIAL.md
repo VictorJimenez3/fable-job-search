@@ -42,6 +42,10 @@ system as a website, refreshed automatically by every crawl:
 - **Pipeline**: separate Maybe, To apply, Applied, OA, Interview, Rejected, and
   Closed lanes. The selected tracker is read back twice daily; "Maybe" remains
   a platform-only scratch lane.
+- **History**: expired and filled postings are removed from active Jobs and
+  alert surfaces but remain here with their last source sighting, close reason,
+  and lifecycle events. This retained dataset supports future posting-timeline
+  analysis; it is not a second active application board.
 - **Per-job workspace** (click the title or details ▸), four tabs: **Fit &
   eligibility** opens first with role family, posting sponsorship, DOL sponsor
   history, required years, location, salary, posting age, score reasons, a short
@@ -102,10 +106,15 @@ exactly as before; Vercel writes to the connected user’s Sheet.
 Inside a role drawer, the repository owner can submit fixed-category ranking
 feedback or archive an expired/filled posting after GitHub sign-in. Feedback is
 written to the structured state and the generated `docs/FEEDBACK.md` audit;
-archive is recoverable and does not erase the crawler history. Other GitHub
-users can report a stale posting through a prefilled issue. Reports are
-deduplicated by the issue author's GitHub login, and three distinct reporters
-bring the posting to the owner's review queue without automatic deletion.
+archive is recoverable and does not erase the crawler history. The crawler also
+marks definitive dead links as **expired** or **filled** automatically. For
+Victor, a tracked terminal page is soft-archived to Notion's recoverable trash.
+Other signed-in users receive the same status in the **Posting Status** column
+of their private Google Sheet and an in-app notice; their application Stage is
+left unchanged. Other GitHub users can report a stale posting through a
+prefilled issue. Reports are deduplicated by the issue author's GitHub login,
+and three distinct reporters bring the posting to the owner's review queue
+without automatic deletion.
 
 The separate [ChemE internship board](https://job-radar-cheme.vercel.app)
 uses its own jobs, scoring profile, pipeline state, and labeled GitHub issues.
@@ -307,6 +316,7 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
 
 ```bash
 .venv/bin/python -m pytest tests/          # run the test suite
+.venv/bin/python -m radar.main lifecycle  # reconcile stale postings + Notion archives
 tail -f ~/.jobradar/logs/enrich.log        # watch the AI companion work
 launchctl kickstart -k gui/$(id -u)/com.jobradar.enrich   # force an enrichment cycle now
 ```

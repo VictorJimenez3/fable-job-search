@@ -1755,3 +1755,19 @@ diff, a clean-PDF ATS highlight overlay, provider/model flow, elapsed time,
 current-run tokens, and observed weekly usage. Codex Plus's actual weekly
 allowance remains unavailable to the local CLI; an owner-provided
 `CODEX_WEEKLY_LIMIT_TOKENS` value may supply a comparison percentage.
+
+## 113. Posting lifecycle keeps stale data useful without keeping it active (2026-08-09)
+
+Postings now have a shared deterministic lifecycle across both radar lanes. Definitive
+dead-page evidence is classified as `expired` or `filled`; a conservative source-gap
+timeout can mark a posting `expired`, while transient fetch failures cannot. Terminal
+postings remain in `state/jobs*.json` for two years by default, including bounded lifecycle
+events and reason strings, but are excluded from active dashboards, boards, feeds, alerts,
+and new tracker actions. The platform History tab exposes that retained data for future
+posting-timeline analysis.
+
+Owner-tracked postings are soft-archived from the owner Notion database. Other users keep
+their private Google tracker rows, which receive the public lifecycle status and an in-app
+notice; application Stage remains a separate user-controlled field. The `lifecycle` CLI
+command provides a manual reconciliation/backfill path, and `RADAR_HISTORY_DAYS` plus the
+lifecycle age/grace variables control retention and source-gap sensitivity.

@@ -13,8 +13,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from . import applied as applied_mod
-from . import sponsorship
-from . import discovery, state
+from . import discovery, lifecycle, sponsorship, state
 from .brief import rerank
 from .config import env, profile, profile_id, seeds
 from .digest import write_outputs
@@ -150,7 +149,8 @@ def crawl() -> int:
     if n_regated:
         print(f"re-gate: rules v{RULES_VERSION} flipped alert_ok on {n_regated} stored job(s)")
     fb = state.feedback()
-    preference_profile = build_preference_profile(state.applied(), jobs_state)
+    applied = state.applied()
+    preference_profile = build_preference_profile(applied, jobs_state)
     print(f"preferences: learned from {preference_profile['sample_count']} saved/applied role(s)")
     seed_sectors = {norm(s["name"]): s.get("sector", "other") for s in seeds()}
 
@@ -182,9 +182,15 @@ def crawl() -> int:
             continue
         jid = j.id
         existing = jobs_state.get(jid)
-        if jid in seen_this_run or (existing is not None and existing.get("source") != "manual"):
+        if jid in seen_this_run:
             continue
         seen_this_run.add(jid)
+        if existing is not None:
+            # A feed sighting can reopen an automatically closed record. The
+            # liveness fetch below still has authority to close it again.
+            lifecycle.touch(existing, now, j.source or "monitored source")
+        if existing is not None and existing.get("source") != "manual":
+            continue
         if not j.sector:
             j.sector = infer(j.company, seed_sectors)  # before gates: priority-sector path
         keep, alert_eligible, reasons = gates(j)
@@ -194,6 +200,7 @@ def crawl() -> int:
         j.alert_ok = alert_eligible
         score(j, fb, now, preference_profile)
         j.score_reasons += reasons
+        lifecycle.touch(j, now, j.source or "monitored source")
         if existing is not None:
             manual_upgrades[jid] = existing
         new_jobs.append(j)
@@ -206,7 +213,8 @@ def crawl() -> int:
     pstats = scrape_pass(new_jobs, jobs_state, eightfold_domains, now)
     if pstats:
         print(f"posting scrape: {pstats['inline']} inline, {pstats['fetched']} fetched, "
-              f"{pstats['demoted']} demoted, {pstats['closed']} closed, "
+              f"{pstats['demoted']} demoted, {pstats['closed']} closed "
+              f"({pstats.get('filled', 0)} filled), "
               f"{pstats.get('research_sources', 0)} research sources")
 
     # ---- optional LLM pass on borderline/alert candidates ----
@@ -220,6 +228,7 @@ def crawl() -> int:
     max_age = thr["max_posting_age_days"] * 86400
     candidates = [j for j in new_jobs
                   if j.alert_ok and j.score >= thr["alert"]
+                  and not lifecycle.is_terminal(j)
                   and (j.posted_at is None or now - j.posted_at <= max_age)]
     candidates.sort(key=lambda j: -j.score)
     max_alerts = int(env("RADAR_MAX_ALERTS", "25"))
@@ -233,6 +242,7 @@ def crawl() -> int:
         rec["first_seen"] = old_manual.get("first_seen", now) if old_manual else now
         if old_manual:
             rec["manual_added"] = True
+        lifecycle.merge_record_metadata(rec, old_record)
         if old_record and old_record.get("manual_archived"):
             rec["manual_archived"] = True
             rec["closed_at"] = old_record.get("closed_at", now)
@@ -243,7 +253,13 @@ def crawl() -> int:
         rec["explicit_new_grad"] = explicit_new_grad(j.title) or source_new_grad(j)
         rec["early_career_possible"] = early_career_possible(j, rec.get("posting"))
         jobs_state[j.id] = rec
-    cutoff = now - 365 * 86400
+    lifecycle_stats = lifecycle.reconcile(
+        jobs_state, now, seen_this_run,
+        allow_source_gap_expiry=lifecycle.source_run_healthy(agg_stats, ats_stats))
+    if lifecycle_stats["expired"] or lifecycle_stats["reopened"]:
+        print(f"lifecycle: {lifecycle_stats['expired']} auto-expired, "
+              f"{lifecycle_stats['reopened']} reopened from current source")
+    cutoff = lifecycle.history_cutoff(now)
     jobs_state = {k: v for k, v in jobs_state.items() if v.get("first_seen", now) >= cutoff}
 
     # The equation is not only for newly discovered rows. Rebuild every active
@@ -263,7 +279,7 @@ def crawl() -> int:
     from . import llm
     if llm.available("company_research"):
         synthesized = company_research.enrich(
-            jobs_state, state.applied(), state.load("web_state.json", {}),
+            jobs_state, applied, state.load("web_state.json", {}),
             limit=int(env("RADAR_CRAWL_COMPANY_RESEARCH_LIMIT", "2")))
         if synthesized:
             print(f"company research: synthesized {synthesized} new company brief(s)")
@@ -284,6 +300,11 @@ def crawl() -> int:
 
     state.save("companies.json", registry)
     state.save("jobs.json", jobs_state)
+    from .notion_sync import archive_terminal_pages
+    archived_notion = archive_terminal_pages(applied, jobs_state)
+    if archived_notion:
+        state.save("applied.json", applied)
+        print(f"lifecycle: archived {archived_notion} terminal tracked page(s) in Notion")
     state.save("alert_history.json", alert_history)
     state.save("runs.json", runs)
 
@@ -313,7 +334,11 @@ def deliver_alerts() -> str | None:
     """
     now = int(time.time())
     history = state.load("alert_history.json", [])
-    recent = [rec for rec in history if rec.get("alerted_at", 0) >= now - 14 * 86400]
+    jobs = state.jobs()
+    recent = [rec for rec in history
+              if rec.get("alerted_at", 0) >= now - 14 * 86400
+              and jobs.get(rec.get("id")) is not None
+              and not lifecycle.is_terminal(jobs[rec.get("id")])]
     url = None
     try:
         from .alerts import post_alerts
@@ -322,7 +347,7 @@ def deliver_alerts() -> str | None:
         print(f"alerts: failed to post issue: {e}")
     try:
         from .board import update_master_board
-        update_master_board(state.jobs(), state.applied())
+        update_master_board(jobs, state.applied())
     except Exception as e:
         print(f"board: failed to update master board: {e}")
     print(f"delivery: checked {len(recent)} recent alert(s)" + (f" → {url}" if url else ""))
@@ -348,12 +373,45 @@ def seed_cmd() -> int:
 
 
 def notion_backfill() -> int:
-    from .notion_sync import sync_applied, sync_from_notion
+    from .notion_sync import archive_terminal_pages, sync_applied, sync_from_notion
     applied = state.applied()
+    jobs = state.jobs()
     pulled = sync_from_notion(applied)
     n = sync_applied(applied)
+    archived = archive_terminal_pages(applied, jobs)
     state.save("applied.json", applied)
-    print(f"notion-backfill: pulled {pulled} stage change(s), pushed {n}")
+    print(f"notion-backfill: pulled {pulled} stage change(s), pushed {n}, "
+          f"archived {archived} terminal page(s)")
+    return 0
+
+
+def lifecycle_cmd() -> int:
+    """Reconcile stale postings without running source discovery.
+
+    This is the safe manual repair/backfill command; scheduled crawls run the
+    same reconciliation automatically after source sightings and liveness
+    checks.
+    """
+    now = int(time.time())
+    jobs_state = state.jobs()
+    stats = lifecycle.reconcile(jobs_state, now, set())
+    cutoff = lifecycle.history_cutoff(now)
+    jobs_state = {
+        jid: record for jid, record in jobs_state.items()
+        if int(record.get("first_seen", now) or now) >= cutoff
+    }
+    applied = state.applied()
+    from .notion_sync import archive_terminal_pages
+    archived = archive_terminal_pages(applied, jobs_state)
+    state.save("jobs.json", jobs_state)
+    if archived:
+        state.save("applied.json", applied)
+    registry = state.companies()
+    runs = state.load("runs.json", [])
+    alert_history = state.load("alert_history.json", [])
+    write_outputs(jobs_state, registry, runs, alert_history)
+    print(f"lifecycle: {stats['expired']} expired, {stats['filled']} filled, "
+          f"{stats['reopened']} reopened, {archived} Notion page(s) archived")
     return 0
 
 
@@ -443,6 +501,12 @@ def enrich() -> int:
                                       priority_ids=priority_ids)
     print(f"enrich: quality pass re-applied {reapplied} verdict(s), "
           f"verified {verified} new job(s)")
+
+    from .notion_sync import archive_terminal_pages
+    archived_notion = archive_terminal_pages(applied, jobs_state)
+    if archived_notion:
+        state.save("applied.json", applied)
+        print(f"enrich: archived {archived_notion} terminal tracked page(s) in Notion")
 
     state.save("jobs.json", jobs_state)
     registry = state.companies()
@@ -566,7 +630,12 @@ def regate_cmd() -> int:
         return internship_regate()
     jobs_state = state.jobs()
     flipped = regate(jobs_state)
+    applied = state.applied()
+    from .notion_sync import archive_terminal_pages
+    archived = archive_terminal_pages(applied, jobs_state)
     state.save("jobs.json", jobs_state)
+    if archived:
+        state.save("applied.json", applied)
     registry = state.companies()
     runs = state.load("runs.json", [])
     alert_history = state.load("alert_history.json", [])
@@ -575,7 +644,8 @@ def regate_cmd() -> int:
                   if any(f"re-gate v{RULES_VERSION}" in s and "dashboard only" in s
                          for s in r.get("score_reasons", [])))
     print(f"regate: rules v{RULES_VERSION} flipped {flipped} job(s) "
-          f"({demoted} demoted to dashboard), docs refreshed")
+          f"({demoted} demoted to dashboard), archived {archived} terminal "
+          f"Notion page(s), docs refreshed")
     return 0
 
 
@@ -594,13 +664,19 @@ def rescore_cmd() -> int:
     preference_profile = build_preference_profile(state.applied(), jobs_state)
     now = int(time.time())
     changed, alerts = _rebuild_scores(jobs_state, fb, now, preference_profile)
+    applied = state.applied()
+    from .notion_sync import archive_terminal_pages
+    archived = archive_terminal_pages(applied, jobs_state)
 
     state.save("jobs.json", jobs_state)
+    if archived:
+        state.save("applied.json", applied)
     registry = state.companies()
     runs = state.load("runs.json", [])
     alert_history = state.load("alert_history.json", [])
     write_outputs(jobs_state, registry, runs, alert_history)
-    print(f"rescore: rebuilt {changed} stored jobs; {alerts} currently alert-eligible; docs refreshed")
+    print(f"rescore: rebuilt {changed} stored jobs; {alerts} currently alert-eligible; "
+          f"archived {archived} terminal Notion page(s); docs refreshed")
     return 0
 
 
@@ -667,6 +743,7 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int,
             quality.reapply(rec)
         if rec.get("posting"):
             posting.reapply(rec)
+        lifecycle.normalize_record(rec, now)
         sponsorship.annotate_record(rec, sponsorship_db)
         rec["early_career_possible"] = early_career_possible(job, rec.get("posting"))
         if rec["early_career_possible"]:
@@ -677,10 +754,16 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int,
             line = f"owner archive: {rec.get('archive_reason', 'removed from active board')}"
             if line not in rec["score_reasons"]:
                 rec["score_reasons"].append(line)
+        if lifecycle.is_terminal(rec):
+            rec["alert_ok"] = False
+            line = (f"posting lifecycle: {lifecycle.status_of(rec)} — "
+                    f"{lifecycle.lifecycle_reason(rec)}")
+            if line not in rec["score_reasons"]:
+                rec["score_reasons"].append(line)
         changed += 1
     apply_company_concentration(jobs_state)
     alerts = sum(
-        (not rec.get("closed_at")) and rec.get("alert_ok")
+        (not lifecycle.is_terminal(rec)) and rec.get("alert_ok")
         and rec.get("score", 0) >= profile()["thresholds"]["alert"]
         for rec in jobs_state.values()
     )
@@ -724,10 +807,16 @@ def rescrape_cmd() -> int:
     stats = posting.scrape_pass([], jobs_state, domains, int(time.time()),
                                 budget=int(env("RADAR_RESCRAPE_LIMIT", "100")))
     state.save("jobs.json", jobs_state)
+    applied = state.applied()
+    from .notion_sync import archive_terminal_pages
+    archived = archive_terminal_pages(applied, jobs_state)
+    if archived:
+        state.save("applied.json", applied)
     write_outputs(jobs_state, registry, state.load("runs.json", []),
                   state.load("alert_history.json", []))
     print(f"rescrape: fetched {stats.get('fetched', 0)}, unreadable {stats.get('unreadable', 0)}, "
-          f"closed {stats.get('closed', 0)}, demoted {stats.get('demoted', 0)}")
+          f"closed {stats.get('closed', 0)}, filled {stats.get('filled', 0)}, "
+          f"demoted {stats.get('demoted', 0)}, Notion archived {archived}")
     return 0
 
 
@@ -808,6 +897,8 @@ def web_action() -> int:
             return 0
         reason = str(payload.get("reason") or "owner archived").strip()[:120]
         now = int(time.time())
+        lifecycle.mark_terminal(job, lifecycle.status_from_reason(reason), now,
+                                f"owner archive: {reason}")
         job.update({"manual_archived": True, "closed_at": now, "archived_at": now,
                     "archived_by": "owner", "archive_reason": reason, "alert_ok": False})
         line = f"owner archive: {reason}"
@@ -815,7 +906,12 @@ def web_action() -> int:
         if line not in reasons:
             reasons.append(line)
         state.save("jobs.json", jobs)
-        print(f"web-action: archive {job['company']} — {reason}")
+        from .notion_sync import archive_terminal_pages
+        archived_notion = archive_terminal_pages(applied, jobs)
+        if archived_notion:
+            state.save("applied.json", applied)
+        print(f"web-action: archive {job['company']} — {reason}"
+              f"; notion archived={archived_notion}")
         return 0
     untracked = set(state.load("untracked.json", []))
     if action == "untrack":
@@ -972,7 +1068,7 @@ def main() -> None:
                                         "marquee-backfill", "reconcile-checkboxes",
                                         "daily-best", "master-board", "deliver-alerts", "web-action", "enrich",
                                         "email-batch",
-                                        "regate", "rescore", "score-health", "rescrape", "repair-feedback",
+                                        "regate", "rescore", "lifecycle", "score-health", "rescrape", "repair-feedback",
                                         "taste-report", "report-sync",
                                         "sponsorship-refresh", "create-google-tracker"])
     args = ap.parse_args()
@@ -1029,6 +1125,8 @@ def main() -> None:
         sys.exit(regate_cmd())
     elif args.command == "rescore":
         sys.exit(rescore_cmd())
+    elif args.command == "lifecycle":
+        sys.exit(lifecycle_cmd())
     elif args.command == "score-health":
         sys.exit(score_health_cmd())
     elif args.command == "rescrape":

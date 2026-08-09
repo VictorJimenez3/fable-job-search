@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import time
 
-from . import discovery, state
+from . import discovery, lifecycle, state
 from .config import env, profile, seeds
 from .digest import write_outputs
 from .internship import RULES_VERSION, annotate, gates, score
@@ -54,6 +54,9 @@ def rescore() -> int:
             "rules_v": RULES_VERSION,
             "score_version": RULES_VERSION,
         })
+        lifecycle.normalize_record(record, now)
+        if lifecycle.is_terminal(record):
+            record["alert_ok"] = False
         changed += 1
         if record["alert_ok"] and record["score"] >= threshold:
             alerts += 1
@@ -62,6 +65,12 @@ def rescore() -> int:
     alert_history = state.load("alert_history.json", [])
     write_outputs(jobs_state, registry, runs, alert_history)
     state.save("jobs.json", jobs_state)
+    applied = state.applied()
+    from .notion_sync import archive_terminal_pages
+    archived = archive_terminal_pages(applied, jobs_state)
+    if archived:
+        state.save("applied.json", applied)
+        print(f"internship rescore: archived {archived} terminal tracked page(s) in Notion")
     print(f"internship rescore: rebuilt {changed} stored jobs; {alerts} currently alert-eligible")
     return 0
 
@@ -92,6 +101,7 @@ def crawl() -> int:
 
     seed_sectors = {norm(s["name"]): s.get("sector", "other") for s in seeds()}
     new_jobs: list[Job] = []
+    applied = state.applied()
     manual_upgrades: dict[str, dict] = {}
     dropped = 0
     seen: set[str] = set()
@@ -99,6 +109,14 @@ def crawl() -> int:
         if not job.company or not job.title or not job.url:
             continue
         job.profile = "internship"
+        if job.id in seen:
+            continue
+        seen.add(job.id)
+        existing = jobs_state.get(job.id)
+        if existing is not None:
+            lifecycle.touch(existing, now, job.source or "monitored source")
+        if existing is not None and existing.get("source") != "manual":
+            continue
         if not job.sector:
             job.sector = seed_sectors.get(norm(job.company), "other")
         annotate(job)
@@ -106,22 +124,28 @@ def crawl() -> int:
         if not keep:
             dropped += 1
             continue
-        if job.id in seen:
-            continue
-        seen.add(job.id)
-        existing = jobs_state.get(job.id)
-        if existing is not None and existing.get("source") != "manual":
-            continue
         job.alert_ok = alert_ok
         score(job, now)
         job.score_reasons += reasons
+        lifecycle.touch(job, now, job.source or "monitored source")
         if existing is not None:
             manual_upgrades[job.id] = existing
         new_jobs.append(job)
 
+    from .posting import scrape_pass
+    eightfold_domains = {norm(e.get("name", "")): (e.get("extra") or {}).get("domain")
+                         for e in registry.values()
+                         if e.get("ats") == "eightfold" and (e.get("extra") or {}).get("domain")}
+    pstats = scrape_pass(new_jobs, jobs_state, eightfold_domains, now,
+                         budget=int(env("RADAR_INTERNSHIP_SCRAPE_LIMIT", "10")))
+    if pstats:
+        print(f"internship posting scrape: {pstats['fetched']} fetched, "
+              f"{pstats['closed']} closed ({pstats.get('filled', 0)} filled)")
+
     max_age = int(profile().get("thresholds", {}).get("max_posting_age_days", 30)) * 86400
     threshold = int(profile().get("thresholds", {}).get("alert", 60))
-    alerts = [job for job in new_jobs if job.alert_ok and job.score >= threshold and
+    alerts = [job for job in new_jobs if job.alert_ok and not lifecycle.is_terminal(job) and
+              job.score >= threshold and
               (job.posted_at is None or now - job.posted_at <= max_age)]
     alerts.sort(key=lambda job: -job.score)
     alerts = alerts[:int(env("RADAR_INTERNSHIP_MAX_ALERTS", "35"))]
@@ -129,15 +153,23 @@ def crawl() -> int:
     for job in new_jobs:
         record = job.to_record()
         old = manual_upgrades.get(job.id)
+        old_record = jobs_state.get(job.id)
         record["first_seen"] = old.get("first_seen", now) if old else now
         if old:
             record["manual_added"] = True
+        lifecycle.merge_record_metadata(record, old_record)
         record["rules_v"] = RULES_VERSION
         record["score_version"] = RULES_VERSION
         record["profile"] = "internship"
         jobs_state[job.id] = record
 
-    cutoff = now - 400 * 86400
+    lifecycle_stats = lifecycle.reconcile(
+        jobs_state, now, seen,
+        allow_source_gap_expiry=lifecycle.source_run_healthy(agg_stats, ats_stats))
+    if lifecycle_stats["expired"] or lifecycle_stats["reopened"]:
+        print(f"internship lifecycle: {lifecycle_stats['expired']} auto-expired, "
+              f"{lifecycle_stats['reopened']} reopened from current source")
+    cutoff = lifecycle.history_cutoff(now)
     jobs_state = {key: value for key, value in jobs_state.items()
                   if value.get("first_seen", now) >= cutoff}
     alert_history = state.load("alert_history.json", [])
@@ -154,6 +186,11 @@ def crawl() -> int:
     runs = runs[-300:]
     state.save("companies.json", registry)
     state.save("jobs.json", jobs_state)
+    from .notion_sync import archive_terminal_pages
+    archived = archive_terminal_pages(applied, jobs_state)
+    if archived:
+        state.save("applied.json", applied)
+        print(f"internship lifecycle: archived {archived} terminal tracked page(s) in Notion")
     state.save("alert_history.json", alert_history)
     state.save("runs.json", runs)
     write_outputs(jobs_state, registry, runs, alert_history)

@@ -52,6 +52,19 @@ def test_platform_exposes_private_google_tracker_path_for_authenticated_users():
     assert '"stage"' in helper + action + main
 
 
+def test_platform_exposes_terminal_posting_history_and_private_status_sync():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    helper = (ROOT / "webapp" / "api" / "_google-tracker.js").read_text()
+    lifecycle = (ROOT / "radar" / "lifecycle.py").read_text()
+    assert '["history","History"]' in html
+    assert "function rHistory()" in html
+    assert "syncTrackerLifecycle" in html
+    assert "posting_status" in html + helper + lifecycle
+    assert '"Posting Status"' in helper
+    assert "expired" in helper and "filled" in helper
+    assert "RADAR_HISTORY_DAYS" in lifecycle
+
+
 def test_platform_exposes_isolated_internship_lane_and_graduation_preferences():
     html = (ROOT / "webapp" / "index.html").read_text()
     helper = (ROOT / "webapp" / "api" / "_google-tracker.js").read_text()
