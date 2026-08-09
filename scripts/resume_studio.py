@@ -29,6 +29,7 @@ import argparse
 import copy
 import concurrent.futures
 import datetime as dt
+from difflib import SequenceMatcher
 import html
 import json
 import os
@@ -94,6 +95,18 @@ MIN_RIGHT_SLACK_PT = 12.0
 MAX_LINE_EDIT_PASSES = 2
 MAX_SPACE_EXPANSION_CANDIDATES = 4
 MIN_MEANINGFUL_BULLET_CHARS = 48
+# A rewrite this close to its authorized source is normally presentation
+# churn, not a hiring-value improvement.  Keep the source wording unless the
+# candidate adds a meaningful technical/role signal or changes a concrete
+# proof point.
+LOW_VALUE_REWRITE_SIMILARITY = 0.82
+LOW_VALUE_REWRITE_OVERLAP = 0.78
+GENERIC_REWRITE_TOKENS = {
+    "a", "an", "and", "across", "built", "build", "created", "create",
+    "developed", "develop", "designed", "design", "established", "establish",
+    "for", "from", "in", "into", "led", "lead", "made", "make", "on",
+    "the", "to", "used", "using", "via", "with",
+}
 # These are provider-output safety limits, not portfolio requirements.  The
 # page packer decides how much evidence the target can honestly carry.
 MAX_CANDIDATE_BULLETS = 60
@@ -602,6 +615,33 @@ def _resume_text_similarity(left: str, right: str) -> float:
     if not left_tokens or not right_tokens:
         return 0.0
     return len(left_tokens & right_tokens) / len(left_tokens | right_tokens)
+
+
+def _low_value_rewrite(source: str, candidate: str) -> bool:
+    """Detect a near-copy that does not buy a new hiring signal.
+
+    This intentionally errs on the side of preserving an approved source
+    line.  A near-copy is allowed through when it adds a concrete metric or a
+    meaningful technical/role term; otherwise the source wording is clearer
+    and the apparent diff is just churn.
+    """
+    source_plain = _latex_plain(source).strip()
+    candidate_plain = _latex_plain(candidate).strip()
+    if not source_plain or not candidate_plain or source_plain == candidate_plain:
+        return False
+    similarity = SequenceMatcher(
+        None, source_plain.lower(), candidate_plain.lower(), autojunk=False
+    ).ratio()
+    overlap = _resume_text_similarity(source_plain, candidate_plain)
+    if similarity < LOW_VALUE_REWRITE_SIMILARITY or overlap < LOW_VALUE_REWRITE_OVERLAP:
+        return False
+    if _resume_numeric_anchors(source_plain) != _resume_numeric_anchors(candidate_plain):
+        return False
+    source_tokens = _resume_tokens(source_plain)
+    candidate_tokens = _resume_tokens(candidate_plain)
+    added = candidate_tokens - source_tokens
+    meaningful_added = added - GENERIC_REWRITE_TOKENS
+    return not meaningful_added
 
 
 def _same_resume_bullet(left: str, right: str) -> bool:
@@ -2999,6 +3039,12 @@ def validate_plan(
                             % (bullet_id, ", ".join(missing_qualifiers))
                         )
                         text = bullet_bank[bullet_id]
+                    elif _low_value_rewrite(bullet_bank[bullet_id], text):
+                        validation_warnings.append(
+                            "reverted low-value paraphrase %s to its authorized source wording"
+                            % bullet_id
+                        )
+                        text = bullet_bank[bullet_id]
                 if FORBIDDEN_CONTENT_COMMANDS.search(text):
                     errors.append("bullet %s contains a forbidden layout command" % bullet_id)
                     continue
@@ -3427,6 +3473,7 @@ def content_change_report(
         str(entry.get("source_id")) for entry in plan.get("projects", [])
     ]
     rewritten = []
+    suppressed_rewrites = []
     selected_bullet_ids = []
     selected_entry_ids = {
         str(entry.get("source_id") or "")
@@ -3441,7 +3488,15 @@ def content_change_report(
                 final_text = _latex_plain(str(bullet.get("text") or ""))
                 source_text = source_bullets.get(source_id, "")
                 supporting = [str(value) for value in (bullet.get("source_ids") or []) if str(value)]
-                if final_text != source_text or len(supporting) > 1:
+                if final_text != source_text and _low_value_rewrite(source_text, final_text):
+                    suppressed_rewrites.append({
+                        "section": section,
+                        "source_id": source_id,
+                        "source_text": source_text,
+                        "final_text": final_text,
+                        "reason": "near-copy without a new metric, technical term, or target signal",
+                    })
+                elif final_text != source_text or len(supporting) > 1:
                     rewritten.append({
                         "section": section,
                         "source_id": source_id,
@@ -3543,6 +3598,8 @@ def content_change_report(
     return {
         "changed_bullet_count": len(rewritten),
         "rewritten_bullets": rewritten,
+        "low_value_rewrite_count": len(suppressed_rewrites),
+        "suppressed_rewrites": suppressed_rewrites,
         "selected_bullet_count": len(selected_bullet_ids),
         "canonical_bullet_count": len(canonical_bullet_by_id),
         "added_bullets": added_bullets,
@@ -4668,17 +4725,19 @@ def _latex_plain(value: str) -> str:
 def pdf_line_geometry(pdf: Path) -> Dict[str, Any]:
     pdftotext = shutil.which("pdftotext")
     if not pdftotext:
-        return {"page_width": None, "lines": []}
+        return {"page_width": None, "page_height": None, "lines": []}
     try:
         raw = subprocess.check_output([pdftotext, "-bbox", str(pdf), "-"], timeout=30)
         root = ET.fromstring(raw)
     except (OSError, subprocess.SubprocessError, ET.ParseError):
-        return {"page_width": None, "lines": []}
+        return {"page_width": None, "page_height": None, "lines": []}
     page = next((element for element in root.iter() if element.tag.endswith("page")), None)
     try:
         page_width = float(page.attrib.get("width")) if page is not None else None
+        page_height = float(page.attrib.get("height")) if page is not None else None
     except (TypeError, ValueError):
         page_width = None
+        page_height = None
     words = []
     for element in root.iter():
         if not element.tag.endswith("word"):
@@ -4714,7 +4773,76 @@ def pdf_line_geometry(pdf: Path) -> Dict[str, Any]:
             "y_min": min(item["y_min"] for item in ordered),
             "y_max": max(item["y_max"] for item in ordered),
         })
-    return {"page_width": page_width, "lines": lines}
+    return {"page_width": page_width, "page_height": page_height, "lines": lines}
+
+
+def review_preview_overlay(
+    pdf: Path, plan: Dict[str, Any], changes: Dict[str, Any],
+    keyword_strategy: Optional[Dict[str, Any]] = None,
+) -> Dict[str, Any]:
+    """Return line-level highlights for a review-only overlay on the clean PDF.
+
+    The image remains the ordinary generated preview.  These transparent
+    boxes are positioned from the PDF text geometry in the browser, so review
+    highlighting cannot alter or leak into the downloadable application PDF.
+    """
+    geometry = pdf_line_geometry(pdf)
+    page_width = geometry.get("page_width")
+    page_height = geometry.get("page_height")
+    if not page_width or not page_height:
+        return {"available": False, "boxes": [], "page_width": page_width, "page_height": page_height}
+    terms = [
+        str(item.get("term") or "")
+        for item in (keyword_strategy or {}).get("terms", [])
+        if item.get("supported") and item.get("rendered") and str(item.get("term") or "")
+    ]
+    changed_ids = {
+        str(item.get("source_id") or "")
+        for item in (changes.get("rewritten_bullets") or [])
+        if str(item.get("source_id") or "")
+    }
+    added_ids = {
+        str(item.get("source_id") or "")
+        for item in (changes.get("added_bullets") or [])
+        if str(item.get("source_id") or "")
+    }
+    changed_bullets = {
+        str(bullet.get("source_id") or ""): _latex_plain(str(bullet.get("text") or ""))
+        for section in ("experiences", "projects", "leadership")
+        for entry in plan.get(section, [])
+        for bullet in entry.get("bullets", [])
+        if str(bullet.get("source_id") or "") in changed_ids | added_ids
+    }
+    boxes = []
+    for line in geometry.get("lines", []):
+        line_text = str(line.get("text") or "")
+        line_lower = line_text.lower()
+        matched_terms = [term for term in terms if _keyword_present(term, line_lower)]
+        changed_id = None
+        line_tokens = set(re.findall(r"[a-z0-9]+", line_lower))
+        for source_id, bullet_text in changed_bullets.items():
+            bullet_tokens = re.findall(r"[a-z0-9]+", bullet_text.lower())
+            if len(bullet_tokens) >= 2 and set(bullet_tokens[:2]).issubset(line_tokens):
+                changed_id = source_id
+                break
+        if not matched_terms and not changed_id:
+            continue
+        boxes.append({
+            "left_percent": round(float(line.get("x_min") or 0) / page_width * 100, 3),
+            "top_percent": round(float(line.get("y_min") or 0) / page_height * 100, 3),
+            "width_percent": round((float(line.get("x_max") or 0) - float(line.get("x_min") or 0)) / page_width * 100, 3),
+            "height_percent": round((float(line.get("y_max") or 0) - float(line.get("y_min") or 0)) / page_height * 100, 3),
+            "terms": matched_terms,
+            "changed_source_id": changed_id,
+            "kind": "changed" if changed_id and not matched_terms else "both" if changed_id else "ats",
+        })
+    return {
+        "available": bool(boxes),
+        "page_width": page_width,
+        "page_height": page_height,
+        "boxes": boxes,
+        "legend": {"ats": "supported ATS term", "changed": "meaningful content change"},
+    }
 
 
 def bullet_layout_metrics(plan: Dict[str, Any], pdf: Path) -> Dict[str, Any]:
@@ -5604,6 +5732,9 @@ def run_tailoring(
         })
     known_by_provider = {name: [int(item.get("usage_tokens")) for item in provider_records if item.get("called") and str(item.get("provider") or "").split("/")[-1] == name and item.get("usage_tokens") is not None] for name in ("codex", "claude")}
     changes = content_change_report(plan, catalog, chosen, context.get("target_keywords"))
+    review_overlay = review_preview_overlay(
+        run_pdf_path(run_dir), plan, changes, changes.get("keyword_coverage")
+    )
     space_audit_value = space_audit(plan, layout, catalog, space_expansion)
     provider_flow = [
         {
@@ -5631,6 +5762,7 @@ def run_tailoring(
         "line_compactions": line_compactions,
         "validation_warnings": synthesis_data.get("validation_warnings", []),
         "content_changes": changes,
+        "review_overlay": review_overlay,
         "space_audit": space_audit_value,
         "provider_flow": provider_flow,
         "run_metrics": {
@@ -5783,6 +5915,35 @@ class RunManager:
         )
         report = read_json(path.parent / "report.json", {}) or {}
         if isinstance(report, dict) and report:
+            # Backfill the review-only presentation for runs created before
+            # the visual audit shipped.  This is intentionally in-memory:
+            # opening an old run must not rewrite its historical report.
+            if (
+                not report.get("review_overlay")
+                and isinstance(report.get("content_plan"), dict)
+                and physical.is_file()
+            ):
+                try:
+                    catalog = source_catalog(self.root)
+                    context = read_json(path.parent / "job_context.json", {}) or {}
+                    tex = (path.parent / "resume.tex").read_text(errors="replace")
+                    refreshed_changes = content_change_report(
+                        report["content_plan"], catalog, tex, context.get("target_keywords")
+                    )
+                    report["content_changes"] = refreshed_changes
+                    report["owner_summary"] = owner_change_summary(
+                        report["content_plan"], catalog, refreshed_changes
+                    )
+                    report["review_overlay"] = review_preview_overlay(
+                        physical,
+                        report["content_plan"],
+                        refreshed_changes,
+                        refreshed_changes.get("keyword_coverage"),
+                    )
+                except (OSError, KeyError, TypeError, ValueError):
+                    # Historical reports remain viewable even if their source
+                    # catalog or local rendering tools are no longer present.
+                    pass
             value["report"] = report
         return value
 
@@ -5939,6 +6100,11 @@ UI_HTML = UI_HTML.replace(
     "html+='<details class=\"report-details\"><summary>Raw review data</summary><pre>'+esc(JSON.stringify(review,null,2))+'</pre></details>'",
 )
 
+UI_HTML = UI_HTML.replace(
+    "</head>",
+    "<style>.review-preview{position:relative;max-width:760px;margin:10px auto;background:#fff;border:1px solid var(--line);border-radius:5px;overflow:hidden}.review-preview>img{display:block;width:100%;height:auto}.review-box{position:absolute;border:2px solid rgba(255,183,0,.9);background:rgba(255,220,80,.22);border-radius:2px;pointer-events:auto}.review-box.changed{border-color:rgba(88,166,255,.95);background:rgba(88,166,255,.18)}.review-box.both{border-color:rgba(168,85,247,.95);background:rgba(168,85,247,.18)}.review-legend{display:flex;gap:10px;flex-wrap:wrap;margin:7px 0 0;color:var(--muted);font-size:11px}.review-legend span{display:inline-flex;align-items:center;gap:4px}.review-legend i{display:inline-block;width:11px;height:11px;border:2px solid #ffb700;background:rgba(255,220,80,.22);border-radius:2px}.review-legend .changed i{border-color:#58a6ff;background:rgba(88,166,255,.18)}.review-legend .both i{border-color:#a855f7;background:rgba(168,85,247,.18)}</style></head>",
+)
+
 
 UI_HTML = UI_HTML.replace(
     "function showView(view){",
@@ -6019,7 +6185,7 @@ UI_HTML = UI_HTML.replace(
     r'''const visualBaseRenderReport=renderReport;
 renderReport=function(status){
   visualBaseRenderReport(status);
-  const report=status.report||{},changes=report.content_changes||{},space=report.space_audit||{},usage=report.usage||{},metrics=report.run_metrics||{};
+  const report=status.report||{},changes=report.content_changes||{},space=report.space_audit||{},usage=report.usage||{},metrics=report.run_metrics||{},previewName=status.preview_filename||report.preview_filename||'';
   if(!report.content_changes)return;
   const fmtSeconds=value=>{const n=Number(value);if(!Number.isFinite(n))return '—';if(n<60)return n.toFixed(1)+'s';return Math.floor(n/60)+'m '+Math.round(n%60)+'s';};
   const terms=(changes.keyword_coverage?.terms||[]).filter(item=>item.supported&&item.rendered).map(item=>String(item.term||'')).filter(Boolean);
@@ -6048,10 +6214,13 @@ renderReport=function(status){
   const chronology=changes.experience_order?.chronology_preserved!==false;
   const oneMore=space.one_more_standard_bullet_fits;
   const applied=space.expansion_applied||[],rejected=space.expansion_rejected||[],candidates=space.unused_verified_candidates||[];
-  let panel=`<section class="audit-shell"><div class="audit-card"><h4>Tailoring audit · what happened</h4><div class="audit-grid"><div class="audit-metric"><strong>${changes.changed_bullet_count||0}</strong><span>rewritten lines</span></div><div class="audit-metric"><strong>${(changes.added_bullets||[]).length}</strong><span>new evidence lines surfaced</span></div><div class="audit-metric"><strong>${fmtSeconds(metrics.elapsed_seconds||status.elapsed_seconds)}</strong><span>total run time</span></div></div><p class="meta">${esc(report.owner_summary?.headline||'The report records selection, replacement, and layout decisions.')}</p><p class="meta"><span class="badge ${chronology?'audit-good':'audit-bad'}">${chronology?'Experience chronology preserved':'Chronology needs review'}</span> <span class="badge">${esc(report.mode||status.mode||'tailor')}</span> <span class="badge">PDF: ${esc(report.pdf_filename||status.pdf_filename||'named resume')}</span></p></div>`;
+  const overlay=report.review_overlay||{},previewUrl=previewName?runArtifact(status.run_id,previewName):'';
+  const overlayBoxes=(overlay.boxes||[]).map(box=>`<div class="review-box ${esc(box.kind||'ats')}" style="left:${Number(box.left_percent)||0}%;top:${Number(box.top_percent)||0}%;width:${Number(box.width_percent)||0}%;height:${Number(box.height_percent)||0}%" title="${esc((box.terms||[]).join(', ')||box.changed_source_id||'review highlight')}"></div>`).join('');
+  const reviewPreview=overlay.available&&previewUrl?`<div class="audit-card"><h4>Highlighted review render</h4><p class="meta">This is a review overlay on the clean rendered page. The downloadable PDF above is unchanged.</p><div class="review-preview"><img src="${previewUrl}" alt="Clean resume with review highlights">${overlayBoxes}</div><div class="review-legend"><span><i></i>supported ATS term</span><span class="changed"><i></i>meaningful content change</span><span class="both"><i></i>both</span></div></div>`:'';
+  let panel=`<section class="audit-shell"><div class="audit-card"><h4>Tailoring audit · what happened</h4><div class="audit-grid"><div class="audit-metric"><strong>${changes.changed_bullet_count||0}</strong><span>meaningful rewrites</span></div><div class="audit-metric"><strong>${(changes.added_bullets||[]).length}</strong><span>new evidence lines surfaced</span></div><div class="audit-metric"><strong>${fmtSeconds(metrics.elapsed_seconds||status.elapsed_seconds)}</strong><span>total run time</span></div></div><p class="meta">${esc(report.owner_summary?.headline||'The report records selection, replacement, and layout decisions.')}</p>${changes.low_value_rewrite_count?`<p class="meta">${changes.low_value_rewrite_count} near-copy paraphrase${changes.low_value_rewrite_count===1?' was':'s were'} suppressed because it added no measurable hiring value.</p>`:''}<p class="meta"><span class="badge ${chronology?'audit-good':'audit-bad'}">${chronology?'Experience chronology preserved':'Chronology needs review'}</span> <span class="badge">${esc(report.mode||status.mode||'tailor')}</span> <span class="badge">PDF: ${esc(report.pdf_filename||status.pdf_filename||'named resume')}</span></p></div>${reviewPreview}`;
   panel+=`<div class="audit-subgrid"><div class="audit-card"><h4>Measured page use</h4><div class="meta">Bottom: <strong>${space.measured_content_bottom_pt==null?'—':space.measured_content_bottom_pt+'pt'}</strong> · reference: <strong>${space.canonical_reference_bottom_pt==null?'—':space.canonical_reference_bottom_pt+'pt'}</strong><br>Clearance gap: <strong>${space.density_gap_pt==null?'—':space.density_gap_pt+'pt'}</strong> · one standard extra bullet: <strong class="${oneMore?'audit-warn':'audit-good'}">${oneMore?'fits':'does not fit'}</strong></div><p class="meta">${esc(space.decision||'No space decision recorded.')}</p>${applied.length?'<div>'+applied.map(item=>`<span class="audit-candidate applied">added ${esc(item.source_id||'line')}</span>`).join('')+'</div>':''}${rejected.length?'<div>'+rejected.map(item=>`<span class="audit-candidate rejected">held ${esc(item.source_id||'candidate')}</span>`).join('')+'</div>':''}</div><div class="audit-card"><h4>Verified evidence left on the table</h4><div class="meta"><strong>${space.unused_candidate_count||candidates.length}</strong> candidate lines inspected${candidates.length?'<br>':''}${candidates.length?candidates.slice(0,8).map(item=>`<div><strong>${esc(item.source_id||'candidate')}</strong> · ${esc(item.text||'')}</div>`).join(''):'<span> No unused strong line was found for the selected portfolio.</span>'}</div></div></div>`;
   panel+=`<div class="audit-card"><h4>Provider flow, model, and usage</h4><div class="flow">${flowHtml}</div><p class="meta"><strong>This run:</strong> ${Number(usage.codex_tokens||0).toLocaleString()} Codex tokens · ${usage.codex_calls||0} Codex calls · ${Number(usage.claude_tokens||0).toLocaleString()} Claude tokens · ${usage.claude_calls||0} Claude calls</p>${weekly}</div>`;
-  panel+=`<div class="audit-card"><h4>Text diff</h4><div class="audit-scroll">${list(rewrites,'rewritten','No wording rewrites were recorded.')}${list(additions,'added','No canonical-source additions were recorded.')}${list(removals,'removed','No canonical evidence was removed.')}</div></div>`;
+  panel+=`<div class="audit-card"><h4>Text diff</h4><div class="audit-scroll">${list(rewrites,'rewritten','No meaningful wording rewrites were recorded.')}${list(additions,'added','No canonical-source additions were recorded.')}${list(removals,'removed','No canonical evidence was removed.')}${changes.low_value_rewrite_count?`<p class="meta">${changes.low_value_rewrite_count} low-value paraphrase${changes.low_value_rewrite_count===1?'':'s'} hidden from the substantive diff.</p>`:''}</div></div>`;
   panel+=`<div class="audit-card"><h4>ATS overlay <span class="meta">(review view; the downloadable PDF stays clean)</span></h4><p class="meta">Highlighted terms are supported and rendered in the final text. Missing or unsupported terms remain visible in the full report instead of being stretched.</p><div class="ats-overlay">${atsHtml}</div></div></section>`;
   $('report').insertAdjacentHTML('afterbegin',panel);
 };

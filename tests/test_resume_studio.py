@@ -58,6 +58,8 @@ def test_resume_report_exposes_change_and_layout_safety_language():
     assert "roomy lines" in rs.UI_HTML
     assert "layout.horizontal.near_wrap_count" in rs.UI_HTML
     assert "ATS overlay" in rs.UI_HTML
+    assert "Highlighted review render" in rs.UI_HTML
+    assert "low-value paraphrase" in rs.UI_HTML
     assert "Provider flow, model, and usage" in rs.UI_HTML
     assert "Measured page use" in rs.UI_HTML
     assert "Experience chronology preserved" in rs.UI_HTML
@@ -715,6 +717,84 @@ def test_same_entry_repeated_metric_and_proof_is_detected():
         "Led a 3-person team building an AlloyDB foundation",
         "Unified 3 AI systems into one conversation timeline",
     )
+
+
+def test_near_copy_rewrite_is_rejected_as_low_value_churn():
+    source = (
+        "Architected an agentic LLM POC, leading a 3-person team to establish "
+        "an extensible AlloyDB foundation for drug safety"
+    )
+    candidate = (
+        "Architected an agentic LLM POC, leading a 3-person team to build "
+        "an extensible AlloyDB drug-safety foundation"
+    )
+    assert rs._low_value_rewrite(source, candidate)
+    assert not rs._low_value_rewrite(
+        source,
+        "Architected an agentic LLM POC, leading a 3-person team to build "
+        "an extensible AlloyDB foundation with row-level access control for drug safety",
+    )
+
+
+def test_enhanced_near_copy_reverts_to_authorized_source_wording():
+    catalog = _fixture_catalog()
+    source = catalog["entries"]["experience:item0"]["bullets"][0]
+    source["text"] = (
+        "Architected an agentic LLM POC, leading a 3-person team to establish "
+        "an extensible AlloyDB foundation for drug safety"
+    )
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    bullet = plan["experiences"][0]["bullets"][0]
+    bullet.update({
+        "text": (
+            "Architected an agentic LLM POC, leading a 3-person team to build "
+            "an extensible AlloyDB drug-safety foundation"
+        ),
+        "source_ids": [source["id"]],
+        "evidence_ids": [source["id"]],
+    })
+    graph = {"nodes": [
+        {"id": item["id"], "claim_allowed": True}
+        for entry in catalog["entries"].values()
+        for item in entry["bullets"]
+    ]}
+    for section in ("experiences", "projects", "leadership"):
+        for entry in plan[section]:
+            for item in entry["bullets"]:
+                item.setdefault("source_ids", [item["source_id"]])
+                item.setdefault("evidence_ids", [item["source_id"]])
+    normalized, errors = rs.validate_plan(plan, catalog, enhance=True, graph=graph)
+    assert not errors
+    assert normalized["experiences"][0]["bullets"][0]["text"] == source["text"]
+    assert any("reverted low-value paraphrase" in warning for warning in normalized["validation_warnings"])
+
+
+def test_review_preview_overlay_marks_ats_and_meaningful_change(monkeypatch, tmp_path):
+    monkeypatch.setattr(
+        rs,
+        "pdf_line_geometry",
+        lambda pdf: {
+            "page_width": 612.0,
+            "page_height": 792.0,
+            "lines": [{
+                "text": "Engineered Python backend with row-level access control",
+                "x_min": 60.0,
+                "x_max": 500.0,
+                "y_min": 100.0,
+                "y_max": 110.0,
+            }],
+        },
+    )
+    result = rs.review_preview_overlay(
+        tmp_path / "draft.pdf",
+        {"experiences": [{"bullets": [{"source_id": "experience:item0:b1", "text": "Engineered Python backend with row-level access control"}]}]},
+        {"rewritten_bullets": [{"source_id": "experience:item0:b1"}], "added_bullets": [],
+         "keyword_coverage": {"terms": [{"term": "Python", "supported": True, "rendered": True}]}},
+        {"terms": [{"term": "Python", "supported": True, "rendered": True}]},
+    )
+    assert result["available"] is True
+    assert result["boxes"][0]["kind"] == "both"
 
 
 def test_target_priority_outweighs_generic_technical_tiebreakers():
