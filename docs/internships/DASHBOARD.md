@@ -1,13 +1,12 @@
 # 🎯 Job Radar — internship dashboard
 
-_Last run: **2026-08-10 13:49 UTC** · companies polled directly: **305** (registry 719) · jobs tracked: **7722** · new this run: **58** · alerts this run: **0**_
+_Last run: **2026-08-10 13:57 UTC** · companies polled directly: **325** (registry 719) · jobs tracked: **7814** · new this run: **92** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Sponsor history | Src |
 |---|---|---|---|---|---|---|---|
 | 92 🔥 | 4d | NVIDIA | [Software Engineering Intern - Dynamo - Fall 2026](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Software-Engineering-Intern--Dynamo---Fall-2026_JR2022295) | Santa Clara, CA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
-| 91 🔥 | 20d | Google | [Software Engineering Intern, MS, Summer 2027](https://www.dreamworkhq.com/job/f9c050e0-edc2-4353-aaf8-3b108001717f?utm_source=github&utm_campaign=gh-tech-internships) | Mountain View, CA, USA, Atlanta, GA, USA | big_tech | — | [Dreamwork tech internship board](https://github.com/dreamworkhq/Tech-Internships-2027) |
 | 91 🔥 | 20d | Google | [Software Engineering Intern, BS, Summer 2027](https://www.dreamworkhq.com/job/9f14147a-7417-46c9-852d-eab1cac1edea?utm_source=github&utm_campaign=gh-tech-internships) | Mountain View, CA, USA, Atlanta, GA, USA | big_tech | — | [Dreamwork tech internship board](https://github.com/dreamworkhq/Tech-Internships-2027) |
 | 91 🔥 | 25d | Citadel Securities | [Software Engineer - Intern - US](https://www.citadelsecurities.com/careers/details/software-engineer-intern-us/) | Miami, FL +1 | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 91 🔥 | 25d | Citadel | [Software Engineer - Intern - US](https://www.citadel.com/careers/details/software-engineer-intern-us/) | Houston, TX +2 | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
@@ -156,5 +155,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 56  | 6d | TikTok | [Machine Learning Engineer Intern - Ads Signal & Measurement](https://lifeattiktok.com/search/7669700361976809733) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 56  | 6d | TikTok | [Software Engineer Intern - Ads Interface](https://lifeattiktok.com/search/7669705785962727733) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 56  | 6d | TikTok | [Machine Learning Engineer Intern - Commercial AI-CRM and Transaction](https://lifeattiktok.com/search/7669702702763018501) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
+| 56  | 6d | TikTok | [Software Engineer Intern - Global CRM](https://lifeattiktok.com/search/7669711844487399685) | San Jose, CA | other | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 
 _150 roles shown (score ≥ 35, posted ≤30d)._
