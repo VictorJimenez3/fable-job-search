@@ -3,41 +3,6 @@
   "alert_ok": true,
   "alerted_at": 1785487196,
   "ats": "",
-  "company": "Artera",
-  "description": "",
-  "id": "8019a125d530844f",
-  "llm_note": "",
-  "locations": [
-   "Seattle, WA"
-  ],
-  "posted_at": 1785477885,
-  "posting": {
-   "analyzed_at": 1785487196,
-   "fetch_status": "readable",
-   "fetched": true,
-   "sponsorship": "unknown"
-  },
-  "remote": false,
-  "salary": "",
-  "score": 86,
-  "score_reasons": [
-   "base 5",
-   "role:ai_ml +26",
-   "trusted new-grad board priority +45",
-   "posted <24h +6",
-   "title matches your history +4",
-   "verified new-grad/early-career evidence"
-  ],
-  "sector": "other",
-  "source": "simplify",
-  "source_url": "https://github.com/SimplifyJobs/New-Grad-Positions",
-  "title": "Associate AI Builder",
-  "url": "https://jobs.lever.co/artera-2/eae88c70-fbf5-4525-890c-d3f9377418b0/apply"
- },
- {
-  "alert_ok": true,
-  "alerted_at": 1785487196,
-  "ats": "",
   "company": "Lockheed Martin",
   "description": "",
   "id": "7963b4cb0537b8ac",
@@ -24199,5 +24164,78 @@
   "source_url": "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad",
   "title": "Student Assistant - Applications Developer (Sac State Students Only)",
   "url": "https://jobright.ai/jobs/info/6a7992d2bb6ca93ae561779a?utm_campaign=Software%20Engineering&utm_source=1103"
+ },
+ {
+  "alert_ok": true,
+  "alerted_at": 1786369944,
+  "ats": "",
+  "company": "Amazon",
+  "description": "",
+  "id": "ad5df5853e03cf39",
+  "last_seen_at": 1786369944,
+  "lifecycle_checked_at": 1786369944,
+  "llm_note": "",
+  "locations": [
+   "Seattle, WA"
+  ],
+  "posted_at": 1786024346,
+  "posting": {
+   "analyzed_at": 1786369944,
+   "fetch_status": "readable",
+   "fetched": true,
+   "sponsorship": "unknown"
+  },
+  "posting_status": "open",
+  "profile": "new_grad",
+  "ranking_adjustment": 0,
+  "remote": false,
+  "salary": "$186k/yr",
+  "score": 91,
+  "score_calibrated": 91,
+  "score_dimensions": {
+   "base": 5,
+   "company_quality": 13,
+   "compensation": 7,
+   "eligibility": 38,
+   "mission": 7,
+   "personal_signal": 14,
+   "role_fit": 20,
+   "timing_access": 1
+  },
+  "score_dimensions_raw": {
+   "base": 5,
+   "company_quality": 13,
+   "compensation": 7,
+   "eligibility": 38,
+   "mission": 7,
+   "personal_signal": 14,
+   "role_fit": 20,
+   "timing_access": 1
+  },
+  "score_raw": 105,
+  "score_reasons": [
+   "base utility +5",
+   "role:swe +20",
+   "sector:big_tech +7 (diminishing return)",
+   "trusted new-grad board priority +38 (eligibility)",
+   "company tier: marquee +8",
+   "cited AI/technical prestige +4",
+   "cited operating scale +1",
+   "compensation ceiling $186,000 +7",
+   "posted <7d +1",
+   "learned from 253 saved/applied roles",
+   "learned role preference: swe 50% of sample +3",
+   "learned sector preference: big tech 42% of recognized sample +3",
+   "learned company preference: Amazon appears in 17 saved/applied roles +4",
+   "learned title signals: development, aws, for +3",
+   "SHPE 2026 exhibitor +2",
+   "raw utility 105; calibration v13 -> 91/100",
+   "verified new-grad/early-career evidence"
+  ],
+  "sector": "big_tech",
+  "source": "speedyapply",
+  "source_url": "https://github.com/speedyapply/2027-SWE-College-Jobs",
+  "title": "Software Development Engineer - EKS - AWS Controllers for Kubernetes",
+  "url": "https://www.amazon.jobs/jobs/10496265/apply"
  }
 ]
