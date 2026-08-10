@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-08-10 22:42 UTC** · companies polled directly: **1665** (registry 1871) · jobs tracked: **35876** · new this run: **41** · alerts this run: **1**_
+_Last run: **2026-08-10 23:04 UTC** · companies polled directly: **1665** (registry 1871) · jobs tracked: **35876** · new this run: **41** · alerts this run: **1**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -92,7 +92,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 83 ⭐ | 20d | Hospital for Special Surgery (HSS) | [Education Outcomes and Data Analytics Assistant](https://hss.wd1.myworkdayjobs.com/HSS_Careers/job/New-York-NY/Education-Outcomes-and-Data-Analytics-Assistant_JR2026-105688) | NYC | healthtech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 83 ⭐ | 26d | Citadel | [Software Engineer - University Graduate - US](https://www.citadel.com/careers/details/software-engineer-university-graduate-us/) | Houston, TX +2 | other | no-history | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 83 ⭐ | 26d | Microsoft | [Software Engineer](https://apply.careers.microsoft.com/careers/job/1970393556932425) | Redmond, WA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 82 ⭐ | 3d | WelbeHealth | [AI Engineer 1](https://job-boards.greenhouse.io/welbehealth/jobs/8599687002) | California | healthtech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 82 ⭐ | 3d | Tesla | [Data Labeler - Tesla AI](https://www.tesla.com/careers/search/job/279543) | Tempe, AZ | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 82 ⭐ | 5d | Roblox | [[2027] Software Engineer, Early Career](https://careers.roblox.com/jobs/8072244?gh_jid=8072244) | San Mateo, CA, United States | big_tech | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/roblox) |
 | 82 ⭐ | 6d | TikTok | [Backend Engineer Graduate](https://lifeattiktok.com/search/7665989305914984709) | San Jose, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
@@ -112,6 +111,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 82 ⭐ | 27d | Akuna Capital | [Software Engineer - Entry-Level - Python](https://www.akunacapital.com/careers/job/8013230/?gh_jid=8013230) | Chicago, IL | fintech | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 82 ⭐ | 27d | Akuna Capital | [Software Engineer - Entry-Level - C++](https://www.akunacapital.com/careers/job/8013085/?gh_jid=8013085) | Chicago, IL | fintech | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 82 ⭐ | 27d | WHOOP | [Android Engineer](https://jobright.ai/jobs/info/6a16c1c4128680351d96caf0?utm_campaign=Software%20Engineering&utm_source=1103) | Boston, MA | healthtech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
+| 81 ⭐ | 3d | WelbeHealth | [AI Engineer 1](https://job-boards.greenhouse.io/welbehealth/jobs/8599687002) | California | healthtech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 4d | TikTok | [Software Engineer Graduate - Multiple Teams](https://lifeattiktok.com/search/7668582086900680965) | Seattle, WA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 5d | Qualcomm | [Data Networking Software Engineer - Modem Software Engineering](https://qualcomm.eightfold.ai/careers/job/446719871565) | San Diego, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 6d | TikTok | [Graduate Software Engineer](https://lifeattiktok.com/search/7668566347702569269) | San Jose, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
