@@ -1,123 +1,6 @@
 {
- "events": [
-  {
-   "at": "2026-08-10T05:44:31+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
-   "endpoint": "nvidia:deepseek",
-   "lane": "api",
-   "latency_ms": 142,
-   "max_tokens": 2200,
-   "model": "deepseek-ai/deepseek-v4-pro",
-   "prompt_chars": 6772,
-   "prompt_tokens": 0,
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-10T05:44:31+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 404: {'status': 404, 'title': 'Not Found', 'detail': \"Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc':",
-   "endpoint": "nvidia:kimi",
-   "lane": "api",
-   "latency_ms": 189,
-   "max_tokens": 2200,
-   "model": "moonshotai/kimi-k2.6",
-   "prompt_chars": 6772,
-   "prompt_tokens": 0,
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-10T05:45:21+00:00",
-   "completion_tokens": 1607,
-   "detail": "",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 50618,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 6772,
-   "prompt_tokens": 1549,
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-10T05:45:50+00:00",
-   "completion_tokens": 2200,
-   "detail": "task schema validation failed",
-   "endpoint": "nvidia:nemotron",
-   "lane": "api",
-   "latency_ms": 78986,
-   "max_tokens": 2200,
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
-   "prompt_chars": 6772,
-   "prompt_tokens": 1677,
-   "status": "invalid",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-10T05:46:03+00:00",
-   "completion_tokens": 1298,
-   "detail": "",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 42275,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 3877,
-   "prompt_tokens": 1223,
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-10T05:46:10+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
-   "endpoint": "nvidia:deepseek",
-   "lane": "api",
-   "latency_ms": 49,
-   "max_tokens": 240,
-   "model": "deepseek-ai/deepseek-v4-pro",
-   "prompt_chars": 6954,
-   "prompt_tokens": 0,
-   "status": "error",
-   "task": "quality"
-  },
-  {
-   "at": "2026-08-10T05:46:18+00:00",
-   "completion_tokens": 61,
-   "detail": "",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 8022,
-   "max_tokens": 240,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 6954,
-   "prompt_tokens": 1570,
-   "selected": true,
-   "status": "ok",
-   "task": "quality"
-  },
-  {
-   "at": "2026-08-10T05:46:30+00:00",
-   "completion_tokens": 50,
-   "detail": "",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 8583,
-   "max_tokens": 240,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 6571,
-   "prompt_tokens": 1367,
-   "selected": true,
-   "status": "ok",
-   "task": "quality"
-  }
- ],
- "generated_at": 1786340794,
+ "events": [],
+ "generated_at": 1786344479,
  "history": [
   {
    "attempts": [
@@ -5894,44 +5777,12 @@
   }
  ],
  "limits": {
-  "logical_calls": 12,
-  "requests": 18
+  "logical_calls": 10000,
+  "requests": 10000
  },
- "logical_calls": 4,
- "models": {
-  "nvidia:deepseek": {
-   "errors": 2,
-   "model": "deepseek-ai/deepseek-v4-pro",
-   "ok": 0,
-   "requests": 2,
-   "tokens": 0
-  },
-  "nvidia:glm": {
-   "errors": 0,
-   "model": "z-ai/glm-5.2",
-   "ok": 4,
-   "requests": 4,
-   "tokens": 8725
-  },
-  "nvidia:kimi": {
-   "errors": 1,
-   "model": "moonshotai/kimi-k2.6",
-   "ok": 0,
-   "requests": 1,
-   "tokens": 0
-  },
-  "nvidia:nemotron": {
-   "errors": 1,
-   "model": "nvidia/nemotron-3-ultra-550b-a55b",
-   "ok": 0,
-   "requests": 1,
-   "tokens": 3877
-  }
- },
+ "logical_calls": 0,
+ "models": {},
  "provider": "nvidia-router",
- "requests": 9,
- "task_calls": {
-  "company_research": 2,
-  "quality": 2
- }
+ "requests": 0,
+ "task_calls": {}
 }
