@@ -820,6 +820,19 @@
   "status": "active",
   "token": "backbone"
  },
+ "ashby:base-power": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1786380424,
+  "last_ok": 1786380548,
+  "name": "Base Power",
+  "origin": "harvest:zapply",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "base-power"
+ },
  "ashby:baseten": {
   "ats": "ashby",
   "extra": {},
@@ -21355,6 +21368,26 @@
   "sector": "",
   "status": "active",
   "token": "lowes"
+ },
+ "workday:lplfinancial:university": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "university"
+  },
+  "failures": 0,
+  "first_seen": 1786380424,
+  "last_ok": 1786380430,
+  "name": "LPL Financial",
+  "origin": "harvest:zapply_pm",
+  "pm_interest": true,
+  "pm_sources": [
+   "zapply_pm"
+  ],
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "lplfinancial"
  },
  "workday:lseg:Careers": {
   "ats": "workday",
