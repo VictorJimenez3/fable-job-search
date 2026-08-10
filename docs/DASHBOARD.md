@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-08-10 19:26 UTC** · companies polled directly: **1663** (registry 1869) · jobs tracked: **35447** · new this run: **130** · alerts this run: **12**_
+_Last run: **2026-08-10 20:03 UTC** · companies polled directly: **1665** (registry 1871) · jobs tracked: **35591** · new this run: **144** · alerts this run: **11**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -147,7 +147,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 80 ⭐ | 21d | PMG | [Graduate Leadership Program - Data Analytics (January Start)](https://job-boards.greenhouse.io/pmg/jobs/8587053002) | Dallas, Texas | other | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587053002) |
 | 80 ⭐ | 21d | PMG | [Graduate Leadership Program - Data Analytics (June Start)](https://job-boards.greenhouse.io/pmg/jobs/8587036002) | Dallas, Texas | other | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/pmg/jobs/8587036002) |
 | 80 ⭐ | 22d | UST HealthProof | [Business Systems & Data Analytics Associate](https://jobright.ai/jobs/info/6a5d1e1b856af468ab010424?utm_campaign=Data%20Analysis&utm_source=1103) | San Jose, CA, United States | healthtech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 80 ⭐ | 23d | SpaceX | [Full Stack Software Engineer Observability - Observability - Starlink](https://boards.greenhouse.io/spacex/jobs/8638457002) | West Athens, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 80 ⭐ | 24d | Chamber Cardio | [Data Analyst](https://jobs.ashbyhq.com/chambercardio/eb5a8d6e-def9-4ea6-a76f-b64995ad5711/application?embed=true) | Remote in USA | healthtech | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 80 ⭐ | 25d | Qualcomm | [Software Product Application Engineer](https://jobright.ai/jobs/info/6a50aad95165966a1161aba2?utm_campaign=Software%20Engineering&utm_source=1103) | San Diego, CA, United States | big_tech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 80 ⭐ | 27d | Qualcomm | [#Display Software Engineer](https://jobright.ai/jobs/info/6a56d78621f64463ad3572f0?utm_campaign=Software%20Engineering&utm_source=1103) | San Diego, CA, United States | big_tech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
@@ -156,5 +155,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 79 ⭐ | 4d | TikTok | [Software Engineer Graduate - Data Arch - E-commerce](https://lifeattiktok.com/search/7668582542044072245) | Seattle, WA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 79 ⭐ | 5d | Complete Care Centers | [Junior Software Engineer](https://jobright.ai/jobs/info/6a79decabb6ca93ae56187eb?utm_campaign=Software%20Engineering&utm_source=1103) | Maitland, FL, United States | healthtech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 79 ⭐ | 5d | CompleteCare, Inc. | [Junior Software Engineer](https://jobright.ai/jobs/info/6a73987932ebbc14ffb4fef8?utm_campaign=Software%20Engineering&utm_source=1103) | Maitland, FL, United States | healthtech | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
+| 79 ⭐ | 6d | Netrolynx AI | [Software Developer](https://jobright.ai/jobs/info/6a72357cee751e0c793478bc?utm_campaign=Software%20Engineering&utm_source=1103) | United States | ai_lab | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
