@@ -1,11 +1,13 @@
 {
  "micron": {
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "business_model": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "high",
+   "source_ids": [
+    "a898c41626"
+   ],
+   "value": "Innovating and delivering leading memory and storage solutions."
   },
   "customers": {
    "confidence": "unknown",
@@ -14,48 +16,50 @@
   },
   "error": "",
   "evidence_sha": "4e57c431520634d1",
-  "generated_at": 1785925012,
+  "generated_at": 1786437527,
   "generator": {
-   "endpoint": "nvidia:deepseek",
-   "model": "deepseek-ai/deepseek-v4-pro",
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
    "task": "company_research"
   },
   "interview_focus": {
-   "confidence": "unknown",
-   "source_ids": [],
-   "value": "Not confirmed"
+   "confidence": "medium",
+   "source_ids": [
+    "e027cdfc13",
+    "a898c41626",
+    "bee43ec0d2"
+   ],
+   "value": "Probe specifics on safety culture, work-life balance, and lab/plant exposure. Ask for details on what 'guidance of experienced engineers' looks like day-to-day, and explicitly clarify work authorization and relocation expectations for the Boise site."
   },
-  "last_attempt_at": 1785925012,
+  "last_attempt_at": 1786437527,
   "last_evidence_at": 1786425661,
   "locations": {
    "confidence": "high",
    "source_ids": [
+    "e027cdfc13",
     "a898c41626",
-    "bee43ec0d2",
-    "36b996c3da"
+    "bee43ec0d2"
    ],
-   "value": "Boise, Idaho (Main Site) confirmed for these intern roles."
+   "value": "Boise, ID (Main Site)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
     "a898c41626",
-    "bee43ec0d2",
-    "36b996c3da"
+    "bee43ec0d2"
    ],
-   "value": "Transform how the world uses information to enrich life through innovative memory and storage solutions."
+   "value": "To transform how the world uses information to enrich life."
   },
   "name": "Micron",
   "products": {
    "confidence": "high",
    "source_ids": [
-    "a898c41626",
-    "36b996c3da"
+    "a898c41626"
    ],
-   "value": "Memory and storage solutions, including DRAM technologies and semiconductors for AI, data centers, mobile devices, and automotive applications."
+   "value": "Memory and storage solutions that power artificial intelligence, data centers, mobile devices, automotive applications, and other emerging technologies."
   },
   "prompt_v": 1,
-  "refresh_after": 1791109012,
+  "refresh_after": 1791621527,
   "schema_v": 1,
   "size_stage": {
    "confidence": "unknown",
@@ -103,30 +107,30 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
+    "e027cdfc13",
     "a898c41626",
-    "bee43ec0d2",
-    "36b996c3da"
+    "bee43ec0d2"
    ],
-   "value": "Micron Technology is a world leader in memory and storage solutions that supplies semiconductors used in AI, data centers, mobile, and automotive applications."
+   "value": "Micron Technology is a world leader in innovating memory and storage solutions, accelerating the transformation of information into intelligence."
   },
-  "synthesized_evidence_sha": "470fd6df632e497c",
+  "synthesized_evidence_sha": "4e57c431520634d1",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
+    "e027cdfc13",
     "a898c41626",
-    "bee43ec0d2",
-    "36b996c3da"
+    "bee43ec0d2"
    ],
-   "value": "Chemical engineering internships involve hands-on process development and optimization. Projects include photolithography process support, DRAM thin films development, and 3D DRAM dry etch process development, working alongside experienced engineers."
+   "value": "Interns work under the guidance of experienced engineers on dedicated, high-impact technical projects focused on semiconductor process development, optimization, and characterization. Areas include Chemical Mechanical Polishing (CMP), Photolithography, and DRAM Thin Films, utilizing advanced statistics, statistical process control (SPC), process optimization, and design of experiments (DOE)."
   },
   "why_it_matters": {
-   "confidence": "medium",
+   "confidence": "high",
    "source_ids": [
+    "e027cdfc13",
     "a898c41626",
-    "bee43ec0d2",
-    "36b996c3da"
+    "bee43ec0d2"
    ],
-   "value": "Internships are project-based roles working on real semiconductor process development with experienced engineers, which aligns with a candidate seeking meaningful technical work, exposure to real processes and scale-up, and accessible mentorship. The stated company commitment to people and collaboration suggests attention to development and team culture. The candidate should confirm specifics on safety culture, work-life balance, relocation, and work authorization, as these are not detailed in t"
+   "value": "Aligns directly with the candidate's priorities: interns receive strong mentorship by working alongside experienced engineers on meaningful technical projects involving real semiconductor manufacturing processes, scale-up, and process optimization."
   }
  },
  "micron technology": {
@@ -234,7 +238,10 @@
  },
  "montenson": {
   "aliases": [],
+  "attempts": 1,
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "eec9374a99d29355",
+  "last_attempt_at": 1786437527,
   "last_evidence_at": 1786392206,
   "name": "Montenson",
   "schema_v": 1,
