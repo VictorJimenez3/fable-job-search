@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-08-11 20:10 UTC** · companies polled directly: **1682** (registry 1891) · jobs tracked: **37206** · new this run: **109** · alerts this run: **7**_
+_Last run: **2026-08-11 20:57 UTC** · companies polled directly: **1682** (registry 1891) · jobs tracked: **37249** · new this run: **43** · alerts this run: **2**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -51,7 +51,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 87 🔥 | 19d | NVIDIA | [Developer Technology Engineer New Grad - Public Sector](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Developer-Technology-Engineer--Public-Sector---New-College-Grad-2026_JR2008990) | Santa Clara, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 87 🔥 | 22d | Amazon | [Software Development Engineer - Agentic Workspaces](https://www.amazon.jobs/jobs/10482153/apply) | Seattle, WA | big_tech | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 87 🔥 | 26d | TikTok | [Backend Software Engineer Graduate - Business Governance - 2027 Start](https://lifeattiktok.com/search/7663042453461600517) | San Jose, CA | big_tech | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
-| 86 🔥 | 21h | Apple | [Frontend Engineer](https://jobs.apple.com/en-us/details/200676168) | Austin, TX | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 86 🔥 | 22h | Apple | [Frontend Engineer](https://jobs.apple.com/en-us/details/200676168) | Austin, TX | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 86 🔥 | 5d | Microsoft | [Software Development Consultant - Technology Consulting](https://apply.careers.microsoft.com/careers/job/1970393556857973) | Springfield, VA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 86 🔥 | 6d | Qualcomm | [Machine Learning Engineer - Machine Learning Engineering](https://qualcomm.eightfold.ai/careers/job/446717859953) | San Diego, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 86 🔥 | 11d | TikTok | [Software Engineer Graduate - Data Arch - E-commerce - 2027 Start](https://lifeattiktok.com/search/7668582086900680965) | Seattle, WA | big_tech | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
