@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-08-11 19:07 UTC** · companies polled directly: **1681** (registry 1890) · jobs tracked: **37097** · new this run: **59** · alerts this run: **1**_
+_Last run: **2026-08-11 19:20 UTC** · companies polled directly: **1681** (registry 1890) · jobs tracked: **37097** · new this run: **59** · alerts this run: **1**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -67,7 +67,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 85 🔥 | 11d | Mayo Clinic Healthcare London | [Associate Data Science Analyst - Artificial Intelligence & Informatics](https://jobright.ai/jobs/info/6a6d05bc32f9300c3a3e691d?utm_campaign=Data%20Analysis&utm_source=1103) | Jacksonville, FL, United States | healthtech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 85 🔥 | 20d | Microsoft | [Software Engineer - CTJ - Poly](https://jobright.ai/jobs/info/6a67122d2bf1fb2b719240b4?utm_campaign=Software%20Engineering&utm_source=1103) | Reston, VA, United States | big_tech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 85 🔥 | 22d | Amazon | [Software Development Engineer – Embedded Systems 2026 (US)](https://jobright.ai/jobs/info/6a42b46e6a9c2774b3fa6f87?utm_campaign=Software%20Engineering&utm_source=1103) | Austin, Texas, USA | big_tech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 84 ⭐ | 20h | PAM Health | [AI Engineer](https://careers-pamhealth.icims.com/jobs/91855/job?mobile=true&needsRedirect=false) | Plano, TX | healthtech | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 84 ⭐ | 21h | PAM Health | [AI Engineer](https://careers-pamhealth.icims.com/jobs/91855/job?mobile=true&needsRedirect=false) | Plano, TX | healthtech | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 84 ⭐ | 4d | Microsoft | [Software Engineering - CTJ - Poly](https://jobright.ai/jobs/info/6a76574a67a1ad0bc53c9f19?utm_campaign=Software%20Engineering&utm_source=1103) | Redmond, WA, United States | big_tech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 84 ⭐ | 7d | TikTok | [Backend Software Engineer Graduate - Global E-commerce](https://lifeattiktok.com/search/7668827379083823413) | Seattle, WA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 84 ⭐ | 7d | TikTok | [Backend Software Engineer Graduate - Global E-commerce](https://lifeattiktok.com/search/7668824169648097541) | San Jose, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
