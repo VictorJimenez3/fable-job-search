@@ -1774,3 +1774,11 @@ source queries stay unchanged, and the feature must normalize the existing
 location values without creating a second ingestion path. Multi-location jobs
 must remain visible under every applicable country/state bucket rather than
 being assigned to only one location.
+## 119. The friendly Vercel alias is the only production door (2026-08-12)
+
+Users are directed to `job-radar-newgrad.vercel.app`, not deployment-specific
+Vercel hostnames. Production deployment is therefore a two-part operation:
+build the current `webapp/` commit and explicitly alias that deployment to the
+friendly URL. The production workflow verifies the live marker and fails when
+the alias cannot be assigned, preventing a successful-looking deploy from
+leaving users on an older build.

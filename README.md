@@ -21,9 +21,18 @@ and notification setting.
 **[→ RSS feed](docs/feed.xml)** ·
 **[→ Cross-CLI handoff notes](docs/CLI_HANDOFF.md)**
 
-The platform is now decision-first: filter by role family, sponsorship, and
-required experience; see honest eligibility facts before opening a posting;
-then use one primary apply link with explicit To apply/Applied tracking. In the
+The friendly Vercel URL is the canonical production door. Production deploys
+run from `claude/newgrad-job-search-system-9gbj9k` and promote the newest build
+to `job-radar-newgrad.vercel.app`; users should never need a deployment-specific
+URL.
+
+The platform is now decision-first: filter by role family, sponsorship,
+required experience, and minimum degree; see honest eligibility facts before opening a posting;
+then use one primary apply link with explicit To apply/Applied tracking. A
+required master's or PhD is shown directly on the role, receives a substantial
+auditable score dock, and becomes dashboard-only rather than alertable; strong
+matches remain visible at the dashboard floor for human review in case the
+posting is mistaken. In the
 Jobs list, click a row once to save it (green); click the saved row again to
 exclude it from active Jobs (red). Exclusions are view-only and reversible, so
 they do not change the score, crawler, tracker history, or notifications.

@@ -1,0 +1,73 @@
+name: deploy platform to Vercel
+
+on:
+  push:
+    branches: [claude/newgrad-job-search-system-9gbj9k]
+    paths:
+      - "webapp/**"
+      - ".github/workflows/vercel-production.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: vercel-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: build, deploy, and keep the friendly alias current
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      contents: read
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }}
+      VERCEL_ALIAS: ${{ vars.VERCEL_ALIAS }}
+    defaults:
+      run:
+        working-directory: webapp
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check deployment settings
+        run: |
+          test -n "$VERCEL_TOKEN" || { echo "Missing production secret VERCEL_TOKEN"; exit 1; }
+          test -n "$VERCEL_ORG_ID" || { echo "Missing production variable VERCEL_ORG_ID"; exit 1; }
+          test -n "$VERCEL_PROJECT_ID" || { echo "Missing production variable VERCEL_PROJECT_ID"; exit 1; }
+          test -n "$VERCEL_ALIAS" || { echo "Missing production variable VERCEL_ALIAS"; exit 1; }
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Link the production Vercel project
+        run: vercel link --yes --project="$VERCEL_PROJECT_ID" --scope="$VERCEL_ORG_ID" --token="$VERCEL_TOKEN"
+
+      - name: Pull production settings
+        run: vercel pull --yes --environment=production --token="$VERCEL_TOKEN" --scope="$VERCEL_ORG_ID"
+
+      - name: Build production output
+        run: vercel build --prod --token="$VERCEL_TOKEN" --scope="$VERCEL_ORG_ID"
+
+      - name: Deploy and promote production
+        id: deploy
+        run: |
+          url="$(vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN" --scope="$VERCEL_ORG_ID")"
+          test -n "$url" || { echo "Vercel returned no deployment URL"; exit 1; }
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "deployment=$url"
+
+      - name: Point the friendly URL at this deployment
+        run: vercel alias set "${{ steps.deploy.outputs.url }}" "$VERCEL_ALIAS" --token="$VERCEL_TOKEN" --scope="$VERCEL_ORG_ID"
+
+      - name: Verify the friendly URL serves this build
+        run: |
+          for attempt in 1 2 3 4 5; do
+            if curl --fail --silent --show-error "https://$VERCEL_ALIAS/" | grep -qi "Best match lookback"; then
+              echo "friendly alias is serving the new platform build"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "friendly alias did not expose the expected platform marker"
+          exit 1

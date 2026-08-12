@@ -189,6 +189,14 @@ Before changing the radar, read these in order:
   Forks with an additional Vercel alias should list its hostname in the
   comma-separated `AUTH_ALIAS_HOSTS` environment variable; Victor's memorable
   alias is built in.
+- **Canonical Vercel deployment:** `job-radar-newgrad.vercel.app` is the stable
+  user-facing alias. `.github/workflows/vercel-production.yml` builds the
+  `webapp/` project, deploys production, aliases that newest deployment to the
+  friendly URL, and verifies the marker before succeeding. Required GitHub
+  production settings are secret `VERCEL_TOKEN` and variables
+  `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`, and `VERCEL_ALIAS` (set the last to
+  `job-radar-newgrad.vercel.app`). If alias assignment fails, the workflow must
+  fail rather than silently leave users on an older deployment.
 - **The ChemE profile is a separate production board** at
   `job-radar-cheme.vercel.app`, backed by `claude/cheme-intern-radar` and
   `RADAR_PROFILE=cheme`. The default production branch owns the three
