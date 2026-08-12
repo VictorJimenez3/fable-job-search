@@ -179,14 +179,18 @@ that made it into the rendered draft, supported terms still missing, and
 requirements your evidence cannot support. The visual audit adds a green/amber/
 red text diff, an ATS-highlighted review overlay (the downloadable PDF remains
 clean), provider/model flow, elapsed time, current-run tokens, and observed
-weekly usage. Space QA measures the bottom geometry and tests whether one more
-standard line fits. If it does, a separate evidence pass may add a strong unused
-bullet or trial a unique project/experience entry; it keeps the addition only if
-the original evidence survives and the new content earns the space. If the
-posting text was not captured, the report says so instead of pretending the
-draft was keyword-tailored. A completed draft must also leave at least 12pt of
-right-edge safety on every bullet; near-wraps are rejected and remain visible
-as failed run diagnostics.
+weekly usage. Space QA measures the bottom geometry and understands both
+current and legacy capacity reports. If one more line fits—or the page exceeds
+the 24pt clearance target—a separate evidence pass asks for strong unused
+content and compiles additions until the next trial would overflow. A new
+project or experience must earn its heading with two bullets. Coursework,
+HackMIT selection proof, and Awards are reclaimed before lower-value project or
+leadership lines; core experience is preserved. The report shows any
+replacement and the evidence it traded away. If the posting text was not
+captured, the report says so instead of pretending the draft was
+keyword-tailored. A completed draft must also leave at least 12pt of right-edge
+safety on every bullet; near-wraps are rejected and remain visible as failed
+run diagnostics.
 
 ### Workshop editing
 
@@ -216,7 +220,10 @@ coverage, gaps, evidence confidence, and private source-backed score.
 
 The generator does not force every role to use the same evidence. It creates a
 strongest-first adaptive pool: leadership, projects, and bullet count are
-chosen for the target, and no weak backup lines are added to fill space.
+chosen for the target, and no weak backup lines are added to fill space. When
+measured capacity remains, it may add verified source evidence or make a
+documented low-value project/leadership swap to expose a stronger unique
+capability.
 Every retained bullet must stay on one visual line. Normal bottom clearance is
 informational when no additional authorized line earns the space. Independent
 critics return critique-only gate data; Codex may revise against it, but the

@@ -417,12 +417,15 @@ Generation asks for a ranked evidence portfolio with adaptive sections. There
 is no required leadership section, project count, or bullet floor: the writer
 must choose complementary evidence and the renderer removes only duplicate or
 overflowing content. It never pads a page with weak lines. Actual PDF line
-widths hard-fail wrapping. When a compiled draft has room for another standard
-line, a separate measured-space pass asks for verified unused evidence; it may
-append a distinct bullet or trial a unique project/experience entry, and keeps it
-only if the original selected evidence remains intact and the new content earns
-the space. Remaining clearance is explained as a measured decision, not hidden
-behind a vague density warning. Unsupported
+widths hard-fail wrapping. When a compiled draft has a usable measured window
+(including a legacy "one more line fits" result or more than 24pt of bottom
+clearance), a separate space pass asks for verified unused evidence and keeps
+additions only after compiled trials fill the window. A new project or
+experience must earn its heading with two bullets. Flexible coursework,
+HackMIT-selection proof, and Awards are reclaimed before the harness considers
+replacing lower-value project or leadership bullets; core experience is not
+trimmed by this last-mile pass. Remaining clearance is explained as a measured
+decision, not hidden behind a vague density warning. Unsupported
 inline LaTeX and lost scope qualifiers such as `synthetic`, `prototype`, or
 `POC` are repaired or rejected before packing. Independent critics return
 critique-only reports; Codex may revise against them, but the owner must review

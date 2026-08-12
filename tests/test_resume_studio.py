@@ -324,6 +324,62 @@ def test_space_expansion_can_propose_a_unique_unused_project_as_a_trial_entry():
     assert trial["projects"][-1]["bullets"][0]["source_id"] == "project:item0:b3"
 
 
+def test_measured_space_available_reads_legacy_capacity_reports():
+    assert rs.measured_space_available({"vertical_capacity": {"qa_pages": 1, "warning": "one more bullet still fits"}})
+    assert not rs.measured_space_available({"vertical_capacity": {"qa_pages": 2, "warning": "one more bullet overflows"}})
+
+
+def test_new_entry_space_trial_requires_two_bullets():
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    plan["projects"] = [entry for entry in plan["projects"] if entry["source_id"] != "project:item0"]
+    graph = {"nodes": [
+        {"id": bullet["id"], "claim_allowed": True}
+        for entry in catalog["entries"].values()
+        for bullet in entry["bullets"]
+    ]}
+    addition = {
+        "entry_id": "project:item0", "placement": "new_entry", "section": "projects",
+        "source_id": "project:item0:b1", "source_ids": ["project:item0:b1"],
+        "evidence_ids": ["project:item0:b1"], "text": catalog["entries"]["project:item0"]["bullets"][0]["text"],
+        "priority": 90, "target_signal": "breadth", "why": "distinct project",
+    }
+    with __import__("tempfile").TemporaryDirectory() as directory:
+        _, result = rs.expand_into_measured_space(plan, [addition], catalog, graph, Path(directory))
+    assert not result["applied"]
+    assert "requires at least two bullets" in result["rejected"][0]["reason"]
+
+
+def test_deterministic_space_fallback_prefers_distinct_selected_entries():
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    plan["experiences"][0]["bullets"].pop()
+    graph = {"nodes": [
+        {"id": bullet["id"], "claim_allowed": True}
+        for entry in catalog["entries"].values()
+        for bullet in entry["bullets"]
+    ]}
+    additions = rs.deterministic_space_additions(plan, catalog, graph=graph, keyword_strategy={})
+    assert additions
+    assert additions[0]["placement"] == "append_bullet"
+    assert additions[0]["entry_id"] == "experience:item0"
+
+
+def test_space_swap_candidates_never_trim_core_experience():
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    candidates = rs._space_removal_candidates(plan)
+    assert candidates
+    assert all(item[1] in {"projects", "leadership"} for item in candidates)
+    trimmed = rs._apply_space_removals(plan, candidates[:2])
+    assert sum(len(entry["bullets"]) for entry in trimmed["experiences"]) == sum(
+        len(entry["bullets"]) for entry in plan["experiences"]
+    )
+
+
 def test_enhanced_plan_can_synthesize_multiple_authorized_source_lines():
     catalog = _fixture_catalog()
     plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)

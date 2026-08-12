@@ -1771,3 +1771,22 @@ their private Google tracker rows, which receive the public lifecycle status and
 notice; application Stage remains a separate user-controlled field. The `lifecycle` CLI
 command provides a manual reconciliation/backfill path, and `RADAR_HISTORY_DAYS` plus the
 lifecycle age/grace variables control retention and source-gap sensitivity.
+
+## 114. Resume Studio must follow measured capacity to a compiled stopping point (2026-08-11)
+
+The one-page contract is not satisfied merely because a draft compiles. Resume Studio now
+reconciles current and legacy capacity-test reports with measured bottom geometry, triggering
+a space pass when a verified extra line fits or bottom clearance exceeds the 24pt density
+target. Codex receives the first editorial pass; a deterministic, source-authorized fallback
+then ranks unused evidence and compiles each candidate until the next trial fails. This keeps
+the system useful when a provider returns no addition or stops after a single line despite
+more room.
+
+An unused project or experience may enter only as an atomic heading-plus-two-bullet group.
+Flexible coursework, the redundant HackMIT selection proof, and Awards are reclaimed before
+substantive evidence. If a materially stronger unique entry still needs room, the bounded
+last-mile pass may replace one or two lower-value project or leadership bullets, but never
+core chronological experience. Every accepted addition, rejected trial, and replacement is
+stored in the private audit report. The policy maximizes evidence density without padding,
+weakening core experience, or treating whitespace reduction as a reason to paraphrase strong
+lines.

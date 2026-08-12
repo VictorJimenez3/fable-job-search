@@ -34,9 +34,9 @@ Before changing the radar, read these in order:
   `docs/feed.xml`, or `docs/internships/`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
-## Current operational facts (verified 2026-08-08)
+## Current operational facts (verified 2026-08-11)
 
-### Latest change (verified 2026-08-08)
+### Latest change (verified 2026-08-11)
 
 - **Minimum-degree evidence:** posting analysis now extracts bachelor's,
   master's, and PhD minimums. Jobs rows show the minimum degree beside visa
@@ -459,6 +459,15 @@ Before changing the radar, read these in order:
   the HackMIT acceptance-pool/selection bullet, then the aggregated Awards
   line. The HackMIT reserve removes only its prestige proof, never the
   project's implementation bullets.
+- **Resume Studio measured-space follow-through (DECISION #114):** the density
+  pass now reads both current and legacy capacity reports and triggers when a
+  compiled page has a usable measured window, not only when a single QA line
+  says it fits. Codex gets the first editorial pass; a deterministic
+  source-authorized fallback then compiles additions until the next trial fails.
+  A new project/experience is atomic at two bullets. Flexible front matter is
+  reclaimed first; if a unique addition still needs room, only lower-value
+  project or leadership bullets may be displaced, never core experience. The
+  audit records additions, rejected trials, and replacement evidence.
 - **Durable candidate-line memory (DECISION #110):** strong or reusable lines
   from private tailoring runs must be promoted into the relevant Markdown
   dossier/iteration log with source support and an `approved`, `bench`, or

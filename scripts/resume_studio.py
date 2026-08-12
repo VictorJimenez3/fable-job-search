@@ -31,6 +31,7 @@ import concurrent.futures
 import datetime as dt
 from difflib import SequenceMatcher
 import html
+import itertools
 import json
 import os
 import re
@@ -2586,15 +2587,17 @@ def space_expansion_prompt(
             })
     return (
         "You are the measured-density editor for Victor's private resume. A compiled one-page draft has passed its "
-        "hard layout checks, and deterministic QA says one additional standard one-line bullet fits. Return only the "
-        "narrow expansion object requested by the schema. Do not return a complete resume plan or LaTeX.\n\n"
-        "Additions are optional: return an empty additions array when no unused source line materially improves the "
-        "target argument. Never pad whitespace. Prefer one strong unused bullet over several weak or redundant lines. "
+        "hard layout checks, and deterministic QA found usable bottom capacity. Return only the narrow expansion "
+        "object requested by the schema. Do not return a complete resume plan or LaTeX.\n\n"
+        "Additions are optional only when no unused source line materially improves the target argument. Never pad "
+        "whitespace. Fill the measured window until the next compiled trial would overflow: prefer strong unused "
+        "bullets over weak or redundant lines, and do not stop after one line if another verified line still fits. "
         "Use placement=append_bullet for an entry already selected below. You may use placement=new_entry for one "
         "unused project or experience when it adds unique capability coverage and the compiled trial proves the "
-        "heading-plus-bullet fits; a new entry has a higher bar than an extra bullet. Do not reorder existing bullets "
-        "or entries. Experience entries must remain in reverse chronological job order. Keep every existing selected "
-        "bullet intact.\n\n"
+        "heading-plus-two-bullets fits; a new entry has a higher bar than an extra bullet and must earn both lines. Do not reorder existing bullets "
+        "or entries. Experience entries must remain in reverse chronological job order. Preserve core experience evidence. "
+        "If a unique two-bullet project is materially stronger, the deterministic harness may reclaim coursework/Awards "
+        "first and then only lower-value project or leadership lines; record that tradeoff rather than padding the page.\n\n"
         "Choose an unused line only when it adds target relevance, technical depth, breadth, differentiation, or a "
         "distinct interview thread. Do not repeat an experience's agents/RAG/retrieval story through a project unless "
         "the line adds a different engineering surface. Preserve prototype, synthetic, simulation, POC, and privacy "
@@ -3302,48 +3305,285 @@ def _append_space_addition(plan: Dict[str, Any], addition: Dict[str, Any]) -> Di
     return value
 
 
+def deterministic_space_additions(
+    plan: Dict[str, Any], catalog: Dict[str, Any],
+    graph: Optional[Dict[str, Any]] = None,
+    keyword_strategy: Optional[Dict[str, Any]] = None,
+) -> List[Dict[str, Any]]:
+    """Build a ranked fallback pool when the expansion lane returns no usable line.
+
+    This is not a replacement for editorial selection. It is a last-mile
+    density guard: it only uses unused authoritative bullets, prefers an
+    existing entry (no heading cost), and proposes a new technical entry only
+    with two bullets so the page does not gain a lonely project heading.
+    """
+    entries = catalog.get("entries") or {}
+    selected_ids = _selected_bullet_ids(plan)
+    selected_entries = {
+        str(entry.get("source_id") or ""): (section, entry)
+        for section in ("experiences", "projects", "leadership")
+        for entry in plan.get(section, []) or []
+    }
+    authority = {
+        str(node.get("id"))
+        for node in (graph or {}).get("nodes", [])
+        if node.get("claim_allowed")
+    }
+    supported_terms = [
+        str(item.get("term") or "")
+        for item in (keyword_strategy or {}).get("terms", [])
+        if item.get("supported") and str(item.get("term") or "")
+    ]
+
+    def candidate_score(text: str, kind: str, placement: str, entry_bullet_count: int, heading: str) -> float:
+        score = 0.0
+        score += 8.0 if placement == "append_bullet" else 0.0
+        score += max(0, 3 - min(entry_bullet_count, 3))
+        score += 6.0 * sum(_keyword_present(term, text) for term in supported_terms)
+        score += 2.0 * sum(bool(re.search(pattern, text, re.I)) for pattern in PORTFOLIO_SIGNAL_PATTERNS.values())
+        if re.search(r"\b\d[\d,.]*\+?%?|\$\d", text):
+            score += 3.0
+        if re.search(r"\b(?:architected|engineered|implemented|designed|built|trained|orchestrated|pipeline|model|api|database)\b", text, re.I):
+            score += 2.0
+        if kind == "leadership":
+            score -= 10.0
+        if heading and re.search(r"1st place|best security|overall|hack", heading, re.I) and re.search(r"\b(?:won|selected|place|competitors?)\b", text, re.I):
+            score -= 5.0
+        return score
+
+    def raw_candidate(entry_id: str, entry: Dict[str, Any], bullet: Dict[str, Any], placement: str, section: str) -> Dict[str, Any]:
+        bullet_id = str(bullet.get("id") or "")
+        text = str(bullet.get("text") or "")
+        return {
+            "entry_id": entry_id,
+            "placement": placement,
+            "section": section,
+            "source_id": bullet_id,
+            "source_ids": [bullet_id],
+            "evidence_ids": [bullet_id],
+            "text": text,
+            "priority": 75,
+            "target_signal": "measured space capability coverage",
+            "why": "Uses verified unused evidence to close measured page capacity without displacing selected lines.",
+            "_score": candidate_score(
+                _latex_plain(text), str(entry.get("kind") or ""), placement,
+                len(selected_entries.get(entry_id, ("", {"bullets": []}))[1].get("bullets", [])),
+                str(entry.get("heading") or ""),
+            ),
+        }
+
+    append_candidates = []
+    new_entry_groups: Dict[str, List[Dict[str, Any]]] = {}
+    for entry_id, entry in entries.items():
+        entry_id = str(entry_id)
+        kind = str(entry.get("kind") or "")
+        section = {"experience": "experiences", "project": "projects", "leadership": "leadership"}.get(kind, "")
+        if not section:
+            continue
+        selected = selected_entries.get(entry_id)
+        selected_bullets = [
+            _latex_plain(str(bullet.get("text") or ""))
+            for bullet in (selected[1].get("bullets", []) if selected else [])
+        ]
+        if selected and len(selected[1].get("bullets", [])) >= PORTFOLIO_CAPS[section]["bullets"]:
+            continue
+        unused = []
+        for bullet in entry.get("bullets", [])[:12]:
+            bullet_id = str(bullet.get("id") or "")
+            text = _latex_plain(str(bullet.get("text") or ""))
+            if not bullet_id or bullet_id in selected_ids or len(text) < MIN_MEANINGFUL_BULLET_CHARS:
+                continue
+            if authority and bullet_id not in authority:
+                continue
+            if any(_same_entry_resume_bullet(text, selected_text) for selected_text in selected_bullets):
+                continue
+            candidate = raw_candidate(entry_id, entry, bullet, "append_bullet" if selected else "new_entry", section)
+            unused.append(candidate)
+        if selected:
+            append_candidates.extend(unused)
+        elif kind in {"project", "experience"} and len(unused) >= 2:
+            new_entry_groups[entry_id] = sorted(unused, key=lambda item: (-item["_score"], item["source_id"]))[:2]
+
+    append_candidates.sort(key=lambda item: (-item["_score"], item["source_id"]))
+    new_groups = sorted(
+        new_entry_groups.values(),
+        key=lambda group: (-sum(item["_score"] for item in group), group[0]["entry_id"]),
+    )
+    # Give distinct selected entries a first look, then allow a second bullet
+    # from the strongest entry if the compiled trials still have room.
+    diversified = []
+    seen_entries = set()
+    for item in append_candidates:
+        if item["entry_id"] in seen_entries:
+            continue
+        diversified.append(item)
+        seen_entries.add(item["entry_id"])
+        if len(diversified) >= 2:
+            break
+    diversified.extend(item for item in append_candidates if item not in diversified)
+    result = diversified[:2]
+    remaining = MAX_SPACE_EXPANSION_CANDIDATES - len(result)
+    if new_groups and len(new_groups[0]) <= remaining:
+        result.extend(new_groups[0])
+        remaining -= len(new_groups[0])
+    result.extend(diversified[2:2 + max(0, remaining)])
+    for item in result:
+        item.pop("_score", None)
+    return result
+
+
+def _space_removal_candidates(plan: Dict[str, Any]) -> List[Tuple[float, str, int, int]]:
+    """Rank safe evidence to reclaim when a stronger two-line entry needs room.
+
+    Expansion is deliberately conservative: flexible coursework/Awards are
+    reclaimed by the normal packer first, then only project or leadership
+    bullets may be displaced. Core chronological experience is never trimmed
+    by this last-mile density pass.
+    """
+    candidates: List[Tuple[float, str, int, int]] = []
+    for section in ("leadership", "projects"):
+        for entry_index, entry in enumerate(plan.get(section, []) or []):
+            bullets = entry.get("bullets", []) or []
+            if len(bullets) <= 1:
+                continue
+            heading = _latex_plain(str(entry.get("heading") or ""))
+            for bullet_index, bullet in enumerate(bullets):
+                text = _latex_plain(str(bullet.get("text") or ""))
+                cost = _bullet_value(bullet)
+                # Leadership is useful only when it is the best available
+                # evidence; it is the first substantive category to reclaim.
+                if section == "leadership":
+                    cost -= 35.0
+                # A project-heading award/selection line is a safer sacrifice
+                # than implementation evidence that proves a capability.
+                if re.search(r"1st place|best security|overall|hack", heading, re.I) and re.search(
+                    r"\b(?:won|selected|place|competitors?)\b", text, re.I
+                ):
+                    cost -= 20.0
+                candidates.append((cost, section, entry_index, bullet_index))
+    return sorted(candidates, key=lambda item: (item[0], item[1], item[2], item[3]))
+
+
+def _apply_space_removals(
+    plan: Dict[str, Any], actions: Iterable[Tuple[float, str, int, int]]
+) -> Dict[str, Any]:
+    value = copy.deepcopy(plan)
+    # Removing from the end of a bullet list first keeps source indexes valid
+    # when two lower-value lines from the same project are reclaimed together.
+    ordered = sorted(actions, key=lambda item: (item[1], item[2], item[3]), reverse=True)
+    for action in ordered:
+        _apply_removal(value, (action[0], action[1], action[2], action[3]))
+    return value
+
+
 def expand_into_measured_space(
     plan: Dict[str, Any], additions: List[Dict[str, Any]], catalog: Dict[str, Any],
     graph: Optional[Dict[str, Any]], run_dir: Path,
 ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
-    """Try additions one at a time and keep only those that preserve all prior evidence."""
+    """Try additions while preserving evidence and atomic new-entry coverage.
+
+    An extra bullet can be tested independently. A new project/experience is
+    different: its heading cost is only justified when at least two bullets
+    from that entry fit together, so the trial is atomic for new entries.
+    """
     current = copy.deepcopy(plan)
     original_ids = _selected_bullet_ids(plan)
     applied = []
+    replaced = []
     rejected = []
-    for index, addition in enumerate(additions[:MAX_SPACE_EXPANSION_CANDIDATES], start=1):
-        trial = _append_space_addition(current, addition)
-        trial = enforce_experience_order(trial, catalog)
-        normalized, errors = validate_plan(trial, catalog, enhance=True, graph=graph)
-        if errors:
-            rejected.append({"source_id": addition["source_id"], "reason": "; ".join(errors[:3])})
-            continue
-        try:
-            packed, packing = pack_plan_to_page(
-                normalized, catalog, run_dir / ("space_expansion_%02d" % index)
-            )
-        except (OSError, RuntimeError, ValueError) as exc:
-            rejected.append({"source_id": addition["source_id"], "reason": str(exc)})
-            continue
-        packed_ids = _selected_bullet_ids(packed)
-        if not original_ids.issubset(packed_ids) or addition["source_id"] not in packed_ids:
+    groups: List[List[Dict[str, Any]]] = []
+    new_entry_groups: Dict[str, List[Dict[str, Any]]] = {}
+    for addition in additions[:MAX_SPACE_EXPANSION_CANDIDATES]:
+        if str(addition.get("placement") or "") == "new_entry":
+            new_entry_groups.setdefault(str(addition.get("entry_id") or ""), []).append(addition)
+        else:
+            groups.append([addition])
+    for group in new_entry_groups.values():
+        groups.append(group)
+    for index, group in enumerate(groups, start=1):
+        if any(str(item.get("placement") or "") == "new_entry" for item in group) and len(group) < 2:
             rejected.append({
-                "source_id": addition["source_id"],
-                "reason": "would displace existing selected evidence or fail the one-page contract",
+                "source_id": str(group[0].get("source_id") or ""),
+                "reason": "new project/experience requires at least two bullets to earn its heading",
             })
             continue
+        group_ids = {str(item.get("source_id") or "") for item in group}
+        attempts = [("direct", [])]
+        removals = _space_removal_candidates(current)
+        # A stronger unused line or a new entry can displace one or two
+        # low-value project/leadership lines when flexible front matter is not
+        # enough. Limit the search so a dense run remains bounded while still
+        # covering Victor's explicit "replace two weaker bullets with a
+        # stronger project" case.
+        attempts.extend(("swap", list(actions)) for actions in removals[:6])
+        attempts.extend(
+            ("swap", list(actions))
+            for actions in itertools.combinations(removals[:6], 2)
+        )
+        accepted = None
+        last_reason = "would displace existing selected evidence or fail the one-page contract"
+        for attempt_index, (attempt_kind, actions) in enumerate(attempts, start=1):
+            trial = _apply_space_removals(current, actions) if actions else copy.deepcopy(current)
+            for addition in group:
+                trial = _append_space_addition(trial, addition)
+            trial = enforce_experience_order(trial, catalog)
+            normalized, errors = validate_plan(trial, catalog, enhance=True, graph=graph)
+            if errors:
+                last_reason = "; ".join(errors[:3])
+                continue
+            try:
+                packed, packing = pack_plan_to_page(
+                    normalized, catalog, run_dir / ("space_expansion_%02d_%s%02d" % (index, attempt_kind, attempt_index))
+                )
+            except (OSError, RuntimeError, ValueError) as exc:
+                last_reason = str(exc)
+                continue
+            packed_ids = _selected_bullet_ids(packed)
+            preserved_ids = set(original_ids)
+            removed_ids = {
+                str(current[section][entry_index]["bullets"][bullet_index].get("source_id") or "")
+                for _, section, entry_index, bullet_index in actions
+            }
+            preserved_ids -= removed_ids
+            if preserved_ids.issubset(packed_ids) and group_ids.issubset(packed_ids):
+                accepted = (packed, packing, actions)
+                break
+            last_reason = (
+                "would displace evidence beyond the explicitly allowed lower-value project/leadership swap"
+                if actions else "would displace existing selected evidence or fail the one-page contract"
+            )
+        if accepted is None:
+            rejected.append({
+                "source_id": group[0]["source_id"],
+                "reason": last_reason,
+            })
+            continue
+        packed, packing, actions = accepted
+        if actions:
+            for _, section, entry_index, bullet_index in actions:
+                removed = current[section][entry_index]["bullets"][bullet_index]
+                replaced.append({
+                    "source_id": str(removed.get("source_id") or ""),
+                    "entry_id": str(current[section][entry_index].get("source_id") or ""),
+                    "section": section,
+                    "text": _latex_plain(str(removed.get("text") or "")),
+                    "reason": "reclaimed lower-value evidence for a stronger unique measured-space entry",
+                })
         current = packed
-        applied.append({
-            "source_id": addition["source_id"],
-            "entry_id": addition["entry_id"],
-            "target_signal": addition.get("target_signal", ""),
-            "why": addition.get("why", ""),
-            "text": _latex_plain(addition.get("text", "")),
-            "packing": packing,
-        })
+        for addition in group:
+            applied.append({
+                "source_id": addition["source_id"],
+                "entry_id": addition["entry_id"],
+                "target_signal": addition.get("target_signal", ""),
+                "why": addition.get("why", ""),
+                "text": _latex_plain(addition.get("text", "")),
+                "packing": packing,
+                "replaced_source_ids": [item["source_id"] for item in replaced[-len(actions):]] if actions else [],
+            })
         original_ids = _selected_bullet_ids(current)
     return current, {
         "applied": applied,
+        "replaced": replaced,
         "rejected": rejected,
         "attempted": bool(additions),
         "candidate_count": len(additions),
@@ -5087,6 +5327,18 @@ def pdf_layout(
     return result
 
 
+def measured_space_available(layout: Dict[str, Any]) -> bool:
+    """Read current and legacy capacity-test shapes without trusting whitespace."""
+    capacity = layout.get("vertical_capacity") or {}
+    if capacity.get("one_more_bullet_fits") or layout.get("one_more_bullet_fits"):
+        return True
+    # Runs made just before the explicit boolean was added recorded the same
+    # result as ``qa_pages=1`` plus this warning. Keep those saved runs
+    # auditable and make future reruns use the same decision.
+    warning = str(capacity.get("warning") or "").lower()
+    return capacity.get("qa_pages") == 1 and "one more bullet still fits" in warning
+
+
 def space_audit(
     plan: Dict[str, Any], layout: Dict[str, Any], catalog: Dict[str, Any],
     expansion: Optional[Dict[str, Any]] = None,
@@ -5127,10 +5379,14 @@ def space_audit(
                 "text": text,
             })
     unused.sort(key=lambda item: (-_bullet_value(item), item["source_id"]))
-    capacity = layout.get("vertical_capacity") or {}
     expansion = expansion or {}
     applied = list(expansion.get("applied") or [])
-    one_more_fits = bool(capacity.get("one_more_bullet_fits") or layout.get("one_more_bullet_fits"))
+    replaced = list(expansion.get("replaced") or [])
+    one_more_fits = measured_space_available(layout)
+    density_gap = layout.get("density_gap_pt")
+    space_review_needed = one_more_fits or (
+        isinstance(density_gap, (int, float)) and density_gap > MAX_DENSITY_GAP_PT
+    )
     return {
         "measured_content_bottom_pt": layout.get("content_bottom_pt"),
         "canonical_reference_bottom_pt": layout.get("reference_content_bottom_pt"),
@@ -5138,13 +5394,17 @@ def space_audit(
         "max_density_gap_pt": MAX_DENSITY_GAP_PT,
         "density_pass": bool(layout.get("density_pass")),
         "one_more_standard_bullet_fits": one_more_fits,
+        "space_review_needed": space_review_needed,
         "unused_candidate_count": len(unused),
         "unused_verified_candidates": unused[:12],
         "expansion_attempted": bool(expansion.get("attempted")),
         "expansion_candidate_count": int(expansion.get("candidate_count") or 0),
         "expansion_applied": applied,
+        "expansion_replaced": replaced,
         "expansion_rejected": list(expansion.get("rejected") or []),
         "decision": str(expansion.get("decision") or (
+            "Measured bottom clearance exceeds the density target; the expansion pass should evaluate verified unused evidence."
+            if space_review_needed and not one_more_fits else
             "A further standard line did not fit the measured bottom capacity."
             if not one_more_fits else
             "A further line fits; the expansion pass should evaluate verified unused evidence."
@@ -5495,8 +5755,11 @@ def run_tailoring(
         "rejected": [],
         "decision": "No expansion was needed because the measured page had no spare standard line.",
     }
-    if enhance and layout.get("one_more_bullet_fits"):
-        update("space_review", "Measured spare page capacity; asking Codex for one strong unused evidence line")
+    if enhance and (
+        measured_space_available(layout)
+        or (isinstance(layout.get("density_gap_pt"), (int, float)) and layout["density_gap_pt"] > MAX_DENSITY_GAP_PT)
+    ):
+        update("space_review", "Measured spare page capacity; asking Codex to fill it with verified unused evidence")
         expansion_record = run_provider(
             writer,
             space_expansion_prompt(context, plan, layout, catalog, graph=graph, unrestricted=unrestricted),
@@ -5531,6 +5794,34 @@ def run_tailoring(
         else:
             packing["space_expansion"] = space_expansion
             write_json(run_dir / "layout_packing.json", packing)
+    # Provider output is judgment-first, but it cannot be allowed to leave a
+    # measured window empty simply because it returned no addition. Use the
+    # source catalog as a deterministic last-mile fallback, then compile every
+    # candidate trial. Existing selected entries are preferred; new entries
+    # arrive only as atomic two-bullet groups.
+    if enhance and (
+        measured_space_available(layout)
+        or (isinstance(layout.get("density_gap_pt"), (int, float)) and layout["density_gap_pt"] > MAX_DENSITY_GAP_PT)
+    ):
+        fallback_additions = deterministic_space_additions(
+            plan, catalog, graph=graph, keyword_strategy=context.get("target_keywords")
+        )
+        if fallback_additions:
+            fallback_plan, fallback_result = expand_into_measured_space(
+                plan, fallback_additions, catalog, graph, run_dir / "deterministic_space_fallback",
+            )
+            space_expansion["fallback_candidates"] = len(fallback_additions)
+            space_expansion["fallback_rejected"] = list(fallback_result.get("rejected") or [])
+            space_expansion["replaced"] = list(space_expansion.get("replaced") or []) + list(fallback_result.get("replaced") or [])
+            if fallback_result.get("applied"):
+                plan = fallback_plan
+                space_expansion["applied"] = list(space_expansion.get("applied") or []) + list(fallback_result["applied"])
+                space_expansion["decision"] = "Filled measured page capacity with model-selected and deterministic verified evidence until the next compiled trial failed."
+                packing["space_expansion"] = space_expansion
+                write_json(run_dir / "content_plan.json", plan)
+                write_json(run_dir / "layout_packing.json", packing)
+                write_json(run_dir / "space_expansion_fallback.json", fallback_result)
+                chosen, layout, preview = render_candidate(plan, run_dir)
     line_edits: List[Dict[str, Any]] = []
     line_compactions: List[Dict[str, Any]] = []
     editable_pool = copy.deepcopy(plan)
@@ -6212,13 +6503,13 @@ renderReport=function(status){
   const atsHtml=atsEntries.length?atsEntries.map(item=>`<div class="ats-entry"><strong>${esc(item.entry)}</strong><span>${markTerms(item.text)}</span></div>`).join(''):'<div class="meta">No final bullets were returned.</div>';
   const weekly=studioUsage?`<p class="meta"><strong>This week:</strong> ${Number(studioUsage.codex_tokens||0).toLocaleString()} observed Codex tokens · ${studioUsage.codex_calls||0} Codex calls · ${studioUsage.runs||0} saved runs${studioUsage.weekly_limit_tokens?` · ${studioUsage.percent_of_limit}% of configured limit`:''}</p>`:'<p class="meta">Weekly usage is loading or unavailable from the local CLI.</p>';
   const chronology=changes.experience_order?.chronology_preserved!==false;
-  const oneMore=space.one_more_standard_bullet_fits;
-  const applied=space.expansion_applied||[],rejected=space.expansion_rejected||[],candidates=space.unused_verified_candidates||[];
+  const oneMore=space.one_more_standard_bullet_fits,spaceReview=space.space_review_needed;
+  const applied=space.expansion_applied||[],replaced=space.expansion_replaced||[],rejected=space.expansion_rejected||[],candidates=space.unused_verified_candidates||[];
   const overlay=report.review_overlay||{},previewUrl=previewName?runArtifact(status.run_id,previewName):'';
   const overlayBoxes=(overlay.boxes||[]).map(box=>`<div class="review-box ${esc(box.kind||'ats')}" style="left:${Number(box.left_percent)||0}%;top:${Number(box.top_percent)||0}%;width:${Number(box.width_percent)||0}%;height:${Number(box.height_percent)||0}%" title="${esc((box.terms||[]).join(', ')||box.changed_source_id||'review highlight')}"></div>`).join('');
   const reviewPreview=overlay.available&&previewUrl?`<div class="audit-card"><h4>Highlighted review render</h4><p class="meta">This is a review overlay on the clean rendered page. The downloadable PDF above is unchanged.</p><div class="review-preview"><img src="${previewUrl}" alt="Clean resume with review highlights">${overlayBoxes}</div><div class="review-legend"><span><i></i>supported ATS term</span><span class="changed"><i></i>meaningful content change</span><span class="both"><i></i>both</span></div></div>`:'';
   let panel=`<section class="audit-shell"><div class="audit-card"><h4>Tailoring audit · what happened</h4><div class="audit-grid"><div class="audit-metric"><strong>${changes.changed_bullet_count||0}</strong><span>meaningful rewrites</span></div><div class="audit-metric"><strong>${(changes.added_bullets||[]).length}</strong><span>new evidence lines surfaced</span></div><div class="audit-metric"><strong>${fmtSeconds(metrics.elapsed_seconds||status.elapsed_seconds)}</strong><span>total run time</span></div></div><p class="meta">${esc(report.owner_summary?.headline||'The report records selection, replacement, and layout decisions.')}</p>${changes.low_value_rewrite_count?`<p class="meta">${changes.low_value_rewrite_count} near-copy paraphrase${changes.low_value_rewrite_count===1?' was':'s were'} suppressed because it added no measurable hiring value.</p>`:''}<p class="meta"><span class="badge ${chronology?'audit-good':'audit-bad'}">${chronology?'Experience chronology preserved':'Chronology needs review'}</span> <span class="badge">${esc(report.mode||status.mode||'tailor')}</span> <span class="badge">PDF: ${esc(report.pdf_filename||status.pdf_filename||'named resume')}</span></p></div>${reviewPreview}`;
-  panel+=`<div class="audit-subgrid"><div class="audit-card"><h4>Measured page use</h4><div class="meta">Bottom: <strong>${space.measured_content_bottom_pt==null?'—':space.measured_content_bottom_pt+'pt'}</strong> · reference: <strong>${space.canonical_reference_bottom_pt==null?'—':space.canonical_reference_bottom_pt+'pt'}</strong><br>Clearance gap: <strong>${space.density_gap_pt==null?'—':space.density_gap_pt+'pt'}</strong> · one standard extra bullet: <strong class="${oneMore?'audit-warn':'audit-good'}">${oneMore?'fits':'does not fit'}</strong></div><p class="meta">${esc(space.decision||'No space decision recorded.')}</p>${applied.length?'<div>'+applied.map(item=>`<span class="audit-candidate applied">added ${esc(item.source_id||'line')}</span>`).join('')+'</div>':''}${rejected.length?'<div>'+rejected.map(item=>`<span class="audit-candidate rejected">held ${esc(item.source_id||'candidate')}</span>`).join('')+'</div>':''}</div><div class="audit-card"><h4>Verified evidence left on the table</h4><div class="meta"><strong>${space.unused_candidate_count||candidates.length}</strong> candidate lines inspected${candidates.length?'<br>':''}${candidates.length?candidates.slice(0,8).map(item=>`<div><strong>${esc(item.source_id||'candidate')}</strong> · ${esc(item.text||'')}</div>`).join(''):'<span> No unused strong line was found for the selected portfolio.</span>'}</div></div></div>`;
+  panel+=`<div class="audit-subgrid"><div class="audit-card"><h4>Measured page use</h4><div class="meta">Bottom: <strong>${space.measured_content_bottom_pt==null?'—':space.measured_content_bottom_pt+'pt'}</strong> · reference: <strong>${space.canonical_reference_bottom_pt==null?'—':space.canonical_reference_bottom_pt+'pt'}</strong><br>Clearance gap: <strong>${space.density_gap_pt==null?'—':space.density_gap_pt+'pt'}</strong> · extra-space review: <strong class="${spaceReview?'audit-warn':'audit-good'}">${spaceReview?(oneMore?'one line fits':'measured gap exceeds target'):'no safe addition'}</strong></div><p class="meta">${esc(space.decision||'No space decision recorded.')}</p>${applied.length?'<div>'+applied.map(item=>`<span class="audit-candidate applied">added ${esc(item.source_id||'line')}</span>`).join('')+'</div>':''}${replaced.length?'<details><summary>Replaced lower-value evidence (${replaced.length})</summary>'+replaced.map(item=>`<div class="meta"><strong>${esc(item.source_id||'line')}</strong> · ${esc(item.entry_id||'entry')}<br>${esc(item.text||'')}<br><em>${esc(item.reason||'')}</em></div>`).join('')+'</details>':''}${rejected.length?'<div>'+rejected.map(item=>`<span class="audit-candidate rejected">held ${esc(item.source_id||'candidate')}</span>`).join('')+'</div>':''}</div><div class="audit-card"><h4>Verified evidence left on the table</h4><div class="meta"><strong>${space.unused_candidate_count||candidates.length}</strong> candidate lines inspected${candidates.length?'<br>':''}${candidates.length?candidates.slice(0,8).map(item=>`<div><strong>${esc(item.source_id||'candidate')}</strong> · ${esc(item.text||'')}</div>`).join(''):'<span> No unused strong line was found for the selected portfolio.</span>'}</div></div></div>`;
   panel+=`<div class="audit-card"><h4>Provider flow, model, and usage</h4><div class="flow">${flowHtml}</div><p class="meta"><strong>This run:</strong> ${Number(usage.codex_tokens||0).toLocaleString()} Codex tokens · ${usage.codex_calls||0} Codex calls · ${Number(usage.claude_tokens||0).toLocaleString()} Claude tokens · ${usage.claude_calls||0} Claude calls</p>${weekly}</div>`;
   panel+=`<div class="audit-card"><h4>Text diff</h4><div class="audit-scroll">${list(rewrites,'rewritten','No meaningful wording rewrites were recorded.')}${list(additions,'added','No canonical-source additions were recorded.')}${list(removals,'removed','No canonical evidence was removed.')}${changes.low_value_rewrite_count?`<p class="meta">${changes.low_value_rewrite_count} low-value paraphrase${changes.low_value_rewrite_count===1?'':'s'} hidden from the substantive diff.</p>`:''}</div></div>`;
   panel+=`<div class="audit-card"><h4>ATS overlay <span class="meta">(review view; the downloadable PDF stays clean)</span></h4><p class="meta">Highlighted terms are supported and rendered in the final text. Missing or unsupported terms remain visible in the full report instead of being stretched.</p><div class="ats-overlay">${atsHtml}</div></div></section>`;
