@@ -5844,7 +5844,22 @@ def run_tailoring(
             write_json(run_dir / (label + "_errors.json"), edit_errors or ["line editor changed selected source IDs"])
             break
         editable_pool = merge_edited_bullets(editable_pool, edited)
-        plan, line_packing = pack_plan_to_page(editable_pool, catalog, run_dir / (label + "_pack"))
+        try:
+            candidate_plan, line_packing = pack_plan_to_page(
+                editable_pool, catalog, run_dir / (label + "_pack")
+            )
+        except (OSError, RuntimeError, ValueError) as exc:
+            # A provider can satisfy the structured plan schema while still
+            # returning malformed inline LaTeX (for example an unmatched
+            # brace). Reject only this editorial candidate and preserve the
+            # last valid rendered plan; a bad line edit must never erase a
+            # good density-expanded resume.
+            write_json(run_dir / (label + "_errors.json"), [
+                "line editor candidate rejected during compiled packing: %s" % exc,
+            ])
+            line_edit["compile_rejected"] = str(exc)
+            break
+        plan = candidate_plan
         packing[label + "_pack"] = line_packing
         write_json(run_dir / "content_plan.json", plan)
         write_json(run_dir / "layout_packing.json", packing)
