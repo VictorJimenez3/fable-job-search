@@ -311,6 +311,10 @@ def test_plan_schema_requests_an_adaptive_ranked_candidate_pool():
     assert "front_matter_rewrites" in generation["required"]
     rewrite = generation["properties"]["front_matter_rewrites"]["items"]
     assert set(rewrite["required"]) == {"line_id", "text", "evidence_ids", "why"}
+    assert rewrite["properties"]["line_id"]["enum"] == [
+        "front:skills:0", "front:skills:1", "front:skills:2",
+        "front:skills:3", "front:skills:4",
+    ]
 
 
 def test_gap_analysis_schema_is_requirement_complete_and_cannot_return_resume_copy():

@@ -1731,7 +1731,10 @@ def plan_schema(enhance: bool, generation: bool = False) -> Dict[str, Any]:
             "items": {
                 "type": "object",
                 "properties": {
-                    "line_id": {"type": "string"},
+                    "line_id": {
+                        "type": "string",
+                        "enum": ["front:skills:%d" % index for index in range(5)],
+                    },
                     "text": {"type": "string"},
                     "evidence_ids": {
                         "type": "array", "items": {"type": "string"},
@@ -2768,6 +2771,7 @@ Victor-specific guardrails:
         ensure_ascii=False,
     )
     benchmark_text = json.dumps(canonical_resume_benchmark(catalog), indent=2, ensure_ascii=False)
+    front_matter_text = json.dumps(front_matter_catalog(repo_root()), indent=2, ensure_ascii=False)
     generation_text = json.dumps(
         context.get("generation_strategy") or {}, indent=2, ensure_ascii=False,
     )
@@ -2789,6 +2793,9 @@ Victor-specific guardrails:
         + context_text[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nSource-addressable evidence catalog:\n"
         + catalog_text[:MAX_CATALOG_PROMPT_CHARS]
+        + (("\n\nEditable front-matter catalog (use these exact line_id values; rewrite one existing "
+            "Skills line per item rather than inventing a combined section ID):\n"
+            + front_matter_text[:8000]) if generation else "")
         + "\n\nCanonical/current benchmark (comparison point, not a preservation rule):\n"
         + benchmark_text[:MAX_CATALOG_PROMPT_CHARS]
         + "\n\nTarget-ranked evidence graph nodes (authority and claim_allowed are binding):\n"
@@ -3417,6 +3424,28 @@ def validate_plan(
             ))[:8]
             if graph is not None:
                 cited = [value for value in cited if value in evidence_ids]
+                # Ground exact technologies in a generated Skills line even
+                # when a provider mangles or omits a source ID. Only
+                # claim-authorized graph nodes may repair the citation set.
+                for term in TARGET_KEYWORD_TERMS:
+                    if not _keyword_present(term, text):
+                        continue
+                    for node in graph.get("nodes", []):
+                        node_id = str(node.get("id") or "")
+                        node_text = " ".join((
+                            str(node.get("heading") or ""),
+                            str(node.get("text") or ""),
+                        ))
+                        if (
+                            node_id in claim_authorities
+                            and _keyword_affirmed(term, node_text)
+                            and node_id not in cited
+                        ):
+                            cited.append(node_id)
+                            if len(cited) >= 8:
+                                break
+                    if len(cited) >= 8:
+                        break
                 if not cited or not set(cited) & claim_authorities:
                     validation_warnings.append(
                         "dropped Skills rewrite %s without claim-authorizing evidence" % line_id
