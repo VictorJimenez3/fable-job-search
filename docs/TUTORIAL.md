@@ -234,6 +234,10 @@ after selecting a role, **Analyze full posting match** fetches the job page and
 recomputes the fixed rubric when readable. The result shows capability
 coverage, gaps, evidence confidence, and private source-backed score.
 
+On the Jobs tab, Best Match also has a lookback selector for hours, days, weeks,
+or months. It limits which recent postings are ranked while preserving the same
+match scoring.
+
 The generator does not force every role to use the same evidence. It creates a
 strongest-first pool, then enforces a 22–26-bullet interview portfolio with
 three experiences, four projects, and one or two leadership entries. Every

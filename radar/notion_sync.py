@@ -34,6 +34,11 @@ import requests
 
 from . import state
 from .config import env, profile
+
+
+TRACKER_CLOSED_RETENTION_DAYS = 2
+TRACKER_NOT_PURSUING_RETENTION_DAYS = 2
+
 from .score import role_bucket
 
 PAGES_API = "https://api.notion.com/v1/pages"
@@ -195,7 +200,7 @@ def archive_page(token: str, page_id: str) -> None:
 
 
 def archive_terminal_pages(applied: list, jobs: dict) -> int:
-    """Soft-archive owner Notion pages whose public posting is terminal.
+    """Soft-archive owner Notion pages whose posting or application is terminal.
 
     Local ``applied.json`` entries remain intact so Pipeline history and the
     posting-timeline dataset survive. The Notion page is moved to trash rather
@@ -211,7 +216,19 @@ def archive_terminal_pages(applied: list, jobs: dict) -> int:
     archived = 0
     for entry in applied:
         record = jobs.get(entry.get("id"))
-        if not record or not lifecycle.is_terminal(record):
+        posting_terminal = bool(record and lifecycle.is_terminal(record))
+        application_stage = str(entry.get("stage", "")).lower()
+        application_closed = application_stage in {"closed", "not_pursuing"}
+        if application_closed and not entry.get("stage_changed_at"):
+            entry["stage_changed_at"] = entry.get("notion_read_at") or entry.get("applied_at")
+        closed_at = entry.get("stage_changed_at") if application_closed else None
+        retention_days = (TRACKER_NOT_PURSUING_RETENTION_DAYS
+                          if application_stage == "not_pursuing"
+                          else TRACKER_CLOSED_RETENTION_DAYS)
+        closed_long_enough = bool(
+            closed_at and time.time() - int(closed_at) >= retention_days * 86400
+        )
+        if not posting_terminal and not closed_long_enough:
             continue
         if entry.get("notion_archived"):
             continue
@@ -228,8 +245,13 @@ def archive_terminal_pages(applied: list, jobs: dict) -> int:
         now = int(time.time())
         entry["notion_archived"] = True
         entry["notion_archived_at"] = now
-        entry["notion_archive_status"] = lifecycle.status_of(record)
-        entry["notion_archive_reason"] = lifecycle.lifecycle_reason(record)
+        entry["notion_archive_status"] = (
+            lifecycle.status_of(record) if posting_terminal else application_stage
+        )
+        entry["notion_archive_reason"] = (
+            lifecycle.lifecycle_reason(record) if posting_terminal
+            else f"application stage {application_stage.upper()} for at least {retention_days} days"
+        )
         entry.pop("notion_archive_error", None)
         archived += 1
     return archived
@@ -256,19 +278,20 @@ def stage_status_name(stage_key: str) -> str | None:
         "interview": n.get("stage_interview", "Interview"),
         "rejected": n.get("stage_rejected", "Rejected"),
         "closed": n.get("stage_closed", "CLOSED"),
+        "not_pursuing": "Not pursuing",
     }.get(stage_key)
 
 
 def _stage_key_from_status(status_name: str) -> str | None:
     """Internal stage for a live Notion status label."""
     wanted = (status_name or "").strip().casefold()
-    for key in ("saved", "applied", "oa", "interview", "rejected", "closed"):
+    for key in ("saved", "applied", "oa", "interview", "rejected", "closed", "not_pursuing"):
         label = stage_status_name(key)
         if label and label.strip().casefold() == wanted:
             return key
     # Tolerate the common labels when a profile omitted optional mappings.
     return {"oa": "oa", "online assessment": "oa", "interview": "interview",
-            "rejected": "rejected", "closed": "closed"}.get(wanted)
+            "rejected": "rejected", "closed": "closed", "not pursuing": "not_pursuing"}.get(wanted)
 
 
 def sync_from_notion(applied: list) -> int:
@@ -318,8 +341,11 @@ def sync_from_notion(applied: list) -> int:
 
     changed = 0
     now = int(time.time())
+    found_pages = set()
     for page in pages:
-        entry = by_page.get(str(page.get("id", "")).replace("-", "").lower())
+        page_key = str(page.get("id", "")).replace("-", "").lower()
+        found_pages.add(page_key)
+        entry = by_page.get(page_key)
         if not entry:
             continue
         prop = (page.get("properties") or {}).get(stage_prop) or {}
@@ -333,8 +359,19 @@ def sync_from_notion(applied: list) -> int:
         if stage != old:
             entry["stage"] = stage
             entry["status"] = stage
+            entry["stage_changed_at"] = now
             if stage in _RESPONSE_STAGES and not entry.get("responded_at"):
                 entry["responded_at"] = now
+            changed += 1
+        elif stage == "closed":
+            entry.setdefault("stage_changed_at", entry.get("notion_read_at") or now)
+    for page_key, entry in by_page.items():
+        if page_key in found_pages or entry.get("notion_archived"):
+            continue
+        if not entry.get("tracker_removed_at"):
+            entry["notion_deleted_at"] = now
+            entry["tracker_removed_at"] = now
+            entry["tracker_removed_reason"] = "Notion page was deleted or archived"
             changed += 1
     return changed
 

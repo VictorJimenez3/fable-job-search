@@ -331,7 +331,7 @@ const LANE_CONFIG = {
     companies:"state/intern_companies.json", runs:"state/intern_runs.json", web:"state/intern_web_state.json"},
 };
 const DEFAULT_FILTER = {q:"", min:45, sector:"", role:"", sectors:[], roles:[], sponsorship:"", sponsorHistory:"",
-  excludedRoles:[], experience:"", career:"", cohort:"", alert:false, lane:"", sort:"best", showExcluded:false, review:false};
+  excludedRoles:[], experience:"", career:"", cohort:"", alert:false, lane:"", sort:"best", bestWindow:"all", showExcluded:false, review:false};
 function storedFilter(lane="new_grad") {
   try {
     const key = lane === "new_grad" ? "jr_filters" : `jr_filters_${lane}`;
@@ -789,7 +789,11 @@ function saveWeb() {                       // debounce web_state commits
 }
 
 /* ---------- derived ---------- */
-const appliedById = () => Object.fromEntries(S.applied.map(a=>[a.id,a]));
+function applicationInactive(a) {
+  return ["closed","not_pursuing"].includes(String(a?.stage || "").toLowerCase())
+    || Boolean(a?.tracker_removed_at || a?.notion_deleted_at);
+}
+const appliedById = () => Object.fromEntries(S.applied.filter(a=>!applicationInactive(a)).map(a=>[a.id,a]));
 function postingStatus(j) {
   const status = String(j?.posting_status || "").toLowerCase();
   return ["expired", "filled"].includes(status) ? status : j?.closed_at ? "expired" : "open";
@@ -966,6 +970,12 @@ function isOpenRelevant(j) {
 function jobList() {
   const byId = appliedById(); const f = S.filter; const q = norm(f.q);
   let rows = Object.values(S.jobs).filter(isOpenRelevant);
+  const inactiveIds = new Set(S.applied.filter(applicationInactive).map(a=>a.id));
+  rows = rows.filter(j=>!inactiveIds.has(j.id));
+  if (f.sort === "best" && f.bestWindow && f.bestWindow !== "all") {
+    const cutoff = Date.now() / 1000 - Number(f.bestWindow);
+    rows = rows.filter(j => postedTs(j) > cutoff);
+  }
   if (!f.showExcluded) rows = rows.filter(j=>!isExcluded(j.id));
   if (S.lane === "internship" && !f.review) rows = rows.filter(j=>["title","body"].includes((j.internship_eligibility||{}).internship_signal));
   rows = rows.filter(j=>byId[j.id] || S.web.maybe.includes(j.id) || S.web.jobs[j.id]
@@ -1015,6 +1025,7 @@ function tasteTokens(title) {
 function tasteSample() {
   const sample = [], seen = new Set();
   for (const entry of S.applied) {
+    if (applicationInactive(entry)) continue;
     const j = S.jobs[entry.id] || entry;
     if (!j || seen.has(j.id)) continue;
     seen.add(j.id);
@@ -1522,8 +1533,9 @@ function render() {
       ? `<button class="on" onclick="openTutorial('accounts')" title="account settings">@${esc(S.auth.login)}${S.auth.owner?"":S.userTracker?" · personal tracker":" · account"}</button>`
       : `<button class="on" onclick="openTutorial('accounts')">Sign in / create account</button>`) : "");
   const byId = appliedById();
-  const saved = S.applied.filter(a=>(a.stage||"applied")==="saved");
-  const done  = S.applied.filter(a=>(a.stage||"applied")!=="saved");
+  const activeTracked = S.applied.filter(a=>!applicationInactive(a));
+  const saved = activeTracked.filter(a=>(a.stage||"applied")==="saved");
+  const done  = activeTracked.filter(a=>(a.stage||"applied")!=="saved");
   $("#stats").innerHTML =
     `<span><b>${S.boot.jobsReady ? Object.keys(S.jobs).length : "…"}</b>${S.boot.jobsReady ? "jobs seen" : "loading jobs"}</span>` +
     `<span><b>${S.web.maybe.length}</b>maybe</span>` +
@@ -1647,6 +1659,19 @@ function rJobs() {
       <select onchange="setFilter('sort',this.value)" title="sort order">
         <option value="best" ${S.filter.sort!=="new"?"selected":""}>best match</option>
         <option value="new" ${S.filter.sort==="new"?"selected":""}>newest first</option></select>
+      <select aria-label="Best match time window" title="Best match lookback" ${S.filter.sort!=="best"?"disabled":""}
+        onchange="setFilter('bestWindow',this.value)">
+        <option value="all" ${S.filter.bestWindow==="all"?"selected":""}>best match · all time</option>
+        <option value="3600" ${S.filter.bestWindow==="3600"?"selected":""}>best match · last hour</option>
+        <option value="21600" ${S.filter.bestWindow==="21600"?"selected":""}>best match · last 6 hours</option>
+        <option value="86400" ${S.filter.bestWindow==="86400"?"selected":""}>best match · last 24 hours</option>
+        <option value="259200" ${S.filter.bestWindow==="259200"?"selected":""}>best match · last 3 days</option>
+        <option value="604800" ${S.filter.bestWindow==="604800"?"selected":""}>best match · last 7 days</option>
+        <option value="1209600" ${S.filter.bestWindow==="1209600"?"selected":""}>best match · last 2 weeks</option>
+        <option value="2592000" ${S.filter.bestWindow==="2592000"?"selected":""}>best match · last month</option>
+        <option value="7776000" ${S.filter.bestWindow==="7776000"?"selected":""}>best match · last 3 months</option>
+        <option value="15552000" ${S.filter.bestWindow==="15552000"?"selected":""}>best match · last 6 months</option>
+        <option value="31536000" ${S.filter.bestWindow==="31536000"?"selected":""}>best match · last year</option></select>
       <button class="act" onclick="clearFilters()">reset filters</button>
     </div>
     </div>
@@ -1729,7 +1754,7 @@ function rPipe() {
   const maybe = S.web.maybe.map(id=>S.jobs[id]).filter(Boolean);
   const stages = [
     ["saved","📝 To apply"],["applied","✅ Applied"],["oa","🧪 OA"],
-    ["interview","🗣 Interview"],["rejected","↩ Rejected"],["closed","⏸ Closed"]];
+    ["interview","🗣 Interview"],["rejected","↩ Rejected"]];
   $("#main").innerHTML = `${laneSettingsHTML()}${trackerPanelHTML()}<section class="manual-add">
     <h2>Add a role you found yourself</h2>
     <p class="sub">This lives in To apply and mirrors to Notion. It is marked manual, never sent as an alert, and does not pretend to be new-grad evidence.</p>
@@ -1740,7 +1765,7 @@ function rPipe() {
       <button class="act primary" onclick="addManualJob()">add to To apply + Notion</button></div>
   </section><div class="lanes">
     <div class="lane"><h3>🤔 Maybe (${maybe.length})</h3>${maybe.map(cardHTML).join("")||'<span class="sub">Park jobs here from the Jobs tab.</span>'}</div>
-  ${stages.map(([key,label])=>{ const rows=S.applied.filter(a=>(a.stage||"applied")===key);
+  ${stages.map(([key,label])=>{ const rows=S.applied.filter(a=>!applicationInactive(a) && (a.stage||"applied")===key);
       return `<div class="lane"><h3>${label} (${rows.length})</h3>${rows.map(cardHTML).join("")||'<span class="sub">Nothing here yet.</span>'}</div>`; }).join("")}
   </div>
   <p class="sub">Stages reflect the radar pipeline and are pushed to Notion. The scheduled
@@ -1749,6 +1774,23 @@ function rPipe() {
 
 function rHistory() {
   const query = norm(S.filter.q);
+  let applicationRows = S.applied.filter(applicationInactive);
+  if (query) applicationRows = applicationRows.filter(entry => {
+    const job = S.jobs[entry.id] || entry;
+    return norm(`${job.company} ${job.title} ${entry.stage || "removed"} ${entry.tracker_removed_reason || ""}`).includes(query);
+  });
+  applicationRows.sort((a,b) => (b.stage_changed_at || b.tracker_removed_at || b.applied_at || 0)
+    - (a.stage_changed_at || a.tracker_removed_at || a.applied_at || 0));
+  const applicationRowsHTML = applicationRows.slice(0, S.shown).map(entry => {
+    const job = S.jobs[entry.id] || entry;
+    const label = entry.tracker_removed_at ? "removed from Notion" : (entry.stage === "not_pursuing" ? "not pursuing" : "closed");
+    const when = entry.tracker_removed_at || entry.stage_changed_at || entry.applied_at;
+    return `<article class="lane" style="margin-bottom:.65rem">
+      <div class="bar"><b>${esc(job.company)} — ${esc(job.title)}</b><span class="chip bad">${label}</span></div>
+      <p class="sub">${lifecycleDate(when)} · ${esc(entry.tracker_removed_reason || "Application closed; retained for history")}</p>
+      <div class="acts"><a class="act" href="${esc(job.url || entry.url || "#")}" target="_blank" rel="noopener">posting ↗</a><button class="act" onclick='openWS("${entry.id}")'>details ▸</button></div>
+    </article>`;
+  }).join("");
   let rows = Object.values(S.jobs).filter(isTerminalPosting);
   if (query) rows = rows.filter(job => norm(`${job.company} ${job.title} ${postingStatus(job)} ${lifecycleReason(job)}`).includes(query));
   rows.sort((a,b) => (lifecycleWhen(b)||0) - (lifecycleWhen(a)||0));
@@ -1766,6 +1808,8 @@ function rHistory() {
     </article>`;
   }).join("");
   $("#main").innerHTML = `<section class="testing-hero"><span class="chip unknown">retained history · hidden from active Jobs</span>
+    <h2>Application history</h2><p class="sub">Closed applications and roles removed from Notion stay here for your record, but no longer count toward active Pipeline or Jobs.</p>
+    <div class="lanes">${applicationRowsHTML || '<section class="lane"><p class="sub">No closed or manually removed applications.</p></section>'}</div>
     <h2>Posting history</h2><p class="sub">Expired and filled postings remain in repository state for timeline analysis and future seasonal prediction. They are not scored into active alerts, boards, dashboards, or feeds. Default retention is two years.</p>
     <div class="bar"><input type="search" placeholder="search history…" value="${esc(S.filter.q)}" oninput="setFilter('q',this.value,false)">
       <span class="chip">${counts.expired || 0} expired</span><span class="chip">${counts.filled || 0} filled</span><span class="sub">${rows.length} retained rows</span></div></section>

@@ -1026,19 +1026,22 @@ def web_action() -> int:
         return 0
     if action == "stage":
         stage = str(payload.get("stage") or "").strip().lower()
-        if stage not in {"maybe", "saved", "applied", "oa", "interview", "rejected", "closed"}:
+        if stage not in {"maybe", "saved", "applied", "oa", "interview", "rejected", "closed", "not_pursuing"}:
             print(f"web-action: unsupported stage {stage!r}")
             return 1
         untracked.discard(job["id"])
         existing = next((entry for entry in applied if entry.get("id") == job["id"]), None)
         if existing is None:
             changed = applied_mod.record_applied(job, applied, fb, via="platform", stage=stage)
+            existing = next((entry for entry in applied if entry.get("id") == job["id"]), None)
         else:
             changed = existing.get("stage", "applied") != stage
             existing["stage"] = stage
             existing["via"] = "platform"
             if stage == "applied":
                 existing["applied_at"] = int(time.time())
+        if existing is not None and (changed or stage == "closed"):
+            existing["stage_changed_at"] = int(time.time())
         from .notion_sync import sync_applied
         synced = sync_applied(applied)
         shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]

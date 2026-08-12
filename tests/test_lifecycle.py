@@ -1,5 +1,7 @@
 import time
 
+import pytest
+
 from radar import lifecycle
 from radar import notion_sync
 from radar.digest import render_dashboard, render_rss
@@ -90,6 +92,41 @@ def test_terminal_owner_notion_page_is_soft_archived(monkeypatch):
     assert calls == [("secret", "3995d6f4-2cab-81b7-9291-edce7b1639b2")]
     assert applied[0]["notion_archived"] is True
     assert notion_sync.archive_terminal_pages(applied, jobs) == 0
+
+
+def test_closed_application_is_archived_after_two_days(monkeypatch):
+    monkeypatch.setenv("NOTION_TOKEN", "secret")
+    calls = []
+    monkeypatch.setattr(notion_sync, "archive_page",
+                        lambda token, page_id: calls.append((token, page_id)))
+    page_hex = "3995d6f42cab81b79291edce7b1639b2"
+    applied = [{"id": "closed", "stage": "closed",
+                "stage_changed_at": NOW - 3 * 86400,
+                "notion_page": f"https://app.notion.com/p/Acme-{page_hex}"}]
+    assert notion_sync.archive_terminal_pages(applied, {}) == 1
+    assert calls == [("secret", "3995d6f4-2cab-81b7-9291-edce7b1639b2")]
+    assert "CLOSED" in applied[0]["notion_archive_reason"]
+
+
+def test_recently_closed_application_stays_in_notion(monkeypatch):
+    monkeypatch.setenv("NOTION_TOKEN", "secret")
+    monkeypatch.setattr(notion_sync, "archive_page", lambda *args: pytest.fail("too soon"))
+    applied = [{"id": "closed", "stage": "closed", "stage_changed_at": NOW - 3600,
+                "notion_page": "https://app.notion.com/p/Acme-3995d6f42cab81b79291edce7b1639b2"}]
+    assert notion_sync.archive_terminal_pages(applied, {}) == 0
+
+
+def test_not_pursuing_application_uses_same_delayed_archive_policy(monkeypatch):
+    monkeypatch.setenv("NOTION_TOKEN", "secret")
+    calls = []
+    monkeypatch.setattr(notion_sync, "archive_page",
+                        lambda token, page_id: calls.append(page_id))
+    applied = [{"id": "skip", "stage": "not_pursuing",
+                "stage_changed_at": NOW - 3 * 86400,
+                "notion_page": "https://app.notion.com/p/Acme-3995d6f42cab81b79291edce7b1639b2"}]
+    assert notion_sync.archive_terminal_pages(applied, {}) == 1
+    assert calls
+    assert "NOT_PURSUING" in applied[0]["notion_archive_reason"]
 
 
 def test_terminal_rows_leave_active_dashboard_and_feed():

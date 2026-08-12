@@ -45,6 +45,9 @@ posting's own visa wording or adds ranking points. Refresh it locally with
 `.venv/bin/python -m radar.main sponsorship-refresh`; the scheduled workflow
 does this weekly from the [official DOL OFLC data page](https://www.dol.gov/agencies/eta/foreign-labor/performance).
 
+The Jobs sort menu also includes a Best Match lookback: all time, the last hour,
+6 hours, 24 hours, 3 or 7 days, 2 weeks, or 1, 3, 6, or 12 months.
+
 The ChemE internship board is intentionally separate from this new-grad
 AI/SWE/DS board. It reads the `claude/cheme-intern-radar` branch and keeps its
 own generated state and GitHub board labels, while both profiles use the one

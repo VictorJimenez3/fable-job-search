@@ -222,6 +222,23 @@ def test_notion_readback_updates_only_matching_owned_page(tmp_state, monkeypatch
     assert entry["responded_at"]
 
 
+def test_deleted_notion_page_is_retained_locally_but_marked_untracked(tmp_state, monkeypatch):
+    monkeypatch.setenv("NOTION_TOKEN", "tok")
+    page_hex = "3995d6f42cab81b79291edce7b1639b2"
+    entry = {"id": JOB["id"], "company": "Tempus", "title": JOB["title"],
+             "stage": "saved", "notion_stage": "saved",
+             "notion_page": f"https://app.notion.com/p/Tempus-{page_hex}"}
+    payload = {"results": [], "has_more": False}
+    with patch.object(ns, "resolve_database", return_value=FULL_SCHEMA), \
+         patch.object(ns.requests, "post") as mock_post:
+        mock_post.return_value.raise_for_status = lambda: None
+        mock_post.return_value.json = lambda: payload
+        assert ns.sync_from_notion([entry]) == 1
+    assert entry["tracker_removed_at"]
+    assert entry["notion_deleted_at"]
+    assert "deleted" in entry["tracker_removed_reason"]
+
+
 def test_notion_payload_degrades_on_minimal_schema():
     # a "fresh slate" database might only have the two essentials — nothing
     # should crash, and fields absent from the schema are simply skipped
