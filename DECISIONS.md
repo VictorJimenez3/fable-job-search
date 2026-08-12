@@ -1763,3 +1763,14 @@ longer formats the workbook or repairs headers/tabs during hydration. That
 avoids a permission error on an older but readable personal workbook; explicit
 writes and fresh Google connections retain the repair path, so the app does not
 trade away tracker correctness when Victor actually asks it to change data.
+
+## 117. Location navigation is a UI TODO over the existing scraper contract (2026-08-12)
+
+The next location feature should let a user select **United States** and expand
+it into individual states. Locations outside the United States should remain
+selectable at country level without requiring state/province specificity. This
+is intentionally a frontend/filtering concern: the current scraper and its
+source queries stay unchanged, and the feature must normalize the existing
+location values without creating a second ingestion path. Multi-location jobs
+must remain visible under every applicable country/state bucket rather than
+being assigned to only one location.

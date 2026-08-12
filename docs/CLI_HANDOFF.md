@@ -483,6 +483,10 @@ Before changing the radar, read these in order:
   detection is also parked until the multi-user privacy model exists. The
   current product stops at finding, saving, tailoring, opening the application,
   and providing public recruiter-search links/templates.
+  **Next UI TODO:** add a hierarchical location selector: expand United States
+  into selectable states, but keep non-US locations at country level only. This
+  must consume the current location fields without changing the scraper,
+  source queries, or posting ingestion contract.
 
 ## Safe handoff practice
 
