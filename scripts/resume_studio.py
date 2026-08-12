@@ -2524,6 +2524,27 @@ def normalize_gap_analysis(
             "reason": "Deterministic ATS inventory item retained because the planning lane did not address it.",
         })
 
+    supported_terms = {
+        str(term).lower()
+        for item in normalized
+        if item.get("evidence_status") in {"direct", "adjacent"}
+        for term in (item.get("exact_terms") or [])
+    }
+    # Models sometimes group one real gap with generic supported technologies
+    # (for example, an unsupported bioinformatics requirement tagged Python).
+    # A term is an honest gap only when no grounded requirement supports it.
+    cleaned = []
+    for item in normalized:
+        if item.get("evidence_status") == "unsupported":
+            item = copy.deepcopy(item)
+            item["exact_terms"] = [
+                term for term in (item.get("exact_terms") or [])
+                if str(term).lower() not in supported_terms
+            ]
+            if not item["exact_terms"]:
+                continue
+        cleaned.append(item)
+    normalized = cleaned
     must_cover = []
     gaps = []
     for item in normalized:
@@ -2532,12 +2553,6 @@ def normalize_gap_analysis(
             must_cover.extend(str(term) for term in terms if str(term))
         elif item.get("evidence_status") == "unsupported":
             gaps.extend(str(term) for term in terms if str(term))
-    supported_terms = {
-        str(term).lower()
-        for item in normalized
-        if item.get("evidence_status") in {"direct", "adjacent"}
-        for term in (item.get("exact_terms") or [])
-    }
     unsupported_terms = allowed_terms - supported_terms
     must_cover.extend(
         str(value).lower() for value in (data.get("must_cover_terms") or [])

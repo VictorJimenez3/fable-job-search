@@ -1208,6 +1208,7 @@ def test_gap_analysis_keeps_unsupported_terms_visible_and_promotes_adjacent_supp
     assert terms["cloud computing"]["support_kind"] == "adjacent"
     assert terms["aws"]["supported"] is False
     assert normalized["must_cover_terms"] == ["cloud computing"]
+    assert "cloud computing" not in normalized["honest_gaps"]
     assert all(item["requirement"] != "Evidence review is in progress" for item in normalized["requirements"])
     assert all("aws" not in item["exact_terms"] for item in normalized["requirements"] if item["evidence_status"] != "unsupported")
     assert "aws" in normalized["honest_gaps"]
