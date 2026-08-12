@@ -148,29 +148,41 @@ the same Applications database instead of creating a second Notion system.
 ## Private Resume Studio
 
 Victor's CV workflow runs locally because `CV/` is personal and gitignored.
+In production, sign in as `@VictorJimenez3`, choose a role, then use **Tailor**
+or open the drawer's **Resume** tab. Job Radar saves the role to **To apply**
+and opens that exact posting in the local Studio. The handoff uses the URL
+fragment to `127.0.0.1`; private evidence and generated PDFs never enter the
+hosted app or public repository.
+
 From the repository on the Mac, start:
 
 ```bash
 .venv/bin/python scripts/resume_studio.py
 ```
 
+Or install the login service once so production links always work:
+
+```bash
+bash scripts/resume-studio-service/install.sh
+```
+
 Then open `http://127.0.0.1:4317/`. Search for a radar role and choose either:
 
-- **Used bullets** — selects target-relevant source IDs from the
+- **Use my source** — selects target-relevant source IDs from the
   master CV and example résumés and copies their text without rewriting.
 - **AI tailor** — permits substantive source-grounded rewrites
-  and synthesis from multiple authorized lines, then runs the same fixed
-  review rubric.
-- **Unrestricted AI tailor** — permits a more original role-specific argument
+  and synthesis from multiple authorized lines, then runs independent gates.
+- **Take the wheel** — permits a more original role-specific argument
   across the authorized evidence bank while preserving factuality and scope
   qualifiers; it is intentionally marked for human review.
 
-All three modes render through the exact `CV/resume.tex` structure. Models cannot
-write the document, alter its margins/typography/spacing, enlarge text, or pass
-a sparse or bloated evidence portfolio. Their existing local subscription sessions are
+All three modes render through the locked
+`CV/immutable/VictorJimenezResume.tex` visual contract. Models cannot write the
+document, alter its margins/typography/spacing, enlarge text, or overwrite the
+canonical resume. Their existing local subscription sessions are
 used; the radar does not receive or store their credentials. The report
-includes the fixed score, target-specific omissions, and known Codex token
-usage. The Studio header shows observed weekly local Codex calls/tokens; the
+includes separate quality gates, target-specific omissions, and known Codex
+token usage. The Studio header shows observed weekly local Codex calls/tokens; the
 Plus weekly allowance is not exposed by the local CLI. Set
 `CODEX_WEEKLY_LIMIT_TOKENS` only when you know the comparison limit.
 

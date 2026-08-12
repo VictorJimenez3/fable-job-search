@@ -12,14 +12,19 @@ import html
 import json
 import re
 import time
+import base64
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 import requests
 
+from radar.evidence_review import (BLOCKING_STATUSES, apply_reviews,
+                                   load_reviews, review_summary)
 
-MATCH_VERSION = "resume-match-v3"
+
+MATCH_VERSION = "resume-match-v4"
 PUBLIC_CACHE_SECONDS = 7 * 86400
+PUBLIC_README_MAX_CHARS = 16000
 MATCH_WEIGHTS = {
     "required_coverage": 35,
     "preferred_coverage": 20,
@@ -88,10 +93,12 @@ def _authority(path: str) -> Tuple[int, bool, str]:
         return 100, True, "experience source of truth"
     if "/experiences/" in "/" + normalized:
         return 95, True, "experience dossier"
-    if normalized.endswith("resume.tex"):
-        return 92, True, "canonical resume"
     if normalized.endswith("tldp_resume.tex"):
         return 88, True, "approved target resume"
+    if normalized.endswith("og_resume.tex"):
+        return 88, True, "approved historical resume"
+    if normalized.endswith("VictorJimenezResume.tex") or normalized.endswith("resume.tex"):
+        return 92, True, "canonical resume"
     if normalized.endswith("cv_full.tex"):
         return 84, True, "master CV"
     if "METHODOLOGY" in normalized or "PLAYBOOK" in normalized or normalized.endswith("AGENTS.md"):
@@ -176,7 +183,12 @@ def _public_cache_path(studio_dir: Path) -> Path:
 
 
 def refresh_public_sources(studio_dir: Path, force: bool = False, session=requests) -> Dict[str, Any]:
-    """Refresh bounded public GitHub/Devpost corroboration with a local cache."""
+    """Refresh bounded GitHub/Devpost corroboration with a local cache.
+
+    Repository metadata alone is too shallow for technical tailoring, so the
+    refresh also captures public README text. These records remain
+    corroboration and cannot authorize a resume claim without user review.
+    """
     path = _public_cache_path(studio_dir)
     try:
         cached = json.loads(path.read_text())
@@ -187,6 +199,12 @@ def refresh_public_sources(studio_dir: Path, force: bool = False, session=reques
 
     records: List[Dict[str, Any]] = []
     errors: List[str] = []
+    warnings: List[str] = []
+    cached_records = {
+        str(record.get("id")): record
+        for record in cached.get("records", [])
+        if isinstance(record, dict) and record.get("id")
+    }
     headers = {"User-Agent": "JobRadar-ResumeStudio/1.0"}
     try:
         response = session.get(
@@ -196,7 +214,8 @@ def refresh_public_sources(studio_dir: Path, force: bool = False, session=reques
             timeout=20,
         )
         response.raise_for_status()
-        for repo in response.json() if isinstance(response.json(), list) else []:
+        repos = response.json()
+        for repo in repos if isinstance(repos, list) else []:
             name = str(repo.get("name") or "")
             description = str(repo.get("description") or "")
             topics = " ".join(repo.get("topics") or [])
@@ -213,6 +232,40 @@ def refresh_public_sources(studio_dir: Path, force: bool = False, session=reques
                     "source_kind": "public corroboration",
                     "tokens": sorted(_tokens(text)),
                 })
+            if not name:
+                continue
+            readme_id = "github-readme:" + _sha(str(repo.get("html_url") or name), 12)
+            try:
+                readme_response = session.get(
+                    "https://api.github.com/repos/VictorJimenez3/%s/readme" % name,
+                    headers={**headers, "Accept": "application/vnd.github+json"},
+                    timeout=20,
+                )
+                if getattr(readme_response, "status_code", None) == 404:
+                    continue
+                readme_response.raise_for_status()
+                readme_payload = readme_response.json()
+                encoded = str(readme_payload.get("content") or "")
+                readme_text = base64.b64decode(encoded).decode("utf-8", errors="replace")
+                readme_text = _strip_markup(readme_text)[:PUBLIC_README_MAX_CHARS]
+                if readme_text:
+                    records.append({
+                        "id": readme_id,
+                        "source": str(readme_payload.get("html_url") or repo.get("html_url") or ""),
+                        "heading": name + " README",
+                        "text": readme_text,
+                        "authority": 50,
+                        "claim_allowed": False,
+                        "source_kind": "public repository README",
+                        "tokens": sorted(_tokens(readme_text)),
+                    })
+            except (requests.RequestException, ValueError, TypeError, KeyError) as exc:
+                cached_readme = cached_records.get(readme_id)
+                if cached_readme and cached_readme.get("source_kind") == "public repository README":
+                    records.append(cached_readme)
+                    warnings.append("Used cached GitHub README for %s: %s" % (name, exc))
+                else:
+                    errors.append("GitHub README refresh failed for %s: %s" % (name, exc))
     except (requests.RequestException, ValueError, TypeError) as exc:
         errors.append("GitHub refresh failed: %s" % exc)
 
@@ -236,8 +289,14 @@ def refresh_public_sources(studio_dir: Path, force: bool = False, session=reques
 
     if not records and cached:
         cached["refresh_errors"] = errors
+        cached["refresh_warnings"] = warnings
         return cached
-    payload = {"fetched_at": int(time.time()), "records": records, "refresh_errors": errors}
+    payload = {
+        "fetched_at": int(time.time()),
+        "records": records,
+        "refresh_errors": errors,
+        "refresh_warnings": warnings,
+    }
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(".tmp")
     tmp.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
@@ -266,10 +325,9 @@ def build_evidence_graph(
         except (OSError, ValueError, TypeError):
             public = {"records": [], "refresh_errors": []}
     nodes.extend(public.get("records") or [])
-    graph_hash = _sha(json.dumps(source_fingerprints, sort_keys=True) + json.dumps(nodes, sort_keys=True), 20)
-    return {
+    reviews = load_reviews(studio_dir)
+    graph = {
         "version": MATCH_VERSION,
-        "hash": graph_hash,
         "built_at": int(time.time()),
         "authority_order": [
             "newest explicit instruction", "experience source of truth", "methodology/playbook",
@@ -277,7 +335,18 @@ def build_evidence_graph(
         ],
         "nodes": nodes,
         "public_refresh_errors": public.get("refresh_errors") or [],
+        "public_refresh_warnings": public.get("refresh_warnings") or [],
     }
+    apply_reviews(graph, reviews)
+    graph["review_summary"] = review_summary(graph)
+    graph_hash = _sha(
+        json.dumps(source_fingerprints, sort_keys=True)
+        + json.dumps(nodes, sort_keys=True)
+        + json.dumps(reviews, sort_keys=True),
+        20,
+    )
+    graph["hash"] = graph_hash
+    return graph
 
 
 def _cluster_hits(tokens: set[str]) -> set[str]:
@@ -559,6 +628,8 @@ def evidence_context(
     target_clusters = _cluster_hits(target_tokens)
     ranked = []
     for node in graph.get("nodes", []):
+        if node.get("review_status") in BLOCKING_STATUSES:
+            continue
         node_tokens = set(node.get("tokens") or [])
         overlap = len(target_tokens & node_tokens)
         cluster_overlap = len(target_clusters & _cluster_hits(node_tokens))

@@ -406,21 +406,36 @@ Resume Studio is the private Victor-first application harness. It reads the
 radar's local job snapshot plus the ignored `CV/` directory and writes all
 prompts, drafts, PDFs, and review reports under `CV/.resume_studio/`.
 
+When signed into production as `@VictorJimenez3`, use **Tailor** on any job row,
+the job drawer's **Resume** tab, or the owner-only **Resume Studio** page. The
+role is saved to **To apply** and opened in the local Studio with its public job
+metadata and any job description Victor saved in Notes. The handoff is an
+encoded browser URL fragment to `127.0.0.1`; the hosted app never receives CV
+evidence or generated files, and the snapshot is retained only with a private
+Studio run.
+
 Start it from the repository:
 
 ```bash
 .venv/bin/python scripts/resume_studio.py
 ```
 
-Open `http://127.0.0.1:4317/`. **Used bullets** selects a target-aware subset
+For the production button to work without starting it manually after every
+login, install the owner Mac service once:
+
+```bash
+bash scripts/resume-studio-service/install.sh
+```
+
+Open `http://127.0.0.1:4317/`. **Use my source** selects a target-aware subset
 from the master CV and example résumés without rewriting it. **AI tailor** may
 substantially rewrite or synthesize bullets from multiple authorized source
-lines. **Unrestricted AI tailor** is freer to make an original role-specific
+lines. **Take the wheel** is freer to make an original role-specific
 argument across the evidence bank; it still cannot invent facts, remove scope
 qualifiers, or bypass layout review. In all modes a deterministic renderer
-uses `CV/resume.tex` unchanged;
+uses the locked `CV/immutable/VictorJimenezResume.tex` visual contract;
 models cannot author the LaTeX document, alter the margins or typography, or
-pass a sparse or bloated portfolio. Employer headings are company-first. Usable installed
+overwrite the canonical resume. Employer headings are company-first. Usable installed
 first-party Codex and Claude Code sessions provide planning and fixed review;
 one may fail independently and the run degrades to the other without API keys.
 The local harness removes API-key environment variables so this owner workflow
@@ -431,17 +446,16 @@ The role list can be sorted by **Best Radar score**, **Newest**, or the private
 **Resume Match** rubric. Match analysis reports requirement coverage, evidence
 strength, domain relevance, eligibility, distinctiveness, confidence, gaps,
 and source IDs; selected roles can be rechecked against the full posting.
-Generation asks for a full ranked evidence portfolio, then keeps 22–26 distinct
-bullets across three experiences, four projects, and one or two leadership
-entries. Deterministic backups are used only when a draft falls below that
-acceptance floor; they do not reintroduce evidence omitted from a complete
-plan. Actual PDF line widths hard-fail wrapping, and bottom density is a hard
-comparison against the immutable human-authored reference. Unsupported inline
+Generation asks for a ranked evidence portfolio and lets the deterministic
+page packer choose how much verified evidence the target can honestly carry;
+there is no fixed entry or bullet quota. Actual PDF line widths hard-fail
+wrapping, and bottom density is compared with the immutable human-authored
+reference. Unsupported inline
 LaTeX and lost scope qualifiers such as
 `synthetic`, `prototype`, or `POC` are repaired or rejected before packing. The
-adversarial pass must return an applied corrected plan rather than a complaint
-about an already-rendered draft. The reported Resume Craft score is separate
-from hard factuality, eligibility, and layout gates.
+critique is advisory and cannot silently mutate or grade its own plan. Factual,
+target-fit, evidence, distinctiveness, clarity, privacy, eligibility, and layout
+remain separate gates rather than one composite craft score.
 
 Enhancement prompts also receive the CV authority dossier and an exact-term ATS
 strategy from the captured posting. They may swap projects and rewrite bullets

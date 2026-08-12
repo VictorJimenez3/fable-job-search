@@ -19,6 +19,12 @@ def test_role_family_prefers_specialized_ai_over_generic_swe():
     assert calibration.role_family(_job("1", "NVIDIA", "Deep Learning Software Engineer")) == "specialized_ai"
 
 
+def test_calibration_pdf_filename_includes_company_and_use_case():
+    job = _job("1", "NVIDIA", "Deep Learning Software Engineer")
+    job["calibration_role_family"] = "specialized_ai"
+    assert calibration.calibration_pdf_filename(job) == "nvidia_specialized_ai_resume.pdf"
+
+
 def test_varied_selection_covers_families_and_avoids_first_pass_company_duplicates():
     jobs = [
         _job("1", "NVIDIA", "Deep Learning Software Engineer", 100),
@@ -49,18 +55,21 @@ def test_feedback_and_artifact_paths_stay_inside_calibration_dir(tmp_path):
     batch = calibration.calibration_root(root) / "batch-1"
     run = batch / "runs" / "case-1"
     run.mkdir(parents=True)
-    (run / "resume.pdf").write_bytes(b"pdf")
+    pdf_name = "example_data_science_resume.pdf"
+    (run / pdf_name).write_bytes(b"pdf")
     case = {
         "case_id": "case-1",
         "batch_id": "batch-1",
         "run_dir": "calibration/batch-1/runs/case-1",
+        "pdf_filename": pdf_name,
+        "preview_filename": "example_data_science_resume-preview.png",
         "job": {"company": "Example", "title": "Data Engineer"},
     }
     batch.mkdir(parents=True, exist_ok=True)
     (batch / "index.json").write_text(json.dumps({"cases": [case]}))
 
-    target = calibration._artifact_path(root, case, "resume.pdf")
-    assert target == (run / "resume.pdf").resolve()
+    target = calibration._artifact_path(root, case, pdf_name)
+    assert target == (run / pdf_name).resolve()
     assert calibration._artifact_path(root, case, "resume.tex") is None
 
     saved = calibration.save_feedback(

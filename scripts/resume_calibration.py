@@ -135,6 +135,13 @@ def slug(value: str) -> str:
     return value[:70] or "role"
 
 
+def calibration_pdf_filename(job: Dict[str, Any]) -> str:
+    """Name new calibration PDFs by company and calibration use case."""
+    company = slug(str(job.get("company") or "company")).replace("-", "_")[:64] or "company"
+    family = slug(str(job.get("calibration_role_family") or role_family(job) or "role")).replace("-", "_")[:48] or "role"
+    return "%s_%s_resume.pdf" % (company, family)
+
+
 def role_family(job: Dict[str, Any]) -> Optional[str]:
     title = str(job.get("title") or "").lower()
     for family, terms in ROLE_FAMILIES:
@@ -246,7 +253,9 @@ def _case_record(
     error: str = "",
 ) -> Dict[str, Any]:
     report = studio.read_json(run_dir / "report.json", {}) or {}
-    has_pdf = (run_dir / "resume.pdf").exists()
+    pdf_name = str(studio.run_pdf_path(run_dir).name)
+    preview_name = str(studio.run_preview_path(run_dir).name)
+    has_pdf = (run_dir / pdf_name).exists()
     status = "failed" if error else "complete" if report else "partial" if has_pdf else "running"
     return {
         "case_id": run_dir.name,
@@ -255,10 +264,12 @@ def _case_record(
         "error": error,
         "role_family": family,
         "job": studio.job_summary(job),
+        "pdf_filename": pdf_name,
+        "preview_filename": preview_name,
         "run_dir": str(run_dir.relative_to(batch_dir.parent.parent)),
         "artifacts": {
-            "pdf": (run_dir / "resume.pdf").exists(),
-            "preview": (run_dir / "resume-preview.png").exists(),
+            "pdf": (run_dir / pdf_name).exists(),
+            "preview": (run_dir / preview_name).exists(),
             "report": (run_dir / "report.json").exists(),
         },
         "thesis": report.get("positioning_thesis", ""),
@@ -282,6 +293,11 @@ def _run_one(
     )
     run_dir = batch_dir / "runs" / case_id
     run_dir.mkdir(parents=True, exist_ok=True)
+    pdf_filename = calibration_pdf_filename(job)
+    studio.write_json(
+        run_dir / "status.json",
+        {"pdf_filename": pdf_filename, "preview_filename": Path(pdf_filename).stem + "-preview.png"},
+    )
     studio.write_json(
         run_dir / "calibration_case.json",
         {"case_id": case_id, "batch_id": batch_dir.name, "role_family": family, "job": studio.job_summary(job)},
@@ -425,7 +441,9 @@ def _load_cases(root: Path, batch_id_value: str = "") -> Tuple[Optional[Path], L
 
 
 def _artifact_path(root: Path, case: Dict[str, Any], name: str) -> Optional[Path]:
-    allowed = {"resume.pdf": "resume.pdf", "resume-preview.png": "resume-preview.png", "report.json": "report.json", "job_context.json": "job_context.json"}
+    pdf_name = str(case.get("pdf_filename") or "company_calibration_resume.pdf")
+    preview_name = str(case.get("preview_filename") or Path(pdf_name).stem + "-preview.png")
+    allowed = {pdf_name: pdf_name, preview_name: preview_name, "report.json": "report.json", "job_context.json": "job_context.json"}
     relative = allowed.get(name)
     if not relative:
         return None
@@ -479,6 +497,14 @@ async function saveFeedback(c){const bullets=[...document.querySelectorAll('[dat
 $('family').onchange=renderCases;$('reload').onclick=load;load();
 </script></main></body></html>'''
 
+LAB_HTML = LAB_HTML.replace(
+    "name=resume.pdf",
+    "name=${encodeURIComponent(c.pdf_filename || 'company_calibration_resume.pdf')}",
+).replace(
+    "name=resume-preview.png",
+    "name=${encodeURIComponent(c.preview_filename || 'company_calibration_resume-preview.png')}",
+)
+
 
 class CalibrationHandler(BaseHTTPRequestHandler):
     root: Path = studio.repo_root()
@@ -529,12 +555,13 @@ class CalibrationHandler(BaseHTTPRequestHandler):
             target = _artifact_path(self.root, case or {}, name) if case else None
             if not target:
                 return self._json({"error": "artifact not found"}, HTTPStatus.NOT_FOUND)
-            content_type = {
-                "resume.pdf": "application/pdf",
-                "resume-preview.png": "image/png",
-                "report.json": "application/json",
-                "job_context.json": "application/json",
-            }[name]
+            pdf_name = str(case.get("pdf_filename") or "company_calibration_resume.pdf")
+            preview_name = str(case.get("preview_filename") or Path(pdf_name).stem + "-preview.png")
+            content_type = (
+                "application/pdf" if name == pdf_name else
+                "image/png" if name == preview_name else
+                "application/json"
+            )
             return self._bytes(target.read_bytes(), content_type)
         return self._json({"error": "not found"}, HTTPStatus.NOT_FOUND)
 
