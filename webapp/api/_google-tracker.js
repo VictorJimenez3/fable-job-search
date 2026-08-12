@@ -586,6 +586,15 @@ function registryUnavailable(error) {
     .test(String(error?.message || error || ""));
 }
 
+// Loading the optional personal mirror must not make the radar look broken.
+// These errors come from the user's Google grant or workbook, not from the
+// deterministic jobs/pipeline data. The API route uses this classification to
+// return a disconnected tracker state while keeping the failure in logs.
+function optionalReadFailure(error) {
+  const message = String(error?.message || error || "");
+  return /^(Google (?:token \d+|did not return an access token|is not connected for this account|Sheet (?:read|tabs|format|update|append) \d+|account (?:tab|registry) \d+)|fetch failed$)/.test(message);
+}
+
 async function resolveAccountWithoutRegistry(provider, identity, current, mode, oauth) {
   if (mode === "link" && !current) throw new Error("sign in before connecting another account");
   if (provider === "google" && current?.google?.sub && current.google.sub !== String(identity.sub || "")) {
@@ -765,4 +774,4 @@ async function updateUserTracker(login, accountKeys, payload, personal = null) {
 
 module.exports = { configured, personalConfigured, hasPersonalSession, userTracker,
   updateUserTracker, resolveAccount, PERSONAL_HEADERS, ACCOUNT_HEADERS, PREFERENCE_HEADERS,
-  VALID_POSTING_STATUSES, tabForProfile, internshipTab, preferencesTab };
+  VALID_POSTING_STATUSES, tabForProfile, internshipTab, preferencesTab, optionalReadFailure };
