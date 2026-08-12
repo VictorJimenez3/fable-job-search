@@ -778,6 +778,27 @@ def test_line_merge_cannot_delete_generated_skills_evidence():
     assert merged["front_matter_rewrites"][0]["evidence_ids"] == ["doc:skills"]
 
 
+def test_downstream_validation_preserves_existing_generation_skills(monkeypatch):
+    catalog = _fixture_catalog()
+    graph = {"nodes": [{
+        "id": "doc:skills", "heading": "Skills", "text": "Used SharePoint",
+        "claim_allowed": True,
+    }]}
+    plan = _fixture_plan()
+    plan["front_matter_rewrites"] = [{
+        "line_id": "front:skills:3",
+        "text": "\\textbf{Data \\& Tools:} GitHub, SharePoint",
+        "evidence_ids": ["doc:skills"],
+        "why": "Target evidence",
+    }]
+    monkeypatch.setattr(rs, "front_matter_catalog", lambda _root: [{
+        "line_id": "front:skills:3", "text": "\\textbf{Data \\& Tools:} GitHub",
+    }])
+    normalized, errors = rs.validate_plan(plan, catalog, enhance=False, graph=graph)
+    assert not errors
+    assert normalized["front_matter_rewrites"][0]["line_id"] == "front:skills:3"
+
+
 def test_workshop_edit_creates_revision_without_overwriting_original_plan(monkeypatch, tmp_path):
     catalog = _fixture_catalog()
     plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)

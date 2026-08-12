@@ -3398,7 +3398,10 @@ def validate_plan(
         "awards": "omit" if str(raw_front_matter.get("awards") or "").lower() == "omit" else "keep",
     }
     normalized["front_matter_rewrites"] = []
-    if generation:
+    # Once a generation plan has evidence-backed Skills rewrites, downstream
+    # packers and space-expansion validators must not erase them merely because
+    # their helper call did not repeat the mode flag.
+    if generation or bool(plan.get("front_matter_rewrites")):
         skill_lines = {
             str(item.get("line_id") or ""): item
             for item in front_matter_catalog(repo_root())
