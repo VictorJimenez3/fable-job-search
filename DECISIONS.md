@@ -1755,3 +1755,11 @@ hydration, logs the short error for operations, and returns a disconnected
 tracker state so the frontend can continue normally and offer reauthorization.
 Writes and unexpected implementation failures remain errors, preserving useful
 signals instead of silently hiding real defects.
+
+## 116. Make tracker hydration read-only (2026-08-11)
+
+`/api/tracker` GET is a dashboard readback path, not a migration job. It no
+longer formats the workbook or repairs headers/tabs during hydration. That
+avoids a permission error on an older but readable personal workbook; explicit
+writes and fresh Google connections retain the repair path, so the app does not
+trade away tracker correctness when Victor actually asks it to change data.
