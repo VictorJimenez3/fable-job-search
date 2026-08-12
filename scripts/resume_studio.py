@@ -3515,7 +3515,7 @@ def expand_into_measured_space(
         # enough. Limit the search so a dense run remains bounded while still
         # covering Victor's explicit "replace two weaker bullets with a
         # stronger project" case.
-        attempts.extend(("swap", list(actions)) for actions in removals[:6])
+        attempts.extend(("swap", [action]) for action in removals[:6])
         attempts.extend(
             ("swap", list(actions))
             for actions in itertools.combinations(removals[:6], 2)
