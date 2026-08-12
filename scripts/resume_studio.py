@@ -2994,12 +2994,16 @@ def line_editor_prompt(
     return (
         "You are Victor's final one-line resume editor. This request is self-contained; do not inspect the filesystem "
         "or run commands. Preserve every selected entry, bullet source_id, "
-        "evidence_id, fact, priority, and section order. Change only bullet text. For wrapped or near-wrap lines "
+        "evidence_id, fact, priority, and section order. Change only bullet text or the text of an existing "
+        "front_matter_rewrite. Never delete a front-matter rewrite, change its line_id/evidence_ids, or remove "
+        "the supported target terms that motivated it. For wrapped or near-wrap lines "
         "(less than the stated safe right slack), cut filler and compress clauses without losing the technical object, "
         "supported ATS term, or proof. The minimum safe right slack is 12pt: every returned bullet must clear that "
         "threshold, and a near-wrap is still a failure even when the PDF technically stays on one line. Prefer a "
         "short, readable line that ends early; never "
-        "expand a bullet merely to approach the right margin. Preserve decision_ledger, front_matter_policy, and front_matter_rewrites unchanged. Do not pad, invent, change layout, or return LaTeX beyond inline textbf/emph. Return the complete "
+        "expand a bullet merely to approach the right margin. Preserve decision_ledger and front_matter_policy; "
+        "compact an unsafe Skills rewrite by removing lower-value non-target tools and compressing separators. "
+        "Do not pad, invent, change layout, or return LaTeX beyond inline textbf/emph. Return the complete "
         "structured plan under the same schema.\n\nTarget:\n"
         + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nCurrent plan:\n"
@@ -4266,10 +4270,23 @@ def merge_edited_bullets(candidate_plan: Dict[str, Any], edited_plan: Dict[str, 
                 replacement = edited.get(str(bullet.get("source_id")))
                 if replacement:
                     entry["bullets"][index] = copy.deepcopy(replacement)
-    if "front_matter_rewrites" in edited_plan:
-        merged["front_matter_rewrites"] = copy.deepcopy(
-            edited_plan.get("front_matter_rewrites") or []
-        )
+    original_rewrites = merged.get("front_matter_rewrites") or []
+    edited_rewrites = {
+        str(item.get("line_id") or ""): item
+        for item in (edited_plan.get("front_matter_rewrites") or [])
+        if isinstance(item, dict) and str(item.get("line_id") or "")
+    }
+    if original_rewrites:
+        preserved = []
+        for original in original_rewrites:
+            line_id = str(original.get("line_id") or "")
+            replacement = copy.deepcopy(edited_rewrites.get(line_id) or original)
+            replacement["line_id"] = line_id
+            replacement["evidence_ids"] = list(original.get("evidence_ids") or [])
+            replacement["why"] = str(original.get("why") or "")
+            replacement["source_text"] = str(original.get("source_text") or "")
+            preserved.append(replacement)
+        merged["front_matter_rewrites"] = preserved
     return merged
 
 
@@ -5158,6 +5175,9 @@ def _line_compaction_candidates(text: str, source_text: str) -> List[str]:
     add(re.sub(r",\s+enabling\s+", " for ", current, flags=re.I))
     add(re.sub(r"\bclassification models\b", "classifiers", current, flags=re.I))
     add(re.sub(r"\bto handle\b", "for", current, flags=re.I))
+    add(re.sub(r"\bGit, GitHub\b", "Git/GitHub", current, flags=re.I))
+    add(re.sub(r"\bTesting, Debugging\b", "Testing/Debugging", current, flags=re.I))
+    add(re.sub(r"\bVector Databases,\s*", "", current, flags=re.I))
     add(re.sub(
         r"\bwhile handling (a|an|the) (.+?) with\b",
         r"on \1 \2 using", current, flags=re.I,
@@ -5214,6 +5234,11 @@ def compact_plan_to_geometry(
                         break
                 if current_bullet:
                     break
+            if not current_bullet and source_id.startswith("front:skills:"):
+                current_bullet = next((
+                    item for item in (best_plan.get("front_matter_rewrites") or [])
+                    if str(item.get("line_id") or "") == source_id
+                ), None)
             if not current_bullet:
                 continue
             current_text = str(current_bullet.get("text") or "")
@@ -5221,6 +5246,14 @@ def compact_plan_to_geometry(
             for candidate_text in candidates:
                 trial = copy.deepcopy(best_plan)
                 replaced = False
+                if source_id.startswith("front:skills:"):
+                    front_line = next((
+                        item for item in (trial.get("front_matter_rewrites") or [])
+                        if str(item.get("line_id") or "") == source_id
+                    ), None)
+                    if front_line:
+                        front_line["text"] = candidate_text
+                        replaced = True
                 for section in ("experiences", "projects", "leadership"):
                     for entry in trial.get(section, []) or []:
                         for bullet in entry.get("bullets", []) or []:

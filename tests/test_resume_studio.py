@@ -496,6 +496,10 @@ def test_line_compaction_shortens_safe_connective_phrases():
     assert "Trained and tuned three classifiers with resampling and stratified validation for rare All-NBA selections" in rs._line_compaction_candidates(nba, nba)
     metric = "Reached 0.984 ROC-AUC and 94% recall while handling a 2.74% positive class with resampling and stratified validation"
     assert "Reached 0.984 ROC-AUC and 94% recall on a 2.74% positive class using resampling and stratified validation" in rs._line_compaction_candidates(metric, metric)
+    skills = "Data & Tools: Data Engineering, Data Visualization, SQLite, Vector Databases, Git, GitHub, SharePoint, Testing, Debugging, Version Control"
+    candidates = rs._line_compaction_candidates(skills, skills)
+    assert "Data & Tools: Data Engineering, Data Visualization, SQLite, Vector Databases, Git/GitHub, SharePoint, Testing, Debugging, Version Control" in candidates
+    assert "Data & Tools: Data Engineering, Data Visualization, SQLite, Git, GitHub, SharePoint, Testing, Debugging, Version Control" in candidates
 
 
 def test_enhanced_plan_can_synthesize_multiple_authorized_source_lines():
@@ -749,6 +753,29 @@ def test_candidate_expansion_adds_authorized_source_backups():
     merged = rs.merge_edited_bullets(expanded, edited)
     assert merged["projects"][0]["bullets"][0]["text"] == "edited text"
     assert rs.portfolio_metrics(merged)["total_bullets"] == 17
+
+
+def test_line_merge_cannot_delete_generated_skills_evidence():
+    candidate = _fixture_plan()
+    candidate["front_matter_rewrites"] = [{
+        "line_id": "front:skills:3",
+        "text": "Data & Tools: GitHub, SharePoint, Testing, Version Control",
+        "evidence_ids": ["doc:skills"],
+        "why": "Target evidence",
+        "source_text": "Data & Tools: GitHub",
+    }]
+    edited = _fixture_plan()
+    edited["front_matter_rewrites"] = []
+    merged = rs.merge_edited_bullets(candidate, edited)
+    assert merged["front_matter_rewrites"] == candidate["front_matter_rewrites"]
+
+    edited["front_matter_rewrites"] = [{
+        "line_id": "front:skills:3", "text": "Data & Tools: GitHub, SharePoint",
+        "evidence_ids": [], "why": "", "source_text": "",
+    }]
+    merged = rs.merge_edited_bullets(candidate, edited)
+    assert merged["front_matter_rewrites"][0]["text"].endswith("GitHub, SharePoint")
+    assert merged["front_matter_rewrites"][0]["evidence_ids"] == ["doc:skills"]
 
 
 def test_workshop_edit_creates_revision_without_overwriting_original_plan(monkeypatch, tmp_path):
