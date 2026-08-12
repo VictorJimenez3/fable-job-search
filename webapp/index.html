@@ -496,6 +496,43 @@ $("#themeBtn").onclick = () => {
 function ownerDevMode() {
   return Boolean(S.auth?.owner && norm(S.auth.login) === "victorjimenez3");
 }
+const RESUME_STUDIO_ORIGIN = "http://127.0.0.1:4317/";
+function ownerResumeStudio() {
+  return Boolean(S.auth?.owner && norm(S.auth.login) === "victorjimenez3");
+}
+function base64UrlUtf8(value) {
+  const bytes = new TextEncoder().encode(value);
+  let binary = "";
+  bytes.forEach(byte => { binary += String.fromCharCode(byte); });
+  return btoa(binary).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/g,"");
+}
+function resumeStudioSnapshot(j) {
+  const privateWeb = S.web.jobs[j.id] || {};
+  return {
+    id:j.id, company:j.company, title:j.title, url:j.url,
+    locations:Array.isArray(j.locations) ? j.locations.slice(0,8) : [],
+    score:j.score, posted_at:j.posted_at, salary:j.salary || "",
+    sector:j.sector || "", source:j.source || "job-radar-production",
+    description:privateWeb.jd || j.description || "",
+    alert_ok:Boolean(j.alert_ok), early_career_possible:Boolean(j.early_career_possible),
+    explicit_new_grad:Boolean(j.explicit_new_grad), score_reasons:j.score_reasons || [],
+  };
+}
+function resumeStudioUrl(j) {
+  return RESUME_STUDIO_ORIGIN + "#job=" + base64UrlUtf8(JSON.stringify(resumeStudioSnapshot(j)));
+}
+function openResumeStudio(j) {
+  if (!j || !ownerResumeStudio()) { toast("Resume Studio is private to @VictorJimenez3"); return; }
+  window.open(resumeStudioUrl(j), "_blank", "noopener");
+  const lane = laneOf(j.id, appliedById());
+  if (!lane && canWrite()) {
+    actTrack(j, true).then(ok => toast(ok
+      ? "Saved to To apply · opened private Resume Studio"
+      : "Resume Studio opened · saving failed, so use Save when you return"));
+  } else {
+    toast(lane ? "Opened private Resume Studio · role already saved" : "Opened private Resume Studio");
+  }
+}
 function recordBootError(path, error, critical=false) {
   const message = error instanceof Error ? error.message : String(error || "unknown error");
   S.boot.errors = [...S.boot.errors.filter(item => item.path !== path), {path, message, critical}];
@@ -1475,7 +1512,7 @@ function renderLaneSwitch() {
 function render() {
   renderBootNotice();
   renderLaneSwitch();
-  const tabs = S.auth?.owner ? [...TABS.slice(0,-1), ["taste","My job preferences"], ["testing","Testing"], TABS.at(-1)] : TABS;
+  const tabs = S.auth?.owner ? [...TABS.slice(0,-1), ["taste","My job preferences"], ["testing","Resume Studio"], TABS.at(-1)] : TABS;
   if (["testing","taste"].includes(S.tab) && !S.auth?.owner) S.tab = "jobs";
   $("#nav").innerHTML = tabs.map(([k,l]) =>
     `<button class="${S.tab===k?'on':''}" onclick="S.tab='${k}';render()">${l}</button>`).join("") +
@@ -1527,6 +1564,7 @@ function rowHTML(j, byId) {
       ${lane ? stageControl(j.id, lane) : ""}
       ${lane && lane!=="maybe" ? "" : `<button class="act" onclick='actMaybe(S.jobs["${j.id}"])'>${lane==="maybe"?"un-maybe":"maybe"}</button>`}
       ${lane ? `<button class="act" onclick='actUntrack(S.jobs["${j.id}"])'>remove</button>` : `<button class="act" onclick='actTrack(S.jobs["${j.id}"])'>save</button>`}
+      ${ownerResumeStudio()?`<button class="act" onclick='openResumeStudio(S.jobs["${j.id}"])'>tailor</button>`:""}
       <button class="act primary" onclick='startApply(S.jobs["${j.id}"])'>apply ↗</button>
       <button class="act" onclick='openWS("${j.id}")'>details ▸</button>
     </div></div>`;
@@ -1907,8 +1945,8 @@ function openWS(id) {
   if (wsId !== id) { S.wsTab = "fit"; wsId = id; }
   const c = S.culture[norm(j.company)];
   const a = appliedById()[id];
-  const tabs = [["fit","Fit & eligibility"],["company","Company"],["outreach","Outreach"],["notes","Notes"]];
-  const body = ({company:wsCompany, fit:wsFit, outreach:wsOutreach, notes:wsNotes}[S.wsTab] || wsFit);
+  const tabs = [["fit","Fit & eligibility"],["company","Company"],...(ownerResumeStudio()?[["resume","Resume"]]:[]),["outreach","Outreach"],["notes","Notes"]];
+  const body = ({company:wsCompany, fit:wsFit, resume:wsResume, outreach:wsOutreach, notes:wsNotes}[S.wsTab] || wsFit);
   $("#ws").classList.add("open");
   $("#wsp").innerHTML = `
     <button class="act" style="float:right" onclick="closeWS()">✕ close</button>
@@ -1924,6 +1962,7 @@ function openWS(id) {
       <div class="facts">${eligibilityBadges(j)}</div>
      <div class="acts" style="margin-top:0.65rem">
         ${a?stageControl(id,a.stage||"saved"):""}
+        ${ownerResumeStudio()?`<button class="act" onclick='openResumeStudio(jobById("${id}"))'>tailor resume ↗</button>`:""}
         <button class="act primary" onclick='startApply(jobById("${id}"))'>open application ↗</button>
         ${a?"":`<button class="act" onclick='actTrack(jobById("${id}"))'>save to apply</button>`}
       </div>
@@ -1936,8 +1975,21 @@ function openWS(id) {
       ${a?"":`<button class="act" onclick='actTrack(jobById("${id}"))'>save → To apply</button>`}
       ${a?`<button class="act" onclick='actUntrack(jobById("${id}"))'>remove from tracker</button>`:""}
       ${a&&(a.stage||"applied")!=="saved"?"":`<button class="act" onclick='actApplied(jobById("${id}"))'>mark applied</button>`}
+      ${ownerResumeStudio()?`<button class="act" onclick='openResumeStudio(jobById("${id}"))'>tailor resume ↗</button>`:""}
       <button class="act primary" onclick='startApply(jobById("${id}"))'>open application ↗</button>
     </div>`;
+}
+
+function wsResume(j, w, c, id) {
+  if (!ownerResumeStudio()) return `<div class="note">Resume Studio is private to @VictorJimenez3.</div>`;
+  return `<div class="sect"><h4>Private Resume Studio</h4>
+    <p>Send this exact role into the local Studio, choose the evidence policy, review the generated PDF, then return here to apply.</p>
+    <div class="facts"><span class="chip">Use my source</span><span class="chip">AI enhanced</span><span class="chip">Take the wheel</span></div>
+    <p class="sub">The job snapshot travels only in the browser URL fragment to <span class="mono">127.0.0.1</span>. Your CV evidence and generated files stay on this Mac.</p>
+    ${w.jd?`<p class="sub">The job description saved in Notes will be included for stronger matching.</p>`:`<p class="sub">Tip: paste the full posting into Notes → Job description before tailoring when the live page is hard to fetch.</p>`}
+    <div class="bar"><button class="act primary" onclick='openResumeStudio(jobById("${id}"))'>save + open Resume Studio ↗</button>
+    <button class="act" onclick='startApply(jobById("${id}"))'>open application ↗</button></div>
+  </div>`;
 }
 
 function wsCompany(j, w, c, id) {
@@ -2479,6 +2531,7 @@ function testingRoleHTML(row) {
         <div class="kv">${Object.entries(m.dimensions).map(([name,value])=>`<span class="k">${esc(name.replaceAll('_',' '))}</span><span>+${value}</span>`).join('')}</div>
         <p class="sub">${m.reasons.map(esc).join(' · ')}</p></details>
       <div class="bar" style="margin:.45rem 0 0"><button class="act" onclick='openWS("${j.id}")'>role details</button>
+        <button class="act" onclick='openResumeStudio(S.jobs["${j.id}"])'>tailor resume ↗</button>
         <button class="act primary" onclick='startApply(S.jobs["${j.id}"])'>apply ↗</button></div>
     </div></article>`;
 }
@@ -2488,8 +2541,9 @@ function rTesting() {
   const calibrated=Object.values(S.jobs).filter(j=>j.score_raw!=null && j.score_calibrated!=null);
   $("#main").innerHTML = `<section class="testing-hero">
     <span class="chip good">owner only · @${esc(S.auth.login)}</span>
-    <h2>Resume + scoring lab</h2>
-    <p class="sub">This is the production window into the system under test. Company comes first everywhere. Private CV sources and generated PDFs stay on the Mac and are never copied into this public repository.</p>
+    <h2>Resume Studio</h2>
+    <p class="sub">Find → save → tailor → apply. Choose any production role here and it opens directly in the private local Studio; CV sources and generated PDFs stay on this Mac and are never copied into this public repository.</p>
+    <div class="bar"><button class="act primary" onclick="window.open(RESUME_STUDIO_ORIGIN,'_blank','noopener')">open local Resume Studio ↗</button></div>
   </section>
   <div class="testing-grid"><section>
     <div class="filters"><div class="bar">
@@ -2499,16 +2553,16 @@ function rTesting() {
         <option value="new" ${S.testing.sort==='new'?'selected':''}>newest</option>
         <option value="radar" ${S.testing.sort==='radar'?'selected':''}>best Radar score</option></select>
       <button class="act primary" onclick="S.testing.q=$('#testingQ').value;S.testing.sort=$('#testingSort').value;rTesting()">rank</button>
-    </div><p class="sub">${rows.length} open technical roles · Match uses the fixed 35/20/20/10/10/5 rubric. This phone preview is intentionally title-only; selecting Tailor on the Mac adds the full posting and source-addressed private evidence graph.</p></div>
+    </div><p class="sub">${rows.length} open technical roles · This title preview helps rank choices. Tailor sends the selected role and any saved job description to the Mac, where the full private evidence graph produces the real match and draft.</p></div>
     <div class="lane">${rows.slice(0,S.testing.shown).map(testingRoleHTML).join('')||'<p class="sub">No matching roles.</p>'}
       ${rows.length>S.testing.shown?`<button class="act" onclick="S.testing.shown+=40;rTesting()">show 40 more</button>`:''}</div>
   </section><aside class="testing-stack">
     <div class="lane"><h3>What is live</h3><div class="kv">
       <span class="k">Resume Match</span><span>best-fit, newest, and Radar ranking</span>
       <span class="k">evidence graph</span><span>private source IDs + authority hierarchy</span>
-      <span class="k">tailoring modes</span><span>used bullets, AI tailor, and unrestricted evidence-grounded AI</span>
-      <span class="k">layout</span><span>exact CV/resume.tex, 0% scaling, measured 2D packing</span>
-      <span class="k">review</span><span>fixed craft rubric + factual, eligibility, and layout gates</span>
+      <span class="k">tailoring modes</span><span>Use my source, AI enhanced, and Take the wheel</span>
+      <span class="k">layout</span><span>immutable VictorJimenezResume base, 0% shrinking, measured 2D packing</span>
+      <span class="k">review</span><span>separate factual, target-fit, evidence, privacy, and layout gates</span>
     </div></div>
     <div class="lane"><h3>Scoring calibration v9</h3>
       <p><b>${calibrated.length.toLocaleString()}</b> jobs currently carry the new raw-utility and calibrated-score ledger in production state.</p>
@@ -2590,7 +2644,7 @@ window.S = S; window.render = render; window.openWS = openWS; window.closeWS = c
 window.renderJobsList = renderJobsList; window.renderCosList = renderCosList;
 window.actMaybe = actMaybe; window.actTrack = actTrack; window.actApplied = actApplied;
 window.cycleJobSelection = cycleJobSelection; window.cycleJobSelectionKey = cycleJobSelectionKey;
-window.startApply = startApply; window.jobById = jobById;
+window.startApply = startApply; window.openResumeStudio = openResumeStudio; window.jobById = jobById;
 window.setFilter = setFilter; window.clearFilters = clearFilters;
 window.addLink = addLink; window.rmLink = rmLink; window.testPAT = testPAT;
 window.setPipelineStage = setPipelineStage;

@@ -1721,3 +1721,26 @@ their private Google tracker rows, which receive the public lifecycle status and
 notice; application Stage remains a separate user-controlled field. The `lifecycle` CLI
 command provides a manual reconciliation/backfill path, and `RADAR_HISTORY_DAYS` plus the
 lifecycle age/grace variables control retention and source-gap sensitivity.
+
+## 114. Bridge Victor's production job choice to the private local Resume Studio (2026-08-11)
+
+The production product now treats tailoring as the third owner workflow stage:
+find, save, tailor, then apply. Only the authenticated `VictorJimenez3` owner UI
+renders Resume Studio controls. Choosing Tailor opens the local loopback service
+and saves an unsaved role to **To apply** in parallel, so tailoring is attached
+to the same tracked job rather than becoming a separate lab workflow.
+
+The hosted app sends a bounded snapshot of public job metadata plus any job
+description Victor pasted into the browser. It encodes that snapshot in the URL
+fragment of `http://127.0.0.1:4317/`; fragments are not sent to the hosted
+server. The local UI validates and posts the snapshot to the loopback service,
+which uses it only when its generated local job state lacks that ID and stores
+it only with the private ignored run. CV evidence, prompts, drafts, and PDFs
+remain under `CV/.resume_studio/` and never enter production or GitHub.
+
+A user-level launchd service may keep the Studio available at login. It binds
+only to `127.0.0.1`, uses the repository virtual environment, and logs under
+the ignored private Studio directory. This is intentionally Victor-first;
+multi-user CV storage and hosted resume generation remain deferred. Automated
+application submission and recruiter messaging are separate future stages and
+must retain explicit owner review.

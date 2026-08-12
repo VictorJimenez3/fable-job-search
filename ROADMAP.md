@@ -268,6 +268,14 @@ not corrupt older private drafts.
 Multi-user provider/CV storage remains later; no email/account integration is
 part of the owner-first system.
 
+Production-to-local Resume Studio — ✅ SHIPPED 2026-08-11 (DECISION #114).
+Only the authenticated `@VictorJimenez3` owner UI exposes Tailor controls. A
+selected production job is saved to **To apply** and passed through a URL
+fragment to the loopback-only Studio, including a manually saved job
+description when available. CV evidence and generated artifacts never cross
+the local privacy boundary. A login service keeps the Studio available on
+Victor's Mac.
+
 Resume library/preview surface — ✅ SHIPPED (DECISION #75). Resume Studio now
 indexes saved runs and legacy architecture experiments, separates “create a
 new run” from “Resume bank,” snapshots the selected posting, preserves prior
@@ -300,6 +308,10 @@ top of that durable bank.
 - **Referral-finder** — cross NJIT alumni signals against target companies;
   drafts the outreach note into the Networking CRM. (Needs a data source that
   isn't LinkedIn scraping — evaluating SHPE directory + GitHub org members.)
+- **Recruiter asking/outreach assistant — ⏸️ DEFERRED.** Build on the shipped
+  public recruiter searches by identifying a reviewable contact candidate,
+  drafting a role-specific ask, and requiring Victor's approval before any
+  send. Never scrape LinkedIn and never auto-message people.
 - **H-1B/sponsorship cross-check — ✅ SHIPPED 2026-08-07 (DECISION #83).** A
   weekly refresh joins radar companies to the latest official DOL OFLC LCA
   disclosure quarters and adds `likely`, `no-history`, or `unavailable`
@@ -321,6 +333,9 @@ top of that durable bank.
   checklist in the workspace. Candidate reviews every answer; no blind form
   submission. This is the next application-speed QoL step after the shipped
   open/save flow and should reuse the Mac-local privacy boundary from #29.
+- **Application autofill and submission — ⏸️ DEFERRED.** The next major stage
+  after finding, saving, and tailoring. Start with owner-reviewed form fill and
+  answer reuse; do not blindly submit, bypass attestations, or conceal failures.
 
 ## Ops
 - **Company-research backlog throughput — ✅ checkpointing + retry visibility shipped.** The

@@ -368,22 +368,27 @@ Before changing the radar, read these in order:
   backoff; checkpoint logs expose ready/pending/retry/error counts.
 - **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it or
   anything derived from it. Owner-only Resume Studio now runs locally with
-  source-only and enhancement modes; start it with
+  Use my source, AI enhanced, and Take-the-wheel modes; start it with
   `.venv/bin/python scripts/resume_studio.py` and open `http://127.0.0.1:4317/`.
+  Install `bash scripts/resume-studio-service/install.sh` once to keep the
+  loopback service available at login. Production exposes Tailor controls only
+  to authenticated `@VictorJimenez3`; selecting one saves the role to **To
+  apply** and sends a bounded public job snapshot through the URL fragment to
+  the local Studio. CV evidence and generated files never cross that boundary
+  (DECISION #114).
   For temporary human-feedback calibration across varied radar roles, run
   `.venv/bin/python scripts/resume_calibration.py --generate --count 6 --serve`
   and open `http://127.0.0.1:4321/`; generated PDFs and JSONL labels stay under
   `CV/.resume_studio/calibration/`.
   It uses installed first-party Codex/Claude Code sessions, strips API-key
   environment variables, and stores all output under `CV/.resume_studio/`.
-  `CV/resume.tex` / `.pdf` is the exact visual baseline; TLDP is only one
-  target artifact. Providers return source-addressed content plans, never full
-  LaTeX. The renderer preserves the baseline's header, education, skills,
-  margins, typography, and spacing, uses company-first employer headings, and
-  enforces a 22–26-bullet, nonredundant interview portfolio across three
-  experiences and four projects with no wrapped bullets, excessive bottom
-  whitespace, or formatting drift. Reports record the fixed
-  reviewer score, exclusions, provider calls, and emitted Codex token usage;
+  `CV/immutable/VictorJimenezResume.tex` / `.pdf` is the locked visual baseline;
+  TLDP is only one reference artifact. Providers return source-addressed
+  content plans, never full LaTeX. The renderer preserves the baseline's
+  visual contract, uses company-first employer headings, and dynamically packs
+  the strongest nonredundant evidence with no wrapped bullets, excessive
+  bottom whitespace, or formatting drift. Reports record separate quality
+  gates, exclusions, provider calls, and emitted Codex token usage;
   totals are marked incomplete when a provider omits a call's footer.
   Live validation on 2026-07-31 found the Codex subscription session usable;
   the installed Claude client returned an organization-level 403 stating that
@@ -464,9 +469,12 @@ Before changing the radar, read these in order:
   companies can reach 100, but posting wording separates nearby roles; cited
   momentum and compensation can compensate for weaker ordinary dimensions.
   Sector points have diminishing influence and hard gates remain absolute.
-- **Still deliberately deferred:** semantic/vector RAG, bullet locks/history,
-  revision threads, and multi-user CV/provider storage. Email-based
-  applied detection is also parked until the multi-user privacy model exists.
+- **Still deliberately deferred:** semantic/vector RAG, multi-user CV/provider
+  storage, owner-reviewed application autofill/submission, and recruiter
+  identification/asking with approval before send. Email-based applied
+  detection is also parked until the multi-user privacy model exists. The
+  current product stops at finding, saving, tailoring, opening the application,
+  and providing public recruiter-search links/templates.
 
 ## Safe handoff practice
 

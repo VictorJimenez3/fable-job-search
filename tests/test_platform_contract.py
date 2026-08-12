@@ -223,3 +223,18 @@ def test_platform_boots_progressively_and_keeps_owner_diagnostics_in_app():
     assert 'victorjimenez3' in html
     assert "No email or external issue was sent" in html
     assert "fetchJSON" not in html
+
+
+def test_owner_only_resume_studio_is_integrated_with_job_selection():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    assert 'const RESUME_STUDIO_ORIGIN = "http://127.0.0.1:4317/"' in html
+    assert "function ownerResumeStudio" in html
+    assert 'norm(S.auth.login) === "victorjimenez3"' in html
+    assert "function openResumeStudio" in html
+    assert "resumeStudioSnapshot" in html
+    assert "privateWeb.jd || j.description" in html
+    assert 'actTrack(j, true).then' in html
+    assert '["testing","Resume Studio"]' in html
+    assert '[["resume","Resume"]]' in html
+    assert "save + open Resume Studio" in html
+    assert "window.openResumeStudio = openResumeStudio" in html
