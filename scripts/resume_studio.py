@@ -5216,7 +5216,10 @@ def compact_plan_to_geometry(
         if bullet.get("id")
     }
     attempt = 0
-    for _ in range(4):
+    # A dense page can contain several independent near-wraps. Keep the pass
+    # bounded, but do not stop before reaching a later line after four earlier
+    # safe compactions.
+    for _ in range(12):
         unsafe_ids = [
             str(item.get("source_id") or "")
             for item in (best_layout.get("horizontal") or {}).get("bullets", [])
