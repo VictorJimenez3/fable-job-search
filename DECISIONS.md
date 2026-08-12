@@ -1744,3 +1744,14 @@ the ignored private Studio directory. This is intentionally Victor-first;
 multi-user CV storage and hosted resume generation remain deferred. Automated
 application submission and recruiter messaging are separate future stages and
 must retain explicit owner review.
+
+## 115. Keep optional Google tracker failures out of the radar boot path (2026-08-11)
+
+The owner’s production workflow uses Notion as its default tracker; Google
+Sheets is an optional personal mirror. A revoked OAuth grant, stale workbook,
+or temporary Sheets response therefore must not make the Jobs/Pipeline shell
+look broken. `/api/tracker` now classifies provider/read failures during GET
+hydration, logs the short error for operations, and returns a disconnected
+tracker state so the frontend can continue normally and offer reauthorization.
+Writes and unexpected implementation failures remain errors, preserving useful
+signals instead of silently hiding real defects.

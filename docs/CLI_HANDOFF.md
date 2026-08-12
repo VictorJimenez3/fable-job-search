@@ -101,6 +101,12 @@ Before changing the radar, read these in order:
   stale panel from blanking the site. The signed-in `VictorJimenez3` owner gets
   a compact red in-app developer notice with retry/details when a request
   fails; it sends no email and creates no issue automatically.
+- **Optional tracker isolation (verified 2026-08-11):** `/api/tracker` now
+  treats Google OAuth refresh and private-Sheet read failures as a disconnected
+  optional mirror, logs the short provider error server-side, and returns 200
+  so the owner’s Jobs/Pipeline/Notion workflow does not show a boot failure.
+  Tracker writes and unexpected backend failures still use the error path;
+  reauthorize Google from the account center to restore the mirror.
 - **Role-field filter controls:** each Jobs role-field button remains visible
   while cycling neutral → selected → red excluded. A third click clears the
   exclusion; the red state filters that role family out without hiding the

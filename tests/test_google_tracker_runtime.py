@@ -94,3 +94,35 @@ def test_expired_owner_registry_does_not_block_a_users_personal_tracker():
         """
     )
     subprocess.run(["node", "-e", script], cwd=ROOT, check=True, capture_output=True, text=True)
+
+
+@pytest.mark.skipif(not shutil.which("node"), reason="Node is required for Vercel API runtime checks")
+def test_optional_tracker_read_failure_degrades_without_a_boot_502():
+    script = textwrap.dedent(
+        """
+        process.env.SESSION_SECRET = "test-session-secret";
+        const {seal} = require("./webapp/api/_lib");
+        const tracker = require("./webapp/api/_google-tracker");
+        const api = require("./webapp/api/tracker");
+        tracker.userTracker = async () => { throw new Error("Google token 401"); };
+        let status = 0;
+        let payload;
+        const res = {
+          status(code) { status = code; return this; },
+          json(body) { payload = body; },
+          end() {},
+        };
+        const req = {
+          method: "GET",
+          headers: {cookie: `jr_s=${seal({u: "example", k: "acct_test", keys: ["acct_test"]})}`},
+          query: {},
+        };
+        (async () => {
+          await api(req, res);
+          if (status !== 200 || payload.tracker_unavailable !== true || payload.needs_google !== true) {
+            throw new Error(`unexpected fallback: ${status} ${JSON.stringify(payload)}`);
+          }
+        })().catch(error => { console.error(error); process.exit(1); });
+        """
+    )
+    subprocess.run(["node", "-e", script], cwd=ROOT, check=True, capture_output=True, text=True)

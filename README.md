@@ -32,6 +32,10 @@ optional research, tracker, and culture panels hydrate, so one stale state file
 does not blank the whole page. If a load fails, only the signed-in
 `VictorJimenez3` owner view receives a compact in-app developer notice with a
 retry action; it never sends an email or creates an issue automatically.
+The optional Google Sheets mirror is isolated from that boot path: if its OAuth
+grant or workbook read is unavailable, the backend keeps the dashboard usable
+and presents the tracker as disconnected until Google is reauthorized. Tracker
+writes and unexpected backend errors still remain visible.
 In Jobs, role-field buttons stay visible and cycle neutral → selected → red
 excluded; click the red state again to clear that exclusion.
 Company-level DOL sponsorship history is also visible as separate context: the

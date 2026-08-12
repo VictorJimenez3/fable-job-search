@@ -13,7 +13,14 @@ module.exports = async (req, res) => {
   try {
     if (req.method === "GET") {
       const profile = profileOf(req.query?.profile);
-      res.status(200).json({ user: s.u, ...(await tracker.userTracker(s.keys || s.k || s.u, s.pt, profile)) });
+      try {
+        res.status(200).json({ user: s.u, ...(await tracker.userTracker(s.keys || s.k || s.u, s.pt, profile)) });
+      } catch (error) {
+        if (!tracker.optionalReadFailure(error)) throw error;
+        console.warn(`[radar tracker] optional read deferred: ${String(error.message || error).slice(0, 180)}`);
+        res.status(200).json({user: s.u, configured: false, connected: false,
+          needs_google: true, tracker_unavailable: true, profile, entries: [], maybe: []});
+      }
       return;
     }
     if (req.method === "POST") {
