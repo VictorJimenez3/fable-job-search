@@ -6326,6 +6326,144 @@ def run_tailoring(
             chosen, layout, preview = render_candidate(plan, run_dir)
             write_json(run_dir / "line_compaction.json", line_compactions)
 
+    # Line editing can reclaim a few points of horizontal space, which can
+    # make an additional verified bullet fit even though the earlier density
+    # pass correctly stopped.  Re-measure after all wording changes and keep
+    # filling that newly exposed capacity.  This is intentionally a
+    # deterministic evidence pass: it cannot invent filler, change
+    # chronology, or replace core experience, and every trial is compiled.
+    post_line_density: List[Dict[str, Any]] = []
+    post_line_attempted: set = set()
+
+    def fill_post_line_capacity(round_label: str) -> None:
+        nonlocal plan, packing, chosen, layout, preview, line_compactions
+        if not enhance:
+            return
+        # A revision can reintroduce a near-wrap after the first compaction
+        # pass. Repair that geometry before deciding whether to add more.
+        if not (layout.get("horizontal") or {}).get("pass"):
+            compacted, compact_layout, extra_compactions = compact_plan_to_geometry(
+                plan, layout, catalog, run_dir / (round_label + "_compaction"),
+            )
+            if extra_compactions:
+                plan = compacted
+                line_compactions.extend(extra_compactions)
+                packing[round_label + "_line_compaction"] = {
+                    "applied": extra_compactions,
+                    "horizontal": compact_layout.get("horizontal", {}),
+                }
+                write_json(run_dir / "content_plan.json", plan)
+                write_json(run_dir / "layout_packing.json", packing)
+                chosen, layout, preview = render_candidate(plan, run_dir)
+
+        for density_round in range(1, 5):
+            capacity_open = measured_space_available(layout)
+            density_gap = layout.get("density_gap_pt")
+            if not capacity_open and not (
+                isinstance(density_gap, (int, float)) and density_gap > MAX_DENSITY_GAP_PT
+            ):
+                break
+            candidates = deterministic_space_additions(
+                plan, catalog, graph=graph, keyword_strategy=context.get("target_keywords"),
+            )
+            # Do not retry a compiled failure forever.  New-entry candidates
+            # are atomic, so once one bullet from a proposed new entry fails,
+            # suppress the rest of that same heading for this pass as well.
+            blocked_new_entries = {
+                str(item.get("entry_id") or "")
+                for item in candidates
+                if str(item.get("placement") or "") == "new_entry"
+                and str(item.get("source_id") or "") in post_line_attempted
+            }
+            candidates = [
+                item for item in candidates
+                if str(item.get("source_id") or "") not in post_line_attempted
+                and not (
+                    str(item.get("placement") or "") == "new_entry"
+                    and str(item.get("entry_id") or "") in blocked_new_entries
+                )
+            ]
+            record: Dict[str, Any] = {
+                "round": density_round,
+                "label": round_label,
+                "before": {
+                    "bullet_count": portfolio_metrics(plan).get("total_bullets"),
+                    "density_gap_pt": density_gap,
+                    "one_more_bullet_fits": measured_space_available(layout),
+                },
+                "candidate_source_ids": [str(item.get("source_id") or "") for item in candidates],
+            }
+            if not candidates:
+                record["decision"] = "No further unused verified candidate remained after compiled density trials."
+                post_line_density.append(record)
+                break
+            post_line_attempted.update(str(item.get("source_id") or "") for item in candidates)
+            prior_plan = copy.deepcopy(plan)
+            expanded_plan, expansion_result = expand_into_measured_space(
+                plan, candidates, catalog, graph,
+                run_dir / (round_label + "_space_expansion_%02d" % density_round),
+            )
+            record["expansion"] = expansion_result
+            if not expansion_result.get("applied"):
+                record["decision"] = "Rejected every remaining candidate because it could not earn the measured page space."
+                post_line_density.append(record)
+                continue
+
+            plan = expanded_plan
+            chosen, layout, preview = render_candidate(plan, run_dir)
+            extra_compactions: List[Dict[str, Any]] = []
+            if not (layout.get("horizontal") or {}).get("pass"):
+                compacted, compact_layout, extra_compactions = compact_plan_to_geometry(
+                    plan, layout, catalog,
+                    run_dir / (round_label + "_compaction_%02d" % density_round),
+                )
+                if extra_compactions:
+                    plan = compacted
+                    line_compactions.extend(extra_compactions)
+                    chosen, layout, preview = render_candidate(plan, run_dir)
+                    packing[round_label + "_line_compaction_%02d" % density_round] = {
+                        "applied": extra_compactions,
+                        "horizontal": layout.get("horizontal", {}),
+                    }
+
+            # The density helper must never smuggle a horizontally unsafe
+            # line into the final artifact. Restore the last good compiled
+            # plan if the new evidence cannot be made safe.
+            if not (layout.get("horizontal") or {}).get("pass") or layout.get("pages") != 1:
+                plan = prior_plan
+                chosen, layout, preview = render_candidate(plan, run_dir)
+                record["decision"] = "Restored the prior safe plan; the candidate did not satisfy the final geometry gate."
+                record["rejected_after_compaction"] = True
+                record["after"] = {
+                    "bullet_count": portfolio_metrics(plan).get("total_bullets"),
+                    "density_gap_pt": layout.get("density_gap_pt"),
+                    "one_more_bullet_fits": measured_space_available(layout),
+                }
+                post_line_density.append(record)
+                continue
+
+            packing[round_label + "_density_%02d" % density_round] = expansion_result
+            space_expansion["applied"] = list(space_expansion.get("applied") or []) + list(expansion_result.get("applied") or [])
+            space_expansion["replaced"] = list(space_expansion.get("replaced") or []) + list(expansion_result.get("replaced") or [])
+            space_expansion.setdefault("post_line_density", []).append(record)
+            record["decision"] = "Kept compiled verified additions and re-measured the remaining capacity."
+            record["after"] = {
+                "bullet_count": portfolio_metrics(plan).get("total_bullets"),
+                "density_gap_pt": layout.get("density_gap_pt"),
+                "one_more_bullet_fits": measured_space_available(layout),
+                "horizontal_pass": bool((layout.get("horizontal") or {}).get("pass")),
+            }
+            post_line_density.append(record)
+            write_json(run_dir / "content_plan.json", plan)
+            write_json(run_dir / "layout_packing.json", packing)
+
+        if enhance:
+            write_json(run_dir / "post_line_density.json", post_line_density)
+            write_json(run_dir / "content_plan.json", plan)
+            write_json(run_dir / "layout_packing.json", packing)
+
+    fill_post_line_capacity("post_line_density")
+
     def combined_critique(records: List[Dict[str, Any]]) -> Dict[str, Any]:
         if not records:
             return {"provider": "", "ok": False, "data": {
@@ -6464,6 +6602,10 @@ def run_tailoring(
         revision_log.append({"round": revision_round, "status": "applied", "provider": writer})
         critique, new_records, independent_available = critique_current(label + "_critique")
         critique_records.extend(new_records)
+    # A revision is allowed to change wording and flexible front matter, so
+    # the final density contract must be checked again after the last critique
+    # pass rather than trusting the pre-critique measurement.
+    fill_post_line_capacity("post_revision_density")
     write_json(run_dir / "revision_log.json", revision_log)
     deterministic = deterministic_review(context, chosen, layout, plan=plan, catalog=catalog)
     if not (layout.get("horizontal") or {}).get("pass"):
@@ -6524,6 +6666,7 @@ def run_tailoring(
         "front_matter_rewrites": synthesis_data.get("front_matter_rewrites", []),
         "generation_strategy": context.get("generation_strategy", {}),
         "line_compactions": line_compactions,
+        "post_line_density": post_line_density,
         "validation_warnings": synthesis_data.get("validation_warnings", []),
         "content_changes": changes,
         "review_overlay": review_overlay,
@@ -6562,6 +6705,7 @@ def run_tailoring(
             "gap_analysis.json" if generation else None,
             "candidate_plan.json", "content_plan.json", "layout_packing.json", "critique.json", "revision_log.json",
             "space_expansion.json" if space_expansion_records else None,
+            "post_line_density.json" if enhance else None,
             *[("line_edit.json" if index == 1 else "line_edit_%s.json" % index) for index in range(1, len(line_edits) + 1)],
             *[("revision.json" if index == 1 else "revision_%s.json" % index) for index in range(1, len(revision_records) + 1)],
         ],

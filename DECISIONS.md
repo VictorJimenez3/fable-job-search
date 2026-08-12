@@ -1782,3 +1782,15 @@ build the current `webapp/` commit and explicitly alias that deployment to the
 friendly URL. The production workflow verifies the live marker and fails when
 the alias cannot be assigned, preventing a successful-looking deploy from
 leaving users on an older build.
+
+## 120. Resume Studio must re-pack after line optimization (2026-08-12)
+
+Resume Studio now performs a final deterministic, compiled density pass after
+provider line edits and again after any critique revision. Shortening a tight
+line can expose capacity that the earlier portfolio pass could not see; the
+system must re-measure that page, try unused claim-authorized evidence, and
+keep only additions that remain one-page and horizontally safe. It repeats
+until the next standard bullet overflows or no unused verified candidate can
+earn the space. Rejected trials and accepted additions remain in the private
+run audit, while core chronological experience and the immutable template are
+unchanged.
