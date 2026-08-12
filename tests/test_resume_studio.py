@@ -1149,6 +1149,8 @@ def test_prompts_teach_marginal_hiring_value_without_a_preserve_base_rule():
 
 def test_owner_notes_current_regression_benchmark_reaches_provider_context():
     context = rs.resume_authority_context(rs.repo_root())
+    if not context:
+        pytest.skip("private CV authority corpus is intentionally absent from CI")
     assert "Google SWE regression benchmark" in context
     assert "keep Quantum Stock Simulator omitted" in context
 
