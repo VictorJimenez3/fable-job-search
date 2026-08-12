@@ -6356,6 +6356,114 @@ def run_tailoring(
                 write_json(run_dir / "layout_packing.json", packing)
                 chosen, layout, preview = render_candidate(plan, run_dir)
 
+        # Generation mode gets one explicit portfolio check for the known
+        # low-signal Resident Assistant entry.  If a verified technical
+        # project line can replace it, make that trade even when the page is
+        # otherwise full.  This encodes Victor's preference without turning
+        # the moderate tailor into a rigid "never show leadership" system.
+        if generation:
+            leadership_targets = []
+            for entry_index, entry in enumerate(plan.get("leadership", []) or []):
+                source_entry = (catalog.get("entries") or {}).get(str(entry.get("source_id") or ""), {})
+                label = " ".join(
+                    str(source_entry.get(key) or "")
+                    for key in ("heading", "company", "role")
+                )
+                if re.search(r"resident assistant|residence life", label, re.I):
+                    leadership_targets.append((entry_index, entry))
+            if leadership_targets:
+                raw_candidates = deterministic_space_additions(
+                    plan, catalog, graph=graph, keyword_strategy=context.get("target_keywords"),
+                )
+                technical_candidates = [
+                    item for item in raw_candidates
+                    if str(item.get("section") or "") == "projects"
+                    and re.search(
+                        r"\b(?:architected|engineered|implemented|built|designed|trained|pipeline|model|api|database|flask|pytorch|react|python|sql|cloud|validation|classification|ingestion)\b",
+                        _latex_plain(str(item.get("text") or "")), re.I,
+                    )
+                ]
+                if technical_candidates:
+                    target_index, target_entry = leadership_targets[0]
+                    target_bullet = (target_entry.get("bullets") or [{}])[0]
+                    prior_plan = copy.deepcopy(plan)
+                    replacement_base = copy.deepcopy(plan)
+                    removed_entry = replacement_base["leadership"].pop(target_index)
+                    # A new project earns its heading atomically. Existing
+                    # technical entries can use the strongest unused bullet;
+                    # a new entry receives the paired candidates returned by
+                    # deterministic_space_additions.
+                    first = technical_candidates[0]
+                    replacement_candidates = [first]
+                    if str(first.get("placement") or "") == "new_entry":
+                        replacement_candidates = [
+                            item for item in technical_candidates
+                            if str(item.get("entry_id") or "") == str(first.get("entry_id") or "")
+                        ][:2]
+                    replacement_plan, replacement_result = expand_into_measured_space(
+                        replacement_base, replacement_candidates, catalog, graph,
+                        run_dir / (round_label + "_leadership_replacement"),
+                    )
+                    replacement_record: Dict[str, Any] = {
+                        "round": 0,
+                        "label": round_label,
+                        "kind": "leadership_replacement",
+                        "before": {
+                            "removed_entry_id": str(removed_entry.get("source_id") or ""),
+                            "removed_source_ids": [
+                                str(item.get("source_id") or "")
+                                for item in removed_entry.get("bullets", [])
+                            ],
+                            "bullet_count": portfolio_metrics(plan).get("total_bullets"),
+                        },
+                        "candidate_source_ids": [
+                            str(item.get("source_id") or "") for item in replacement_candidates
+                        ],
+                        "expansion": replacement_result,
+                    }
+                    if replacement_result.get("applied"):
+                        plan = replacement_plan
+                        chosen, layout, preview = render_candidate(plan, run_dir)
+                        replacement_compactions: List[Dict[str, Any]] = []
+                        if not (layout.get("horizontal") or {}).get("pass"):
+                            compacted, compact_layout, replacement_compactions = compact_plan_to_geometry(
+                                plan, layout, catalog,
+                                run_dir / (round_label + "_leadership_compaction"),
+                            )
+                            if replacement_compactions:
+                                plan = compacted
+                                line_compactions.extend(replacement_compactions)
+                                chosen, layout, preview = render_candidate(plan, run_dir)
+                        if not (layout.get("horizontal") or {}).get("pass") or layout.get("pages") != 1:
+                            plan = prior_plan
+                            chosen, layout, preview = render_candidate(plan, run_dir)
+                            replacement_record["decision"] = "Restored Resident Assistant evidence; the technical replacement failed the final geometry gate."
+                        else:
+                            replacement_result.setdefault("replaced", []).append({
+                                "source_id": str(target_bullet.get("source_id") or ""),
+                                "entry_id": str(removed_entry.get("source_id") or ""),
+                                "section": "leadership",
+                                "text": _latex_plain(str(target_bullet.get("text") or "")),
+                                "reason": "replaced low-signal Resident Assistant evidence with stronger verified technical project evidence",
+                            })
+                            space_expansion["applied"] = list(space_expansion.get("applied") or []) + list(replacement_result.get("applied") or [])
+                            space_expansion["replaced"] = list(space_expansion.get("replaced") or []) + list(replacement_result.get("replaced") or [])
+                            space_expansion.setdefault("post_line_density", []).append(replacement_record)
+                            replacement_record["decision"] = "Replaced Resident Assistant evidence with stronger verified technical project evidence."
+                            replacement_record["after"] = {
+                                "bullet_count": portfolio_metrics(plan).get("total_bullets"),
+                                "density_gap_pt": layout.get("density_gap_pt"),
+                                "one_more_bullet_fits": measured_space_available(layout),
+                                "horizontal_pass": bool((layout.get("horizontal") or {}).get("pass")),
+                            }
+                            packing[round_label + "_leadership_replacement"] = replacement_result
+                            post_line_density.append(replacement_record)
+                            post_line_attempted.update(
+                                str(item.get("source_id") or "") for item in replacement_candidates
+                            )
+                            write_json(run_dir / "content_plan.json", plan)
+                            write_json(run_dir / "layout_packing.json", packing)
+
         for density_round in range(1, 5):
             capacity_open = measured_space_available(layout)
             density_gap = layout.get("density_gap_pt")

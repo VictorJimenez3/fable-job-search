@@ -512,6 +512,11 @@ Before changing the radar, read these in order:
   newly exposed by compaction, recompiling every candidate and restoring the
   previous safe plan if geometry fails. The private `post_line_density.json`
   audit records this last-mile decision.
+- **Unchained portfolio judgment (DECISION #121):** generation compares a
+  generic Resident Assistant/Residence Life line against unused verified
+  technical project evidence. When the technical evidence is stronger and
+  fits safely, generation replaces the low-signal leadership line and records
+  the tradeoff; the moderate tailor is unchanged.
 - **Resume Studio unchained generation is separate from the moderate baseline:**
   `generation` performs a posting requirement-to-evidence audit before drafting,
   searches claim-authorized Markdown records, and may synthesize grounded bullets

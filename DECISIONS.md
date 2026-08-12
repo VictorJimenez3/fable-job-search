@@ -1231,6 +1231,16 @@ wording is rendered and offered to the deterministic margin editor before the
 pipeline may restore source text; factuality and final geometry gates are
 unchanged.
 
+## 121. Unchained generation prefers technical evidence over low-signal RA (2026-08-12)
+
+When Unchained generation selects a Resident Assistant/Residence Life line
+only for a generic problem-solving or collaboration signal, it must compare
+that line against unused verified technical project evidence. If a stronger
+technical line fits or can replace it without violating the page and geometry
+contracts, the RA line is removed and the replacement is recorded. This is a
+generation-only preference; the moderate tailor remains free to keep
+leadership when it carries the better role-specific signal.
+
 Workshop front-matter addresses are regenerated from the current canonical
 template whenever a saved draft is loaded. Existing line text and revision
 notes are overlaid by stable line ID, so a renderer-index correction migrates
