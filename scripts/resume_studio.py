@@ -4801,6 +4801,10 @@ def _line_compaction_candidates(text: str, source_text: str) -> List[str]:
     # that technically stay on one line but fail the 12pt safety margin.
     add(re.sub(r",\s+and\s+(?=[A-Za-z])", ", ", current))
     add(re.sub(r",\s+enabling\s+", " for ", current, flags=re.I))
+    add(re.sub(r"\bclassification models\b", "classifiers", current, flags=re.I))
+    add(re.sub(r"\bto handle\b", "for", current, flags=re.I))
+    compacted = re.sub(r"\bclassification models\b", "classifiers", current, flags=re.I)
+    add(re.sub(r"\bto handle\b", "for", compacted, flags=re.I))
 
     # Articles are the safest generic deletion when the line is otherwise
     # unchanged; generate one-at-a-time variants so the result remains

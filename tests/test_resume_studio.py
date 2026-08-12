@@ -387,6 +387,8 @@ def test_line_compaction_shortens_safe_connective_phrases():
     pytorch_candidates = rs._line_compaction_candidates(pytorch, pytorch)
     assert "Unified RAG infrastructure on Google Cloud with AlloyDB/pgvector for embeddings, vector search, SQL retrieval" in rag_candidates
     assert "Extended modular PyTorch framework with 3+ arithmetic features for repeatable linear-algebra experiments" in pytorch_candidates
+    nba = "Trained and tuned three classification models with resampling and stratified validation to handle rare All-NBA selections"
+    assert "Trained and tuned three classifiers with resampling and stratified validation for rare All-NBA selections" in rs._line_compaction_candidates(nba, nba)
 
 
 def test_enhanced_plan_can_synthesize_multiple_authorized_source_lines():
