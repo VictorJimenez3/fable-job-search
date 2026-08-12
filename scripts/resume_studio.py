@@ -4796,6 +4796,11 @@ def _line_compaction_candidates(text: str, source_text: str) -> List[str]:
         add(re.sub(r"\bretrieval[- ]augmented generation\b", "RAG", current, flags=re.I))
     add(re.sub(r"\blearned features\b", "features", current, flags=re.I))
     add(re.sub(r"\bacross RNN/LLM architectures\b", "in RNN/LLM architectures", current, flags=re.I))
+    # Compact common list/connective wording without dropping a technical
+    # object or changing the claim. These are especially useful for lines
+    # that technically stay on one line but fail the 12pt safety margin.
+    add(re.sub(r",\s+and\s+(?=[A-Za-z])", ", ", current))
+    add(re.sub(r",\s+enabling\s+", " for ", current, flags=re.I))
 
     # Articles are the safest generic deletion when the line is otherwise
     # unchanged; generate one-at-a-time variants so the result remains
