@@ -185,7 +185,8 @@ Before changing the radar, read these in order:
   (victorjimenez3.github.io/fable-job-search/platform/ — tokenless, what
   forks get). `webapp/index.html` is canonical; `docs/platform/index.html`
   is a byte copy. Jobs tab shows posting age and sorts by best-match or
-  newest-first.
+  newest-first; Best Match can be limited to a selectable hour/day/week/month
+  lookback window.
   Forks with an additional Vercel alias should list its hostname in the
   comma-separated `AUTH_ALIAS_HOSTS` environment variable; Victor's memorable
   alias is built in.
