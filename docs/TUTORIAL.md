@@ -167,16 +167,32 @@ bash scripts/resume-studio-service/install.sh
 ```
 
 Then open `http://127.0.0.1:4317/`. Search for a radar role and choose either:
+- **Unchained generation** — performs a requirement-by-requirement evidence
+  audit before drafting, searches the authorized Markdown graph, and may create
+  new grounded bullets or Skills lines to close supported gaps. Unsupported
+  requirements remain visible instead of being stretched into claims.
+- **Take-the-wheel (moderate)** — the preserved adaptive mode. It can make a substantial portfolio
+  change, surface deeper unused evidence, or write a new role-specific line
+  when the expected hiring-value gain is real.
+- **AI tailor** — the same evidence graph and review process with a higher bar
+  for replacing an already-strong line; useful when you want adaptive tailoring
+  with less creative variance.
+- **Used bullets** — selects target-relevant approved source IDs and wording
+  without creative rewriting; use it as the clean comparison baseline.
 
-- **Use my source** — selects target-relevant source IDs from the
-  master CV and example résumés and copies their text without rewriting.
-- **AI tailor** — permits substantive source-grounded rewrites
-  and synthesis from multiple authorized lines, then runs independent gates.
-- **Take the wheel** — permits a more original role-specific argument
-  across the authorized evidence bank while preserving factuality and scope
-  qualifiers; it is intentionally marked for human review.
-
-All three modes render through the locked
+Unchained is not an unguarded writer: all modes share source authority,
+factual and qualifier checks, chronological job order, one-page compilation,
+one-line geometry, and owner approval. The normal screen puts Take-the-wheel
+alongside the separate unchained option; the mode guide explains the
+tradeoff in place. All modes render through the exact
+`CV/immutable/VictorJimenezResume.tex` structure. Models cannot write the
+document, alter its margins/typography/spacing, or bypass factual, duplicate,
+one-line, and compile gates. Codex writes/synthesizes with the `gpt-5.6-luna`
+model pin; Claude independently critiques when its first-party subscription CLI
+is installed. There is no local-model or API fallback. The report includes separate gates,
+target-specific omissions, and observed provider usage; it has no composite
+craft score. A run stays `awaiting_review` until Victor approves a ready draft.
+All four modes render through the locked
 `CV/immutable/VictorJimenezResume.tex` visual contract. Models cannot write the
 document, alter its margins/typography/spacing, enlarge text, or overwrite the
 canonical resume. Their existing local subscription sessions are

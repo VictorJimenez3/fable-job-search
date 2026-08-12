@@ -443,12 +443,14 @@ login, install the owner Mac service once:
 bash scripts/resume-studio-service/install.sh
 ```
 
-Open `http://127.0.0.1:4317/`. **Use my source** selects a target-aware subset
-from the master CV and example résumés without rewriting it. **AI tailor** may
-substantially rewrite or synthesize bullets from multiple authorized source
-lines. **Take the wheel** is freer to make an original role-specific
-argument across the evidence bank; it still cannot invent facts, remove scope
-qualifiers, or bypass layout review. In all modes a deterministic renderer
+Open `http://127.0.0.1:4317/`. **Unchained generation** is the deepest mode: it
+maps every material posting requirement to the complete authorized evidence
+graph, then may synthesize new grounded bullets or Skills lines to close
+supported gaps. Unsupported requirements remain explicit gaps. **Take-the-wheel
+(moderate)** preserves the adaptive mode; **AI tailor** uses a more conservative
+change threshold; **Used bullets** is the clean comparison baseline. All four
+modes share the same evidence graph, factual gates, chronological job order,
+one-page contract, and owner review. In all modes a deterministic renderer
 uses the locked `CV/immutable/VictorJimenezResume.tex` visual contract;
 models cannot author the LaTeX document, alter the margins or typography, or
 overwrite the canonical resume. Employer headings are company-first. Usable installed

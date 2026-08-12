@@ -29,6 +29,16 @@ def test_generated_resume_filename_is_company_identifiable():
     assert rs.resume_pdf_filename({"company": "Johnson & Johnson"}) == "johnson_johnson_resume_ai.pdf"
     assert rs.resume_pdf_filename({"company": "NVIDIA"}) == "nvidia_resume_ai.pdf"
     assert rs.resume_pdf_filename({}) == "company_resume_ai.pdf"
+    assert rs.resume_pdf_filename({"company": "Merck"}, "generation") == "merck_resume_unchained.pdf"
+
+
+def test_generation_mode_is_separate_from_the_saved_moderate_mode():
+    assert rs.normalize_tailor_mode("unrestricted") == "unrestricted"
+    assert rs.normalize_tailor_mode("unchained") == "generation"
+    assert rs.tailor_mode_label("unrestricted") == "Take-the-wheel (moderate)"
+    assert rs.tailor_mode_label("generation") == "Unchained generation"
+    assert 'id="generation"' in rs.UI_HTML
+    assert "Requirement → evidence map" in rs.UI_HTML
 
 
 def test_project_heading_uses_pipe_separator():
@@ -297,6 +307,25 @@ def test_plan_schema_requests_an_adaptive_ranked_candidate_pool():
     assert "front_matter_policy" in strict["properties"]
     assert "front_matter_policy" in strict["required"]
 
+    generation = rs.plan_schema(True, generation=True)
+    assert "front_matter_rewrites" in generation["required"]
+    rewrite = generation["properties"]["front_matter_rewrites"]["items"]
+    assert set(rewrite["required"]) == {"line_id", "text", "evidence_ids", "why"}
+
+
+def test_gap_analysis_schema_is_requirement_complete_and_cannot_return_resume_copy():
+    schema = rs.gap_analysis_schema()
+    assert set(schema["required"]) == {
+        "portfolio_strategy", "requirements", "must_cover_terms", "honest_gaps",
+    }
+    assert "resume_tex" not in schema["properties"]
+    assert schema["properties"]["requirements"]["minItems"] == 8
+    requirement = schema["properties"]["requirements"]["items"]
+    assert requirement["properties"]["exact_terms"]["minItems"] == 1
+    assert {"evidence_status", "evidence_ids", "recommended_action", "exact_terms"}.issubset(
+        requirement["required"]
+    )
+
 
 def test_space_expansion_schema_is_source_addressed_and_cannot_return_a_new_section():
     schema = rs.space_expansion_schema()
@@ -394,6 +423,75 @@ def test_space_expansion_can_propose_a_unique_unused_project_as_a_trial_entry():
     trial = rs._append_space_addition(plan, additions[0])
     assert any(entry["source_id"] == "project:item0" for entry in trial["projects"])
     assert trial["projects"][-1]["bullets"][0]["source_id"] == "project:item0:b3"
+
+
+def test_measured_space_available_reads_legacy_capacity_reports():
+    assert rs.measured_space_available({"vertical_capacity": {"qa_pages": 1, "warning": "one more bullet still fits"}})
+    assert not rs.measured_space_available({"vertical_capacity": {"qa_pages": 2, "warning": "one more bullet overflows"}})
+
+
+def test_new_entry_space_trial_requires_two_bullets():
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    plan["projects"] = [entry for entry in plan["projects"] if entry["source_id"] != "project:item0"]
+    graph = {"nodes": [
+        {"id": bullet["id"], "claim_allowed": True}
+        for entry in catalog["entries"].values()
+        for bullet in entry["bullets"]
+    ]}
+    addition = {
+        "entry_id": "project:item0", "placement": "new_entry", "section": "projects",
+        "source_id": "project:item0:b1", "source_ids": ["project:item0:b1"],
+        "evidence_ids": ["project:item0:b1"], "text": catalog["entries"]["project:item0"]["bullets"][0]["text"],
+        "priority": 90, "target_signal": "breadth", "why": "distinct project",
+    }
+    with __import__("tempfile").TemporaryDirectory() as directory:
+        _, result = rs.expand_into_measured_space(plan, [addition], catalog, graph, Path(directory))
+    assert not result["applied"]
+    assert "requires at least two bullets" in result["rejected"][0]["reason"]
+
+
+def test_deterministic_space_fallback_prefers_distinct_selected_entries():
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    plan["experiences"][0]["bullets"].pop()
+    graph = {"nodes": [
+        {"id": bullet["id"], "claim_allowed": True}
+        for entry in catalog["entries"].values()
+        for bullet in entry["bullets"]
+    ]}
+    additions = rs.deterministic_space_additions(plan, catalog, graph=graph, keyword_strategy={})
+    assert additions
+    assert additions[0]["placement"] == "append_bullet"
+    assert additions[0]["entry_id"] == "experience:item0"
+
+
+def test_space_swap_candidates_never_trim_core_experience():
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    candidates = rs._space_removal_candidates(plan)
+    assert candidates
+    assert all(item[1] in {"projects", "leadership"} for item in candidates)
+    trimmed = rs._apply_space_removals(plan, candidates[:2])
+    assert sum(len(entry["bullets"]) for entry in trimmed["experiences"]) == sum(
+        len(entry["bullets"]) for entry in plan["experiences"]
+    )
+
+
+def test_line_compaction_shortens_safe_connective_phrases():
+    rag = "Unified RAG infrastructure on Google Cloud with AlloyDB/pgvector for embeddings, vector search, and SQL retrieval"
+    pytorch = "Extended modular PyTorch framework with 3+ arithmetic features, enabling repeatable linear-algebra experiments"
+    rag_candidates = rs._line_compaction_candidates(rag, rag)
+    pytorch_candidates = rs._line_compaction_candidates(pytorch, pytorch)
+    assert "Unified RAG infrastructure on Google Cloud with AlloyDB/pgvector for embeddings, vector search, SQL retrieval" in rag_candidates
+    assert "Extended modular PyTorch framework with 3+ arithmetic features for repeatable linear-algebra experiments" in pytorch_candidates
+    nba = "Trained and tuned three classification models with resampling and stratified validation to handle rare All-NBA selections"
+    assert "Trained and tuned three classifiers with resampling and stratified validation for rare All-NBA selections" in rs._line_compaction_candidates(nba, nba)
+    metric = "Reached 0.984 ROC-AUC and 94% recall while handling a 2.74% positive class with resampling and stratified validation"
+    assert "Reached 0.984 ROC-AUC and 94% recall on a 2.74% positive class using resampling and stratified validation" in rs._line_compaction_candidates(metric, metric)
 
 
 def test_enhanced_plan_can_synthesize_multiple_authorized_source_lines():
@@ -1023,6 +1121,98 @@ def test_target_keyword_strategy_marks_supported_and_unsupported_terms(tmp_path)
     assert "python" in strategy["required_terms"]
 
 
+def test_generation_keyword_strategy_searches_authorized_markdown_and_ignores_denials(tmp_path):
+    cv = tmp_path / "CV"
+    (cv / "immutable").mkdir(parents=True)
+    (cv / "immutable" / "resume.tex").write_text("Python GitHub\n")
+    (cv / "cv_full.tex").write_text("Python GitHub\n")
+    graph = {
+        "nodes": [
+            {"id": "doc:sharepoint", "heading": "Workflow", "text": "Used SharePoint and version control for team documentation", "claim_allowed": True},
+            {"id": "doc:boundary", "heading": "Boundary", "text": "This does not authorize Agile experience", "claim_allowed": True},
+        ]
+    }
+    context = {
+        "posting_text": (
+            "Required skills include version control and testing. Responsibilities include SharePoint and GitHub. "
+            "Preferred experience includes Agile methodology and AWS. This description includes enough additional "
+            "context for exact posting analysis and requirement extraction across software-development workflows."
+        )
+    }
+    strategy = rs.target_keyword_strategy(
+        context, _fixture_catalog(), tmp_path, graph=graph, comprehensive=True,
+    )
+    terms = {item["term"]: item for item in strategy["terms"]}
+    assert terms["sharepoint"]["supported"] is True
+    assert terms["version control"]["supported"] is True
+    assert terms["agile"]["supported"] is False
+    assert terms["aws"]["supported"] is False
+
+
+def test_gap_analysis_keeps_unsupported_terms_visible_and_promotes_adjacent_support():
+    catalog = _fixture_catalog()
+    graph = {
+        "nodes": [
+            {"id": "doc:cloud", "heading": "Cloud architecture", "text": "Built a Google Cloud application", "claim_allowed": True},
+        ]
+    }
+    keywords = {
+        "terms": [
+            {"term": "cloud computing", "importance": "preferred", "supported": False, "source_ids": []},
+            {"term": "aws", "importance": "responsibility", "supported": False, "source_ids": []},
+        ]
+    }
+    data = {
+        "portfolio_strategy": "Expose defensible cloud evidence.",
+        "requirements": [{
+            "requirement": "cloud computing",
+            "importance": "preferred",
+            "exact_terms": ["cloud computing"],
+            "evidence_status": "adjacent",
+            "evidence_ids": ["doc:cloud"],
+            "target_entry_id": "experience:item0",
+            "recommended_action": "synthesize",
+            "candidate_angle": "Use Google Cloud implementation as the proof.",
+            "reason": "The capability is direct even though the source uses the platform name.",
+        }, {
+            "requirement": "Evidence review is in progress",
+            "importance": "required",
+            "exact_terms": ["output format"],
+            "evidence_status": "direct",
+            "evidence_ids": [],
+            "target_entry_id": "",
+            "recommended_action": "keep",
+            "candidate_angle": "",
+            "reason": "Process narration must not enter the job analysis.",
+        }, {
+            "requirement": "Scientific domains",
+            "importance": "preferred",
+            "exact_terms": ["cloud computing", "aws"],
+            "evidence_status": "adjacent",
+            "evidence_ids": ["doc:cloud"],
+            "target_entry_id": "experience:item0",
+            "recommended_action": "rewrite",
+            "candidate_angle": "Use cloud evidence, but do not claim AWS.",
+            "reason": "AWS is unsupported.",
+        }],
+        "must_cover_terms": ["cloud computing", "aws"],
+        "honest_gaps": ["aws"],
+    }
+    normalized = rs.normalize_gap_analysis(
+        data, keywords, catalog, graph,
+        "Preferred cloud computing experience; applications may use AWS.",
+    )
+    enriched = rs.apply_gap_support_to_keywords(keywords, normalized)
+    terms = {item["term"]: item for item in enriched["terms"]}
+    assert terms["cloud computing"]["supported"] is True
+    assert terms["cloud computing"]["support_kind"] == "adjacent"
+    assert terms["aws"]["supported"] is False
+    assert normalized["must_cover_terms"] == ["cloud computing"]
+    assert all(item["requirement"] != "Evidence review is in progress" for item in normalized["requirements"])
+    assert all("aws" not in item["exact_terms"] for item in normalized["requirements"] if item["evidence_status"] != "unsupported")
+    assert "aws" in normalized["honest_gaps"]
+
+
 def test_content_change_report_exposes_rewrites_and_project_swaps():
     catalog = _fixture_catalog()
     catalog["entries"]["project:item0"]["sources"] = ["resume.tex"]
@@ -1190,6 +1380,23 @@ def test_prompts_teach_marginal_hiring_value_without_a_preserve_base_rule():
     assert "do not apply a blanket" in review
     assert "Resident Assistant" in base
     assert "project slot" in synthesis
+
+
+def test_generation_prompt_includes_the_binding_gap_strategy_outside_truncated_context():
+    context = {
+        "company": "Example",
+        "posting_text": "x" * (rs.MAX_CONTEXT_PROMPT_CHARS + 100),
+        "generation_strategy": {
+            "portfolio_strategy": "Surface the verified SharePoint workflow",
+            "requirements": [],
+        },
+    }
+    prompt = rs.base_prompt(
+        context, "editor", _fixture_catalog(), True,
+        unrestricted=True, generation=True,
+    )
+    assert "Binding requirement-to-evidence strategy" in prompt
+    assert "Surface the verified SharePoint workflow" in prompt
 
 
 def test_owner_notes_current_regression_benchmark_reaches_provider_context():

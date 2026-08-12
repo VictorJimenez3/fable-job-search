@@ -14,6 +14,9 @@ The service has two modes:
   and separate critique lanes. Codex may apply critique in bounded revision
   rounds; the reviewer never mutates or self-grades the plan, and the module
   reports separate quality gates instead of a composite craft score.
+* ``generation`` adds a requirement-to-evidence gap pass before drafting. It
+  may synthesize new bullets and tailored skill lines from authorized Markdown
+  evidence while leaving unsupported requirements visible.
 
 Run with::
 
@@ -118,7 +121,7 @@ MAX_METHODOLOGY_CONTEXT_CHARS = 12000
 MAX_CONTEXT_PROMPT_CHARS = 12000
 MAX_CATALOG_PROMPT_CHARS = 18000
 MAX_GRAPH_PROMPT_CHARS = 28000
-MAX_TARGET_KEYWORDS = 24
+MAX_TARGET_KEYWORDS = 48
 MAX_WORKSHOP_TEXT_CHARS = 900
 MAX_WORKSHOP_REQUEST_CHARS = 3000
 MAX_WORKSHOP_REVISIONS = 100
@@ -128,6 +131,8 @@ TAILOR_MODE_ALIASES = {
     "strict": "used", "source": "used", "source-only": "used", "used": "used",
     "dream": "ai", "enhanced": "ai", "ai": "ai", "ai-enhanced": "ai",
     "free": "unrestricted", "unrestricted": "unrestricted",
+    "unchained": "generation", "generate": "generation",
+    "generation": "generation", "generative": "generation",
 }
 FORBIDDEN_RESUME_TERM_RE = re.compile(r"\bticc\b", re.I)
 PROTECTED_QUALIFIERS = (
@@ -139,6 +144,28 @@ PROTECTED_QUALIFIERS = (
     "demo",
 )
 TARGET_KEYWORD_TERMS = (
+    "machine learning", "deep learning", "computer vision", "software engineering",
+    "software development", "software development life cycle", "sdlc",
+    "object-oriented", "distributed systems", "data structures", "algorithms",
+    "cloud computing", "natural language processing", "large language models",
+    "generative ai", "retrieval augmented generation", "statistical analysis",
+    "experimental design", "version control", "unit testing", "testing", "debugging",
+    "troubleshooting", "continuous integration", "continuous improvement", "code reviews",
+    "document", "documentation", "knowledge sharing", "agile", "agile methodology",
+    "collaboration", "communication", "problem-solving", "business value creation",
+    "data engineering", "data visualization", "data analytics", "data platforms",
+    "scientific computing", "scientific research", "life sciences", "bioinformatics",
+    "computational chemistry", "web frameworks", "ai-assisted development tools",
+    "ai-enabled solutions", "learning new technologies",
+    "linux", "bash", "slurm", "gpu", "cuda", "c++", "c#", "python", "java", "sql",
+    "javascript", "typescript", "react", "pytorch", "tensorflow", "scikit-learn",
+    "numpy", "pandas", "fastapi", "flask", "sharepoint", "power platform", "databricks",
+    "docker", "kubernetes", "aws", "azure", "gcp", "google cloud", "alloydb", "postgresql",
+    "postgres", "pgvector", "mongodb", "sqlite", "git", "github", "rest api", "api",
+    "rag", "llm", "gemini", "agentic", "inference", "training", "quantization",
+    "optimization", "hpc", "real-time", "multimodal", "data pipeline", "microservices",
+)
+LEGACY_TARGET_KEYWORD_TERMS = (
     "machine learning", "deep learning", "computer vision", "software engineering",
     "object-oriented", "distributed systems", "data structures", "algorithms",
     "cloud computing", "natural language processing", "large language models",
@@ -253,7 +280,7 @@ def now_iso() -> str:
 def normalize_tailor_mode(mode: str) -> str:
     normalized = TAILOR_MODE_ALIASES.get(str(mode or "").strip().lower())
     if not normalized:
-        raise ValueError("mode must be used, ai, or unrestricted")
+        raise ValueError("mode must be used, ai, unrestricted, or generation")
     return normalized
 
 
@@ -261,7 +288,8 @@ def tailor_mode_label(mode: str) -> str:
     return {
         "used": "Used bullets",
         "ai": "AI tailor",
-        "unrestricted": "Unrestricted AI tailor",
+        "unrestricted": "Take-the-wheel (moderate)",
+        "generation": "Unchained generation",
     }.get(normalize_tailor_mode(mode), "AI tailor")
 
 
@@ -553,14 +581,16 @@ def _slug(value: str) -> str:
     return value[:48] or "entry"
 
 
-def resume_pdf_filename(job: Dict[str, Any]) -> str:
+def resume_pdf_filename(job: Dict[str, Any], mode: str = "ai") -> str:
     """Return the human-readable filename shown for a generated resume.
 
     Every new PDF includes a company slug and a use-case suffix so opening
     several drafts cannot hide which role each artifact belongs to.
     """
     company = re.sub(r"[^a-z0-9]+", "_", str(job.get("company") or "company").lower()).strip("_")
-    return "%s_resume_ai.pdf" % (company[:64] or "company")
+    normalized = normalize_tailor_mode(mode)
+    suffix = "unchained" if normalized == "generation" else "ai"
+    return "%s_resume_%s.pdf" % (company[:64] or "company", suffix)
 
 
 def run_pdf_path(run_dir: Path) -> Path:
@@ -569,7 +599,7 @@ def run_pdf_path(run_dir: Path) -> Path:
     configured = str(status.get("pdf_filename") or "").strip()
     if configured:
         return run_dir / Path(configured).name
-    named = sorted(run_dir.glob("*_resume_ai*.pdf"))
+    named = sorted(run_dir.glob("*_resume_*.pdf"))
     if named:
         return named[0]
     return run_dir / "resume.pdf"
@@ -1580,10 +1610,12 @@ def useful_provider_data(data: Dict[str, Any], label: str) -> bool:
         )
     if label.startswith("space_expansion"):
         return isinstance(data.get("additions"), list) and isinstance(data.get("decision"), str)
+    if label.startswith("gap_analysis"):
+        return isinstance(data.get("requirements"), list) and isinstance(data.get("portfolio_strategy"), str)
     return all(key in data for key in ("experiences", "projects", "leadership", "positioning_thesis"))
 
 
-def plan_schema(enhance: bool) -> Dict[str, Any]:
+def plan_schema(enhance: bool, generation: bool = False) -> Dict[str, Any]:
     bullet_properties: Dict[str, Any] = {
         "source_id": {"type": "string"},
         "priority": {"type": "integer", "minimum": 1, "maximum": 100},
@@ -1651,9 +1683,7 @@ def plan_schema(enhance: bool) -> Dict[str, Any]:
             "additionalProperties": False,
         }
 
-    return {
-        "type": "object",
-        "properties": {
+    properties = {
             "positioning_thesis": {"type": "string"},
             "selected_evidence": {
                 "type": "array",
@@ -1688,18 +1718,88 @@ def plan_schema(enhance: bool) -> Dict[str, Any]:
                 "type": "array", "maxItems": 40, "items": decision_ledger_item,
             },
             "front_matter_policy": front_matter_policy,
+        }
+    required = [
+        "positioning_thesis", "selected_evidence", "excluded_evidence",
+        "experiences", "projects", "leadership", "revision_notes",
+        "decision_ledger", "front_matter_policy",
+    ]
+    if generation:
+        properties["front_matter_rewrites"] = {
+            "type": "array",
+            "maxItems": 5,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "line_id": {"type": "string"},
+                    "text": {"type": "string"},
+                    "evidence_ids": {
+                        "type": "array", "items": {"type": "string"},
+                        "minItems": 1, "maxItems": 8,
+                    },
+                    "why": {"type": "string"},
+                },
+                "required": ["line_id", "text", "evidence_ids", "why"],
+                "additionalProperties": False,
+            },
+        }
+        required.append("front_matter_rewrites")
+    return {
+        "type": "object",
+        "properties": properties,
+        "required": required,
+        "additionalProperties": False,
+    }
+
+
+def gap_analysis_schema() -> Dict[str, Any]:
+    requirement = {
+        "type": "object",
+        "properties": {
+            "requirement": {"type": "string"},
+            "importance": {
+                "type": "string",
+                "enum": ["required", "preferred", "responsibility", "mentioned"],
+            },
+            "exact_terms": {
+                "type": "array", "items": {"type": "string"},
+                "minItems": 1, "maxItems": 8,
+            },
+            "evidence_status": {
+                "type": "string", "enum": ["direct", "adjacent", "unsupported"],
+            },
+            "evidence_ids": {
+                "type": "array", "items": {"type": "string"}, "maxItems": 8,
+            },
+            "target_entry_id": {"type": "string"},
+            "recommended_action": {
+                "type": "string",
+                "enum": ["keep", "reorder", "rewrite", "synthesize", "tailor_skills", "leave_gap"],
+            },
+            "candidate_angle": {"type": "string"},
+            "reason": {"type": "string"},
         },
         "required": [
-            "positioning_thesis",
-            "selected_evidence",
-            "excluded_evidence",
-            "experiences",
-            "projects",
-            "leadership",
-            "revision_notes",
-            "decision_ledger",
-            "front_matter_policy",
+            "requirement", "importance", "exact_terms", "evidence_status",
+            "evidence_ids", "target_entry_id", "recommended_action",
+            "candidate_angle", "reason",
         ],
+        "additionalProperties": False,
+    }
+    return {
+        "type": "object",
+        "properties": {
+            "portfolio_strategy": {"type": "string"},
+            # Do not accept a provider's promise to analyze the posting as the
+            # analysis itself. The normalizer still fills individual omissions.
+            "requirements": {
+                "type": "array", "items": requirement,
+                "minItems": 8, "maxItems": 48,
+            },
+            "must_cover_terms": {"type": "array", "items": {"type": "string"}, "maxItems": 32},
+            "honest_gaps": {"type": "array", "items": {"type": "string"}, "maxItems": 24},
+        },
+        "required": ["portfolio_strategy", "requirements", "must_cover_terms", "honest_gaps"],
         "additionalProperties": False,
     }
 
@@ -2142,8 +2242,29 @@ def _keyword_present(term: str, text: str) -> bool:
     return bool(re.search(_keyword_pattern(term), str(text or "").lower()))
 
 
+def _keyword_affirmed(term: str, text: str) -> bool:
+    """Reject claim-boundary mentions such as 'do not claim Agile'."""
+    lowered = str(text or "").lower()
+    match = re.search(_keyword_pattern(term), lowered)
+    if not match:
+        return False
+    window = lowered[max(0, match.start() - 90): min(len(lowered), match.end() + 90)]
+    denied = re.search(
+        r"\b(?:do not|does not|did not|never|not|without|unsupported|cannot|can't)\b.{0,70}"
+        + _keyword_pattern(term)
+        + r"|"
+        + _keyword_pattern(term)
+        + r".{0,70}\b(?:not authorized|not supported|without confirmation|without additional confirmation)\b",
+        window,
+        re.I,
+    )
+    return not bool(denied)
+
+
 def target_keyword_strategy(
     context: Dict[str, Any], catalog: Dict[str, Any], root: Optional[Path] = None,
+    graph: Optional[Dict[str, Any]] = None,
+    comprehensive: bool = False,
 ) -> Dict[str, Any]:
     """Return exact, source-grounded ATS targets for a posting.
 
@@ -2173,27 +2294,54 @@ def target_keyword_strategy(
         for bullet in entry.get("bullets", []):
             source_texts.append((str(bullet.get("id") or ""), _latex_plain(str(bullet.get("text") or ""))))
 
+    # The generation mode is specifically allowed to retrieve buried facts
+    # from Victor's reviewed Markdown corpus. Exact support therefore cannot
+    # be limited to wording that already made a LaTeX resume. Public
+    # corroboration and rejected/private-only records remain non-authorizing.
+    for node in (graph or {}).get("nodes", []) if comprehensive else []:
+        if not node.get("claim_allowed"):
+            continue
+        node_id = str(node.get("id") or "")
+        text = " ".join(
+            str(node.get(field) or "") for field in ("heading", "text")
+        )
+        if node_id and text.strip():
+            source_texts.append((node_id, _latex_plain(text)))
+
     sentences = [part.strip() for part in re.split(r"[\n.!?;]+", posting) if part.strip()]
     terms: List[Dict[str, Any]] = []
-    for term in sorted(TARGET_KEYWORD_TERMS, key=lambda value: (-len(value), value)):
+    vocabulary = TARGET_KEYWORD_TERMS if comprehensive else LEGACY_TARGET_KEYWORD_TERMS
+    found_terms = [term for term in vocabulary if _keyword_present(term, posting)]
+    for term in sorted(found_terms, key=lambda value: posting.lower().find(value.replace("-", " "))):
         if not _keyword_present(term, posting):
             continue
-        matching_sources = [source_id for source_id, text in source_texts if _keyword_present(term, text)]
-        required = any(
-            _keyword_present(term, sentence)
-            and re.search(r"\b(required|must|minimum|qualifications?|you will)\b", sentence, re.I)
-            for sentence in sentences
-        )
+        matching_sources = list(dict.fromkeys(
+            source_id for source_id, text in source_texts if _keyword_affirmed(term, text)
+        ))
         preferred = any(
             _keyword_present(term, sentence)
             and re.search(r"\b(preferred|nice to have|bonus|ideally)\b", sentence, re.I)
             for sentence in sentences
         )
+        required = not preferred and any(
+            _keyword_present(term, sentence)
+            and re.search(r"\b(required|must|minimum|required experience|required skills)\b", sentence, re.I)
+            for sentence in sentences
+        )
+        responsibility = not required and not preferred and any(
+            _keyword_present(term, sentence)
+            and re.search(r"\b(responsibilit|you will|contribute|support|participate|collaborate|design|develop|maintain)\w*\b", sentence, re.I)
+            for sentence in sentences
+        )
+        importance = "required" if required else "preferred" if preferred else "responsibility" if responsibility else "mentioned"
         terms.append({
             "term": term,
             "required": bool(required),
             "preferred": bool(preferred),
+            "responsibility": bool(responsibility),
+            "importance": importance,
             "supported": bool(matching_sources),
+            "support_kind": "exact" if matching_sources else "none",
             "source_ids": matching_sources[:6],
         })
         if len(terms) >= MAX_TARGET_KEYWORDS:
@@ -2202,7 +2350,11 @@ def target_keyword_strategy(
     preferred_terms = [item["term"] for item in terms if item["preferred"]]
     return {
         "posting_available": True,
-        "reason": "Exact terms extracted from the captured posting and checked against the authorized CV corpus.",
+        "reason": (
+            "Exact terms extracted from the captured posting and checked against authorized resume and Markdown evidence."
+            if comprehensive else
+            "Exact terms extracted from the captured posting and checked against the authorized CV corpus."
+        ),
         "terms": terms,
         "required_terms": required_terms,
         "preferred_terms": preferred_terms,
@@ -2221,6 +2373,219 @@ def resume_methodology_context(root: Optional[Path] = None) -> str:
     return _prompt_excerpt("\n\n".join(parts), MAX_METHODOLOGY_CONTEXT_CHARS)
 
 
+def gap_analysis_prompt(
+    context: Dict[str, Any], catalog: Dict[str, Any], graph: Dict[str, Any],
+) -> str:
+    """Ask for the human-style requirement/evidence pass used by generation mode."""
+    focused_context = {
+        "company": context.get("company"),
+        "title": context.get("title"),
+        "posting_text": context.get("posting_text"),
+    }
+    return (
+        "Return the requested JSON strategy now; do not narrate progress, promise future work, or "
+        "treat these instructions as job requirements. You are the requirement-to-evidence planner "
+        "for Victor Jimenez's private resume studio. "
+        "Read the complete posting, then account for every material qualification, responsibility, "
+        "named technology, workflow, domain signal, and collaboration expectation. For each one, "
+        "decide whether the authorized evidence is direct, adjacent-but-defensible, or unsupported. "
+        "Search beyond existing resume bullets: reviewed Markdown evidence is specifically provided "
+        "so buried work can become a new source-grounded bullet or tailored skill line. Recommend "
+        "synthesis only when it makes a real requirement visible. Do not manufacture AWS, Azure, "
+        "Databricks, Power Platform, Agile, code reviews, deployment, metrics, or any other missing "
+        "claim. Exact ATS wording is useful only when the cited evidence genuinely supports it. "
+        "Treat the resume as one information budget: stronger gap-filling evidence may replace a "
+        "redundant bullet, project, coursework, or awards. Preserve chronology and factual qualifiers. "
+        "Every requirements[].exact_terms value must come verbatim from the supplied Exact ATS "
+        "inventory. Do not create requirements about output format, chronology, evidence review, "
+        "or the analysis process. Include a term in must_cover_terms only when direct or adjacent "
+        "authorized evidence supports it; unsupported terms belong only in honest_gaps. Return the "
+        "auditable strategy requested by the schema, not resume copy or LaTeX.\n\n"
+        "Job context:\n"
+        + json.dumps(focused_context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
+        + "\n\nExact ATS inventory:\n"
+        + json.dumps(context.get("target_keywords") or {}, indent=2, ensure_ascii=False)
+        + "\n\nSource-addressable resume catalog:\n"
+        + json.dumps(catalog_for_prompt(catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
+        + "\n\nTarget-ranked authorized evidence, including Markdown:\n"
+        + json.dumps(
+            evidence_context(graph, context, str(context.get("posting_text") or "")),
+            indent=2, ensure_ascii=False,
+        )[:MAX_GRAPH_PROMPT_CHARS]
+    )
+
+
+def normalize_gap_analysis(
+    data: Dict[str, Any], keyword_strategy: Dict[str, Any],
+    catalog: Dict[str, Any], graph: Dict[str, Any], posting_text: str,
+) -> Dict[str, Any]:
+    """Ground a provider gap plan and guarantee coverage of the ATS inventory."""
+    node_by_id = {
+        str(node.get("id") or ""): node
+        for node in graph.get("nodes", [])
+        if str(node.get("id") or "")
+    }
+    claim_ids = {
+        node_id for node_id, node in node_by_id.items() if node.get("claim_allowed")
+    }
+    entry_ids = set((catalog.get("entries") or {}).keys())
+    posting = str(posting_text or "")
+    allowed_terms = {
+        str(item.get("term") or "").lower()
+        for item in (keyword_strategy.get("terms") or [])
+        if str(item.get("term") or "").strip()
+    }
+    normalized: List[Dict[str, Any]] = []
+    represented_terms = set()
+    for raw in (data.get("requirements") or [])[:48]:
+        if not isinstance(raw, dict):
+            continue
+        requirement = str(raw.get("requirement") or "").strip()[:240]
+        if not requirement:
+            continue
+        importance = str(raw.get("importance") or "mentioned").lower()
+        if importance not in {"required", "preferred", "responsibility", "mentioned"}:
+            importance = "mentioned"
+        exact_terms = []
+        evidence_explanation = " ".join((
+            str(raw.get("candidate_angle") or ""),
+            str(raw.get("reason") or ""),
+        ))
+        for value in raw.get("exact_terms") or []:
+            term = str(value or "").strip().lower()[:80]
+            explicitly_denied = (
+                _keyword_present(term, evidence_explanation)
+                and not _keyword_affirmed(term, evidence_explanation)
+            )
+            if (
+                term in allowed_terms and _keyword_present(term, posting)
+                and not explicitly_denied and term not in exact_terms
+            ):
+                exact_terms.append(term)
+                represented_terms.add(term)
+        if not exact_terms:
+            continue
+        evidence_ids = list(dict.fromkeys(
+            str(value) for value in (raw.get("evidence_ids") or [])
+            if str(value) in claim_ids
+        ))[:8]
+        status = str(raw.get("evidence_status") or "unsupported").lower()
+        if not evidence_ids:
+            status = "unsupported"
+        elif status not in {"direct", "adjacent"}:
+            status = "adjacent"
+        if status == "direct" and exact_terms:
+            exact_supported = any(
+                any(_keyword_present(term, " ".join((str(node_by_id[node_id].get("heading") or ""), str(node_by_id[node_id].get("text") or "")))) for term in exact_terms)
+                for node_id in evidence_ids
+            )
+            if not exact_supported:
+                status = "adjacent"
+        action = str(raw.get("recommended_action") or "leave_gap").lower()
+        if action not in {"keep", "reorder", "rewrite", "synthesize", "tailor_skills", "leave_gap"}:
+            action = "leave_gap"
+        if status == "unsupported":
+            action = "leave_gap"
+        target_entry = str(raw.get("target_entry_id") or "")
+        if target_entry not in entry_ids:
+            target_entry = ""
+        normalized.append({
+            "requirement": requirement,
+            "importance": importance,
+            "exact_terms": exact_terms,
+            "evidence_status": status,
+            "evidence_ids": evidence_ids,
+            "target_entry_id": target_entry,
+            "recommended_action": action,
+            "candidate_angle": str(raw.get("candidate_angle") or "").strip()[:500],
+            "reason": str(raw.get("reason") or "").strip()[:500],
+        })
+
+    # A model may group several requirements or simply overlook one. Preserve
+    # the complete deterministic inventory so the report never hides that gap.
+    for term_item in keyword_strategy.get("terms") or []:
+        term = str(term_item.get("term") or "").lower()
+        if not term or term in represented_terms:
+            continue
+        source_ids = [
+            str(value) for value in (term_item.get("source_ids") or [])
+            if str(value) in claim_ids
+        ][:8]
+        supported = bool(source_ids)
+        normalized.append({
+            "requirement": term,
+            "importance": str(term_item.get("importance") or "mentioned"),
+            "exact_terms": [term],
+            "evidence_status": "direct" if supported else "unsupported",
+            "evidence_ids": source_ids,
+            "target_entry_id": "",
+            "recommended_action": "rewrite" if supported else "leave_gap",
+            "candidate_angle": "Use the exact term naturally where the cited evidence earns space." if supported else "",
+            "reason": "Deterministic ATS inventory item retained because the planning lane did not address it.",
+        })
+
+    must_cover = []
+    gaps = []
+    for item in normalized:
+        terms = item.get("exact_terms") or [item.get("requirement")]
+        if item.get("evidence_status") in {"direct", "adjacent"} and item.get("importance") != "mentioned":
+            must_cover.extend(str(term) for term in terms if str(term))
+        elif item.get("evidence_status") == "unsupported":
+            gaps.extend(str(term) for term in terms if str(term))
+    supported_terms = {
+        str(term).lower()
+        for item in normalized
+        if item.get("evidence_status") in {"direct", "adjacent"}
+        for term in (item.get("exact_terms") or [])
+    }
+    unsupported_terms = allowed_terms - supported_terms
+    must_cover.extend(
+        str(value).lower() for value in (data.get("must_cover_terms") or [])
+        if str(value).lower() in supported_terms
+    )
+    gaps.extend(
+        str(value).lower() for value in (data.get("honest_gaps") or [])
+        if str(value).lower() in unsupported_terms
+    )
+    return {
+        "portfolio_strategy": str(data.get("portfolio_strategy") or "").strip()[:1200]
+        or "Use direct and adjacent authorized evidence to close material posting gaps; leave unsupported requirements explicit.",
+        "requirements": normalized[:48],
+        "must_cover_terms": list(dict.fromkeys(must_cover))[:32],
+        "honest_gaps": list(dict.fromkeys(gaps))[:24],
+    }
+
+
+def apply_gap_support_to_keywords(
+    keyword_strategy: Dict[str, Any], gap_strategy: Dict[str, Any],
+) -> Dict[str, Any]:
+    """Promote provider-audited adjacent evidence without hiding its status."""
+    value = copy.deepcopy(keyword_strategy)
+    by_term: Dict[str, Dict[str, Any]] = {}
+    for requirement in gap_strategy.get("requirements") or []:
+        if requirement.get("evidence_status") not in {"direct", "adjacent"}:
+            continue
+        for term in requirement.get("exact_terms") or []:
+            by_term[str(term).lower()] = requirement
+    for item in value.get("terms") or []:
+        requirement = by_term.get(str(item.get("term") or "").lower())
+        if not requirement:
+            continue
+        evidence_ids = list(requirement.get("evidence_ids") or [])
+        if not evidence_ids:
+            continue
+        item["supported"] = True
+        item["support_kind"] = str(requirement.get("evidence_status") or "adjacent")
+        item["source_ids"] = list(dict.fromkeys(
+            list(item.get("source_ids") or []) + evidence_ids
+        ))[:8]
+    value["reason"] = (
+        "Exact posting terms checked against authorized resume/Markdown evidence; "
+        "generation-mode adjacent support is labeled separately from exact-source support."
+    )
+    return value
+
+
 def base_prompt(
     context: Dict[str, Any],
     role: str,
@@ -2228,6 +2593,7 @@ def base_prompt(
     enhance: bool,
     graph: Optional[Dict[str, Any]] = None,
     unrestricted: bool = False,
+    generation: bool = False,
 ) -> str:
     role_guardrails = """
 Victor-specific guardrails:
@@ -2364,6 +2730,16 @@ Victor-specific guardrails:
                 "authorized source, protected prototype/simulation qualifiers stay intact, and the final page must "
                 "remain honest, readable, and reviewable."
             )
+        if generation:
+            role_guardrails += (
+                "\n- Unchained generation mode begins from the supplied requirement-to-evidence strategy. "
+                "For each material direct or adjacent opportunity, decide whether to keep, reorder, rewrite, "
+                "synthesize, or tailor a Skills line so the final resume visibly answers the posting. You may "
+                "create a genuinely new bullet by combining an existing catalog bullet as its primary source_id "
+                "with claim-authorizing Markdown evidence_ids. Replace redundant evidence when needed. Return "
+                "front_matter_rewrites only for evidence-backed Skills changes, and leave unsupported requirements "
+                "as explicit gaps instead of inventing them."
+            )
     else:
         role_guardrails += (
             "\n- Source-only mode is selection, not rewriting. Choose source IDs only; the harness will copy every heading and bullet verbatim."
@@ -2377,6 +2753,9 @@ Victor-specific guardrails:
         ensure_ascii=False,
     )
     benchmark_text = json.dumps(canonical_resume_benchmark(catalog), indent=2, ensure_ascii=False)
+    generation_text = json.dumps(
+        context.get("generation_strategy") or {}, indent=2, ensure_ascii=False,
+    )
     return (
         "You are the "
         + role
@@ -2401,12 +2780,15 @@ Victor-specific guardrails:
         + graph_text[:MAX_GRAPH_PROMPT_CHARS]
         + "\n\nExact ATS keyword strategy:\n"
         + json.dumps(context.get("target_keywords") or {}, indent=2, ensure_ascii=False)
+        + (("\n\nBinding requirement-to-evidence strategy (act on its supported opportunities):\n"
+            + generation_text[:18000]) if generation else "")
     )
 
 
 def synthesis_prompt(
     context: Dict[str, Any], drafts: List[Dict[str, Any]], catalog: Dict[str, Any], enhance: bool,
     graph: Optional[Dict[str, Any]] = None, unrestricted: bool = False,
+    generation: bool = False,
 ) -> str:
     packed = []
     for draft in drafts:
@@ -2423,6 +2805,7 @@ def synthesis_prompt(
                 "revision_notes": data.get("revision_notes", []),
                 "decision_ledger": data.get("decision_ledger", []),
                 "front_matter_policy": data.get("front_matter_policy", {}),
+                "front_matter_rewrites": data.get("front_matter_rewrites", []),
             }
         )
     return (
@@ -2436,6 +2819,7 @@ def synthesis_prompt(
         "value; normal bottom clearance is acceptable only when no additional evidence is useful. "
         + ("You may substantially rewrite or synthesize bullet text from the authorized source bank; preserve the primary source_id, add all supporting source IDs, and retain every scope-limiting qualifier. " if enhance else "Select source IDs verbatim; do not rewrite bullets. ")
         + ("This is the unrestricted creative pass: write genuinely original, role-specific bullets and make decisive project swaps when the evidence supports them; do not collapse back to base-resume phrasing. " if unrestricted else "")
+        + ("This is the unchained generation pass: use the requirement-to-evidence strategy to close material supported gaps with newly synthesized bullets or evidence-backed Skills rewrites, and explain every gap left open. " if generation else "")
         + "Choose the stronger defensible plan rather than averaging it. Judge the whole portfolio before individual wording: preserve strong fifth experience bullets when space permits, remove Resident Assistant before a stronger unused technical project, and do not spend a project slot repeating an experience's agents/RAG/retrieval story unless the project adds a materially distinct engineering surface. If the rendered page needs room for a distinct project or bullet, use flexible reserves before substantive evidence: coursework first, then the HackMIT acceptance-pool bullet when present, then Awards. Do not change an already strong line merely to make the draft look tailored. Compare each substantive swap, exclusion, rewrite, or reorder with the canonical/current benchmark and record the hiring-value gain and important signal lost in decision_ledger. High-value changes include stronger unused evidence, a materially better project, a newly exposed technical dimension, useful ordering, accurate ATS terminology, and reduced redundancy; low-value paraphrase churn is not a goal. Preserve reverse-chronological job order unless the exception is genuinely stronger and explicitly recorded. \n\n"
         "Job context:\n"
         + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
@@ -2460,6 +2844,7 @@ def reviewer_prompt(
     graph_context: Optional[List[Dict[str, Any]]] = None,
     catalog: Optional[Dict[str, Any]] = None,
     unrestricted: bool = False,
+    generation: bool = False,
 ) -> str:
     return (
         "You are an independent adversarial resume critic. This is a fresh review: do not "
@@ -2472,6 +2857,7 @@ def reviewer_prompt(
         "Sections and bullet counts are adaptive: do not penalize an omitted leadership or "
         "project section unless the target argument genuinely needs that evidence. "
         + ("This is an unrestricted creative pass; preserve factual boundaries but prefer a fresh, specific argument over safe base-CV wording. " if unrestricted else "")
+        + ("This is an unchained generation pass. Audit whether it closed the strongest supported requirement gaps, whether every new line cites authorizing evidence, and whether any unsupported term was smuggled into the resume. " if generation else "")
         + "Use the exact ATS keyword strategy to improve supported keyword coverage, while recording unsupported requirements as missing evidence. "
         "unsupported_claims must describe only claims present in the proposed plan.\n\n"
         "Authority rule: CV/immutable/VictorJimenezResume.tex is canonical for the immutable contact, "
@@ -2538,6 +2924,7 @@ def revision_prompt(
     context: Dict[str, Any], plan: Dict[str, Any], critique: Dict[str, Any],
     catalog: Dict[str, Any], graph: Optional[Dict[str, Any]] = None,
     unrestricted: bool = False,
+    generation: bool = False,
 ) -> str:
     """Ask the writer to apply independent criticism without self-grading."""
     return (
@@ -2558,6 +2945,7 @@ def revision_prompt(
         "evidence should not be duplicated by a project unless its engineering surface is distinct. "
         "The ledger is an audit trail, not permission to create churn. "
         + ("This is the unrestricted creative pass; make a sharper role-specific argument rather than reverting to base-CV wording. " if unrestricted else "")
+        + ("This is the unchained generation pass; preserve or improve evidence-backed gap closure and front_matter_rewrites, while keeping unsupported requirements out. " if generation else "")
         + "\n\nTarget context:\n"
         + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nCurrent plan:\n"
@@ -2589,7 +2977,7 @@ def line_editor_prompt(
         "supported ATS term, or proof. The minimum safe right slack is 12pt: every returned bullet must clear that "
         "threshold, and a near-wrap is still a failure even when the PDF technically stays on one line. Prefer a "
         "short, readable line that ends early; never "
-        "expand a bullet merely to approach the right margin. Preserve decision_ledger and front_matter_policy unchanged. Do not pad, invent, change layout, or return LaTeX beyond inline textbf/emph. Return the complete "
+        "expand a bullet merely to approach the right margin. Preserve decision_ledger, front_matter_policy, and front_matter_rewrites unchanged. Do not pad, invent, change layout, or return LaTeX beyond inline textbf/emph. Return the complete "
         "structured plan under the same schema.\n\nTarget:\n"
         + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nCurrent plan:\n"
@@ -2607,6 +2995,7 @@ def space_expansion_prompt(
     context: Dict[str, Any], plan: Dict[str, Any], layout: Dict[str, Any],
     catalog: Dict[str, Any], graph: Optional[Dict[str, Any]] = None,
     unrestricted: bool = False,
+    generation: bool = False,
 ) -> str:
     """Ask Codex for only the extra evidence that measured page room can carry."""
     selected_entries = [
@@ -2657,6 +3046,7 @@ def space_expansion_prompt(
         "the line adds a different engineering surface. Preserve prototype, synthetic, simulation, POC, and privacy "
         "boundaries. Use exact supported ATS terms naturally; unsupported requirements remain gaps.\n\n"
         + ("This is the unrestricted/take-the-wheel pass, so select the strongest creative addition when the evidence supports it. " if unrestricted else "Keep this conservative and evidence-first. ")
+        + ("Prioritize a verified line that closes a material supported requirement from the generation strategy. " if generation else "")
         + "Every addition must include placement, the catalog entry_id, the exact catalog bullet source_id, source_ids, claim-authorizing "
         "evidence_ids, a complete source-grounded text line, priority, target_signal, and why.\n\n"
         "Target context:\n"
@@ -2942,6 +3332,7 @@ def validate_plan(
     catalog: Dict[str, Any],
     enhance: bool,
     graph: Optional[Dict[str, Any]] = None,
+    generation: bool = False,
 ) -> Tuple[Dict[str, Any], List[str]]:
     entries = catalog.get("entries", {})
     all_bullet_bank = {
@@ -2980,6 +3371,49 @@ def validate_plan(
         "coursework": "omit" if str(raw_front_matter.get("coursework") or "").lower() == "omit" else "keep",
         "awards": "omit" if str(raw_front_matter.get("awards") or "").lower() == "omit" else "keep",
     }
+    normalized["front_matter_rewrites"] = []
+    if generation:
+        skill_lines = {
+            str(item.get("line_id") or ""): item
+            for item in front_matter_catalog(repo_root())
+            if str(item.get("line_id") or "").startswith("front:skills:")
+        }
+        for item in (plan.get("front_matter_rewrites") or [])[:5]:
+            if not isinstance(item, dict):
+                validation_warnings.append("dropped malformed front-matter rewrite")
+                continue
+            line_id = str(item.get("line_id") or "")
+            if line_id not in skill_lines:
+                validation_warnings.append("dropped unknown Skills line rewrite: %s" % line_id)
+                continue
+            text = _normalize_model_fragment(item.get("text"))
+            if not text or FORBIDDEN_CONTENT_COMMANDS.search(text):
+                validation_warnings.append("dropped invalid Skills line rewrite: %s" % line_id)
+                continue
+            unsupported_commands = _unsupported_inline_commands(text)
+            if unsupported_commands:
+                validation_warnings.append(
+                    "dropped Skills rewrite %s with unsupported command(s): %s"
+                    % (line_id, ", ".join(unsupported_commands))
+                )
+                continue
+            cited = list(dict.fromkeys(
+                str(value) for value in (item.get("evidence_ids") or []) if str(value)
+            ))[:8]
+            if graph is not None:
+                cited = [value for value in cited if value in evidence_ids]
+                if not cited or not set(cited) & claim_authorities:
+                    validation_warnings.append(
+                        "dropped Skills rewrite %s without claim-authorizing evidence" % line_id
+                    )
+                    continue
+            normalized["front_matter_rewrites"].append({
+                "line_id": line_id,
+                "text": text,
+                "evidence_ids": cited,
+                "why": str(item.get("why") or "").strip(),
+                "source_text": str(skill_lines[line_id].get("text") or ""),
+            })
     # Providers occasionally place a known source under the wrong resume
     # section while preserving the source ID and evidence. Rebucket only when
     # the catalog proves the source kind; unknown IDs remain validation errors
@@ -3571,24 +4005,43 @@ def content_change_report(
             continue
         supported = bool(item.get("supported"))
         rendered = _keyword_present(term, rendered_text)
-        status = "covered" if supported and rendered else "missing" if supported else "unsupported"
+        status = (
+            "covered" if supported and rendered
+            else "missing" if supported
+            else "unverified_rendered" if rendered
+            else "unsupported"
+        )
         keyword_terms.append({
             "term": term,
             "required": bool(item.get("required")),
             "preferred": bool(item.get("preferred")),
+            "responsibility": bool(item.get("responsibility")),
+            "importance": str(item.get("importance") or "mentioned"),
             "supported": supported,
+            "support_kind": str(item.get("support_kind") or ("exact" if supported else "none")),
             "rendered": rendered,
             "status": status,
             "source_ids": list(item.get("source_ids") or [])[:6],
         })
     supported_terms = [item for item in keyword_terms if item["supported"]]
     covered_terms = [item for item in supported_terms if item["rendered"]]
+    required_terms = [item for item in keyword_terms if item["required"]]
+    required_covered = [item for item in required_terms if item["supported"] and item["rendered"]]
+    unverified_rendered = [item for item in keyword_terms if item["status"] == "unverified_rendered"]
     keyword_coverage = {
         "posting_available": bool((keyword_strategy or {}).get("posting_available")),
         "reason": str((keyword_strategy or {}).get("reason") or ""),
         "supported_count": len(supported_terms),
         "covered_count": len(covered_terms),
-        "exact_coverage_percent": round(100 * len(covered_terms) / max(1, len(supported_terms))),
+        "detected_count": len(keyword_terms),
+        "exact_coverage_percent": round(100 * len(covered_terms) / max(1, len(keyword_terms))),
+        "supported_exact_coverage_percent": round(100 * len(covered_terms) / max(1, len(supported_terms))),
+        "required_count": len(required_terms),
+        "required_supported_count": sum(item["supported"] for item in required_terms),
+        "required_covered_count": len(required_covered),
+        "required_coverage_percent": round(100 * len(required_covered) / max(1, len(required_terms))),
+        "unverified_rendered_count": len(unverified_rendered),
+        "unverified_rendered_terms": [item["term"] for item in unverified_rendered],
         "required_terms": list((keyword_strategy or {}).get("required_terms") or []),
         "preferred_terms": list((keyword_strategy or {}).get("preferred_terms") or []),
         "terms": keyword_terms,
@@ -3686,6 +4139,17 @@ def content_change_report(
         "removed_front_matter": [
             field for field, state in front_matter_policy.items() if state == "omit"
         ],
+        "front_matter_rewrites": [
+            {
+                "line_id": str(item.get("line_id") or ""),
+                "source_text": _latex_plain(str(item.get("source_text") or "")),
+                "final_text": _latex_plain(str(item.get("text") or "")),
+                "evidence_ids": list(item.get("evidence_ids") or []),
+                "why": str(item.get("why") or ""),
+            }
+            for item in (plan.get("front_matter_rewrites") or [])
+            if isinstance(item, dict)
+        ],
         "portfolio_diagnostics": portfolio_diagnostics(plan, catalog),
         "keyword_coverage": keyword_coverage,
     }
@@ -3758,6 +4222,10 @@ def merge_edited_bullets(candidate_plan: Dict[str, Any], edited_plan: Dict[str, 
                 replacement = edited.get(str(bullet.get("source_id")))
                 if replacement:
                     entry["bullets"][index] = copy.deepcopy(replacement)
+    if "front_matter_rewrites" in edited_plan:
+        merged["front_matter_rewrites"] = copy.deepcopy(
+            edited_plan.get("front_matter_rewrites") or []
+        )
     return merged
 
 
@@ -3801,6 +4269,7 @@ def render_plan(plan: Dict[str, Any], catalog: Dict[str, Any], root: Optional[Pa
     if BODY_MARKER not in template:
         raise ValueError("CV/immutable/VictorJimenezResume.tex is missing the experience marker")
     prefix = _generated_one_page_prefix(template)
+    prefix = _apply_front_matter_rewrites(prefix, plan.get("front_matter_rewrites"), root)
     prefix = _apply_front_matter_policy(prefix, plan.get("front_matter_policy"), root)
     entries = catalog["entries"]
     lines = [prefix, "", BODY_MARKER]
@@ -3945,6 +4414,31 @@ def front_matter_catalog(root: Optional[Path] = None) -> List[Dict[str, Any]]:
             "argument_index": 0,
         })
     return result
+
+
+def _apply_front_matter_rewrites(
+    prefix: str, rewrites: Optional[List[Dict[str, Any]]], root: Optional[Path] = None,
+) -> str:
+    """Apply evidence-backed generated Skills text without changing the shell."""
+    if not isinstance(rewrites, list) or not rewrites:
+        return prefix
+    catalog = {
+        str(item.get("line_id") or ""): item
+        for item in front_matter_catalog(root or repo_root())
+        if str(item.get("line_id") or "").startswith("front:skills:")
+    }
+    for rewrite in rewrites:
+        line_id = str(rewrite.get("line_id") or "") if isinstance(rewrite, dict) else ""
+        item = catalog.get(line_id)
+        text = str(rewrite.get("text") or "") if isinstance(rewrite, dict) else ""
+        if not item or not text:
+            continue
+        try:
+            index = int(item.get("template_index"))
+        except (TypeError, ValueError):
+            continue
+        prefix = _replace_macro_call(prefix, "resumeItem", index, [text])
+    return prefix
 
 
 def _apply_front_matter_policy(
@@ -4620,6 +5114,10 @@ def _line_compaction_candidates(text: str, source_text: str) -> List[str]:
     add(re.sub(r",\s+enabling\s+", " for ", current, flags=re.I))
     add(re.sub(r"\bclassification models\b", "classifiers", current, flags=re.I))
     add(re.sub(r"\bto handle\b", "for", current, flags=re.I))
+    add(re.sub(
+        r"\bwhile handling (a|an|the) (.+?) with\b",
+        r"on \1 \2 using", current, flags=re.I,
+    ))
     compacted = re.sub(r"\bclassification models\b", "classifiers", current, flags=re.I)
     add(re.sub(r"\bto handle\b", "for", compacted, flags=re.I))
 
@@ -4724,11 +5222,15 @@ def compact_plan_to_geometry(
 def template_style_guard(
     tex: str, root: Optional[Path] = None,
     front_matter_policy: Optional[Dict[str, Any]] = None,
+    front_matter_rewrites: Optional[List[Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
     template = (cv_root(root) / CANONICAL_TEMPLATE).read_text()
     template_prefix = template.split(BODY_MARKER, 1)[0].rstrip()
     generated_prefix = tex.split(BODY_MARKER, 1)[0].rstrip() if BODY_MARKER in tex else ""
     generated_prefix = generated_prefix.replace(GENERATED_ONE_PAGE_FOOTER, CANONICAL_PAGE_FOOTER, 1)
+    template_prefix = _apply_front_matter_rewrites(
+        template_prefix, front_matter_rewrites, root,
+    ).rstrip()
     if isinstance(front_matter_policy, dict):
         # Coursework and the aggregated Awards line are the only sanctioned
         # front-matter removals. Compare against the same policy applied to
@@ -4747,6 +5249,7 @@ def template_style_guard(
         "canonical_template": "CV/" + CANONICAL_TEMPLATE,
         "identical_preamble_header_education_skills": identical,
         "allowed_front_matter_policy": front_matter_policy or {"coursework": "keep", "awards": "keep"},
+        "evidence_backed_front_matter_rewrites": len(front_matter_rewrites or []),
         "font_size_reduction_percent": 0.0 if identical else None,
         "font_size_increase_percent": 0.0 if identical else None,
         "allowed_max_reduction_percent": MAX_STYLE_REDUCTION_PERCENT,
@@ -4916,42 +5419,59 @@ def bullet_layout_metrics(plan: Dict[str, Any], pdf: Path) -> Dict[str, Any]:
     page_width = geometry.get("page_width") or 612.0
     right_edge = page_width - 36.0
     results = []
+    candidates = [
+        {
+            "source_id": str(item.get("line_id") or ""),
+            "text": str(item.get("text") or ""),
+            "kind": "front_matter",
+        }
+        for item in (plan.get("front_matter_rewrites") or [])
+        if str(item.get("line_id") or "") and str(item.get("text") or "")
+    ]
     for section in ("experiences", "projects", "leadership"):
         for entry in plan.get(section, []):
             for bullet in entry.get("bullets", []):
-                plain = _latex_plain(str(bullet.get("text") or ""))
-                tokens = re.findall(r"[a-z0-9]+", plain.lower())
-                anchor = " ".join(tokens[:2])
-                ending = tokens[-1] if tokens else ""
-                matched = None
-                best_overlap = -1.0
-                for line in geometry.get("lines", []):
-                    line_tokens = re.findall(r"[a-z0-9]+", str(line.get("text") or "").lower())
-                    line_text = " ".join(line_tokens)
-                    if not anchor or anchor not in line_text:
-                        continue
-                    overlap = len(set(tokens) & set(line_tokens)) / max(1, len(set(tokens)))
-                    if overlap > best_overlap:
-                        matched = line
-                        best_overlap = overlap
-                if matched:
-                    line_tokens = re.findall(r"[a-z0-9]+", str(matched.get("text") or "").lower())
-                    wraps = bool(ending and ending not in line_tokens)
-                    slack = round(right_edge - float(matched.get("x_max") or 0), 2)
-                    results.append({
-                        "source_id": bullet.get("source_id"),
-                        "text": plain,
-                        "wraps": wraps,
-                        "right_slack_pt": slack,
-                        "near_wrap": slack < MIN_RIGHT_SLACK_PT,
-                        "horizontal_pass": not wraps and slack >= MIN_RIGHT_SLACK_PT,
-                    })
-                else:
-                    results.append({
-                        "source_id": bullet.get("source_id"), "text": plain,
-                        "wraps": None, "right_slack_pt": None, "horizontal_pass": False,
-                        "warning": "bullet line not found in PDF geometry",
-                    })
+                candidates.append({
+                    "source_id": bullet.get("source_id"),
+                    "text": str(bullet.get("text") or ""),
+                    "kind": "bullet",
+                })
+    for candidate in candidates:
+        plain = _latex_plain(candidate["text"])
+        tokens = re.findall(r"[a-z0-9]+", plain.lower())
+        anchor = " ".join(tokens[:2])
+        ending = tokens[-1] if tokens else ""
+        matched = None
+        best_overlap = -1.0
+        for line in geometry.get("lines", []):
+            line_tokens = re.findall(r"[a-z0-9]+", str(line.get("text") or "").lower())
+            line_text = " ".join(line_tokens)
+            if not anchor or anchor not in line_text:
+                continue
+            overlap = len(set(tokens) & set(line_tokens)) / max(1, len(set(tokens)))
+            if overlap > best_overlap:
+                matched = line
+                best_overlap = overlap
+        if matched:
+            line_tokens = re.findall(r"[a-z0-9]+", str(matched.get("text") or "").lower())
+            wraps = bool(ending and ending not in line_tokens)
+            slack = round(right_edge - float(matched.get("x_max") or 0), 2)
+            results.append({
+                "source_id": candidate["source_id"],
+                "kind": candidate["kind"],
+                "text": plain,
+                "wraps": wraps,
+                "right_slack_pt": slack,
+                "near_wrap": slack < MIN_RIGHT_SLACK_PT,
+                "horizontal_pass": not wraps and slack >= MIN_RIGHT_SLACK_PT,
+            })
+        else:
+            results.append({
+                "source_id": candidate["source_id"], "kind": candidate["kind"],
+                "text": plain, "wraps": None, "right_slack_pt": None,
+                "horizontal_pass": False,
+                "warning": "resume line not found in PDF geometry",
+            })
     measurable = [item for item in results if item.get("right_slack_pt") is not None]
     return {
         "max_right_slack_pt": MAX_RIGHT_SLACK_PT,
@@ -5224,8 +5744,9 @@ def deterministic_review(
 ) -> Dict[str, Any]:
     warnings = list(layout.get("warnings", []))
     policy = plan.get("front_matter_policy") if isinstance(plan, dict) else None
+    rewrites = plan.get("front_matter_rewrites") if isinstance(plan, dict) else None
     style = (
-        template_style_guard(tex, repo_root(), policy)
+        template_style_guard(tex, repo_root(), policy, rewrites)
         if isinstance(policy, dict)
         else template_style_guard(tex, repo_root())
     )
@@ -5236,6 +5757,19 @@ def deterministic_review(
         warnings.append("canonical owner name/contact header is missing")
     if _contains_forbidden_resume_term(tex):
         warnings.append("a permanently excluded resume term appears in the draft")
+    rendered_plain = _latex_plain(tex)
+    unsupported_rendered = [
+        str(item.get("term") or "")
+        for item in (job.get("target_keywords") or {}).get("terms", [])
+        if not item.get("supported")
+        and str(item.get("term") or "")
+        and _keyword_present(str(item.get("term") or ""), rendered_plain)
+    ]
+    if unsupported_rendered:
+        warnings.append(
+            "unsupported posting term(s) rendered without authorized evidence: %s"
+            % ", ".join(unsupported_rendered)
+        )
     layout_gate = (
         layout.get("compiled")
         and layout.get("pages") == 1
@@ -5262,7 +5796,7 @@ def deterministic_review(
         eligibility = {"status": "partial", "reason": "Early-career possible; posting eligibility needs confirmation"}
     else:
         eligibility = {"status": "partial", "reason": "Resume Studio does not independently verify posting eligibility"}
-    factual_status = "fail" if _contains_forbidden_resume_term(tex) else "pass"
+    factual_status = "fail" if _contains_forbidden_resume_term(tex) or unsupported_rendered else "pass"
     return {
         "rubric_version": RUBRIC_VERSION,
         "hard_fail": not layout_gate,
@@ -5272,7 +5806,14 @@ def deterministic_review(
         "gates": {
             "factual": {
                 "status": factual_status,
-                "reason": "permanently excluded resume term detected" if factual_status == "fail" else "no deterministic forbidden claim detected",
+                "reason": (
+                    "unsupported or permanently excluded terminology detected: %s"
+                    % ", ".join(unsupported_rendered)
+                    if factual_status == "fail" and unsupported_rendered
+                    else "permanently excluded resume term detected"
+                    if factual_status == "fail"
+                    else "no deterministic forbidden claim detected"
+                ),
             },
             "layout": {"status": "pass" if layout_gate else "fail", "reason": "; ".join(warnings) or "all rendered layout checks passed"},
             "portfolio": {
@@ -5422,12 +5963,16 @@ def approve_run(root: Optional[Path], run_id: str) -> Dict[str, Any]:
 def _select_valid_plan(
     candidates: List[Dict[str, Any]], catalog: Dict[str, Any], enhance: bool,
     graph: Optional[Dict[str, Any]] = None,
+    generation: bool = False,
 ) -> Tuple[Optional[Dict[str, Any]], List[str], Optional[Dict[str, Any]]]:
     all_errors: List[str] = []
     for candidate in candidates:
         if not candidate.get("ok"):
             continue
-        normalized, errors = validate_plan(candidate.get("data") or {}, catalog, enhance, graph=graph)
+        normalized, errors = validate_plan(
+            candidate.get("data") or {}, catalog, enhance, graph=graph,
+            generation=generation,
+        )
         if not errors:
             return normalized, [], candidate
         all_errors.extend(["%s: %s" % (candidate.get("provider", "provider"), error) for error in errors])
@@ -5437,6 +5982,7 @@ def _select_valid_plan(
 def run_tailoring(
     run_dir: Path, job: Dict[str, Any], update, enhance: bool,
     unrestricted: bool = False,
+    generation: bool = False,
 ) -> None:
     run_started_clock = time.time()
     run_started_at = now_iso()
@@ -5447,13 +5993,43 @@ def run_tailoring(
     graph_context = evidence_context(graph, context, str(context.get("posting_text") or ""))
     match = resume_match_for_job(job, repo_root(), posting_text=str(context.get("posting_text") or ""))
     context["resume_match"] = match
-    context["target_keywords"] = target_keyword_strategy(context, catalog, repo_root())
+    context["target_keywords"] = target_keyword_strategy(
+        context, catalog, repo_root(), graph=graph,
+        comprehensive=generation,
+    )
     context["provider_policy"] = {
         "allowed_lanes": [name for name, path in provider_commands().items() if path],
         "codex_model": CODEX_LUNA_MODEL,
         "local_models_allowed": False,
         "api_fallback_allowed": False,
     }
+    available = [name for name, path in provider_commands().items() if path]
+    if not available:
+        raise RuntimeError("No approved Codex or Claude Code subscription CLI is installed")
+    gap_records: List[Dict[str, Any]] = []
+    if generation:
+        update("gap_analysis", "Mapping every posting requirement to authorized resume and Markdown evidence")
+        gap_provider = "codex" if "codex" in available else available[0]
+        gap_record = run_provider(
+            gap_provider,
+            gap_analysis_prompt(context, catalog, graph),
+            run_dir,
+            "gap_analysis",
+            timeout=5 * 60,
+            schema=gap_analysis_schema(),
+        )
+        gap_record["label"] = "gap_analysis"
+        gap_records.append(gap_record)
+        write_json(run_dir / "gap_analysis.json", gap_record)
+        context["generation_strategy"] = normalize_gap_analysis(
+            gap_record.get("data") or {}, context["target_keywords"], catalog,
+            graph, str(context.get("posting_text") or ""),
+        )
+        context["target_keywords"] = apply_gap_support_to_keywords(
+            context["target_keywords"], context["generation_strategy"],
+        )
+    else:
+        context["generation_strategy"] = {}
     write_json(run_dir / "job_context.json", context)
     write_json(run_dir / "evidence_catalog.json", catalog_for_prompt(catalog))
     write_json(run_dir / "evidence_graph_context.json", graph_context)
@@ -5467,6 +6043,7 @@ def run_tailoring(
         "job": job_summary(job),
         "posting_text_available": bool(context.get("posting_text")),
         "target_keywords": context.get("target_keywords"),
+        "generation_strategy": context.get("generation_strategy"),
         "provider_policy": context["provider_policy"],
         "evidence_graph": {
             "version": graph.get("version"),
@@ -5475,15 +6052,12 @@ def run_tailoring(
             "markdown_sources": markdown_sources,
         },
     })
-    mode_label = "unrestricted" if unrestricted else "enhanced" if enhance else "source-only"
+    mode_label = "generation" if generation else "unrestricted" if unrestricted else "enhanced" if enhance else "source-only"
     prompt = base_prompt(
         context, "an independent resume evidence strategist", catalog, enhance,
-        graph=graph, unrestricted=unrestricted,
+        graph=graph, unrestricted=unrestricted, generation=generation,
     )
-    schema = plan_schema(enhance)
-    available = [name for name, path in provider_commands().items() if path]
-    if not available:
-        raise RuntimeError("No approved Codex or Claude Code subscription CLI is installed")
+    schema = plan_schema(enhance, generation=generation)
     update("drafting", "Building adaptive %s evidence plans with: %s" % (mode_label, ", ".join(available)))
     with concurrent.futures.ThreadPoolExecutor(max_workers=len(available)) as pool:
         futures = {
@@ -5509,13 +6083,18 @@ def run_tailoring(
     else:
         synthesis = run_provider(
             writer,
-            synthesis_prompt(context, successful, catalog, enhance, graph=graph, unrestricted=unrestricted),
+            synthesis_prompt(
+                context, successful, catalog, enhance, graph=graph,
+                unrestricted=unrestricted, generation=generation,
+            ),
             run_dir, "synthesis", timeout=4 * 60, schema=schema,
         )
     synthesis["label"] = "synthesis"
     write_json(run_dir / "synthesis.json", synthesis)
     candidates = [synthesis] + successful
-    candidate_plan, plan_errors, _ = _select_valid_plan(candidates, catalog, enhance, graph=graph)
+    candidate_plan, plan_errors, _ = _select_valid_plan(
+        candidates, catalog, enhance, graph=graph, generation=generation,
+    )
     if candidate_plan is None:
         write_json(run_dir / "plan_errors.json", plan_errors)
         raise RuntimeError("No provider returned a valid adaptive source-addressed plan; inspect plan_errors.json")
@@ -5528,8 +6107,10 @@ def run_tailoring(
         "revision_notes": candidate_plan.get("revision_notes", []),
         "decision_ledger": candidate_plan.get("decision_ledger", []),
         "front_matter_policy": candidate_plan.get("front_matter_policy", {"coursework": "keep", "awards": "keep"}),
+        "front_matter_rewrites": candidate_plan.get("front_matter_rewrites", []),
         "job": job_summary(job),
         "target_keywords": context.get("target_keywords"),
+        "generation_strategy": context.get("generation_strategy"),
         "provider_policy": context["provider_policy"],
         "evidence_graph": {
             "version": graph.get("version"),
@@ -5565,7 +6146,10 @@ def run_tailoring(
         update("space_review", "Measured spare page capacity; asking Codex for one strong unused evidence line")
         expansion_record = run_provider(
             writer,
-            space_expansion_prompt(context, plan, layout, catalog, graph=graph, unrestricted=unrestricted),
+            space_expansion_prompt(
+                context, plan, layout, catalog, graph=graph,
+                unrestricted=unrestricted, generation=generation,
+            ),
             run_dir,
             "space_expansion",
             timeout=4 * 60,
@@ -5607,14 +6191,17 @@ def run_tailoring(
         update("line_editing", "Repairing rendered one-line geometry (pass %s/%s)" % (line_round, MAX_LINE_EDIT_PASSES))
         line_edit = run_provider(
             writer, line_editor_prompt(context, plan, layout, graph), run_dir, label,
-            timeout=6 * 60, schema=plan_schema(True),
+            timeout=6 * 60, schema=plan_schema(True, generation=generation),
         )
         line_edits.append(line_edit)
         line_edit["label"] = label
         write_json(run_dir / (label + ".json"), line_edit)
         if not line_edit.get("ok"):
             break
-        edited, edit_errors = validate_plan(line_edit.get("data") or {}, catalog, True, graph=graph)
+        edited, edit_errors = validate_plan(
+            line_edit.get("data") or {}, catalog, True, graph=graph,
+            generation=generation,
+        )
         if edit_errors or _plan_source_signature(edited) != _plan_source_signature(plan):
             write_json(run_dir / (label + "_errors.json"), edit_errors or ["line editor changed selected source IDs"])
             break
@@ -5737,7 +6324,11 @@ def run_tailoring(
             futures = {
                 pool.submit(
                     run_provider, provider,
-                    reviewer_prompt(context, chosen, plan=plan, graph_context=graph_context, catalog=catalog, unrestricted=unrestricted),
+                    reviewer_prompt(
+                        context, chosen, plan=plan, graph_context=graph_context,
+                        catalog=catalog, unrestricted=unrestricted,
+                        generation=generation,
+                    ),
                     run_dir, round_label + "_" + provider, timeout=8 * 60, schema=review_schema(),
                 ): provider for provider in critic_lanes
             }
@@ -5761,8 +6352,12 @@ def run_tailoring(
         label = "revision" if revision_round == 1 else "revision_%s" % revision_round
         update("revising", "Codex is applying independent critique (pass %s/2)" % revision_round)
         revision = run_provider(
-            writer, revision_prompt(context, plan, critique, catalog, graph=graph, unrestricted=unrestricted),
-            run_dir, label, timeout=8 * 60, schema=plan_schema(True),
+            writer, revision_prompt(
+                context, plan, critique, catalog, graph=graph,
+                unrestricted=unrestricted, generation=generation,
+            ),
+            run_dir, label, timeout=8 * 60,
+            schema=plan_schema(True, generation=generation),
         )
         revision_records.append(revision)
         revision["label"] = label
@@ -5770,7 +6365,10 @@ def run_tailoring(
         if not revision.get("ok"):
             revision_log.append({"round": revision_round, "status": "failed", "reason": revision.get("error", "provider failed")})
             break
-        revised_plan, revision_errors = validate_plan(revision.get("data") or {}, catalog, True, graph=graph)
+        revised_plan, revision_errors = validate_plan(
+            revision.get("data") or {}, catalog, True, graph=graph,
+            generation=generation,
+        )
         if revision_errors:
             revision_log.append({"round": revision_round, "status": "rejected", "errors": revision_errors})
             write_json(run_dir / (label + "_errors.json"), revision_errors)
@@ -5799,7 +6397,7 @@ def run_tailoring(
     synthesis_data = plan
     provider_records = []
     all_provider_records = (
-        drafts + [synthesis] + space_expansion_records + line_edits
+        gap_records + drafts + [synthesis] + space_expansion_records + line_edits
         + revision_records + critique_records
     )
     for record in all_provider_records:
@@ -5840,6 +6438,8 @@ def run_tailoring(
         "revision_notes": synthesis_data.get("revision_notes", []),
         "decision_ledger": synthesis_data.get("decision_ledger", []),
         "front_matter_policy": synthesis_data.get("front_matter_policy", {"coursework": "keep", "awards": "keep"}),
+        "front_matter_rewrites": synthesis_data.get("front_matter_rewrites", []),
+        "generation_strategy": context.get("generation_strategy", {}),
         "line_compactions": line_compactions,
         "validation_warnings": synthesis_data.get("validation_warnings", []),
         "content_changes": changes,
@@ -5876,6 +6476,7 @@ def run_tailoring(
         "artifacts": [
             "resume.tex", run_pdf_path(run_dir).name, "resume.txt", run_preview_path(run_dir).name if preview else None,
             "job.json", "report.json", "job_context.json", "brief.json", "evidence_catalog.json", "evidence_graph_context.json",
+            "gap_analysis.json" if generation else None,
             "candidate_plan.json", "content_plan.json", "layout_packing.json", "critique.json", "revision_log.json",
             "space_expansion.json" if space_expansion_records else None,
             *[("line_edit.json" if index == 1 else "line_edit_%s.json" % index) for index in range(1, len(line_edits) + 1)],
@@ -5900,6 +6501,13 @@ def run_unrestricted(run_dir: Path, job: Dict[str, Any], update) -> None:
     run_tailoring(run_dir, job, update, enhance=True, unrestricted=True)
 
 
+def run_generation(run_dir: Path, job: Dict[str, Any], update) -> None:
+    run_tailoring(
+        run_dir, job, update, enhance=True, unrestricted=True,
+        generation=True,
+    )
+
+
 class RunManager:
     def __init__(self, root: Optional[Path] = None):
         self.root = root or repo_root()
@@ -5911,7 +6519,7 @@ class RunManager:
         run_id = uuid.uuid4().hex[:12]
         run_dir = studio_root(self.root) / "runs" / run_id
         run_dir.mkdir(parents=True, exist_ok=True)
-        pdf_filename = resume_pdf_filename(job)
+        pdf_filename = resume_pdf_filename(job, mode)
         status = {
             "run_id": run_id,
             "mode": mode,
@@ -5961,8 +6569,10 @@ class RunManager:
                 run_strict(run_dir, job, update)
             elif mode == "ai":
                 run_dream(run_dir, job, update)
-            else:
+            elif mode == "unrestricted":
                 run_unrestricted(run_dir, job, update)
+            else:
+                run_generation(run_dir, job, update)
         except Exception as exc:  # keep failure inspectable in the local UI
             trace = traceback.format_exc()
             (run_dir / "error.log").write_text(trace)
@@ -6258,6 +6868,55 @@ document.addEventListener('click',event=>{const approve=event.target.closest('[d
 function showView(view){""",
 )
 
+# Generation is deliberately a fourth, separate mode. The existing
+# take-the-wheel path remains selectable and behaviorally unchanged as the
+# strong moderate baseline.
+UI_HTML = UI_HTML.replace(
+    '<option value="all">All modes</option>',
+    '<option value="all">All modes</option><option value="generation">Unchained generation</option>',
+)
+UI_HTML = UI_HTML.replace(
+    "unrestricted:'Take-the-wheel'",
+    "unrestricted:'Take-the-wheel (moderate)',generation:'Unchained generation'",
+)
+UI_HTML = UI_HTML.replace(
+    '<div class="action-grid"><div class="action-card featured"><h3>1. Take-the-wheel</h3>',
+    '<div class="action-grid"><div class="action-card featured"><h3>1. Unchained generation</h3><p>Maps every posting requirement to the full evidence graph, then generates new source-grounded bullets or Skills lines to close truthful gaps.</p><p class="micro">Human-style gap filling · unsupported claims stay visible</p><button id="generation">Create unchained draft</button></div><div class="action-card"><h3>2. Take-the-wheel (moderate)</h3>',
+)
+UI_HTML = UI_HTML.replace(
+    '<p><strong>Take-the-wheel:</strong> may substantially restructure the portfolio when stronger verified evidence supports it.</p>',
+    '<p><strong>Unchained generation:</strong> audits every requirement, searches Markdown for buried evidence, and may generate new evidence-backed lines.</p><p><strong>Take-the-wheel (moderate):</strong> may substantially restructure the portfolio when stronger verified evidence supports it.</p>',
+)
+UI_HTML = UI_HTML.replace(
+    "['strict','dream','unrestricted']",
+    "['strict','dream','unrestricted','generation']",
+)
+UI_HTML = UI_HTML.replace(
+    "$(`unrestricted`).onclick=()=>start('unrestricted')",
+    "$(`unrestricted`).onclick=()=>start('unrestricted');$(`generation`).onclick=()=>start('generation')",
+)
+# The raw string uses ordinary quote syntax for DOM IDs.
+UI_HTML = UI_HTML.replace(
+    "$('unrestricted').onclick=()=>start('unrestricted');$('showScoreReasons')",
+    "$('unrestricted').onclick=()=>start('unrestricted');$('generation').onclick=()=>start('generation');$('showScoreReasons')",
+)
+UI_HTML = UI_HTML.replace(
+    "status.mode==='ai'||status.mode==='unrestricted'",
+    "status.mode==='ai'||status.mode==='unrestricted'||status.mode==='generation'",
+)
+UI_HTML = UI_HTML.replace(
+    "report.mode==='enhanced'||report.mode==='unrestricted'",
+    "report.mode==='enhanced'||report.mode==='unrestricted'||report.mode==='generation'",
+)
+UI_HTML = UI_HTML.replace(
+    "${ats.covered_count||0}/${ats.supported_count||0} supported exact terms rendered (${ats.exact_coverage_percent||0}%)",
+    "${ats.covered_count||0}/${ats.detected_count||ats.supported_count||0} detected exact terms rendered (${ats.exact_coverage_percent||0}% overall; ${ats.supported_exact_coverage_percent||0}% of supported terms)",
+)
+UI_HTML = UI_HTML.replace(
+    'panel+=`<div class="audit-card"><h4>ATS overlay',
+    'const strategy=report.generation_strategy||{};if((strategy.requirements||[]).length)panel+=`<div class="audit-card"><h4>Requirement → evidence map</h4><p class="meta">${esc(strategy.portfolio_strategy||\'\')}</p><div class="audit-scroll">${strategy.requirements.map(item=>`<div class="diff-row ${item.evidence_status===\'unsupported\'?\'removed\':item.recommended_action===\'synthesize\'||item.recommended_action===\'tailor_skills\'?\'added\':\'rewritten\'}"><span class="diff-label">${esc(item.importance)} · ${esc(item.evidence_status)} · ${esc(item.recommended_action)}</span><strong>${esc(item.requirement)}</strong>${item.exact_terms?.length?`<br><span class="meta">terms: ${esc(item.exact_terms.join(\', \'))}</span>`:\'\'}${item.reason?`<br>${esc(item.reason)}`:\'\'}</div>`).join(\'\')}</div></div>`;panel+=`<div class="audit-card"><h4>ATS overlay',
+)
+
 UI_HTML = UI_HTML.replace(
     "${layout.horizontal.underfilled_line_count||0} underfilled lines · one-more-bullet",
     "${layout.horizontal.near_wrap_count||0} near-wraps · ${layout.horizontal.underfilled_line_count||0} roomy lines · one-more-bullet",
@@ -6346,6 +7005,11 @@ document.addEventListener('click',event=>{
   if(saved){event.preventDefault();openSavedReport(saved.dataset.openSavedReport||'');}
 });
 function showView(view){''',
+)
+
+UI_HTML = UI_HTML.replace(
+    '  panel+=`<div class="audit-card"><h4>ATS overlay',
+    '  const strategy=report.generation_strategy||{};if((strategy.requirements||[]).length)panel+=`<div class="audit-card"><h4>Requirement → evidence map</h4><p class="meta">${esc(strategy.portfolio_strategy||\'\')}</p><div class="audit-scroll">${strategy.requirements.map(item=>`<div class="diff-row ${item.evidence_status===\'unsupported\'?\'removed\':item.recommended_action===\'synthesize\'||item.recommended_action===\'tailor_skills\'?\'added\':\'rewritten\'}"><span class="diff-label">${esc(item.importance)} · ${esc(item.evidence_status)} · ${esc(item.recommended_action)}</span><strong>${esc(item.requirement)}</strong>${item.exact_terms?.length?`<br><span class="meta">terms: ${esc(item.exact_terms.join(\', \'))}</span>`:\'\'}${item.reason?`<br>${esc(item.reason)}`:\'\'}</div>`).join(\'\')}</div></div>`;\n  panel+=`<div class="audit-card"><h4>ATS overlay',
 )
 
 
