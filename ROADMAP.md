@@ -67,6 +67,14 @@ none block anything currently running.
    be meaningfully tailored to the selected CV, then offer a local, review-only
    tailored draft. Personal CV content stays local and never enters public
    state.
+4. **Hierarchical location selector — TODO.** Add a Jobs-view location control
+   where **United States** can be expanded into selectable states, while every
+   non-US country is selectable at the country level without requiring a
+   state/province choice. This is a presentation/filtering feature over the
+   location fields already captured by the current pipeline; do not change the
+   scraper or its source queries for this work. Keep the existing location
+   values and make the hierarchy auditable when a posting has multiple
+   locations.
 
 ## North star: a platform anyone can log into (direction, 2026-07-13)
 
