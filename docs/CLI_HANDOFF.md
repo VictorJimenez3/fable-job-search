@@ -517,6 +517,14 @@ Before changing the radar, read these in order:
   technical project evidence. When the technical evidence is stronger and
   fits safely, generation replaces the low-signal leadership line and records
   the tradeoff; the moderate tailor is unchanged.
+- **TODO — confirmed application resume snapshots (DECISION #122):** when
+  Victor confirms that a specific generated resume was used, upload or attach
+  that exact company-named PDF to the existing `Resume` column on the
+  corresponding Notion application row. Make the confirmation explicit,
+  preserve an immutable/private snapshot or durable artifact reference, and
+  never infer confirmation from generation or application-stage changes. The
+  UI should make this nearly seamless while keeping the action owner-controlled
+  and auditable.
 - **Resume Studio unchained generation is separate from the moderate baseline:**
   `generation` performs a posting requirement-to-evidence audit before drafting,
   searches claim-authorized Markdown records, and may synthesize grounded bullets

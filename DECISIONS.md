@@ -1231,6 +1231,17 @@ wording is rendered and offered to the deterministic margin editor before the
 pipeline may restore source text; factuality and final geometry gates are
 unchanged.
 
+## 122. Confirmed applications may attach an immutable resume snapshot in Notion (2026-08-12)
+
+Future application tracking should offer a seamless owner-confirmed action to
+place the exact generated PDF used for an application into the existing Notion
+`Resume` column on its application row. The action must require Victor's
+explicit confirmation in Notion or the application workflow, preserve the
+company-specific filename and run ID, and store an immutable/private snapshot
+or durable artifact so later resume iterations cannot silently change what was
+submitted. It must remain optional, owner-controlled, and auditable; generating
+or tailoring a resume alone must never populate the applied resume column.
+
 ## 121. Unchained generation prefers technical evidence over low-signal RA (2026-08-12)
 
 When Unchained generation selects a Resident Assistant/Residence Life line
