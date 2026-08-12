@@ -1,6 +1,6 @@
 # 🎯 Job Radar — internship dashboard
 
-_Last run: **2026-08-12 13:54 UTC** · companies polled directly: **649** (registry 761) · jobs tracked: **10946** · new this run: **207** · alerts this run: **1**_
+_Last run: **2026-08-12 14:04 UTC** · companies polled directly: **668** (registry 761) · jobs tracked: **11215** · new this run: **269** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -23,7 +23,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 87 🔥 | 26d | Tesla | [Internship, Software Engineer, Energy Engineering (Fall 2026)](https://www.dreamworkhq.com/job/fbb11263-66e5-43ad-ace3-b962e0a5038d?utm_source=github&utm_campaign=gh-tech-internships) | Palo Alto, California | big_tech | — | [Dreamwork tech internship board](https://github.com/dreamworkhq/Tech-Internships-2027) |
 | 84 ⭐ | 8d | SpaceX | [Summer 2027 Software Engineering Internship/Co-op](https://boards.greenhouse.io/spacex/jobs/8621757002?gh_jid=8621757002) | Flexible - Any SpaceX Site | big_tech | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
 | 84 ⭐ | 8d | SpaceX | [Spring 2027 Software Engineering Internship/Co-op](https://boards.greenhouse.io/spacex/jobs/8621756002?gh_jid=8621756002) | Flexible - Any SpaceX Site | big_tech | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
-| 83 ⭐ | 19h | SpaceX | [Software Engineer (Starlink/Akoustis)](https://boards.greenhouse.io/spacex/jobs/8696779002?gh_jid=8696779002) | Canandaigua, NY  | big_tech | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
+| 83 ⭐ | 20h | SpaceX | [Software Engineer (Starlink/Akoustis)](https://boards.greenhouse.io/spacex/jobs/8696779002?gh_jid=8696779002) | Canandaigua, NY  | big_tech | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
 | 81 ⭐ | 4d | Snowflake | [Data Engineering Solutions Specialist ](https://jobs.ashbyhq.com/snowflake/ecd08904-f188-4336-bf8c-f75f97df1a02) | US, Remote | big_tech | — | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/snowflake/ecd08904-f188-4336-bf8c-f75f97df1a02) |
 | 81 ⭐ | 5d | TikTok | [Frontend Engineer Intern - Ads Interface - 2027 Summer](https://lifeattiktok.com/search/7671211313289398581) | San Jose, CA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 81 ⭐ | 5d | TikTok | [Fullstack Software Engineer Intern - Global E-Commerce - 2027 Summer](https://lifeattiktok.com/search/7670700387322300677) | Seattle, WA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
@@ -73,7 +73,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 80 ⭐ | 27d | TikTok | [General Hire Software Engineer Intern - Trust and Safety-Engineering -](https://lifeattiktok.com/search/7662700594251958581) | San Jose, CA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 80 ⭐ | 27d | TikTok | [General Hire Software Engineer Intern - Trust and Safety-Engineering -](https://lifeattiktok.com/search/7662684280234232117) | Seattle, WA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 80 ⭐ | 27d | TikTok | [Software Engineer Project Intern - Global E-Commerce Search Infrastruc](https://lifeattiktok.com/search/7662594807715072261) | Seattle, WA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
-| 79 ⭐ | 17h | SpaceX | [Manufacturing Engineer, AI Satellites (Starmind)](https://boards.greenhouse.io/spacex/jobs/8697063002?gh_jid=8697063002) | Bastrop, TX | big_tech | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
+| 79 ⭐ | 18h | SpaceX | [Manufacturing Engineer, AI Satellites (Starmind)](https://boards.greenhouse.io/spacex/jobs/8697063002?gh_jid=8697063002) | Bastrop, TX | big_tech | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
 | 78 ⭐ | 1d | Salesforce | [Software Engineering Intern - Future Pathways](https://salesforce.wd12.myworkdayjobs.com/en-US/external_career_site/job/California---San-Francisco/Software-Engineering-Intern---Future-Pathways_JR355842) | California, USA +3 | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 77 ⭐ | 29d | Snowflake | [Strategic Finance - Product, AI/ML and Analytics](https://jobs.ashbyhq.com/snowflake/86a1f062-74fe-4ee7-95f0-37399f8dac55) | US-CA-Menlo Park | big_tech | — | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/snowflake/86a1f062-74fe-4ee7-95f0-37399f8dac55) |
 | 76 ⭐ | 29d | Jane Street | [Data Engineer](https://www.janestreet.com/join-jane-street/apply/8631973002?gh_jid=8631973002) | New York, New York, United States | other | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/janestreet) |
