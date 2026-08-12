@@ -657,8 +657,9 @@ async function userTracker(accountKeys, personal = null, profile = "new_grad") {
     spreadsheetId = account.googleSheetId;
     googleEmail = account.googleEmail;
   }
-  await ensurePersonalTabs(token, spreadsheetId);
-  await repairPersonalTrackerFormat(token, spreadsheetId);
+  // GET hydration must be read-only. Older workbooks can be readable while
+  // their stored grant no longer permits formatting/header repairs; do those
+  // migrations on an explicit write or fresh OAuth connection instead.
   const tab = tabForProfile(profile);
   const rows = await readTab(token, spreadsheetId, tab, `A:${columnName(PERSONAL_HEADERS.length)}`);
   let preferences = [];

@@ -105,8 +105,10 @@ Before changing the radar, read these in order:
   treats Google OAuth refresh and private-Sheet read failures as a disconnected
   optional mirror, logs the short provider error server-side, and returns 200
   so the owner’s Jobs/Pipeline/Notion workflow does not show a boot failure.
-  Tracker writes and unexpected backend failures still use the error path;
-  reauthorize Google from the account center to restore the mirror.
+  GET hydration is read-only, so an older readable workbook is not mutated just
+  to render the dashboard. Tracker writes and unexpected backend failures still
+  use the error path; reauthorize Google from the account center if writes remain
+  unavailable.
 - **Role-field filter controls:** each Jobs role-field button remains visible
   while cycling neutral → selected → red excluded. A third click clears the
   exclusion; the red state filters that role family out without hiding the
