@@ -1790,3 +1790,14 @@ core chronological experience. Every accepted addition, rejected trial, and repl
 stored in the private audit report. The policy maximizes evidence density without padding,
 weakening core experience, or treating whitespace reduction as a reason to paraphrase strong
 lines.
+
+## 115. Location navigation is a UI TODO over the existing scraper contract (2026-08-12)
+
+The next location feature should let a user select **United States** and expand
+it into individual states. Locations outside the United States should remain
+selectable at country level without requiring state/province specificity. This
+is intentionally a frontend/filtering concern: the current scraper and its
+source queries stay unchanged, and the feature must normalize the existing
+location values without creating a second ingestion path. Multi-location jobs
+must remain visible under every applicable country/state bucket rather than
+being assigned to only one location.

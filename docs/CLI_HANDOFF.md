@@ -505,6 +505,10 @@ Before changing the radar, read these in order:
 - **Still deliberately deferred:** semantic/vector RAG, bullet locks/history,
   revision threads, and multi-user CV/provider storage. Email-based
   applied detection is also parked until the multi-user privacy model exists.
+  **Next UI TODO:** add a hierarchical location selector: expand United States
+  into selectable states, but keep non-US locations at country level only. This
+  must consume the current location fields without changing the scraper,
+  source queries, or posting ingestion contract.
 
 ## Safe handoff practice
 
