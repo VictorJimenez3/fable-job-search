@@ -1,6 +1,6 @@
 # 🎯 Job Radar — internship dashboard
 
-_Last run: **2026-08-13 13:54 UTC** · companies polled directly: **685** (registry 779) · jobs tracked: **11564** · new this run: **21** · alerts this run: **0**_
+_Last run: **2026-08-13 14:05 UTC** · companies polled directly: **685** (registry 779) · jobs tracked: **11564** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -24,7 +24,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 84 ⭐ | 19h | Snowflake | [Software Engineer](https://jobs.ashbyhq.com/snowflake/74466b25-9cc8-4e9b-b60b-234c539c455c) | US-CA-Menlo Park | big_tech | — | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/snowflake/74466b25-9cc8-4e9b-b60b-234c539c455c) |
 | 84 ⭐ | 9d | SpaceX | [Summer 2027 Software Engineering Internship/Co-op](https://boards.greenhouse.io/spacex/jobs/8621757002?gh_jid=8621757002) | Flexible - Any SpaceX Site | big_tech | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
 | 84 ⭐ | 9d | SpaceX | [Spring 2027 Software Engineering Internship/Co-op](https://boards.greenhouse.io/spacex/jobs/8621756002?gh_jid=8621756002) | Flexible - Any SpaceX Site | big_tech | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
-| 83 ⭐ | 20h | OpenAI | [Machine Learning Data Scientist, Forecasting](https://jobs.ashbyhq.com/openai/0b57e309-426d-4f5c-a28c-6dd941b84703) | San Francisco | ai_lab | — | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/openai/0b57e309-426d-4f5c-a28c-6dd941b84703) |
+| 83 ⭐ | 21h | OpenAI | [Machine Learning Data Scientist, Forecasting](https://jobs.ashbyhq.com/openai/0b57e309-426d-4f5c-a28c-6dd941b84703) | San Francisco | ai_lab | — | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/openai/0b57e309-426d-4f5c-a28c-6dd941b84703) |
 | 82 ⭐ | 1d | SpaceX | [Software Engineer (Starlink/Akoustis)](https://boards.greenhouse.io/spacex/jobs/8696779002?gh_jid=8696779002) | Canandaigua, NY  | big_tech | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
 | 81 ⭐ | 5d | Snowflake | [Data Engineering Solutions Specialist ](https://jobs.ashbyhq.com/snowflake/ecd08904-f188-4336-bf8c-f75f97df1a02) | US, Remote | big_tech | — | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/snowflake/ecd08904-f188-4336-bf8c-f75f97df1a02) |
 | 81 ⭐ | 6d | TikTok | [Frontend Engineer Intern - Ads Interface - 2027 Summer](https://lifeattiktok.com/search/7671211313289398581) | San Jose, CA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
