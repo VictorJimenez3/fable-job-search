@@ -233,10 +233,10 @@
  },
  "montenson": {
   "aliases": [],
-  "attempts": 2,
+  "attempts": 3,
   "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "eec9374a99d29355",
-  "last_attempt_at": 1786524799,
+  "last_attempt_at": 1786611375,
   "last_evidence_at": 1786392206,
   "name": "Montenson",
   "schema_v": 1,
@@ -466,10 +466,64 @@
  },
  "rtx": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e26c7cb70"
+   ],
+   "value": "Manufacturer with production and maintenance employees essential to product development."
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "165f054d33f2faeb",
+  "generated_at": 1786611375,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e26c7cb70"
+   ],
+   "value": "Ask how the intern engages with production and maintenance teams, what mentorship is provided within the tight-knit team, specifics of safety culture in product validation, and any expectations on relocation or work authorization given the onsite requirement."
+  },
+  "last_attempt_at": 1786611375,
   "last_evidence_at": 1786576970,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "3e26c7cb70"
+   ],
+   "value": "U.S. – Connecticut – East Hartford, 400 Main St, Building J (Onsite)"
+  },
+  "mission": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e26c7cb70"
+   ],
+   "value": "Welcomes passionate and committed employees into a tight-knit team that takes its mission personally."
+  },
   "name": "RTX",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1791795375,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "214af987b4ee8bc3",
@@ -482,7 +536,34 @@
     "url": "https://globalhr.wd5.myworkdayjobs.com/fr-CA/Private_Posting_No_TMP/job/US-CT-EAST-HARTFORD-J--400-Main-St--BLDG-J/Intern--Validation-Engineering---Product-Safety--Certification---Validation---Onsite-_01864406"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e26c7cb70"
+   ],
+   "value": "RTX is an aerospace and defense manufacturer seeking a Validation Engineer Intern for Product Safety, Certification & Validation in East Hartford, CT."
+  },
+  "synthesized_evidence_sha": "165f054d33f2faeb",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e26c7cb70"
+   ],
+   "value": "Internship role in Validation Engineering focusing on Product Safety and Certification & Validation; production and maintenance teams are essential to product development."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "3e26c7cb70"
+   ],
+   "value": "This onsite Validation Engineering internship supports your priority for meaningful technical work in a manufacturing environment, exposure to real production processes, and a tight-knit, mission-driven team culture."
+  }
  },
  "toyota research institute": {
   "aliases": [],
