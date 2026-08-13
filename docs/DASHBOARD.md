@@ -1,16 +1,18 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-13 16:10 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **97 shown / 11189 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-08-13 17:11 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **99 shown / 11191 stored** · new this run: **2** · alerts this run: **2**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
+| 100 🔥 | <1h | Micron | [Intern - DRAM Process Integration](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---DRAM-Process-Integration_JR108075) | Boise, ID - Main Site | semiconductors | workday |
+| 100 🔥 | <1h | Micron | [Intern - Wafer Bonding Process Development](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Wafer-Bonding-Process-Development_JR108074) | Boise, ID - Main Site | semiconductors | workday |
 | 99 🔥 | 1d | Micron | [Intern - Process Development Engineer, 3D DRAM Metals](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--3D-DRAM-Metals_JR107311) | Boise, ID - Main Site | semiconductors | workday |
 | 99 🔥 | 2d | Micron | [Intern - Process Development Engineer, 3D DRAM CMP](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--3D-DRAM-CMP_JR107848) | Boise, ID - Main Site | semiconductors | workday |
-| 93 🔥 | 8d | Micron | [Intern - Photolithography Process](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Photolithography-Process_JR107508) | Boise, ID - Main Site | semiconductors | workday |
-| 93 🔥 | 8d | Micron | [Intern - Process Pathfinding, DRAM Dry Etch](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Pathfinding--DRAM-Dry-Etch_JR107347) | Boise, ID - Main Site | semiconductors | workday |
-| 93 🔥 | 8d | Micron | [Intern - Process Development Engineer, DRAM Thin Films](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--DRAM-Thin-Films_JR107203) | Boise, ID - Main Site | semiconductors | workday |
+| 93 🔥 | 9d | Micron | [Intern - Photolithography Process](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Photolithography-Process_JR107508) | Boise, ID - Main Site | semiconductors | workday |
+| 93 🔥 | 9d | Micron | [Intern - Process Pathfinding, DRAM Dry Etch](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Pathfinding--DRAM-Dry-Etch_JR107347) | Boise, ID - Main Site | semiconductors | workday |
+| 93 🔥 | 9d | Micron | [Intern - Process Development Engineer, DRAM Thin Films](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--DRAM-Thin-Films_JR107203) | Boise, ID - Main Site | semiconductors | workday |
 | 88 🔥 | 9d | Micron Technology | [Industrial Engineer Intern - Technology & Products Group - Global Indu](https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---Main-Site/Intern---TPG-Global-IE_JR107486) | Boise, ID | semiconductors | simplify |
 | 88 🔥 | 22d | Micron | [Advanced Engineering & Manufacturing Internship (Singapore)](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Fab-10NX-Singapore/Advanced-Engineering---Manufacturing-Internship_JR106775) | 4 Locations | semiconductors | workday |
 | 88 🔥 | 22d | Micron | [Advanced Engineering & Manufacturing Internship](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Fab-10NX-Singapore/Advanced-Engineering---Manufacturing-Internship_JR106775) | 4 Locations | semiconductors | workday |
@@ -21,9 +23,9 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 77 ⭐ | 3d | Micron Technology | [DRAM Design Engineer Intern](https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---Main-Site/Intern---DRAM-Design-Engineer_JR108468) | Boise, ID | semiconductors | simplify |
 | 77 ⭐ | 7d | GlobalFoundries | [IP & Design Engineering Intern (Fall 2026)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Texas---Richardson/XMLNAME-1H-University-Intern---PVD-Equipment_JR-2502699) | USA - Texas - Richardson | semiconductors | workday |
 | 77 ⭐ | 7d | GlobalFoundries | [Factory Automation Engineering Intern (Fall 2026)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Factory-Automation-Engineering-Intern--Fall-2026-_JR-2503358) | USA - New York - Malta | semiconductors | workday |
-| 76 ⭐ | 14h | ByteDance | [Self-Built Engineer Intern - CDN Platform](https://jobs.bytedance.com/en/position/7670364362450733317/detail) | San Jose, CA | other | simplify |
-| 76 ⭐ | 19h | TMEIC Corporation Americas | [Engineer Intern - Spring 2027](https://apply.workable.com/tmeic-corporation-americas/j/68E556E5CA/apply) | Houston, TX | other | simplify |
-| 76 ⭐ | 19h | TMEIC Corporation Americas | [Engineer Intern - Spring 2027 - Eis](https://apply.workable.com/tmeic-corporation-americas/j/D44B74C42B/apply) | Roanoke, VA | other | simplify |
+| 76 ⭐ | 15h | ByteDance | [Self-Built Engineer Intern - CDN Platform](https://jobs.bytedance.com/en/position/7670364362450733317/detail) | San Jose, CA | other | simplify |
+| 76 ⭐ | 20h | TMEIC Corporation Americas | [Engineer Intern - Spring 2027](https://apply.workable.com/tmeic-corporation-americas/j/68E556E5CA/apply) | Houston, TX | other | simplify |
+| 76 ⭐ | 20h | TMEIC Corporation Americas | [Engineer Intern - Spring 2027 - Eis](https://apply.workable.com/tmeic-corporation-americas/j/D44B74C42B/apply) | Roanoke, VA | other | simplify |
 | 76 ⭐ | 21d | Rantec Power Systems Inc. | [PCB Design Engineer Intern](https://rantecpowersystemsinc.applytojob.com/apply/C88xK8WZio/PCB-Design-Engineering-Intern) | San Luis Obispo, CA | energy | simplify |
 | 76 ⭐ | 28d | Solar Turbines | [Gas Turbine Products Engineering Intern](https://cat.wd5.myworkdayjobs.com/en-US/solarturbines/job/San-Diego-California/XMLNAME-2027--Gas-Turbine-Product-Engineering-Internship_R0000382293) | San Diego, CA | energy | simplify |
 | 75 ⭐ | 13d | GlobalFoundries | [Robotics and Automation Engineering Intern](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/Essex-Junction/Robotics-and-Automation-Engineering-Intern_JR-2603574) | Essex Junction | semiconductors | workday |
@@ -32,10 +34,10 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 75 ⭐ | 16d | GlobalFoundries | [Device Engineering Intern, ULP CMOS (Summer 2026)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Product-Business-Unit-Finance-Intern--Summer-2026-_JR-2502830) | USA - New York - Malta | semiconductors | workday |
 | 75 ⭐ | 21d | Applied Materials | [2026 Fall Mechanical Engineer Co-op - BS/MS (Gloucester, MA)](https://amat.wd1.myworkdayjobs.com/en-US/External/job/GloucesterMA/XMLNAME-2026-Fall-Mechanical-Engineer-Co-op---BS-MS--Gloucester--MA-_R2611501) | Gloucester,MA | semiconductors | workday |
 | 75 ⭐ | 26d | Neuralink | [R&D Materials Engineer Intern](https://boards.greenhouse.io/neuralink/jobs/7808233003) | San Bruno, CA | other | simplify |
-| 73  | 8d | Micron | [Intern - Process Development Engineer, Dry Etch](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--Dry-Etch_JR107326) | Boise, ID - Main Site | semiconductors | workday |
-| 73  | 8d | Micron | [Intern - Process Development Engineer, 3D DRAM Dry Etch](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--3D-DRAM-Dry-Etch_JR107330) | Boise, ID - Main Site | semiconductors | workday |
-| 73  | 8d | Micron | [Intern - Process Development Engineer, 3D DRAM Photo](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--3D-DRAM-Photo_JR107312) | Boise, ID - Main Site | semiconductors | workday |
-| 73  | 8d | Micron | [Intern - Process Development](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development_JR107319) | Boise, ID - Main Site | semiconductors | workday |
+| 73  | 9d | Micron | [Intern - Process Development Engineer, Dry Etch](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--Dry-Etch_JR107326) | Boise, ID - Main Site | semiconductors | workday |
+| 73  | 9d | Micron | [Intern - Process Development Engineer, 3D DRAM Dry Etch](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--3D-DRAM-Dry-Etch_JR107330) | Boise, ID - Main Site | semiconductors | workday |
+| 73  | 9d | Micron | [Intern - Process Development Engineer, 3D DRAM Photo](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--3D-DRAM-Photo_JR107312) | Boise, ID - Main Site | semiconductors | workday |
+| 73  | 9d | Micron | [Intern - Process Development](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development_JR107319) | Boise, ID - Main Site | semiconductors | workday |
 | 73  | 9d | Tesla | [Cell Engineering Intern - Cell Qualification](https://www.tesla.com/careers/search/job/278620) | Palo Alto, CA | consumer_manufacturing | simplify |
 | 73  | 16d | East Penn Manufacturing Company | [Product Engineer Intern](https://careers-eastpennmanufacturing.icims.com/jobs/30021/job?mobile=true&needsRedirect=false) | Ann Arbor, MI | consumer_manufacturing | simplify |
 | 73  | 19d | Micron | [Intern – Process Development Engineer, 3D DRAM Wet Etch](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--3D-DRAM-Wet-Etch_JR106729) | Boise, ID - Main Site | semiconductors | workday |
@@ -104,4 +106,4 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 29d | Cirrus Logic | [Digital Design Engineer Co-op - Digital Design Engineer](https://jobs.eu.lever.co/cirrus/285c6096-5bc0-438e-abc6-b9768891167d/apply) | Greensboro, NC | other | simplify |
 | 64  | 29d | Cirrus Logic | [Analog Design Engineer Co-op - Analog Design Engineer](https://jobs.eu.lever.co/cirrus/8ad92ca2-1f67-4a86-a5cf-12b7b2981960/apply) | Greensboro, NC | other | simplify |
 
-_97 roles shown (score ≥ 42, posted ≤30d)._
+_99 roles shown (score ≥ 42, posted ≤30d)._
