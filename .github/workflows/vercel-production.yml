@@ -52,7 +52,7 @@ jobs:
       - name: Deploy and promote production
         id: deploy
         run: |
-          url="$(vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN" --scope="$VERCEL_ORG_ID")"
+          url="$(vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN" --scope="$VERCEL_ORG_ID" | tail -n 1)"
           test -n "$url" || { echo "Vercel returned no deployment URL"; exit 1; }
           echo "url=$url" >> "$GITHUB_OUTPUT"
           echo "deployment=$url"
@@ -63,7 +63,7 @@ jobs:
       - name: Verify the friendly URL serves this build
         run: |
           for attempt in 1 2 3 4 5; do
-            if curl --fail --silent --show-error "https://$VERCEL_ALIAS/" | grep -qi "Best match lookback"; then
+            if curl --fail --silent --show-error "https://$VERCEL_ALIAS/" | grep -q "Best Match lookback"; then
               echo "friendly alias is serving the new platform build"
               exit 0
             fi

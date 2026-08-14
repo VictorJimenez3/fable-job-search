@@ -422,13 +422,26 @@ Resume Studio is the private Victor-first application harness. It reads the
 radar's local job snapshot plus the ignored `CV/` directory and writes all
 prompts, drafts, PDFs, and review reports under `CV/.resume_studio/`.
 
-When signed into production as `@VictorJimenez3`, use **Tailor** on any job row,
-the job drawer's **Resume** tab, or the owner-only **Resume Studio** page. The
-role is saved to **To apply** and opened in the local Studio with its public job
-metadata and any job description Victor saved in Notes. The handoff is an
-encoded browser URL fragment to `127.0.0.1`; the hosted app never receives CV
-evidence or generated files, and the snapshot is retained only with a private
-Studio run.
+The production platform now exposes the same workflow as one owner-only
+**Resume Studio** workspace. From any Jobs row or role drawer, choose
+**tailor** to open the posting in that workspace; the cloud page keeps the
+posting selection, private-engine connection, queue, run status, and resume
+bank together. It calls the Mac engine over a loopback-only bridge when the
+Mac is awake, and falls back to Radar/title matching plus posting and apply
+links when it is not. The bridge accepts browser requests only from the two
+production Vercel doors and the Pages mirror. CV evidence, provider sessions,
+generated PDFs, and workshop revisions remain under the ignored local
+`CV/.resume_studio/` boundary; the cloud UI never pretends an offline run is
+complete.
+
+The canonical `CV/immutable/VictorJimenezResume.tex`,
+`CV/immutable/VictorJimenezResume.pdf`, and the historical
+`CV/immutable/og_resume.*` and `CV/immutable/tldp_resume.*` pairs are locked
+from Studio writes. Editing any protected artifact requires the owner PIN
+through the local lock command. Every generated draft and
+every Workshop revision is rendered in its own private directory, so selecting
+another posting or editing a draft cannot overwrite a canonical resume. The
+Studio header exposes this protection state.
 
 Start it from the repository:
 
@@ -443,12 +456,14 @@ login, install the owner Mac service once:
 bash scripts/resume-studio-service/install.sh
 ```
 
-Open `http://127.0.0.1:4317/`. **Use my source** selects a target-aware subset
-from the master CV and example résumés without rewriting it. **AI tailor** may
-substantially rewrite or synthesize bullets from multiple authorized source
-lines. **Take the wheel** is freer to make an original role-specific
-argument across the evidence bank; it still cannot invent facts, remove scope
-qualifiers, or bypass layout review. In all modes a deterministic renderer
+Open `http://127.0.0.1:4317/`. **Unchained generation** is the deepest mode: it
+maps every material posting requirement to the complete authorized evidence
+graph, then may synthesize new grounded bullets or Skills lines to close
+supported gaps. Unsupported requirements remain explicit gaps. **Take-the-wheel
+(moderate)** preserves the adaptive mode; **AI tailor** uses a more conservative
+change threshold; **Used bullets** is the clean comparison baseline. All four
+modes share the same evidence graph, factual gates, chronological job order,
+one-page contract, and owner review. In all modes a deterministic renderer
 uses the locked `CV/immutable/VictorJimenezResume.tex` visual contract;
 models cannot author the LaTeX document, alter the margins or typography, or
 overwrite the canonical resume. Employer headings are company-first. Usable installed

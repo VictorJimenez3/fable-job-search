@@ -34,9 +34,24 @@ Before changing the radar, read these in order:
   `docs/feed.xml`, or `docs/internships/`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
-## Current operational facts (verified 2026-08-08)
+## Current operational facts (verified 2026-08-14)
 
-### Latest change (verified 2026-08-08)
+### Latest change (verified 2026-08-14)
+
+- **Unified cloud Resume Studio:** the owner-only production platform now has
+  one Resume Studio workspace instead of a separate cloud title-preview page
+  plus a local launcher. Jobs rows, role drawers, and the Resume Studio tab
+  select the same posting; the workspace shows private-engine health, source
+  match, Used bullets / AI tailor / Take-the-wheel / Unchained generation
+  queues, run status, and bank links. It calls the loopback Mac engine through
+  a narrow production-origin postMessage bridge to the compact loopback engine
+  window. When the Mac is unavailable, cloud
+  ranking, posting links, and apply flow remain usable while draft controls
+  stay disabled. The CV corpus, provider sessions, PDFs, reports, and
+  workshop revisions remain local-only under `CV/.resume_studio/`; no private
+  artifact is committed or exposed by the bridge health response.
+
+### Earlier operational facts (verified 2026-08-08)
 
 - **PM dashboard lane:** `pm` is a zero-weight role bucket for Product
   Manager, Technical Product Manager, Product Owner, Project Manager, Business
@@ -185,7 +200,8 @@ Before changing the radar, read these in order:
   (victorjimenez3.github.io/fable-job-search/platform/ — tokenless, what
   forks get). `webapp/index.html` is canonical; `docs/platform/index.html`
   is a byte copy. Jobs tab shows posting age and sorts by best-match or
-  newest-first.
+  newest-first; Best Match can be limited to a selectable hour/day/week/month
+  lookback window.
   Forks with an additional Vercel alias should list its hostname in the
   comma-separated `AUTH_ALIAS_HOSTS` environment variable; Victor's memorable
   alias is built in.
@@ -383,15 +399,14 @@ Before changing the radar, read these in order:
   or schema attempts are explicit retryable records with capped exponential
   backoff; checkpoint logs expose ready/pending/retry/error counts.
 - **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it or
-  anything derived from it. Owner-only Resume Studio now runs locally with
-  Use my source, AI enhanced, and Take-the-wheel modes; start it with
-  `.venv/bin/python scripts/resume_studio.py` and open `http://127.0.0.1:4317/`.
-  Install `bash scripts/resume-studio-service/install.sh` once to keep the
-  loopback service available at login. Production exposes Tailor controls only
-  to authenticated `@VictorJimenez3`; selecting one saves the role to **To
-  apply** and sends a bounded public job snapshot through the URL fragment to
-  the local Studio. CV evidence and generated files never cross that boundary
-  (DECISION #114).
+  anything derived from it. The owner-only Resume Studio control plane lives
+  in production; its private engine runs from
+  `.venv/bin/python scripts/resume_studio.py` or the installed login service
+  at `http://127.0.0.1:4317/`. Tailor, the drawer's Resume tab, and the Studio
+  tab all use the same cloud workspace. A bounded public posting snapshot is
+  sent through the allowlisted loopback postMessage bridge only when matching
+  or generation is requested. CV evidence, provider sessions, PDFs, and
+  reports never cross that boundary (DECISION #123).
   For temporary human-feedback calibration across varied radar roles, run
   `.venv/bin/python scripts/resume_calibration.py --generate --count 6 --serve`
   and open `http://127.0.0.1:4321/`; generated PDFs and JSONL labels stay under
@@ -456,6 +471,86 @@ Before changing the radar, read these in order:
   visible line, and exposes selection rationale plus observed weekly Codex
   tokens/calls. Codex Plus's weekly allowance is not exposed by the local CLI;
   `CODEX_WEEKLY_LIMIT_TOKENS` is an optional owner-provided comparison limit.
+- **Resume Studio canonical-file lock is shipped (DECISION #98):** the local
+  Studio exposes a lock status and refuses to render anywhere inside `CV/`
+  except the private `CV/.resume_studio/` workspace. The canonical
+  `immutable/VictorJimenezResume.tex` / `immutable/VictorJimenezResume.pdf`, the historical `og_resume` pair, and the TLDP source/PDF are never Studio write
+  targets. The main UI makes Take-the-wheel the primary option, followed by AI
+  tailor and Used bullets; raw review data stays behind disclosures. No legacy
+  project set was restored automatically; the local CV Git history and saved
+  runs remain available for explicit comparison.
+- **VictorJimenezResume is now the protected default (DECISION #105):** Resume
+  Studio reads `CV/immutable/VictorJimenezResume.tex` and compares against
+  `VictorJimenezResume.pdf`; the old `og_resume` pair remains historical. The
+  protected files use read-only permissions plus macOS `uchg` flags. Deliberate
+  edits require the interactive owner-PIN command
+  `.venv/bin/python scripts/resume_lock.py unlock`, followed by `lock`.
+- **Resume Studio evidence review is shipped (DECISION #99):** the private
+  graph indexes the Markdown corpus plus bounded public GitHub/Devpost
+  corroboration, with source IDs, authority, and reversible review statuses.
+  Public records remain non-authorizing until Victor confirms them; rejected or
+  superseded records are removed from ranked context. The GitHub refresh keeps
+  cached README evidence when the unauthenticated API is rate-limited, and
+  reports that condition as stale-data metadata instead of discarding it.
+- **Resume Studio harness v2 is the current contract (DECISION #106):** the
+  candidate portfolio is adaptive; no leadership, project, or bullet-count
+  floor is forced, and no weak backup bullets are added to fill a page. Codex
+  is the primary writer/synthesizer, while Claude is an independent critique
+  lane using a first-party subscription CLI. Codex is pinned to
+  `gpt-5.6-luna`; local models, Ollama, arbitrary endpoints, and API fallbacks
+  are forbidden. The
+  critic returns critique-only gates and line feedback; it cannot replace the
+  plan or grade itself. A compiled draft remains `awaiting_review` until
+  Victor approves a ready gate report, and approval changes only private run
+  metadata. Normal bottom clearance is informational; wraps, compile errors,
+  forbidden claims, duplicate evidence, and missing independent review block
+  readiness.
+- **Resume Studio flexible portfolio reserves (DECISION #109):** when an added
+  project contributes unique capability coverage, the one-page packer protects
+  core experience and reclaims flexible content first in this order: coursework,
+  the HackMIT acceptance-pool/selection bullet, then the aggregated Awards
+  line. The HackMIT reserve removes only its prestige proof, never the
+  project's implementation bullets.
+- **Resume Studio measured-space follow-through (DECISION #114):** the density
+  pass now reads both current and legacy capacity reports and triggers when a
+  compiled page has a usable measured window, not only when a single QA line
+  says it fits. Codex gets the first editorial pass; a deterministic
+  source-authorized fallback then compiles additions until the next trial fails.
+  A new project/experience is atomic at two bullets. Flexible front matter is
+  reclaimed first; if a unique addition still needs room, only lower-value
+  project or leadership bullets may be displaced, never core experience. The
+  audit records additions, rejected trials, and replacement evidence.
+- **Resume Studio post-edit density closure (DECISION #120):** after provider
+  line editing—and again after any critique revision—the final page is
+  re-measured. A deterministic, claim-authorized evidence pass fills capacity
+  newly exposed by compaction, recompiling every candidate and restoring the
+  previous safe plan if geometry fails. The private `post_line_density.json`
+  audit records this last-mile decision.
+- **Unchained portfolio judgment (DECISION #121):** generation compares a
+  generic Resident Assistant/Residence Life line against unused verified
+  technical project evidence. When the technical evidence is stronger and
+  fits safely, generation replaces the low-signal leadership line and records
+  the tradeoff; the moderate tailor is unchanged.
+- **TODO — confirmed application resume snapshots (DECISION #122):** when
+  Victor confirms that a specific generated resume was used, upload or attach
+  that exact company-named PDF to the existing `Resume` column on the
+  corresponding Notion application row. Make the confirmation explicit,
+  preserve an immutable/private snapshot or durable artifact reference, and
+  never infer confirmation from generation or application-stage changes. The
+  UI should make this nearly seamless while keeping the action owner-controlled
+  and auditable.
+- **Resume Studio unchained generation is separate from the moderate baseline:**
+  `generation` performs a posting requirement-to-evidence audit before drafting,
+  searches claim-authorized Markdown records, and may synthesize grounded bullets
+  or Skills lines. It labels adjacent support, records honest gaps, and blocks
+  unsupported posting terms from the rendered resume. Existing `unrestricted`
+  behavior is preserved and displayed as Take-the-wheel (moderate); generated
+  files use the distinct `<company>_resume_unchained.pdf` pattern.
+- **Durable candidate-line memory (DECISION #110):** strong or reusable lines
+  from private tailoring runs must be promoted into the relevant Markdown
+  dossier/iteration log with source support and an `approved`, `bench`, or
+  `superseded` status. Future evidence retrieval is Markdown-first; old PDFs
+  remain audit artifacts, not authority.
 - **Resume Studio Sol-high UAT hardening is shipped (DECISION #82):** repeated
   reviewer selections for one entry merge distinct bullets instead of dropping
   them, supported ATS rewrites reach the margin editor before safe source

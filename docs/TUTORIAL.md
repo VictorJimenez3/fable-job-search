@@ -147,12 +147,12 @@ the same Applications database instead of creating a second Notion system.
 
 ## Private Resume Studio
 
-Victor's CV workflow runs locally because `CV/` is personal and gitignored.
-In production, sign in as `@VictorJimenez3`, choose a role, then use **Tailor**
-or open the drawer's **Resume** tab. Job Radar saves the role to **To apply**
-and opens that exact posting in the local Studio. The handoff uses the URL
-fragment to `127.0.0.1`; private evidence and generated PDFs never enter the
-hosted app or public repository.
+Resume Studio has one user-facing cloud control plane. In production, sign in
+as `@VictorJimenez3`, choose a role, then use **Tailor**, the drawer's
+**Resume** tab, or the owner-only **Resume Studio** tab. The cloud workspace
+keeps the posting, match, queue, run status, and resume bank together. It opens
+a small loopback bridge to the Mac engine only when private matching or
+generation is requested; CV evidence and generated artifacts remain local.
 
 From the repository on the Mac, start:
 
@@ -166,40 +166,55 @@ Or install the login service once so production links always work:
 bash scripts/resume-studio-service/install.sh
 ```
 
-Then open `http://127.0.0.1:4317/`. Search for a radar role and choose either:
+You can also stay in the production platform: sign in as `VictorJimenez3`,
+open **Resume Studio**, or press **tailor** beside any Jobs posting. That is
+the canonical cloud control plane for the same private engine. It shows the
+posting, connection state, match, queue, run status, and resume bank in the
+main platform UI. If the Mac service is asleep, the cloud page remains a safe
+read-only posting/apply surface and keeps generation disabled until the engine
+is reachable again.
 
-- **Use my source** — selects target-relevant source IDs from the
-  master CV and example résumés and copies their text without rewriting.
-- **AI tailor** — permits substantive source-grounded rewrites
-  and synthesis from multiple authorized lines, then runs independent gates.
-- **Take the wheel** — permits a more original role-specific argument
-  across the authorized evidence bank while preserving factuality and scope
-  qualifiers; it is intentionally marked for human review.
+- **Unchained generation** — performs a requirement-by-requirement evidence
+  audit before drafting, searches the authorized Markdown graph, and may create
+  new grounded bullets or Skills lines to close supported gaps. Unsupported
+  requirements remain visible instead of being stretched into claims.
+- **Take-the-wheel (moderate)** — the preserved adaptive mode. It can make a substantial portfolio
+  change, surface deeper unused evidence, or write a new role-specific line
+  when the expected hiring-value gain is real.
+- **AI tailor** — the same evidence graph and review process with a higher bar
+  for replacing an already-strong line; useful when you want adaptive tailoring
+  with less creative variance.
+- **Used bullets** — selects target-relevant approved source IDs and wording
+  without creative rewriting; use it as the clean comparison baseline.
 
-All three modes render through the locked
-`CV/immutable/VictorJimenezResume.tex` visual contract. Models cannot write the
-document, alter its margins/typography/spacing, enlarge text, or overwrite the
-canonical resume. Their existing local subscription sessions are
-used; the radar does not receive or store their credentials. The report
-includes separate quality gates, target-specific omissions, and known Codex
-token usage. The Studio header shows observed weekly local Codex calls/tokens; the
-Plus weekly allowance is not exposed by the local CLI. Set
-`CODEX_WEEKLY_LIMIT_TOKENS` only when you know the comparison limit.
-
+Unchained is not an unguarded writer: all modes share source authority,
+factual and qualifier checks, chronological job order, one-page compilation,
+one-line geometry, and owner approval. The normal screen puts Take-the-wheel
+alongside the separate unchained option; the mode guide explains the
+tradeoff in place. All modes render through the exact
+`CV/immutable/VictorJimenezResume.tex` structure. Models cannot write the
+document, alter its margins/typography/spacing, or bypass factual, duplicate,
+one-line, and compile gates. Codex writes/synthesizes with the `gpt-5.6-luna`
+model pin; Claude independently critiques when its first-party subscription CLI
+is installed. There is no local-model or API fallback. The report includes separate gates,
+target-specific omissions, and observed provider usage; it has no composite
+craft score. A run stays `awaiting_review` until Victor approves a ready draft.
 Drafts, prompts, source context, PDFs, and review reports live only under
 `CV/.resume_studio/`. Review the generated PDF and report before using any
 application material. The system preserves the master CV as the evidence bank
 and never auto-submits a resume. Use **Resume bank** in the header to revisit
 any saved run or legacy experiment; selecting another posting does not remove
-the previous result. New PDFs use a company-identifiable name such as
+the previous result. Select **View audit** on a saved run to rehydrate the
+same visual audit used for new runs. New PDFs use a company-identifiable name such as
 `mayo_clinic_resume_ai.pdf`, and the preview response preserves that name when
 the file is opened or downloaded. Project headings use `|` separators. TICC is
 never emitted by generation or workshop editing, even when it appears in a
 local historical source; the source files themselves are not changed. Each new
 run stores a private posting snapshot beside its artifacts.
 
-For an AI-enhanced run, the report's **What changed** block lists rewritten
-source lines and project swaps, while **ATS terms** shows exact supported terms
+For an AI-enhanced run, the report's **What changed** block lists meaningful
+rewritten source lines and project swaps; near-copy paraphrases are suppressed
+and the authorized source wording is retained. **ATS terms** shows exact supported terms
 that made it into the rendered draft, supported terms still missing, and
 requirements your evidence cannot support. Space QA labels unused width as
 roomy lines instead of confusing it with whitespace or a wrap. If the posting
@@ -239,12 +254,12 @@ or months. It limits which recent postings are ranked while preserving the same
 match scoring.
 
 The generator does not force every role to use the same evidence. It creates a
-strongest-first pool, then enforces a 22–26-bullet interview portfolio with
-three experiences, four projects, and one or two leadership entries. Every
-bullet must stay on one visual line, and the page must reach the same bottom
-region as the immutable human reference. The adversarial final pass applies a
-corrected source-addressed plan before the PDF is accepted; it cannot fix a
-weak result by deleting its way to a sparse page.
+strongest-first adaptive pool, preserves reverse chronology, and packs only
+verified lines that fit the locked one-page geometry. If measured capacity
+remains, a separate evidence pass may add unused source lines or document a
+low-value project/leadership tradeoff; a new project or experience must earn
+its heading with two bullets, and core experience is never trimmed. The final
+pass compiles every candidate and keeps a draft in review when any gate fails.
 If an enhancement drops a scope-limiting source fact such as `synthetic`,
 `prototype`, or `POC`, that bullet reverts to approved source wording. Resume
 Craft measures the argument and writing; factuality, eligibility, and layout

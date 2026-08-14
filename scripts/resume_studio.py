@@ -14,6 +14,9 @@ The service has two modes:
   and separate critique lanes. Codex may apply critique in bounded revision
   rounds; the reviewer never mutates or self-grades the plan, and the module
   reports separate quality gates instead of a composite craft score.
+* ``generation`` adds a requirement-to-evidence gap pass before drafting. It
+  may synthesize new bullets and tailored skill lines from authorized Markdown
+  evidence while leaving unsupported requirements visible.
 
 Run with::
 
@@ -31,6 +34,7 @@ import concurrent.futures
 import datetime as dt
 from difflib import SequenceMatcher
 import html
+import itertools
 import json
 import os
 import re
@@ -118,7 +122,7 @@ MAX_METHODOLOGY_CONTEXT_CHARS = 12000
 MAX_CONTEXT_PROMPT_CHARS = 12000
 MAX_CATALOG_PROMPT_CHARS = 18000
 MAX_GRAPH_PROMPT_CHARS = 28000
-MAX_TARGET_KEYWORDS = 24
+MAX_TARGET_KEYWORDS = 48
 MAX_WORKSHOP_TEXT_CHARS = 900
 MAX_WORKSHOP_REQUEST_CHARS = 3000
 MAX_WORKSHOP_REVISIONS = 100
@@ -128,6 +132,8 @@ TAILOR_MODE_ALIASES = {
     "strict": "used", "source": "used", "source-only": "used", "used": "used",
     "dream": "ai", "enhanced": "ai", "ai": "ai", "ai-enhanced": "ai",
     "free": "unrestricted", "unrestricted": "unrestricted",
+    "unchained": "generation", "generate": "generation",
+    "generation": "generation", "generative": "generation",
 }
 FORBIDDEN_RESUME_TERM_RE = re.compile(r"\bticc\b", re.I)
 PROTECTED_QUALIFIERS = (
@@ -139,6 +145,28 @@ PROTECTED_QUALIFIERS = (
     "demo",
 )
 TARGET_KEYWORD_TERMS = (
+    "machine learning", "deep learning", "computer vision", "software engineering",
+    "software development", "software development life cycle", "sdlc",
+    "object-oriented", "distributed systems", "data structures", "algorithms",
+    "cloud computing", "natural language processing", "large language models",
+    "generative ai", "retrieval augmented generation", "statistical analysis",
+    "experimental design", "version control", "unit testing", "testing", "debugging",
+    "troubleshooting", "continuous integration", "continuous improvement", "code reviews",
+    "document", "documentation", "knowledge sharing", "agile", "agile methodology",
+    "collaboration", "communication", "problem-solving", "business value creation",
+    "data engineering", "data visualization", "data analytics", "data platforms",
+    "scientific computing", "scientific research", "life sciences", "bioinformatics",
+    "computational chemistry", "web frameworks", "ai-assisted development tools",
+    "ai-enabled solutions", "learning new technologies",
+    "linux", "bash", "slurm", "gpu", "cuda", "c++", "c#", "python", "java", "sql",
+    "javascript", "typescript", "react", "pytorch", "tensorflow", "scikit-learn",
+    "numpy", "pandas", "fastapi", "flask", "sharepoint", "power platform", "databricks",
+    "docker", "kubernetes", "aws", "azure", "gcp", "google cloud", "alloydb", "postgresql",
+    "postgres", "pgvector", "mongodb", "sqlite", "git", "github", "rest api", "api",
+    "rag", "llm", "gemini", "agentic", "inference", "training", "quantization",
+    "optimization", "hpc", "real-time", "multimodal", "data pipeline", "microservices",
+)
+LEGACY_TARGET_KEYWORD_TERMS = (
     "machine learning", "deep learning", "computer vision", "software engineering",
     "object-oriented", "distributed systems", "data structures", "algorithms",
     "cloud computing", "natural language processing", "large language models",
@@ -253,7 +281,7 @@ def now_iso() -> str:
 def normalize_tailor_mode(mode: str) -> str:
     normalized = TAILOR_MODE_ALIASES.get(str(mode or "").strip().lower())
     if not normalized:
-        raise ValueError("mode must be used, ai, or unrestricted")
+        raise ValueError("mode must be used, ai, unrestricted, or generation")
     return normalized
 
 
@@ -261,7 +289,8 @@ def tailor_mode_label(mode: str) -> str:
     return {
         "used": "Used bullets",
         "ai": "AI tailor",
-        "unrestricted": "Unrestricted AI tailor",
+        "unrestricted": "Take-the-wheel (moderate)",
+        "generation": "Unchained generation",
     }.get(normalize_tailor_mode(mode), "AI tailor")
 
 
@@ -553,14 +582,16 @@ def _slug(value: str) -> str:
     return value[:48] or "entry"
 
 
-def resume_pdf_filename(job: Dict[str, Any]) -> str:
+def resume_pdf_filename(job: Dict[str, Any], mode: str = "ai") -> str:
     """Return the human-readable filename shown for a generated resume.
 
     Every new PDF includes a company slug and a use-case suffix so opening
     several drafts cannot hide which role each artifact belongs to.
     """
     company = re.sub(r"[^a-z0-9]+", "_", str(job.get("company") or "company").lower()).strip("_")
-    return "%s_resume_ai.pdf" % (company[:64] or "company")
+    normalized = normalize_tailor_mode(mode)
+    suffix = "unchained" if normalized == "generation" else "ai"
+    return "%s_resume_%s.pdf" % (company[:64] or "company", suffix)
 
 
 def run_pdf_path(run_dir: Path) -> Path:
@@ -569,7 +600,7 @@ def run_pdf_path(run_dir: Path) -> Path:
     configured = str(status.get("pdf_filename") or "").strip()
     if configured:
         return run_dir / Path(configured).name
-    named = sorted(run_dir.glob("*_resume_ai*.pdf"))
+    named = sorted(run_dir.glob("*_resume_*.pdf"))
     if named:
         return named[0]
     return run_dir / "resume.pdf"
@@ -1580,10 +1611,12 @@ def useful_provider_data(data: Dict[str, Any], label: str) -> bool:
         )
     if label.startswith("space_expansion"):
         return isinstance(data.get("additions"), list) and isinstance(data.get("decision"), str)
+    if label.startswith("gap_analysis"):
+        return isinstance(data.get("requirements"), list) and isinstance(data.get("portfolio_strategy"), str)
     return all(key in data for key in ("experiences", "projects", "leadership", "positioning_thesis"))
 
 
-def plan_schema(enhance: bool) -> Dict[str, Any]:
+def plan_schema(enhance: bool, generation: bool = False) -> Dict[str, Any]:
     bullet_properties: Dict[str, Any] = {
         "source_id": {"type": "string"},
         "priority": {"type": "integer", "minimum": 1, "maximum": 100},
@@ -1651,9 +1684,7 @@ def plan_schema(enhance: bool) -> Dict[str, Any]:
             "additionalProperties": False,
         }
 
-    return {
-        "type": "object",
-        "properties": {
+    properties = {
             "positioning_thesis": {"type": "string"},
             "selected_evidence": {
                 "type": "array",
@@ -1688,18 +1719,91 @@ def plan_schema(enhance: bool) -> Dict[str, Any]:
                 "type": "array", "maxItems": 40, "items": decision_ledger_item,
             },
             "front_matter_policy": front_matter_policy,
+        }
+    required = [
+        "positioning_thesis", "selected_evidence", "excluded_evidence",
+        "experiences", "projects", "leadership", "revision_notes",
+        "decision_ledger", "front_matter_policy",
+    ]
+    if generation:
+        properties["front_matter_rewrites"] = {
+            "type": "array",
+            "maxItems": 5,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "line_id": {
+                        "type": "string",
+                        "enum": ["front:skills:%d" % index for index in range(5)],
+                    },
+                    "text": {"type": "string"},
+                    "evidence_ids": {
+                        "type": "array", "items": {"type": "string"},
+                        "minItems": 1, "maxItems": 8,
+                    },
+                    "why": {"type": "string"},
+                },
+                "required": ["line_id", "text", "evidence_ids", "why"],
+                "additionalProperties": False,
+            },
+        }
+        required.append("front_matter_rewrites")
+    return {
+        "type": "object",
+        "properties": properties,
+        "required": required,
+        "additionalProperties": False,
+    }
+
+
+def gap_analysis_schema() -> Dict[str, Any]:
+    requirement = {
+        "type": "object",
+        "properties": {
+            "requirement": {"type": "string"},
+            "importance": {
+                "type": "string",
+                "enum": ["required", "preferred", "responsibility", "mentioned"],
+            },
+            "exact_terms": {
+                "type": "array", "items": {"type": "string"},
+                "minItems": 1, "maxItems": 8,
+            },
+            "evidence_status": {
+                "type": "string", "enum": ["direct", "adjacent", "unsupported"],
+            },
+            "evidence_ids": {
+                "type": "array", "items": {"type": "string"}, "maxItems": 8,
+            },
+            "target_entry_id": {"type": "string"},
+            "recommended_action": {
+                "type": "string",
+                "enum": ["keep", "reorder", "rewrite", "synthesize", "tailor_skills", "leave_gap"],
+            },
+            "candidate_angle": {"type": "string"},
+            "reason": {"type": "string"},
         },
         "required": [
-            "positioning_thesis",
-            "selected_evidence",
-            "excluded_evidence",
-            "experiences",
-            "projects",
-            "leadership",
-            "revision_notes",
-            "decision_ledger",
-            "front_matter_policy",
+            "requirement", "importance", "exact_terms", "evidence_status",
+            "evidence_ids", "target_entry_id", "recommended_action",
+            "candidate_angle", "reason",
         ],
+        "additionalProperties": False,
+    }
+    return {
+        "type": "object",
+        "properties": {
+            "portfolio_strategy": {"type": "string"},
+            # Do not accept a provider's promise to analyze the posting as the
+            # analysis itself. The normalizer still fills individual omissions.
+            "requirements": {
+                "type": "array", "items": requirement,
+                "minItems": 8, "maxItems": 48,
+            },
+            "must_cover_terms": {"type": "array", "items": {"type": "string"}, "maxItems": 32},
+            "honest_gaps": {"type": "array", "items": {"type": "string"}, "maxItems": 24},
+        },
+        "required": ["portfolio_strategy", "requirements", "must_cover_terms", "honest_gaps"],
         "additionalProperties": False,
     }
 
@@ -2142,8 +2246,29 @@ def _keyword_present(term: str, text: str) -> bool:
     return bool(re.search(_keyword_pattern(term), str(text or "").lower()))
 
 
+def _keyword_affirmed(term: str, text: str) -> bool:
+    """Reject claim-boundary mentions such as 'do not claim Agile'."""
+    lowered = str(text or "").lower()
+    match = re.search(_keyword_pattern(term), lowered)
+    if not match:
+        return False
+    window = lowered[max(0, match.start() - 90): min(len(lowered), match.end() + 90)]
+    denied = re.search(
+        r"\b(?:do not|does not|did not|never|not|without|unsupported|cannot|can't)\b.{0,70}"
+        + _keyword_pattern(term)
+        + r"|"
+        + _keyword_pattern(term)
+        + r".{0,70}\b(?:not authorized|not supported|without confirmation|without additional confirmation)\b",
+        window,
+        re.I,
+    )
+    return not bool(denied)
+
+
 def target_keyword_strategy(
     context: Dict[str, Any], catalog: Dict[str, Any], root: Optional[Path] = None,
+    graph: Optional[Dict[str, Any]] = None,
+    comprehensive: bool = False,
 ) -> Dict[str, Any]:
     """Return exact, source-grounded ATS targets for a posting.
 
@@ -2173,27 +2298,54 @@ def target_keyword_strategy(
         for bullet in entry.get("bullets", []):
             source_texts.append((str(bullet.get("id") or ""), _latex_plain(str(bullet.get("text") or ""))))
 
+    # The generation mode is specifically allowed to retrieve buried facts
+    # from Victor's reviewed Markdown corpus. Exact support therefore cannot
+    # be limited to wording that already made a LaTeX resume. Public
+    # corroboration and rejected/private-only records remain non-authorizing.
+    for node in (graph or {}).get("nodes", []) if comprehensive else []:
+        if not node.get("claim_allowed"):
+            continue
+        node_id = str(node.get("id") or "")
+        text = " ".join(
+            str(node.get(field) or "") for field in ("heading", "text")
+        )
+        if node_id and text.strip():
+            source_texts.append((node_id, _latex_plain(text)))
+
     sentences = [part.strip() for part in re.split(r"[\n.!?;]+", posting) if part.strip()]
     terms: List[Dict[str, Any]] = []
-    for term in sorted(TARGET_KEYWORD_TERMS, key=lambda value: (-len(value), value)):
+    vocabulary = TARGET_KEYWORD_TERMS if comprehensive else LEGACY_TARGET_KEYWORD_TERMS
+    found_terms = [term for term in vocabulary if _keyword_present(term, posting)]
+    for term in sorted(found_terms, key=lambda value: posting.lower().find(value.replace("-", " "))):
         if not _keyword_present(term, posting):
             continue
-        matching_sources = [source_id for source_id, text in source_texts if _keyword_present(term, text)]
-        required = any(
-            _keyword_present(term, sentence)
-            and re.search(r"\b(required|must|minimum|qualifications?|you will)\b", sentence, re.I)
-            for sentence in sentences
-        )
+        matching_sources = list(dict.fromkeys(
+            source_id for source_id, text in source_texts if _keyword_affirmed(term, text)
+        ))
         preferred = any(
             _keyword_present(term, sentence)
             and re.search(r"\b(preferred|nice to have|bonus|ideally)\b", sentence, re.I)
             for sentence in sentences
         )
+        required = not preferred and any(
+            _keyword_present(term, sentence)
+            and re.search(r"\b(required|must|minimum|required experience|required skills)\b", sentence, re.I)
+            for sentence in sentences
+        )
+        responsibility = not required and not preferred and any(
+            _keyword_present(term, sentence)
+            and re.search(r"\b(responsibilit|you will|contribute|support|participate|collaborate|design|develop|maintain)\w*\b", sentence, re.I)
+            for sentence in sentences
+        )
+        importance = "required" if required else "preferred" if preferred else "responsibility" if responsibility else "mentioned"
         terms.append({
             "term": term,
             "required": bool(required),
             "preferred": bool(preferred),
+            "responsibility": bool(responsibility),
+            "importance": importance,
             "supported": bool(matching_sources),
+            "support_kind": "exact" if matching_sources else "none",
             "source_ids": matching_sources[:6],
         })
         if len(terms) >= MAX_TARGET_KEYWORDS:
@@ -2202,7 +2354,11 @@ def target_keyword_strategy(
     preferred_terms = [item["term"] for item in terms if item["preferred"]]
     return {
         "posting_available": True,
-        "reason": "Exact terms extracted from the captured posting and checked against the authorized CV corpus.",
+        "reason": (
+            "Exact terms extracted from the captured posting and checked against authorized resume and Markdown evidence."
+            if comprehensive else
+            "Exact terms extracted from the captured posting and checked against the authorized CV corpus."
+        ),
         "terms": terms,
         "required_terms": required_terms,
         "preferred_terms": preferred_terms,
@@ -2221,6 +2377,234 @@ def resume_methodology_context(root: Optional[Path] = None) -> str:
     return _prompt_excerpt("\n\n".join(parts), MAX_METHODOLOGY_CONTEXT_CHARS)
 
 
+def gap_analysis_prompt(
+    context: Dict[str, Any], catalog: Dict[str, Any], graph: Dict[str, Any],
+) -> str:
+    """Ask for the human-style requirement/evidence pass used by generation mode."""
+    focused_context = {
+        "company": context.get("company"),
+        "title": context.get("title"),
+        "posting_text": context.get("posting_text"),
+    }
+    return (
+        "Return the requested JSON strategy now; do not narrate progress, promise future work, or "
+        "treat these instructions as job requirements. You are the requirement-to-evidence planner "
+        "for Victor Jimenez's private resume studio. "
+        "Read the complete posting, then account for every material qualification, responsibility, "
+        "named technology, workflow, domain signal, and collaboration expectation. For each one, "
+        "decide whether the authorized evidence is direct, adjacent-but-defensible, or unsupported. "
+        "Search beyond existing resume bullets: reviewed Markdown evidence is specifically provided "
+        "so buried work can become a new source-grounded bullet or tailored skill line. Recommend "
+        "synthesis only when it makes a real requirement visible. Do not manufacture AWS, Azure, "
+        "Databricks, Power Platform, Agile, code reviews, deployment, metrics, or any other missing "
+        "claim. Exact ATS wording is useful only when the cited evidence genuinely supports it. "
+        "Treat the resume as one information budget: stronger gap-filling evidence may replace a "
+        "redundant bullet, project, coursework, or awards. Preserve chronology and factual qualifiers. "
+        "Every requirements[].exact_terms value must come verbatim from the supplied Exact ATS "
+        "inventory. Do not create requirements about output format, chronology, evidence review, "
+        "or the analysis process. Include a term in must_cover_terms only when direct or adjacent "
+        "authorized evidence supports it; unsupported terms belong only in honest_gaps. Return the "
+        "auditable strategy requested by the schema, not resume copy or LaTeX.\n\n"
+        "Job context:\n"
+        + json.dumps(focused_context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
+        + "\n\nExact ATS inventory:\n"
+        + json.dumps(context.get("target_keywords") or {}, indent=2, ensure_ascii=False)
+        + "\n\nSource-addressable resume catalog:\n"
+        + json.dumps(catalog_for_prompt(catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
+        + "\n\nTarget-ranked authorized evidence, including Markdown:\n"
+        + json.dumps(
+            evidence_context(graph, context, str(context.get("posting_text") or "")),
+            indent=2, ensure_ascii=False,
+        )[:MAX_GRAPH_PROMPT_CHARS]
+    )
+
+
+def normalize_gap_analysis(
+    data: Dict[str, Any], keyword_strategy: Dict[str, Any],
+    catalog: Dict[str, Any], graph: Dict[str, Any], posting_text: str,
+) -> Dict[str, Any]:
+    """Ground a provider gap plan and guarantee coverage of the ATS inventory."""
+    node_by_id = {
+        str(node.get("id") or ""): node
+        for node in graph.get("nodes", [])
+        if str(node.get("id") or "")
+    }
+    claim_ids = {
+        node_id for node_id, node in node_by_id.items() if node.get("claim_allowed")
+    }
+    entry_ids = set((catalog.get("entries") or {}).keys())
+    posting = str(posting_text or "")
+    allowed_terms = {
+        str(item.get("term") or "").lower()
+        for item in (keyword_strategy.get("terms") or [])
+        if str(item.get("term") or "").strip()
+    }
+    normalized: List[Dict[str, Any]] = []
+    represented_terms = set()
+    for raw in (data.get("requirements") or [])[:48]:
+        if not isinstance(raw, dict):
+            continue
+        requirement = str(raw.get("requirement") or "").strip()[:240]
+        if not requirement:
+            continue
+        importance = str(raw.get("importance") or "mentioned").lower()
+        if importance not in {"required", "preferred", "responsibility", "mentioned"}:
+            importance = "mentioned"
+        exact_terms = []
+        evidence_explanation = " ".join((
+            str(raw.get("candidate_angle") or ""),
+            str(raw.get("reason") or ""),
+        ))
+        for value in raw.get("exact_terms") or []:
+            term = str(value or "").strip().lower()[:80]
+            explicitly_denied = (
+                _keyword_present(term, evidence_explanation)
+                and not _keyword_affirmed(term, evidence_explanation)
+            )
+            if (
+                term in allowed_terms and _keyword_present(term, posting)
+                and not explicitly_denied and term not in exact_terms
+            ):
+                exact_terms.append(term)
+                represented_terms.add(term)
+        if not exact_terms:
+            continue
+        evidence_ids = list(dict.fromkeys(
+            str(value) for value in (raw.get("evidence_ids") or [])
+            if str(value) in claim_ids
+        ))[:8]
+        status = str(raw.get("evidence_status") or "unsupported").lower()
+        if not evidence_ids:
+            status = "unsupported"
+        elif status not in {"direct", "adjacent"}:
+            status = "adjacent"
+        if status == "direct" and exact_terms:
+            exact_supported = any(
+                any(_keyword_present(term, " ".join((str(node_by_id[node_id].get("heading") or ""), str(node_by_id[node_id].get("text") or "")))) for term in exact_terms)
+                for node_id in evidence_ids
+            )
+            if not exact_supported:
+                status = "adjacent"
+        action = str(raw.get("recommended_action") or "leave_gap").lower()
+        if action not in {"keep", "reorder", "rewrite", "synthesize", "tailor_skills", "leave_gap"}:
+            action = "leave_gap"
+        if status == "unsupported":
+            action = "leave_gap"
+        target_entry = str(raw.get("target_entry_id") or "")
+        if target_entry not in entry_ids:
+            target_entry = ""
+        normalized.append({
+            "requirement": requirement,
+            "importance": importance,
+            "exact_terms": exact_terms,
+            "evidence_status": status,
+            "evidence_ids": evidence_ids,
+            "target_entry_id": target_entry,
+            "recommended_action": action,
+            "candidate_angle": str(raw.get("candidate_angle") or "").strip()[:500],
+            "reason": str(raw.get("reason") or "").strip()[:500],
+        })
+
+    # A model may group several requirements or simply overlook one. Preserve
+    # the complete deterministic inventory so the report never hides that gap.
+    for term_item in keyword_strategy.get("terms") or []:
+        term = str(term_item.get("term") or "").lower()
+        if not term or term in represented_terms:
+            continue
+        source_ids = [
+            str(value) for value in (term_item.get("source_ids") or [])
+            if str(value) in claim_ids
+        ][:8]
+        supported = bool(source_ids)
+        normalized.append({
+            "requirement": term,
+            "importance": str(term_item.get("importance") or "mentioned"),
+            "exact_terms": [term],
+            "evidence_status": "direct" if supported else "unsupported",
+            "evidence_ids": source_ids,
+            "target_entry_id": "",
+            "recommended_action": "rewrite" if supported else "leave_gap",
+            "candidate_angle": "Use the exact term naturally where the cited evidence earns space." if supported else "",
+            "reason": "Deterministic ATS inventory item retained because the planning lane did not address it.",
+        })
+
+    supported_terms = {
+        str(term).lower()
+        for item in normalized
+        if item.get("evidence_status") in {"direct", "adjacent"}
+        for term in (item.get("exact_terms") or [])
+    }
+    # Models sometimes group one real gap with generic supported technologies
+    # (for example, an unsupported bioinformatics requirement tagged Python).
+    # A term is an honest gap only when no grounded requirement supports it.
+    cleaned = []
+    for item in normalized:
+        if item.get("evidence_status") == "unsupported":
+            item = copy.deepcopy(item)
+            item["exact_terms"] = [
+                term for term in (item.get("exact_terms") or [])
+                if str(term).lower() not in supported_terms
+            ]
+            if not item["exact_terms"]:
+                continue
+        cleaned.append(item)
+    normalized = cleaned
+    must_cover = []
+    gaps = []
+    for item in normalized:
+        terms = item.get("exact_terms") or [item.get("requirement")]
+        if item.get("evidence_status") in {"direct", "adjacent"} and item.get("importance") != "mentioned":
+            must_cover.extend(str(term) for term in terms if str(term))
+        elif item.get("evidence_status") == "unsupported":
+            gaps.extend(str(term) for term in terms if str(term))
+    unsupported_terms = allowed_terms - supported_terms
+    must_cover.extend(
+        str(value).lower() for value in (data.get("must_cover_terms") or [])
+        if str(value).lower() in supported_terms
+    )
+    gaps.extend(
+        str(value).lower() for value in (data.get("honest_gaps") or [])
+        if str(value).lower() in unsupported_terms
+    )
+    return {
+        "portfolio_strategy": str(data.get("portfolio_strategy") or "").strip()[:1200]
+        or "Use direct and adjacent authorized evidence to close material posting gaps; leave unsupported requirements explicit.",
+        "requirements": normalized[:48],
+        "must_cover_terms": list(dict.fromkeys(must_cover))[:32],
+        "honest_gaps": list(dict.fromkeys(gaps))[:24],
+    }
+
+
+def apply_gap_support_to_keywords(
+    keyword_strategy: Dict[str, Any], gap_strategy: Dict[str, Any],
+) -> Dict[str, Any]:
+    """Promote provider-audited adjacent evidence without hiding its status."""
+    value = copy.deepcopy(keyword_strategy)
+    by_term: Dict[str, Dict[str, Any]] = {}
+    for requirement in gap_strategy.get("requirements") or []:
+        if requirement.get("evidence_status") not in {"direct", "adjacent"}:
+            continue
+        for term in requirement.get("exact_terms") or []:
+            by_term[str(term).lower()] = requirement
+    for item in value.get("terms") or []:
+        requirement = by_term.get(str(item.get("term") or "").lower())
+        if not requirement:
+            continue
+        evidence_ids = list(requirement.get("evidence_ids") or [])
+        if not evidence_ids:
+            continue
+        item["supported"] = True
+        item["support_kind"] = str(requirement.get("evidence_status") or "adjacent")
+        item["source_ids"] = list(dict.fromkeys(
+            list(item.get("source_ids") or []) + evidence_ids
+        ))[:8]
+    value["reason"] = (
+        "Exact posting terms checked against authorized resume/Markdown evidence; "
+        "generation-mode adjacent support is labeled separately from exact-source support."
+    )
+    return value
+
+
 def base_prompt(
     context: Dict[str, Any],
     role: str,
@@ -2228,6 +2612,7 @@ def base_prompt(
     enhance: bool,
     graph: Optional[Dict[str, Any]] = None,
     unrestricted: bool = False,
+    generation: bool = False,
 ) -> str:
     role_guardrails = """
 Victor-specific guardrails:
@@ -2364,6 +2749,16 @@ Victor-specific guardrails:
                 "authorized source, protected prototype/simulation qualifiers stay intact, and the final page must "
                 "remain honest, readable, and reviewable."
             )
+        if generation:
+            role_guardrails += (
+                "\n- Unchained generation mode begins from the supplied requirement-to-evidence strategy. "
+                "For each material direct or adjacent opportunity, decide whether to keep, reorder, rewrite, "
+                "synthesize, or tailor a Skills line so the final resume visibly answers the posting. You may "
+                "create a genuinely new bullet by combining an existing catalog bullet as its primary source_id "
+                "with claim-authorizing Markdown evidence_ids. Replace redundant evidence when needed. Return "
+                "front_matter_rewrites only for evidence-backed Skills changes, and leave unsupported requirements "
+                "as explicit gaps instead of inventing them."
+            )
     else:
         role_guardrails += (
             "\n- Source-only mode is selection, not rewriting. Choose source IDs only; the harness will copy every heading and bullet verbatim."
@@ -2377,6 +2772,10 @@ Victor-specific guardrails:
         ensure_ascii=False,
     )
     benchmark_text = json.dumps(canonical_resume_benchmark(catalog), indent=2, ensure_ascii=False)
+    front_matter_text = json.dumps(front_matter_catalog(repo_root()), indent=2, ensure_ascii=False)
+    generation_text = json.dumps(
+        context.get("generation_strategy") or {}, indent=2, ensure_ascii=False,
+    )
     return (
         "You are the "
         + role
@@ -2395,18 +2794,24 @@ Victor-specific guardrails:
         + context_text[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nSource-addressable evidence catalog:\n"
         + catalog_text[:MAX_CATALOG_PROMPT_CHARS]
+        + (("\n\nEditable front-matter catalog (use these exact line_id values; rewrite one existing "
+            "Skills line per item rather than inventing a combined section ID):\n"
+            + front_matter_text[:8000]) if generation else "")
         + "\n\nCanonical/current benchmark (comparison point, not a preservation rule):\n"
         + benchmark_text[:MAX_CATALOG_PROMPT_CHARS]
         + "\n\nTarget-ranked evidence graph nodes (authority and claim_allowed are binding):\n"
         + graph_text[:MAX_GRAPH_PROMPT_CHARS]
         + "\n\nExact ATS keyword strategy:\n"
         + json.dumps(context.get("target_keywords") or {}, indent=2, ensure_ascii=False)
+        + (("\n\nBinding requirement-to-evidence strategy (act on its supported opportunities):\n"
+            + generation_text[:18000]) if generation else "")
     )
 
 
 def synthesis_prompt(
     context: Dict[str, Any], drafts: List[Dict[str, Any]], catalog: Dict[str, Any], enhance: bool,
     graph: Optional[Dict[str, Any]] = None, unrestricted: bool = False,
+    generation: bool = False,
 ) -> str:
     packed = []
     for draft in drafts:
@@ -2423,6 +2828,7 @@ def synthesis_prompt(
                 "revision_notes": data.get("revision_notes", []),
                 "decision_ledger": data.get("decision_ledger", []),
                 "front_matter_policy": data.get("front_matter_policy", {}),
+                "front_matter_rewrites": data.get("front_matter_rewrites", []),
             }
         )
     return (
@@ -2436,6 +2842,7 @@ def synthesis_prompt(
         "value; normal bottom clearance is acceptable only when no additional evidence is useful. "
         + ("You may substantially rewrite or synthesize bullet text from the authorized source bank; preserve the primary source_id, add all supporting source IDs, and retain every scope-limiting qualifier. " if enhance else "Select source IDs verbatim; do not rewrite bullets. ")
         + ("This is the unrestricted creative pass: write genuinely original, role-specific bullets and make decisive project swaps when the evidence supports them; do not collapse back to base-resume phrasing. " if unrestricted else "")
+        + ("This is the unchained generation pass: use the requirement-to-evidence strategy to close material supported gaps with newly synthesized bullets or evidence-backed Skills rewrites, and explain every gap left open. " if generation else "")
         + "Choose the stronger defensible plan rather than averaging it. Judge the whole portfolio before individual wording: preserve strong fifth experience bullets when space permits, remove Resident Assistant before a stronger unused technical project, and do not spend a project slot repeating an experience's agents/RAG/retrieval story unless the project adds a materially distinct engineering surface. If the rendered page needs room for a distinct project or bullet, use flexible reserves before substantive evidence: coursework first, then the HackMIT acceptance-pool bullet when present, then Awards. Do not change an already strong line merely to make the draft look tailored. Compare each substantive swap, exclusion, rewrite, or reorder with the canonical/current benchmark and record the hiring-value gain and important signal lost in decision_ledger. High-value changes include stronger unused evidence, a materially better project, a newly exposed technical dimension, useful ordering, accurate ATS terminology, and reduced redundancy; low-value paraphrase churn is not a goal. Preserve reverse-chronological job order unless the exception is genuinely stronger and explicitly recorded. \n\n"
         "Job context:\n"
         + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
@@ -2460,6 +2867,7 @@ def reviewer_prompt(
     graph_context: Optional[List[Dict[str, Any]]] = None,
     catalog: Optional[Dict[str, Any]] = None,
     unrestricted: bool = False,
+    generation: bool = False,
 ) -> str:
     return (
         "You are an independent adversarial resume critic. This is a fresh review: do not "
@@ -2472,6 +2880,7 @@ def reviewer_prompt(
         "Sections and bullet counts are adaptive: do not penalize an omitted leadership or "
         "project section unless the target argument genuinely needs that evidence. "
         + ("This is an unrestricted creative pass; preserve factual boundaries but prefer a fresh, specific argument over safe base-CV wording. " if unrestricted else "")
+        + ("This is an unchained generation pass. Audit whether it closed the strongest supported requirement gaps, whether every new line cites authorizing evidence, and whether any unsupported term was smuggled into the resume. " if generation else "")
         + "Use the exact ATS keyword strategy to improve supported keyword coverage, while recording unsupported requirements as missing evidence. "
         "unsupported_claims must describe only claims present in the proposed plan.\n\n"
         "Authority rule: CV/immutable/VictorJimenezResume.tex is canonical for the immutable contact, "
@@ -2538,6 +2947,7 @@ def revision_prompt(
     context: Dict[str, Any], plan: Dict[str, Any], critique: Dict[str, Any],
     catalog: Dict[str, Any], graph: Optional[Dict[str, Any]] = None,
     unrestricted: bool = False,
+    generation: bool = False,
 ) -> str:
     """Ask the writer to apply independent criticism without self-grading."""
     return (
@@ -2558,6 +2968,7 @@ def revision_prompt(
         "evidence should not be duplicated by a project unless its engineering surface is distinct. "
         "The ledger is an audit trail, not permission to create churn. "
         + ("This is the unrestricted creative pass; make a sharper role-specific argument rather than reverting to base-CV wording. " if unrestricted else "")
+        + ("This is the unchained generation pass; preserve or improve evidence-backed gap closure and front_matter_rewrites, while keeping unsupported requirements out. " if generation else "")
         + "\n\nTarget context:\n"
         + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nCurrent plan:\n"
@@ -2584,12 +2995,16 @@ def line_editor_prompt(
     return (
         "You are Victor's final one-line resume editor. This request is self-contained; do not inspect the filesystem "
         "or run commands. Preserve every selected entry, bullet source_id, "
-        "evidence_id, fact, priority, and section order. Change only bullet text. For wrapped or near-wrap lines "
+        "evidence_id, fact, priority, and section order. Change only bullet text or the text of an existing "
+        "front_matter_rewrite. Never delete a front-matter rewrite, change its line_id/evidence_ids, or remove "
+        "the supported target terms that motivated it. For wrapped or near-wrap lines "
         "(less than the stated safe right slack), cut filler and compress clauses without losing the technical object, "
         "supported ATS term, or proof. The minimum safe right slack is 12pt: every returned bullet must clear that "
         "threshold, and a near-wrap is still a failure even when the PDF technically stays on one line. Prefer a "
         "short, readable line that ends early; never "
-        "expand a bullet merely to approach the right margin. Preserve decision_ledger and front_matter_policy unchanged. Do not pad, invent, change layout, or return LaTeX beyond inline textbf/emph. Return the complete "
+        "expand a bullet merely to approach the right margin. Preserve decision_ledger and front_matter_policy; "
+        "compact an unsafe Skills rewrite by removing lower-value non-target tools and compressing separators. "
+        "Do not pad, invent, change layout, or return LaTeX beyond inline textbf/emph. Return the complete "
         "structured plan under the same schema.\n\nTarget:\n"
         + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nCurrent plan:\n"
@@ -2607,6 +3022,7 @@ def space_expansion_prompt(
     context: Dict[str, Any], plan: Dict[str, Any], layout: Dict[str, Any],
     catalog: Dict[str, Any], graph: Optional[Dict[str, Any]] = None,
     unrestricted: bool = False,
+    generation: bool = False,
 ) -> str:
     """Ask Codex for only the extra evidence that measured page room can carry."""
     selected_entries = [
@@ -2643,20 +3059,23 @@ def space_expansion_prompt(
             })
     return (
         "You are the measured-density editor for Victor's private resume. A compiled one-page draft has passed its "
-        "hard layout checks, and deterministic QA says one additional standard one-line bullet fits. Return only the "
-        "narrow expansion object requested by the schema. Do not return a complete resume plan or LaTeX.\n\n"
-        "Additions are optional: return an empty additions array when no unused source line materially improves the "
-        "target argument. Never pad whitespace. Prefer one strong unused bullet over several weak or redundant lines. "
+        "hard layout checks, and deterministic QA found usable bottom capacity. Return only the narrow expansion "
+        "object requested by the schema. Do not return a complete resume plan or LaTeX.\n\n"
+        "Additions are optional only when no unused source line materially improves the target argument. Never pad "
+        "whitespace. Fill the measured window until the next compiled trial would overflow: prefer strong unused "
+        "bullets over weak or redundant lines, and do not stop after one line if another verified line still fits. "
         "Use placement=append_bullet for an entry already selected below. You may use placement=new_entry for one "
         "unused project or experience when it adds unique capability coverage and the compiled trial proves the "
-        "heading-plus-bullet fits; a new entry has a higher bar than an extra bullet. Do not reorder existing bullets "
-        "or entries. Experience entries must remain in reverse chronological job order. Keep every existing selected "
-        "bullet intact.\n\n"
+        "heading-plus-two-bullets fits; a new entry has a higher bar than an extra bullet and must earn both lines. Do not reorder existing bullets "
+        "or entries. Experience entries must remain in reverse chronological job order. Preserve core experience evidence. "
+        "If a unique two-bullet project is materially stronger, the deterministic harness may reclaim coursework/Awards "
+        "first and then only lower-value project or leadership lines; record that tradeoff rather than padding the page.\n\n"
         "Choose an unused line only when it adds target relevance, technical depth, breadth, differentiation, or a "
         "distinct interview thread. Do not repeat an experience's agents/RAG/retrieval story through a project unless "
         "the line adds a different engineering surface. Preserve prototype, synthetic, simulation, POC, and privacy "
         "boundaries. Use exact supported ATS terms naturally; unsupported requirements remain gaps.\n\n"
         + ("This is the unrestricted/take-the-wheel pass, so select the strongest creative addition when the evidence supports it. " if unrestricted else "Keep this conservative and evidence-first. ")
+        + ("Prioritize a verified line that closes a material supported requirement from the generation strategy. " if generation else "")
         + "Every addition must include placement, the catalog entry_id, the exact catalog bullet source_id, source_ids, claim-authorizing "
         "evidence_ids, a complete source-grounded text line, priority, target_signal, and why.\n\n"
         "Target context:\n"
@@ -2942,6 +3361,7 @@ def validate_plan(
     catalog: Dict[str, Any],
     enhance: bool,
     graph: Optional[Dict[str, Any]] = None,
+    generation: bool = False,
 ) -> Tuple[Dict[str, Any], List[str]]:
     entries = catalog.get("entries", {})
     all_bullet_bank = {
@@ -2980,6 +3400,74 @@ def validate_plan(
         "coursework": "omit" if str(raw_front_matter.get("coursework") or "").lower() == "omit" else "keep",
         "awards": "omit" if str(raw_front_matter.get("awards") or "").lower() == "omit" else "keep",
     }
+    normalized["front_matter_rewrites"] = []
+    # Once a generation plan has evidence-backed Skills rewrites, downstream
+    # packers and space-expansion validators must not erase them merely because
+    # their helper call did not repeat the mode flag.
+    if generation or bool(plan.get("front_matter_rewrites")):
+        skill_lines = {
+            str(item.get("line_id") or ""): item
+            for item in front_matter_catalog(repo_root())
+            if str(item.get("line_id") or "").startswith("front:skills:")
+        }
+        for item in (plan.get("front_matter_rewrites") or [])[:5]:
+            if not isinstance(item, dict):
+                validation_warnings.append("dropped malformed front-matter rewrite")
+                continue
+            line_id = str(item.get("line_id") or "")
+            if line_id not in skill_lines:
+                validation_warnings.append("dropped unknown Skills line rewrite: %s" % line_id)
+                continue
+            text = _normalize_model_fragment(item.get("text"))
+            if not text or FORBIDDEN_CONTENT_COMMANDS.search(text):
+                validation_warnings.append("dropped invalid Skills line rewrite: %s" % line_id)
+                continue
+            unsupported_commands = _unsupported_inline_commands(text)
+            if unsupported_commands:
+                validation_warnings.append(
+                    "dropped Skills rewrite %s with unsupported command(s): %s"
+                    % (line_id, ", ".join(unsupported_commands))
+                )
+                continue
+            cited = list(dict.fromkeys(
+                str(value) for value in (item.get("evidence_ids") or []) if str(value)
+            ))[:8]
+            if graph is not None:
+                cited = [value for value in cited if value in evidence_ids]
+                # Ground exact technologies in a generated Skills line even
+                # when a provider mangles or omits a source ID. Only
+                # claim-authorized graph nodes may repair the citation set.
+                for term in TARGET_KEYWORD_TERMS:
+                    if not _keyword_present(term, text):
+                        continue
+                    for node in graph.get("nodes", []):
+                        node_id = str(node.get("id") or "")
+                        node_text = " ".join((
+                            str(node.get("heading") or ""),
+                            str(node.get("text") or ""),
+                        ))
+                        if (
+                            node_id in claim_authorities
+                            and _keyword_affirmed(term, node_text)
+                            and node_id not in cited
+                        ):
+                            cited.append(node_id)
+                            if len(cited) >= 8:
+                                break
+                    if len(cited) >= 8:
+                        break
+                if not cited or not set(cited) & claim_authorities:
+                    validation_warnings.append(
+                        "dropped Skills rewrite %s without claim-authorizing evidence" % line_id
+                    )
+                    continue
+            normalized["front_matter_rewrites"].append({
+                "line_id": line_id,
+                "text": text,
+                "evidence_ids": cited,
+                "why": str(item.get("why") or "").strip(),
+                "source_text": str(skill_lines[line_id].get("text") or ""),
+            })
     # Providers occasionally place a known source under the wrong resume
     # section while preserving the source ID and evidence. Rebucket only when
     # the catalog proves the source kind; unknown IDs remain validation errors
@@ -3359,48 +3847,285 @@ def _append_space_addition(plan: Dict[str, Any], addition: Dict[str, Any]) -> Di
     return value
 
 
+def deterministic_space_additions(
+    plan: Dict[str, Any], catalog: Dict[str, Any],
+    graph: Optional[Dict[str, Any]] = None,
+    keyword_strategy: Optional[Dict[str, Any]] = None,
+) -> List[Dict[str, Any]]:
+    """Build a ranked fallback pool when the expansion lane returns no usable line.
+
+    This is not a replacement for editorial selection. It is a last-mile
+    density guard: it only uses unused authoritative bullets, prefers an
+    existing entry (no heading cost), and proposes a new technical entry only
+    with two bullets so the page does not gain a lonely project heading.
+    """
+    entries = catalog.get("entries") or {}
+    selected_ids = _selected_bullet_ids(plan)
+    selected_entries = {
+        str(entry.get("source_id") or ""): (section, entry)
+        for section in ("experiences", "projects", "leadership")
+        for entry in plan.get(section, []) or []
+    }
+    authority = {
+        str(node.get("id"))
+        for node in (graph or {}).get("nodes", [])
+        if node.get("claim_allowed")
+    }
+    supported_terms = [
+        str(item.get("term") or "")
+        for item in (keyword_strategy or {}).get("terms", [])
+        if item.get("supported") and str(item.get("term") or "")
+    ]
+
+    def candidate_score(text: str, kind: str, placement: str, entry_bullet_count: int, heading: str) -> float:
+        score = 0.0
+        score += 8.0 if placement == "append_bullet" else 0.0
+        score += max(0, 3 - min(entry_bullet_count, 3))
+        score += 6.0 * sum(_keyword_present(term, text) for term in supported_terms)
+        score += 2.0 * sum(bool(re.search(pattern, text, re.I)) for pattern in PORTFOLIO_SIGNAL_PATTERNS.values())
+        if re.search(r"\b\d[\d,.]*\+?%?|\$\d", text):
+            score += 3.0
+        if re.search(r"\b(?:architected|engineered|implemented|designed|built|trained|orchestrated|pipeline|model|api|database)\b", text, re.I):
+            score += 2.0
+        if kind == "leadership":
+            score -= 10.0
+        if heading and re.search(r"1st place|best security|overall|hack", heading, re.I) and re.search(r"\b(?:won|selected|place|competitors?)\b", text, re.I):
+            score -= 5.0
+        return score
+
+    def raw_candidate(entry_id: str, entry: Dict[str, Any], bullet: Dict[str, Any], placement: str, section: str) -> Dict[str, Any]:
+        bullet_id = str(bullet.get("id") or "")
+        text = str(bullet.get("text") or "")
+        return {
+            "entry_id": entry_id,
+            "placement": placement,
+            "section": section,
+            "source_id": bullet_id,
+            "source_ids": [bullet_id],
+            "evidence_ids": [bullet_id],
+            "text": text,
+            "priority": 75,
+            "target_signal": "measured space capability coverage",
+            "why": "Uses verified unused evidence to close measured page capacity without displacing selected lines.",
+            "_score": candidate_score(
+                _latex_plain(text), str(entry.get("kind") or ""), placement,
+                len(selected_entries.get(entry_id, ("", {"bullets": []}))[1].get("bullets", [])),
+                str(entry.get("heading") or ""),
+            ),
+        }
+
+    append_candidates = []
+    new_entry_groups: Dict[str, List[Dict[str, Any]]] = {}
+    for entry_id, entry in entries.items():
+        entry_id = str(entry_id)
+        kind = str(entry.get("kind") or "")
+        section = {"experience": "experiences", "project": "projects", "leadership": "leadership"}.get(kind, "")
+        if not section:
+            continue
+        selected = selected_entries.get(entry_id)
+        selected_bullets = [
+            _latex_plain(str(bullet.get("text") or ""))
+            for bullet in (selected[1].get("bullets", []) if selected else [])
+        ]
+        if selected and len(selected[1].get("bullets", [])) >= PORTFOLIO_CAPS[section]["bullets"]:
+            continue
+        unused = []
+        for bullet in entry.get("bullets", [])[:12]:
+            bullet_id = str(bullet.get("id") or "")
+            text = _latex_plain(str(bullet.get("text") or ""))
+            if not bullet_id or bullet_id in selected_ids or len(text) < MIN_MEANINGFUL_BULLET_CHARS:
+                continue
+            if authority and bullet_id not in authority:
+                continue
+            if any(_same_entry_resume_bullet(text, selected_text) for selected_text in selected_bullets):
+                continue
+            candidate = raw_candidate(entry_id, entry, bullet, "append_bullet" if selected else "new_entry", section)
+            unused.append(candidate)
+        if selected:
+            append_candidates.extend(unused)
+        elif kind in {"project", "experience"} and len(unused) >= 2:
+            new_entry_groups[entry_id] = sorted(unused, key=lambda item: (-item["_score"], item["source_id"]))[:2]
+
+    append_candidates.sort(key=lambda item: (-item["_score"], item["source_id"]))
+    new_groups = sorted(
+        new_entry_groups.values(),
+        key=lambda group: (-sum(item["_score"] for item in group), group[0]["entry_id"]),
+    )
+    # Give distinct selected entries a first look, then allow a second bullet
+    # from the strongest entry if the compiled trials still have room.
+    diversified = []
+    seen_entries = set()
+    for item in append_candidates:
+        if item["entry_id"] in seen_entries:
+            continue
+        diversified.append(item)
+        seen_entries.add(item["entry_id"])
+        if len(diversified) >= 2:
+            break
+    diversified.extend(item for item in append_candidates if item not in diversified)
+    result = diversified[:2]
+    remaining = MAX_SPACE_EXPANSION_CANDIDATES - len(result)
+    if new_groups and len(new_groups[0]) <= remaining:
+        result.extend(new_groups[0])
+        remaining -= len(new_groups[0])
+    result.extend(diversified[2:2 + max(0, remaining)])
+    for item in result:
+        item.pop("_score", None)
+    return result
+
+
+def _space_removal_candidates(plan: Dict[str, Any]) -> List[Tuple[float, str, int, int]]:
+    """Rank safe evidence to reclaim when a stronger two-line entry needs room.
+
+    Expansion is deliberately conservative: flexible coursework/Awards are
+    reclaimed by the normal packer first, then only project or leadership
+    bullets may be displaced. Core chronological experience is never trimmed
+    by this last-mile density pass.
+    """
+    candidates: List[Tuple[float, str, int, int]] = []
+    for section in ("leadership", "projects"):
+        for entry_index, entry in enumerate(plan.get(section, []) or []):
+            bullets = entry.get("bullets", []) or []
+            if len(bullets) <= 1:
+                continue
+            heading = _latex_plain(str(entry.get("heading") or ""))
+            for bullet_index, bullet in enumerate(bullets):
+                text = _latex_plain(str(bullet.get("text") or ""))
+                cost = _bullet_value(bullet)
+                # Leadership is useful only when it is the best available
+                # evidence; it is the first substantive category to reclaim.
+                if section == "leadership":
+                    cost -= 35.0
+                # A project-heading award/selection line is a safer sacrifice
+                # than implementation evidence that proves a capability.
+                if re.search(r"1st place|best security|overall|hack", heading, re.I) and re.search(
+                    r"\b(?:won|selected|place|competitors?)\b", text, re.I
+                ):
+                    cost -= 20.0
+                candidates.append((cost, section, entry_index, bullet_index))
+    return sorted(candidates, key=lambda item: (item[0], item[1], item[2], item[3]))
+
+
+def _apply_space_removals(
+    plan: Dict[str, Any], actions: Iterable[Tuple[float, str, int, int]]
+) -> Dict[str, Any]:
+    value = copy.deepcopy(plan)
+    # Removing from the end of a bullet list first keeps source indexes valid
+    # when two lower-value lines from the same project are reclaimed together.
+    ordered = sorted(actions, key=lambda item: (item[1], item[2], item[3]), reverse=True)
+    for action in ordered:
+        _apply_removal(value, (action[0], action[1], action[2], action[3]))
+    return value
+
+
 def expand_into_measured_space(
     plan: Dict[str, Any], additions: List[Dict[str, Any]], catalog: Dict[str, Any],
     graph: Optional[Dict[str, Any]], run_dir: Path,
 ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
-    """Try additions one at a time and keep only those that preserve all prior evidence."""
+    """Try additions while preserving evidence and atomic new-entry coverage.
+
+    An extra bullet can be tested independently. A new project/experience is
+    different: its heading cost is only justified when at least two bullets
+    from that entry fit together, so the trial is atomic for new entries.
+    """
     current = copy.deepcopy(plan)
     original_ids = _selected_bullet_ids(plan)
     applied = []
+    replaced = []
     rejected = []
-    for index, addition in enumerate(additions[:MAX_SPACE_EXPANSION_CANDIDATES], start=1):
-        trial = _append_space_addition(current, addition)
-        trial = enforce_experience_order(trial, catalog)
-        normalized, errors = validate_plan(trial, catalog, enhance=True, graph=graph)
-        if errors:
-            rejected.append({"source_id": addition["source_id"], "reason": "; ".join(errors[:3])})
-            continue
-        try:
-            packed, packing = pack_plan_to_page(
-                normalized, catalog, run_dir / ("space_expansion_%02d" % index)
-            )
-        except (OSError, RuntimeError, ValueError) as exc:
-            rejected.append({"source_id": addition["source_id"], "reason": str(exc)})
-            continue
-        packed_ids = _selected_bullet_ids(packed)
-        if not original_ids.issubset(packed_ids) or addition["source_id"] not in packed_ids:
+    groups: List[List[Dict[str, Any]]] = []
+    new_entry_groups: Dict[str, List[Dict[str, Any]]] = {}
+    for addition in additions[:MAX_SPACE_EXPANSION_CANDIDATES]:
+        if str(addition.get("placement") or "") == "new_entry":
+            new_entry_groups.setdefault(str(addition.get("entry_id") or ""), []).append(addition)
+        else:
+            groups.append([addition])
+    for group in new_entry_groups.values():
+        groups.append(group)
+    for index, group in enumerate(groups, start=1):
+        if any(str(item.get("placement") or "") == "new_entry" for item in group) and len(group) < 2:
             rejected.append({
-                "source_id": addition["source_id"],
-                "reason": "would displace existing selected evidence or fail the one-page contract",
+                "source_id": str(group[0].get("source_id") or ""),
+                "reason": "new project/experience requires at least two bullets to earn its heading",
             })
             continue
+        group_ids = {str(item.get("source_id") or "") for item in group}
+        attempts = [("direct", [])]
+        removals = _space_removal_candidates(current)
+        # A stronger unused line or a new entry can displace one or two
+        # low-value project/leadership lines when flexible front matter is not
+        # enough. Limit the search so a dense run remains bounded while still
+        # covering Victor's explicit "replace two weaker bullets with a
+        # stronger project" case.
+        attempts.extend(("swap", list(actions)) for actions in removals[:6])
+        attempts.extend(
+            ("swap", list(actions))
+            for actions in itertools.combinations(removals[:6], 2)
+        )
+        accepted = None
+        last_reason = "would displace existing selected evidence or fail the one-page contract"
+        for attempt_index, (attempt_kind, actions) in enumerate(attempts, start=1):
+            trial = _apply_space_removals(current, actions) if actions else copy.deepcopy(current)
+            for addition in group:
+                trial = _append_space_addition(trial, addition)
+            trial = enforce_experience_order(trial, catalog)
+            normalized, errors = validate_plan(trial, catalog, enhance=True, graph=graph)
+            if errors:
+                last_reason = "; ".join(errors[:3])
+                continue
+            try:
+                packed, packing = pack_plan_to_page(
+                    normalized, catalog, run_dir / ("space_expansion_%02d_%s%02d" % (index, attempt_kind, attempt_index))
+                )
+            except (OSError, RuntimeError, ValueError) as exc:
+                last_reason = str(exc)
+                continue
+            packed_ids = _selected_bullet_ids(packed)
+            preserved_ids = set(original_ids)
+            removed_ids = {
+                str(current[section][entry_index]["bullets"][bullet_index].get("source_id") or "")
+                for _, section, entry_index, bullet_index in actions
+            }
+            preserved_ids -= removed_ids
+            if preserved_ids.issubset(packed_ids) and group_ids.issubset(packed_ids):
+                accepted = (packed, packing, actions)
+                break
+            last_reason = (
+                "would displace evidence beyond the explicitly allowed lower-value project/leadership swap"
+                if actions else "would displace existing selected evidence or fail the one-page contract"
+            )
+        if accepted is None:
+            rejected.append({
+                "source_id": group[0]["source_id"],
+                "reason": last_reason,
+            })
+            continue
+        packed, packing, actions = accepted
+        if actions:
+            for _, section, entry_index, bullet_index in actions:
+                removed = current[section][entry_index]["bullets"][bullet_index]
+                replaced.append({
+                    "source_id": str(removed.get("source_id") or ""),
+                    "entry_id": str(current[section][entry_index].get("source_id") or ""),
+                    "section": section,
+                    "text": _latex_plain(str(removed.get("text") or "")),
+                    "reason": "reclaimed lower-value evidence for a stronger unique measured-space entry",
+                })
         current = packed
-        applied.append({
-            "source_id": addition["source_id"],
-            "entry_id": addition["entry_id"],
-            "target_signal": addition.get("target_signal", ""),
-            "why": addition.get("why", ""),
-            "text": _latex_plain(addition.get("text", "")),
-            "packing": packing,
-        })
+        for addition in group:
+            applied.append({
+                "source_id": addition["source_id"],
+                "entry_id": addition["entry_id"],
+                "target_signal": addition.get("target_signal", ""),
+                "why": addition.get("why", ""),
+                "text": _latex_plain(addition.get("text", "")),
+                "packing": packing,
+                "replaced_source_ids": [item["source_id"] for item in replaced[-len(actions):]] if actions else [],
+            })
         original_ids = _selected_bullet_ids(current)
     return current, {
         "applied": applied,
+        "replaced": replaced,
         "rejected": rejected,
         "attempted": bool(additions),
         "candidate_count": len(additions),
@@ -3571,24 +4296,43 @@ def content_change_report(
             continue
         supported = bool(item.get("supported"))
         rendered = _keyword_present(term, rendered_text)
-        status = "covered" if supported and rendered else "missing" if supported else "unsupported"
+        status = (
+            "covered" if supported and rendered
+            else "missing" if supported
+            else "unverified_rendered" if rendered
+            else "unsupported"
+        )
         keyword_terms.append({
             "term": term,
             "required": bool(item.get("required")),
             "preferred": bool(item.get("preferred")),
+            "responsibility": bool(item.get("responsibility")),
+            "importance": str(item.get("importance") or "mentioned"),
             "supported": supported,
+            "support_kind": str(item.get("support_kind") or ("exact" if supported else "none")),
             "rendered": rendered,
             "status": status,
             "source_ids": list(item.get("source_ids") or [])[:6],
         })
     supported_terms = [item for item in keyword_terms if item["supported"]]
     covered_terms = [item for item in supported_terms if item["rendered"]]
+    required_terms = [item for item in keyword_terms if item["required"]]
+    required_covered = [item for item in required_terms if item["supported"] and item["rendered"]]
+    unverified_rendered = [item for item in keyword_terms if item["status"] == "unverified_rendered"]
     keyword_coverage = {
         "posting_available": bool((keyword_strategy or {}).get("posting_available")),
         "reason": str((keyword_strategy or {}).get("reason") or ""),
         "supported_count": len(supported_terms),
         "covered_count": len(covered_terms),
-        "exact_coverage_percent": round(100 * len(covered_terms) / max(1, len(supported_terms))),
+        "detected_count": len(keyword_terms),
+        "exact_coverage_percent": round(100 * len(covered_terms) / max(1, len(keyword_terms))),
+        "supported_exact_coverage_percent": round(100 * len(covered_terms) / max(1, len(supported_terms))),
+        "required_count": len(required_terms),
+        "required_supported_count": sum(item["supported"] for item in required_terms),
+        "required_covered_count": len(required_covered),
+        "required_coverage_percent": round(100 * len(required_covered) / max(1, len(required_terms))),
+        "unverified_rendered_count": len(unverified_rendered),
+        "unverified_rendered_terms": [item["term"] for item in unverified_rendered],
         "required_terms": list((keyword_strategy or {}).get("required_terms") or []),
         "preferred_terms": list((keyword_strategy or {}).get("preferred_terms") or []),
         "terms": keyword_terms,
@@ -3686,6 +4430,17 @@ def content_change_report(
         "removed_front_matter": [
             field for field, state in front_matter_policy.items() if state == "omit"
         ],
+        "front_matter_rewrites": [
+            {
+                "line_id": str(item.get("line_id") or ""),
+                "source_text": _latex_plain(str(item.get("source_text") or "")),
+                "final_text": _latex_plain(str(item.get("text") or "")),
+                "evidence_ids": list(item.get("evidence_ids") or []),
+                "why": str(item.get("why") or ""),
+            }
+            for item in (plan.get("front_matter_rewrites") or [])
+            if isinstance(item, dict)
+        ],
         "portfolio_diagnostics": portfolio_diagnostics(plan, catalog),
         "keyword_coverage": keyword_coverage,
     }
@@ -3758,6 +4513,23 @@ def merge_edited_bullets(candidate_plan: Dict[str, Any], edited_plan: Dict[str, 
                 replacement = edited.get(str(bullet.get("source_id")))
                 if replacement:
                     entry["bullets"][index] = copy.deepcopy(replacement)
+    original_rewrites = merged.get("front_matter_rewrites") or []
+    edited_rewrites = {
+        str(item.get("line_id") or ""): item
+        for item in (edited_plan.get("front_matter_rewrites") or [])
+        if isinstance(item, dict) and str(item.get("line_id") or "")
+    }
+    if original_rewrites:
+        preserved = []
+        for original in original_rewrites:
+            line_id = str(original.get("line_id") or "")
+            replacement = copy.deepcopy(edited_rewrites.get(line_id) or original)
+            replacement["line_id"] = line_id
+            replacement["evidence_ids"] = list(original.get("evidence_ids") or [])
+            replacement["why"] = str(original.get("why") or "")
+            replacement["source_text"] = str(original.get("source_text") or "")
+            preserved.append(replacement)
+        merged["front_matter_rewrites"] = preserved
     return merged
 
 
@@ -3801,6 +4573,7 @@ def render_plan(plan: Dict[str, Any], catalog: Dict[str, Any], root: Optional[Pa
     if BODY_MARKER not in template:
         raise ValueError("CV/immutable/VictorJimenezResume.tex is missing the experience marker")
     prefix = _generated_one_page_prefix(template)
+    prefix = _apply_front_matter_rewrites(prefix, plan.get("front_matter_rewrites"), root)
     prefix = _apply_front_matter_policy(prefix, plan.get("front_matter_policy"), root)
     entries = catalog["entries"]
     lines = [prefix, "", BODY_MARKER]
@@ -3945,6 +4718,31 @@ def front_matter_catalog(root: Optional[Path] = None) -> List[Dict[str, Any]]:
             "argument_index": 0,
         })
     return result
+
+
+def _apply_front_matter_rewrites(
+    prefix: str, rewrites: Optional[List[Dict[str, Any]]], root: Optional[Path] = None,
+) -> str:
+    """Apply evidence-backed generated Skills text without changing the shell."""
+    if not isinstance(rewrites, list) or not rewrites:
+        return prefix
+    catalog = {
+        str(item.get("line_id") or ""): item
+        for item in front_matter_catalog(root or repo_root())
+        if str(item.get("line_id") or "").startswith("front:skills:")
+    }
+    for rewrite in rewrites:
+        line_id = str(rewrite.get("line_id") or "") if isinstance(rewrite, dict) else ""
+        item = catalog.get(line_id)
+        text = str(rewrite.get("text") or "") if isinstance(rewrite, dict) else ""
+        if not item or not text:
+            continue
+        try:
+            index = int(item.get("template_index"))
+        except (TypeError, ValueError):
+            continue
+        prefix = _replace_macro_call(prefix, "resumeItem", index, [text])
+    return prefix
 
 
 def _apply_front_matter_policy(
@@ -4613,6 +5411,22 @@ def _line_compaction_candidates(text: str, source_text: str) -> List[str]:
         add(re.sub(r"\bretrieval[- ]augmented generation\b", "RAG", current, flags=re.I))
     add(re.sub(r"\blearned features\b", "features", current, flags=re.I))
     add(re.sub(r"\bacross RNN/LLM architectures\b", "in RNN/LLM architectures", current, flags=re.I))
+    # Compact common list/connective wording without dropping a technical
+    # object or changing the claim. These are especially useful for lines
+    # that technically stay on one line but fail the 12pt safety margin.
+    add(re.sub(r",\s+and\s+(?=[A-Za-z])", ", ", current))
+    add(re.sub(r",\s+enabling\s+", " for ", current, flags=re.I))
+    add(re.sub(r"\bclassification models\b", "classifiers", current, flags=re.I))
+    add(re.sub(r"\bto handle\b", "for", current, flags=re.I))
+    add(re.sub(r"\bGit, GitHub\b", "Git/GitHub", current, flags=re.I))
+    add(re.sub(r"\bTesting, Debugging\b", "Testing/Debugging", current, flags=re.I))
+    add(re.sub(r"\bVector Databases,\s*", "", current, flags=re.I))
+    add(re.sub(
+        r"\bwhile handling (a|an|the) (.+?) with\b",
+        r"on \1 \2 using", current, flags=re.I,
+    ))
+    compacted = re.sub(r"\bclassification models\b", "classifiers", current, flags=re.I)
+    add(re.sub(r"\bto handle\b", "for", compacted, flags=re.I))
 
     # Articles are the safest generic deletion when the line is otherwise
     # unchanged; generate one-at-a-time variants so the result remains
@@ -4642,7 +5456,10 @@ def compact_plan_to_geometry(
         if bullet.get("id")
     }
     attempt = 0
-    for _ in range(4):
+    # A dense page can contain several independent near-wraps. Keep the pass
+    # bounded, but do not stop before reaching a later line after four earlier
+    # safe compactions.
+    for _ in range(12):
         unsafe_ids = [
             str(item.get("source_id") or "")
             for item in (best_layout.get("horizontal") or {}).get("bullets", [])
@@ -4663,6 +5480,11 @@ def compact_plan_to_geometry(
                         break
                 if current_bullet:
                     break
+            if not current_bullet and source_id.startswith("front:skills:"):
+                current_bullet = next((
+                    item for item in (best_plan.get("front_matter_rewrites") or [])
+                    if str(item.get("line_id") or "") == source_id
+                ), None)
             if not current_bullet:
                 continue
             current_text = str(current_bullet.get("text") or "")
@@ -4670,6 +5492,14 @@ def compact_plan_to_geometry(
             for candidate_text in candidates:
                 trial = copy.deepcopy(best_plan)
                 replaced = False
+                if source_id.startswith("front:skills:"):
+                    front_line = next((
+                        item for item in (trial.get("front_matter_rewrites") or [])
+                        if str(item.get("line_id") or "") == source_id
+                    ), None)
+                    if front_line:
+                        front_line["text"] = candidate_text
+                        replaced = True
                 for section in ("experiences", "projects", "leadership"):
                     for entry in trial.get(section, []) or []:
                         for bullet in entry.get("bullets", []) or []:
@@ -4715,11 +5545,15 @@ def compact_plan_to_geometry(
 def template_style_guard(
     tex: str, root: Optional[Path] = None,
     front_matter_policy: Optional[Dict[str, Any]] = None,
+    front_matter_rewrites: Optional[List[Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
     template = (cv_root(root) / CANONICAL_TEMPLATE).read_text()
     template_prefix = template.split(BODY_MARKER, 1)[0].rstrip()
     generated_prefix = tex.split(BODY_MARKER, 1)[0].rstrip() if BODY_MARKER in tex else ""
     generated_prefix = generated_prefix.replace(GENERATED_ONE_PAGE_FOOTER, CANONICAL_PAGE_FOOTER, 1)
+    template_prefix = _apply_front_matter_rewrites(
+        template_prefix, front_matter_rewrites, root,
+    ).rstrip()
     if isinstance(front_matter_policy, dict):
         # Coursework and the aggregated Awards line are the only sanctioned
         # front-matter removals. Compare against the same policy applied to
@@ -4738,6 +5572,7 @@ def template_style_guard(
         "canonical_template": "CV/" + CANONICAL_TEMPLATE,
         "identical_preamble_header_education_skills": identical,
         "allowed_front_matter_policy": front_matter_policy or {"coursework": "keep", "awards": "keep"},
+        "evidence_backed_front_matter_rewrites": len(front_matter_rewrites or []),
         "font_size_reduction_percent": 0.0 if identical else None,
         "font_size_increase_percent": 0.0 if identical else None,
         "allowed_max_reduction_percent": MAX_STYLE_REDUCTION_PERCENT,
@@ -4907,42 +5742,59 @@ def bullet_layout_metrics(plan: Dict[str, Any], pdf: Path) -> Dict[str, Any]:
     page_width = geometry.get("page_width") or 612.0
     right_edge = page_width - 36.0
     results = []
+    candidates = [
+        {
+            "source_id": str(item.get("line_id") or ""),
+            "text": str(item.get("text") or ""),
+            "kind": "front_matter",
+        }
+        for item in (plan.get("front_matter_rewrites") or [])
+        if str(item.get("line_id") or "") and str(item.get("text") or "")
+    ]
     for section in ("experiences", "projects", "leadership"):
         for entry in plan.get(section, []):
             for bullet in entry.get("bullets", []):
-                plain = _latex_plain(str(bullet.get("text") or ""))
-                tokens = re.findall(r"[a-z0-9]+", plain.lower())
-                anchor = " ".join(tokens[:2])
-                ending = tokens[-1] if tokens else ""
-                matched = None
-                best_overlap = -1.0
-                for line in geometry.get("lines", []):
-                    line_tokens = re.findall(r"[a-z0-9]+", str(line.get("text") or "").lower())
-                    line_text = " ".join(line_tokens)
-                    if not anchor or anchor not in line_text:
-                        continue
-                    overlap = len(set(tokens) & set(line_tokens)) / max(1, len(set(tokens)))
-                    if overlap > best_overlap:
-                        matched = line
-                        best_overlap = overlap
-                if matched:
-                    line_tokens = re.findall(r"[a-z0-9]+", str(matched.get("text") or "").lower())
-                    wraps = bool(ending and ending not in line_tokens)
-                    slack = round(right_edge - float(matched.get("x_max") or 0), 2)
-                    results.append({
-                        "source_id": bullet.get("source_id"),
-                        "text": plain,
-                        "wraps": wraps,
-                        "right_slack_pt": slack,
-                        "near_wrap": slack < MIN_RIGHT_SLACK_PT,
-                        "horizontal_pass": not wraps and slack >= MIN_RIGHT_SLACK_PT,
-                    })
-                else:
-                    results.append({
-                        "source_id": bullet.get("source_id"), "text": plain,
-                        "wraps": None, "right_slack_pt": None, "horizontal_pass": False,
-                        "warning": "bullet line not found in PDF geometry",
-                    })
+                candidates.append({
+                    "source_id": bullet.get("source_id"),
+                    "text": str(bullet.get("text") or ""),
+                    "kind": "bullet",
+                })
+    for candidate in candidates:
+        plain = _latex_plain(candidate["text"])
+        tokens = re.findall(r"[a-z0-9]+", plain.lower())
+        anchor = " ".join(tokens[:2])
+        ending = tokens[-1] if tokens else ""
+        matched = None
+        best_overlap = -1.0
+        for line in geometry.get("lines", []):
+            line_tokens = re.findall(r"[a-z0-9]+", str(line.get("text") or "").lower())
+            line_text = " ".join(line_tokens)
+            if not anchor or anchor not in line_text:
+                continue
+            overlap = len(set(tokens) & set(line_tokens)) / max(1, len(set(tokens)))
+            if overlap > best_overlap:
+                matched = line
+                best_overlap = overlap
+        if matched:
+            line_tokens = re.findall(r"[a-z0-9]+", str(matched.get("text") or "").lower())
+            wraps = bool(ending and ending not in line_tokens)
+            slack = round(right_edge - float(matched.get("x_max") or 0), 2)
+            results.append({
+                "source_id": candidate["source_id"],
+                "kind": candidate["kind"],
+                "text": plain,
+                "wraps": wraps,
+                "right_slack_pt": slack,
+                "near_wrap": slack < MIN_RIGHT_SLACK_PT,
+                "horizontal_pass": not wraps and slack >= MIN_RIGHT_SLACK_PT,
+            })
+        else:
+            results.append({
+                "source_id": candidate["source_id"], "kind": candidate["kind"],
+                "text": plain, "wraps": None, "right_slack_pt": None,
+                "horizontal_pass": False,
+                "warning": "resume line not found in PDF geometry",
+            })
     measurable = [item for item in results if item.get("right_slack_pt") is not None]
     return {
         "max_right_slack_pt": MAX_RIGHT_SLACK_PT,
@@ -5144,6 +5996,18 @@ def pdf_layout(
     return result
 
 
+def measured_space_available(layout: Dict[str, Any]) -> bool:
+    """Read current and legacy capacity-test shapes without trusting whitespace."""
+    capacity = layout.get("vertical_capacity") or {}
+    if capacity.get("one_more_bullet_fits") or layout.get("one_more_bullet_fits"):
+        return True
+    # Runs made just before the explicit boolean was added recorded the same
+    # result as ``qa_pages=1`` plus this warning. Keep those saved runs
+    # auditable and make future reruns use the same decision.
+    warning = str(capacity.get("warning") or "").lower()
+    return capacity.get("qa_pages") == 1 and "one more bullet still fits" in warning
+
+
 def space_audit(
     plan: Dict[str, Any], layout: Dict[str, Any], catalog: Dict[str, Any],
     expansion: Optional[Dict[str, Any]] = None,
@@ -5184,10 +6048,14 @@ def space_audit(
                 "text": text,
             })
     unused.sort(key=lambda item: (-_bullet_value(item), item["source_id"]))
-    capacity = layout.get("vertical_capacity") or {}
     expansion = expansion or {}
     applied = list(expansion.get("applied") or [])
-    one_more_fits = bool(capacity.get("one_more_bullet_fits") or layout.get("one_more_bullet_fits"))
+    replaced = list(expansion.get("replaced") or [])
+    one_more_fits = measured_space_available(layout)
+    density_gap = layout.get("density_gap_pt")
+    space_review_needed = one_more_fits or (
+        isinstance(density_gap, (int, float)) and density_gap > MAX_DENSITY_GAP_PT
+    )
     return {
         "measured_content_bottom_pt": layout.get("content_bottom_pt"),
         "canonical_reference_bottom_pt": layout.get("reference_content_bottom_pt"),
@@ -5195,13 +6063,17 @@ def space_audit(
         "max_density_gap_pt": MAX_DENSITY_GAP_PT,
         "density_pass": bool(layout.get("density_pass")),
         "one_more_standard_bullet_fits": one_more_fits,
+        "space_review_needed": space_review_needed,
         "unused_candidate_count": len(unused),
         "unused_verified_candidates": unused[:12],
         "expansion_attempted": bool(expansion.get("attempted")),
         "expansion_candidate_count": int(expansion.get("candidate_count") or 0),
         "expansion_applied": applied,
+        "expansion_replaced": replaced,
         "expansion_rejected": list(expansion.get("rejected") or []),
         "decision": str(expansion.get("decision") or (
+            "Measured bottom clearance exceeds the density target; the expansion pass should evaluate verified unused evidence."
+            if space_review_needed and not one_more_fits else
             "A further standard line did not fit the measured bottom capacity."
             if not one_more_fits else
             "A further line fits; the expansion pass should evaluate verified unused evidence."
@@ -5215,8 +6087,9 @@ def deterministic_review(
 ) -> Dict[str, Any]:
     warnings = list(layout.get("warnings", []))
     policy = plan.get("front_matter_policy") if isinstance(plan, dict) else None
+    rewrites = plan.get("front_matter_rewrites") if isinstance(plan, dict) else None
     style = (
-        template_style_guard(tex, repo_root(), policy)
+        template_style_guard(tex, repo_root(), policy, rewrites)
         if isinstance(policy, dict)
         else template_style_guard(tex, repo_root())
     )
@@ -5227,6 +6100,19 @@ def deterministic_review(
         warnings.append("canonical owner name/contact header is missing")
     if _contains_forbidden_resume_term(tex):
         warnings.append("a permanently excluded resume term appears in the draft")
+    rendered_plain = _latex_plain(tex)
+    unsupported_rendered = [
+        str(item.get("term") or "")
+        for item in (job.get("target_keywords") or {}).get("terms", [])
+        if not item.get("supported")
+        and str(item.get("term") or "")
+        and _keyword_present(str(item.get("term") or ""), rendered_plain)
+    ]
+    if unsupported_rendered:
+        warnings.append(
+            "unsupported posting term(s) rendered without authorized evidence: %s"
+            % ", ".join(unsupported_rendered)
+        )
     layout_gate = (
         layout.get("compiled")
         and layout.get("pages") == 1
@@ -5253,7 +6139,7 @@ def deterministic_review(
         eligibility = {"status": "partial", "reason": "Early-career possible; posting eligibility needs confirmation"}
     else:
         eligibility = {"status": "partial", "reason": "Resume Studio does not independently verify posting eligibility"}
-    factual_status = "fail" if _contains_forbidden_resume_term(tex) else "pass"
+    factual_status = "fail" if _contains_forbidden_resume_term(tex) or unsupported_rendered else "pass"
     return {
         "rubric_version": RUBRIC_VERSION,
         "hard_fail": not layout_gate,
@@ -5263,7 +6149,14 @@ def deterministic_review(
         "gates": {
             "factual": {
                 "status": factual_status,
-                "reason": "permanently excluded resume term detected" if factual_status == "fail" else "no deterministic forbidden claim detected",
+                "reason": (
+                    "unsupported or permanently excluded terminology detected: %s"
+                    % ", ".join(unsupported_rendered)
+                    if factual_status == "fail" and unsupported_rendered
+                    else "permanently excluded resume term detected"
+                    if factual_status == "fail"
+                    else "no deterministic forbidden claim detected"
+                ),
             },
             "layout": {"status": "pass" if layout_gate else "fail", "reason": "; ".join(warnings) or "all rendered layout checks passed"},
             "portfolio": {
@@ -5413,12 +6306,16 @@ def approve_run(root: Optional[Path], run_id: str) -> Dict[str, Any]:
 def _select_valid_plan(
     candidates: List[Dict[str, Any]], catalog: Dict[str, Any], enhance: bool,
     graph: Optional[Dict[str, Any]] = None,
+    generation: bool = False,
 ) -> Tuple[Optional[Dict[str, Any]], List[str], Optional[Dict[str, Any]]]:
     all_errors: List[str] = []
     for candidate in candidates:
         if not candidate.get("ok"):
             continue
-        normalized, errors = validate_plan(candidate.get("data") or {}, catalog, enhance, graph=graph)
+        normalized, errors = validate_plan(
+            candidate.get("data") or {}, catalog, enhance, graph=graph,
+            generation=generation,
+        )
         if not errors:
             return normalized, [], candidate
         all_errors.extend(["%s: %s" % (candidate.get("provider", "provider"), error) for error in errors])
@@ -5428,6 +6325,7 @@ def _select_valid_plan(
 def run_tailoring(
     run_dir: Path, job: Dict[str, Any], update, enhance: bool,
     unrestricted: bool = False,
+    generation: bool = False,
 ) -> None:
     run_started_clock = time.time()
     run_started_at = now_iso()
@@ -5438,13 +6336,43 @@ def run_tailoring(
     graph_context = evidence_context(graph, context, str(context.get("posting_text") or ""))
     match = resume_match_for_job(job, repo_root(), posting_text=str(context.get("posting_text") or ""))
     context["resume_match"] = match
-    context["target_keywords"] = target_keyword_strategy(context, catalog, repo_root())
+    context["target_keywords"] = target_keyword_strategy(
+        context, catalog, repo_root(), graph=graph,
+        comprehensive=generation,
+    )
     context["provider_policy"] = {
         "allowed_lanes": [name for name, path in provider_commands().items() if path],
         "codex_model": CODEX_LUNA_MODEL,
         "local_models_allowed": False,
         "api_fallback_allowed": False,
     }
+    available = [name for name, path in provider_commands().items() if path]
+    if not available:
+        raise RuntimeError("No approved Codex or Claude Code subscription CLI is installed")
+    gap_records: List[Dict[str, Any]] = []
+    if generation:
+        update("gap_analysis", "Mapping every posting requirement to authorized resume and Markdown evidence")
+        gap_provider = "codex" if "codex" in available else available[0]
+        gap_record = run_provider(
+            gap_provider,
+            gap_analysis_prompt(context, catalog, graph),
+            run_dir,
+            "gap_analysis",
+            timeout=5 * 60,
+            schema=gap_analysis_schema(),
+        )
+        gap_record["label"] = "gap_analysis"
+        gap_records.append(gap_record)
+        write_json(run_dir / "gap_analysis.json", gap_record)
+        context["generation_strategy"] = normalize_gap_analysis(
+            gap_record.get("data") or {}, context["target_keywords"], catalog,
+            graph, str(context.get("posting_text") or ""),
+        )
+        context["target_keywords"] = apply_gap_support_to_keywords(
+            context["target_keywords"], context["generation_strategy"],
+        )
+    else:
+        context["generation_strategy"] = {}
     write_json(run_dir / "job_context.json", context)
     write_json(run_dir / "evidence_catalog.json", catalog_for_prompt(catalog))
     write_json(run_dir / "evidence_graph_context.json", graph_context)
@@ -5458,6 +6386,7 @@ def run_tailoring(
         "job": job_summary(job),
         "posting_text_available": bool(context.get("posting_text")),
         "target_keywords": context.get("target_keywords"),
+        "generation_strategy": context.get("generation_strategy"),
         "provider_policy": context["provider_policy"],
         "evidence_graph": {
             "version": graph.get("version"),
@@ -5466,15 +6395,12 @@ def run_tailoring(
             "markdown_sources": markdown_sources,
         },
     })
-    mode_label = "unrestricted" if unrestricted else "enhanced" if enhance else "source-only"
+    mode_label = "generation" if generation else "unrestricted" if unrestricted else "enhanced" if enhance else "source-only"
     prompt = base_prompt(
         context, "an independent resume evidence strategist", catalog, enhance,
-        graph=graph, unrestricted=unrestricted,
+        graph=graph, unrestricted=unrestricted, generation=generation,
     )
-    schema = plan_schema(enhance)
-    available = [name for name, path in provider_commands().items() if path]
-    if not available:
-        raise RuntimeError("No approved Codex or Claude Code subscription CLI is installed")
+    schema = plan_schema(enhance, generation=generation)
     update("drafting", "Building adaptive %s evidence plans with: %s" % (mode_label, ", ".join(available)))
     with concurrent.futures.ThreadPoolExecutor(max_workers=len(available)) as pool:
         futures = {
@@ -5500,13 +6426,18 @@ def run_tailoring(
     else:
         synthesis = run_provider(
             writer,
-            synthesis_prompt(context, successful, catalog, enhance, graph=graph, unrestricted=unrestricted),
+            synthesis_prompt(
+                context, successful, catalog, enhance, graph=graph,
+                unrestricted=unrestricted, generation=generation,
+            ),
             run_dir, "synthesis", timeout=4 * 60, schema=schema,
         )
     synthesis["label"] = "synthesis"
     write_json(run_dir / "synthesis.json", synthesis)
     candidates = [synthesis] + successful
-    candidate_plan, plan_errors, _ = _select_valid_plan(candidates, catalog, enhance, graph=graph)
+    candidate_plan, plan_errors, _ = _select_valid_plan(
+        candidates, catalog, enhance, graph=graph, generation=generation,
+    )
     if candidate_plan is None:
         write_json(run_dir / "plan_errors.json", plan_errors)
         raise RuntimeError("No provider returned a valid adaptive source-addressed plan; inspect plan_errors.json")
@@ -5519,8 +6450,10 @@ def run_tailoring(
         "revision_notes": candidate_plan.get("revision_notes", []),
         "decision_ledger": candidate_plan.get("decision_ledger", []),
         "front_matter_policy": candidate_plan.get("front_matter_policy", {"coursework": "keep", "awards": "keep"}),
+        "front_matter_rewrites": candidate_plan.get("front_matter_rewrites", []),
         "job": job_summary(job),
         "target_keywords": context.get("target_keywords"),
+        "generation_strategy": context.get("generation_strategy"),
         "provider_policy": context["provider_policy"],
         "evidence_graph": {
             "version": graph.get("version"),
@@ -5552,11 +6485,17 @@ def run_tailoring(
         "rejected": [],
         "decision": "No expansion was needed because the measured page had no spare standard line.",
     }
-    if enhance and layout.get("one_more_bullet_fits"):
-        update("space_review", "Measured spare page capacity; asking Codex for one strong unused evidence line")
+    if enhance and (
+        measured_space_available(layout)
+        or (isinstance(layout.get("density_gap_pt"), (int, float)) and layout["density_gap_pt"] > MAX_DENSITY_GAP_PT)
+    ):
+        update("space_review", "Measured spare page capacity; asking Codex to fill it with verified unused evidence")
         expansion_record = run_provider(
             writer,
-            space_expansion_prompt(context, plan, layout, catalog, graph=graph, unrestricted=unrestricted),
+            space_expansion_prompt(
+                context, plan, layout, catalog, graph=graph,
+                unrestricted=unrestricted, generation=generation,
+            ),
             run_dir,
             "space_expansion",
             timeout=4 * 60,
@@ -5588,6 +6527,34 @@ def run_tailoring(
         else:
             packing["space_expansion"] = space_expansion
             write_json(run_dir / "layout_packing.json", packing)
+    # Provider output is judgment-first, but it cannot be allowed to leave a
+    # measured window empty simply because it returned no addition. Use the
+    # source catalog as a deterministic last-mile fallback, then compile every
+    # candidate trial. Existing selected entries are preferred; new entries
+    # arrive only as atomic two-bullet groups.
+    if enhance and (
+        measured_space_available(layout)
+        or (isinstance(layout.get("density_gap_pt"), (int, float)) and layout["density_gap_pt"] > MAX_DENSITY_GAP_PT)
+    ):
+        fallback_additions = deterministic_space_additions(
+            plan, catalog, graph=graph, keyword_strategy=context.get("target_keywords")
+        )
+        if fallback_additions:
+            fallback_plan, fallback_result = expand_into_measured_space(
+                plan, fallback_additions, catalog, graph, run_dir / "deterministic_space_fallback",
+            )
+            space_expansion["fallback_candidates"] = len(fallback_additions)
+            space_expansion["fallback_rejected"] = list(fallback_result.get("rejected") or [])
+            space_expansion["replaced"] = list(space_expansion.get("replaced") or []) + list(fallback_result.get("replaced") or [])
+            if fallback_result.get("applied"):
+                plan = fallback_plan
+                space_expansion["applied"] = list(space_expansion.get("applied") or []) + list(fallback_result["applied"])
+                space_expansion["decision"] = "Filled measured page capacity with model-selected and deterministic verified evidence until the next compiled trial failed."
+                packing["space_expansion"] = space_expansion
+                write_json(run_dir / "content_plan.json", plan)
+                write_json(run_dir / "layout_packing.json", packing)
+                write_json(run_dir / "space_expansion_fallback.json", fallback_result)
+                chosen, layout, preview = render_candidate(plan, run_dir)
     line_edits: List[Dict[str, Any]] = []
     line_compactions: List[Dict[str, Any]] = []
     editable_pool = copy.deepcopy(plan)
@@ -5598,19 +6565,37 @@ def run_tailoring(
         update("line_editing", "Repairing rendered one-line geometry (pass %s/%s)" % (line_round, MAX_LINE_EDIT_PASSES))
         line_edit = run_provider(
             writer, line_editor_prompt(context, plan, layout, graph), run_dir, label,
-            timeout=6 * 60, schema=plan_schema(True),
+            timeout=6 * 60, schema=plan_schema(True, generation=generation),
         )
         line_edits.append(line_edit)
         line_edit["label"] = label
         write_json(run_dir / (label + ".json"), line_edit)
         if not line_edit.get("ok"):
             break
-        edited, edit_errors = validate_plan(line_edit.get("data") or {}, catalog, True, graph=graph)
+        edited, edit_errors = validate_plan(
+            line_edit.get("data") or {}, catalog, True, graph=graph,
+            generation=generation,
+        )
         if edit_errors or _plan_source_signature(edited) != _plan_source_signature(plan):
             write_json(run_dir / (label + "_errors.json"), edit_errors or ["line editor changed selected source IDs"])
             break
         editable_pool = merge_edited_bullets(editable_pool, edited)
-        plan, line_packing = pack_plan_to_page(editable_pool, catalog, run_dir / (label + "_pack"))
+        try:
+            candidate_plan, line_packing = pack_plan_to_page(
+                editable_pool, catalog, run_dir / (label + "_pack")
+            )
+        except (OSError, RuntimeError, ValueError) as exc:
+            # A provider can satisfy the structured plan schema while still
+            # returning malformed inline LaTeX (for example an unmatched
+            # brace). Reject only this editorial candidate and preserve the
+            # last valid rendered plan; a bad line edit must never erase a
+            # good density-expanded resume.
+            write_json(run_dir / (label + "_errors.json"), [
+                "line editor candidate rejected during compiled packing: %s" % exc,
+            ])
+            line_edit["compile_rejected"] = str(exc)
+            break
+        plan = candidate_plan
         packing[label + "_pack"] = line_packing
         write_json(run_dir / "content_plan.json", plan)
         write_json(run_dir / "layout_packing.json", packing)
@@ -5631,6 +6616,252 @@ def run_tailoring(
             write_json(run_dir / "layout_packing.json", packing)
             chosen, layout, preview = render_candidate(plan, run_dir)
             write_json(run_dir / "line_compaction.json", line_compactions)
+
+    # Line editing can reclaim a few points of horizontal space, which can
+    # make an additional verified bullet fit even though the earlier density
+    # pass correctly stopped.  Re-measure after all wording changes and keep
+    # filling that newly exposed capacity.  This is intentionally a
+    # deterministic evidence pass: it cannot invent filler, change
+    # chronology, or replace core experience, and every trial is compiled.
+    post_line_density: List[Dict[str, Any]] = []
+    post_line_attempted: set = set()
+
+    def fill_post_line_capacity(round_label: str) -> None:
+        nonlocal plan, packing, chosen, layout, preview, line_compactions
+        if not enhance:
+            return
+        # A revision can reintroduce a near-wrap after the first compaction
+        # pass. Repair that geometry before deciding whether to add more.
+        if not (layout.get("horizontal") or {}).get("pass"):
+            compacted, compact_layout, extra_compactions = compact_plan_to_geometry(
+                plan, layout, catalog, run_dir / (round_label + "_compaction"),
+            )
+            if extra_compactions:
+                plan = compacted
+                line_compactions.extend(extra_compactions)
+                packing[round_label + "_line_compaction"] = {
+                    "applied": extra_compactions,
+                    "horizontal": compact_layout.get("horizontal", {}),
+                }
+                write_json(run_dir / "content_plan.json", plan)
+                write_json(run_dir / "layout_packing.json", packing)
+                chosen, layout, preview = render_candidate(plan, run_dir)
+
+        # Generation mode gets one explicit portfolio check for the known
+        # low-signal Resident Assistant entry.  If a verified technical
+        # project line can replace it, make that trade even when the page is
+        # otherwise full.  This encodes Victor's preference without turning
+        # the moderate tailor into a rigid "never show leadership" system.
+        if generation:
+            leadership_targets = []
+            for entry_index, entry in enumerate(plan.get("leadership", []) or []):
+                source_entry = (catalog.get("entries") or {}).get(str(entry.get("source_id") or ""), {})
+                label = " ".join(
+                    str(source_entry.get(key) or "")
+                    for key in ("heading", "company", "role")
+                )
+                if re.search(r"resident assistant|residence life", label, re.I):
+                    leadership_targets.append((entry_index, entry))
+            if leadership_targets:
+                raw_candidates = deterministic_space_additions(
+                    plan, catalog, graph=graph, keyword_strategy=context.get("target_keywords"),
+                )
+                technical_candidates = [
+                    item for item in raw_candidates
+                    if str(item.get("section") or "") == "projects"
+                    and re.search(
+                        r"\b(?:architected|engineered|implemented|built|designed|trained|pipeline|model|api|database|flask|pytorch|react|python|sql|cloud|validation|classification|ingestion)\b",
+                        _latex_plain(str(item.get("text") or "")), re.I,
+                    )
+                ]
+                if technical_candidates:
+                    target_index, target_entry = leadership_targets[0]
+                    target_bullet = (target_entry.get("bullets") or [{}])[0]
+                    prior_plan = copy.deepcopy(plan)
+                    replacement_base = copy.deepcopy(plan)
+                    removed_entry = replacement_base["leadership"].pop(target_index)
+                    # A new project earns its heading atomically. Existing
+                    # technical entries can use the strongest unused bullet;
+                    # a new entry receives the paired candidates returned by
+                    # deterministic_space_additions.
+                    first = technical_candidates[0]
+                    replacement_candidates = [first]
+                    if str(first.get("placement") or "") == "new_entry":
+                        replacement_candidates = [
+                            item for item in technical_candidates
+                            if str(item.get("entry_id") or "") == str(first.get("entry_id") or "")
+                        ][:2]
+                    replacement_plan, replacement_result = expand_into_measured_space(
+                        replacement_base, replacement_candidates, catalog, graph,
+                        run_dir / (round_label + "_leadership_replacement"),
+                    )
+                    replacement_record: Dict[str, Any] = {
+                        "round": 0,
+                        "label": round_label,
+                        "kind": "leadership_replacement",
+                        "before": {
+                            "removed_entry_id": str(removed_entry.get("source_id") or ""),
+                            "removed_source_ids": [
+                                str(item.get("source_id") or "")
+                                for item in removed_entry.get("bullets", [])
+                            ],
+                            "bullet_count": portfolio_metrics(plan).get("total_bullets"),
+                        },
+                        "candidate_source_ids": [
+                            str(item.get("source_id") or "") for item in replacement_candidates
+                        ],
+                        "expansion": replacement_result,
+                    }
+                    if replacement_result.get("applied"):
+                        plan = replacement_plan
+                        chosen, layout, preview = render_candidate(plan, run_dir)
+                        replacement_compactions: List[Dict[str, Any]] = []
+                        if not (layout.get("horizontal") or {}).get("pass"):
+                            compacted, compact_layout, replacement_compactions = compact_plan_to_geometry(
+                                plan, layout, catalog,
+                                run_dir / (round_label + "_leadership_compaction"),
+                            )
+                            if replacement_compactions:
+                                plan = compacted
+                                line_compactions.extend(replacement_compactions)
+                                chosen, layout, preview = render_candidate(plan, run_dir)
+                        if not (layout.get("horizontal") or {}).get("pass") or layout.get("pages") != 1:
+                            plan = prior_plan
+                            chosen, layout, preview = render_candidate(plan, run_dir)
+                            replacement_record["decision"] = "Restored Resident Assistant evidence; the technical replacement failed the final geometry gate."
+                        else:
+                            replacement_result.setdefault("replaced", []).append({
+                                "source_id": str(target_bullet.get("source_id") or ""),
+                                "entry_id": str(removed_entry.get("source_id") or ""),
+                                "section": "leadership",
+                                "text": _latex_plain(str(target_bullet.get("text") or "")),
+                                "reason": "replaced low-signal Resident Assistant evidence with stronger verified technical project evidence",
+                            })
+                            space_expansion["applied"] = list(space_expansion.get("applied") or []) + list(replacement_result.get("applied") or [])
+                            space_expansion["replaced"] = list(space_expansion.get("replaced") or []) + list(replacement_result.get("replaced") or [])
+                            space_expansion.setdefault("post_line_density", []).append(replacement_record)
+                            replacement_record["decision"] = "Replaced Resident Assistant evidence with stronger verified technical project evidence."
+                            replacement_record["after"] = {
+                                "bullet_count": portfolio_metrics(plan).get("total_bullets"),
+                                "density_gap_pt": layout.get("density_gap_pt"),
+                                "one_more_bullet_fits": measured_space_available(layout),
+                                "horizontal_pass": bool((layout.get("horizontal") or {}).get("pass")),
+                            }
+                            packing[round_label + "_leadership_replacement"] = replacement_result
+                            post_line_density.append(replacement_record)
+                            post_line_attempted.update(
+                                str(item.get("source_id") or "") for item in replacement_candidates
+                            )
+                            write_json(run_dir / "content_plan.json", plan)
+                            write_json(run_dir / "layout_packing.json", packing)
+
+        for density_round in range(1, 5):
+            capacity_open = measured_space_available(layout)
+            density_gap = layout.get("density_gap_pt")
+            if not capacity_open and not (
+                isinstance(density_gap, (int, float)) and density_gap > MAX_DENSITY_GAP_PT
+            ):
+                break
+            candidates = deterministic_space_additions(
+                plan, catalog, graph=graph, keyword_strategy=context.get("target_keywords"),
+            )
+            # Do not retry a compiled failure forever.  New-entry candidates
+            # are atomic, so once one bullet from a proposed new entry fails,
+            # suppress the rest of that same heading for this pass as well.
+            blocked_new_entries = {
+                str(item.get("entry_id") or "")
+                for item in candidates
+                if str(item.get("placement") or "") == "new_entry"
+                and str(item.get("source_id") or "") in post_line_attempted
+            }
+            candidates = [
+                item for item in candidates
+                if str(item.get("source_id") or "") not in post_line_attempted
+                and not (
+                    str(item.get("placement") or "") == "new_entry"
+                    and str(item.get("entry_id") or "") in blocked_new_entries
+                )
+            ]
+            record: Dict[str, Any] = {
+                "round": density_round,
+                "label": round_label,
+                "before": {
+                    "bullet_count": portfolio_metrics(plan).get("total_bullets"),
+                    "density_gap_pt": density_gap,
+                    "one_more_bullet_fits": measured_space_available(layout),
+                },
+                "candidate_source_ids": [str(item.get("source_id") or "") for item in candidates],
+            }
+            if not candidates:
+                record["decision"] = "No further unused verified candidate remained after compiled density trials."
+                post_line_density.append(record)
+                break
+            post_line_attempted.update(str(item.get("source_id") or "") for item in candidates)
+            prior_plan = copy.deepcopy(plan)
+            expanded_plan, expansion_result = expand_into_measured_space(
+                plan, candidates, catalog, graph,
+                run_dir / (round_label + "_space_expansion_%02d" % density_round),
+            )
+            record["expansion"] = expansion_result
+            if not expansion_result.get("applied"):
+                record["decision"] = "Rejected every remaining candidate because it could not earn the measured page space."
+                post_line_density.append(record)
+                continue
+
+            plan = expanded_plan
+            chosen, layout, preview = render_candidate(plan, run_dir)
+            extra_compactions: List[Dict[str, Any]] = []
+            if not (layout.get("horizontal") or {}).get("pass"):
+                compacted, compact_layout, extra_compactions = compact_plan_to_geometry(
+                    plan, layout, catalog,
+                    run_dir / (round_label + "_compaction_%02d" % density_round),
+                )
+                if extra_compactions:
+                    plan = compacted
+                    line_compactions.extend(extra_compactions)
+                    chosen, layout, preview = render_candidate(plan, run_dir)
+                    packing[round_label + "_line_compaction_%02d" % density_round] = {
+                        "applied": extra_compactions,
+                        "horizontal": layout.get("horizontal", {}),
+                    }
+
+            # The density helper must never smuggle a horizontally unsafe
+            # line into the final artifact. Restore the last good compiled
+            # plan if the new evidence cannot be made safe.
+            if not (layout.get("horizontal") or {}).get("pass") or layout.get("pages") != 1:
+                plan = prior_plan
+                chosen, layout, preview = render_candidate(plan, run_dir)
+                record["decision"] = "Restored the prior safe plan; the candidate did not satisfy the final geometry gate."
+                record["rejected_after_compaction"] = True
+                record["after"] = {
+                    "bullet_count": portfolio_metrics(plan).get("total_bullets"),
+                    "density_gap_pt": layout.get("density_gap_pt"),
+                    "one_more_bullet_fits": measured_space_available(layout),
+                }
+                post_line_density.append(record)
+                continue
+
+            packing[round_label + "_density_%02d" % density_round] = expansion_result
+            space_expansion["applied"] = list(space_expansion.get("applied") or []) + list(expansion_result.get("applied") or [])
+            space_expansion["replaced"] = list(space_expansion.get("replaced") or []) + list(expansion_result.get("replaced") or [])
+            space_expansion.setdefault("post_line_density", []).append(record)
+            record["decision"] = "Kept compiled verified additions and re-measured the remaining capacity."
+            record["after"] = {
+                "bullet_count": portfolio_metrics(plan).get("total_bullets"),
+                "density_gap_pt": layout.get("density_gap_pt"),
+                "one_more_bullet_fits": measured_space_available(layout),
+                "horizontal_pass": bool((layout.get("horizontal") or {}).get("pass")),
+            }
+            post_line_density.append(record)
+            write_json(run_dir / "content_plan.json", plan)
+            write_json(run_dir / "layout_packing.json", packing)
+
+        if enhance:
+            write_json(run_dir / "post_line_density.json", post_line_density)
+            write_json(run_dir / "content_plan.json", plan)
+            write_json(run_dir / "layout_packing.json", packing)
+
+    fill_post_line_capacity("post_line_density")
 
     def combined_critique(records: List[Dict[str, Any]]) -> Dict[str, Any]:
         if not records:
@@ -5713,7 +6944,11 @@ def run_tailoring(
             futures = {
                 pool.submit(
                     run_provider, provider,
-                    reviewer_prompt(context, chosen, plan=plan, graph_context=graph_context, catalog=catalog, unrestricted=unrestricted),
+                    reviewer_prompt(
+                        context, chosen, plan=plan, graph_context=graph_context,
+                        catalog=catalog, unrestricted=unrestricted,
+                        generation=generation,
+                    ),
                     run_dir, round_label + "_" + provider, timeout=8 * 60, schema=review_schema(),
                 ): provider for provider in critic_lanes
             }
@@ -5737,8 +6972,12 @@ def run_tailoring(
         label = "revision" if revision_round == 1 else "revision_%s" % revision_round
         update("revising", "Codex is applying independent critique (pass %s/2)" % revision_round)
         revision = run_provider(
-            writer, revision_prompt(context, plan, critique, catalog, graph=graph, unrestricted=unrestricted),
-            run_dir, label, timeout=8 * 60, schema=plan_schema(True),
+            writer, revision_prompt(
+                context, plan, critique, catalog, graph=graph,
+                unrestricted=unrestricted, generation=generation,
+            ),
+            run_dir, label, timeout=8 * 60,
+            schema=plan_schema(True, generation=generation),
         )
         revision_records.append(revision)
         revision["label"] = label
@@ -5746,7 +6985,10 @@ def run_tailoring(
         if not revision.get("ok"):
             revision_log.append({"round": revision_round, "status": "failed", "reason": revision.get("error", "provider failed")})
             break
-        revised_plan, revision_errors = validate_plan(revision.get("data") or {}, catalog, True, graph=graph)
+        revised_plan, revision_errors = validate_plan(
+            revision.get("data") or {}, catalog, True, graph=graph,
+            generation=generation,
+        )
         if revision_errors:
             revision_log.append({"round": revision_round, "status": "rejected", "errors": revision_errors})
             write_json(run_dir / (label + "_errors.json"), revision_errors)
@@ -5759,6 +7001,10 @@ def run_tailoring(
         revision_log.append({"round": revision_round, "status": "applied", "provider": writer})
         critique, new_records, independent_available = critique_current(label + "_critique")
         critique_records.extend(new_records)
+    # A revision is allowed to change wording and flexible front matter, so
+    # the final density contract must be checked again after the last critique
+    # pass rather than trusting the pre-critique measurement.
+    fill_post_line_capacity("post_revision_density")
     write_json(run_dir / "revision_log.json", revision_log)
     deterministic = deterministic_review(context, chosen, layout, plan=plan, catalog=catalog)
     if not (layout.get("horizontal") or {}).get("pass"):
@@ -5775,7 +7021,7 @@ def run_tailoring(
     synthesis_data = plan
     provider_records = []
     all_provider_records = (
-        drafts + [synthesis] + space_expansion_records + line_edits
+        gap_records + drafts + [synthesis] + space_expansion_records + line_edits
         + revision_records + critique_records
     )
     for record in all_provider_records:
@@ -5816,7 +7062,10 @@ def run_tailoring(
         "revision_notes": synthesis_data.get("revision_notes", []),
         "decision_ledger": synthesis_data.get("decision_ledger", []),
         "front_matter_policy": synthesis_data.get("front_matter_policy", {"coursework": "keep", "awards": "keep"}),
+        "front_matter_rewrites": synthesis_data.get("front_matter_rewrites", []),
+        "generation_strategy": context.get("generation_strategy", {}),
         "line_compactions": line_compactions,
+        "post_line_density": post_line_density,
         "validation_warnings": synthesis_data.get("validation_warnings", []),
         "content_changes": changes,
         "review_overlay": review_overlay,
@@ -5852,8 +7101,10 @@ def run_tailoring(
         "artifacts": [
             "resume.tex", run_pdf_path(run_dir).name, "resume.txt", run_preview_path(run_dir).name if preview else None,
             "job.json", "report.json", "job_context.json", "brief.json", "evidence_catalog.json", "evidence_graph_context.json",
+            "gap_analysis.json" if generation else None,
             "candidate_plan.json", "content_plan.json", "layout_packing.json", "critique.json", "revision_log.json",
             "space_expansion.json" if space_expansion_records else None,
+            "post_line_density.json" if enhance else None,
             *[("line_edit.json" if index == 1 else "line_edit_%s.json" % index) for index in range(1, len(line_edits) + 1)],
             *[("revision.json" if index == 1 else "revision_%s.json" % index) for index in range(1, len(revision_records) + 1)],
         ],
@@ -5876,6 +7127,13 @@ def run_unrestricted(run_dir: Path, job: Dict[str, Any], update) -> None:
     run_tailoring(run_dir, job, update, enhance=True, unrestricted=True)
 
 
+def run_generation(run_dir: Path, job: Dict[str, Any], update) -> None:
+    run_tailoring(
+        run_dir, job, update, enhance=True, unrestricted=True,
+        generation=True,
+    )
+
+
 class RunManager:
     def __init__(self, root: Optional[Path] = None):
         self.root = root or repo_root()
@@ -5887,7 +7145,7 @@ class RunManager:
         run_id = uuid.uuid4().hex[:12]
         run_dir = studio_root(self.root) / "runs" / run_id
         run_dir.mkdir(parents=True, exist_ok=True)
-        pdf_filename = resume_pdf_filename(job)
+        pdf_filename = resume_pdf_filename(job, mode)
         status = {
             "run_id": run_id,
             "mode": mode,
@@ -5937,8 +7195,10 @@ class RunManager:
                 run_strict(run_dir, job, update)
             elif mode == "ai":
                 run_dream(run_dir, job, update)
-            else:
+            elif mode == "unrestricted":
                 run_unrestricted(run_dir, job, update)
+            else:
+                run_generation(run_dir, job, update)
         except Exception as exc:  # keep failure inspectable in the local UI
             trace = traceback.format_exc()
             (run_dir / "error.log").write_text(trace)
@@ -6102,7 +7362,15 @@ function renderReport(status){const report=status.report||{};const review=report
 function showView(view){const bank=view==='library',workshop=view==='workshop';$('tailorView').classList.toggle('hidden',bank||workshop);$('libraryView').classList.toggle('hidden',!bank);$('workshopView').classList.toggle('hidden',!workshop);$('tailorTab').classList.toggle('active',!bank&&!workshop);$('libraryTab').classList.toggle('active',bank);if(bank)renderLibrary();if(workshop)renderWorkshop();}
 document.addEventListener('click',async event=>{const evidence=event.target.closest('[data-evidence-status]');if(evidence){event.preventDefault();return reviewEvidence(decodeURIComponent(evidence.dataset.evidenceId||''),evidence.dataset.evidenceStatus||'');}const open=event.target.closest('[data-open-workshop]');if(open){event.preventDefault();return openWorkshop(open.dataset.openWorkshop||open.dataset.run);}const button=event.target.closest('[data-view-posting]');if(!button)return;const card=button.closest('.resume-card'),panel=card.querySelector('.posting-snapshot');if(!panel.classList.contains('hidden')){panel.classList.add('hidden');button.textContent='View posting snapshot';return;}button.disabled=true;try{const r=await fetch(button.dataset.posting),data=await r.json();if(!r.ok)throw new Error(data.error||'Posting snapshot unavailable');panel.innerHTML=`<strong>Saved posting snapshot</strong><pre>${esc(data.posting_text||'Only posting metadata was available for this run.')}</pre>`;panel.classList.remove('hidden');button.textContent='Hide posting snapshot';}catch(error){panel.textContent=error.message;panel.classList.remove('hidden');}finally{button.disabled=false;}});
 function explainRadarReason(reason){const text=String(reason||'');if(text.startsWith('raw utility'))return 'Calibration: '+text;const labels=[['base utility','Baseline role utility'],['role:','Role family fit'],['sector:','Sector fit'],['new-grad/early-career priority','Verified early-career signal'],['early-career possible','Plausible first-role signal'],['new-grad evidence absent','No explicit early-career evidence'],['company tier','Company quality'],['explicit goal company','Personal goal-company preference'],['company concentration','Company diversity adjustment'],['compensation','Compensation'],['posted','Freshness'],['remote','Remote access'],['Resume Match','Resume Match']];const label=(labels.find(item=>text.startsWith(item[0]))||[])[1]||'Scoring input';return label+': '+text;}
- $('search').oninput=()=>{clearTimeout(window.searchTimer);window.searchTimer=setTimeout(loadJobs,250)};$('sort').onchange=loadJobs;$('librarySearch').oninput=renderLibrary;$('libraryMode').onchange=renderLibrary;$('analyzeMatch').onclick=analyzeMatch;$('refreshEvidence').onclick=refreshEvidence;$('strict').onclick=()=>start('used');$('dream').onclick=()=>start('ai');$('unrestricted').onclick=()=>start('unrestricted');$('showScoreReasons').onclick=()=>{if(!selected)return;const reasons=selected.score_reasons||[];$('scoreReasons').classList.remove('hidden');$('scoreReasons').innerHTML='<strong>Why Radar gave this role '+esc(selected.score)+'/100</strong><p>Radar is deterministic job fit. Resume Match is a separate CV/evidence alignment score. 90+ is strong; the company-diversity adjustment only nudges weaker duplicates.</p><ul>'+reasons.map(reason=>'<li>'+esc(explainRadarReason(reason))+'</li>').join('')+'</ul>';};$('queueOpen').onclick=()=>showView('library');$('tailorTab').onclick=()=>showView('tailor');$('libraryTab').onclick=()=>showView('library');$('selectedLibrary').onclick=()=>showView('library');$('allSaved').onclick=()=>showView('library');$('backToTailor').onclick=()=>showView('tailor');$('workshopBack').onclick=()=>showView('library');$('workshopTailor').onclick=()=>showView('tailor');$('workshopAsk').onclick=()=>askWorkshop('');Promise.all([loadJobs(),loadLibrary(),loadUsage(),loadProtection(),loadEvidenceReview()]);
+ $('search').oninput=()=>{clearTimeout(window.searchTimer);window.searchTimer=setTimeout(loadJobs,250)};$('sort').onchange=loadJobs;$('librarySearch').oninput=renderLibrary;$('libraryMode').onchange=renderLibrary;$('analyzeMatch').onclick=analyzeMatch;$('refreshEvidence').onclick=refreshEvidence;$('strict').onclick=()=>start('used');$('dream').onclick=()=>start('ai');$('unrestricted').onclick=()=>start('unrestricted');$('showScoreReasons').onclick=()=>{if(!selected)return;const reasons=selected.score_reasons||[];$('scoreReasons').classList.remove('hidden');$('scoreReasons').innerHTML='<strong>Why Radar gave this role '+esc(selected.score)+'/100</strong><p>Radar is deterministic job fit. Resume Match is a separate CV/evidence alignment score. 90+ is strong; the company-diversity adjustment only nudges weaker duplicates.</p><ul>'+reasons.map(reason=>'<li>'+esc(explainRadarReason(reason))+'</li>').join('')+'</ul>';};$('queueOpen').onclick=()=>showView('library');$('tailorTab').onclick=()=>showView('tailor');$('libraryTab').onclick=()=>showView('library');$('selectedLibrary').onclick=()=>showView('library');$('allSaved').onclick=()=>showView('library');$('backToTailor').onclick=()=>showView('tailor');$('workshopBack').onclick=()=>showView('library');$('workshopTailor').onclick=()=>showView('tailor');$('workshopAsk').onclick=()=>askWorkshop('');Promise.all([loadJobs(),loadLibrary(),loadUsage(),loadProtection(),loadEvidenceReview()]).then(()=>{const runId=new URLSearchParams((location.hash||'').replace(/^#/,'')).get('run');if(runId)openWorkshop(runId);});
+const resumeStudioBridgeMode=new URLSearchParams(location.search).get('bridge')==='1';
+const resumeStudioBridgeOrigins=new Set(['https://job-radar-newgrad.vercel.app','https://job-radar-vmj-8946s-projects.vercel.app','https://victorjimenez3.github.io']);
+function bridgeReply(event,requestId,data,error=''){if(!event.source||!resumeStudioBridgeOrigins.has(event.origin))return;event.source.postMessage({type:'resume-studio:response',request_id:requestId,ok:!error,data,error},event.origin);}
+async function bridgeFetch(path,init={}){const response=await fetch(path,init);let data={};try{data=await response.json();}catch(_){data={};}if(!response.ok)throw new Error(data.error||`engine returned ${response.status}`);return data;}
+async function handleResumeStudioBridge(event){const message=event.data||{};if(!resumeStudioBridgeOrigins.has(event.origin)||message.type!=='resume-studio:request')return;const action=message.action,payload=message.payload||{};try{let data;if(action==='health')data=await bridgeFetch('/api/health');else if(action==='library')data=await bridgeFetch('/api/library?limit='+encodeURIComponent(payload.limit||100));else if(action==='match')data=await bridgeFetch('/api/match',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id})});else if(action==='queue')data=await bridgeFetch('/api/run',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,mode:payload.mode})});else if(action==='status')data=await bridgeFetch('/api/run?id='+encodeURIComponent(payload.id||''));else throw new Error('unsupported bridge request');bridgeReply(event,message.request_id,data);if(action==='queue'&&data.run_id)bridgePollRun(event,data.run_id);}catch(error){bridgeReply(event,message.request_id,{},error.message||String(error));}}
+async function bridgePollRun(event,runId){for(let i=0;i<1200;i+=1){await new Promise(resolve=>setTimeout(resolve,1500));try{const data=await bridgeFetch('/api/run?id='+encodeURIComponent(runId));if(event.source&&resumeStudioBridgeOrigins.has(event.origin))event.source.postMessage({type:'resume-studio:run',run_id:runId,data},event.origin);if(['complete','awaiting_review','failed'].includes(data.status))return;}catch(error){if(event.source)event.source.postMessage({type:'resume-studio:run',run_id:runId,data:{status:'failed',message:error.message}},event.origin);return;}}}
+window.addEventListener('message',handleResumeStudioBridge);
+if(resumeStudioBridgeMode){document.title='Resume Studio engine';document.body.innerHTML='<main style="max-width:420px;margin:0 auto;padding:28px;font:15px/1.45 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:#131A21;color:#D9E2E8;min-height:100vh"><h1 style="font-size:20px">Resume Studio engine</h1><p id="bridgeState">Connecting to the cloud workspace…</p><p style="color:#8FA1AE;font-size:13px">Keep this small private-engine window open while the cloud Resume Studio queues or reviews a draft. Your CV and generated files remain on this Mac.</p></main>';if(window.opener)window.opener.postMessage({type:'resume-studio:ready'},'*');}
 </script></main></body></html>"""
 
 
@@ -6234,6 +7502,55 @@ document.addEventListener('click',event=>{const approve=event.target.closest('[d
 function showView(view){""",
 )
 
+# Generation is deliberately a fourth, separate mode. The existing
+# take-the-wheel path remains selectable and behaviorally unchanged as the
+# strong moderate baseline.
+UI_HTML = UI_HTML.replace(
+    '<option value="all">All modes</option>',
+    '<option value="all">All modes</option><option value="generation">Unchained generation</option>',
+)
+UI_HTML = UI_HTML.replace(
+    "unrestricted:'Take-the-wheel'",
+    "unrestricted:'Take-the-wheel (moderate)',generation:'Unchained generation'",
+)
+UI_HTML = UI_HTML.replace(
+    '<div class="action-grid"><div class="action-card featured"><h3>1. Take-the-wheel</h3>',
+    '<div class="action-grid"><div class="action-card featured"><h3>1. Unchained generation</h3><p>Maps every posting requirement to the full evidence graph, then generates new source-grounded bullets or Skills lines to close truthful gaps.</p><p class="micro">Human-style gap filling · unsupported claims stay visible</p><button id="generation">Create unchained draft</button></div><div class="action-card"><h3>2. Take-the-wheel (moderate)</h3>',
+)
+UI_HTML = UI_HTML.replace(
+    '<p><strong>Take-the-wheel:</strong> may substantially restructure the portfolio when stronger verified evidence supports it.</p>',
+    '<p><strong>Unchained generation:</strong> audits every requirement, searches Markdown for buried evidence, and may generate new evidence-backed lines.</p><p><strong>Take-the-wheel (moderate):</strong> may substantially restructure the portfolio when stronger verified evidence supports it.</p>',
+)
+UI_HTML = UI_HTML.replace(
+    "['strict','dream','unrestricted']",
+    "['strict','dream','unrestricted','generation']",
+)
+UI_HTML = UI_HTML.replace(
+    "$(`unrestricted`).onclick=()=>start('unrestricted')",
+    "$(`unrestricted`).onclick=()=>start('unrestricted');$(`generation`).onclick=()=>start('generation')",
+)
+# The raw string uses ordinary quote syntax for DOM IDs.
+UI_HTML = UI_HTML.replace(
+    "$('unrestricted').onclick=()=>start('unrestricted');$('showScoreReasons')",
+    "$('unrestricted').onclick=()=>start('unrestricted');$('generation').onclick=()=>start('generation');$('showScoreReasons')",
+)
+UI_HTML = UI_HTML.replace(
+    "status.mode==='ai'||status.mode==='unrestricted'",
+    "status.mode==='ai'||status.mode==='unrestricted'||status.mode==='generation'",
+)
+UI_HTML = UI_HTML.replace(
+    "report.mode==='enhanced'||report.mode==='unrestricted'",
+    "report.mode==='enhanced'||report.mode==='unrestricted'||report.mode==='generation'",
+)
+UI_HTML = UI_HTML.replace(
+    "${ats.covered_count||0}/${ats.supported_count||0} supported exact terms rendered (${ats.exact_coverage_percent||0}%)",
+    "${ats.covered_count||0}/${ats.detected_count||ats.supported_count||0} detected exact terms rendered (${ats.exact_coverage_percent||0}% overall; ${ats.supported_exact_coverage_percent||0}% of supported terms)",
+)
+UI_HTML = UI_HTML.replace(
+    'panel+=`<div class="audit-card"><h4>ATS overlay',
+    'const strategy=report.generation_strategy||{};if((strategy.requirements||[]).length)panel+=`<div class="audit-card"><h4>Requirement → evidence map</h4><p class="meta">${esc(strategy.portfolio_strategy||\'\')}</p><div class="audit-scroll">${strategy.requirements.map(item=>`<div class="diff-row ${item.evidence_status===\'unsupported\'?\'removed\':item.recommended_action===\'synthesize\'||item.recommended_action===\'tailor_skills\'?\'added\':\'rewritten\'}"><span class="diff-label">${esc(item.importance)} · ${esc(item.evidence_status)} · ${esc(item.recommended_action)}</span><strong>${esc(item.requirement)}</strong>${item.exact_terms?.length?`<br><span class="meta">terms: ${esc(item.exact_terms.join(\', \'))}</span>`:\'\'}${item.reason?`<br>${esc(item.reason)}`:\'\'}</div>`).join(\'\')}</div></div>`;panel+=`<div class="audit-card"><h4>ATS overlay',
+)
+
 UI_HTML = UI_HTML.replace(
     "${layout.horizontal.underfilled_line_count||0} underfilled lines · one-more-bullet",
     "${layout.horizontal.near_wrap_count||0} near-wraps · ${layout.horizontal.underfilled_line_count||0} roomy lines · one-more-bullet",
@@ -6284,13 +7601,13 @@ renderReport=function(status){
   const atsHtml=atsEntries.length?atsEntries.map(item=>`<div class="ats-entry"><strong>${esc(item.entry)}</strong><span>${markTerms(item.text)}</span></div>`).join(''):'<div class="meta">No final bullets were returned.</div>';
   const weekly=studioUsage?`<p class="meta"><strong>This week:</strong> ${Number(studioUsage.codex_tokens||0).toLocaleString()} observed Codex tokens · ${studioUsage.codex_calls||0} Codex calls · ${studioUsage.runs||0} saved runs${studioUsage.weekly_limit_tokens?` · ${studioUsage.percent_of_limit}% of configured limit`:''}</p>`:'<p class="meta">Weekly usage is loading or unavailable from the local CLI.</p>';
   const chronology=changes.experience_order?.chronology_preserved!==false;
-  const oneMore=space.one_more_standard_bullet_fits;
-  const applied=space.expansion_applied||[],rejected=space.expansion_rejected||[],candidates=space.unused_verified_candidates||[];
+  const oneMore=space.one_more_standard_bullet_fits,spaceReview=space.space_review_needed;
+  const applied=space.expansion_applied||[],replaced=space.expansion_replaced||[],rejected=space.expansion_rejected||[],candidates=space.unused_verified_candidates||[];
   const overlay=report.review_overlay||{},previewUrl=previewName?runArtifact(status.run_id,previewName):'';
   const overlayBoxes=(overlay.boxes||[]).map(box=>`<div class="review-box ${esc(box.kind||'ats')}" style="left:${Number(box.left_percent)||0}%;top:${Number(box.top_percent)||0}%;width:${Number(box.width_percent)||0}%;height:${Number(box.height_percent)||0}%" title="${esc((box.terms||[]).join(', ')||box.changed_source_id||'review highlight')}"></div>`).join('');
   const reviewPreview=overlay.available&&previewUrl?`<div class="audit-card"><h4>Highlighted review render</h4><p class="meta">This is a review overlay on the clean rendered page. The downloadable PDF above is unchanged.</p><div class="review-preview"><img src="${previewUrl}" alt="Clean resume with review highlights">${overlayBoxes}</div><div class="review-legend"><span><i></i>supported ATS term</span><span class="changed"><i></i>meaningful content change</span><span class="both"><i></i>both</span></div></div>`:'';
   let panel=`<section class="audit-shell"><div class="audit-card"><h4>Tailoring audit · what happened</h4><div class="audit-grid"><div class="audit-metric"><strong>${changes.changed_bullet_count||0}</strong><span>meaningful rewrites</span></div><div class="audit-metric"><strong>${(changes.added_bullets||[]).length}</strong><span>new evidence lines surfaced</span></div><div class="audit-metric"><strong>${fmtSeconds(metrics.elapsed_seconds||status.elapsed_seconds)}</strong><span>total run time</span></div></div><p class="meta">${esc(report.owner_summary?.headline||'The report records selection, replacement, and layout decisions.')}</p>${changes.low_value_rewrite_count?`<p class="meta">${changes.low_value_rewrite_count} near-copy paraphrase${changes.low_value_rewrite_count===1?' was':'s were'} suppressed because it added no measurable hiring value.</p>`:''}<p class="meta"><span class="badge ${chronology?'audit-good':'audit-bad'}">${chronology?'Experience chronology preserved':'Chronology needs review'}</span> <span class="badge">${esc(report.mode||status.mode||'tailor')}</span> <span class="badge">PDF: ${esc(report.pdf_filename||status.pdf_filename||'named resume')}</span></p></div>${reviewPreview}`;
-  panel+=`<div class="audit-subgrid"><div class="audit-card"><h4>Measured page use</h4><div class="meta">Bottom: <strong>${space.measured_content_bottom_pt==null?'—':space.measured_content_bottom_pt+'pt'}</strong> · reference: <strong>${space.canonical_reference_bottom_pt==null?'—':space.canonical_reference_bottom_pt+'pt'}</strong><br>Clearance gap: <strong>${space.density_gap_pt==null?'—':space.density_gap_pt+'pt'}</strong> · one standard extra bullet: <strong class="${oneMore?'audit-warn':'audit-good'}">${oneMore?'fits':'does not fit'}</strong></div><p class="meta">${esc(space.decision||'No space decision recorded.')}</p>${applied.length?'<div>'+applied.map(item=>`<span class="audit-candidate applied">added ${esc(item.source_id||'line')}</span>`).join('')+'</div>':''}${rejected.length?'<div>'+rejected.map(item=>`<span class="audit-candidate rejected">held ${esc(item.source_id||'candidate')}</span>`).join('')+'</div>':''}</div><div class="audit-card"><h4>Verified evidence left on the table</h4><div class="meta"><strong>${space.unused_candidate_count||candidates.length}</strong> candidate lines inspected${candidates.length?'<br>':''}${candidates.length?candidates.slice(0,8).map(item=>`<div><strong>${esc(item.source_id||'candidate')}</strong> · ${esc(item.text||'')}</div>`).join(''):'<span> No unused strong line was found for the selected portfolio.</span>'}</div></div></div>`;
+  panel+=`<div class="audit-subgrid"><div class="audit-card"><h4>Measured page use</h4><div class="meta">Bottom: <strong>${space.measured_content_bottom_pt==null?'—':space.measured_content_bottom_pt+'pt'}</strong> · reference: <strong>${space.canonical_reference_bottom_pt==null?'—':space.canonical_reference_bottom_pt+'pt'}</strong><br>Clearance gap: <strong>${space.density_gap_pt==null?'—':space.density_gap_pt+'pt'}</strong> · extra-space review: <strong class="${spaceReview?'audit-warn':'audit-good'}">${spaceReview?(oneMore?'one line fits':'measured gap exceeds target'):'no safe addition'}</strong></div><p class="meta">${esc(space.decision||'No space decision recorded.')}</p>${applied.length?'<div>'+applied.map(item=>`<span class="audit-candidate applied">added ${esc(item.source_id||'line')}</span>`).join('')+'</div>':''}${replaced.length?'<details><summary>Replaced lower-value evidence (${replaced.length})</summary>'+replaced.map(item=>`<div class="meta"><strong>${esc(item.source_id||'line')}</strong> · ${esc(item.entry_id||'entry')}<br>${esc(item.text||'')}<br><em>${esc(item.reason||'')}</em></div>`).join('')+'</details>':''}${rejected.length?'<div>'+rejected.map(item=>`<span class="audit-candidate rejected">held ${esc(item.source_id||'candidate')}</span>`).join('')+'</div>':''}</div><div class="audit-card"><h4>Verified evidence left on the table</h4><div class="meta"><strong>${space.unused_candidate_count||candidates.length}</strong> candidate lines inspected${candidates.length?'<br>':''}${candidates.length?candidates.slice(0,8).map(item=>`<div><strong>${esc(item.source_id||'candidate')}</strong> · ${esc(item.text||'')}</div>`).join(''):'<span> No unused strong line was found for the selected portfolio.</span>'}</div></div></div>`;
   panel+=`<div class="audit-card"><h4>Provider flow, model, and usage</h4><div class="flow">${flowHtml}</div><p class="meta"><strong>This run:</strong> ${Number(usage.codex_tokens||0).toLocaleString()} Codex tokens · ${usage.codex_calls||0} Codex calls · ${Number(usage.claude_tokens||0).toLocaleString()} Claude tokens · ${usage.claude_calls||0} Claude calls</p>${weekly}</div>`;
   panel+=`<div class="audit-card"><h4>Text diff</h4><div class="audit-scroll">${list(rewrites,'rewritten','No meaningful wording rewrites were recorded.')}${list(additions,'added','No canonical-source additions were recorded.')}${list(removals,'removed','No canonical evidence was removed.')}${changes.low_value_rewrite_count?`<p class="meta">${changes.low_value_rewrite_count} low-value paraphrase${changes.low_value_rewrite_count===1?'':'s'} hidden from the substantive diff.</p>`:''}</div></div>`;
   panel+=`<div class="audit-card"><h4>ATS overlay <span class="meta">(review view; the downloadable PDF stays clean)</span></h4><p class="meta">Highlighted terms are supported and rendered in the final text. Missing or unsupported terms remain visible in the full report instead of being stretched.</p><div class="ats-overlay">${atsHtml}</div></div></section>`;
@@ -6324,9 +7641,55 @@ document.addEventListener('click',event=>{
 function showView(view){''',
 )
 
+UI_HTML = UI_HTML.replace(
+    '  panel+=`<div class="audit-card"><h4>ATS overlay',
+    '  const strategy=report.generation_strategy||{};if((strategy.requirements||[]).length)panel+=`<div class="audit-card"><h4>Requirement → evidence map</h4><p class="meta">${esc(strategy.portfolio_strategy||\'\')}</p><div class="audit-scroll">${strategy.requirements.map(item=>`<div class="diff-row ${item.evidence_status===\'unsupported\'?\'removed\':item.recommended_action===\'synthesize\'||item.recommended_action===\'tailor_skills\'?\'added\':\'rewritten\'}"><span class="diff-label">${esc(item.importance)} · ${esc(item.evidence_status)} · ${esc(item.recommended_action)}</span><strong>${esc(item.requirement)}</strong>${item.exact_terms?.length?`<br><span class="meta">terms: ${esc(item.exact_terms.join(\', \'))}</span>`:\'\'}${item.reason?`<br>${esc(item.reason)}`:\'\'}</div>`).join(\'\')}</div></div>`;\n  panel+=`<div class="audit-card"><h4>ATS overlay',
+)
+
+
+# The cloud control plane forwards the bounded public posting snapshot through
+# the loopback bridge so a newly crawled role can still be matched or queued
+# before the Mac checkout has ingested the same job ID.
+UI_HTML = UI_HTML.replace(
+    "body:JSON.stringify({job_id:payload.job_id})",
+    "body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot||null})",
+)
 
 class StudioHandler(BaseHTTPRequestHandler):
     manager: RunManager = RunManager()
+    # The cloud Job Radar page is only a control plane.  The engine remains
+    # bound to loopback, and browser requests are accepted from the two
+    # production doors plus Victor's Pages mirror.  This prevents an
+    # unrelated page from reading private run artifacts through the browser.
+    DEFAULT_BRIDGE_ORIGINS = {
+        "https://job-radar-newgrad.vercel.app",
+        "https://job-radar-vmj-8946s-projects.vercel.app",
+        "https://victorjimenez3.github.io",
+        "http://localhost:4317",
+        "http://127.0.0.1:4317",
+    }
+
+    @classmethod
+    def bridge_origins(cls) -> set:
+        configured = {
+            item.strip().rstrip("/")
+            for item in os.environ.get("RESUME_STUDIO_ALLOWED_ORIGINS", "").split(",")
+            if item.strip()
+        }
+        return configured or cls.DEFAULT_BRIDGE_ORIGINS
+
+    def end_headers(self) -> None:
+        origin = (self.headers.get("Origin") or "").rstrip("/")
+        if origin in self.bridge_origins():
+            self.send_header("Access-Control-Allow-Origin", origin)
+            self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+            self.send_header("Access-Control-Allow-Headers", "Content-Type")
+            self.send_header("Vary", "Origin")
+        super().end_headers()
+
+    def do_OPTIONS(self) -> None:
+        self.send_response(HTTPStatus.NO_CONTENT)
+        self.end_headers()
 
     def log_message(self, format: str, *args) -> None:  # keep terminal output useful
         print("resume-studio:", format % args)
@@ -6367,7 +7730,7 @@ class StudioHandler(BaseHTTPRequestHandler):
             return self.send_json({
                 "ok": True,
                 "providers": {k: bool(v) for k, v in provider_commands().items()},
-                "cv_root": str(cv_root(repo_root())),
+                "cv_present": cv_root(repo_root()).is_dir(),
                 "evidence_graph": {"version": graph.get("version"), "nodes": len(graph.get("nodes", [])), "hash": graph.get("hash")},
             })
         if parsed.path == "/api/jobs":

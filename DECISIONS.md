@@ -1231,12 +1231,47 @@ wording is rendered and offered to the deterministic margin editor before the
 pipeline may restore source text; factuality and final geometry gates are
 unchanged.
 
+## 122. Confirmed applications may attach an immutable resume snapshot in Notion (2026-08-12)
+
+Future application tracking should offer a seamless owner-confirmed action to
+place the exact generated PDF used for an application into the existing Notion
+`Resume` column on its application row. The action must require Victor's
+explicit confirmation in Notion or the application workflow, preserve the
+company-specific filename and run ID, and store an immutable/private snapshot
+or durable artifact so later resume iterations cannot silently change what was
+submitted. It must remain optional, owner-controlled, and auditable; generating
+or tailoring a resume alone must never populate the applied resume column.
+
+## 121. Unchained generation prefers technical evidence over low-signal RA (2026-08-12)
+
+When Unchained generation selects a Resident Assistant/Residence Life line
+only for a generic problem-solving or collaboration signal, it must compare
+that line against unused verified technical project evidence. If a stronger
+technical line fits or can replace it without violating the page and geometry
+contracts, the RA line is removed and the replacement is recorded. This is a
+generation-only preference; the moderate tailor remains free to keep
+leadership when it carries the better role-specific signal.
+
 Workshop front-matter addresses are regenerated from the current canonical
 template whenever a saved draft is loaded. Existing line text and revision
 notes are overlaid by stable line ID, so a renderer-index correction migrates
 older private state without discarding edits or misplacing education and skills
 rows. Workshop revisions remain additive and never overwrite the original run
 or either human-authored reference PDF.
+
+## 123. Resume Studio uses one cloud control plane with a private local engine (2026-08-14)
+
+The production owner view now hosts the Resume Studio workflow in the main Job
+Radar UI. Jobs rows and role drawers open directly into the same workspace,
+which owns posting selection, match display, mode queueing, run status, and
+resume-bank links. The mature local engine remains the safe execution boundary
+for the ignored CV corpus, first-party provider sessions, LaTeX rendering,
+workshop edits, and generated artifacts. A loopback bridge is allowed only
+from the production Vercel doors and Pages mirror; the health response exposes
+only capability metadata, not the local CV path. If the Mac is offline, the
+cloud UI keeps deterministic/title-level matching and apply links available but
+does not enable a fake generation path. This gives one user-facing system with
+an explicit cloud control layer and a private, auditable execution fail-safe.
 ## 83. Official DOL sponsorship history is contextual, not a job promise (2026-08-07)
 
 The radar now refreshes the latest quarterly U.S. Department of Labor OFLC LCA
@@ -1782,3 +1817,15 @@ build the current `webapp/` commit and explicitly alias that deployment to the
 friendly URL. The production workflow verifies the live marker and fails when
 the alias cannot be assigned, preventing a successful-looking deploy from
 leaving users on an older build.
+
+## 120. Resume Studio must re-pack after line optimization (2026-08-12)
+
+Resume Studio now performs a final deterministic, compiled density pass after
+provider line edits and again after any critique revision. Shortening a tight
+line can expose capacity that the earlier portfolio pass could not see; the
+system must re-measure that page, try unused claim-authorized evidence, and
+keep only additions that remain one-page and horizontally safe. It repeats
+until the next standard bullet overflows or no unused verified candidate can
+earn the space. Rejected trials and accepted additions remain in the private
+run audit, while core chronological experience and the immutable template are
+unchanged.

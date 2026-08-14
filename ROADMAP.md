@@ -264,6 +264,34 @@ lines, project swaps, and rendered coverage. Near-wrap lines (under 12pt of
 right-edge safety) are rejected along with actual wraps, so historical PDFs do
 not masquerade as output from the current pipeline.
 
+Unchained generation — ✅ SHIPPED 2026-08-11. The prior Take-the-wheel behavior
+remains available as the moderate checkpoint. Unchained adds a separate
+requirement-to-evidence pass across the captured posting and authorized Markdown
+graph, then permits source-addressed bullet synthesis and Skills tailoring for
+supported gaps. Its audit distinguishes direct, adjacent, and unsupported
+evidence; unsupported terms cannot pass the factual gate merely because they
+appear in the posting. Outputs use a distinct company `_unchained.pdf` name.
+
+The marginal hiring-value refinement (2026-08-08) preserves adaptive and
+take-the-wheel tailoring while adding a canonical/current comparison point.
+Substantive swaps, exclusions, rewrites, and unusual reorders are recorded in a
+decision_ledger; the independent critic can return decision_feedback when a
+change loses stronger evidence, adds only keyword similarity, creates
+redundancy, or breaks chronology without a strong reason. This is an audit
+layer, not a rigid numeric craft score or a blanket preserve-base rule.
+
+The portfolio-first refinement checks composition before line polish. It flags
+project overlap, unused technical alternatives, and leadership competing for
+technical page space; it also lets the report explain when coursework or the
+aggregated Awards line was reclaimed before strong evidence.
+
+The evidence maintenance loop is now shipped locally (DECISION #99). Resume
+Markdown files are indexed as source-addressed records, public GitHub README
+material is bounded corroboration, and the collapsed Studio Evidence review
+panel records explicit Confirm/Public-safe/Disputed/Private/Reject/Supersede
+decisions. Public material stays blocked until a human confirmation; rejected
+or private records are excluded from ranked context and future generation.
+Refreshes preserve cached README records through GitHub rate limits.
 Resume Studio workshop — ✅ SHIPPED (DECISION #76). Completed runs now expose
 editable education, skills, experience, project, and leadership lines; AI may
 return multiple source-grounded candidates for an explicit user request; and
@@ -290,6 +318,14 @@ new run” from “Resume bank,” snapshots the selected posting, preserves pri
 results when switching roles, and exposes company-identifiable PDF names for
 new runs. The editable workshop and revision history are now the next layer on
 top of that durable bank.
+
+Cloud Resume Studio control plane — ✅ SHIPPED 2026-08-14 (DECISION #123).
+The production owner view is now the single Resume Studio UI: Jobs rows and
+role drawers open directly into it, with posting selection, private-engine
+health, full-match handoff, four tailoring modes, queued-run status, and bank
+links in one workspace. The Mac engine remains the private fail-safe for CV
+evidence, provider calls, rendering, and workshop artifacts; when it is
+offline, the cloud UI stays useful but never enables a pretend draft.
 
 ## Pipeline intelligence
 - **Resume UAT and outcome learning** — future idea: if enough applications,

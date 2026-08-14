@@ -261,6 +261,44 @@
   .testing-role summary { cursor:pointer; color:var(--accent-ink); font-size:0.75rem;
                           font-family:ui-monospace,"SF Mono",Menlo,monospace; }
   .testing-role .kv { margin-top:0.35rem; }
+  .studio-shell { display:grid; grid-template-columns:minmax(250px,.72fr) minmax(0,1.28fr); gap:1rem; }
+  .studio-panel { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:.85rem; }
+  .studio-panel h3 { margin:0 0 .45rem; font-size:.82rem; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); }
+  .studio-jobs { max-height:calc(100vh - 260px); overflow:auto; }
+  .studio-job { display:grid; grid-template-columns:2.2rem minmax(0,1fr); gap:.55rem; width:100%; text-align:left; background:transparent; color:var(--ink); border:1px solid transparent; border-radius:7px; padding:.55rem; cursor:pointer; }
+  .studio-job:hover, .studio-job.selected { background:var(--paper); border-color:var(--accent); }
+  .studio-job .match-score { grid-row:span 2; width:2.15rem; height:2.15rem; display:grid; place-items:center; border:1px solid var(--accent-ink); border-radius:6px; color:var(--accent-ink); font:700 .78rem ui-monospace,Menlo,monospace; }
+  .studio-job strong { display:block; font-size:.82rem; }
+  .studio-job small { display:block; color:var(--muted); font-size:.7rem; margin-top:.12rem; }
+  .studio-toolbar { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:.45rem; margin-bottom:.55rem; }
+  .studio-toolbar input { min-width:0; width:100%; }
+  .studio-selected { border:1px solid var(--accent-ink); border-radius:8px; padding:.75rem; background:var(--paper); }
+  .studio-selected h2 { margin:0; font-size:1.1rem; }
+  .studio-selected .studio-meta { margin-top:.18rem; }
+  .studio-actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.55rem; margin:.7rem 0; }
+  .studio-action { background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:.65rem; }
+  .studio-action.featured { border-color:var(--accent); }
+  .studio-action h4 { margin:0 0 .2rem; font-size:.82rem; }
+  .studio-action p { min-height:2.6rem; margin:.2rem 0 .55rem; color:var(--muted); font-size:.72rem; }
+  .studio-action button { width:100%; }
+  .studio-status { border-left:3px solid var(--accent); padding:.55rem .7rem; background:var(--code); border-radius:0 6px 6px 0; white-space:pre-wrap; font-size:.78rem; }
+  .studio-status.warn { border-color:var(--amber); }
+  .studio-status.bad { border-color:var(--danger); }
+  .studio-result { margin-top:.75rem; padding:.7rem; border:1px solid var(--line); border-radius:8px; background:var(--paper); }
+  .studio-result h3 { color:var(--ink); letter-spacing:normal; text-transform:none; font-size:.9rem; }
+  .studio-result .studio-links { display:flex; gap:.35rem; flex-wrap:wrap; margin-top:.55rem; }
+  .studio-result a, .studio-result button { font-size:.72rem; }
+  .studio-library { display:grid; gap:.45rem; margin-top:.55rem; }
+  .studio-run { display:flex; justify-content:space-between; gap:.6rem; align-items:center; border-top:1px solid var(--line); padding:.5rem 0; font-size:.75rem; }
+  .studio-run:first-child { border-top:0; }
+  .studio-run .sub { font-size:.68rem; }
+  .studio-note { background:var(--code); border:1px solid var(--line); border-radius:7px; padding:.6rem .7rem; color:var(--muted); font-size:.74rem; }
+  .studio-note strong { color:var(--ink); }
+  .studio-empty { padding:2rem .75rem; text-align:center; color:var(--muted); }
+  .studio-badge { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:.06rem .42rem; font:600 .62rem ui-monospace,Menlo,monospace; color:var(--muted); }
+  .studio-badge.good { color:var(--accent-ink); border-color:var(--accent-ink); }
+  .studio-badge.warn { color:var(--amber); border-color:var(--amber); }
+  .studio-badge.bad { color:var(--danger); border-color:var(--danger); }
   .taste-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:.9rem; }
   .taste-grid h4 { margin:.65rem 0 .25rem; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase;
                   color:var(--accent-ink); font-family:ui-monospace,Menlo,monospace; }
@@ -290,7 +328,9 @@
     .job .acts { width:100%; padding-left:2.9rem; }
     .job .acts button { flex:1; }
     .filters select { flex:1; min-width:9rem; }
-    .testing-grid { grid-template-columns:1fr; }
+    .testing-grid, .studio-shell { grid-template-columns:1fr; }
+    .studio-jobs { max-height:24rem; }
+    .studio-actions { grid-template-columns:1fr; }
   }
 </style>
 </head>
@@ -359,7 +399,7 @@ const S = {           // app state
   authProviders:{github:false,google:false},
   tab:"jobs", filter:{...DEFAULT_FILTER, ...storedFilter()}, shown:250,
   wsTab:"fit",
-  testing:{q:"", sort:"resume", shown:40},
+  testing:{q:"", sort:"resume", shown:40, selectedId:"", engine:"checking", engineError:"", match:null, library:[], activeRunId:"", runStatus:null},
   boot:{phase:"starting", jobsReady:false, inFlight:false, errors:[]},
   marquee:new Set(["meta","apple","amazon","netflix","google","microsoft","nvidia",
     "anthropic","openai","deepmind","genentech","moderna","regeneron",
@@ -1576,7 +1616,7 @@ function rowHTML(j, byId) {
       ${lane ? stageControl(j.id, lane) : ""}
       ${lane && lane!=="maybe" ? "" : `<button class="act" onclick='actMaybe(S.jobs["${j.id}"])'>${lane==="maybe"?"un-maybe":"maybe"}</button>`}
       ${lane ? `<button class="act" onclick='actUntrack(S.jobs["${j.id}"])'>remove</button>` : `<button class="act" onclick='actTrack(S.jobs["${j.id}"])'>save</button>`}
-      ${ownerResumeStudio()?`<button class="act" onclick='openResumeStudio(S.jobs["${j.id}"])'>tailor</button>`:""}
+      ${ownerResumeStudio()?`<button class="act" onclick='event.stopPropagation();openResumeStudio(S.jobs["${j.id}"])'>tailor</button>`:""}
       <button class="act primary" onclick='startApply(S.jobs["${j.id}"])'>apply ↗</button>
       <button class="act" onclick='openWS("${j.id}")'>details ▸</button>
     </div></div>`;
@@ -1980,6 +2020,73 @@ function templates(j) {
 ["Follow-up (1 week)", `Hi {name} — following up on the ${j.title} role at ${j.company} I applied to on {date}. Still very interested; since applying I ${"{recent win, e.g. shipped X}"}. If there's anything else useful I can send over, happy to. Thanks for your time!`]];
 }
 const jobById = id => S.jobs[id] || S.applied.find(a=>a.id===id);
+const RESUME_STUDIO_LOCAL_ORIGIN = "http://127.0.0.1:4317";
+let resumeBridgeWindow = null, resumeBridgeReady = null, resumeBridgeSequence = 0;
+const resumeBridgePending = new Map();
+window.addEventListener("message", event => {
+  const data = event.data || {};
+  if (data.type === "resume-studio:ready") {
+    if (event.origin === RESUME_STUDIO_LOCAL_ORIGIN) {
+      resumeBridgeWindow = event.source;
+      if (resumeBridgeReady) resumeBridgeReady.resolve(event.source);
+      resumeBridgeReady = null;
+    }
+    return;
+  }
+  if (data.type === "resume-studio:run") {
+    if (data.run_id === S.testing.activeRunId) {
+      S.testing.runStatus = data.data || null;
+      renderStudioWorkspace();
+      if (["complete","awaiting_review","failed"].includes(data.data?.status)) refreshResumeLibrary();
+    }
+    return;
+  }
+  if (data.type !== "resume-studio:response") return;
+  const pending = resumeBridgePending.get(data.request_id);
+  if (!pending) return;
+  resumeBridgePending.delete(data.request_id);
+  clearTimeout(pending.timer);
+  if (data.ok) pending.resolve(data.data);
+  else pending.reject(new Error(data.error || "Private Resume Studio request failed"));
+});
+function ensureResumeBridge() {
+  if (resumeBridgeReady) return resumeBridgeReady.promise;
+  if (resumeBridgeWindow && !resumeBridgeWindow.closed) return Promise.resolve(resumeBridgeWindow);
+  const popup = window.open(`${RESUME_STUDIO_LOCAL_ORIGIN}/?bridge=1`, "resume-studio-engine", "popup,width=440,height=220");
+  if (!popup) return Promise.reject(new Error("The private engine window was blocked. Allow pop-ups for the Radar to connect Resume Studio."));
+  resumeBridgeWindow = popup;
+  let resolveReady, rejectReady;
+  const promise = new Promise((resolve,reject)=>{resolveReady=resolve;rejectReady=reject;});
+  resumeBridgeReady = {promise, resolve:resolveReady, reject:rejectReady};
+  setTimeout(()=>{if(resumeBridgeReady?.promise===promise){resumeBridgeReady.reject(new Error("Private Resume Studio did not connect before timeout."));resumeBridgeReady=null;}},7000);
+  return promise;
+}
+function bridgeRequest(action, payload={}) {
+  return ensureResumeBridge().then(target => new Promise((resolve,reject) => {
+    const request_id = `cloud-${Date.now()}-${++resumeBridgeSequence}`;
+    const timer = setTimeout(()=>{resumeBridgePending.delete(request_id);reject(new Error("Private Resume Studio did not answer."));},15000);
+    resumeBridgePending.set(request_id,{resolve,reject,timer});
+    target.postMessage({type:"resume-studio:request",request_id,action,payload},RESUME_STUDIO_LOCAL_ORIGIN);
+  }));
+}
+function ownerResumeStudio() {
+  return Boolean(S.auth?.owner && norm(S.auth.login) === "victorjimenez3");
+}
+function openResumeStudio(j) {
+  if (!j || !ownerResumeStudio()) { toast("Resume Studio is private to @VictorJimenez3"); return; }
+  S.testing.selectedId = j.id;
+  S.testing.match = null;
+  S.testing.runStatus = null;
+  S.testing.activeRunId = "";
+  S.tab = "testing";
+  const lane = laneOf(j.id, appliedById());
+  if (!lane && canWrite()) {
+    actTrack(j, true).then(ok => toast(ok
+      ? "Saved to To apply · opened Resume Studio"
+      : "Resume Studio opened · saving failed, so use Save when you return"));
+  }
+  render();
+}
 let wsId = null;  // switching jobs resets the drawer to decision-first role fit
 function openWS(id) {
   const j = jobById(id);
@@ -1989,7 +2096,7 @@ function openWS(id) {
   if (wsId !== id) { S.wsTab = "fit"; wsId = id; }
   const c = S.culture[norm(j.company)];
   const a = appliedById()[id];
-  const tabs = [["fit","Fit & eligibility"],["company","Company"],...(ownerResumeStudio()?[["resume","Resume"]]:[]),["outreach","Outreach"],["notes","Notes"]];
+  const tabs = [["fit","Fit & eligibility"],["company","Company"],...(ownerResumeStudio() ? [["resume","Resume"]] : []),["outreach","Outreach"],["notes","Notes"]];
   const body = ({company:wsCompany, fit:wsFit, resume:wsResume, outreach:wsOutreach, notes:wsNotes}[S.wsTab] || wsFit);
   $("#ws").classList.add("open");
   $("#wsp").innerHTML = `
@@ -2006,7 +2113,7 @@ function openWS(id) {
       <div class="facts">${eligibilityBadges(j)}</div>
      <div class="acts" style="margin-top:0.65rem">
         ${a?stageControl(id,a.stage||"saved"):""}
-        ${ownerResumeStudio()?`<button class="act" onclick='openResumeStudio(jobById("${id}"))'>tailor resume ↗</button>`:""}
+        ${ownerResumeStudio()?`<button class="act" onclick='event.stopPropagation();openResumeStudio(jobById("${id}"))'>tailor resume</button>`:""}
         <button class="act primary" onclick='startApply(jobById("${id}"))'>open application ↗</button>
         ${a?"":`<button class="act" onclick='actTrack(jobById("${id}"))'>save to apply</button>`}
       </div>
@@ -2375,6 +2482,14 @@ function wsNotes(j, w, c, id) {
     <div class="sect"><h4>Notes (resume tailoring, referrals, interview intel)</h4>
       <textarea onchange='S.web.jobs["${id}"].notes=this.value;saveWeb();toast("Saved")'>${esc(w.notes)}</textarea></div>`;
 }
+function wsResume(j, w, c, id) {
+  const match = testingMatch(j);
+  return `<div class="sect"><h4>Resume Studio</h4>
+    <p>Use the same posting you are reviewing here. The unified Studio opens in the main cloud workspace, while the private evidence graph and rendered PDFs stay behind the owner-only Mac engine.</p>
+    <div class="match-card"><strong>Title preview: ${match.score}/100</strong><p class="sub">Full source-level matching runs when the private engine is connected.</p></div>
+    <div class="acts"><button class="act primary" onclick='openResumeStudio(jobById("${id}"))'>open in Resume Studio</button>
+      <a class="act" href="${esc(j.url||"#")}" target="_blank" rel="noopener">open posting ↗</a></div></div>`;
+}
 function closeWS(){ $("#ws").classList.remove("open"); render(); }
 $("#ws").addEventListener("click", e=>{ if(e.target.id==="ws") closeWS(); });
 document.addEventListener("keydown", e=>{
@@ -2497,12 +2612,14 @@ function rAI() {
     </div>`;
 }
 
-// ---------- owner testing lab --------------------------------------------
-// This is deliberately a public-data preview. The real evidence graph, source
-// documents, prompts, and generated resumes remain under ignored CV/ on the
-// owner's Mac. Hiding the tab is product access control, not a claim that
-// static JavaScript in a public repository can hold secrets.
-const TEST_MATCH_VERSION = "title-preview-v1 · full Resume Match stays local";
+// ---------- owner Resume Studio ------------------------------------------
+// The cloud page is the single control plane. The private Mac engine remains
+// the first fail-safe because the CV corpus, provider auth, LaTeX toolchain,
+// and generated PDFs must not enter this public repository or a public API.
+// When the engine is awake, this page calls its localhost API with a narrow
+// CORS allowlist; when it is asleep, the Radar still provides a useful
+// title-level preview and the posting/apply links remain usable.
+const TEST_MATCH_VERSION = "title-preview-v2 · cloud control plane";
 const TEST_CAPABILITIES = {
   ai_ml:{strength:.95, terms:["ai","ml","machine learning","deep learning","model","inference","pytorch"]},
   llm_rag:{strength:.92, terms:["llm","rag","generative ai","agentic","retrieval","embedding"]},
@@ -2575,14 +2692,174 @@ function testingRoleHTML(row) {
         <div class="kv">${Object.entries(m.dimensions).map(([name,value])=>`<span class="k">${esc(name.replaceAll('_',' '))}</span><span>+${value}</span>`).join('')}</div>
         <p class="sub">${m.reasons.map(esc).join(' · ')}</p></details>
       <div class="bar" style="margin:.45rem 0 0"><button class="act" onclick='openWS("${j.id}")'>role details</button>
-        <button class="act" onclick='openResumeStudio(S.jobs["${j.id}"])'>tailor resume ↗</button>
+        <button class="act" onclick='openResumeStudio(S.jobs["${j.id}"])'>tailor here</button>
         <button class="act primary" onclick='startApply(S.jobs["${j.id}"])'>apply ↗</button></div>
     </div></article>`;
+}
+function studioPath(path) { return RESUME_STUDIO_LOCAL_ORIGIN + path; }
+async function studioRequest(path, options={}) {
+  const method = String(options.method||"GET").toUpperCase();
+  const body = options.body ? JSON.parse(options.body) : {};
+  const requestBody = {...body};
+  if (requestBody.job_id && !requestBody.job_snapshot) {
+    const selected = jobById(requestBody.job_id);
+    if (selected) requestBody.job_snapshot = resumeStudioSnapshot(selected);
+  }
+  if (location.protocol === "https:" || !["localhost","127.0.0.1"].includes(location.hostname)) {
+    if (path === "/api/health") return bridgeRequest("health");
+    if (path.startsWith("/api/library")) return bridgeRequest("library", {limit:Number(new URLSearchParams(path.split("?")[1]||"").get("limit")||100)});
+    if (path === "/api/match") return bridgeRequest("match", requestBody);
+    if (path === "/api/run" && method === "POST") return bridgeRequest("queue", requestBody);
+    if (path === "/api/run" && method === "GET") return bridgeRequest("status", {id:new URLSearchParams(path.split("?")[1]||"").get("id")||""});
+  }
+  const init = {...options, mode:"cors", cache:"no-store", headers:{"content-type":"application/json", ...(options.headers||{})}};
+  if (options.body) init.body = JSON.stringify(requestBody);
+  const response = await fetch(studioPath(path), init);
+  let data = {};
+  try { data = await response.json(); } catch (_) { data = {}; }
+  if (!response.ok) throw new Error(data.error || `Private Resume Studio returned ${response.status}`);
+  return data;
+}
+function studioArtifact(runId, name) {
+  return studioPath(`/runs/${encodeURIComponent(runId)}/${encodeURIComponent(name)}`);
+}
+function studioBadge(label, kind="") { return `<span class="studio-badge ${kind}">${esc(label)}</span>`; }
+function studioRunStatusText(status) {
+  if (!status) return "";
+  return `${status.job?.company||status.job?.title||"Resume Studio"}: ${status.message||status.status||"working"}`;
+}
+function studioMatchFor(j) { return S.testing.match?.job_id === j.id ? S.testing.match.resume_match : testingMatch(j); }
+function studioJobListHTML(rows) {
+  return rows.slice(0,S.testing.shown).map(({job,match})=>`<button class="studio-job ${S.testing.selectedId===job.id?'selected':''}" onclick='selectStudioJob("${job.id}")'>
+    <span class="match-score">${S.testing.match?.job_id===job.id ? S.testing.match.resume_match.score : match.score}</span>
+    <span><strong>${esc(job.company)}</strong><small>${esc(job.title)} · Radar ${job.score??"–"} · ${ago(postedTs(job))||"date unknown"}</small></span>
+  </button>`).join("") || '<div class="studio-empty">No roles match this search.</div>';
+}
+function studioResultHTML(status) {
+  if (!status || !["complete","awaiting_review","failed"].includes(status.status)) return "";
+  const report = status.report||{};
+  const review = report.review||{};
+  const gates = review.gates||{};
+  if (status.status === "failed") return `<div class="studio-result"><h3>Draft failed safely</h3><p class="sub">${esc(status.message||"The run failed before producing a resume.")} No canonical resume was changed.</p></div>`;
+  const pdf = status.pdf_filename ? `<a class="act" href="${studioArtifact(status.run_id,status.pdf_filename)}" target="_blank" rel="noopener">open PDF ↗</a>` : "";
+  const preview = status.preview_filename ? `<a class="act" href="${studioArtifact(status.run_id,status.preview_filename)}" target="_blank" rel="noopener">open preview ↗</a>` : "";
+  const reportLink = `<a class="act" href="${studioArtifact(status.run_id,"report.json")}" target="_blank" rel="noopener">audit JSON ↗</a>`;
+  const reviewText = review.ready===true ? "All required gates pass; inspect the draft before approval." : "Human review is required before this can be treated as ready.";
+  return `<div class="studio-result"><h3>${status.status==="awaiting_review"?"Draft awaiting your review":"Saved draft"} ${studioBadge(modeLabel(status.mode||report.mode),"good")}</h3>
+    <p class="sub">${esc(reviewText)} ${report.resume_match?`Resume Match ${esc(report.resume_match.score)}/100.`:""}</p>
+    ${Object.keys(gates).length?`<div class="facts">${Object.entries(gates).map(([name,gate])=>studioBadge(`${name}: ${gate.status}`,gate.status==="pass"?"good":gate.status==="fail"?"bad":"warn")).join("")}</div>`:""}
+    <div class="studio-links">${pdf}${preview}${reportLink}<button class="act" onclick='openResumeWorkshop("${esc(status.run_id)}")'>workshop ↗</button></div></div>`;
+}
+function studioLibraryHTML() {
+  const entries = (S.testing.library||[]).slice(0,10);
+  if (!entries.length) return '<div class="studio-empty">No saved drafts yet. Choose a posting and queue a mode.</div>';
+  return entries.map(entry=>{
+    const job=entry.job||{};
+    const pdf=entry.has_pdf&&entry.urls?.pdf?`<a class="act" href="${studioPath(entry.urls.pdf)}" target="_blank" rel="noopener">PDF ↗</a>`:"";
+    const open=entry.run_id?`<button class="act" onclick='loadResumeRun("${esc(entry.run_id)}")'>inspect</button>`:"";
+    return `<div class="studio-run"><div><strong>${esc(job.company||"Unknown company")}</strong><div class="sub">${esc(job.title||"Untitled role")} · ${esc(modeLabel(entry.mode))} · ${esc(entry.status||"saved")}</div></div><div class="acts">${pdf}${open}</div></div>`;
+  }).join("");
+}
+function renderStudioWorkspace() {
+  const selected = jobById(S.testing.selectedId);
+  const workspace = $("#studioWorkspace");
+  if (!workspace) return;
+  if (!selected) {
+    workspace.innerHTML = `<div class="studio-empty"><h2>Choose a posting</h2><p>Select a role on the left or use “tailor” from any Jobs row. The exact posting stays attached to every private run.</p></div>`;
+    return;
+  }
+  const match = studioMatchFor(selected);
+  const engineOnline = S.testing.engine === "online";
+  const engineBadge = engineOnline ? studioBadge("private engine connected","good") : S.testing.engine === "offline" ? studioBadge("private engine offline","warn") : studioBadge("checking private engine");
+  const run = S.testing.runStatus;
+  const busy = run && ["queued","running"].includes(run.status);
+  workspace.innerHTML = `<div class="studio-selected"><div class="bar" style="justify-content:space-between;margin:0"><div>${engineBadge} ${selected.alert_ok?studioBadge("eligible","good"):studioBadge("dashboard review","warn")}</div><a class="act" href="${esc(selected.url||"#")}" target="_blank" rel="noopener">open posting ↗</a></div>
+    <h2>${esc(selected.company)} · ${esc(selected.title)}</h2><div class="sub studio-meta">${esc((selected.locations||[]).join(", ")||"location unknown")} · Radar ${selected.score??"–"} · ${ago(postedTs(selected))||"date unknown"}</div>
+    <div class="facts" style="margin-top:.45rem">${match.score!=null?studioBadge(`Resume Match ${match.score}/100`,match.confidence==="low"?"warn":"good"):""}${(match.clusters||[]).slice(0,6).map(c=>studioBadge(c.replaceAll("_"," "))).join("")}</div></div>
+    <div class="studio-note" style="margin-top:.65rem"><strong>One system, two safe layers.</strong> This cloud workspace owns the selection, posting link, queue, and run status. The private engine owns your evidence graph, AI calls, PDF rendering, and revisions. If the engine is offline, this page never pretends a draft exists.</div>
+    <div class="studio-actions">
+      <div class="studio-action featured"><h4>Take-the-wheel</h4><p>Adaptive portfolio, role-specific rewrites, project swaps, ATS proof, and independent review.</p><button class="act primary" ${engineOnline&&!busy?"":"disabled"} onclick="queueResumeMode('unrestricted')">create draft</button></div>
+      <div class="studio-action"><h4>AI tailor</h4><p>More conservative evidence-grounded rewrites and selection changes.</p><button class="act" ${engineOnline&&!busy?"":"disabled"} onclick="queueResumeMode('ai')">create draft</button></div>
+      <div class="studio-action"><h4>Used bullets</h4><p>Approved source wording only: the clean comparison baseline.</p><button class="act" ${engineOnline&&!busy?"":"disabled"} onclick="queueResumeMode('used')">create draft</button></div>
+      <div class="studio-action"><h4>Unchained generation</h4><p>Requirement-to-evidence audit with source-grounded generated bullets or Skills lines.</p><button class="act" ${engineOnline&&!busy?"":"disabled"} onclick="queueResumeMode('generation')">create draft</button></div>
+    </div>
+    ${run?`<div class="studio-status ${run.status==='failed'?'bad':busy?'warn':''}">${esc(studioRunStatusText(run))}</div>`:""}
+    ${studioResultHTML(run)}
+    <details class="score-explanation" style="margin-top:.75rem"><summary>Match details</summary><div class="kv" style="margin-top:.45rem">${Object.entries(match.dimensions||{}).map(([name,value])=>`<span class="k">${esc(name.replaceAll("_"," "))}</span><span>+${esc(value)}</span>`).join("")}</div><p class="sub">${(match.reasons||[]).map(esc).join(" · ")}</p></details>
+    <div class="section-title" style="margin-top:1rem"><h3>Resume bank</h3><button class="act" onclick="refreshResumeLibrary()">refresh</button></div><div class="studio-library">${studioLibraryHTML()}</div>`;
+}
+async function loadResumeEngine() {
+  try {
+    const health = await studioRequest("/api/health");
+    S.testing.engine = health.ok ? "online" : "offline";
+    S.testing.engineError = health.ok ? "" : "Private engine did not confirm health.";
+    await refreshResumeLibrary(false);
+    const selected = jobById(S.testing.selectedId);
+    if (selected) {
+      try { S.testing.match = await studioRequest("/api/match", {method:"POST",body:JSON.stringify({job_id:selected.id})}); }
+      catch (error) { S.testing.match = null; S.testing.engineError = `Engine is online, but this posting is not in its local snapshot: ${error.message}`; }
+    }
+  } catch (error) {
+    S.testing.engine = "offline";
+    S.testing.engineError = "Start the private Resume Studio service on the Mac to enable evidence-grounded matching and PDF generation.";
+  }
+  renderStudioWorkspace();
+  const notice = $("#studioEngineNotice");
+  if (notice) notice.innerHTML = S.testing.engine === "online"
+    ? `<strong>Private engine connected.</strong> Full source-level matching, generation, workshop edits, and PDFs are available through this page.`
+    : `<strong>Cloud mode is still usable.</strong> ${esc(S.testing.engineError)} Job ranking, posting links, and apply flow remain available; draft buttons stay disabled until the private engine is reachable. <button class="act" onclick="retryResumeEngine()">retry connection</button>`;
+}
+function retryResumeEngine() { S.testing.engine="checking"; S.testing.engineError=""; rTesting(); }
+async function refreshResumeLibrary(render=true) {
+  if (S.testing.engine !== "online" && render) return;
+  try {
+    const data = await studioRequest("/api/library?limit=100");
+    S.testing.library = data.resumes || [];
+  } catch (error) {
+    S.testing.engineError = error.message;
+  }
+  if (render) renderStudioWorkspace();
+}
+function selectStudioJob(id) {
+  S.testing.selectedId = id; S.testing.match = null; S.testing.runStatus = null; S.testing.activeRunId = "";
+  renderStudioWorkspace();
+  if (S.testing.engine === "online") {
+    studioRequest("/api/match", {method:"POST",body:JSON.stringify({job_id:id})}).then(data=>{S.testing.match=data;renderStudioWorkspace();}).catch(error=>{S.testing.engineError=error.message;renderStudioWorkspace();});
+  }
+}
+async function queueResumeMode(mode) {
+  const selected = jobById(S.testing.selectedId);
+  if (!selected || S.testing.engine !== "online") return;
+  try {
+    const status = await studioRequest("/api/run", {method:"POST",body:JSON.stringify({job_id:selected.id,mode})});
+    S.testing.activeRunId = status.run_id; S.testing.runStatus = status; renderStudioWorkspace(); pollResumeRun(status.run_id);
+  } catch (error) { S.testing.runStatus = {status:"failed",message:error.message,job:selected}; renderStudioWorkspace(); }
+}
+function pollResumeRun(id) {
+  const tick = async () => {
+    try {
+      const status = await studioRequest(`/api/run?id=${encodeURIComponent(id)}`);
+      if (S.testing.activeRunId === id) { S.testing.runStatus = status; renderStudioWorkspace(); }
+      if (["complete","awaiting_review","failed"].includes(status.status)) { await refreshResumeLibrary(); return; }
+      setTimeout(tick, 1800);
+    } catch (error) {
+      if (S.testing.activeRunId === id) { S.testing.runStatus = {status:"failed",message:error.message}; renderStudioWorkspace(); }
+    }
+  };
+  tick();
+}
+async function loadResumeRun(id) {
+  try { S.testing.activeRunId=id; S.testing.runStatus=await studioRequest(`/api/run?id=${encodeURIComponent(id)}`); const job=S.testing.runStatus.job; if(job?.id)S.testing.selectedId=job.id; renderStudioWorkspace(); }
+  catch (error) { toast("Could not load saved run: "+error.message.slice(0,90)); }
+}
+function openResumeWorkshop(id) {
+  window.open(studioPath(`/#run=${encodeURIComponent(id)}`), "_blank", "noopener");
+  toast("Workshop data opened from the private engine");
 }
 function rTesting() {
   if (!S.auth?.owner) { S.tab="jobs"; rJobs(); return; }
   const rows=testingRows();
-  const calibrated=Object.values(S.jobs).filter(j=>j.score_raw!=null && j.score_calibrated!=null);
+  if (!S.testing.selectedId && rows[0]) S.testing.selectedId = rows[0].job.id;
   $("#main").innerHTML = `<section class="testing-hero">
     <span class="chip good">owner only · @${esc(S.auth.login)}</span>
     <h2>Resume Studio</h2>
@@ -2618,6 +2895,21 @@ function rTesting() {
       </div><p class="sub">A draft is never marked ready unless the PDF compiles and every independent gate passes. The reviewer cannot alter its weights or lower the bar.</p></div>
     <div class="note"><b>Why PDFs are not here:</b> CV/ is personal and gitignored by contract. Production shows the control plane and ranking; actual resume documents remain private on the Mac.</div>
   </aside></div>`;
+  $("#main").innerHTML = `<section class="testing-hero">
+    <span class="chip good">owner only · @${esc(S.auth.login)}</span>
+    <h2>Resume Studio</h2>
+    <p class="sub">Choose a production posting, tailor it here, and keep the private evidence graph and generated artifacts behind the owner boundary. This is the same Studio workflow without a second cloud UI.</p>
+    <div id="studioEngineNotice" class="studio-note">Checking the private engine…</div>
+  </section>
+  <div class="studio-shell"><section class="studio-panel"><h3>1 · Choose a posting <span class="sub" style="float:right">${rows.length} roles</span></h3>
+    <div class="studio-toolbar"><input id="testingQ" type="search" placeholder="search company or role…" value="${esc(S.testing.q)}"><select id="testingSort" aria-label="Sort Studio roles"><option value="resume" ${S.testing.sort==='resume'?'selected':''}>best match</option><option value="new" ${S.testing.sort==='new'?'selected':''}>newest</option><option value="radar" ${S.testing.sort==='radar'?'selected':''}>Radar score</option></select></div>
+    <div id="studioJobList" class="studio-jobs">${studioJobListHTML(rows)}</div>${rows.length>S.testing.shown?`<button class="act" style="margin-top:.55rem" onclick="S.testing.shown+=40;rTesting()">show more</button>`:""}</section>
+    <section id="studioWorkspace" class="studio-panel"><div class="studio-empty">Loading the selected posting…</div></section></div>`;
+  $("#testingQ").oninput=()=>{S.testing.q=$("#testingQ").value;clearTimeout(window.studioSearchTimer);window.studioSearchTimer=setTimeout(rTesting,200);};
+  $("#testingSort").onchange=()=>{S.testing.sort=$("#testingSort").value;rTesting();};
+  renderStudioWorkspace();
+  if (S.testing.engine === "checking") loadResumeEngine();
+  else { renderStudioWorkspace(); const notice=$("#studioEngineNotice"); if(notice)notice.innerHTML=S.testing.engine==="online"?`<strong>Private engine connected.</strong> Full source-level matching and PDF generation are available.`:`<strong>Cloud mode is still usable.</strong> ${esc(S.testing.engineError||"Start the private engine on the Mac to generate a draft.")} <button class="act" onclick="retryResumeEngine()">retry connection</button>`; }
 }
 
 function toggleScorePreference(name, enabled) {
