@@ -2700,14 +2700,20 @@ function studioPath(path) { return RESUME_STUDIO_LOCAL_ORIGIN + path; }
 async function studioRequest(path, options={}) {
   const method = String(options.method||"GET").toUpperCase();
   const body = options.body ? JSON.parse(options.body) : {};
+  const requestBody = {...body};
+  if (requestBody.job_id && !requestBody.job_snapshot) {
+    const selected = jobById(requestBody.job_id);
+    if (selected) requestBody.job_snapshot = resumeStudioSnapshot(selected);
+  }
   if (location.protocol === "https:" || !["localhost","127.0.0.1"].includes(location.hostname)) {
     if (path === "/api/health") return bridgeRequest("health");
     if (path.startsWith("/api/library")) return bridgeRequest("library", {limit:Number(new URLSearchParams(path.split("?")[1]||"").get("limit")||100)});
-    if (path === "/api/match") return bridgeRequest("match", body);
-    if (path === "/api/run" && method === "POST") return bridgeRequest("queue", body);
+    if (path === "/api/match") return bridgeRequest("match", requestBody);
+    if (path === "/api/run" && method === "POST") return bridgeRequest("queue", requestBody);
     if (path === "/api/run" && method === "GET") return bridgeRequest("status", {id:new URLSearchParams(path.split("?")[1]||"").get("id")||""});
   }
   const init = {...options, mode:"cors", cache:"no-store", headers:{"content-type":"application/json", ...(options.headers||{})}};
+  if (options.body) init.body = JSON.stringify(requestBody);
   const response = await fetch(studioPath(path), init);
   let data = {};
   try { data = await response.json(); } catch (_) { data = {}; }
@@ -2889,7 +2895,9 @@ function rTesting() {
       </div><p class="sub">A draft is never marked ready unless the PDF compiles and every independent gate passes. The reviewer cannot alter its weights or lower the bar.</p></div>
     <div class="note"><b>Why PDFs are not here:</b> CV/ is personal and gitignored by contract. Production shows the control plane and ranking; actual resume documents remain private on the Mac.</div>
   </aside></div>`;
-  $("#main").innerHTML = `
+  $("#main").innerHTML = `<section class="testing-hero">
+    <span class="chip good">owner only · @${esc(S.auth.login)}</span>
+    <h2>Resume Studio</h2>
     <p class="sub">Choose a production posting, tailor it here, and keep the private evidence graph and generated artifacts behind the owner boundary. This is the same Studio workflow without a second cloud UI.</p>
     <div id="studioEngineNotice" class="studio-note">Checking the private engine…</div>
   </section>

@@ -7356,6 +7356,14 @@ UI_HTML = UI_HTML.replace(
 )
 
 
+# The cloud control plane forwards the bounded public posting snapshot through
+# the loopback bridge so a newly crawled role can still be matched or queued
+# before the Mac checkout has ingested the same job ID.
+UI_HTML = UI_HTML.replace(
+    "body:JSON.stringify({job_id:payload.job_id})",
+    "body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot||null})",
+)
+
 class StudioHandler(BaseHTTPRequestHandler):
     manager: RunManager = RunManager()
     # The cloud Job Radar page is only a control plane.  The engine remains
