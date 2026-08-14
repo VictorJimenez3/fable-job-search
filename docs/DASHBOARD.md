@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-08-14 11:19 UTC** · companies polled directly: **1758** (registry 1985) · jobs tracked: **40070** · new this run: **21** · alerts this run: **0**_
+_Last run: **2026-08-14 11:32 UTC** · companies polled directly: **1758** (registry 1985) · jobs tracked: **40070** · new this run: **21** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -35,7 +35,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 90 🔥 | 24d | Amazon | [Software Development Engineer - Agentic Workspaces](https://www.amazon.jobs/jobs/10482153/apply) | Seattle, WA | big_tech | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 89 🔥 | 2d | TikTok | [Software Engineer Graduate - Recommendation - TikTok AI Search & Visua](https://lifeattiktok.com/search/7672517471946000645) | San Jose, CA | big_tech | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 89 🔥 | 8d | Merck | [Software Engineer - AI Development](https://msd.wd5.myworkdayjobs.com/searchjobs/job/USA---New-Jersey---Rahway/Software-Engineer---AI-Development_R408724-1) | North Wales, PA | healthtech | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 88 🔥 | 6h | Microsoft | [Software Development Engineer - Azure PostgreSQL](https://apply.careers.microsoft.com/careers/job/1970393556959253) | United States | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 88 🔥 | 7h | Microsoft | [Software Development Engineer - Azure PostgreSQL](https://apply.careers.microsoft.com/careers/job/1970393556959253) | United States | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 88 🔥 | 2d | TikTok | [AI Infrastructure Engineer Graduate - Recommendation & LLM](https://lifeattiktok.com/search/7672654026594093317) | San Jose, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 88 🔥 | 21d | Amazon | [Software Development Engineer - Amazon Leo](https://amazon.jobs/en/jobs/3144341/software-development-engineer-amazon-leo-us) | Redmond, WA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 88 🔥 | 22d | NVIDIA | [Software Engineer New Grad - Physical Design Infrastructure](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Software-Engineer--Physical-Design-Infrastructure---New-College-Grad-2026_JR2021823) | Santa Clara, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
