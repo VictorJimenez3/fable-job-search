@@ -1,6 +1,6 @@
 # 🎯 Job Radar — internship dashboard
 
-_Last run: **2026-08-14 07:56 UTC** · companies polled directly: **698** (registry 799) · jobs tracked: **11904** · new this run: **31** · alerts this run: **0**_
+_Last run: **2026-08-14 08:08 UTC** · companies polled directly: **698** (registry 799) · jobs tracked: **11904** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -76,7 +76,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 80 ⭐ | 29d | TikTok | [General Hire Software Engineer Intern - Trust and Safety-Engineering -](https://lifeattiktok.com/search/7662700594251958581) | San Jose, CA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 80 ⭐ | 29d | TikTok | [General Hire Software Engineer Intern - Trust and Safety-Engineering -](https://lifeattiktok.com/search/7662684280234232117) | Seattle, WA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 80 ⭐ | 29d | TikTok | [Software Engineer Project Intern - Global E-Commerce Search Infrastruc](https://lifeattiktok.com/search/7662594807715072261) | Seattle, WA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
-| 79 ⭐ | 15h | SpaceX | [Software Engineer (Starlink)](https://boards.greenhouse.io/spacex/jobs/8706510002?gh_jid=8706510002) | Hawthorne, CA | big_tech | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
+| 79 ⭐ | 16h | SpaceX | [Software Engineer (Starlink)](https://boards.greenhouse.io/spacex/jobs/8706510002?gh_jid=8706510002) | Hawthorne, CA | big_tech | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
 | 78 ⭐ | 2d | SpaceX | [Manufacturing Engineer, AI Satellites (Starmind)](https://boards.greenhouse.io/spacex/jobs/8697063002?gh_jid=8697063002) | Bastrop, TX | big_tech | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
 | 78 ⭐ | 2d | Salesforce | [Software Engineering Intern - Future Pathways](https://salesforce.wd12.myworkdayjobs.com/en-US/external_career_site/job/California---San-Francisco/Software-Engineering-Intern---Future-Pathways_JR355842) | California, USA +3 | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 75 ⭐ | 15h | SpaceX | [Optical Test Engineer, AI Satellites (Starmind)](https://boards.greenhouse.io/spacex/jobs/8706543002?gh_jid=8706543002) | Bastrop, TX | big_tech | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
