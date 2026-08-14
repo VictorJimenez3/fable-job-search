@@ -34,7 +34,6 @@ Before changing the radar, read these in order:
   `docs/feed.xml`, or `docs/internships/`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
-## Current operational facts (verified 2026-08-08)
 ## Current operational facts (verified 2026-08-14)
 
 ### Latest change (verified 2026-08-14)
@@ -45,13 +44,14 @@ Before changing the radar, read these in order:
   select the same posting; the workspace shows private-engine health, source
   match, Used bullets / AI tailor / Take-the-wheel / Unchained generation
   queues, run status, and bank links. It calls the loopback Mac engine through
-  a narrow production-origin CORS bridge. When the Mac is unavailable, cloud
+  a narrow production-origin postMessage bridge to the compact loopback engine
+  window. When the Mac is unavailable, cloud
   ranking, posting links, and apply flow remain usable while draft controls
   stay disabled. The CV corpus, provider sessions, PDFs, reports, and
   workshop revisions remain local-only under `CV/.resume_studio/`; no private
   artifact is committed or exposed by the bridge health response.
 
-### Latest change (verified 2026-08-08)
+### Earlier operational facts (verified 2026-08-08)
 
 - **PM dashboard lane:** `pm` is a zero-weight role bucket for Product
   Manager, Technical Product Manager, Product Owner, Project Manager, Business
@@ -399,15 +399,14 @@ Before changing the radar, read these in order:
   or schema attempts are explicit retryable records with capped exponential
   backoff; checkpoint logs expose ready/pending/retry/error counts.
 - **`CV/` is local-only and gitignored** (DECISIONS #29) — never commit it or
-  anything derived from it. Owner-only Resume Studio now runs locally with
-  Use my source, AI enhanced, and Take-the-wheel modes; start it with
-  `.venv/bin/python scripts/resume_studio.py` and open `http://127.0.0.1:4317/`.
-  Install `bash scripts/resume-studio-service/install.sh` once to keep the
-  loopback service available at login. Production exposes Tailor controls only
-  to authenticated `@VictorJimenez3`; selecting one saves the role to **To
-  apply** and sends a bounded public job snapshot through the URL fragment to
-  the local Studio. CV evidence and generated files never cross that boundary
-  (DECISION #114).
+  anything derived from it. The owner-only Resume Studio control plane lives
+  in production; its private engine runs from
+  `.venv/bin/python scripts/resume_studio.py` or the installed login service
+  at `http://127.0.0.1:4317/`. Tailor, the drawer's Resume tab, and the Studio
+  tab all use the same cloud workspace. A bounded public posting snapshot is
+  sent through the allowlisted loopback postMessage bridge only when matching
+  or generation is requested. CV evidence, provider sessions, PDFs, and
+  reports never cross that boundary (DECISION #123).
   For temporary human-feedback calibration across varied radar roles, run
   `.venv/bin/python scripts/resume_calibration.py --generate --count 6 --serve`
   and open `http://127.0.0.1:4321/`; generated PDFs and JSONL labels stay under

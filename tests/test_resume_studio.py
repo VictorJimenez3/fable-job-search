@@ -167,7 +167,8 @@ def test_resume_studio_exposes_a_canonical_lock_and_private_render_boundary(tmp_
     assert "CV/immutable/VictorJimenezResume.tex locked" in rs.UI_HTML
     assert "resume_lock.py unlock" in rs.UI_HTML
     assert "company_resume_ai.pdf" in rs.UI_HTML
-    assert "Advanced mode: unrestricted AI tailor" in rs.UI_HTML
+    assert "Take-the-wheel (moderate)" in rs.UI_HTML
+    assert "Unchained generation" in rs.UI_HTML
     assert "Raw review data" in rs.UI_HTML
     assert "Evidence review" in rs.UI_HTML
     assert "/api/evidence/review" in rs.UI_HTML

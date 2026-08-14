@@ -147,12 +147,12 @@ the same Applications database instead of creating a second Notion system.
 
 ## Private Resume Studio
 
-Victor's CV workflow runs locally because `CV/` is personal and gitignored.
-In production, sign in as `@VictorJimenez3`, choose a role, then use **Tailor**
-or open the drawer's **Resume** tab. Job Radar saves the role to **To apply**
-and opens that exact posting in the local Studio. The handoff uses the URL
-fragment to `127.0.0.1`; private evidence and generated PDFs never enter the
-hosted app or public repository.
+Resume Studio has one user-facing cloud control plane. In production, sign in
+as `@VictorJimenez3`, choose a role, then use **Tailor**, the drawer's
+**Resume** tab, or the owner-only **Resume Studio** tab. The cloud workspace
+keeps the posting, match, queue, run status, and resume bank together. It opens
+a small loopback bridge to the Mac engine only when private matching or
+generation is requested; CV evidence and generated artifacts remain local.
 
 From the repository on the Mac, start:
 
@@ -166,7 +166,6 @@ Or install the login service once so production links always work:
 bash scripts/resume-studio-service/install.sh
 ```
 
-Then open `http://127.0.0.1:4317/`. Search for a radar role and choose either:
 You can also stay in the production platform: sign in as `VictorJimenez3`,
 open **Resume Studio**, or press **tailor** beside any Jobs posting. That is
 the canonical cloud control plane for the same private engine. It shows the
@@ -200,16 +199,6 @@ model pin; Claude independently critiques when its first-party subscription CLI
 is installed. There is no local-model or API fallback. The report includes separate gates,
 target-specific omissions, and observed provider usage; it has no composite
 craft score. A run stays `awaiting_review` until Victor approves a ready draft.
-All four modes render through the locked
-`CV/immutable/VictorJimenezResume.tex` visual contract. Models cannot write the
-document, alter its margins/typography/spacing, enlarge text, or overwrite the
-canonical resume. Their existing local subscription sessions are
-used; the radar does not receive or store their credentials. The report
-includes separate quality gates, target-specific omissions, and known Codex
-token usage. The Studio header shows observed weekly local Codex calls/tokens; the
-Plus weekly allowance is not exposed by the local CLI. Set
-`CODEX_WEEKLY_LIMIT_TOKENS` only when you know the comparison limit.
-
 Drafts, prompts, source context, PDFs, and review reports live only under
 `CV/.resume_studio/`. Review the generated PDF and report before using any
 application material. The system preserves the master CV as the evidence bank
@@ -265,12 +254,12 @@ or months. It limits which recent postings are ranked while preserving the same
 match scoring.
 
 The generator does not force every role to use the same evidence. It creates a
-strongest-first pool, then enforces a 22–26-bullet interview portfolio with
-three experiences, four projects, and one or two leadership entries. Every
-bullet must stay on one visual line, and the page must reach the same bottom
-region as the immutable human reference. The adversarial final pass applies a
-corrected source-addressed plan before the PDF is accepted; it cannot fix a
-weak result by deleting its way to a sparse page.
+strongest-first adaptive pool, preserves reverse chronology, and packs only
+verified lines that fit the locked one-page geometry. If measured capacity
+remains, a separate evidence pass may add unused source lines or document a
+low-value project/leadership tradeoff; a new project or experience must earn
+its heading with two bullets, and core experience is never trimmed. The final
+pass compiles every candidate and keeps a draft in review when any gate fails.
 If an enhancement drops a scope-limiting source fact such as `synthetic`,
 `prototype`, or `POC`, that bullet reverts to approved source wording. Resume
 Craft measures the argument and writing; factuality, eligibility, and layout
