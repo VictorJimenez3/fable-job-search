@@ -7071,7 +7071,15 @@ function renderReport(status){const report=status.report||{};const review=report
 function showView(view){const bank=view==='library',workshop=view==='workshop';$('tailorView').classList.toggle('hidden',bank||workshop);$('libraryView').classList.toggle('hidden',!bank);$('workshopView').classList.toggle('hidden',!workshop);$('tailorTab').classList.toggle('active',!bank&&!workshop);$('libraryTab').classList.toggle('active',bank);if(bank)renderLibrary();if(workshop)renderWorkshop();}
 document.addEventListener('click',async event=>{const evidence=event.target.closest('[data-evidence-status]');if(evidence){event.preventDefault();return reviewEvidence(decodeURIComponent(evidence.dataset.evidenceId||''),evidence.dataset.evidenceStatus||'');}const open=event.target.closest('[data-open-workshop]');if(open){event.preventDefault();return openWorkshop(open.dataset.openWorkshop||open.dataset.run);}const button=event.target.closest('[data-view-posting]');if(!button)return;const card=button.closest('.resume-card'),panel=card.querySelector('.posting-snapshot');if(!panel.classList.contains('hidden')){panel.classList.add('hidden');button.textContent='View posting snapshot';return;}button.disabled=true;try{const r=await fetch(button.dataset.posting),data=await r.json();if(!r.ok)throw new Error(data.error||'Posting snapshot unavailable');panel.innerHTML=`<strong>Saved posting snapshot</strong><pre>${esc(data.posting_text||'Only posting metadata was available for this run.')}</pre>`;panel.classList.remove('hidden');button.textContent='Hide posting snapshot';}catch(error){panel.textContent=error.message;panel.classList.remove('hidden');}finally{button.disabled=false;}});
 function explainRadarReason(reason){const text=String(reason||'');if(text.startsWith('raw utility'))return 'Calibration: '+text;const labels=[['base utility','Baseline role utility'],['role:','Role family fit'],['sector:','Sector fit'],['new-grad/early-career priority','Verified early-career signal'],['early-career possible','Plausible first-role signal'],['new-grad evidence absent','No explicit early-career evidence'],['company tier','Company quality'],['explicit goal company','Personal goal-company preference'],['company concentration','Company diversity adjustment'],['compensation','Compensation'],['posted','Freshness'],['remote','Remote access'],['Resume Match','Resume Match']];const label=(labels.find(item=>text.startsWith(item[0]))||[])[1]||'Scoring input';return label+': '+text;}
- $('search').oninput=()=>{clearTimeout(window.searchTimer);window.searchTimer=setTimeout(loadJobs,250)};$('sort').onchange=loadJobs;$('librarySearch').oninput=renderLibrary;$('libraryMode').onchange=renderLibrary;$('analyzeMatch').onclick=analyzeMatch;$('refreshEvidence').onclick=refreshEvidence;$('strict').onclick=()=>start('used');$('dream').onclick=()=>start('ai');$('unrestricted').onclick=()=>start('unrestricted');$('showScoreReasons').onclick=()=>{if(!selected)return;const reasons=selected.score_reasons||[];$('scoreReasons').classList.remove('hidden');$('scoreReasons').innerHTML='<strong>Why Radar gave this role '+esc(selected.score)+'/100</strong><p>Radar is deterministic job fit. Resume Match is a separate CV/evidence alignment score. 90+ is strong; the company-diversity adjustment only nudges weaker duplicates.</p><ul>'+reasons.map(reason=>'<li>'+esc(explainRadarReason(reason))+'</li>').join('')+'</ul>';};$('queueOpen').onclick=()=>showView('library');$('tailorTab').onclick=()=>showView('tailor');$('libraryTab').onclick=()=>showView('library');$('selectedLibrary').onclick=()=>showView('library');$('allSaved').onclick=()=>showView('library');$('backToTailor').onclick=()=>showView('tailor');$('workshopBack').onclick=()=>showView('library');$('workshopTailor').onclick=()=>showView('tailor');$('workshopAsk').onclick=()=>askWorkshop('');Promise.all([loadJobs(),loadLibrary(),loadUsage(),loadProtection(),loadEvidenceReview()]);
+ $('search').oninput=()=>{clearTimeout(window.searchTimer);window.searchTimer=setTimeout(loadJobs,250)};$('sort').onchange=loadJobs;$('librarySearch').oninput=renderLibrary;$('libraryMode').onchange=renderLibrary;$('analyzeMatch').onclick=analyzeMatch;$('refreshEvidence').onclick=refreshEvidence;$('strict').onclick=()=>start('used');$('dream').onclick=()=>start('ai');$('unrestricted').onclick=()=>start('unrestricted');$('showScoreReasons').onclick=()=>{if(!selected)return;const reasons=selected.score_reasons||[];$('scoreReasons').classList.remove('hidden');$('scoreReasons').innerHTML='<strong>Why Radar gave this role '+esc(selected.score)+'/100</strong><p>Radar is deterministic job fit. Resume Match is a separate CV/evidence alignment score. 90+ is strong; the company-diversity adjustment only nudges weaker duplicates.</p><ul>'+reasons.map(reason=>'<li>'+esc(explainRadarReason(reason))+'</li>').join('')+'</ul>';};$('queueOpen').onclick=()=>showView('library');$('tailorTab').onclick=()=>showView('tailor');$('libraryTab').onclick=()=>showView('library');$('selectedLibrary').onclick=()=>showView('library');$('allSaved').onclick=()=>showView('library');$('backToTailor').onclick=()=>showView('tailor');$('workshopBack').onclick=()=>showView('library');$('workshopTailor').onclick=()=>showView('tailor');$('workshopAsk').onclick=()=>askWorkshop('');Promise.all([loadJobs(),loadLibrary(),loadUsage(),loadProtection(),loadEvidenceReview()]).then(()=>{const runId=new URLSearchParams((location.hash||'').replace(/^#/,'')).get('run');if(runId)openWorkshop(runId);});
+const resumeStudioBridgeMode=new URLSearchParams(location.search).get('bridge')==='1';
+const resumeStudioBridgeOrigins=new Set(['https://job-radar-newgrad.vercel.app','https://job-radar-vmj-8946s-projects.vercel.app','https://victorjimenez3.github.io']);
+function bridgeReply(event,requestId,data,error=''){if(!event.source||!resumeStudioBridgeOrigins.has(event.origin))return;event.source.postMessage({type:'resume-studio:response',request_id:requestId,ok:!error,data,error},event.origin);}
+async function bridgeFetch(path,init={}){const response=await fetch(path,init);let data={};try{data=await response.json();}catch(_){data={};}if(!response.ok)throw new Error(data.error||`engine returned ${response.status}`);return data;}
+async function handleResumeStudioBridge(event){const message=event.data||{};if(!resumeStudioBridgeOrigins.has(event.origin)||message.type!=='resume-studio:request')return;const action=message.action,payload=message.payload||{};try{let data;if(action==='health')data=await bridgeFetch('/api/health');else if(action==='library')data=await bridgeFetch('/api/library?limit='+encodeURIComponent(payload.limit||100));else if(action==='match')data=await bridgeFetch('/api/match',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id})});else if(action==='queue')data=await bridgeFetch('/api/run',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,mode:payload.mode})});else if(action==='status')data=await bridgeFetch('/api/run?id='+encodeURIComponent(payload.id||''));else throw new Error('unsupported bridge request');bridgeReply(event,message.request_id,data);if(action==='queue'&&data.run_id)bridgePollRun(event,data.run_id);}catch(error){bridgeReply(event,message.request_id,{},error.message||String(error));}}
+async function bridgePollRun(event,runId){for(let i=0;i<1200;i+=1){await new Promise(resolve=>setTimeout(resolve,1500));try{const data=await bridgeFetch('/api/run?id='+encodeURIComponent(runId));if(event.source&&resumeStudioBridgeOrigins.has(event.origin))event.source.postMessage({type:'resume-studio:run',run_id:runId,data},event.origin);if(['complete','awaiting_review','failed'].includes(data.status))return;}catch(error){if(event.source)event.source.postMessage({type:'resume-studio:run',run_id:runId,data:{status:'failed',message:error.message}},event.origin);return;}}}
+window.addEventListener('message',handleResumeStudioBridge);
+if(resumeStudioBridgeMode){document.title='Resume Studio engine';document.body.innerHTML='<main style="max-width:420px;margin:0 auto;padding:28px;font:15px/1.45 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:#131A21;color:#D9E2E8;min-height:100vh"><h1 style="font-size:20px">Resume Studio engine</h1><p id="bridgeState">Connecting to the cloud workspace…</p><p style="color:#8FA1AE;font-size:13px">Keep this small private-engine window open while the cloud Resume Studio queues or reviews a draft. Your CV and generated files remain on this Mac.</p></main>';if(window.opener)window.opener.postMessage({type:'resume-studio:ready'},'*');}
 </script></main></body></html>"""
 
 
@@ -7350,6 +7358,39 @@ UI_HTML = UI_HTML.replace(
 
 class StudioHandler(BaseHTTPRequestHandler):
     manager: RunManager = RunManager()
+    # The cloud Job Radar page is only a control plane.  The engine remains
+    # bound to loopback, and browser requests are accepted from the two
+    # production doors plus Victor's Pages mirror.  This prevents an
+    # unrelated page from reading private run artifacts through the browser.
+    DEFAULT_BRIDGE_ORIGINS = {
+        "https://job-radar-newgrad.vercel.app",
+        "https://job-radar-vmj-8946s-projects.vercel.app",
+        "https://victorjimenez3.github.io",
+        "http://localhost:4317",
+        "http://127.0.0.1:4317",
+    }
+
+    @classmethod
+    def bridge_origins(cls) -> set:
+        configured = {
+            item.strip().rstrip("/")
+            for item in os.environ.get("RESUME_STUDIO_ALLOWED_ORIGINS", "").split(",")
+            if item.strip()
+        }
+        return configured or cls.DEFAULT_BRIDGE_ORIGINS
+
+    def end_headers(self) -> None:
+        origin = (self.headers.get("Origin") or "").rstrip("/")
+        if origin in self.bridge_origins():
+            self.send_header("Access-Control-Allow-Origin", origin)
+            self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+            self.send_header("Access-Control-Allow-Headers", "Content-Type")
+            self.send_header("Vary", "Origin")
+        super().end_headers()
+
+    def do_OPTIONS(self) -> None:
+        self.send_response(HTTPStatus.NO_CONTENT)
+        self.end_headers()
 
     def log_message(self, format: str, *args) -> None:  # keep terminal output useful
         print("resume-studio:", format % args)
@@ -7390,7 +7431,7 @@ class StudioHandler(BaseHTTPRequestHandler):
             return self.send_json({
                 "ok": True,
                 "providers": {k: bool(v) for k, v in provider_commands().items()},
-                "cv_root": str(cv_root(repo_root())),
+                "cv_present": cv_root(repo_root()).is_dir(),
                 "evidence_graph": {"version": graph.get("version"), "nodes": len(graph.get("nodes", [])), "hash": graph.get("hash")},
             })
         if parsed.path == "/api/jobs":

@@ -209,6 +209,20 @@ def test_platform_role_field_buttons_cycle_to_red_exclusion_without_disappearing
     assert "f.excludedRoles.includes(roleFamily(j))" in html
 
 
+def test_platform_resume_studio_is_one_cloud_workspace_with_private_engine_fallback():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    studio = (ROOT / "scripts" / "resume_studio.py").read_text()
+    assert '"Resume Studio"' in html
+    assert "RESUME_STUDIO_LOCAL_ORIGIN" in html
+    assert "openResumeStudio" in html
+    assert "queueResumeMode" in html
+    assert "private engine offline" in html
+    assert "tailor here" in html
+    assert "DEFAULT_BRIDGE_ORIGINS" in studio
+    assert "Access-Control-Allow-Origin" in studio
+    assert "cv_present" in studio
+
+
 def test_platform_boots_progressively_and_keeps_owner_diagnostics_in_app():
     html = (ROOT / "webapp" / "index.html").read_text()
     assert 'id="bootNotice"' in html

@@ -319,6 +319,14 @@ results when switching roles, and exposes company-identifiable PDF names for
 new runs. The editable workshop and revision history are now the next layer on
 top of that durable bank.
 
+Cloud Resume Studio control plane — ✅ SHIPPED 2026-08-14 (DECISION #123).
+The production owner view is now the single Resume Studio UI: Jobs rows and
+role drawers open directly into it, with posting selection, private-engine
+health, full-match handoff, four tailoring modes, queued-run status, and bank
+links in one workspace. The Mac engine remains the private fail-safe for CV
+evidence, provider calls, rendering, and workshop artifacts; when it is
+offline, the cloud UI stays useful but never enables a pretend draft.
+
 ## Pipeline intelligence
 - **Resume UAT and outcome learning** — future idea: if enough applications,
   interviews, and eventual outcomes accumulate, compare resume variants and

@@ -1258,6 +1258,20 @@ notes are overlaid by stable line ID, so a renderer-index correction migrates
 older private state without discarding edits or misplacing education and skills
 rows. Workshop revisions remain additive and never overwrite the original run
 or either human-authored reference PDF.
+
+## 123. Resume Studio uses one cloud control plane with a private local engine (2026-08-14)
+
+The production owner view now hosts the Resume Studio workflow in the main Job
+Radar UI. Jobs rows and role drawers open directly into the same workspace,
+which owns posting selection, match display, mode queueing, run status, and
+resume-bank links. The mature local engine remains the safe execution boundary
+for the ignored CV corpus, first-party provider sessions, LaTeX rendering,
+workshop edits, and generated artifacts. A loopback bridge is allowed only
+from the production Vercel doors and Pages mirror; the health response exposes
+only capability metadata, not the local CV path. If the Mac is offline, the
+cloud UI keeps deterministic/title-level matching and apply links available but
+does not enable a fake generation path. This gives one user-facing system with
+an explicit cloud control layer and a private, auditable execution fail-safe.
 ## 83. Official DOL sponsorship history is contextual, not a job promise (2026-08-07)
 
 The radar now refreshes the latest quarterly U.S. Department of Labor OFLC LCA

@@ -35,6 +35,21 @@ Before changing the radar, read these in order:
   its reason documented in the commit/message. Crawls generate them.
 
 ## Current operational facts (verified 2026-08-08)
+## Current operational facts (verified 2026-08-14)
+
+### Latest change (verified 2026-08-14)
+
+- **Unified cloud Resume Studio:** the owner-only production platform now has
+  one Resume Studio workspace instead of a separate cloud title-preview page
+  plus a local launcher. Jobs rows, role drawers, and the Resume Studio tab
+  select the same posting; the workspace shows private-engine health, source
+  match, Used bullets / AI tailor / Take-the-wheel / Unchained generation
+  queues, run status, and bank links. It calls the loopback Mac engine through
+  a narrow production-origin CORS bridge. When the Mac is unavailable, cloud
+  ranking, posting links, and apply flow remain usable while draft controls
+  stay disabled. The CV corpus, provider sessions, PDFs, reports, and
+  workshop revisions remain local-only under `CV/.resume_studio/`; no private
+  artifact is committed or exposed by the bridge health response.
 
 ### Latest change (verified 2026-08-08)
 

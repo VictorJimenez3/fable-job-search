@@ -167,6 +167,14 @@ bash scripts/resume-studio-service/install.sh
 ```
 
 Then open `http://127.0.0.1:4317/`. Search for a radar role and choose either:
+You can also stay in the production platform: sign in as `VictorJimenez3`,
+open **Resume Studio**, or press **tailor** beside any Jobs posting. That is
+the canonical cloud control plane for the same private engine. It shows the
+posting, connection state, match, queue, run status, and resume bank in the
+main platform UI. If the Mac service is asleep, the cloud page remains a safe
+read-only posting/apply surface and keeps generation disabled until the engine
+is reachable again.
+
 - **Unchained generation** — performs a requirement-by-requirement evidence
   audit before drafting, searches the authorized Markdown graph, and may create
   new grounded bullets or Skills lines to close supported gaps. Unsupported
