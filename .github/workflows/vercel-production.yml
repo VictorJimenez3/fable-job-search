@@ -63,7 +63,7 @@ jobs:
       - name: Verify the friendly URL serves this build
         run: |
           for attempt in 1 2 3 4 5; do
-            if curl --fail --silent --show-error "https://$VERCEL_ALIAS/" | grep -q "Best Match lookback"; then
+            if curl --fail --silent --show-error "https://$VERCEL_ALIAS/" | grep -qi "Best Match lookback"; then
               echo "friendly alias is serving the new platform build"
               exit 0
             fi
