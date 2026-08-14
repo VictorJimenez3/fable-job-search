@@ -2863,41 +2863,6 @@ function rTesting() {
   $("#main").innerHTML = `<section class="testing-hero">
     <span class="chip good">owner only · @${esc(S.auth.login)}</span>
     <h2>Resume Studio</h2>
-    <p class="sub">Find → save → tailor → apply. Choose any production role here and it opens directly in the private local Studio; CV sources and generated PDFs stay on this Mac and are never copied into this public repository.</p>
-    <div class="bar"><button class="act primary" onclick="window.open(RESUME_STUDIO_ORIGIN,'_blank','noopener')">open local Resume Studio ↗</button></div>
-  </section>
-  <div class="testing-grid"><section>
-    <div class="filters"><div class="bar">
-      <input id="testingQ" type="search" placeholder="search company or role…" value="${esc(S.testing.q)}">
-      <select id="testingSort" aria-label="Testing sort">
-        <option value="resume" ${S.testing.sort==='resume'?'selected':''}>best Resume Match</option>
-        <option value="new" ${S.testing.sort==='new'?'selected':''}>newest</option>
-        <option value="radar" ${S.testing.sort==='radar'?'selected':''}>best Radar score</option></select>
-      <button class="act primary" onclick="S.testing.q=$('#testingQ').value;S.testing.sort=$('#testingSort').value;rTesting()">rank</button>
-    </div><p class="sub">${rows.length} open technical roles · This title preview helps rank choices. Tailor sends the selected role and any saved job description to the Mac, where the full private evidence graph produces the real match and draft.</p></div>
-    <div class="lane">${rows.slice(0,S.testing.shown).map(testingRoleHTML).join('')||'<p class="sub">No matching roles.</p>'}
-      ${rows.length>S.testing.shown?`<button class="act" onclick="S.testing.shown+=40;rTesting()">show 40 more</button>`:''}</div>
-  </section><aside class="testing-stack">
-    <div class="lane"><h3>What is live</h3><div class="kv">
-      <span class="k">Resume Match</span><span>best-fit, newest, and Radar ranking</span>
-      <span class="k">evidence graph</span><span>private source IDs + authority hierarchy</span>
-      <span class="k">tailoring modes</span><span>Use my source, AI enhanced, and Take the wheel</span>
-      <span class="k">layout</span><span>immutable VictorJimenezResume base, 0% shrinking, measured 2D packing</span>
-      <span class="k">review</span><span>separate factual, target-fit, evidence, privacy, and layout gates</span>
-    </div></div>
-    <div class="lane"><h3>Scoring calibration v9</h3>
-      <p><b>${calibrated.length.toLocaleString()}</b> jobs currently carry the new raw-utility and calibrated-score ledger in production state.</p>
-      <p class="sub">Explicit new-grad evidence is strongest; plausible no-floor roles receive a smaller lift. Dimensions can compensate, eligibility remains a hard gate, and only weaker roles from a crowded company receive the transparent -1/-2 diversity nudge.</p></div>
-    <div class="lane"><h3>Non-negotiable QA</h3><div class="gate-row">
-      <span class="chip good">company first</span><span class="chip good">one page</span>
-      <span class="chip good">0% format growth</span><span class="chip good">+1 bullet capacity reported</span>
-      <span class="chip good">12pt right-edge safety</span><span class="chip good">claims cited</span>
-      </div><p class="sub">A draft is never marked ready unless the PDF compiles and every independent gate passes. The reviewer cannot alter its weights or lower the bar.</p></div>
-    <div class="note"><b>Why PDFs are not here:</b> CV/ is personal and gitignored by contract. Production shows the control plane and ranking; actual resume documents remain private on the Mac.</div>
-  </aside></div>`;
-  $("#main").innerHTML = `<section class="testing-hero">
-    <span class="chip good">owner only · @${esc(S.auth.login)}</span>
-    <h2>Resume Studio</h2>
     <p class="sub">Choose a production posting, tailor it here, and keep the private evidence graph and generated artifacts behind the owner boundary. This is the same Studio workflow without a second cloud UI.</p>
     <div id="studioEngineNotice" class="studio-note">Checking the private engine…</div>
   </section>
