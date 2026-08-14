@@ -2867,6 +2867,19 @@
   "status": "active",
   "token": "apptronik"
  },
+ "greenhouse:arevonenergyimpltest": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1786747131,
+  "last_ok": 1786747131,
+  "name": "Arevon",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "arevonenergyimpltest"
+ },
  "greenhouse:argmax": {
   "ats": "greenhouse",
   "extra": {},
@@ -6385,6 +6398,20 @@
   "status": "invalid",
   "token": "careers-appliedsystems"
  },
+ "icims:careers-berrydunn": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1786747131,
+  "invalidated_at": 1786747133,
+  "last_ok": 0,
+  "name": "BerryDunn",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "careers-berrydunn"
+ },
  "icims:careers-beyondsoft": {
   "ats": "icims",
   "extra": {},
@@ -9247,6 +9274,22 @@
   "status": "active",
   "token": "fa-etbx-saasfaprod1"
  },
+ "oracle_orc:fa-etum-saasfaprod1:CX_1": {
+  "ats": "oracle_orc",
+  "extra": {
+   "host": "fa-etum-saasfaprod1.fa.ocs.oraclecloud.com",
+   "site": "CX_1"
+  },
+  "failures": 0,
+  "first_seen": 1786747131,
+  "last_ok": 1786747133,
+  "name": "GuideWell Mutual",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "fa-etum-saasfaprod1"
+ },
  "oracle_orc:fa-etvl-saasfaprod1:CX_1": {
   "ats": "oracle_orc",
   "extra": {
@@ -10633,7 +10676,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1786744701,
+  "last_ok": 1786747148,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -11027,7 +11070,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1786744704,
+  "last_ok": 1786747151,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12414,6 +12457,22 @@
   "status": "active",
   "token": "cccis"
  },
+ "workday:cenovus:careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "careers"
+  },
+  "failures": 0,
+  "first_seen": 1786747131,
+  "last_ok": 1786747132,
+  "name": "Cenovus Energy",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "cenovus"
+ },
  "workday:centerstone:centerstonecareers": {
   "ats": "workday",
   "extra": {
@@ -13238,7 +13297,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1786744699,
+  "last_ok": 1786747145,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13347,7 +13406,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1786744692,
+  "last_ok": 1786747140,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13986,7 +14045,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1786744698,
+  "last_ok": 1786747145,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -15560,7 +15619,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1786744693,
+  "last_ok": 1786747140,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -17386,7 +17445,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1786744697,
+  "last_ok": 1786747144,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
