@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-14 23:35 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **108 shown / 11205 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-08-14 23:59 UTC** · companies polled directly: **7** (ChemE registry 9) · jobs tracked: **108 shown / 11205 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -27,9 +27,9 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 77 ⭐ | 4d | Micron Technology | [DRAM IP Circuits Design Engineer Intern - IP Development](https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---Main-Site/Intern---DRAM-IP-Circuits-Design-Engineer_JR108471) | Boise, ID | semiconductors | simplify |
 | 77 ⭐ | 4d | Micron Technology | [DRAM Design Engineer Intern](https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---Main-Site/Intern---DRAM-Design-Engineer_JR108468) | Boise, ID | semiconductors | simplify |
 | 76 ⭐ | 14h | ByteDance | [Self-Built Engineer Intern - CDN Platform](https://jobs.bytedance.com/en/position/7673608499872827701/detail) | Seattle, WA | other | simplify |
-| 76 ⭐ | 17h | MPR Associates | [Engineer Co-op - Multiple Teams](https://careers-mpr.icims.com/jobs/1524/job?mobile=true&needsRedirect=false) | Salt Lake City, UT | other | simplify |
-| 76 ⭐ | 17h | Pacific Northwest National Laboratory | [Undergraduate Technical Intern - Nuclear Facility](https://careers.pnnl.gov/jobs/12027?icims=1) | Richland, WA | other | simplify |
-| 76 ⭐ | 19h | True Anomaly | [GSE Engineering Intern](https://job-boards.greenhouse.io/trueanomalyinc/jobs/5210059007) | Long Beach, CA | other | simplify |
+| 76 ⭐ | 18h | MPR Associates | [Engineer Co-op - Multiple Teams](https://careers-mpr.icims.com/jobs/1524/job?mobile=true&needsRedirect=false) | Salt Lake City, UT | other | simplify |
+| 76 ⭐ | 18h | Pacific Northwest National Laboratory | [Undergraduate Technical Intern - Nuclear Facility](https://careers.pnnl.gov/jobs/12027?icims=1) | Richland, WA | other | simplify |
+| 76 ⭐ | 20h | True Anomaly | [GSE Engineering Intern](https://job-boards.greenhouse.io/trueanomalyinc/jobs/5210059007) | Long Beach, CA | other | simplify |
 | 76 ⭐ | 23h | Schweitzer Engineering Laboratories | [Test Engineer Intern](https://selinc.wd1.myworkdayjobs.com/SEL/job/Washington---Pullman/Engineering-Intern_2026-22411) | Pullman, WA | other | simplify |
 | 76 ⭐ | 23h | RTX | [Electrical Computer-Aided Design Engineer Intern](https://globalhr.wd5.myworkdayjobs.com/fr-CA/Private_Posting_No_TMP/job/US-AZ-TUCSON-M02--1151-E-Hermans-Rd--BLDG-M02/EAP-Engineering-ECAD-Intern--Summer-2027-_01866716-1) | Tucson, AZ | other | simplify |
 | 76 ⭐ | 23h | RTX | [Radar Digital Products Engineering Intern](https://globalhr.wd5.myworkdayjobs.com/fr-CA/Private_Posting_No_TMP/job/US-MA-TEWKSBURY-TB1--50-Apple-Hill-Dr--ASSABET-BLDG/Radar-Digital-Products-Engineering-Intern--Summer-2027-_01866243) | Tewksbury, MA | other | simplify |
