@@ -1,10 +1,78 @@
 {
  "globalfoundries": {
   "aliases": [],
+  "attempts": 1,
+  "business_model": {
+   "confidence": "high",
+   "source_ids": [
+    "fc119b2bac"
+   ],
+   "value": "Semiconductor manufacturing with global operations across the U.S., Europe, and Asia."
+  },
+  "customers": {
+   "confidence": "high",
+   "source_ids": [
+    "6b6d0d9c84",
+    "60c4564b9a",
+    "fc119b2bac"
+   ],
+   "value": "Customers around the world."
+  },
+  "error": "",
   "evidence_sha": "290c97a72db69b4e",
+  "generated_at": 1786780941,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b6d0d9c84",
+    "60c4564b9a",
+    "fc119b2bac"
+   ],
+   "value": "Ask for details on day-to-day mentorship accessibility, specific safety protocols and culture, exposure to labs and scale-up processes, work-life balance expectations, and clarify work authorization and relocation policies."
+  },
+  "last_attempt_at": 1786780941,
   "last_evidence_at": 1786763036,
+  "locations": {
+   "confidence": "high",
+   "source_ids": [
+    "6b6d0d9c84",
+    "60c4564b9a",
+    "fc119b2bac"
+   ],
+   "value": "U.S. manufacturing operations in Malta, New York (Fab 8) and Essex Junction, Vermont; global operations across Europe and Asia."
+  },
+  "mission": {
+   "confidence": "high",
+   "source_ids": [
+    "6b6d0d9c84",
+    "60c4564b9a",
+    "fc119b2bac"
+   ],
+   "value": "Enabling AI at scale from the cloud to the physical world."
+  },
   "name": "GlobalFoundries",
+  "products": {
+   "confidence": "high",
+   "source_ids": [
+    "6b6d0d9c84",
+    "60c4564b9a",
+    "fc119b2bac"
+   ],
+   "value": "Essential semiconductors."
+  },
+  "prompt_v": 1,
+  "refresh_after": 1791964941,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "f89010d3326156df",
@@ -37,11 +105,43 @@
     "url": "https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/Advanced-Manufacturing-Process-Engineering-Intern--Summer-2027-_JR-2604659"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "6b6d0d9c84",
+    "60c4564b9a",
+    "fc119b2bac"
+   ],
+   "value": "GlobalFoundries (GF) is a leading manufacturer of essential semiconductors that enable AI at scale, serving as a trusted technology partner globally."
+  },
+  "synthesized_evidence_sha": "290c97a72db69b4e",
+  "technical_work": {
+   "confidence": "high",
+   "source_ids": [
+    "6b6d0d9c84",
+    "fc119b2bac"
+   ],
+   "value": "Interns design, execute, and analyze experiments to screen and optimize manufacturing processes to meet technology (performance, yield, reliability) and manufacturing (process stability, cost of ownership) targets in state-of-the-art 300mm factories."
+  },
+  "why_it_matters": {
+   "confidence": "medium",
+   "source_ids": [
+    "6b6d0d9c84",
+    "60c4564b9a",
+    "fc119b2bac"
+   ],
+   "value": "Aligns with the candidate's priorities by offering hands-on experiments in real manufacturing processes, scale-up, and yield optimization within a state-of-the-art 300mm plant. The presence of a dedicated Environmental Health & Safety internship indicates a strong safety culture, while the goal of attracting highly qualified people suggests a commitment to intern development and mentorship."
+  }
  },
  "micron": {
   "aliases": [],
-  "attempts": 7,
+  "attempts": 8,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -69,7 +169,7 @@
    ],
    "value": "Candidate should inquire about specific day-to-day responsibilities on the dedicated technical project, the structure of mentorship under experienced engineers, safety protocols in the lab/plant, and clear expectations regarding work authorization and relocation."
   },
-  "last_attempt_at": 1786697390,
+  "last_attempt_at": 1786780941,
   "last_evidence_at": 1786648734,
   "locations": {
    "confidence": "high",
@@ -273,10 +373,10 @@
  },
  "montenson": {
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "eec9374a99d29355",
-  "last_attempt_at": 1786697390,
+  "last_attempt_at": 1786780941,
   "last_evidence_at": 1786392206,
   "name": "Montenson",
   "schema_v": 1,
