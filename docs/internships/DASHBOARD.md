@@ -1,6 +1,6 @@
 # 🎯 Job Radar — internship dashboard
 
-_Last run: **2026-08-15 14:45 UTC** · companies polled directly: **718** (registry 820) · jobs tracked: **12277** · new this run: **2** · alerts this run: **1**_
+_Last run: **2026-08-15 14:56 UTC** · companies polled directly: **718** (registry 820) · jobs tracked: **12277** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -30,7 +30,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 82 ⭐ | 1d | TikTok | [Mobile Software Engineer Intern - Global E-Commerce - 2027 Summer](https://lifeattiktok.com/search/7673663349758675205) | San Jose, CA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 82 ⭐ | 2d | OpenAI | [Machine Learning Data Scientist, Forecasting](https://jobs.ashbyhq.com/openai/0b57e309-426d-4f5c-a28c-6dd941b84703) | San Francisco | ai_lab | — | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/openai/0b57e309-426d-4f5c-a28c-6dd941b84703) |
 | 81 ⭐ | 3d | SpaceX | [Software Engineer (Starlink/Akoustis)](https://boards.greenhouse.io/spacex/jobs/8696779002?gh_jid=8696779002) | Canandaigua, NY  | big_tech | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
-| 80 ⭐ | 7d | Snowflake | [Data Engineering Solutions Specialist ](https://jobs.ashbyhq.com/snowflake/ecd08904-f188-4336-bf8c-f75f97df1a02) | US, Remote | big_tech | — | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/snowflake/ecd08904-f188-4336-bf8c-f75f97df1a02) |
+| 80 ⭐ | 8d | Snowflake | [Data Engineering Solutions Specialist ](https://jobs.ashbyhq.com/snowflake/ecd08904-f188-4336-bf8c-f75f97df1a02) | US, Remote | big_tech | — | [Direct company / ATS monitoring](https://jobs.ashbyhq.com/snowflake/ecd08904-f188-4336-bf8c-f75f97df1a02) |
 | 80 ⭐ | 8d | TikTok | [Frontend Engineer Intern - Ads Interface - 2027 Summer](https://lifeattiktok.com/search/7671211313289398581) | San Jose, CA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 80 ⭐ | 8d | TikTok | [Fullstack Software Engineer Intern - Global E-Commerce - 2027 Summer](https://lifeattiktok.com/search/7670700387322300677) | Seattle, WA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 80 ⭐ | 8d | TikTok | [Fullstack Software Engineer Intern - Global E-Commerce - 2027 Summer](https://lifeattiktok.com/search/7670738362521520437) | San Jose, CA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
