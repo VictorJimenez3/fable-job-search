@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-08-15 20:28 UTC** · companies polled directly: **1779** (registry 2007) · jobs tracked: **39878** · new this run: **61** · alerts this run: **17**_
+_Last run: **2026-08-15 20:48 UTC** · companies polled directly: **1779** (registry 2007) · jobs tracked: **39878** · new this run: **61** · alerts this run: **17**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -155,6 +155,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 80 ⭐ | 27d | UST HealthProof | [Business Systems & Data Analytics Associate](https://jobright.ai/jobs/info/6a5d1e1b856af468ab010424?utm_campaign=Data%20Analysis&utm_source=1103) | San Jose, CA, United States | healthtech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 80 ⭐ | 29d | Mayo Clinic | [IT Assoc Cloud Engineer - IS-Mod - Cloud CMDB Steward](https://jobright.ai/jobs/info/6a5a2d3063a8f619507c5889?utm_campaign=Software%20Engineering&utm_source=1103) | Rochester, MN, United States | healthtech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 80 ⭐ | 29d | Chamber Cardio | [Data Analyst](https://jobs.ashbyhq.com/chambercardio/eb5a8d6e-def9-4ea6-a76f-b64995ad5711/application?embed=true) | Remote in USA | healthtech | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 79 ⭐ | 19h | Applied Intuition | [Research Engineer New Grad](https://jobs.ashbyhq.com/applied/45fc41cd-8280-4010-ba1f-def6114b3e39/application?embed=true) | Sunnyvale, CA | other | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 79 ⭐ | 20h | Applied Intuition | [Research Engineer New Grad](https://jobs.ashbyhq.com/applied/45fc41cd-8280-4010-ba1f-def6114b3e39/application?embed=true) | Sunnyvale, CA | other | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
