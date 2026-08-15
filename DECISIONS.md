@@ -1829,3 +1829,25 @@ until the next standard bullet overflows or no unused verified candidate can
 earn the space. Rejected trials and accepted additions remain in the private
 run audit, while core chronological experience and the immutable template are
 unchanged.
+
+## 124. Resume Studio uses the Job Radar shell with a private cloud artifact bank (2026-08-15)
+
+The cloud Resume Studio is part of the main Job Radar page rather than a
+separate visual product. Its controls intentionally match the local Studio's
+four mode contract: Used bullets, AI tailor, Take-the-wheel (moderate), and
+Unchained generation. Jobs rows, role drawers, and direct Studio navigation
+therefore lead to one workflow and one set of labels; localhost uses the same
+UI contract against direct loopback APIs, while production uses the
+allowlisted bridge for the private engine.
+
+The source CV, evidence graph, provider sessions, prompts, and generation
+execution remain local-only. Victor may explicitly sync the complete local
+Resume Bank—including legacy, failed, interrupted, and in-progress entries—
+to an app-created `Job Radar Resume Bank` folder in his Google Drive. The
+owner-authenticated cloud API stores an index and private copies of generated
+PDFs, previews, reports, and posting snapshots, then serves them through a
+no-store session proxy. This gives the cloud UI an offline Mac read path
+without making source evidence or generated artifacts public. New matching,
+generation, and Workshop edits still require the local engine. Existing
+production behavior is recoverable through the `resume-studio-pre-bank-redesign-2026-08-15`
+rollback tag.

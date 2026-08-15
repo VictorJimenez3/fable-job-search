@@ -7513,6 +7513,11 @@ UI_HTML = UI_HTML.replace(
     "unrestricted:'Take-the-wheel'",
     "unrestricted:'Take-the-wheel (moderate)',generation:'Unchained generation'",
 )
+# Keep the local controls named exactly like the cloud workspace. The
+# underlying mode ids remain unchanged so existing runs and API clients keep
+# working.
+UI_HTML = UI_HTML.replace("Unrestricted AI tailor", "Take-the-wheel (moderate)")
+UI_HTML = UI_HTML.replace("Queue unrestricted tailor", "Queue Take-the-wheel")
 UI_HTML = UI_HTML.replace(
     '<div class="action-grid"><div class="action-card featured"><h3>1. Take-the-wheel</h3>',
     '<div class="action-grid"><div class="action-card featured"><h3>1. Unchained generation</h3><p>Maps every posting requirement to the full evidence graph, then generates new source-grounded bullets or Skills lines to close truthful gaps.</p><p class="micro">Human-style gap filling · unsupported claims stay visible</p><button id="generation">Create unchained draft</button></div><div class="action-card"><h3>2. Take-the-wheel (moderate)</h3>',

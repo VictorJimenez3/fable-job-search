@@ -429,10 +429,13 @@ posting selection, private-engine connection, queue, run status, and resume
 bank together. It calls the Mac engine over a loopback-only bridge when the
 Mac is awake, and falls back to Radar/title matching plus posting and apply
 links when it is not. The bridge accepts browser requests only from the two
-production Vercel doors and the Pages mirror. CV evidence, provider sessions,
-generated PDFs, and workshop revisions remain under the ignored local
-`CV/.resume_studio/` boundary; the cloud UI never pretends an offline run is
-complete.
+production Vercel doors and the Pages mirror. The source CV, evidence graph,
+provider sessions, and generation/workshop execution remain under the ignored
+local `CV/.resume_studio/` boundary. When Victor chooses **sync local bank**,
+the owner-only cloud API copies bank metadata plus generated PDFs, previews,
+reports, and posting snapshots into an app-created private Google Drive folder;
+the cloud UI never publishes a public artifact URL or pretends an offline run
+is complete.
 
 The canonical `CV/immutable/VictorJimenezResume.tex`,
 `CV/immutable/VictorJimenezResume.pdf`, and the historical
@@ -508,9 +511,11 @@ permanently excluded from every generated or workshop-edited resume, while
 the local source files remain untouched. Open a saved posting snapshot from
 its card when the source text was captured. Failed and in-progress runs remain
 listed so an interrupted attempt is inspectable rather than silently
-disappearing.
+disappearing. The cloud bank shows the same cards after an owner sync, with
+private PDF/preview/report links that continue to work while the Mac is asleep;
+connect Google in Accounts if the existing owner grant is not available.
 
-The three tailoring buttons queue independent runs, so switching postings or
+The four tailoring buttons queue independent runs, so switching postings or
 starting another mode does not replace the current draft. The header shows
 observed Codex tokens/calls for the current UTC week and the bank shows queued,
 running, interrupted, and completed runs. Codex Plus's weekly allowance is not

@@ -152,7 +152,9 @@ as `@VictorJimenez3`, choose a role, then use **Tailor**, the drawer's
 **Resume** tab, or the owner-only **Resume Studio** tab. The cloud workspace
 keeps the posting, match, queue, run status, and resume bank together. It opens
 a small loopback bridge to the Mac engine only when private matching or
-generation is requested; CV evidence and generated artifacts remain local.
+generation is requested. The source CV/evidence graph and provider execution
+remain local, while the owner can sync generated bank artifacts into a private
+Google Drive folder for cloud viewing.
 
 From the repository on the Mac, start:
 
@@ -172,7 +174,9 @@ the canonical cloud control plane for the same private engine. It shows the
 posting, connection state, match, queue, run status, and resume bank in the
 main platform UI. If the Mac service is asleep, the cloud page remains a safe
 read-only posting/apply surface and keeps generation disabled until the engine
-is reachable again.
+is reachable again. **Resume bank** still shows artifacts already synced to
+the private cloud; use **sync local bank** while the Mac is awake to copy all
+current and legacy entries, including failed or interrupted runs.
 
 - **Unchained generation** — performs a requirement-by-requirement evidence
   audit before drafting, searches the authorized Markdown graph, and may create
@@ -199,13 +203,15 @@ model pin; Claude independently critiques when its first-party subscription CLI
 is installed. There is no local-model or API fallback. The report includes separate gates,
 target-specific omissions, and observed provider usage; it has no composite
 craft score. A run stays `awaiting_review` until Victor approves a ready draft.
-Drafts, prompts, source context, PDFs, and review reports live only under
-`CV/.resume_studio/`. Review the generated PDF and report before using any
-application material. The system preserves the master CV as the evidence bank
-and never auto-submits a resume. Use **Resume bank** in the header to revisit
-any saved run or legacy experiment; selecting another posting does not remove
-the previous result. Select **View audit** on a saved run to rehydrate the
-same visual audit used for new runs. New PDFs use a company-identifiable name such as
+Drafts, prompts, source context, and provider sessions live only under
+`CV/.resume_studio/`. An explicit owner sync copies generated PDFs, previews,
+reports, and posting snapshots to the private cloud bank; it does not upload
+the source CV or evidence graph. Review the generated PDF and report before
+using any application material. The system preserves the master CV as the
+evidence bank and never auto-submits a resume. Use **Resume bank** in the
+header to revisit any saved run or legacy experiment; selecting another
+posting does not remove the previous result. Select **View audit** on a saved
+run to rehydrate the same visual audit used for new runs. New PDFs use a company-identifiable name such as
 `mayo_clinic_resume_ai.pdf`, and the preview response preserves that name when
 the file is opened or downloaded. Project headings use `|` separators. TICC is
 never emitted by generation or workshop editing, even when it appears in a
