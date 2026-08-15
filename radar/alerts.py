@@ -53,9 +53,18 @@ def format_line(j: dict, culture_map: dict | None = None) -> str:
     from .company_info import snapshot
     snapshot_text = snapshot(j["company"], j.get("sector") or "", culture_map)
     snapshot_text = f" · _{snapshot_text}_" if snapshot_text else ""
-    from .provenance import info as source_info
-    source_label, source_url = source_info(j.get("source", ""), j.get("source_url") or j.get("url", ""))
-    found = f" · found via [{source_label}]({source_url})" if source_url else f" · found via {source_label}"
+    from .provenance import alternate_link_label, source_links
+    provenance = source_links(j)
+    if provenance:
+        source_label, source_url = provenance[0]
+        found = f" · found via [{source_label}]({source_url})"
+        for label, url in provenance[1:3]:
+            found += f" · also via [{label}]({url})"
+    else:
+        found = ""
+    for url in (j.get("alternate_urls") or [])[:2]:
+        if url:
+            found += f" · [{alternate_link_label(url)}]({url})"
     ptags = summary_tags(j.get("posting"))
     ptags = f" · {ptags}" if ptags else ""
     cohort = ""

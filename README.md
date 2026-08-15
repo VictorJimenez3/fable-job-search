@@ -200,19 +200,33 @@ and its ranking remain the priority whenever compute is constrained.
    the repository owner's Notion pipeline.
    (`stage_saved` in profile.yaml, default "Not started") and improves future
    ranking.
-2. **When you apply, the inbox becomes the source of truth.** The email-based
-   watcher is currently parked as a future multi-user capability. When that
-   capability is enabled, it reads application-lifecycle emails
-   and drives the tracker **Stage** for you, end to end — no manual updates:
+   The crawler and tracker also use the canonical posting URL as a duplicate
+   boundary, so aggregator/ATS variants become one role instead of multiple
+   apply targets. Existing duplicates are merged on the next crawl; owner
+   notes and tracker history are migrated, and duplicate Notion pages are
+   soft-archived rather than deleted.
+   Jobright-style aggregator pages are handled conservatively: each crawl
+   follows a bounded number of new/high-value aggregator links, promotes an
+   explicit employer/ATS application URL when one is verifiable, and keeps the
+   aggregator URL as a labeled fallback when it is not. Exact employer/title
+   matches with one compatible direct ATS row are merged; ambiguous same-title
+   roles remain separate so coverage is not lost. Alerts and the generated
+   dashboard list the discovery source(s) and fallback links.
+2. **When you apply, the inbox becomes the source of truth.** When the optional
+   email secrets are configured, the watcher reads application-lifecycle
+   emails every 30 minutes and drives the tracker **Stage** for you:
    - "Thank you for applying…" → promotes the tracked entry to **Applied**
    - online-assessment / coding-challenge invite → **OA**
    - interview / "schedule a call" / "next steps" → **Interview**
-   - "unfortunately… other candidates" → **Rejected** (+ Response date)
-   - applied with no reply for `autoclose_days` (default 45) → **CLOSED**
+   - rejection / "another direction" / "not selected" → **Rejected** (+ Response date)
+   - applied with no reply for autoclose_days (default 45) → **CLOSED**
 
-   It only ever moves a job *forward*, so a stray late email can't undo a
-   later stage. You can still change anything in Notion/Sheets by hand; the
-   twice-daily readback now brings those stage edits into the radar.
+   It searches the last 21 days, matches employer plus role title, and only
+   advances a stage. A late email cannot undo a later stage; ambiguous matches
+   are recorded in the email review queue instead of silently changing the
+   wrong application. A separate tracker-sync runs every 15 minutes, so
+   Notion/Sheets stage edits and local changes converge without waiting for an
+   issue event. The twice-daily checkbox sweep remains as a second safety net.
 
    Internship notification batches are disabled unless the owner explicitly
    enables **internship batches** in Settings. New-grad batches have their own
@@ -364,27 +378,33 @@ works with zero setup.
 
 Verify anytime without creating test data: *Actions → notion-verify → Run workflow*.
 
-**Future multi-user email-based applied-detection (separate from OAuth login)**
+**Optional email lifecycle automation (separate from OAuth login)**
 
-This path remains parked because OAuth login and private per-account tracking do
-not require inbox access. Victor's current owner workflow does not need
-`EMAIL_ADDRESS` or `EMAIL_APP_PASSWORD`.
+This is an owner-only GitHub Actions connector. To enable automatic Applied,
+OA, Interview, Rejected, and CLOSED updates, add repository secrets
+`EMAIL_ADDRESS` and `EMAIL_APP_PASSWORD`. The password must be an IMAP/App
+Password, never the normal account password.
 
-The ChemE candidate uses NJIT Google Workspace/Gmail, so this uses IMAP with an App Password
+For an NJIT Google Workspace/Gmail inbox, use IMAP with an App Password
 (Google's supported way to let a non-browser client log in — this is not
-your NJIT password and can be revoked anytime independent of it):
-1. On the `ak2943@njit.edu` Google account, enable **2-Step Verification** at
+the normal account password and can be revoked independently):
+1. On the Google account that owns the inbox, enable **2-Step Verification** at
    [myaccount.google.com/security](https://myaccount.google.com/security) if not already on
    (required before Google will issue app passwords).
 2. Generate one at [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)
    — name it "Job Radar", copy the 16-character password.
-3. Add two repo secrets: `EMAIL_ADDRESS` = `ak2943@njit.edu`, `EMAIL_APP_PASSWORD` = the 16-char password.
+3. Add two repo secrets: `EMAIL_ADDRESS` = the inbox address,
+   `EMAIL_APP_PASSWORD` = the 16-character app password.
 
-This connector reads her inbox for application lifecycle messages; it is not
-the outbound alert channel. ChemE GitHub issues mention `@ak2943` for board
-notifications without granting repository access.
+This connector reads that owner inbox for application lifecycle messages; it is
+not the outbound alert channel.
 
 Verify anytime (read-only, marks nothing as read): *Actions → email-verify → Run workflow*.
+
+If an automated workflow fails, it retries failed jobs once. A second failure
+opens or updates one repair issue with the exact run link and the instruction
+**Tell Codex: fix workflow run <link>**. This prevents repeated silent failures
+while avoiding an infinite retry loop.
 
 *If NJIT's Workspace admin has disabled app passwords* (some university IT
 policies do), `email-verify` will fail with a clear "login rejected" message
@@ -636,9 +656,13 @@ python -m radar.main crawl         # full cycle (respects RADAR_* env vars)
 Useful env vars: `RADAR_DISABLE_SOURCES=ats,hn`, `RADAR_PROBE_BUDGET`,
 `RADAR_MAX_COMPANIES`, `RADAR_PM_BACKFILL_COMPANIES`, `RADAR_MAX_ALERTS`,
 `RADAR_WORKERS`, `RADAR_LIFECYCLE_ACTIVE_DAYS=45`,
-`RADAR_LIFECYCLE_UNSEEN_GRACE_DAYS=14`, and `RADAR_HISTORY_DAYS=730`.
+`RADAR_LIFECYCLE_UNSEEN_GRACE_DAYS=14`, `RADAR_HISTORY_DAYS=730`,
+`RADAR_LINK_RESOLVE_LIMIT=25`, and `RADAR_LINK_RESOLVE_TTL_DAYS=30`.
 
 Other one-off CLI commands: `notion-verify`, `email-verify` (connectivity checks,
-create nothing), `email-watch` (run one detection cycle manually), and
+create nothing), `email-watch` (run one detection cycle manually),
+`tracker-sync` (pull and push tracker stages), and
+`resolve-links` (bounded, auditable aggregator-link backfill; set
+`RADAR_LINK_RESOLVE_LIMIT` for the batch size), and
 `lifecycle` (reconcile stale state plus retry terminal Notion archives without
 source discovery).

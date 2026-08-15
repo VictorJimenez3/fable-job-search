@@ -22,6 +22,7 @@ import time
 
 from . import state
 from .config import env, profile_id
+from .identity import canonical_url
 from .models import norm
 from .notion_sync import sync_applied, sync_from_notion
 from .score import update_feedback_from_applied
@@ -36,6 +37,115 @@ CMD_FEEDBACK = re.compile(
 CMD_UNTRACK = re.compile(r"^untrack\s+(\S+)", re.I | re.M)
 CMD_TRACK = re.compile(r"^track\s+(\w+)\s+(\S+)(?:\s+(.+))?", re.I | re.M)
 CMD_CULTURE = re.compile(r"^culture\s+(.+?)\s*$", re.I | re.M)
+
+# Keep this ordering in one place for issue commands, email detection, and
+# tracker deduplication. Terminal states intentionally remain terminal.
+TRACKER_STAGE_ORDER = {
+    "saved": 0, "applied": 1, "oa": 2, "interview": 3,
+    "offered": 8, "signed": 9, "rejected": 9, "closed": 9,
+    "not_pursuing": 9,
+}
+
+
+def _stage_rank(stage: str | None) -> int:
+    return TRACKER_STAGE_ORDER.get(str(stage or "applied").lower(), 1)
+
+
+def _tracker_key(entry: dict) -> tuple[str, str]:
+    url = canonical_url(entry.get("url"))
+    return ("url", url) if url else ("id", str(entry.get("id", "")))
+
+
+def _tracker_winner_key(index: int, entry: dict) -> tuple:
+    return (
+        1 if not entry.get("notion_archived") else 0,
+        1 if not entry.get("tracker_removed_at") else 0,
+        _stage_rank(entry.get("stage")),
+        int(entry.get("stage_changed_at") or 0),
+        int(entry.get("responded_at") or 0),
+        1 if entry.get("notion_page") else 0,
+        1 if entry.get("notion_synced") else 0,
+        int(entry.get("applied_at") or 0),
+        -index,
+    )
+
+
+def _merge_tracker_entry(winner: dict, loser: dict) -> dict:
+    """Merge duplicate tracker rows without discarding owner or Notion state."""
+    merged = dict(winner)
+    for key, value in loser.items():
+        if key in {"id", "url", "stage", "notion_page", "notion_synced"}:
+            continue
+        if key not in merged or merged[key] in (None, "", [], {}):
+            merged[key] = value
+
+    locations = list(merged.get("locations") or [])
+    for location in loser.get("locations") or []:
+        if location not in locations:
+            locations.append(location)
+    if locations:
+        merged["locations"] = locations
+
+    if (loser.get("score") or 0) > (merged.get("score") or 0):
+        merged["score"] = loser["score"]
+
+    # A surviving row can inherit the only Notion page. If both rows had a
+    # page, the non-surviving page is queued for soft-archival by notion_sync.
+    winner_page = merged.get("notion_page") or ""
+    loser_page = loser.get("notion_page") or ""
+    duplicate_pages = list(merged.get("notion_duplicate_pages") or [])
+    duplicate_pages.extend(loser.get("notion_duplicate_pages") or [])
+    if winner_page and loser_page and winner_page != loser_page:
+        duplicate_pages.append(loser_page)
+    elif not winner_page and loser_page:
+        merged["notion_page"] = loser_page
+        merged["notion_synced"] = bool(loser.get("notion_synced"))
+        winner_page = loser_page
+    merged["notion_duplicate_pages"] = list(dict.fromkeys(
+        page for page in duplicate_pages if page and page != winner_page
+    ))
+
+    if not merged.get("notion_stage") and loser.get("notion_stage"):
+        merged["notion_stage"] = loser["notion_stage"]
+    if not merged.get("notion_synced") and loser.get("notion_synced") and winner_page:
+        merged["notion_synced"] = True
+
+    merged_ids = list(merged.get("tracker_merged_ids") or [])
+    loser_id = loser.get("id")
+    if loser_id and loser_id != merged.get("id") and loser_id not in merged_ids:
+        merged_ids.append(loser_id)
+    if merged_ids:
+        merged["tracker_merged_ids"] = merged_ids
+    return merged
+
+
+def deduplicate_entries(applied: list[dict]) -> int:
+    """Collapse tracker entries that refer to the same canonical posting URL."""
+    groups: dict[tuple[str, str], list[tuple[int, dict]]] = {}
+    for index, entry in enumerate(applied):
+        key = _tracker_key(entry)
+        if key == ("id", ""):
+            key = ("index", str(index))
+        groups.setdefault(key, []).append((index, entry))
+
+    output: list[tuple[int, dict]] = []
+    merged_count = 0
+    for members in groups.values():
+        if len(members) == 1:
+            output.append(members[0])
+            continue
+        winner_index, winner = max(members, key=lambda pair: _tracker_winner_key(*pair))
+        merged = dict(winner)
+        for index, entry in members:
+            if index == winner_index:
+                continue
+            merged = _merge_tracker_entry(merged, entry)
+            merged_count += 1
+        output.append((min(index for index, _ in members), merged))
+
+    output.sort(key=lambda pair: pair[0])
+    applied[:] = [entry for _, entry in output]
+    return merged_count
 
 
 def _reply(event: dict, body: str) -> None:
@@ -79,32 +189,58 @@ def culture_generate_one(name: str, dossiers: dict) -> bool:
 
 
 def record_applied(job: dict, applied: list, fb: dict, via: str, stage: str = "applied") -> bool:
-    existing = next((a for a in applied if a["id"] == job["id"]), None)
+    job_url = canonical_url(job.get("url"))
+    existing = next((a for a in applied
+                     if a.get("id") == job.get("id")
+                     or (job_url and canonical_url(a.get("url")) == job_url)), None)
+    now = int(time.time())
     if existing:
         existing.setdefault("profile", job.get("profile") or profile_id())
-        # An applied signal promotes a saved entry; anything else is a dupe.
-        if stage == "applied" and existing.get("stage", "applied") != "applied":
-            existing["stage"] = "applied"
+        for key in ("company", "title", "url", "locations", "sector", "score", "source"):
+            if existing.get(key) in (None, "", [], {}) and job.get(key) not in (None, "", [], {}):
+                existing[key] = job[key]
+        current = existing.get("stage", "applied")
+        if _stage_rank(stage) > _stage_rank(current):
+            existing["stage"] = stage
+            existing["status"] = stage
             existing["via"] = via
-            existing["applied_at"] = int(time.time())
+            existing["stage_changed_at"] = now
+            if stage == "applied":
+                existing["applied_at"] = now
+            if stage in {"oa", "interview", "rejected", "closed"}:
+                existing.setdefault("responded_at", now)
+            if existing.get("notion_archived"):
+                # Re-tracking a previously archived posting gets a fresh page;
+                # the old page remains recoverable in Notion trash.
+                existing["notion_archived"] = False
+                existing["notion_synced"] = False
+                existing.pop("notion_page", None)
+            existing.pop("tracker_removed_at", None)
+            existing.pop("notion_deleted_at", None)
             return True
         return False
-    applied.append({
+    entry = {
         "id": job["id"], "company": job["company"], "title": job["title"],
         "url": job.get("url", ""), "locations": job.get("locations", []),
         "sector": job.get("sector", ""),
         "score": job.get("score"), "source": job.get("source"),
         "profile": job.get("profile") or profile_id(),
-        "applied_at": int(time.time()), "via": via, "stage": stage,
+        "applied_at": now, "via": via, "stage": stage, "status": stage,
+        "stage_changed_at": now,
         "notion_synced": False,
-    })
+    }
+    if stage in {"oa", "interview", "rejected", "closed"}:
+        entry["responded_at"] = now
+    applied.append(entry)
     update_feedback_from_applied(fb, job["company"], job["title"])
     return True
 
 
 def remove_tracking(ref: str, applied: list, untracked: set[str]) -> bool:
     """Remove one local tracker entry and archive its Notion page if present."""
-    entry = next((a for a in applied if a.get("id") == ref or a.get("url") == ref), None)
+    ref_url = canonical_url(ref)
+    entry = next((a for a in applied if a.get("id") == ref
+                  or (ref_url and canonical_url(a.get("url")) == ref_url)), None)
     if not entry:
         return False
     page = entry.get("notion_page")

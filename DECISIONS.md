@@ -1851,3 +1851,36 @@ without making source evidence or generated artifacts public. New matching,
 generation, and Workshop edits still require the local engine. Existing
 production behavior is recoverable through the `resume-studio-pre-bank-redesign-2026-08-15`
 rollback tag.
+
+## 125. Tracker and email state must converge without issue timing (2026-08-15)
+
+The application tracker is now reconciled independently of GitHub issue events:
+the scheduled tracker-sync job reads external Stage edits and pushes local
+changes every 15 minutes. A canonical HTTP posting URL is the identity boundary
+for tracker and crawler deduplication; the radar ID still distinguishes role
+variants when URLs differ. Existing exact-URL duplicates are merged
+conservatively, owner notes and durable references are migrated, and extra
+Notion pages are soft-archived into recoverable trash with an audit marker.
+
+Email lifecycle detection is opt-in through the owner inbox secrets. It uses a
+bounded 21-day lookback, decoded headers, employer-plus-title matching, and
+forward-only stage transitions for confirmations, assessments, interviews,
+rejections, and silent-application closure. Ambiguous messages go to a bounded
+review queue rather than silently changing a role. Workflow recovery reruns
+failed jobs once; a second failure opens or updates one repair issue with the
+exact run URL and a copyable Codex repair instruction. No path submits an
+application or sends recruiter messages automatically.
+
+## 126. Aggregator links need a verified direct-link fallback (2026-08-15)
+
+Jobright and similar discovery pages are not reliable application targets, but
+discarding them would lose breadth. The crawler therefore follows a bounded,
+cached batch of aggregator URLs and promotes a direct ATS/employer URL only
+when the page, public detail response, or an unambiguous existing direct ATS
+record proves the relationship. The original aggregator URL is retained in
+`alternate_urls`, source boards are retained in `source_url_variants`, and
+alerts/dashboard rows list the available provenance. Cross-source merging is
+limited to exact employer/title matches with a compatible location; ambiguous
+same-title roles remain separate. `resolve-links` is an explicit bounded
+backfill command for existing state, and failed resolution always leaves the
+aggregator link usable.

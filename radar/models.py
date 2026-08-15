@@ -38,6 +38,12 @@ class Job:
     url: str
     source: str                      # simplify | vansh | jobright | speedyapply | greenhouse | ...
     source_url: str = ""             # board/feed that surfaced this posting
+    source_variants: list[str] = field(default_factory=list)
+    source_url_variants: list[str] = field(default_factory=list)
+    # Other URLs discovered for the same posting.  The primary ``url`` is the
+    # link the user should open; these remain visible as provenance/fallbacks.
+    alternate_urls: list[str] = field(default_factory=list)
+    link_resolution: dict = field(default_factory=dict)
     locations: list[str] = field(default_factory=list)
     posted_at: int | None = None     # unix epoch seconds, None if unknown
     description: str = ""            # plain text, may be empty; trimmed to 4000 chars
@@ -84,6 +90,10 @@ class Job:
             del d["posting"]   # only persist the key when analysis exists
         if not d["internship_eligibility"]:
             del d["internship_eligibility"]
+        for key in ("source_variants", "source_url_variants", "alternate_urls",
+                    "link_resolution"):
+            if not d.get(key):
+                d.pop(key, None)
         for key in ("posting_status_changed_at", "posting_status_reason", "closed_at",
                     "last_closed_at", "last_seen_at", "lifecycle_checked_at",
                     "lifecycle_events"):

@@ -13,10 +13,11 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from . import applied as applied_mod
-from . import discovery, lifecycle, sponsorship, state
+from . import discovery, lifecycle, link_resolver, sponsorship, state
 from .brief import rerank
 from .config import env, profile, profile_id, seeds
 from .digest import write_outputs
+from .identity import canonical_url
 from .internship import RULES_VERSION as INTERNSHIP_RULES_VERSION
 from .models import Job, norm
 from .score import (RULES_VERSION, apply_company_concentration,
@@ -47,6 +48,212 @@ AGG_SOURCES_INTERNSHIP = {
 }
 
 PM_BACKFILL_ATS = {"workday", "phenom"}
+
+
+def _discovered_job_priority(job: Job) -> tuple:
+    source = str(job.source or "").casefold()
+    aggregator = source in {
+        "simplify", "vansh", "jobright", "jobright_pm", "speedyapply",
+        "zapply", "zapply_pm", "hn",
+    }
+    return (
+        1 if job.ats or not aggregator else 0,
+        1 if job.description else 0,
+        len(job.description or ""),
+        1 if job.posted_at else 0,
+        source,
+    )
+
+
+def _append_unique(values: list, items: list) -> bool:
+    changed = False
+    for item in items:
+        if item and item not in values:
+            values.append(item)
+            changed = True
+    return changed
+
+
+def _merge_job_sighting(winner: Job, sighting: Job) -> None:
+    """Keep every feed/source link when one posting wins a feed dedupe."""
+    _append_unique(winner.source_variants, [winner.source, sighting.source])
+    _append_unique(winner.source_url_variants,
+                   [winner.source_url, sighting.source_url,
+                    *sighting.source_url_variants])
+    winner_url = canonical_url(winner.url)
+    for url in [sighting.url, *sighting.alternate_urls]:
+        if url and canonical_url(url) != winner_url:
+            _append_unique(winner.alternate_urls, [url])
+    if (not winner.link_resolution or
+            winner.link_resolution.get("status") != "resolved"):
+        if sighting.link_resolution:
+            winner.link_resolution = dict(sighting.link_resolution)
+
+
+def _merge_record_sighting(target: dict, sighting: dict) -> bool:
+    """Merge provenance from a new sighting into an existing state record."""
+    changed = False
+    source_variants = target.setdefault("source_variants", [])
+    changed |= _append_unique(source_variants,
+                              [target.get("source"), sighting.get("source"),
+                               *sighting.get("source_variants", [])])
+    source_urls = target.setdefault("source_url_variants", [])
+    changed |= _append_unique(source_urls,
+                              [target.get("source_url"), sighting.get("source_url"),
+                               *sighting.get("source_url_variants", [])])
+    target_url = canonical_url(target.get("url"))
+    alternate_urls = target.setdefault("alternate_urls", [])
+    for url in [sighting.get("url"), *sighting.get("alternate_urls", [])]:
+        if url and canonical_url(url) != target_url:
+            changed |= _append_unique(alternate_urls, [url])
+    resolution = sighting.get("link_resolution") or {}
+    if resolution and (not target.get("link_resolution") or
+                       target.get("link_resolution", {}).get("status") != "resolved"):
+        target["link_resolution"] = resolution
+        changed = True
+    return changed
+
+
+def _unique_discovered_jobs(discovered: list[Job]) -> tuple[list[Job], int]:
+    """Keep one best-provenance candidate per stable role identity per run."""
+    selected: dict[str, Job] = {}
+    passthrough: list[Job] = []
+    dropped = 0
+    for job in discovered:
+        _append_unique(job.source_variants, [job.source])
+        _append_unique(job.source_url_variants, [job.source_url])
+        key = canonical_url(job.url)
+        if not key:
+            passthrough.append(job)
+            continue
+        previous = selected.get(key)
+        if previous is None:
+            selected[key] = job
+        elif _discovered_job_priority(job) > _discovered_job_priority(previous):
+            _merge_job_sighting(job, previous)
+            selected[key] = job
+            dropped += 1
+        else:
+            _merge_job_sighting(previous, job)
+            dropped += 1
+    # ``Job.id`` is intentionally company/title/location based, so two feeds
+    # can still collide after their URLs differ. Keep the best primary link
+    # under that stable identity and retain the other URL as provenance rather
+    # than letting the crawl's later ID guard discard it silently.
+    by_role: dict[str, Job] = {}
+    role_passthrough: list[Job] = []
+    for job in list(selected.values()) + passthrough:
+        role_key = job.id if canonical_url(job.url) else ""
+        if not role_key:
+            role_passthrough.append(job)
+            continue
+        previous = by_role.get(role_key)
+        if previous is None:
+            by_role[role_key] = job
+        elif _discovered_job_priority(job) > _discovered_job_priority(previous):
+            _merge_job_sighting(job, previous)
+            by_role[role_key] = job
+            dropped += 1
+        else:
+            _merge_job_sighting(previous, job)
+            dropped += 1
+    return list(by_role.values()) + role_passthrough, dropped
+
+
+def _resolve_discovered_links(discovered: list[Job], jobs_state: dict, now: int) -> tuple[list[Job], dict]:
+    """Resolve a bounded batch of aggregator links before identity matching."""
+    stats = {"attempted": 0, "resolved": 0, "unchanged": 0, "errors": 0}
+    if env("RADAR_DISABLE_LINK_RESOLUTION", "").lower() in {"1", "true", "yes"}:
+        return discovered, stats
+    limit = max(0, int(env("RADAR_LINK_RESOLVE_LIMIT", "25")))
+    candidates = []
+    for job in discovered:
+        if not link_resolver.is_aggregator_url(job.url):
+            continue
+        existing = jobs_state.get(job.id)
+        # A direct primary URL already stored for this stable role identity is
+        # stronger than a fresh aggregator sighting; only merge its provenance.
+        if existing and not link_resolver.is_aggregator_url(existing.get("url")):
+            continue
+        if existing and not link_resolver.needs_resolution(existing, job.url, now):
+            continue
+        candidates.append((job, existing))
+    candidates.sort(key=lambda pair: (
+        1 if (pair[1] or {}).get("alert_ok") else 0,
+        int((pair[1] or {}).get("score") or 0),
+        int(pair[0].posted_at or 0),
+    ), reverse=True)
+    for job, existing in candidates[:limit]:
+        stats["attempted"] += 1
+        result = link_resolver.resolve_job(job, existing=existing, now=now)
+        status = result.get("status")
+        if status == "resolved":
+            stats["resolved"] += 1
+        elif status in {"error", "not_found"}:
+            stats["errors"] += 1
+        else:
+            stats["unchanged"] += 1
+    return discovered, stats
+
+
+def _repair_duplicate_job_state(jobs_state: dict, applied: list) -> tuple[dict, bool]:
+    """Repair URL duplicates and migrate durable references to the survivor."""
+    from .dedupe import (
+        collapse_cross_source_jobs, collapse_jobs, remap_entry_ids,
+        remap_web_jobs, resolve_alias,
+    )
+
+    jobs_state, aliases, exact_merged = collapse_jobs(jobs_state)
+    jobs_state, cross_aliases, cross_merged = collapse_cross_source_jobs(jobs_state)
+    aliases.update(cross_aliases)
+    if not aliases:
+        return jobs_state, False
+
+    applied_changed = remap_entry_ids(applied, aliases)
+    tracker_merged = applied_mod.deduplicate_entries(applied)
+    shortlist = state.shortlist()
+    shortlist_changed = remap_entry_ids(shortlist, aliases)
+    # A shortlist can contain two feed variants of one URL even when the
+    # durable applied list does not. Keep the first owner selection.
+    seen_shortlist = set()
+    compact_shortlist = []
+    for entry in shortlist:
+        key = canonical_url(entry.get("url")) or f"id:{entry.get('id', '')}"
+        if key in seen_shortlist:
+            shortlist_changed += 1
+            continue
+        seen_shortlist.add(key)
+        compact_shortlist.append(entry)
+    shortlist[:] = compact_shortlist
+
+    history = state.load("alert_history.json", [])
+    history_changed = remap_entry_ids(history, aliases)
+    untracked = {
+        resolve_alias(str(job_id), aliases)
+        for job_id in state.load("untracked.json", [])
+    }
+    web = state.load("web_state.json", {})
+    web_changed = remap_web_jobs(web, aliases)
+
+    prior_aliases = state.load("job_aliases.json", {})
+    prior_aliases.update(aliases)
+    for old in list(prior_aliases):
+        prior_aliases[old] = resolve_alias(prior_aliases[old], prior_aliases)
+
+    state.save("job_aliases.json", prior_aliases)
+    state.save("applied.json", applied)
+    state.save("shortlist.json", shortlist)
+    state.save("untracked.json", sorted(untracked))
+    state.save("alert_history.json", history)
+    if web_changed:
+        state.save("web_state.json", web)
+    print(
+        f"hygiene: merged {exact_merged} exact-URL + {cross_merged} "
+        f"high-confidence aggregator/ATS duplicate posting record(s); "
+        f"migrated {applied_changed + shortlist_changed + history_changed + web_changed} "
+        f"reference(s), {tracker_merged} duplicate tracker row(s)"
+    )
+    return jobs_state, True
 
 
 def _fetch_aggregators(disabled: set[str]) -> tuple[list[Job], dict]:
@@ -143,6 +350,8 @@ def crawl() -> int:
     registry = state.companies()
     discovery.seed_registry(registry, seeds())
     jobs_state = state.jobs()
+    applied = state.applied()
+    jobs_state, _ = _repair_duplicate_job_state(jobs_state, applied)
     dropped_glyphs = scrub_glyph_companies(jobs_state)
     if dropped_glyphs:
         print(f"hygiene: dropped {dropped_glyphs} glyph-company record(s)")
@@ -150,7 +359,6 @@ def crawl() -> int:
     if n_regated:
         print(f"re-gate: rules v{RULES_VERSION} flipped alert_ok on {n_regated} stored job(s)")
     fb = state.feedback()
-    applied = state.applied()
     preference_profile = build_preference_profile(applied, jobs_state)
     score_preferences = load_score_preferences()
     print(f"preferences: learned from {preference_profile['sample_count']} saved/applied role(s)")
@@ -178,13 +386,49 @@ def crawl() -> int:
     # manual placeholder with official source/description/eligibility data.
     manual_upgrades: dict[str, dict] = {}
     dropped = 0
+    discovered, feed_duplicates = _unique_discovered_jobs(agg_jobs + ats_jobs)
+    if feed_duplicates:
+        print(f"hygiene: ignored {feed_duplicates} duplicate feed sighting(s) this run")
+    discovered, link_stats = _resolve_discovered_links(discovered, jobs_state, now)
+    if link_stats["attempted"]:
+        print(f"link resolution: checked {link_stats['attempted']}, "
+              f"promoted {link_stats['resolved']} direct link(s), "
+              f"kept {link_stats['unchanged']} aggregator fallback(s), "
+              f"errors/not found {link_stats['errors']}")
+    # Resolution can turn two previously different aggregator URLs into one
+    # direct URL, so run the cheap in-memory feed dedupe once more.
+    discovered, resolved_feed_duplicates = _unique_discovered_jobs(discovered)
+    if resolved_feed_duplicates:
+        print(f"hygiene: ignored {resolved_feed_duplicates} duplicate sighting(s) after link resolution")
+    existing_url_ids = {
+        canonical_url(record.get("url")): jid
+        for jid, record in jobs_state.items()
+        if canonical_url(record.get("url"))
+    }
     seen_this_run: set[str] = set()
-    for j in agg_jobs + ats_jobs:
+    for j in discovered:
         if not j.company or not j.title or not j.url:
             continue
         jid = j.id
+        canonical = canonical_url(j.url)
+        existing_url_id = existing_url_ids.get(canonical) if canonical else None
+        if existing_url_id and existing_url_id != jid:
+            # The durable state already has this URL under a title/location
+            # variant. Keep that identity instead of reintroducing a duplicate
+            # on every crawl; the next lifecycle/scoring pass still refreshes
+            # the surviving record.
+            existing = jobs_state[existing_url_id]
+            lifecycle.touch(existing, now, j.source or "monitored source")
+            _merge_record_sighting(existing, j.to_record())
+            seen_this_run.add(existing_url_id)
+            continue
         existing = jobs_state.get(jid)
         if jid in seen_this_run:
+            # ``_unique_discovered_jobs`` normally handles this before the
+            # crawl loop. Keep a defensive state merge for edge cases without
+            # replacing an already-scored in-memory job with a raw sighting.
+            if existing is not None:
+                _merge_record_sighting(existing, j.to_record())
             continue
         seen_this_run.add(jid)
         if existing is not None:
@@ -192,7 +436,15 @@ def crawl() -> int:
             # liveness fetch below still has authority to close it again.
             lifecycle.touch(existing, now, j.source or "monitored source")
         if existing is not None and existing.get("source") != "manual":
-            continue
+            sighting = j.to_record()
+            _merge_record_sighting(existing, sighting)
+            resolved_upgrade = (
+                bool(j.link_resolution.get("status") == "resolved") and
+                canonical_url(j.url) != canonical_url(existing.get("url")) and
+                not link_resolver.is_aggregator_url(j.url)
+            )
+            if not resolved_upgrade:
+                continue
         if not j.sector:
             j.sector = infer(j.company, seed_sectors)  # before gates: priority-sector path
         keep, alert_eligible, reasons = gates(j)
@@ -241,9 +493,16 @@ def crawl() -> int:
         rec = j.to_record()
         old_record = jobs_state.get(j.id)
         old_manual = manual_upgrades.get(j.id)
-        rec["first_seen"] = old_manual.get("first_seen", now) if old_manual else now
+        rec["first_seen"] = (
+            (old_manual or old_record or {}).get("first_seen", now)
+        )
         if old_manual:
             rec["manual_added"] = True
+        if old_record:
+            _merge_record_sighting(rec, old_record)
+            for key in ("posting", "quality", "company_research"):
+                if old_record.get(key) and not rec.get(key):
+                    rec[key] = old_record[key]
         lifecycle.merge_record_metadata(rec, old_record)
         if old_record and old_record.get("manual_archived"):
             rec["manual_archived"] = True
@@ -255,6 +514,8 @@ def crawl() -> int:
         rec["explicit_new_grad"] = explicit_new_grad(j.title) or source_new_grad(j)
         rec["early_career_possible"] = early_career_possible(j, rec.get("posting"))
         jobs_state[j.id] = rec
+        if canonical_url(j.url):
+            existing_url_ids[canonical_url(j.url)] = j.id
     lifecycle_stats = lifecycle.reconcile(
         jobs_state, now, seen_this_run,
         allow_source_gap_expiry=lifecycle.source_run_healthy(agg_stats, ats_stats))
@@ -384,6 +645,87 @@ def notion_backfill() -> int:
     state.save("applied.json", applied)
     print(f"notion-backfill: pulled {pulled} stage change(s), pushed {n}, "
           f"archived {archived} terminal page(s)")
+    return 0
+
+
+def tracker_sync() -> int:
+    """Continuously reconcile local tracker state in both directions.
+
+    This is intentionally separate from issue events: Notion edits and missed
+    webhook runs should converge on their own within one scheduled cycle.
+    """
+    from .notion_sync import archive_terminal_pages, sync_applied, sync_from_notion
+
+    applied = state.applied()
+    jobs = state.jobs()
+    pulled = sync_from_notion(applied)
+    pushed = sync_applied(applied)
+    archived = archive_terminal_pages(applied, jobs)
+    state.save("applied.json", applied)
+    print(
+        f"tracker-sync: pulled {pulled} stage change(s), pushed {pushed}, "
+        f"archived {archived} terminal/duplicate page(s)"
+    )
+    return 0
+
+
+def resolve_links_cmd() -> int:
+    """Bounded backfill for aggregator URLs already present in state.
+
+    Normal crawls do this opportunistically. This command is the explicit
+    repair knob when Victor wants to accelerate an existing backlog without
+    making an unbounded number of third-party requests.
+    """
+    now = int(time.time())
+    jobs_state = state.jobs()
+    candidates = [
+        (jid, record) for jid, record in jobs_state.items()
+        if link_resolver.is_aggregator_url(record.get("url"))
+        and link_resolver.needs_resolution(record, record.get("url", ""), now)
+    ]
+    candidates.sort(key=lambda pair: (
+        1 if pair[1].get("alert_ok") else 0,
+        int(pair[1].get("score") or 0),
+        int(pair[1].get("last_seen_at") or pair[1].get("first_seen") or 0),
+    ), reverse=True)
+    limit = max(0, int(env("RADAR_LINK_RESOLVE_LIMIT", "50")))
+    attempted = resolved = unchanged = errors = 0
+    for _jid, record in candidates[:limit]:
+        job = Job(
+            company=record.get("company", ""), title=record.get("title", ""),
+            url=record.get("url", ""), source=record.get("source", ""),
+            source_url=record.get("source_url", ""),
+            locations=record.get("locations", []), ats=record.get("ats", ""),
+            posted_at=record.get("posted_at"),
+        )
+        job.source_variants = list(record.get("source_variants") or [])
+        job.source_url_variants = list(record.get("source_url_variants") or [])
+        job.alternate_urls = list(record.get("alternate_urls") or [])
+        job.link_resolution = dict(record.get("link_resolution") or {})
+        attempted += 1
+        result = link_resolver.resolve_job(job, existing=record, now=now)
+        if result.get("status") == "resolved":
+            record["url"] = job.url
+            if job.ats:
+                record["ats"] = job.ats
+            _merge_record_sighting(record, job.to_record())
+            resolved += 1
+        elif result.get("status") in {"error", "not_found"}:
+            record["link_resolution"] = result
+            errors += 1
+        else:
+            record["link_resolution"] = result
+            unchanged += 1
+
+    applied = state.applied()
+    jobs_state, repaired = _repair_duplicate_job_state(jobs_state, applied)
+    state.save("jobs.json", jobs_state)
+    if repaired:
+        state.save("applied.json", applied)
+    write_outputs(jobs_state, state.companies(), state.load("runs.json", []),
+                  state.load("alert_history.json", []))
+    print(f"link-resolve: checked {attempted}, promoted {resolved}, kept {unchanged}, "
+          f"errors/not found {errors}; repair={'yes' if repaired else 'no'}")
     return 0
 
 
@@ -1079,12 +1421,13 @@ def report_sync() -> int:
 def main() -> None:
     ap = argparse.ArgumentParser(prog="radar")
     ap.add_argument("command", choices=["crawl", "applied-sync", "seed", "notion-backfill",
+                                        "tracker-sync",
                                         "strategist", "notion-verify", "email-watch", "email-verify",
                                         "migrate-checkbox-applied", "promote-shortlist",
                                         "marquee-backfill", "reconcile-checkboxes",
                                         "daily-best", "master-board", "deliver-alerts", "web-action", "enrich",
                                         "email-batch",
-                                        "regate", "rescore", "lifecycle", "score-health", "rescrape", "repair-feedback",
+                                        "regate", "rescore", "lifecycle", "score-health", "rescrape", "resolve-links", "repair-feedback",
                                         "taste-report", "report-sync",
                                         "sponsorship-refresh", "create-google-tracker"])
     args = ap.parse_args()
@@ -1096,6 +1439,8 @@ def main() -> None:
         sys.exit(seed_cmd())
     elif args.command == "notion-backfill":
         sys.exit(notion_backfill())
+    elif args.command == "tracker-sync":
+        sys.exit(tracker_sync())
     elif args.command == "strategist":
         from .strategist import post_memo
         url = post_memo()
@@ -1147,6 +1492,8 @@ def main() -> None:
         sys.exit(score_health_cmd())
     elif args.command == "rescrape":
         sys.exit(rescrape_cmd())
+    elif args.command == "resolve-links":
+        sys.exit(resolve_links_cmd())
     elif args.command == "repair-feedback":
         sys.exit(repair_feedback())
     elif args.command == "taste-report":

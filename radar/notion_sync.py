@@ -113,9 +113,15 @@ def _stage_option(entry: dict, schema: dict, prop: str) -> str | None:
     """Status name for this entry, or None to omit the property (the database
     then applies its own default status, typically 'Not started')."""
     n = profile()["notion"]
-    if entry.get("stage", "applied") == "applied":
-        return n["stage_applied"]
-    want = n.get("stage_saved", "Not started")
+    want = {
+        "saved": n.get("stage_saved", "Not started"),
+        "applied": n.get("stage_applied", "Applied"),
+        "oa": n.get("stage_oa", "OA"),
+        "interview": n.get("stage_interview", "Interview"),
+        "rejected": n.get("stage_rejected", "Rejected"),
+        "closed": n.get("stage_closed", "CLOSED"),
+        "not_pursuing": n.get("stage_not_pursuing", "Not pursuing"),
+    }.get(str(entry.get("stage", "applied")).lower(), n.get("stage_saved", "Not started"))
     options = schema.get("status_options", {}).get(prop)
     return want if options is None or want in options else None
 
@@ -140,7 +146,7 @@ def build_payload(entry: dict, schema: dict) -> dict:
         lane = entry.get("profile") or "new_grad"
         payload_props["Text"] = {"rich_text": [{"text": {"content":
             f"{entry['title'][:150]} · via JobRadar ({lane}; score {entry.get('score', '?')}, "
-            f"source {entry.get('source', '?')})"}}]}
+            f"source {entry.get('source', '?')}; radar id {entry.get('id', '?')})"}}]}
     if entry.get("url") and props.get("Job URL") == "url":
         payload_props["Job URL"] = {"url": entry["url"][:1900]}
     loc = (entry.get("locations") or [""])[0]
@@ -301,25 +307,27 @@ def sync_from_notion(applied: list) -> int:
     page ID already stored on each local entry—not company/title guessing.
     Unknown statuses and pages from the other board are ignored.
     """
+    from .applied import deduplicate_entries
+    merged = deduplicate_entries(applied)
     backend = env("TRACKER_BACKEND", "notion").strip().lower()
     if backend == "google_sheets":
         from .google_sheets import sync_from_sheet
-        return sync_from_sheet(applied)
+        return merged + sync_from_sheet(applied)
     token = env("NOTION_TOKEN")
     if not token or not applied:
-        return 0
+        return merged
     by_page = {}
     for entry in applied:
         page_id = page_id_from_url(entry.get("notion_page", ""))
         if page_id:
             by_page[page_id.replace("-", "").lower()] = entry
     if not by_page:
-        return 0
+        return merged
     try:
         schema = resolve_database(token)
         stage_prop = _stage_property(schema)
         if not stage_prop:
-            return 0
+            return merged
         pages, cursor = [], None
         while True:
             payload = {"page_size": 100}
@@ -337,9 +345,9 @@ def sync_from_notion(applied: list) -> int:
                 break
     except Exception as exc:
         print(f"notion: readback failed; local stages left unchanged: {exc}")
-        return 0
+        return merged
 
-    changed = 0
+    changed = merged
     now = int(time.time())
     found_pages = set()
     for page in pages:
@@ -394,15 +402,49 @@ def _sync_applied_notion(applied: list) -> int:
     if not token:
         pending = sum(1 for a in applied
                       if not a.get("notion_synced") and not a.get("notion_archived"))
+        duplicate_pages = sum(len(a.get("notion_duplicate_pages") or []) for a in applied)
         if pending:
             print(f"notion: NOTION_TOKEN not set — {pending} tracked entries queued locally")
+        if duplicate_pages:
+            print(f"notion: NOTION_TOKEN not set — {duplicate_pages} duplicate page(s) queued for archival")
         return 0
+
+    # URL identity repair may have found old pages that represent the same
+    # posting. Archive those pages before creating or patching the survivor;
+    # Notion trash is reversible and the local audit trail keeps the IDs.
+    duplicate_archived = 0
+    for entry in applied:
+        pages = list(entry.get("notion_duplicate_pages") or [])
+        archived_pages = list(entry.get("notion_duplicate_pages_archived") or [])
+        remaining = []
+        for page_url in pages:
+            page_id = page_id_from_url(page_url)
+            if not page_id:
+                remaining.append(page_url)
+                continue
+            try:
+                archive_page(token, page_id)
+                duplicate_archived += 1
+                if page_url not in archived_pages:
+                    archived_pages.append(page_url)
+            except Exception as exc:
+                remaining.append(page_url)
+                entry["notion_duplicate_archive_error"] = str(exc)[:240]
+                print(f"notion: could not archive duplicate page for {entry.get('company')}: {exc}")
+        if remaining:
+            entry["notion_duplicate_pages"] = remaining
+        else:
+            entry.pop("notion_duplicate_pages", None)
+            entry.pop("notion_duplicate_archive_error", None)
+        if archived_pages:
+            entry["notion_duplicate_pages_archived"] = archived_pages
+
     pending = [a for a in applied
                if not a.get("notion_synced") and not a.get("notion_archived")]
     promotions = [a for a in applied
                   if not a.get("notion_archived") and _needs_stage_patch(a)]
     if not pending and not promotions:
-        return 0
+        return duplicate_archived
     try:
         schema = resolve_database(token)
     except Exception as e:
@@ -410,7 +452,7 @@ def _sync_applied_notion(applied: list) -> int:
         return 0
 
     headers = _headers(token)
-    synced = 0
+    synced = duplicate_archived
     for entry in pending:
         try:
             r = requests.post(PAGES_API, headers=headers, json=build_payload(entry, schema), timeout=20)
@@ -456,10 +498,12 @@ def _sync_applied_notion(applied: list) -> int:
 
 def sync_applied(applied: list) -> int:
     """Sync to the selected tracker backend; Notion remains the default."""
+    from .applied import deduplicate_entries
+    merged = deduplicate_entries(applied)
     backend = env("TRACKER_BACKEND", "notion").strip().lower()
     if backend == "google_sheets":
         from .google_sheets import sync_applied as sync_sheet
-        return sync_sheet(applied)
+        return merged + sync_sheet(applied)
     if backend not in {"notion", ""}:
         print(f"tracker: unknown TRACKER_BACKEND={backend!r}; using Notion")
-    return _sync_applied_notion(applied)
+    return merged + _sync_applied_notion(applied)

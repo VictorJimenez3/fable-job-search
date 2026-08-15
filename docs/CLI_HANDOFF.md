@@ -236,11 +236,31 @@ Before changing the radar, read these in order:
   to the correct branch via the profile payload or `radar-cheme` label. Both
   profiles deliberately share the repository `NOTION_TOKEN`; do not create a
   second Notion database or token for ChemE.
-- **Notion:** `NOTION_TOKEN` is set and working. Checkbox → entry with the
-  `stage_saved` status ("Waiting for a referral" in his DB); Victor promotes
-  manually. The email autopilot remains coded/tested but is intentionally
-  parked as future multi-user functionality; no `EMAIL_ADDRESS` /
-  `EMAIL_APP_PASSWORD` secrets are needed for Victor's current workflow.
+- **Notion/tracker:** `NOTION_TOKEN` is set and working. Checkbox → entry
+  with the `stage_saved` status ("Waiting for a referral" in his DB).
+  `.github/workflows/tracker-sync.yml` now pulls Notion/Sheets stage edits and
+  pushes local changes every 15 minutes; `reconcile-checkboxes` remains the
+  twice-daily issue safety net. Canonical posting URLs collapse feed/ATS
+  variants into one local tracker identity, migrate durable references, and
+  queue duplicate Notion pages for reversible archival.
+- **Aggregator/direct-link convergence:** Jobright aggregator URLs are never
+  thrown away. The crawl follows a bounded `RADAR_LINK_RESOLVE_LIMIT` batch,
+  promotes only an explicit ATS/employer application link, records the
+  aggregator URL in `alternate_urls`, and shows source/fallback links in issue
+  alerts and `docs/DASHBOARD.md`. A strict employer+title+compatible-location
+  match can merge an aggregator row into one direct ATS row; ambiguous roles
+  remain separate. `python -m radar.main resolve-links` accelerates the same
+  cached, auditable backfill for existing state.
+- **Email lifecycle:** `email-watch` is active when
+  `EMAIL_ADDRESS` / `EMAIL_APP_PASSWORD` are configured. It searches a
+  bounded 21-day window, decodes ATS headers, matches employer plus title, and
+  advances Applied → OA → Interview or Rejected without regressing terminal
+  stages. Ambiguous messages are retained in `state/email_review.json`.
+  Missing secrets produce a workflow warning and a clean skip.
+- **Workflow recovery:** `workflow-recovery` listens to critical workflow
+  completions, reruns failed jobs once, and opens/updates one actionable issue
+  after a second failure with the exact instruction: "Tell Codex: fix workflow
+  run <URL>".
 - **Scoring (rules v7, 2026-07-24):** verified new-grad or
   early-career evidence is required for alerts, except for a technical/data
   graduate, rotational, or leadership program. Aggregator listings, marquee

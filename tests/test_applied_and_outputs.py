@@ -66,6 +66,19 @@ def test_applied_signal_promotes_saved_entry(tmp_state):
     assert not record_applied(JOB, applied, fb, via="comment")
 
 
+def test_same_canonical_url_promotes_existing_tracker_entry(tmp_state):
+    from radar.applied import record_applied
+    applied, fb = [], {"company_boosts": {}, "token_boosts": {}}
+    saved = {**JOB, "id": "a" * 16, "url": "https://jobs.example.test/role/?utm_source=mail"}
+    applied_variant = {**JOB, "id": "b" * 16, "url": "https://jobs.example.test/role",
+                       "title": "Different feed title"}
+    assert record_applied(saved, applied, fb, via="checkbox", stage="saved")
+    assert record_applied(applied_variant, applied, fb, via="email", stage="applied")
+    assert len(applied) == 1
+    assert applied[0]["id"] == "a" * 16
+    assert applied[0]["stage"] == "applied"
+
+
 def test_applied_comment_clears_from_shortlist(tmp_state, tmp_path, monkeypatch):
     monkeypatch.delenv("NOTION_TOKEN", raising=False)
     state.save("jobs.json", {JOB["id"]: JOB})
@@ -154,6 +167,12 @@ def test_notion_payload_saved_stage():
     assert "Stage" not in p["properties"]
 
 
+def test_notion_payload_uses_response_stage_for_new_email_entry():
+    rejected = {**JOB, "stage": "rejected"}
+    p = build_payload(rejected, FULL_SCHEMA)
+    assert p["properties"]["Stage"]["status"]["name"] == "Rejected"
+
+
 def test_sync_patches_stage_when_saved_entry_becomes_applied(tmp_state, monkeypatch):
     monkeypatch.setenv("NOTION_TOKEN", "tok")
     entry = {"id": JOB["id"], "company": "Tempus", "title": JOB["title"], "url": JOB["url"],
@@ -167,6 +186,24 @@ def test_sync_patches_stage_when_saved_entry_becomes_applied(tmp_state, monkeypa
     sent = mock_patch.call_args.kwargs["json"]["properties"]
     assert sent["Stage"]["status"]["name"] == "Applied"
     assert "Apply date" in sent
+
+
+def test_notion_duplicate_page_is_soft_archived(tmp_state, monkeypatch):
+    monkeypatch.setenv("NOTION_TOKEN", "tok")
+    page_one = "3995d6f42cab81b79291edce7b1639b2"
+    page_two = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    entries = [
+        {**JOB, "id": "a" * 16, "stage": "applied", "notion_synced": True,
+         "notion_stage": "applied",
+         "notion_page": f"https://app.notion.com/p/Tempus-{page_one}"},
+        {**JOB, "id": "b" * 16, "stage": "applied", "notion_synced": True,
+         "notion_stage": "applied",
+         "notion_page": f"https://app.notion.com/p/Tempus-{page_two}"},
+    ]
+    with patch.object(ns, "archive_page") as archive:
+        assert ns.sync_applied(entries) == 2  # one merge + one archive
+    assert len(entries) == 1
+    archive.assert_called_once_with("tok", "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa")
 
 
 def test_sync_patches_rejection_stage_with_response_date(tmp_state, monkeypatch):

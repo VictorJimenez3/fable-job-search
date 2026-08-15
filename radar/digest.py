@@ -8,7 +8,7 @@ from xml.sax.saxutils import escape
 
 from .config import DOCS_DIR, github_repo, profile, profile_id
 from . import lifecycle
-from .provenance import info
+from .provenance import alternate_link_label, source_links
 
 
 def _age(posted_at, now) -> str:
@@ -60,8 +60,17 @@ def render_dashboard(jobs: dict, registry: dict, runs: list) -> str:
     ]
     for j in rows:
         loc = (j.get("locations") or [""])[0][:40]
-        source_label, source_url = info(j.get("source", ""), j.get("source_url", ""))
-        source_link = f"[{source_label}]({j.get('source_url') or source_url or j.get('url', '')})"
+        provenance = source_links(j)
+        source_link = " · ".join(
+            f"[{label}]({url})" for label, url in provenance[:3]
+        ) or f"[posting]({j.get('url', '')})"
+        fallbacks = [
+            f"[{alternate_link_label(url)}]({url})"
+            for url in (j.get("alternate_urls") or [])[:2]
+            if url
+        ]
+        if fallbacks:
+            source_link += "<br>" + " · ".join(fallbacks)
         lines.append(
             f"| {j['score']} {_fire(j['score'])} | {_age(j.get('posted_at'), now)} "
             f"| {j['company'][:38]} | [{j['title'][:70]}]({j['url']}) "

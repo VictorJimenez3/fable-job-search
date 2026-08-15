@@ -29,22 +29,27 @@ import imaplib
 import re
 import time
 from datetime import datetime, timedelta, timezone
+from email.header import decode_header, make_header
 
 from . import state
 from .applied import record_applied
 from .config import env
+from .identity import canonical_url
 from .models import norm
 from .notion_sync import sync_applied
 
 DEFAULT_HOST = "imap.gmail.com"
-DEFAULT_LOOKBACK_DAYS = 5
+DEFAULT_LOOKBACK_DAYS = 21
 MAX_SEEN_IDS = 4000
 
 CONFIRMATION_RE = re.compile(
     r"thank(?:s| you) for (?:your interest in |applying|your application)|"
+    r"we appreciate your interest in|"
     r"application (?:has been )?(?:received|submitted|confirmed)|"
     r"we(?:'ve| have) received your application|"
     r"your application (?:to|for|at|has been received)|"
+    r"your application (?:was|is being) (?:successfully )?submitted|"
+    r"we have successfully received|"
     r"application confirmation|"
     r"successfully applied", re.I)
 
@@ -58,20 +63,30 @@ REJECTION_RE = re.compile(
     r"(?:position|role|req(?:uisition)?) (?:has been|is) (?:filled|closed)|"
     r"not (?:be )?(?:selected|selecting you|a match at this time)|"
     r"after (?:careful|thorough) (?:consideration|review)|"
-    r"chosen to move forward with other", re.I)
+    r"chosen to move forward with other|"
+    r"we(?:'ve| have) decided to go in another direction|"
+    r"decided to pursue other opportunities|"
+    r"not selected for (?:the )?(?:next|final) round|"
+    r"unable to move forward with your candidacy|"
+    r"your candidacy will not be advancing|"
+    r"we will not be advancing your application", re.I)
 
 OA_RE = re.compile(
     r"online assessment|coding (?:challenge|assessment|test|exercise)|"
     r"hackerrank|codesignal|codility|karat|hirevue|"
     r"take[- ]?home (?:assignment|assessment|challenge)|"
     r"technical (?:assessment|screen(?:ing)?)|assessment (?:invitation|link)|"
-    r"complete (?:the|your|a) (?:assessment|challenge)", re.I)
+    r"complete (?:the|your|a) (?:assessment|challenge)|"
+    r"coding (?:test|exercise) link|"
+    r"pre[- ]?employment assessment", re.I)
 
 INTERVIEW_RE = re.compile(
     r"interview|schedule (?:a |your |some )?(?:time|call|chat|conversation)|"
     r"phone screen|next steps|(?:like|love) to (?:meet|speak|chat|connect) with|"
     r"hiring manager|video call|availability (?:for|to)|book (?:a |your )?time|"
-    r"set up (?:a |some )?time|move(?:d)? (?:you )?(?:to|forward to|onto) the", re.I)
+    r"set up (?:a |some )?time|move(?:d)? (?:you )?(?:to|forward to|onto) the|"
+    r"invite you to (?:a |an )?(?:conversation|screen)|"
+    r"please select a time|meet the team", re.I)
 
 
 def classify(text: str) -> str | None:
@@ -93,7 +108,8 @@ def classify(text: str) -> str | None:
 # (e.g. a stray "interview" note after a rejection is ignored). Terminal
 # stages sit at the top so any real response can reach them.
 STAGE_ORDER = {"saved": 0, "applied": 1, "oa": 2, "interview": 3,
-               "offered": 8, "signed": 9, "rejected": 9, "closed": 9}
+               "offered": 8, "signed": 9, "rejected": 9, "closed": 9,
+               "not_pursuing": 9}
 
 
 def can_advance(current: str | None, target: str) -> bool:
@@ -120,10 +136,19 @@ def _clean_name(s: str) -> str:
     return " ".join(words).strip(" -,.")
 
 
-def guess_company_candidates(msg: email.message.Message) -> list[str]:
+def _header(msg: email.message.Message, name: str) -> str:
+    """Decode RFC 2047 headers from ATS messages before matching them."""
+    raw = msg.get(name, "") or ""
+    try:
+        return str(make_header(decode_header(str(raw)))).strip()
+    except (TypeError, ValueError):
+        return str(raw).strip()
+
+
+def guess_company_candidates(msg: email.message.Message, text: str = "") -> list[str]:
     """Best-effort list of candidate company names, best guess first."""
     candidates = []
-    name, addr = email.utils.parseaddr(msg.get("From", ""))
+    name, addr = email.utils.parseaddr(_header(msg, "From"))
     cleaned_name = _clean_name(name)
     if cleaned_name and norm(cleaned_name):
         candidates.append(cleaned_name)
@@ -134,10 +159,14 @@ def guess_company_candidates(msg: email.message.Message) -> list[str]:
     if domain and domain not in ATS_DOMAINS and domain_root not in {"gmail", "outlook", "yahoo"}:
         candidates.append(domain_root.replace("-", " ").title())
 
-    subject = str(msg.get("Subject", "") or "")
-    m = re.search(r"(?:at|to|with|from)\s+([A-Z][\w&.,' -]{1,40}?)(?:[!.]|\s+[-|]|\s*$)", subject)
-    if m:
-        candidates.append(m.group(1).strip())
+    subject = _header(msg, "Subject")
+    for haystack in (subject, text[:2500]):
+        for m in re.finditer(
+                r"(?:at|from|with|joining|company:)\s+([A-Z][\w&.'-]*"
+                r"(?:\s+[A-Z][\w&.'-]*){0,4})", haystack):
+            candidate = m.group(1).strip(" .,;:!-|")
+            if candidate and candidate not in candidates:
+                candidates.append(candidate)
 
     return candidates
 
@@ -154,10 +183,72 @@ def _best_match(candidates: list[str], pool: list[dict], key: str = "company") -
     best_score, best_item = 0.0, None
     for cand in candidates:
         for item in pool:
-            r = _token_overlap(cand, item[key])
+            r = _token_overlap(cand, item.get(key, ""))
             if r > best_score:
                 best_score, best_item = r, item
     return best_score, best_item
+
+
+_TITLE_NOISE = {
+    "application", "applications", "candidate", "candidacy", "position", "role",
+    "job", "jobs", "opportunity", "opportunities", "your", "the", "at", "for",
+    "update", "status", "regarding", "next", "steps", "team", "career", "careers",
+}
+
+
+def _meaningful_tokens(text: str) -> set[str]:
+    return {token for token in norm(text).split()
+            if len(token) > 2 and token not in _TITLE_NOISE}
+
+
+def _title_match_score(subject: str, body: str, title: str) -> float:
+    wanted = _meaningful_tokens(title)
+    if not wanted:
+        return 0.0
+    subject_tokens = _meaningful_tokens(subject)
+    body_tokens = _meaningful_tokens(body[:4000])
+    subject_score = len(wanted & subject_tokens) / len(wanted)
+    body_score = len(wanted & body_tokens) / len(wanted)
+    return max(subject_score, body_score)
+
+
+def match_application(candidates: list[str], subject: str, body: str,
+                      pool: list[dict]) -> dict | None:
+    """Match an email to one role, requiring enough evidence to be safe.
+
+    Employer evidence is mandatory. A title hit resolves multiple roles at the
+    same company; if the message only names a company with several equally
+    plausible tracked roles, returning None is safer than changing the wrong
+    application.
+    """
+    scored = []
+    for item in pool:
+        company_score = max(
+            (_token_overlap(candidate, item.get("company", "")) for candidate in candidates),
+            default=0.0,
+        )
+        if company_score < 0.5:
+            continue
+        title_score = _title_match_score(subject, body, item.get("title", ""))
+        scored.append((company_score, title_score, item))
+    if not scored:
+        return None
+
+    scored.sort(
+        key=lambda row: (row[1], row[0], int(row[2].get("applied_at") or 0)),
+        reverse=True,
+    )
+    best = scored[0]
+    if len(scored) == 1:
+        return best[2]
+    second = scored[1]
+    if best[1] >= 0.5 and best[1] > second[1]:
+        return best[2]
+    # A single strong company match is safe when other candidates are only
+    # weak token overlaps (for example, Stripe vs Stripe Health).
+    if best[0] >= 0.9 and best[0] > second[0] + 0.2:
+        return best[2]
+    return None
 
 
 def match_company(candidates: list[str], shortlist: list[dict], jobs: dict) -> dict | None:
@@ -180,9 +271,12 @@ def match_company(candidates: list[str], shortlist: list[dict], jobs: dict) -> d
     return None
 
 
-def _synthetic_job(company: str) -> dict:
-    sid = hashlib.sha1(f"email-detected|{norm(company)}|{int(time.time())}".encode()).hexdigest()[:16]
-    return {"id": sid, "company": company, "title": "Application (auto-detected via email)",
+def _synthetic_job(company: str, subject: str = "") -> dict:
+    # Stable identity prevents a retry or duplicate notification from creating
+    # a fresh tracker row every time the watcher runs.
+    sid = hashlib.sha1(f"email-detected|{norm(company)}|{norm(subject)}".encode()).hexdigest()[:16]
+    title = subject.strip()[:180] or "Application (auto-detected via email)"
+    return {"id": sid, "company": company, "title": title,
             "url": "", "locations": [], "score": None, "source": "email-detected"}
 
 
@@ -191,15 +285,16 @@ def _search_candidate_uids(conn: imaplib.IMAP4_SSL, host: str, lookback_days: in
         # bare terms (no subject:) search the whole message, so rejection /
         # interview / assessment language in the body is caught too.
         query = (
-            f'newer_than:{lookback_days}d ('
+            f'in:anywhere newer_than:{lookback_days}d ('
             'subject:"thank you for applying" OR subject:"thanks for applying" OR '
             'subject:"application received" OR subject:"your application" OR '
             'subject:"application confirmation" OR subject:"applying to" OR '
             'subject:"update on your" OR subject:"regarding your application" OR '
             'subject:interview OR subject:assessment OR subject:"next steps" OR '
             '"successfully applied" OR "unfortunately" OR "move forward with other" OR '
-            '"regret to inform" OR "online assessment" OR "coding challenge" OR '
-            '"schedule a" OR "we received your application")'
+            '"regret to inform" OR "not selected" OR "not moving forward" OR '
+            '"online assessment" OR "coding challenge" OR "schedule a" OR '
+            '"we received your application" OR "another direction")'
         )
         typ, data = conn.search(None, "X-GM-RAW", f'"{query}"')
     else:
@@ -314,6 +409,7 @@ def _advance(entry: dict, target: str, when: int | None) -> bool:
     entry["stage"] = target
     entry["status"] = target
     entry["responded_at"] = when or int(time.time())
+    entry["stage_changed_at"] = entry["responded_at"]
     return True
 
 
@@ -326,18 +422,27 @@ def _autoclose(applied: list, now: int, days: int) -> int:
                 and e.get("applied_at", now) < cutoff):
             e["stage"] = "closed"
             e["status"] = "closed"
+            e["stage_changed_at"] = now
             e["auto_closed"] = True
             closed += 1
     return closed
 
 
-def run(lookback_days: int = DEFAULT_LOOKBACK_DAYS) -> dict:
+def run(lookback_days: int | None = None) -> dict:
+    """Run one bounded, idempotent email lifecycle pass."""
     address = env("EMAIL_ADDRESS")
     app_password = env("EMAIL_APP_PASSWORD")
     if not address or not app_password:
         print("email_watch: EMAIL_ADDRESS/EMAIL_APP_PASSWORD not set — skipping "
-              "(applications must be logged manually via `applied <url>` for now)")
+              "(applications must be logged manually via applied <url> for now)")
         return {"checked": 0, "matched": 0, "synced": 0}
+
+    if lookback_days is None:
+        try:
+            lookback_days = int(env("RADAR_EMAIL_LOOKBACK_DAYS", str(DEFAULT_LOOKBACK_DAYS)))
+        except ValueError:
+            lookback_days = DEFAULT_LOOKBACK_DAYS
+    lookback_days = max(1, min(90, lookback_days))
 
     from .config import profile
     host = env("EMAIL_IMAP_HOST", DEFAULT_HOST)
@@ -348,60 +453,107 @@ def run(lookback_days: int = DEFAULT_LOOKBACK_DAYS) -> dict:
     try:
         conn.select("INBOX", readonly=True)
         uids = _search_candidate_uids(conn, host, lookback_days)
-
         shortlist = state.shortlist()
         jobs = state.jobs()
         applied = state.applied()
         fb = state.feedback()
+        review = state.load("email_review.json", [])
         counts = {"confirmation": 0, "oa": 0, "interview": 0, "rejected": 0}
 
         for uid in uids:
             msg = _fetch_full(conn, uid) or _fetch_headers(conn, uid)
             if msg is None:
                 continue
-            msg_id = msg.get("Message-ID") or f"uid-{uid.decode() if isinstance(uid, bytes) else uid}"
+            msg_id = _header(msg, "Message-ID") or (
+                f"uid-{uid.decode() if isinstance(uid, bytes) else uid}"
+            )
             if msg_id in seen_ids:
                 continue
             seen_ids.add(msg_id)
 
-            subject = msg.get("Subject", "") or ""
-            kind = classify(f"{subject}\n{_body_text(msg)}")
+            subject = _header(msg, "Subject")
+            body = _body_text(msg)
+            kind = classify(f"{subject}\n{body}")
             if kind is None:
                 continue
 
-            candidates = guess_company_candidates(msg)
+            candidates = guess_company_candidates(msg, body)
             if not candidates:
+                review.append({
+                    "message_id": msg_id, "kind": kind, "subject": subject[:240],
+                    "from": _header(msg, "From")[:240],
+                    "reason": "no employer candidate", "seen_at": int(time.time()),
+                })
                 continue
 
             if kind == "confirmation":
-                job = match_company(candidates, shortlist, jobs) or _synthetic_job(candidates[0])
+                job = (
+                    match_application(candidates, subject, body, shortlist)
+                    or match_application(candidates, subject, body, list(jobs.values()))
+                    or match_company(candidates, shortlist, jobs)
+                    or _synthetic_job(candidates[0], subject)
+                )
                 if record_applied(job, applied, fb, via="email"):
                     counts["confirmation"] += 1
-                    shortlist[:] = [s for s in shortlist if s["id"] != job["id"]]
-            else:
-                # a response (oa/interview/rejection) only makes sense for a job
-                # already in the pipeline — match against applied, not shortlist
-                mscore, match = _best_match(candidates, applied) if applied else (0.0, None)
-                if match and mscore >= 0.5 and _advance(match, kind, _msg_epoch(msg)):
-                    counts[kind] += 1
+                    url = canonical_url(job.get("url"))
+                    shortlist[:] = [
+                        s for s in shortlist
+                        if s.get("id") != job.get("id")
+                        and not (url and canonical_url(s.get("url")) == url)
+                    ]
+                continue
 
-        closed = _autoclose(applied, int(time.time()),
-                            int(profile()["notion"].get("autoclose_days", 45)))
+            # Search applied first, then saved roles and known radar postings.
+            # This closes the old gap where an untracked rejection was lost.
+            match = match_application(candidates, subject, body, applied)
+            changed = _advance(match, kind, _msg_epoch(msg)) if match else False
+            if not match or not changed:
+                match = (
+                    match_application(candidates, subject, body, shortlist)
+                    or match_application(candidates, subject, body, list(jobs.values()))
+                )
+                if match:
+                    changed = record_applied(match, applied, fb, via="email", stage=kind)
+                    url = canonical_url(match.get("url"))
+                    shortlist[:] = [
+                        s for s in shortlist
+                        if s.get("id") != match.get("id")
+                        and not (url and canonical_url(s.get("url")) == url)
+                    ]
+            if changed:
+                counts[kind] += 1
+            elif not match:
+                review.append({
+                    "message_id": msg_id, "kind": kind, "subject": subject[:240],
+                    "from": _header(msg, "From")[:240],
+                    "reason": "employer matched ambiguously or role was not in radar",
+                    "seen_at": int(time.time()),
+                })
 
+        closed = _autoclose(
+            applied, int(time.time()),
+            int(profile()["notion"].get("autoclose_days", 45)),
+        )
         synced = sync_applied(applied)
         state.save("applied.json", applied)
         state.save("shortlist.json", shortlist)
         state.save("feedback.json", fb)
-        seen_ids_list = list(seen_ids)[-MAX_SEEN_IDS:]
-        state.save("email_watch.json", {"seen_message_ids": seen_ids_list,
-                                        "last_checked_at": int(time.time())})
+        state.save("email_review.json", review[-200:])
+        state.save("email_watch.json", {
+            "seen_message_ids": list(seen_ids)[-MAX_SEEN_IDS:],
+            "last_checked_at": int(time.time()),
+        })
         matched = sum(counts.values())
-        print(f"email_watch: checked {len(uids)} email(s) — "
-              f"{counts['confirmation']} applied, {counts['interview']} interview, "
-              f"{counts['oa']} OA, {counts['rejected']} rejected, {closed} auto-closed; "
-              f"synced {synced} to Notion")
-        return {"checked": len(uids), "matched": matched, "closed": closed,
-                "synced": synced, **counts}
+        print(
+            f"email_watch: checked {len(uids)} email(s) — "
+            f"{counts['confirmation']} applied, {counts['interview']} interview, "
+            f"{counts['oa']} OA, {counts['rejected']} rejected, {closed} auto-closed; "
+            f"{len(review[-200:])} review item(s), synced {synced} to Notion"
+        )
+        return {
+            "checked": len(uids), "matched": matched, "closed": closed,
+            "synced": synced, "review": len(review[-200:]), **counts,
+        }
     finally:
         try:
             conn.logout()

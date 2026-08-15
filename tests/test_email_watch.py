@@ -166,6 +166,22 @@ def test_can_advance_is_forward_only():
     assert not ew.can_advance("rejected", "interview")   # no regression
     assert not ew.can_advance("interview", "applied")
     assert not ew.can_advance("interview", "interview")
+    assert not ew.can_advance("not_pursuing", "interview")
+
+
+def test_match_application_uses_title_to_disambiguate_company_roles():
+    pool = [
+        {"id": "one", "company": "Tempus", "title": "Data Scientist",
+         "applied_at": 10},
+        {"id": "two", "company": "Tempus", "title": "Software Engineer",
+         "applied_at": 20},
+    ]
+    match = ew.match_application(
+        ["Tempus"], "Update on your application — Data Scientist",
+        "Unfortunately, we decided to pursue other opportunities.",
+        pool,
+    )
+    assert match["id"] == "one"
 
 
 def _raw_body(from_hdr, subject, body, msg_id):
@@ -200,6 +216,51 @@ def test_rejection_email_advances_applied_entry_to_rejected(tmp_state, monkeypat
     e = state.applied()[0]
     assert e["stage"] == "rejected" and e["status"] == "rejected"
     assert e["responded_at"]
+
+
+def test_rejection_email_promotes_saved_role_and_uses_broader_phrase(tmp_state, monkeypatch):
+    monkeypatch.setenv("EMAIL_ADDRESS", "vmj@njit.edu")
+    monkeypatch.setenv("EMAIL_APP_PASSWORD", "fake")
+    monkeypatch.delenv("NOTION_TOKEN", raising=False)
+    state.save("jobs.json", {})
+    state.save("shortlist.json", [{
+        "id": "saved1", "company": "Tempus", "title": "Data Scientist 1",
+        "url": "https://tempus.com/jobs/1", "locations": [],
+        "score": 88, "source": "simplify",
+    }])
+    msgs = {b"1": _raw_body(
+        "Tempus Recruiting <no-reply@tempus.com>",
+        "Update on your application — Data Scientist 1",
+        "We have decided to go in another direction with this role.",
+        "<r2@tempus.com>",
+    )}
+    monkeypatch.setattr(ew.imaplib, "IMAP4_SSL", lambda host, port: _full_imap(msgs))
+    result = ew.run(lookback_days=5)
+    assert result["rejected"] == 1
+    assert state.applied()[0]["stage"] == "rejected"
+    assert state.shortlist() == []
+
+
+def test_rejection_email_can_track_known_untracked_job(tmp_state, monkeypatch):
+    monkeypatch.setenv("EMAIL_ADDRESS", "vmj@njit.edu")
+    monkeypatch.setenv("EMAIL_APP_PASSWORD", "fake")
+    monkeypatch.delenv("NOTION_TOKEN", raising=False)
+    state.save("jobs.json", {
+        "job1": {"id": "job1", "company": "Stripe", "title": "Software Engineer",
+                 "url": "https://stripe.com/jobs/1", "locations": [],
+                 "score": 80, "source": "greenhouse"},
+    })
+    msgs = {b"1": _raw_body(
+        "Workday <no-reply@myworkday.com>",
+        "Application update — Software Engineer at Stripe",
+        "Your candidacy will not be advancing at this time.",
+        "<r3@stripe.com>",
+    )}
+    monkeypatch.setattr(ew.imaplib, "IMAP4_SSL", lambda host, port: _full_imap(msgs))
+    result = ew.run(lookback_days=5)
+    assert result["rejected"] == 1
+    assert state.applied()[0]["id"] == "job1"
+    assert state.applied()[0]["stage"] == "rejected"
 
 
 def test_interview_email_advances_and_no_regression(tmp_state, monkeypatch):
