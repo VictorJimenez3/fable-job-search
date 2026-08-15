@@ -34,9 +34,23 @@ Before changing the radar, read these in order:
   `docs/feed.xml`, or `docs/internships/`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
-## Current operational facts (verified 2026-08-14)
+## Current operational facts (verified 2026-08-15)
 
-### Latest change (verified 2026-08-14)
+### Latest change (verified 2026-08-15)
+
+- **Resume Studio parity bank:** the cloud Studio now uses the live Job Radar
+  shell and page layout while retaining the local Studio's four mode buttons,
+  full bank filters, posting snapshots, reports, PDF/preview links, and
+  Workshop handoff. The owner-only `/api/resume-bank` stores a synchronized
+  index and generated artifacts in an app-created private Google Drive folder.
+  **sync local bank** copies every local and legacy entry, including failed or
+  interrupted runs; it never uploads the source CV or evidence graph. Cloud
+  artifacts are served through an owner-session proxy with private/no-store
+  headers. New matching, generation, and Workshop edits still require the
+  loopback Mac engine, so the cloud remains a safe fail-safe when that engine
+  is asleep.
+
+### Earlier change (verified 2026-08-14)
 
 - **Unified cloud Resume Studio:** the owner-only production platform now has
   one Resume Studio workspace instead of a separate cloud title-preview page
@@ -47,9 +61,10 @@ Before changing the radar, read these in order:
   a narrow production-origin postMessage bridge to the compact loopback engine
   window. When the Mac is unavailable, cloud
   ranking, posting links, and apply flow remain usable while draft controls
-  stay disabled. The CV corpus, provider sessions, PDFs, reports, and
-  workshop revisions remain local-only under `CV/.resume_studio/`; no private
-  artifact is committed or exposed by the bridge health response.
+  stay disabled. The source CV corpus, provider sessions, and generation
+  execution remain local-only under `CV/.resume_studio/`; explicit bank sync is
+  the only path that copies generated artifacts to the private cloud Drive
+  proxy, and no private artifact is committed or exposed by bridge health.
 
 ### Earlier operational facts (verified 2026-08-08)
 
@@ -405,8 +420,10 @@ Before changing the radar, read these in order:
   at `http://127.0.0.1:4317/`. Tailor, the drawer's Resume tab, and the Studio
   tab all use the same cloud workspace. A bounded public posting snapshot is
   sent through the allowlisted loopback postMessage bridge only when matching
-  or generation is requested. CV evidence, provider sessions, PDFs, and
-  reports never cross that boundary (DECISION #123).
+  or generation is requested. CV evidence, provider sessions, and source
+  documents never cross that boundary; explicit owner bank sync copies
+  generated artifacts to the private Google Drive bank (DECISION #123 and the
+  current bank closure).
   For temporary human-feedback calibration across varied radar roles, run
   `.venv/bin/python scripts/resume_calibration.py --generate --count 6 --serve`
   and open `http://127.0.0.1:4321/`; generated PDFs and JSONL labels stay under
@@ -465,12 +482,13 @@ Before changing the radar, read these in order:
   the company-identifiable filename to the browser, and TICC is hard-excluded
   from source selection, model plans, rendering, and workshop edits without
   modifying the local CV corpus.
-- **Resume Studio queue/editor/usage is shipped:** Used bullets, AI tailor, and
-  Unrestricted AI tailor are durable queued modes. The bank keeps each posting
-  snapshot and run; the workshop embeds the original/latest PDF, edits every
-  visible line, and exposes selection rationale plus observed weekly Codex
-  tokens/calls. Codex Plus's weekly allowance is not exposed by the local CLI;
-  `CODEX_WEEKLY_LIMIT_TOKENS` is an optional owner-provided comparison limit.
+- **Resume Studio queue/editor/usage is shipped:** Used bullets, AI tailor,
+  Take-the-wheel (moderate), and Unchained generation are durable queued
+  modes. The bank keeps each posting snapshot and run; the workshop embeds the
+  original/latest PDF, edits every visible line, and exposes selection
+  rationale plus observed weekly Codex tokens/calls. Codex Plus's weekly
+  allowance is not exposed by the local CLI; `CODEX_WEEKLY_LIMIT_TOKENS` is an
+  optional owner-provided comparison limit.
 - **Resume Studio canonical-file lock is shipped (DECISION #98):** the local
   Studio exposes a lock status and refuses to render anywhere inside `CV/`
   except the private `CV/.resume_studio/` workspace. The canonical

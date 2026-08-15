@@ -88,6 +88,23 @@ async function personalSessionAccessToken(personal) {
   return accessTokenFor(GOOGLE_AUTH_CLIENT_ID(), GOOGLE_AUTH_CLIENT_SECRET(), personal.r);
 }
 
+const ownerDriveConfigured = () => ["GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET",
+  "GOOGLE_REFRESH_TOKEN"].every(k => envv(k));
+
+// Resume Bank uses the same private Drive boundary as the existing tracker.
+// A linked personal Google session wins; the owner-only configured grant is a
+// fallback for Victor's existing production deployment, so the bank does not
+// require a second OAuth ceremony just to read it.
+async function resumeDriveAccess(personal, ownerFallback = false) {
+  if (hasPersonalSession(personal)) {
+    return {token: await personalSessionAccessToken(personal), source: "personal"};
+  }
+  if (ownerFallback && ownerDriveConfigured()) {
+    return {token: await accessToken(), source: "owner"};
+  }
+  throw new Error("Connect Google to enable the private cloud Resume Bank");
+}
+
 function rangeUrl(spreadsheetId, range, sheetTab, suffix = "") {
   return `${SHEETS_API}/${spreadsheetId}/values/${encodeURIComponent(`${sheetTab}!${range}`)}${suffix}`;
 }
@@ -775,4 +792,5 @@ async function updateUserTracker(login, accountKeys, payload, personal = null) {
 
 module.exports = { configured, personalConfigured, hasPersonalSession, userTracker,
   updateUserTracker, resolveAccount, PERSONAL_HEADERS, ACCOUNT_HEADERS, PREFERENCE_HEADERS,
-  VALID_POSTING_STATUSES, tabForProfile, internshipTab, preferencesTab, optionalReadFailure };
+  VALID_POSTING_STATUSES, tabForProfile, internshipTab, preferencesTab, optionalReadFailure,
+  resumeDriveAccess, ownerDriveConfigured };

@@ -212,12 +212,25 @@ def test_platform_role_field_buttons_cycle_to_red_exclusion_without_disappearing
 def test_platform_resume_studio_is_one_cloud_workspace_with_private_engine_fallback():
     html = (ROOT / "webapp" / "index.html").read_text()
     studio = (ROOT / "scripts" / "resume_studio.py").read_text()
+    bank = (ROOT / "webapp" / "api" / "resume-bank.js").read_text()
     assert '"Resume Studio"' in html
     assert "RESUME_STUDIO_LOCAL_ORIGIN" in html
     assert "openResumeStudio" in html
     assert "queueResumeMode" in html
+    assert "renderResumeBankView" in html
+    assert "syncCloudResumeBank" in html
+    assert 'fetch("/api/resume-bank"' in html
+    assert "Resume bank" in html
+    assert "resumeDriveAccess" in bank
+    assert "private, no-store" in bank
+    assert "Job Radar Resume Bank" in bank
+    assert "Resume Bank is private to the repository owner" in bank
     assert "private engine offline" in html
     assert "tailor here" in html
+    assert "Take-the-wheel (moderate)" in html
+    assert "Unchained generation" in html
+    assert "Take-the-wheel (moderate)" in studio
+    assert "Queue Take-the-wheel" in studio
     assert "DEFAULT_BRIDGE_ORIGINS" in studio
     assert "Access-Control-Allow-Origin" in studio
     assert "cv_present" in studio

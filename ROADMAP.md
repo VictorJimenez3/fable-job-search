@@ -308,9 +308,10 @@ Production-to-local Resume Studio — ✅ SHIPPED 2026-08-11 (DECISION #114).
 Only the authenticated `@VictorJimenez3` owner UI exposes Tailor controls. A
 selected production job is saved to **To apply** and passed through a URL
 fragment to the loopback-only Studio, including a manually saved job
-description when available. CV evidence and generated artifacts never cross
-the local privacy boundary. A login service keeps the Studio available on
-Victor's Mac.
+description when available. The source CV/evidence graph and generation
+execution never cross the local privacy boundary; an explicit owner sync may
+copy generated bank artifacts into the private cloud bank. A login service
+keeps the Studio available on Victor's Mac.
 
 Resume library/preview surface — ✅ SHIPPED (DECISION #75). Resume Studio now
 indexes saved runs and legacy architecture experiments, separates “create a
@@ -323,9 +324,13 @@ Cloud Resume Studio control plane — ✅ SHIPPED 2026-08-14 (DECISION #123).
 The production owner view is now the single Resume Studio UI: Jobs rows and
 role drawers open directly into it, with posting selection, private-engine
 health, full-match handoff, four tailoring modes, queued-run status, and bank
-links in one workspace. The Mac engine remains the private fail-safe for CV
-evidence, provider calls, rendering, and workshop artifacts; when it is
-offline, the cloud UI stays useful but never enables a pretend draft.
+links in one workspace. The 2026-08-15 bank closure adds a private,
+owner-authenticated Google Drive artifact bank and local-to-cloud sync for all
+current and legacy entries, including PDFs, previews, reports, and posting
+snapshots. The Mac engine remains the private fail-safe for source CV/evidence,
+provider calls, rendering, and workshop edits; when it is offline, already
+synced artifacts remain viewable but new generation and workshop actions stay
+disabled.
 
 ## Pipeline intelligence
 - **Resume UAT and outcome learning** — future idea: if enough applications,
