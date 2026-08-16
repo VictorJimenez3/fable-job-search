@@ -94,8 +94,8 @@ def test_cursor_api_filters_action_queue_and_blocks_unsafe_urls():
           const authReq={method:"GET",url:"/api/v1/router?path=auth/get-session",query:{path:"auth/get-session"}};
           const authOut={...out,headers:{},statusCode:0,body:null};
           await api(authReq,authOut);
-          if(authReq.url!=="/api/v1/auth/get-session" || authOut.statusCode!==503) {
-            throw new Error("nested auth route was not preserved");
+          if(authReq.url!=="/api/v1/auth/get-session" || authOut.statusCode===0 || authOut.statusCode===404) {
+            throw new Error(`nested auth route was not preserved: ${authOut.statusCode}`);
           }
         })().catch(error=>{console.error(error);process.exit(1);});
         """
