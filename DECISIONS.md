@@ -1993,3 +1993,19 @@ independent ChemE branch cannot invoke a local action or lockfile that exists
 only on the default branch, so they retain a pinned Python and
 `requirements.txt` bootstrap until that branch independently adopts uv. This
 avoids centralizing setup at the cost of breaking scheduled cross-branch work.
+
+## 134. vNext API routing fits the current Vercel budget without weakening boundaries (2026-08-16)
+
+Vercel's current project limit is twelve serverless functions. The vNext
+endpoints therefore keep their individual modules as underscore-prefixed
+implementation files and expose one router function behind an explicit
+`/api/v1/:path*` rewrite. The router restores the public URL before delegating,
+so Better Auth still sees `/api/v1/auth/*`, while public Jobs keeps the JSON
+fallback and owner checks remain in the private handlers. This avoids a paid
+plan dependency and preserves endpoint behavior; the prebuild asserts twelve
+functions and four static files.
+
+The deployment workflow waits for the Vercel deployment to reach Ready before
+aliasing it. The vNext entry itself receives the same strict CSP as its asset
+descendants, and live probes verify that auth configuration and source files
+are not statically exposed.

@@ -90,6 +90,14 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
 
 ### Latest change (verified 2026-08-16)
 
+- **vNext is live behind the Hobby-safe Vercel function budget:** public v1
+  reads, private migration endpoints, and Better Auth are dispatched through
+  one `/api/v1/router` function with an explicit `/api/v1/:path*` rewrite.
+  The production workflow waits for Vercel readiness before moving
+  `job-radar-newgrad.vercel.app`, and the vNext HTML entry plus descendants
+  receive the strict CSP. The live deployment returns v1 Jobs data, fails
+  closed for unconfigured auth, and exposes no source/config files.
+
 - **Owner-only objective Resume Bank comparison:** each grouped posting card now
   identifies the strongest finished variant for that posting using the
   auditable `objective-resume-v1` rubric (target fit, evidence safety, layout
