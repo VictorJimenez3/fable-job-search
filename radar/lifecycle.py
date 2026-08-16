@@ -198,8 +198,13 @@ def normalize_record(record: dict, when: int) -> None:
         record["alert_ok"] = False
 
 
-def reconcile(jobs: dict, when: int, seen_ids: set[str] | None = None,
-              allow_source_gap_expiry: bool = True) -> dict:
+def reconcile(
+    jobs: dict,
+    when: int,
+    seen_ids: set[str] | None = None,
+    allow_source_gap_expiry: bool = True,
+    healthy_source_boards: set[str] | None = None,
+) -> dict:
     """Normalize records and expire roles absent from feeds for long enough.
 
     The default 45-day active age plus 14-day source-gap grace is intentionally
@@ -229,7 +234,20 @@ def reconcile(jobs: dict, when: int, seen_ids: set[str] | None = None,
         last_seen = int(record.get("last_seen_at") or record.get("first_seen") or first)
         old_enough = when - first >= active_days * 86400
         source_gap = when - last_seen >= grace_days * 86400
-        if allow_source_gap_expiry and old_enough and source_gap:
+        record_boards = {
+            str(value)
+            for value in [
+                record.get("source_board"),
+                *(record.get("source_board_variants") or []),
+            ]
+            if value
+        }
+        # Missing run evidence is not success. Legacy rows gain an exact board
+        # identity on their next sighting; until then they remain open unless a
+        # direct page check proves a terminal state.
+        board_was_healthy = bool(record_boards & (healthy_source_boards or set()))
+        if (allow_source_gap_expiry and board_was_healthy
+                and old_enough and source_gap):
             days = max(1, (when - last_seen) // 86400)
             mark_terminal(record, EXPIRED, when,
                           f"not seen in monitored sources for {days} days")

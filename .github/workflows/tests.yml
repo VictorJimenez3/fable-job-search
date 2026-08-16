@@ -2,7 +2,17 @@ name: tests
 
 on:
   push:
-    paths: ["radar/**", "tests/**", "profile.yaml", "requirements.txt"]
+    paths:
+      - ".github/actions/**"
+      - ".github/workflows/tests.yml"
+      - "radar/**"
+      - "tests/**"
+      - "migrations/**"
+      - "webapp/**"
+      - "profile.yaml"
+      - "pyproject.toml"
+      - "uv.lock"
+      - "requirements.txt"
   workflow_dispatch: {}
 
 permissions:
@@ -13,12 +23,22 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Set up frozen Radar test environment
+        uses: ./.github/actions/setup-radar
         with:
-          python-version: "3.12"
-          cache: pip
-      - run: pip install -r requirements.txt pytest
-      - run: python -m pytest tests/ -q
+          dev: "true"
+      - run: uv run pytest tests/ -q
+      - run: uv run python -m compileall -q radar tests migrations
+      - run: uv run ruff check radar/db radar/cli.py radar/http.py radar/gmail_api.py radar/worker.py tests/test_http_security.py tests/test_vnext_foundation.py tests/test_gmail_api.py tests/test_worker.py
       - name: Verify stored score coverage
-        run: python -m radar.main score-health
+        run: uv run python -m radar.main score-health
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: webapp/package-lock.json
+      - run: npm ci
+        working-directory: webapp
+      - run: npm run typecheck && npm test && npm run lint && npm run build && npm audit --audit-level=high
+        working-directory: webapp

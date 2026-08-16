@@ -507,7 +507,6 @@ function activateLane(mode, rerender=true) {
 try { S.lane = LANE_CONFIG[localStorage.getItem("jr_active_lane")] ? localStorage.getItem("jr_active_lane") : "new_grad"; } catch {}
 activateLane(S.lane, false);
 const norm = s => (s||"").toLowerCase().replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();
-const token = () => localStorage.getItem("jr_pat") || "";
 function trackerBackend() {
   // Victor's repository workflow is Notion-first. Google Sheets is an
   // explicit, optional personal mirror; it must never become the default just
@@ -530,6 +529,18 @@ function setTrackerBackend(choice) {
 }
 const $ = sel => document.querySelector(sel);
 const esc = s => (s??"").toString().replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function safeExternalURL(value) {
+  try {
+    const parsed = new URL(String(value || ""), location.href);
+    if (!["http:", "https:"].includes(parsed.protocol) || parsed.username || parsed.password) return "#";
+    return parsed.href;
+  } catch { return "#"; }
+}
+function openExternal(value) {
+  const target = safeExternalURL(value);
+  if (target === "#") { toast("Blocked an unsafe link"); return null; }
+  return window.open(target, "_blank", "noopener,noreferrer");
+}
 const toast = m => { const t=document.createElement("div"); t.className="toast"; t.textContent=m;
   document.body.appendChild(t); setTimeout(()=>t.remove(), 3200); };
 
@@ -630,7 +641,7 @@ function resumeStudioUrl(j) {
 }
 function openResumeStudio(j) {
   if (!j || !ownerResumeStudio()) { toast("Resume Studio is private to @VictorJimenez3"); return; }
-  window.open(resumeStudioUrl(j), "_blank", "noopener");
+  openExternal(resumeStudioUrl(j));
   const lane = laneOf(j.id, appliedById());
   if (!lane && canWrite()) {
     actTrack(j, true).then(ok => toast(ok
@@ -832,21 +843,6 @@ async function boot() {
 }
 
 /* ---------- write paths ---------- */
-async function gh(path, opts={}) {
-  const r = await fetch(API + path, {...opts, headers: {
-    "Authorization": `Bearer ${token()}`, "Accept": "application/vnd.github+json",
-    ...(opts.headers||{}) }});
-  if (!r.ok && r.status !== 409) throw new Error(`${r.status} ${await r.text()}`);
-  return r;
-}
-async function dispatch(action, job, extra={}) {
-  await gh(`/repos/${REPO}/dispatches`, {method:"POST",
-    body: JSON.stringify({event_type:"radar-web",
-      client_payload:{action, id: job.id, url: job.url, company: job.company,
-        title: job.title, location: (job.locations||[])[0] || "",
-        profile:S.lane, ...extra}})});
-  return true;
-}
 // Tokenless write path: open a prefilled GitHub issue — your GitHub login is
 // the auth. The radar only obeys the repo owner and auto-closes the issue.
 function issueCmd(cmd, job) {
@@ -854,7 +850,7 @@ function issueCmd(cmd, job) {
   const u = `https://github.com/${REPO}/issues/new?title=${
     encodeURIComponent(`radar: ${cmd} ${job.company}`)}&body=${
     encodeURIComponent(`radar-profile: ${S.lane}\n${cmd} ${ref}`)}`;
-  window.open(u, "_blank");
+  openExternal(u);
   toast("Hit 'Create' on GitHub — it processes & auto-closes in ~1 min");
   return false;
 }
@@ -862,7 +858,7 @@ function issueFeedback(job, vote, reason) {
   const body = `radar-profile: ${S.lane}\nfeedback ${job.id} ${vote} ${reason}`;
   const u = `https://github.com/${REPO}/issues/new?title=${
     encodeURIComponent(`radar: feedback ${job.company}`)}&body=${encodeURIComponent(body)}`;
-  window.open(u, "_blank");
+  openExternal(u);
   toast("Hit 'Create' on GitHub — owner feedback processes in ~1 min");
   return false;
 }
@@ -879,20 +875,6 @@ function saveWeb() {                       // debounce web_state commits
     }, 1500);
     return;
   }
-  if (!token()) return;
-  clearTimeout(saveTimer);
-  saveTimer = setTimeout(async () => {
-    try {
-      let sha;
-      const webPath = S.lane === "internship" ? "state/intern_web_state.json" : "state/web_state.json";
-      const cur = await fetch(`${API}/repos/${REPO}/contents/${webPath}?ref=${BRANCH}`,
-        {headers:{Authorization:`Bearer ${token()}`}});
-      if (cur.ok) sha = (await cur.json()).sha;
-      const content = btoa(unescape(encodeURIComponent(JSON.stringify(S.web, null, 1))));
-      await gh(`/repos/${REPO}/contents/${webPath}`, {method:"PUT",
-        body: JSON.stringify({message:"platform: workspace update", content, sha, branch:BRANCH})});
-    } catch(e) { toast("Cloud save failed (kept locally): " + e.message.slice(0,80)); }
-  }, 1500);
 }
 
 /* ---------- derived ---------- */
@@ -1227,7 +1209,6 @@ async function sendTasteFeedback(job, vote, selectorId) {
   const reason = allowed.has(selected) ? selected : (vote === "up" ? "both" : "other");
   try {
     if (S.auth?.owner) await apiAction("feedback", job, {vote, reason});
-    else if (token()) await dispatch("feedback", job, {vote, reason});
     else if (!S.backend) { issueFeedback(job, vote, reason); return; }
     else { toast("Sign in as the repository owner to send ranking feedback"); return; }
     S.feedback = S.feedback || {};
@@ -1243,7 +1224,7 @@ function reportJob(job) {
   const body = `radar-report: ${job.id}\nreport-type: ${type}\n\nPosting: ${job.url||""}`;
   const u = `https://github.com/${REPO}/issues/new?title=${
     encodeURIComponent(`radar: report ${job.company}`)}&body=${encodeURIComponent(body)}`;
-  window.open(u, "_blank");
+  openExternal(u);
   toast("Create the GitHub issue to log this report");
 }
 async function archiveJob(job) {
@@ -1366,7 +1347,7 @@ function lifecycleNoticeHTML() {
     `${count} ${postingStatusLabel(status)}`).join(" and ");
   return `<div class="note"><b>Private tracker update:</b> ${esc(parts)} posting${notice.count === 1 ? "" : "s"} were marked in your Google Sheet. They are hidden from active Jobs but remain in <b>History</b>.</div>`;
 }
-function canWrite() { return Boolean((S.auth && (S.auth.owner || S.userTracker)) || token()); }
+function canWrite() { return Boolean(S.auth && (S.auth.owner || S.userTracker)); }
 function canResearchCompany() { return Boolean(S.auth && S.auth.owner); }
 function researchPrefetchIds(current) {
   // One role per employer, in the user's current Jobs ordering. The opened
@@ -1402,7 +1383,6 @@ async function doWrite(action, job) {   // best available write path
     return result;
   }
   if (S.auth && S.userTracker) return trackerAction(action, job);
-  if (token()) return dispatch(action, job);
   if (S.backend) { toast("Connect Google to create your personal tracker");
                    return false; }
   return issueCmd(action === "track" ? "save" : action === "untrack" ? "untrack" : "applied", job);
@@ -1442,7 +1422,7 @@ async function actApplied(j) {
 }
 function startApply(j) {
   if (!j || !j.url) return;
-  window.open(j.url, "_blank", "noopener");
+  openExternal(j.url);
   const lane = laneOf(j.id, appliedById());
   if (!lane && canWrite()) {
     actTrack(j, true).then(ok=>toast(ok
@@ -1475,7 +1455,7 @@ function connectButton(provider, label) {
 }
 function trackerOpenButton(label = "Open Google Sheet") {
   const url = S.trackerMeta?.sheet_url;
-  return url ? `<a class="act primary tracker-quick" aria-label="${esc(label)}" href="${esc(url)}" target="_blank" rel="noopener">📊 ${esc(label)} ↗</a>` : "";
+  return url ? `<a class="act primary tracker-quick" aria-label="${esc(label)}" href="${esc(safeExternalURL(url))}" target="_blank" rel="noopener noreferrer">📊 ${esc(label)} ↗</a>` : "";
 }
 function trackerActionButton(label = "Connect Google") {
   if (S.auth?.owner) {
@@ -1895,7 +1875,7 @@ function rHistory() {
     return `<article class="lane" style="margin-bottom:.65rem">
       <div class="bar"><b>${esc(job.company)} — ${esc(job.title)}</b><span class="chip bad">${label}</span></div>
       <p class="sub">${lifecycleDate(when)} · ${esc(entry.tracker_removed_reason || "Application closed; retained for history")}</p>
-      <div class="acts"><a class="act" href="${esc(job.url || entry.url || "#")}" target="_blank" rel="noopener">posting ↗</a><button class="act" onclick='openWS("${entry.id}")'>details ▸</button></div>
+      <div class="acts"><a class="act" href="${esc(safeExternalURL(job.url || entry.url))}" target="_blank" rel="noopener noreferrer">posting ↗</a><button class="act" onclick='openWS("${entry.id}")'>details ▸</button></div>
     </article>`;
   }).join("");
   let rows = Object.values(S.jobs).filter(isTerminalPosting);
@@ -1911,7 +1891,7 @@ function rHistory() {
       <p class="sub">${lifecycleDate(lifecycleWhen(job))} · first seen ${lifecycleDate(job.first_seen)} · last source sighting ${lifecycleDate(job.last_seen_at)} · score ${job.score ?? "–"}</p>
       <p class="sub"><b>Why:</b> ${esc(lifecycleReason(job))}</p>
       ${events.length ? `<details><summary>${events.length} lifecycle event${events.length === 1 ? "" : "s"}</summary><ul class="plain">${events.map(event => `<li>${esc(event.status)} · ${lifecycleDate(event.at)} · ${esc(event.reason || "")}</li>`).join("")}</ul></details>` : ""}
-      <div class="acts"><a class="act" href="${esc(job.url || "#")}" target="_blank" rel="noopener">posting ↗</a><button class="act" onclick='openWS("${job.id}")'>details ▸</button></div>
+      <div class="acts"><a class="act" href="${esc(safeExternalURL(job.url))}" target="_blank" rel="noopener noreferrer">posting ↗</a><button class="act" onclick='openWS("${job.id}")'>details ▸</button></div>
     </article>`;
   }).join("");
   $("#main").innerHTML = `<section class="testing-hero"><span class="chip unknown">retained history · hidden from active Jobs</span>
@@ -2061,7 +2041,7 @@ function foundVia(j) {
     zapply:"Zapply DS/ML board", hn:"Hacker News Who Is Hiring"};
   const label = labels[j.source] || "direct company / ATS monitoring";
   const url = j.source_url || j.url;
-  return `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label)} ↗</a>`;
+  return `<a href="${esc(safeExternalURL(url))}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`;
 }
 function researchFreshness(d) {
   if (d?.retry_after && d.retry_after > Date.now()/1000) {
@@ -2075,7 +2055,7 @@ function researchFreshness(d) {
 function sourceList(d) {
   if (!d?.sources?.length) return `<p class="sub">No official source excerpt captured yet.</p>`;
   return `<ol class="sub">${d.sources.map((s,i)=>`<li id="src-${i+1}">
-    <a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>
+    <a href="${esc(safeExternalURL(s.url))}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a>
     · retrieved ${new Date((s.retrieved_at||0)*1000).toLocaleDateString()}
     <br>${esc(s.excerpt)}</li>`).join("")}</ol>`;
 }
@@ -2090,18 +2070,19 @@ const jobById = id => S.jobs[id] || S.applied.find(a=>a.id===id);
 const RESUME_STUDIO_LOCAL_ORIGIN = "http://127.0.0.1:4317";
 // Owner-defined quality-era boundary: the first Google run after the Studio overhaul.
 const RESUME_BANK_CURRENT_ERA_START = "2026-08-08T19:03:28Z";
-let resumeBridgeWindow = null, resumeBridgeReady = null, resumeBridgeSequence = 0;
+let resumeBridgeWindow = null, resumeBridgeReady = null, resumeBridgeSequence = 0, resumeBridgeNonce = "";
 const resumeBridgePending = new Map();
 window.addEventListener("message", event => {
   const data = event.data || {};
+  if (event.origin !== RESUME_STUDIO_LOCAL_ORIGIN || event.source !== resumeBridgeWindow) return;
   if (data.type === "resume-studio:ready") {
-    if (event.origin === RESUME_STUDIO_LOCAL_ORIGIN) {
-      resumeBridgeWindow = event.source;
-      if (resumeBridgeReady) resumeBridgeReady.resolve(event.source);
-      resumeBridgeReady = null;
-    }
+    if (!/^[A-Za-z0-9_-]{32,128}$/.test(String(data.bridge_nonce || ""))) return;
+    resumeBridgeNonce = data.bridge_nonce;
+    if (resumeBridgeReady) resumeBridgeReady.resolve(event.source);
+    resumeBridgeReady = null;
     return;
   }
+  if (!resumeBridgeNonce || data.bridge_nonce !== resumeBridgeNonce) return;
   if (data.type === "resume-studio:run") {
     if (data.run_id === S.testing.activeRunId) {
       S.testing.runStatus = data.data || null;
@@ -2121,7 +2102,7 @@ window.addEventListener("message", event => {
 function ensureResumeBridge() {
   if (resumeBridgeReady) return resumeBridgeReady.promise;
   if (resumeBridgeWindow && !resumeBridgeWindow.closed) return Promise.resolve(resumeBridgeWindow);
-  const popup = window.open(`${RESUME_STUDIO_LOCAL_ORIGIN}/?bridge=1`, "resume-studio-engine", "popup,width=440,height=220");
+  const popup = window.open(`${RESUME_STUDIO_LOCAL_ORIGIN}/?bridge=1&origin=${encodeURIComponent(location.origin)}`, "resume-studio-engine", "popup,width=440,height=220");
   if (!popup) return Promise.reject(new Error("The private engine window was blocked. Allow pop-ups for the Radar to connect Resume Studio."));
   resumeBridgeWindow = popup;
   let resolveReady, rejectReady;
@@ -2136,7 +2117,7 @@ function bridgeRequest(action, payload={}) {
     const timeout = ["match","context_job"].includes(action) ? 35000 : 15000;
     const timer = setTimeout(()=>{resumeBridgePending.delete(request_id);reject(new Error("Private Resume Studio did not answer."));},timeout);
     resumeBridgePending.set(request_id,{resolve,reject,timer});
-    target.postMessage({type:"resume-studio:request",request_id,action,payload},RESUME_STUDIO_LOCAL_ORIGIN);
+    target.postMessage({type:"resume-studio:request",request_id,bridge_nonce:resumeBridgeNonce,action,payload},RESUME_STUDIO_LOCAL_ORIGIN);
   }));
 }
 function ownerResumeStudio() {
@@ -2457,11 +2438,11 @@ function sponsorshipHistoryCard(j) {
     const workers = (Number(h.certified_workers)||0) + (Number(h.certified_withdrawn_workers)||0);
     return `<div class="note"><b>Likely historical sponsor</b> · ${cases} certified LCA case${cases===1?"":"s"}${workers?` · ${workers} worker position${workers===1?"":"s"}`:""}<br>
       <span class="sub">Covered ${esc(coverage)} · latest decision ${esc(h.latest_decision_date||"not recorded")}. This is company-level history, not a promise that this role sponsors or that a future petition will succeed.</span>
-      <br><a href="${esc(source)}" target="_blank" rel="noopener">view official DOL source ↗</a></div>`;
+      <br><a href="${esc(safeExternalURL(source))}" target="_blank" rel="noopener noreferrer">view official DOL source ↗</a></div>`;
   }
   if (h.status === "no-history") return `<div class="note"><b>No certified history found</b> in ${esc(coverage)}.<br>
     <span class="sub">That is not a finding that the company will not sponsor. Use the posting’s own visa wording first.</span>
-    <br><a href="${esc(source)}" target="_blank" rel="noopener">view official DOL source ↗</a></div>`;
+    <br><a href="${esc(safeExternalURL(source))}" target="_blank" rel="noopener noreferrer">view official DOL source ↗</a></div>`;
   return `<div class="note"><b>DOL history unavailable.</b> Refresh the sponsorship database to add company context; the posting facts above remain authoritative.</div>`;
 }
 function wsFit(j, w, c, id) {
@@ -2536,7 +2517,7 @@ function wsOutreach(j, w, c, id) {
       ${recruiterDorks(j)}</div>
     <div class="sect"><h4>Conversations & contacts</h4>
       <ul class="plain" id="wsLinks">${w.links.map((l,i)=>
-        `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label||l.url)}</a>
+        `<li><a href="${esc(safeExternalURL(l.url))}" target="_blank" rel="noopener noreferrer">${esc(l.label||l.url)}</a>
          <button class="act" onclick="rmLink('${id}',${i})">✕</button></li>`).join("")}</ul>
       <div class="bar"><input id="lkLabel" placeholder="label (e.g. Sarah DM)" style="width:10rem">
         <input id="lkUrl" placeholder="https:// convo / profile / thread">
@@ -2558,7 +2539,7 @@ function wsResume(j, w, c, id) {
     <p>Use the same posting you are reviewing here. The unified Studio opens in the main cloud workspace, while the private evidence graph and rendered PDFs stay behind the owner-only Mac engine.</p>
     <div class="match-card"><strong>Title preview: ${match.score}/100</strong><p class="sub">Full source-level matching runs when the private engine is connected.</p></div>
     <div class="acts"><button class="act primary" onclick='openResumeStudio(jobById("${id}"))'>open in Resume Studio</button>
-      <a class="act" href="${esc(j.url||"#")}" target="_blank" rel="noopener">open posting ↗</a></div></div>`;
+      <a class="act" href="${esc(safeExternalURL(j.url))}" target="_blank" rel="noopener noreferrer">open posting ↗</a></div></div>`;
 }
 function closeWS(){ $("#ws").classList.remove("open"); render(); }
 $("#ws").addEventListener("click", e=>{ if(e.target.id==="ws") closeWS(); });
@@ -2977,7 +2958,7 @@ async function dismissContextHint(id,label) {
 }
 function contextQuestionHTML(item) {
   const trigger=(item.triggers||[]).slice(-1)[0]||{}, answered=item.status==="answered";
-  const hints=(item.candidate_hints||[]).map((hint,index)=>`<div class="context-hint"><strong>${esc(hint.label)}</strong><p>${esc(hint.reason)}</p><p><em>${esc(hint.question)}</em></p><div class="acts"><button class="act" onclick='useContextHint(${JSON.stringify(item.id)},${index})'>answer about this place</button>${hint.kind!=="owner-hint"?`<button class="act" onclick='dismissContextHint(${JSON.stringify(item.id)},${JSON.stringify(hint.label)})'>not in this place</button>`:""}${hint.source_url?`<a class="act" href="${esc(hint.source_url)}" target="_blank" rel="noopener">inspect source ↗</a>`:""}</div></div>`).join("");
+  const hints=(item.candidate_hints||[]).map((hint,index)=>`<div class="context-hint"><strong>${esc(hint.label)}</strong><p>${esc(hint.reason)}</p><p><em>${esc(hint.question)}</em></p><div class="acts"><button class="act" onclick='useContextHint(${JSON.stringify(item.id)},${index})'>answer about this place</button>${hint.kind!=="owner-hint"?`<button class="act" onclick='dismissContextHint(${JSON.stringify(item.id)},${JSON.stringify(hint.label)})'>not in this place</button>`:""}${hint.source_url?`<a class="act" href="${esc(safeExternalURL(hint.source_url))}" target="_blank" rel="noopener noreferrer">inspect source ↗</a>`:""}</div></div>`).join("");
   return `<div class="context-question" data-context-question="${esc(item.id)}"><div class="bar" style="justify-content:space-between"><strong>${esc(item.term)}</strong>${studioBadge(answered?(item.response==="used"?"confirmed evidence":"known absence"):"open",answered?"good":"warn")}</div><p>${esc(item.question)}</p><p class="sub">Raised by ${esc(trigger.company||"a posting")} · ${esc(trigger.title||trigger.importance||"requirement")}${(item.triggers||[]).length>1?` · ${(item.triggers||[]).length} postings`:""}</p>${hints?`<details><summary>Possible places to investigate · ${(item.candidate_hints||[]).length}</summary><div class="context-hints">${hints}</div></details>`:""}${answered?`<p><strong>${esc(item.where_when||"")}</strong><br>${esc(item.answer||item.response)}</p>`:`<input class="context-where" type="text" placeholder="Where and when? e.g. J&amp;J internship, summer 2025"><textarea rows="3" placeholder="What did you personally do, how did you use it, and what happened?"></textarea><div class="acts"><button class="act primary" onclick='answerContextQuestion(${JSON.stringify(item.id)},"used")'>I used this</button><button class="act" onclick='answerContextQuestion(${JSON.stringify(item.id)},"not_used")'>I have not used this</button><button class="act" onclick='answerContextQuestion(${JSON.stringify(item.id)},"unsure")'>keep open</button></div><details class="context-hint-form"><summary>Add a project, role, course, or repo to investigate</summary><input class="hint-label" type="text" placeholder="e.g. CS485 · Nexus LinkedIn clone"><input class="hint-url" type="url" placeholder="Optional GitHub or project URL"><textarea class="hint-note" rows="2" placeholder="Why might this be where you used it?"></textarea><button class="act" onclick='saveContextHint(${JSON.stringify(item.id)})'>save place to investigate</button></details>`}</div>`;
 }
 function renderResumeContextView() {
@@ -3106,7 +3087,7 @@ function renderStudioWorkspace() {
   const engineBadge = engineOnline ? studioBadge("private engine connected","good") : S.testing.engine === "offline" ? studioBadge("private engine offline","warn") : studioBadge("checking private engine");
   const run = S.testing.runStatus;
   const busy = run && ["queued","running"].includes(run.status);
-  workspace.innerHTML = `<div class="studio-selected"><div class="bar" style="justify-content:space-between;margin:0"><div>${engineBadge} ${selected.alert_ok?studioBadge("eligible","good"):studioBadge("dashboard review","warn")}</div><div class="acts"><button class="act" onclick="showResumeContext()">context &amp; questions${S.testing.match?.context_summary?.open_questions!=null?` · ${S.testing.match.context_summary.open_questions} open`:""}</button><a class="act" href="${esc(selected.url||"#")}" target="_blank" rel="noopener">open posting ↗</a></div></div>
+  workspace.innerHTML = `<div class="studio-selected"><div class="bar" style="justify-content:space-between;margin:0"><div>${engineBadge} ${selected.alert_ok?studioBadge("eligible","good"):studioBadge("dashboard review","warn")}</div><div class="acts"><button class="act" onclick="showResumeContext()">context &amp; questions${S.testing.match?.context_summary?.open_questions!=null?` · ${S.testing.match.context_summary.open_questions} open`:""}</button><a class="act" href="${esc(safeExternalURL(selected.url))}" target="_blank" rel="noopener noreferrer">open posting ↗</a></div></div>
     <h2>${esc(selected.company)} · ${esc(selected.title)}</h2><div class="sub studio-meta">${esc((selected.locations||[]).join(", ")||"location unknown")} · Radar ${selected.score??"–"} · ${ago(postedTs(selected))||"date unknown"}</div>
     <div class="facts" style="margin-top:.45rem">${match.score!=null?studioBadge(`Resume Match ${match.score}/100`,match.confidence==="low"?"warn":"good"):""}${(match.clusters||[]).slice(0,6).map(c=>studioBadge(c.replaceAll("_"," "))).join("")}</div></div>
     <div class="studio-note" style="margin-top:.65rem"><strong>One system, two safe layers.</strong> This cloud workspace owns the selection, posting link, queue, and run status. The private engine owns your evidence graph, AI calls, PDF rendering, and revisions. If the engine is offline, this page never pretends a draft exists.</div>
@@ -3270,27 +3251,11 @@ function rSet() {
       the backend returns only that user’s rows. On GitHub Pages, the board remains read-only and
       notes stay only in that browser. The owner-only repository workflow remains separate from
       personal tracking.</p></div>
-    <div class="sect"><h4>Optional: a token for instant writes + cross-device notes</h4>
-      <p class="sub" style="max-width:44rem">Only if you want one-click writes without the GitHub
-      hop: a <b>fine-grained</b> token scoped to <span class="mono">${REPO}</span> only, with
-      <b>Contents: read/write</b> only (<a target="_blank" rel="noopener"
-      href="https://github.com/settings/personal-access-tokens/new">create here</a>). It is stored
-      in this browser's localStorage — never in the repo or the page — so don't do this on a
-      shared computer, and revoke it anytime at github.com/settings/tokens. Worst case if this
-      browser is compromised: this one repo, nothing else on your account. Note: with a token,
-      notes sync via <span class="mono">state/web_state.json</span>, which is public — keep
-      anything sensitive out or skip the token.</p>
-      <div class="bar"><input id="pat" type="password" placeholder="github_pat_… (optional)" style="min-width:20rem"
-        value="${esc(token())}">
-        <button class="act primary" onclick='localStorage.setItem("jr_pat",$("#pat").value.trim());testPAT()'>save & test</button>
-        <button class="act" onclick='localStorage.removeItem("jr_pat");toast("Token removed");render()'>remove</button></div>
-      <p id="patRes" class="sub"></p></div>`;
-}
-async function testPAT() {
-  try { const r = await gh(`/repos/${REPO}`); const d = await r.json();
-    $("#patRes").textContent = `✓ token works (repo: ${d.full_name}, push: ${d.permissions?.push})`;
-    toast("Token saved"); }
-  catch(e){ $("#patRes").textContent = "✗ " + e.message.slice(0,120); }
+    <div class="sect"><h4>GitHub Pages mode</h4>
+      <p class="sub" style="max-width:44rem">The static mirror never accepts or stores a GitHub
+      token. It remains read-only and uses prefilled, owner-checked GitHub issues for save,
+      applied, feedback, and stale-report requests. Use the signed-in Vercel platform for
+      private one-click writes and cross-device state.</p></div>`;
 }
 
 window.S = S; window.render = render; window.openWS = openWS; window.closeWS = closeWS;
@@ -3299,7 +3264,7 @@ window.actMaybe = actMaybe; window.actTrack = actTrack; window.actApplied = actA
 window.cycleJobSelection = cycleJobSelection; window.cycleJobSelectionKey = cycleJobSelectionKey;
 window.startApply = startApply; window.openResumeStudio = openResumeStudio; window.jobById = jobById;
 window.setFilter = setFilter; window.clearFilters = clearFilters;
-window.addLink = addLink; window.rmLink = rmLink; window.testPAT = testPAT;
+window.addLink = addLink; window.rmLink = rmLink;
 window.setPipelineStage = setPipelineStage;
 window.requestCompanyResearch = requestCompanyResearch; window.$ = $;
 window.openTutorial = openTutorial; window.closeTutorial = closeTutorial;

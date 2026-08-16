@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "job-radar"
+version = "2.0.0"
+description = "Auditable direct-ATS job discovery and application workflow"
+requires-python = ">=3.12"
+dependencies = [
+  "alembic>=1.14,<2",
+  "psycopg[binary]>=3.2,<4",
+  "pydantic>=2.10,<3",
+  "PyYAML>=6.0,<7",
+  "requests>=2.32,<3",
+  "SQLAlchemy>=2.0,<3",
+  "typer>=0.16,<1",
+]
+
+[project.optional-dependencies]
+ai = [
+  "litellm>=1.97,<2",
+]
+dev = [
+  "mypy>=1.15,<2",
+  "pip-audit>=2.8,<3",
+  "pytest>=9.0.3,<10",
+  "pytest-cov>=6,<7",
+  "ruff>=0.11,<1",
+]
+
+[project.scripts]
+radar = "radar.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["radar"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["S101", "S311"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S603", "S607"]
+
+[tool.mypy]
+python_version = "3.12"
+warn_unused_ignores = true
+check_untyped_defs = true
+no_implicit_optional = true

@@ -28,7 +28,8 @@ import hashlib
 import imaplib
 import re
 import time
-from datetime import datetime, timedelta, timezone
+from contextlib import suppress
+from datetime import UTC, datetime, timedelta
 from email.header import decode_header, make_header
 
 from . import state
@@ -274,7 +275,10 @@ def match_company(candidates: list[str], shortlist: list[dict], jobs: dict) -> d
 def _synthetic_job(company: str, subject: str = "") -> dict:
     # Stable identity prevents a retry or duplicate notification from creating
     # a fresh tracker row every time the watcher runs.
-    sid = hashlib.sha1(f"email-detected|{norm(company)}|{norm(subject)}".encode()).hexdigest()[:16]
+    sid = hashlib.sha1(
+        f"email-detected|{norm(company)}|{norm(subject)}".encode(),
+        usedforsecurity=False,
+    ).hexdigest()[:16]
     title = subject.strip()[:180] or "Application (auto-detected via email)"
     return {"id": sid, "company": company, "title": title,
             "url": "", "locations": [], "score": None, "source": "email-detected"}
@@ -298,7 +302,7 @@ def _search_candidate_uids(conn: imaplib.IMAP4_SSL, host: str, lookback_days: in
         )
         typ, data = conn.search(None, "X-GM-RAW", f'"{query}"')
     else:
-        since = (datetime.now(timezone.utc) - timedelta(days=lookback_days)).strftime("%d-%b-%Y")
+        since = (datetime.now(UTC) - timedelta(days=lookback_days)).strftime("%d-%b-%Y")
         typ, data = conn.search(None, f"(SINCE {since})")
     if typ != "OK" or not data or not data[0]:
         return []
@@ -356,6 +360,10 @@ def _msg_epoch(msg: email.message.Message) -> int | None:
 
 
 def _connect() -> imaplib.IMAP4_SSL:
+    if env("EMAIL_BACKEND").casefold() == "gmail_api":
+        from .gmail_api import GmailAPIConnection
+
+        return GmailAPIConnection()
     host = env("EMAIL_IMAP_HOST", DEFAULT_HOST)
     address = env("EMAIL_ADDRESS")
     app_password = env("EMAIL_APP_PASSWORD")
@@ -368,6 +376,21 @@ def verify_connection() -> None:
     """Read-only check: can we log in and see the inbox? Prints a clear
     diagnosis and exits nonzero on failure. Selects INBOX read-only, sends no
     search, marks nothing read — safe to run anytime."""
+    if env("EMAIL_BACKEND").casefold() == "gmail_api":
+        from .gmail_api import GmailAPIConnection, configured
+
+        if not configured():
+            print("FAIL: Gmail API refresh credentials are not configured.")
+            raise SystemExit(1)
+        try:
+            conn = GmailAPIConnection()
+            typ, data = conn.select("INBOX", readonly=True)
+            count = int(data[0]) if typ == "OK" and data and data[0] else "?"
+            print(f"OK: Gmail API read-only inbox access is armed ({count} messages).")
+        finally:
+            if "conn" in locals():
+                conn.logout()
+        return
     address = env("EMAIL_ADDRESS")
     app_password = env("EMAIL_APP_PASSWORD")
     if not address or not app_password:
@@ -378,7 +401,7 @@ def verify_connection() -> None:
         conn = imaplib.IMAP4_SSL(host, 993)
     except Exception as e:
         print(f"FAIL: could not reach {host}:993 — {e}")
-        raise SystemExit(1)
+        raise SystemExit(1) from e
     try:
         conn.login(address, app_password)
     except imaplib.IMAP4.error as e:
@@ -387,17 +410,15 @@ def verify_connection() -> None:
               "myaccount.google.com/apppasswords. If this is a Google Workspace / school "
               "account, its admin may have App Passwords disabled entirely — see README "
               "for the personal-Gmail-forwarding fallback.")
-        raise SystemExit(1)
+        raise SystemExit(1) from e
     try:
         typ, data = conn.select("INBOX", readonly=True)
         count = int(data[0]) if typ == "OK" and data and data[0] else "?"
         print(f"OK: logged in to {address} via {host}, INBOX visible ({count} messages). "
               "Email-based applied-detection is armed.")
     finally:
-        try:
+        with suppress(Exception):
             conn.logout()
-        except Exception:
-            pass
 
 
 def _advance(entry: dict, target: str, when: int | None) -> bool:
@@ -430,10 +451,22 @@ def _autoclose(applied: list, now: int, days: int) -> int:
 
 def run(lookback_days: int | None = None) -> dict:
     """Run one bounded, idempotent email lifecycle pass."""
+    gmail_api = env("EMAIL_BACKEND").casefold() == "gmail_api"
     address = env("EMAIL_ADDRESS")
     app_password = env("EMAIL_APP_PASSWORD")
-    if not address or not app_password:
-        print("email_watch: EMAIL_ADDRESS/EMAIL_APP_PASSWORD not set — skipping "
+    if gmail_api:
+        from .gmail_api import configured as gmail_configured
+
+        ready = gmail_configured()
+    else:
+        ready = bool(address and app_password)
+    if not ready:
+        required = (
+            "GMAIL_REFRESH_TOKEN and Google OAuth credentials"
+            if gmail_api
+            else "EMAIL_ADDRESS/EMAIL_APP_PASSWORD"
+        )
+        print(f"email_watch: {required} not set — skipping "
               "(applications must be logged manually via applied <url> for now)")
         return {"checked": 0, "matched": 0, "synced": 0}
 
@@ -543,6 +576,8 @@ def run(lookback_days: int | None = None) -> dict:
             "seen_message_ids": list(seen_ids)[-MAX_SEEN_IDS:],
             "last_checked_at": int(time.time()),
         })
+        if hasattr(conn, "commit"):
+            conn.commit()
         matched = sum(counts.values())
         print(
             f"email_watch: checked {len(uids)} email(s) — "
@@ -555,7 +590,5 @@ def run(lookback_days: int | None = None) -> dict:
             "synced": synced, "review": len(review[-200:]), **counts,
         }
     finally:
-        try:
+        with suppress(Exception):
             conn.logout()
-        except Exception:
-            pass

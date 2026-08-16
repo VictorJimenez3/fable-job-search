@@ -2,11 +2,9 @@ import time
 
 import pytest
 
-from radar import lifecycle
-from radar import notion_sync
+from radar import lifecycle, notion_sync
 from radar.digest import render_dashboard, render_rss
 from radar.models import Job
-
 
 NOW = int(time.time())
 
@@ -33,17 +31,24 @@ def test_terminal_state_is_auditable_and_idempotent():
 def test_reconcile_expires_unseen_rows_reopens_reappearing_rows(monkeypatch):
     monkeypatch.setenv("RADAR_LIFECYCLE_ACTIVE_DAYS", "45")
     monkeypatch.setenv("RADAR_LIFECYCLE_UNSEEN_GRACE_DAYS", "14")
-    stale = {"id": "stale", "first_seen": NOW - 70 * 86400,
+    stale = {"id": "stale", "source_board": "aggregator:test",
+             "first_seen": NOW - 70 * 86400,
              "last_seen_at": NOW - 20 * 86400, "alert_ok": True, "score_reasons": []}
-    seen = {"id": "seen", "first_seen": NOW - 70 * 86400,
+    seen = {"id": "seen", "source_board": "aggregator:test",
+            "first_seen": NOW - 70 * 86400,
             "last_seen_at": NOW - 20 * 86400, "alert_ok": True, "score_reasons": []}
     jobs = {"stale": stale, "seen": seen}
-    stats = lifecycle.reconcile(jobs, NOW, {"seen"})
+    stats = lifecycle.reconcile(
+        jobs, NOW, {"seen"}, healthy_source_boards={"aggregator:test"}
+    )
     assert stats["expired"] == 1
     assert stale["posting_status"] == "expired"
     assert lifecycle.status_of(seen) == "open"
     lifecycle.mark_terminal(seen, lifecycle.EXPIRED, NOW, "dead link")
-    assert lifecycle.reconcile({"seen": seen}, NOW + 86400, {"seen"})["reopened"] == 1
+    assert lifecycle.reconcile(
+        {"seen": seen}, NOW + 86400, {"seen"},
+        healthy_source_boards={"aggregator:test"},
+    )["reopened"] == 1
     assert lifecycle.status_of(seen) == "open"
 
 
@@ -57,6 +62,53 @@ def test_reconcile_does_not_expire_on_an_all_source_outage(monkeypatch):
     assert lifecycle.status_of(stale) == "open"
     assert not lifecycle.source_run_healthy({"simplify": "error: timeout"}, {"ok": 0, "failed": 12})
     assert lifecycle.source_run_healthy({"simplify": 0}, {"ok": 0, "failed": 12})
+
+
+def test_reconcile_treats_missing_board_health_as_unknown(monkeypatch):
+    monkeypatch.setenv("RADAR_LIFECYCLE_ACTIVE_DAYS", "45")
+    monkeypatch.setenv("RADAR_LIFECYCLE_UNSEEN_GRACE_DAYS", "14")
+    stale = {
+        "id": "legacy",
+        "first_seen": NOW - 70 * 86400,
+        "last_seen_at": NOW - 20 * 86400,
+        "alert_ok": True,
+        "score_reasons": [],
+    }
+    stats = lifecycle.reconcile({"legacy": stale}, NOW, set())
+    assert stats["expired"] == 0
+    assert lifecycle.status_of(stale) == "open"
+
+
+def test_reconcile_requires_health_from_the_postings_own_board(monkeypatch):
+    monkeypatch.setenv("RADAR_LIFECYCLE_ACTIVE_DAYS", "45")
+    monkeypatch.setenv("RADAR_LIFECYCLE_UNSEEN_GRACE_DAYS", "14")
+    stale = {
+        "id": "stale",
+        "source": "greenhouse",
+        "source_board": "ats:greenhouse:acme",
+        "first_seen": NOW - 70 * 86400,
+        "last_seen_at": NOW - 20 * 86400,
+        "alert_ok": True,
+        "score_reasons": [],
+    }
+
+    stats = lifecycle.reconcile(
+        {"stale": stale},
+        NOW,
+        set(),
+        healthy_source_boards={"ats:greenhouse:other-company"},
+    )
+    assert stats["expired"] == 0
+    assert lifecycle.status_of(stale) == "open"
+
+    stats = lifecycle.reconcile(
+        {"stale": stale},
+        NOW,
+        set(),
+        healthy_source_boards={"ats:greenhouse:acme"},
+    )
+    assert stats["expired"] == 1
+    assert lifecycle.status_of(stale) == "expired"
 
 
 def test_manual_archive_stays_terminal_even_if_source_reappears():

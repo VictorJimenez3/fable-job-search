@@ -1,2 +1,3 @@
-requests>=2.31
-PyYAML>=6.0
+# Compatibility entrypoint for existing workflows. Dependency declarations and
+# reproducible versions live in pyproject.toml and uv.lock.
+-e .

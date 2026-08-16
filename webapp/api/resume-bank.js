@@ -6,7 +6,7 @@
 // platform already has a least-privilege drive.file OAuth path for the owner;
 // no public blob URL or repository commit is created.
 const crypto = require("crypto");
-const { OWNER, session } = require("./_lib");
+const { OWNER, session, requireMutationRequest } = require("./_lib");
 const tracker = require("./_google-tracker");
 
 const DRIVE_FILES_API = "https://www.googleapis.com/drive/v3/files";
@@ -306,6 +306,7 @@ module.exports = async (req, res) => {
         updated_at: current.index.updated_at, resumes: publicEntries(current.index)}); return;
     }
     if (req.method === "POST") {
+      if (!requireMutationRequest(req, res)) return;
       const payload = bodyOf(req);
       const entry = await syncEntry(access.token, payload.entry, payload.artifact, payload.artifacts);
       res.status(200).json({ok: true, entry: publicEntries({entries: [{...entry, artifact_refs: {}}]})[0]}); return;

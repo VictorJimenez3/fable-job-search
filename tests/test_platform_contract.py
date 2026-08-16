@@ -237,7 +237,10 @@ def test_platform_resume_studio_is_one_cloud_workspace_with_private_engine_fallb
     assert "Take-the-wheel (moderate)" in studio
     assert "Queue Take-the-wheel" in studio
     assert "DEFAULT_BRIDGE_ORIGINS" in studio
-    assert "Access-Control-Allow-Origin" in studio
+    assert "cross-origin access is disabled" in studio
+    assert "bridge_nonce" in studio + html
+    assert "event.source===window.opener" in studio
+    assert "event.source !== resumeBridgeWindow" in html
     assert "cv_present" in studio
 
 

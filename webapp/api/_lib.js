@@ -67,7 +67,13 @@ const GOOGLE_AUTH_CLIENT_ID = () => envv("GOOGLE_AUTH_CLIENT_ID") || envv("GOOGL
 const GOOGLE_AUTH_CLIENT_SECRET = () => envv("GOOGLE_AUTH_CLIENT_SECRET") || envv("GOOGLE_CLIENT_SECRET");
 const googleAuthConfigured = () => Boolean(GOOGLE_AUTH_CLIENT_ID() && GOOGLE_AUTH_CLIENT_SECRET());
 
-const key = () => crypto.createHash("sha256").update(envv("SESSION_SECRET")).digest();
+function sessionSecret() {
+  const secret = envv("SESSION_SECRET");
+  if (!secret) throw new Error("SESSION_SECRET is required");
+  return secret;
+}
+
+const key = () => crypto.createHash("sha256").update(sessionSecret()).digest();
 
 function seal(obj) {
   const iv = crypto.randomBytes(12);
@@ -77,6 +83,7 @@ function seal(obj) {
 }
 
 function unseal(tok) {
+  if (!envv("SESSION_SECRET")) return null;
   try {
     const b = Buffer.from(tok, "base64url");
     const d = crypto.createDecipheriv("aes-256-gcm", key(), b.subarray(0, 12));
@@ -86,8 +93,50 @@ function unseal(tok) {
 }
 
 function session(req) {
+  // Never derive a predictable key from an empty environment variable. API
+  // routes that need authentication fail closed until setup is complete.
+  if (!envv("SESSION_SECRET")) return null;
   const m = /(?:^|;\s*)jr_s=([^;]+)/.exec(req.headers.cookie || "");
   return m ? unseal(m[1]) : null;
+}
+
+function requestOrigin(req) {
+  try {
+    const value = String(req?.headers?.origin || "");
+    if (!value) return "";
+    const parsed = new URL(value);
+    if (parsed.protocol !== "https:" || parsed.pathname !== "/") return "";
+    return authHost(parsed.host) ? parsed.origin : "";
+  } catch { return ""; }
+}
+
+function requireMutationRequest(req, res) {
+  if (needSessionSetup(res)) return false;
+  const origin = requestOrigin(req);
+  if (!origin) {
+    res.status(403).json({error: "untrusted request origin"});
+    return false;
+  }
+  const fetchSite = String(req?.headers?.["sec-fetch-site"] || "").toLowerCase();
+  if (fetchSite && !["same-origin", "same-site"].includes(fetchSite)) {
+    res.status(403).json({error: "cross-site mutation blocked"});
+    return false;
+  }
+  const contentType = String(req?.headers?.["content-type"] || "").toLowerCase();
+  if (!contentType.startsWith("application/json")) {
+    res.status(415).json({error: "application/json required"});
+    return false;
+  }
+  return true;
+}
+
+function httpUrl(value, {httpsOnly = false} = {}) {
+  try {
+    const parsed = new URL(String(value || ""));
+    if (parsed.username || parsed.password) return "";
+    if (httpsOnly ? parsed.protocol !== "https:" : !["http:", "https:"].includes(parsed.protocol)) return "";
+    return parsed.toString();
+  } catch { return ""; }
 }
 
 function sessionCookies(payload) {
@@ -147,4 +196,5 @@ module.exports = { OWNER, REPO, BRANCH, PROFILE, AUTH_MODE, envv, seal, unseal,
                    sessionHandoffLocation,
                    session, sessionCookies, clearSessionCookies,
                    authLog,
-                   needSetup, needSessionSetup, gh };
+                   needSetup, needSessionSetup, requestOrigin,
+                   requireMutationRequest, httpUrl, gh };

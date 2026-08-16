@@ -26,11 +26,12 @@ credits, and this radar does not need an OpenAI key.
 
 ## Routing and limits
 
-`radar/llm.py` makes one logical request and races every configured healthy
-endpoint concurrently. The first valid answer wins; slower calls still finish
-long enough to record latency, validity, and failure telemetry. It retries a
-transient response once, honors `Retry-After` (capped), then applies task-local
-cooldowns to 401/403/404, rate limits, empty answers, and invalid schemas.
+`radar/llm.py` makes one logical request and tries a small ordered set of
+healthy endpoints (two by default). It no longer races every configured model,
+which used provider quota after a winner was already known. Each selected
+endpoint retries a transient response once, honors `Retry-After` (capped), then
+applies task-local cooldowns to 401/403/404, rate limits, empty answers, and
+invalid schemas. `RADAR_AI_PROVIDER_ATTEMPTS` controls the fallback width.
 
 | Task | Preferred order | Default output cap |
 |---|---|---|
@@ -40,10 +41,9 @@ cooldowns to 401/403/404, rate limits, empty answers, and invalid schemas.
 | Scout | Nemotron → GLM → DeepSeek → Kimi | 600 tokens |
 | Strategy note | Nemotron → GLM → DeepSeek → Kimi | 300 tokens |
 
-All four configured NVIDIA providers are now launched for each API request;
-the table is the benchmark/tie-break order, not a serial fallback chain. Kimi
-is still expected to lose until its intermittent `404 model unavailable` issue
-is fixed.
+The table is the serial fallback order. The separate benchmark workflow still
+tests all four providers when broad comparison is wanted. Kimi stays last until
+its intermittent `404 model unavailable` issue is fixed.
 
 Cloud budgets:
 
@@ -59,7 +59,24 @@ Cloud budgets:
 
 Override knobs are `RADAR_AI_MAX_CALLS`, `RADAR_AI_MAX_REQUESTS`,
 `RADAR_AI_TASK_<TASK>_LIMIT`,
-`RADAR_QUALITY_LIMIT`, and `RADAR_COMPANY_RESEARCH_LIMIT`.
+`RADAR_AI_PROVIDER_ATTEMPTS`, `RADAR_QUALITY_LIMIT`, and
+`RADAR_COMPANY_RESEARCH_LIMIT`.
+
+### Optional LiteLLM adapter
+
+The default direct HTTP path remains small and dependency-light. When a new
+provider would otherwise require another custom payload adapter, install the
+maintained LiteLLM SDK and opt in:
+
+```bash
+uv sync --extra ai
+RADAR_LLM_ADAPTER=litellm uv run radar enrich jobs
+```
+
+LiteLLM translates provider requests only. Radar still owns the hard logical
+and network budgets, prompt-injection boundary, schema validation, ordered
+fallback, circuit breaking, and secret-free telemetry; LiteLLM retries are
+disabled to keep request accounting exact.
 
 ## Verify and observe
 
@@ -78,6 +95,8 @@ AI tab reads `state/ai_usage.json` and shows task counts, model successes/errors
 reported tokens, and the hard budget. Each attempt records its lane (`local` or
 `api`), endpoint, status, latency, and whether it was selected; per-run attempt
 logs are retained in usage history. Telemetry never stores prompts or keys.
+It stores a prompt-policy version/hash so a response can be audited without
+retaining the untrusted posting text.
 
 ## Grounding rules
 

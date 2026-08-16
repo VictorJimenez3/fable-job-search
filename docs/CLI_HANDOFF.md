@@ -36,6 +36,58 @@ Before changing the radar, read these in order:
 
 ## Current operational facts (verified 2026-08-16)
 
+### vNext foundation (implemented and verified 2026-08-16)
+
+- **Staged product:** `/vnext/` is a React/TypeScript workspace with cursor
+  pagination, virtualized Jobs, runtime API contracts, and responsive Jobs,
+  Applications, Companies, Resume, and Settings routes. Jobs can use a
+  server-side repository fallback; private and not-yet-migrated workflows link
+  visibly to the classic UI, so cutover does not discard a feature.
+- **Persistence:** `radar/db/schema.py` and Alembic own the normalized Postgres
+  schema. `radar db import-legacy` performs an idempotent stable-ID import and
+  reports parity; `radar worker` leases durable work with `SKIP LOCKED`, retry
+  backoff, and terminal failure records. The worker is not scheduled until a
+  production database exists.
+- **Identity:** Better Auth is staged at `/api/v1/auth/*`, backed by the same
+  Alembic schema and encrypted provider tokens. Existing owner-only APIs keep
+  the legacy signed session during migration; do not switch them until the
+  imported owner profile and both OAuth callbacks are verified end to end.
+- **Crawler/scoring:** posting records retain exact source-board identity,
+  source-gap expiry requires that same board's successful run, ATS APIs use
+  bounded pagination, and evidence score / eligibility / personal priority are
+  distinct auditable outputs. Legacy `score` remains compatible.
+- **Tooling:** Python is locked with uv for 3.12, workflows share the pinned
+  setup action where the checked-out branch supports it, and cross-branch ChemE
+  jobs retain their requirements-based bootstrap. Hosted LLM routing is
+  sequential and bounded; `RADAR_LLM_ADAPTER=litellm` is optional. Gmail
+  lifecycle automation can use a read-only incremental History API cursor or
+  the existing IMAP fallback.
+
+Activation order:
+
+1. Set `DATABASE_URL`, run `radar db migrate`, then `radar db import-legacy`
+   and require the printed count/hash parity to pass.
+2. Set Vercel `DATABASE_URL`, `BETTER_AUTH_URL`, and a random
+   `BETTER_AUTH_SECRET` of at least 32 characters. Configure GitHub and/or
+   Google callbacks at `/api/v1/auth/callback/github` and
+   `/api/v1/auth/callback/google`.
+3. Verify owner identity, applications, preferences, and rollback behavior in
+   preview. Only then route private v1 APIs to Better Auth and schedule the
+   durable worker.
+4. Gmail is independent and optional: use `EMAIL_BACKEND=gmail_api` with
+   `GMAIL_REFRESH_TOKEN`, `GOOGLE_AUTH_CLIENT_ID`, and
+   `GOOGLE_AUTH_CLIENT_SECRET`, or retain the IMAP secrets.
+
+Local verification contract now also includes:
+
+```bash
+uv sync --frozen --extra dev
+uv run pytest tests/ -q
+uv run python -m compileall -q radar tests
+uv run python -m radar.cli db migrate --sql
+cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint && npm run build
+```
+
 ### Latest change (verified 2026-08-16)
 
 - **Owner-only objective Resume Bank comparison:** each grouped posting card now
