@@ -1,5 +1,5 @@
-const {BRANCH, REPO, httpUrl, normalizeProfile} = require("../../_lib");
-const {configured, database, publicCache, serverError} = require("../_db");
+const {BRANCH, REPO, httpUrl, normalizeProfile} = require("../_lib");
+const {configured, database, publicCache, serverError} = require("./_db");
 
 const legacyCache = new Map();
 const LEGACY_TTL_MS = 60_000;

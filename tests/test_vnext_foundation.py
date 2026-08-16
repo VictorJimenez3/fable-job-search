@@ -61,7 +61,7 @@ def test_cursor_api_filters_action_queue_and_blocks_unsafe_urls():
           if (request === "@neondatabase/serverless") throw new Error("Neon must be lazy");
           return originalLoad.call(this, request, parent, isMain);
         };
-        const api = require("./webapp/api/v1/jobs");
+        const api = require("./webapp/api/v1/router");
         const now = Math.floor(Date.now()/1000);
         global.fetch = async () => ({ok:true, json:async () => ({
           fresh:{company:"Fresh", title:"Engineer", url:"https://example.com/job", score:80,
@@ -71,7 +71,10 @@ def test_cursor_api_filters_action_queue_and_blocks_unsafe_urls():
           old:{company:"Old", title:"Engineer", url:"https://example.com/old", score:99,
             alert_ok:true, posted_at:now-40*86400, last_seen_at:now, score_reasons:[]}
         })});
-        const req = {method:"GET", query:{profile:"new_grad", freshness:"action", eligibility:"eligible", limit:"1"}};
+        const req = {
+          method:"GET", url:"/api/v1/router?path=jobs",
+          query:{path:"jobs", profile:"new_grad", freshness:"action", eligibility:"eligible", limit:"1"}
+        };
         const out = {headers:{}, statusCode:0, body:null,
           setHeader(k,v){this.headers[k]=v;}, status(code){this.statusCode=code;return this;},
           json(value){this.body=value;return this;}, end(){}};
@@ -80,12 +83,20 @@ def test_cursor_api_filters_action_queue_and_blocks_unsafe_urls():
           if(out.statusCode!==200 || out.body.data.length!==1 || !out.body.next_cursor) {
             throw new Error(JSON.stringify(out.body));
           }
+          if(req.url!=="/api/v1/jobs") throw new Error(`public URL was not restored: ${req.url}`);
           const first=out.body.data[0];
           if(first.company!=="Hostile" || first.url!=="") throw new Error("unsafe URL was exposed");
-          const next={...req,query:{...req.query,cursor:out.body.next_cursor}};
+          const next={...req,url:"/api/v1/router?path=jobs",
+            query:{...req.query,path:"jobs",cursor:out.body.next_cursor}};
           const nextOut={...out,headers:{},statusCode:0,body:null};
           await api(next,nextOut);
           if(nextOut.body.data[0].company!=="Fresh") throw new Error("cursor did not advance");
+          const authReq={method:"GET",url:"/api/v1/router?path=auth/get-session",query:{path:"auth/get-session"}};
+          const authOut={...out,headers:{},statusCode:0,body:null};
+          await api(authReq,authOut);
+          if(authReq.url!=="/api/v1/auth/get-session" || authOut.statusCode!==503) {
+            throw new Error("nested auth route was not preserved");
+          }
         })().catch(error=>{console.error(error);process.exit(1);});
         """
     )
