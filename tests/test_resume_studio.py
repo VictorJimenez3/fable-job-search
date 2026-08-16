@@ -259,8 +259,36 @@ def test_resume_library_keeps_runs_and_legacy_experiments_with_posting_snapshots
     saved = next(entry for entry in entries if entry["source"] == "run")
     assert saved["pdf_filename"] == "example_co_resume_ai.pdf"
     assert saved["has_posting_snapshot"] is True
+    assert saved["objective"]["version"] == "objective-resume-v1"
+    assert saved["objective"]["rankable"] is False
     snapshot = rs.posting_snapshot(tmp_path, "run", "0123456789ab")
     assert snapshot["posting_text"] == "Required: Python and SQL."
+
+
+def test_objective_resume_assessment_is_target_specific_and_explains_unknown_reviewer(tmp_path):
+    report = {
+        "resume_match": {"score": 92, "missing_requirements": ["Kubernetes"]},
+        "validation_warnings": ["one warning"],
+        "review": {
+            "unsupported_claims": ["Kubernetes"],
+            "independent_review": False,
+            "deterministic": {
+                "gates": {"factual": {"status": "pass"}},
+                "layout": {"pass": True},
+                "portfolio": {"pass": True},
+            },
+        },
+    }
+    assessment = rs.objective_resume_assessment(report, "awaiting_review")
+
+    assert assessment["version"] == "objective-resume-v1"
+    assert assessment["rankable"] is True
+    assert assessment["score"] < 92
+    assert assessment["confidence"] == "medium"
+    assert any("No independent reviewer" in item for item in assessment["risks"])
+    assert any(item["name"] == "Target fit" and item["source"] == "resume_match.score" for item in assessment["breakdown"])
+    failed = rs.objective_resume_assessment(report, "failed")
+    assert failed["score"] is None and failed["rankable"] is False
 
 
 def test_run_manager_snapshots_job_and_assigns_named_pdf(tmp_path):

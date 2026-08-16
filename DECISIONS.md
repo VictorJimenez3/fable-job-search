@@ -1903,3 +1903,13 @@ inventory and Q&A are available through the allowlisted loopback bridge so the
 cloud UI can explain what is known, unknown, and sourced. The underlying
 answers and source graph stay in ignored local storage and are not copied by
 Google Drive artifact sync.
+
+## 128. Objective resume ranking is a per-posting owner decision aid (2026-08-16)
+
+Resume Studio now ranks finished variants only within their grouped canonical
+posting card. The `objective-resume-v1` score is a transparent weighted aid from
+deterministic Resume Match, factual/evidence safety, layout safety, and
+portfolio diagnostics. Failed or interrupted runs cannot win. Missing
+independent provider critique is shown as a confidence limitation rather than
+being silently scored as a failed resume, and the feature remains owner-only
+with no effect on Radar ranking, application tracking, or submission behavior.

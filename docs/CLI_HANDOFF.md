@@ -34,9 +34,19 @@ Before changing the radar, read these in order:
   `docs/feed.xml`, or `docs/internships/`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
-## Current operational facts (verified 2026-08-15)
+## Current operational facts (verified 2026-08-16)
 
-### Latest change (verified 2026-08-15)
+### Latest change (verified 2026-08-16)
+
+- **Owner-only objective Resume Bank comparison:** each grouped posting card now
+  identifies the strongest finished variant for that posting using the
+  auditable `objective-resume-v1` rubric (target fit, evidence safety, layout
+  safety, portfolio signal). It exposes the score components and provenance,
+  excludes failed/interrupted runs from winning, and reports missing
+  independent review as a confidence limit. This is a private decision aid,
+  not an automatic submission or a claim about an outside ChatGPT verdict.
+
+### Previous change (verified 2026-08-15)
 
 - **Resume Studio grouped bank and context loop:** the cloud Studio uses the live Job Radar
   shell and page layout while retaining the local Studio's four mode buttons,

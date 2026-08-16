@@ -148,6 +148,18 @@ function normalizedEntry(value) {
     has_workshop: Boolean(entry.has_workshop), craft_score: entry.craft_score ?? null,
     ready: entry.ready === true, validation_warnings: Array.isArray(entry.validation_warnings)
       ? entry.validation_warnings.map(item => clean(item, 280)).slice(0, 30) : [],
+    objective: entry.objective && typeof entry.objective === "object" ? {
+      version: clean(entry.objective.version, 80),
+      score: Number.isFinite(Number(entry.objective.score)) ? Number(entry.objective.score) : null,
+      confidence: clean(entry.objective.confidence, 20), rankable: entry.objective.rankable === true,
+      breakdown: Array.isArray(entry.objective.breakdown) ? entry.objective.breakdown.slice(0, 8).map(item => ({
+        name: clean(item?.name, 80), weight: Number(item?.weight || 0), score: Number(item?.score || 0),
+        source: clean(item?.source, 160), detail: clean(item?.detail, 280),
+      })) : [],
+      strengths: Array.isArray(entry.objective.strengths) ? entry.objective.strengths.map(item => clean(item, 280)).slice(0, 5) : [],
+      risks: Array.isArray(entry.objective.risks) ? entry.objective.risks.map(item => clean(item, 280)).slice(0, 6) : [],
+      note: clean(entry.objective.note, 280),
+    } : null,
     artifacts,
     job: {
       id: clean(job.id, 140), company: clean(job.company, 220), title: clean(job.title, 320),

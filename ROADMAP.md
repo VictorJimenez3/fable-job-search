@@ -339,6 +339,13 @@ turns unsupported posting terms into deduplicated global questions, stores
 owner answers locally, projects only affirmative concrete answers into the
 evidence graph, and exposes source/authority provenance in the cloud UI.
 
+Owner-only objective Resume Bank comparison — ✅ SHIPPED 2026-08-16
+(DECISION #128). Each posting card now ranks its finished variants with a
+transparent target-fit, evidence-safety, layout-safety, and portfolio rubric.
+The result is explicitly a deterministic shortlist aid rather than a hidden
+AI/hiring prediction; unavailable independent review is surfaced as a
+confidence limitation.
+
 ## Pipeline intelligence
 - **Resume UAT and outcome learning** — future idea: if enough applications,
   interviews, and eventual outcomes accumulate, compare resume variants and
