@@ -55,6 +55,12 @@ def test_cursor_api_filters_action_queue_and_blocks_unsafe_urls():
         delete process.env.DATABASE_URL;
         process.env.RADAR_REPO = "owner/repo";
         process.env.RADAR_BRANCH = "main";
+        const Module = require("module");
+        const originalLoad = Module._load;
+        Module._load = function(request, parent, isMain) {
+          if (request === "@neondatabase/serverless") throw new Error("Neon must be lazy");
+          return originalLoad.call(this, request, parent, isMain);
+        };
         const api = require("./webapp/api/v1/jobs");
         const now = Math.floor(Date.now()/1000);
         global.fetch = async () => ({ok:true, json:async () => ({

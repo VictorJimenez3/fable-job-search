@@ -1,4 +1,3 @@
-const {Pool} = require("@neondatabase/serverless");
 const crypto = require("crypto");
 
 let pool;
@@ -9,7 +8,13 @@ function configured() {
 
 function database() {
   if (!configured()) throw new Error("DATABASE_URL is not configured");
-  if (!pool) pool = new Pool({connectionString: process.env.DATABASE_URL, max: 3});
+  if (!pool) {
+    // Keep the JSON fallback genuinely dependency-free. CI, forks, and the
+    // deterministic crawler can load public APIs before frontend packages are
+    // installed; Neon is needed only after DATABASE_URL activates Postgres.
+    const {Pool} = require("@neondatabase/serverless");
+    pool = new Pool({connectionString: process.env.DATABASE_URL, max: 3});
+  }
   return pool;
 }
 
