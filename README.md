@@ -302,7 +302,9 @@ explicitly says the role was filled; other definitive dead links and safely
 expired source gaps become **expired**. Terminal postings leave active Jobs,
 dashboard, RSS, master-board, and alert delivery, but are retained in the
 platform's **History** tab with `closed_at`, `last_seen_at`, lifecycle events,
-and the exact reason ledger. State retention is two years by default
+and the exact reason ledger. Application-history cards also show how long the
+posting was up in days, months, or years instead of a lifecycle date. State
+retention is two years by default
 (`RADAR_HISTORY_DAYS`, minimum one year), so the record can support future
 seasonal posting-timeline analysis. `RADAR_LIFECYCLE_ACTIVE_DAYS` defaults to
 45 and `RADAR_LIFECYCLE_UNSEEN_GRACE_DAYS` to 14; a transient fetch failure

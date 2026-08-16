@@ -65,6 +65,14 @@ def test_platform_exposes_terminal_posting_history_and_private_status_sync():
     assert "RADAR_HISTORY_DAYS" in lifecycle
 
 
+def test_application_history_shows_posting_duration_instead_of_a_date():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    assert "function postingDurationLabel(job)" in html
+    assert "posting was up for" in html
+    assert '"less than 1 day"' in html
+    assert "month${months === 1" in html and "year${years === 1" in html
+
+
 def test_platform_exposes_isolated_internship_lane_and_graduation_preferences():
     html = (ROOT / "webapp" / "index.html").read_text()
     helper = (ROOT / "webapp" / "api" / "_google-tracker.js").read_text()

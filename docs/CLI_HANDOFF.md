@@ -108,6 +108,12 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
 
 ### Current change (verified 2026-08-16)
 
+- **Application history posting duration:** the classic History tab now shows
+  how long each application’s posting was up in days, months, or years instead
+  of showing the application lifecycle date. It uses the posting’s observed
+  start and last-seen/closure timestamps and keeps the separate Posting history
+  timeline unchanged.
+
 - **Resume Studio visual ATS audit and contextual Q&A hints:** Resume Bank
   metadata now carries the report's compact keyword coverage and PDF line
   geometry through local and private-cloud paths. The owner UI renders green

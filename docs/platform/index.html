@@ -902,6 +902,24 @@ function lifecycleWhen(j) {
 function lifecycleDate(value) {
   return value ? new Date(Number(value) * 1000).toLocaleDateString() : "unknown date";
 }
+function postingDurationLabel(job) {
+  const start = Number(job?.posted_at || job?.first_seen || 0);
+  const isOpen = postingStatus(job) === "open";
+  const end = Number(job?.last_seen_at || job?.posting_status_changed_at || job?.closed_at ||
+    (isOpen ? Math.floor(Date.now() / 1000) : 0));
+  if (!Number.isFinite(start) || !Number.isFinite(end) || start <= 0 || end < start) {
+    return "an unknown duration";
+  }
+  const days = Math.floor((end - start) / 86400);
+  if (days < 1) return "less than 1 day";
+  if (days < 30) return `${days} day${days === 1 ? "" : "s"}`;
+  if (days < 365) {
+    const months = Math.floor(days / 30);
+    return `${months} month${months === 1 ? "" : "s"}`;
+  }
+  const years = Math.floor(days / 365);
+  return `${years} year${years === 1 ? "" : "s"}`;
+}
 function isExcluded(id) { return (S.web.excluded||[]).includes(id); }
 function laneOf(id, byId) {
   const a = byId[id];
@@ -1871,10 +1889,9 @@ function rHistory() {
   const applicationRowsHTML = applicationRows.slice(0, S.shown).map(entry => {
     const job = S.jobs[entry.id] || entry;
     const label = entry.tracker_removed_at ? "removed from Notion" : (entry.stage === "not_pursuing" ? "not pursuing" : "closed");
-    const when = entry.tracker_removed_at || entry.stage_changed_at || entry.applied_at;
     return `<article class="lane" style="margin-bottom:.65rem">
       <div class="bar"><b>${esc(job.company)} — ${esc(job.title)}</b><span class="chip bad">${label}</span></div>
-      <p class="sub">${lifecycleDate(when)} · ${esc(entry.tracker_removed_reason || "Application closed; retained for history")}</p>
+      <p class="sub">posting was up for ${esc(postingDurationLabel(job))} · ${esc(entry.tracker_removed_reason || "Application closed; retained for history")}</p>
       <div class="acts"><a class="act" href="${esc(safeExternalURL(job.url || entry.url))}" target="_blank" rel="noopener noreferrer">posting ↗</a><button class="act" onclick='openWS("${entry.id}")'>details ▸</button></div>
     </article>`;
   }).join("");
