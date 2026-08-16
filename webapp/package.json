@@ -5,7 +5,7 @@
   "type": "commonjs",
   "engines": {"node": "24.x"},
   "scripts": {
-    "build": "vite build --config vite.config.mts",
+    "build": "node build-static.mjs",
     "dev": "vite --config vite.config.mts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
