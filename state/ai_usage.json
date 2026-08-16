@@ -1,71 +1,6 @@
 {
- "events": [
-  {
-   "at": "2026-08-16T23:40:37+00:00",
-   "completion_tokens": 1303,
-   "detail": "",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 17931,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 6135,
-   "prompt_tokens": 1830,
-   "prompt_version": "company_research:prompt-policy-v1:1c26519b76c6ce66",
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-16T23:40:45+00:00",
-   "completion_tokens": 1115,
-   "detail": "",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 26167,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 3419,
-   "prompt_tokens": 1081,
-   "prompt_version": "company_research:prompt-policy-v1:b05d8d47667aa464",
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-16T23:40:52+00:00",
-   "completion_tokens": 1495,
-   "detail": "",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 32725,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 6652,
-   "prompt_tokens": 1645,
-   "prompt_version": "company_research:prompt-policy-v1:9256c949bd425ee1",
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-16T23:41:16+00:00",
-   "completion_tokens": 872,
-   "detail": "",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 57446,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 3071,
-   "prompt_tokens": 897,
-   "prompt_version": "company_research:prompt-policy-v1:c43e1e1e69503d14",
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  }
- ],
- "generated_at": 1786923677,
+ "events": [],
+ "generated_at": 1786923701,
  "history": [
   {
    "attempts": [
@@ -6409,19 +6344,9 @@
   "logical_calls": 10000,
   "requests": 10000
  },
- "logical_calls": 4,
- "models": {
-  "nvidia:glm": {
-   "errors": 0,
-   "model": "z-ai/glm-5.2",
-   "ok": 4,
-   "requests": 4,
-   "tokens": 10238
-  }
- },
+ "logical_calls": 0,
+ "models": {},
  "provider": "nvidia-router",
- "requests": 5,
- "task_calls": {
-  "company_research": 4
- }
+ "requests": 0,
+ "task_calls": {}
 }
