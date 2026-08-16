@@ -2801,7 +2801,15 @@ function resumeBankEntries() {
   for (const entry of (S.testing.cloudLibrary||[])) merged.set(resumeBankKey(entry), entry);
   for (const entry of (S.testing.library||[])) {
     const key = resumeBankKey(entry);
-    if (!merged.has(key)) merged.set(key, entry);
+    const cloud=merged.get(key);
+    if (!cloud) { merged.set(key, entry); continue; }
+    merged.set(key, {
+      ...cloud, ...entry, storage:"cloud", urls:cloud.urls,
+      artifacts:(cloud.artifacts||[]).length?cloud.artifacts:entry.artifacts,
+      job:{...(cloud.job||{}),...(entry.job||{})},
+      objective:entry.objective||cloud.objective,
+      keyword_audit:entry.keyword_audit||cloud.keyword_audit,
+    });
   }
   return [...merged.values()].sort((a,b)=>String(b.updated_at||b.created_at||"").localeCompare(String(a.updated_at||a.created_at||"")));
 }

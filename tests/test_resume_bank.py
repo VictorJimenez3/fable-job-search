@@ -52,3 +52,4 @@ def test_resume_bank_exposes_visual_keyword_audit_and_context_followup():
     assert "/api/context/hint" in html
     assert "not in this place" in html
     assert "entry.keyword_audit" in api
+    assert "keyword_audit:entry.keyword_audit||cloud.keyword_audit" in html
