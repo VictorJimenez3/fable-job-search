@@ -19,7 +19,8 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 import requests
 
 from radar.evidence_review import (BLOCKING_STATUSES, apply_reviews,
-                                   load_reviews, review_summary)
+                                   load_reviews, owner_answer_nodes,
+                                   review_summary)
 
 
 MATCH_VERSION = "resume-match-v4"
@@ -338,6 +339,9 @@ def build_evidence_graph(
         "public_refresh_warnings": public.get("refresh_warnings") or [],
     }
     apply_reviews(graph, reviews)
+    # Owner Q&A is already explicitly confirmed; append it after generic claim
+    # overrides so the default "unreviewed" state cannot erase that provenance.
+    nodes.extend(owner_answer_nodes(reviews))
     graph["review_summary"] = review_summary(graph)
     graph_hash = _sha(
         json.dumps(source_fingerprints, sort_keys=True)

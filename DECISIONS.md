@@ -1884,3 +1884,22 @@ limited to exact employer/title matches with a compatible location; ambiguous
 same-title roles remain separate. `resolve-links` is an explicit bounded
 backfill command for existing state, and failed resolution always leaves the
 aggregator link usable.
+
+## 127. Resume variants group by job; posting gaps feed a durable private evidence loop (2026-08-15)
+
+Resume Bank identity is the canonical posting URL when available, then the
+radar job ID, then normalized company and title. One card represents that job
+and expands into every local/cloud version, preventing mode experiments from
+looking like duplicate applications. The owner-defined current quality era
+starts at the first Google run after the 2026-08-08 Studio overhaul; it is the
+default display and sync scope, while all historical entries remain available.
+
+Unsupported exact terms discovered during full-posting matching create one
+private question per normalized capability. Questions accumulate posting
+provenance across jobs. A concrete owner answer that records where/when and
+what happened becomes a high-authority `Victor Q&A` evidence node; an explicit
+not-used answer suppresses repetition but never authorizes a claim. Context
+inventory and Q&A are available through the allowlisted loopback bridge so the
+cloud UI can explain what is known, unknown, and sourced. The underlying
+answers and source graph stay in ignored local storage and are not copied by
+Google Drive artifact sync.

@@ -38,13 +38,17 @@ Before changing the radar, read these in order:
 
 ### Latest change (verified 2026-08-15)
 
-- **Resume Studio parity bank:** the cloud Studio now uses the live Job Radar
+- **Resume Studio grouped bank and context loop:** the cloud Studio uses the live Job Radar
   shell and page layout while retaining the local Studio's four mode buttons,
   full bank filters, posting snapshots, reports, PDF/preview links, and
   Workshop handoff. The owner-only `/api/resume-bank` stores a synchronized
   index and generated artifacts in an app-created private Google Drive folder.
-  **sync local bank** copies every local and legacy entry, including failed or
-  interrupted runs; it never uploads the source CV or evidence graph. Cloud
+  The bank groups versions by posting and defaults to the Google-onward quality
+  era; **all history** remains available, and sync follows that scope.
+  **Context & Q&A** deduplicates unsupported posting terms into durable private
+  questions. Only a concrete affirmative owner answer becomes evidence; known
+  absences remain non-authorizing. The context inventory shows source,
+  authority, and confirmation while remaining local and excluded from sync. Cloud
   artifacts are served through an owner-session proxy with private/no-store
   headers. New matching, generation, and Workshop edits still require the
   loopback Mac engine, so the cloud remains a safe fail-safe when that engine
