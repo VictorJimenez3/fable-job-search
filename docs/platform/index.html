@@ -423,7 +423,7 @@ const S = {           // app state
   wsTab:"fit",
   testing:{q:"", sort:"resume", shown:40, selectedId:"", engine:"checking", engineError:"", match:null,
     library:[], cloudLibrary:[], cloudBank:{status:"checking",error:"",updated_at:"",needsGoogle:false}, bankView:false, contextView:false,
-    bankQuery:"", bankMode:"all", bankStatus:"all", bankEra:"current", context:null, contextQuery:"", contextError:"",
+    bankQuery:"", bankMode:"all", bankStatus:"all", bankEra:"current", context:null, contextQuery:"", contextError:"", contextScanError:"",
     sync:{state:"idle",done:0,total:0,error:""}, activeRunId:"", runStatus:null},
   boot:{phase:"starting", jobsReady:false, inFlight:false, errors:[]},
   marquee:new Set(["meta","apple","amazon","netflix","google","microsoft","nvidia",
@@ -2091,7 +2091,8 @@ function ensureResumeBridge() {
 function bridgeRequest(action, payload={}) {
   return ensureResumeBridge().then(target => new Promise((resolve,reject) => {
     const request_id = `cloud-${Date.now()}-${++resumeBridgeSequence}`;
-    const timer = setTimeout(()=>{resumeBridgePending.delete(request_id);reject(new Error("Private Resume Studio did not answer."));},15000);
+    const timeout = ["match","context_job"].includes(action) ? 35000 : 15000;
+    const timer = setTimeout(()=>{resumeBridgePending.delete(request_id);reject(new Error("Private Resume Studio did not answer."));},timeout);
     resumeBridgePending.set(request_id,{resolve,reject,timer});
     target.postMessage({type:"resume-studio:request",request_id,action,payload},RESUME_STUDIO_LOCAL_ORIGIN);
   }));
@@ -2860,9 +2861,13 @@ async function loadResumeContext(jobId="") {
   if (S.testing.engine!=="online") return;
   try {
     S.testing.contextError="";
-    S.testing.context = jobId
-      ? await studioRequest("/api/context/job",{method:"POST",body:JSON.stringify({job_id:jobId})})
-      : await studioRequest("/api/context");
+    S.testing.contextScanError="";
+    S.testing.context = await studioRequest("/api/context");
+    if(S.tab==="testing"&&S.testing.contextView)rTesting();
+    if(jobId) {
+      try { S.testing.context=await studioRequest("/api/context/job",{method:"POST",body:JSON.stringify({job_id:jobId})}); }
+      catch(error){S.testing.contextScanError="The selected posting gap scan did not finish: "+error.message;}
+    }
   } catch (error) { S.testing.contextError=error.message; }
   if(S.tab==="testing"&&S.testing.contextView)rTesting();
 }
@@ -2887,7 +2892,7 @@ function renderResumeContextView() {
   const summary=data.summary||{}, q=String(S.testing.contextQuery||"").toLowerCase().trim();
   const facts=(data.facts||[]).filter(item=>!q||`${item.heading||""} ${item.text||""} ${item.source||""}`.toLowerCase().includes(q));
   const open=(data.questions||[]).filter(item=>item.status!=="answered"), answered=(data.questions||[]).filter(item=>item.status==="answered");
-  return `<section class="testing-hero"><div class="bar" style="justify-content:space-between"><span class="chip good">owner-only private context</span><div class="acts"><button class="act" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBank()">Resume bank</button><button class="act primary" onclick="loadResumeContext(S.testing.selectedId)">refresh from posting</button></div></div><h2>What Resume Studio knows</h2><p class="sub">Every usable fact shows its source. Posting gaps become global questions; your confirmed answers improve future jobs, not just one tailor. “I have not used this” is remembered and never becomes résumé evidence.</p><div class="facts"><span class="chip good">${summary.known_facts||0} usable facts</span><span class="chip">${summary.confirmed_answers||0} owner answers</span><span class="chip ${open.length?'warn':'good'}">${open.length} open questions</span><span class="chip">${summary.known_absences||0} known absences</span></div></section>
+  return `<section class="testing-hero"><div class="bar" style="justify-content:space-between"><span class="chip good">owner-only private context</span><div class="acts"><button class="act" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBank()">Resume bank</button><button class="act primary" onclick="loadResumeContext(S.testing.selectedId)">refresh from posting</button></div></div><h2>What Resume Studio knows</h2><p class="sub">Every usable fact shows its source. Posting gaps become global questions; your confirmed answers improve future jobs, not just one tailor. “I have not used this” is remembered and never becomes résumé evidence.</p><div class="facts"><span class="chip good">${summary.known_facts||0} usable facts</span><span class="chip">${summary.confirmed_answers||0} owner answers</span><span class="chip ${open.length?'warn':'good'}">${open.length} open questions</span><span class="chip">${summary.known_absences||0} known absences</span></div>${S.testing.contextScanError?`<div class="note">${esc(S.testing.contextScanError)} Your existing context is still available; retry when the posting is reachable.</div>`:""}</section>
   <div class="context-grid"><section class="lane"><h3>Questions raised by postings</h3>${open.length?open.map(contextQuestionHTML).join(""):'<p class="sub">No open questions. Match another posting to discover evidence gaps.</p>'}${answered.length?`<details><summary>${answered.length} answered questions</summary>${answered.map(contextQuestionHTML).join("")}</details>`:""}</section><section class="lane"><div class="bar" style="justify-content:space-between"><h3>Authorized evidence &amp; provenance</h3><input id="contextQ" type="search" placeholder="search facts or sources…" value="${esc(S.testing.contextQuery||"")}"></div><p class="sub">${esc(data.privacy||"")}</p>${facts.map(item=>`<div class="context-fact"><div class="bar" style="justify-content:space-between"><strong>${esc(item.heading||"Evidence")}</strong><span class="chip">authority ${esc(item.authority||0)}</span></div><p>${esc(item.text)}</p><p class="sub">Source: ${esc(item.source)} · ${esc(item.source_kind||"local evidence")}${item.reviewed_by?` · confirmed by ${esc(item.reviewed_by)}`:""}</p></div>`).join("")||'<p class="sub">No facts match this search.</p>'}</section></div>`;
 }
 function studioArtifact(runId, name) {
