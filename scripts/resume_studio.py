@@ -69,6 +69,7 @@ from radar.evidence_review import (BLOCKING_STATUSES, REVIEW_STATUSES,
 
 
 RUBRIC_VERSION = "resume-gates-v1"
+OBJECTIVE_RESUME_RUBRIC_VERSION = "objective-resume-v1"
 CODEX_LUNA_MODEL = "gpt-5.6-luna"
 REVIEW_CRITERIA = (
     "factual", "target_fit", "evidence", "distinctiveness", "clarity", "privacy",
@@ -1256,6 +1257,149 @@ def job_summary(job: Dict[str, Any], match: Optional[Dict[str, Any]] = None) -> 
     return summary
 
 
+def objective_resume_assessment(
+    report: Dict[str, Any], status: str = "",
+) -> Dict[str, Any]:
+    """Build a transparent, target-specific shortlist score for Resume Bank.
+
+    This is intentionally not the Studio's craft score and it does not claim
+    to predict a hiring decision.  It is a stable comparison aid for versions
+    of the *same posting*: deterministic match, factual-safety, layout, and
+    portfolio signals are scored; unavailable signals are omitted and the
+    result carries its confidence and provenance.  Independent model critique
+    is never inferred from a missing provider result.
+    """
+    report = report if isinstance(report, dict) else {}
+    review = report.get("review") if isinstance(report.get("review"), dict) else {}
+    deterministic = review.get("deterministic") if isinstance(review.get("deterministic"), dict) else {}
+    deterministic_gates = deterministic.get("gates") if isinstance(deterministic.get("gates"), dict) else {}
+    review_gates = review.get("gates") if isinstance(review.get("gates"), dict) else {}
+    breakdown: List[Dict[str, Any]] = []
+
+    def add_component(name: str, weight: int, score: Any, source: str, detail: str) -> None:
+        if not isinstance(score, (int, float)) or isinstance(score, bool):
+            return
+        bounded = max(0.0, min(100.0, float(score)))
+        breakdown.append({
+            "name": name,
+            "weight": weight,
+            "score": round(bounded, 1),
+            "source": source,
+            "detail": str(detail or "")[:280],
+        })
+
+    def gate_score(gate: Any) -> Optional[float]:
+        if not isinstance(gate, dict):
+            return None
+        value = str(gate.get("status") or "").lower()
+        return {"pass": 100.0, "partial": 60.0, "fail": 0.0}.get(value)
+
+    match = report.get("resume_match") if isinstance(report.get("resume_match"), dict) else {}
+    match_score = match.get("score")
+    if isinstance(match_score, (int, float)) and not isinstance(match_score, bool):
+        add_component(
+            "Target fit", 45, match_score, "resume_match.score",
+            "Resume Match is the deterministic posting-to-evidence alignment score.",
+        )
+
+    unsupported = review.get("unsupported_claims")
+    if not isinstance(unsupported, list):
+        unsupported = [unsupported] if unsupported else []
+    warnings = report.get("validation_warnings")
+    if not isinstance(warnings, list):
+        warnings = [warnings] if warnings else []
+    factual_gate = deterministic_gates.get("factual")
+    factual = gate_score(factual_gate)
+    if factual is not None:
+        safety = factual - min(65.0, len(unsupported) * 20.0) - min(20.0, len(warnings) * 5.0)
+        add_component(
+            "Evidence safety", 25, safety, "deterministic factual gate + report warnings",
+            "Starts from the deterministic factual gate, then subtracts unsupported claims and validation warnings.",
+        )
+
+    layout = deterministic.get("layout") if isinstance(deterministic.get("layout"), dict) else {}
+    layout_score = 100.0 if layout.get("pass") is True else 0.0 if layout else gate_score(
+        deterministic_gates.get("layout") or review_gates.get("layout")
+    )
+    if layout_score is not None:
+        add_component(
+            "Layout safety", 15, layout_score, "deterministic layout audit",
+            "Compiled page count, text extraction, overflow, and horizontal packing checks.",
+        )
+
+    portfolio = deterministic.get("portfolio") if isinstance(deterministic.get("portfolio"), dict) else {}
+    portfolio_score = 100.0 if portfolio.get("pass") is True else 0.0 if portfolio else gate_score(
+        deterministic_gates.get("portfolio") or review_gates.get("portfolio")
+    )
+    portfolio_diagnostics = report.get("portfolio_diagnostics")
+    if not isinstance(portfolio_diagnostics, dict):
+        portfolio_diagnostics = review.get("portfolio_comparison") if isinstance(review.get("portfolio_comparison"), dict) else {}
+    portfolio_warnings = portfolio_diagnostics.get("warnings")
+    if not isinstance(portfolio_warnings, list):
+        portfolio_warnings = []
+    if portfolio_score is not None:
+        portfolio_score = max(0.0, portfolio_score - min(40.0, len(portfolio_warnings) * 15.0))
+        add_component(
+            "Portfolio signal", 15, portfolio_score, "deterministic portfolio audit",
+            "Checks compactness and redundant project signal families; warnings are visible below.",
+        )
+
+    weighted_total = sum(item["weight"] for item in breakdown)
+    score = round(sum(item["score"] * item["weight"] for item in breakdown) / weighted_total, 1) if weighted_total else None
+    independent = review.get("independent_review")
+    if isinstance(independent, dict):
+        independent_available = independent.get("available") is True
+    else:
+        independent_available = independent is True
+    if independent_available:
+        confidence = "high" if len(breakdown) >= 4 else "medium"
+    elif len(breakdown) >= 3:
+        confidence = "medium"
+    elif breakdown:
+        confidence = "low"
+    else:
+        confidence = "unranked"
+
+    strengths: List[str] = []
+    risks: List[str] = []
+    if isinstance(match_score, (int, float)):
+        strengths.append("Target fit: Resume Match %s/100." % int(match_score))
+    if factual == 100.0 and not unsupported and not warnings:
+        strengths.append("No deterministic factual or validation warnings.")
+    if layout_score == 100.0:
+        strengths.append("One-page layout and overflow checks pass.")
+    if portfolio_score == 100.0:
+        strengths.append("Portfolio compactness and nonredundancy checks pass.")
+    if match.get("missing_requirements"):
+        risks.append("Missing target requirements remain: %s." % ", ".join(str(item) for item in match["missing_requirements"][:4]))
+    if unsupported:
+        risks.append("Unsupported claims were reported (%d)." % len(unsupported))
+    if warnings:
+        risks.append("Validation warnings remain (%d)." % len(warnings))
+    if portfolio_warnings:
+        risks.append("Portfolio audit has %d warning%s." % (len(portfolio_warnings), "s" if len(portfolio_warnings) != 1 else ""))
+    if not independent_available:
+        risks.append("No independent reviewer result; this is a deterministic shortlist, not a ChatGPT verdict.")
+    if status in {"failed", "interrupted"}:
+        risks.insert(0, "Run did not finish successfully, so it is excluded from the winner.")
+
+    rankable = bool(
+        score is not None
+        and any(item["score"] > 0 for item in breakdown)
+        and status not in {"failed", "interrupted"}
+    )
+    return {
+        "version": OBJECTIVE_RESUME_RUBRIC_VERSION,
+        "score": score if rankable else None,
+        "confidence": confidence,
+        "rankable": rankable,
+        "breakdown": breakdown,
+        "strengths": strengths[:5],
+        "risks": risks[:6],
+        "note": "Per-posting decision aid; unavailable evidence is omitted rather than treated as a zero.",
+    }
+
+
 def bridged_job(value: Any) -> Optional[Dict[str, Any]]:
     """Validate a public Job Radar snapshot opened from the production UI.
 
@@ -1379,6 +1523,7 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
             age = 0
         if age > 30 * 60:
             display_status = "interrupted"
+    objective = objective_resume_assessment(report, display_status)
     artifacts = []
     for name in (public_pdf_name, public_preview_name, "job.json", "job_context.json", "report.json", "content_plan.json", "candidate_plan.json", "layout_packing.json", "resume.tex", "resume.txt", "workshop.json"):
         if (directory / name).is_file():
@@ -1410,6 +1555,7 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
         "ready": review.get("ready"),
         "review_plan_applied": report.get("review_plan_applied"),
         "validation_warnings": report.get("validation_warnings") or [],
+        "objective": objective,
         "artifacts": artifacts,
         "urls": {
             "pdf": "/artifacts/%s/%s/%s" % (quote(source, safe=""), quote(entry_id, safe=""), quote(public_pdf_name, safe="")),

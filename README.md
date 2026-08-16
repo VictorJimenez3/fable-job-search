@@ -551,6 +551,15 @@ disappearing. The cloud bank shows the same cards after an owner sync, with
 private PDF/preview/report links that continue to work while the Mac is asleep;
 connect Google in Accounts if the existing owner grant is not available.
 
+Inside each posting card, **Objective ranking** marks the strongest saved
+variant for that posting. It uses a fixed, auditable shortlist rubric: target
+fit, evidence safety, layout safety, and portfolio signal. It compares only
+variants for the same canonical posting, keeps failed/interrupted runs out of
+the winner slot, and shows the component sources, strengths, and limits. This
+is an owner-only decision aid—not a claim that an outside ChatGPT session or a
+hiring manager would choose the same resume. If no independent reviewer result
+exists, the UI says so and lowers confidence rather than inventing a verdict.
+
 The four tailoring buttons queue independent runs, so switching postings or
 starting another mode does not replace the current draft. The header shows
 observed Codex tokens/calls for the current UTC week and the bank shows queued,

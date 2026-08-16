@@ -310,6 +310,17 @@
   .resume-bank-version { display:flex; justify-content:space-between; gap:.6rem; align-items:center;
     border-top:1px solid var(--line); padding:.55rem 0; }
   .resume-bank-version:first-child { margin-top:.65rem; }
+  .resume-objective { border:1px solid var(--accent-ink); border-radius:7px; padding:.65rem; margin:.65rem 0; background:var(--paper); }
+  .resume-objective h4 { margin:0; font-size:.78rem; }
+  .resume-objective p { margin:.22rem 0; }
+  .resume-objective-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(150px,.65fr); gap:.6rem; margin-top:.45rem; }
+  .resume-objective-rank { display:flex; justify-content:space-between; gap:.5rem; align-items:center; border-top:1px solid var(--line); padding:.4rem 0; font-size:.72rem; }
+  .resume-objective-rank:first-child { border-top:0; padding-top:0; }
+  .resume-objective-score { color:var(--accent-ink); font:700 .82rem ui-monospace,Menlo,monospace; white-space:nowrap; }
+  .resume-objective-bar { height:5px; background:var(--line); border-radius:99px; overflow:hidden; margin-top:.2rem; }
+  .resume-objective-bar span { display:block; height:100%; background:var(--accent-ink); }
+  .resume-objective-list { margin:.25rem 0 0 1rem; padding:0; color:var(--muted); font-size:.7rem; }
+  @media(max-width:650px){.resume-objective-grid{grid-template-columns:1fr;}}
   .context-grid { display:grid; grid-template-columns:minmax(280px,.8fr) minmax(360px,1.2fr); gap:.9rem; }
   .context-question { border:1px solid var(--line); background:var(--paper); border-radius:7px; padding:.7rem; margin:.55rem 0; }
   .context-question textarea, .context-question input { width:100%; box-sizing:border-box; margin:.35rem 0; }
@@ -2778,6 +2789,25 @@ function resumeBankGroups(entries) {
   }
   return [...groups.entries()].map(([key,versions])=>({key,versions:versions.sort((a,b)=>String(b.updated_at||b.created_at||"").localeCompare(String(a.updated_at||a.created_at||"")))}));
 }
+function objectiveAssessment(entry) {
+  if (entry?.objective && typeof entry.objective === "object") return entry.objective;
+  const score=Number(entry?.job?.resume_match?.score);
+  if (!Number.isFinite(score)) return {version:"objective-resume-v1",score:null,confidence:"unranked",rankable:false,breakdown:[],strengths:[],risks:["This older bank entry has no objective assessment metadata; sync it again from the private engine."],note:"Per-posting decision aid; unavailable evidence is omitted rather than treated as a zero."};
+  return {version:"objective-resume-v1",score,confidence:"low",rankable:!['failed','interrupted'].includes(entry?.status),breakdown:[{name:"Target fit",weight:100,score,source:"resume_match.score",detail:"Only the saved Resume Match signal is available for this older entry."}],strengths:[`Target fit: Resume Match ${score}/100.`],risks:["Older entry lacks the full deterministic audit breakdown."],note:"Per-posting decision aid; sync the local bank to refresh the full audit."};
+}
+function objectiveRankings(group) {
+  return group.versions.map(entry=>({entry,assessment:objectiveAssessment(entry)})).sort((a,b)=>{
+    const as=Number(a.assessment.score), bs=Number(b.assessment.score), ar=Boolean(a.assessment.rankable), br=Boolean(b.assessment.rankable);
+    return Number(br)-Number(ar) || (Number.isFinite(bs)?bs:-1)-(Number.isFinite(as)?as:-1) || String(b.entry.updated_at||b.entry.created_at||"").localeCompare(String(a.entry.updated_at||a.entry.created_at||""));
+  }).map((item,index)=>({...item,rank:index+1}));
+}
+function objectiveRankingHTML(group) {
+  const ranked=objectiveRankings(group), winner=ranked.find(item=>item.assessment.rankable&&Number.isFinite(Number(item.assessment.score)));
+  if (!winner) return `<div class="resume-objective"><h4>Objective ranking unavailable</h4><p class="sub">No finished version in this job group has enough audit data to rank. Failed or interrupted runs stay visible below but cannot win.</p></div>`;
+  const assessment=winner.assessment, breakdown=Array.isArray(assessment.breakdown)?assessment.breakdown:[];
+  const strengths=(assessment.strengths||[]).slice(0,3), risks=(assessment.risks||[]).slice(0,4);
+  return `<div class="resume-objective"><div class="bar" style="justify-content:space-between"><h4>Objective ranking · best for this posting</h4>${studioBadge(`${assessment.score}/100 · ${assessment.confidence} confidence`,assessment.confidence==="high"?"good":assessment.confidence==="medium"?"warn":"")}</div><p class="sub"><strong>${esc(studioModeLabel(winner.entry.mode))}</strong> is currently #1 among ${ranked.length} saved version${ranked.length===1?"":"s"}. ${esc(assessment.note||"Per-posting decision aid; not a hiring prediction.")}</p><div class="resume-objective-grid"><div>${ranked.map(item=>{const a=item.assessment, score=Number(a.score);return `<div class="resume-objective-rank"><span><strong>#${item.rank} · ${esc(studioModeLabel(item.entry.mode))}</strong><br><span class="sub">${esc(item.entry.status||"saved")} · ${esc(a.confidence||"unranked")}</span></span><span class="resume-objective-score">${a.rankable&&Number.isFinite(score)?`${score}/100`:"not ranked"}</span></div>`;}).join("")}</div><div><strong class="sub">Why this version</strong>${strengths.length?`<ul class="resume-objective-list">${strengths.map(item=>`<li>${esc(item)}</li>`).join("")}</ul>`:""}${risks.length?`<p class="sub" style="margin-top:.55rem"><strong>Limits</strong></p><ul class="resume-objective-list">${risks.map(item=>`<li>${esc(item)}</li>`).join("")}</ul>`:""}</div></div>${breakdown.length?`<details style="margin-top:.55rem"><summary>show rubric sources</summary>${breakdown.map(item=>`<div style="margin-top:.4rem"><div class="bar" style="justify-content:space-between"><span class="sub">${esc(item.name)} · ${item.weight}%</span><span class="sub">${item.score}/100</span></div><div class="resume-objective-bar"><span style="width:${Math.max(0,Math.min(100,Number(item.score)||0))}%"></span></div><p class="sub">${esc(item.source)} · ${esc(item.detail)}</p></div>`).join("")}</details>`:""}</div>`;
+}
 function cloudBankArtifactUrl(entry, kind) {
   if (entry?.storage === "cloud") return entry.urls?.[kind] || "";
   if (!entry?.entry_id || !entry?.source) return "";
@@ -2941,22 +2971,23 @@ function studioLibraryHTML() {
     return `<div class="studio-run"><div><strong>${esc(job.company||"Unknown company")}</strong><div class="sub">${esc(job.title||"Untitled role")} · ${esc(studioModeLabel(entry.mode))} · ${esc(entry.status||"saved")}${entry.storage==="cloud"?" · cloud":" · local"}</div></div><div class="acts">${pdf}${preview}${open}</div></div>`;
   }).join("");
 }
-function resumeBankVersionHTML(entry) {
+function resumeBankVersionHTML(entry, ranking=null) {
   const job=entry.job||{}, preview=cloudBankArtifactUrl(entry,"preview"), pdf=cloudBankArtifactUrl(entry,"pdf");
   const report=cloudBankArtifactUrl(entry,"report"), posting=cloudBankArtifactUrl(entry,"posting");
   const workshop=entry.run_id && entry.has_workshop
     ? `<button class="act" ${S.testing.engine==="online"?"":"disabled title=\"Start the private engine to open Workshop\""} onclick='openResumeWorkshop("${esc(entry.run_id)}")'>Workshop</button>` : "";
   const inspect=entry.run_id && entry.storage!=="cloud" ? `<button class="act" onclick='loadResumeRun("${esc(entry.run_id)}")'>inspect</button>` : "";
   const statusKind=entry.status==="complete"||entry.status==="awaiting_review"?"good":entry.status==="failed"?"bad":"unknown";
-  return `<div class="resume-bank-version"><div><strong>${esc(studioModeLabel(entry.mode))}</strong><p class="sub">${esc(entry.created_at||"date unavailable")} · ${entry.storage==="cloud"?"cloud":"local"} ${studioBadge(entry.status||"saved",statusKind)}</p></div><div class="acts resume-bank-actions">${pdf?`<a class="act" href="${pdf}" target="_blank" rel="noopener">PDF ↗</a>`:""}${preview?`<a class="act" href="${preview}" target="_blank" rel="noopener">preview ↗</a>`:""}${report?`<a class="act" href="${report}" target="_blank" rel="noopener">audit ↗</a>`:""}${posting?`<a class="act" href="${posting}" target="_blank" rel="noopener">posting ↗</a>`:""}${inspect}${workshop}</div></div>`;
+  const rankBadge=ranking?.assessment?.rankable&&Number.isFinite(Number(ranking.assessment.score))?studioBadge(`#${ranking.rank} · ${ranking.assessment.score}/100`,ranking.rank===1?"good":""):studioBadge("not ranked","warn");
+  return `<div class="resume-bank-version"><div><strong>${esc(studioModeLabel(entry.mode))} ${rankBadge}</strong><p class="sub">${esc(entry.created_at||"date unavailable")} · ${entry.storage==="cloud"?"cloud":"local"} ${studioBadge(entry.status||"saved",statusKind)}</p></div><div class="acts resume-bank-actions">${pdf?`<a class="act" href="${pdf}" target="_blank" rel="noopener">PDF ↗</a>`:""}${preview?`<a class="act" href="${preview}" target="_blank" rel="noopener">preview ↗</a>`:""}${report?`<a class="act" href="${report}" target="_blank" rel="noopener">audit ↗</a>`:""}${posting?`<a class="act" href="${posting}" target="_blank" rel="noopener">posting ↗</a>`:""}${inspect}${workshop}</div></div>`;
 }
 function resumeBankGroupHTML(group) {
-  const latest=group.versions[0], job=latest.job||{}, preview=cloudBankArtifactUrl(latest,"preview");
+  const latest=group.versions[0], job=latest.job||{}, preview=cloudBankArtifactUrl(latest,"preview"), ranked=objectiveRankings(group), winner=ranked.find(item=>item.assessment.rankable&&Number.isFinite(Number(item.assessment.score)));
   const statuses=[...new Set(group.versions.map(entry=>entry.status).filter(Boolean))];
   return `<details class="resume-bank-card"><summary><div class="resume-bank-card-head"><div><h3>${esc(job.company||"Unknown company")}</h3><p class="sub">${esc(job.title||"Untitled role")}</p></div><span class="chip good">${group.versions.length} version${group.versions.length===1?"":"s"}</span></div>
     ${preview?`<img class="resume-bank-preview" loading="lazy" src="${preview}" alt="${esc(job.company||"Resume")} latest preview">`:'<div class="resume-bank-preview empty">No preview was produced for the latest version.</div>'}
-    <p class="sub">Latest: ${esc(studioModeLabel(latest.mode))} · ${esc(latest.created_at||"date unavailable")}</p><div class="facts">${statuses.map(value=>studioBadge(value,value==="failed"?"bad":"good")).join("")}<span class="chip">click to see every version</span></div></summary>
-    <div>${group.versions.map(resumeBankVersionHTML).join("")}</div></details>`;
+    <p class="sub">Latest: ${esc(studioModeLabel(latest.mode))} · ${esc(latest.created_at||"date unavailable")}${winner?` · best: ${esc(studioModeLabel(winner.entry.mode))} ${studioBadge(`${winner.assessment.score}/100`,"good")}`:""}</p><div class="facts">${statuses.map(value=>studioBadge(value,value==="failed"?"bad":"good")).join("")}<span class="chip">click to see every version · compare objectively</span></div></summary>
+    <div>${objectiveRankingHTML(group)}${ranked.map(item=>resumeBankVersionHTML(item.entry,item)).join("")}</div></details>`;
 }
 function renderResumeBankView() {
   const query=String(S.testing.bankQuery||"").toLowerCase().trim(), mode=S.testing.bankMode||"all", status=S.testing.bankStatus||"all", era=S.testing.bankEra||"current";
@@ -2969,7 +3000,7 @@ function renderResumeBankView() {
     S.testing.cloudBank.status==="unavailable"?`cloud bank unavailable · ${S.testing.cloudBank.error}`:"checking cloud bank…";
   const cloudSetup=S.testing.cloudBank.needsGoogle?`<button class="act" onclick="openTutorial('accounts')">connect Google for private bank</button>`:"";
   const sync=S.testing.sync.state==="running"?`syncing ${S.testing.sync.done}/${S.testing.sync.total} entries…`:S.testing.sync.state==="complete"?"last sync complete":S.testing.sync.state==="failed"?`sync stopped · ${S.testing.sync.error}`:"";
-  return `<section class="testing-hero"><div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">${esc(cloudState)}</span></div><div class="acts"><button class="act" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><button class="act primary" onclick="loadCloudResumeBank()">refresh bank</button>${cloudSetup}</div></div><h2>Resume bank</h2><p class="sub">One card per job. Click it to compare every saved version, audit, posting snapshot, and PDF. Every local run and legacy experiment remains available under all history; the default view starts with the Google-era Studio overhaul. New matching, generation, and Workshop edits still use the private Mac engine.</p>${sync?`<p class="note" role="status">${esc(sync)}</p>`:""}</section>
+  return `<section class="testing-hero"><div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">${esc(cloudState)}</span></div><div class="acts"><button class="act" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><button class="act primary" onclick="loadCloudResumeBank()">refresh bank</button>${cloudSetup}</div></div><h2>Resume bank</h2><p class="sub">One card per job. Click it to compare every saved version, audit, posting snapshot, and PDF. The private <strong>Objective ranking</strong> marks the strongest saved version for that posting using transparent match, evidence-safety, layout, and portfolio signals. It is a decision aid, not a hiring prediction or automatic submission. Every local run and legacy experiment remains available under all history; the default view starts with the Google-era Studio overhaul. New matching, generation, and Workshop edits still use the private Mac engine.</p>${sync?`<p class="note" role="status">${esc(sync)}</p>`:""}</section>
   <div class="bar"><input id="resumeBankQ" type="search" placeholder="filter company or role…" value="${esc(S.testing.bankQuery||"")}"><select id="resumeBankEra" aria-label="Filter Resume Bank era"><option value="current" ${era==="current"?"selected":""}>Google onward</option><option value="all" ${era==="all"?"selected":""}>all history</option></select><select id="resumeBankMode" aria-label="Filter Resume Bank mode"><option value="all">all modes</option><option value="used" ${mode==="used"?"selected":""}>Used bullets</option><option value="ai" ${mode==="ai"?"selected":""}>AI tailor</option><option value="unrestricted" ${mode==="unrestricted"?"selected":""}>Take-the-wheel</option><option value="generation" ${mode==="generation"?"selected":""}>Unchained generation</option></select><select id="resumeBankStatus" aria-label="Filter Resume Bank status"><option value="all">all statuses</option>${[...new Set(resumeBankEntries().map(e=>e.status).filter(Boolean))].sort().map(value=>`<option value="${esc(value)}" ${status===value?"selected":""}>${esc(value)}</option>`).join("")}</select><button class="act" onclick="syncCloudResumeBank()" ${S.testing.engine==="online"?"":"disabled"}>sync local bank · ${era==="current"?"Google-onward":"all"} ↗</button></div>
   <p class="sub">${groups.length} jobs · ${entries.length} versions</p><section class="resume-bank-grid">${groups.length?groups.map(resumeBankGroupHTML).join(""):"<div class=\"lane\"><p class=\"sub\">No bank entries match this filter. Start the private engine to load the local bank, or connect Google and sync it.</p></div>"}</section>`;
 }

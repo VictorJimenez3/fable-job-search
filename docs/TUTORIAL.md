@@ -181,6 +181,12 @@ the first post-overhaul Google run; choose **all history** before syncing if
 you deliberately want legacy, failed, or interrupted experiments too. The
 bank shows one job card; click it to see every version for that posting.
 
+Inside an expanded job card, **Objective ranking** sorts the finished variants
+for that posting and marks the current winner. Open **show rubric sources** to
+see the target-fit, evidence-safety, layout, and portfolio inputs. It is a
+private comparison aid, not an automatic application choice or a prediction of
+what a hiring manager will do; missing independent review is shown as a limit.
+
 Open **Context & Q&A** to inspect what the tailoring engine can actually use.
 The right side lists authorized facts and their exact source. The left side
 lists capability gaps raised by any posting. Answer **I used this** only with
