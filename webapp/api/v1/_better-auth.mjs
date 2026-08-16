@@ -6,6 +6,6 @@ export default async function handler(req, res) {
     res.status(503).json({error: "database-backed auth is not configured"});
     return;
   }
-  const {auth} = await import("../../../auth.config.mjs");
+  const {auth} = await import("../../auth.config.mjs");
   return toNodeHandler(auth)(req, res);
 }

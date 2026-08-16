@@ -20,5 +20,8 @@
       ]
     }
   ],
-  "rewrites": [{"source": "/vnext", "destination": "/vnext/index.html"}]
+  "rewrites": [
+    {"source": "/api/v1/:path*", "destination": "/api/v1/router?path=:path"},
+    {"source": "/vnext", "destination": "/vnext/index.html"}
+  ]
 }

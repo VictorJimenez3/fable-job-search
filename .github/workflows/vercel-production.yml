@@ -60,6 +60,9 @@ jobs:
           echo "url=$url" >> "$GITHUB_OUTPUT"
           echo "deployment=$url"
 
+      - name: Wait for the deployment to become ready
+        run: vercel inspect "${{ steps.deploy.outputs.url }}" --wait --timeout 5m --token="$VERCEL_TOKEN" --scope="$VERCEL_ORG_ID"
+
       - name: Point the friendly URL at this deployment
         run: vercel alias set "${{ steps.deploy.outputs.url }}" "$VERCEL_ALIAS" --token="$VERCEL_TOKEN" --scope="$VERCEL_ORG_ID"
 
