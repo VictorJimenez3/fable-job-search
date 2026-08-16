@@ -7,7 +7,7 @@ export default defineConfig({
   base: "/vnext/",
   plugins: [react()],
   build: {
-    outDir: resolve(__dirname, "vnext"),
+    outDir: resolve(__dirname, "public/vnext"),
     emptyOutDir: true,
     sourcemap: false,
   },
