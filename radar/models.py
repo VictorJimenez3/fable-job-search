@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import re
-from dataclasses import dataclass, field, asdict
+from dataclasses import asdict, dataclass, field
 
 
 def norm(s: str) -> str:
@@ -28,7 +28,8 @@ def _loc_key(location: str) -> str:
 
 def job_id(company: str, title: str, location: str) -> str:
     raw = f"{norm(company)}|{norm(title)}|{_loc_key(location)}"
-    return hashlib.sha1(raw.encode()).hexdigest()[:16]
+    # SHA-1 is retained solely for backward-compatible, non-security identity.
+    return hashlib.sha1(raw.encode(), usedforsecurity=False).hexdigest()[:16]
 
 
 @dataclass
@@ -38,6 +39,11 @@ class Job:
     url: str
     source: str                      # simplify | vansh | jobright | speedyapply | greenhouse | ...
     source_url: str = ""             # board/feed that surfaced this posting
+    # Stable crawl-board identity. This is deliberately more specific than
+    # ``source``: two companies can both use Greenhouse, but a successful
+    # crawl of one board is not evidence that the other omitted a role.
+    source_board: str = ""
+    source_board_variants: list[str] = field(default_factory=list)
     source_variants: list[str] = field(default_factory=list)
     source_url_variants: list[str] = field(default_factory=list)
     # Other URLs discovered for the same posting.  The primary ``url`` is the
@@ -52,6 +58,11 @@ class Job:
     ats: str = ""                    # which ATS the canonical URL lives on
     sector: str = ""                 # filled by sector inference
     score: int = 0
+    # vNext ranking separates objective evidence from user intent. ``score``
+    # remains the backward-compatible personalized display value.
+    evidence_score: int = 0
+    eligibility: str = "review"
+    priority_tier: str = "explore"
     score_raw: float = 0.0            # uncapped utility before display calibration
     score_calibrated: int = 0         # pre-verdict calibrated score
     ranking_adjustment: int = 0       # deterministic diversity adjustment after group ranking
@@ -90,8 +101,8 @@ class Job:
             del d["posting"]   # only persist the key when analysis exists
         if not d["internship_eligibility"]:
             del d["internship_eligibility"]
-        for key in ("source_variants", "source_url_variants", "alternate_urls",
-                    "link_resolution"):
+        for key in ("source_board", "source_board_variants", "source_variants",
+                    "source_url_variants", "alternate_urls", "link_resolution"):
             if not d.get(key):
                 d.pop(key, None)
         for key in ("posting_status_changed_at", "posting_status_reason", "closed_at",

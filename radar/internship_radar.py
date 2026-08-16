@@ -48,6 +48,9 @@ def rescore() -> int:
             "profile": "internship",
             "internship_eligibility": job.internship_eligibility,
             "score": job.score,
+            "evidence_score": job.evidence_score,
+            "eligibility": job.eligibility,
+            "priority_tier": job.priority_tier,
             "score_raw": job.score_raw,
             "score_calibrated": job.score_calibrated,
             "score_dimensions": job.score_dimensions,
@@ -92,12 +95,12 @@ def crawl() -> int:
     registry = state.companies()
     discovery.seed_registry(registry, seeds())
     jobs_state = state.jobs()
-    agg_jobs, agg_stats = _fetch_aggregators(disabled)
+    agg_jobs, agg_stats, healthy_aggregator_boards = _fetch_aggregators(disabled)
     harvested = discovery.harvest(registry, agg_jobs,
                                   max_new=int(env("RADAR_INTERNSHIP_MAX_HARVEST", "100")))
     activated, invalidated = discovery.probe_new(
         registry, budget=int(env("RADAR_INTERNSHIP_PROBE_BUDGET", "20")))
-    ats_jobs, ats_stats = _fetch_ats(registry, disabled)
+    ats_jobs, ats_stats, healthy_ats_boards = _fetch_ats(registry, disabled)
     print(f"internship aggregators: {agg_stats}")
     print(f"internship discovery: harvested {harvested}, probed {activated} active / {invalidated} invalid")
     print(f"internship ats: {ats_stats}")
@@ -168,7 +171,8 @@ def crawl() -> int:
 
     lifecycle_stats = lifecycle.reconcile(
         jobs_state, now, seen,
-        allow_source_gap_expiry=lifecycle.source_run_healthy(agg_stats, ats_stats))
+        healthy_source_boards=healthy_aggregator_boards | healthy_ats_boards,
+    )
     if lifecycle_stats["expired"] or lifecycle_stats["reopened"]:
         print(f"internship lifecycle: {lifecycle_stats['expired']} auto-expired, "
               f"{lifecycle_stats['reopened']} reopened from current source")

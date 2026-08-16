@@ -6,7 +6,7 @@
 // legacy same-site GET handoff.
 const {
   CANON_HOST, requestHost, authReturnHost, session,
-  seal, unseal, sessionCookies, authLog,
+  seal, unseal, sessionCookies, authLog, requireMutationRequest,
 } = require("./_lib");
 
 const MAX_AGE_MS = 60 * 1000;
@@ -47,6 +47,7 @@ module.exports = (req, res) => {
   }
 
   if (req.method === "POST") {
+    if (!requireMutationRequest(req, res)) return;
     const target = authReturnHost(requestHost(req));
     const opened = unseal(req.body?.ticket || "");
     const accepted = Boolean(target && opened && opened.kind === "job-radar-session-handoff" &&

@@ -8,7 +8,8 @@ def test_resume_bank_is_owner_only_private_drive_storage():
     api = (ROOT / "webapp" / "api" / "resume-bank.js").read_text()
     tracker = (ROOT / "webapp" / "api" / "_google-tracker.js").read_text()
 
-    assert 'const { OWNER, session }' in api
+    assert 'const { OWNER, session, requireMutationRequest }' in api
+    assert "requireMutationRequest(req, res)" in api
     assert "Resume Bank is private to the repository owner" in api
     assert "resumeDriveAccess" in api and "resumeDriveAccess" in tracker
     assert "jobRadarResumeBank" in api

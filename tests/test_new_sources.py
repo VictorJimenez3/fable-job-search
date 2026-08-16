@@ -156,6 +156,36 @@ def test_query_driven_ats_include_pm_synonyms():
     assert set(ats.PM_SEARCH_QUERIES).issubset(calls)
 
 
+def test_workday_paginates_until_reported_total(monkeypatch):
+    monkeypatch.setenv("RADAR_WORKDAY_MAX_RESULTS", "200")
+    offsets = []
+
+    def fake_post(_url, payload, **_kwargs):
+        offsets.append(payload["offset"])
+        count = 20 if payload["offset"] == 0 else 1
+        return {
+            "total": 21,
+            "jobPostings": [
+                {
+                    "externalPath": f"/job/example/{payload['offset'] + index}",
+                    "title": f"Engineer {payload['offset'] + index}",
+                }
+                for index in range(count)
+            ],
+        }
+
+    entry = {
+        "name": "Acme",
+        "ats": "workday",
+        "token": "acme",
+        "extra": {"host": "wd5", "site": "External"},
+    }
+    with patch.object(ats, "post_json", side_effect=fake_post):
+        jobs = ats.fetch_workday(entry, queries=["new grad"])
+    assert offsets == [0, 20]
+    assert len(jobs) == 21
+
+
 def test_amazon_pm_queries_skip_technical_category_filter():
     calls = []
 

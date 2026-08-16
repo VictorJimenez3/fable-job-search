@@ -1,10 +1,12 @@
 // PUT: commit the workspace state (notes, outreach links, maybe-lane) to
 // state/web_state.json using the owner's session. The file lives in a public
 // repo — the frontend says so next to the save switch.
-const { OWNER, REPO, BRANCH, PROFILE, VALID_PROFILES, normalizeProfile, session, gh } = require("./_lib");
+const { OWNER, REPO, BRANCH, PROFILE, VALID_PROFILES, normalizeProfile, session,
+  requireMutationRequest, gh } = require("./_lib");
 
 module.exports = async (req, res) => {
   if (req.method !== "PUT") { res.status(405).end(); return; }
+  if (!requireMutationRequest(req, res)) return;
   const s = session(req);
   if (!s) { res.status(401).json({ error: "sign in first" }); return; }
   if (s.u !== OWNER) { res.status(403).json({ error: "owner only" }); return; }

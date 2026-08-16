@@ -26,6 +26,16 @@ run from `claude/newgrad-job-search-system-9gbj9k` and promote the newest build
 to `job-radar-newgrad.vercel.app`; users should never need a deployment-specific
 URL.
 
+The staged vNext workspace is available at
+[`/vnext/`](https://job-radar-newgrad.vercel.app/vnext/). It loads a cursor-
+paginated action queue instead of downloading the full repository datastore,
+virtualizes long lists, validates every API response, and has responsive Jobs,
+Applications, and Companies routes. Until Postgres cutover, public Jobs use a
+server-side legacy fallback and private workflows link back to the classic UI;
+no current capability is removed. vNext displays an objective evidence score,
+eligibility, and Victor's goal/recommended priority as separate signals instead
+of hiding personal priority inside one number.
+
 The platform is now decision-first: filter by role family, sponsorship,
 required experience, and minimum degree; see honest eligibility facts before opening a posting;
 then use one primary apply link with explicit To apply/Applied tracking. A
@@ -221,8 +231,11 @@ and its ranking remain the priority whenever compute is constrained.
    - rejection / "another direction" / "not selected" → **Rejected** (+ Response date)
    - applied with no reply for autoclose_days (default 45) → **CLOSED**
 
-   It searches the last 21 days, matches employer plus role title, and only
-   advances a stage. A late email cannot undo a later stage; ambiguous matches
+   Gmail can use its read-only incremental History API (`EMAIL_BACKEND=gmail_api`),
+   which advances a cursor only after a successful pass. Other inboxes and
+   existing installations keep the read-only IMAP connector. Both paths use a
+   bounded 21-day recovery search, match employer plus role title, and only
+   advance a stage. A late email cannot undo a later stage; ambiguous matches
    are recorded in the email review queue instead of silently changing the
    wrong application. A separate tracker-sync runs every 15 minutes, so
    Notion/Sheets stage edits and local changes converge without waiting for an
@@ -293,7 +306,9 @@ and the exact reason ledger. State retention is two years by default
 (`RADAR_HISTORY_DAYS`, minimum one year), so the record can support future
 seasonal posting-timeline analysis. `RADAR_LIFECYCLE_ACTIVE_DAYS` defaults to
 45 and `RADAR_LIFECYCLE_UNSEEN_GRACE_DAYS` to 14; a transient fetch failure
-never closes a role, and an all-source outage does not count as a source gap.
+never closes a role. Source-gap expiry requires a successful run of that
+posting's exact aggregator or company ATS board, so one healthy Greenhouse
+tenant cannot expire another company's jobs.
 
 For Victor, tracked terminal roles are soft-archived to the personal Notion
 Applications database (Notion trash remains recoverable), while the local
@@ -381,7 +396,22 @@ Verify anytime without creating test data: *Actions → notion-verify → Run wo
 **Optional email lifecycle automation (separate from OAuth login)**
 
 This is an owner-only GitHub Actions connector. To enable automatic Applied,
-OA, Interview, Rejected, and CLOSED updates, add repository secrets
+OA, Interview, Rejected, and CLOSED updates, choose either the Gmail API or
+IMAP. Neither path sends mail.
+
+For Gmail, the preferred path is the read-only History API:
+
+1. Create/choose a Google OAuth web client and authorize only
+   `https://www.googleapis.com/auth/gmail.readonly` (Google's OAuth Playground
+   can create the one-time refresh grant when **Use your own OAuth credentials**
+   is enabled).
+2. Add secrets `GMAIL_REFRESH_TOKEN`, `GOOGLE_AUTH_CLIENT_ID`, and
+   `GOOGLE_AUTH_CLIENT_SECRET`.
+3. Add repository variable `EMAIL_BACKEND=gmail_api` and run
+   **Actions → email-verify**. The cursor is stored in generated
+   `state/email_watch_api.json` only after a complete pass.
+
+For another IMAP provider, or an existing App Password installation, add
 `EMAIL_ADDRESS` and `EMAIL_APP_PASSWORD`. The password must be an IMAP/App
 Password, never the normal account password.
 
@@ -684,17 +714,35 @@ setting. Edit and push — next run picks it up. Seed companies:
 ## Development
 
 ```bash
-pip install -r requirements.txt pytest
-python -m pytest tests/            # unit tests (real captured fixtures)
-python -m radar.main seed          # initialize registry + taste priors
-python -m radar.main crawl         # full cycle (respects RADAR_* env vars)
+uv sync --frozen --extra dev
+uv run pytest tests/ -q            # unit tests (real captured fixtures)
+uv run radar doctor --json
+uv run radar crawl run --dry-run   # typed grouped CLI
+uv run radar score explain JOB_ID
+uv run radar db migrate --sql      # review Postgres DDL without applying it
 ```
+
+Python 3.12 is pinned in `.python-version`; `requirements.txt` remains a thin
+compatibility entry point. Production workflows share the repository's local
+setup action and frozen `uv.lock`. Optional maintained provider translation is
+installed with `uv sync --extra ai` and enabled with
+`RADAR_LLM_ADAPTER=litellm`; AI is still unnecessary for crawling or scoring.
 
 Useful env vars: `RADAR_DISABLE_SOURCES=ats,hn`, `RADAR_PROBE_BUDGET`,
 `RADAR_MAX_COMPANIES`, `RADAR_PM_BACKFILL_COMPANIES`, `RADAR_MAX_ALERTS`,
 `RADAR_WORKERS`, `RADAR_LIFECYCLE_ACTIVE_DAYS=45`,
 `RADAR_LIFECYCLE_UNSEEN_GRACE_DAYS=14`, `RADAR_HISTORY_DAYS=730`,
-`RADAR_LINK_RESOLVE_LIMIT=25`, and `RADAR_LINK_RESOLVE_TTL_DAYS=30`.
+`RADAR_LINK_RESOLVE_LIMIT=25`, `RADAR_LINK_RESOLVE_TTL_DAYS=30`,
+`RADAR_WORKDAY_MAX_RESULTS=200`, `RADAR_PHENOM_MAX_RESULTS=100`,
+`RADAR_EIGHTFOLD_MAX_RESULTS=100`, and
+`RADAR_SMARTRECRUITERS_MAX_RESULTS=1000`.
+
+The normalized Postgres path is opt-in through `DATABASE_URL`: `radar db
+migrate`, `radar db import-legacy`, and `radar db parity` provide an idempotent
+cutover with stable public IDs, aliases, sightings, score snapshots,
+application events, preferences, prompt/LLM audit rows, and leased work items.
+The deterministic crawler and current JSON production datastore continue to
+work with no database or new secret.
 
 Other one-off CLI commands: `notion-verify`, `email-verify` (connectivity checks,
 create nothing), `email-watch` (run one detection cycle manually),

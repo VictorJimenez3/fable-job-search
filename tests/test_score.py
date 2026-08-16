@@ -258,6 +258,9 @@ def test_google_new_grad_favorite_is_100_but_pm_stays_low():
     technical = mk("Software Engineer, New Grad", company="Google")
     score(technical, FB, NOW)
     assert technical.score == 100
+    assert technical.evidence_score < technical.score
+    assert technical.eligibility == "eligible"
+    assert technical.priority_tier == "goal"
     assert any("Google new-grad -> 100" in reason for reason in technical.score_reasons)
 
     pm = mk("Product Manager, New Grad", company="Google", source="simplify")

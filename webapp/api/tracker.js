@@ -1,6 +1,6 @@
 // GET/POST personal tracker rows for any authenticated account.
 // This is separate from the owner-only repository state/actions.
-const { session } = require("./_lib");
+const { session, requireMutationRequest } = require("./_lib");
 const tracker = require("./_google-tracker");
 
 function profileOf(value) {
@@ -24,6 +24,7 @@ module.exports = async (req, res) => {
       return;
     }
     if (req.method === "POST") {
+      if (!requireMutationRequest(req, res)) return;
       const payload = {...(req.body || {}), profile: profileOf(req.body?.profile)};
       const result = await tracker.updateUserTracker(s.u, s.keys || s.k || s.u, payload, s.pt);
       res.status(200).json(result);

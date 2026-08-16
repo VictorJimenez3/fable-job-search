@@ -14,17 +14,17 @@ telemetry.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass
-from datetime import datetime, timezone
-from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import threading
 import time
-from typing import Callable
+from collections.abc import Callable
+from dataclasses import dataclass
+from datetime import UTC, datetime
 
 import requests
 
 from .config import env, profile
+from .prompts import guarded_prompt, prompt_version
 
 ANTHROPIC_API = "https://api.anthropic.com/v1/messages"
 NVIDIA_DEFAULT_BASE = "https://integrate.api.nvidia.com/v1"
@@ -101,7 +101,7 @@ _counter_lock = threading.Lock()
 def _config_signature() -> tuple:
     names = ["ANTHROPIC_API_KEY", "LLM_BASE_URL", "LLM_API_KEY", "LLM_MODEL",
              "NVIDIA_API_BASE_URL", "RADAR_AI_MAX_CALLS", "RADAR_AI_MAX_REQUESTS",
-             "RADAR_AI_PROVIDER_ATTEMPTS"]
+             "RADAR_AI_PROVIDER_ATTEMPTS", "RADAR_LLM_ADAPTER"]
     for key_name, model_name in _NVIDIA.values():
         names.extend((key_name, model_name))
     return tuple(os.environ.get(n, "") for n in names)
@@ -265,6 +265,8 @@ def _response_error(response) -> None:
 
 def _call(ep: Endpoint, prompt: str, max_tokens: int, timeout: int,
           json_mode: bool) -> tuple[str | None, dict]:
+    if env("RADAR_LLM_ADAPTER").casefold() == "litellm":
+        return _call_litellm(ep, prompt, max_tokens, timeout, json_mode)
     if ep.kind == "anthropic":
         response = _post_with_retry(ep.base_url, timeout=timeout, json={
             "model": ep.model,
@@ -315,12 +317,60 @@ def _call(ep: Endpoint, prompt: str, max_tokens: int, timeout: int,
     return _strip_thinking(text) or None, body.get("usage") or {}
 
 
+def _call_litellm(
+    ep: Endpoint,
+    prompt: str,
+    max_tokens: int,
+    timeout: int,
+    json_mode: bool,
+) -> tuple[str | None, dict]:
+    """Use maintained provider adapters while retaining Radar's hard budgets."""
+    try:
+        from litellm import completion
+    except ImportError as exc:
+        raise CallFailure(
+            "RADAR_LLM_ADAPTER=litellm requires `uv sync --extra ai`"
+        ) from exc
+
+    if ep.kind == "anthropic":
+        model = ep.model if ep.model.startswith("anthropic/") else f"anthropic/{ep.model}"
+        kwargs = {"api_key": ep.api_key}
+    elif _ollama_api_url(ep.base_url):
+        model = ep.model if ep.model.startswith("ollama_chat/") else f"ollama_chat/{ep.model}"
+        kwargs = {"api_base": ep.base_url.removesuffix("/v1")}
+    else:
+        model = ep.model if "/" in ep.model else f"openai/{ep.model}"
+        kwargs = {"api_base": ep.base_url, "api_key": ep.api_key}
+    if json_mode:
+        kwargs["response_format"] = {"type": "json_object"}
+    _reserve_request()
+    response = completion(
+        model=model,
+        messages=[{"role": "user", "content": prompt}],
+        max_tokens=max_tokens,
+        timeout=timeout,
+        num_retries=0,
+        **kwargs,
+    )
+    choice = response.choices[0] if getattr(response, "choices", None) else None
+    message = getattr(choice, "message", None)
+    text = getattr(message, "content", "") if message else ""
+    usage_value = getattr(response, "usage", None)
+    if hasattr(usage_value, "model_dump"):
+        usage = usage_value.model_dump()
+    elif isinstance(usage_value, dict):
+        usage = usage_value
+    else:
+        usage = {}
+    return _strip_thinking(str(text or "")) or None, usage
+
+
 def _record(task: str, ep: Endpoint | None, status: str, started: float,
             prompt: str, max_tokens: int, usage: dict | None = None,
             detail: str = "") -> dict:
     usage = usage or {}
     event = {
-        "at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "at": datetime.now(UTC).isoformat(timespec="seconds"),
         "task": task,
         "endpoint": ep.name if ep else "none",
         "lane": ("local" if ep and _is_local(ep.base_url) else
@@ -333,6 +383,7 @@ def _record(task: str, ep: Endpoint | None, status: str, started: float,
         "prompt_tokens": usage.get("prompt_tokens") or usage.get("input_tokens") or 0,
         "completion_tokens": usage.get("completion_tokens") or usage.get("output_tokens") or 0,
         "detail": detail[:120],
+        "prompt_version": prompt_version(task, prompt),
     }
     with _counter_lock:
         _events.append(event)
@@ -391,20 +442,21 @@ def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180,
     with _counter_lock:
         _logical_calls += 1
         _task_calls[task] = _task_calls.get(task, 0) + 1
+    request_prompt = guarded_prompt(task, prompt)
 
-    # Race every healthy configured endpoint. The first *valid* answer wins;
-    # slower calls continue only long enough to record telemetry. This avoids
-    # serially waiting behind a flaky free-tier provider while preserving
-    # deterministic schema validation and cooldowns.
+    # Try a small ordered provider set. Racing every configured model multiplied
+    # free-tier usage and ignored RADAR_AI_PROVIDER_ATTEMPTS; the deterministic
+    # task preference now controls fallback order and caps cost.
     with _counter_lock:
         candidates = [ep for ep in eps if _cooldowns.get(ep.name, 0) <= time.monotonic()]
     if not candidates:
         return None
+    attempts = min(len(candidates), _int_env("RADAR_AI_PROVIDER_ATTEMPTS", 2, minimum=1))
 
     def attempt(ep: Endpoint) -> tuple[str | None, dict | None]:
         started = time.monotonic()
         try:
-            text, usage = _call(ep, prompt, max_tokens, timeout, json_mode)
+            text, usage = _call(ep, request_prompt, max_tokens, timeout, json_mode)
             if text and validator is not None and not validator(text):
                 event = _record(task, ep, "invalid", started, prompt, max_tokens, usage,
                                 detail="task schema validation failed")
@@ -423,23 +475,11 @@ def complete(prompt: str, max_tokens: int = 2000, timeout: int = 180,
             _cooldown(ep, status)
             return None, event
 
-    pool = ThreadPoolExecutor(max_workers=len(candidates),
-                              thread_name_prefix="radar-llm")
-    futures = {pool.submit(attempt, ep): ep for ep in candidates}
-    selected = None
-    try:
-        for future in as_completed(futures):
-            text, event = future.result()
-            if text and selected is None:
-                selected = (text, event)
-                break
-    finally:
-        # Do not make the caller wait for slower providers after a winner is
-        # available. In-flight requests still finish and write telemetry.
-        pool.shutdown(wait=False, cancel_futures=False)
-    if selected:
-        selected[1]["selected"] = True
-        return selected[0]
+    for ep in candidates[:attempts]:
+        text, event = attempt(ep)
+        if text:
+            event["selected"] = True
+            return text
     return None
 
 

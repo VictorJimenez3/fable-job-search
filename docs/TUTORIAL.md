@@ -22,6 +22,21 @@ handles time-sensitive enrichment nightly. The repo itself is the database.
 **https://victorjimenez3.github.io/fable-job-search/platform/** — the whole
 system as a website, refreshed automatically by every crawl:
 
+The production Vercel door also exposes the staged **vNext** workspace at
+[`/vnext/`](https://job-radar-newgrad.vercel.app/vnext/). It is the faster,
+mobile-first path for Jobs, Applications, and Companies: Jobs are fetched in
+cursor-sized pages, long lists are virtualized, and API responses are checked
+before they reach the UI. Until the Postgres migration is activated, public
+Jobs fall back to the current repository snapshot and private/Resume/Settings
+workflows link to the classic platform. Nothing in the existing workflow is
+removed during the cutover.
+
+vNext names three signals that the combined classic score can make easy to
+confuse: **evidence score** (what the posting proves), **eligibility** (whether
+deterministic gates allow it), and **priority** (Victor-specific
+goal/recommended ordering). The classic `score` remains available during
+migration for compatibility.
+
 - **Jobs**: every role the radar has ever seen, with persistent dropdowns for
   role family—including the low-priority **Product / project management**
   lane—posting sponsorship, official DOL sponsor history, experience,
@@ -121,8 +136,9 @@ stay signed in together; OAuth may briefly use the original callback host, but
 the account center returns you to the URL you started from. Google consent includes least-privilege Drive file
 access and creates your personal workbook with separate Applications,
 Internships, and Preferences tabs; if you started with GitHub, use **Connect Google + create my
-Sheet** from the same signed-in session. There is no password login. On the Pages mirror, buttons use prefilled GitHub issues by default;
-the optional Settings token enables instant writes and cross-device notes.
+Sheet** from the same signed-in session. There is no password login. On the
+Pages mirror, actions use owner-reviewed prefilled GitHub issues and the site
+never asks the browser to store a repository token.
 The private Google-backed tracker is one workbook per connected Google account;
 the Sheet is never sent to the browser wholesale. GitHub checkboxes keep working
 exactly as before; Vercel writes to the connected user’s Sheet.
@@ -374,9 +390,11 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
   Model memory is released after each run (`keep_alive: 0` + `ollama stop`).
 - **Observable and bounded:** the AI tab shows task/model successes, errors,
   reported tokens, and the run cap. Prompts/keys are never stored.
-- **Parked for future multi-user support:** Gmail confirmation detection
-  (auto-flip to Applied). Victor's current owner workflow does not need the
-  email App Password secret.
+- **Owner-only email lifecycle connector:** the preferred Gmail integration
+  uses the read-only Gmail History API and advances its cursor only after a
+  complete successful pass. IMAP remains available for another provider or an
+  existing App Password setup. Ambiguous matches go to review, transitions are
+  forward-only, and neither backend sends mail.
 
 ## Running things manually
 

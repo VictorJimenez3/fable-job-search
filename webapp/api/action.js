@@ -3,10 +3,12 @@
 // Auth: the sealed session cookie. Only the repo owner may write; GitHub
 // would refuse anyone else anyway (their OAuth token lacks repo write), but
 // we reject early for a clear error.
-const { OWNER, REPO, PROFILE, VALID_PROFILES, normalizeProfile, session, gh } = require("./_lib");
+const { OWNER, REPO, PROFILE, VALID_PROFILES, normalizeProfile, session,
+  requireMutationRequest, httpUrl, gh } = require("./_lib");
 
 module.exports = async (req, res) => {
   if (req.method !== "POST") { res.status(405).end(); return; }
+  if (!requireMutationRequest(req, res)) return;
   const s = session(req);
   if (!s) { res.status(401).json({ error: "sign in first" }); return; }
   if (s.u !== OWNER) {
@@ -37,10 +39,7 @@ module.exports = async (req, res) => {
     return;
   }
   if (manual) {
-    try {
-      const parsed = new URL(url);
-      if (parsed.protocol !== "https:" && parsed.protocol !== "http:") throw new Error("protocol");
-    } catch (_) {
+    if (!httpUrl(url)) {
       res.status(400).json({ error: "manual role needs a valid http(s) posting URL" });
       return;
     }

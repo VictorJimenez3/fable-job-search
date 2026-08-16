@@ -40,7 +40,8 @@ def test_alias_session_handoff_and_login_logout_redirects():
         if (issued.statusCode !== 200 || !issued.body.ticket) throw new Error("handoff ticket missing");
 
         const applied = response();
-        handoff({method:"POST", headers:{host:"job-radar-newgrad.vercel.app"},
+        handoff({method:"POST", headers:{host:"job-radar-newgrad.vercel.app",
+          origin:"https://job-radar-newgrad.vercel.app", "content-type":"application/json", "sec-fetch-site":"same-origin"},
           body:{ticket:issued.body.ticket}}, applied);
         if (applied.statusCode !== 200) throw new Error("handoff was not accepted");
         const bridgedCookie = applied.headers["Set-Cookie"][0].split(";")[0];
@@ -68,7 +69,8 @@ def test_alias_session_handoff_and_login_logout_redirects():
           throw new Error("provider token leaked into the redirect");
         }
         const directHandoff = response();
-        handoff({method:"POST", headers:{host:"job-radar-newgrad.vercel.app"},
+        handoff({method:"POST", headers:{host:"job-radar-newgrad.vercel.app",
+          origin:"https://job-radar-newgrad.vercel.app", "content-type":"application/json", "sec-fetch-site":"same-origin"},
           body:{ticket:new URLSearchParams(returnLocation.hash.slice(1)).get("session_handoff")}}, directHandoff);
         if (directHandoff.statusCode !== 200) {
           throw new Error("fragment handoff was not accepted without a canonical cookie");
@@ -78,6 +80,49 @@ def test_alias_session_handoff_and_login_logout_redirects():
         logout({method:"GET", headers:{host:"job-radar-newgrad.vercel.app", cookie:bridgedCookie}, query:{}}, aliasLogout);
         if (!aliasLogout.headers.Location.includes("/api/logout?return_host=job-radar-newgrad.vercel.app")) {
           throw new Error("alias logout did not clear the canonical host");
+        }
+        """
+    )
+    subprocess.run(["node", "-e", script], cwd=ROOT, check=True, capture_output=True, text=True)
+
+
+@pytest.mark.skipif(not shutil.which("node"), reason="Node is required for Vercel API runtime checks")
+def test_sessions_fail_closed_and_mutations_require_trusted_json_origin():
+    script = textwrap.dedent(
+        """
+        delete process.env.SESSION_SECRET;
+        const lib = require("./webapp/api/_lib");
+        if (lib.unseal("anything") !== null || lib.session({headers:{cookie:"jr_s=anything"}}) !== null) {
+          throw new Error("missing session secret did not fail closed");
+        }
+        let threw = false;
+        try { lib.seal({u:"attacker"}); } catch (_) { threw = true; }
+        if (!threw) throw new Error("seal accepted an empty secret");
+
+        process.env.SESSION_SECRET = "test-session-secret";
+        const fresh = require.resolve("./webapp/api/_lib");
+        delete require.cache[fresh];
+        const secure = require("./webapp/api/_lib");
+        function response() {
+          const out = {statusCode:200, body:null};
+          out.status = code => { out.statusCode = code; return out; };
+          out.json = value => { out.body = value; return out; };
+          return out;
+        }
+        const missingOrigin = response();
+        if (secure.requireMutationRequest({headers:{"content-type":"application/json"}}, missingOrigin) || missingOrigin.statusCode !== 403) {
+          throw new Error("origin-less mutation was accepted");
+        }
+        const wrongType = response();
+        if (secure.requireMutationRequest({headers:{origin:"https://job-radar-newgrad.vercel.app", "content-type":"text/plain"}}, wrongType) || wrongType.statusCode !== 415) {
+          throw new Error("non-JSON mutation was accepted");
+        }
+        const accepted = response();
+        if (!secure.requireMutationRequest({headers:{origin:"https://job-radar-newgrad.vercel.app", "content-type":"application/json", "sec-fetch-site":"same-origin"}}, accepted)) {
+          throw new Error("same-origin JSON mutation was rejected");
+        }
+        if (secure.httpUrl("javascript:alert(1)") || secure.httpUrl("https://user:pass@example.com")) {
+          throw new Error("unsafe external URL was accepted");
         }
         """
     )

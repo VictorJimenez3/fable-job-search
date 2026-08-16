@@ -1932,3 +1932,64 @@ related existing bullet cannot prove Victor's contribution. Only his concrete
 affirmative answer with where/when, action, and outcome creates reusable
 claim-authorizing evidence. A place-specific negative suppresses that candidate
 without converting the entire capability into a known absence.
+
+## 130. Postgres is an additive system of record with a verified JSON fallback (2026-08-16)
+
+The next persistence layer uses one normalized SQLAlchemy/Alembic schema for
+profiles, companies, exact source boards and runs, postings and aliases,
+sightings and lifecycle events, score snapshots, applications/events,
+preferences/feedback, research and model telemetry, auth, and durable work.
+Public IDs remain stable across migration and aliases preserve source identity.
+The importer is idempotent and must prove count/hash parity before cutover.
+
+This is an additive migration, not a flag-day rewrite. The deterministic
+crawler still starts and publishes its repository JSON state with no database,
+AI provider, or web server. Public v1 reads can serve that snapshot until
+Postgres is configured. Private APIs stay on the proven legacy owner session
+until Better Auth identity is migrated and verified. This preserves the
+repo-as-datastore operating model as a rollback path while allowing cursor
+queries, event history, transactions, and multiple users where they add value.
+
+## 131. Evidence, eligibility, and personal priority are different signals (2026-08-16)
+
+A single personalized score cannot cleanly answer three questions: what the
+posting proves, whether deterministic gates allow it, and how urgently Victor
+should act. Posting records therefore publish an objective evidence score, an
+eligibility result, and a personal priority tier separately. The old score is
+retained during migration and remains the backward-compatible personalized
+ordering. Every adjustment and demotion still carries reason strings.
+
+Lifecycle evidence also becomes source-specific. Each posting retains its
+exact aggregator or ATS tenant identity, and unseen-source expiry is allowed
+only after that same board succeeded. A healthy Greenhouse tenant can no
+longer make another employer's absent posting look safely expired. Explicit
+dead/filled pages remain authoritative.
+
+## 132. vNext composes maintained standards behind existing safety boundaries (2026-08-16)
+
+The foundation deliberately adopts established components where they already
+solve the generic problem: uv for reproducible Python environments,
+SQLAlchemy/Alembic for schema and migration ownership, Better Auth for staged
+OAuth sessions, LiteLLM as an optional provider adapter, Gmail's read-only
+History API for incremental inbox processing, and React with TanStack Query,
+TanStack Virtual, and Zod for the cursor client. These libraries do not own
+product policy: Radar retains its deterministic gates, call/request budgets,
+sequential provider fallback, reason ledger, owner authorization, and graceful
+no-secret behavior.
+
+The security boundary is fail-closed. Mutations require the exact trusted
+origin, JSON content type, fetch metadata, and a valid owner session; external
+HTTP accepts credential-free HTTP(S), resolves and rejects non-global targets,
+revalidates every redirect, and applies bounded retries. The local Resume
+bridge additionally binds messages to an exact origin, source window, and
+cryptographic nonce. Pages is read-only and never stores a repository token in
+the browser.
+
+## 133. Toolchain consolidation must preserve branch-local bootstraps (2026-08-16)
+
+Default-branch workflows share an immutable-action, frozen-uv setup and CI runs
+Python plus frontend contracts. Jobs that deliberately check out the
+independent ChemE branch cannot invoke a local action or lockfile that exists
+only on the default branch, so they retain a pinned Python and
+`requirements.txt` bootstrap until that branch independently adopts uv. This
+avoids centralizing setup at the cost of breaking scheduled cross-branch work.

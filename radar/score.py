@@ -1256,6 +1256,20 @@ def score(job: Job, feedback: dict, now: int | None = None,
             reasons.append(f"technical program display floor +{floor - display}")
             display = floor
 
+    # Evidence is frozen before personal goal-company overrides. The legacy
+    # ``score`` remains personalized for compatibility, while vNext can show
+    # objective evidence, eligibility, and user priority as distinct signals.
+    evidence_score = display
+    if midlevel:
+        eligibility = "excluded"
+    elif new_grad or program:
+        eligibility = "eligible"
+    elif early_career_possible(job):
+        eligibility = "review"
+    else:
+        eligibility = "excluded"
+    priority_tier = "recommended" if evidence_score >= 66 else "explore"
+
     # Explicit, profile-driven favorites are data, not company-name branches
     # in the scorer. PM-family roles stay low per the friend-facing contract.
     for override in p.get("score_overrides", []):
@@ -1269,9 +1283,16 @@ def score(job: Job, feedback: dict, now: int | None = None,
                 reasons.append(
                     f"configured score override: {job.company} new-grad -> {target}")
             display = target
+            priority_tier = "goal"
             break
 
+    if norm(job.company) in goal_companies and eligibility != "excluded":
+        priority_tier = "goal"
+
     job.score_raw = raw_utility
+    job.evidence_score = evidence_score
+    job.eligibility = eligibility
+    job.priority_tier = priority_tier
     job.score_calibrated = display
     job.score_dimensions = dimensions
     job.score_dimensions_raw = raw_dimensions

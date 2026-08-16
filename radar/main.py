@@ -20,14 +20,22 @@ from .digest import write_outputs
 from .identity import canonical_url
 from .internship import RULES_VERSION as INTERNSHIP_RULES_VERSION
 from .models import Job, norm
-from .score import (RULES_VERSION, apply_company_concentration,
-                    build_preference_profile, early_career_possible,
-                    explicit_new_grad, gates, load_score_preferences,
-                    normalize_score_preferences, regate, score, source_new_grad)
+from .score import (
+    RULES_VERSION,
+    apply_company_concentration,
+    build_preference_profile,
+    early_career_possible,
+    explicit_new_grad,
+    gates,
+    load_score_preferences,
+    normalize_score_preferences,
+    regate,
+    score,
+    source_new_grad,
+)
 from .sector import infer
 from .sources import aggregators, hn
 from .sources.ats import FETCHERS, PM_SEARCH_QUERIES
-
 
 AGG_SOURCES = {
     "simplify": aggregators.fetch_simplify,
@@ -76,6 +84,9 @@ def _append_unique(values: list, items: list) -> bool:
 
 def _merge_job_sighting(winner: Job, sighting: Job) -> None:
     """Keep every feed/source link when one posting wins a feed dedupe."""
+    _append_unique(winner.source_board_variants,
+                   [winner.source_board, sighting.source_board,
+                    *sighting.source_board_variants])
     _append_unique(winner.source_variants, [winner.source, sighting.source])
     _append_unique(winner.source_url_variants,
                    [winner.source_url, sighting.source_url,
@@ -93,6 +104,15 @@ def _merge_job_sighting(winner: Job, sighting: Job) -> None:
 def _merge_record_sighting(target: dict, sighting: dict) -> bool:
     """Merge provenance from a new sighting into an existing state record."""
     changed = False
+    source_boards = target.setdefault("source_board_variants", [])
+    changed |= _append_unique(
+        source_boards,
+        [target.get("source_board"), sighting.get("source_board"),
+         *sighting.get("source_board_variants", [])],
+    )
+    if not target.get("source_board") and sighting.get("source_board"):
+        target["source_board"] = sighting["source_board"]
+        changed = True
     source_variants = target.setdefault("source_variants", [])
     changed |= _append_unique(source_variants,
                               [target.get("source"), sighting.get("source"),
@@ -199,8 +219,11 @@ def _resolve_discovered_links(discovered: list[Job], jobs_state: dict, now: int)
 def _repair_duplicate_job_state(jobs_state: dict, applied: list) -> tuple[dict, bool]:
     """Repair URL duplicates and migrate durable references to the survivor."""
     from .dedupe import (
-        collapse_cross_source_jobs, collapse_jobs, remap_entry_ids,
-        remap_web_jobs, resolve_alias,
+        collapse_cross_source_jobs,
+        collapse_jobs,
+        remap_entry_ids,
+        remap_web_jobs,
+        resolve_alias,
     )
 
     jobs_state, aliases, exact_merged = collapse_jobs(jobs_state)
@@ -256,8 +279,9 @@ def _repair_duplicate_job_state(jobs_state: dict, applied: list) -> tuple[dict, 
     return jobs_state, True
 
 
-def _fetch_aggregators(disabled: set[str]) -> tuple[list[Job], dict]:
+def _fetch_aggregators(disabled: set[str]) -> tuple[list[Job], dict, set[str]]:
     jobs, stats = [], {}
+    healthy_boards: set[str] = set()
     sources = AGG_SOURCES_INTERNSHIP if profile_id() == "internship" else AGG_SOURCES
     with ThreadPoolExecutor(max_workers=8) as ex:
         futs = {ex.submit(fn): name for name, fn in sources.items() if name not in disabled}
@@ -265,11 +289,15 @@ def _fetch_aggregators(disabled: set[str]) -> tuple[list[Job], dict]:
             name = futs[fut]
             try:
                 got = fut.result()
+                board = f"aggregator:{name}"
+                for job in got:
+                    job.source_board = board
                 jobs.extend(got)
                 stats[name] = len(got)
+                healthy_boards.add(board)
             except Exception as e:
                 stats[name] = f"error: {type(e).__name__}: {e}"
-    return jobs, stats
+    return jobs, stats, healthy_boards
 
 
 def _select_companies(registry: dict, cap: int) -> list[dict]:
@@ -288,9 +316,9 @@ def _pm_backfill_ids(entries: list[dict], cap: int) -> set[int]:
     return {id(e) for e in candidates[:max(0, cap)]}
 
 
-def _fetch_ats(registry: dict, disabled: set[str]) -> tuple[list[Job], dict]:
+def _fetch_ats(registry: dict, disabled: set[str]) -> tuple[list[Job], dict, set[str]]:
     if "ats" in disabled:
-        return [], {"ats": "disabled"}
+        return [], {"ats": "disabled"}, set()
     cap = int(env("RADAR_MAX_COMPANIES", "800"))
     entries = _select_companies(registry, cap)
     wd_queries = list(dict.fromkeys(
@@ -300,6 +328,7 @@ def _fetch_ats(registry: dict, disabled: set[str]) -> tuple[list[Job], dict]:
     pm_backfill_ids = _pm_backfill_ids(
         entries, int(env("RADAR_PM_BACKFILL_COMPANIES", "200")))
     jobs, ok, fail = [], 0, 0
+    healthy_boards: set[str] = set()
 
     def one(entry: dict) -> list[Job]:
         fn = FETCHERS[entry["ats"]]
@@ -315,15 +344,21 @@ def _fetch_ats(registry: dict, disabled: set[str]) -> tuple[list[Job], dict]:
             try:
                 got = fut.result()
                 discovery.record_result(entry, True)
+                registry_key = discovery.key(
+                    entry["ats"], entry["token"], entry.get("extra")
+                )
+                board = f"ats:{registry_key}"
                 # direct-ATS jobs inherit the registry's sector knowledge
                 for j in got:
                     j.sector = entry.get("sector", "")
+                    j.source_board = board
                 jobs.extend(got)
+                healthy_boards.add(board)
                 ok += 1
             except Exception:
                 discovery.record_result(entry, False)
                 fail += 1
-    return jobs, {"companies_polled": len(entries), "ok": ok, "failed": fail}
+    return jobs, {"companies_polled": len(entries), "ok": ok, "failed": fail}, healthy_boards
 
 
 def scrub_glyph_companies(jobs_state: dict) -> int:
@@ -367,7 +402,7 @@ def crawl() -> int:
     from . import culture
     culture.write_outputs()  # sync curated dossiers before scoring reads them
 
-    agg_jobs, agg_stats = _fetch_aggregators(disabled)
+    agg_jobs, agg_stats, healthy_aggregator_boards = _fetch_aggregators(disabled)
     print(f"aggregators: {agg_stats}")
 
     harvested = discovery.harvest(registry, agg_jobs, max_new=int(env("RADAR_MAX_HARVEST", "200")))
@@ -376,7 +411,7 @@ def crawl() -> int:
           f"probed → {activated} active / {invalidated} invalid "
           f"(registry: {len(registry)})")
 
-    ats_jobs, ats_stats = _fetch_ats(registry, disabled)
+    ats_jobs, ats_stats, healthy_ats_boards = _fetch_ats(registry, disabled)
     print(f"ats: {ats_stats}")
 
     # ---- normalize, dedupe, score ----
@@ -518,7 +553,8 @@ def crawl() -> int:
             existing_url_ids[canonical_url(j.url)] = j.id
     lifecycle_stats = lifecycle.reconcile(
         jobs_state, now, seen_this_run,
-        allow_source_gap_expiry=lifecycle.source_run_healthy(agg_stats, ats_stats))
+        healthy_source_boards=healthy_aggregator_boards | healthy_ats_boards,
+    )
     if lifecycle_stats["expired"] or lifecycle_stats["reopened"]:
         print(f"lifecycle: {lifecycle_stats['expired']} auto-expired, "
               f"{lifecycle_stats['reopened']} reopened from current source")
@@ -738,7 +774,11 @@ def lifecycle_cmd() -> int:
     """
     now = int(time.time())
     jobs_state = state.jobs()
-    stats = lifecycle.reconcile(jobs_state, now, set())
+    # A repair command has no fresh per-board evidence. It can normalize and
+    # archive definitive closures, but must never infer source-gap expiry.
+    stats = lifecycle.reconcile(
+        jobs_state, now, set(), allow_source_gap_expiry=False
+    )
     cutoff = lifecycle.history_cutoff(now)
     jobs_state = {
         jid: record for jid, record in jobs_state.items()
@@ -823,6 +863,9 @@ def enrich() -> int:
         score(j, fb, now, preference_profile, score_preferences)
         rec["score_raw"] = j.score_raw
         rec["score_calibrated"] = j.score_calibrated
+        rec["evidence_score"] = j.evidence_score
+        rec["eligibility"] = j.eligibility
+        rec["priority_tier"] = j.priority_tier
         rec["score_dimensions"] = j.score_dimensions
         rec["score_dimensions_raw"] = j.score_dimensions_raw
         rec["score_version"] = RULES_VERSION
@@ -1057,8 +1100,9 @@ def score_health_cmd() -> int:
 def _rebuild_scores(jobs_state: dict, fb: dict, now: int,
                     preference_profile: dict | None = None) -> tuple[int, int]:
     """Apply the current deterministic equation to every active stored job."""
-    from . import culture, posting, quality
     import radar.score as score_mod
+
+    from . import culture, posting, quality
 
     culture.write_outputs()
     score_mod._CULTURE_CACHE = None
@@ -1080,6 +1124,9 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int,
         rec["score"] = job.score
         rec["score_raw"] = job.score_raw
         rec["score_calibrated"] = job.score_calibrated
+        rec["evidence_score"] = job.evidence_score
+        rec["eligibility"] = job.eligibility
+        rec["priority_tier"] = job.priority_tier
         rec["score_dimensions"] = job.score_dimensions
         rec["score_dimensions_raw"] = job.score_dimensions_raw
         rec["score_reasons"] = job.score_reasons
@@ -1123,9 +1170,12 @@ def sponsorship_refresh_cmd() -> int:
     from . import sponsorship as sponsorship_mod
     database = sponsorship_mod.build_alias_index(sponsorship_mod.refresh())
     state.save("sponsorship.json", database)
-    print("sponsorship: %s companies with certified DOL history across %s; %s rows read"
-          % (database["stats"]["companies_with_certified_history"],
-             ", ".join(database["coverage_quarters"]), database["stats"]["rows_read"]))
+    print(
+        "sponsorship: "
+        f"{database['stats']['companies_with_certified_history']} companies with "
+        f"certified DOL history across {', '.join(database['coverage_quarters'])}; "
+        f"{database['stats']['rows_read']} rows read"
+    )
     return rescore_cmd()
 
 
@@ -1199,7 +1249,12 @@ def web_action() -> int:
     with open(path) as f:
         payload = _json.load(f).get("client_payload") or {}
     action = payload.get("action")
-    if action not in {"track", "applied", "stage", "untrack", "manual-add", "research-company", "feedback", "archive", "score-preferences", "notification-preference"}:
+    supported_actions = {
+        "track", "applied", "stage", "untrack", "manual-add",
+        "research-company", "feedback", "archive", "score-preferences",
+        "notification-preference",
+    }
+    if action not in supported_actions:
         print(f"web-action: unknown action {action!r}")
         return 0
     if action == "score-preferences":
@@ -1427,7 +1482,8 @@ def main() -> None:
                                         "marquee-backfill", "reconcile-checkboxes",
                                         "daily-best", "master-board", "deliver-alerts", "web-action", "enrich",
                                         "email-batch",
-                                        "regate", "rescore", "lifecycle", "score-health", "rescrape", "resolve-links", "repair-feedback",
+                                        "regate", "rescore", "lifecycle", "score-health",
+                                        "rescrape", "resolve-links", "repair-feedback",
                                         "taste-report", "report-sync",
                                         "sponsorship-refresh", "create-google-tracker"])
     args = ap.parse_args()

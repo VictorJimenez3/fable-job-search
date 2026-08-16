@@ -3,6 +3,37 @@
 The dream-system backlog. Each item is scoped enough to build on request;
 none block anything currently running.
 
+## 2026-08-16 vNext implementation status
+
+1. **Normalized persistence and migration path — ✅ IMPLEMENTED, activation
+   pending.** SQLAlchemy/Alembic now define postings, exact source boards and
+   sightings, aliases, score snapshots, applications/events, preferences,
+   research/LLM telemetry, durable work items, and Better Auth storage. The
+   legacy importer is idempotent and reports count/hash parity. JSON remains
+   the deterministic production fallback until `DATABASE_URL` is provisioned,
+   migrated, imported, and verified.
+2. **Cursor API and React workspace — ✅ STAGED.** `/vnext/` has responsive
+   Jobs, Applications, Companies, Resume, and Settings routes; cursor fetching,
+   list virtualization, runtime response validation, and explicit loading/error
+   states. Private workflows keep a visible classic-platform bridge until the
+   database/auth identity cutover is proven.
+3. **Crawler correctness and ranking semantics — ✅ SHIPPED IN CODE.** ATS
+   connectors paginate within bounded caps, every posting retains its exact
+   board identity, and source-gap expiry requires that exact board to have
+   succeeded. Evidence score, eligibility, and personal priority are separate
+   audited fields while legacy score remains compatible.
+4. **Established infrastructure instead of bespoke substitutes — ✅
+   IMPLEMENTED.** The project uses uv lockfiles, Alembic/SQLAlchemy, staged
+   Better Auth, optional LiteLLM routing, Gmail History API, TanStack Query and
+   Virtual, and Zod. Existing deterministic budgets, owner checks, and
+   repository fallbacks remain authoritative.
+5. **Production activation — ⏳ CONTROLLED CUTOVER.** Provision Postgres,
+   run migration/import/parity, configure Better Auth and provider callbacks,
+   then verify private API ownership before replacing the legacy session. The
+   durable worker stays dormant until its database and operational schedule are
+   configured; this prevents a partial migration from disrupting the live
+   crawler.
+
 ## 2026-07-18 AI/QoL release status
 
 1. **AI functionality foundation / knowledge layer — ✅ SHIPPED.** Four named

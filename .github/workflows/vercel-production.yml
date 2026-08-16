@@ -28,7 +28,7 @@ jobs:
       run:
         working-directory: webapp
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Check deployment settings
         run: |
@@ -38,13 +38,16 @@ jobs:
           test -n "$VERCEL_ALIAS" || { echo "Missing production variable VERCEL_ALIAS"; exit 1; }
 
       - name: Install Vercel CLI
-        run: npm install --global vercel@latest
+        run: npm install --global vercel@59.1.3
 
       - name: Link the production Vercel project
         run: vercel link --yes --project="$VERCEL_PROJECT_ID" --scope="$VERCEL_ORG_ID" --token="$VERCEL_TOKEN"
 
       - name: Pull production settings
         run: vercel pull --yes --environment=production --token="$VERCEL_TOKEN" --scope="$VERCEL_ORG_ID"
+
+      - name: Build typed platform assets
+        run: npm ci && npm run typecheck && npm test && npm run build
 
       - name: Build production output
         run: vercel build --prod --token="$VERCEL_TOKEN" --scope="$VERCEL_ORG_ID"

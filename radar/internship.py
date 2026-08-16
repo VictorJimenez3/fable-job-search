@@ -459,6 +459,17 @@ def score(job: Job, now: int) -> None:
     job.score_raw = raw_value
     job.score_calibrated = max(0, min(100, round(value)))
     job.score = job.score_calibrated
+    job.evidence_score = job.score_calibrated
+    signal = (job.internship_eligibility or {}).get("internship_signal", "unknown")
+    full_time_only = (
+        (job.internship_eligibility or {}).get("employment_signal") == "full_time_only"
+    )
+    job.eligibility = (
+        "eligible"
+        if signal in {"title", "body"} and not full_time_only
+        else "review"
+    )
+    job.priority_tier = "recommended" if job.evidence_score >= 60 else "explore"
     job.score_dimensions = dimensions
     job.score_dimensions_raw = dict(dimensions)
     job.profile = "internship"

@@ -9,12 +9,11 @@ from __future__ import annotations
 import html as _html
 import re
 import time
-from datetime import datetime, timezone
+from datetime import datetime
 
+from ..config import env, profile_id
 from ..http import get_json, post_json
 from ..models import Job
-from ..config import profile_id
-
 
 # Query-driven career sites need title synonyms because a search for only
 # "new grad" misses early-career PM openings that are filed under a business
@@ -99,7 +98,7 @@ def fetch_lever(entry: dict) -> list[Job]:
         out.append(Job(
             company=entry["name"], title=j.get("text", ""), url=j.get("hostedUrl", ""),
             source="lever", ats="lever",
-            locations=[l for l in all_locs if l],
+            locations=[location for location in all_locs if location],
             posted_at=int(j["createdAt"] / 1000) if j.get("createdAt") else None,
             description=(j.get("descriptionPlain") or "")[:4000],
             remote=(j.get("workplaceType") or "").lower() == "remote" or "remote" in loc.lower(),
@@ -126,7 +125,7 @@ def fetch_ashby(entry: dict) -> list[Job]:
             continue
         locs = [j.get("location") or ""]
         locs += [s.get("location", "") for s in (j.get("secondaryLocations") or [])]
-        locs = [l for l in locs if l]
+        locs = [location for location in locs if location]
         out.append(Job(
             company=entry["name"], title=j.get("title", ""),
             url=j.get("jobUrl") or j.get("applyUrl") or "",
@@ -134,7 +133,7 @@ def fetch_ashby(entry: dict) -> list[Job]:
             locations=locs,
             posted_at=_iso_epoch(j.get("publishedAt")),
             description=(j.get("descriptionPlain") or _plain(j.get("descriptionHtml")))[:4000],
-            remote=bool(j.get("isRemote")) or any("remote" in l.lower() for l in locs),
+            remote=bool(j.get("isRemote")) or any("remote" in location.lower() for location in locs),
             internship_eligibility=(
                 {"status": "open", "source_signal": True,
                  "evidence": [f"ATS employment type: {j.get('employmentType')}".strip()]}
@@ -171,8 +170,9 @@ def fetch_workday(entry: dict, queries: list[str] | None = None) -> list[Job]:
     default_queries = ["new grad", "early career", "leadership development",
                        "graduate program", "rotational program", "emerging talent"]
     search_queries = list(dict.fromkeys(queries or default_queries))
+    max_results = max(20, min(1000, int(env("RADAR_WORKDAY_MAX_RESULTS", "200"))))
     for q in search_queries:
-        for offset in (0, 20, 40):
+        for offset in range(0, max_results, 20):
             data = post_json(api, {"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": q})
             postings = data.get("jobPostings") or []
             for j in postings:
@@ -196,7 +196,8 @@ def fetch_workday(entry: dict, queries: list[str] | None = None) -> list[Job]:
                         else {}
                     ),
                 ))
-            if len(postings) < 20:
+            total = data.get("total")
+            if len(postings) < 20 or (isinstance(total, int) and offset + len(postings) >= total):
                 break
     return out
 
@@ -207,7 +208,8 @@ def fetch_eightfold(entry: dict) -> list[Job]:
     host = entry["extra"].get("host") or f"https://{entry['token']}"
     domain = entry["extra"].get("domain") or f"{entry['token']}.com"
     out = []
-    for start in (0, 10, 20):
+    max_results = max(10, min(1000, int(env("RADAR_EIGHTFOLD_MAX_RESULTS", "100"))))
+    for start in range(0, max_results, 10):
         data = get_json(f"{host}/api/apply/v2/jobs?domain={domain}&num=10&start={start}"
                         "&sort_by=timestamp")
         positions = data.get("positions") or []
@@ -219,7 +221,7 @@ def fetch_eightfold(entry: dict) -> list[Job]:
                 company=entry["name"], title=j.get("name", ""),
                 url=j.get("canonicalPositionUrl") or f"{host}/careers/job/{j.get('id')}",
                 source="eightfold", ats="eightfold",
-                locations=[l for l in dict.fromkeys(locs) if l],
+                locations=[location for location in dict.fromkeys(locs) if location],
                 posted_at=int(posted) if posted else None,
                 remote="remote" in loc.lower(),
             ))
@@ -291,32 +293,36 @@ def fetch_phenom(entry: dict, queries: list[str] | None = None) -> list[Job]:
                        "leadership development", "graduate program",
                        "rotational program", "emerging talent"]
     search_queries = list(dict.fromkeys(queries or default_queries))
+    max_results = max(20, min(500, int(env("RADAR_PHENOM_MAX_RESULTS", "100"))))
     for q in search_queries:
-        payload = {
-            "lang": "en_us", "deviceType": "desktop", "country": "us",
-            "pageName": "search-results", "ddoKey": "refineSearch",
-            "sortBy": "Most recent", "subsearch": "", "from": 0, "jobs": True,
-            "counts": True, "all_fields": ["category", "country", "state", "city"],
-            "size": 20, "clearAll": False, "jdsource": "facets", "isSliderEnable": False,
-            "pageId": "page20", "siteType": "external", "keywords": q, "global": True,
-            "selected_fields": {}, "locationData": {}, "s": "1",
-        }
-        data = post_json(f"{host}/widgets", payload, headers=BROWSER_HEADERS)
-        jobs = ((data.get("refineSearch") or {}).get("data") or {}).get("jobs") or []
-        for j in jobs:
-            slug = j.get("jobSeqNo") or j.get("reqId") or ""
-            if not slug or slug in seen:
-                continue
-            seen.add(slug)
-            loc = j.get("cityStateCountry") or j.get("location") or ""
-            out.append(Job(
-                company=entry["name"], title=j.get("title", ""),
-                url=j.get("applyUrl") or f"{host}/job/{slug}",
-                source="phenom", ats="phenom",
-                locations=[loc] if loc else [],
-                posted_at=_iso_epoch(j.get("postedDate")),
-                remote="remote" in str(loc).lower() or bool(j.get("isRemote")),
-            ))
+        for offset in range(0, max_results, 20):
+            payload = {
+                "lang": "en_us", "deviceType": "desktop", "country": "us",
+                "pageName": "search-results", "ddoKey": "refineSearch",
+                "sortBy": "Most recent", "subsearch": "", "from": offset, "jobs": True,
+                "counts": True, "all_fields": ["category", "country", "state", "city"],
+                "size": 20, "clearAll": False, "jdsource": "facets", "isSliderEnable": False,
+                "pageId": "page20", "siteType": "external", "keywords": q, "global": True,
+                "selected_fields": {}, "locationData": {}, "s": "1",
+            }
+            data = post_json(f"{host}/widgets", payload, headers=BROWSER_HEADERS)
+            jobs = ((data.get("refineSearch") or {}).get("data") or {}).get("jobs") or []
+            for j in jobs:
+                slug = j.get("jobSeqNo") or j.get("reqId") or ""
+                if not slug or slug in seen:
+                    continue
+                seen.add(slug)
+                loc = j.get("cityStateCountry") or j.get("location") or ""
+                out.append(Job(
+                    company=entry["name"], title=j.get("title", ""),
+                    url=j.get("applyUrl") or f"{host}/job/{slug}",
+                    source="phenom", ats="phenom",
+                    locations=[loc] if loc else [],
+                    posted_at=_iso_epoch(j.get("postedDate")),
+                    remote="remote" in str(loc).lower() or bool(j.get("isRemote")),
+                ))
+            if len(jobs) < 20:
+                break
     _ = refnum  # part of the seed contract; some tenants require it in payload
     return out
 
@@ -324,22 +330,31 @@ def fetch_phenom(entry: dict, queries: list[str] | None = None) -> list[Job]:
 # ---------------- SmartRecruiters ----------------
 
 def fetch_smartrecruiters(entry: dict) -> list[Job]:
-    data = get_json(f"https://api.smartrecruiters.com/v1/companies/{entry['token']}/postings?limit=100")
     out = []
-    for j in data.get("content", []):
-        loc = j.get("location") or {}
-        country = (loc.get("country") or "").lower()
-        if country and country not in {"us", "usa", "united states"} and not loc.get("remote"):
-            continue
-        loc_s = ", ".join(x for x in [loc.get("city"), loc.get("region")] if x)
-        out.append(Job(
-            company=entry["name"], title=j.get("name", ""),
-            url=f"https://jobs.smartrecruiters.com/{entry['token']}/{j.get('id')}",
-            source="smartrecruiters", ats="smartrecruiters",
-            locations=[loc_s] if loc_s else [],
-            posted_at=_iso_epoch(j.get("releasedDate")),
-            remote=bool(loc.get("remote")),
-        ))
+    max_results = max(100, min(2000, int(env("RADAR_SMARTRECRUITERS_MAX_RESULTS", "1000"))))
+    for offset in range(0, max_results, 100):
+        data = get_json(
+            f"https://api.smartrecruiters.com/v1/companies/{entry['token']}/postings"
+            f"?limit=100&offset={offset}"
+        )
+        content = data.get("content") or []
+        for j in content:
+            loc = j.get("location") or {}
+            country = (loc.get("country") or "").lower()
+            if country and country not in {"us", "usa", "united states"} and not loc.get("remote"):
+                continue
+            loc_s = ", ".join(x for x in [loc.get("city"), loc.get("region")] if x)
+            out.append(Job(
+                company=entry["name"], title=j.get("name", ""),
+                url=f"https://jobs.smartrecruiters.com/{entry['token']}/{j.get('id')}",
+                source="smartrecruiters", ats="smartrecruiters",
+                locations=[loc_s] if loc_s else [],
+                posted_at=_iso_epoch(j.get("releasedDate")),
+                remote=bool(loc.get("remote")),
+            ))
+        total = data.get("totalFound")
+        if len(content) < 100 or (isinstance(total, int) and offset + len(content) >= total):
+            break
     return out
 
 
