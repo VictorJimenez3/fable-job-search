@@ -141,22 +141,20 @@
  },
  "micron": {
   "aliases": [],
-  "attempts": 8,
+  "attempts": 9,
   "business_model": {
-   "confidence": "high",
-   "source_ids": [
-    "a898c41626"
-   ],
-   "value": "Innovating and delivering memory and storage solutions."
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
   },
   "customers": {
    "confidence": "unknown",
    "source_ids": [],
    "value": "Not confirmed"
   },
-  "error": "provider unavailable or response was not source-grounded",
+  "error": "",
   "evidence_sha": "987f3a3c4e9c5844",
-  "generated_at": 1786524799,
+  "generated_at": 1786867394,
   "generator": {
    "endpoint": "nvidia:glm",
    "model": "z-ai/glm-5.2",
@@ -165,39 +163,42 @@
   "interview_focus": {
    "confidence": "medium",
    "source_ids": [
-    "e027cdfc13"
+    "5be12d9efa",
+    "139560ac60"
    ],
-   "value": "Candidate should inquire about specific day-to-day responsibilities on the dedicated technical project, the structure of mentorship under experienced engineers, safety protocols in the lab/plant, and clear expectations regarding work authorization and relocation."
+   "value": "Focus on Micron's commitment to safety culture, accessible mentorship, and professional development. Discuss expectations around work-life balance, and seek clarity on work authorization, relocation, and sustainability initiatives."
   },
-  "last_attempt_at": 1786780941,
+  "last_attempt_at": 1786867394,
   "last_evidence_at": 1786648734,
   "locations": {
    "confidence": "high",
    "source_ids": [
-    "a560f6bda5",
-    "e027cdfc13",
-    "a898c41626"
+    "5be12d9efa",
+    "5bd2fb6f01"
    ],
-   "value": "Boise, ID (Main Site)."
+   "value": "Boise, Idaho (Main Site)."
   },
   "mission": {
    "confidence": "high",
    "source_ids": [
-    "a560f6bda5",
-    "a898c41626"
+    "5be12d9efa",
+    "139560ac60",
+    "5bd2fb6f01"
    ],
-   "value": "To transform how the world uses information to enrich life, inspiring the world to learn, communicate and advance faster than ever."
+   "value": "To transform how the world uses information to enrich life for all, inspiring the world to learn, communicate, and advance faster than ever."
   },
   "name": "Micron",
   "products": {
    "confidence": "high",
    "source_ids": [
-    "a898c41626"
+    "5be12d9efa",
+    "139560ac60",
+    "5bd2fb6f01"
    ],
-   "value": "Memory and storage solutions that power artificial intelligence, data centers, mobile devices, automotive applications, and other emerging technologies."
+   "value": "Memory and storage solutions, including DRAM technologies and advanced semiconductor products."
   },
   "prompt_v": 1,
-  "refresh_after": 1791708799,
+  "refresh_after": 1792051394,
   "schema_v": 1,
   "size_stage": {
    "confidence": "unknown",
@@ -245,27 +246,30 @@
   "summary": {
    "confidence": "high",
    "source_ids": [
-    "a560f6bda5",
-    "e027cdfc13",
-    "a898c41626"
+    "5be12d9efa",
+    "139560ac60",
+    "5bd2fb6f01"
    ],
-   "value": "Micron Technology is a world leader in innovating memory and storage solutions that accelerate the transformation of information into intelligence."
+   "value": "Micron Technology is a world leader in the semiconductor industry, innovating memory and storage solutions such as DRAM to accelerate computing, AI, and data-driven applications."
   },
-  "synthesized_evidence_sha": "baeb73bdc6f31498",
+  "synthesized_evidence_sha": "987f3a3c4e9c5844",
   "technical_work": {
    "confidence": "high",
    "source_ids": [
-    "a560f6bda5",
-    "e027cdfc13"
+    "5be12d9efa",
+    "139560ac60",
+    "5bd2fb6f01"
    ],
-   "value": "Interns develop and optimize semiconductor processes, working under the guidance of experienced engineers on dedicated technical projects focused on process development, optimization, and characterization. Work involves advanced statistics, statistical process control (SPC), process optimization, and design of experiments (DOE)."
+   "value": "Interns work alongside engineers and scientists on process development, optimization, fundamental research, process characterization, and data analysis for semiconductor manufacturing, including CMP and wafer bonding technologies."
   },
   "why_it_matters": {
    "confidence": "high",
    "source_ids": [
-    "e027cdfc13"
+    "5be12d9efa",
+    "139560ac60",
+    "5bd2fb6f01"
    ],
-   "value": "Aligns with the candidate's priority for meaningful technical work and accessible mentorship; interns work under the guidance of experienced engineers on dedicated technical projects involving real semiconductor process development and optimization."
+   "value": "Micron provides chemical engineering interns with meaningful technical work involving real processes, labs, scale-up, and manufacturing. The company emphasizes personal wellbeing, professional growth, and mentorship, aligning with priorities for a supportive environment."
   }
  },
  "micron technology": {
@@ -373,13 +377,58 @@
  },
  "montenson": {
   "aliases": [],
-  "attempts": 5,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 6,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "eec9374a99d29355",
-  "last_attempt_at": 1786780941,
+  "generated_at": 1786867394,
+  "generator": {
+   "endpoint": "nvidia:glm",
+   "model": "z-ai/glm-5.2",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "medium",
+   "source_ids": [
+    "b82574e0d5"
+   ],
+   "value": "Focus on clarifying the technical scope of the sustainability internship, the specific chemical engineering processes involved, lab or plant exposure, the mentorship structure, and the company's safety culture to ensure alignment with your priorities."
+  },
+  "last_attempt_at": 1786867394,
   "last_evidence_at": 1786392206,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Montenson",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1792051394,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "2c722ad97c57abd0",
@@ -392,7 +441,36 @@
     "url": "https://fa-esgu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/23367"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "high",
+   "source_ids": [
+    "b82574e0d5"
+   ],
+   "value": "Visa sponsorship is not offered for this position. The company cannot sponsor or take over sponsorship of employment visas (e.g., H1B, OPT, CPT, TN, etc.) at this time."
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "high",
+   "source_ids": [
+    "b82574e0d5"
+   ],
+   "value": "Mortenson (noted as Montenson in the posting) is an employer posting for a Sustainability Engineer Intern position. The company explicitly states it does not offer visa sponsorship."
+  },
+  "synthesized_evidence_sha": "eec9374a99d29355",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "b82574e0d5"
+   ],
+   "value": "Hiring for a Sustainability Engineer Intern role."
+  },
+  "why_it_matters": {
+   "confidence": "high",
+   "source_ids": [
+    "b82574e0d5"
+   ],
+   "value": "The available information strictly establishes work authorization constraints, directly addressing the candidate's requirement for clear sponsorship expectations. The lack of details on safety, mentorship, and work-life balance makes it critical for the candidate to inquire about these priorities."
+  }
  },
  "neuralink": {
   "aliases": [],
