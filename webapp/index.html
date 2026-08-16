@@ -423,7 +423,7 @@ const S = {           // app state
   wsTab:"fit",
   testing:{q:"", sort:"resume", shown:40, selectedId:"", engine:"checking", engineError:"", match:null,
     library:[], cloudLibrary:[], cloudBank:{status:"checking",error:"",updated_at:"",needsGoogle:false}, bankView:false, contextView:false,
-    bankQuery:"", bankMode:"all", bankStatus:"all", bankEra:"current", context:null, contextQuery:"",
+    bankQuery:"", bankMode:"all", bankStatus:"all", bankEra:"current", context:null, contextQuery:"", contextError:"",
     sync:{state:"idle",done:0,total:0,error:""}, activeRunId:"", runStatus:null},
   boot:{phase:"starting", jobsReady:false, inFlight:false, errors:[]},
   marquee:new Set(["meta","apple","amazon","netflix","google","microsoft","nvidia",
@@ -2859,10 +2859,11 @@ function showResumeContext() { S.testing.bankView=false; S.testing.contextView=t
 async function loadResumeContext(jobId="") {
   if (S.testing.engine!=="online") return;
   try {
+    S.testing.contextError="";
     S.testing.context = jobId
       ? await studioRequest("/api/context/job",{method:"POST",body:JSON.stringify({job_id:jobId})})
       : await studioRequest("/api/context");
-  } catch (error) { S.testing.engineError=error.message; }
+  } catch (error) { S.testing.contextError=error.message; }
   if(S.tab==="testing"&&S.testing.contextView)rTesting();
 }
 async function answerContextQuestion(id,response) {
@@ -2881,6 +2882,7 @@ function contextQuestionHTML(item) {
 function renderResumeContextView() {
   const data=S.testing.context, online=S.testing.engine==="online";
   if(!online)return `<section class="testing-hero"><div class="acts"><button class="act" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBank()">Resume bank</button></div><h2>Context &amp; Q&amp;A</h2><div class="note"><strong>Private engine offline.</strong> This source-level context stays on your Mac, so start the engine to inspect or update it from the cloud UI.</div></section>`;
+  if(!data&&S.testing.contextError)return `<section class="testing-hero"><div class="acts"><button class="act" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBank()">Resume bank</button></div><h2>Context &amp; Q&amp;A</h2><div class="note"><strong>Context is not available from this engine yet.</strong> Restart the private Resume Studio service after updating the production checkout, then retry. ${esc(S.testing.contextError)}</div><button class="act primary" onclick="S.testing.contextError='';rTesting()">retry context</button></section>`;
   if(!data){loadResumeContext(S.testing.selectedId);return `<section class="testing-hero"><h2>Context &amp; Q&amp;A</h2><p class="sub">Loading your private evidence map…</p></section>`;}
   const summary=data.summary||{}, q=String(S.testing.contextQuery||"").toLowerCase().trim();
   const facts=(data.facts||[]).filter(item=>!q||`${item.heading||""} ${item.text||""} ${item.source||""}`.toLowerCase().includes(q));
