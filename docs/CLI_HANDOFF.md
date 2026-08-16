@@ -46,6 +46,22 @@ Before changing the radar, read these in order:
   independent review as a confidence limit. This is a private decision aid,
   not an automatic submission or a claim about an outside ChatGPT verdict.
 
+### Current change (verified 2026-08-16)
+
+- **Resume Studio visual ATS audit and contextual Q&A hints:** Resume Bank
+  metadata now carries the report's compact keyword coverage and PDF line
+  geometry through local and private-cloud paths. The owner UI renders green
+  covered, yellow supported-but-omitted, and red unsupported terms, plus an
+  optional review-only overlay on the clean preview. Context questions derive
+  candidate project/role/course places from claim-authorized neighboring
+  evidence and accept owner-supplied labels/URLs. A place-specific dismissal
+  suppresses a false lead without answering the whole capability. Every hint remains
+  `claim_allowed: false`; only a concrete affirmative owner answer creates an
+  evidence node. The private CS485 Nexus CI/CD lead is seeded as an open hint,
+  not a resume fact, and J&J is already recorded as ruled out for that
+  capability. Existing old bank reports without geometry degrade to the
+  term list or an explicit unavailable state.
+
 ### Previous change (verified 2026-08-15)
 
 - **Resume Studio grouped bank and context loop:** the cloud Studio uses the live Job Radar

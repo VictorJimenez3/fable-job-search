@@ -339,6 +339,13 @@ turns unsupported posting terms into deduplicated global questions, stores
 owner answers locally, projects only affirmative concrete answers into the
 evidence graph, and exposes source/authority provenance in the cloud UI.
 
+Visual ATS audit and evidence-place Q&A — ✅ SHIPPED 2026-08-16 (DECISION
+#129). Every report-backed bank version separates covered terms,
+supported-but-omitted terms, and unsupported gaps; newer previews position
+review-only highlights over the exact PDF lines. Context questions can propose
+or save a role, project, course, or repository to investigate without turning
+that clue into claim-authorizing evidence.
+
 Owner-only objective Resume Bank comparison — ✅ SHIPPED 2026-08-16
 (DECISION #128). Each posting card now ranks its finished variants with a
 transparent target-fit, evidence-safety, layout-safety, and portfolio rubric.

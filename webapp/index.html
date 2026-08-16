@@ -299,9 +299,11 @@
   .studio-badge.good { color:var(--accent-ink); border-color:var(--accent-ink); }
   .studio-badge.warn { color:var(--amber); border-color:var(--amber); }
   .studio-badge.bad { color:var(--danger); border-color:var(--danger); }
+  .testing-hero .bar > div { min-width:0; display:flex; flex-wrap:wrap; gap:.25rem; }
   .resume-bank-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:.9rem; }
   .resume-bank-card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:.75rem; min-width:0; }
   .resume-bank-card:hover { border-color:var(--accent); }
+  .resume-bank-card[open] { grid-column:1 / -1; }
   .resume-bank-card-head { display:flex; justify-content:space-between; gap:.55rem; align-items:flex-start; }
   .resume-bank-card h3 { margin:0; font-size:.88rem; }
   .resume-bank-card .sub { margin:.12rem 0; }
@@ -310,6 +312,9 @@
   .resume-bank-version { display:flex; justify-content:space-between; gap:.6rem; align-items:center;
     border-top:1px solid var(--line); padding:.55rem 0; }
   .resume-bank-version:first-child { margin-top:.65rem; }
+  .resume-bank-version-wrap { border-top:1px solid var(--line); }
+  .resume-bank-version-wrap:first-of-type { margin-top:.65rem; }
+  .resume-bank-version-wrap .resume-bank-version { border-top:0; }
   .resume-objective { border:1px solid var(--accent-ink); border-radius:7px; padding:.65rem; margin:.65rem 0; background:var(--paper); }
   .resume-objective h4 { margin:0; font-size:.78rem; }
   .resume-objective p { margin:.22rem 0; }
@@ -324,12 +329,38 @@
   .context-grid { display:grid; grid-template-columns:minmax(280px,.8fr) minmax(360px,1.2fr); gap:.9rem; }
   .context-question { border:1px solid var(--line); background:var(--paper); border-radius:7px; padding:.7rem; margin:.55rem 0; }
   .context-question textarea, .context-question input { width:100%; box-sizing:border-box; margin:.35rem 0; }
+  .context-hints { display:grid; gap:.4rem; margin:.55rem 0; }
+  .context-hint { border-left:3px solid var(--amber); background:var(--code); border-radius:0 6px 6px 0; padding:.48rem .55rem; }
+  .context-hint p { margin:.18rem 0; font-size:.7rem; }
+  .context-hint .acts { margin-top:.3rem; }
+  .context-hint-form { border-top:1px dashed var(--line); margin-top:.55rem; padding-top:.45rem; }
   .context-fact { border-top:1px solid var(--line); padding:.55rem 0; }
   .resume-bank-preview-link { display:block; margin:.6rem 0; }
   .resume-bank-preview { display:block; width:100%; height:220px; object-fit:contain; object-position:top center; background:#fff; border:1px solid var(--line); border-radius:5px; }
   .resume-bank-preview.empty { display:grid; place-items:center; color:var(--muted); font-size:.74rem; text-align:center; padding:.8rem; }
   .resume-bank-actions { flex-wrap:wrap; margin-top:.55rem; }
   .resume-bank-actions .act { font-size:.68rem; }
+  .keyword-audit { margin:.15rem 0 .65rem; border:1px solid var(--line); border-radius:7px; background:var(--paper); }
+  .keyword-audit > summary { cursor:pointer; list-style:none; padding:.5rem .6rem; }
+  .keyword-audit > summary::-webkit-details-marker { display:none; }
+  .keyword-audit-body { padding:0 .6rem .65rem; }
+  .ats-keyword-groups { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.45rem; }
+  .ats-keyword-group { padding:.45rem; border:1px solid var(--line); border-radius:6px; min-width:0; }
+  .ats-keyword-group h5 { margin:0 0 .3rem; font-size:.68rem; }
+  .ats-term { display:block; width:100%; text-align:left; border:0; border-radius:4px; padding:.25rem .35rem; margin:.2rem 0; font-size:.67rem; color:var(--ink); background:transparent; }
+  button.ats-term { cursor:pointer; }
+  .ats-term.covered { background:color-mix(in srgb,var(--accent) 22%,transparent); }
+  .ats-term.available { background:color-mix(in srgb,var(--amber) 18%,transparent); }
+  .ats-term.missing { background:color-mix(in srgb,var(--danger) 14%,transparent); }
+  .ats-where { display:block; margin-top:.08rem; color:var(--muted); font-size:.6rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .ats-preview { position:relative; width:min(100%,680px); margin:.55rem auto 0; line-height:0; background:white; }
+  .ats-preview img { display:block; width:100%; height:auto; }
+  .ats-box { position:absolute; border:1.5px solid rgba(22,133,84,.9); background:rgba(48,201,119,.2); pointer-events:none; }
+  .ats-box.changed { border-color:rgba(33,102,190,.9); background:rgba(53,130,230,.15); }
+  .ats-box.both { border-color:rgba(122,65,190,.95); background:rgba(147,91,219,.18); }
+  .ats-legend { display:flex; flex-wrap:wrap; gap:.45rem; margin-top:.4rem; font-size:.62rem; color:var(--muted); }
+  .ats-swatch::before { content:""; display:inline-block; width:.65rem; height:.65rem; margin-right:.2rem; vertical-align:-.08rem; border:1px solid currentColor; background:rgba(48,201,119,.2); }
+  @media(max-width:650px){.ats-keyword-groups{grid-template-columns:1fr;}}
   .taste-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:.9rem; }
   .taste-grid h4 { margin:.65rem 0 .25rem; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase;
                   color:var(--accent-ink); font-family:ui-monospace,Menlo,monospace; }
@@ -2751,6 +2782,8 @@ async function studioRequest(path, options={}) {
     if (path === "/api/context" && method === "GET") return bridgeRequest("context");
     if (path === "/api/context/job" && method === "POST") return bridgeRequest("context_job", requestBody);
     if (path === "/api/context/answer" && method === "POST") return bridgeRequest("context_answer", requestBody);
+    if (path === "/api/context/hint" && method === "POST") return bridgeRequest("context_hint", requestBody);
+    if (path === "/api/context/hint/dismiss" && method === "POST") return bridgeRequest("context_hint_dismiss", requestBody);
     if (path === "/api/run" && method === "POST") return bridgeRequest("queue", requestBody);
     if (path === "/api/run" && method === "GET") return bridgeRequest("status", {id:new URLSearchParams(path.split("?")[1]||"").get("id")||""});
   }
@@ -2910,9 +2943,34 @@ async function answerContextQuestion(id,response) {
     toast(response==="used"?"Added to your confirmed evidence context":"Saved; Studio will remember this answer"); rTesting();
   } catch(error){toast(error.message.slice(0,120));}
 }
+function useContextHint(id,index) {
+  const item=(S.testing.context?.questions||[]).find(question=>question.id===id), hint=item?.candidate_hints?.[index];
+  const card=[...document.querySelectorAll("[data-context-question]")].find(node=>node.dataset.contextQuestion===id);
+  if(!hint||!card)return;
+  const where=card.querySelector(".context-where"), answer=card.querySelector("textarea");
+  if(where)where.value=hint.label||"";
+  if(answer)answer.value=hint.question||"";
+  answer?.focus();
+}
+async function saveContextHint(id) {
+  const card=[...document.querySelectorAll("[data-context-question]")].find(node=>node.dataset.contextQuestion===id);
+  if(!card)return;
+  const label=card.querySelector(".hint-label")?.value||"", source_url=card.querySelector(".hint-url")?.value||"", note=card.querySelector(".hint-note")?.value||"";
+  try {
+    S.testing.context=await studioRequest("/api/context/hint",{method:"POST",body:JSON.stringify({id,label,source_url,note})});
+    toast("Saved as a place to investigate—not evidence"); rTesting();
+  } catch(error){toast(error.message.slice(0,120));}
+}
+async function dismissContextHint(id,label) {
+  try {
+    S.testing.context=await studioRequest("/api/context/hint/dismiss",{method:"POST",body:JSON.stringify({id,label})});
+    toast("Ruled out this place; the capability question stays open"); rTesting();
+  } catch(error){toast(error.message.slice(0,120));}
+}
 function contextQuestionHTML(item) {
   const trigger=(item.triggers||[]).slice(-1)[0]||{}, answered=item.status==="answered";
-  return `<div class="context-question" data-context-question="${esc(item.id)}"><div class="bar" style="justify-content:space-between"><strong>${esc(item.term)}</strong>${studioBadge(answered?(item.response==="used"?"confirmed evidence":"known absence"):"open",answered?"good":"warn")}</div><p>${esc(item.question)}</p><p class="sub">Raised by ${esc(trigger.company||"a posting")} · ${esc(trigger.title||trigger.importance||"requirement")}${(item.triggers||[]).length>1?` · ${(item.triggers||[]).length} postings`:""}</p>${answered?`<p><strong>${esc(item.where_when||"")}</strong><br>${esc(item.answer||item.response)}</p>`:`<input type="text" placeholder="Where and when? e.g. J&amp;J internship, summer 2025"><textarea rows="3" placeholder="What did you do, how did you use it, and what happened?"></textarea><div class="acts"><button class="act primary" onclick='answerContextQuestion(${JSON.stringify(item.id)},"used")'>I used this</button><button class="act" onclick='answerContextQuestion(${JSON.stringify(item.id)},"not_used")'>I have not used this</button><button class="act" onclick='answerContextQuestion(${JSON.stringify(item.id)},"unsure")'>keep open</button></div>`}</div>`;
+  const hints=(item.candidate_hints||[]).map((hint,index)=>`<div class="context-hint"><strong>${esc(hint.label)}</strong><p>${esc(hint.reason)}</p><p><em>${esc(hint.question)}</em></p><div class="acts"><button class="act" onclick='useContextHint(${JSON.stringify(item.id)},${index})'>answer about this place</button>${hint.kind!=="owner-hint"?`<button class="act" onclick='dismissContextHint(${JSON.stringify(item.id)},${JSON.stringify(hint.label)})'>not in this place</button>`:""}${hint.source_url?`<a class="act" href="${esc(hint.source_url)}" target="_blank" rel="noopener">inspect source ↗</a>`:""}</div></div>`).join("");
+  return `<div class="context-question" data-context-question="${esc(item.id)}"><div class="bar" style="justify-content:space-between"><strong>${esc(item.term)}</strong>${studioBadge(answered?(item.response==="used"?"confirmed evidence":"known absence"):"open",answered?"good":"warn")}</div><p>${esc(item.question)}</p><p class="sub">Raised by ${esc(trigger.company||"a posting")} · ${esc(trigger.title||trigger.importance||"requirement")}${(item.triggers||[]).length>1?` · ${(item.triggers||[]).length} postings`:""}</p>${hints?`<details><summary>Possible places to investigate · ${(item.candidate_hints||[]).length}</summary><div class="context-hints">${hints}</div></details>`:""}${answered?`<p><strong>${esc(item.where_when||"")}</strong><br>${esc(item.answer||item.response)}</p>`:`<input class="context-where" type="text" placeholder="Where and when? e.g. J&amp;J internship, summer 2025"><textarea rows="3" placeholder="What did you personally do, how did you use it, and what happened?"></textarea><div class="acts"><button class="act primary" onclick='answerContextQuestion(${JSON.stringify(item.id)},"used")'>I used this</button><button class="act" onclick='answerContextQuestion(${JSON.stringify(item.id)},"not_used")'>I have not used this</button><button class="act" onclick='answerContextQuestion(${JSON.stringify(item.id)},"unsure")'>keep open</button></div><details class="context-hint-form"><summary>Add a project, role, course, or repo to investigate</summary><input class="hint-label" type="text" placeholder="e.g. CS485 · Nexus LinkedIn clone"><input class="hint-url" type="url" placeholder="Optional GitHub or project URL"><textarea class="hint-note" rows="2" placeholder="Why might this be where you used it?"></textarea><button class="act" onclick='saveContextHint(${JSON.stringify(item.id)})'>save place to investigate</button></details>`}</div>`;
 }
 function renderResumeContextView() {
   const data=S.testing.context, online=S.testing.engine==="online";
@@ -2921,8 +2979,9 @@ function renderResumeContextView() {
   if(!data){loadResumeContext(S.testing.selectedId);return `<section class="testing-hero"><h2>Context &amp; Q&amp;A</h2><p class="sub">Loading your private evidence map…</p></section>`;}
   const summary=data.summary||{}, q=String(S.testing.contextQuery||"").toLowerCase().trim();
   const facts=(data.facts||[]).filter(item=>!q||`${item.heading||""} ${item.text||""} ${item.source||""}`.toLowerCase().includes(q));
-  const open=(data.questions||[]).filter(item=>item.status!=="answered"), answered=(data.questions||[]).filter(item=>item.status==="answered");
-  return `<section class="testing-hero"><div class="bar" style="justify-content:space-between"><span class="chip good">owner-only private context</span><div class="acts"><button class="act" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBank()">Resume bank</button><button class="act primary" onclick="loadResumeContext(S.testing.selectedId)">refresh from posting</button></div></div><h2>What Resume Studio knows</h2><p class="sub">Every usable fact shows its source. Posting gaps become global questions; your confirmed answers improve future jobs, not just one tailor. “I have not used this” is remembered and never becomes résumé evidence.</p><div class="facts"><span class="chip good">${summary.known_facts||0} usable facts</span><span class="chip">${summary.confirmed_answers||0} owner answers</span><span class="chip ${open.length?'warn':'good'}">${open.length} open questions</span><span class="chip">${summary.known_absences||0} known absences</span></div>${S.testing.contextScanError?`<div class="note">${esc(S.testing.contextScanError)} Your existing context is still available; retry when the posting is reachable.</div>`:""}</section>
+  const matchesQuestion=item=>!q||`${item.term||""} ${item.question||""} ${(item.candidate_hints||[]).map(h=>h.label).join(" ")}`.toLowerCase().includes(q);
+  const open=(data.questions||[]).filter(item=>item.status!=="answered"&&matchesQuestion(item)), answered=(data.questions||[]).filter(item=>item.status==="answered"&&matchesQuestion(item));
+  return `<section class="testing-hero"><div class="bar" style="justify-content:space-between"><span class="chip good">owner-only private context</span><div class="acts"><button class="act" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBank()">Resume bank</button><button class="act primary" onclick="loadResumeContext(S.testing.selectedId)">refresh from posting</button></div></div><h2>What Resume Studio knows</h2><p class="sub">Every usable fact shows its source. Posting gaps become global questions; your confirmed answers improve future jobs, not just one tailor. Suggested projects, courses, roles, and repositories are clues to check—never proof. “I have not used this” is remembered and never becomes résumé evidence.</p><div class="facts"><span class="chip good">${summary.known_facts||0} usable facts</span><span class="chip">${summary.confirmed_answers||0} owner answers</span><span class="chip ${open.length?'warn':'good'}">${open.length} matching open questions</span><span class="chip">${summary.known_absences||0} known absences</span></div>${S.testing.contextScanError?`<div class="note">${esc(S.testing.contextScanError)} Your existing context is still available; retry when the posting is reachable.</div>`:""}</section>
   <div class="context-grid"><section class="lane"><h3>Questions raised by postings</h3>${open.length?open.map(contextQuestionHTML).join(""):'<p class="sub">No open questions. Match another posting to discover evidence gaps.</p>'}${answered.length?`<details><summary>${answered.length} answered questions</summary>${answered.map(contextQuestionHTML).join("")}</details>`:""}</section><section class="lane"><div class="bar" style="justify-content:space-between"><h3>Authorized evidence &amp; provenance</h3><input id="contextQ" type="search" placeholder="search facts or sources…" value="${esc(S.testing.contextQuery||"")}"></div><p class="sub">${esc(data.privacy||"")}</p>${facts.map(item=>`<div class="context-fact"><div class="bar" style="justify-content:space-between"><strong>${esc(item.heading||"Evidence")}</strong><span class="chip">authority ${esc(item.authority||0)}</span></div><p>${esc(item.text)}</p><p class="sub">Source: ${esc(item.source)} · ${esc(item.source_kind||"local evidence")}${item.reviewed_by?` · confirmed by ${esc(item.reviewed_by)}`:""}</p></div>`).join("")||'<p class="sub">No facts match this search.</p>'}</section></div>`;
 }
 function studioArtifact(runId, name) {
@@ -2971,6 +3030,28 @@ function studioLibraryHTML() {
     return `<div class="studio-run"><div><strong>${esc(job.company||"Unknown company")}</strong><div class="sub">${esc(job.title||"Untitled role")} · ${esc(studioModeLabel(entry.mode))} · ${esc(entry.status||"saved")}${entry.storage==="cloud"?" · cloud":" · local"}</div></div><div class="acts">${pdf}${preview}${open}</div></div>`;
   }).join("");
 }
+async function reviewKeywordInContext(term) {
+  S.testing.contextQuery=String(term||"");
+  showResumeContext();
+  if(S.testing.engine==="online")await loadResumeContext();
+}
+function atsPct(value) { const number=Number(value); return Number.isFinite(number)?Math.max(0,Math.min(100,number)):null; }
+function keywordAuditHTML(entry) {
+  const audit=entry.keyword_audit, preview=cloudBankArtifactUrl(entry,"preview");
+  if(!audit?.posting_available||!(audit.terms||[]).length)return `<details class="keyword-audit"><summary><strong>ATS keyword map</strong> ${studioBadge("not available","warn")}</summary><div class="keyword-audit-body"><p class="sub">This older draft did not preserve a posting keyword audit. Its PDF and objective review are still available.</p></div></details>`;
+  const terms=audit.terms||[], boxes=audit.overlay?.boxes||[];
+  const groups={covered:terms.filter(item=>item.supported&&item.rendered),available:terms.filter(item=>item.supported&&!item.rendered),missing:terms.filter(item=>!item.supported)};
+  const termHTML=(item,state)=>{
+    const lines=boxes.filter(box=>(box.terms||[]).some(term=>String(term).toLowerCase()===String(item.term).toLowerCase())).map(box=>box.text).filter(Boolean);
+    const where=lines[0]||item.source_ids?.[0]||"";
+    const label=`${item.term}${item.required?" · required":item.preferred?" · preferred":""}`;
+    if(state==="missing")return `<button class="ats-term missing" title="Unsupported: verify in Context &amp; Q&amp;A" onclick='reviewKeywordInContext(${JSON.stringify(item.term)})'>${esc(label)}<span class="ats-where">unsupported · ask or confirm absence</span></button>`;
+    return `<span class="ats-term ${state}" title="${esc(where||item.support_kind||"")}">${esc(label)}<span class="ats-where">${esc(state==="covered"?(where?`shown: ${where}`:"rendered in final resume"):(item.source_ids?.length?`supported by ${item.source_ids[0]}`:"supported elsewhere in your evidence"))}</span></span>`;
+  };
+  const overlay=preview&&audit.overlay?.available?`<div class="ats-preview"><img loading="lazy" src="${preview}" alt="Resume preview with review highlights">${boxes.map(box=>`<span class="ats-box ${esc(box.kind||"ats")}" title="${esc((box.terms||[]).join(", ")+(box.text?`: ${box.text}`:""))}" style="left:${atsPct(box.left_percent)||0}%;top:${atsPct(box.top_percent)||0}%;width:${atsPct(box.width_percent)||0}%;height:${atsPct(box.height_percent)||0}%"></span>`).join("")}</div><div class="ats-legend"><span class="ats-swatch">green: supported posting terms</span><span class="ats-swatch" style="color:#2166be">blue: rewritten line</span><span class="ats-swatch" style="color:#7a41be">purple: both</span></div>`:`<p class="sub">Exact line highlights were not preserved for this draft; the term map below still distinguishes what was used, available, and unsupported.</p>`;
+  const supportedPct=atsPct(audit.supported_coverage_percent), overallPct=atsPct(audit.overall_coverage_percent);
+  return `<details class="keyword-audit" open><summary><strong>ATS keyword map</strong> ${supportedPct!==null?studioBadge(`${supportedPct}% of supported terms used`,supportedPct>=80?"good":"warn"):""}</summary><div class="keyword-audit-body"><p class="sub">Diagnostic comparison—not a recruiter ATS score. Green terms appear in this resume; yellow terms are supported by your evidence but omitted; red terms are unsupported and must never be invented.${overallPct!==null?` Overall exact coverage: ${overallPct}%.`:""}</p>${overlay}<div class="ats-keyword-groups"><div class="ats-keyword-group"><h5>Covered · ${groups.covered.length}</h5>${groups.covered.map(item=>termHTML(item,"covered")).join("")||'<p class="sub">None detected.</p>'}</div><div class="ats-keyword-group"><h5>Available but omitted · ${groups.available.length}</h5>${groups.available.map(item=>termHTML(item,"available")).join("")||'<p class="sub">None.</p>'}</div><div class="ats-keyword-group"><h5>Unsupported · ${groups.missing.length}</h5>${groups.missing.map(item=>termHTML(item,"missing")).join("")||'<p class="sub">None.</p>'}</div></div></div></details>`;
+}
 function resumeBankVersionHTML(entry, ranking=null) {
   const job=entry.job||{}, preview=cloudBankArtifactUrl(entry,"preview"), pdf=cloudBankArtifactUrl(entry,"pdf");
   const report=cloudBankArtifactUrl(entry,"report"), posting=cloudBankArtifactUrl(entry,"posting");
@@ -2979,7 +3060,7 @@ function resumeBankVersionHTML(entry, ranking=null) {
   const inspect=entry.run_id && entry.storage!=="cloud" ? `<button class="act" onclick='loadResumeRun("${esc(entry.run_id)}")'>inspect</button>` : "";
   const statusKind=entry.status==="complete"||entry.status==="awaiting_review"?"good":entry.status==="failed"?"bad":"unknown";
   const rankBadge=ranking?.assessment?.rankable&&Number.isFinite(Number(ranking.assessment.score))?studioBadge(`#${ranking.rank} · ${ranking.assessment.score}/100`,ranking.rank===1?"good":""):studioBadge("not ranked","warn");
-  return `<div class="resume-bank-version"><div><strong>${esc(studioModeLabel(entry.mode))} ${rankBadge}</strong><p class="sub">${esc(entry.created_at||"date unavailable")} · ${entry.storage==="cloud"?"cloud":"local"} ${studioBadge(entry.status||"saved",statusKind)}</p></div><div class="acts resume-bank-actions">${pdf?`<a class="act" href="${pdf}" target="_blank" rel="noopener">PDF ↗</a>`:""}${preview?`<a class="act" href="${preview}" target="_blank" rel="noopener">preview ↗</a>`:""}${report?`<a class="act" href="${report}" target="_blank" rel="noopener">audit ↗</a>`:""}${posting?`<a class="act" href="${posting}" target="_blank" rel="noopener">posting ↗</a>`:""}${inspect}${workshop}</div></div>`;
+  return `<div class="resume-bank-version-wrap"><div class="resume-bank-version"><div><strong>${esc(studioModeLabel(entry.mode))} ${rankBadge}</strong><p class="sub">${esc(entry.created_at||"date unavailable")} · ${entry.storage==="cloud"?"cloud":"local"} ${studioBadge(entry.status||"saved",statusKind)}</p></div><div class="acts resume-bank-actions">${pdf?`<a class="act" href="${pdf}" target="_blank" rel="noopener">PDF ↗</a>`:""}${preview?`<a class="act" href="${preview}" target="_blank" rel="noopener">clean preview ↗</a>`:""}${report?`<a class="act" href="${report}" target="_blank" rel="noopener">audit ↗</a>`:""}${posting?`<a class="act" href="${posting}" target="_blank" rel="noopener">posting ↗</a>`:""}${inspect}${workshop}</div></div>${keywordAuditHTML(entry)}</div>`;
 }
 function resumeBankGroupHTML(group) {
   const latest=group.versions[0], job=latest.job||{}, preview=cloudBankArtifactUrl(latest,"preview"), ranked=objectiveRankings(group), winner=ranked.find(item=>item.assessment.rankable&&Number.isFinite(Number(item.assessment.score)));
