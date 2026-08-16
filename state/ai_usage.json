@@ -1,55 +1,6 @@
 {
- "events": [
-  {
-   "at": "2026-08-16T22:08:41+00:00",
-   "completion_tokens": 1119,
-   "detail": "",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 14669,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 6415,
-   "prompt_tokens": 1543,
-   "prompt_version": "company_research:prompt-policy-v1:7bc6ae1ef0222bc5",
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-16T22:08:49+00:00",
-   "completion_tokens": 1413,
-   "detail": "",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 22639,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 5532,
-   "prompt_tokens": 1414,
-   "prompt_version": "company_research:prompt-policy-v1:6527f43652628426",
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-16T22:08:54+00:00",
-   "completion_tokens": 1103,
-   "detail": "",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 28112,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 5747,
-   "prompt_tokens": 1819,
-   "prompt_version": "company_research:prompt-policy-v1:22f03c86832e7766",
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  }
- ],
- "generated_at": 1786918135,
+ "events": [],
+ "generated_at": 1786918167,
  "history": [
   {
    "attempts": [
@@ -6268,19 +6219,9 @@
   "logical_calls": 10000,
   "requests": 10000
  },
- "logical_calls": 3,
- "models": {
-  "nvidia:glm": {
-   "errors": 0,
-   "model": "z-ai/glm-5.2",
-   "ok": 3,
-   "requests": 3,
-   "tokens": 8411
-  }
- },
+ "logical_calls": 0,
+ "models": {},
  "provider": "nvidia-router",
- "requests": 4,
- "task_calls": {
-  "company_research": 3
- }
+ "requests": 0,
+ "task_calls": {}
 }
