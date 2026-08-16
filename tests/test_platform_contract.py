@@ -218,6 +218,11 @@ def test_platform_resume_studio_is_one_cloud_workspace_with_private_engine_fallb
     assert "openResumeStudio" in html
     assert "queueResumeMode" in html
     assert "renderResumeBankView" in html
+    assert "resumeBankGroups" in html
+    assert "click to see every version" in html
+    assert "Google onward" in html
+    assert "Context &amp; Q&amp;A" in html
+    assert "answerContextQuestion" in html
     assert "syncCloudResumeBank" in html
     assert 'fetch("/api/resume-bank"' in html
     assert "Resume bank" in html

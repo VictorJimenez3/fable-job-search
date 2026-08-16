@@ -5,6 +5,8 @@ import pytest
 
 from scripts import resume_studio as rs
 from scripts import resume_lock
+from radar.evidence_review import (answer_question, load_reviews,
+                                   owner_answer_nodes, upsert_questions)
 
 
 def test_extract_json_handles_provider_wrapper_and_fences():
@@ -23,6 +25,44 @@ def test_write_json_uses_an_atomic_worker_specific_temp_file(tmp_path):
     rs.write_json(target, {"ok": True})
     assert json.loads(target.read_text()) == {"ok": True}
     assert list(tmp_path.glob("*.tmp")) == []
+
+
+def test_context_questions_group_a_capability_across_postings_and_authorize_only_used_answers(tmp_path):
+    studio = tmp_path / "CV" / ".resume_studio"
+    upsert_questions(studio, [{
+        "term": "version control", "job_id": "job-1", "company": "Acme",
+        "title": "Engineer", "importance": "required",
+    }])
+    upsert_questions(studio, [{
+        "term": "Version Control", "job_id": "job-2", "company": "Example",
+        "title": "Developer", "importance": "preferred",
+    }])
+    payload = load_reviews(studio)
+    assert len(payload["questions"]) == 1
+    item = next(iter(payload["questions"].values()))
+    assert len(item["triggers"]) == 2
+
+    answer_question(
+        studio, item["id"], "used",
+        answer="Managed feature branches, pull requests, and reviewed changes with Git and GitHub.",
+        where_when="J&J internship, summer 2025",
+    )
+    nodes = owner_answer_nodes(load_reviews(studio))
+    assert len(nodes) == 1
+    assert nodes[0]["claim_allowed"] is True
+    assert nodes[0]["source"] == "Victor Q&A"
+    assert "J&J internship" in nodes[0]["text"]
+
+
+def test_context_not_used_answer_is_remembered_but_never_becomes_evidence(tmp_path):
+    studio = tmp_path / "CV" / ".resume_studio"
+    upsert_questions(studio, [{"term": "databricks", "job_id": "job-1"}])
+    item = next(iter(load_reviews(studio)["questions"].values()))
+    answer_question(studio, item["id"], "not_used")
+    saved = load_reviews(studio)["questions"][item["id"]]
+    assert saved["status"] == "answered"
+    assert saved["response"] == "not_used"
+    assert owner_answer_nodes(load_reviews(studio)) == []
 
 
 def test_generated_resume_filename_is_company_identifiable():

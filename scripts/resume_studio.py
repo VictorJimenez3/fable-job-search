@@ -63,7 +63,9 @@ from radar.resume_match import (MATCH_VERSION, build_evidence_graph,
                                 evidence_context, job_match_hash,
                                 posting_eligibility_blocks, score_resume_match)
 from radar.evidence_review import (BLOCKING_STATUSES, REVIEW_STATUSES,
-                                   load_reviews, review_path, review_summary)
+                                   answer_question as save_context_answer,
+                                   load_reviews, review_path, review_summary,
+                                   upsert_questions)
 
 
 RUBRIC_VERSION = "resume-gates-v1"
@@ -468,6 +470,100 @@ def update_evidence_review(
     key = str((root or repo_root()).resolve())
     _EVIDENCE_GRAPH_CACHE.pop(key, None)
     return evidence_review_view(root)
+
+
+def context_questions_for_job(
+    job: Dict[str, Any], posting_text: str, root: Optional[Path] = None,
+) -> List[Dict[str, Any]]:
+    """Turn exact unsupported posting terms into one durable question per topic."""
+    base = root or repo_root()
+    strategy = target_keyword_strategy(
+        {"posting_text": posting_text}, source_catalog(base), base,
+        graph=evidence_graph(base), comprehensive=True,
+    )
+    gaps = []
+    for item in strategy.get("terms") or []:
+        if item.get("supported") or item.get("importance") == "mentioned":
+            continue
+        gaps.append({
+            "term": item.get("term"),
+            "importance": item.get("importance"),
+            "job_id": job.get("id"),
+            "company": job.get("company"),
+            "title": job.get("title"),
+            "url": job.get("url"),
+        })
+        if len(gaps) >= 16:
+            break
+    if gaps:
+        upsert_questions(studio_root(base), gaps)
+    return gaps
+
+
+def context_inventory(
+    root: Optional[Path] = None,
+    job: Optional[Dict[str, Any]] = None,
+    posting_text: str = "",
+    limit: int = 240,
+) -> Dict[str, Any]:
+    """Explain what Studio knows, where it came from, and its durable gaps."""
+    base = root or repo_root()
+    if job and posting_text:
+        context_questions_for_job(job, posting_text, base)
+    graph = evidence_graph(base)
+    reviews = load_reviews(studio_root(base))
+    questions = [item for item in (reviews.get("questions") or {}).values() if isinstance(item, dict)]
+    questions.sort(key=lambda item: (
+        item.get("status") == "answered",
+        {"required": 0, "preferred": 1, "responsibility": 2}.get(
+            str(((item.get("triggers") or [{}])[-1] or {}).get("importance") or ""), 3
+        ),
+        str(item.get("term") or ""),
+    ))
+    facts = []
+    source_counts: Dict[str, int] = {}
+    for node in graph.get("nodes", []):
+        if not node.get("claim_allowed") or not str(node.get("text") or "").strip():
+            continue
+        kind = str(node.get("source_kind") or "local evidence")
+        source_counts[kind] = source_counts.get(kind, 0) + 1
+        facts.append({key: node.get(key) for key in (
+            "id", "source", "heading", "text", "authority", "source_kind",
+            "review_status", "reviewed_by", "reviewed_at",
+        )})
+    facts.sort(key=lambda item: (
+        item.get("source_kind") != "owner-confirmed answer",
+        -int(item.get("authority") or 0),
+        str(item.get("source") or ""),
+    ))
+    answered = [item for item in questions if item.get("status") == "answered"]
+    return {
+        "version": graph.get("version"),
+        "hash": graph.get("hash"),
+        "summary": {
+            "known_facts": len(facts),
+            "source_kinds": source_counts,
+            "open_questions": sum(item.get("status") != "answered" for item in questions),
+            "answered_questions": len(answered),
+            "confirmed_answers": sum(item.get("response") == "used" for item in answered),
+            "known_absences": sum(item.get("response") == "not_used" for item in answered),
+        },
+        "questions": questions[:200],
+        "facts": facts[: max(1, min(int(limit or 240), 500))],
+        "privacy": "Source CV files and owner answers remain in the ignored private Mac workspace.",
+    }
+
+
+def update_context_answer(
+    item_id: str, response: str, answer: str = "", where_when: str = "",
+    root: Optional[Path] = None,
+) -> Dict[str, Any]:
+    base = root or repo_root()
+    save_context_answer(
+        studio_root(base), item_id, response, answer=answer, where_when=where_when,
+    )
+    _EVIDENCE_GRAPH_CACHE.pop(str(base.resolve()), None)
+    return context_inventory(base)
 
 
 def _match_cache_path(root: Optional[Path] = None) -> Path:
@@ -7367,7 +7463,7 @@ const resumeStudioBridgeMode=new URLSearchParams(location.search).get('bridge')=
 const resumeStudioBridgeOrigins=new Set(['https://job-radar-newgrad.vercel.app','https://job-radar-vmj-8946s-projects.vercel.app','https://victorjimenez3.github.io']);
 function bridgeReply(event,requestId,data,error=''){if(!event.source||!resumeStudioBridgeOrigins.has(event.origin))return;event.source.postMessage({type:'resume-studio:response',request_id:requestId,ok:!error,data,error},event.origin);}
 async function bridgeFetch(path,init={}){const response=await fetch(path,init);let data={};try{data=await response.json();}catch(_){data={};}if(!response.ok)throw new Error(data.error||`engine returned ${response.status}`);return data;}
-async function handleResumeStudioBridge(event){const message=event.data||{};if(!resumeStudioBridgeOrigins.has(event.origin)||message.type!=='resume-studio:request')return;const action=message.action,payload=message.payload||{};try{let data;if(action==='health')data=await bridgeFetch('/api/health');else if(action==='library')data=await bridgeFetch('/api/library?limit='+encodeURIComponent(payload.limit||100));else if(action==='match')data=await bridgeFetch('/api/match',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id})});else if(action==='queue')data=await bridgeFetch('/api/run',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,mode:payload.mode})});else if(action==='status')data=await bridgeFetch('/api/run?id='+encodeURIComponent(payload.id||''));else throw new Error('unsupported bridge request');bridgeReply(event,message.request_id,data);if(action==='queue'&&data.run_id)bridgePollRun(event,data.run_id);}catch(error){bridgeReply(event,message.request_id,{},error.message||String(error));}}
+async function handleResumeStudioBridge(event){const message=event.data||{};if(!resumeStudioBridgeOrigins.has(event.origin)||message.type!=='resume-studio:request')return;const action=message.action,payload=message.payload||{};try{let data;if(action==='health')data=await bridgeFetch('/api/health');else if(action==='library')data=await bridgeFetch('/api/library?limit='+encodeURIComponent(payload.limit||100));else if(action==='match')data=await bridgeFetch('/api/match',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot})});else if(action==='context')data=await bridgeFetch('/api/context');else if(action==='context_job')data=await bridgeFetch('/api/context/job',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot})});else if(action==='context_answer')data=await bridgeFetch('/api/context/answer',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='queue')data=await bridgeFetch('/api/run',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,mode:payload.mode,job_snapshot:payload.job_snapshot})});else if(action==='status')data=await bridgeFetch('/api/run?id='+encodeURIComponent(payload.id||''));else throw new Error('unsupported bridge request');bridgeReply(event,message.request_id,data);if(action==='queue'&&data.run_id)bridgePollRun(event,data.run_id);}catch(error){bridgeReply(event,message.request_id,{},error.message||String(error));}}
 async function bridgePollRun(event,runId){for(let i=0;i<1200;i+=1){await new Promise(resolve=>setTimeout(resolve,1500));try{const data=await bridgeFetch('/api/run?id='+encodeURIComponent(runId));if(event.source&&resumeStudioBridgeOrigins.has(event.origin))event.source.postMessage({type:'resume-studio:run',run_id:runId,data},event.origin);if(['complete','awaiting_review','failed'].includes(data.status))return;}catch(error){if(event.source)event.source.postMessage({type:'resume-studio:run',run_id:runId,data:{status:'failed',message:error.message}},event.origin);return;}}}
 window.addEventListener('message',handleResumeStudioBridge);
 if(resumeStudioBridgeMode){document.title='Resume Studio engine';document.body.innerHTML='<main style="max-width:420px;margin:0 auto;padding:28px;font:15px/1.45 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:#131A21;color:#D9E2E8;min-height:100vh"><h1 style="font-size:20px">Resume Studio engine</h1><p id="bridgeState">Connecting to the cloud workspace…</p><p style="color:#8FA1AE;font-size:13px">Keep this small private-engine window open while the cloud Resume Studio queues or reviews a draft. Your CV and generated files remain on this Mac.</p></main>';if(window.opener)window.opener.postMessage({type:'resume-studio:ready'},'*');}
@@ -7773,6 +7869,8 @@ class StudioHandler(BaseHTTPRequestHandler):
             return self.send_json(canonical_resume_lock(repo_root()))
         if parsed.path == "/api/evidence":
             return self.send_json(evidence_review_view(repo_root()))
+        if parsed.path == "/api/context":
+            return self.send_json(context_inventory(repo_root()))
         if parsed.path == "/api/posting":
             params = parse_qs(parsed.query)
             source = params.get("source", [""])[0]
@@ -7846,6 +7944,7 @@ class StudioHandler(BaseHTTPRequestHandler):
         parsed = urlparse(self.path)
         if parsed.path not in {
             "/api/run", "/api/run/approve", "/api/match", "/api/evidence/refresh", "/api/evidence/review",
+            "/api/context/job", "/api/context/answer",
             "/api/workshop/edit", "/api/workshop/ai", "/api/workshop/revert",
         }:
             return self.send_json({"error": "not found"}, HTTPStatus.NOT_FOUND)
@@ -7870,6 +7969,14 @@ class StudioHandler(BaseHTTPRequestHandler):
                     status=str(body.get("status") or ""),
                     note=str(body.get("note") or ""),
                     claim_allowed=bool(body.get("claim_allowed")),
+                    root=repo_root(),
+                ))
+            if parsed.path == "/api/context/answer":
+                return self.send_json(update_context_answer(
+                    item_id=str(body.get("id") or ""),
+                    response=str(body.get("response") or ""),
+                    answer=str(body.get("answer") or ""),
+                    where_when=str(body.get("where_when") or ""),
                     root=repo_root(),
                 ))
             if parsed.path == "/api/workshop/edit":
@@ -7906,10 +8013,19 @@ class StudioHandler(BaseHTTPRequestHandler):
                     job = imported
             if not job:
                 return self.send_json({"error": "job not found"}, HTTPStatus.NOT_FOUND)
-            if parsed.path == "/api/match":
+            if parsed.path in {"/api/match", "/api/context/job"}:
                 posting_text = fetch_job_description(job)
+                inventory = context_inventory(
+                    repo_root(), job=job, posting_text=posting_text,
+                )
+            if parsed.path == "/api/context/job":
+                return self.send_json(inventory)
+            if parsed.path == "/api/match":
                 match = resume_match_for_job(job, repo_root(), posting_text=posting_text)
-                return self.send_json({"job_id": job_id, "resume_match": match})
+                return self.send_json({
+                    "job_id": job_id, "resume_match": match,
+                    "context_summary": inventory.get("summary", {}),
+                })
             mode = str(body.get("mode") or "")
             status = self.manager.start(job, mode)
             return self.send_json(status, HTTPStatus.ACCEPTED)

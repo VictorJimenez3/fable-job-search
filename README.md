@@ -455,7 +455,21 @@ local `CV/.resume_studio/` boundary. When Victor chooses **sync local bank**,
 the owner-only cloud API copies bank metadata plus generated PDFs, previews,
 reports, and posting snapshots into an app-created private Google Drive folder;
 the cloud UI never publishes a public artifact URL or pretends an offline run
-is complete.
+is complete. The bank groups every version under one posting card. Its default
+scope begins with the first post-overhaul Google run on 2026-08-08; **all
+history** keeps older experiments available, and sync follows the selected
+scope.
+
+The cloud workspace also exposes **Context & Q&A** while the private engine is
+awake. Exact unsupported terms found in postings become one durable question
+per capability, not one question per run. Victor can document where/when and
+how he used the capability, state that he has not used it, or leave it open.
+Only a concrete **I used this** answer becomes claim-authorizing evidence; a
+negative answer is remembered and never becomes resume text. The context view
+lists every usable fact with its source, source kind, authority, and owner
+confirmation. Answers and source-level context remain local under the ignored
+`CV/.resume_studio/evidence_review.json` boundary and are never included in
+cloud bank sync.
 
 The canonical `CV/immutable/VictorJimenezResume.tex`,
 `CV/immutable/VictorJimenezResume.pdf`, and the historical
@@ -521,8 +535,10 @@ roomy lines from near-wraps; a bullet with less than 12pt of right-edge safety
 is treated as a near-wrap and rejected, even if the PDF extractor technically
 reports one line.
 
-Use **Resume bank** in the Studio header to browse every saved run and legacy
-experiment. Each new run keeps a private snapshot of the selected posting,
+Use **Resume bank** in the Studio header to browse one card per job and expand
+it to compare every saved version. **Google onward** is the default current
+quality era, while **all history** reveals legacy experiments. Each new run
+keeps a private snapshot of the selected posting,
 remains visible after switching to another role, and names its PDF with the
 company (for example, `mayo_clinic_resume_ai.pdf`). Preview responses also send
 that filename to the browser/Preview app, so downloads do not fall back to

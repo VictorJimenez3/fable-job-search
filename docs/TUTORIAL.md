@@ -176,7 +176,19 @@ main platform UI. If the Mac service is asleep, the cloud page remains a safe
 read-only posting/apply surface and keeps generation disabled until the engine
 is reachable again. **Resume bank** still shows artifacts already synced to
 the private cloud; use **sync local bank** while the Mac is awake to copy all
-current and legacy entries, including failed or interrupted runs.
+entries in the selected scope. The default **Google onward** scope starts at
+the first post-overhaul Google run; choose **all history** before syncing if
+you deliberately want legacy, failed, or interrupted experiments too. The
+bank shows one job card; click it to see every version for that posting.
+
+Open **Context & Q&A** to inspect what the tailoring engine can actually use.
+The right side lists authorized facts and their exact source. The left side
+lists capability gaps raised by any posting. Answer **I used this** only with
+where/when plus what you did; that answer becomes reusable owner-confirmed
+evidence for later jobs. **I have not used this** is remembered as a known
+absence and can never authorize a resume claim. These answers stay in the
+private Mac evidence workspace, so the context panel requires the engine even
+when generated PDFs have been synced to the cloud.
 
 - **Unchained generation** — performs a requirement-by-requirement evidence
   audit before drafting, searches the authorized Markdown graph, and may create

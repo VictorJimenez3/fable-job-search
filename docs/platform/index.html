@@ -305,6 +305,15 @@
   .resume-bank-card-head { display:flex; justify-content:space-between; gap:.55rem; align-items:flex-start; }
   .resume-bank-card h3 { margin:0; font-size:.88rem; }
   .resume-bank-card .sub { margin:.12rem 0; }
+  .resume-bank-card > summary { list-style:none; cursor:pointer; }
+  .resume-bank-card > summary::-webkit-details-marker { display:none; }
+  .resume-bank-version { display:flex; justify-content:space-between; gap:.6rem; align-items:center;
+    border-top:1px solid var(--line); padding:.55rem 0; }
+  .resume-bank-version:first-child { margin-top:.65rem; }
+  .context-grid { display:grid; grid-template-columns:minmax(280px,.8fr) minmax(360px,1.2fr); gap:.9rem; }
+  .context-question { border:1px solid var(--line); background:var(--paper); border-radius:7px; padding:.7rem; margin:.55rem 0; }
+  .context-question textarea, .context-question input { width:100%; box-sizing:border-box; margin:.35rem 0; }
+  .context-fact { border-top:1px solid var(--line); padding:.55rem 0; }
   .resume-bank-preview-link { display:block; margin:.6rem 0; }
   .resume-bank-preview { display:block; width:100%; height:220px; object-fit:contain; object-position:top center; background:#fff; border:1px solid var(--line); border-radius:5px; }
   .resume-bank-preview.empty { display:grid; place-items:center; color:var(--muted); font-size:.74rem; text-align:center; padding:.8rem; }
@@ -343,6 +352,7 @@
     .resume-bank-grid { grid-template-columns:1fr; }
     .studio-jobs { max-height:24rem; }
     .studio-actions { grid-template-columns:1fr; }
+    .context-grid { grid-template-columns:1fr; }
   }
 </style>
 </head>
@@ -412,8 +422,8 @@ const S = {           // app state
   tab:"jobs", filter:{...DEFAULT_FILTER, ...storedFilter()}, shown:250,
   wsTab:"fit",
   testing:{q:"", sort:"resume", shown:40, selectedId:"", engine:"checking", engineError:"", match:null,
-    library:[], cloudLibrary:[], cloudBank:{status:"checking",error:"",updated_at:"",needsGoogle:false}, bankView:false,
-    bankQuery:"", bankMode:"all", bankStatus:"all",
+    library:[], cloudLibrary:[], cloudBank:{status:"checking",error:"",updated_at:"",needsGoogle:false}, bankView:false, contextView:false,
+    bankQuery:"", bankMode:"all", bankStatus:"all", bankEra:"current", context:null, contextQuery:"",
     sync:{state:"idle",done:0,total:0,error:""}, activeRunId:"", runStatus:null},
   boot:{phase:"starting", jobsReady:false, inFlight:false, errors:[]},
   marquee:new Set(["meta","apple","amazon","netflix","google","microsoft","nvidia",
@@ -2036,6 +2046,8 @@ function templates(j) {
 }
 const jobById = id => S.jobs[id] || S.applied.find(a=>a.id===id);
 const RESUME_STUDIO_LOCAL_ORIGIN = "http://127.0.0.1:4317";
+// Owner-defined quality-era boundary: the first Google run after the Studio overhaul.
+const RESUME_BANK_CURRENT_ERA_START = "2026-08-08T19:03:28Z";
 let resumeBridgeWindow = null, resumeBridgeReady = null, resumeBridgeSequence = 0;
 const resumeBridgePending = new Map();
 window.addEventListener("message", event => {
@@ -2724,6 +2736,9 @@ async function studioRequest(path, options={}) {
     if (path === "/api/health") return bridgeRequest("health");
     if (path.startsWith("/api/library")) return bridgeRequest("library", {limit:Number(new URLSearchParams(path.split("?")[1]||"").get("limit")||100)});
     if (path === "/api/match") return bridgeRequest("match", requestBody);
+    if (path === "/api/context" && method === "GET") return bridgeRequest("context");
+    if (path === "/api/context/job" && method === "POST") return bridgeRequest("context_job", requestBody);
+    if (path === "/api/context/answer" && method === "POST") return bridgeRequest("context_answer", requestBody);
     if (path === "/api/run" && method === "POST") return bridgeRequest("queue", requestBody);
     if (path === "/api/run" && method === "GET") return bridgeRequest("status", {id:new URLSearchParams(path.split("?")[1]||"").get("id")||""});
   }
@@ -2744,6 +2759,23 @@ function resumeBankEntries() {
     if (!merged.has(key)) merged.set(key, entry);
   }
   return [...merged.values()].sort((a,b)=>String(b.updated_at||b.created_at||"").localeCompare(String(a.updated_at||a.created_at||"")));
+}
+function resumeBankCurrentEra(entry) {
+  const stamp=Date.parse(entry?.created_at||entry?.updated_at||"");
+  return Number.isFinite(stamp) && stamp>=Date.parse(RESUME_BANK_CURRENT_ERA_START);
+}
+function resumeJobKey(entry) {
+  const job=entry?.job||{};
+  try { const url=new URL(job.url||""); return `url:${url.hostname.toLowerCase()}${url.pathname.replace(/\/$/,"").toLowerCase()}`; } catch (_) {}
+  if (job.id) return `id:${String(job.id)}`;
+  return `fallback:${String(job.company||"").trim().toLowerCase()}|${String(job.title||"").trim().toLowerCase()}`;
+}
+function resumeBankGroups(entries) {
+  const groups=new Map();
+  for (const entry of entries) {
+    const key=resumeJobKey(entry); if(!groups.has(key))groups.set(key,[]); groups.get(key).push(entry);
+  }
+  return [...groups.entries()].map(([key,versions])=>({key,versions:versions.sort((a,b)=>String(b.updated_at||b.created_at||"").localeCompare(String(a.updated_at||a.created_at||"")))}));
 }
 function cloudBankArtifactUrl(entry, kind) {
   if (entry?.storage === "cloud") return entry.urls?.[kind] || "";
@@ -2796,7 +2828,8 @@ function syncArtifactNames(entry) {
 }
 async function syncCloudResumeBank() {
   if (S.testing.engine !== "online") { toast("Start the private Resume Studio engine before syncing the bank"); return; }
-  const localEntries = S.testing.library?.length ? S.testing.library : await studioRequest("/api/library?limit=500").then(data=>data.resumes||[]);
+  const allLocalEntries = S.testing.library?.length ? S.testing.library : await studioRequest("/api/library?limit=500").then(data=>data.resumes||[]);
+  const localEntries = S.testing.bankEra==="all" ? allLocalEntries : allLocalEntries.filter(resumeBankCurrentEra);
   if (!localEntries.length) { toast("No local Resume Bank entries were found"); return; }
   S.testing.sync = {state:"running",done:0,total:localEntries.length,error:""};
   rTesting();
@@ -2820,8 +2853,41 @@ async function syncCloudResumeBank() {
   }
   rTesting();
 }
-function showResumeBank() { S.testing.bankView=true; rTesting(); }
-function showResumeTailoring() { S.testing.bankView=false; rTesting(); }
+function showResumeBank() { S.testing.bankView=true; S.testing.contextView=false; rTesting(); }
+function showResumeTailoring() { S.testing.bankView=false; S.testing.contextView=false; rTesting(); }
+function showResumeContext() { S.testing.bankView=false; S.testing.contextView=true; rTesting(); }
+async function loadResumeContext(jobId="") {
+  if (S.testing.engine!=="online") return;
+  try {
+    S.testing.context = jobId
+      ? await studioRequest("/api/context/job",{method:"POST",body:JSON.stringify({job_id:jobId})})
+      : await studioRequest("/api/context");
+  } catch (error) { S.testing.engineError=error.message; }
+  if(S.tab==="testing"&&S.testing.contextView)rTesting();
+}
+async function answerContextQuestion(id,response) {
+  const card=[...document.querySelectorAll("[data-context-question]")].find(item=>item.dataset.contextQuestion===id);
+  if(!card)return;
+  const answer=card.querySelector("textarea")?.value||"", where_when=card.querySelector("input")?.value||"";
+  try {
+    S.testing.context=await studioRequest("/api/context/answer",{method:"POST",body:JSON.stringify({id,response,answer,where_when})});
+    toast(response==="used"?"Added to your confirmed evidence context":"Saved; Studio will remember this answer"); rTesting();
+  } catch(error){toast(error.message.slice(0,120));}
+}
+function contextQuestionHTML(item) {
+  const trigger=(item.triggers||[]).slice(-1)[0]||{}, answered=item.status==="answered";
+  return `<div class="context-question" data-context-question="${esc(item.id)}"><div class="bar" style="justify-content:space-between"><strong>${esc(item.term)}</strong>${studioBadge(answered?(item.response==="used"?"confirmed evidence":"known absence"):"open",answered?"good":"warn")}</div><p>${esc(item.question)}</p><p class="sub">Raised by ${esc(trigger.company||"a posting")} · ${esc(trigger.title||trigger.importance||"requirement")}${(item.triggers||[]).length>1?` · ${(item.triggers||[]).length} postings`:""}</p>${answered?`<p><strong>${esc(item.where_when||"")}</strong><br>${esc(item.answer||item.response)}</p>`:`<input type="text" placeholder="Where and when? e.g. J&amp;J internship, summer 2025"><textarea rows="3" placeholder="What did you do, how did you use it, and what happened?"></textarea><div class="acts"><button class="act primary" onclick='answerContextQuestion(${JSON.stringify(item.id)},"used")'>I used this</button><button class="act" onclick='answerContextQuestion(${JSON.stringify(item.id)},"not_used")'>I have not used this</button><button class="act" onclick='answerContextQuestion(${JSON.stringify(item.id)},"unsure")'>keep open</button></div>`}</div>`;
+}
+function renderResumeContextView() {
+  const data=S.testing.context, online=S.testing.engine==="online";
+  if(!online)return `<section class="testing-hero"><div class="acts"><button class="act" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBank()">Resume bank</button></div><h2>Context &amp; Q&amp;A</h2><div class="note"><strong>Private engine offline.</strong> This source-level context stays on your Mac, so start the engine to inspect or update it from the cloud UI.</div></section>`;
+  if(!data){loadResumeContext(S.testing.selectedId);return `<section class="testing-hero"><h2>Context &amp; Q&amp;A</h2><p class="sub">Loading your private evidence map…</p></section>`;}
+  const summary=data.summary||{}, q=String(S.testing.contextQuery||"").toLowerCase().trim();
+  const facts=(data.facts||[]).filter(item=>!q||`${item.heading||""} ${item.text||""} ${item.source||""}`.toLowerCase().includes(q));
+  const open=(data.questions||[]).filter(item=>item.status!=="answered"), answered=(data.questions||[]).filter(item=>item.status==="answered");
+  return `<section class="testing-hero"><div class="bar" style="justify-content:space-between"><span class="chip good">owner-only private context</span><div class="acts"><button class="act" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBank()">Resume bank</button><button class="act primary" onclick="loadResumeContext(S.testing.selectedId)">refresh from posting</button></div></div><h2>What Resume Studio knows</h2><p class="sub">Every usable fact shows its source. Posting gaps become global questions; your confirmed answers improve future jobs, not just one tailor. “I have not used this” is remembered and never becomes résumé evidence.</p><div class="facts"><span class="chip good">${summary.known_facts||0} usable facts</span><span class="chip">${summary.confirmed_answers||0} owner answers</span><span class="chip ${open.length?'warn':'good'}">${open.length} open questions</span><span class="chip">${summary.known_absences||0} known absences</span></div></section>
+  <div class="context-grid"><section class="lane"><h3>Questions raised by postings</h3>${open.length?open.map(contextQuestionHTML).join(""):'<p class="sub">No open questions. Match another posting to discover evidence gaps.</p>'}${answered.length?`<details><summary>${answered.length} answered questions</summary>${answered.map(contextQuestionHTML).join("")}</details>`:""}</section><section class="lane"><div class="bar" style="justify-content:space-between"><h3>Authorized evidence &amp; provenance</h3><input id="contextQ" type="search" placeholder="search facts or sources…" value="${esc(S.testing.contextQuery||"")}"></div><p class="sub">${esc(data.privacy||"")}</p>${facts.map(item=>`<div class="context-fact"><div class="bar" style="justify-content:space-between"><strong>${esc(item.heading||"Evidence")}</strong><span class="chip">authority ${esc(item.authority||0)}</span></div><p>${esc(item.text)}</p><p class="sub">Source: ${esc(item.source)} · ${esc(item.source_kind||"local evidence")}${item.reviewed_by?` · confirmed by ${esc(item.reviewed_by)}`:""}</p></div>`).join("")||'<p class="sub">No facts match this search.</p>'}</section></div>`;
+}
 function studioArtifact(runId, name) {
   return studioPath(`/runs/${encodeURIComponent(runId)}/${encodeURIComponent(name)}`);
 }
@@ -2868,34 +2934,37 @@ function studioLibraryHTML() {
     return `<div class="studio-run"><div><strong>${esc(job.company||"Unknown company")}</strong><div class="sub">${esc(job.title||"Untitled role")} · ${esc(studioModeLabel(entry.mode))} · ${esc(entry.status||"saved")}${entry.storage==="cloud"?" · cloud":" · local"}</div></div><div class="acts">${pdf}${preview}${open}</div></div>`;
   }).join("");
 }
-function resumeBankCardHTML(entry) {
+function resumeBankVersionHTML(entry) {
   const job=entry.job||{}, preview=cloudBankArtifactUrl(entry,"preview"), pdf=cloudBankArtifactUrl(entry,"pdf");
   const report=cloudBankArtifactUrl(entry,"report"), posting=cloudBankArtifactUrl(entry,"posting");
   const workshop=entry.run_id && entry.has_workshop
     ? `<button class="act" ${S.testing.engine==="online"?"":"disabled title=\"Start the private engine to open Workshop\""} onclick='openResumeWorkshop("${esc(entry.run_id)}")'>Workshop</button>` : "";
   const inspect=entry.run_id && entry.storage!=="cloud" ? `<button class="act" onclick='loadResumeRun("${esc(entry.run_id)}")'>inspect</button>` : "";
   const statusKind=entry.status==="complete"||entry.status==="awaiting_review"?"good":entry.status==="failed"?"bad":"unknown";
-  return `<article class="resume-bank-card">
-    <div class="resume-bank-card-head"><div><h3>${esc(job.company||"Unknown company")}</h3><p class="sub">${esc(job.title||"Untitled role")}</p></div><span class="chip ${statusKind}">${esc(entry.status||"saved")}</span></div>
-    ${preview?`<a class="resume-bank-preview-link" href="${preview}" target="_blank" rel="noopener"><img class="resume-bank-preview" loading="lazy" src="${preview}" alt="${esc(job.company||"Resume")} preview"></a>`:'<div class="resume-bank-preview empty">Preview appears after a run produces one.</div>'}
-    <p class="sub">${esc(studioModeLabel(entry.mode))} · ${entry.storage==="cloud"?"cloud copy":"local copy"} · ${esc(entry.created_at||"date unavailable")}</p>
-    <div class="facts"><span class="chip">${entry.ready===true?"ready for review":"human review required"}</span>${entry.job?.resume_match?.score!=null?`<span class="chip good">Match ${entry.job.resume_match.score}/100</span>`:""}${entry.legacy?'<span class="chip unknown">legacy experiment</span>':""}</div>
-    <div class="acts resume-bank-actions">${pdf?`<a class="act" href="${pdf}" target="_blank" rel="noopener">Preview PDF ↗</a>`:""}${report?`<a class="act" href="${report}" target="_blank" rel="noopener">Report ↗</a>`:""}${posting?`<a class="act" href="${posting}" target="_blank" rel="noopener">Posting snapshot ↗</a>`:""}${inspect}${workshop}</div>
-  </article>`;
+  return `<div class="resume-bank-version"><div><strong>${esc(studioModeLabel(entry.mode))}</strong><p class="sub">${esc(entry.created_at||"date unavailable")} · ${entry.storage==="cloud"?"cloud":"local"} ${studioBadge(entry.status||"saved",statusKind)}</p></div><div class="acts resume-bank-actions">${pdf?`<a class="act" href="${pdf}" target="_blank" rel="noopener">PDF ↗</a>`:""}${preview?`<a class="act" href="${preview}" target="_blank" rel="noopener">preview ↗</a>`:""}${report?`<a class="act" href="${report}" target="_blank" rel="noopener">audit ↗</a>`:""}${posting?`<a class="act" href="${posting}" target="_blank" rel="noopener">posting ↗</a>`:""}${inspect}${workshop}</div></div>`;
+}
+function resumeBankGroupHTML(group) {
+  const latest=group.versions[0], job=latest.job||{}, preview=cloudBankArtifactUrl(latest,"preview");
+  const statuses=[...new Set(group.versions.map(entry=>entry.status).filter(Boolean))];
+  return `<details class="resume-bank-card"><summary><div class="resume-bank-card-head"><div><h3>${esc(job.company||"Unknown company")}</h3><p class="sub">${esc(job.title||"Untitled role")}</p></div><span class="chip good">${group.versions.length} version${group.versions.length===1?"":"s"}</span></div>
+    ${preview?`<img class="resume-bank-preview" loading="lazy" src="${preview}" alt="${esc(job.company||"Resume")} latest preview">`:'<div class="resume-bank-preview empty">No preview was produced for the latest version.</div>'}
+    <p class="sub">Latest: ${esc(studioModeLabel(latest.mode))} · ${esc(latest.created_at||"date unavailable")}</p><div class="facts">${statuses.map(value=>studioBadge(value,value==="failed"?"bad":"good")).join("")}<span class="chip">click to see every version</span></div></summary>
+    <div>${group.versions.map(resumeBankVersionHTML).join("")}</div></details>`;
 }
 function renderResumeBankView() {
-  const query=String(S.testing.bankQuery||"").toLowerCase().trim(), mode=S.testing.bankMode||"all", status=S.testing.bankStatus||"all";
+  const query=String(S.testing.bankQuery||"").toLowerCase().trim(), mode=S.testing.bankMode||"all", status=S.testing.bankStatus||"all", era=S.testing.bankEra||"current";
   const entries=resumeBankEntries().filter(entry=>{
     const hay=`${entry.job?.company||""} ${entry.job?.title||""}`.toLowerCase();
-    return (!query||query.split(/\s+/).every(part=>hay.includes(part))) && (mode==="all"||entry.mode===mode) && (status==="all"||entry.status===status);
+    return (era==="all"||resumeBankCurrentEra(entry)) && (!query||query.split(/\s+/).every(part=>hay.includes(part))) && (mode==="all"||entry.mode===mode) && (status==="all"||entry.status===status);
   });
+  const groups=resumeBankGroups(entries);
   const cloudState=S.testing.cloudBank.status==="online"?`${S.testing.cloudLibrary.length} synced cloud entries`:
     S.testing.cloudBank.status==="unavailable"?`cloud bank unavailable · ${S.testing.cloudBank.error}`:"checking cloud bank…";
   const cloudSetup=S.testing.cloudBank.needsGoogle?`<button class="act" onclick="openTutorial('accounts')">connect Google for private bank</button>`:"";
   const sync=S.testing.sync.state==="running"?`syncing ${S.testing.sync.done}/${S.testing.sync.total} entries…`:S.testing.sync.state==="complete"?"last sync complete":S.testing.sync.state==="failed"?`sync stopped · ${S.testing.sync.error}`:"";
-  return `<section class="testing-hero"><div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">${esc(cloudState)}</span></div><div class="acts"><button class="act" onclick="showResumeTailoring()">New tailoring</button><button class="act primary" onclick="loadCloudResumeBank()">refresh bank</button>${cloudSetup}</div></div><h2>Resume bank</h2><p class="sub">Every local run and legacy experiment, synced into your private cloud bank with its posting, status, preview, PDF, and audit links. New matching, generation, and Workshop edits still use the private Mac engine.</p>${sync?`<p class="note" role="status">${esc(sync)}</p>`:""}</section>
-  <div class="bar"><input id="resumeBankQ" type="search" placeholder="filter company or role…" value="${esc(S.testing.bankQuery||"")}"><select id="resumeBankMode" aria-label="Filter Resume Bank mode"><option value="all">all modes</option><option value="used" ${mode==="used"?"selected":""}>Used bullets</option><option value="ai" ${mode==="ai"?"selected":""}>AI tailor</option><option value="unrestricted" ${mode==="unrestricted"?"selected":""}>Take-the-wheel</option><option value="generation" ${mode==="generation"?"selected":""}>Unchained generation</option></select><select id="resumeBankStatus" aria-label="Filter Resume Bank status"><option value="all">all statuses</option>${[...new Set(resumeBankEntries().map(e=>e.status).filter(Boolean))].sort().map(value=>`<option value="${esc(value)}" ${status===value?"selected":""}>${esc(value)}</option>`).join("")}</select><button class="act" onclick="syncCloudResumeBank()" ${S.testing.engine==="online"?"":"disabled"}>sync local bank ↗</button></div>
-  <section class="resume-bank-grid">${entries.length?entries.map(resumeBankCardHTML).join(""):"<div class=\"lane\"><p class=\"sub\">No bank entries match this filter. If this is the first setup, connect Google and sync the private Mac bank.</p></div>"}</section>`;
+  return `<section class="testing-hero"><div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">${esc(cloudState)}</span></div><div class="acts"><button class="act" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><button class="act primary" onclick="loadCloudResumeBank()">refresh bank</button>${cloudSetup}</div></div><h2>Resume bank</h2><p class="sub">One card per job. Click it to compare every saved version, audit, posting snapshot, and PDF. Every local run and legacy experiment remains available under all history; the default view starts with the Google-era Studio overhaul. New matching, generation, and Workshop edits still use the private Mac engine.</p>${sync?`<p class="note" role="status">${esc(sync)}</p>`:""}</section>
+  <div class="bar"><input id="resumeBankQ" type="search" placeholder="filter company or role…" value="${esc(S.testing.bankQuery||"")}"><select id="resumeBankEra" aria-label="Filter Resume Bank era"><option value="current" ${era==="current"?"selected":""}>Google onward</option><option value="all" ${era==="all"?"selected":""}>all history</option></select><select id="resumeBankMode" aria-label="Filter Resume Bank mode"><option value="all">all modes</option><option value="used" ${mode==="used"?"selected":""}>Used bullets</option><option value="ai" ${mode==="ai"?"selected":""}>AI tailor</option><option value="unrestricted" ${mode==="unrestricted"?"selected":""}>Take-the-wheel</option><option value="generation" ${mode==="generation"?"selected":""}>Unchained generation</option></select><select id="resumeBankStatus" aria-label="Filter Resume Bank status"><option value="all">all statuses</option>${[...new Set(resumeBankEntries().map(e=>e.status).filter(Boolean))].sort().map(value=>`<option value="${esc(value)}" ${status===value?"selected":""}>${esc(value)}</option>`).join("")}</select><button class="act" onclick="syncCloudResumeBank()" ${S.testing.engine==="online"?"":"disabled"}>sync local bank · ${era==="current"?"Google-onward":"all"} ↗</button></div>
+  <p class="sub">${groups.length} jobs · ${entries.length} versions</p><section class="resume-bank-grid">${groups.length?groups.map(resumeBankGroupHTML).join(""):"<div class=\"lane\"><p class=\"sub\">No bank entries match this filter. Start the private engine to load the local bank, or connect Google and sync it.</p></div>"}</section>`;
 }
 function renderStudioWorkspace() {
   const selected = jobById(S.testing.selectedId);
@@ -2910,7 +2979,7 @@ function renderStudioWorkspace() {
   const engineBadge = engineOnline ? studioBadge("private engine connected","good") : S.testing.engine === "offline" ? studioBadge("private engine offline","warn") : studioBadge("checking private engine");
   const run = S.testing.runStatus;
   const busy = run && ["queued","running"].includes(run.status);
-  workspace.innerHTML = `<div class="studio-selected"><div class="bar" style="justify-content:space-between;margin:0"><div>${engineBadge} ${selected.alert_ok?studioBadge("eligible","good"):studioBadge("dashboard review","warn")}</div><a class="act" href="${esc(selected.url||"#")}" target="_blank" rel="noopener">open posting ↗</a></div>
+  workspace.innerHTML = `<div class="studio-selected"><div class="bar" style="justify-content:space-between;margin:0"><div>${engineBadge} ${selected.alert_ok?studioBadge("eligible","good"):studioBadge("dashboard review","warn")}</div><div class="acts"><button class="act" onclick="showResumeContext()">context &amp; questions${S.testing.match?.context_summary?.open_questions!=null?` · ${S.testing.match.context_summary.open_questions} open`:""}</button><a class="act" href="${esc(selected.url||"#")}" target="_blank" rel="noopener">open posting ↗</a></div></div>
     <h2>${esc(selected.company)} · ${esc(selected.title)}</h2><div class="sub studio-meta">${esc((selected.locations||[]).join(", ")||"location unknown")} · Radar ${selected.score??"–"} · ${ago(postedTs(selected))||"date unknown"}</div>
     <div class="facts" style="margin-top:.45rem">${match.score!=null?studioBadge(`Resume Match ${match.score}/100`,match.confidence==="low"?"warn":"good"):""}${(match.clusters||[]).slice(0,6).map(c=>studioBadge(c.replaceAll("_"," "))).join("")}</div></div>
     <div class="studio-note" style="margin-top:.65rem"><strong>One system, two safe layers.</strong> This cloud workspace owns the selection, posting link, queue, and run status. The private engine owns your evidence graph, AI calls, PDF rendering, and revisions. If the engine is offline, this page never pretends a draft exists.</div>
@@ -2997,12 +3066,18 @@ function openResumeWorkshop(id) {
 }
 function rTesting() {
   if (!S.auth?.owner) { S.tab="jobs"; rJobs(); return; }
+  if (S.testing.contextView) {
+    $("#main").innerHTML=renderResumeContextView();
+    const contextQ=$("#contextQ"); if(contextQ)contextQ.oninput=()=>{S.testing.contextQuery=contextQ.value;clearTimeout(window.contextSearchTimer);window.contextSearchTimer=setTimeout(rTesting,180);};
+    return;
+  }
   if (S.testing.bankView) {
     $("#main").innerHTML = renderResumeBankView();
-    const bankQ=$("#resumeBankQ"), bankMode=$("#resumeBankMode"), bankStatus=$("#resumeBankStatus");
+    const bankQ=$("#resumeBankQ"), bankMode=$("#resumeBankMode"), bankStatus=$("#resumeBankStatus"), bankEra=$("#resumeBankEra");
     if (bankQ) bankQ.oninput=()=>{S.testing.bankQuery=bankQ.value;clearTimeout(window.resumeBankSearchTimer);window.resumeBankSearchTimer=setTimeout(rTesting,180);};
     if (bankMode) bankMode.onchange=()=>{S.testing.bankMode=bankMode.value;rTesting();};
     if (bankStatus) bankStatus.onchange=()=>{S.testing.bankStatus=bankStatus.value;rTesting();};
+    if (bankEra) bankEra.onchange=()=>{S.testing.bankEra=bankEra.value;rTesting();};
     if (S.testing.cloudBank.status==="checking") loadCloudResumeBank(false).then(()=>{if(S.tab==="testing"&&S.testing.bankView)rTesting();});
     return;
   }
@@ -3012,7 +3087,7 @@ function rTesting() {
     <span class="chip good">owner only · @${esc(S.auth.login)}</span>
     <h2>Resume Studio</h2>
     <p class="sub">Choose a production posting, tailor it here, and keep the private evidence graph and generated artifacts behind the owner boundary. The website owns the workflow; the Mac engine is the private generation layer.</p>
-    <div class="bar" style="margin:.65rem 0 0"><button class="act primary" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBank()">Resume bank <span class="chip">${resumeBankEntries().length}</span></button><span class="sub">${S.testing.cloudBank.status==="online"?"private cloud bank connected":"private cloud bank checking"}</span></div>
+    <div class="bar" style="margin:.65rem 0 0"><button class="act primary" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBank()">Resume bank <span class="chip">${resumeBankGroups(resumeBankEntries().filter(resumeBankCurrentEra)).length} jobs</span></button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><span class="sub">${S.testing.cloudBank.status==="online"?"private cloud bank connected":"private cloud bank checking"}</span></div>
     <div id="studioEngineNotice" class="note" style="margin:.65rem 0 0">Checking the private engine…</div>
   </section>
   <div class="testing-grid"><section class="lane"><h3>1 · Choose a posting <span class="sub" style="float:right">${rows.length} roles</span></h3>

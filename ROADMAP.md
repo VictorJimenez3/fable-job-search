@@ -332,6 +332,13 @@ provider calls, rendering, and workshop edits; when it is offline, already
 synced artifacts remain viewable but new generation and workshop actions stay
 disabled.
 
+Grouped Resume Bank and durable evidence Q&A — ✅ SHIPPED 2026-08-15
+(DECISION #127). The cloud bank now groups all variants under one posting and
+defaults to the post-overhaul Google-onward quality era. The private engine
+turns unsupported posting terms into deduplicated global questions, stores
+owner answers locally, projects only affirmative concrete answers into the
+evidence graph, and exposes source/authority provenance in the cloud UI.
+
 ## Pipeline intelligence
 - **Resume UAT and outcome learning** — future idea: if enough applications,
   interviews, and eventual outcomes accumulate, compare resume variants and
