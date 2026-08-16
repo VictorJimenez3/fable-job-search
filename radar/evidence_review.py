@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Any, Dict
 
 
-REVIEW_VERSION = "evidence-review-v3"
+REVIEW_VERSION = "evidence-review-v4"
 REVIEW_FILENAME = "evidence_review.json"
 REVIEW_STATUSES = {
     "unreviewed", "confirmed", "public_safe", "disputed", "rejected",
@@ -147,6 +147,69 @@ def answer_question(
     })
     payload["updated_at"] = now
     _write_reviews(studio_dir, payload)
+    return payload
+
+
+def add_question_hint(
+    studio_dir: Path,
+    item_id: str,
+    label: str,
+    note: str = "",
+    source_url: str = "",
+) -> Dict[str, Any]:
+    """Attach an owner-supplied place to investigate without authorizing a claim."""
+    payload = load_reviews(studio_dir)
+    questions = payload.setdefault("questions", {})
+    item = questions.get(str(item_id or ""))
+    if not isinstance(item, dict):
+        raise ValueError("context question not found")
+    label = str(label or "").strip()
+    note = str(note or "").strip()
+    source_url = str(source_url or "").strip()
+    if len(label) < 3:
+        raise ValueError("hint needs a project, role, course, or other place to investigate")
+    if len(label) > 300 or len(note) > 1200 or len(source_url) > 2000:
+        raise ValueError("context hint is too long")
+    if source_url and not re.match(r"^https?://[^\s]+$", source_url, flags=re.I):
+        raise ValueError("hint source must be an http(s) URL")
+    hints = item.get("hints") if isinstance(item.get("hints"), list) else []
+    fingerprint = (label.lower(), source_url.lower())
+    if not any(
+        (str(existing.get("label") or "").lower(), str(existing.get("source_url") or "").lower()) == fingerprint
+        for existing in hints if isinstance(existing, dict)
+    ):
+        now = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+        hints.append({
+            "id": "hint:" + hashlib.sha256((str(item_id) + "\n" + label + "\n" + source_url).encode()).hexdigest()[:12],
+            "label": label,
+            "note": note,
+            "source_url": source_url,
+            "added_by": "Victor",
+            "added_at": now,
+            "claim_allowed": False,
+        })
+        item["hints"] = hints[-20:]
+        item["status"] = "open" if item.get("response") not in {"used", "not_used"} else item.get("status")
+        payload["updated_at"] = now
+        _write_reviews(studio_dir, payload)
+    return payload
+
+
+def dismiss_question_hint(studio_dir: Path, item_id: str, label: str) -> Dict[str, Any]:
+    """Remember that a capability was not used in one suggested place."""
+    payload = load_reviews(studio_dir)
+    item = payload.setdefault("questions", {}).get(str(item_id or ""))
+    if not isinstance(item, dict):
+        raise ValueError("context question not found")
+    label = str(label or "").strip()
+    if len(label) < 3 or len(label) > 300:
+        raise ValueError("dismissed place needs a valid label")
+    dismissed = item.get("dismissed_hints") if isinstance(item.get("dismissed_hints"), list) else []
+    if label.lower() not in {str(value).lower() for value in dismissed}:
+        dismissed.append(label)
+        item["dismissed_hints"] = dismissed[-30:]
+        payload["updated_at"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+        _write_reviews(studio_dir, payload)
     return payload
 
 

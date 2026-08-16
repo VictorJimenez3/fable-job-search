@@ -1913,3 +1913,22 @@ portfolio diagnostics. Failed or interrupted runs cannot win. Missing
 independent provider critique is shown as a confidence limitation rather than
 being silently scored as a failed resume, and the feature remains owner-only
 with no effect on Radar ranking, application tracking, or submission behavior.
+
+## 129. ATS review is three-state, and contextual hints never authorize claims (2026-08-16)
+
+Resume Studio exposes tailoring performance as evidence-aware diagnostics, not
+as a fictional universal ATS score. Each posting term is visibly separated
+into rendered and supported, supported elsewhere but omitted, or unsupported.
+When the report includes PDF geometry, the cloud bank places a review-only
+overlay on the clean preview and names the matching line; it never alters the
+application PDF. This follows the useful review pattern in current tailoring
+tools while preserving the system's stronger factual boundary.
+
+For unsupported terms, neighboring authorized evidence may suggest a role,
+project, course, or repository and generate a specific question about personal
+work. Owner-added URLs and places use the same path. These hints are
+investigative metadata with `claim_allowed: false`; repository content or a
+related existing bullet cannot prove Victor's contribution. Only his concrete
+affirmative answer with where/when, action, and outcome creates reusable
+claim-authorizing evidence. A place-specific negative suppresses that candidate
+without converting the entire capability into a known absence.

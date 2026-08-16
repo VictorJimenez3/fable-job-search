@@ -38,3 +38,17 @@ def test_resume_bank_exposes_owner_only_objective_per_posting_comparison():
     assert "not a hiring prediction" in html
     assert "transparent match, evidence-safety, layout, and portfolio signals" in html
     assert "entry.objective" in api
+
+
+def test_resume_bank_exposes_visual_keyword_audit_and_context_followup():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    api = (ROOT / "webapp" / "api" / "resume-bank.js").read_text()
+
+    assert "ATS keyword map" in html
+    assert "Available but omitted" in html
+    assert "Diagnostic comparison—not a recruiter ATS score" in html
+    assert "reviewKeywordInContext" in html
+    assert "Possible places to investigate" in html
+    assert "/api/context/hint" in html
+    assert "not in this place" in html
+    assert "entry.keyword_audit" in api

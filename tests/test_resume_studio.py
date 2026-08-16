@@ -5,7 +5,7 @@ import pytest
 
 from scripts import resume_studio as rs
 from scripts import resume_lock
-from radar.evidence_review import (answer_question, load_reviews,
+from radar.evidence_review import (add_question_hint, answer_question, dismiss_question_hint, load_reviews,
                                    owner_answer_nodes, upsert_questions)
 
 
@@ -63,6 +63,47 @@ def test_context_not_used_answer_is_remembered_but_never_becomes_evidence(tmp_pa
     assert saved["status"] == "answered"
     assert saved["response"] == "not_used"
     assert owner_answer_nodes(load_reviews(studio)) == []
+
+
+def test_context_place_hint_is_durable_but_never_authorizes_a_claim(tmp_path):
+    studio = tmp_path / "CV" / ".resume_studio"
+    upsert_questions(studio, [{"term": "ci/cd", "job_id": "job-1"}])
+    item = next(iter(load_reviews(studio)["questions"].values()))
+    add_question_hint(
+        studio, item["id"], "CS485 · Nexus LinkedIn clone",
+        note="Check whether the course project used an automated workflow.",
+        source_url="https://github.com/example/nexus",
+    )
+    saved = load_reviews(studio)["questions"][item["id"]]
+    assert saved["hints"][0]["claim_allowed"] is False
+    assert owner_answer_nodes(load_reviews(studio)) == []
+
+
+def test_context_place_can_be_ruled_out_without_closing_the_capability(tmp_path):
+    studio = tmp_path / "CV" / ".resume_studio"
+    upsert_questions(studio, [{"term": "ci/cd", "job_id": "job-1"}])
+    item = next(iter(load_reviews(studio)["questions"].values()))
+    dismiss_question_hint(studio, item["id"], "Johnson & Johnson internship")
+    saved = load_reviews(studio)["questions"][item["id"]]
+    assert saved["status"] == "open"
+    assert saved["dismissed_hints"] == ["Johnson & Johnson internship"]
+    assert owner_answer_nodes(load_reviews(studio)) == []
+
+
+def test_context_candidates_turn_neighboring_evidence_into_questions_not_claims():
+    question = {"term": "ci/cd", "hints": []}
+    graph = {"nodes": [{
+        "id": "jnj:b1", "entry_id": "jnj", "heading": "Johnson & Johnson internship",
+        "source": "CV/resume.tex", "text": "Built and tested an AlloyDB deployment pipeline",
+        "authority": 90, "claim_allowed": True,
+    }]}
+    hints = rs._context_candidate_hints(question, graph)
+    assert hints[0]["label"] == "Johnson & Johnson internship"
+    assert hints[0]["claim_allowed"] is False
+    assert "not proof" in hints[0]["reason"]
+    assert "personally configure" in hints[0]["question"]
+    question["dismissed_hints"] = ["Johnson & Johnson internship"]
+    assert rs._context_candidate_hints(question, graph) == []
 
 
 def test_generated_resume_filename_is_company_identifiable():
@@ -245,7 +286,22 @@ def test_resume_library_keeps_runs_and_legacy_experiments_with_posting_snapshots
         "job": rs.job_summary(job),
     })
     rs.write_json(run / "job_context.json", {"posting_text": "Required: Python and SQL."})
-    rs.write_json(run / "report.json", {"mode": "enhanced", "job": rs.job_summary(job), "review": {"craft_score": 88}})
+    rs.write_json(run / "report.json", {
+        "mode": "enhanced", "job": rs.job_summary(job), "review": {"craft_score": 88},
+        "content_changes": {"keyword_coverage": {
+            "posting_available": True, "detected_count": 2, "supported_count": 1,
+            "covered_count": 1, "supported_exact_coverage_percent": 100,
+            "exact_coverage_percent": 50,
+            "terms": [
+                {"term": "Python", "supported": True, "rendered": True, "status": "covered", "source_ids": ["experience:x:b1"]},
+                {"term": "Kubernetes", "supported": False, "rendered": False, "status": "unsupported"},
+            ],
+        }},
+        "review_overlay": {"available": True, "boxes": [{
+            "left_percent": 10, "top_percent": 20, "width_percent": 70, "height_percent": 2,
+            "terms": ["Python"], "text": "Built Python services", "kind": "ats",
+        }]},
+    })
     (run / "example_co_resume_ai.pdf").write_bytes(b"pdf")
 
     legacy = tmp_path / "CV" / ".resume_studio" / "architecture_experiments" / "old-example"
@@ -261,6 +317,9 @@ def test_resume_library_keeps_runs_and_legacy_experiments_with_posting_snapshots
     assert saved["has_posting_snapshot"] is True
     assert saved["objective"]["version"] == "objective-resume-v1"
     assert saved["objective"]["rankable"] is False
+    assert saved["keyword_audit"]["supported_coverage_percent"] == 100
+    assert saved["keyword_audit"]["terms"][1]["status"] == "unsupported"
+    assert saved["keyword_audit"]["overlay"]["boxes"][0]["text"] == "Built Python services"
     snapshot = rs.posting_snapshot(tmp_path, "run", "0123456789ab")
     assert snapshot["posting_text"] == "Required: Python and SQL."
 
@@ -1086,6 +1145,7 @@ def test_review_preview_overlay_marks_ats_and_meaningful_change(monkeypatch, tmp
     )
     assert result["available"] is True
     assert result["boxes"][0]["kind"] == "both"
+    assert result["boxes"][0]["text"].startswith("Engineered Python")
 
 
 def test_target_priority_outweighs_generic_technical_tiebreakers():

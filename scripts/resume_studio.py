@@ -63,7 +63,9 @@ from radar.resume_match import (MATCH_VERSION, build_evidence_graph,
                                 evidence_context, job_match_hash,
                                 posting_eligibility_blocks, score_resume_match)
 from radar.evidence_review import (BLOCKING_STATUSES, REVIEW_STATUSES,
+                                   add_question_hint as save_context_hint,
                                    answer_question as save_context_answer,
+                                   dismiss_question_hint as dismiss_context_hint,
                                    load_reviews, review_path, review_summary,
                                    upsert_questions)
 
@@ -501,6 +503,117 @@ def context_questions_for_job(
     return gaps
 
 
+CONTEXT_HINT_ASSOCIATIONS = {
+    "ci/cd": {"pipeline", "deployment", "deploy", "docker", "github", "git", "automation", "testing", "build", "workflow", "infrastructure"},
+    "continuous integration": {"pipeline", "deployment", "deploy", "docker", "github", "git", "automation", "testing", "build", "workflow"},
+    "continuous deployment": {"pipeline", "deployment", "deploy", "docker", "github", "git", "automation", "testing", "build", "workflow"},
+    "version control": {"git", "github", "branch", "merge", "repository", "code review", "collaboration"},
+    "cloud computing": {"cloud", "gcp", "google cloud", "aws", "azure", "alloydb", "docker", "deployment", "infrastructure"},
+    "data visualization": {"visualization", "dashboard", "plot", "chart", "matplotlib", "tableau", "power bi", "looker"},
+    "continuous improvement": {"iteration", "prototype", "testing", "feedback", "customer discovery", "optimization", "revision"},
+}
+
+
+def _context_candidate_hints(
+    question: Dict[str, Any], graph: Dict[str, Any], limit: int = 4,
+) -> List[Dict[str, Any]]:
+    """Suggest plausible places to investigate without converting them to evidence."""
+    term = str(question.get("term") or "").strip().lower()
+    term_tokens = set(re.findall(r"[a-z0-9+#.]+", term))
+    related = set()
+    for key, values in CONTEXT_HINT_ASSOCIATIONS.items():
+        if key in term or term in key:
+            related.update(values)
+    clue_tokens = term_tokens | set(
+        token for value in related for token in re.findall(r"[a-z0-9+#.]+", value.lower())
+    )
+    grouped: Dict[str, Dict[str, Any]] = {}
+    for node in graph.get("nodes", []):
+        if not node.get("claim_allowed"):
+            continue
+        source = str(node.get("source") or "").strip()
+        heading = _latex_plain(str(node.get("heading") or "")).strip()
+        source_match = re.search(r"CV/experiences/([^/]+?)(?:_SOURCE_OF_TRUTH|_BULLET_ITERATION_LOG|\.md)", source, re.I)
+        if source_match:
+            stem = source_match.group(1).replace("_", " ").strip()
+            known_places = {
+                "jj": "Johnson & Johnson internship",
+                "j&j": "Johnson & Johnson internship",
+            }
+            place_label = known_places.get(stem.lower(), stem.title() + " experience materials")
+            group_key = "experience-source:" + stem.lower()
+        else:
+            place_label = heading
+            group_key = str(node.get("entry_id") or heading).lower()
+        if not source_match and (
+            re.search(r"\b(skills?|technologies|nodes?|signals?|contradictions?|rendered set)\b", place_label, re.I)
+            or len(place_label) < 5
+        ):
+            continue
+        text = _latex_plain(str(node.get("text") or "")).strip()
+        if not place_label or not text:
+            continue
+        haystack = (place_label + " " + heading + " " + text + " " + source).lower()
+        matched = sorted({token for token in clue_tokens if len(token) > 2 and re.search(r"\b%s\b" % re.escape(token), haystack)})
+        if not matched:
+            continue
+        score = len(matched) * 12 + int(node.get("authority") or 0) / 10
+        if source_match:
+            score += 8
+        current = grouped.get(group_key)
+        if current is None or score > current["score"]:
+            grouped[group_key] = {
+                "label": place_label[:220],
+                "source": source[:500],
+                "source_url": "",
+                "matched_clues": matched[:6],
+                "score": score,
+                "kind": "evidence-neighbor",
+                "claim_allowed": False,
+            }
+    candidates = []
+    seen_places = set()
+    for candidate in sorted(grouped.values(), key=lambda item: (-item["score"], item["label"])):
+        place_key = re.sub(
+            r"\b(ai|data|science|internship|intern|experience|materials)\b", " ",
+            re.sub(r"[^a-z0-9]+", " ", candidate["label"].lower()),
+        )
+        place_key = " ".join(place_key.split())
+        if place_key in seen_places:
+            continue
+        seen_places.add(place_key)
+        candidates.append(candidate)
+        if len(candidates) >= limit:
+            break
+    for item in candidates:
+        clues = ", ".join(item.pop("matched_clues", []))
+        item.pop("score", None)
+        item["reason"] = "Related evidence mentions %s; that is a clue to investigate, not proof." % clues
+        item["question"] = (
+            "Did you use %s in %s—for example around %s? If yes, what did you personally configure, "
+            "where did it run, and what happened?"
+        ) % (term, item["label"], clues)
+    owner_hints = []
+    for hint in question.get("hints") or []:
+        if not isinstance(hint, dict) or not str(hint.get("label") or "").strip():
+            continue
+        label = str(hint.get("label") or "").strip()
+        note = str(hint.get("note") or "").strip()
+        owner_hints.append({
+            "id": hint.get("id"),
+            "label": label,
+            "source": "Owner-supplied place to investigate",
+            "source_url": str(hint.get("source_url") or ""),
+            "reason": note or "You added this as a possible place to check; it is not resume evidence yet.",
+            "question": "Did you use %s in %s? What did you personally build or configure, using which tools, and what was the outcome?" % (term, label),
+            "kind": "owner-hint",
+            "claim_allowed": False,
+        })
+    dismissed = {str(value).strip().lower() for value in (question.get("dismissed_hints") or []) if str(value).strip()}
+    candidates = [item for item in candidates if str(item.get("label") or "").strip().lower() not in dismissed]
+    return (owner_hints + candidates)[: max(1, min(int(limit or 4), 8))]
+
+
 def context_inventory(
     root: Optional[Path] = None,
     job: Optional[Dict[str, Any]] = None,
@@ -513,7 +626,13 @@ def context_inventory(
         context_questions_for_job(job, posting_text, base)
     graph = evidence_graph(base)
     reviews = load_reviews(studio_root(base))
-    questions = [item for item in (reviews.get("questions") or {}).values() if isinstance(item, dict)]
+    questions = []
+    for item in (reviews.get("questions") or {}).values():
+        if not isinstance(item, dict):
+            continue
+        view = dict(item)
+        view["candidate_hints"] = _context_candidate_hints(view, graph)
+        questions.append(view)
     questions.sort(key=lambda item: (
         item.get("status") == "answered",
         {"required": 0, "preferred": 1, "responsibility": 2}.get(
@@ -564,6 +683,25 @@ def update_context_answer(
         studio_root(base), item_id, response, answer=answer, where_when=where_when,
     )
     _EVIDENCE_GRAPH_CACHE.pop(str(base.resolve()), None)
+    return context_inventory(base)
+
+
+def update_context_hint(
+    item_id: str, label: str, note: str = "", source_url: str = "",
+    root: Optional[Path] = None,
+) -> Dict[str, Any]:
+    base = root or repo_root()
+    save_context_hint(
+        studio_root(base), item_id, label=label, note=note, source_url=source_url,
+    )
+    return context_inventory(base)
+
+
+def update_context_hint_dismissal(
+    item_id: str, label: str, root: Optional[Path] = None,
+) -> Dict[str, Any]:
+    base = root or repo_root()
+    dismiss_context_hint(studio_root(base), item_id, label=label)
     return context_inventory(base)
 
 
@@ -1524,6 +1662,55 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
         if age > 30 * 60:
             display_status = "interrupted"
     objective = objective_resume_assessment(report, display_status)
+    changes = report.get("content_changes") if isinstance(report.get("content_changes"), dict) else {}
+    coverage = changes.get("keyword_coverage") if isinstance(changes.get("keyword_coverage"), dict) else {}
+    overlay = report.get("review_overlay") if isinstance(report.get("review_overlay"), dict) else {}
+    if (
+        overlay.get("available") and pdf.is_file()
+        and any(not str(box.get("text") or "").strip() for box in (overlay.get("boxes") or []) if isinstance(box, dict))
+    ):
+        refreshed_overlay = review_preview_overlay(
+            pdf,
+            report.get("content_plan") if isinstance(report.get("content_plan"), dict) else {},
+            changes,
+            coverage,
+        )
+        if refreshed_overlay.get("available"):
+            overlay = refreshed_overlay
+    keyword_terms = []
+    for item in coverage.get("terms") or []:
+        if not isinstance(item, dict) or not str(item.get("term") or "").strip():
+            continue
+        keyword_terms.append({
+            "term": str(item.get("term") or "")[:160],
+            "importance": str(item.get("importance") or "")[:40],
+            "required": bool(item.get("required")),
+            "preferred": bool(item.get("preferred")),
+            "supported": bool(item.get("supported")),
+            "rendered": bool(item.get("rendered")),
+            "status": str(item.get("status") or "")[:40],
+            "support_kind": str(item.get("support_kind") or "")[:120],
+            "source_ids": [str(value)[:180] for value in (item.get("source_ids") or [])[:8]],
+        })
+    overlay_boxes = []
+    for box in (overlay.get("boxes") or [])[:160]:
+        if not isinstance(box, dict):
+            continue
+        overlay_boxes.append({key: box.get(key) for key in (
+            "left_percent", "top_percent", "width_percent", "height_percent",
+            "terms", "text", "changed_source_id", "kind",
+        )})
+    keyword_audit = {
+        "posting_available": bool(coverage.get("posting_available")),
+        "detected_count": int(coverage.get("detected_count") or 0),
+        "supported_count": int(coverage.get("supported_count") or 0),
+        "covered_count": int(coverage.get("covered_count") or 0),
+        "supported_coverage_percent": coverage.get("supported_exact_coverage_percent"),
+        "overall_coverage_percent": coverage.get("exact_coverage_percent"),
+        "required_coverage_percent": coverage.get("required_coverage_percent"),
+        "terms": keyword_terms[:80],
+        "overlay": {"available": bool(overlay.get("available") and overlay_boxes), "boxes": overlay_boxes},
+    }
     artifacts = []
     for name in (public_pdf_name, public_preview_name, "job.json", "job_context.json", "report.json", "content_plan.json", "candidate_plan.json", "layout_packing.json", "resume.tex", "resume.txt", "workshop.json"):
         if (directory / name).is_file():
@@ -1556,6 +1743,7 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
         "review_plan_applied": report.get("review_plan_applied"),
         "validation_warnings": report.get("validation_warnings") or [],
         "objective": objective,
+        "keyword_audit": keyword_audit,
         "artifacts": artifacts,
         "urls": {
             "pdf": "/artifacts/%s/%s/%s" % (quote(source, safe=""), quote(entry_id, safe=""), quote(public_pdf_name, safe="")),
@@ -5967,6 +6155,7 @@ def review_preview_overlay(
             "width_percent": round((float(line.get("x_max") or 0) - float(line.get("x_min") or 0)) / page_width * 100, 3),
             "height_percent": round((float(line.get("y_max") or 0) - float(line.get("y_min") or 0)) / page_height * 100, 3),
             "terms": matched_terms,
+            "text": line_text[:500],
             "changed_source_id": changed_id,
             "kind": "changed" if changed_id and not matched_terms else "both" if changed_id else "ats",
         })
@@ -7609,7 +7798,7 @@ const resumeStudioBridgeMode=new URLSearchParams(location.search).get('bridge')=
 const resumeStudioBridgeOrigins=new Set(['https://job-radar-newgrad.vercel.app','https://job-radar-vmj-8946s-projects.vercel.app','https://victorjimenez3.github.io']);
 function bridgeReply(event,requestId,data,error=''){if(!event.source||!resumeStudioBridgeOrigins.has(event.origin))return;event.source.postMessage({type:'resume-studio:response',request_id:requestId,ok:!error,data,error},event.origin);}
 async function bridgeFetch(path,init={}){const response=await fetch(path,init);let data={};try{data=await response.json();}catch(_){data={};}if(!response.ok)throw new Error(data.error||`engine returned ${response.status}`);return data;}
-async function handleResumeStudioBridge(event){const message=event.data||{};if(!resumeStudioBridgeOrigins.has(event.origin)||message.type!=='resume-studio:request')return;const action=message.action,payload=message.payload||{};try{let data;if(action==='health')data=await bridgeFetch('/api/health');else if(action==='library')data=await bridgeFetch('/api/library?limit='+encodeURIComponent(payload.limit||100));else if(action==='match')data=await bridgeFetch('/api/match',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot})});else if(action==='context')data=await bridgeFetch('/api/context');else if(action==='context_job')data=await bridgeFetch('/api/context/job',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot})});else if(action==='context_answer')data=await bridgeFetch('/api/context/answer',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='queue')data=await bridgeFetch('/api/run',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,mode:payload.mode,job_snapshot:payload.job_snapshot})});else if(action==='status')data=await bridgeFetch('/api/run?id='+encodeURIComponent(payload.id||''));else throw new Error('unsupported bridge request');bridgeReply(event,message.request_id,data);if(action==='queue'&&data.run_id)bridgePollRun(event,data.run_id);}catch(error){bridgeReply(event,message.request_id,{},error.message||String(error));}}
+async function handleResumeStudioBridge(event){const message=event.data||{};if(!resumeStudioBridgeOrigins.has(event.origin)||message.type!=='resume-studio:request')return;const action=message.action,payload=message.payload||{};try{let data;if(action==='health')data=await bridgeFetch('/api/health');else if(action==='library')data=await bridgeFetch('/api/library?limit='+encodeURIComponent(payload.limit||100));else if(action==='match')data=await bridgeFetch('/api/match',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot})});else if(action==='context')data=await bridgeFetch('/api/context');else if(action==='context_job')data=await bridgeFetch('/api/context/job',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot})});else if(action==='context_answer')data=await bridgeFetch('/api/context/answer',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='context_hint')data=await bridgeFetch('/api/context/hint',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='context_hint_dismiss')data=await bridgeFetch('/api/context/hint/dismiss',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='queue')data=await bridgeFetch('/api/run',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,mode:payload.mode,job_snapshot:payload.job_snapshot})});else if(action==='status')data=await bridgeFetch('/api/run?id='+encodeURIComponent(payload.id||''));else throw new Error('unsupported bridge request');bridgeReply(event,message.request_id,data);if(action==='queue'&&data.run_id)bridgePollRun(event,data.run_id);}catch(error){bridgeReply(event,message.request_id,{},error.message||String(error));}}
 async function bridgePollRun(event,runId){for(let i=0;i<1200;i+=1){await new Promise(resolve=>setTimeout(resolve,1500));try{const data=await bridgeFetch('/api/run?id='+encodeURIComponent(runId));if(event.source&&resumeStudioBridgeOrigins.has(event.origin))event.source.postMessage({type:'resume-studio:run',run_id:runId,data},event.origin);if(['complete','awaiting_review','failed'].includes(data.status))return;}catch(error){if(event.source)event.source.postMessage({type:'resume-studio:run',run_id:runId,data:{status:'failed',message:error.message}},event.origin);return;}}}
 window.addEventListener('message',handleResumeStudioBridge);
 if(resumeStudioBridgeMode){document.title='Resume Studio engine';document.body.innerHTML='<main style="max-width:420px;margin:0 auto;padding:28px;font:15px/1.45 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:#131A21;color:#D9E2E8;min-height:100vh"><h1 style="font-size:20px">Resume Studio engine</h1><p id="bridgeState">Connecting to the cloud workspace…</p><p style="color:#8FA1AE;font-size:13px">Keep this small private-engine window open while the cloud Resume Studio queues or reviews a draft. Your CV and generated files remain on this Mac.</p></main>';if(window.opener)window.opener.postMessage({type:'resume-studio:ready'},'*');}
@@ -8090,7 +8279,7 @@ class StudioHandler(BaseHTTPRequestHandler):
         parsed = urlparse(self.path)
         if parsed.path not in {
             "/api/run", "/api/run/approve", "/api/match", "/api/evidence/refresh", "/api/evidence/review",
-            "/api/context/job", "/api/context/answer",
+            "/api/context/job", "/api/context/answer", "/api/context/hint", "/api/context/hint/dismiss",
             "/api/workshop/edit", "/api/workshop/ai", "/api/workshop/revert",
         }:
             return self.send_json({"error": "not found"}, HTTPStatus.NOT_FOUND)
@@ -8123,6 +8312,20 @@ class StudioHandler(BaseHTTPRequestHandler):
                     response=str(body.get("response") or ""),
                     answer=str(body.get("answer") or ""),
                     where_when=str(body.get("where_when") or ""),
+                    root=repo_root(),
+                ))
+            if parsed.path == "/api/context/hint":
+                return self.send_json(update_context_hint(
+                    item_id=str(body.get("id") or ""),
+                    label=str(body.get("label") or ""),
+                    note=str(body.get("note") or ""),
+                    source_url=str(body.get("source_url") or ""),
+                    root=repo_root(),
+                ))
+            if parsed.path == "/api/context/hint/dismiss":
+                return self.send_json(update_context_hint_dismissal(
+                    item_id=str(body.get("id") or ""),
+                    label=str(body.get("label") or ""),
                     root=repo_root(),
                 ))
             if parsed.path == "/api/workshop/edit":

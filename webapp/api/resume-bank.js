@@ -160,6 +160,31 @@ function normalizedEntry(value) {
       risks: Array.isArray(entry.objective.risks) ? entry.objective.risks.map(item => clean(item, 280)).slice(0, 6) : [],
       note: clean(entry.objective.note, 280),
     } : null,
+    keyword_audit: entry.keyword_audit && typeof entry.keyword_audit === "object" ? {
+      posting_available: Boolean(entry.keyword_audit.posting_available),
+      detected_count: Number(entry.keyword_audit.detected_count || 0),
+      supported_count: Number(entry.keyword_audit.supported_count || 0),
+      covered_count: Number(entry.keyword_audit.covered_count || 0),
+      supported_coverage_percent: Number.isFinite(Number(entry.keyword_audit.supported_coverage_percent)) ? Number(entry.keyword_audit.supported_coverage_percent) : null,
+      overall_coverage_percent: Number.isFinite(Number(entry.keyword_audit.overall_coverage_percent)) ? Number(entry.keyword_audit.overall_coverage_percent) : null,
+      required_coverage_percent: Number.isFinite(Number(entry.keyword_audit.required_coverage_percent)) ? Number(entry.keyword_audit.required_coverage_percent) : null,
+      terms: Array.isArray(entry.keyword_audit.terms) ? entry.keyword_audit.terms.slice(0, 80).map(item => ({
+        term: clean(item?.term, 160), importance: clean(item?.importance, 40), required: Boolean(item?.required),
+        preferred: Boolean(item?.preferred), supported: Boolean(item?.supported), rendered: Boolean(item?.rendered),
+        status: clean(item?.status, 40), support_kind: clean(item?.support_kind, 120),
+        source_ids: Array.isArray(item?.source_ids) ? item.source_ids.map(value => clean(value, 180)).slice(0, 8) : [],
+      })).filter(item => item.term) : [],
+      overlay: entry.keyword_audit.overlay && typeof entry.keyword_audit.overlay === "object" ? {
+        available: entry.keyword_audit.overlay.available === true,
+        boxes: Array.isArray(entry.keyword_audit.overlay.boxes) ? entry.keyword_audit.overlay.boxes.slice(0, 160).map(box => ({
+          left_percent: Number(box?.left_percent || 0), top_percent: Number(box?.top_percent || 0),
+          width_percent: Number(box?.width_percent || 0), height_percent: Number(box?.height_percent || 0),
+          terms: Array.isArray(box?.terms) ? box.terms.map(value => clean(value, 160)).slice(0, 12) : [],
+          text: clean(box?.text, 500), changed_source_id: clean(box?.changed_source_id, 180),
+          kind: ["ats", "changed", "both"].includes(box?.kind) ? box.kind : "ats",
+        })) : [],
+      } : {available:false, boxes:[]},
+    } : null,
     artifacts,
     job: {
       id: clean(job.id, 140), company: clean(job.company, 220), title: clean(job.title, 320),

@@ -469,7 +469,12 @@ negative answer is remembered and never becomes resume text. The context view
 lists every usable fact with its source, source kind, authority, and owner
 confirmation. Answers and source-level context remain local under the ignored
 `CV/.resume_studio/evidence_review.json` boundary and are never included in
-cloud bank sync.
+cloud bank sync. For an open gap, Studio also proposes specific roles,
+projects, courses, or repositories whose neighboring evidence makes them worth
+checking. These are labeled investigation hints, not facts. Victor can add a
+custom place or GitHub URL, use its tailored question as an answer prompt, and
+still must confirm his personal work before it becomes evidence. **Not in this
+place** suppresses one bad lead without falsely closing the capability gap.
 
 The canonical `CV/immutable/VictorJimenezResume.tex`,
 `CV/immutable/VictorJimenezResume.pdf`, and the historical
@@ -559,6 +564,13 @@ the winner slot, and shows the component sources, strengths, and limits. This
 is an owner-only decision aid—not a claim that an outside ChatGPT session or a
 hiring manager would choose the same resume. If no independent reviewer result
 exists, the UI says so and lowers confidence rather than inventing a verdict.
+Each saved version also exposes an **ATS keyword map**. Green terms occur in
+the rendered resume, yellow terms are supported by the private evidence bank
+but omitted from that version, and red terms are unsupported. When PDF geometry
+was preserved, the clean preview receives a review-only line overlay showing
+exact placement and meaningful rewrites; the downloadable PDF remains clean.
+The percentages are diagnostic posting comparisons, not scores produced by a
+recruiter's ATS.
 
 The four tailoring buttons queue independent runs, so switching postings or
 starting another mode does not replace the current draft. The header shows

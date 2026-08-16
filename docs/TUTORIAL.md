@@ -194,7 +194,21 @@ where/when plus what you did; that answer becomes reusable owner-confirmed
 evidence for later jobs. **I have not used this** is remembered as a known
 absence and can never authorize a resume claim. These answers stay in the
 private Mac evidence workspace, so the context panel requires the engine even
-when generated PDFs have been synced to the cloud.
+when generated PDFs have been synced to the cloud. Expand **Possible places to
+investigate** to see project/role/course suggestions derived from neighboring
+evidence, or add a custom place and optional repository URL. Clicking a hint
+prefills a specific personal-contribution question. A hint is never evidence
+until you submit a concrete affirmative answer. Use **not in this place** when
+a suggested project or role is wrong; the broader capability remains open.
+
+Expand **ATS keyword map** beneath any saved version to grade the tailor. Green
+means the exact supported posting term is visible in that resume, yellow means
+the evidence bank supports it but this version omitted it, and red means the
+evidence does not currently support it. Red terms link back to Context & Q&A.
+For newer drafts, the embedded preview highlights the exact rendered lines;
+green is a supported posting term, blue is a rewritten line, and purple is
+both. This overlay is review-only—the linked PDF is unchanged. Treat coverage
+as a diagnostic comparison, not a promise about any employer's ATS.
 
 - **Unchained generation** — performs a requirement-by-requirement evidence
   audit before drafting, searches the authorized Markdown graph, and may create
