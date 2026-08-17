@@ -2,27 +2,6 @@
  {
   "aggregators": {
    "hn": 5,
-   "jobright": 1128,
-   "simplify": 2559,
-   "speedyapply": 70,
-   "vansh": 452,
-   "zapply": 419
-  },
-  "alerts": 14,
-  "ats": {
-   "companies_polled": 800,
-   "failed": 1,
-   "ok": 799
-  },
-  "dropped_by_gates": 53337,
-  "new_jobs": 89,
-  "registry_size": 1769,
-  "took_s": 300.5,
-  "ts": 1785863468
- },
- {
-  "aggregators": {
-   "hn": 5,
    "jobright": 1162,
    "simplify": 2541,
    "speedyapply": 70,
@@ -6803,5 +6782,28 @@
   "registry_size": 2008,
   "took_s": 787.3,
   "ts": 1786978459
+ },
+ {
+  "aggregators": {
+   "hn": 9,
+   "jobright": "error: HTTPError: 429 Client Error: Too Many Requests for url: https://raw.githubusercontent.com/jobright-ai/2026-Software-Engineer-New-Grad/master/README.md",
+   "jobright_pm": 45,
+   "simplify": 2961,
+   "speedyapply": "error: HTTPError: 429 Client Error: Too Many Requests for url: https://raw.githubusercontent.com/speedyapply/2027-SWE-College-Jobs/main/NEW_GRAD_USA.md",
+   "vansh": "error: HTTPError: 429 Client Error: Too Many Requests for url: https://raw.githubusercontent.com/vanshb03/New-Grad-2026/dev/.github/scripts/listings.json",
+   "zapply": "error: HTTPError: 429 Client Error: Too Many Requests for url: https://raw.githubusercontent.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027/main/README.md",
+   "zapply_pm": 28
+  },
+  "alerts": 0,
+  "ats": {
+   "companies_polled": 800,
+   "failed": 0,
+   "ok": 800
+  },
+  "dropped_by_gates": 84954,
+  "new_jobs": 44,
+  "registry_size": 2009,
+  "took_s": 786.5,
+  "ts": 1786979982
  }
 ]
