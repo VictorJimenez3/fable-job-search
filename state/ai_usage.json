@@ -1,83 +1,6 @@
 {
- "events": [
-  {
-   "at": "2026-08-17T10:53:35+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 429: {'status': 429, 'title': 'Too Many Requests'}",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 7248,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 4119,
-   "prompt_tokens": 0,
-   "prompt_version": "company_research:prompt-policy-v1:6ea1032294646c8d",
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-17T10:53:37+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
-   "endpoint": "nvidia:deepseek",
-   "lane": "api",
-   "latency_ms": 2038,
-   "max_tokens": 2200,
-   "model": "deepseek-ai/deepseek-v4-pro",
-   "prompt_chars": 4119,
-   "prompt_tokens": 0,
-   "prompt_version": "company_research:prompt-policy-v1:6ea1032294646c8d",
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-17T10:54:12+00:00",
-   "completion_tokens": 769,
-   "detail": "",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 44749,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 4466,
-   "prompt_tokens": 1467,
-   "prompt_version": "company_research:prompt-policy-v1:21301a1c5e5e2687",
-   "selected": true,
-   "status": "ok",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-17T10:54:43+00:00",
-   "completion_tokens": 0,
-   "detail": "ReadTimeout: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=75)",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 75185,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 5793,
-   "prompt_tokens": 0,
-   "prompt_version": "company_research:prompt-policy-v1:bdd5286d1f42f66f",
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-17T10:54:43+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
-   "endpoint": "nvidia:deepseek",
-   "lane": "api",
-   "latency_ms": 173,
-   "max_tokens": 2200,
-   "model": "deepseek-ai/deepseek-v4-pro",
-   "prompt_chars": 5793,
-   "prompt_tokens": 0,
-   "prompt_version": "company_research:prompt-policy-v1:bdd5286d1f42f66f",
-   "status": "error",
-   "task": "company_research"
-  }
- ],
- "generated_at": 1786964084,
+ "events": [],
+ "generated_at": 1786964116,
  "history": [
   {
    "attempts": [
@@ -4293,26 +4216,9 @@
   "logical_calls": 10000,
   "requests": 10000
  },
- "logical_calls": 3,
- "models": {
-  "nvidia:deepseek": {
-   "errors": 2,
-   "model": "deepseek-ai/deepseek-v4-pro",
-   "ok": 0,
-   "requests": 2,
-   "tokens": 0
-  },
-  "nvidia:glm": {
-   "errors": 2,
-   "model": "z-ai/glm-5.2",
-   "ok": 1,
-   "requests": 3,
-   "tokens": 2236
-  }
- },
+ "logical_calls": 0,
+ "models": {},
  "provider": "nvidia-router",
- "requests": 6,
- "task_calls": {
-  "company_research": 3
- }
+ "requests": 0,
+ "task_calls": {}
 }
