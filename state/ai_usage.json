@@ -1,37 +1,6 @@
 {
- "events": [
-  {
-   "at": "2026-08-17T10:04:03+00:00",
-   "completion_tokens": 0,
-   "detail": "ReadTimeout: HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=75)",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 75124,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 4466,
-   "prompt_tokens": 0,
-   "prompt_version": "company_research:prompt-policy-v1:21301a1c5e5e2687",
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-17T10:04:03+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
-   "endpoint": "nvidia:deepseek",
-   "lane": "api",
-   "latency_ms": 62,
-   "max_tokens": 2200,
-   "model": "deepseek-ai/deepseek-v4-pro",
-   "prompt_chars": 4466,
-   "prompt_tokens": 0,
-   "prompt_version": "company_research:prompt-policy-v1:21301a1c5e5e2687",
-   "status": "error",
-   "task": "company_research"
-  }
- ],
- "generated_at": 1786961044,
+ "events": [],
+ "generated_at": 1786961070,
  "history": [
   {
    "attempts": [
@@ -4425,26 +4394,9 @@
   "logical_calls": 10000,
   "requests": 10000
  },
- "logical_calls": 1,
- "models": {
-  "nvidia:deepseek": {
-   "errors": 1,
-   "model": "deepseek-ai/deepseek-v4-pro",
-   "ok": 0,
-   "requests": 1,
-   "tokens": 0
-  },
-  "nvidia:glm": {
-   "errors": 1,
-   "model": "z-ai/glm-5.2",
-   "ok": 0,
-   "requests": 1,
-   "tokens": 0
-  }
- },
+ "logical_calls": 0,
+ "models": {},
  "provider": "nvidia-router",
- "requests": 2,
- "task_calls": {
-  "company_research": 1
- }
+ "requests": 0,
+ "task_calls": {}
 }
