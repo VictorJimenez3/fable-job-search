@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-08-17 14:34 UTC** · companies polled directly: **1784** (registry 2008) · jobs tracked: **42904** · new this run: **117** · alerts this run: **18**_
+_Last run: **2026-08-17 14:53 UTC** · companies polled directly: **1784** (registry 2008) · jobs tracked: **42904** · new this run: **117** · alerts this run: **18**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -103,8 +103,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 82 ⭐ | 16d | Quora | [Software Engineer, Machine Learning Platform, New Grad - Quora (Remote](https://jobs.ashbyhq.com/quora/452afc2e-0c79-41f8-8201-1aab7df775db) | Remote - Multiple Locations | other | likely | [Direct company / ATS monitoring](https://github.com/vanshb03/New-Grad-2026) |
 | 82 ⭐ | 18d | Consumer Direct Care Network | [Software Engineer I](https://jobright.ai/jobs/info/6a6c13c057120971bf3aa47e?utm_campaign=Software%20Engineering&utm_source=1103) | Missoula, MT, United States | healthtech | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 82 ⭐ | 24d | Boston Children's Hospital | [Healthcare Data Analyst I](https://jobright.ai/jobs/info/6a63cd0b8d53603449604606?utm_campaign=Data%20Analysis&utm_source=1103) | Boston, MA, United States | healthtech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 82 ⭐ | 27d | PMG | [Graduate Leadership Program - Data Analytics (January Start)](https://job-boards.greenhouse.io/pmg/jobs/8587053002) | Dallas, Texas | other | likely | [posting](https://job-boards.greenhouse.io/pmg/jobs/8587053002) |
-| 82 ⭐ | 27d | PMG | [Graduate Leadership Program - AI & Software Engineering (January Start](https://job-boards.greenhouse.io/pmg/jobs/8587050002) | Dallas, Texas | other | likely | [posting](https://job-boards.greenhouse.io/pmg/jobs/8587050002) |
+| 82 ⭐ | 28d | PMG | [Graduate Leadership Program - Data Analytics (January Start)](https://job-boards.greenhouse.io/pmg/jobs/8587053002) | Dallas, Texas | other | likely | [posting](https://job-boards.greenhouse.io/pmg/jobs/8587053002) |
+| 82 ⭐ | 28d | PMG | [Graduate Leadership Program - AI & Software Engineering (January Start](https://job-boards.greenhouse.io/pmg/jobs/8587050002) | Dallas, Texas | other | likely | [posting](https://job-boards.greenhouse.io/pmg/jobs/8587050002) |
 | 82 ⭐ | 28d | PMG | [Graduate Leadership Program - AI & Software Engineering (June Start)](https://job-boards.greenhouse.io/pmg/jobs/8587038002) | Dallas, Texas | other | likely | [Direct company / ATS monitoring](https://github.com/SimplifyJobs/New-Grad-Positions)<br>[Greenhouse fallback](https://job-boards.greenhouse.io/pmg/jobs/8587050002) |
 | 82 ⭐ | 28d | PMG | [Graduate Leadership Program - Data Analytics (June Start)](https://job-boards.greenhouse.io/pmg/jobs/8587036002) | Dallas, Texas | other | likely | [Direct company / ATS monitoring](https://github.com/SimplifyJobs/New-Grad-Positions)<br>[Greenhouse fallback](https://job-boards.greenhouse.io/pmg/jobs/8587053002) |
 | 81 ⭐ | 14h | TikTok | [Data Scientist Graduate (E-Commerce Governance) - 2027 Start](https://jobright.ai/jobs/info/6a82c74fb5a0ac0e84a22044?utm_campaign=Data%20Analysis&utm_source=1103) | Seattle, WA, United States | big_tech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
