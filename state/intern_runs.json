@@ -1238,5 +1238,25 @@
   "registry_size": 823,
   "took_s": 359.6,
   "ts": 1786885922
+ },
+ {
+  "aggregators": {
+   "dreamwork_internship": 463,
+   "simplify_internship": "error: HTTPError: 429 Client Error: Too Many Requests for url: https://raw.githubusercontent.com/SimplifyJobs/Summer2027-Internships/dev/.github/scripts/listings.json",
+   "speedyapply_internship": 77,
+   "zapply_internship": "error: HTTPError: 429 Client Error: Too Many Requests for url: https://raw.githubusercontent.com/zapplyjobs/Internships-2027/main/README.md"
+  },
+  "alerts": 0,
+  "ats": {
+   "companies_polled": 250,
+   "failed": 1,
+   "ok": 249
+  },
+  "dropped_by_gates": 29945,
+  "new_jobs": 147,
+  "profile": "internship",
+  "registry_size": 823,
+  "took_s": 386.0,
+  "ts": 1786977887
  }
 ]
