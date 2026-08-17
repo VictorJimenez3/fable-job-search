@@ -1,17 +1,17 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-17 17:04 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **111 shown / 11214 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-08-17 17:44 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **111 shown / 11214 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
-| 100 🔥 | 9h | Micron | [Intern - Wet Etch Process Development Engineer](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Wet-Etch-Process-Development-Engineer_JR108050) | Boise, ID - Main Site | semiconductors | workday |
-| 100 🔥 | 9h | Micron | [Intern - Process Development Engineer, Thin Films](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--Thin-Films_JR107323) | Boise, ID - Main Site | semiconductors | workday |
+| 100 🔥 | 10h | Micron | [Intern - Wet Etch Process Development Engineer](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Wet-Etch-Process-Development-Engineer_JR108050) | Boise, ID - Main Site | semiconductors | workday |
+| 100 🔥 | 10h | Micron | [Intern - Process Development Engineer, Thin Films](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--Thin-Films_JR107323) | Boise, ID - Main Site | semiconductors | workday |
 | 99 🔥 | 2d | GlobalFoundries | [Advanced Manufacturing Engineering Intern, Process & Equipment (Summer](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Advanced-Manufacturing-Engineering-Intern--Process---Equipment--Summer-2027-_JR-2604591) | USA - New York - Malta | semiconductors | workday |
 | 99 🔥 | 2d | GlobalFoundries | [Advanced Manufacturing Process Engineering Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/Advanced-Manufacturing-Process-Engineering-Intern--Summer-2027-_JR-2604659) | USA - Vermont - Essex Junction | semiconductors | workday |
-| 95 🔥 | 3d | Micron | [Intern - DRAM Process Integration](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---DRAM-Process-Integration_JR108075) | Boise, ID - Main Site | semiconductors | workday |
-| 95 🔥 | 3d | Micron | [Intern - Wafer Bonding Process Development](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Wafer-Bonding-Process-Development_JR108074) | Boise, ID - Main Site | semiconductors | workday |
+| 95 🔥 | 4d | Micron | [Intern - DRAM Process Integration](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---DRAM-Process-Integration_JR108075) | Boise, ID - Main Site | semiconductors | workday |
+| 95 🔥 | 4d | Micron | [Intern - Wafer Bonding Process Development](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Wafer-Bonding-Process-Development_JR108074) | Boise, ID - Main Site | semiconductors | workday |
 | 95 🔥 | 5d | Micron | [Intern - Process Development Engineer, 3D DRAM Metals](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--3D-DRAM-Metals_JR107311) | Boise, ID - Main Site | semiconductors | workday |
 | 95 🔥 | 6d | Micron | [Intern - Process Development Engineer, 3D DRAM CMP](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--3D-DRAM-CMP_JR107848) | Boise, ID - Main Site | semiconductors | workday |
 | 93 🔥 | 13d | Micron | [Intern - Photolithography Process](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Photolithography-Process_JR107508) | Boise, ID - Main Site | semiconductors | workday |
