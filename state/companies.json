@@ -22888,6 +22888,22 @@
   "status": "active",
   "token": "kantar"
  },
+ "workday:kauai:Kauai_External_Career_Site": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "Kauai_External_Career_Site"
+  },
+  "failures": 0,
+  "first_seen": 1786981698,
+  "last_ok": 1786981954,
+  "name": "County of Kauai",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "kauai"
+ },
  "workday:kbr:KBR_Careers": {
   "ats": "workday",
   "extra": {
@@ -25609,6 +25625,22 @@
   "last_ok": 1786678795,
   "name": "Pennsylvania State University",
   "origin": "harvest:simplify",
+  "sector": "",
+  "status": "active",
+  "token": "psu"
+ },
+ "workday:psu:Student": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "Student"
+  },
+  "failures": 0,
+  "first_seen": 1786981698,
+  "last_ok": 1786981976,
+  "name": "Penn State University",
+  "origin": "harvest:zapply",
+  "probe_attempts": 1,
   "sector": "",
   "status": "active",
   "token": "psu"
