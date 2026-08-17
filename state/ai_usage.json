@@ -1,12 +1,27 @@
 {
  "events": [
   {
-   "at": "2026-08-17T11:47:06+00:00",
+   "at": "2026-08-17T12:17:08+00:00",
    "completion_tokens": 0,
    "detail": "CallFailure: HTTP 429: {'status': 429, 'title': 'Too Many Requests'}",
    "endpoint": "nvidia:glm",
    "lane": "api",
-   "latency_ms": 4091,
+   "latency_ms": 6142,
+   "max_tokens": 2200,
+   "model": "z-ai/glm-5.2",
+   "prompt_chars": 6123,
+   "prompt_tokens": 0,
+   "prompt_version": "company_research:prompt-policy-v1:d20ea9179c184576",
+   "status": "error",
+   "task": "company_research"
+  },
+  {
+   "at": "2026-08-17T12:17:10+00:00",
+   "completion_tokens": 0,
+   "detail": "CallFailure: HTTP 429: {'status': 429, 'title': 'Too Many Requests'}",
+   "endpoint": "nvidia:glm",
+   "lane": "api",
+   "latency_ms": 8063,
    "max_tokens": 2200,
    "model": "z-ai/glm-5.2",
    "prompt_chars": 5028,
@@ -16,27 +31,27 @@
    "task": "company_research"
   },
   {
-   "at": "2026-08-17T11:47:08+00:00",
+   "at": "2026-08-17T12:17:12+00:00",
    "completion_tokens": 0,
    "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
    "endpoint": "nvidia:deepseek",
    "lane": "api",
-   "latency_ms": 1985,
+   "latency_ms": 3918,
    "max_tokens": 2200,
    "model": "deepseek-ai/deepseek-v4-pro",
-   "prompt_chars": 5028,
+   "prompt_chars": 6123,
    "prompt_tokens": 0,
-   "prompt_version": "company_research:prompt-policy-v1:126cc30f32879c04",
+   "prompt_version": "company_research:prompt-policy-v1:d20ea9179c184576",
    "status": "error",
    "task": "company_research"
   },
   {
-   "at": "2026-08-17T11:47:10+00:00",
+   "at": "2026-08-17T12:17:14+00:00",
    "completion_tokens": 0,
    "detail": "CallFailure: HTTP 429: {'status': 429, 'title': 'Too Many Requests'}",
    "endpoint": "nvidia:glm",
    "lane": "api",
-   "latency_ms": 8098,
+   "latency_ms": 12095,
    "max_tokens": 2200,
    "model": "z-ai/glm-5.2",
    "prompt_chars": 3942,
@@ -46,12 +61,27 @@
    "task": "company_research"
   },
   {
-   "at": "2026-08-17T11:47:12+00:00",
+   "at": "2026-08-17T12:17:16+00:00",
    "completion_tokens": 0,
    "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
    "endpoint": "nvidia:deepseek",
    "lane": "api",
-   "latency_ms": 1982,
+   "latency_ms": 6001,
+   "max_tokens": 2200,
+   "model": "deepseek-ai/deepseek-v4-pro",
+   "prompt_chars": 5028,
+   "prompt_tokens": 0,
+   "prompt_version": "company_research:prompt-policy-v1:126cc30f32879c04",
+   "status": "error",
+   "task": "company_research"
+  },
+  {
+   "at": "2026-08-17T12:17:18+00:00",
+   "completion_tokens": 0,
+   "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
+   "endpoint": "nvidia:deepseek",
+   "lane": "api",
+   "latency_ms": 3978,
    "max_tokens": 2200,
    "model": "deepseek-ai/deepseek-v4-pro",
    "prompt_chars": 3942,
@@ -61,265 +91,8 @@
    "task": "company_research"
   }
  ],
- "generated_at": 1786967233,
+ "generated_at": 1786969039,
  "history": [
-  {
-   "attempts": [
-    {
-     "at": "2026-08-16T18:48:04+00:00",
-     "completion_tokens": 0,
-     "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
-     "endpoint": "nvidia:deepseek",
-     "lane": "api",
-     "latency_ms": 114,
-     "max_tokens": 2200,
-     "model": "deepseek-ai/deepseek-v4-pro",
-     "prompt_chars": 3842,
-     "prompt_tokens": 0,
-     "status": "error",
-     "task": "company_research"
-    },
-    {
-     "at": "2026-08-16T18:48:04+00:00",
-     "completion_tokens": 0,
-     "detail": "CallFailure: HTTP 404: {'status': 404, 'title': 'Not Found', 'detail': \"Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc':",
-     "endpoint": "nvidia:kimi",
-     "lane": "api",
-     "latency_ms": 161,
-     "max_tokens": 2200,
-     "model": "moonshotai/kimi-k2.6",
-     "prompt_chars": 3842,
-     "prompt_tokens": 0,
-     "status": "error",
-     "task": "company_research"
-    },
-    {
-     "at": "2026-08-16T18:48:40+00:00",
-     "completion_tokens": 1059,
-     "detail": "",
-     "endpoint": "nvidia:glm",
-     "lane": "api",
-     "latency_ms": 35455,
-     "max_tokens": 2200,
-     "model": "z-ai/glm-5.2",
-     "prompt_chars": 3842,
-     "prompt_tokens": 901,
-     "selected": true,
-     "status": "ok",
-     "task": "company_research"
-    },
-    {
-     "at": "2026-08-16T18:49:24+00:00",
-     "completion_tokens": 2200,
-     "detail": "task schema validation failed",
-     "endpoint": "nvidia:nemotron",
-     "lane": "api",
-     "latency_ms": 79967,
-     "max_tokens": 2200,
-     "model": "nvidia/nemotron-3-ultra-550b-a55b",
-     "prompt_chars": 3842,
-     "prompt_tokens": 991,
-     "status": "invalid",
-     "task": "company_research"
-    },
-    {
-     "at": "2026-08-16T18:49:26+00:00",
-     "completion_tokens": 1419,
-     "detail": "",
-     "endpoint": "nvidia:glm",
-     "lane": "api",
-     "latency_ms": 46173,
-     "max_tokens": 2200,
-     "model": "z-ai/glm-5.2",
-     "prompt_chars": 5615,
-     "prompt_tokens": 1387,
-     "selected": true,
-     "status": "ok",
-     "task": "company_research"
-    },
-    {
-     "at": "2026-08-16T18:49:26+00:00",
-     "completion_tokens": 0,
-     "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
-     "endpoint": "nvidia:deepseek",
-     "lane": "api",
-     "latency_ms": 76,
-     "max_tokens": 2200,
-     "model": "deepseek-ai/deepseek-v4-pro",
-     "prompt_chars": 3725,
-     "prompt_tokens": 0,
-     "status": "error",
-     "task": "company_research"
-    },
-    {
-     "at": "2026-08-16T18:49:28+00:00",
-     "completion_tokens": 2107,
-     "detail": "",
-     "endpoint": "nvidia:nemotron",
-     "lane": "api",
-     "latency_ms": 48753,
-     "max_tokens": 2200,
-     "model": "nvidia/nemotron-3-ultra-550b-a55b",
-     "prompt_chars": 5615,
-     "prompt_tokens": 1565,
-     "status": "ok",
-     "task": "company_research"
-    },
-    {
-     "at": "2026-08-16T18:50:07+00:00",
-     "completion_tokens": 1382,
-     "detail": "",
-     "endpoint": "nvidia:glm",
-     "lane": "api",
-     "latency_ms": 41195,
-     "max_tokens": 2200,
-     "model": "z-ai/glm-5.2",
-     "prompt_chars": 3725,
-     "prompt_tokens": 1218,
-     "selected": true,
-     "status": "ok",
-     "task": "company_research"
-    },
-    {
-     "at": "2026-08-16T18:50:57+00:00",
-     "completion_tokens": 2200,
-     "detail": "task schema validation failed",
-     "endpoint": "nvidia:nemotron",
-     "lane": "api",
-     "latency_ms": 49446,
-     "max_tokens": 2200,
-     "model": "nvidia/nemotron-3-ultra-550b-a55b",
-     "prompt_chars": 6487,
-     "prompt_tokens": 1673,
-     "status": "invalid",
-     "task": "company_research"
-    },
-    {
-     "at": "2026-08-16T18:51:37+00:00",
-     "completion_tokens": 1285,
-     "detail": "",
-     "endpoint": "nvidia:glm",
-     "lane": "api",
-     "latency_ms": 89591,
-     "max_tokens": 2200,
-     "model": "z-ai/glm-5.2",
-     "prompt_chars": 6487,
-     "prompt_tokens": 1534,
-     "selected": true,
-     "status": "ok",
-     "task": "company_research"
-    },
-    {
-     "at": "2026-08-16T18:51:37+00:00",
-     "completion_tokens": 0,
-     "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
-     "endpoint": "nvidia:deepseek",
-     "lane": "api",
-     "latency_ms": 80,
-     "max_tokens": 2200,
-     "model": "deepseek-ai/deepseek-v4-pro",
-     "prompt_chars": 6178,
-     "prompt_tokens": 0,
-     "status": "error",
-     "task": "company_research"
-    },
-    {
-     "at": "2026-08-16T18:52:11+00:00",
-     "completion_tokens": 1439,
-     "detail": "",
-     "endpoint": "nvidia:glm",
-     "lane": "api",
-     "latency_ms": 33993,
-     "max_tokens": 2200,
-     "model": "z-ai/glm-5.2",
-     "prompt_chars": 6178,
-     "prompt_tokens": 1565,
-     "selected": true,
-     "status": "ok",
-     "task": "company_research"
-    },
-    {
-     "at": "2026-08-16T18:52:14+00:00",
-     "completion_tokens": 0,
-     "detail": "CallFailure: HTTP 429: {'status': 429, 'title': 'Too Many Requests'}",
-     "endpoint": "nvidia:glm",
-     "lane": "api",
-     "latency_ms": 3178,
-     "max_tokens": 2200,
-     "model": "z-ai/glm-5.2",
-     "prompt_chars": 5975,
-     "prompt_tokens": 0,
-     "status": "error",
-     "task": "company_research"
-    },
-    {
-     "at": "2026-08-16T18:52:26+00:00",
-     "completion_tokens": 0,
-     "detail": "per-run AI budget reached",
-     "endpoint": "none",
-     "lane": "router",
-     "latency_ms": 0,
-     "max_tokens": 240,
-     "model": "",
-     "prompt_chars": 6961,
-     "prompt_tokens": 0,
-     "status": "budget_skipped",
-     "task": "quality"
-    },
-    {
-     "at": "2026-08-16T18:52:28+00:00",
-     "completion_tokens": 0,
-     "detail": "per-run AI budget reached",
-     "endpoint": "none",
-     "lane": "router",
-     "latency_ms": 0,
-     "max_tokens": 240,
-     "model": "",
-     "prompt_chars": 1906,
-     "prompt_tokens": 0,
-     "status": "budget_skipped",
-     "task": "quality"
-    }
-   ],
-   "generated_at": 1786906352,
-   "logical_calls": 12,
-   "models": {
-    "nvidia:deepseek": {
-     "errors": 3,
-     "model": "deepseek-ai/deepseek-v4-pro",
-     "ok": 0,
-     "requests": 3,
-     "tokens": 0
-    },
-    "nvidia:glm": {
-     "errors": 1,
-     "model": "z-ai/glm-5.2",
-     "ok": 5,
-     "requests": 6,
-     "tokens": 13189
-    },
-    "nvidia:kimi": {
-     "errors": 1,
-     "model": "moonshotai/kimi-k2.6",
-     "ok": 0,
-     "requests": 1,
-     "tokens": 0
-    },
-    "nvidia:nemotron": {
-     "errors": 2,
-     "model": "nvidia/nemotron-3-ultra-550b-a55b",
-     "ok": 1,
-     "requests": 3,
-     "tokens": 10736
-    }
-   },
-   "provider": "nvidia-router",
-   "requests": 14,
-   "task_calls": {
-    "company_research": 6,
-    "quality": 6
-   }
-  },
   {
    "attempts": [
     {
@@ -4166,32 +3939,149 @@
    "task_calls": {
     "company_research": 2
    }
+  },
+  {
+   "attempts": [
+    {
+     "at": "2026-08-17T12:17:08+00:00",
+     "completion_tokens": 0,
+     "detail": "CallFailure: HTTP 429: {'status': 429, 'title': 'Too Many Requests'}",
+     "endpoint": "nvidia:glm",
+     "lane": "api",
+     "latency_ms": 6142,
+     "max_tokens": 2200,
+     "model": "z-ai/glm-5.2",
+     "prompt_chars": 6123,
+     "prompt_tokens": 0,
+     "prompt_version": "company_research:prompt-policy-v1:d20ea9179c184576",
+     "status": "error",
+     "task": "company_research"
+    },
+    {
+     "at": "2026-08-17T12:17:10+00:00",
+     "completion_tokens": 0,
+     "detail": "CallFailure: HTTP 429: {'status': 429, 'title': 'Too Many Requests'}",
+     "endpoint": "nvidia:glm",
+     "lane": "api",
+     "latency_ms": 8063,
+     "max_tokens": 2200,
+     "model": "z-ai/glm-5.2",
+     "prompt_chars": 5028,
+     "prompt_tokens": 0,
+     "prompt_version": "company_research:prompt-policy-v1:126cc30f32879c04",
+     "status": "error",
+     "task": "company_research"
+    },
+    {
+     "at": "2026-08-17T12:17:12+00:00",
+     "completion_tokens": 0,
+     "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
+     "endpoint": "nvidia:deepseek",
+     "lane": "api",
+     "latency_ms": 3918,
+     "max_tokens": 2200,
+     "model": "deepseek-ai/deepseek-v4-pro",
+     "prompt_chars": 6123,
+     "prompt_tokens": 0,
+     "prompt_version": "company_research:prompt-policy-v1:d20ea9179c184576",
+     "status": "error",
+     "task": "company_research"
+    },
+    {
+     "at": "2026-08-17T12:17:14+00:00",
+     "completion_tokens": 0,
+     "detail": "CallFailure: HTTP 429: {'status': 429, 'title': 'Too Many Requests'}",
+     "endpoint": "nvidia:glm",
+     "lane": "api",
+     "latency_ms": 12095,
+     "max_tokens": 2200,
+     "model": "z-ai/glm-5.2",
+     "prompt_chars": 3942,
+     "prompt_tokens": 0,
+     "prompt_version": "company_research:prompt-policy-v1:22d35327e62d2ba8",
+     "status": "error",
+     "task": "company_research"
+    },
+    {
+     "at": "2026-08-17T12:17:16+00:00",
+     "completion_tokens": 0,
+     "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
+     "endpoint": "nvidia:deepseek",
+     "lane": "api",
+     "latency_ms": 6001,
+     "max_tokens": 2200,
+     "model": "deepseek-ai/deepseek-v4-pro",
+     "prompt_chars": 5028,
+     "prompt_tokens": 0,
+     "prompt_version": "company_research:prompt-policy-v1:126cc30f32879c04",
+     "status": "error",
+     "task": "company_research"
+    },
+    {
+     "at": "2026-08-17T12:17:18+00:00",
+     "completion_tokens": 0,
+     "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
+     "endpoint": "nvidia:deepseek",
+     "lane": "api",
+     "latency_ms": 3978,
+     "max_tokens": 2200,
+     "model": "deepseek-ai/deepseek-v4-pro",
+     "prompt_chars": 3942,
+     "prompt_tokens": 0,
+     "prompt_version": "company_research:prompt-policy-v1:22d35327e62d2ba8",
+     "status": "error",
+     "task": "company_research"
+    }
+   ],
+   "generated_at": 1786969039,
+   "logical_calls": 3,
+   "models": {
+    "nvidia:deepseek": {
+     "errors": 3,
+     "model": "deepseek-ai/deepseek-v4-pro",
+     "ok": 0,
+     "requests": 3,
+     "tokens": 0
+    },
+    "nvidia:glm": {
+     "errors": 3,
+     "model": "z-ai/glm-5.2",
+     "ok": 0,
+     "requests": 3,
+     "tokens": 0
+    }
+   },
+   "provider": "nvidia-router",
+   "requests": 9,
+   "task_calls": {
+    "company_research": 3
+   }
   }
  ],
  "limits": {
   "logical_calls": 10000,
   "requests": 10000
  },
- "logical_calls": 2,
+ "logical_calls": 3,
  "models": {
   "nvidia:deepseek": {
-   "errors": 2,
+   "errors": 3,
    "model": "deepseek-ai/deepseek-v4-pro",
    "ok": 0,
-   "requests": 2,
+   "requests": 3,
    "tokens": 0
   },
   "nvidia:glm": {
-   "errors": 2,
+   "errors": 3,
    "model": "z-ai/glm-5.2",
    "ok": 0,
-   "requests": 2,
+   "requests": 3,
    "tokens": 0
   }
  },
  "provider": "nvidia-router",
- "requests": 6,
+ "requests": 9,
  "task_calls": {
-  "company_research": 2
+  "company_research": 3
  }
 }
