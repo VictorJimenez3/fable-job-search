@@ -2,27 +2,6 @@
  {
   "aggregators": {
    "hn": 5,
-   "jobright": 1086,
-   "simplify": 2563,
-   "speedyapply": 70,
-   "vansh": 452,
-   "zapply": 419
-  },
-  "alerts": 3,
-  "ats": {
-   "companies_polled": 800,
-   "failed": 0,
-   "ok": 800
-  },
-  "dropped_by_gates": 53357,
-  "new_jobs": 91,
-  "registry_size": 1769,
-  "took_s": 289.9,
-  "ts": 1785856844
- },
- {
-  "aggregators": {
-   "hn": 5,
    "jobright": 1128,
    "simplify": 2559,
    "speedyapply": 70,
@@ -6801,5 +6780,28 @@
   "registry_size": 2008,
   "took_s": 755.1,
   "ts": 1786976456
+ },
+ {
+  "aggregators": {
+   "hn": 9,
+   "jobright": 924,
+   "jobright_pm": "error: HTTPError: 503 Server Error: first byte timeout for url: https://raw.githubusercontent.com/jobright-ai/2026-Product-Management-New-Grad/master/README.md",
+   "simplify": 2961,
+   "speedyapply": 116,
+   "vansh": 346,
+   "zapply": "error: HTTPError: 429 Client Error: Too Many Requests for url: https://raw.githubusercontent.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027/main/README.md",
+   "zapply_pm": "error: HTTPError: 429 Client Error: Too Many Requests for url: https://raw.githubusercontent.com/zapplyjobs/New-Grad-Jobs-2027/main/README.md"
+  },
+  "alerts": 25,
+  "ats": {
+   "companies_polled": 800,
+   "failed": 0,
+   "ok": 800
+  },
+  "dropped_by_gates": 85270,
+  "new_jobs": 86,
+  "registry_size": 2008,
+  "took_s": 787.3,
+  "ts": 1786978459
  }
 ]
