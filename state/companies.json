@@ -4084,6 +4084,19 @@
   "status": "active",
   "token": "galaxydigitalservices"
  },
+ "greenhouse:gardacp": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1787096104,
+  "last_ok": 1787096104,
+  "name": "Garda Capital Partners",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "gardacp"
+ },
  "greenhouse:garnerhealth": {
   "ats": "greenhouse",
   "extra": {},
@@ -5716,6 +5729,19 @@
   "status": "active",
   "token": "sleepdoctor"
  },
+ "greenhouse:snorkelai": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1787096104,
+  "last_ok": 1787096104,
+  "name": "Snorkel AI",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "snorkelai"
+ },
  "greenhouse:snowflakecomputing": {
   "ats": "greenhouse",
   "extra": {},
@@ -6746,7 +6772,7 @@
   "last_ok": 0,
   "name": "Filtration Group",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "careers-filtrationgroupcorp"
@@ -7558,7 +7584,7 @@
   "last_ok": 0,
   "name": "By Light Professional IT Services",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "jobs-bylight"
@@ -7572,7 +7598,7 @@
   "last_ok": 0,
   "name": "Cole Engineering Services",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "jobs-cesi"
@@ -11133,7 +11159,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787093983,
+  "last_ok": 1787096121,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -11399,7 +11425,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1787093972,
+  "last_ok": 1787096111,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -11528,7 +11554,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787093985,
+  "last_ok": 1787096123,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13068,7 +13094,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1787093971,
+  "last_ok": 1787096110,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13804,7 +13830,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787093979,
+  "last_ok": 1787096120,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13913,7 +13939,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787093973,
+  "last_ok": 1787096111,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14584,7 +14610,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787093978,
+  "last_ok": 1787096118,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14793,6 +14819,22 @@
   "sector": "",
   "status": "active",
   "token": "harriscomputer"
+ },
+ "workday:hcad:HCADCareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "HCADCareers"
+  },
+  "failures": 0,
+  "first_seen": 1787096104,
+  "last_ok": 1787096105,
+  "name": "Harris Central Appraisal District",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "hcad"
  },
  "workday:hcmportal:Search": {
   "ats": "workday",
@@ -16190,7 +16232,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787093973,
+  "last_ok": 1787096113,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -17279,6 +17321,22 @@
   "status": "active",
   "token": "pureinsurance"
  },
+ "workday:pwc:Global_Campus_Careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "Global_Campus_Careers"
+  },
+  "failures": 0,
+  "first_seen": 1787096104,
+  "last_ok": 1787096106,
+  "name": "PricewaterhouseCoopers (PwC)",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "pwc"
+ },
  "workday:q2ebanking:Q2": {
   "ats": "workday",
   "extra": {
@@ -18080,7 +18138,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787093977,
+  "last_ok": 1787096117,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
