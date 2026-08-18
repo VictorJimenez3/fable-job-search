@@ -6737,6 +6737,20 @@
   "status": "invalid",
   "token": "careers-exponent"
  },
+ "icims:careers-filtrationgroupcorp": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1787092811,
+  "invalidated_at": 1787092813,
+  "last_ok": 0,
+  "name": "Filtration Group",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "careers-filtrationgroupcorp"
+ },
  "icims:careers-fsg": {
   "ats": "icims",
   "extra": {},
@@ -7534,6 +7548,34 @@
   "sector": "",
   "status": "invalid",
   "token": "gsk-us-earlytalent"
+ },
+ "icims:jobs-bylight": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1787092811,
+  "invalidated_at": 1787092813,
+  "last_ok": 0,
+  "name": "By Light Professional IT Services",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "jobs-bylight"
+ },
+ "icims:jobs-cesi": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1787092811,
+  "invalidated_at": 1787092813,
+  "last_ok": 0,
+  "name": "Cole Engineering Services",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "jobs-cesi"
  },
  "icims:jobs-legrand": {
   "ats": "icims",
@@ -11091,7 +11133,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787090242,
+  "last_ok": 1787092828,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -11357,7 +11399,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1787090233,
+  "last_ok": 1787092817,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -11486,7 +11528,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787090244,
+  "last_ok": 1787092830,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13026,7 +13068,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1787090231,
+  "last_ok": 1787092817,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13693,6 +13735,22 @@
   "status": "active",
   "token": "dickssportinggoods"
  },
+ "workday:dimensional:dfa_careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "dfa_careers"
+  },
+  "failures": 0,
+  "first_seen": 1787092811,
+  "last_ok": 1787092812,
+  "name": "Dimensional Fund Advisors",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "dimensional"
+ },
  "workday:disney:disneycareer": {
   "ats": "workday",
   "extra": {
@@ -13746,7 +13804,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787090241,
+  "last_ok": 1787092827,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13855,7 +13913,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787090233,
+  "last_ok": 1787092818,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14237,6 +14295,22 @@
   "status": "active",
   "token": "fmr"
  },
+ "workday:foresters:ForestersFinancialCareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "ForestersFinancialCareers"
+  },
+  "failures": 0,
+  "first_seen": 1787092811,
+  "last_ok": 1787092812,
+  "name": "Foresters Financial",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "foresters"
+ },
  "workday:fox:Domestic": {
   "ats": "workday",
   "extra": {
@@ -14510,7 +14584,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787090238,
+  "last_ok": 1787092824,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16116,7 +16190,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787090235,
+  "last_ok": 1787092819,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -18006,7 +18080,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787090237,
+  "last_ok": 1787092823,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
