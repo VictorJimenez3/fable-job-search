@@ -40,7 +40,11 @@ def save(name: str, obj, namespace: str | None = None) -> None:
     p = _path(name, namespace)
     tmp = p.with_suffix(".tmp")
     with open(tmp, "w") as f:
-        json.dump(obj, f, indent=1, sort_keys=True, ensure_ascii=False)
+        # The jobs snapshot is a committed production artifact. Compact JSON
+        # keeps a full score rebuild below GitHub's 100 MB blob limit while
+        # remaining ordinary JSON for the web app and Mac companion.
+        json.dump(obj, f, sort_keys=True, ensure_ascii=False,
+                  separators=(",", ":"))
         f.write("\n")
     tmp.replace(p)
 
@@ -58,7 +62,8 @@ def save_shared(name: str, obj) -> None:
     p = _path(name, shared=True)
     tmp = p.with_suffix(".tmp")
     with open(tmp, "w") as f:
-        json.dump(obj, f, indent=1, sort_keys=True, ensure_ascii=False)
+        json.dump(obj, f, sort_keys=True, ensure_ascii=False,
+                  separators=(",", ":"))
         f.write("\n")
     tmp.replace(p)
 

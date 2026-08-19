@@ -2085,3 +2085,16 @@ discovery times out; tracking-query variants retry their canonical page path,
 and explicit `jobResult.isDeleted` metadata is treated as the same closed
 verdict. Transient errors remain auditable, and no expiry is inferred from a
 failed request.
+
+## 140. Posting verdicts must lower the live score and snapshots must fit the blob cap (2026-08-19)
+
+Deterministic posting analysis is part of the score users act on, not only an
+alert gate. When a newly fetched description establishes a positive experience
+floor, the in-memory Job receives the same auditable score penalty as the
+stored-record repair path; this prevents a high score from surviving until a
+later cycle. Full rescore remains the authoritative migration for older rows.
+
+The committed JSON state is now emitted compactly. It remains ordinary,
+sorted, UTF-8 JSON for the browser and Mac companion, but the jobs snapshot
+stays below GitHub's 100 MB blob limit during a full score rebuild. This is a
+serialization-only change; no records or fields are dropped.

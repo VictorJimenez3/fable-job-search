@@ -153,6 +153,12 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   demotions remain on the row instead of being promoted back to a sibling's
   calibrated score. The reason ledger still records both the verdict and any
   diversity adjustment.
+- **Experience verdicts reach the displayed score:** when posting text is
+  fetched during a crawl, the in-memory row now receives the deterministic
+  `years_min` penalty immediately as well as `alert_ok=False`; this keeps a
+  high score from surviving until a later rescore. `python -m radar.main
+  rescore` is the documented repair for older analyzed rows. Committed JSON is
+  compact so that that full rebuild remains under GitHub's blob-size limit.
 - **Jobright closed-page signal:** a bounded Jobright resolver now recognizes
   the definitive 200-page banner “This job has closed.” as expired evidence,
   stores the page-signal version/reason, and prevents that sighting from
