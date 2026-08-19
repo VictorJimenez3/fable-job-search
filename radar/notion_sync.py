@@ -201,9 +201,15 @@ def verify_connection() -> None:
 
 
 def archive_page(token: str, page_id: str) -> None:
-    """Archive (soft-delete, reversible from Notion's trash) a page by ID."""
+    """Trash (soft-delete, reversible from Notion's trash) a page by ID.
+
+    ``in_trash`` is the current Notion page-update field.  The older
+    ``archived`` alias started returning 400s for some live pages after
+    Notion's 2026 API changes, which left terminal tracker pages retrying on
+    every crawl.
+    """
     r = requests.patch(f"https://api.notion.com/v1/pages/{page_id}",
-                       headers=_headers(token), json={"archived": True}, timeout=20)
+                       headers=_headers(token), json={"in_trash": True}, timeout=20)
     r.raise_for_status()
 
 
