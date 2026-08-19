@@ -742,23 +742,30 @@ def resolve_links_cmd() -> int:
 
     Normal crawls do this opportunistically. This command is the explicit
     repair knob when Victor wants to accelerate an existing backlog without
-    making an unbounded number of third-party requests.
+    making an unbounded number of third-party requests. Network resolution is
+    parallel, but state mutation stays sequential so a slow or failed request
+    cannot leave a half-written record behind.
     """
     now = int(time.time())
     jobs_state = state.jobs()
+    terminal_statuses = {lifecycle.EXPIRED, lifecycle.FILLED}
     candidates = [
         (jid, record) for jid, record in jobs_state.items()
         if link_resolver.is_aggregator_url(record.get("url"))
+        and record.get("posting_status", lifecycle.OPEN) not in terminal_statuses
         and link_resolver.needs_resolution(record, record.get("url", ""), now)
     ]
     candidates.sort(key=lambda pair: (
         1 if pair[1].get("alert_ok") else 0,
+        1 if not pair[1].get("link_resolution") else 0,
         int(pair[1].get("score") or 0),
         int(pair[1].get("last_seen_at") or pair[1].get("first_seen") or 0),
     ), reverse=True)
-    limit = max(0, int(env("RADAR_LINK_RESOLVE_LIMIT", "50")))
-    attempted = resolved = closed = unchanged = errors = 0
-    for _jid, record in candidates[:limit]:
+    limit = max(0, int(env("RADAR_LINK_RESOLVE_LIMIT", "200")))
+    workers = max(1, min(32, int(env("RADAR_LINK_RESOLVE_WORKERS", "12"))))
+
+    def prepare(candidate: tuple[str, dict]):
+        jid, record = candidate
         job = Job(
             company=record.get("company", ""), title=record.get("title", ""),
             url=record.get("url", ""), source=record.get("source", ""),
@@ -770,8 +777,29 @@ def resolve_links_cmd() -> int:
         job.source_url_variants = list(record.get("source_url_variants") or [])
         job.alternate_urls = list(record.get("alternate_urls") or [])
         job.link_resolution = dict(record.get("link_resolution") or {})
-        attempted += 1
         result = link_resolver.resolve_job(job, existing=record, now=now)
+        return jid, record, job, result
+
+    resolved_results = []
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        futures = [ex.submit(prepare, candidate) for candidate in candidates[:limit]]
+        for future in as_completed(futures):
+            try:
+                resolved_results.append(future.result())
+            except Exception as exc:
+                # Keep one unexpected parser/transport failure from cancelling
+                # the entire maintenance batch. The normal resolver already
+                # turns expected HTTP failures into an auditable result.
+                resolved_results.append((None, None, None, {
+                    "status": "error", "error": type(exc).__name__,
+                }))
+
+    attempted = resolved = closed = unchanged = errors = 0
+    for _jid, record, job, result in resolved_results:
+        if record is None or job is None:
+            errors += 1
+            continue
+        attempted += 1
         if result.get("status") == "closed":
             record["link_resolution"] = result
             lifecycle.mark_terminal(

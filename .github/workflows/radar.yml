@@ -14,7 +14,49 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  repair-links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30af803 # v6
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Set up frozen Radar environment
+        uses: ./.github/actions/setup-radar
+
+      - name: Repair cached aggregator liveness
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          RADAR_LINK_RESOLVE_LIMIT: "200"
+          RADAR_LINK_RESOLVE_WORKERS: "16"
+          RADAR_PROFILE: "new_grad"
+        run: |
+          git config user.name "job-radar[bot]"
+          git config user.email "radar@users.noreply.github.com"
+          for i in 1 2 3; do
+            python -m radar.main resolve-links
+            git add state docs
+            if git diff --cached --quiet; then
+              echo "link-repair: no generated-state changes"
+              exit 0
+            fi
+            git commit -m "radar: repair aggregator liveness $(date -u +'%Y-%m-%d %H:%M')"
+            if git push; then
+              echo "link-repair: published on attempt $i"
+              exit 0
+            fi
+            echo "link-repair: upstream moved; retrying against fresh state"
+            git fetch origin "${GITHUB_REF_NAME}"
+            git reset --hard "origin/${GITHUB_REF_NAME}"
+          done
+          echo "link-repair: upstream kept moving; leaving production unchanged" >&2
+          exit 1
+
   crawl:
+    needs: repair-links
+    if: ${{ always() && needs.repair-links.result != 'cancelled' }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:

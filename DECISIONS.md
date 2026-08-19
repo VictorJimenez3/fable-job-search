@@ -2070,3 +2070,15 @@ and review gates. Queueing a batch creates drafts only; it never changes a
 stage to Applied and never submits an application. Notion tailored sections and
 broader duplicate reconciliation are deferred until the current workflow proves
 the batch loop useful.
+
+## 139. Closed-page cleanup must be independent of full discovery (2026-08-19)
+
+The full radar crawl can legitimately spend its 25-minute budget on source
+discovery and safe state reconciliation. That budget must not also determine
+whether an already-known Jobright posting is removed from the action queue.
+`resolve-links` therefore checks only still-open aggregator rows in bounded
+parallel batches, mutating state sequentially after network work completes.
+The default batch is 200 rows and the scheduled `radar.yml` workflow runs it
+in a separate pre-crawl job with a push-race retry. Definitive Jobright
+closed-page signals can now advance into History even when discovery times out;
+transient errors remain auditable and do not infer expiry.

@@ -67,7 +67,10 @@ migration for compatibility.
   and lifecycle events. Application-history cards also show how long the
   posting was up (in days, months, or years) instead of a lifecycle date. This
   retained dataset supports future posting-timeline analysis; it is not a
-  second active application board.
+  second active application board. The scheduled radar first checks a bounded
+  batch of still-open aggregator pages in parallel, so a Jobright page that
+  visibly says “This job has closed.” is moved here even if the larger
+  discovery crawl is slow.
 - **Per-job workspace** (click the title or details ▸), four tabs: **Fit &
   eligibility** opens first with role family, posting sponsorship, DOL sponsor
   history, required years, location, salary, posting age, score reasons, a short

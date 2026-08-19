@@ -1,6 +1,7 @@
-from types import SimpleNamespace
 import time
+from types import SimpleNamespace
 
+import radar.main as radar_main
 from radar import link_resolver
 from radar.alerts import format_line
 from radar.dedupe import collapse_cross_source_jobs
@@ -230,3 +231,50 @@ def test_outputs_show_direct_and_fallback_links():
     assert "https://jobs.lever.co/acme/123" in line
     assert "Jobright fallback" in line
     assert "https://jobright.ai/jobs/info/abc" in dashboard
+
+
+def test_resolve_links_cmd_batches_open_records_in_parallel(monkeypatch):
+    jobs = {
+        "open-a": {
+            "id": "open-a", "company": "Acme", "title": "SWE",
+            "url": "https://jobright.ai/jobs/info/a", "source": "jobright",
+            "posting_status": "open", "alert_ok": True, "score": 90,
+        },
+        "open-b": {
+            "id": "open-b", "company": "Beta", "title": "SWE",
+            "url": "https://jobright.ai/jobs/info/b", "source": "jobright",
+            "posting_status": "open", "score": 80,
+        },
+        "already-expired": {
+            "id": "already-expired", "company": "Gamma", "title": "SWE",
+            "url": "https://jobright.ai/jobs/info/c", "source": "jobright",
+            "posting_status": "expired", "score": 99,
+        },
+    }
+    calls = []
+
+    def fake_resolve(job, existing=None, now=None):
+        calls.append(job.url)
+        return {"status": "checked_no_direct", "checked_at": now,
+                "original_url": job.url, "page_signal_version": 1}
+
+    monkeypatch.setenv("RADAR_LINK_RESOLVE_LIMIT", "2")
+    monkeypatch.setenv("RADAR_LINK_RESOLVE_WORKERS", "2")
+    monkeypatch.setattr(radar_main.state, "jobs", lambda: jobs)
+    monkeypatch.setattr(radar_main.state, "applied", lambda: [])
+    monkeypatch.setattr(radar_main.state, "companies", lambda: {})
+    monkeypatch.setattr(radar_main.state, "load", lambda name, default=None: default)
+    monkeypatch.setattr(radar_main.state, "save", lambda name, value: None)
+    monkeypatch.setattr(radar_main, "write_outputs", lambda *args: None)
+    monkeypatch.setattr(radar_main, "_repair_duplicate_job_state",
+                        lambda current, applied: (current, False))
+    monkeypatch.setattr(link_resolver, "resolve_job", fake_resolve)
+
+    assert radar_main.resolve_links_cmd() == 0
+    assert sorted(calls) == [
+        "https://jobright.ai/jobs/info/a",
+        "https://jobright.ai/jobs/info/b",
+    ]
+    assert jobs["open-a"]["link_resolution"]["status"] == "checked_no_direct"
+    assert jobs["open-b"]["link_resolution"]["status"] == "checked_no_direct"
+    assert "link_resolution" not in jobs["already-expired"]
