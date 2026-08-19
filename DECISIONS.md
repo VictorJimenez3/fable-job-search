@@ -2082,5 +2082,6 @@ The CLI default batch is 200 rows; the scheduled `radar.yml` workflow uses an
 800-row production batch in a separate pre-crawl job with a push-race retry.
 Definitive Jobright closed-page signals can now advance into History even when
 discovery times out; tracking-query variants retry their canonical page path,
-transient errors remain auditable, and no expiry is inferred from a failed
-request.
+and explicit `jobResult.isDeleted` metadata is treated as the same closed
+verdict. Transient errors remain auditable, and no expiry is inferred from a
+failed request.

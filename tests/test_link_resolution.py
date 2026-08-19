@@ -102,6 +102,25 @@ def test_resolver_uses_public_detail_apply_link_as_fallback(monkeypatch):
     assert result["resolved_url"] == direct
 
 
+def test_resolver_marks_jobright_deleted_metadata_as_expired(monkeypatch):
+    aggregator = "https://jobright.ai/jobs/info/abc123"
+    monkeypatch.setattr(
+        link_resolver.http, "get",
+        lambda url, **kwargs: _response(aggregator, "<html>visitor variant</html>"),
+    )
+    monkeypatch.setattr(
+        link_resolver, "_public_jobright_detail",
+        lambda url: {"result": {"jobDetail": {"jobResult": {"isDeleted": True}}}},
+    )
+
+    result = link_resolver.resolve_link(aggregator, now=100)
+
+    assert result["status"] == "closed"
+    assert result["posting_status"] == "expired"
+    assert result["page_signal_version"] == link_resolver.JOBRIGHT_PAGE_SIGNAL_VERSION
+    assert "deleted" in result["reason"].lower()
+
+
 def test_resolver_keeps_aggregator_when_no_direct_link(monkeypatch):
     aggregator = "https://jobright.ai/jobs/info/abc123"
     monkeypatch.setattr(
