@@ -2078,7 +2078,7 @@ discovery and safe state reconciliation. That budget must not also determine
 whether an already-known Jobright posting is removed from the action queue.
 `resolve-links` therefore checks only still-open aggregator rows in bounded
 parallel batches, mutating state sequentially after network work completes.
-The default batch is 200 rows and the scheduled `radar.yml` workflow runs it
-in a separate pre-crawl job with a push-race retry. Definitive Jobright
-closed-page signals can now advance into History even when discovery times out;
-transient errors remain auditable and do not infer expiry.
+The CLI default batch is 200 rows; the scheduled `radar.yml` workflow uses an
+800-row production batch in a separate pre-crawl job with a push-race retry.
+Definitive Jobright closed-page signals can now advance into History even when
+discovery times out; transient errors remain auditable and do not infer expiry.
