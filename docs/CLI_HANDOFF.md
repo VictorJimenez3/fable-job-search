@@ -34,7 +34,7 @@ Before changing the radar, read these in order:
   `docs/feed.xml`, or `docs/internships/`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
-## Current operational facts (verified 2026-08-16)
+## Current operational facts (verified 2026-08-19)
 
 ### vNext foundation (implemented and verified 2026-08-16)
 
@@ -127,6 +127,44 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   not a resume fact, and J&J is already recorded as ruled out for that
   capability. Existing old bank reports without geometry degrade to the
   term list or an explicit unavailable state.
+
+### Current change (verified 2026-08-17)
+
+- **Resume Studio effort profile and latency closure:** the local engine keeps
+  Codex pinned to `gpt-5.6-luna` and now uses high reasoning for every stage by
+  Victor's standing preference. Lower effort values and max are rejected and
+  fall back to high. A single line-repair pass now precedes the deterministic
+  compactor; the second frontier repair pass was removed after controlled runs
+  showed diminishing returns. Every provider-flow row records the selected
+  effort alongside model, latency, status, and observed tokens. On the same
+  Merck posting, Luna low/medium/high returned valid plans in 69/82/76 seconds;
+  high produced the safest compiled geometry, while max was stopped after
+  4:51 without a structured response and is now disabled.
+
+### Current change (verified 2026-08-19)
+
+- **Fresh new-grad action queue:** the classic platform defaults New-grad Jobs
+  to entry-compatible or unclear experience and a one-month Best Match window.
+  Tracked/Maybe roles remain visible when they are older or experienced so
+  saved work is not lost; explicit filters expose the broader research board.
+  Expired and filled rows remain in History, not active Jobs.
+- **Score verdicts survive company concentration:** full rescoring now resets
+  only the prior concentration adjustment. Posting/quality/lifecycle
+  demotions remain on the row instead of being promoted back to a sibling's
+  calibrated score. The reason ledger still records both the verdict and any
+  diversity adjustment.
+- **Jobright closed-page signal:** a bounded Jobright resolver now recognizes
+  the definitive 200-page banner “This job has closed.” as expired evidence,
+  stores the page-signal version/reason, and prevents that sighting from
+  reopening the role during the same crawl. Older no-direct caches are
+  rechecked once under the new signal. `resolve-links` reports closed rows
+  separately from transient errors.
+- **Owner Resume Studio batch:** **Tailor today** selects up to 12 roles added
+  to the Pipeline on the local calendar day, queues one chosen mode through
+  the existing private engine bridge, and never submits or marks applications.
+  The engine's existing two-run concurrency and bank/review gates remain in
+  force. Notion tailored sections and broader duplicate reconciliation remain
+  intentionally deferred.
 
 ### Previous change (verified 2026-08-15)
 
@@ -345,8 +383,11 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   aggregator URL in `alternate_urls`, and shows source/fallback links in issue
   alerts and `docs/DASHBOARD.md`. A strict employer+title+compatible-location
   match can merge an aggregator row into one direct ATS row; ambiguous roles
-  remain separate. `python -m radar.main resolve-links` accelerates the same
-  cached, auditable backfill for existing state.
+  remain separate. A definitive Jobright page banner saying the posting has
+  closed is now stored as expired evidence before direct-link promotion, so it
+  cannot remain in active Jobs merely because the page returned HTTP 200.
+  `python -m radar.main resolve-links` accelerates the same cached, auditable
+  backfill for existing state and reports closed rows separately.
 - **Email lifecycle:** `email-watch` is active when
   `EMAIL_ADDRESS` / `EMAIL_APP_PASSWORD` are configured. It searches a
   bounded 21-day window, decodes ATS headers, matches employer plus title, and
@@ -389,8 +430,10 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   level-II/L4/mid-level title receives the profile-driven `-28` locked
   eligibility contribution even when its wording also says early career; it
   stays dashboard-visible but cannot alert. Same-company/title postings are
-  treated as exact location/requisition variants and tied to the strongest
-  displayed score without a diversity penalty. Different but conservatively
+  treated as exact location/requisition variants and normally tied to the
+  strongest displayed score without a diversity penalty; posting-specific
+  quality/experience/lifecycle verdicts remain authoritative on each row.
+  Different but conservatively
   similar titles are compared only within the same company and role bucket;
   weaker siblings get a bounded `-1` to `-3` adjustment, then the existing
   company-concentration guard prevents a crowded employer from filling the

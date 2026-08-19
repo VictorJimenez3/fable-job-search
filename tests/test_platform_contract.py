@@ -10,6 +10,25 @@ def test_platform_mirror_matches_canonical_frontend():
     assert mirror == canonical
 
 
+def test_platform_defaults_to_a_fresh_entry_compatible_action_queue():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    assert 'experience:"entryfit"' in html
+    assert 'bestWindow:"2592000"' in html
+    assert "Fresh action queue." in html
+    assert "Expired and filled postings are removed from active Jobs" in html
+    assert "posting-specific verdicts preserved" in (ROOT / "radar" / "score.py").read_text()
+
+
+def test_platform_exposes_owner_batch_resume_tailoring_for_today():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    assert "Tailor today" in html
+    assert "RESUME_BATCH_LIMIT = 12" in html
+    assert "function resumeBatchCandidates()" in html
+    assert "function queueResumeBatch()" in html
+    assert "private drafts · no applications sent" in html
+    assert "local calendar day" in html
+
+
 def test_outreach_uses_public_search_links_without_linkedin_scraping():
     html = (ROOT / "webapp" / "index.html").read_text()
     assert "function recruiterDorks(j)" in html

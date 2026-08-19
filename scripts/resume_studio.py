@@ -101,7 +101,10 @@ MAX_RIGHT_SLACK_PT = 38.0
 # wrapping. Treat that as a failed draft so the model gets a real chance to
 # shorten it or the deterministic source fallback can restore a safer line.
 MIN_RIGHT_SLACK_PT = 12.0
-MAX_LINE_EDIT_PASSES = 2
+# A single geometry-aware editor pass is enough before the deterministic
+# compactor takes over.  A second frontier call was usually paraphrase churn
+# after the first pass had already made the line safe.
+MAX_LINE_EDIT_PASSES = 1
 MAX_SPACE_EXPANSION_CANDIDATES = 4
 MIN_MEANINGFUL_BULLET_CHARS = 48
 # A rewrite this close to its authorized source is normally presentation
@@ -139,6 +142,20 @@ TAILOR_MODE_ALIASES = {
     "free": "unrestricted", "unrestricted": "unrestricted",
     "unchained": "generation", "generate": "generation",
     "generation": "generation", "generative": "generation",
+}
+# Victor's standing preference is the high Luna lane for every tailoring stage.
+# Keep the task map explicit for auditability, but reject lower or experimental
+# effort overrides so a future run cannot silently send max reasoning.
+CODEX_EFFORTS = frozenset(("high",))
+CODEX_TASK_EFFORT_DEFAULTS = {
+    "draft": "high",
+    "synthesis": "high",
+    "gap_analysis": "high",
+    "space_expansion": "high",
+    "line_edit": "high",
+    "revision": "high",
+    "review": "high",
+    "workshop": "high",
 }
 FORBIDDEN_RESUME_TERM_RE = re.compile(r"\bticc\b", re.I)
 PROTECTED_QUALIFIERS = (
@@ -2419,6 +2436,51 @@ def provider_usage_tokens(stderr_path: Path) -> Optional[int]:
     return int(matches[-1].replace(",", "")) if matches else None
 
 
+def codex_effort_task(label: str) -> str:
+    """Map a durable provider label to its reasoning-budget category."""
+    normalized = str(label or "").strip().lower()
+    if (
+        normalized.startswith(("review", "critique"))
+        or "_critique" in normalized
+    ):
+        return "review"
+    if normalized.startswith("line_edit"):
+        return "line_edit"
+    if normalized.startswith("revision"):
+        return "revision"
+    if normalized.startswith("workshop"):
+        return "workshop"
+    if normalized.startswith("gap_analysis"):
+        return "gap_analysis"
+    if normalized.startswith("space_expansion"):
+        return "space_expansion"
+    if normalized.startswith("synthesis"):
+        return "synthesis"
+    return "draft"
+
+
+def codex_reasoning_effort(label: str, override: Optional[str] = None) -> str:
+    """Return the configured Luna effort for one stage.
+
+    The lookup order makes experiments easy without forcing a permanent
+    configuration change: an explicit call override wins, then a task-specific
+    environment variable, then the global benchmark override, then the safe
+    production default for that task.
+    """
+    task = codex_effort_task(label)
+    candidates = [
+        override,
+        os.environ.get("RESUME_STUDIO_%s_CODEX_EFFORT" % task.upper()),
+        os.environ.get("RESUME_STUDIO_CODEX_EFFORT"),
+        CODEX_TASK_EFFORT_DEFAULTS.get(task, "high"),
+    ]
+    for value in candidates:
+        normalized = str(value or "").strip().lower()
+        if normalized in CODEX_EFFORTS:
+            return normalized
+    return "high"
+
+
 def provider_model_label(provider: str) -> str:
     """Name the approved subscription lane without pretending to know hidden model routing."""
     if str(provider or "") == "codex":
@@ -2456,11 +2518,16 @@ def run_provider(
     label: str,
     timeout: int = RUN_TIMEOUT_SECONDS,
     schema: Optional[Dict[str, Any]] = None,
+    codex_effort: Optional[str] = None,
 ) -> Dict[str, Any]:
     commands = provider_commands()
     executable = commands.get(provider)
+    requested_effort = codex_reasoning_effort(label, codex_effort) if provider == "codex" else ""
     if not executable:
-        return {"provider": provider, "ok": False, "error": "CLI not installed"}
+        return {
+            "provider": provider, "ok": False, "error": "CLI not installed",
+            "reasoning_effort": requested_effort,
+        }
     prompt_path = run_dir / ("prompt_" + label + "_" + provider + ".txt")
     stdout_path = run_dir / ("stdout_" + label + "_" + provider + ".txt")
     stderr_path = run_dir / ("stderr_" + label + "_" + provider + ".txt")
@@ -2469,22 +2536,13 @@ def run_provider(
     schema_path = run_dir / ("schema_" + label + "_" + provider + ".json")
     write_json(schema_path, schema)
     if provider == "codex":
-        effort_variable = (
-            "RESUME_STUDIO_REVIEW_CODEX_EFFORT"
-            if label.startswith("review")
-            else "RESUME_STUDIO_CODEX_EFFORT"
-        )
-        default_effort = "medium" if label.startswith("review") else "high"
-        configured_effort = os.environ.get(effort_variable, default_effort).strip().lower()
-        if configured_effort not in {"low", "medium", "high", "max"}:
-            configured_effort = "high"
         args = [
             executable,
             "exec",
             "-c",
             "model=" + CODEX_LUNA_MODEL,
             "-c",
-            "model_reasoning_effort=" + configured_effort,
+            "model_reasoning_effort=" + requested_effort,
             "--sandbox",
             "read-only",
             "--ephemeral",
@@ -2507,7 +2565,10 @@ def run_provider(
             str(cv_root(repo_root())),
         ]
     else:
-        return {"provider": provider, "ok": False, "error": "unsupported provider lane"}
+        return {
+            "provider": provider, "ok": False, "error": "unsupported provider lane",
+            "reasoning_effort": requested_effort,
+        }
     started = time.time()
     stdout_path.touch()
     try:
@@ -2535,6 +2596,7 @@ def run_provider(
                     return {
                         "provider": provider,
                         "ok": True,
+                        "reasoning_effort": requested_effort,
                         "elapsed_seconds": round(time.time() - started, 1),
                         "data": recovered,
                         "usage_tokens": provider_usage_tokens(stderr_path),
@@ -2551,6 +2613,7 @@ def run_provider(
             return {
                 "provider": provider,
                 "ok": True,
+                "reasoning_effort": requested_effort,
                 "elapsed_seconds": round(time.time() - started, 1),
                 "data": data,
                 "usage_tokens": provider_usage_tokens(stderr_path),
@@ -2561,6 +2624,7 @@ def run_provider(
             return {
                 "provider": provider,
                 "ok": False,
+                "reasoning_effort": requested_effort,
                 "error": "timed out after %ss" % timeout,
                 "elapsed_seconds": round(time.time() - started, 1),
                 "usage_tokens": provider_usage_tokens(stderr_path),
@@ -2570,6 +2634,7 @@ def run_provider(
             return {
                 "provider": provider,
                 "ok": False,
+                "reasoning_effort": requested_effort,
                 "error": "CLI exited with code %s" % proc.returncode,
                 "elapsed_seconds": round(time.time() - started, 1),
                 "usage_tokens": provider_usage_tokens(stderr_path),
@@ -2579,6 +2644,7 @@ def run_provider(
         return {
             "provider": provider,
             "ok": useful_provider_data(data, label),
+            "reasoning_effort": requested_effort,
             "elapsed_seconds": round(time.time() - started, 1),
             "data": data,
             "usage_tokens": provider_usage_tokens(stderr_path),
@@ -2586,7 +2652,10 @@ def run_provider(
             "stderr_path": str(stderr_path),
         }
     except OSError as exc:
-        return {"provider": provider, "ok": False, "error": str(exc)}
+        return {
+            "provider": provider, "ok": False, "error": str(exc),
+            "reasoning_effort": requested_effort,
+        }
 
 
 def job_context(job: Dict[str, Any]) -> Dict[str, Any]:
@@ -4487,7 +4556,7 @@ def expand_into_measured_space(
         # enough. Limit the search so a dense run remains bounded while still
         # covering Victor's explicit "replace two weaker bullets with a
         # stronger project" case.
-        attempts.extend(("swap", list(actions)) for actions in removals[:6])
+        attempts.extend(("swap", [action]) for action in removals[:6])
         attempts.extend(
             ("swap", list(actions))
             for actions in itertools.combinations(removals[:6], 2)
@@ -6774,6 +6843,7 @@ def run_tailoring(
     context["provider_policy"] = {
         "allowed_lanes": [name for name, path in provider_commands().items() if path],
         "codex_model": CODEX_LUNA_MODEL,
+        "codex_effort_defaults": dict(CODEX_TASK_EFFORT_DEFAULTS),
         "local_models_allowed": False,
         "api_fallback_allowed": False,
     }
@@ -7461,6 +7531,7 @@ def run_tailoring(
             "label": str(record.get("label") or "provider"),
             "provider": provider,
             "model": provider_model_label(provider),
+            "reasoning_effort": str(record.get("reasoning_effort") or ""),
             "ok": record.get("ok"), "called": not record.get("skipped", False),
             "elapsed_seconds": record.get("elapsed_seconds"), "usage_tokens": record.get("usage_tokens"),
         })
@@ -7475,6 +7546,7 @@ def run_tailoring(
             "label": item.get("label"),
             "provider": item.get("provider"),
             "model": item.get("model"),
+            "reasoning_effort": item.get("reasoning_effort"),
             "status": "complete" if item.get("ok") else "failed" if item.get("called") else "skipped",
             "elapsed_seconds": item.get("elapsed_seconds"),
             "usage_tokens": item.get("usage_tokens"),
@@ -8034,7 +8106,7 @@ renderReport=function(status){
   const additions=(changes.added_bullets||[]).map(item=>({label:'new selected evidence · '+(item.source_id||'line'),text:item.text||''}));
   const removals=(changes.removed_canonical_bullets||[]).map(item=>({label:'removed from canonical · '+(item.source_id||'line'),text:item.text||''}));
   const flow=report.provider_flow||report.providers||[];
-  const flowHtml=flow.length?flow.map(item=>`<div class="flow-step ${item.status==='failed'?'failed':item.status==='skipped'?'skipped':''}"><span class="flow-dot"></span><strong>${esc(item.label||'provider')}</strong><span>${esc(item.model||item.provider||'unknown')}<br><small>${esc(item.status||'unknown')}</small></span><span class="flow-meta">${fmtSeconds(item.elapsed_seconds)} · ${item.usage_tokens==null?'tokens n/a':Number(item.usage_tokens).toLocaleString()+' tokens'}</span></div>`).join(''):'<div class="meta">No provider flow was recorded.</div>';
+  const flowHtml=flow.length?flow.map(item=>`<div class="flow-step ${item.status==='failed'?'failed':item.status==='skipped'?'skipped':''}"><span class="flow-dot"></span><strong>${esc(item.label||'provider')}</strong><span>${esc((item.model||item.provider||'unknown')+(item.reasoning_effort?' · '+item.reasoning_effort:''))}<br><small>${esc(item.status||'unknown')}</small></span><span class="flow-meta">${fmtSeconds(item.elapsed_seconds)} · ${item.usage_tokens==null?'tokens n/a':Number(item.usage_tokens).toLocaleString()+' tokens'}</span></div>`).join(''):'<div class="meta">No provider flow was recorded.</div>';
   const plan=report.content_plan||{};
   const atsEntries=[];
   ['experiences','projects','leadership'].forEach(section=>(plan[section]||[]).forEach(entry=>(entry.bullets||[]).forEach(bullet=>atsEntries.push({entry:entry.source_id||section,text:bullet.text||''}))));

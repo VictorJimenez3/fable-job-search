@@ -51,6 +51,16 @@ _DIRECT_KEY_RE = re.compile(
     r"posting(?:url|link)?|external(?:url|link)?)",
     re.I,
 )
+# Jobright can keep serving a perfectly healthy 200 page after the employer
+# closes the role.  This is a visible page-level verdict, not an inferred
+# age-based expiry, so it is safe to use before considering application links.
+JOBRIGHT_PAGE_SIGNAL_VERSION = 1
+_JOBRIGHT_CLOSED_RE = re.compile(
+    r"\bthis\s+job\s+has\s+closed\b|"
+    r"\bjob\s+posting\s+has\s+closed\b|"
+    r"\bthis\s+posting\s+has\s+closed\b",
+    re.I,
+)
 
 
 def _host(url: str | None) -> str:
@@ -233,6 +243,16 @@ def resolve_link(url: str, now: int | None = None) -> dict:
     if final_url and canonical_url(final_url) != canonical_url(url):
         candidates.append((final_url, "http redirect"))
     body = str(getattr(response, "text", "") or "")
+    result["page_signal_version"] = JOBRIGHT_PAGE_SIGNAL_VERSION
+    if _JOBRIGHT_CLOSED_RE.search(unescape(body)):
+        result.update({
+            "status": "closed",
+            "posting_status": "expired",
+            "reason": "Jobright page says: This job has closed.",
+        })
+        if final_url:
+            result["final_url"] = final_url
+        return result
     candidates.extend(_html_candidates(final_url or url, body))
     # Jobright's visitor HTML intentionally omits the original application URL
     # for some postings.  Its public share endpoint sometimes includes it, so
@@ -284,6 +304,14 @@ def _cached_resolution(existing: dict | None, primary_url: str, now: int) -> dic
     ttl = max(1, int(env("RADAR_LINK_RESOLVE_TTL_DAYS", "30"))) * 86400
     original = cached.get("original_url") or existing.get("url")
     if not checked or now - checked >= ttl or canonical_url(original) != canonical_url(primary_url):
+        return None
+    # Older no-direct results were cached before the Jobright closed-banner
+    # signal existed. Recheck those once so closed roles do not remain active
+    # for another full cache TTL. Resolved/not-found results retain their
+    # existing conservative cache behavior.
+    if (is_aggregator_url(primary_url)
+            and cached.get("status") == "checked_no_direct"
+            and cached.get("page_signal_version") != JOBRIGHT_PAGE_SIGNAL_VERSION):
         return None
     return cached
 

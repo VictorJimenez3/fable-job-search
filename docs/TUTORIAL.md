@@ -50,6 +50,11 @@ migration for compatibility.
   You can also click a Jobs row once to save it (green), then click that saved
   row again to exclude it (red). Turn on **show excluded** to restore a red row;
   this is a reversible view preference, not a score or notification change.
+  New-grad Jobs opens to a **Fresh action queue** with entry-compatible or
+  unclear experience and postings from the last month. Tracked roles stay
+  reviewable even when they are older or experienced; use the explicit filters
+  for the full research board. Expired and filled roles are kept in **History**
+  instead of active Jobs.
 - **Progressive loading**: the shell and Jobs board appear first, then optional
   repository panels load independently. If a state source fails, the rest of
   the site remains usable. Only the signed-in `VictorJimenez3` owner sees the
@@ -199,6 +204,13 @@ the first post-overhaul Google run; choose **all history** before syncing if
 you deliberately want legacy, failed, or interrupted experiments too. The
 bank shows one job card; click it to see every version for that posting.
 
+Use **Tailor today** in the Resume Studio header for a batch pass. It finds
+roles added to your Pipeline on the current local calendar day, preselects up
+to 12, and lets you choose one mode before queueing. You can review or clear
+selections first. The private engine runs at most two at once, and the batch
+only creates reviewable Resume Bank drafts—it does not change a role to
+Applied and never submits anything.
+
 Inside an expanded job card, **Objective ranking** sorts the finished variants
 for that posting and marks the current winner. Open **show rubric sources** to
 see the target-fit, evidence-safety, layout, and portfolio inputs. It is a
@@ -308,6 +320,9 @@ coverage, gaps, evidence confidence, and private source-backed score.
 On the Jobs tab, Best Match also has a lookback selector for hours, days, weeks,
 or months. It limits which recent postings are ranked while preserving the same
 match scoring.
+The default new-grad Jobs queue uses the last month plus entry-compatible or
+unclear experience; older/experienced tracked roles remain available through
+explicit filter choices.
 
 The generator does not force every role to use the same evidence. It creates a
 strongest-first adaptive pool, preserves reverse chronology, and packs only
