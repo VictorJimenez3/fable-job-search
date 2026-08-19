@@ -1,11 +1,12 @@
 """Write tracked jobs into the user's Notion Applications database.
 
 Every entry in state/applied.json carries a stage: "saved" (checkbox on an
-alert — Victor is tracking it, hasn't applied yet) or "applied" (an explicit
-`applied` comment or, later, email confirmation). Saved entries get a Notion
-page immediately with the not-yet-applied status; Victor flips the status in
-Notion when he applies. If the radar itself later learns an entry was applied,
-sync patches the existing page's status instead of creating a duplicate.
+alert — Victor is tracking it, hasn't applied yet), "to_tailor" (a private
+Resume Studio draft was queued), or "applied" (an explicit `applied` comment
+or email confirmation). Saved entries get a Notion page immediately with the
+not-yet-applied status; Victor can advance it to the configured To tailor or
+Applied status. If the radar itself later learns an entry was applied, sync
+patches the existing page's status instead of creating a duplicate.
 
 The database is resolved by *search*, not a hardcoded ID: Notion's search API
 only returns objects actually shared with the integration, so whichever
@@ -115,6 +116,7 @@ def _stage_option(entry: dict, schema: dict, prop: str) -> str | None:
     n = profile()["notion"]
     want = {
         "saved": n.get("stage_saved", "Not started"),
+        "to_tailor": n.get("stage_to_tailor", "To tailor"),
         "applied": n.get("stage_applied", "Applied"),
         "oa": n.get("stage_oa", "OA"),
         "interview": n.get("stage_interview", "Interview"),
@@ -279,6 +281,7 @@ def stage_status_name(stage_key: str) -> str | None:
     n = profile()["notion"]
     return {
         "saved": n.get("stage_saved"),
+        "to_tailor": n.get("stage_to_tailor", "To tailor"),
         "applied": n.get("stage_applied"),
         "oa": n.get("stage_oa", "OA"),
         "interview": n.get("stage_interview", "Interview"),
@@ -291,12 +294,13 @@ def stage_status_name(stage_key: str) -> str | None:
 def _stage_key_from_status(status_name: str) -> str | None:
     """Internal stage for a live Notion status label."""
     wanted = (status_name or "").strip().casefold()
-    for key in ("saved", "applied", "oa", "interview", "rejected", "closed", "not_pursuing"):
+    for key in ("saved", "to_tailor", "applied", "oa", "interview", "rejected", "closed", "not_pursuing"):
         label = stage_status_name(key)
         if label and label.strip().casefold() == wanted:
             return key
     # Tolerate the common labels when a profile omitted optional mappings.
-    return {"oa": "oa", "online assessment": "oa", "interview": "interview",
+    return {"to tailor": "to_tailor", "tailoring": "to_tailor",
+            "oa": "oa", "online assessment": "oa", "interview": "interview",
             "rejected": "rejected", "closed": "closed", "not pursuing": "not_pursuing"}.get(wanted)
 
 

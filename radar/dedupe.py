@@ -4,7 +4,10 @@ Exact canonical posting URLs are safe identity boundaries: the same URL can
 be emitted with different titles or locations by an aggregator and its ATS.
 The merge keeps the stronger record's identity, carries over useful evidence,
 and returns aliases so application, issue, and private workspace references
-remain usable.
+remain usable.  A second, narrower family pass handles providers that mint a
+different URL for every location of one employer requisition.  It requires
+shared title-core evidence plus direct/aggregator or same-board evidence; a
+same-title collision by itself is never enough.
 """
 from __future__ import annotations
 
@@ -12,11 +15,26 @@ from .identity import canonical_url
 from .link_resolver import is_aggregator_url
 from .models import norm
 
-
 _AGGREGATOR_SOURCES = {
     "simplify", "vansh", "jobright", "jobright_pm", "speedyapply",
     "zapply", "zapply_pm", "hn", "simplify_internship",
     "speedyapply_internship", "zapply_internship", "dreamwork_internship",
+}
+
+# These words describe the hiring program or level rather than the work.  They
+# may be removed while comparing an official title with an aggregator's title,
+# but year tokens remain meaningful so 2026 and 2027 postings cannot collapse.
+_TITLE_VARIANT_MARKERS = {
+    "new", "newgrad", "grad", "graduate", "early", "career", "campus",
+    "college", "university", "entry", "level", "intern", "internship",
+    "co", "op",
+}
+
+_LOCATION_ALIASES = {
+    "nyc": "new york",
+    "la": "los angeles",
+    "sf": "san francisco",
+    "dc": "washington",
 }
 
 
@@ -24,14 +42,59 @@ def _record_url(record: dict) -> str:
     return canonical_url(record.get("url"))
 
 
+def _record_source_url(record: dict) -> str:
+    return canonical_url(
+        record.get("source_url") or (record.get("source_url_variants") or [""])[0]
+    )
+
+
+def _title_words(record: dict) -> set[str]:
+    return set(norm(record.get("title")).split())
+
+
+def title_family(record: dict) -> str:
+    """Return the work-oriented title core used for variant comparison."""
+    words = [word for word in norm(record.get("title")).split()
+             if word not in _TITLE_VARIANT_MARKERS]
+    return " ".join(words)
+
+
+def _has_title_variant_marker(record: dict) -> bool:
+    return bool(_title_words(record) & _TITLE_VARIANT_MARKERS)
+
+
+def _is_direct_record(record: dict) -> bool:
+    """Whether the primary URL is an employer/ATS URL, even if a feed found it."""
+    return bool(_record_url(record)) and not _is_aggregator_record(record)
+
+
+def _posting_variant_reason(left: dict, right: dict) -> str:
+    """Explain why two records are safe candidates for one posting family."""
+    if norm(left.get("company")) != norm(right.get("company")):
+        return ""
+    left_title = norm(left.get("title"))
+    right_title = norm(right.get("title"))
+    if not left_title or not right_title:
+        return ""
+    if left_title == right_title:
+        title_reason = "same employer and title"
+    elif (title_family(left) and title_family(left) == title_family(right)
+          and (_has_title_variant_marker(left) or _has_title_variant_marker(right))):
+        title_reason = "same employer and title core with a hiring-program marker"
+    else:
+        return ""
+    if not _same_location_or_unknown(left, right):
+        return ""
+    return f"{title_reason}; compatible location evidence"
+
+
 def _winner_key(record: dict, key: str) -> tuple:
-    source = str(record.get("source") or "").casefold()
     # Manual records carry owner intent; direct ATS records carry better
     # provenance than aggregator copies.  Active and evidence-rich records
     # should survive a cleanup over stale/closed twins.
     return (
         1 if record.get("manual_added") else 0,
-        1 if record.get("ats") or source not in _AGGREGATOR_SOURCES else 0,
+        1 if _is_direct_record(record) else 0,
         1 if str(record.get("posting_status", "open")).casefold() == "open" else 0,
         1 if record.get("posting") else 0,
         1 if record.get("quality") else 0,
@@ -74,21 +137,26 @@ def _location_tokens(record: dict) -> set[str]:
     }
     tokens = set()
     for location in record.get("locations") or []:
-        tokens.update(token for token in norm(location).split() if token not in noise)
+        text = norm(location).replace("new york city", "new york")
+        for token in text.split():
+            alias = _LOCATION_ALIASES.get(token, token)
+            tokens.update(word for word in alias.split() if word not in noise)
     meaningful = tokens - state_codes - state_names
-    # State-only/country-only locations remain useful as unknown rather than
-    # creating false same-state matches between distinct city postings.
-    return meaningful or tokens
+    # State-only/country-only locations are unknown rather than evidence for a
+    # same-state match between distinct city postings.
+    return meaningful
 
 
 def _is_aggregator_record(record: dict) -> bool:
     source = str(record.get("source") or "").casefold()
     if source not in _AGGREGATOR_SOURCES:
         return False
-    # A Jobright record may already have been promoted to a direct ATS URL.
-    # Its remaining source label is useful provenance, but it is no longer a
-    # safe aggregator-only identity for another cross-source merge.
-    return is_aggregator_url(record.get("url")) or not record.get("ats")
+    # A record found in Simplify/Vansh/etc. may already be an official employer
+    # URL.  The URL, not the discovery label, decides whether it is still an
+    # aggregator-only identity.  This is important for Google: Simplify can
+    # surface the official multi-location row while Jobright emits one URL per
+    # city.
+    return is_aggregator_url(record.get("url"))
 
 
 def _same_location_or_unknown(left: dict, right: dict) -> bool:
@@ -99,7 +167,7 @@ def _same_location_or_unknown(left: dict, right: dict) -> bool:
     return bool(left_tokens & right_tokens)
 
 
-def _merge_record(winner: dict, loser: dict) -> dict:
+def _merge_record(winner: dict, loser: dict, reason: str = "") -> dict:
     """Merge non-conflicting evidence without replacing owner state."""
     merged = dict(winner)
     for key, value in loser.items():
@@ -158,6 +226,20 @@ def _merge_record(winner: dict, loser: dict) -> dict:
             if event not in events:
                 events.append(event)
         merged["lifecycle_events"] = events
+
+    winner_identity = merged.get("posting_identity") or {}
+    loser_identity = loser.get("posting_identity") or {}
+    winner_count = int(winner_identity.get("variant_count") or 1)
+    loser_count = int(loser_identity.get("variant_count") or 1)
+    reasons = list(winner_identity.get("matched_by") or [])
+    _append_unique(reasons, list(loser_identity.get("matched_by") or []))
+    if reason:
+        _append_unique(reasons, [reason])
+    if reasons or winner_count > 1 or loser_count > 1:
+        merged["posting_identity"] = {
+            "variant_count": winner_count + loser_count,
+            "matched_by": reasons[:6],
+        }
     return merged
 
 
@@ -184,25 +266,26 @@ def collapse_jobs(jobs: dict) -> tuple[dict, dict, int]:
         for key, record in members:
             if key == winner_key:
                 continue
-            merged = _merge_record(merged, record)
+            merged = _merge_record(merged, record, "same canonical posting URL")
             aliases[key] = winner_key
             collapsed.pop(key, None)
             merged_count += 1
         merged["id"] = winner.get("id") or winner_key
+        merged["posting_family_id"] = winner_key
         collapsed[winner_key] = merged
 
     return collapsed, aliases, merged_count
 
 
 def collapse_cross_source_jobs(jobs: dict) -> tuple[dict, dict, int]:
-    """Merge only exact company/title aggregator copies with direct ATS rows.
+    """Merge narrow company/title-family aggregator copies with direct rows.
 
     URL equality remains the strongest identity boundary.  This second pass is
     intentionally narrower than fuzzy matching: a source-only row is merged
-    when its normalized company/title has one compatible direct candidate, or
-    when a multi-candidate company/title group has exactly one location match.
-    Ambiguous roles stay separate so breadth is never traded for a guessed
-    identity.
+    when its normalized company and work-oriented title family have one
+    compatible direct candidate, or when a multi-candidate family has exactly
+    one location match. Ambiguous roles stay separate so breadth is never
+    traded for a guessed identity.
     """
     direct_by_key: dict[tuple[str, str], list[tuple[str, dict]]] = {}
     aggregator_rows: list[tuple[str, dict]] = []
@@ -212,8 +295,9 @@ def collapse_cross_source_jobs(jobs: dict) -> tuple[dict, dict, int]:
             continue
         if _is_aggregator_record(record):
             aggregator_rows.append((str(key), record))
-        elif record.get("ats"):
-            direct_by_key.setdefault(identity, []).append((str(key), record))
+        elif _record_url(record):
+            family_identity = (identity[0], title_family(record))
+            direct_by_key.setdefault(family_identity, []).append((str(key), record))
 
     collapsed = dict(jobs)
     aliases: dict[str, str] = {}
@@ -222,23 +306,77 @@ def collapse_cross_source_jobs(jobs: dict) -> tuple[dict, dict, int]:
         if aggregator_id not in collapsed:
             continue
         candidates = direct_by_key.get(
-            (norm(aggregator.get("company")), norm(aggregator.get("title"))), [])
-        if len(candidates) == 1:
-            candidate_id, direct = candidates[0]
-            winner_id = candidate_id if _same_location_or_unknown(aggregator, direct) else None
-        else:
-            matching = [
-                (candidate_id, direct) for candidate_id, direct in candidates
-                if _same_location_or_unknown(aggregator, direct)
-            ]
-            winner_id, direct = matching[0] if len(matching) == 1 else (None, None)
+            (norm(aggregator.get("company")), title_family(aggregator)), [])
+        matching = [
+            (candidate_id, direct, _posting_variant_reason(aggregator, direct))
+            for candidate_id, direct in candidates
+            if _posting_variant_reason(aggregator, direct)
+        ]
+        winner_id, direct, reason = matching[0] if len(matching) == 1 else (None, None, "")
         if not winner_id or winner_id not in collapsed:
             continue
-        collapsed[winner_id] = _merge_record(collapsed[winner_id], aggregator)
+        collapsed[winner_id] = _merge_record(collapsed[winner_id], aggregator, reason)
+        collapsed[winner_id]["posting_family_id"] = winner_id
         collapsed.pop(aggregator_id, None)
         aliases[aggregator_id] = winner_id
         merged_count += 1
 
+    return collapsed, aliases, merged_count
+
+
+def collapse_location_variants(jobs: dict) -> tuple[dict, dict, int]:
+    """Collapse same-board aggregator rows that represent one multi-location role.
+
+    This pass intentionally excludes employer/ATS records.  It only runs when
+    the same aggregator board supplied the same employer/title family, the
+    title contains an early-career/program marker, and a source URL identifies
+    the shared board.  That keeps ordinary same-title requisitions (for
+    example, dozens of local sales jobs) as separate application targets.
+    """
+    groups: dict[tuple[str, str, str, str], list[tuple[str, dict]]] = {}
+    for key, record in jobs.items():
+        if not _is_aggregator_record(record):
+            continue
+        source_url = _record_source_url(record)
+        company = norm(record.get("company"))
+        family = title_family(record)
+        if not source_url or not company or not family or not _has_title_variant_marker(record):
+            continue
+        groups.setdefault((str(record.get("source") or "").casefold(), source_url,
+                          company, family), []).append((str(key), record))
+
+    collapsed = dict(jobs)
+    aliases: dict[str, str] = {}
+    merged_count = 0
+    for members in groups.values():
+        if len(members) < 2:
+            continue
+        posted_days = {
+            int(record["posted_at"]) // 86400
+            for _, record in members if record.get("posted_at")
+        }
+        # A location fan-out is normally emitted with one common posting date.
+        # A rolling sequence of same-title rows is more likely a set of real
+        # requisitions (Albertsons is a concrete example in the live snapshot).
+        if len(posted_days) > 1 or any(not record.get("posted_at") for _, record in members):
+            continue
+        winner_key, winner = max(members, key=lambda pair: _winner_key(pair[1], pair[0]))
+        merged = dict(winner)
+        for key, record in members:
+            if key == winner_key:
+                continue
+            reason = _posting_variant_reason(winner, record)
+            if not reason:
+                # Distinct locations are expected in this pass; the shared
+                # board/title-family evidence is the location-variant proof.
+                reason = "same aggregator board and marked title family; location variant"
+            merged = _merge_record(merged, record, reason)
+            aliases[key] = winner_key
+            collapsed.pop(key, None)
+            merged_count += 1
+        merged["id"] = winner.get("id") or winner_key
+        merged["posting_family_id"] = winner_key
+        collapsed[winner_key] = merged
     return collapsed, aliases, merged_count
 
 

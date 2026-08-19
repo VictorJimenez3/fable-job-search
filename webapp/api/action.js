@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
     return;
   }
   const { action, id, ids, url, company, title, location, vote, reason, stage,
-    preferences, profile, key, enabled } = req.body || {};
+    tailored_at, preferences, profile, key, enabled } = req.body || {};
   const manual = action === "manual-add";
   const research = action === "research-company";
   const scorePreferences = action === "score-preferences";
@@ -34,7 +34,7 @@ module.exports = async (req, res) => {
     res.status(400).json({ error: "bad payload" });
     return;
   }
-  if (action === "stage" && !["maybe", "saved", "applied", "oa", "interview", "rejected", "closed"].includes(String(stage || "").toLowerCase())) {
+  if (action === "stage" && !["maybe", "saved", "to_tailor", "applied", "oa", "interview", "rejected", "closed"].includes(String(stage || "").toLowerCase())) {
     res.status(400).json({ error: "unsupported application stage" });
     return;
   }
@@ -52,7 +52,7 @@ module.exports = async (req, res) => {
     body: JSON.stringify({
       event_type: "radar-web",
       client_payload: { action, id, ids: researchIds, url, company, title, location,
-        vote, reason, stage, preferences, profile: lane, key, enabled },
+        vote, reason, stage, tailored_at, preferences, profile: lane, key, enabled },
     }),
   });
   if (r.status === 204) res.status(202).json({ ok: true });

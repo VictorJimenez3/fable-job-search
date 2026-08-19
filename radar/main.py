@@ -84,6 +84,7 @@ def _append_unique(values: list, items: list) -> bool:
 
 def _merge_job_sighting(winner: Job, sighting: Job) -> None:
     """Keep every feed/source link when one posting wins a feed dedupe."""
+    _append_unique(winner.locations, sighting.locations)
     _append_unique(winner.source_board_variants,
                    [winner.source_board, sighting.source_board,
                     *sighting.source_board_variants])
@@ -109,6 +110,62 @@ def _merge_job_sighting(winner: Job, sighting: Job) -> None:
             winner.link_resolution = dict(sighting.link_resolution)
 
 
+def _merge_discovered_variant_sighting(winner: Job, sighting: Job) -> None:
+    """Merge a location-family feed sighting while retaining rich crawl data."""
+    _merge_job_sighting(winner, sighting)
+    _append_unique(winner.locations, sighting.locations)
+    if not winner.description and sighting.description:
+        winner.description = sighting.description
+    if not winner.salary and sighting.salary:
+        winner.salary = sighting.salary
+    if not winner.ats and sighting.ats:
+        winner.ats = sighting.ats
+    if not winner.sector and sighting.sector:
+        winner.sector = sighting.sector
+    if not winner.posted_at or (sighting.posted_at and sighting.posted_at < winner.posted_at):
+        winner.posted_at = sighting.posted_at
+    winner.remote = winner.remote or sighting.remote
+
+
+def _collapse_discovered_variant_jobs(discovered: list[Job]) -> tuple[list[Job], int]:
+    """Apply the durable family rules to one fresh feed batch in memory.
+
+    The durable repair runs at the beginning of every crawl.  This companion
+    pass prevents a newly arrived official row plus its location-specific
+    aggregator sightings from producing duplicate alerts before the next run.
+    """
+    if len(discovered) < 2:
+        return discovered, 0
+    from .dedupe import collapse_cross_source_jobs, collapse_location_variants, resolve_alias
+
+    by_id = {job.id: job for job in discovered}
+    records = {job.id: job.to_record() for job in discovered}
+    records, aliases, first_merged = collapse_cross_source_jobs(records)
+    records, more_aliases, second_merged = collapse_location_variants(records)
+    aliases.update(more_aliases)
+    if not aliases:
+        return discovered, 0
+    for old in list(aliases):
+        aliases[old] = resolve_alias(aliases[old], aliases)
+    for old, new in aliases.items():
+        loser = by_id.get(old)
+        winner = by_id.get(new)
+        if loser is not None and winner is not None:
+            _merge_discovered_variant_sighting(winner, loser)
+        by_id.pop(old, None)
+    # The merge logic operates on records so it can share the durable repair
+    # rules. Copy its audit metadata back onto the surviving Job before the
+    # normal crawl serializer runs; otherwise the first fresh merge would be
+    # visible only after a later repair cycle.
+    for key, record in records.items():
+        winner = by_id.get(key)
+        if winner is None:
+            continue
+        winner.posting_family_id = str(record.get("posting_family_id") or "")
+        winner.posting_identity = dict(record.get("posting_identity") or {})
+    return [by_id[key] for key in records if key in by_id], first_merged + second_merged
+
+
 def _merge_record_sighting(target: dict, sighting: dict) -> bool:
     """Merge provenance from a new sighting into an existing state record."""
     changed = False
@@ -129,6 +186,14 @@ def _merge_record_sighting(target: dict, sighting: dict) -> bool:
     changed |= _append_unique(source_urls,
                               [target.get("source_url"), sighting.get("source_url"),
                                *sighting.get("source_url_variants", [])])
+    locations = target.setdefault("locations", [])
+    before_locations = len(locations)
+    _append_unique(locations, sighting.get("locations") or [])
+    changed |= len(locations) != before_locations
+    for key in ("posting_family_id", "posting_identity"):
+        if not target.get(key) and sighting.get(key):
+            target[key] = sighting[key]
+            changed = True
     target_url = canonical_url(target.get("url"))
     alternate_urls = target.setdefault("alternate_urls", [])
     for url in [sighting.get("url"), *sighting.get("alternate_urls", [])]:
@@ -190,7 +255,9 @@ def _unique_discovered_jobs(discovered: list[Job]) -> tuple[list[Job], int]:
         else:
             _merge_job_sighting(previous, job)
             dropped += 1
-    return list(by_role.values()) + role_passthrough, dropped
+    variant_jobs, variant_dropped = _collapse_discovered_variant_jobs(
+        list(by_role.values()) + role_passthrough)
+    return variant_jobs, dropped + variant_dropped
 
 
 def _resolve_discovered_links(discovered: list[Job], jobs_state: dict, now: int) -> tuple[list[Job], dict]:
@@ -236,6 +303,7 @@ def _repair_duplicate_job_state(jobs_state: dict, applied: list) -> tuple[dict, 
     from .dedupe import (
         collapse_cross_source_jobs,
         collapse_jobs,
+        collapse_location_variants,
         remap_entry_ids,
         remap_web_jobs,
         resolve_alias,
@@ -244,6 +312,8 @@ def _repair_duplicate_job_state(jobs_state: dict, applied: list) -> tuple[dict, 
     jobs_state, aliases, exact_merged = collapse_jobs(jobs_state)
     jobs_state, cross_aliases, cross_merged = collapse_cross_source_jobs(jobs_state)
     aliases.update(cross_aliases)
+    jobs_state, family_aliases, family_merged = collapse_location_variants(jobs_state)
+    aliases.update(family_aliases)
     if not aliases:
         return jobs_state, False
 
@@ -287,7 +357,8 @@ def _repair_duplicate_job_state(jobs_state: dict, applied: list) -> tuple[dict, 
         state.save("web_state.json", web)
     print(
         f"hygiene: merged {exact_merged} exact-URL + {cross_merged} "
-        f"high-confidence aggregator/ATS duplicate posting record(s); "
+        f"high-confidence aggregator/ATS + {family_merged} location-family "
+        f"duplicate posting record(s); "
         f"migrated {applied_changed + shortlist_changed + history_changed + web_changed} "
         f"reference(s), {tracker_merged} duplicate tracker row(s)"
     )
@@ -567,7 +638,8 @@ def crawl() -> int:
             rec["manual_added"] = True
         if old_record:
             _merge_record_sighting(rec, old_record)
-            for key in ("posting", "quality", "company_research"):
+            for key in ("posting", "quality", "company_research", "posting_family_id",
+                        "posting_identity"):
                 if old_record.get(key) and not rec.get(key):
                     rec[key] = old_record[key]
         lifecycle.merge_record_metadata(rec, old_record)
@@ -1496,7 +1568,10 @@ def web_action() -> int:
         return 0
     if action == "stage":
         stage = str(payload.get("stage") or "").strip().lower()
-        if stage not in {"maybe", "saved", "applied", "oa", "interview", "rejected", "closed", "not_pursuing"}:
+        if stage not in {
+            "maybe", "saved", "to_tailor", "applied", "oa", "interview",
+            "rejected", "closed", "not_pursuing",
+        }:
             print(f"web-action: unsupported stage {stage!r}")
             return 1
         untracked.discard(job["id"])
@@ -1510,6 +1585,8 @@ def web_action() -> int:
             existing["via"] = "platform"
             if stage == "applied":
                 existing["applied_at"] = int(time.time())
+        if existing is not None and stage == "to_tailor":
+            existing["tailored_at"] = int(payload.get("tailored_at") or existing.get("tailored_at") or time.time())
         if existing is not None and (changed or stage == "closed"):
             existing["stage_changed_at"] = int(time.time())
         from .notion_sync import sync_applied

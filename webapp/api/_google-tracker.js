@@ -25,7 +25,7 @@ const PREFERENCE_HEADERS = ["Preference", "Value", "Updated At"];
 const ACCOUNT_HEADERS = ["Account ID", "GitHub ID", "GitHub Login", "Google Subject",
   "Google Email", "Created At", "Updated At", "Merged Into", "Status",
   "Google Token Ciphertext", "Google Sheet ID", "Google Connected At"];
-const VALID_STAGES = new Set(["saved", "applied", "oa", "interview", "rejected", "closed", "maybe", "archived"]);
+const VALID_STAGES = new Set(["saved", "to_tailor", "applied", "oa", "interview", "rejected", "closed", "maybe", "archived"]);
 const VALID_POSTING_STATUSES = new Set(["open", "expired", "filled"]);
 
 // These credentials are the owner-only metadata registry credentials. They
@@ -298,7 +298,7 @@ async function createPersonalTracker(token, label) {
     ["Job Radar personal tracker", "How it works"],
     ["Applications", "Your private new-grad application funnel."],
     ["Internships", "Your separate private internship funnel."],
-    ["Stage", "saved → applied → oa → interview → rejected/closed."],
+    ["Stage", "saved → to_tailor → applied → oa → interview → rejected/closed."],
     ["Posting Status", "open until the radar finds a definitive expired/filled signal."],
     ["Job Radar ID", "Stable ID used to update a row instead of duplicating it."],
     ["Apply date", "Filled when you mark a role applied; safe to edit manually."],

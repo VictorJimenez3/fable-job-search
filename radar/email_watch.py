@@ -33,7 +33,7 @@ from datetime import UTC, datetime, timedelta
 from email.header import decode_header, make_header
 
 from . import state
-from .applied import record_applied
+from .applied import TRACKER_STAGE_ORDER, record_applied
 from .config import env
 from .identity import canonical_url
 from .models import norm
@@ -108,9 +108,7 @@ def classify(text: str) -> str | None:
 # Forward-only pipeline ordering. A late email can never move a job backward
 # (e.g. a stray "interview" note after a rejection is ignored). Terminal
 # stages sit at the top so any real response can reach them.
-STAGE_ORDER = {"saved": 0, "applied": 1, "oa": 2, "interview": 3,
-               "offered": 8, "signed": 9, "rejected": 9, "closed": 9,
-               "not_pursuing": 9}
+STAGE_ORDER = TRACKER_STAGE_ORDER
 
 
 def can_advance(current: str | None, target: str) -> bool:

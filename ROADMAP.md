@@ -179,6 +179,17 @@ are quietly saved to **To apply**; marking Applied stays explicit. Rules v3
 also makes field eligibility title-led, demoting roughly 650 current false
 positive alerts found through description boilerplate.
 
+## Canonical posting families + batch tailoring — ✅ SHIPPED 2026-08-19 (DECISION #141)
+
+Exact posting URLs remain the strongest identity boundary, with a conservative
+company/title-family repair for official-versus-aggregator variants and a
+same-board/same-day guard for marked location fan-outs. Surviving rows retain
+locations, alternate links, aliases, and auditable match reasons while
+ambiguous same-title requisitions remain separate. The owner-only **Tailor
+today** flow now moves successfully queued drafts into a real **To tailor**
+lane between **To apply** and **Applied**, across the classic UI, email
+ordering, Notion mapping, Google trackers, and staged API.
+
 ## Posting ↔ profile RAG (to-do, parked — Victor 2026-07-17: "to do list that for sure")
 
 Embed posting text and Victor's profile/CV bullets, use similarity as a

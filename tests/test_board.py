@@ -110,6 +110,21 @@ def test_web_action_track_records_saved(tmp_state, tmp_path, monkeypatch):
     assert state.applied()[0]["stage"] == "applied"
 
 
+def test_web_action_moves_a_role_to_tailor_lane(tmp_state, tmp_path, monkeypatch):
+    from radar.main import web_action
+    monkeypatch.delenv("NOTION_TOKEN", raising=False)
+    state.save("jobs.json", {JOB["id"]: JOB})
+    state.save("applied.json", [{**JOB, "stage": "saved"}])
+    ev = tmp_path / "dispatch.json"
+    ev.write_text(json.dumps({"client_payload": {
+        "action": "stage", "id": JOB["id"], "stage": "to_tailor", "tailored_at": 123,
+    }}))
+    monkeypatch.setenv("GITHUB_EVENT_PATH", str(ev))
+    assert web_action() == 0
+    assert state.applied()[0]["stage"] == "to_tailor"
+    assert state.applied()[0]["tailored_at"] == 123
+
+
 def test_web_action_saves_score_section_preferences_and_requests_rescore(tmp_state, tmp_path, monkeypatch):
     from radar.main import web_action
     event = tmp_path / "dispatch.json"

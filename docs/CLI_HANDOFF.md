@@ -173,9 +173,18 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
 - **Owner Resume Studio batch:** **Tailor today** selects up to 12 roles added
   to the Pipeline on the local calendar day, queues one chosen mode through
   the existing private engine bridge, and never submits or marks applications.
-  The engine's existing two-run concurrency and bank/review gates remain in
-  force. Notion tailored sections and broader duplicate reconciliation remain
-  intentionally deferred.
+  Successful queueing moves the application to the new `to_tailor` stage. The
+  engine's existing two-run concurrency and bank/review gates remain in force.
+  Notion's status option must be added manually because the API cannot create
+  status options; local state and Google tracker sync still work without it.
+- **Canonical posting families:** exact canonical URLs remain the strongest
+  identity boundary, followed by a conservative company/title-family pass for
+  official-versus-aggregator variants and a same-board/same-posting-day pass
+  for marked location fan-outs. Survivors retain all locations, alternate
+  URLs, `posting_family_id`, and `posting_identity.matched_by` audit reasons.
+  Ambiguous same-title direct requisitions remain separate. `resolve-links`
+  runs this repair after bounded liveness work, remaps applied/shortlist/web
+  references, and queues duplicate Notion pages for reversible archival.
 
 ### Previous change (verified 2026-08-15)
 

@@ -35,6 +35,16 @@ def test_sheet_readback_is_id_matched_and_stage_validated(monkeypatch):
     assert entries[1]["stage"] == "applied"
 
 
+def test_sheet_readback_accepts_to_tailor_stage(monkeypatch):
+    _configure(monkeypatch)
+    monkeypatch.setattr(gs, "_access_token", lambda: "access")
+    monkeypatch.setattr(gs, "_values", lambda token: [gs.HEADERS,
+        ["j1", "Acme", "Engineer", "to_tailor"]])
+    entries = [{"id": "j1", "stage": "saved"}]
+    assert gs.sync_from_sheet(entries) == 1
+    assert entries[0]["stage"] == "to_tailor"
+
+
 def test_create_tracker_builds_metadata_tabs_and_returns_url(monkeypatch):
     for name, value in {
         "GOOGLE_CLIENT_ID": "cid", "GOOGLE_CLIENT_SECRET": "secret",

@@ -59,9 +59,10 @@ migration for compatibility.
   repository panels load independently. If a state source fails, the rest of
   the site remains usable. Only the signed-in `VictorJimenez3` owner sees the
   in-app developer notice and retry details; no email or automatic issue is sent.
-- **Pipeline**: separate Maybe, To apply, Applied, OA, Interview, Rejected, and
-  Closed lanes. The selected tracker is read back twice daily; "Maybe" remains
-  a platform-only scratch lane.
+- **Pipeline**: separate Maybe, To apply, To tailor, Applied, OA, Interview,
+  Rejected, and Closed lanes. The selected tracker is read back twice daily;
+  "Maybe" remains a platform-only scratch lane. Queueing a Resume Studio batch
+  moves successful drafts into To tailor; it never marks them Applied.
 - **History**: expired and filled postings are removed from active Jobs and
   alert surfaces but remain here with their last source sighting, close reason,
   and lifecycle events. Application-history cards also show how long the
@@ -211,8 +212,10 @@ Use **Tailor today** in the Resume Studio header for a batch pass. It finds
 roles added to your Pipeline on the current local calendar day, preselects up
 to 12, and lets you choose one mode before queueing. You can review or clear
 selections first. The private engine runs at most two at once, and the batch
-only creates reviewable Resume Bank drafts—it does not change a role to
-Applied and never submits anything.
+only creates reviewable Resume Bank drafts—it moves successful roles into the
+Pipeline's **To tailor** lane, does not change them to Applied, and never
+submits an application. If you use Victor's Notion tracker, add a `To tailor`
+status option manually; Notion's API cannot create status options.
 
 Inside an expanded job card, **Objective ranking** sorts the finished variants
 for that posting and marks the current winner. Open **show rubric sources** to

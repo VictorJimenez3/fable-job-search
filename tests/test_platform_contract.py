@@ -27,6 +27,21 @@ def test_platform_exposes_owner_batch_resume_tailoring_for_today():
     assert "function queueResumeBatch()" in html
     assert "private drafts · no applications sent" in html
     assert "local calendar day" in html
+    assert '"to_tailor"' in html
+    assert "Queueing moves selected roles into the Pipeline’s" in html
+    assert "stage_to_tailor" in (ROOT / "profile.yaml").read_text()
+    assert "to_tailor" in (ROOT / "webapp" / "api" / "_google-tracker.js").read_text()
+    assert "STAGE_ORDER = TRACKER_STAGE_ORDER" in (ROOT / "radar" / "email_watch.py").read_text()
+    assert "to_tailor" in (ROOT / "webapp" / "api" / "v1" / "_applications.js").read_text()
+
+
+def test_platform_defensively_hides_closed_link_signal_and_exposes_family_identity():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    dedupe = (ROOT / "radar" / "dedupe.py").read_text()
+    assert '"closed"' in html and "link_resolution" in html
+    assert "postingVariantBadge" in html
+    assert "collapse_location_variants" in dedupe
+    assert "posting_family_id" in dedupe
 
 
 def test_outreach_uses_public_search_links_without_linkedin_scraping():

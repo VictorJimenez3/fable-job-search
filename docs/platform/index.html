@@ -78,6 +78,7 @@
           border-radius:999px; padding:0.05rem 0.45rem; white-space:nowrap; }
   .chip.marquee { color:var(--amber); border-color:var(--amber); }
   .chip.saved { color:var(--amber); border-color:var(--amber); }
+  .chip.to_tailor { color:#7b61c9; border-color:#7b61c9; }
   .chip.applied { color:var(--accent-ink); border-color:var(--accent-ink); }
   .chip.excluded { color:var(--danger); border-color:var(--danger); }
   .chip.maybe { color:var(--muted); }
@@ -899,7 +900,9 @@ function applicationInactive(a) {
 const appliedById = () => Object.fromEntries(S.applied.filter(a=>!applicationInactive(a)).map(a=>[a.id,a]));
 function postingStatus(j) {
   const status = String(j?.posting_status || "").toLowerCase();
-  return ["expired", "filled"].includes(status) ? status : j?.closed_at ? "expired" : "open";
+  if (["expired", "filled", "closed"].includes(status)) return status === "closed" ? "expired" : status;
+  if (j?.closed_at || String(j?.link_resolution?.status || "").toLowerCase() === "closed") return "expired";
+  return "open";
 }
 function isTerminalPosting(j) { return postingStatus(j) !== "open" || Boolean(j?.manual_archived); }
 function postingStatusLabel(status) { return status === "filled" ? "filled" : "expired"; }
@@ -915,6 +918,19 @@ function lifecycleWhen(j) {
 }
 function lifecycleDate(value) {
   return value ? new Date(Number(value) * 1000).toLocaleDateString() : "unknown date";
+}
+function locationLabel(job) {
+  const locations = Array.isArray(job?.locations) ? job.locations.filter(Boolean) : [];
+  if (!locations.length) return "location unknown";
+  if (locations.length === 1) return locations[0];
+  return `${locations[0]} + ${locations.length - 1} other location${locations.length === 2 ? "" : "s"}`;
+}
+function postingVariantBadge(job) {
+  const count = Number(job?.posting_identity?.variant_count || 0);
+  const locations = Array.isArray(job?.locations) ? job.locations.filter(Boolean).length : 0;
+  if (count < 2 && locations < 2) return "";
+  const label = locations > 1 ? `${locations} locations · one posting` : `${count} source variants merged`;
+  return `<span class="chip unknown" title="Canonical posting family merged provider variants into one application target">${esc(label)}</span>`;
 }
 function postingDurationLabel(job) {
   const start = Number(job?.posted_at || job?.first_seen || 0);
@@ -939,6 +955,10 @@ function laneOf(id, byId) {
   const a = byId[id];
   if (a) return a.stage || "applied";
   return S.web.maybe.includes(id) ? "maybe" : "";
+}
+function pipelineStageLabel(stage) {
+  return ({maybe:"Maybe", saved:"To apply", to_tailor:"To tailor", applied:"Applied",
+    oa:"online assessment", interview:"interview", rejected:"rejected", closed:"closed"})[stage] || stage || "pipeline";
 }
 const ROLE_LABELS = {
   ai_ml:"AI / machine learning", swe:"Software engineering",
@@ -1426,7 +1446,7 @@ async function actTrack(j, quiet=false) {
   if (!j) return false;
   const existing = appliedById()[j.id];
   if (existing) {
-    if (!quiet) toast(existing.stage === "applied" ? "Already marked applied" : "Already in To apply");
+    if (!quiet) toast(`Already in ${pipelineStageLabel(existing.stage || "saved")}`);
     return true;
   }
   try { if (await doWrite("track", j)) {
@@ -1618,7 +1638,7 @@ function tutorialContent(tab) {
   return `<div class="tut-kicker">A calmer first run</div><h2>Welcome to Job Radar</h2>
     <p class="sub">This is the quick map for the parts you will actually use.</p>
     <div class="tut-grid"><div class="tut-card"><h4>1 · Browse</h4><p>Start in Jobs. Scores are a ranking aid; role details explain the evidence and eligibility.</p></div>
-      <div class="tut-card"><h4>2 · Build a funnel</h4><p>Maybe → To apply → Applied → OA/Interview. Keep decisions explicit.</p></div>
+      <div class="tut-card"><h4>2 · Build a funnel</h4><p>Maybe → To apply → To tailor → Applied → OA/Interview. Keep decisions explicit.</p></div>
       <div class="tut-card"><h4>3 · Connect once</h4><p>Use GitHub or Google OAuth, then connect the other provider from Accounts & login.</p></div>
       <div class="tut-card"><h4>4 · Keep the source of truth</h4><p>The private tracker mirrors a Notion-style application board while the app remains the safe front door.</p></div></div>
     <div class="tut-note">You can reopen this guide anytime with the <b>Tutorial</b> button in the header.</div>`;
@@ -1657,11 +1677,13 @@ function render() {
   const byId = appliedById();
   const activeTracked = S.applied.filter(a=>!applicationInactive(a));
   const saved = activeTracked.filter(a=>(a.stage||"applied")==="saved");
-  const done  = activeTracked.filter(a=>(a.stage||"applied")!=="saved");
+  const toTailor = activeTracked.filter(a=>(a.stage||"applied")==="to_tailor");
+  const done  = activeTracked.filter(a=>!["saved","to_tailor"].includes(a.stage||"applied"));
   $("#stats").innerHTML =
     `<span><b>${S.boot.jobsReady ? Object.keys(S.jobs).length : "…"}</b>${S.boot.jobsReady ? "jobs seen" : "loading jobs"}</span>` +
     `<span><b>${S.web.maybe.length}</b>maybe</span>` +
     `<span><b>${saved.length}</b>to apply</span>` +
+    `<span><b>${toTailor.length}</b>to tailor</span>` +
     `<span><b>${done.length}</b>applied</span>`;
   ({jobs:rJobs, pipeline:rPipe, history:rHistory, companies:rCos, interview:rInterview,
     ai:rAI, taste:rTaste, testing:rTesting, settings:rSet})[S.tab]();
@@ -1686,14 +1708,15 @@ function rowHTML(j, byId) {
     <div class="body">
       <span class="co">${esc(j.company)}</span> —
       <button class="jobtitle" onclick='openWS("${j.id}")'>${esc(j.title)}</button>
-      <div class="sub">${ago(postedTs(j))?`<b title="${j.posted_at?"posted":"first seen"} ${new Date(postedTs(j)*1000).toLocaleDateString()}">${ago(postedTs(j))}</b> · `:""}${esc((j.locations||[])[0]||"?")}${j.salary?" · "+esc(j.salary):""}
+      <div class="sub">${ago(postedTs(j))?`<b title="${j.posted_at?"posted":"first seen"} ${new Date(postedTs(j)*1000).toLocaleDateString()}">${ago(postedTs(j))}</b> · `:""}${esc(locationLabel(j))}${j.salary?" · "+esc(j.salary):""}
         · ${esc(j.sector||"tech")}${c?` · ${esc(c.industry)} (${esc(c.prestige)})`:""}
         ${j.llm_note?` · <i>${esc(j.llm_note)}</i>`:""}</div>
       <div class="facts">${eligibilityBadges(j)}</div>
     </div>
     ${j.explicit_new_grad?'<span class="chip applied">new grad</span>':""}
+    ${postingVariantBadge(j)}
     ${mq?'<span class="chip marquee">marquee</span>':""}
-    ${excluded?'<span class="chip excluded">excluded</span>':lane?`<span class="chip ${lane}">${lane==="saved"?"to apply":lane}</span>`:""}
+    ${excluded?'<span class="chip excluded">excluded</span>':lane?`<span class="chip ${lane}">${esc(pipelineStageLabel(lane))}</span>`:""}
    <div class="acts">
       ${lane ? stageControl(j.id, lane) : ""}
       ${lane && lane!=="maybe" ? "" : `<button class="act" onclick='actMaybe(S.jobs["${j.id}"])'>${lane==="maybe"?"un-maybe":"maybe"}</button>`}
@@ -1836,7 +1859,7 @@ function renderJobsList() {
       show more (${rows.length-S.shown} left)</button></p>`:"");
 }
 
-const PIPELINE_STAGES = [["maybe","Maybe"],["saved","To apply"],["applied","Applied"],
+const PIPELINE_STAGES = [["maybe","Maybe"],["saved","To apply"],["to_tailor","To tailor"],["applied","Applied"],
   ["oa","Online assessment"],["interview","Interview"],["rejected","Rejected"],["closed","Closed"]];
 function stageControl(id, current) {
   if (!S.auth || (!S.userTracker && !S.auth.owner)) return "";
@@ -1848,8 +1871,10 @@ async function setPipelineStage(id, stage) {
   const job = jobById(id);
   if (!job || !PIPELINE_STAGES.some(([value]) => value === stage)) return;
   try {
-    if (S.auth && S.userTracker) await trackerAction("stage", job, {stage});
-    else if (S.auth?.owner) await apiAction("stage", job, {stage});
+    const payload = {stage};
+    if (stage === "to_tailor") payload.tailored_at = Math.floor(Date.now() / 1000);
+    if (S.auth && S.userTracker) await trackerAction("stage", job, payload);
+    else if (S.auth?.owner) await apiAction("stage", job, payload);
     else { toast("Connect Google before changing application stages"); return; }
     if (stage === "maybe") {
       S.applied = S.applied.filter(entry => entry.id !== id);
@@ -1876,7 +1901,7 @@ function cardHTML(x) {
 function rPipe() {
   const maybe = S.web.maybe.map(id=>S.jobs[id]).filter(Boolean);
   const stages = [
-    ["saved","📝 To apply"],["applied","✅ Applied"],["oa","🧪 OA"],
+    ["saved","📝 To apply"],["to_tailor","🎯 To tailor"],["applied","✅ Applied"],["oa","🧪 OA"],
     ["interview","🗣 Interview"],["rejected","↩ Rejected"]];
   $("#main").innerHTML = `${laneSettingsHTML()}${trackerPanelHTML()}<section class="manual-add">
     <h2>Add a role you found yourself</h2>
@@ -2197,11 +2222,11 @@ function openWS(id) {
     <h2>${esc(j.company)}</h2>
     <div class="sub">${esc(j.title)}
       ${j.explicit_new_grad?'· <span class="chip applied">new grad</span>':""}
-      ${a?`· <span class="chip ${esc(a.stage||"applied")}">${a.stage==="saved"?"to apply":esc(a.stage||"applied")}</span>`:""}
+      ${a?`· <span class="chip ${esc(a.stage||"applied")}">${esc(pipelineStageLabel(a.stage||"applied"))}</span>`:""}
       ${a&&a.notion_page?`· <a href="${esc(a.notion_page)}" target="_blank" rel="noopener">Notion ↗</a>`:""}</div>
     <div class="decision">
       <b>Quick decision</b>
-      <div class="sub">${esc((j.locations||[])[0]||"location unknown")}${j.salary?" · "+esc(j.salary):""}
+      <div class="sub">${esc(locationLabel(j))}${j.salary?" · "+esc(j.salary):""}
         · score ${j.score??"?"}${j.score_raw!==undefined?` (raw utility ${j.score_raw})`:""} · scoring v${j.score_version||j.rules_v||"?"} · ${ago(postedTs(j))||"date unknown"} old</div>
       <div class="facts">${eligibilityBadges(j)}</div>
      <div class="acts" style="margin-top:0.65rem">
@@ -2218,7 +2243,7 @@ function openWS(id) {
       ${a?"":`<button class="act" onclick='actMaybe(jobById("${id}"))'>${laneOf(id, appliedById())==="maybe"?"remove maybe":"maybe"}</button>`}
       ${a?"":`<button class="act" onclick='actTrack(jobById("${id}"))'>save → To apply</button>`}
       ${a?`<button class="act" onclick='actUntrack(jobById("${id}"))'>remove from tracker</button>`:""}
-      ${a&&(a.stage||"applied")!=="saved"?"":`<button class="act" onclick='actApplied(jobById("${id}"))'>mark applied</button>`}
+      ${a&&!['saved','to_tailor'].includes(a.stage||"applied")?"":`<button class="act" onclick='actApplied(jobById("${id}"))'>mark applied</button>`}
       ${ownerResumeStudio()?`<button class="act" onclick='openResumeStudio(jobById("${id}"))'>tailor resume ↗</button>`:""}
       <button class="act primary" onclick='startApply(jobById("${id}"))'>open application ↗</button>
     </div>`;
@@ -2967,7 +2992,7 @@ function resumeBatchCandidates() {
       const addedAt = Number(entry.applied_at || entry.stage_changed_at || 0);
       const job = jobById(entry.id) || entry;
       if (!job || seen.has(entry.id) || addedAt < start || addedAt >= end ||
-          ["closed", "rejected", "not_pursuing"].includes(stage) || isTerminalPosting(job)) return null;
+          !["saved", "to_tailor"].includes(stage) || isTerminalPosting(job)) return null;
       seen.add(entry.id);
       return {...job, _resumeAddedAt:addedAt, _resumeStage:stage};
     })
@@ -3001,7 +3026,7 @@ function renderResumeBatchView() {
     <div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">private drafts · no applications sent</span></div><div class="acts"><button class="act" onclick="showResumeTailoring()">single posting</button><button class="act" onclick="showResumeBank()">Resume bank</button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button></div></div>
     <h2>Tailor today’s saved roles</h2>
     <p class="sub">A focused queue for the mass-apply rhythm: roles you added to the active pipeline today are listed together, each with its own posting snapshot and durable Resume Studio run. Select a few, choose one mode, and review the finished drafts in Resume Bank before you apply.</p>
-    <div class="note"><strong>Safe by design.</strong> This only creates private resume drafts. It never submits an application, changes a pipeline stage, or publishes your CV. The private Mac engine processes at most two runs at once; the rest wait in its durable queue.</div>
+    <div class="note"><strong>Safe by design.</strong> This only creates private resume drafts. Queueing moves selected roles into the Pipeline’s <strong>To tailor</strong> lane; it never marks them Applied, submits an application, or publishes your CV. The private Mac engine processes at most two runs at once; the rest wait in its durable queue.</div>
   </section>
   <div class="lane">
     <div class="bar" style="justify-content:space-between"><div><h3>Added today <span class="sub">${candidates.length} role${candidates.length===1?"":"s"}</span></h3><p class="sub" style="margin:0">Up to ${RESUME_BATCH_LIMIT} drafts per batch · local calendar day · current non-terminal postings only.</p></div><div class="acts"><button class="act" onclick="selectAllResumeBatch()" ${candidates.length?"":"disabled"}>select up to ${RESUME_BATCH_LIMIT}</button><button class="act" onclick="clearResumeBatch()" ${selected.size?"":"disabled"}>clear</button></div></div>
@@ -3042,6 +3067,23 @@ function finishResumeBatchIfDone() {
   if (!runs.length || runs.some(run => ["queued", "running"].includes(run.status))) return;
   batch.state = runs.some(run => run.status === "failed") ? "partial" : "complete";
 }
+async function markResumeBatchTailored(job) {
+  const tailoredAt = Math.floor(Date.now() / 1000);
+  const payload = {stage:"to_tailor", tailored_at:tailoredAt};
+  if (S.auth && S.userTracker) await trackerAction("stage", job, payload);
+  else if (S.auth?.owner) await apiAction("stage", job, payload);
+  else throw new Error("connect a tracker before queueing drafts");
+  const entry = S.applied.find(item => item.id === job.id);
+  if (entry) {
+    entry.stage = "to_tailor";
+    entry.tailored_at = tailoredAt;
+  } else {
+    S.applied.push({id:job.id, company:job.company, title:job.title, url:job.url,
+      stage:"to_tailor", tailored_at:tailoredAt, via:"resume-batch"});
+  }
+  S.web.maybe = S.web.maybe.filter(value => value !== job.id);
+  saveWeb();
+}
 async function queueResumeBatch() {
   const batch = resumeBatchState();
   if (S.testing.engine !== "online") { toast("Start the private Resume Studio engine before queueing a batch"); return; }
@@ -3056,6 +3098,13 @@ async function queueResumeBatch() {
     try {
       const status = await studioRequest("/api/run", {method:"POST",body:JSON.stringify({job_id:job.id,mode:batch.mode})});
       Object.assign(row, {run_id:status.run_id,status:status.status||"queued",message:status.message||"waiting for a private worker"});
+      try {
+        await markResumeBatchTailored(job);
+        row.stage = "to_tailor";
+      } catch (stageError) {
+        row.stage_error = stageError.message;
+        row.message = `${row.message}; pipeline stage sync failed`;
+      }
       pollResumeBatchRun(status.run_id);
     } catch (error) {
       Object.assign(row, {status:"failed",message:error.message});

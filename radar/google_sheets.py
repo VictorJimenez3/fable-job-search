@@ -24,7 +24,7 @@ USER_HEADERS = ["Account ID", "GitHub User", "Job Radar ID", "Company", "Stage",
 ACCOUNT_HEADERS = ["Account ID", "GitHub ID", "GitHub Login", "Google Subject",
                    "Google Email", "Created At", "Updated At", "Merged Into", "Status",
                    "Google Token Ciphertext", "Google Sheet ID", "Google Connected At"]
-STAGES = {"saved", "applied", "oa", "interview", "rejected", "closed"}
+STAGES = {"saved", "to_tailor", "applied", "oa", "interview", "rejected", "closed"}
 
 
 def configured() -> bool:
@@ -180,6 +180,7 @@ def create_tracker(title: str | None = None) -> dict:
         ["Apply date / Job URL / Location", "Application context carried from the radar."],
         ["Text", "Short source/role context; safe to edit for personal notes."],
         ["saved", "Interested / to apply."],
+        ["to_tailor", "Resume draft queued; not applied yet."],
         ["applied", "Application submitted."],
         ["oa / interview / rejected / closed", "Response and terminal workflow stages."],
     ])
