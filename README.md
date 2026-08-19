@@ -38,7 +38,7 @@ of hiding personal priority inside one number.
 
 The platform is now decision-first: filter by role family, sponsorship,
 required experience, and minimum degree; see honest eligibility facts before opening a posting;
-then use one primary apply link with explicit To apply/Applied tracking. A
+then use one primary apply link with explicit To apply/To tailor/Applied tracking. A
 required master's or PhD is shown directly on the role, receives a substantial
 auditable score dock, and becomes dashboard-only rather than alertable; strong
 matches remain visible at the dashboard floor for human review in case the
@@ -216,9 +216,15 @@ and its ranking remain the priority whenever compute is constrained.
    the repository owner's Notion pipeline.
    (`stage_saved` in profile.yaml, default "Not started") and improves future
    ranking.
-   The crawler and tracker also use the canonical posting URL as a duplicate
-   boundary, so aggregator/ATS variants become one role instead of multiple
-   apply targets. Existing duplicates are merged on the next crawl; owner
+   The crawler and tracker use the canonical posting URL as the strongest
+   duplicate boundary, then run a conservative posting-family repair for
+   providers that mint a different URL per location. A family needs the same
+   employer and work-oriented title core, a hiring-program marker when titles
+   differ, and either a compatible official/aggregator location match or the
+   same aggregator board plus the same posting day. One surviving row carries
+   all known locations, alternate provider links, and an audit reason; generic
+   same-title roles with ambiguous direct postings stay separate. Existing
+   duplicates are merged on the next crawl or `resolve-links` repair; owner
    notes and tracker history are migrated, and duplicate Notion pages are
    soft-archived rather than deleted.
    Jobright-style aggregator pages are handled conservatively: each crawl
@@ -257,8 +263,10 @@ and its ranking remain the priority whenever compute is constrained.
    changes the posting crawler.
 3. For a job found outside the radar, use **Pipeline → Add a role you found
    yourself** to save its company, title, live link, and optional location to
-   the in-house **To apply** lane and Notion. It is explicitly marked manual,
-   never creates an alert, and is not mislabeled as new-grad. You can also
+   the in-house **To apply** lane and Notion. From there, move it to **To
+   tailor** when a Resume Studio draft is queued, then to **Applied** only
+   after you actually submit. It is explicitly marked manual, never creates
+   an alert, and is not mislabeled as new-grad. You can also
    comment `applied <url>` on any issue to log it as Applied immediately.
 4. A twice-daily reconcile sweep re-reads every radar issue and tracks any
    checked box the event pipeline missed — a tick is never lost.
@@ -627,8 +635,16 @@ For a focused application session, **Tailor today** selects up to 12 roles you
 added to the Pipeline on the current local calendar day. Review the selection,
 choose one tailoring mode for the batch, and queue the runs together; the
 private Mac engine still limits active work to two runs, and the action only
-creates drafts in Resume Bank. It never marks a role Applied or submits an
-application. Individual roles can be removed from the batch before queueing.
+creates drafts in Resume Bank. Successful queueing moves each role from **To
+apply** into the **To tailor** pipeline lane. It never marks a role Applied or
+submits an application. Individual roles can be removed from the batch before
+queueing.
+
+For Victor's Notion tracker, add a `To tailor` option to the Stage status
+column if it is not already present. Notion's API cannot create status options;
+until that option exists, the local Pipeline and Google tracker still record
+the stage and Notion leaves the local sync state auditable rather than sending
+an invalid update.
 
 The local engine now uses **high Luna effort for every tailoring stage** by
 standing preference. Lower effort values and `max` are rejected and fall back

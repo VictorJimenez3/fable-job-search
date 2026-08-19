@@ -4,9 +4,10 @@
   the job: it is recorded to applied.json with stage="saved" and a Notion page
   is created immediately with the not-yet-applied status. Victor flips the
   status to Applied in Notion himself when he actually applies.
-- An `applied <url>` comment (or, once credentials exist, email confirmation
-  detection) records stage="applied" — promoting an already-saved entry and
-  patching its Notion page rather than duplicating it.
+- A successful Resume Studio batch can move a saved entry to stage="to_tailor";
+  an `applied <url>` comment (or, once credentials exist, email confirmation
+  detection) advances it to stage="applied" — patching its Notion page rather
+  than duplicating it.
 - Comment commands:
     applied <url or id>   log a confirmed application immediately
     skip <company or id>  negative feedback (downranks similar roles)
@@ -41,7 +42,7 @@ CMD_CULTURE = re.compile(r"^culture\s+(.+?)\s*$", re.I | re.M)
 # Keep this ordering in one place for issue commands, email detection, and
 # tracker deduplication. Terminal states intentionally remain terminal.
 TRACKER_STAGE_ORDER = {
-    "saved": 0, "applied": 1, "oa": 2, "interview": 3,
+    "saved": 0, "to_tailor": 1, "applied": 2, "oa": 3, "interview": 4,
     "offered": 8, "signed": 9, "rejected": 9, "closed": 9,
     "not_pursuing": 9,
 }

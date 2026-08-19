@@ -160,6 +160,9 @@ def test_classify_lifecycle_events():
 
 
 def test_can_advance_is_forward_only():
+    assert ew.can_advance("to_tailor", "applied")
+    assert ew.can_advance("to_tailor", "oa")
+    assert not ew.can_advance("to_tailor", "saved")
     assert ew.can_advance("applied", "interview")
     assert ew.can_advance("applied", "rejected")
     assert ew.can_advance("interview", "rejected")

@@ -3,7 +3,7 @@ const {httpUrl, normalizeProfile} = require("../_lib");
 const {owner} = require("./_auth");
 const {configured, database, serverError} = require("./_db");
 
-const STAGES = new Set(["saved", "applied", "oa", "interview", "offer", "rejected", "withdrawn", "closed", "not_pursuing"]);
+const STAGES = new Set(["saved", "to_tailor", "applied", "oa", "interview", "offer", "rejected", "withdrawn", "closed", "not_pursuing"]);
 
 function bodyOf(req) {
   if (req.body && typeof req.body === "object") return req.body;

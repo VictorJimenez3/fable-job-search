@@ -84,6 +84,10 @@ class Job:
     last_seen_at: int | None = None
     lifecycle_checked_at: int | None = None
     lifecycle_events: list[dict] = field(default_factory=list)
+    # Durable posting-family identity is populated by the conservative feed
+    # dedupe pass. It is optional so old/simple source records stay compact.
+    posting_family_id: str = ""
+    posting_identity: dict = field(default_factory=dict)
 
     @property
     def id(self) -> str:
@@ -102,7 +106,8 @@ class Job:
         if not d["internship_eligibility"]:
             del d["internship_eligibility"]
         for key in ("source_board", "source_board_variants", "source_variants",
-                    "source_url_variants", "alternate_urls", "link_resolution"):
+                    "source_url_variants", "alternate_urls", "link_resolution",
+                    "posting_family_id", "posting_identity"):
             if not d.get(key):
                 d.pop(key, None)
         for key in ("posting_status_changed_at", "posting_status_reason", "closed_at",

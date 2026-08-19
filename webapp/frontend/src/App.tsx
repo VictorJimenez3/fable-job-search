@@ -21,6 +21,18 @@ function ageLabel(epoch?: number | null): string {
   return `${days} days ago`;
 }
 
+function applicationStageLabel(stage: string): string {
+  return ({
+    saved: "To apply",
+    to_tailor: "To tailor",
+    applied: "Applied",
+    oa: "Online assessment",
+    interview: "Interview",
+    rejected: "Rejected",
+    closed: "Closed",
+  } as Record<string, string>)[stage] ?? stage.replaceAll("_", " ");
+}
+
 const JobCard = memo(function JobCard({
   job,
   selected,
@@ -164,7 +176,7 @@ function ApplicationsView({profile}: {profile: JobFilters["profile"]}) {
     <section className="workspace"><p className="kicker">Application timeline</p><h2>Your pipeline</h2>
       {query.isLoading && <p>Loading applications…</p>}
       {query.isError && <div className="empty-state"><p>{query.error.message}</p><a href="/#pipeline">Open the classic pipeline</a></div>}
-      <div className="table-list">{query.data?.map((item) => <article key={item.id}><span className="badge">{item.stage}</span><div><strong>{item.company}</strong><p>{item.title}</p></div><time>{new Date(item.updated_at).toLocaleDateString()}</time></article>)}</div>
+      <div className="table-list">{query.data?.map((item) => <article key={item.id}><span className="badge">{applicationStageLabel(item.stage)}</span><div><strong>{item.company}</strong><p>{item.title}</p></div><time>{new Date(item.updated_at).toLocaleDateString()}</time></article>)}</div>
     </section>
   );
 }

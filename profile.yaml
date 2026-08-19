@@ -231,6 +231,11 @@ notion:
   # radar/notion_sync.py:resolve_database). Rename or recreate the tracker
   # freely; nothing here needs to change.
   stage_applied: Applied
+  # Add this status option to the Notion Stage column when it is not already
+  # present. The local/Google tracker can use it immediately; Notion's API
+  # cannot create status options, so sync leaves the local stage auditable
+  # until the option exists.
+  stage_to_tailor: To tailor
   # status a checkbox-tracked (not yet applied) job gets. Must be an existing
   # option of your Stage status column — the Notion API cannot create status
   # options. Verified live 2026-07-11: your to-do group's only option is

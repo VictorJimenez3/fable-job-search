@@ -2098,3 +2098,31 @@ The committed JSON state is now emitted compactly. It remains ordinary,
 sorted, UTF-8 JSON for the browser and Mac companion, but the jobs snapshot
 stays below GitHub's 100 MB blob limit during a full score rebuild. This is a
 serialization-only change; no records or fields are dropped.
+
+## 141. Canonical posting families prevent location/provider duplicate targets (2026-08-19)
+
+Canonical URL equality remains the strongest duplicate boundary, but it is not
+enough for providers such as Jobright that mint a different detail URL for each
+location of one employer requisition. Durable repair now assigns a
+`posting_family_id` and merges only high-confidence variants: the same
+employer, the same work-oriented title core, a hiring-program marker when
+titles differ, and compatible location evidence when an official/aggregator
+pair exists. When no official anchor exists, same-board aggregator rows also
+need a marked early-career/program title and the same posting calendar day.
+
+The surviving record retains all locations, alternate URLs, source variants,
+and `posting_identity.matched_by` reasons. Applied, shortlist, alert-history,
+web-state, and existing Notion references follow the alias to the survivor;
+duplicate Notion pages are soft-archived, never destroyed. Ambiguous direct
+same-title requisitions remain separate even when their locations match. The
+repair runs both on the durable pre-crawl state and on each fresh discovery
+batch, so a new official row cannot generate a duplicate alert while waiting
+for the next scheduled repair.
+
+Resume Studio's owner-only **Tailor today** flow now has an explicit
+`to_tailor` application stage between `saved` (**To apply**) and `applied`.
+Successful batch queueing moves the role into that lane but never claims that
+an application was submitted. The stage is carried through the classic UI,
+Notion mapping, email forward-only ordering, legacy/modern Google tracker
+adapters, and the staged applications API. Notion status options remain a
+manual setup step because Notion's API cannot create them.

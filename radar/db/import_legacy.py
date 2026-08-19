@@ -191,6 +191,7 @@ def import_legacy(root: Path = ROOT, repo: RadarRepository | None = None) -> dic
             stage = str(entry.get("stage") or "saved").casefold()
             if stage not in {
                 "saved",
+                "to_tailor",
                 "applied",
                 "oa",
                 "interview",
@@ -257,7 +258,7 @@ def parity(root: Path = ROOT, repo: RadarRepository | None = None) -> dict[str, 
             for index, entry in enumerate(value):
                 stage = str(entry.get("stage") or "saved").casefold()
                 if stage not in {
-                    "saved", "applied", "oa", "interview", "offer", "rejected",
+                    "saved", "to_tailor", "applied", "oa", "interview", "offer", "rejected",
                     "withdrawn", "closed", "not_pursuing",
                 }:
                     stage = "saved"

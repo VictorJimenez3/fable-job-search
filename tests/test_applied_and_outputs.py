@@ -66,6 +66,16 @@ def test_applied_signal_promotes_saved_entry(tmp_state):
     assert not record_applied(JOB, applied, fb, via="comment")
 
 
+def test_tracker_stage_order_supports_to_tailor_before_applied(tmp_state):
+    from radar.applied import record_applied
+    applied, fb = [], {"company_boosts": {}, "token_boosts": {}}
+    assert record_applied(JOB, applied, fb, via="checkbox", stage="saved")
+    assert record_applied(JOB, applied, fb, via="resume-batch", stage="to_tailor")
+    assert applied[0]["stage"] == "to_tailor"
+    assert record_applied(JOB, applied, fb, via="comment", stage="applied")
+    assert applied[0]["stage"] == "applied"
+
+
 def test_same_canonical_url_promotes_existing_tracker_entry(tmp_state):
     from radar.applied import record_applied
     applied, fb = [], {"company_boosts": {}, "token_boosts": {}}
@@ -165,6 +175,17 @@ def test_notion_payload_saved_stage():
     schema = {**FULL_SCHEMA, "status_options": {"Stage": ["Applied", "Interview"]}}
     p = build_payload(saved, schema)
     assert "Stage" not in p["properties"]
+
+
+def test_notion_payload_to_tailor_stage_is_distinct_when_configured():
+    from radar.config import profile
+    want = profile()["notion"]["stage_to_tailor"]
+    entry = {**JOB, "stage": "to_tailor"}
+    schema = {**FULL_SCHEMA, "status_options": {"Stage": [want, "Applied", "Interview"]}}
+    p = build_payload(entry, schema)
+    assert p["properties"]["Stage"]["status"]["name"] == want
+    assert "Apply date" not in p["properties"]
+    assert ns._stage_key_from_status(want) == "to_tailor"
 
 
 def test_notion_payload_uses_response_stage_for_new_email_entry():
