@@ -160,7 +160,7 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   rechecked once under the new signal. `resolve-links` reports closed rows
   separately from transient errors.
 - **Stale-link maintenance:** `radar.yml` now runs a separate pre-crawl repair
-  job that checks up to 200 still-open aggregator rows with bounded parallel
+  job that checks up to 800 still-open aggregator rows with bounded parallel
   workers and commits terminal verdicts before full discovery begins. The
   repair job retries against fresh upstream state on a push race, so a slow or
   timed-out full crawl cannot starve the closed-posting cleanup.

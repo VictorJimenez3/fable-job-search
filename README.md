@@ -228,7 +228,7 @@ and its ranking remain the priority whenever compute is constrained.
    matches with one compatible direct ATS row are merged; ambiguous same-title
    roles remain separate so coverage is not lost. Alerts and the generated
    dashboard list the discovery source(s) and fallback links.
-   A separate pre-crawl repair job checks up to 200 still-open aggregator rows
+   A separate pre-crawl repair job checks up to 800 still-open aggregator rows
    in parallel (16 bounded workers) and publishes closed-page verdicts before
    the expensive discovery crawl starts. This keeps stale Jobright pages
    moving into History even when a full crawl reaches its execution limit.
