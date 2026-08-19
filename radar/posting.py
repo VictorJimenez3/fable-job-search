@@ -274,10 +274,13 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
             return
         if is_job:
             was = target.alert_ok
-            rec = {"alert_ok": target.alert_ok, "score_reasons": target.score_reasons}
+            rec = {"alert_ok": target.alert_ok, "score": target.score,
+                   "score_reasons": target.score_reasons}
             apply_record(rec, a, fetched=True, now=now)
             target.posting = rec["posting"]
             target.alert_ok = rec["alert_ok"]
+            target.score = rec["score"]
+            target.score_reasons = rec["score_reasons"]
             if was and not target.alert_ok:
                 stats["demoted"] += 1
         else:
@@ -297,11 +300,14 @@ def scrape_pass(new_jobs: list, jobs_state: dict, domains: dict,
                 stats["research_sources"] += 1
             a = analyze(j.description)
             if a:
-                rec = {"alert_ok": j.alert_ok, "score_reasons": j.score_reasons}
+                rec = {"alert_ok": j.alert_ok, "score": j.score,
+                       "score_reasons": j.score_reasons}
                 was = j.alert_ok
                 apply_record(rec, a, fetched=False, now=now)
                 j.posting = rec["posting"]
                 j.alert_ok = rec["alert_ok"]
+                j.score = rec["score"]
+                j.score_reasons = rec["score_reasons"]
                 stats["inline"] += 1
                 if was and not j.alert_ok:
                     stats["demoted"] += 1

@@ -77,10 +77,11 @@ def test_apply_demotes_three_plus_years_and_is_idempotent():
 
 
 def test_apply_demotes_any_positive_experience_floor():
-    rec = {"alert_ok": True, "score_reasons": []}
+    rec = {"alert_ok": True, "score": 80, "score_reasons": []}
     posting.apply_record(rec, {"sponsorship": "unknown", "years_min": 1,
                                "years_note": "1+ years"}, fetched=True, now=NOW)
     assert rec["alert_ok"] is False
+    assert rec["score"] == 80 - (35 + 4)
     assert "posting: wants 1+ yrs (dashboard only) -39" in rec["score_reasons"]
 
 
@@ -146,6 +147,7 @@ def test_scrape_pass_inline_fetch_and_stored(monkeypatch):
 
     assert fetch_me.posting["years_min"] == 3
     assert fetch_me.alert_ok is False        # 3+ yrs demoted, not deleted
+    assert fetch_me.score == 80 - (35 + 12)
 
     assert dead.alert_ok is False
     assert "posting gone (link checked)" in dead.score_reasons
