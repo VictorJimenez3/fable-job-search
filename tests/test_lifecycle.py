@@ -1,4 +1,5 @@
 import time
+from unittest.mock import Mock, patch
 
 import pytest
 
@@ -144,6 +145,14 @@ def test_terminal_owner_notion_page_is_soft_archived(monkeypatch):
     assert calls == [("secret", "3995d6f4-2cab-81b7-9291-edce7b1639b2")]
     assert applied[0]["notion_archived"] is True
     assert notion_sync.archive_terminal_pages(applied, jobs) == 0
+
+
+def test_notion_archive_uses_current_in_trash_field():
+    response = Mock()
+    response.raise_for_status.return_value = None
+    with patch.object(notion_sync.requests, "patch", return_value=response) as patch_request:
+        notion_sync.archive_page("secret", "3995d6f4-2cab-81b7-9291-edce7b1639b2")
+    assert patch_request.call_args.kwargs["json"] == {"in_trash": True}
 
 
 def test_closed_application_is_archived_after_two_days(monkeypatch):
