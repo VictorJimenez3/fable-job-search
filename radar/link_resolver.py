@@ -8,17 +8,15 @@ aggregator URL remains the primary fallback and is never discarded.
 """
 from __future__ import annotations
 
-import json
 import re
 import time
 from html import unescape
 from html.parser import HTMLParser
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import urljoin, urlsplit, urlunsplit
 
 from . import http
 from .config import env
 from .identity import canonical_url
-
 
 # Keep this list deliberately narrow.  Adding a host here changes which URLs
 # the crawler is willing to replace, so each addition needs a parser/test.
@@ -54,7 +52,9 @@ _DIRECT_KEY_RE = re.compile(
 # Jobright can keep serving a perfectly healthy 200 page after the employer
 # closes the role.  This is a visible page-level verdict, not an inferred
 # age-based expiry, so it is safe to use before considering application links.
-JOBRIGHT_PAGE_SIGNAL_VERSION = 1
+# Bump when the liveness probe changes. Existing no-direct caches are then
+# rechecked instead of masking a newly supported page-level signal.
+JOBRIGHT_PAGE_SIGNAL_VERSION = 2
 _JOBRIGHT_CLOSED_RE = re.compile(
     r"\bthis\s+job\s+has\s+closed\b|"
     r"\bjob\s+posting\s+has\s+closed\b|"
@@ -207,6 +207,14 @@ def _jobright_id(url: str) -> str:
         return ""
 
 
+def _canonical_page_url(url: str) -> str:
+    """Drop tracking query/fragment data before a liveness retry."""
+    parts = urlsplit(url)
+    if not parts.scheme or not parts.netloc or not parts.path:
+        return ""
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, "", ""))
+
+
 def _public_jobright_detail(url: str):
     job_id = _jobright_id(url)
     if not job_id:
@@ -253,6 +261,26 @@ def resolve_link(url: str, now: int | None = None) -> dict:
         if final_url:
             result["final_url"] = final_url
         return result
+    # Jobright feed URLs often carry campaign parameters. A runner or CDN can
+    # serve different visitor HTML for that variant, so retry the canonical
+    # page path before accepting a no-direct result. This is still a bounded
+    # same-host request and only runs when the original URL has query/fragment
+    # data.
+    canonical_page = _canonical_page_url(final_url or url)
+    if canonical_page and canonical_page != (final_url or url):
+        try:
+            canonical_response = http.get(canonical_page, timeout=15, allow_redirects=True)
+        except Exception:
+            canonical_response = None
+        canonical_body = str(getattr(canonical_response, "text", "") or "")
+        if _JOBRIGHT_CLOSED_RE.search(unescape(canonical_body)):
+            result.update({
+                "status": "closed",
+                "posting_status": "expired",
+                "reason": "Jobright page says: This job has closed.",
+                "final_url": str(getattr(canonical_response, "url", "") or canonical_page),
+            })
+            return result
     candidates.extend(_html_candidates(final_url or url, body))
     # Jobright's visitor HTML intentionally omits the original application URL
     # for some postings.  Its public share endpoint sometimes includes it, so

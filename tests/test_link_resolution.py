@@ -50,6 +50,29 @@ def test_resolver_marks_jobright_closed_banner_as_expired(monkeypatch):
     assert "job has closed" in result["reason"].lower()
 
 
+def test_resolver_retries_jobright_tracking_url_without_query(monkeypatch):
+    tracking = "https://jobright.ai/jobs/info/abc123?utm_source=board"
+    canonical = "https://jobright.ai/jobs/info/abc123"
+    calls = []
+
+    def fake_get(url, **kwargs):
+        calls.append(url)
+        body = "This job has closed." if url == canonical else "<html>visitor variant</html>"
+        return _response(url, body)
+
+    monkeypatch.setattr(link_resolver.http, "get", fake_get)
+    monkeypatch.setattr(
+        link_resolver, "_public_jobright_detail",
+        lambda url: (_ for _ in ()).throw(AssertionError("closed canonical page needs no detail lookup")),
+    )
+
+    result = link_resolver.resolve_link(tracking, now=100)
+
+    assert result["status"] == "closed"
+    assert result["page_signal_version"] == link_resolver.JOBRIGHT_PAGE_SIGNAL_VERSION
+    assert calls == [tracking, canonical]
+
+
 def test_resolver_accepts_explicit_company_application_anchor(monkeypatch):
     aggregator = "https://jobright.ai/jobs/info/abc123"
     direct = "https://careers.acme.example/careers/jobs/swe-123"
