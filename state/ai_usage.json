@@ -1,67 +1,6 @@
 {
- "events": [
-  {
-   "at": "2026-08-19T09:55:18+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 429: {'status': 429, 'title': 'Too Many Requests'}",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 4140,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 3967,
-   "prompt_tokens": 0,
-   "prompt_version": "company_research:prompt-policy-v1:0172d9409cb06a95",
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-19T09:55:20+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
-   "endpoint": "nvidia:deepseek",
-   "lane": "api",
-   "latency_ms": 1970,
-   "max_tokens": 2200,
-   "model": "deepseek-ai/deepseek-v4-pro",
-   "prompt_chars": 3967,
-   "prompt_tokens": 0,
-   "prompt_version": "company_research:prompt-policy-v1:0172d9409cb06a95",
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-19T09:55:22+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 429: {'status': 429, 'title': 'Too Many Requests'}",
-   "endpoint": "nvidia:glm",
-   "lane": "api",
-   "latency_ms": 8128,
-   "max_tokens": 2200,
-   "model": "z-ai/glm-5.2",
-   "prompt_chars": 5097,
-   "prompt_tokens": 0,
-   "prompt_version": "company_research:prompt-policy-v1:f04f5bf660369456",
-   "status": "error",
-   "task": "company_research"
-  },
-  {
-   "at": "2026-08-19T09:55:24+00:00",
-   "completion_tokens": 0,
-   "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
-   "endpoint": "nvidia:deepseek",
-   "lane": "api",
-   "latency_ms": 1987,
-   "max_tokens": 2200,
-   "model": "deepseek-ai/deepseek-v4-pro",
-   "prompt_chars": 5097,
-   "prompt_tokens": 0,
-   "prompt_version": "company_research:prompt-policy-v1:f04f5bf660369456",
-   "status": "error",
-   "task": "company_research"
-  }
- ],
- "generated_at": 1787133325,
+ "events": [],
+ "generated_at": 1787134579,
  "history": [
   {
    "attempts": [
@@ -6562,26 +6501,9 @@
   "logical_calls": 10000,
   "requests": 10000
  },
- "logical_calls": 2,
- "models": {
-  "nvidia:deepseek": {
-   "errors": 2,
-   "model": "deepseek-ai/deepseek-v4-pro",
-   "ok": 0,
-   "requests": 2,
-   "tokens": 0
-  },
-  "nvidia:glm": {
-   "errors": 2,
-   "model": "z-ai/glm-5.2",
-   "ok": 0,
-   "requests": 2,
-   "tokens": 0
-  }
- },
+ "logical_calls": 0,
+ "models": {},
  "provider": "nvidia-router",
- "requests": 6,
- "task_calls": {
-  "company_research": 2
- }
+ "requests": 0,
+ "task_calls": {}
 }
