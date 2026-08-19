@@ -54,7 +54,7 @@ _DIRECT_KEY_RE = re.compile(
 # age-based expiry, so it is safe to use before considering application links.
 # Bump when the liveness probe changes. Existing no-direct caches are then
 # rechecked instead of masking a newly supported page-level signal.
-JOBRIGHT_PAGE_SIGNAL_VERSION = 2
+JOBRIGHT_PAGE_SIGNAL_VERSION = 3
 _JOBRIGHT_CLOSED_RE = re.compile(
     r"\bthis\s+job\s+has\s+closed\b|"
     r"\bjob\s+posting\s+has\s+closed\b|"
@@ -199,6 +199,17 @@ def _json_candidates(page_url: str, payload) -> list[tuple[str, str]]:
     return found
 
 
+def _jobright_metadata_is_closed(payload) -> bool:
+    """Recognize Jobright's explicit deleted-posting metadata."""
+    if isinstance(payload, dict):
+        if payload.get("isDeleted") is True:
+            return True
+        return any(_jobright_metadata_is_closed(child) for child in payload.values())
+    if isinstance(payload, list):
+        return any(_jobright_metadata_is_closed(child) for child in payload)
+    return False
+
+
 def _jobright_id(url: str) -> str:
     parts = [part for part in urlsplit(url).path.split("/") if part]
     try:
@@ -289,6 +300,13 @@ def resolve_link(url: str, now: int | None = None) -> dict:
     if is_aggregator_url(final_url or url):
         payload = _public_jobright_detail(url)
         if payload is not None:
+            if _jobright_metadata_is_closed(payload):
+                result.update({
+                    "status": "closed",
+                    "posting_status": "expired",
+                    "reason": "Jobright metadata says the job is deleted.",
+                })
+                return result
             candidates.extend(_json_candidates(url, payload))
 
     ranked: list[tuple[int, str, str]] = []
