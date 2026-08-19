@@ -228,6 +228,10 @@ and its ranking remain the priority whenever compute is constrained.
    matches with one compatible direct ATS row are merged; ambiguous same-title
    roles remain separate so coverage is not lost. Alerts and the generated
    dashboard list the discovery source(s) and fallback links.
+   A separate pre-crawl repair job checks up to 200 still-open aggregator rows
+   in parallel (16 bounded workers) and publishes closed-page verdicts before
+   the expensive discovery crawl starts. This keeps stale Jobright pages
+   moving into History even when a full crawl reaches its execution limit.
 2. **When you apply, the inbox becomes the source of truth.** When the optional
    email secrets are configured, the watcher reads application-lifecycle
    emails every 30 minutes and drives the tracker **Stage** for you:
@@ -760,6 +764,7 @@ Useful env vars: `RADAR_DISABLE_SOURCES=ats,hn`, `RADAR_PROBE_BUDGET`,
 `RADAR_WORKERS`, `RADAR_LIFECYCLE_ACTIVE_DAYS=45`,
 `RADAR_LIFECYCLE_UNSEEN_GRACE_DAYS=14`, `RADAR_HISTORY_DAYS=730`,
 `RADAR_LINK_RESOLVE_LIMIT=25`, `RADAR_LINK_RESOLVE_TTL_DAYS=30`,
+`RADAR_LINK_RESOLVE_WORKERS=12`,
 `RADAR_WORKDAY_MAX_RESULTS=200`, `RADAR_PHENOM_MAX_RESULTS=100`,
 `RADAR_EIGHTFOLD_MAX_RESULTS=100`, and
 `RADAR_SMARTRECRUITERS_MAX_RESULTS=1000`.
@@ -775,6 +780,7 @@ Other one-off CLI commands: `notion-verify`, `email-verify` (connectivity checks
 create nothing), `email-watch` (run one detection cycle manually),
 `tracker-sync` (pull and push tracker stages), and
 `resolve-links` (bounded, auditable aggregator-link backfill; set
-`RADAR_LINK_RESOLVE_LIMIT` for the batch size), and
+`RADAR_LINK_RESOLVE_LIMIT` for the batch size; it defaults to 200 open rows and
+uses bounded parallel requests), and
 `lifecycle` (reconcile stale state plus retry terminal Notion archives without
 source discovery).

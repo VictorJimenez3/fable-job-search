@@ -159,6 +159,11 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   reopening the role during the same crawl. Older no-direct caches are
   rechecked once under the new signal. `resolve-links` reports closed rows
   separately from transient errors.
+- **Stale-link maintenance:** `radar.yml` now runs a separate pre-crawl repair
+  job that checks up to 200 still-open aggregator rows with bounded parallel
+  workers and commits terminal verdicts before full discovery begins. The
+  repair job retries against fresh upstream state on a push race, so a slow or
+  timed-out full crawl cannot starve the closed-posting cleanup.
 - **Owner Resume Studio batch:** **Tailor today** selects up to 12 roles added
   to the Pipeline on the local calendar day, queues one chosen mode through
   the existing private engine bridge, and never submits or marks applications.
@@ -387,7 +392,8 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   closed is now stored as expired evidence before direct-link promotion, so it
   cannot remain in active Jobs merely because the page returned HTTP 200.
   `python -m radar.main resolve-links` accelerates the same cached, auditable
-  backfill for existing state and reports closed rows separately.
+  backfill for existing open state, uses bounded parallel requests, and reports
+  closed rows separately. The scheduled repair job runs this before discovery.
 - **Email lifecycle:** `email-watch` is active when
   `EMAIL_ADDRESS` / `EMAIL_APP_PASSWORD` are configured. It searches a
   bounded 21-day window, decodes ATS headers, matches employer plus title, and
