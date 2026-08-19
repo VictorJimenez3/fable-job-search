@@ -28,6 +28,7 @@ def test_platform_exposes_owner_batch_resume_tailoring_for_today():
     assert "private drafts · no applications sent" in html
     assert "local calendar day" in html
     assert '"to_tailor"' in html
+    assert 'value="to_tailor"' in html
     assert "Queueing moves selected roles into the Pipeline’s" in html
     assert "stage_to_tailor" in (ROOT / "profile.yaml").read_text()
     assert "to_tailor" in (ROOT / "webapp" / "api" / "_google-tracker.js").read_text()
