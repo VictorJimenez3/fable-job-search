@@ -95,9 +95,17 @@ def _merge_job_sighting(winner: Job, sighting: Job) -> None:
     for url in [sighting.url, *sighting.alternate_urls]:
         if url and canonical_url(url) != winner_url:
             _append_unique(winner.alternate_urls, [url])
-    if (not winner.link_resolution or
-            winner.link_resolution.get("status") != "resolved"):
-        if sighting.link_resolution:
+    if sighting.link_resolution:
+        # A closed aggregator copy is definitive for that aggregator URL, but
+        # an official ATS variant gets its own liveness check. Do not carry a
+        # stale Jobright banner onto a stronger direct posting winner.
+        closed_aggregator = (
+            sighting.link_resolution.get("status") == "closed" and
+            link_resolver.is_aggregator_url(winner.url) is False
+        )
+        if not closed_aggregator and (
+                not winner.link_resolution or
+                winner.link_resolution.get("status") != "resolved"):
             winner.link_resolution = dict(sighting.link_resolution)
 
 
@@ -127,8 +135,13 @@ def _merge_record_sighting(target: dict, sighting: dict) -> bool:
         if url and canonical_url(url) != target_url:
             changed |= _append_unique(alternate_urls, [url])
     resolution = sighting.get("link_resolution") or {}
-    if resolution and (not target.get("link_resolution") or
-                       target.get("link_resolution", {}).get("status") != "resolved"):
+    closed_aggregator = (
+        resolution.get("status") == "closed" and
+        link_resolver.is_aggregator_url(target.get("url")) is False
+    )
+    if (resolution and not closed_aggregator and
+            (not target.get("link_resolution") or
+             target.get("link_resolution", {}).get("status") != "resolved")):
         target["link_resolution"] = resolution
         changed = True
     return changed
@@ -182,7 +195,7 @@ def _unique_discovered_jobs(discovered: list[Job]) -> tuple[list[Job], int]:
 
 def _resolve_discovered_links(discovered: list[Job], jobs_state: dict, now: int) -> tuple[list[Job], dict]:
     """Resolve a bounded batch of aggregator links before identity matching."""
-    stats = {"attempted": 0, "resolved": 0, "unchanged": 0, "errors": 0}
+    stats = {"attempted": 0, "resolved": 0, "closed": 0, "unchanged": 0, "errors": 0}
     if env("RADAR_DISABLE_LINK_RESOLUTION", "").lower() in {"1", "true", "yes"}:
         return discovered, stats
     limit = max(0, int(env("RADAR_LINK_RESOLVE_LIMIT", "25")))
@@ -209,6 +222,8 @@ def _resolve_discovered_links(discovered: list[Job], jobs_state: dict, now: int)
         status = result.get("status")
         if status == "resolved":
             stats["resolved"] += 1
+        elif status == "closed":
+            stats["closed"] += 1
         elif status in {"error", "not_found"}:
             stats["errors"] += 1
         else:
@@ -428,6 +443,7 @@ def crawl() -> int:
     if link_stats["attempted"]:
         print(f"link resolution: checked {link_stats['attempted']}, "
               f"promoted {link_stats['resolved']} direct link(s), "
+              f"closed {link_stats['closed']} Jobright posting(s), "
               f"kept {link_stats['unchanged']} aggregator fallback(s), "
               f"errors/not found {link_stats['errors']}")
     # Resolution can turn two previously different aggregator URLs into one
@@ -445,6 +461,22 @@ def crawl() -> int:
         if not j.company or not j.title or not j.url:
             continue
         jid = j.id
+        link_result = j.link_resolution or {}
+        if link_result.get("status") == "closed":
+            # Do this before ``touch``: touch deliberately reopens any
+            # terminal role that reappears in a feed, while this page signal
+            # is the stronger, same-run liveness verdict.
+            existing = jobs_state.get(jid)
+            if existing is not None:
+                existing["link_resolution"] = dict(link_result)
+                lifecycle.mark_terminal(
+                    existing,
+                    link_result.get("posting_status") or lifecycle.EXPIRED,
+                    now,
+                    link_result.get("reason") or "Jobright page says the posting is closed",
+                )
+                seen_this_run.add(jid)
+            continue
         canonical = canonical_url(j.url)
         existing_url_id = existing_url_ids.get(canonical) if canonical else None
         if existing_url_id and existing_url_id != jid:
@@ -725,7 +757,7 @@ def resolve_links_cmd() -> int:
         int(pair[1].get("last_seen_at") or pair[1].get("first_seen") or 0),
     ), reverse=True)
     limit = max(0, int(env("RADAR_LINK_RESOLVE_LIMIT", "50")))
-    attempted = resolved = unchanged = errors = 0
+    attempted = resolved = closed = unchanged = errors = 0
     for _jid, record in candidates[:limit]:
         job = Job(
             company=record.get("company", ""), title=record.get("title", ""),
@@ -740,7 +772,16 @@ def resolve_links_cmd() -> int:
         job.link_resolution = dict(record.get("link_resolution") or {})
         attempted += 1
         result = link_resolver.resolve_job(job, existing=record, now=now)
-        if result.get("status") == "resolved":
+        if result.get("status") == "closed":
+            record["link_resolution"] = result
+            lifecycle.mark_terminal(
+                record,
+                result.get("posting_status") or lifecycle.EXPIRED,
+                now,
+                result.get("reason") or "Jobright page says the posting is closed",
+            )
+            closed += 1
+        elif result.get("status") == "resolved":
             record["url"] = job.url
             if job.ats:
                 record["ats"] = job.ats
@@ -760,7 +801,7 @@ def resolve_links_cmd() -> int:
         state.save("applied.json", applied)
     write_outputs(jobs_state, state.companies(), state.load("runs.json", []),
                   state.load("alert_history.json", []))
-    print(f"link-resolve: checked {attempted}, promoted {resolved}, kept {unchanged}, "
+    print(f"link-resolve: checked {attempted}, promoted {resolved}, closed {closed}, kept {unchanged}, "
           f"errors/not found {errors}; repair={'yes' if repaired else 'no'}")
     return 0
 
@@ -1113,6 +1154,10 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int,
     changed = 0
     alerts = 0
     for rec in jobs_state.values():
+        # Company concentration is applied after these verdicts. Reset only
+        # its own prior adjustment while retaining the freshly rebuilt score
+        # as the source of truth for later ranking nudges.
+        rec["ranking_adjustment"] = 0
         job = Job(company=rec.get("company", ""), title=rec.get("title", ""),
                   url=rec.get("url", ""), source=rec.get("source", ""),
                   locations=rec.get("locations", []), salary=rec.get("salary", ""),

@@ -613,6 +613,53 @@ def test_space_swap_candidates_never_trim_core_experience():
     )
 
 
+def test_space_expansion_single_swap_trial_keeps_action_tuple_shape(monkeypatch, tmp_path):
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    graph = {"nodes": [
+        {"id": bullet["id"], "claim_allowed": True}
+        for entry in catalog["entries"].values()
+        for bullet in entry["bullets"]
+    ]}
+    source = catalog["entries"]["project:item0"]["bullets"][2]
+    addition = {
+        "entry_id": "project:item0",
+        "section": "projects",
+        "placement": "append_bullet",
+        "source_id": source["id"],
+        "source_ids": [source["id"]],
+        "evidence_ids": [source["id"]],
+        "text": source["text"],
+        "priority": 95,
+        "target_signal": "communication",
+        "why": "Adds a distinct verified signal when a lower-value project line is displaced.",
+    }
+    original_count = sum(
+        len(entry["bullets"])
+        for section in ("experiences", "projects", "leadership")
+        for entry in plan[section]
+    )
+
+    def fake_pack(candidate, _catalog, _run_dir):
+        count = sum(
+            len(entry["bullets"])
+            for section in ("experiences", "projects", "leadership")
+            for entry in candidate[section]
+        )
+        if count > original_count:
+            raise RuntimeError("forced direct-trial overflow")
+        return candidate, {"compiled": True, "pages": 1, "overfull": False}
+
+    monkeypatch.setattr(rs, "pack_plan_to_page", fake_pack)
+    expanded, result = rs.expand_into_measured_space(
+        plan, [addition], catalog, graph, tmp_path,
+    )
+    assert result["applied"]
+    assert source["id"] in rs._selected_bullet_ids(expanded)
+    assert result["replaced"]
+
+
 def test_line_compaction_shortens_safe_connective_phrases():
     rag = "Unified RAG infrastructure on Google Cloud with AlloyDB/pgvector for embeddings, vector search, and SQL retrieval"
     pytorch = "Extended modular PyTorch framework with 3+ arithmetic features, enabling repeatable linear-algebra experiments"
@@ -1663,6 +1710,24 @@ def test_provider_policy_pins_luna_to_codex_model_not_a_provider_lane(monkeypatc
     assert set(commands) == {"codex", "claude"}
     assert "luna" not in commands
     assert rs.CODEX_LUNA_MODEL == "gpt-5.6-luna"
+
+
+def test_codex_effort_profile_spends_depth_on_writing_and_speed_on_mechanics(monkeypatch):
+    monkeypatch.delenv("RESUME_STUDIO_CODEX_EFFORT", raising=False)
+    monkeypatch.delenv("RESUME_STUDIO_DRAFT_CODEX_EFFORT", raising=False)
+    monkeypatch.delenv("RESUME_STUDIO_LINE_EDIT_CODEX_EFFORT", raising=False)
+    assert rs.codex_effort_task("draft") == "draft"
+    assert rs.codex_effort_task("critique_claude") == "review"
+    assert rs.codex_effort_task("revision_critique_claude") == "review"
+    assert rs.codex_effort_task("line_edit_2") == "line_edit"
+    assert rs.codex_reasoning_effort("draft") == "high"
+    assert rs.codex_reasoning_effort("space_expansion") == "high"
+    assert rs.codex_reasoning_effort("line_edit") == "high"
+    monkeypatch.setenv("RESUME_STUDIO_CODEX_EFFORT", "max")
+    assert rs.codex_reasoning_effort("draft") == "high"
+    monkeypatch.setenv("RESUME_STUDIO_LINE_EDIT_CODEX_EFFORT", "low")
+    assert rs.codex_reasoning_effort("line_edit") == "high"
+    assert rs.codex_reasoning_effort("draft", override="max") == "high"
 
 
 def test_provider_error_result_is_not_usable():

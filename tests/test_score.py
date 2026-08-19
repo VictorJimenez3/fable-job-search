@@ -507,6 +507,30 @@ def test_company_concentration_does_not_touch_small_groups_or_raw_ties():
     assert all(job.ranking_adjustment == 0 for job in tied)
 
 
+def test_dict_concentration_preserves_post_verdict_demotions():
+    # Stored records receive posting/quality verdicts after calibration. The
+    # diversity pass must not restore the old calibrated score and make an
+    # experienced role look like a 100 again.
+    record = {
+        "company": "NVIDIA",
+        "title": "Machine Learning Engineer",
+        "score": 61,
+        "score_calibrated": 100,
+        "score_raw": 91,
+        "ranking_adjustment": 0,
+        "score_reasons": ["posting: wants 1+ yrs (dashboard only) -39"],
+    }
+    apply_company_concentration({"role-1": record})
+    assert record["score"] == 61
+    assert record["score"] < record["score_calibrated"]
+
+    # A second pass removes only its own prior diversity adjustment.
+    record["score"] = 59
+    record["ranking_adjustment"] = -2
+    apply_company_concentration({"role-1": record})
+    assert record["score"] == 61
+
+
 def test_exact_title_variants_tie_without_a_diversity_penalty():
     jobs = [
         mk("Software Engineer, New Grad", company="Google", locations=["New York, NY"]),

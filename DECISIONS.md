@@ -2009,3 +2009,64 @@ The deployment workflow waits for the Vercel deployment to reach Ready before
 aliasing it. The vNext entry itself receives the same strict CSP as its asset
 descendants, and live probes verify that auth configuration and source files
 are not statically exposed.
+
+## 135. Resume tailoring spends Luna depth where judgment matters (2026-08-17)
+
+Resume tailoring is a staged editorial workflow, but every stage does not need
+the same reasoning budget. A controlled comparison on one captured Merck
+posting measured Luna low/medium/high at 69/82/76 seconds for the same valid
+source-addressed planning task. High produced the safest compiled geometry;
+low and medium remained valid but left more near-wraps. Luna max produced no
+structured response within 4 minutes 51 seconds and is therefore retained only
+as an explicit experiment setting.
+
+The production profile keeps high for the main portfolio writer and
+critique-driven revisions, medium for requirement mapping and review/workshop
+calls, and low for measured-space selection and one-line geometry repair. The
+line editor runs once before deterministic compaction; a second frontier pass
+was redundant latency. This preserves the evidence graph, source IDs,
+factuality gates, independent-review boundary, and compiled PDF checks while
+reducing avoidable latency. The global
+`RESUME_STUDIO_CODEX_EFFORT` variable and task-specific effort variables remain
+available for reproducible experiments. Max is capped at five minutes per
+provider call so a stalled deep-reasoning experiment cannot monopolize a full
+run, and each provider-flow record exposes the selected effort for auditability.
+
+## 136. Keep all future tailoring calls on Luna high (2026-08-18)
+
+Victor prefers the quality of the high Luna lane for future tailoring. All
+tailoring stages therefore default to and accept only `high`; low, medium, and
+max overrides fall back to high. The prior low/medium/max benchmark remains
+historical evidence, not an active production profile. The staged evidence,
+compiled-layout, and owner-review gates remain unchanged.
+
+## 137. Make the default action queue fresh and preserve posting verdicts (2026-08-19)
+
+The new-grad Jobs view now opens on entry-compatible or unclear experience and
+the last month of postings. This is an application queue, not a claim that
+older or experienced roles are irrelevant: tracked and Maybe rows bypass those
+defaults, and explicit filters still expose the broader research board.
+Expired and filled postings remain recoverable in History.
+
+Full rescoring resets only the prior company-concentration adjustment before
+rebuilding the score. It must not erase a row-specific quality, experience, or
+lifecycle demotion and then restore the row to a sibling's calibrated score.
+Exact same-company/title variants can still share utility when no posting-level
+verdict separates them; every adjustment remains in the reason ledger.
+
+Jobright's visible “This job has closed.” page banner is definitive liveness
+evidence even when the HTTP response is 200 and public detail metadata lacks a
+direct application URL. The bounded resolver records a versioned page signal,
+marks the row expired before identity matching/touch, and rechecks legacy
+`checked_no_direct` caches once. The broader duplicate/alternate-link model
+remains conservative and unchanged.
+
+## 138. Batch tailoring starts from today's Pipeline additions (2026-08-19)
+
+Resume Studio adds an owner-only **Tailor today** action that selects up to 12
+roles added to the Pipeline during the local calendar day. It reuses the
+existing private bridge, tailoring modes, durable run records, concurrency cap,
+and review gates. Queueing a batch creates drafts only; it never changes a
+stage to Applied and never submits an application. Notion tailored sections and
+broader duplicate reconciliation are deferred until the current workflow proves
+the batch loop useful.

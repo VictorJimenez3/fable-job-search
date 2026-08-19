@@ -5,7 +5,7 @@ from radar import link_resolver
 from radar.alerts import format_line
 from radar.dedupe import collapse_cross_source_jobs
 from radar.digest import render_dashboard
-from radar.main import _unique_discovered_jobs
+from radar.main import _merge_job_sighting, _unique_discovered_jobs
 from radar.models import Job
 
 
@@ -24,6 +24,29 @@ def test_resolver_promotes_explicit_ats_link(monkeypatch):
     assert result["status"] == "resolved"
     assert result["resolved_url"] == direct
     assert result["ats"] == "lever"
+
+
+def test_resolver_marks_jobright_closed_banner_as_expired(monkeypatch):
+    aggregator = "https://jobright.ai/jobs/info/abc123"
+    direct = "https://jobs.lever.co/acme/role-123"
+    monkeypatch.setattr(
+        link_resolver.http, "get",
+        lambda url, **kwargs: _response(
+            aggregator,
+            f'<div class="expired">This job has closed.</div><a href="{direct}">Apply</a>',
+        ),
+    )
+    monkeypatch.setattr(
+        link_resolver, "_public_jobright_detail",
+        lambda url: (_ for _ in ()).throw(AssertionError("closed pages need no detail lookup")),
+    )
+
+    result = link_resolver.resolve_link(aggregator, now=100)
+
+    assert result["status"] == "closed"
+    assert result["posting_status"] == "expired"
+    assert result["page_signal_version"] == link_resolver.JOBRIGHT_PAGE_SIGNAL_VERSION
+    assert "job has closed" in result["reason"].lower()
 
 
 def test_resolver_accepts_explicit_company_application_anchor(monkeypatch):
@@ -86,6 +109,48 @@ def test_cached_resolution_avoids_rechecking(monkeypatch):
     assert job.url == direct
     assert job.alternate_urls == [aggregator]
     assert job.ats == "ashby"
+
+
+def test_old_jobright_no_direct_cache_rechecks_for_page_signal(monkeypatch):
+    aggregator = "https://jobright.ai/jobs/info/abc123"
+    job = Job(company="Acme", title="SWE", url=aggregator, source="jobright")
+    existing = {
+        "url": aggregator,
+        "link_resolution": {
+            "status": "checked_no_direct", "checked_at": 90,
+            "original_url": aggregator,
+        },
+    }
+    monkeypatch.setattr(
+        link_resolver, "resolve_link",
+        lambda *args, **kwargs: {
+            "status": "closed", "posting_status": "expired",
+            "checked_at": 100, "original_url": aggregator,
+            "page_signal_version": link_resolver.JOBRIGHT_PAGE_SIGNAL_VERSION,
+        },
+    )
+
+    result = link_resolver.resolve_job(job, existing=existing, now=100)
+
+    assert result["status"] == "closed"
+
+
+def test_closed_aggregator_signal_does_not_close_direct_variant():
+    direct = Job(
+        company="Acme", title="SWE", url="https://jobs.lever.co/acme/role-123",
+        source="lever", ats="lever",
+    )
+    closed_aggregator = Job(
+        company="Acme", title="SWE", url="https://jobright.ai/jobs/info/abc123",
+        source="jobright", link_resolution={
+            "status": "closed", "posting_status": "expired",
+        },
+    )
+
+    _merge_job_sighting(direct, closed_aggregator)
+
+    assert direct.link_resolution == {}
+    assert closed_aggregator.url in direct.alternate_urls
 
 
 def test_cross_source_merge_requires_compatible_identity():

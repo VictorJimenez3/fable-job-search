@@ -435,7 +435,8 @@ const LANE_CONFIG = {
     companies:"state/intern_companies.json", runs:"state/intern_runs.json", web:"state/intern_web_state.json"},
 };
 const DEFAULT_FILTER = {q:"", min:45, sector:"", role:"", sectors:[], roles:[], sponsorship:"", sponsorHistory:"",
-  excludedRoles:[], experience:"", career:"", cohort:"", alert:false, lane:"", sort:"best", bestWindow:"all", showExcluded:false, review:false};
+  excludedRoles:[], experience:"entryfit", career:"", cohort:"", alert:false, lane:"", sort:"best", bestWindow:"2592000", showExcluded:false, review:false};
+const ACTIVE_QUEUE_WINDOW = 30 * 86400;
 function storedFilter(lane="new_grad") {
   try {
     const key = lane === "new_grad" ? "jr_filters" : `jr_filters_${lane}`;
@@ -443,6 +444,18 @@ function storedFilter(lane="new_grad") {
     if (f._alertFilterVersion !== 3) {
       f.alert = false;
       f._alertFilterVersion = 3;
+      localStorage.setItem(key, JSON.stringify(f));
+    }
+    // The old defaults showed every still-open row, including stale
+    // aggregator copies and experienced roles. Migrate only that exact old
+    // default; preserve an owner's deliberate experienced/all-time choice.
+    if (lane === "new_grad" && f._queueFilterVersion !== 1) {
+      if ((f.experience == null || f.experience === "") &&
+          (f.bestWindow == null || f.bestWindow === "all")) {
+        f.experience = "entryfit";
+        f.bestWindow = "2592000";
+      }
+      f._queueFilterVersion = 1;
       localStorage.setItem(key, JSON.stringify(f));
     }
     if (!Array.isArray(f.roles)) f.roles = f.role ? [f.role] : [];
@@ -466,7 +479,8 @@ const S = {           // app state
   testing:{q:"", sort:"resume", shown:40, selectedId:"", engine:"checking", engineError:"", match:null,
     library:[], cloudLibrary:[], cloudBank:{status:"checking",error:"",updated_at:"",needsGoogle:false}, bankView:false, contextView:false,
     bankQuery:"", bankMode:"all", bankStatus:"all", bankEra:"current", context:null, contextQuery:"", contextError:"", contextScanError:"",
-    sync:{state:"idle",done:0,total:0,error:""}, activeRunId:"", runStatus:null},
+    sync:{state:"idle",done:0,total:0,error:""}, activeRunId:"", runStatus:null,
+    batchView:false, batch:{mode:"unrestricted",selected:[],runs:[],state:"idle",error:""}},
   boot:{phase:"starting", jobsReady:false, inFlight:false, errors:[]},
   marquee:new Set(["meta","apple","amazon","netflix","google","microsoft","nvidia",
     "anthropic","openai","deepmind","genentech","moderna","regeneron",
@@ -1081,7 +1095,10 @@ function jobList() {
   rows = rows.filter(j=>!inactiveIds.has(j.id));
   if (f.sort === "best" && f.bestWindow && f.bestWindow !== "all") {
     const cutoff = Date.now() / 1000 - Number(f.bestWindow);
-    rows = rows.filter(j => postedTs(j) > cutoff);
+    // A role already in the owner's pipeline remains actionable even when
+    // its original posting date is older than the discovery window.
+    rows = rows.filter(j => byId[j.id] || S.web.maybe.includes(j.id) || S.web.jobs[j.id]
+      || postedTs(j) > cutoff);
   }
   if (!f.showExcluded) rows = rows.filter(j=>!isExcluded(j.id));
   if (S.lane === "internship" && !f.review) rows = rows.filter(j=>["title","body"].includes((j.internship_eligibility||{}).internship_signal));
@@ -1780,6 +1797,7 @@ function rJobs() {
       <button class="act" onclick="clearFilters()">reset filters</button>
     </div>
     </div>
+   ${S.lane === "new_grad" ? `<div class="note"><b>Fresh action queue.</b> New-grad Jobs starts with entry-compatible or unclear experience and roles posted within the last month. Experienced or older open roles stay reviewable: choose their explicit filters or <em>all time</em> when you want the wider research board. Expired and filled postings are removed from active Jobs and retained in History.</div>` : ""}
    ${excludedCount?`<div class="note"><span class="chip excluded">${excludedCount} excluded</span> Hidden from the normal Jobs list; turn on “show excluded” to restore one.</div>`:""}
    ${liSavedSearches()}
     ${!S.backend && !canWrite()?`<div class="note">No token needed: <b>track / applied</b> open a one-click
@@ -2105,6 +2123,13 @@ window.addEventListener("message", event => {
       S.testing.runStatus = data.data || null;
       renderStudioWorkspace();
       if (["complete","awaiting_review","failed"].includes(data.data?.status)) refreshResumeLibrary();
+    }
+    const batchRun = (S.testing.batch?.runs || []).find(run => run.run_id === data.run_id);
+    if (batchRun) {
+      Object.assign(batchRun, {status:data.data?.status || batchRun.status, message:data.data?.message || data.data?.status || batchRun.message, report:data.data?.report});
+      finishResumeBatchIfDone();
+      if (["complete","awaiting_review","failed"].includes(data.data?.status)) refreshResumeLibrary(false);
+      if (S.testing.batchView) rTesting();
     }
     return;
   }
@@ -2584,7 +2609,7 @@ function renderCosList() {
   for (const j of Object.values(S.jobs)) {
     const tracked = byId[j.id] || S.web.maybe.includes(j.id) || S.web.jobs[j.id];
     if (!isOpenRelevant(j) || roleFamily(j)==="other"
-        || (!tracked && postedTs(j) && Date.now()/1000-postedTs(j) > 365*86400)
+        || (!tracked && postedTs(j) && Date.now()/1000-postedTs(j) > ACTIVE_QUEUE_WINDOW)
         || (!tracked && (j.score||0) < DEFAULT_FILTER.min)) continue;
     const k = norm(j.company);
     counts[k] = counts[k]||{name:j.company, open:0, best:0, bestId:j.id};
@@ -2739,7 +2764,8 @@ function testingMatch(j) {
 function testingRows() {
   const q = norm(S.testing.q);
   let rows = Object.values(S.jobs).filter(isOpenRelevant)
-    .filter(j=>!postedTs(j) || Date.now()/1000-postedTs(j)<=365*86400)
+    .filter(j=>S.lane === "internship" || experienceStatus(j) !== "experienced")
+    .filter(j=>!postedTs(j) || Date.now()/1000-postedTs(j)<=ACTIVE_QUEUE_WINDOW)
     .filter(j=>roleFamily(j)!=="other")
     .filter(j=>!q || norm(`${j.company} ${j.title}`).includes(q))
     .map(j=>({job:j, match:testingMatch(j)}));
@@ -2923,9 +2949,142 @@ async function syncCloudResumeBank() {
   }
   rTesting();
 }
-function showResumeBank() { S.testing.bankView=true; S.testing.contextView=false; rTesting(); }
-function showResumeTailoring() { S.testing.bankView=false; S.testing.contextView=false; rTesting(); }
-function showResumeContext() { S.testing.bankView=false; S.testing.contextView=true; rTesting(); }
+const RESUME_BATCH_LIMIT = 12;
+function resumeBatchState() {
+  return S.testing.batch || (S.testing.batch = {mode:"unrestricted",selected:[],runs:[],state:"idle",error:""});
+}
+function localDayStartSeconds() {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return Math.floor(today.getTime() / 1000);
+}
+function resumeBatchCandidates() {
+  const start = localDayStartSeconds(), end = start + 86400, seen = new Set();
+  return S.applied
+    .filter(entry => !applicationInactive(entry))
+    .map(entry => {
+      const stage = String(entry.stage || "saved").toLowerCase();
+      const addedAt = Number(entry.applied_at || entry.stage_changed_at || 0);
+      const job = jobById(entry.id) || entry;
+      if (!job || seen.has(entry.id) || addedAt < start || addedAt >= end ||
+          ["closed", "rejected", "not_pursuing"].includes(stage) || isTerminalPosting(job)) return null;
+      seen.add(entry.id);
+      return {...job, _resumeAddedAt:addedAt, _resumeStage:stage};
+    })
+    .filter(Boolean)
+    .sort((a,b) => (b.score || 0) - (a.score || 0) || String(a.company).localeCompare(String(b.company)));
+}
+function resumeBatchModeOptions(mode) {
+  return [["unrestricted","Take-the-wheel (moderate)"],["ai","AI tailor"],["used","Used bullets"],["generation","Unchained generation"]]
+    .map(([value,label]) => `<option value="${value}" ${mode===value?"selected":""}>${label}</option>`).join("");
+}
+function resumeBatchStatusKind(status) {
+  return status === "complete" || status === "awaiting_review" ? "good" : status === "failed" ? "bad" : "warn";
+}
+function resumeBatchStatusLabel(run) {
+  if (run.status === "awaiting_review") return "awaiting review";
+  return run.status || "queued";
+}
+function renderResumeBatchView() {
+  const batch = resumeBatchState();
+  const candidates = resumeBatchCandidates();
+  const candidateIds = new Set(candidates.map(job => job.id));
+  batch.selected = (batch.selected || []).filter(id => candidateIds.has(id)).slice(0, RESUME_BATCH_LIMIT);
+  const selected = new Set(batch.selected);
+  const engineOnline = S.testing.engine === "online";
+  const queueing = batch.state === "queueing";
+  const active = (batch.runs || []).filter(run => ["queued", "running"].includes(run.status)).length;
+  const stateText = batch.state === "complete" ? "All selected drafts finished." :
+    batch.state === "partial" ? "The batch finished with one or more failed drafts." :
+    active ? `${active} draft${active === 1 ? "" : "s"} still running.` : "";
+  return `<section class="testing-hero">
+    <div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">private drafts · no applications sent</span></div><div class="acts"><button class="act" onclick="showResumeTailoring()">single posting</button><button class="act" onclick="showResumeBank()">Resume bank</button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button></div></div>
+    <h2>Tailor today’s saved roles</h2>
+    <p class="sub">A focused queue for the mass-apply rhythm: roles you added to the active pipeline today are listed together, each with its own posting snapshot and durable Resume Studio run. Select a few, choose one mode, and review the finished drafts in Resume Bank before you apply.</p>
+    <div class="note"><strong>Safe by design.</strong> This only creates private resume drafts. It never submits an application, changes a pipeline stage, or publishes your CV. The private Mac engine processes at most two runs at once; the rest wait in its durable queue.</div>
+  </section>
+  <div class="lane">
+    <div class="bar" style="justify-content:space-between"><div><h3>Added today <span class="sub">${candidates.length} role${candidates.length===1?"":"s"}</span></h3><p class="sub" style="margin:0">Up to ${RESUME_BATCH_LIMIT} drafts per batch · local calendar day · current non-terminal postings only.</p></div><div class="acts"><button class="act" onclick="selectAllResumeBatch()" ${candidates.length?"":"disabled"}>select up to ${RESUME_BATCH_LIMIT}</button><button class="act" onclick="clearResumeBatch()" ${selected.size?"":"disabled"}>clear</button></div></div>
+    ${candidates.length ? `<div class="bar" style="margin:.7rem 0"><label class="sub">draft mode <select id="resumeBatchMode" onchange="resumeBatchState().mode=this.value;rTesting()">${resumeBatchModeOptions(batch.mode)}</select></label><button class="act primary" onclick="queueResumeBatch()" ${!engineOnline || !selected.size || queueing?"disabled":""}>${queueing?"Queueing…":`queue ${selected.size} draft${selected.size===1?"":"s"}`}</button><span class="sub">${engineOnline?`${selected.size} selected`:`start the private engine to queue drafts`}</span></div>
+      <div class="studio-jobs">${candidates.map(job => `<label class="studio-job" style="cursor:pointer"><input type="checkbox" style="margin-right:.55rem" ${selected.has(job.id)?"checked":""} onchange='toggleResumeBatchSelection(${JSON.stringify(job.id)},this.checked)'><span><strong>${esc(job.company)}</strong><small>${esc(job.title)} · Radar ${job.score??"–"} · added ${new Date(job._resumeAddedAt*1000).toLocaleTimeString([], {hour:"numeric",minute:"2-digit"})} · ${esc(job._resumeStage)}</small></span></label>`).join("")}</div>`
+      : `<div class="studio-empty"><h3>Nothing added today yet</h3><p>Add roles from Jobs with <strong>save to apply</strong>; they will appear here automatically. Existing active roles can still be tailored one at a time from their row or drawer.</p><button class="act primary" onclick="S.tab='jobs';render()">open Jobs</button></div>`}
+  </div>
+  ${(batch.runs||[]).length ? `<div class="lane"><div class="bar" style="justify-content:space-between"><h3>Batch status</h3><span class="sub">${esc(stateText)}</span></div>${batch.error?`<div class="note bad">${esc(batch.error)}</div>`:""}<div class="resume-objective-grid">${batch.runs.map(run => `<div class="resume-objective-rank"><span><strong>${esc(run.company||"Role")}</strong><br><span class="sub">${esc(run.title||"")} · ${esc(run.message||"")}</span></span><span>${studioBadge(resumeBatchStatusLabel(run),resumeBatchStatusKind(run.status))}${run.run_id?` <button class="act" onclick='loadResumeRun(${JSON.stringify(run.run_id)})'>inspect</button>`:""}</span></div>`).join("")}</div></div>` : ""}`;
+}
+function showResumeBank() { S.testing.bankView=true; S.testing.contextView=false; S.testing.batchView=false; rTesting(); }
+function showResumeTailoring() { S.testing.bankView=false; S.testing.contextView=false; S.testing.batchView=false; rTesting(); }
+function showResumeBatch() {
+  const candidates = resumeBatchCandidates();
+  const batch = resumeBatchState();
+  batch.selected = candidates.slice(0, RESUME_BATCH_LIMIT).map(job => job.id);
+  batch.runs = [];
+  batch.state = "idle";
+  batch.error = "";
+  S.testing.bankView=false; S.testing.contextView=false; S.testing.batchView=true; rTesting();
+}
+function showResumeContext() { S.testing.bankView=false; S.testing.contextView=true; S.testing.batchView=false; rTesting(); }
+function toggleResumeBatchSelection(id, checked) {
+  const batch = resumeBatchState(), selected = new Set(batch.selected || []);
+  if (checked) {
+    if (selected.size >= RESUME_BATCH_LIMIT && !selected.has(id)) {
+      toast(`A batch is limited to ${RESUME_BATCH_LIMIT} drafts`); rTesting(); return;
+    }
+    selected.add(id);
+  } else selected.delete(id);
+  batch.selected = [...selected]; rTesting();
+}
+function selectAllResumeBatch() {
+  resumeBatchState().selected = resumeBatchCandidates().slice(0, RESUME_BATCH_LIMIT).map(job => job.id); rTesting();
+}
+function clearResumeBatch() { resumeBatchState().selected = []; rTesting(); }
+function finishResumeBatchIfDone() {
+  const batch = resumeBatchState(), runs = batch.runs || [];
+  if (!runs.length || runs.some(run => ["queued", "running"].includes(run.status))) return;
+  batch.state = runs.some(run => run.status === "failed") ? "partial" : "complete";
+}
+async function queueResumeBatch() {
+  const batch = resumeBatchState();
+  if (S.testing.engine !== "online") { toast("Start the private Resume Studio engine before queueing a batch"); return; }
+  const byId = new Map(resumeBatchCandidates().map(job => [job.id, job]));
+  const jobs = [...new Set(batch.selected || [])].map(id => byId.get(id)).filter(Boolean).slice(0, RESUME_BATCH_LIMIT);
+  if (!jobs.length) { toast("Select at least one role to tailor"); return; }
+  batch.state = "queueing"; batch.error = "";
+  batch.runs = jobs.map(job => ({job_id:job.id,company:job.company,title:job.title,status:"queueing",message:"sending to the private engine"}));
+  rTesting();
+  await Promise.all(jobs.map(async job => {
+    const row = batch.runs.find(run => run.job_id === job.id);
+    try {
+      const status = await studioRequest("/api/run", {method:"POST",body:JSON.stringify({job_id:job.id,mode:batch.mode})});
+      Object.assign(row, {run_id:status.run_id,status:status.status||"queued",message:status.message||"waiting for a private worker"});
+      pollResumeBatchRun(status.run_id);
+    } catch (error) {
+      Object.assign(row, {status:"failed",message:error.message});
+    }
+    rTesting();
+  }));
+  batch.state = "monitoring";
+  finishResumeBatchIfDone();
+  rTesting();
+}
+function pollResumeBatchRun(id) {
+  const tick = async () => {
+    const batch = resumeBatchState(), row = (batch.runs || []).find(run => run.run_id === id);
+    if (!row) return;
+    try {
+      const status = await studioRequest(`/api/run?id=${encodeURIComponent(id)}`);
+      Object.assign(row, {status:status.status||row.status,message:status.message||status.status||row.message,report:status.report});
+      finishResumeBatchIfDone();
+      if (S.testing.batchView) rTesting();
+      if (["complete","awaiting_review","failed"].includes(status.status)) { await refreshResumeLibrary(false); return; }
+      setTimeout(tick, 1800);
+    } catch (error) {
+      Object.assign(row, {status:"failed",message:error.message});
+      finishResumeBatchIfDone();
+      if (S.testing.batchView) rTesting();
+    }
+  };
+  tick();
+}
 async function loadResumeContext(jobId="") {
   if (S.testing.engine!=="online") return;
   try {
@@ -3087,7 +3246,7 @@ function renderResumeBankView() {
     S.testing.cloudBank.status==="unavailable"?`cloud bank unavailable · ${S.testing.cloudBank.error}`:"checking cloud bank…";
   const cloudSetup=S.testing.cloudBank.needsGoogle?`<button class="act" onclick="openTutorial('accounts')">connect Google for private bank</button>`:"";
   const sync=S.testing.sync.state==="running"?`syncing ${S.testing.sync.done}/${S.testing.sync.total} entries…`:S.testing.sync.state==="complete"?"last sync complete":S.testing.sync.state==="failed"?`sync stopped · ${S.testing.sync.error}`:"";
-  return `<section class="testing-hero"><div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">${esc(cloudState)}</span></div><div class="acts"><button class="act" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><button class="act primary" onclick="loadCloudResumeBank()">refresh bank</button>${cloudSetup}</div></div><h2>Resume bank</h2><p class="sub">One card per job. Click it to compare every saved version, audit, posting snapshot, and PDF. The private <strong>Objective ranking</strong> marks the strongest saved version for that posting using transparent match, evidence-safety, layout, and portfolio signals. It is a decision aid, not a hiring prediction or automatic submission. Every local run and legacy experiment remains available under all history; the default view starts with the Google-era Studio overhaul. New matching, generation, and Workshop edits still use the private Mac engine.</p>${sync?`<p class="note" role="status">${esc(sync)}</p>`:""}</section>
+  return `<section class="testing-hero"><div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">${esc(cloudState)}</span></div><div class="acts"><button class="act" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBatch()">Tailor today <span class="chip">${resumeBatchCandidates().length}</span></button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><button class="act primary" onclick="loadCloudResumeBank()">refresh bank</button>${cloudSetup}</div></div><h2>Resume bank</h2><p class="sub">One card per job. Click it to compare every saved version, audit, posting snapshot, and PDF. The private <strong>Objective ranking</strong> marks the strongest saved version for that posting using transparent match, evidence-safety, layout, and portfolio signals. It is a decision aid, not a hiring prediction or automatic submission. Every local run and legacy experiment remains available under all history; the default view starts with the Google-era Studio overhaul. New matching, generation, and Workshop edits still use the private Mac engine.</p>${sync?`<p class="note" role="status">${esc(sync)}</p>`:""}</section>
   <div class="bar"><input id="resumeBankQ" type="search" placeholder="filter company or role…" value="${esc(S.testing.bankQuery||"")}"><select id="resumeBankEra" aria-label="Filter Resume Bank era"><option value="current" ${era==="current"?"selected":""}>Google onward</option><option value="all" ${era==="all"?"selected":""}>all history</option></select><select id="resumeBankMode" aria-label="Filter Resume Bank mode"><option value="all">all modes</option><option value="used" ${mode==="used"?"selected":""}>Used bullets</option><option value="ai" ${mode==="ai"?"selected":""}>AI tailor</option><option value="unrestricted" ${mode==="unrestricted"?"selected":""}>Take-the-wheel</option><option value="generation" ${mode==="generation"?"selected":""}>Unchained generation</option></select><select id="resumeBankStatus" aria-label="Filter Resume Bank status"><option value="all">all statuses</option>${[...new Set(resumeBankEntries().map(e=>e.status).filter(Boolean))].sort().map(value=>`<option value="${esc(value)}" ${status===value?"selected":""}>${esc(value)}</option>`).join("")}</select><button class="act" onclick="syncCloudResumeBank()" ${S.testing.engine==="online"?"":"disabled"}>sync local bank · ${era==="current"?"Google-onward":"all"} ↗</button></div>
   <p class="sub">${groups.length} jobs · ${entries.length} versions</p><section class="resume-bank-grid">${groups.length?groups.map(resumeBankGroupHTML).join(""):"<div class=\"lane\"><p class=\"sub\">No bank entries match this filter. Start the private engine to load the local bank, or connect Google and sync it.</p></div>"}</section>`;
 }
@@ -3206,13 +3365,17 @@ function rTesting() {
     if (S.testing.cloudBank.status==="checking") loadCloudResumeBank(false).then(()=>{if(S.tab==="testing"&&S.testing.bankView)rTesting();});
     return;
   }
+  if (S.testing.batchView) {
+    $("#main").innerHTML = renderResumeBatchView();
+    return;
+  }
   const rows=testingRows();
   if (!S.testing.selectedId && rows[0]) S.testing.selectedId = rows[0].job.id;
   $("#main").innerHTML = `<section class="testing-hero">
     <span class="chip good">owner only · @${esc(S.auth.login)}</span>
     <h2>Resume Studio</h2>
     <p class="sub">Choose a production posting, tailor it here, and keep the private evidence graph and generated artifacts behind the owner boundary. The website owns the workflow; the Mac engine is the private generation layer.</p>
-    <div class="bar" style="margin:.65rem 0 0"><button class="act primary" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBank()">Resume bank <span class="chip">${resumeBankGroups(resumeBankEntries().filter(resumeBankCurrentEra)).length} jobs</span></button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><span class="sub">${S.testing.cloudBank.status==="online"?"private cloud bank connected":"private cloud bank checking"}</span></div>
+    <div class="bar" style="margin:.65rem 0 0"><button class="act primary" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBatch()">Tailor today <span class="chip">${resumeBatchCandidates().length}</span></button><button class="act" onclick="showResumeBank()">Resume bank <span class="chip">${resumeBankGroups(resumeBankEntries().filter(resumeBankCurrentEra)).length} jobs</span></button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><span class="sub">${S.testing.cloudBank.status==="online"?"private cloud bank connected":"private cloud bank checking"}</span></div>
     <div id="studioEngineNotice" class="note" style="margin:.65rem 0 0">Checking the private engine…</div>
   </section>
   <div class="testing-grid"><section class="lane"><h3>1 · Choose a posting <span class="sub" style="float:right">${rows.length} roles</span></h3>

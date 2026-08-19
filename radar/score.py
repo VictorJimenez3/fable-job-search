@@ -862,9 +862,13 @@ def apply_company_concentration(jobs) -> int:
 
     The adjustment is a ranking aid, not a fit judgment. Exact same-company,
     same-title postings are location/requisition variants and tie with the
-    strongest variant. For non-identical titles, only a weaker near-duplicate
-    is nudged, then the existing broad company guard keeps a crowded employer
-    from filling the whole top of the board. Every change is recorded.
+    strongest variant when working with in-memory ``Job`` objects. Persisted
+    records can carry posting- or quality-specific demotions after their
+    calibrated score, so those rows keep their lower verdict score instead of
+    being promoted by duplicate handling. For non-identical titles, only a
+    weaker near-duplicate is nudged, then the existing broad company guard
+    keeps a crowded employer from filling the whole top of the board. Every
+    change is recorded.
     """
     groups: dict[str, list] = {}
     exact_groups: dict[tuple[str, str], list] = {}
@@ -873,7 +877,16 @@ def apply_company_concentration(jobs) -> int:
     for job in materialized:
         if isinstance(job, dict):
             prior_adjustment = int(job.get("ranking_adjustment", 0) or 0)
-            base_score = int(job.get("score_calibrated", job.get("score", 0) - prior_adjustment))
+            # ``score`` is the post-verdict score. It may already include a
+            # deterministic quality or posting-facts demotion that is not in
+            # ``score_calibrated``. Repeated concentration passes subtract
+            # only their prior adjustment; they must not restore the old
+            # calibrated score and erase the verdict.
+            displayed_score = job.get("score")
+            if displayed_score is None:
+                base_score = int(job.get("score_calibrated", 0) or 0)
+            else:
+                base_score = int(displayed_score or 0) - prior_adjustment
             job["score"] = base_score
             job["ranking_adjustment"] = 0
             job["score_reasons"] = [
@@ -909,8 +922,7 @@ def apply_company_concentration(jobs) -> int:
         if not company or not title or len(duplicate_group) < 2:
             continue
         best_score = max(
-            int(item.get("score_calibrated", item.get("score", 0)) if isinstance(item, dict)
-                else item.score_calibrated)
+            int(item.get("score", 0) if isinstance(item, dict) else item.score_calibrated)
             for item in duplicate_group
         )
         locations = set()
@@ -922,11 +934,21 @@ def apply_company_concentration(jobs) -> int:
                            if isinstance(duplicate_group[0], dict) else duplicate_group[0].company)
         reason = (
             f"duplicate role variant: {len(duplicate_group)} {company_name} postings share this title; "
-            f"tied at {best_score}/100 across {max(1, len(locations))} location set(s)"
+            f"strongest displayed score {best_score}/100 across {max(1, len(locations))} location set(s)"
+            + ("; posting-specific verdicts preserved" if any(
+                isinstance(item, dict) and int(item.get("score", 0) or 0) < int(item.get("score_calibrated", item.get("score", 0)) or 0)
+                for item in duplicate_group
+            ) else "")
         )
         for item in duplicate_group:
             if isinstance(item, dict):
-                item["score"] = best_score
+                # A persisted row may be lower because its own posting facts
+                # say 1+ years or its quality verdict is negative. Do not let
+                # a different URL for the same title erase that evidence.
+                calibrated = int(item.get("score_calibrated", item.get("score", 0)) or 0)
+                current_score = int(item.get("score", 0) or 0)
+                if current_score >= calibrated:
+                    item["score"] = best_score
                 item["ranking_adjustment"] = 0
                 reasons = item.setdefault("score_reasons", [])
             else:
@@ -988,7 +1010,7 @@ def apply_company_concentration(jobs) -> int:
             continue
         if isinstance(job, dict):
             job["ranking_adjustment"] = -penalty
-            job["score"] = max(0, int(job.get("score_calibrated", job.get("score", 0))) - penalty)
+            job["score"] = max(0, int(job.get("score", 0) or 0) - penalty)
             reasons = job.setdefault("score_reasons", [])
         else:
             job.ranking_adjustment = -penalty
@@ -1045,7 +1067,7 @@ def apply_company_concentration(jobs) -> int:
                 reason = None
             if isinstance(job, dict):
                 job["ranking_adjustment"] = -penalty
-                job["score"] = max(0, int(job.get("score_calibrated", job.get("score", 0))) - penalty)
+                job["score"] = max(0, int(job.get("score", 0) or 0) - penalty)
                 reasons = job.setdefault("score_reasons", [])
             else:
                 job.ranking_adjustment = -penalty

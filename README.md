@@ -66,6 +66,12 @@ does this weekly from the [official DOL OFLC data page](https://www.dol.gov/agen
 
 The Jobs sort menu also includes a Best Match lookback: all time, the last hour,
 6 hours, 24 hours, 3 or 7 days, 2 weeks, or 1, 3, 6, or 12 months.
+For the new-grad lane, the default Jobs view is a **Fresh action queue**: it
+starts with entry-compatible or unclear experience and postings from the last
+month. Tracked or Maybe roles remain available even when older or experienced;
+choose an explicit experience or lookback filter when researching the full
+board. Definitively expired or filled postings leave active Jobs and stay in
+History with their evidence and close reason.
 
 The ChemE internship board is intentionally separate from this new-grad
 AI/SWE/DS board. It reads the `claude/cheme-intern-radar` branch and keeps its
@@ -373,8 +379,10 @@ for configured favorites or a genuinely exceptional raw match, while the
 60s–90s distinguish plausible, strong, and standout roles. Level-II/L4-style
 postings remain visible for research but receive a locked score demotion and
 never become alerts. Exact same-company/title variants (often the same role in
-different locations) tie with the strongest variant; non-identical near-sibling
-roles receive only a small, reasoned deduction when a stronger sibling exists.
+different locations) normally tie with the strongest variant; a posting-level
+quality, experience, or lifecycle verdict still lowers that specific row.
+Non-identical near-sibling roles receive only a small, reasoned deduction when
+a stronger sibling exists.
 
 Other comment commands: `skip <company>` (downrank similar roles),
 `track <ats> <token> [Name]` (force-add a company to the crawl registry).
@@ -610,6 +618,23 @@ observed Codex tokens/calls for the current UTC week and the bank shows queued,
 running, interrupted, and completed runs. Codex Plus's weekly allowance is not
 available through the local CLI; set `CODEX_WEEKLY_LIMIT_TOKENS` only if you
 want the UI to calculate a percentage against a known personal limit.
+
+For a focused application session, **Tailor today** selects up to 12 roles you
+added to the Pipeline on the current local calendar day. Review the selection,
+choose one tailoring mode for the batch, and queue the runs together; the
+private Mac engine still limits active work to two runs, and the action only
+creates drafts in Resume Bank. It never marks a role Applied or submits an
+application. Individual roles can be removed from the batch before queueing.
+
+The local engine now uses **high Luna effort for every tailoring stage** by
+standing preference. Lower effort values and `max` are rejected and fall back
+to high, so future runs cannot silently trade away quality or hang in the max
+lane. Only one frontier line-repair pass runs; the deterministic
+source-authorized compactor remains the fallback. Run reports record the
+stage, model, effort, latency, and observed tokens in **Provider flow, model,
+and usage**. The historical 2026-08-17 Merck comparison produced valid drafts
+in 69–82 seconds at low/medium/high, with high having the safest compiled
+geometry; max produced no structured result within 4:51 and is now disabled.
 
 Open **Workshop** on a completed run to edit education, skills, experience,
 projects, and leadership lines without touching the original PDF. Saving a
