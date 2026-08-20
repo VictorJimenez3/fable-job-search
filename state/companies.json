@@ -4597,6 +4597,32 @@
   "status": "active",
   "token": "instead"
  },
+ "greenhouse:integra": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1787265867,
+  "last_ok": 1787265869,
+  "name": "Integra FEC",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "integra"
+ },
+ "greenhouse:integrainterns": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1787265867,
+  "last_ok": 1787265869,
+  "name": "Integra FEC",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "integrainterns"
+ },
  "greenhouse:inversionspace": {
   "ats": "greenhouse",
   "extra": {},
@@ -6854,6 +6880,20 @@
   "sector": "",
   "status": "invalid",
   "token": "careers-filtrationgroupcorp"
+ },
+ "icims:careers-framatome": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1787265867,
+  "invalidated_at": 1787265871,
+  "last_ok": 0,
+  "name": "Framatome",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "careers-framatome"
  },
  "icims:careers-fsg": {
   "ats": "icims",
@@ -10770,6 +10810,19 @@
   "status": "active",
   "token": "Mapjectscom"
  },
+ "smartrecruiters:McWaneInc": {
+  "ats": "smartrecruiters",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1787265867,
+  "last_ok": 1787265869,
+  "name": "McWane",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "McWaneInc"
+ },
  "smartrecruiters:NBCUniversal3": {
   "ats": "smartrecruiters",
   "extra": {},
@@ -11277,7 +11330,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787263275,
+  "last_ok": 1787265888,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -11543,7 +11596,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1787263263,
+  "last_ok": 1787265875,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -11672,7 +11725,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787263278,
+  "last_ok": 1787265887,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13212,7 +13265,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1787263263,
+  "last_ok": 1787265875,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13964,7 +14017,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787263271,
+  "last_ok": 1787265882,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14073,7 +14126,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787263265,
+  "last_ok": 1787265876,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14205,6 +14258,22 @@
   "sector": "",
   "status": "active",
   "token": "evergreenix"
+ },
+ "workday:eversource:ExternalSite": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "ExternalSite"
+  },
+  "failures": 0,
+  "first_seen": 1787265867,
+  "last_ok": 1787265870,
+  "name": "Eversource Energy",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "eversource"
  },
  "workday:evonik:External_Careers": {
   "ats": "workday",
@@ -14760,7 +14829,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787263272,
+  "last_ok": 1787265882,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -15981,6 +16050,22 @@
   "status": "active",
   "token": "lsu"
  },
+ "workday:lthc:ExcellusBCBSCareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "ExcellusBCBSCareers"
+  },
+  "failures": 0,
+  "first_seen": 1787265867,
+  "last_ok": 1787265870,
+  "name": "Excellus BCBS",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "lthc"
+ },
  "workday:lumentum:LITE": {
   "ats": "workday",
   "extra": {
@@ -16414,7 +16499,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787263266,
+  "last_ok": 1787265878,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -17379,6 +17464,22 @@
   "status": "active",
   "token": "pg"
  },
+ "workday:philips:jobs-and-careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "jobs-and-careers"
+  },
+  "failures": 0,
+  "first_seen": 1787265867,
+  "last_ok": 1787265869,
+  "name": "Philips",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "philips"
+ },
  "workday:pimco:pimco-careers": {
   "ats": "workday",
   "extra": {
@@ -18320,7 +18421,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787263271,
+  "last_ok": 1787265882,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
