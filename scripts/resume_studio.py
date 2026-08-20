@@ -363,14 +363,31 @@ def current_scored_jobs(root: Optional[Path] = None) -> Dict[str, Dict[str, Any]
     if isinstance(cached, dict) and cached.get("signature") == signature:
         return cached["jobs"]
 
+    records = load_jobs(base)
+    from radar.score import RULES_VERSION
+
+    # The crawler persists the complete current score projection, including
+    # quality/posting verdicts and concentration adjustments.  Rebuilding a
+    # 45k-record in-memory projection on every Resume Studio launch made the
+    # local UI appear dead for minutes even when no record was stale.  Only
+    # take the expensive compatibility path when at least one record actually
+    # predates the active rules.
+    if records and all(
+        rec.get("score_version") == RULES_VERSION
+        and rec.get("rules_v") == RULES_VERSION
+        for rec in records.values()
+    ):
+        _CURRENT_SCORE_CACHE[key] = {"signature": signature, "jobs": records}
+        return records
+
     from radar import posting, quality
     from radar.models import Job
     import radar.score as score_mod
-    from radar.score import (RULES_VERSION, apply_company_concentration,
+    from radar.score import (apply_company_concentration,
                              early_career_possible, explicit_new_grad, gates,
                              score, source_new_grad)
 
-    records = copy.deepcopy(load_jobs(base))
+    records = copy.deepcopy(records)
     feedback = read_json(feedback_path, {}) or {}
     score_mod._CULTURE_CACHE = None
     score_mod._CULTURE_MATCH_CACHE = {}

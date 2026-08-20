@@ -2126,3 +2126,19 @@ an application was submitted. The stage is carried through the classic UI,
 Notion mapping, email forward-only ordering, legacy/modern Google tracker
 adapters, and the staged applications API. Notion status options remain a
 manual setup step because Notion's API cannot create them.
+
+## 142. Resume Studio stays a ready loopback companion (2026-08-20)
+
+The private Resume Studio execution engine remains deployed as a per-user Mac
+launch agent rather than a Vercel function. It requires the local CV corpus,
+provider CLI sessions, filesystem-locked canonical resumes, and durable local
+PDF/report tools; moving those inputs to hosted infrastructure would be a
+material privacy and persistence change, not a routine deployment. The Vercel
+application remains the owner/session-gated control plane and safe fallback.
+
+The launch-agent installer retries transient `launchctl` bootstrap races and
+waits for `/api/health` before reporting success. The engine also trusts the
+crawler's current persisted score projection on cold start and only performs
+the full compatibility rebuild when records are stale. This preserves the
+auditable stale-record path while keeping the local UI responsive with the
+current 45k-record snapshot.
