@@ -274,6 +274,11 @@ def test_platform_resume_studio_is_one_cloud_workspace_with_private_engine_fallb
     assert "Job Radar Resume Bank" in bank
     assert "Resume Bank is private to the repository owner" in bank
     assert "private engine offline" in html
+    assert "cloudQueue" in html
+    assert "queue_update" in html
+    assert "drainCloudResumeQueue" in html
+    assert "job_snapshot:cloudQueueJob(item.job)" in html
+    assert "the Mac worker will pick it up when it reconnects" in html
     assert "tailor here" in html
     assert "Take-the-wheel (moderate)" in html
     assert "Unchained generation" in html

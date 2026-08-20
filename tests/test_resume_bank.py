@@ -17,6 +17,11 @@ def test_resume_bank_is_owner_only_private_drive_storage():
     assert '"private, no-store"' in api
     assert "Content-Disposition" in api
     assert "CV/" not in api
+    assert "resume-studio-cloud-queue.json" in api
+    assert "queueJob" in api
+    assert 'payload.action === "queue"' in api
+    assert 'payload.action === "queue_update"' in api
+    assert "QUEUE_STATES" in api
 
 
 def test_resume_bank_frontend_keeps_local_engine_as_sync_source():
@@ -28,6 +33,10 @@ def test_resume_bank_frontend_keeps_local_engine_as_sync_source():
     assert "PDFs and previews stay behind the owner session" in html
     assert "Start the private Resume Studio engine before syncing the bank" in html
     assert "New matching, generation, and Workshop edits still use the private Mac engine" in html
+    assert "loadCloudResumeQueue" in html
+    assert "queueCloudResumeItem" in html
+    assert "drainCloudResumeQueue" in html
+    assert "saved privately and will dispatch" in html
 
 
 def test_resume_bank_exposes_owner_only_objective_per_posting_comparison():

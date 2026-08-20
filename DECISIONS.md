@@ -2142,3 +2142,20 @@ crawler's current persisted score projection on cold start and only performs
 the full compatibility rebuild when records are stale. This preserves the
 auditable stale-record path while keeping the local UI responsive with the
 current 45k-record snapshot.
+
+## 143. Resume Studio uses a private cloud queue with a local execution worker (2026-08-20)
+
+The owner-only Vercel workspace now has a durable Resume Studio queue in the
+same private Google Drive boundary as the Resume Bank. It stores only a
+sanitized public posting snapshot, tailoring mode, queue state, and local run
+reference. When the Mac companion is awake, the production page dispatches at
+most two queued items through the existing allowlisted loopback bridge and
+mirrors terminal status back to Drive. When the Mac is asleep, single and
+batch tailoring can still be saved, and the items remain visibly queued.
+
+This is intentionally a two-layer deployment rather than putting the CV,
+provider sessions, evidence graph, LaTeX toolchain, or generated PDFs into a
+stateless hosted function. The local engine remains the only execution
+authority; the cloud layer provides durable selection, queueing, status, and
+the owner-only entry point. A browser tab on the production workspace must be
+open for automatic dispatch when the Mac reconnects.
