@@ -185,6 +185,17 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   Ambiguous same-title direct requisitions remain separate. `resolve-links`
   runs this repair after bounded liveness work, remaps applied/shortlist/web
   references, and queues duplicate Notion pages for reversible archival.
+- **Notion archival retry fix (verified 2026-08-20):** archival probes the
+  page first, treats pages already in Notion trash as an idempotent success,
+  and uses the current `in_trash` update field for live pages. Production
+  tracker sync archived four terminal/duplicate pages with no remaining local
+  Notion archive errors. The live Applications database is readable, but its
+  `Stage` status options still need a manually-created `To tailor` option.
+- **Integration checks (verified 2026-08-20):** `notion-verify` passes against
+  the `2026 Applications` database. `email-verify` is currently blocked because
+  production has neither IMAP `EMAIL_ADDRESS`/`EMAIL_APP_PASSWORD` nor the
+  Gmail API refresh/OAuth credentials; add one supported credential set before
+  relying on email-based application-stage advancement.
 
 ### Previous change (verified 2026-08-15)
 
