@@ -38,7 +38,7 @@ cat > "$PLIST_PATH" <<PLIST
   </array>
   <key>WorkingDirectory</key><string>$REPO_DIR</string>
   <key>EnvironmentVariables</key>
-  <dict><key>PATH</key><string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string></dict>
+  <dict><key>PATH</key><string>$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string></dict>
   <key>RunAtLoad</key><true/>
   <key>KeepAlive</key><true/>
   <key>ThrottleInterval</key><integer>10</integer>
@@ -49,10 +49,46 @@ cat > "$PLIST_PATH" <<PLIST
 </plist>
 PLIST
 
-launchctl bootout "$SERVICE_DOMAIN/com.jobradar.resume-studio" 2>/dev/null || true
-launchctl bootstrap "$SERVICE_DOMAIN" "$PLIST_PATH"
-launchctl kickstart -k "$SERVICE_DOMAIN/com.jobradar.resume-studio"
+SERVICE_LABEL="$SERVICE_DOMAIN/com.jobradar.resume-studio"
+launchctl bootout "$SERVICE_LABEL" 2>/dev/null || true
+
+# launchd can briefly retain the old job after bootout. Retry the bootstrap so
+# reinstalling the companion does not leave Resume Studio offline on a transient
+# "Input/output error" (exit 5).
+bootstrapped=false
+for attempt in 1 2 3; do
+  if launchctl bootstrap "$SERVICE_DOMAIN" "$PLIST_PATH" 2>/dev/null; then
+    bootstrapped=true
+    break
+  fi
+  launchctl bootout "$SERVICE_LABEL" 2>/dev/null || true
+  sleep 1
+done
+if [ "$bootstrapped" != true ]; then
+  echo "Could not bootstrap Resume Studio with launchd: $PLIST_PATH" >&2
+  exit 1
+fi
+
+launchctl kickstart -k "$SERVICE_LABEL"
+launchctl print "$SERVICE_LABEL" >/dev/null
+
+# launchctl can report an active job a moment before Python has bound the
+# socket. Do not announce success until the private loopback health endpoint
+# answers, so callers can open the UI immediately after installation.
+ready=false
+for attempt in $(seq 1 40); do
+  if curl --silent --show-error --fail --max-time 2 \
+    http://127.0.0.1:4317/api/health >/dev/null 2>&1; then
+    ready=true
+    break
+  fi
+  sleep 0.25
+done
+if [ "$ready" != true ]; then
+  echo "Resume Studio launchd job loaded but health check did not become ready" >&2
+  exit 1
+fi
 
 echo "Resume Studio service installed: http://127.0.0.1:4317/"
 echo "Private logs: $LOG_DIR/service.log"
-echo "Remove with: launchctl bootout $SERVICE_DOMAIN/com.jobradar.resume-studio && rm $PLIST_PATH"
+echo "Remove with: launchctl bootout $SERVICE_LABEL && rm $PLIST_PATH"

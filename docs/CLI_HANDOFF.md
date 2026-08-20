@@ -197,6 +197,25 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   Gmail API refresh/OAuth credentials; add one supported credential set before
   relying on email-based application-stage advancement.
 
+### Current change (verified 2026-08-20)
+
+- **Resume Studio cold-start reliability:** the Mac launch agent now retries a
+  transient `launchctl` bootstrap race and waits for the private loopback health
+  endpoint before reporting installation success. The engine uses the repository
+  Python 3.12 virtualenv and the local provider CLI path, so both Codex and
+  Claude are visible after login. When the persisted job snapshot already has
+  the active score version, Resume Studio reuses that crawler projection instead
+  of rebuilding all 45k records; stale records still take the compatibility
+  rebuild path. A clean restart now serves `/api/jobs` in under a second and the
+  exact NVIDIA job endpoint immediately.
+- **Hosted-engine boundary verified:** the Vercel cloud Resume Studio control
+  plane is live and retains the owner/session guard, but the private execution
+  engine remains a loopback Mac companion by design. It reads the local CV and
+  provider sessions and writes private artifacts, so moving it to a stateless
+  Vercel function would require a new remote privacy/auth/storage architecture.
+  No CV, provider credential, or generated artifact was uploaded as part of this
+  repair. Production's safe fallback remains available when the Mac is asleep.
+
 ### Previous change (verified 2026-08-15)
 
 - **Resume Studio grouped bank and context loop:** the cloud Studio uses the live Job Radar

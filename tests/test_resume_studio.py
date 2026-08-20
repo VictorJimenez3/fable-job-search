@@ -1830,6 +1830,28 @@ def test_job_search_and_sort(tmp_path):
     assert rs.list_jobs(tmp_path)[0]["id"] == "b"
 
 
+def test_current_scored_jobs_uses_persisted_projection_when_current(tmp_path, monkeypatch):
+    from radar.score import RULES_VERSION
+
+    state = tmp_path / "state"
+    state.mkdir()
+    (state / "jobs.json").write_text(json.dumps({
+        "job-1": {
+            "id": "job-1", "company": "Acme", "title": "Software Engineer",
+            "score": 91, "rules_v": RULES_VERSION,
+            "score_version": RULES_VERSION,
+        },
+    }))
+    monkeypatch.setattr(
+        rs.copy, "deepcopy",
+        lambda value: (_ for _ in ()).throw(AssertionError("cold projection rebuilt")),
+    )
+
+    jobs = rs.current_scored_jobs(tmp_path)
+
+    assert jobs["job-1"]["score"] == 91
+
+
 def test_fetch_job_description_uses_spa_reader(monkeypatch):
     from radar import quality
 
