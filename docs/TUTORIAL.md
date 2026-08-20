@@ -246,6 +246,20 @@ green is a supported posting term, blue is a rewritten line, and purple is
 both. This overlay is review-only—the linked PDF is unchanged. Treat coverage
 as a diagnostic comparison, not a promise about any employer's ATS.
 
+Also open **Tailoring audit** on a saved version. **Fit** describes the
+candidate's supported match to the role; **Tailoring** describes whether this
+version improved the evidence selection and communication relative to the
+original resume. Review the supported gains, dropped or omitted evidence,
+redundancy warnings, explained tradeoffs, and blockers. The audit also gives a
+recommendation: **prefer tailored**, **prefer base**, or **needs review**. An
+explicit source-backed project replacement is not automatically a regression,
+and omitting low-priority coursework is not treated like losing core technical
+evidence. If material loss remains, one bounded repair pass tries to improve the
+plan and keeps it only when the compiled comparison improves. `ready`, `review`,
+and `blocked` are readiness states, not a single hiring score: unsupported
+claims, eligibility conflicts, layout failures, privacy failures, and missing
+independent review remain visible as hard constraints.
+
 - **Unchained generation** — performs a requirement-by-requirement evidence
   audit before drafting, searches the authorized Markdown graph, and may create
   new grounded bullets or Skills lines to close supported gaps. Unsupported

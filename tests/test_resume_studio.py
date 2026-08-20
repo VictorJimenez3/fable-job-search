@@ -154,6 +154,8 @@ def test_resume_report_exposes_change_and_layout_safety_language():
     assert "Provider flow, model, and usage" in rs.UI_HTML
     assert "Measured page use" in rs.UI_HTML
     assert "Experience chronology preserved" in rs.UI_HTML
+    assert "Tailoring decision" in rs.UI_HTML
+    assert "Compared with the original resume for this posting" in rs.UI_HTML
 
 
 def test_production_bridge_accepts_only_bounded_public_job_snapshots():
@@ -350,6 +352,29 @@ def test_objective_resume_assessment_is_target_specific_and_explains_unknown_rev
     assert failed["score"] is None and failed["rankable"] is False
 
 
+def test_objective_resume_assessment_excludes_a_draft_when_audit_prefers_base():
+    report = {
+        "resume_match": {"score": 94},
+        "review": {
+            "independent_review": False,
+            "deterministic": {
+                "gates": {"factual": {"status": "pass"}},
+                "layout": {"pass": True},
+                "portfolio": {"pass": True},
+            },
+        },
+        "tailoring_audit": {
+            "readiness": "review", "recommended_version": "base",
+            "decision": "prefer_base",
+        },
+    }
+    assessment = rs.objective_resume_assessment(report, "awaiting_review")
+    assert assessment["rankable"] is False
+    assert assessment["score"] is None
+    assert assessment["recommended_version"] == "base"
+    assert any("canonical base" in item for item in assessment["risks"])
+
+
 def test_run_manager_snapshots_job_and_assigns_named_pdf(tmp_path):
     class NoopExecutor:
         def submit(self, *args, **kwargs):
@@ -359,9 +384,10 @@ def test_run_manager_snapshots_job_and_assigns_named_pdf(tmp_path):
     manager.executor.shutdown(wait=False)
     manager.executor = NoopExecutor()
     job = {"id": "job-3", "company": "Acme Labs", "title": "ML Engineer"}
-    status = manager.start(job, "dream")
+    status = manager.start(job, "dream", queue_id="queue-123")
     run_dir = tmp_path / "CV" / ".resume_studio" / "runs" / status["run_id"]
     assert status["pdf_filename"] == "acme_labs_resume_ai.pdf"
+    assert status["queue_id"] == "queue-123"
     assert json.loads((run_dir / "job.json").read_text())["company"] == "Acme Labs"
 
 
@@ -1480,6 +1506,183 @@ def test_content_change_report_uses_immutable_canonical_project_sources():
     assert changes["project_swaps"]["swapped_out"] == ["\\textbf{Project 0} | \\emph{Python}"]
 
 
+def test_job_intelligence_separates_fit_tracks_terms_and_hard_eligibility():
+    intelligence = rs.build_job_intelligence(
+        {"id": "job-1", "title": "Performance Engineer", "company": "Example"},
+        "Required: CUDA, Python, and at least 1 years of experience. "
+        "Work on distributed systems and performance optimization. " * 8,
+        match={"score": 62, "confidence": "high", "missing_requirements": ["CUDA"]},
+        target_keywords={"terms": [
+            {"term": "Python", "importance": "required", "supported": True, "source_ids": ["cv:b1"], "support_kind": "exact"},
+            {"term": "CUDA", "importance": "required", "supported": False, "source_ids": [], "support_kind": "none"},
+        ]},
+    )
+    assert intelligence["version"] == rs.JOB_INTELLIGENCE_VERSION
+    assert intelligence["fit"]["band"] == "moderate"
+    assert "systems_performance" in intelligence["role_tracks"]
+    assert "1+ years of experience required" in intelligence["hard_blockers"]
+    cuda = next(item for item in intelligence["requirements"] if item["requirement"] == "CUDA")
+    assert cuda["evidence_status"] == "unsupported"
+    assert cuda["recommended_action"] == "leave_gap"
+
+
+def test_content_change_report_marks_base_term_gains_and_losses():
+    catalog = _fixture_catalog()
+    plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
+    assert not errors
+    strategy = {"posting_available": True, "terms": [
+        {"term": "Python", "importance": "required", "required": True, "supported": True, "source_ids": ["experience:item0:b1"]},
+        {"term": "SQL", "importance": "preferred", "preferred": True, "supported": True, "source_ids": ["experience:item0:b1"]},
+    ]}
+    changes = rs.content_change_report(plan, catalog, "Python", strategy, base_tex="Python SQL")
+    terms = {item["term"]: item for item in changes["keyword_coverage"]["terms"]}
+    assert terms["Python"]["comparison_status"] == "retained"
+    assert terms["SQL"]["comparison_status"] == "lost"
+    assert changes["keyword_coverage"]["lost_terms"] == ["SQL"]
+    assert changes["base_text_hash"]
+
+
+def test_change_findings_catch_unsupported_terms_losses_and_missing_supported_evidence():
+    findings = rs.build_change_findings(
+        {"keyword_coverage": {"terms": [
+                {"term": "CUDA", "supported": False, "rendered": True, "status": "unverified_rendered", "comparison_status": "gained"},
+                {"term": "SQL", "supported": True, "rendered": False, "status": "missing", "comparison_status": "lost", "required": True, "source_ids": ["cv:sql"]},
+                {"term": "Linux", "supported": True, "rendered": False, "status": "missing", "comparison_status": "absent", "source_ids": ["cv:linux"]},
+        ], "portfolio_diagnostics": {"warnings": []}}},
+        {"gates": {"factual": {"status": "fail", "reason": "unsupported term"}}},
+    )
+    classes = [item["classification"] for item in findings]
+    assert "BLOCKER" in classes
+    assert any(item["classification"] == "REGRESSION" and "SQL" in item["reason"] for item in findings)
+    assert any(item["classification"] == "MISSED_OPPORTUNITY" and "Linux" in item["reason"] for item in findings)
+    rewrite_findings = rs.build_change_findings({"rewritten_bullets": [{
+        "source_id": "cv:bullet", "source_text": "Built Python APIs", "final_text": "Designed Python APIs",
+    }]})
+    assert rewrite_findings[0]["classification"] == "QUESTIONABLE"
+
+
+def test_change_findings_do_not_call_low_priority_context_loss_a_regression():
+    findings = rs.build_change_findings({
+        "keyword_coverage": {"terms": [{
+            "term": "algorithms", "supported": True, "rendered": False,
+            "base_rendered": True, "comparison_status": "lost",
+            "importance": "mentioned", "source_ids": ["CV/immutable/VictorJimenezResume.tex"],
+        }]},
+        "portfolio_diagnostics": {"warnings": ["advisory overlap"], "blocking_warnings": []},
+    })
+    assert not any(item["classification"] == "REGRESSION" for item in findings)
+    assert any(item["classification"] == "QUESTIONABLE" and "context term" in item["reason"] for item in findings)
+    assert any(item["classification"] == "QUESTIONABLE" and "advisory overlap" in item["reason"] for item in findings)
+
+
+def test_explained_tradeoff_is_not_counted_as_missed_evidence():
+    findings = rs.build_change_findings({
+        "removed_canonical_bullets": [{
+            "source_id": "project:quantum:b1", "entry_id": "project:quantum",
+            "text": "Won 1st place among 650 competitors", "tradeoff_status": "explained",
+        }],
+        "unexplained_removed_bullets": [],
+        "portfolio_diagnostics": {"warnings": [], "blocking_warnings": []},
+    })
+    assert findings == []
+
+
+def test_tailoring_recommendation_prefers_base_when_comparison_regresses():
+    audit = {
+        "recommended_version": "base", "comparison": {
+            "gain_weight": 1, "loss_weight": 4, "missed_opportunity_weight": 2,
+        }, "finding_counts": {"QUESTIONABLE": 0},
+    }
+    assert rs.tailoring_audit_preference_key(audit)[0] == 1
+    assert rs.tailoring_audit_preference_key({
+        "recommended_version": "tailored", "comparison": {
+            "gain_weight": 4, "loss_weight": 0, "missed_opportunity_weight": 0,
+        }, "finding_counts": {"QUESTIONABLE": 0},
+    }) > rs.tailoring_audit_preference_key(audit)
+
+
+def test_tailoring_audit_keeps_fit_separate_from_tailoring_and_blocks_hard_failures():
+    context = {"posting_text": "Required: Python. " * 40, "job_intelligence": {
+        "posting_available": True, "posting_snapshot_hash": "post", "hash": "job-intel",
+        "hard_blockers": [],
+    }}
+    match = {"score": 82, "confidence": "high", "missing_requirements": []}
+    graph = {"hash": "graph"}
+    changes = {"keyword_coverage": {"terms": [{
+        "term": "Python", "supported": True, "rendered": True,
+        "comparison_status": "gained", "status": "covered", "required": True,
+    }], "required_coverage_percent": 100}, "portfolio_diagnostics": {}}
+    passing_gates = {name: {"status": "pass", "reason": "ok"} for name in rs.REVIEW_CRITERIA}
+    passing_gates.update({"layout": {"status": "pass", "reason": "ok"}, "eligibility": {"status": "pass", "reason": "ok"}, "portfolio": {"status": "pass", "reason": "ok"}})
+    review = {"gates": passing_gates, "independent_review": True, "ready": True, "unsupported_claims": []}
+    audit = rs.build_tailoring_audit(
+        {"id": "job-1", "title": "Engineer"}, context, match, graph, {}, changes,
+        {"gates": passing_gates}, review, "Python", "Python CUDA",
+    )
+    assert audit["fit"]["band"] == "strong"
+    assert audit["tailoring"] == "improved"
+    assert audit["recommended_version"] == "tailored"
+    assert audit["readiness"] == "ready"
+
+    review_only = rs.build_tailoring_audit(
+        {"id": "job-1", "title": "Engineer"}, context, match, graph, {}, changes,
+        {"gates": passing_gates},
+        {"gates": {name: {"status": "fail", "reason": "critic unavailable"} for name in rs.REVIEW_CRITERIA},
+         "independent_review": False, "ready": False, "unsupported_claims": []},
+        "Python", "Python",
+    )
+    assert review_only["readiness"] == "review"
+    assert review_only["hard_failures"] == []
+
+    critic_gates = dict(passing_gates)
+    critic_gates["factual"] = {"status": "fail", "reason": "critic found a vague unsupported claim"}
+    critic_blocked = rs.build_tailoring_audit(
+        {"id": "job-1", "title": "Engineer"}, context, match, graph, {}, changes,
+        {"gates": passing_gates},
+        {"gates": critic_gates, "independent_review": True, "ready": False, "unsupported_claims": []},
+        "Python", "Python",
+    )
+    assert critic_blocked["readiness"] == "blocked"
+    assert critic_blocked["hard_failures"][0]["name"] == "factual"
+
+    blocked = rs.build_tailoring_audit(
+        {"id": "job-1", "title": "Engineer"}, context, match, graph, {}, changes,
+        {"gates": {"eligibility": {"status": "fail", "reason": "degree conflict"}}},
+        {"gates": {"eligibility": {"status": "fail", "reason": "degree conflict"}}, "independent_review": True, "ready": False, "unsupported_claims": []},
+        "Python", "Python",
+    )
+    assert blocked["fit"]["band"] == "strong"
+    assert blocked["readiness"] == "blocked"
+
+
+
+def test_tailoring_audit_summary_keeps_gains_and_not_questionable_improved():
+    audit = {
+        "version": rs.TAILORING_AUDIT_VERSION,
+        "status": "review", "readiness": "review", "tailoring": "inconclusive", "confidence": "medium",
+        "fit": {"band": "moderate"}, "finding_counts": {"QUESTIONABLE": 1},
+        "findings": [
+            {"classification": "KEEP_GOOD", "severity": "info", "reason": "Supported Python was surfaced."},
+            {"classification": "QUESTIONABLE", "severity": "warning", "reason": "A duplicate was suppressed."},
+        ],
+        "hash": "audit-hash",
+    }
+    summary = rs.tailoring_audit_summary(audit)
+    assert summary["gains"] == ["Supported Python was surfaced."]
+    assert summary["losses"] == []
+    assert summary["fit"] == "moderate"
+
+
+def test_tailoring_audit_summary_carries_only_opaque_run_correlation():
+    summary = rs.tailoring_audit_summary({
+        "run_id": "run-1", "queue_id": "queue-1",
+        "findings": [{"classification": "BLOCKER", "reason": "Independent critic reported unsupported claim: private candidate evidence"}],
+    })
+    assert summary["run_id"] == "run-1"
+    assert summary["queue_id"] == "queue-1"
+    assert "private candidate evidence" not in summary["blockers"][0]
+
+
 def test_portfolio_diagnostics_flags_leadership_and_repeated_agents_story():
     catalog = _fixture_catalog()
     catalog["entries"]["experience:item0"]["bullets"][0]["text"] = "Built an agentic RAG FastAPI backend"
@@ -1918,6 +2121,24 @@ def test_score_review_hard_fails_unsupported_claims():
     )
     assert result["hard_fail"] is True
     assert result["ready"] is False
+
+
+def test_score_review_cannot_average_away_failed_eligibility_gate():
+    agent = {"provider": "claude", "data": {
+        "criteria": {name: {"status": "pass", "reason": "ok"} for name in rs.REVIEW_CRITERIA},
+        "portfolio_comparison": {"status": "pass", "reason": "better", "preserved_strengths": [], "gained_strengths": [], "lost_strengths": []},
+        "unsupported_claims": [], "blocking_issues": [],
+    }}
+    deterministic = {"gates": {
+        "factual": {"status": "pass", "reason": "ok"},
+        "layout": {"status": "pass", "reason": "ok"},
+        "portfolio": {"status": "pass", "reason": "ok"},
+        "eligibility": {"status": "fail", "reason": "PhD required"},
+    }}
+    result = rs.score_review(agent, deterministic, independent_available=True)
+    assert result["gates"]["eligibility"]["status"] == "fail"
+    assert result["ready"] is False
+    assert result["hard_fail"] is True
 
 
 def test_deterministic_review_fails_full_posting_degree_gate(monkeypatch):

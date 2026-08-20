@@ -33,6 +33,7 @@ import copy
 import concurrent.futures
 import datetime as dt
 from difflib import SequenceMatcher
+import hashlib
 import html
 import itertools
 import json
@@ -72,6 +73,8 @@ from radar.evidence_review import (BLOCKING_STATUSES, REVIEW_STATUSES,
 
 RUBRIC_VERSION = "resume-gates-v1"
 OBJECTIVE_RESUME_RUBRIC_VERSION = "objective-resume-v1"
+JOB_INTELLIGENCE_VERSION = "job-intelligence-v1"
+TAILORING_AUDIT_VERSION = "tailoring-audit-v2"
 CODEX_LUNA_MODEL = "gpt-5.6-luna"
 REVIEW_CRITERIA = (
     "factual", "target_fit", "evidence", "distinctiveness", "clarity", "privacy",
@@ -131,6 +134,14 @@ MAX_CONTEXT_PROMPT_CHARS = 12000
 MAX_CATALOG_PROMPT_CHARS = 18000
 MAX_GRAPH_PROMPT_CHARS = 28000
 MAX_TARGET_KEYWORDS = 48
+MAX_AUDIT_FINDINGS = 80
+TAILORING_PRIORITY_WEIGHTS = {
+    "eligibility": 5,
+    "required": 5,
+    "preferred": 4,
+    "responsibility": 3,
+    "mentioned": 1,
+}
 MAX_WORKSHOP_TEXT_CHARS = 900
 MAX_WORKSHOP_REQUEST_CHARS = 3000
 MAX_WORKSHOP_REVISIONS = 100
@@ -1373,10 +1384,23 @@ def portfolio_diagnostics(
             "compare it against unused projects before expanding the repeated story."
         )
     if canonical_project_ids and not set(canonical_project_ids) <= set(selected_project_ids):
-        warnings.append(
-            "The tailored portfolio differs from the canonical project set; every dropped "
-            "strong project needs a clear replacement or explicit tradeoff."
-        )
+        decision_ledger = [
+            item for item in (plan.get("decision_ledger") or [])
+            if isinstance(item, dict)
+        ]
+        unexplained = [
+            entry_id for entry_id in canonical_project_ids
+            if entry_id not in set(selected_project_ids)
+            and not _ledger_explains_removed_evidence(
+                {"entry_id": entry_id, "source_id": ""},
+                decision_ledger, entries,
+            )
+        ]
+        if unexplained:
+            warnings.append(
+                "The tailored portfolio differs from the canonical project set; every dropped "
+                "strong project needs a clear replacement or explicit tradeoff."
+            )
     return {
         "selected_entry_families": selected_families,
         "selected_signal_families": selected_families_all,
@@ -1427,6 +1451,661 @@ def job_summary(job: Dict[str, Any], match: Optional[Dict[str, Any]] = None) -> 
             "version": match.get("version", MATCH_VERSION),
         }
     return summary
+
+
+def _stable_digest(value: Any, length: int = 24) -> str:
+    """Return a deterministic content identity for local audit artifacts."""
+    if isinstance(value, bytes):
+        raw = value
+    elif isinstance(value, str):
+        raw = value.encode("utf-8", errors="replace")
+    else:
+        raw = json.dumps(
+            value, ensure_ascii=False, sort_keys=True, separators=(",", ":"),
+            default=str,
+        ).encode("utf-8", errors="replace")
+    return hashlib.sha256(raw).hexdigest()[: max(8, int(length or 24))]
+
+
+ROLE_TRACK_TERMS = {
+    "systems_performance": {
+        "systems", "performance", "hpc", "cuda", "distributed", "parallel",
+        "compiler", "inference", "optimization", "infrastructure", "slurm",
+    },
+    "backend_infrastructure": {
+        "backend", "api", "service", "services", "cloud", "docker",
+        "kubernetes", "database", "databases", "platform", "deployment",
+    },
+    "ml_research": {
+        "machine", "learning", "deep", "model", "models", "research",
+        "experiments", "pytorch", "tensorflow", "vision", "nlp", "publication",
+    },
+    "data_platform": {
+        "data", "analytics", "analysis", "sql", "pipeline", "pipelines",
+        "warehouse", "statistics", "visualization", "etl", "feature",
+    },
+}
+
+
+def build_job_intelligence(
+    job: Dict[str, Any], posting_text: str,
+    match: Optional[Dict[str, Any]] = None,
+    target_keywords: Optional[Dict[str, Any]] = None,
+    generation_strategy: Optional[Dict[str, Any]] = None,
+) -> Dict[str, Any]:
+    """Build a compact, source-grounded requirement model for one posting.
+
+    This is deliberately deterministic in v1.  Provider gap analysis can add
+    richer requirement prose, but this artifact remains anchored to captured
+    posting terms, authorized evidence IDs, and explicit eligibility rules.
+    """
+    text = clean_text(str(posting_text or ""))
+    target_keywords = target_keywords if isinstance(target_keywords, dict) else {}
+    generation_strategy = generation_strategy if isinstance(generation_strategy, dict) else {}
+    requirements: List[Dict[str, Any]] = []
+    seen_keys = set()
+
+    def add_requirement(
+        requirement: str, importance: str, exact_terms: Iterable[str],
+        evidence_status: str = "unsupported", evidence_ids: Optional[Iterable[str]] = None,
+        hard_block: bool = False, source: str = "posting",
+        recommended_action: str = "leave_gap", reason: str = "",
+    ) -> None:
+        clean_requirement = clean_text(str(requirement or ""))[:500]
+        terms = list(dict.fromkeys(clean_text(str(term or ""))[:160] for term in exact_terms if str(term or "").strip()))
+        key = (clean_requirement.lower(), tuple(term.lower() for term in terms))
+        if not clean_requirement or key in seen_keys:
+            return
+        seen_keys.add(key)
+        requirements.append({
+            "id": "requirement:" + _stable_digest({"requirement": clean_requirement, "terms": terms}, 12),
+            "requirement": clean_requirement,
+            "importance": importance if importance in {"required", "preferred", "responsibility", "mentioned", "eligibility"} else "mentioned",
+            "exact_terms": terms[:8],
+            "evidence_status": evidence_status if evidence_status in {"direct", "adjacent", "unsupported", "unknown"} else "unknown",
+            "evidence_ids": list(dict.fromkeys(str(value) for value in (evidence_ids or []) if str(value)))[:8],
+            "hard_block": bool(hard_block),
+            "source": source,
+            "recommended_action": recommended_action,
+            "reason": str(reason or "")[:500],
+        })
+
+    for item in target_keywords.get("terms") or []:
+        if not isinstance(item, dict):
+            continue
+        term = str(item.get("term") or "").strip()
+        if not term:
+            continue
+        support_kind = str(item.get("support_kind") or "none")
+        evidence_status = "direct" if item.get("supported") and support_kind != "adjacent" else "adjacent" if item.get("supported") else "unsupported"
+        add_requirement(
+            term,
+            str(item.get("importance") or "mentioned"),
+            [term],
+            evidence_status=evidence_status,
+            evidence_ids=item.get("source_ids") or [],
+            source="deterministic_term_inventory",
+            recommended_action="keep" if item.get("supported") else "leave_gap",
+            reason=(
+                "Authorized evidence can support this term."
+                if item.get("supported") else
+                "No authorized evidence currently supports this exact term."
+            ),
+        )
+
+    for item in generation_strategy.get("requirements") or []:
+        if not isinstance(item, dict):
+            continue
+        add_requirement(
+            str(item.get("requirement") or ""),
+            str(item.get("importance") or "mentioned"),
+            item.get("exact_terms") or [],
+            evidence_status=str(item.get("evidence_status") or "unknown"),
+            evidence_ids=item.get("evidence_ids") or [],
+            source="normalized_gap_analysis",
+            recommended_action=str(item.get("recommended_action") or "leave_gap"),
+            reason=str(item.get("reason") or ""),
+        )
+
+    eligibility_blocks = posting_eligibility_blocks(text) if text else []
+    for block in eligibility_blocks:
+        add_requirement(
+            block, "eligibility", [], evidence_status="unknown", hard_block=True,
+            source="deterministic_eligibility", recommended_action="leave_gap",
+            reason="This application-level constraint is evaluated outside resume wording.",
+        )
+
+    haystack = (str(job.get("title") or "") + " " + text).lower()
+    tokens = set(re.findall(r"[a-z0-9+#.]+", haystack))
+    track_scores = {
+        track: len(tokens & terms)
+        for track, terms in ROLE_TRACK_TERMS.items()
+    }
+    tracks = [track for track, score in sorted(track_scores.items(), key=lambda pair: (-pair[1], pair[0])) if score]
+    if not tracks:
+        tracks = ["general_software"]
+    if len(tracks) > 1 and track_scores.get(tracks[1], 0) >= max(2, track_scores.get(tracks[0], 0) - 1):
+        track_confidence = "ambiguous"
+    elif track_scores.get(tracks[0], 0) >= 3:
+        track_confidence = "high"
+    else:
+        track_confidence = "low"
+
+    match = match if isinstance(match, dict) else {}
+    match_score = match.get("score")
+    fit_band = (
+        "strong" if isinstance(match_score, (int, float)) and match_score >= 75 else
+        "moderate" if isinstance(match_score, (int, float)) and match_score >= 50 else
+        "stretch" if isinstance(match_score, (int, float)) else "unknown"
+    )
+    artifact = {
+        "version": JOB_INTELLIGENCE_VERSION,
+        "posting_available": len(text) >= 300,
+        "posting_chars": len(text),
+        "posting_snapshot_hash": _stable_digest(text),
+        "role_tracks": tracks[:4],
+        "track_confidence": track_confidence,
+        "requirements": requirements[:80],
+        "hard_blockers": eligibility_blocks,
+        "fit": {
+            "band": fit_band,
+            "score": match_score if isinstance(match_score, (int, float)) else None,
+            "confidence": str(match.get("confidence") or "low"),
+            "missing_requirements": list(match.get("missing_requirements") or [])[:20],
+        },
+    }
+    artifact["hash"] = _stable_digest(artifact)
+    return artifact
+
+
+def build_change_findings(
+    changes: Dict[str, Any], deterministic: Optional[Dict[str, Any]] = None,
+    review: Optional[Dict[str, Any]] = None,
+) -> List[Dict[str, Any]]:
+    """Classify material base-to-tailored changes without asking a provider."""
+    changes = changes if isinstance(changes, dict) else {}
+    deterministic = deterministic if isinstance(deterministic, dict) else {}
+    review = review if isinstance(review, dict) else {}
+    findings: List[Dict[str, Any]] = []
+
+    def add(
+        classification: str, severity: str, reason: str,
+        source_ids: Optional[Iterable[str]] = None,
+        requirement_ids: Optional[Iterable[str]] = None,
+        action: str = "",
+    ) -> None:
+        if classification not in {"KEEP_GOOD", "QUESTIONABLE", "REGRESSION", "MISSED_OPPORTUNITY", "BLOCKER"}:
+            classification = "QUESTIONABLE"
+        item = {
+            "id": "finding:" + _stable_digest({
+                "classification": classification, "reason": reason,
+                "source_ids": list(source_ids or []), "requirement_ids": list(requirement_ids or []),
+            }, 14),
+            "classification": classification,
+            "severity": severity if severity in {"info", "warning", "critical"} else "warning",
+            "reason": str(reason or "")[:700],
+            "source_ids": list(dict.fromkeys(str(value) for value in (source_ids or []) if str(value)))[:8],
+            "requirement_ids": list(dict.fromkeys(str(value) for value in (requirement_ids or []) if str(value)))[:8],
+            "action": str(action or "")[:500],
+        }
+        if item["id"] not in {existing["id"] for existing in findings}:
+            findings.append(item)
+
+    keyword_terms = {
+        str(item.get("term") or "").lower(): item
+        for item in (changes.get("keyword_coverage") or {}).get("terms") or []
+        if isinstance(item, dict) and str(item.get("term") or "")
+    }
+    for item in changes.get("rewritten_bullets") or []:
+        source_ids = item.get("source_ids") or [item.get("source_id")]
+        missing = _missing_protected_qualifiers(
+            str(item.get("source_text") or ""), str(item.get("final_text") or "")
+        )
+        if missing:
+            add(
+                "BLOCKER", "critical",
+                "Rewrite dropped protected scope qualifier(s): %s." % ", ".join(missing),
+                source_ids, action="Restore the authorized qualifier before review.",
+            )
+        elif any(
+            _tailoring_term_weight(keyword_terms.get(str(term).lower(), {})) >= 3
+            for term in item.get("dropped_supported_terms") or []
+        ):
+            dropped = ", ".join(str(term) for term in item.get("dropped_supported_terms") or [])
+            add(
+                "REGRESSION", "warning",
+                "A rewrite dropped higher-priority supported target terminology: %s." % dropped,
+                source_ids, action="Restore the supported term or explain why stronger evidence replaced it.",
+            )
+        elif item.get("added_supported_terms"):
+            add(
+                "KEEP_GOOD", "info",
+                "Evidence-preserving rewrite adds a supported role signal%s." % (
+                    ": " + ", ".join(str(term) for term in item.get("added_supported_terms") or [])
+                    if item.get("added_supported_terms") else ""
+                ),
+                source_ids, action="Retain the rewrite if it remains readable and interview-defensible.",
+            )
+        else:
+            add(
+                "QUESTIONABLE", "info",
+                "Source-addressed wording change preserved authorized evidence, but its role value still needs independent comparison.",
+                source_ids, action="Keep only if the paired reviewer confirms better role relevance or clearer proof.",
+            )
+
+    # Suppressed near-copy rewrites are a successful safety action, not a
+    # negative finding.  They remain inspectable in content_changes.
+
+    coverage = changes.get("keyword_coverage") or {}
+    for item in coverage.get("terms") or []:
+        term = str(item.get("term") or "")
+        comparison = str(item.get("comparison_status") or "unknown")
+        required = bool(item.get("required"))
+        source_ids = item.get("source_ids") or []
+        if item.get("status") == "unverified_rendered":
+            add(
+                "BLOCKER", "critical",
+                "Unsupported posting term rendered without authorized evidence: %s." % term,
+                source_ids, action="Remove the term or confirm supporting evidence before use.",
+            )
+        elif comparison == "gained":
+            add(
+                "KEEP_GOOD", "info",
+                "Supported posting terminology was surfaced in the tailored resume: %s." % term,
+                source_ids, action="Retain if the surrounding claim remains specific and defensible.",
+            )
+        elif comparison == "lost":
+            weight = _tailoring_term_weight(item)
+            classification = "REGRESSION" if weight >= 3 else "QUESTIONABLE"
+            severity = "critical" if required else "warning"
+            reason = (
+                "The tailored resume dropped a higher-priority supported term from the base resume: %s."
+                if classification == "REGRESSION" else
+                "A lower-priority supported context term was omitted from the tailored resume: %s."
+            ) % term
+            add(
+                classification, severity, reason,
+                source_ids, action=(
+                    "Restore it or record why stronger evidence displaced it."
+                    if classification == "REGRESSION" else
+                    "Restore it only if the role benefits more from this context than the evidence already selected."
+                ),
+            )
+        elif item.get("status") == "missing" and item.get("supported"):
+            add(
+                "MISSED_OPPORTUNITY", "critical" if required else "warning",
+                "Authorized evidence supports this posting term, but the tailored resume does not surface it: %s." % term,
+                source_ids, action="Consider surfacing the term where the underlying evidence is visible.",
+            )
+
+    for item in (changes.get("unexplained_removed_bullets") or changes.get("removed_canonical_bullets") or [])[:20]:
+        if item.get("tradeoff_status") == "explained":
+            continue
+        text = str(item.get("text") or "")
+        if _resume_numeric_anchors(text) or _portfolio_signal_families(text):
+            add(
+                "MISSED_OPPORTUNITY", "warning",
+                "A canonical evidence bullet with concrete proof or a technical signal was removed from the tailored portfolio.",
+                [item.get("source_id")], action="Confirm the lost signal is intentionally replaced by stronger evidence.",
+            )
+
+    diagnostics = changes.get("portfolio_diagnostics") or {}
+    for warning in (diagnostics.get("warnings") or [])[:12]:
+        add(
+            "REGRESSION" if warning in (diagnostics.get("blocking_warnings") or []) else "QUESTIONABLE",
+            "critical" if warning in (diagnostics.get("blocking_warnings") or []) else "warning",
+            "Portfolio audit warning: %s" % warning,
+            action=(
+                "Resolve the redundancy or explain the deliberate tradeoff."
+                if warning in (diagnostics.get("blocking_warnings") or []) else
+                "Compare the flagged alternative; this is advisory until a stronger replacement is demonstrated."
+            ),
+        )
+
+    gates = deterministic.get("gates") or {}
+    for name, gate in gates.items():
+        if not isinstance(gate, dict):
+            continue
+        status = str(gate.get("status") or "").lower()
+        if status == "fail":
+            add(
+                "BLOCKER", "critical",
+                "%s gate failed: %s" % (str(name).replace("_", " ").title(), str(gate.get("reason") or "unspecified")),
+                action="Resolve this gate before treating the resume as ready.",
+            )
+        elif status == "partial":
+            add(
+                "QUESTIONABLE", "warning",
+                "%s gate is unresolved: %s" % (str(name).replace("_", " ").title(), str(gate.get("reason") or "unspecified")),
+                action="Confirm the missing condition during owner review.",
+            )
+
+    unsupported = review.get("unsupported_claims") or []
+    if not isinstance(unsupported, list):
+        unsupported = [unsupported]
+    for claim in unsupported[:20]:
+        add(
+            "BLOCKER", "critical",
+            "Independent critic reported an unsupported claim: %s" % str(claim),
+            action="Remove or ground the claim in authorized evidence.",
+        )
+    blocking_issues = review.get("blocking_issues") or []
+    if review.get("independent_review") is True and not isinstance(blocking_issues, list):
+        blocking_issues = [blocking_issues]
+    if review.get("independent_review") is True:
+        for issue in blocking_issues[:20]:
+            add(
+                "BLOCKER", "critical",
+                "Independent critic reported a blocking issue: %s" % str(issue),
+                action="Resolve the critic's blocking issue before treating the resume as ready.",
+            )
+    return findings[:MAX_AUDIT_FINDINGS]
+
+
+def build_tailoring_audit(
+    job: Dict[str, Any], context: Dict[str, Any], match: Dict[str, Any],
+    graph: Dict[str, Any], plan: Dict[str, Any], changes: Dict[str, Any],
+    deterministic: Dict[str, Any], review: Dict[str, Any],
+    base_tex: str, tailored_tex: str, run_id: str = "", queue_id: str = "",
+) -> Dict[str, Any]:
+    """Return the comparative, hard-gated decision artifact for one run."""
+    findings = build_change_findings(changes, deterministic, review)
+    deterministic_gates = deterministic.get("gates") if isinstance(deterministic.get("gates"), dict) else {}
+    review_gates = review.get("gates") if isinstance(review.get("gates"), dict) else {}
+    gates = review_gates or deterministic_gates
+    independent_available = bool(review.get("independent_review"))
+
+    def effective_gate(name: str) -> Dict[str, Any]:
+        deterministic_gate = deterministic_gates.get(name)
+        review_gate = gates.get(name)
+        if isinstance(deterministic_gate, dict) and str(deterministic_gate.get("status") or "").lower() == "fail":
+            return deterministic_gate
+        if independent_available and isinstance(review_gate, dict) and str(review_gate.get("status") or "").lower() == "fail":
+            return review_gate
+        if isinstance(deterministic_gate, dict):
+            return deterministic_gate
+        if not independent_available and name in REVIEW_CRITERIA:
+            return {"status": "unknown", "reason": "independent provider critique unavailable"}
+        return review_gate if isinstance(review_gate, dict) else {}
+
+    hard_gate_names = ("factual", "eligibility", "layout", "privacy")
+    hard_failures = [
+        {"name": name, "reason": str(effective_gate(name).get("reason") or "")}
+        for name in hard_gate_names
+        if str(effective_gate(name).get("status") or "").lower() == "fail"
+    ]
+    finding_blockers = [item for item in findings if item.get("classification") == "BLOCKER"]
+    hard_gates = [
+        {"name": str(name), "status": str(effective_gate(name).get("status") or "unknown"),
+         "reason": str(effective_gate(name).get("reason") or "")[:500]}
+        for name in sorted(set(gates) | set(deterministic_gates))
+        if isinstance(effective_gate(name), dict)
+    ]
+    intelligence = context.get("job_intelligence") if isinstance(context.get("job_intelligence"), dict) else {}
+    posting_available = bool(intelligence.get("posting_available") or len(str(context.get("posting_text") or "")) >= 300)
+    unknown_gate = any(item.get("status") in {"partial", "unknown"} for item in hard_gates)
+    if hard_failures or finding_blockers:
+        readiness = "blocked"
+    elif not posting_available or not independent_available or unknown_gate or review.get("ready") is not True:
+        readiness = "review"
+    else:
+        readiness = "ready"
+
+    counts = {
+        classification: sum(1 for item in findings if item.get("classification") == classification)
+        for classification in ("KEEP_GOOD", "QUESTIONABLE", "REGRESSION", "MISSED_OPPORTUNITY", "BLOCKER")
+    }
+    gains = counts["KEEP_GOOD"]
+    losses = counts["REGRESSION"] + counts["BLOCKER"]
+    missed = counts["MISSED_OPPORTUNITY"]
+    gain_weight = sum(
+        5 if item.get("severity") == "critical" else 2 if item.get("severity") == "warning" else 1
+        for item in findings if item.get("classification") == "KEEP_GOOD"
+    )
+    loss_weight = sum(
+        5 if item.get("severity") == "critical" else 2 if item.get("severity") == "warning" else 1
+        for item in findings if item.get("classification") in {"REGRESSION", "BLOCKER"}
+    )
+    missed_weight = sum(
+        5 if item.get("severity") == "critical" else 2 if item.get("severity") == "warning" else 1
+        for item in findings if item.get("classification") == "MISSED_OPPORTUNITY"
+    )
+    if losses and losses >= max(1, gains):
+        tailoring = "regressed"
+    elif gains > losses:
+        tailoring = "improved"
+    elif counts["QUESTIONABLE"] or missed:
+        tailoring = "inconclusive"
+    elif gains:
+        tailoring = "improved"
+    else:
+        tailoring = "neutral"
+
+    critical_missed = any(
+        item.get("classification") == "MISSED_OPPORTUNITY"
+        and item.get("severity") == "critical"
+        for item in findings
+    )
+    if hard_failures or finding_blockers:
+        recommended_version = "blocked"
+        decision = "do_not_ship"
+    elif tailoring == "regressed":
+        recommended_version = "base"
+        decision = "prefer_base"
+    elif tailoring == "improved" and not critical_missed:
+        recommended_version = "tailored"
+        decision = "prefer_tailored"
+    else:
+        recommended_version = "review"
+        decision = "needs_review"
+    uplift_band = (
+        "negative" if loss_weight > gain_weight else
+        "positive" if gain_weight > loss_weight and not critical_missed else
+        "uncertain"
+    )
+
+    score = match.get("score") if isinstance(match, dict) else None
+    fit_band = (
+        "strong" if isinstance(score, (int, float)) and score >= 75 else
+        "moderate" if isinstance(score, (int, float)) and score >= 50 else
+        "stretch" if isinstance(score, (int, float)) else "unknown"
+    )
+    keyword = changes.get("keyword_coverage") or {}
+    required_coverage = keyword.get("required_coverage_percent")
+    screening = (
+        "fail" if any(item.get("status") == "unverified_rendered" for item in keyword.get("terms") or [])
+        else "partial" if isinstance(required_coverage, (int, float)) and required_coverage < 100
+        else "pass"
+    )
+    integrity = "fail" if hard_failures or finding_blockers else "partial" if not independent_available or any(item.get("status") in {"partial", "unknown"} for item in hard_gates) else "pass"
+    portfolio = changes.get("portfolio_diagnostics") or {}
+    efficiency = "fail" if portfolio.get("blocking_warnings") else "partial" if portfolio.get("warnings") else "pass"
+    criteria = review_gates
+    human_relevance = "unknown" if not independent_available else str((criteria.get("target_fit") or {}).get("status") or "unknown")
+    technical_conviction = "unknown" if not independent_available else str((criteria.get("evidence") or {}).get("status") or "unknown")
+    dimensions = {
+        "fit": {"status": fit_band, "score": score, "source": "resume_match.score"},
+        "screening": {"status": screening, "source": "deterministic keyword and layout audit"},
+        "human_relevance": {"status": human_relevance, "source": "independent review"},
+        "technical_conviction": {"status": technical_conviction, "source": "evidence gate and independent review"},
+        "integrity": {"status": integrity, "source": "factual, eligibility, privacy, and provenance gates"},
+        "information_efficiency": {"status": efficiency, "source": "portfolio and density audit"},
+    }
+    confidence = "high" if posting_available and independent_available and not unknown_gate else "medium" if posting_available else "low"
+    audit = {
+        "version": TAILORING_AUDIT_VERSION,
+        "status": "blocked" if readiness == "blocked" else "complete" if readiness == "ready" else "review",
+        "readiness": readiness,
+        "fit": {
+            "band": fit_band,
+            "score": score,
+            "confidence": str(match.get("confidence") or "low"),
+            "missing_requirements": list(match.get("missing_requirements") or [])[:20],
+            "hard_blockers": list(intelligence.get("hard_blockers") or []),
+        },
+        "tailoring": tailoring,
+        "decision": decision,
+        "recommended_version": recommended_version,
+        "confidence": confidence,
+        "dimensions": dimensions,
+        "hard_gates": hard_gates,
+        "hard_failures": hard_failures,
+        "findings": findings,
+        "tradeoffs": list(changes.get("explained_tradeoffs") or [])[:40],
+        "finding_counts": counts,
+        "comparison": {
+            "preference": tailoring,
+            "recommended_version": recommended_version,
+            "decision": decision,
+            "uplift_band": uplift_band,
+            "gain_weight": gain_weight,
+            "loss_weight": loss_weight,
+            "missed_opportunity_weight": missed_weight,
+            "base_text_hash": _stable_digest(base_tex),
+            "tailored_text_hash": _stable_digest(tailored_tex),
+            "gains": gains,
+            "losses": losses,
+            "missed_opportunities": missed,
+        },
+        "posting_snapshot_hash": str(intelligence.get("posting_snapshot_hash") or _stable_digest(context.get("posting_text") or "")),
+        "evidence_graph_hash": str(graph.get("hash") or ""),
+        "job_intelligence_hash": str(intelligence.get("hash") or ""),
+        "run_id": str(run_id or ""),
+        "queue_id": str(queue_id or ""),
+    }
+    audit["hash"] = _stable_digest(audit)
+    return audit
+
+
+def tailoring_audit_preference_key(audit: Dict[str, Any]) -> Tuple[int, int, int, int, int]:
+    """Order two candidate drafts without pretending to predict hiring."""
+    audit = audit if isinstance(audit, dict) else {}
+    recommendation = str(audit.get("recommended_version") or "review")
+    rank = {"tailored": 3, "review": 2, "base": 1, "blocked": 0}.get(recommendation, 2)
+    comparison = audit.get("comparison") if isinstance(audit.get("comparison"), dict) else {}
+    gains = int(comparison.get("gain_weight") or 0)
+    losses = int(comparison.get("loss_weight") or 0)
+    missed = int(comparison.get("missed_opportunity_weight") or 0)
+    questionable = int((audit.get("finding_counts") or {}).get("QUESTIONABLE") or 0)
+    return (rank, -losses, -missed, gains, -questionable)
+
+
+def tailoring_repair_feedback(audit: Dict[str, Any], changes: Dict[str, Any]) -> Dict[str, Any]:
+    """Turn deterministic audit output into bounded repair instructions."""
+    audit = audit if isinstance(audit, dict) else {}
+    changes = changes if isinstance(changes, dict) else {}
+    findings = [item for item in audit.get("findings") or [] if isinstance(item, dict)]
+    actionable = [
+        {
+            "classification": str(item.get("classification") or "QUESTIONABLE"),
+            "severity": str(item.get("severity") or "warning"),
+            "reason": str(item.get("reason") or "")[:500],
+            "action": str(item.get("action") or "")[:400],
+            "source_ids": list(item.get("source_ids") or [])[:8],
+        }
+        for item in findings
+        if item.get("classification") in {"BLOCKER", "REGRESSION", "MISSED_OPPORTUNITY"}
+    ][:16]
+    return {
+        "decision": str(audit.get("decision") or "needs_review"),
+        "recommended_version": str(audit.get("recommended_version") or "review"),
+        "tailoring": str(audit.get("tailoring") or "inconclusive"),
+        "comparison": audit.get("comparison") or {},
+        "actionable_findings": actionable,
+        "explained_tradeoffs": list(changes.get("explained_tradeoffs") or [])[:12],
+        "rules": [
+            "Repair only with authorized source or evidence IDs already present in the plan/catalog.",
+            "Do not restore a base line merely because it existed; restore it when it closes a target-relevant loss.",
+            "Do not remove a deliberate project swap when the decision ledger explains a stronger replacement.",
+            "Do not add unsupported job terminology, even if the posting emphasizes it.",
+            "Prefer a smaller, coherent portfolio over keyword coverage or page filling.",
+            "Preserve metrics, scope qualifiers, and reverse-chronological experience order.",
+        ],
+    }
+
+
+def tailoring_repair_prompt(
+    context: Dict[str, Any], plan: Dict[str, Any], feedback: Dict[str, Any],
+    catalog: Dict[str, Any], graph: Optional[Dict[str, Any]] = None,
+    unrestricted: bool = False, generation: bool = False,
+) -> str:
+    """Ask the writer to repair a comparative audit, not to rewrite blindly."""
+    return (
+        "You are the repair writer for a private resume tailoring system. A deterministic, source-aware audit "
+        "found that the current plan may be weaker than the canonical resume. Produce one complete replacement "
+        "plan under the supplied schema. This is not a keyword exercise and you must not invent evidence. "
+        "Use only the authorized catalog, graph, and existing plan. Repair the highest-value findings first; "
+        "retain an explained tradeoff when its replacement is genuinely stronger. Do not create paraphrase churn. "
+        "Every substantive swap, exclusion, rewrite, or restored line must be recorded in decision_ledger with the "
+        "expected hiring-value gain and signal lost. Preserve all scope qualifiers, metrics, chronology, and the "
+        "canonical formatting contract. If a gap is unsupported, leave it as a gap rather than inserting the term. "
+        + ("Use a sharp role-specific argument, but remain evidence-bounded. " if unrestricted else "Keep the repair conservative and evidence-first. ")
+        + ("Preserve supported generation-mode gap closure only when it remains source-authorized. " if generation else "")
+        + "\n\nTarget context:\n"
+        + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
+        + "\n\nCurrent plan:\n"
+        + json.dumps(plan, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
+        + "\n\nComparative audit repair instructions:\n"
+        + json.dumps(feedback, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
+        + "\n\nAuthorized evidence:\n"
+        + json.dumps(evidence_context(graph, context, str(context.get("posting_text") or "")) if graph else [], indent=2, ensure_ascii=False)[:MAX_GRAPH_PROMPT_CHARS]
+        + "\n\nSource catalog:\n"
+        + json.dumps(catalog_for_prompt(catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
+        + "\n\nCanonical/current benchmark:\n"
+        + json.dumps(canonical_resume_benchmark(catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
+        + "\n\nMethodology:\n"
+        + resume_methodology_context(repo_root())[:MAX_METHODOLOGY_CONTEXT_CHARS]
+    )
+
+
+def tailoring_audit_summary(audit: Any) -> Dict[str, Any]:
+    """Return a cloud-safe audit summary with no CV/evidence text."""
+    if not isinstance(audit, dict):
+        return {
+            "version": TAILORING_AUDIT_VERSION,
+            "available": False,
+            "readiness": "unavailable",
+            "tailoring": "inconclusive",
+            "decision": "needs_review",
+            "recommended_version": "review",
+            "confidence": "low",
+            "run_id": "",
+            "queue_id": "",
+        }
+    findings = [item for item in audit.get("findings") or [] if isinstance(item, dict)]
+    important = findings
+    fit_value = audit.get("fit")
+    fit_band = fit_value.get("band", "unknown") if isinstance(fit_value, dict) else str(fit_value or "unknown")
+
+    def summary_reason(item: Dict[str, Any]) -> str:
+        reason = str(item.get("reason") or "")
+        if reason.startswith("Independent critic reported"):
+            return "Independent critic reported a review blocker; inspect the private local audit."
+        return reason[:220]
+
+    return {
+        "version": str(audit.get("version") or TAILORING_AUDIT_VERSION),
+        "available": True,
+        "status": str(audit.get("status") or "review"),
+        "readiness": str(audit.get("readiness") or "review"),
+        "fit": fit_band,
+        "tailoring": str(audit.get("tailoring") or "inconclusive"),
+        "decision": str(audit.get("decision") or "needs_review"),
+        "recommended_version": str(audit.get("recommended_version") or "review"),
+        "confidence": str(audit.get("confidence") or "low"),
+        "run_id": str(audit.get("run_id") or "")[:80],
+        "queue_id": str(audit.get("queue_id") or "")[:80],
+        "finding_counts": dict(audit.get("finding_counts") or {}),
+        "blockers": [summary_reason(item) for item in important if item.get("classification") == "BLOCKER"][:6],
+        "gains": [summary_reason(item) for item in important if item.get("classification") == "KEEP_GOOD"][:4],
+        "losses": [summary_reason(item) for item in important if item.get("classification") in {"REGRESSION", "MISSED_OPPORTUNITY"}][:6],
+        "tradeoffs": list(dict.fromkeys(
+            str(item.get("reason") or "")[:220]
+            for item in audit.get("tradeoffs") or []
+            if isinstance(item, dict) and str(item.get("reason") or "")
+        ))[:4],
+        "hash": str(audit.get("hash") or ""),
+    }
 
 
 def objective_resume_assessment(
@@ -1560,11 +2239,27 @@ def objective_resume_assessment(
         and any(item["score"] > 0 for item in breakdown)
         and status not in {"failed", "interrupted"}
     )
+    audit = report.get("tailoring_audit") if isinstance(report.get("tailoring_audit"), dict) else {}
+    recommendation = str(audit.get("recommended_version") or "review")
+    if recommendation == "base":
+        rankable = False
+        score = None
+        risks.insert(0, "Comparative audit prefers the canonical base resume over this tailored draft.")
+    elif recommendation == "blocked" or audit.get("readiness") == "blocked":
+        rankable = False
+        score = None
+        risks.insert(0, "Tailoring audit is blocked by a critical safety or eligibility gate.")
+    elif audit.get("readiness") == "review":
+        risks.append("Tailoring audit still requires review; numeric ranking remains a diagnostic only.")
+    if recommendation == "tailored":
+        strengths.append("Comparative audit prefers this tailored evidence selection over the base resume.")
     return {
         "version": OBJECTIVE_RESUME_RUBRIC_VERSION,
         "score": score if rankable else None,
         "confidence": confidence,
         "rankable": rankable,
+        "recommended_version": recommendation,
+        "tailoring_decision": str(audit.get("decision") or "needs_review"),
         "breakdown": breakdown,
         "strengths": strengths[:5],
         "risks": risks[:6],
@@ -1673,6 +2368,7 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
     preview = run_preview_path(directory)
     review = report.get("review") if isinstance(report.get("review"), dict) else {}
     resume_match = report.get("resume_match") if isinstance(report.get("resume_match"), dict) else None
+    audit = report.get("tailoring_audit") if isinstance(report.get("tailoring_audit"), dict) else None
     context = read_json(directory / "job_context.json", {}) or {}
     if not isinstance(context, dict):
         context = {}
@@ -1722,6 +2418,8 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
             "preferred": bool(item.get("preferred")),
             "supported": bool(item.get("supported")),
             "rendered": bool(item.get("rendered")),
+            "base_rendered": item.get("base_rendered"),
+            "comparison_status": str(item.get("comparison_status") or "unknown")[:40],
             "status": str(item.get("status") or "")[:40],
             "support_kind": str(item.get("support_kind") or "")[:120],
             "source_ids": [str(value)[:180] for value in (item.get("source_ids") or [])[:8]],
@@ -1746,7 +2444,7 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
         "overlay": {"available": bool(overlay.get("available") and overlay_boxes), "boxes": overlay_boxes},
     }
     artifacts = []
-    for name in (public_pdf_name, public_preview_name, "job.json", "job_context.json", "report.json", "content_plan.json", "candidate_plan.json", "layout_packing.json", "resume.tex", "resume.txt", "workshop.json"):
+    for name in (public_pdf_name, public_preview_name, "job.json", "job_context.json", "report.json", "content_plan.json", "candidate_plan.json", "layout_packing.json", "job_intelligence.json", "tailoring_audit.json", "resume.tex", "resume.txt", "workshop.json"):
         if (directory / name).is_file():
             artifacts.append(name)
     # Keep legacy physical artifacts discoverable while presenting an
@@ -1760,6 +2458,7 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
         "source": source,
         "legacy": source != "run",
         "run_id": entry_id if source == "run" else "",
+        "queue_id": str(status.get("queue_id") or report.get("queue_id") or (audit or {}).get("queue_id") or "")[:80],
         "status": display_status,
         "step": str(status.get("step") or ""),
         "message": str(status.get("message") or ""),
@@ -1777,6 +2476,7 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
         "review_plan_applied": report.get("review_plan_applied"),
         "validation_warnings": report.get("validation_warnings") or [],
         "objective": objective,
+        "tailoring_audit": tailoring_audit_summary(audit),
         "keyword_audit": keyword_audit,
         "artifacts": artifacts,
         "urls": {
@@ -4744,9 +5444,70 @@ def portfolio_metrics(plan: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
+def _tailoring_term_weight(item: Dict[str, Any]) -> int:
+    """Return an auditable priority weight for a posting term."""
+    importance = str(item.get("importance") or "mentioned").lower()
+    if item.get("required"):
+        importance = "required"
+    elif item.get("preferred"):
+        importance = "preferred"
+    return TAILORING_PRIORITY_WEIGHTS.get(importance, 1)
+
+
+def _ledger_text(item: Dict[str, Any]) -> str:
+    return " ".join(
+        str(item.get(field) or "")
+        for field in (
+            "action", "current_evidence", "replacement_or_exclusion",
+            "target_signal", "why_stronger", "signal_lost",
+        )
+    ).strip()
+
+
+def _meaningful_label_tokens(value: Any) -> List[str]:
+    tokens = list(_resume_tokens(_latex_plain(str(value or ""))))
+    return [token for token in tokens if len(token) >= 3 and token not in {
+        "the", "and", "for", "with", "from", "into", "using", "built",
+        "project", "experience", "resume", "work",
+    }]
+
+
+def _ledger_explains_removed_evidence(
+    removed: Dict[str, Any], ledger: List[Dict[str, Any]], entries: Dict[str, Any],
+) -> Optional[Dict[str, Any]]:
+    """Find a source-grounded decision explaining an omitted canonical line.
+
+    A canonical resume is a benchmark, not a preservation contract.  The old
+    audit treated every omitted line as a loss, which punished explicit,
+    evidence-backed project swaps.  This matcher is intentionally conservative:
+    it requires either an exact source/entry ID or several distinctive label
+    tokens in the decision ledger.
+    """
+    source_id = str(removed.get("source_id") or "")
+    entry_id = str(removed.get("entry_id") or "")
+    entry = entries.get(entry_id) or {}
+    label = " ".join(
+        str(entry.get(field) or "")
+        for field in ("heading", "company", "role")
+    )
+    label_tokens = _meaningful_label_tokens(label)
+    for item in ledger:
+        text = _ledger_text(item).lower()
+        if source_id and source_id.lower() in text:
+            return item
+        if entry_id and entry_id.lower() in text:
+            return item
+        if label_tokens:
+            matches = sum(token in text for token in label_tokens)
+            if matches >= min(3, len(label_tokens)):
+                return item
+    return None
+
+
 def content_change_report(
     plan: Dict[str, Any], catalog: Dict[str, Any], tex: str,
     keyword_strategy: Optional[Dict[str, Any]] = None,
+    base_tex: str = "",
 ) -> Dict[str, Any]:
     """Make tailoring changes inspectable instead of forcing PDF comparison."""
     entries = catalog.get("entries") or {}
@@ -4786,6 +5547,16 @@ def content_change_report(
                 final_text = _latex_plain(str(bullet.get("text") or ""))
                 source_text = source_bullets.get(source_id, "")
                 supporting = [str(value) for value in (bullet.get("source_ids") or []) if str(value)]
+                source_terms = [
+                    str(item.get("term") or "")
+                    for item in (keyword_strategy or {}).get("terms", [])
+                    if str(item.get("term") or "") and _keyword_present(str(item.get("term") or ""), source_text)
+                ]
+                final_terms = [
+                    str(item.get("term") or "")
+                    for item in (keyword_strategy or {}).get("terms", [])
+                    if str(item.get("term") or "") and _keyword_present(str(item.get("term") or ""), final_text)
+                ]
                 if final_text != source_text and _low_value_rewrite(source_text, final_text):
                     suppressed_rewrites.append({
                         "section": section,
@@ -4793,6 +5564,8 @@ def content_change_report(
                         "source_text": source_text,
                         "final_text": final_text,
                         "reason": "near-copy without a new metric, technical term, or target signal",
+                        "added_supported_terms": sorted(set(final_terms) - set(source_terms)),
+                        "dropped_supported_terms": sorted(set(source_terms) - set(final_terms)),
                     })
                 elif final_text != source_text or len(supporting) > 1:
                     rewritten.append({
@@ -4802,22 +5575,39 @@ def content_change_report(
                         "final_text": final_text,
                         "source_ids": supporting or [source_id],
                         "rationale": str(bullet.get("candidate_rationale") or ""),
+                        "source_terms": sorted(set(source_terms)),
+                        "final_terms": sorted(set(final_terms)),
+                        "added_supported_terms": sorted(set(final_terms) - set(source_terms)),
+                        "dropped_supported_terms": sorted(set(source_terms) - set(final_terms)),
+                        "numeric_anchors_preserved": _resume_numeric_anchors(source_text).issubset(
+                            _resume_numeric_anchors(final_text)
+                        ),
                     })
 
     keyword_terms = []
     rendered_text = _latex_plain(tex)
+    base_rendered_text = _latex_plain(base_tex) if base_tex else ""
     for item in (keyword_strategy or {}).get("terms", []):
         term = str(item.get("term") or "")
         if not term:
             continue
         supported = bool(item.get("supported"))
         rendered = _keyword_present(term, rendered_text)
+        base_rendered = _keyword_present(term, base_rendered_text) if base_rendered_text else None
         status = (
             "covered" if supported and rendered
             else "missing" if supported
             else "unverified_rendered" if rendered
             else "unsupported"
         )
+        comparison_status = "unknown"
+        if base_rendered is not None:
+            comparison_status = (
+                "gained" if rendered and not base_rendered else
+                "lost" if base_rendered and not rendered else
+                "retained" if rendered and base_rendered else
+                "absent"
+            )
         keyword_terms.append({
             "term": term,
             "required": bool(item.get("required")),
@@ -4827,14 +5617,24 @@ def content_change_report(
             "supported": supported,
             "support_kind": str(item.get("support_kind") or ("exact" if supported else "none")),
             "rendered": rendered,
+            "base_rendered": base_rendered,
+            "comparison_status": comparison_status,
             "status": status,
             "source_ids": list(item.get("source_ids") or [])[:6],
+            "priority_weight": _tailoring_term_weight(item),
+            "selected_evidence_ids": [
+                source_id for source_id in (item.get("source_ids") or [])
+                if str(source_id) in set(selected_bullet_ids)
+            ][:6],
         })
     supported_terms = [item for item in keyword_terms if item["supported"]]
     covered_terms = [item for item in supported_terms if item["rendered"]]
     required_terms = [item for item in keyword_terms if item["required"]]
     required_covered = [item for item in required_terms if item["supported"] and item["rendered"]]
     unverified_rendered = [item for item in keyword_terms if item["status"] == "unverified_rendered"]
+    base_supported_terms = [item for item in keyword_terms if item["supported"] and item.get("base_rendered")]
+    gained_terms = [item for item in keyword_terms if item.get("comparison_status") == "gained"]
+    lost_terms = [item for item in keyword_terms if item.get("comparison_status") == "lost"]
     keyword_coverage = {
         "posting_available": bool((keyword_strategy or {}).get("posting_available")),
         "reason": str((keyword_strategy or {}).get("reason") or ""),
@@ -4849,6 +5649,12 @@ def content_change_report(
         "required_coverage_percent": round(100 * len(required_covered) / max(1, len(required_terms))),
         "unverified_rendered_count": len(unverified_rendered),
         "unverified_rendered_terms": [item["term"] for item in unverified_rendered],
+        "base_available": bool(base_rendered_text),
+        "base_supported_count": len(base_supported_terms),
+        "gained_count": len(gained_terms),
+        "gained_terms": [item["term"] for item in gained_terms],
+        "lost_count": len(lost_terms),
+        "lost_terms": [item["term"] for item in lost_terms],
         "required_terms": list((keyword_strategy or {}).get("required_terms") or []),
         "preferred_terms": list((keyword_strategy or {}).get("preferred_terms") or []),
         "terms": keyword_terms,
@@ -4888,6 +5694,13 @@ def content_change_report(
             "source_id": source_id,
             "entry_id": item.get("entry_id", ""),
             "section": item.get("section", ""),
+            "entry_label": _project_heading(
+                (entries.get(str(item.get("entry_id") or "")) or {}).get("heading")
+            ) or str(
+                (entries.get(str(item.get("entry_id") or "")) or {}).get("company")
+                or (entries.get(str(item.get("entry_id") or "")) or {}).get("role")
+                or item.get("entry_id") or ""
+            ),
             "text": _latex_plain(str(item.get("text") or "")),
         }
         for source_id, item in canonical_bullet_by_id.items()
@@ -4912,6 +5725,39 @@ def content_change_report(
         if source_id in canonical_rank
     ]
     chronology_preserved = selected_rank == sorted(selected_rank)
+    decision_ledger = []
+    for raw in (plan.get("decision_ledger") or []):
+        if not isinstance(raw, dict):
+            continue
+        record = {
+            field: str(raw.get(field) or "")
+            for field in (
+                "action", "current_evidence", "replacement_or_exclusion",
+                "target_signal", "why_stronger", "signal_lost",
+            )
+        }
+        record["source_ids"] = [
+            source_id for source_id in (
+                list(raw.get("source_ids") or [])
+                + re.findall(r"(?:experience|project|leadership):[a-z0-9_.-]+(?::b\d+)?", _ledger_text(raw), re.I)
+            )
+            if str(source_id)
+        ][:12]
+        decision_ledger.append(record)
+    explained_tradeoffs = []
+    for item in removed_bullets:
+        match = _ledger_explains_removed_evidence(item, decision_ledger, entries)
+        if match:
+            item["tradeoff_status"] = "explained"
+            item["tradeoff_reason"] = str(match.get("why_stronger") or match.get("replacement_or_exclusion") or "")[:500]
+            item["tradeoff_action"] = str(match.get("action") or "")[:300]
+            explained_tradeoffs.append({
+                "source_id": item.get("source_id", ""),
+                "entry_id": item.get("entry_id", ""),
+                "reason": item.get("tradeoff_reason", ""),
+            })
+        else:
+            item["tradeoff_status"] = "unexplained"
     return {
         "changed_bullet_count": len(rewritten),
         "rewritten_bullets": rewritten,
@@ -4931,16 +5777,11 @@ def content_change_report(
             "changed": not chronology_preserved,
             "chronology_preserved": chronology_preserved,
         },
-        "decision_ledger": [
-            {
-                field: str(item.get(field) or "")
-                for field in (
-                    "action", "current_evidence", "replacement_or_exclusion",
-                    "target_signal", "why_stronger", "signal_lost",
-                )
-            }
-            for item in (plan.get("decision_ledger") or [])
-            if isinstance(item, dict)
+        "decision_ledger": decision_ledger[:40],
+        "explained_tradeoffs": explained_tradeoffs[:40],
+        "unexplained_removed_bullets": [
+            item for item in removed_bullets
+            if item.get("tradeoff_status") != "explained"
         ][:40],
         "front_matter_policy": front_matter_policy,
         "removed_front_matter": [
@@ -4959,6 +5800,8 @@ def content_change_report(
         ],
         "portfolio_diagnostics": portfolio_diagnostics(plan, catalog),
         "keyword_coverage": keyword_coverage,
+        "base_text_hash": _stable_digest(base_tex) if base_tex else "",
+        "tailored_text_hash": _stable_digest(tex),
     }
 
 
@@ -6657,9 +7500,14 @@ def deterministic_review(
     else:
         eligibility = {"status": "partial", "reason": "Resume Studio does not independently verify posting eligibility"}
     factual_status = "fail" if _contains_forbidden_resume_term(tex) or unsupported_rendered else "pass"
+    eligibility_status = str(eligibility.get("status") or "partial").lower()
     return {
         "rubric_version": RUBRIC_VERSION,
-        "hard_fail": not layout_gate,
+        "hard_fail": (
+            not layout_gate
+            or factual_status == "fail"
+            or eligibility_status == "fail"
+        ),
         "warnings": warnings,
         "layout": layout,
         "style": style,
@@ -6747,7 +7595,7 @@ def score_review(
     blocking = data.get("blocking_issues", [])
     if not isinstance(blocking, list):
         blocking = [str(blocking)]
-    required_gates = ("factual", "target_fit", "evidence", "distinctiveness", "clarity", "privacy", "layout", "portfolio", "independent_review", "portfolio_comparison")
+    required_gates = ("factual", "target_fit", "evidence", "distinctiveness", "clarity", "privacy", "layout", "portfolio", "eligibility", "independent_review", "portfolio_comparison")
     hard_fail = bool(blocking) or any(gates.get(name, {}).get("status") != "pass" for name in required_gates)
     return {
         "rubric_version": RUBRIC_VERSION,
@@ -6846,6 +7694,11 @@ def run_tailoring(
 ) -> None:
     run_started_clock = time.time()
     run_started_at = now_iso()
+    run_id = str(job.get("_resume_studio_run_id") or "")
+    queue_id = str(job.get("_resume_studio_queue_id") or "")
+    # Queue/run correlation is local operational metadata, never prompt or
+    # evidence content. Keep it out of the persisted public posting snapshot.
+    job = {key: value for key, value in job.items() if not str(key).startswith("_resume_studio_")}
     update("context", "Fetching the posting and preparing the private CV context")
     context = job_context(job)
     catalog = source_catalog(repo_root())
@@ -6891,6 +7744,11 @@ def run_tailoring(
         )
     else:
         context["generation_strategy"] = {}
+    context["job_intelligence"] = build_job_intelligence(
+        job, str(context.get("posting_text") or ""), match,
+        context.get("target_keywords"), context.get("generation_strategy"),
+    )
+    context["posting_snapshot_hash"] = context["job_intelligence"].get("posting_snapshot_hash", "")
     write_json(run_dir / "job_context.json", context)
     write_json(run_dir / "evidence_catalog.json", catalog_for_prompt(catalog))
     write_json(run_dir / "evidence_graph_context.json", graph_context)
@@ -7524,6 +8382,129 @@ def run_tailoring(
     # pass rather than trusting the pre-critique measurement.
     fill_post_line_capacity("post_revision_density")
     write_json(run_dir / "revision_log.json", revision_log)
+    audit_repair_records: List[Dict[str, Any]] = []
+    audit_repair_log: List[Dict[str, Any]] = []
+    try:
+        base_tex_for_audit = (cv_root(repo_root()) / CANONICAL_TEMPLATE).read_text(errors="replace")
+    except OSError:
+        base_tex_for_audit = ""
+    initial_deterministic = deterministic_review(
+        context, chosen, layout, plan=plan, catalog=catalog,
+    )
+    initial_scored = score_review(
+        critique, initial_deterministic, independent_available=independent_available,
+    )
+    initial_changes = content_change_report(
+        plan, catalog, chosen, context.get("target_keywords"), base_tex=base_tex_for_audit,
+    )
+    initial_audit = build_tailoring_audit(
+        job, context, match, graph, plan, initial_changes,
+        initial_deterministic, initial_scored, base_tex_for_audit, chosen,
+        run_id=run_id, queue_id=queue_id,
+    )
+    repair_needed = enhance and (
+        initial_audit.get("tailoring") == "regressed"
+        or any(
+            item.get("classification") in {"REGRESSION", "BLOCKER"}
+            for item in initial_audit.get("findings") or []
+            if isinstance(item, dict)
+        )
+    )
+    if repair_needed:
+        update("audit_repair", "Repairing source-aware regressions before selecting the final draft")
+        feedback = tailoring_repair_feedback(initial_audit, initial_changes)
+        repair_record = run_provider(
+            writer,
+            tailoring_repair_prompt(
+                context, plan, feedback, catalog, graph=graph,
+                unrestricted=unrestricted, generation=generation,
+            ),
+            run_dir, "audit_repair", timeout=8 * 60,
+            schema=plan_schema(True, generation=generation),
+        )
+        repair_record["label"] = "audit_repair"
+        audit_repair_records.append(repair_record)
+        write_json(run_dir / "audit_repair.json", repair_record)
+        if not repair_record.get("ok"):
+            audit_repair_log.append({
+                "status": "failed",
+                "reason": str(repair_record.get("error") or "repair provider failed"),
+            })
+        else:
+            repaired_plan, repair_errors = validate_plan(
+                repair_record.get("data") or {}, catalog, True,
+                graph=graph, generation=generation,
+            )
+            if repair_errors:
+                audit_repair_log.append({"status": "rejected", "errors": repair_errors[:12]})
+                write_json(run_dir / "audit_repair_errors.json", repair_errors)
+            else:
+                repair_root = run_dir / "audit_repair_candidate"
+                try:
+                    repaired_plan, repair_packing = pack_plan_to_page(
+                        repaired_plan, catalog, repair_root,
+                    )
+                    repaired_tex, repaired_layout, repaired_preview = render_candidate(
+                        repaired_plan, repair_root,
+                    )
+                    repaired_deterministic = deterministic_review(
+                        context, repaired_tex, repaired_layout,
+                        plan=repaired_plan, catalog=catalog,
+                    )
+                    repaired_scored = score_review(
+                        critique, repaired_deterministic,
+                        independent_available=independent_available,
+                    )
+                    repaired_changes = content_change_report(
+                        repaired_plan, catalog, repaired_tex,
+                        context.get("target_keywords"), base_tex=base_tex_for_audit,
+                    )
+                    repaired_audit = build_tailoring_audit(
+                        job, context, match, graph, repaired_plan, repaired_changes,
+                        repaired_deterministic, repaired_scored,
+                        base_tex_for_audit, repaired_tex,
+                        run_id=run_id, queue_id=queue_id,
+                    )
+                    current_key = tailoring_audit_preference_key(initial_audit)
+                    repaired_key = tailoring_audit_preference_key(repaired_audit)
+                    safe_render = bool(
+                        repaired_layout.get("compiled")
+                        and repaired_layout.get("pages") == 1
+                        and not repaired_layout.get("overfull")
+                        and (repaired_layout.get("horizontal") or {}).get("pass")
+                    )
+                    if safe_render and repaired_key > current_key:
+                        plan = repaired_plan
+                        packing["audit_repair"] = repair_packing
+                        packing["audit_repair_comparison"] = {
+                            "before": current_key,
+                            "after": repaired_key,
+                            "before_audit": initial_audit.get("comparison", {}),
+                            "after_audit": repaired_audit.get("comparison", {}),
+                        }
+                        write_json(run_dir / "content_plan.json", plan)
+                        write_json(run_dir / "layout_packing.json", packing)
+                        chosen, layout, preview = render_candidate(plan, run_dir)
+                        audit_repair_log.append({
+                            "status": "accepted",
+                            "before": current_key,
+                            "after": repaired_key,
+                            "tailoring": repaired_audit.get("tailoring"),
+                            "recommended_version": repaired_audit.get("recommended_version"),
+                        })
+                    else:
+                        audit_repair_log.append({
+                            "status": "rejected",
+                            "reason": "repair did not improve the source-aware comparison or failed layout safety",
+                            "before": current_key,
+                            "after": repaired_key,
+                            "safe_render": safe_render,
+                        })
+                except (OSError, RuntimeError, ValueError) as exc:
+                    audit_repair_log.append({
+                        "status": "rejected",
+                        "reason": "repair candidate failed compilation or validation: %s" % exc,
+                    })
     deterministic = deterministic_review(context, chosen, layout, plan=plan, catalog=catalog)
     if not (layout.get("horizontal") or {}).get("pass"):
         rejection = {
@@ -7540,7 +8521,7 @@ def run_tailoring(
     provider_records = []
     all_provider_records = (
         gap_records + drafts + [synthesis] + space_expansion_records + line_edits
-        + revision_records + critique_records
+        + revision_records + critique_records + audit_repair_records
     )
     for record in all_provider_records:
         provider = str(record.get("provider") or "")
@@ -7553,7 +8534,19 @@ def run_tailoring(
             "elapsed_seconds": record.get("elapsed_seconds"), "usage_tokens": record.get("usage_tokens"),
         })
     known_by_provider = {name: [int(item.get("usage_tokens")) for item in provider_records if item.get("called") and str(item.get("provider") or "").split("/")[-1] == name and item.get("usage_tokens") is not None] for name in ("codex", "claude")}
-    changes = content_change_report(plan, catalog, chosen, context.get("target_keywords"))
+    try:
+        base_tex = (cv_root(repo_root()) / CANONICAL_TEMPLATE).read_text(errors="replace")
+    except OSError:
+        base_tex = ""
+    changes = content_change_report(
+        plan, catalog, chosen, context.get("target_keywords"), base_tex=base_tex,
+    )
+    tailoring_audit = build_tailoring_audit(
+        job, context, match, graph, plan, changes, deterministic, scored,
+        base_tex, chosen, run_id=run_id, queue_id=queue_id,
+    )
+    write_json(run_dir / "job_intelligence.json", context.get("job_intelligence", {}))
+    write_json(run_dir / "tailoring_audit.json", tailoring_audit)
     review_overlay = review_preview_overlay(
         run_pdf_path(run_dir), plan, changes, changes.get("keyword_coverage")
     )
@@ -7584,10 +8577,17 @@ def run_tailoring(
         "front_matter_policy": synthesis_data.get("front_matter_policy", {"coursework": "keep", "awards": "keep"}),
         "front_matter_rewrites": synthesis_data.get("front_matter_rewrites", []),
         "generation_strategy": context.get("generation_strategy", {}),
+        "job_intelligence": context.get("job_intelligence", {}),
+        "posting_snapshot_hash": context.get("posting_snapshot_hash", ""),
+        "queue_id": queue_id,
+        "run_id": run_id,
         "line_compactions": line_compactions,
+        "audit_repair_log": audit_repair_log,
         "post_line_density": post_line_density,
         "validation_warnings": synthesis_data.get("validation_warnings", []),
         "content_changes": changes,
+        "tailoring_audit": tailoring_audit,
+        "tailoring_audit_summary": tailoring_audit_summary(tailoring_audit),
         "review_overlay": review_overlay,
         "space_audit": space_audit_value,
         "provider_flow": provider_flow,
@@ -7621,6 +8621,8 @@ def run_tailoring(
         "artifacts": [
             "resume.tex", run_pdf_path(run_dir).name, "resume.txt", run_preview_path(run_dir).name if preview else None,
             "job.json", "report.json", "job_context.json", "brief.json", "evidence_catalog.json", "evidence_graph_context.json",
+            "job_intelligence.json", "tailoring_audit.json",
+            "audit_repair.json" if audit_repair_records else None,
             "gap_analysis.json" if generation else None,
             "candidate_plan.json", "content_plan.json", "layout_packing.json", "critique.json", "revision_log.json",
             "space_expansion.json" if space_expansion_records else None,
@@ -7660,8 +8662,9 @@ class RunManager:
         self.executor = concurrent.futures.ThreadPoolExecutor(max_workers=2)
         self.lock = threading.Lock()
 
-    def start(self, job: Dict[str, Any], mode: str) -> Dict[str, Any]:
+    def start(self, job: Dict[str, Any], mode: str, queue_id: str = "") -> Dict[str, Any]:
         mode = normalize_tailor_mode(mode)
+        queue_id = str(queue_id or "").strip()[:80]
         run_id = uuid.uuid4().hex[:12]
         run_dir = studio_root(self.root) / "runs" / run_id
         run_dir.mkdir(parents=True, exist_ok=True)
@@ -7679,12 +8682,17 @@ class RunManager:
             "preview_filename": Path(pdf_filename).stem + "-preview.png",
             "run_dir": str(run_dir),
         }
+        if queue_id:
+            status["queue_id"] = queue_id
         # Keep the historical posting record attached to the run even if the
         # radar later removes or updates the live job.  This is private ignored
         # state, not a second source of truth for the public radar database.
         write_json(run_dir / "job.json", copy.deepcopy(job))
         write_json(run_dir / "status.json", status)
-        self.executor.submit(self._worker, run_id, run_dir, job, mode)
+        worker_job = copy.deepcopy(job)
+        worker_job["_resume_studio_run_id"] = run_id
+        worker_job["_resume_studio_queue_id"] = queue_id
+        self.executor.submit(self._worker, run_id, run_dir, worker_job, mode)
         return status
 
     def update(self, run_id: str, run_dir: Path, status: str, step: str, message: str, **extra) -> None:
@@ -7891,7 +8899,7 @@ const resumeStudioBridgeNonce=(()=>{const bytes=new Uint8Array(32);crypto.getRan
 function validBridgeEvent(event,message){return Boolean(resumeStudioBridgeMode&&resumeStudioBridgeOrigin&&event.source===window.opener&&event.origin===resumeStudioBridgeOrigin&&message&&message.bridge_nonce===resumeStudioBridgeNonce&&/^cloud-[0-9]{10,}-[0-9]+$/.test(String(message.request_id||'')));}
 function bridgeReply(event,requestId,data,error=''){if(!validBridgeEvent(event,{bridge_nonce:resumeStudioBridgeNonce,request_id:requestId}))return;event.source.postMessage({type:'resume-studio:response',request_id:requestId,bridge_nonce:resumeStudioBridgeNonce,ok:!error,data,error},resumeStudioBridgeOrigin);}
 async function bridgeFetch(path,init={}){const response=await fetch(path,init);let data={};try{data=await response.json();}catch(_){data={};}if(!response.ok)throw new Error(data.error||`engine returned ${response.status}`);return data;}
-async function handleResumeStudioBridge(event){const message=event.data||{};if(message.type!=='resume-studio:request'||!validBridgeEvent(event,message))return;const action=message.action,payload=message.payload&&typeof message.payload==='object'&&!Array.isArray(message.payload)?message.payload:{};try{let data;if(action==='health')data=await bridgeFetch('/api/health');else if(action==='library')data=await bridgeFetch('/api/library?limit='+encodeURIComponent(payload.limit||100));else if(action==='match')data=await bridgeFetch('/api/match',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot})});else if(action==='context')data=await bridgeFetch('/api/context');else if(action==='context_job')data=await bridgeFetch('/api/context/job',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot})});else if(action==='context_answer')data=await bridgeFetch('/api/context/answer',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='context_hint')data=await bridgeFetch('/api/context/hint',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='context_hint_dismiss')data=await bridgeFetch('/api/context/hint/dismiss',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='queue')data=await bridgeFetch('/api/run',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,mode:payload.mode,job_snapshot:payload.job_snapshot})});else if(action==='status')data=await bridgeFetch('/api/run?id='+encodeURIComponent(payload.id||''));else throw new Error('unsupported bridge request');bridgeReply(event,message.request_id,data);if(action==='queue'&&data.run_id)bridgePollRun(event,data.run_id);}catch(error){bridgeReply(event,message.request_id,{},error.message||String(error));}}
+async function handleResumeStudioBridge(event){const message=event.data||{};if(message.type!=='resume-studio:request'||!validBridgeEvent(event,message))return;const action=message.action,payload=message.payload&&typeof message.payload==='object'&&!Array.isArray(message.payload)?message.payload:{};try{let data;if(action==='health')data=await bridgeFetch('/api/health');else if(action==='library')data=await bridgeFetch('/api/library?limit='+encodeURIComponent(payload.limit||100));else if(action==='match')data=await bridgeFetch('/api/match',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot})});else if(action==='context')data=await bridgeFetch('/api/context');else if(action==='context_job')data=await bridgeFetch('/api/context/job',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot})});else if(action==='context_answer')data=await bridgeFetch('/api/context/answer',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='context_hint')data=await bridgeFetch('/api/context/hint',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='context_hint_dismiss')data=await bridgeFetch('/api/context/hint/dismiss',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='queue')data=await bridgeFetch('/api/run',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,mode:payload.mode,queue_id:payload.queue_id,job_snapshot:payload.job_snapshot})});else if(action==='status')data=await bridgeFetch('/api/run?id='+encodeURIComponent(payload.id||''));else throw new Error('unsupported bridge request');bridgeReply(event,message.request_id,data);if(action==='queue'&&data.run_id)bridgePollRun(event,data.run_id);}catch(error){bridgeReply(event,message.request_id,{},error.message||String(error));}}
 async function bridgePollRun(event,runId){for(let i=0;i<1200;i+=1){await new Promise(resolve=>setTimeout(resolve,1500));try{const data=await bridgeFetch('/api/run?id='+encodeURIComponent(runId));if(event.source===window.opener&&event.origin===resumeStudioBridgeOrigin)event.source.postMessage({type:'resume-studio:run',run_id:runId,bridge_nonce:resumeStudioBridgeNonce,data},resumeStudioBridgeOrigin);if(['complete','awaiting_review','failed'].includes(data.status))return;}catch(error){if(event.source===window.opener)event.source.postMessage({type:'resume-studio:run',run_id:runId,bridge_nonce:resumeStudioBridgeNonce,data:{status:'failed',message:error.message}},resumeStudioBridgeOrigin);return;}}}
 window.addEventListener('message',handleResumeStudioBridge);
 if(resumeStudioBridgeMode){document.title='Resume Studio engine';document.body.innerHTML='<main style="max-width:420px;margin:0 auto;padding:28px;font:15px/1.45 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:#131A21;color:#D9E2E8;min-height:100vh"><h1 style="font-size:20px">Resume Studio engine</h1><p id="bridgeState">Connecting to the cloud workspace…</p><p style="color:#8FA1AE;font-size:13px">Keep this small private-engine window open while the cloud Resume Studio queues or reviews a draft. Your CV and generated files remain on this Mac.</p></main>';if(window.opener&&resumeStudioBridgeOrigin)window.opener.postMessage({type:'resume-studio:ready',bridge_nonce:resumeStudioBridgeNonce},resumeStudioBridgeOrigin);}
@@ -7975,7 +8983,20 @@ UI_HTML = UI_HTML.replace(
     """const baseRenderReport=renderReport;
 renderReport=function(status){
   baseRenderReport(status);
-  const report=status.report||{},changes=report.content_changes||{},swaps=changes.project_swaps||{},ats=changes.keyword_coverage||{};
+  const report=status.report||{},audit=report.tailoring_audit||{},changes=report.content_changes||{},swaps=changes.project_swaps||{},ats=changes.keyword_coverage||{};
+  if(audit.version){
+    const fit=typeof audit.fit==='object'?audit.fit.band:audit.fit||'unknown',readiness=audit.readiness||'review',tailoring=audit.tailoring||'inconclusive';
+    const badge=value=>`<span class="badge">${esc(value)}</span>`;
+    const recommendation=audit.recommended_version||audit.comparison?.recommended_version||'review',decision=audit.decision||audit.comparison?.decision||'needs_review';
+    let auditPanel=`<div class="match-card"><strong>Tailoring decision</strong><p>${badge(`Fit: ${fit}`)} ${badge(`Tailoring: ${tailoring}`)} ${badge(`Readiness: ${readiness}`)} ${badge(`Recommendation: ${recommendation}`)} ${badge(`${audit.confidence||'low'} confidence`)}</p><div class="meta">Compared with the original resume for this posting; not a hiring prediction. <strong>${esc(decision.replaceAll('_',' '))}</strong></div>`;
+    const findings=audit.findings||[];
+    const blockers=findings.filter(item=>item.classification==='BLOCKER').slice(0,5),gains=findings.filter(item=>item.classification==='KEEP_GOOD').slice(0,4),losses=findings.filter(item=>item.classification==='REGRESSION'||item.classification==='MISSED_OPPORTUNITY').slice(0,6);
+    if(gains.length)auditPanel+=`<p><strong>Supported gains</strong></p><ul>${gains.map(item=>`<li>${esc(item.reason||'')}</li>`).join('')}</ul>`;
+    if(losses.length)auditPanel+=`<p><strong>Losses or missed opportunities</strong></p><ul>${losses.map(item=>`<li>${esc(item.reason||'')}</li>`).join('')}</ul>`;
+    if(blockers.length)auditPanel+=`<p><strong>Blockers</strong></p><ul>${blockers.map(item=>`<li>${esc(item.reason||'')}</li>`).join('')}</ul>`;
+    auditPanel+='</div>';
+    $('report').insertAdjacentHTML('afterbegin',auditPanel);
+  }
   if(!report.content_changes)return;
   let extra=`<div class=\"match-card\"><strong>What changed</strong><div class=\"meta\">${changes.changed_bullet_count||0} bullets rewritten · ${swaps.swapped_in?.length||0} projects swapped in · ${swaps.swapped_out?.length||0} base projects swapped out</div>`;
   if(swaps.swapped_in?.length)extra+=`<div class=\"meta\"><strong>Added:</strong> ${esc(swaps.swapped_in.join(' · '))}</div>`;
@@ -8483,7 +9504,8 @@ class StudioHandler(BaseHTTPRequestHandler):
                     "context_summary": inventory.get("summary", {}),
                 })
             mode = str(body.get("mode") or "")
-            status = self.manager.start(job, mode)
+            queue_id = str(body.get("queue_id") or "").strip()[:80]
+            status = self.manager.start(job, mode, queue_id=queue_id)
             return self.send_json(status, HTTPStatus.ACCEPTED)
         except (ValueError, RuntimeError, json.JSONDecodeError) as exc:
             return self.send_json({"error": str(exc)}, HTTPStatus.BAD_REQUEST)

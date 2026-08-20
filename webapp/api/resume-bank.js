@@ -119,6 +119,26 @@ async function readFile(token, id) {
   return Buffer.from(await response.arrayBuffer());
 }
 
+function auditSummary(value) {
+  const audit = value && typeof value === "object" ? value : {};
+  const counts = audit.finding_counts && typeof audit.finding_counts === "object" ? audit.finding_counts : {};
+  const fit = audit.fit && typeof audit.fit === "object" ? audit.fit.band : audit.fit;
+  const available = audit.available === true || Boolean(audit.version && (audit.readiness || audit.findings || fit));
+  const list = (field, limit) => Array.isArray(audit[field])
+    ? audit[field].map(item => clean(item, 240)).filter(Boolean).slice(0, limit)
+    : [];
+  return {
+    version: clean(audit.version, 80), available,
+    status: clean(audit.status, 24), readiness: clean(audit.readiness, 24),
+    fit: clean(fit, 24), tailoring: clean(audit.tailoring, 24),
+    confidence: clean(audit.confidence, 24),
+    run_id: clean(audit.run_id, 80), queue_id: clean(audit.queue_id, 80),
+    finding_counts: Object.fromEntries(Object.entries(counts).slice(0, 8).map(([key, value]) => [clean(key, 60), Number(value || 0)])),
+    blockers: list("blockers", 6), gains: list("gains", 4), losses: list("losses", 6),
+    hash: clean(audit.hash, 80),
+  };
+}
+
 async function bankIndex(token, folder) {
   const files = await listFiles(token,
     `'${folder.id}' in parents and trashed = false and name = '${INDEX_FILENAME}' and ` +
@@ -145,7 +165,7 @@ function normalizedEntry(value) {
   const artifacts = Array.isArray(entry.artifacts) ? entry.artifacts.map(safeName).filter(Boolean).slice(0, 30) : [];
   return {
     entry_id: clean(entry.entry_id, 120), source: clean(entry.source, 40), legacy: Boolean(entry.legacy),
-    run_id: clean(entry.run_id, 120), status: clean(entry.status, 40), step: clean(entry.step, 160),
+    run_id: clean(entry.run_id, 120), queue_id: clean(entry.queue_id, 80), status: clean(entry.status, 40), step: clean(entry.step, 160),
     message: clean(entry.message, 500), mode: clean(entry.mode, 40), created_at: clean(entry.created_at, 80),
     updated_at: clean(entry.updated_at, 80), pdf_filename: safeName(entry.pdf_filename),
     preview_filename: entry.preview_filename ? safeName(entry.preview_filename) : "",
@@ -165,6 +185,8 @@ function normalizedEntry(value) {
       risks: Array.isArray(entry.objective.risks) ? entry.objective.risks.map(item => clean(item, 280)).slice(0, 6) : [],
       note: clean(entry.objective.note, 280),
     } : null,
+    tailoring_audit: entry.tailoring_audit && typeof entry.tailoring_audit === "object"
+      ? auditSummary(entry.tailoring_audit) : auditSummary(null),
     keyword_audit: entry.keyword_audit && typeof entry.keyword_audit === "object" ? {
       posting_available: Boolean(entry.keyword_audit.posting_available),
       detected_count: Number(entry.keyword_audit.detected_count || 0),

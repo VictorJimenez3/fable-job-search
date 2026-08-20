@@ -224,6 +224,26 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   items and mirrors `queued`/`running`/`awaiting_review`/`complete`/`failed`
   state. The CV, evidence graph, provider sessions, and generated artifacts
   remain local. A production browser tab must stay open for reconnect dispatch.
+- **Comparative tailoring audit shipped:** each new local run now writes
+  `job_intelligence.json` and `tailoring_audit.json`. The audit separates actual
+  candidate fit from base → tailored communication quality, reports supported
+  gains/lost or unused evidence and change-level regressions, and keeps
+  factuality, eligibility, layout, privacy, and independent-review failures as
+  visible readiness blockers. The local report contains the full evidence and
+  hashes; Resume Bank/cloud queue views receive only a sanitized summary plus
+  `queue_id`/`run_id` correlation. `ready`, `review`, and `blocked` replace a
+  misleading universal ATS score for this quality-control decision. Existing
+  objective same-posting ranking remains a separate shortlist aid.
+- **Comparative audit v2 and repair gate (verified 2026-08-20):** source-aware
+  tradeoffs now distinguish an explained project replacement from an actual
+  lost evidence signal, and low-priority base-context omissions are advisory
+  rather than automatic regressions. Each report exposes `recommended_version`
+  (`tailored`, `base`, or `review`) plus a `decision` (`prefer_tailored`,
+  `prefer_base`, or `needs_review`). If deterministic audit finds a material
+  regression, one bounded Codex repair pass proposes a complete replacement
+  plan; the worker compiles and compares it, accepting it only when it improves
+  the source-aware preference key and passes the one-page geometry gate. A
+  missing independent provider remains `review`, never silently `ready`.
 
 ### Previous change (verified 2026-08-15)
 
