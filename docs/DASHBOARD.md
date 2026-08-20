@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-08-20 13:12 UTC** · companies polled directly: **1869** (registry 2108) · jobs tracked: **45700** · new this run: **22** · alerts this run: **4**_
+_Last run: **2026-08-20 13:14 UTC** · companies polled directly: **1869** (registry 2108) · jobs tracked: **45700** · new this run: **22** · alerts this run: **4**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -108,7 +108,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 80 ⭐ | 18d | TikTok | [Backend Software Engineer Graduate (Machine Moderation Platform) - 202](https://jobright.ai/jobs/info/6a6ffdc1160eda5948e8d14b?utm_campaign=Software%20Engineering&utm_source=1103) | Seattle, WA, United States | big_tech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 80 ⭐ | 27d | Citi | [Junior Generative AI Application Developer](https://citi.wd5.myworkdayjobs.com/2/job/Irving-Texas-United-States/Junior-Generative-AI-Application-Developer_26962476) | Irving, TX | other | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 80 ⭐ | 27d | Amazon | [Software Development Engineer - Amazon Leo](https://amazon.jobs/en/jobs/3144341/software-development-engineer-amazon-leo-us) | Redmond, WA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 79 ⭐ | 14h | NRG Energy | [Data Science Analyst - Agentic AI Developer](https://careers.nrgenergy.com/nrg/job/Houston-Data-Science-Analyst-Agentic-AI-Developer-TX-77010/1421186800/?ats=successfactors) | Houston, TX | other | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 79 ⭐ | 15h | NRG Energy | [Data Science Analyst - Agentic AI Developer](https://careers.nrgenergy.com/nrg/job/Houston-Data-Science-Analyst-Agentic-AI-Developer-TX-77010/1421186800/?ats=successfactors) | Houston, TX | other | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 79 ⭐ | 1d | Deeter Analytics | [Machine Learning Engineer](https://jobs.ashbyhq.com/deeter-analytics/2c12339b-d302-427c-9a73-d825b4b942b0/application?embed=true) | Remote in USA | other | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions)<br>[Ashby fallback](https://jobs.ashbyhq.com/deeter-analytics/2c12339b-d302-427c-9a73-d825b4b942b0) |
 | 79 ⭐ | 1d | SpaceX | [New Graduate Engineer, Software (Starship)](https://boards.greenhouse.io/spacex/jobs/8729121002?gh_jid=8729121002) | Starbase, TX | big_tech | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
 | 79 ⭐ | 2d | Nexthop.ai | [Software Engineer New Grad](https://nexthopai.bamboohr.com/careers/24/) | Santa Clara, CA | ai_lab | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
