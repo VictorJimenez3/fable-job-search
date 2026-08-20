@@ -2159,3 +2159,44 @@ stateless hosted function. The local engine remains the only execution
 authority; the cloud layer provides durable selection, queueing, status, and
 the owner-only entry point. A browser tab on the production workspace must be
 open for automatic dispatch when the Mac reconnects.
+
+## 144. Resume Studio evaluates tailoring comparatively and hard-gates blockers (2026-08-20)
+
+Resume Studio now emits a deterministic `job_intelligence.json` requirement
+snapshot and a `tailoring_audit.json` decision artifact for each new run. The
+audit keeps candidate-to-role fit separate from tailoring quality, compares the
+tailored text with the locked canonical baseline, and classifies material
+changes as supported gains, questionable changes, regressions, missed
+opportunities, or blockers. It records evidence-backed posting terms,
+unsupported gaps, unused supported evidence, portfolio warnings, and the
+posting/run/evidence hashes needed to inspect a result later.
+
+Factuality, eligibility, layout, privacy, and independent-review failures are
+readiness gates rather than weighted-away deductions. The owner-facing result
+therefore reports `ready`, `review`, or `blocked` plus fit and tailoring
+judgments; it does not present a universal 0–100 hiring prediction. Existing
+objective Resume Bank ranking remains a transparent same-posting shortlist aid,
+not a replacement for this comparative audit or for owner approval.
+
+The full audit and candidate evidence remain on the Mac. The cloud queue and
+Resume Bank receive only a sanitized summary and queue/run correlation, so the
+new quality-control layer does not change the private execution boundary or
+claim that a completed run has improved an external hiring outcome.
+
+## 145. Resume Studio adjudicates explained tradeoffs and repairs material loss (2026-08-20)
+
+The first comparative audit exposed a false-negative failure mode: it counted
+every omitted canonical project bullet, every nonblocking portfolio warning,
+and every low-priority context term as a regression. Resume Studio now uses the
+decision ledger and source/entry labels to recognize an explicit, source-backed
+replacement. Only unexplained loss of meaningful evidence remains a missed
+opportunity; low-priority omissions remain visible as advisory questions.
+
+The audit v2 artifact adds a bounded recommendation—`tailored`, `base`, or
+`review`—and a corresponding `prefer_tailored`, `prefer_base`, or
+`needs_review` decision. This is deliberately not a universal score. When a
+material deterministic regression remains, one Codex repair pass receives the
+findings, produces a complete evidence-grounded replacement plan, and is
+accepted only if it beats the prior source-aware comparison key and passes the
+one-page render gate. A missing Claude/independent lane still prevents `ready`;
+the repair pass cannot manufacture independent confidence.

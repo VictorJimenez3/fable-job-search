@@ -395,6 +395,24 @@ The result is explicitly a deterministic shortlist aid rather than a hidden
 AI/hiring prediction; unavailable independent review is surfaced as a
 confidence limitation.
 
+Comparative tailoring quality control — ✅ SHIPPED 2026-08-20 (DECISION #144).
+Each current run now preserves a deterministic job-intelligence snapshot and a
+base → tailored audit. Fit remains separate from tailoring uplift; change-level
+findings expose supported gains, regressions, missed evidence, questionable
+rewrites, and unsupported claims. Factuality, eligibility, privacy, layout,
+and independent-review failures produce visible `blocked`/`review` states
+instead of disappearing inside an overall ATS score. The cloud surface receives
+only a sanitized summary because the full evidence-grounded audit remains on
+the private Mac.
+
+Comparative audit adjudication and bounded repair — ✅ SHIPPED 2026-08-20
+(DECISION #145). Source-aware explanations prevent deliberate, evidence-backed
+project swaps from being misclassified as regressions; the report now chooses
+`prefer_tailored`, `prefer_base`, or `needs_review`. A single repair pass is
+allowed only when the deterministic comparison finds material loss, and its
+compiled candidate must beat the prior preference key. Independent-provider
+absence remains a visible review limitation.
+
 ## Pipeline intelligence
 - **Resume UAT and outcome learning** — future idea: if enough applications,
   interviews, and eventual outcomes accumulate, compare resume variants and

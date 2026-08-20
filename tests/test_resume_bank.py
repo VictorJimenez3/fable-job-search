@@ -22,6 +22,9 @@ def test_resume_bank_is_owner_only_private_drive_storage():
     assert 'payload.action === "queue"' in api
     assert 'payload.action === "queue_update"' in api
     assert "QUEUE_STATES" in api
+    assert "function auditSummary" in api
+    assert "tailoring_audit" in api
+    assert "queue_id: clean(entry.queue_id" in api
 
 
 def test_resume_bank_frontend_keeps_local_engine_as_sync_source():
@@ -37,6 +40,9 @@ def test_resume_bank_frontend_keeps_local_engine_as_sync_source():
     assert "queueCloudResumeItem" in html
     assert "drainCloudResumeQueue" in html
     assert "saved privately and will dispatch" in html
+    assert "queue_id:item.queue_id" in html
+    assert "function tailoringAuditHTML" in html
+    assert "This compares the tailored resume with the original" in html
 
 
 def test_resume_bank_exposes_owner_only_objective_per_posting_comparison():

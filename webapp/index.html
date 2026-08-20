@@ -3297,6 +3297,7 @@ function studioResultHTML(status) {
   return `<div class="studio-result"><h3>${status.status==="awaiting_review"?"Draft awaiting your review":"Saved draft"} ${studioBadge(studioModeLabel(status.mode||report.mode),"good")}</h3>
     <p class="sub">${esc(reviewText)} ${report.resume_match?`Resume Match ${esc(report.resume_match.score)}/100.`:""}</p>
     ${Object.keys(gates).length?`<div class="facts">${Object.entries(gates).map(([name,gate])=>studioBadge(`${name}: ${gate.status}`,gate.status==="pass"?"good":gate.status==="fail"?"bad":"warn")).join("")}</div>`:""}
+    ${tailoringAuditHTML(report.tailoring_audit_summary||report.tailoring_audit)}
     <div class="studio-links">${pdf}${preview}${reportLink}<button class="act" onclick='openResumeWorkshop("${esc(status.run_id)}")'>workshop ↗</button></div></div>`;
 }
 function studioLibraryHTML() {
@@ -3332,6 +3333,15 @@ function keywordAuditHTML(entry) {
   const supportedPct=atsPct(audit.supported_coverage_percent), overallPct=atsPct(audit.overall_coverage_percent);
   return `<details class="keyword-audit" open><summary><strong>ATS keyword map</strong> ${supportedPct!==null?studioBadge(`${supportedPct}% of supported terms used`,supportedPct>=80?"good":"warn"):""}</summary><div class="keyword-audit-body"><p class="sub">Diagnostic comparison—not a recruiter ATS score. Green terms appear in this resume; yellow terms are supported by your evidence but omitted; red terms are unsupported and must never be invented.${overallPct!==null?` Overall exact coverage: ${overallPct}%.`:""}</p>${overlay}<div class="ats-keyword-groups"><div class="ats-keyword-group"><h5>Covered · ${groups.covered.length}</h5>${groups.covered.map(item=>termHTML(item,"covered")).join("")||'<p class="sub">None detected.</p>'}</div><div class="ats-keyword-group"><h5>Available but omitted · ${groups.available.length}</h5>${groups.available.map(item=>termHTML(item,"available")).join("")||'<p class="sub">None.</p>'}</div><div class="ats-keyword-group"><h5>Unsupported · ${groups.missing.length}</h5>${groups.missing.map(item=>termHTML(item,"missing")).join("")||'<p class="sub">None.</p>'}</div></div></div></details>`;
 }
+function tailoringAuditHTML(value) {
+  const audit=value&&typeof value==="object"?value:null;
+  if(!audit||audit.available===false)return `<details class="keyword-audit"><summary><strong>Tailoring audit</strong> ${studioBadge("not available","warn")}</summary><div class="keyword-audit-body"><p class="sub">This run has no comparative audit artifact yet. Queue it through the current private Mac worker to generate one.</p></div></details>`;
+  const fit=typeof audit.fit==="object"?audit.fit.band:audit.fit||"unknown", readiness=audit.readiness||"review", tailoring=audit.tailoring||"inconclusive";
+  const kind=value=>value==="ready"||value==="improved"||value==="strong"?"good":value==="blocked"||value==="regressed"?"bad":"warn";
+  const list=(items,label)=>Array.isArray(items)&&items.length?`<p class="sub" style="margin:.35rem 0"><strong>${label}</strong></p><ul class="resume-objective-list">${items.slice(0,4).map(item=>`<li>${esc(item)}</li>`).join("")}</ul>`:"";
+  const recommendation=audit.recommended_version||"review",decision=audit.decision||"needs_review";
+  return `<details class="keyword-audit" open><summary><strong>Tailoring audit</strong> ${studioBadge(`fit: ${fit}`,kind(fit))} ${studioBadge(`tailoring: ${tailoring}`,kind(tailoring))} ${studioBadge(`readiness: ${readiness}`,kind(readiness))} ${studioBadge(`recommend: ${recommendation}`,recommendation==="tailored"?"good":recommendation==="base"||recommendation==="blocked"?"bad":"warn")} ${studioBadge(`${audit.confidence||"low"} confidence`,audit.confidence==="high"?"good":"warn")}</summary><div class="keyword-audit-body"><p class="sub">This compares the tailored resume with the original for this posting. It is not a hiring prediction. <strong>${esc(decision.replaceAll("_"," "))}</strong></p>${list(audit.gains,"Supported gains")}${list(audit.losses,"Losses or missed opportunities")}${list(audit.tradeoffs,"Explained tradeoffs")}${list(audit.blockers,"Blockers")}</div></details>`;
+}
 function resumeBankVersionHTML(entry, ranking=null) {
   const job=entry.job||{}, preview=cloudBankArtifactUrl(entry,"preview"), pdf=cloudBankArtifactUrl(entry,"pdf");
   const report=cloudBankArtifactUrl(entry,"report"), posting=cloudBankArtifactUrl(entry,"posting");
@@ -3340,7 +3350,7 @@ function resumeBankVersionHTML(entry, ranking=null) {
   const inspect=entry.run_id && entry.storage!=="cloud" ? `<button class="act" onclick='loadResumeRun("${esc(entry.run_id)}")'>inspect</button>` : "";
   const statusKind=entry.status==="complete"||entry.status==="awaiting_review"?"good":entry.status==="failed"?"bad":"unknown";
   const rankBadge=ranking?.assessment?.rankable&&Number.isFinite(Number(ranking.assessment.score))?studioBadge(`#${ranking.rank} · ${ranking.assessment.score}/100`,ranking.rank===1?"good":""):studioBadge("not ranked","warn");
-  return `<div class="resume-bank-version-wrap"><div class="resume-bank-version"><div><strong>${esc(studioModeLabel(entry.mode))} ${rankBadge}</strong><p class="sub">${esc(entry.created_at||"date unavailable")} · ${entry.storage==="cloud"?"cloud":"local"} ${studioBadge(entry.status||"saved",statusKind)}</p></div><div class="acts resume-bank-actions">${pdf?`<a class="act" href="${pdf}" target="_blank" rel="noopener">PDF ↗</a>`:""}${preview?`<a class="act" href="${preview}" target="_blank" rel="noopener">clean preview ↗</a>`:""}${report?`<a class="act" href="${report}" target="_blank" rel="noopener">audit ↗</a>`:""}${posting?`<a class="act" href="${posting}" target="_blank" rel="noopener">posting ↗</a>`:""}${inspect}${workshop}</div></div>${keywordAuditHTML(entry)}</div>`;
+  return `<div class="resume-bank-version-wrap"><div class="resume-bank-version"><div><strong>${esc(studioModeLabel(entry.mode))} ${rankBadge}</strong><p class="sub">${esc(entry.created_at||"date unavailable")} · ${entry.storage==="cloud"?"cloud":"local"} ${studioBadge(entry.status||"saved",statusKind)}</p></div><div class="acts resume-bank-actions">${pdf?`<a class="act" href="${pdf}" target="_blank" rel="noopener">PDF ↗</a>`:""}${preview?`<a class="act" href="${preview}" target="_blank" rel="noopener">clean preview ↗</a>`:""}${report?`<a class="act" href="${report}" target="_blank" rel="noopener">audit ↗</a>`:""}${posting?`<a class="act" href="${posting}" target="_blank" rel="noopener">posting ↗</a>`:""}${inspect}${workshop}</div></div>${tailoringAuditHTML(entry.tailoring_audit)}${keywordAuditHTML(entry)}</div>`;
 }
 function resumeBankGroupHTML(group) {
   const latest=group.versions[0], job=latest.job||{}, preview=cloudBankArtifactUrl(latest,"preview"), ranked=objectiveRankings(group), winner=ranked.find(item=>item.assessment.rankable&&Number.isFinite(Number(item.assessment.score)));
@@ -3459,7 +3469,7 @@ async function drainCloudResumeQueue() {
       try {
         await updateCloudResumeItem(item.queue_id, "dispatching", {message:"Dispatching to the private Mac worker…"});
         const status = await studioRequest("/api/run", {method:"POST",body:JSON.stringify({
-          job_id:item.job.id, mode:item.mode, job_snapshot:cloudQueueJob(item.job),
+          job_id:item.job.id, mode:item.mode, queue_id:item.queue_id, job_snapshot:cloudQueueJob(item.job),
         })});
         const running = {...item, state:"running", run_id:status.run_id, message:status.message||"running on the private Mac worker"};
         updateResumeBatchQueueRow(item.queue_id, {status:"running",run_id:status.run_id,message:running.message});

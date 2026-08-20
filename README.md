@@ -635,6 +635,23 @@ exact placement and meaningful rewrites; the downloadable PDF remains clean.
 The percentages are diagnostic posting comparisons, not scores produced by a
 recruiter's ATS.
 
+Every current run also exposes a **Tailoring audit**. It separates **Fit**
+(what the candidate actually has for the role) from **Tailoring** (whether the
+run selected and communicated that evidence better than the locked baseline).
+The audit compares base → tailored changes, surfaces supported gains, dropped
+or unused evidence, redundancy/regression warnings, and unsupported claims,
+and shows a `ready`, `review`, or `blocked` decision. It also makes the
+recommendation explicit: **prefer tailored**, **prefer base**, or **needs
+review**. An explained project swap is not counted as a regression, and a
+low-priority context term such as coursework is not treated like lost core
+evidence. When material regressions remain, an evidence-bounded repair pass
+tries once to improve the plan and accepts it only if the compiled comparison
+gets better. Factuality, eligibility, layout, privacy, and independent-review
+failures cannot be averaged away. This is a quality-control and comparison
+report—not an ATS score or a prediction of an employer's decision. The full
+`job_intelligence.json` and `tailoring_audit.json` artifacts stay local; cloud
+sync exposes only their sanitized summary.
+
 The four tailoring buttons queue independent runs, so switching postings or
 starting another mode does not replace the current draft. The header shows
 observed Codex tokens/calls for the current UTC week and the bank shows queued,
