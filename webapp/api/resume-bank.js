@@ -17,6 +17,11 @@ const BANK_VERSION = "v1";
 const MAX_ENTRY_ARTIFACT_BYTES = 2_750_000;
 const MAX_ENTRIES = 500;
 const INDEX_FILENAME = "resume-bank-index.json";
+const QUEUE_VERSION = "v1";
+const QUEUE_FILENAME = "resume-studio-cloud-queue.json";
+const MAX_QUEUE_ITEMS = 100;
+const QUEUE_MODES = new Set(["used", "ai", "unrestricted", "generation"]);
+const QUEUE_STATES = new Set(["queued", "dispatching", "running", "awaiting_review", "complete", "failed", "cancelled"]);
 
 function bodyOf(req) {
   if (req.body && typeof req.body === "object") return req.body;
@@ -233,6 +238,112 @@ function findArtifact(index, id) {
   return null;
 }
 
+function queueJob(value) {
+  const job = value && typeof value === "object" ? value : {};
+  let url = "";
+  try {
+    const parsed = new URL(String(job.url || ""));
+    if (!["http:", "https:"].includes(parsed.protocol) || parsed.username || parsed.password) return null;
+    url = parsed.toString().slice(0, 2000);
+  } catch { return null; }
+  const id = clean(job.id, 140);
+  const company = clean(job.company, 220);
+  const title = clean(job.title, 320);
+  if (!id || !company || !title || !url) return null;
+  return {
+    id, company, title, url,
+    locations: Array.isArray(job.locations) ? job.locations.map(item => clean(item, 160)).filter(Boolean).slice(0, 12) : [],
+    sector: clean(job.sector, 120),
+    score: Number.isFinite(Number(job.score)) ? Number(job.score) : 0,
+    alert_ok: Boolean(job.alert_ok),
+    early_career_possible: Boolean(job.early_career_possible),
+    explicit_new_grad: Boolean(job.explicit_new_grad),
+    posted_at: job.posted_at ?? null,
+  };
+}
+
+function publicQueueItem(value) {
+  const item = value && typeof value === "object" ? value : {};
+  return {
+    queue_id: clean(item.queue_id, 80), mode: QUEUE_MODES.has(item.mode) ? item.mode : "ai",
+    state: QUEUE_STATES.has(item.state) ? item.state : "queued",
+    run_id: clean(item.run_id, 80), message: clean(item.message, 500), error: clean(item.error, 500),
+    created_at: clean(item.created_at, 80), updated_at: clean(item.updated_at, 80),
+    job: queueJob(item.job),
+  };
+}
+
+async function queueIndex(token, folder) {
+  const files = await listFiles(token,
+    `'${folder.id}' in parents and trashed = false and name = '${QUEUE_FILENAME}' and ` +
+    "appProperties has { key='resumeStudioCloudQueue' and value='v1' }",
+    "files(id,name,mimeType,appProperties,parents,size,modifiedTime)");
+  const file = files[0] || null;
+  let items = [];
+  if (file?.id) {
+    try {
+      const parsed = JSON.parse((await readFile(token, file.id)).toString("utf8"));
+      items = Array.isArray(parsed?.items) ? parsed.items.map(publicQueueItem).filter(item => item.queue_id && item.job) : [];
+    } catch {}
+  }
+  return {file, items};
+}
+
+async function writeQueue(token, folder, current, items) {
+  const metadata = {name: QUEUE_FILENAME, mimeType: "application/json",
+    appProperties: {resumeStudioCloudQueue: QUEUE_VERSION}};
+  if (!current.file?.id) metadata.parents = [folder.id];
+  const value = {version: QUEUE_VERSION, updated_at: new Date().toISOString(),
+    items: items.slice(0, MAX_QUEUE_ITEMS).map(publicQueueItem)};
+  await uploadFile(token, {
+    id: current.file?.id || "", metadata,
+    content: Buffer.from(JSON.stringify(value)), contentType: "application/json",
+  });
+  return value.items;
+}
+
+async function getQueue(token) {
+  const folder = await ensureFolder(token);
+  const current = await queueIndex(token, folder);
+  return {folder, current};
+}
+
+async function enqueueCloudRun(token, value) {
+  const mode = String(value?.mode || "").trim().toLowerCase();
+  if (!QUEUE_MODES.has(mode)) throw new Error("invalid Resume Studio queue mode");
+  const job = queueJob(value?.job);
+  if (!job) throw new Error("invalid public posting snapshot");
+  const {folder, current} = await getQueue(token);
+  const duplicate = current.items.find(item => item.job?.id === job.id && item.mode === mode &&
+    ["queued", "dispatching", "running", "awaiting_review"].includes(item.state));
+  if (duplicate) return {item: publicQueueItem(duplicate), duplicate: true};
+  const now = new Date().toISOString();
+  const item = {
+    queue_id: crypto.randomBytes(12).toString("hex"), mode, state: "queued", run_id: "",
+    message: "Saved in the private cloud queue; waiting for the Mac worker.", error: "",
+    created_at: now, updated_at: now, job,
+  };
+  const items = [item, ...current.items].slice(0, MAX_QUEUE_ITEMS);
+  await writeQueue(token, folder, current, items);
+  return {item: publicQueueItem(item), duplicate: false};
+}
+
+async function updateCloudRun(token, value) {
+  const queueId = clean(value?.queue_id, 80);
+  const state = String(value?.state || "").trim().toLowerCase();
+  if (!queueId || !QUEUE_STATES.has(state)) throw new Error("invalid Resume Studio queue update");
+  const {folder, current} = await getQueue(token);
+  const item = current.items.find(candidate => candidate.queue_id === queueId);
+  if (!item) throw new Error("cloud queue item not found");
+  item.state = state;
+  item.run_id = clean(value?.run_id || item.run_id, 80);
+  item.message = clean(value?.message || item.message, 500);
+  item.error = clean(value?.error || (state === "failed" ? item.message : ""), 500);
+  item.updated_at = new Date().toISOString();
+  await writeQueue(token, folder, current, current.items);
+  return {item: publicQueueItem(item)};
+}
+
 async function contextFor(req) {
   const auth = ownerSession(req);
   if (auth.error) throw Object.assign(new Error(auth.error), {statusCode: auth.error === "sign in first" ? 401 : 403});
@@ -288,6 +399,11 @@ module.exports = async (req, res) => {
   try {
     const access = await contextFor(req);
     if (req.method === "GET") {
+      if (String(req.query?.queue || "") === "1") {
+        const {current} = await getQueue(access.token);
+        res.status(200).json({configured: true, connected: true, source: access.source,
+          queue_version: QUEUE_VERSION, items: current.items.map(publicQueueItem)}); return;
+      }
       const {current} = await getBank(access.token);
       const artifactId = clean(req.query?.artifact, 160);
       if (artifactId) {
@@ -308,6 +424,12 @@ module.exports = async (req, res) => {
     if (req.method === "POST") {
       if (!requireMutationRequest(req, res)) return;
       const payload = bodyOf(req);
+      if (payload.action === "queue") {
+        res.status(200).json({ok: true, ...(await enqueueCloudRun(access.token, payload))}); return;
+      }
+      if (payload.action === "queue_update") {
+        res.status(200).json({ok: true, ...(await updateCloudRun(access.token, payload))}); return;
+      }
       const entry = await syncEntry(access.token, payload.entry, payload.artifact, payload.artifacts);
       res.status(200).json({ok: true, entry: publicEntries({entries: [{...entry, artifact_refs: {}}]})[0]}); return;
     }

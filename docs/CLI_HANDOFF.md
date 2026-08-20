@@ -215,6 +215,15 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   Vercel function would require a new remote privacy/auth/storage architecture.
   No CV, provider credential, or generated artifact was uploaded as part of this
   repair. Production's safe fallback remains available when the Mac is asleep.
+- **Private cloud queue shipped:** the same owner-only `/api/resume-bank` route
+  now stores a bounded `resume-studio-cloud-queue.json` in the app-created
+  private Drive folder. Single and **Tailor today** batch requests can be
+  saved while the Mac is offline; only sanitized posting metadata, mode, and
+  status cross into the queue. Once the local engine reports healthy through
+  the existing bridge, the open production workspace dispatches up to two
+  items and mirrors `queued`/`running`/`awaiting_review`/`complete`/`failed`
+  state. The CV, evidence graph, provider sessions, and generated artifacts
+  remain local. A production browser tab must stay open for reconnect dispatch.
 
 ### Previous change (verified 2026-08-15)
 

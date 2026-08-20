@@ -478,7 +478,8 @@ const S = {           // app state
   tab:"jobs", filter:{...DEFAULT_FILTER, ...storedFilter()}, shown:250,
   wsTab:"fit",
   testing:{q:"", sort:"resume", shown:40, selectedId:"", engine:"checking", engineError:"", match:null,
-    library:[], cloudLibrary:[], cloudBank:{status:"checking",error:"",updated_at:"",needsGoogle:false}, bankView:false, contextView:false,
+    library:[], cloudLibrary:[], cloudBank:{status:"checking",error:"",updated_at:"",needsGoogle:false},
+    cloudQueue:{status:"checking",items:[],error:"",needsGoogle:false}, bankView:false, contextView:false,
     bankQuery:"", bankMode:"all", bankStatus:"all", bankEra:"current", context:null, contextQuery:"", contextError:"", contextScanError:"",
     sync:{state:"idle",done:0,total:0,error:""}, activeRunId:"", runStatus:null,
     batchView:false, batch:{mode:"unrestricted",selected:[],runs:[],state:"idle",error:""}},
@@ -2928,6 +2929,61 @@ async function cloudResumeBankPost(entry, artifact=null, artifacts=[]) {
   if (!response.ok) throw new Error(data.error || `Cloud Resume Bank returned ${response.status}`);
   return data;
 }
+function cloudQueueJob(job) {
+  return {
+    id:job?.id, company:job?.company, title:job?.title, url:job?.url,
+    locations:Array.isArray(job?.locations)?job.locations.slice(0,8):[], sector:job?.sector||"",
+    score:job?.score, alert_ok:Boolean(job?.alert_ok), early_career_possible:Boolean(job?.early_career_possible),
+    explicit_new_grad:Boolean(job?.explicit_new_grad), posted_at:job?.posted_at ?? null,
+  };
+}
+async function loadCloudResumeQueue(render=true) {
+  try {
+    const response = await fetch("/api/resume-bank?queue=1", {credentials:"same-origin",cache:"no-store"});
+    let data={}; try { data=await response.json(); } catch (_) {}
+    if (!response.ok) throw new Error(data.error || `Cloud queue returned ${response.status}`);
+    S.testing.cloudQueue = {status:"online", items:Array.isArray(data.items)?data.items:[], error:"", needsGoogle:false};
+  } catch (error) {
+    S.testing.cloudQueue = {status:"unavailable", items:[], error:error.message, needsGoogle:/Connect Google/i.test(error.message)};
+  }
+  if (render && S.tab === "testing") rTesting();
+  return S.testing.cloudQueue.items;
+}
+async function cloudResumeQueuePost(action, payload={}) {
+  const response = await fetch("/api/resume-bank", {method:"POST",credentials:"same-origin",
+    headers:{"content-type":"application/json"}, body:JSON.stringify({action,...payload})});
+  let data={}; try { data=await response.json(); } catch (_) {}
+  if (!response.ok) throw new Error(data.error || `Cloud queue returned ${response.status}`);
+  return data;
+}
+function cloudQueuePendingCount() {
+  return (S.testing.cloudQueue.items||[]).filter(item=>["queued","dispatching","running","awaiting_review"].includes(item.state)).length;
+}
+function cloudQueueOnline() { return S.testing.cloudQueue.status === "online"; }
+function cloudQueueStatusLabel(item) {
+  if (item?.state === "awaiting_review") return "awaiting review";
+  return item?.state || "queued";
+}
+function cloudQueueSummaryHTML() {
+  if (S.testing.cloudQueue.status === "checking") return `<div class="note" role="status"><strong>Private cloud queue.</strong> Checking the owner-only queue…</div>`;
+  if (!cloudQueueOnline()) return `<div class="note" role="status"><strong>Private cloud queue unavailable.</strong> ${esc(S.testing.cloudQueue.error||"Connect Google to save work while the Mac is asleep.")}</div>`;
+  const allItems = S.testing.cloudQueue.items||[];
+  const items = allItems.slice(0,6);
+  const pending = cloudQueuePendingCount();
+  return `<div class="note" role="status"><strong>Private cloud queue · ${pending} pending.</strong> ${items.length?items.map(item=>`${esc(item.job?.company||"Role")} · ${esc(item.job?.title||"")} · ${esc(studioModeLabel(item.mode))} · ${esc(cloudQueueStatusLabel(item))}`).join("<br>"):"Nothing is waiting."}${allItems.length>items.length?`<br><span class="sub">${allItems.length-items.length} more items are stored privately.</span>`:""}</div>`;
+}
+async function queueCloudResumeItem(job, mode) {
+  const result = await cloudResumeQueuePost("queue", {job:cloudQueueJob(job), mode});
+  await loadCloudResumeQueue(false);
+  return result.item;
+}
+async function updateCloudResumeItem(queueId, state, extra={}) {
+  const result = await cloudResumeQueuePost("queue_update", {queue_id:queueId, state, ...extra});
+  const current = new Map((S.testing.cloudQueue.items||[]).map(item=>[item.queue_id,item]));
+  if (result.item) current.set(result.item.queue_id, result.item);
+  S.testing.cloudQueue.items = [...current.values()];
+  return result.item;
+}
 function bytesToBase64(buffer) {
   const bytes = new Uint8Array(buffer); let binary=""; const step=0x8000;
   for(let i=0;i<bytes.length;i+=step) binary += String.fromCharCode(...bytes.subarray(i,Math.min(i+step,bytes.length)));
@@ -3018,6 +3074,8 @@ function renderResumeBatchView() {
   batch.selected = (batch.selected || []).filter(id => candidateIds.has(id)).slice(0, RESUME_BATCH_LIMIT);
   const selected = new Set(batch.selected);
   const engineOnline = S.testing.engine === "online";
+  const cloudReady = cloudQueueOnline();
+  const canQueue = engineOnline || cloudReady;
   const queueing = batch.state === "queueing";
   const active = (batch.runs || []).filter(run => ["queued", "running"].includes(run.status)).length;
   const stateText = batch.state === "complete" ? "All selected drafts finished." :
@@ -3031,7 +3089,7 @@ function renderResumeBatchView() {
   </section>
   <div class="lane">
     <div class="bar" style="justify-content:space-between"><div><h3>Added today <span class="sub">${candidates.length} role${candidates.length===1?"":"s"}</span></h3><p class="sub" style="margin:0">Up to ${RESUME_BATCH_LIMIT} drafts per batch · local calendar day · current non-terminal postings only.</p></div><div class="acts"><button class="act" onclick="selectAllResumeBatch()" ${candidates.length?"":"disabled"}>select up to ${RESUME_BATCH_LIMIT}</button><button class="act" onclick="clearResumeBatch()" ${selected.size?"":"disabled"}>clear</button></div></div>
-    ${candidates.length ? `<div class="bar" style="margin:.7rem 0"><label class="sub">draft mode <select id="resumeBatchMode" onchange="resumeBatchState().mode=this.value;rTesting()">${resumeBatchModeOptions(batch.mode)}</select></label><button class="act primary" onclick="queueResumeBatch()" ${!engineOnline || !selected.size || queueing?"disabled":""}>${queueing?"Queueing…":`queue ${selected.size} draft${selected.size===1?"":"s"}`}</button><span class="sub">${engineOnline?`${selected.size} selected`:`start the private engine to queue drafts`}</span></div>
+    ${candidates.length ? `<div class="bar" style="margin:.7rem 0"><label class="sub">draft mode <select id="resumeBatchMode" onchange="resumeBatchState().mode=this.value;rTesting()">${resumeBatchModeOptions(batch.mode)}</select></label><button class="act primary" onclick="queueResumeBatch()" ${!canQueue || !selected.size || queueing?"disabled":""}>${queueing?"Queueing…":`queue ${selected.size} draft${selected.size===1?"":"s"}`}</button><span class="sub">${engineOnline?`${selected.size} selected · Mac worker ready`:cloudReady?`${selected.size} selected · saved privately for the Mac worker`:`connect Google to enable the private queue`}</span></div>
       <div class="studio-jobs">${candidates.map(job => `<label class="studio-job" style="cursor:pointer"><input type="checkbox" style="margin-right:.55rem" ${selected.has(job.id)?"checked":""} onchange='toggleResumeBatchSelection(${JSON.stringify(job.id)},this.checked)'><span><strong>${esc(job.company)}</strong><small>${esc(job.title)} · Radar ${job.score??"–"} · added ${new Date(job._resumeAddedAt*1000).toLocaleTimeString([], {hour:"numeric",minute:"2-digit"})} · ${esc(job._resumeStage)}</small></span></label>`).join("")}</div>`
       : `<div class="studio-empty"><h3>Nothing added today yet</h3><p>Add roles from Jobs with <strong>save to apply</strong>; they will appear here automatically. Existing active roles can still be tailored one at a time from their row or drawer.</p><button class="act primary" onclick="S.tab='jobs';render()">open Jobs</button></div>`}
   </div>
@@ -3087,7 +3145,9 @@ async function markResumeBatchTailored(job) {
 }
 async function queueResumeBatch() {
   const batch = resumeBatchState();
-  if (S.testing.engine !== "online") { toast("Start the private Resume Studio engine before queueing a batch"); return; }
+  const engineOnline = S.testing.engine === "online";
+  const cloudReady = cloudQueueOnline();
+  if (!engineOnline && !cloudReady) { toast("Connect Google or start the private Resume Studio engine before queueing a batch"); return; }
   const byId = new Map(resumeBatchCandidates().map(job => [job.id, job]));
   const jobs = [...new Set(batch.selected || [])].map(id => byId.get(id)).filter(Boolean).slice(0, RESUME_BATCH_LIMIT);
   if (!jobs.length) { toast("Select at least one role to tailor"); return; }
@@ -3097,8 +3157,13 @@ async function queueResumeBatch() {
   await Promise.all(jobs.map(async job => {
     const row = batch.runs.find(run => run.job_id === job.id);
     try {
-      const status = await studioRequest("/api/run", {method:"POST",body:JSON.stringify({job_id:job.id,mode:batch.mode})});
-      Object.assign(row, {run_id:status.run_id,status:status.status||"queued",message:status.message||"waiting for a private worker"});
+      if (!engineOnline) {
+        const queued = await queueCloudResumeItem(job, batch.mode);
+        Object.assign(row, {queue_id:queued.queue_id,status:queued.state||"queued",message:queued.message||"saved in the private cloud queue"});
+      } else {
+        const status = await studioRequest("/api/run", {method:"POST",body:JSON.stringify({job_id:job.id,mode:batch.mode})});
+        Object.assign(row, {run_id:status.run_id,status:status.status||"queued",message:status.message||"waiting for a private worker"});
+      }
       try {
         await markResumeBatchTailored(job);
         row.stage = "to_tailor";
@@ -3106,7 +3171,7 @@ async function queueResumeBatch() {
         row.stage_error = stageError.message;
         row.message = `${row.message}; pipeline stage sync failed`;
       }
-      pollResumeBatchRun(status.run_id);
+      if (row.run_id) pollResumeBatchRun(row.run_id);
     } catch (error) {
       Object.assign(row, {status:"failed",message:error.message});
     }
@@ -3300,6 +3365,10 @@ function renderResumeBankView() {
   <div class="bar"><input id="resumeBankQ" type="search" placeholder="filter company or role…" value="${esc(S.testing.bankQuery||"")}"><select id="resumeBankEra" aria-label="Filter Resume Bank era"><option value="current" ${era==="current"?"selected":""}>Google onward</option><option value="all" ${era==="all"?"selected":""}>all history</option></select><select id="resumeBankMode" aria-label="Filter Resume Bank mode"><option value="all">all modes</option><option value="used" ${mode==="used"?"selected":""}>Used bullets</option><option value="ai" ${mode==="ai"?"selected":""}>AI tailor</option><option value="unrestricted" ${mode==="unrestricted"?"selected":""}>Take-the-wheel</option><option value="generation" ${mode==="generation"?"selected":""}>Unchained generation</option></select><select id="resumeBankStatus" aria-label="Filter Resume Bank status"><option value="all">all statuses</option>${[...new Set(resumeBankEntries().map(e=>e.status).filter(Boolean))].sort().map(value=>`<option value="${esc(value)}" ${status===value?"selected":""}>${esc(value)}</option>`).join("")}</select><button class="act" onclick="syncCloudResumeBank()" ${S.testing.engine==="online"?"":"disabled"}>sync local bank · ${era==="current"?"Google-onward":"all"} ↗</button></div>
   <p class="sub">${groups.length} jobs · ${entries.length} versions</p><section class="resume-bank-grid">${groups.length?groups.map(resumeBankGroupHTML).join(""):"<div class=\"lane\"><p class=\"sub\">No bank entries match this filter. Start the private engine to load the local bank, or connect Google and sync it.</p></div>"}</section>`;
 }
+function studioQueueActionLabel(mode) {
+  const labels = {used:"used-bullets tailor", ai:"AI tailor", unrestricted:"Take-the-wheel", generation:"unchained draft"};
+  return S.testing.engine === "online" ? `Queue ${labels[mode]}` : `Queue ${labels[mode]} in private cloud`;
+}
 function renderStudioWorkspace() {
   const selected = jobById(S.testing.selectedId);
   const workspace = $("#studioWorkspace");
@@ -3310,18 +3379,21 @@ function renderStudioWorkspace() {
   }
   const match = studioMatchFor(selected);
   const engineOnline = S.testing.engine === "online";
-  const engineBadge = engineOnline ? studioBadge("private engine connected","good") : S.testing.engine === "offline" ? studioBadge("private engine offline","warn") : studioBadge("checking private engine");
-  const run = S.testing.runStatus;
+  const cloudReady = cloudQueueOnline();
+  const cloudItem = [...(S.testing.cloudQueue.items||[])].reverse().find(item=>item.job?.id===selected.id && ["queued","dispatching","running","awaiting_review"].includes(item.state));
+  const run = S.testing.runStatus || (cloudItem ? {status:cloudItem.state,message:cloudItem.message,job:selected,queue_id:cloudItem.queue_id,run_id:cloudItem.run_id} : null);
   const busy = run && ["queued","running"].includes(run.status);
+  const canQueue = (engineOnline || cloudReady) && !busy;
+  const engineBadge = engineOnline ? studioBadge("private engine connected","good") : S.testing.engine === "offline" ? studioBadge("private engine offline","warn") : studioBadge("checking private engine");
   workspace.innerHTML = `<div class="studio-selected"><div class="bar" style="justify-content:space-between;margin:0"><div>${engineBadge} ${selected.alert_ok?studioBadge("eligible","good"):studioBadge("dashboard review","warn")}</div><div class="acts"><button class="act" onclick="showResumeContext()">context &amp; questions${S.testing.match?.context_summary?.open_questions!=null?` · ${S.testing.match.context_summary.open_questions} open`:""}</button><a class="act" href="${esc(safeExternalURL(selected.url))}" target="_blank" rel="noopener noreferrer">open posting ↗</a></div></div>
     <h2>${esc(selected.company)} · ${esc(selected.title)}</h2><div class="sub studio-meta">${esc((selected.locations||[]).join(", ")||"location unknown")} · Radar ${selected.score??"–"} · ${ago(postedTs(selected))||"date unknown"}</div>
     <div class="facts" style="margin-top:.45rem">${match.score!=null?studioBadge(`Resume Match ${match.score}/100`,match.confidence==="low"?"warn":"good"):""}${(match.clusters||[]).slice(0,6).map(c=>studioBadge(c.replaceAll("_"," "))).join("")}</div></div>
-    <div class="studio-note" style="margin-top:.65rem"><strong>One system, two safe layers.</strong> This cloud workspace owns the selection, posting link, queue, and run status. The private engine owns your evidence graph, AI calls, PDF rendering, and revisions. If the engine is offline, this page never pretends a draft exists.</div>
+    <div class="studio-note" style="margin-top:.65rem"><strong>One system, two safe layers.</strong> This cloud workspace owns the selection, private queue, and run status. The Mac engine owns your evidence graph, provider calls, PDF rendering, and revisions. ${engineOnline?"Queued work can run now.":cloudReady?"The Mac is offline, but this posting can be saved to the private cloud queue and dispatched automatically when the engine reconnects.":"Connect Google to enable the private cloud queue."}</div>
     <div class="studio-actions">
-      <div class="studio-action"><h4>Used bullets</h4><p>Approved wording and selections only. Your clean comparison baseline.</p><button class="act" ${engineOnline&&!busy?"":"disabled"} onclick="queueResumeMode('used')">Queue used-bullets tailor</button></div>
-      <div class="studio-action"><h4>AI tailor</h4><p>Role-specific rewrites, project swaps, ATS coverage, and a review pass.</p><button class="act" ${engineOnline&&!busy?"":"disabled"} onclick="queueResumeMode('ai')">Queue AI tailor</button></div>
-      <div class="studio-action featured"><h4>Take-the-wheel (moderate)</h4><p>Adaptive portfolio changes when stronger verified evidence supports them.</p><button class="act primary" ${engineOnline&&!busy?"":"disabled"} onclick="queueResumeMode('unrestricted')">Queue Take-the-wheel</button></div>
-      <div class="studio-action"><h4>Unchained generation</h4><p>Requirement-to-evidence audit with source-grounded generated bullets or Skills lines.</p><button class="act" ${engineOnline&&!busy?"":"disabled"} onclick="queueResumeMode('generation')">Create unchained draft</button></div>
+      <div class="studio-action"><h4>Used bullets</h4><p>Approved wording and selections only. Your clean comparison baseline.</p><button class="act" ${canQueue?"":"disabled"} onclick="queueResumeMode('used')">${studioQueueActionLabel("used")}</button></div>
+      <div class="studio-action"><h4>AI tailor</h4><p>Role-specific rewrites, project swaps, ATS coverage, and a review pass.</p><button class="act" ${canQueue?"":"disabled"} onclick="queueResumeMode('ai')">${studioQueueActionLabel("ai")}</button></div>
+      <div class="studio-action featured"><h4>Take-the-wheel (moderate)</h4><p>Adaptive portfolio changes when stronger verified evidence supports them.</p><button class="act primary" ${canQueue?"":"disabled"} onclick="queueResumeMode('unrestricted')">${studioQueueActionLabel("unrestricted")}</button></div>
+      <div class="studio-action"><h4>Unchained generation</h4><p>Requirement-to-evidence audit with source-grounded generated bullets or Skills lines.</p><button class="act" ${canQueue?"":"disabled"} onclick="queueResumeMode('generation')">${studioQueueActionLabel("generation")}</button></div>
     </div>
     ${run?`<div class="studio-status ${run.status==='failed'?'bad':busy?'warn':''}">${esc(studioRunStatusText(run))}</div>`:""}
     ${studioResultHTML(run)}
@@ -3329,6 +3401,94 @@ function renderStudioWorkspace() {
     <div class="section-title" style="margin-top:1rem"><h3>Resume bank <span class="sub">${resumeBankEntries().length} saved</span></h3><div class="acts"><button class="act" onclick="showResumeBank()">open full bank</button><button class="act" onclick="refreshResumeLibrary();loadCloudResumeBank()">refresh</button></div></div>
     <p class="sub">The bank is cloud-visible when synced. PDFs and previews stay behind the owner session; the Mac is only needed for new matching, generation, and workshop edits.</p>
     <div class="studio-library">${studioLibraryHTML()}</div>`;
+}
+let cloudQueueDrainInFlight = false;
+function updateResumeBatchQueueRow(queueId, patch={}) {
+  const batch = resumeBatchState();
+  const row = (batch.runs||[]).find(item=>item.queue_id===queueId);
+  if (!row) return;
+  Object.assign(row, patch);
+  finishResumeBatchIfDone();
+  if (S.tab === "testing" && S.testing.batchView) rTesting();
+}
+function cloudQueueRunStatus(item, status, message="") {
+  const job = item?.job || {};
+  return {status:status.status||"running", message:message||status.message||status.status||"processing on the private Mac worker", job, queue_id:item.queue_id, run_id:status.run_id||item.run_id||""};
+}
+async function pollCloudResumeRun(item, runId) {
+  const tick = async () => {
+    try {
+      const status = await studioRequest(`/api/run?id=${encodeURIComponent(runId)}`);
+      if (S.testing.selectedId === item.job?.id) {
+        S.testing.activeRunId = runId;
+        S.testing.runStatus = cloudQueueRunStatus(item, status);
+        renderStudioWorkspace();
+      }
+      if (["complete","awaiting_review","failed"].includes(status.status)) {
+        updateResumeBatchQueueRow(item.queue_id, {status:status.status,run_id:runId,message:status.message||status.status});
+        await updateCloudResumeItem(item.queue_id, status.status, {
+          run_id:runId, message:status.message||status.status,
+          error:status.status === "failed" ? (status.error||status.message||"private run failed") : "",
+        });
+        await refreshResumeLibrary(false);
+        await loadCloudResumeQueue(false);
+        await drainCloudResumeQueue();
+        if (S.tab === "testing") { renderStudioWorkspace(); if (S.testing.batchView) rTesting(); }
+        return;
+      }
+      setTimeout(tick, 1800);
+    } catch (error) {
+      try {
+        await updateCloudResumeItem(item.queue_id, "queued", {
+          run_id:"", message:"The Mac worker disconnected; this item is queued for a safe retry.", error:error.message,
+        });
+        await loadCloudResumeQueue(false);
+      } catch (_) {}
+      if (S.tab === "testing") { renderStudioWorkspace(); if (S.testing.batchView) rTesting(); }
+    }
+  };
+  tick();
+}
+async function drainCloudResumeQueue() {
+  if (cloudQueueDrainInFlight || S.testing.engine !== "online" || !cloudQueueOnline()) return;
+  cloudQueueDrainInFlight = true;
+  let refillAfterDispatch = false;
+  try {
+    const pending = (S.testing.cloudQueue.items||[]).filter(item=>item.state === "queued").slice(0,2);
+    await Promise.all(pending.map(async item => {
+      try {
+        await updateCloudResumeItem(item.queue_id, "dispatching", {message:"Dispatching to the private Mac worker…"});
+        const status = await studioRequest("/api/run", {method:"POST",body:JSON.stringify({
+          job_id:item.job.id, mode:item.mode, job_snapshot:cloudQueueJob(item.job),
+        })});
+        const running = {...item, state:"running", run_id:status.run_id, message:status.message||"running on the private Mac worker"};
+        updateResumeBatchQueueRow(item.queue_id, {status:"running",run_id:status.run_id,message:running.message});
+        await updateCloudResumeItem(item.queue_id, "running", {run_id:status.run_id, message:running.message});
+        if (S.testing.selectedId === item.job?.id) {
+          S.testing.activeRunId = status.run_id;
+          S.testing.runStatus = cloudQueueRunStatus(item, status);
+          renderStudioWorkspace();
+        }
+        if (["complete","awaiting_review","failed"].includes(status.status)) {
+          refillAfterDispatch = true;
+          updateResumeBatchQueueRow(item.queue_id, {status:status.status,run_id:status.run_id,message:status.message||status.status});
+          await updateCloudResumeItem(item.queue_id, status.status, {
+            run_id:status.run_id, message:status.message||status.status,
+            error:status.status === "failed" ? (status.error||status.message||"private run failed") : "",
+          });
+          await refreshResumeLibrary(false);
+        } else pollCloudResumeRun(running, status.run_id);
+      } catch (error) {
+        updateResumeBatchQueueRow(item.queue_id, {status:"queued",message:"waiting for the Mac worker to reconnect"});
+        try { await updateCloudResumeItem(item.queue_id, "queued", {message:"The Mac worker was unavailable; waiting for the next connection.", error:error.message}); }
+        catch (_) {}
+      }
+    }));
+  } finally {
+    cloudQueueDrainInFlight = false;
+    if (S.tab === "testing") { renderStudioWorkspace(); if (S.testing.batchView) rTesting(); }
+    if (refillAfterDispatch && S.testing.engine === "online" && cloudQueueOnline() && (S.testing.cloudQueue.items||[]).some(item=>item.state === "queued")) setTimeout(()=>drainCloudResumeQueue(),0);
+  }
 }
 async function loadResumeEngine() {
   try {
@@ -3341,15 +3501,18 @@ async function loadResumeEngine() {
       try { S.testing.match = await studioRequest("/api/match", {method:"POST",body:JSON.stringify({job_id:selected.id})}); }
       catch (error) { S.testing.match = null; S.testing.engineError = `Engine is online, but this posting is not in its local snapshot: ${error.message}`; }
     }
+    await loadCloudResumeQueue(false);
+    await drainCloudResumeQueue();
   } catch (error) {
     S.testing.engine = "offline";
     S.testing.engineError = "Start the private Resume Studio service on the Mac to enable evidence-grounded matching and PDF generation.";
+    await loadCloudResumeQueue(false);
   }
   renderStudioWorkspace();
   const notice = $("#studioEngineNotice");
   if (notice) notice.innerHTML = S.testing.engine === "online"
     ? `<strong>Private engine connected.</strong> Full source-level matching, generation, workshop edits, and PDFs are available through this page.`
-    : `<strong>Cloud mode is still usable.</strong> ${esc(S.testing.engineError)} Job ranking, posting links, and apply flow remain available; draft buttons stay disabled until the private engine is reachable. <button class="act" onclick="retryResumeEngine()">retry connection</button>`;
+    : `<strong>Cloud mode is still usable.</strong> ${esc(S.testing.engineError)} ${cloudQueueOnline()?"Drafts can be saved privately and will dispatch when the Mac worker reconnects.":"Connect Google to enable the private queue."} <button class="act" onclick="retryResumeEngine()">retry connection</button>`;
 }
 function retryResumeEngine() { S.testing.engine="checking"; S.testing.engineError=""; rTesting(); }
 async function refreshResumeLibrary(render=true) {
@@ -3371,10 +3534,20 @@ function selectStudioJob(id) {
 }
 async function queueResumeMode(mode) {
   const selected = jobById(S.testing.selectedId);
-  if (!selected || S.testing.engine !== "online") return;
+  if (!selected) return;
   try {
-    const status = await studioRequest("/api/run", {method:"POST",body:JSON.stringify({job_id:selected.id,mode})});
-    S.testing.activeRunId = status.run_id; S.testing.runStatus = status; renderStudioWorkspace(); pollResumeRun(status.run_id);
+    if (S.testing.engine === "online") {
+      const status = await studioRequest("/api/run", {method:"POST",body:JSON.stringify({job_id:selected.id,mode})});
+      S.testing.activeRunId = status.run_id; S.testing.runStatus = status; renderStudioWorkspace(); pollResumeRun(status.run_id);
+    } else if (cloudQueueOnline()) {
+      const queued = await queueCloudResumeItem(selected, mode);
+      try { await markResumeBatchTailored(selected); }
+      catch (stageError) { toast(`Saved draft, but pipeline stage sync failed: ${stageError.message}`); }
+      S.testing.activeRunId = "";
+      S.testing.runStatus = {status:queued.state||"queued",message:queued.message||"saved in the private cloud queue",job:selected,queue_id:queued.queue_id};
+      renderStudioWorkspace();
+      toast("Saved privately; the Mac worker will pick it up when it reconnects");
+    } else return;
   } catch (error) { S.testing.runStatus = {status:"failed",message:error.message,job:selected}; renderStudioWorkspace(); }
 }
 function pollResumeRun(id) {
@@ -3413,10 +3586,13 @@ function rTesting() {
     if (bankStatus) bankStatus.onchange=()=>{S.testing.bankStatus=bankStatus.value;rTesting();};
     if (bankEra) bankEra.onchange=()=>{S.testing.bankEra=bankEra.value;rTesting();};
     if (S.testing.cloudBank.status==="checking") loadCloudResumeBank(false).then(()=>{if(S.tab==="testing"&&S.testing.bankView)rTesting();});
+    if (S.testing.cloudQueue.status==="checking") loadCloudResumeQueue(false).then(()=>{if(S.tab==="testing"&&S.testing.bankView)rTesting();});
     return;
   }
   if (S.testing.batchView) {
     $("#main").innerHTML = renderResumeBatchView();
+    if (S.testing.cloudQueue.status==="checking") loadCloudResumeQueue(false).then(()=>{if(S.tab==="testing"&&S.testing.batchView)rTesting();});
+    if (S.testing.engine === "checking") loadResumeEngine().then(()=>{if(S.tab==="testing"&&S.testing.batchView)rTesting();});
     return;
   }
   const rows=testingRows();
@@ -3425,8 +3601,9 @@ function rTesting() {
     <span class="chip good">owner only · @${esc(S.auth.login)}</span>
     <h2>Resume Studio</h2>
     <p class="sub">Choose a production posting, tailor it here, and keep the private evidence graph and generated artifacts behind the owner boundary. The website owns the workflow; the Mac engine is the private generation layer.</p>
-    <div class="bar" style="margin:.65rem 0 0"><button class="act primary" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBatch()">Tailor today <span class="chip">${resumeBatchCandidates().length}</span></button><button class="act" onclick="showResumeBank()">Resume bank <span class="chip">${resumeBankGroups(resumeBankEntries().filter(resumeBankCurrentEra)).length} jobs</span></button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><span class="sub">${S.testing.cloudBank.status==="online"?"private cloud bank connected":"private cloud bank checking"}</span></div>
+    <div class="bar" style="margin:.65rem 0 0"><button class="act primary" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBatch()">Tailor today <span class="chip">${resumeBatchCandidates().length}</span></button><button class="act" onclick="showResumeBank()">Resume bank <span class="chip">${resumeBankGroups(resumeBankEntries().filter(resumeBankCurrentEra)).length} jobs</span></button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><span class="sub">${S.testing.cloudBank.status==="online"?"private cloud bank connected":"private cloud bank checking"} · ${S.testing.cloudQueue.status==="online"?`${cloudQueuePendingCount()} private queue item${cloudQueuePendingCount()===1?"":"s"}`:"private queue checking"}</span></div>
     <div id="studioEngineNotice" class="note" style="margin:.65rem 0 0">Checking the private engine…</div>
+    ${cloudQueueSummaryHTML()}
   </section>
   <div class="testing-grid"><section class="lane"><h3>1 · Choose a posting <span class="sub" style="float:right">${rows.length} roles</span></h3>
     <div class="studio-toolbar"><input id="testingQ" type="search" placeholder="search company or role…" value="${esc(S.testing.q)}"><select id="testingSort" aria-label="Sort Studio roles"><option value="resume" ${S.testing.sort==='resume'?'selected':''}>best match</option><option value="new" ${S.testing.sort==='new'?'selected':''}>newest</option><option value="radar" ${S.testing.sort==='radar'?'selected':''}>Radar score</option></select></div>
@@ -3436,8 +3613,9 @@ function rTesting() {
   $("#testingSort").onchange=()=>{S.testing.sort=$("#testingSort").value;rTesting();};
   renderStudioWorkspace();
   if (S.testing.engine === "checking") loadResumeEngine();
-  else { renderStudioWorkspace(); const notice=$("#studioEngineNotice"); if(notice)notice.innerHTML=S.testing.engine==="online"?`<strong>Private engine connected.</strong> Full source-level matching and PDF generation are available.`:`<strong>Cloud mode is still usable.</strong> ${esc(S.testing.engineError||"Start the private engine on the Mac to generate a draft.")} <button class="act" onclick="retryResumeEngine()">retry connection</button>`; }
+  else { renderStudioWorkspace(); const notice=$("#studioEngineNotice"); if(notice)notice.innerHTML=S.testing.engine==="online"?`<strong>Private engine connected.</strong> Full source-level matching and PDF generation are available.`:`<strong>Cloud mode is still usable.</strong> ${esc(S.testing.engineError||"Start the private engine on the Mac to generate a draft.")} ${cloudQueueOnline()?"Drafts can be saved privately and will dispatch when the Mac worker reconnects.":"Connect Google to enable the private queue."} <button class="act" onclick="retryResumeEngine()">retry connection</button>`; }
   if (S.testing.cloudBank.status==="checking") loadCloudResumeBank(false).then(()=>{if(S.tab==="testing"&&!S.testing.bankView)rTesting();});
+  if (S.testing.cloudQueue.status==="checking") loadCloudResumeQueue(false).then(()=>{if(S.tab==="testing"&&!S.testing.bankView)rTesting();});
 }
 
 function toggleScorePreference(name, enabled) {

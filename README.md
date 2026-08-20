@@ -512,6 +512,17 @@ scope begins with the first post-overhaul Google run on 2026-08-08; **all
 history** keeps older experiments available, and sync follows the selected
 scope.
 
+The workspace has two safe operating modes. If the Mac engine is awake, a
+tailoring request runs immediately through the loopback bridge. If it is
+asleep, single tailoring and **Tailor today** batches can still be saved to
+the owner-only private cloud queue; the next open production Studio tab with
+the Mac companion connected dispatches up to two items and mirrors their
+status. The queue carries only public posting metadata and the requested mode,
+never CV text, provider credentials, evidence, or generated artifacts. This
+keeps the local execution path fully available while giving the cloud
+workspace durable work selection instead of pretending a hosted function can
+render the private resume.
+
 The cloud workspace also exposes **Context & Q&A** while the private engine is
 awake. Exact unsupported terms found in postings become one durable question
 per capability, not one question per run. Victor can document where/when and
