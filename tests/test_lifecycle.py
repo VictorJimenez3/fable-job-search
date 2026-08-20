@@ -148,11 +148,23 @@ def test_terminal_owner_notion_page_is_soft_archived(monkeypatch):
 
 
 def test_notion_archive_uses_current_in_trash_field():
+    existing = Mock(status_code=200)
+    existing.json.return_value = {}
     response = Mock()
     response.raise_for_status.return_value = None
-    with patch.object(notion_sync.requests, "patch", return_value=response) as patch_request:
+    with patch.object(notion_sync.requests, "get", return_value=existing), \
+            patch.object(notion_sync.requests, "patch", return_value=response) as patch_request:
         notion_sync.archive_page("secret", "3995d6f4-2cab-81b7-9291-edce7b1639b2")
     assert patch_request.call_args.kwargs["json"] == {"in_trash": True}
+
+
+def test_notion_archive_treats_deleted_page_as_idempotent():
+    existing = Mock(status_code=200)
+    existing.json.return_value = {"in_trash": True}
+    with patch.object(notion_sync.requests, "get", return_value=existing), \
+            patch.object(notion_sync.requests, "patch") as patch_request:
+        notion_sync.archive_page("secret", "3995d6f4-2cab-81b7-9291-edce7b1639b2")
+    patch_request.assert_not_called()
 
 
 def test_closed_application_is_archived_after_two_days(monkeypatch):

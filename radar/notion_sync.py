@@ -205,10 +205,21 @@ def archive_page(token: str, page_id: str) -> None:
 
     ``in_trash`` is the current Notion page-update field.  The older
     ``archived`` alias started returning 400s for some live pages after
-    Notion's 2026 API changes, which left terminal tracker pages retrying on
-    every crawl.
+    Notion's 2026 API changes.  A page already in trash is treated as a
+    successful no-op so deleted tracker pages do not retry forever.
     """
-    r = requests.patch(f"https://api.notion.com/v1/pages/{page_id}",
+    url = f"https://api.notion.com/v1/pages/{page_id}"
+    try:
+        existing = requests.get(url, headers=_headers(token), timeout=20)
+        if existing.status_code == 200:
+            payload = existing.json()
+            if payload.get("in_trash") or payload.get("archived") or payload.get("is_archived"):
+                return
+    except (requests.RequestException, ValueError):
+        # The PATCH below remains the source of truth when the probe is
+        # unavailable or the response is not a page payload.
+        pass
+    r = requests.patch(url,
                        headers=_headers(token), json={"in_trash": True}, timeout=20)
     r.raise_for_status()
 
