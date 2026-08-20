@@ -38,7 +38,7 @@ cat > "$PLIST_PATH" <<PLIST
   </array>
   <key>WorkingDirectory</key><string>$REPO_DIR</string>
   <key>EnvironmentVariables</key>
-  <dict><key>PATH</key><string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string></dict>
+  <dict><key>PATH</key><string>$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string></dict>
   <key>RunAtLoad</key><true/>
   <key>KeepAlive</key><true/>
   <key>ThrottleInterval</key><integer>10</integer>
