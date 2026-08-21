@@ -143,7 +143,7 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   high produced the safest compiled geometry, while max was stopped after
   4:51 without a structured response and is now disabled.
 
-### Current change (lab in progress, 2026-08-21)
+### Current change (verified 2026-08-21)
 
 - **Sealed Luna Max evaluator and broad quality lab:** Resume Studio now uses
   the `resume-evaluator-v2-sealed` critique-only contract. The writer supplies
@@ -170,8 +170,26 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   lost high-information evidence, repeated AI/RAG/backend stories, and failed
   the consensus near-wrap check. This is a qualitative pairwise control, not a
   score or an owner approval of the Merck draft.
-  The active manifest and final receipts must be recorded here after the lab
-  closes; no evaluator result may be altered to force a pass.
+  No evaluator result may be altered to force a pass. The broad cohort
+  selected 86 fetched/matched postings and launched a 12-role full sample
+  with two concurrent full-run workers and 16 match workers. At handoff, 7
+  runs had completed with complete four-role panels, 4 were honest
+  quality/layout rejections, and 1 was still running; two earlier abandoned
+  drafting directories were excluded from those counts.
+
+- **Post-audit density prerequisite receipt (DECISION #155):** the patched
+  Stryker run at
+  `CV/.resume_studio/benchmarks/stryker-post-repair-density-20260821/runs/78044c21145b`
+  completed in 3,557.3 seconds with 26 Codex Luna calls. All four sealed
+  roles completed in each recorded round. Its audit repair failed the
+  one-page geometry prerequisite, so post-repair density was correctly
+  `not_run`; final geometry recovery restored three authorized source lines
+  and passed a fresh panel. The tailored version still remained
+  `do_not_ship`/`blocked` with zero gains, loss weight 15, five regressions,
+  one blocker, and twelve questions, so the immutable base became the primary
+  artifact and the candidate remained diagnostic. The code now records this
+  prerequisite outcome explicitly instead of leaving an ambiguous absence in
+  `audit_repair_log`.
 
 - **Compiled space search is bounded:** measured-capacity expansion still
   permits direct additions, single removals, and two-bullet swaps, but its
