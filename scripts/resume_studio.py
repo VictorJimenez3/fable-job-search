@@ -7226,6 +7226,26 @@ def _line_compaction_candidates(text: str, source_text: str) -> List[str]:
     add(re.sub(r"\bGit, GitHub\b", "Git/GitHub", current, flags=re.I))
     add(re.sub(r"\bTesting, Debugging\b", "Testing/Debugging", current, flags=re.I))
     add(re.sub(r"\bVector Databases,\s*", "", current, flags=re.I))
+    # These are conservative, source-preserving reductions for common
+    # latency/fallback phrasing. They remove connective filler only; they do
+    # not add a capability or change the outcome being claimed. Keeping them
+    # deterministic matters because a final geometry repair must not become a
+    # second unbounded writer pass.
+    add(re.sub(
+        r"\breturning a safe fallback when processing lagged\b",
+        "with safe fallback on lag", current, flags=re.I,
+    ))
+    add(re.sub(
+        r"\bKept live conversations responsive with asynchronous emotion analysis, returning a safe fallback when processing lagged\b",
+        "Kept conversations responsive via asynchronous emotion analysis, with safe fallback on lag",
+        current, flags=re.I,
+    ))
+    add(re.sub(
+        r"\breturning a safe fallback when (?:processing )?lagged\b",
+        "with safe fallback on lag", current, flags=re.I,
+    ))
+    add(re.sub(r"\bKept live conversations responsive with\b", "Kept conversations responsive via", current, flags=re.I))
+    add(re.sub(r"\bwhen processing lagged\b", "on lag", current, flags=re.I))
     add(re.sub(
         r"\bwhile handling (a|an|the) (.+?) with\b",
         r"on \1 \2 using", current, flags=re.I,
@@ -8990,6 +9010,12 @@ def run_tailoring(
     write_json(run_dir / "revision_log.json", revision_log)
     audit_repair_records: List[Dict[str, Any]] = []
     audit_repair_log: List[Dict[str, Any]] = []
+    final_geometry_recovery: Dict[str, Any] = {
+        "attempted": False,
+        "status": "not_needed",
+        "restored_source_ids": [],
+        "compactions": [],
+    }
     try:
         base_tex_for_audit = (cv_root(repo_root()) / CANONICAL_TEMPLATE).read_text(errors="replace")
     except OSError:
@@ -9135,6 +9161,84 @@ def run_tailoring(
                         "status": "rejected",
                         "reason": "repair candidate failed compilation or validation: %s" % exc,
                     })
+
+    # A repair can be source-valid and still leave the previously selected
+    # candidate with a wrapped/near-wrapped line.  The hard geometry gate must
+    # remain hard, but this is a safe last-mile recovery opportunity before
+    # rejecting the entire run: restore the exact authorized source wording,
+    # try bounded deterministic compactions, then re-run the sealed panel on
+    # the exact recovered artifact. No evaluator criterion or pass threshold
+    # is changed here.
+    if not (layout.get("horizontal") or {}).get("pass"):
+        final_geometry_recovery["attempted"] = True
+        final_geometry_recovery["status"] = "candidate_unsafe"
+        recovery_root = run_dir / "final_geometry_recovery"
+        prior_geometry_state = (plan, chosen, layout, preview, critique, review_available)
+        try:
+            recovered_plan, restored_ids = restore_wrapped_source_text(
+                plan, layout, catalog,
+            )
+            final_geometry_recovery["restored_source_ids"] = list(restored_ids)
+            source_root = recovery_root / "source_restore"
+            _, source_layout, _ = render_candidate(recovered_plan, source_root)
+            compacted_plan, _, compactions = compact_plan_to_geometry(
+                recovered_plan, source_layout, catalog, recovery_root,
+            )
+            final_geometry_recovery["compactions"] = list(compactions)
+            changed = bool(restored_ids or compactions)
+            if changed:
+                candidate_root = recovery_root / "candidate"
+                candidate_tex, candidate_layout, candidate_preview = render_candidate(
+                    compacted_plan, candidate_root,
+                )
+                candidate_safe = bool(
+                    candidate_layout.get("compiled")
+                    and candidate_layout.get("pages") == 1
+                    and not candidate_layout.get("overfull")
+                    and (candidate_layout.get("horizontal") or {}).get("pass")
+                )
+                final_geometry_recovery["candidate"] = {
+                    "safe_render": candidate_safe,
+                    "wrap_count": (candidate_layout.get("horizontal") or {}).get("wrap_count", 0),
+                    "near_wrap_count": (candidate_layout.get("horizontal") or {}).get("near_wrap_count", 0),
+                }
+                if candidate_safe:
+                    # Critique the recovered artifact, not the stale unsafe
+                    # candidate. A deterministic wording change still needs a
+                    # fresh complete panel before it can be selected.
+                    plan, chosen, layout, preview = (
+                        compacted_plan, candidate_tex, candidate_layout, candidate_preview,
+                    )
+                    recovery_critique, recovery_records, recovery_available = critique_current(
+                        "final_geometry_critique"
+                    )
+                    critique_records.extend(recovery_records)
+                    if recovery_available:
+                        critique = recovery_critique
+                        review_available = recovery_available
+                        packing["final_geometry_recovery"] = {
+                            "restored_source_ids": list(restored_ids),
+                            "compactions": list(compactions),
+                            "candidate": final_geometry_recovery.get("candidate", {}),
+                        }
+                        write_json(run_dir / "content_plan.json", plan)
+                        write_json(run_dir / "layout_packing.json", packing)
+                        chosen, layout, preview = render_candidate(plan, run_dir)
+                        final_geometry_recovery["status"] = "accepted_after_sealed_recheck"
+                    else:
+                        final_geometry_recovery["status"] = "rejected_incomplete_sealed_recheck"
+                        plan, chosen, layout, preview, critique, review_available = prior_geometry_state
+                else:
+                    final_geometry_recovery["status"] = "rejected_candidate_unsafe"
+                    plan, chosen, layout, preview, critique, review_available = prior_geometry_state
+            else:
+                final_geometry_recovery["status"] = "no_safe_deterministic_change"
+        except (OSError, RuntimeError, ValueError) as exc:
+            final_geometry_recovery["status"] = "recovery_error"
+            final_geometry_recovery["error"] = str(exc)
+            plan, chosen, layout, preview, critique, review_available = prior_geometry_state
+        write_json(run_dir / "final_geometry_recovery.json", final_geometry_recovery)
+
     deterministic = deterministic_review(context, chosen, layout, plan=plan, catalog=catalog)
     if not (layout.get("horizontal") or {}).get("pass"):
         rejection = {
@@ -9266,6 +9370,7 @@ def run_tailoring(
         "queue_id": queue_id,
         "run_id": run_id,
         "line_compactions": line_compactions,
+        "final_geometry_recovery": final_geometry_recovery,
         "audit_repair_log": audit_repair_log,
         "post_line_density": post_line_density,
         "validation_warnings": synthesis_data.get("validation_warnings", []),
@@ -9346,6 +9451,7 @@ def run_tailoring(
             "job.json", "report.json", "job_context.json", "brief.json", "evidence_catalog.json", "evidence_graph_context.json",
             "job_intelligence.json", "tailoring_audit.json",
             "audit_repair.json" if audit_repair_records else None,
+            "final_geometry_recovery.json" if final_geometry_recovery.get("attempted") else None,
             "gap_analysis.json" if generation else None,
             "candidate_plan.json", "content_plan.json", "layout_packing.json", "critique.json", "revision_log.json",
             "space_expansion.json" if space_expansion_records else None,

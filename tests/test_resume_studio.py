@@ -745,6 +745,9 @@ def test_line_compaction_shortens_safe_connective_phrases():
     candidates = rs._line_compaction_candidates(skills, skills)
     assert "Data & Tools: Data Engineering, Data Visualization, SQLite, Vector Databases, Git/GitHub, SharePoint, Testing, Debugging, Version Control" in candidates
     assert "Data & Tools: Data Engineering, Data Visualization, SQLite, Git, GitHub, SharePoint, Testing, Debugging, Version Control" in candidates
+    fallback = "Kept live conversations responsive with asynchronous emotion analysis, returning a safe fallback when processing lagged"
+    fallback_candidates = rs._line_compaction_candidates(fallback, fallback)
+    assert "Kept conversations responsive via asynchronous emotion analysis, with safe fallback on lag" in fallback_candidates
 
 
 def test_enhanced_plan_can_synthesize_multiple_authorized_source_lines():
