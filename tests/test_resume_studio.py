@@ -1677,6 +1677,26 @@ def test_base_winner_archives_candidate_without_touching_immutable_source(monkey
     assert (run_dir / "base_control.tex").read_text() == "canonical-tex"
 
 
+def test_repair_feedback_exposes_unexplained_control_losses_to_writer():
+    feedback = rs.tailoring_repair_feedback(
+        {"decision": "do_not_ship", "recommended_version": "base", "tailoring": "regressed", "findings": []},
+        {
+            "canonical_bullet_count": 12,
+            "unexplained_removed_bullets": [{
+                "source_id": "project:distinct:b2", "entry_id": "project:distinct",
+                "text": "Built a distinct systems artifact",
+            }],
+            "keyword_coverage": {"terms": [{"term": "Git", "supported": True, "comparison_status": "lost"}]},
+            "project_swaps": {"swapped_in": ["repetitive"], "swapped_out": ["distinctive"]},
+            "portfolio_diagnostics": {"warnings": ["overlap"], "blocking_warnings": []},
+            "explained_tradeoffs": [],
+        },
+    )
+    assert feedback["comparison_control"]["unexplained_removed_bullets"][0]["source_id"] == "project:distinct:b2"
+    assert feedback["comparison_control"]["lost_supported_terms"] == ["Git"]
+    assert "canonical evidence as the control" in feedback["rules"][1]
+
+
 def test_tailoring_audit_keeps_fit_separate_from_tailoring_and_blocks_hard_failures():
     context = {"posting_text": "Required: Python. " * 40, "job_intelligence": {
         "posting_available": True, "posting_snapshot_hash": "post", "hash": "job-intel",

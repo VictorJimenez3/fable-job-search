@@ -2319,3 +2319,13 @@ generated PDF primary; `base` and `blocked` make the immutable canonical PDF
 primary and retain the generated artifact as `tailored_candidate.pdf`, with
 `base_control.tex` and a `winner_artifact` receipt. This changes no evaluator
 rubric, threshold, or evidence authority and never edits the immutable source.
+
+## 152. Resume Studio makes control losses explicit to repair writers (2026-08-21)
+
+The broad lab showed repeated repair behavior: the writer understood critic
+prose but did not receive a compact inventory of which canonical bullets and
+supported terms had actually been lost. Repair feedback now includes bounded
+unexplained canonical losses, lost supported terminology, project swaps, and
+portfolio-overlap warnings, with explicit rules to restore or justify those
+losses before adding new wording. This remains a writer-input improvement only;
+the sealed evaluator packet, rubric hash, and pass thresholds are unchanged.
