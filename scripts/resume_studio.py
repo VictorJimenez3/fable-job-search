@@ -82,10 +82,94 @@ CODEX_REVIEW_MODE = "codex_luna_multi_role_jury"
 SEALED_EVALUATOR_CONTRACT = resume_evaluator.EVALUATOR_CONTRACT_VERSION
 CODEX_RECHECK_EFFORT = "max"
 CODEX_CRITIC_ROLES = resume_evaluator.ROLE_DEFINITIONS
+QUALITY_PROFILE_DEFAULT = "balanced"
+QUALITY_PROFILES = {
+    # The deep lane remains available for controlled comparisons and difficult
+    # owner-reviewed jobs. It preserves the original frontier behavior.
+    "deep": {
+        "author_effort": "max",
+        "line_editor_effort": "max",
+        "revision_rounds": 2,
+        "model_space_expansion": True,
+        "model_line_editor": True,
+        "line_editor_fallback": False,
+        "audit_repair": True,
+        "evaluator_timeout_seconds": 8 * 60,
+    },
+    # Balanced is the normal application lane: deterministic density and
+    # control-preservation run first, while Luna is reserved for decisions the
+    # compiler cannot safely make. This removes two common serial calls without
+    # weakening the sealed evaluator or any hard gate.
+    "balanced": {
+        # High remains the approved Luna lane but avoids spending the Max
+        # budget on the first structured plan; the independent evaluator stays
+        # Max and can reject an overconfident author.
+        "author_effort": "high",
+        "line_editor_effort": "high",
+        # The normal lane is a bounded final-candidate experiment: let the
+        # sealed panel judge the compiled candidate once, then select base or
+        # tailored. Critic-driven rewriting remains available in ``deep``;
+        # making it routine caused revision + audit-repair cascades to dominate
+        # wall time without producing a positive Stryker comparison.
+        "revision_rounds": 0,
+        "model_space_expansion": False,
+        "model_line_editor": False,
+        "line_editor_fallback": True,
+        "audit_repair": False,
+        # A single Luna Max role occasionally needs just over six minutes.
+        # The normal lane is still bounded to one panel; this ceiling avoids
+        # turning provider jitter into a false incomplete review while keeping
+        # the old multi-round cascade out of the default path.
+        "evaluator_timeout_seconds": 8 * 60,
+    },
+}
+CANONICAL_CONTROL_PROMPT_LIMIT = 12
+CANONICAL_CONTROL_PROMPT_CHARS = 7000
 REVIEW_CRITERIA = (
     "factual", "target_fit", "evidence", "distinctiveness", "clarity", "privacy",
 )
 STATUS_MULTIPLIER = {"pass": 1.0, "partial": 0.5, "fail": 0.0}
+
+
+def normalize_quality_profile(value: Any) -> str:
+    """Return a known authoring profile without changing evaluator policy."""
+    name = str(value or QUALITY_PROFILE_DEFAULT).strip().lower()
+    return name if name in QUALITY_PROFILES else QUALITY_PROFILE_DEFAULT
+
+
+def actionable_unsupported_claims(values: Any) -> Tuple[List[str], List[str]]:
+    """Separate actual unsupported-claim findings from explicit negations.
+
+    Critic prompts ask for a list, and Luna sometimes places a sentence such
+    as ``No unsupported claim was identified; ... are unsupported target
+    terms, not claims made`` in that field. Treating that sentence as a
+    factual violation is an evaluator false positive: it describes a role
+    gap, not a fabricated resume statement. Preserve the sentence for audit
+    visibility while excluding it from the hard factual gate.
+    """
+    if not isinstance(values, list):
+        values = [values]
+    actionable: List[str] = []
+    negated: List[str] = []
+    explicit_no_claim = re.compile(
+        r"^\s*no\b.*\b(?:unsupported|fabricated|exaggerated|false|hallucinated)\b"
+        r".*\b(?:claim|bullet|resume)\b.*\b(?:identified|detected|found|present)\b",
+        re.I | re.S,
+    )
+    not_a_claim = re.compile(
+        r"\b(?:not|never)\s+(?:an?\s+)?(?:claim|bullet|resume claim)\b"
+        r"|\b(?:not|never)\s+claims?\s+(?:made|rendered|present)\b",
+        re.I,
+    )
+    for value in values:
+        text = str(value or "").strip()
+        if not text:
+            continue
+        if explicit_no_claim.search(text) or not_a_claim.search(text):
+            negated.append(text[:700])
+        else:
+            actionable.append(text[:700])
+    return actionable[:20], negated[:20]
 
 # A critic's ``blocking_issues`` field is intentionally broad: it gives a
 # writer useful repair material, but it must not be treated as a list of
@@ -101,8 +185,11 @@ CRITIC_HARD_ISSUE_RE = re.compile(
     r"visa\s+(?:conflict|requirement)|credential\s+(?:conflict|absent)|"
     r"degree\s+(?:conflict|required|mismatch)|parse(?:r|ing)?\s+(?:failure|error)|"
     r"compil(?:e|ation)\s+(?:failure|error)|near[- ]?wrap\w*|wrap\w*\s+(?:bullet|line)|"
-    r"right[- ]side\s+slack|one[- ]line\s+(?:safety|check)|layout(?:\s+(?:failure|defect|check))?|"
-    r"readability(?:\s+(?:failure|defect|risk))?)\b",
+    r"right[- ]side\s+slack|one[- ]line\s+(?:safety|check)|"
+    r"layout\s+(?:failure|defect|check|gate|unsafe|overflow|regression|problem|issue|contract)|"
+    r"layout\s+(?:has|shows?|contains?)\s+(?:a\s+)?(?:material\s+)?(?:failure|defect|overflow|problem|issue)|"
+    r"readability\s+(?:failure|defect|risk|regression|problem|issue)|"
+    r"(?:poor|material|unreadable|fragile)\s+readability)\b",
     re.I,
 )
 CRITIC_FIT_GAP_RE = re.compile(
@@ -321,7 +408,10 @@ GENERIC_REWRITE_TOKENS = {
 # page packer decides how much evidence the target can honestly carry.
 MAX_CANDIDATE_BULLETS = 60
 MAX_RENDERED_BULLETS = 40
-MIN_TOTAL_BULLETS = 0
+# A valid tailored artifact must contain substantive evidence. Section floors
+# remain adaptive (an experience/project section may be omitted), but the
+# compiler may never satisfy the one-page contract by deleting every bullet.
+MIN_TOTAL_BULLETS = 1
 MAX_TOTAL_BULLETS = MAX_RENDERED_BULLETS
 MAX_AUTHORITY_CONTEXT_CHARS = 16000
 MAX_METHODOLOGY_CONTEXT_CHARS = 12000
@@ -1426,6 +1516,144 @@ def canonical_resume_benchmark(catalog: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
+def canonical_control_evidence(
+    catalog: Dict[str, Any], keyword_strategy: Optional[Dict[str, Any]] = None,
+    limit: int = 24,
+) -> List[Dict[str, Any]]:
+    """Rank high-information canonical lines used as a packing/control guard.
+
+    This is deliberately not a preservation mandate. It gives the author and
+    compiler a visible list of the base resume's strongest proof points so a
+    lower-information keyword or project swap must clear a higher bar.
+    """
+    supported_terms = [
+        str(item.get("term") or "")
+        for item in (keyword_strategy or {}).get("terms") or []
+        if isinstance(item, dict) and item.get("supported") and str(item.get("term") or "")
+    ]
+    ranked: List[Dict[str, Any]] = []
+    for entry in (catalog.get("entries") or {}).values():
+        for bullet in entry.get("bullets") or []:
+            if not _is_canonical_source(bullet.get("source")):
+                continue
+            source_id = str(bullet.get("id") or "")
+            text = _latex_plain(str(bullet.get("text") or ""))
+            if not source_id or not text:
+                continue
+            numeric = sorted(_resume_numeric_anchors(text))
+            families = _portfolio_signal_families(text)
+            matched_terms = sorted({term for term in supported_terms if _keyword_present(term, text)})
+            reasons = []
+            if numeric:
+                reasons.append("quantified proof")
+            if families:
+                reasons.append("distinct technical signal")
+            if matched_terms:
+                reasons.append("supported target terminology")
+            # Numeric anchors and role-specific terms are the strongest
+            # deterministic clues, but the score is only a packing tie-breaker.
+            control_priority = (
+                50
+                + min(18, 6 * len(numeric))
+                + min(12, 4 * len(families))
+                + min(15, 5 * len(matched_terms))
+            )
+            ranked.append({
+                "source_id": source_id,
+                "entry_id": str(entry.get("id") or ""),
+                "text": text,
+                "control_priority": control_priority,
+                "reasons": reasons,
+                "numeric_anchors": numeric[:8],
+                "signal_families": families[:8],
+                "supported_terms": matched_terms[:8],
+            })
+    ranked.sort(key=lambda item: (-int(item.get("control_priority") or 0), str(item.get("source_id") or "")))
+    return ranked[:max(1, int(limit))]
+
+
+def canonical_control_plan(catalog: Dict[str, Any]) -> Dict[str, Any]:
+    """Build a source-addressed fallback from the immutable resume only.
+
+    This is an execution fallback, not a second author. If Luna returns an
+    empty or malformed plan, Resume Studio should still be able to compile and
+    compare a known control rather than fail the application with no artifact.
+    Every selected line is copied verbatim from the canonical template and is
+    still sent through normal packing, geometry, and sealed evaluation.
+    """
+    sections = {"experience": "experiences", "project": "projects", "leadership": "leadership"}
+    value: Dict[str, Any] = {
+        "positioning_thesis": "Use the immutable resume as the safe control when the author lane is unavailable.",
+        "selected_evidence": [],
+        "excluded_evidence": [],
+        "experiences": [],
+        "projects": [],
+        "leadership": [],
+        "revision_notes": ["Deterministic canonical-control fallback; no new claims or rewrites."],
+        "decision_ledger": [],
+        "front_matter_policy": {"coursework": "keep", "awards": "keep"},
+    }
+    control_scores = canonical_control_scores(catalog)
+    for entry in (catalog.get("entries") or {}).values():
+        section = sections.get(str(entry.get("kind") or ""))
+        if not section:
+            continue
+        bullets = [
+            bullet for bullet in (entry.get("bullets") or [])
+            if _is_canonical_source(bullet.get("source"))
+        ]
+        if not bullets:
+            continue
+        entry_id = str(entry.get("id") or "")
+        value[section].append({
+            "source_id": entry_id,
+            "bullets": [{
+                "source_id": str(bullet.get("id") or ""),
+                "source_ids": [str(bullet.get("id") or "")],
+                "text": str(bullet.get("text") or ""),
+                "evidence_ids": [str(bullet.get("id") or "")],
+                "priority": int(control_scores.get(str(bullet.get("id") or ""), 75)),
+                "candidate_rationale": "Canonical source line retained verbatim as the control fallback.",
+            } for bullet in bullets if str(bullet.get("id") or "") and str(bullet.get("text") or "")],
+            "why": "Canonical immutable control entry retained verbatim.",
+        })
+        value["selected_evidence"].append({
+            "source": entry_id,
+            "why": "Immutable canonical source used because the author response was unavailable or invalid.",
+        })
+    return value
+
+
+def canonical_control_scores(
+    catalog: Optional[Dict[str, Any]] = None,
+    keyword_strategy: Optional[Dict[str, Any]] = None,
+) -> Dict[str, float]:
+    """Return deterministic control bonuses for compile-time removal search."""
+    return {
+        str(item.get("source_id") or ""): float(item.get("control_priority") or 0)
+        for item in canonical_control_evidence(catalog or {}, keyword_strategy)
+        if str(item.get("source_id") or "")
+    }
+
+
+def canonical_control_prompt(
+    catalog: Dict[str, Any], keyword_strategy: Optional[Dict[str, Any]] = None,
+) -> str:
+    """Return a bounded control receipt for author prompts.
+
+    The full evidence catalog remains available to the writer. This compact
+    section exists to prevent repeated prompt copies of every canonical line
+    from becoming a latency tax across authoring and repair calls.
+    """
+    return json.dumps(
+        canonical_control_evidence(
+            catalog, keyword_strategy, limit=CANONICAL_CONTROL_PROMPT_LIMIT,
+        ),
+        indent=2,
+        ensure_ascii=False,
+    )[:CANONICAL_CONTROL_PROMPT_CHARS]
+
+
 def _portfolio_signal_families(text: Any) -> List[str]:
     plain = _latex_plain(str(text or ""))
     return [
@@ -1933,6 +2161,58 @@ def build_change_findings(
     # Suppressed near-copy rewrites are a successful safety action, not a
     # negative finding.  They remain inspectable in content_changes.
 
+    # An added source line is not automatically a gain: it may be filler or
+    # duplicate the base story. Count it positively only when the sealed panel
+    # independently named a matching gained strength. This fixes the old
+    # blind spot where every new evidence line was invisible to the uplift
+    # audit, without turning source selection into keyword scoring.
+    comparison = review.get("portfolio_comparison") or {}
+    gained_strengths = [
+        str(value).strip()
+        for value in comparison.get("gained_strengths") or []
+        if str(value).strip()
+    ]
+    gain_stop = {
+        "added", "better", "candidate", "clear", "concrete", "direct", "evidence",
+        "explicit", "gained", "new", "relevant", "resume", "role", "signal",
+        "strong", "target", "technical", "the", "this", "visible", "work",
+    }
+    high_signal = {
+        "access", "algorithm", "api", "async", "authentication", "cache", "dashboard",
+        "document", "encrypted", "endpoint", "fallback", "flask", "hpc", "jwt",
+        "metric", "pipeline", "prototype", "quantum", "react", "recall", "rest",
+        "row", "security", "sqlite", "validation", "visualization",
+    }
+
+    def strength_tokens(value: Any) -> set:
+        tokens = set()
+        for token in _resume_tokens(_latex_plain(str(value or ""))):
+            normalized = token.rstrip("s")
+            if len(normalized) >= 4 and normalized not in gain_stop:
+                tokens.add(normalized)
+        return tokens
+
+    normalized_gains = [(strength, strength_tokens(strength)) for strength in gained_strengths]
+    used_gained_strengths = set()
+    for added in changes.get("added_bullets") or []:
+        source_id = str(added.get("source_id") or "")
+        bullet_tokens = strength_tokens(added.get("text"))
+        matches = []
+        for strength, gain_tokens in normalized_gains:
+            overlap = bullet_tokens & gain_tokens
+            high_overlap = overlap & high_signal
+            if (len(overlap) >= 2 or high_overlap) and strength.casefold() not in used_gained_strengths:
+                matches.append(strength)
+        if matches:
+            used_gained_strengths.update(value.casefold() for value in matches)
+            add(
+                "KEEP_GOOD", "warning",
+                "Sealed critic panel confirmed a target-relevant evidence gain: %s."
+                % "; ".join(matches[:2]),
+                [source_id],
+                action="Retain this authorized line unless a later complete panel identifies a material regression.",
+            )
+
     coverage = changes.get("keyword_coverage") or {}
     for item in coverage.get("terms") or []:
         term = str(item.get("term") or "")
@@ -2017,9 +2297,9 @@ def build_change_findings(
                 action="Confirm the missing condition during owner review.",
             )
 
-    unsupported = review.get("unsupported_claims") or []
-    if not isinstance(unsupported, list):
-        unsupported = [unsupported]
+    unsupported, _ignored_unsupported = actionable_unsupported_claims(
+        review.get("unsupported_claims") or []
+    )
     for claim in unsupported[:20]:
         add(
             "BLOCKER", "critical",
@@ -2159,6 +2439,13 @@ def build_tailoring_audit(
     if hard_failures or finding_blockers:
         recommended_version = "blocked"
         decision = "do_not_ship"
+    elif not review_available:
+        # Partial critic findings remain useful diagnostics, but they are not
+        # an independent comparative decision.  Never promote a tailored
+        # artifact from an incomplete panel; the canonical base is the safe
+        # primary until the owner can review or a complete panel returns.
+        recommended_version = "review"
+        decision = "needs_review"
     elif tailoring == "regressed":
         recommended_version = "base"
         decision = "prefer_base"
@@ -2282,7 +2569,10 @@ def final_winner_version(audit: Dict[str, Any]) -> str:
     """
     audit = audit if isinstance(audit, dict) else {}
     recommendation = str(audit.get("recommended_version") or "review").lower()
-    return "base" if recommendation in {"base", "blocked"} else "tailored"
+    # ``review`` is deliberately fail-closed.  It may contain useful partial
+    # diagnostics, but it has not earned the right to replace the canonical
+    # control artifact as the primary output.
+    return "base" if recommendation in {"base", "blocked", "review"} else "tailored"
 
 
 def adopt_base_control_winner(
@@ -2295,6 +2585,7 @@ def adopt_base_control_winner(
     generated candidate is retained under an explicit diagnostic filename so
     the owner can inspect exactly what lost the comparison.
     """
+    recommendation = str((audit or {}).get("recommended_version") or "review").lower()
     result: Dict[str, Any] = {
         "winner_version": final_winner_version(audit),
         "primary_artifact": run_pdf_path(run_dir).name,
@@ -2335,6 +2626,9 @@ def adopt_base_control_winner(
         ),
         "primary_preview": run_preview_path(run_dir).name if rendered_preview else "",
         "reason": (
+            "The critic panel was incomplete; the canonical base was retained as the safe primary and the "
+            "generated candidate was retained as tailored_candidate.pdf for diagnostic comparison."
+            if recommendation == "review" else
             "The sealed comparative audit preferred the canonical base; the generated candidate was retained "
             "as tailored_candidate.pdf for diagnostic comparison."
         ),
@@ -2431,6 +2725,8 @@ def tailoring_repair_prompt(
         + json.dumps(catalog_for_prompt(catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
         + "\n\nCanonical/current benchmark:\n"
         + json.dumps(canonical_resume_benchmark(catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
+        + "\n\nHigh-information canonical control evidence:\n"
+        + canonical_control_prompt(catalog, context.get("target_keywords"))
         + "\n\nMethodology:\n"
         + resume_methodology_context(repo_root())[:MAX_METHODOLOGY_CONTEXT_CHARS]
     )
@@ -4482,6 +4778,11 @@ Victor-specific guardrails:
   evidence, replacement or exclusion, target signal, why the change is
   stronger, and important signal lost. Leave it empty when no substantive
   change is justified.
+- Treat the high-information canonical lines listed below as control evidence.
+  Do not remove a quantified metric, validation result, integration mechanism,
+  or communication/ownership proof merely to make a project or keyword look
+  more tailored. A replacement must add a clearly distinct, target-relevant
+  proof point; if it does not, preserve the control line and explain the choice.
 - Return front_matter_policy with coursework and awards set to keep unless
   reclaiming that flexible space is preferable to removing strong technical
   evidence.
@@ -4531,6 +4832,7 @@ Victor-specific guardrails:
     generation_text = json.dumps(
         context.get("generation_strategy") or {}, indent=2, ensure_ascii=False,
     )
+    control_text = canonical_control_prompt(catalog, context.get("target_keywords"))
     return (
         "You are the "
         + role
@@ -4554,6 +4856,8 @@ Victor-specific guardrails:
             + front_matter_text[:8000]) if generation else "")
         + "\n\nCanonical/current benchmark (comparison point, not a preservation rule):\n"
         + benchmark_text[:MAX_CATALOG_PROMPT_CHARS]
+        + "\n\nHigh-information canonical control evidence (preserve unless a stronger replacement is explicit):\n"
+        + control_text[:12000]
         + "\n\nTarget-ranked evidence graph nodes (authority and claim_allowed are binding):\n"
         + graph_text[:MAX_GRAPH_PROMPT_CHARS]
         + "\n\nExact ATS keyword strategy:\n"
@@ -4605,6 +4909,8 @@ def synthesis_prompt(
         + json.dumps(catalog_for_prompt(catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
         + "\n\nCanonical/current benchmark (comparison point, not a preservation rule):\n"
         + json.dumps(canonical_resume_benchmark(catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
+        + "\n\nHigh-information canonical control evidence (do not trade away for a keyword-only change):\n"
+        + canonical_control_prompt(catalog, context.get("target_keywords"))
         + "\n\nTarget-ranked evidence graph:\n"
         + json.dumps(evidence_context(graph, context, str(context.get("posting_text") or "")) if graph else [], indent=2, ensure_ascii=False)[:MAX_GRAPH_PROMPT_CHARS]
         + "\n\nCV authority dossier:\n"
@@ -4697,6 +5003,8 @@ def reviewer_prompt(
         + json.dumps(catalog_for_prompt(catalog or {}), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
         + "\n\nCanonical/current benchmark (comparison point, not a preservation rule):\n"
         + json.dumps(canonical_resume_benchmark(catalog or {}), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
+        + "\n\nHigh-information canonical control evidence:\n"
+        + canonical_control_prompt(catalog or {}, context.get("target_keywords"))
         + "\n\nDeterministic portfolio diagnostics:\n"
         + json.dumps(portfolio_diagnostics(plan or {}, catalog or {}), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
         + "\n\nAuthorized evidence context:\n"
@@ -4746,6 +5054,8 @@ def revision_prompt(
         + json.dumps(catalog_for_prompt(catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
         + "\n\nCanonical/current benchmark (comparison point, not a preservation rule):\n"
         + json.dumps(canonical_resume_benchmark(catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
+        + "\n\nHigh-information canonical control evidence:\n"
+        + canonical_control_prompt(catalog, context.get("target_keywords"))
         + "\n\nDeterministic portfolio diagnostics:\n"
         + json.dumps(portfolio_diagnostics(plan, catalog), indent=2, ensure_ascii=False)[:MAX_CATALOG_PROMPT_CHARS]
         + "\n\nMethodology:\n"
@@ -5647,7 +5957,22 @@ def deterministic_space_additions(
         score += 8.0 if placement == "append_bullet" else 0.0
         score += max(0, 3 - min(entry_bullet_count, 3))
         score += 6.0 * sum(_keyword_present(term, text) for term in supported_terms)
-        score += 2.0 * sum(bool(re.search(pattern, text, re.I)) for pattern in PORTFOLIO_SIGNAL_PATTERNS.values())
+        families = _portfolio_signal_families(text)
+        score += 2.0 * len(families)
+        # When the page is full, a deterministic replacement should prefer a
+        # genuinely distinct mechanism or externally validated result over a
+        # second generic AI/backend line. This remains a tie-breaker; the
+        # sealed panel still decides whether the swap helped the job.
+        if "external_validation" in families:
+            score += 8.0
+        if "algorithms_validation" in families:
+            score += 4.0
+        if re.search(
+            r"\b(?:quantum|qubit|brownian|monte\s+carlo|historical[- ]market|"
+            r"knowledge[- ]graph|transcript|coordination|simulation|clustering)\b",
+            text, re.I,
+        ):
+            score += 8.0
         if re.search(r"\b\d[\d,.]*\+?%?|\$\d", text):
             score += 3.0
         if re.search(r"\b(?:architected|engineered|implemented|designed|built|trained|orchestrated|pipeline|model|api|database)\b", text, re.I):
@@ -5900,6 +6225,273 @@ def expand_into_measured_space(
             if applied else "No unused verified line earned the available page space without displacing stronger evidence."
         ),
     }
+
+
+def deterministic_distinctive_replacement(
+    plan: Dict[str, Any], catalog: Dict[str, Any],
+    graph: Optional[Dict[str, Any]], keyword_strategy: Optional[Dict[str, Any]],
+    run_dir: Path,
+) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+    """Try one bounded full-page swap for stronger unused evidence.
+
+    Measured whitespace is not the only useful capacity signal: a lower-value
+    selected bullet can be worth replacing with a distinctive, authorized
+    two-bullet project. This helper is intentionally deterministic and
+    single-shot. It cannot add unsupported text, displace core experience, or
+    bypass the later sealed panel; failed geometry restores the prior plan.
+    """
+    additions = deterministic_space_additions(
+        plan, catalog, graph=graph, keyword_strategy=keyword_strategy,
+    )
+    new_groups: Dict[str, List[Dict[str, Any]]] = {}
+    appends: List[Dict[str, Any]] = []
+    for item in additions:
+        entry_id = str(item.get("entry_id") or "")
+        if str(item.get("placement") or "") == "new_entry":
+            new_groups.setdefault(entry_id, []).append(item)
+        else:
+            appends.append(item)
+
+    def distinctiveness(item: Dict[str, Any]) -> float:
+        text = _latex_plain(str(item.get("text") or ""))
+        families = _portfolio_signal_families(text)
+        score = 3.0 * len(families)
+        score += 10.0 if "external_validation" in families else 0.0
+        score += 5.0 if "algorithms_validation" in families else 0.0
+        score += 9.0 if re.search(
+            r"\b(?:quantum|qubit|brownian|monte\s+carlo|historical[- ]market|"
+            r"knowledge[- ]graph|transcript|coordination|simulation|clustering)\b",
+            text, re.I,
+        ) else 0.0
+        score += 2.0 * len(_resume_numeric_anchors(text))
+        return score
+
+    groups = [
+        sorted(group, key=lambda item: (-distinctiveness(item), str(item.get("source_id") or "")))
+        for group in new_groups.values()
+        if len(group) >= 2
+    ]
+    groups.sort(key=lambda group: (-sum(distinctiveness(item) for item in group), str(group[0].get("entry_id") or "")))
+    candidates = groups[0] if groups else ([max(appends, key=distinctiveness)] if appends else [])
+    if not candidates:
+        return plan, {
+            "attempted": False,
+            "status": "not_available",
+            "candidates": [],
+            "applied": [],
+            "replaced": [],
+        }
+    prior = copy.deepcopy(plan)
+    replacement, result = expand_into_measured_space(
+        plan, candidates, catalog, graph, run_dir,
+    )
+    if not result.get("applied"):
+        return plan, {
+            "attempted": True,
+            "status": "rejected",
+            "candidates": [str(item.get("source_id") or "") for item in candidates],
+            "applied": [],
+            "replaced": list(result.get("replaced") or []),
+            "reason": str(result.get("decision") or "candidate did not earn a compiled replacement"),
+        }
+    # ``expand_into_measured_space`` guarantees the vertical contract, but
+    # retain the prior plan if this bounded replacement introduces a near-wrap
+    # that the deterministic compactor cannot safely repair at this stage.
+    candidate_root = run_dir / "distinctive_replacement"
+    candidate_tex = render_plan(replacement, catalog, repo_root())
+    (candidate_root).mkdir(parents=True, exist_ok=True)
+    (candidate_root / "resume.tex").write_text(candidate_tex)
+    compiled = compile_resume(candidate_root)
+    candidate_layout = pdf_layout(candidate_root, compiled, plan=replacement, run_capacity_test=False)
+    if not (
+        candidate_layout.get("compiled")
+        and candidate_layout.get("pages") == 1
+        and not candidate_layout.get("overfull")
+    ):
+        return prior, {
+            "attempted": True,
+            "status": "rejected",
+            "candidates": [str(item.get("source_id") or "") for item in candidates],
+            "applied": [],
+            "replaced": [],
+            "reason": "distinctive replacement failed the compiled one-page prerequisite",
+        }
+    return replacement, {
+        "attempted": True,
+        "status": "applied",
+        "candidates": [str(item.get("source_id") or "") for item in candidates],
+        "applied": list(result.get("applied") or []),
+        "replaced": list(result.get("replaced") or []),
+        "layout": candidate_layout.get("horizontal") or {},
+    }
+
+
+def deterministic_control_recovery(
+    plan: Dict[str, Any], catalog: Dict[str, Any],
+    keyword_strategy: Optional[Dict[str, Any]], run_dir: Path,
+) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+    """Recover high-information base proof before independent judging.
+
+    The author can make a valid but strategically poor choice: keep several
+    generated project bullets while dropping a canonical HPC, validation, or
+    mechanism line. This bounded pass does not invent or rewrite anything. It
+    makes at most one source-verbatim canonical replacement per selected entry
+    and removes at most one non-canonical bullet when a selected project is
+    clearly repeating an experience signal family. The sealed panel still
+    decides whether the resulting candidate actually improved the job match.
+    """
+    recovered = copy.deepcopy(plan)
+    entries = catalog.get("entries") or {}
+    all_control = canonical_control_evidence(
+        catalog, keyword_strategy, limit=max(1, len(entries) * 12),
+    )
+    control_scores = {
+        str(item.get("source_id") or ""): float(item.get("control_priority") or 0)
+        for item in all_control
+        if str(item.get("source_id") or "")
+    }
+    source_bullets = {
+        str(bullet.get("id") or ""): bullet
+        for entry in entries.values()
+        for bullet in entry.get("bullets") or []
+        if str(bullet.get("id") or "")
+    }
+    actions: List[Dict[str, Any]] = []
+    restored_ids = set()
+
+    def make_bullet(source_id: str, rationale: str) -> Optional[Dict[str, Any]]:
+        source = source_bullets.get(source_id)
+        if not source:
+            return None
+        text = str(source.get("text") or "")
+        if not text:
+            return None
+        return {
+            "source_id": source_id,
+            "source_ids": [source_id],
+            "text": text,
+            "evidence_ids": [source_id],
+            "priority": max(1, min(100, int(control_scores.get(source_id, 75)))),
+            "candidate_rationale": rationale,
+        }
+
+    # First protect omitted canonical lines inside entries the author already
+    # selected. Replacing an extra/cv_full line is preferred; replacing a
+    # canonical line is allowed only when the omitted line has a higher
+    # deterministic proof priority.
+    for section in ("experiences", "projects", "leadership"):
+        for selection in recovered.get(section, []) or []:
+            entry_id = str(selection.get("source_id") or "")
+            entry = entries.get(entry_id) or {}
+            selected_ids = {
+                str(bullet.get("source_id") or "")
+                for bullet in selection.get("bullets", []) or []
+            }
+            omitted = [
+                bullet for bullet in entry.get("bullets") or []
+                if _is_canonical_source(bullet.get("source"))
+                and str(bullet.get("id") or "") not in selected_ids
+            ]
+            omitted.sort(key=lambda bullet: (-control_scores.get(str(bullet.get("id") or ""), 0), str(bullet.get("id") or "")))
+            if not omitted:
+                continue
+            target = None
+            target_index = -1
+            for index, bullet in enumerate(selection.get("bullets", []) or []):
+                if not _is_canonical_source(source_bullets.get(str(bullet.get("source_id") or ""), {}).get("source")):
+                    target = bullet
+                    target_index = index
+                    break
+            if target is None:
+                ranked_targets = sorted(
+                    enumerate(selection.get("bullets", []) or []),
+                    key=lambda item: (
+                        control_scores.get(str(item[1].get("source_id") or ""), 0),
+                        _bullet_value(item[1]),
+                    ),
+                )
+                if ranked_targets:
+                    candidate_score = control_scores.get(str(omitted[0].get("id") or ""), 0)
+                    index, possible = ranked_targets[0]
+                    possible_score = control_scores.get(str(possible.get("source_id") or ""), 0)
+                    if candidate_score > possible_score:
+                        target, target_index = possible, index
+            if target is None or target_index < 0:
+                continue
+            source_id = str(omitted[0].get("id") or "")
+            replacement = make_bullet(
+                source_id,
+                "Recovered canonical proof before independent judging; replaced lower-information selected evidence.",
+            )
+            if not replacement:
+                continue
+            old_id = str(target.get("source_id") or "")
+            selection["bullets"][target_index] = replacement
+            restored_ids.add(source_id)
+            actions.append({
+                "kind": "canonical_replacement",
+                "section": section,
+                "entry_id": entry_id,
+                "restored_source_id": source_id,
+                "replaced_source_id": old_id,
+                "reason": "canonical proof priority exceeded the selected replacement",
+            })
+
+    # Then make one narrow overlap repair. This specifically targets a
+    # non-canonical project bullet whose signal family is already established
+    # by experience, and only when the project has more than four bullets.
+    diagnostics = portfolio_diagnostics(recovered, catalog)
+    overlap_ids = {
+        str(item.get("source_id") or "")
+        for item in diagnostics.get("project_overlap", [])
+        if item.get("severity") == "high"
+    }
+    experience_families = set()
+    for entry_id, families in (diagnostics.get("selected_entry_families") or {}).items():
+        if str(entry_id).startswith("experience:"):
+            experience_families.update(families)
+    for selection in recovered.get("projects", []) or []:
+        entry_id = str(selection.get("source_id") or "")
+        bullets = selection.get("bullets", []) or []
+        if entry_id not in overlap_ids or len(bullets) <= 4:
+            continue
+        removable = []
+        for index, bullet in enumerate(bullets):
+            source_id = str(bullet.get("source_id") or "")
+            source = source_bullets.get(source_id) or {}
+            if _is_canonical_source(source.get("source")) or source_id in restored_ids:
+                continue
+            families = set(_portfolio_signal_families(bullet.get("text") or ""))
+            shared = families & experience_families
+            if shared:
+                removable.append((
+                    _bullet_value(bullet), index, source_id, sorted(shared),
+                ))
+        if removable:
+            _, index, source_id, shared = min(removable)
+            removed = bullets.pop(index)
+            actions.append({
+                "kind": "overlap_trim",
+                "section": "projects",
+                "entry_id": entry_id,
+                "removed_source_id": source_id,
+                "shared_signal_families": shared,
+                "reason": "trim one non-canonical project line repeating selected experience families",
+            })
+            break
+
+    record = {
+        "attempted": True,
+        "status": "applied" if actions else "not_needed",
+        "actions": actions,
+        "restored_source_ids": sorted(restored_ids),
+        "reason": (
+            "Recovered canonical proof and/or trimmed one repeated project signal before sealed review."
+            if actions else "No bounded control recovery cleared its deterministic conditions."
+        ),
+    }
+    write_json(run_dir / "control_recovery.json", record)
+    return recovered, record
 
 
 def _render_bullets(bullets: List[Dict[str, str]]) -> List[str]:
@@ -7078,7 +7670,24 @@ def _bullet_value(bullet: Dict[str, Any]) -> float:
     return priority + metric + technical
 
 
-def _removal_actions(plan: Dict[str, Any]) -> List[Tuple[float, str, int, Optional[int]]]:
+def _control_bullet_value(
+    bullet: Dict[str, Any], catalog: Optional[Dict[str, Any]] = None,
+) -> float:
+    """Value a line for packing while protecting high-information controls."""
+    value = _bullet_value(bullet)
+    source_id = str(bullet.get("source_id") or "")
+    control = canonical_control_scores(catalog or {}).get(source_id)
+    if control is not None:
+        # The model's target priority still leads. The bounded bonus prevents
+        # compile overflow from deleting a quantified/base proof line merely
+        # because a fresh project received an inflated priority.
+        value += 12.0 + max(0.0, min(45.0, control - 50.0)) * 0.25
+    return value
+
+
+def _removal_actions(
+    plan: Dict[str, Any], catalog: Optional[Dict[str, Any]] = None,
+) -> List[Tuple[float, str, int, Optional[int]]]:
     actions: List[Tuple[float, str, int, Optional[int]]] = []
     total_bullets = sum(
         len(entry.get("bullets", []))
@@ -7096,11 +7705,11 @@ def _removal_actions(plan: Dict[str, Any]) -> List[Tuple[float, str, int, Option
             bullets = entry.get("bullets", [])
             if can_remove and len(bullets) > max(1, minimum_bullets):
                 for bullet_index, bullet in enumerate(bullets):
-                    actions.append((_bullet_value(bullet), section, entry_index, bullet_index))
-            if can_remove and len(entries) > minimum_entries:
+                    actions.append((_control_bullet_value(bullet, catalog), section, entry_index, bullet_index))
+            if can_remove and len(entries) > minimum_entries and total_bullets - len(bullets) >= 1:
                 # Removing an entry saves its heading too, so compare value per
                 # vertical unit rather than raw total value.
-                density = sum(_bullet_value(bullet) for bullet in bullets) / max(1, len(bullets) + 1)
+                density = sum(_control_bullet_value(bullet, catalog) for bullet in bullets) / max(1, len(bullets) + 1)
                 actions.append((density, section, entry_index, None))
     return actions
 
@@ -7220,9 +7829,19 @@ def pack_plan_to_page(
     while attempt_number < 50:
         attempt_number += 1
         _, layout = _compile_plan_attempt(plan, catalog, run_dir, attempt_number)
+        horizontal = layout.get("horizontal") or {}
+        horizontal_safe = bool(horizontal.get("bullets")) and bool(horizontal.get("pass"))
+        total_bullets = sum(
+            len(entry.get("bullets", []) or [])
+            for section in ("experiences", "projects", "leadership")
+            for entry in (plan.get(section, []) or [])
+        )
         attempts.append({
             "attempt": attempt_number, "pages": layout.get("pages"),
             "overfull": layout.get("overfull"),
+            "horizontal_pass": horizontal_safe,
+            "wrap_count": horizontal.get("wrap_count", 0),
+            "near_wrap_count": horizontal.get("near_wrap_count", 0),
             "density_gap_pt": layout.get("density_gap_pt"),
             "density_pass": layout.get("density_pass"),
             "bullets": sum(len(entry.get("bullets", [])) for section in ("experiences", "projects", "leadership") for entry in plan.get(section, [])),
@@ -7231,7 +7850,12 @@ def pack_plan_to_page(
             raise RuntimeError(
                 "candidate LaTeX failed to compile; packing cannot treat a syntax error as page overflow"
             )
-        if layout.get("compiled") and layout.get("pages") == 1 and not layout.get("overfull"):
+        # Vertical/page overflow is the packer's removal contract. Near-wraps
+        # are recorded for the bounded line editor/compactor after packing;
+        # deleting whole evidence families just to make every line safe here
+        # was worse than preserving the content for a geometry repair or an
+        # honest final rejection.
+        if layout.get("compiled") and layout.get("pages") == 1 and not layout.get("overfull") and total_bullets >= MIN_TOTAL_BULLETS:
             break
         flexible_removal = _reclaim_flexible_content(plan)
         if flexible_removal:
@@ -7241,7 +7865,7 @@ def pack_plan_to_page(
             else:
                 removed.append(flexible_removal)
             continue
-        actions = _removal_actions(plan)
+        actions = _removal_actions(plan, catalog)
         if not actions:
             break
         removed.append(_apply_removal(plan, min(actions, key=lambda item: item[0])))
@@ -7250,6 +7874,11 @@ def pack_plan_to_page(
         layout.get("compiled")
         and layout.get("pages") == 1
         and not layout.get("overfull")
+        and sum(
+            len(entry.get("bullets", []) or [])
+            for section in ("experiences", "projects", "leadership")
+            for entry in (plan.get(section, []) or [])
+        ) >= MIN_TOTAL_BULLETS
     ):
         raise RuntimeError(
             "candidate portfolio could not meet the one-page render contract"
@@ -7279,6 +7908,10 @@ def pack_plan_to_page(
         "density_warning": (
             "normal bottom clearance remains because no additional authorized evidence was packed"
             if not layout.get("density_pass") else ""
+        ),
+        "horizontal_pass": bool(
+            (layout.get("horizontal") or {}).get("bullets")
+            and (layout.get("horizontal") or {}).get("pass")
         ),
     }
 
@@ -8125,9 +8758,9 @@ def score_review(
     roles = [str(item) for item in (critic_roles or []) if str(item)]
     data = agent_review.get("data") or {}
     criteria = data.get("criteria") if isinstance(data.get("criteria"), dict) else data
-    unsupported = data.get("unsupported_claims", [])
-    if not isinstance(unsupported, list):
-        unsupported = [str(unsupported)]
+    unsupported, ignored_unsupported = actionable_unsupported_claims(
+        data.get("unsupported_claims", [])
+    )
     decision_feedback = data.get("decision_feedback", [])
     if not isinstance(decision_feedback, list):
         decision_feedback = []
@@ -8233,6 +8866,7 @@ def score_review(
         "hard_fail": hard_fail,
         "gates": gates,
         "unsupported_claims": unsupported,
+        "ignored_unsupported_claims": ignored_unsupported,
         "missing_evidence": data.get("missing_evidence", []),
         "revision_priorities": data.get("revision_priorities", []),
         "blocking_issues": blocking,
@@ -8333,9 +8967,12 @@ def run_tailoring(
     run_dir: Path, job: Dict[str, Any], update, enhance: bool,
     unrestricted: bool = False,
     generation: bool = False,
+    quality_profile: str = QUALITY_PROFILE_DEFAULT,
 ) -> None:
     run_started_clock = time.time()
     run_started_at = now_iso()
+    quality_profile = normalize_quality_profile(quality_profile)
+    profile = QUALITY_PROFILES[quality_profile]
     run_id = str(job.get("_resume_studio_run_id") or "")
     queue_id = str(job.get("_resume_studio_queue_id") or "")
     # Queue/run correlation is local operational metadata, never prompt or
@@ -8369,6 +9006,8 @@ def run_tailoring(
         "separate_vendor_review": False,
         "local_models_allowed": False,
         "api_fallback_allowed": False,
+        "quality_profile": quality_profile,
+        "quality_profile_policy": dict(profile),
     }
     available = [name for name, path in provider_commands().items() if path and name == "codex"]
     if not available:
@@ -8417,6 +9056,7 @@ def run_tailoring(
         "target_keywords": context.get("target_keywords"),
         "generation_strategy": context.get("generation_strategy"),
         "provider_policy": context["provider_policy"],
+        "quality_profile": quality_profile,
         "evidence_graph": {
             "version": graph.get("version"),
             "hash": graph.get("hash"),
@@ -8433,7 +9073,10 @@ def run_tailoring(
     update("drafting", "Building adaptive %s evidence plan with Codex Luna" % mode_label)
     with concurrent.futures.ThreadPoolExecutor(max_workers=len(available)) as pool:
         futures = {
-            pool.submit(run_provider, provider, prompt, run_dir, "draft", RUN_TIMEOUT_SECONDS, schema): provider
+            pool.submit(
+                run_provider, provider, prompt, run_dir, "draft", RUN_TIMEOUT_SECONDS,
+                schema, codex_effort=profile["author_effort"],
+            ): provider
             for provider in available
         }
         drafts = [future.result() for future in concurrent.futures.as_completed(futures)]
@@ -8468,9 +9111,39 @@ def run_tailoring(
         candidates, catalog, enhance, graph=graph, generation=generation,
     )
     if candidate_plan is None:
-        write_json(run_dir / "plan_errors.json", plan_errors)
-        raise RuntimeError("No provider returned a valid adaptive source-addressed plan; inspect plan_errors.json")
+        # A blank structured response is a provider/execution failure, not a
+        # reason to leave the user with no resume artifact. Fall back to the
+        # immutable source-addressed control, then send that exact compiled
+        # candidate through the same packer, geometry gates, and sealed panel.
+        # This preserves fail-closed quality semantics while making transient
+        # Luna failures recoverable and auditable.
+        fallback_data = canonical_control_plan(catalog)
+        fallback_plan, fallback_errors = validate_plan(
+            fallback_data, catalog, enhance, graph=graph, generation=generation,
+        )
+        if fallback_errors:
+            write_json(run_dir / "plan_errors.json", plan_errors + [
+                "canonical control fallback: %s" % error for error in fallback_errors
+            ])
+            raise RuntimeError("No provider returned a valid adaptive source-addressed plan; inspect plan_errors.json")
+        fallback_record = {
+            "provider": "deterministic",
+            "ok": True,
+            "label": "canonical_control_fallback",
+            "reasoning_effort": "none",
+            "data": fallback_plan,
+            "fallback": True,
+            "error_context": plan_errors[:12],
+        }
+        write_json(run_dir / "canonical_control_fallback.json", fallback_record)
+        candidate_plan = fallback_plan
+        plan_errors = plan_errors + ["selected deterministic canonical-control fallback"]
     candidate_plan = expand_candidate_portfolio(candidate_plan, catalog, enhance)
+    control_recovery: Dict[str, Any] = {"attempted": False, "status": "not_run"}
+    if enhance:
+        candidate_plan, control_recovery = deterministic_control_recovery(
+            candidate_plan, catalog, context.get("target_keywords"), run_dir,
+        )
     write_json(run_dir / "candidate_plan.json", candidate_plan)
     write_json(run_dir / "brief.json", {
         "positioning_thesis": candidate_plan.get("positioning_thesis", ""),
@@ -8484,6 +9157,8 @@ def run_tailoring(
         "target_keywords": context.get("target_keywords"),
         "generation_strategy": context.get("generation_strategy"),
         "provider_policy": context["provider_policy"],
+        "quality_profile": quality_profile,
+        "control_recovery": control_recovery,
         "evidence_graph": {
             "version": graph.get("version"),
             "hash": graph.get("hash"),
@@ -8514,7 +9189,7 @@ def run_tailoring(
         "rejected": [],
         "decision": "No expansion was needed because the measured page had no spare standard line.",
     }
-    if enhance and (
+    if enhance and profile["model_space_expansion"] and (
         measured_space_available(layout)
         or (isinstance(layout.get("density_gap_pt"), (int, float)) and layout["density_gap_pt"] > MAX_DENSITY_GAP_PT)
     ):
@@ -8587,14 +9262,19 @@ def run_tailoring(
     line_edits: List[Dict[str, Any]] = []
     line_compactions: List[Dict[str, Any]] = []
     editable_pool = copy.deepcopy(plan)
-    for line_round in range(1, MAX_LINE_EDIT_PASSES + 1):
+    line_edit_passes = MAX_LINE_EDIT_PASSES if enhance and (
+        profile["model_line_editor"]
+        or (profile["line_editor_fallback"] and not (layout.get("horizontal") or {}).get("pass"))
+    ) else 0
+    for line_round in range(1, line_edit_passes + 1):
         if not enhance or (layout.get("horizontal") or {}).get("pass"):
             break
         label = "line_edit" if line_round == 1 else "line_edit_%s" % line_round
-        update("line_editing", "Repairing rendered one-line geometry (pass %s/%s)" % (line_round, MAX_LINE_EDIT_PASSES))
+        update("line_editing", "Repairing rendered one-line geometry (pass %s/%s)" % (line_round, line_edit_passes))
         line_edit = run_provider(
             writer, line_editor_prompt(context, plan, layout, graph), run_dir, label,
             timeout=6 * 60, schema=plan_schema(True, generation=generation),
+            codex_effort=profile["line_editor_effort"],
         )
         line_edits.append(line_edit)
         line_edit["label"] = label
@@ -8654,9 +9334,10 @@ def run_tailoring(
     # chronology, or replace core experience, and every trial is compiled.
     post_line_density: List[Dict[str, Any]] = []
     post_line_attempted: set = set()
+    distinctive_replacement_attempted = False
 
     def fill_post_line_capacity(round_label: str) -> None:
-        nonlocal plan, packing, chosen, layout, preview, line_compactions
+        nonlocal plan, packing, chosen, layout, preview, line_compactions, distinctive_replacement_attempted
         if not enhance:
             return
         # A revision can reintroduce a near-wrap after the first compaction
@@ -8790,6 +9471,47 @@ def run_tailoring(
             if not capacity_open and not (
                 isinstance(density_gap, (int, float)) and density_gap > MAX_DENSITY_GAP_PT
             ):
+                if not distinctive_replacement_attempted and round_label == "post_line_density":
+                    distinctive_replacement_attempted = True
+                    prior_plan = copy.deepcopy(plan)
+                    replacement_plan, replacement_record = deterministic_distinctive_replacement(
+                        plan, catalog, graph, context.get("target_keywords"),
+                        run_dir / "distinctive_replacement",
+                    )
+                    replacement_record.update({
+                        "round": density_round,
+                        "label": round_label,
+                        "before_bullet_count": portfolio_metrics(plan).get("total_bullets"),
+                    })
+                    if replacement_record.get("status") == "applied":
+                        plan = replacement_plan
+                        chosen, layout, preview = render_candidate(plan, run_dir)
+                        if not (layout.get("horizontal") or {}).get("pass"):
+                            compacted, compact_layout, extra_compactions = compact_plan_to_geometry(
+                                plan, layout, catalog, run_dir / "distinctive_replacement_compaction",
+                            )
+                            if extra_compactions:
+                                plan = compacted
+                                line_compactions.extend(extra_compactions)
+                                chosen, layout, preview = render_candidate(plan, run_dir)
+                        if (
+                            layout.get("pages") != 1
+                            or layout.get("overfull")
+                            or not (layout.get("horizontal") or {}).get("pass")
+                        ):
+                            plan = prior_plan
+                            chosen, layout, preview = render_candidate(plan, run_dir)
+                            replacement_record["status"] = "rejected"
+                            replacement_record["reason"] = "replacement did not satisfy the final geometry gate"
+                        else:
+                            space_expansion["applied"] = list(space_expansion.get("applied") or []) + list(replacement_record.get("applied") or [])
+                            space_expansion["replaced"] = list(space_expansion.get("replaced") or []) + list(replacement_record.get("replaced") or [])
+                            replacement_record["after_bullet_count"] = portfolio_metrics(plan).get("total_bullets")
+                            replacement_record["decision"] = "Kept one compiled distinctive evidence replacement before the sealed panel."
+                            packing[round_label + "_distinctive_replacement"] = replacement_record
+                            write_json(run_dir / "content_plan.json", plan)
+                            write_json(run_dir / "layout_packing.json", packing)
+                    post_line_density.append(replacement_record)
                 break
             candidates = deterministic_space_additions(
                 plan, catalog, graph=graph, keyword_strategy=context.get("target_keywords"),
@@ -8923,6 +9645,7 @@ def run_tailoring(
             "gained_strengths": [],
             "lost_strengths": [],
         })
+        comparison_records = [copy.deepcopy(data.get("portfolio_comparison") or {})]
         criteria = data.setdefault("criteria", {})
         for record in records[1:]:
             other = record.get("data") or {}
@@ -8932,13 +9655,8 @@ def run_tailoring(
             data["missing_evidence"].extend(other.get("missing_evidence") or [])
             data["revision_priorities"].extend(other.get("revision_priorities") or [])
             data["decision_feedback"].extend(other.get("decision_feedback") or [])
-            current_comparison = data.get("portfolio_comparison") or {}
             other_comparison = other.get("portfolio_comparison") or {}
-            if str(other_comparison.get("status") or "") == "fail" or (
-                str(current_comparison.get("status") or "") == "unknown"
-                and other_comparison
-            ):
-                data["portfolio_comparison"] = copy.deepcopy(other_comparison)
+            comparison_records.append(copy.deepcopy(other_comparison))
             for name in REVIEW_CRITERIA:
                 left = criteria.get(name) or {"status": "fail", "reason": "missing critique"}
                 right = (other.get("criteria") or {}).get(name) or {"status": "fail", "reason": "missing critique"}
@@ -8948,6 +9666,48 @@ def run_tailoring(
                 elif right.get("reason") and right.get("reason") not in str(left.get("reason") or ""):
                     left["reason"] = "; ".join(value for value in (str(left.get("reason") or ""), str(right.get("reason") or "")) if value)
                     criteria[name] = left
+        # A panel comparison is an aggregate judgment, not whichever role
+        # happened to finish first. Keep the worst status for safety while
+        # retaining every role-confirmed preserved/gained/lost strength for
+        # the comparative audit. This makes positive findings traceable without
+        # allowing one optimistic critic to erase another role's loss.
+        comparison_order = {"fail": 0, "partial": 1, "pass": 2, "unknown": -1}
+        valid_comparisons = [
+            item for item in comparison_records
+            if isinstance(item, dict) and str(item.get("status") or "") in comparison_order
+        ]
+        if valid_comparisons:
+            known_comparisons = [
+                item for item in valid_comparisons
+                if str(item.get("status") or "") in {"fail", "partial", "pass"}
+            ]
+            # An unavailable role must not erase a complete comparison from
+            # the other sealed roles. ``unknown`` is the fallback only when
+            # every role failed to produce a determinate comparison.
+            aggregate_comparisons = known_comparisons or valid_comparisons
+            selected_comparison = min(
+                aggregate_comparisons,
+                key=lambda item: comparison_order.get(str(item.get("status") or "unknown"), -1),
+            )
+            merged_comparison = {
+                "status": str(selected_comparison.get("status") or "unknown"),
+                "reason": "",
+                "preserved_strengths": [],
+                "gained_strengths": [],
+                "lost_strengths": [],
+            }
+            reasons = []
+            for item in aggregate_comparisons:
+                reason = str(item.get("reason") or "").strip()
+                if reason and reason not in reasons:
+                    reasons.append(reason)
+                for field in ("preserved_strengths", "gained_strengths", "lost_strengths"):
+                    for strength in item.get(field) or []:
+                        value = str(strength or "").strip()
+                        if value and value not in merged_comparison[field]:
+                            merged_comparison[field].append(value)
+            merged_comparison["reason"] = "; ".join(reasons[:8])
+            data["portfolio_comparison"] = merged_comparison
         for key in ("blocking_issues", "unsupported_claims", "missing_evidence", "revision_priorities"):
             data[key] = list(dict.fromkeys(str(value) for value in data.get(key) or []))
         # Child results remain raw and independently inspectable.  The parent
@@ -8991,9 +9751,103 @@ def run_tailoring(
         base_tex_for_panel = ""
 
     def critique_current(round_label: str) -> Tuple[Dict[str, Any], List[Dict[str, Any]], bool]:
+        nonlocal plan, packing, chosen, layout, preview
         critic_roles = list(CODEX_CRITIC_ROLES) if writer == "codex" and "codex" in available else []
         if not critic_roles:
             critique = combined_critique([])
+            write_json(run_dir / (round_label + ".json"), critique)
+            return critique, [], False
+        # Geometry is a deterministic prerequisite for a useful panel. Older
+        # flow judged a near-wrap first and only attempted source restoration
+        # after the panel, which could spend four Luna calls on an artifact
+        # that the compiler would later reject. Restore approved source text
+        # and compact before sending the packet; this keeps the evaluator
+        # independent while removing avoidable review latency.
+        if not (layout.get("horizontal") or {}).get("pass"):
+            pre_panel_root = run_dir / (round_label + "_pre_panel_geometry")
+            pre_panel_record: Dict[str, Any] = {"attempted": True, "status": "unsafe"}
+            try:
+                recovered_plan, restored_ids = restore_wrapped_source_text(
+                    plan, layout, catalog,
+                )
+                source_root = pre_panel_root / "source_restore"
+                _, source_layout, _ = render_candidate(recovered_plan, source_root)
+                compacted_plan, _, compactions = compact_plan_to_geometry(
+                    recovered_plan, source_layout, catalog, pre_panel_root,
+                )
+                changed = bool(restored_ids or compactions)
+                if changed:
+                    candidate_root = pre_panel_root / "candidate"
+                    candidate_tex, candidate_layout, candidate_preview = render_candidate(
+                        compacted_plan, candidate_root,
+                    )
+                    candidate_safe = bool(
+                        candidate_layout.get("compiled")
+                        and candidate_layout.get("pages") == 1
+                        and not candidate_layout.get("overfull")
+                        and (candidate_layout.get("horizontal") or {}).get("pass")
+                    )
+                    pre_panel_record.update({
+                        "restored_source_ids": list(restored_ids),
+                        "compactions": list(compactions),
+                        "candidate": {
+                            "safe_render": candidate_safe,
+                            "wrap_count": (candidate_layout.get("horizontal") or {}).get("wrap_count", 0),
+                            "near_wrap_count": (candidate_layout.get("horizontal") or {}).get("near_wrap_count", 0),
+                        },
+                    })
+                    if candidate_safe:
+                        plan, chosen, layout, preview = (
+                            compacted_plan, candidate_tex, candidate_layout, candidate_preview,
+                        )
+                        packing[round_label + "_pre_panel_geometry"] = pre_panel_record
+                        write_json(run_dir / "content_plan.json", plan)
+                        write_json(run_dir / "layout_packing.json", packing)
+                        pre_panel_record["status"] = "accepted"
+                    else:
+                        pre_panel_record["status"] = "rejected_candidate_unsafe"
+                else:
+                    pre_panel_record["status"] = "no_deterministic_change"
+            except (OSError, RuntimeError, ValueError) as exc:
+                pre_panel_record["status"] = "error"
+                pre_panel_record["error"] = str(exc)
+            write_json(run_dir / (round_label + "_pre_panel_geometry.json"), pre_panel_record)
+        substantive_bullets = sum(
+            len(entry.get("bullets", []) or [])
+            for section in ("experiences", "projects", "leadership")
+            for entry in (plan.get(section, []) or [])
+        )
+        initial_substantive_bullets = substantive_bullets
+        # A provider/editor mutation must never send an empty or stale render
+        # to the independent jury. Recover the last persisted source-addressed
+        # plan when possible; otherwise fail closed without spending four Luna
+        # calls on an artifact that cannot be a resume.
+        if substantive_bullets <= 0 or not chosen or "resumeItem" not in chosen:
+            persisted_plan = read_json(run_dir / "content_plan.json", {}) or {}
+            persisted_bullets = sum(
+                len(entry.get("bullets", []) or [])
+                for section in ("experiences", "projects", "leadership")
+                for entry in (persisted_plan.get(section, []) or [])
+            ) if isinstance(persisted_plan, dict) else 0
+            if persisted_bullets > substantive_bullets:
+                plan = persisted_plan
+                chosen, layout, preview = render_candidate(plan, run_dir)
+                substantive_bullets = persisted_bullets
+            elif substantive_bullets > 0:
+                chosen, layout, preview = render_candidate(plan, run_dir)
+            write_json(run_dir / (round_label + "_candidate_guard.json"), {
+                "initial_bullets": initial_substantive_bullets,
+                "persisted_bullets": persisted_bullets,
+                "render_has_resume_items": "resumeItem" in chosen if chosen else False,
+                "decision": "recovered_persisted_plan" if persisted_bullets > 0 else "failed_closed",
+            })
+        if substantive_bullets <= 0 or not chosen or "resumeItem" not in chosen:
+            critique = combined_critique([])
+            critique["critic_round"] = round_label
+            critique["candidate_guard"] = {
+                "available": False,
+                "reason": "candidate had no substantive rendered evidence; sealed panel skipped",
+            }
             write_json(run_dir / (round_label + ".json"), critique)
             return critique, [], False
         recheck = round_label != "critique"
@@ -9024,7 +9878,7 @@ def run_tailoring(
                     ),
                     run_dir,
                     round_label + "_" + role["key"],
-                    timeout=8 * 60,
+                    timeout=int(profile.get("evaluator_timeout_seconds") or 8 * 60),
                 ): role for role in critic_roles
             }
         # Futures complete in arbitrary order; retain the role key alongside
@@ -9065,13 +9919,17 @@ def run_tailoring(
     critique, critique_records, review_available = critique_current("critique")
     revision_records: List[Dict[str, Any]] = []
     revision_log: List[Dict[str, Any]] = []
-    for revision_round in range(1, 3):
+    for revision_round in range(1, int(profile["revision_rounds"]) + 1):
         critique_data = critique.get("data") or {}
         statuses = [str((critique_data.get("criteria") or {}).get(name, {}).get("status") or "fail") for name in REVIEW_CRITERIA]
         if not enhance or not review_available or (not critique_data.get("blocking_issues") and all(status == "pass" for status in statuses)):
             break
         label = "revision" if revision_round == 1 else "revision_%s" % revision_round
-        update("revising", "Codex Luna is applying the critic-panel feedback (pass %s/2)" % revision_round)
+        update(
+            "revising",
+            "Codex Luna is applying the critic-panel feedback (pass %s/%s)"
+            % (revision_round, profile["revision_rounds"]),
+        )
         revision = run_provider(
             writer, revision_prompt(
                 context, plan, critique, catalog, graph=graph,
@@ -9140,7 +9998,7 @@ def run_tailoring(
         initial_deterministic, initial_scored, base_tex_for_audit, chosen,
         run_id=run_id, queue_id=queue_id,
     )
-    repair_needed = enhance and (
+    repair_needed = enhance and bool(profile.get("audit_repair")) and (
         initial_audit.get("tailoring") == "regressed"
         or any(
             item.get("classification") in {"REGRESSION", "BLOCKER"}
@@ -9197,18 +10055,62 @@ def run_tailoring(
                     repaired_tex, repaired_layout, repaired_preview = render_candidate(
                         repaired_plan, repair_root,
                     )
-                    # The repair writer changed the candidate after the last
-                    # critic. Evaluate this exact replacement in a fresh
-                    # sealed panel before comparing or accepting it. Reusing
-                    # the old critique here would let a repair pass without
-                    # being judged for newly introduced claims or regressions.
+                    safe_render = bool(
+                        repaired_layout.get("compiled")
+                        and repaired_layout.get("pages") == 1
+                        and not repaired_layout.get("overfull")
+                        and (repaired_layout.get("horizontal") or {}).get("pass")
+                    )
                     plan, chosen, layout, preview = (
                         repaired_plan, repaired_tex, repaired_layout, repaired_preview,
                     )
-                    repair_critique, repair_records, repair_review_available = critique_current(
-                        "audit_repair_critique"
-                    )
-                    critique_records.extend(repair_records)
+                    if safe_render:
+                        # The repair writer changed the candidate after the
+                        # last critic. Evaluate this exact replacement in a
+                        # fresh sealed panel before comparing or accepting it.
+                        # Reusing the old critique here would let a repair pass
+                        # without being judged for newly introduced claims or
+                        # regressions.
+                        repair_critique, repair_records, repair_review_available = critique_current(
+                            "audit_repair_critique"
+                        )
+                        critique_records.extend(repair_records)
+                    else:
+                        # Geometry is a deterministic prerequisite. Do not
+                        # spend four Luna calls judging a candidate that cannot
+                        # ship regardless of its prose; retain an explicit
+                        # unavailable receipt so the audit cannot mistake a
+                        # skipped panel for approval.
+                        repair_critique = {
+                            "provider": "codex",
+                            "ok": False,
+                            "review_mode": "unavailable",
+                            "critic_roles": [],
+                            "data": {
+                                "criteria": {
+                                    name: {"status": "fail", "reason": "candidate failed deterministic geometry gate"}
+                                    for name in REVIEW_CRITERIA
+                                },
+                                "blocking_issues": [
+                                    "Repair candidate failed the deterministic one-page/horizontal geometry gate; sealed recheck skipped."
+                                ],
+                                "blocking_issue_assessments": [],
+                                "line_feedback": [],
+                                "unsupported_claims": [],
+                                "missing_evidence": [],
+                                "revision_priorities": [],
+                                "decision_feedback": [],
+                                "portfolio_comparison": {
+                                    "status": "fail",
+                                    "reason": "candidate failed deterministic geometry gate",
+                                    "preserved_strengths": [],
+                                    "gained_strengths": [],
+                                    "lost_strengths": [],
+                                },
+                            },
+                        }
+                        repair_records = []
+                        repair_review_available = False
                     repaired_deterministic = deterministic_review(
                         context, repaired_tex, repaired_layout,
                         plan=repaired_plan, catalog=catalog,
@@ -9231,12 +10133,6 @@ def run_tailoring(
                     )
                     current_key = tailoring_audit_preference_key(initial_audit)
                     repaired_key = tailoring_audit_preference_key(repaired_audit)
-                    safe_render = bool(
-                        repaired_layout.get("compiled")
-                        and repaired_layout.get("pages") == 1
-                        and not repaired_layout.get("overfull")
-                        and (repaired_layout.get("horizontal") or {}).get("pass")
-                    )
                     if safe_render and repair_review_available and repaired_key > current_key:
                         critique = repair_critique
                         review_available = repair_review_available
@@ -9444,8 +10340,20 @@ def run_tailoring(
                         chosen, layout, preview = render_candidate(plan, run_dir)
                         final_geometry_recovery["status"] = "accepted_after_sealed_recheck"
                     else:
-                        final_geometry_recovery["status"] = "rejected_incomplete_sealed_recheck"
-                        plan, chosen, layout, preview, critique, review_available = prior_geometry_state
+                        # The geometry repair is still valuable even when the
+                        # optional fresh jury misses its latency budget. Keep
+                        # the safe artifact, mark the independent review
+                        # unavailable, and let the normal fail-closed audit
+                        # select the base rather than restoring an unsafe PDF.
+                        final_geometry_recovery["status"] = "accepted_geometry_only_incomplete_sealed_recheck"
+                        critique = combined_critique([])
+                        critique["critic_round"] = "final_geometry_critique"
+                        critique["candidate_guard"] = {
+                            "available": False,
+                            "reason": "safe deterministic recovery retained, but its sealed recheck was incomplete",
+                        }
+                        write_json(run_dir / "final_geometry_critique.json", critique)
+                        review_available = False
                 else:
                     final_geometry_recovery["status"] = "rejected_candidate_unsafe"
                     plan, chosen, layout, preview, critique, review_available = prior_geometry_state
@@ -9621,6 +10529,7 @@ def run_tailoring(
         "format_contract": {"template": "CV/" + CANONICAL_TEMPLATE, "model_can_write_latex_document": False, "font_size_reduction_percent": 0.0, "font_size_increase_percent": 0.0, "allowed_max_reduction_percent": MAX_STYLE_REDUCTION_PERCENT},
         "providers": provider_records,
         "provider_policy": context["provider_policy"],
+        "quality_profile": quality_profile,
         "critic_panel": {
             "available": review_available,
             "mode": str(critique.get("review_mode") or "unavailable"),

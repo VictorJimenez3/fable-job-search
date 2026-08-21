@@ -647,9 +647,9 @@ and shows a `ready`, `review`, or `blocked` decision. It also makes the
 recommendation explicit: **prefer tailored**, **prefer base**, or **needs
 review**. An explained project swap is not counted as a regression, and a
 low-priority context term such as coursework is not treated like lost core
-evidence. When material regressions remain, an evidence-bounded repair pass
-tries once to improve the plan and accepts it only if the compiled comparison
-gets better. Factuality, eligibility, layout, privacy, and critic-panel failures
+evidence. The deeper profile can run an evidence-bounded repair pass and
+accepts a replacement only if the compiled comparison gets better. Factuality,
+eligibility, layout, privacy, and critic-panel failures
 cannot be averaged away. This is a quality-control and comparison
 report—not an ATS score or a prediction of an employer's decision. The full
 `job_intelligence.json` and `tailoring_audit.json` artifacts stay local; cloud
@@ -677,8 +677,10 @@ until that option exists, the local Pipeline and Google tracker still record
 the stage and Notion leaves the local sync state auditable rather than sending
 an invalid update.
 
-The active quality lane uses **Codex Luna Max** for the initial authoring pass
-and every critic recheck. Repeated writer repair calls use Luna High after the
+The normal **balanced** quality lane uses **Codex Luna High** for the initial
+structured authoring pass and **Codex Luna Max** for every independent critic
+recheck. The deliberately deeper `deep` profile retains Max for initial
+authoring as well. Its repeated writer-repair calls use Luna High after the
 quality lab showed Max consuming its full budget without returning a
 structured replacement; this is recorded as an explicit repair policy rather
 than a hidden fallback. Each critic runs in a fresh, critique-only subprocess
@@ -714,6 +716,21 @@ portfolio-overlap warnings are listed before the repair writer acts. The
 repair rules prioritize restoring high-value control evidence or explaining a
 real replacement before adding another role-keyword line.
 
+The normal application lane is the bounded **balanced** authoring profile. It
+keeps the same sealed Luna Max critic panel and hard gates, but lets the
+deterministic compiler handle measured page packing and control recovery first,
+skips model space expansion and critic-driven revision/audit-repair rounds, and
+uses at most one conditional Luna High line-edit pass when geometry is unsafe.
+The original two-round frontier remains available for a deliberately deeper run
+with `--quality-profile deep`; changing profiles never changes the evaluator
+contract or turns a rejected candidate into a pass.
+
+The compiler also treats quantified, validated, integration, and ownership
+proof from the locked base resume as control evidence during overflow packing.
+An added line counts as a positive tailoring gain only when the sealed panel
+independently confirms the new target-relevant strength. This prevents both
+keyword-only gains and a bookkeeping blind spot from driving the comparison.
+
 For broad validation, `scripts/resume_studio_benchmark.py` fetches and matches
 many live postings concurrently, then runs a smaller full-tailoring sample
 balanced across sectors and companies. Its manifest preserves the posting
@@ -731,11 +748,12 @@ had a consensus near-wrap/readability defect. The Merck PDF remains
 owner-unapproved and the control reports no exact hiring score.
 
 The primary artifact now follows that comparison decision. When the audit
-returns `base` or `blocked`, Resume Studio publishes the immutable canonical
-PDF as the run's winner and preserves the rejected generated artifact as
-`tailored_candidate.pdf` (with `base_control.tex` and the reason recorded in
-`winner_artifact`). A compiling tailored PDF is therefore never silently
-presented as the best version when the control comparison says otherwise.
+returns `base`, `blocked`, or `review`, Resume Studio publishes the immutable
+canonical PDF as the run's winner and preserves the rejected or unreviewed
+generated artifact as `tailored_candidate.pdf` (with `base_control.tex` and the
+reason recorded in `winner_artifact`). A compiling tailored PDF is therefore
+never silently presented as the best version when the control comparison is
+negative or incomplete.
 
 Open **Workshop** on a completed run to edit education, skills, experience,
 projects, and leadership lines without touching the original PDF. Saving a
