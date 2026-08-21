@@ -758,6 +758,21 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   No API or second-provider fallback is configured; a missing Codex CLI leaves
   the local engine unavailable rather than silently changing the privacy or
   billing boundary.
+- **Current Stryker quality lab receipt (DECISION #154):** the merged-code
+  absolute-path run at
+  `CV/.resume_studio/benchmarks/stryker-latest-merged-absolute-20260821/runs/40f4734b66df`
+  completed in 2,715.9 seconds. Fit was strong (97), but tailoring was
+  `do_not_ship`/`blocked` with five regressions, one hard blocker, zero gains,
+  and loss weight 13. Audit repair improved the preference key from `-17` to
+  `-13` but still did not beat the control. The sealed evidence, recruiter,
+  technical, and screening roles all completed in every round under the fixed
+  contract and rubric hashes. The canonical base is therefore the primary PDF;
+  the rejected candidate remains available as `tailored_candidate.pdf`.
+  A fresh four-role Merck-control jury completed in 393.7 seconds: factuality
+  and privacy passed across all roles, but the candidate's useful JWT,
+  document-extraction/caching, and HackMIT gains did not offset lost REST,
+  fallback, explainability, health/security, and portfolio evidence. This is a
+  qualitative control result, not a hiring prediction or exact score.
 - **Resume intelligence v1 is shipped locally (DECISIONS #72-74):** the Studio
   builds a source-authority evidence graph from the ignored CV corpus, caches
   public GitHub/Devpost material as corroboration only, and exposes Best,

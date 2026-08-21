@@ -2340,3 +2340,30 @@ single swaps, and all six two-bullet swaps. This reduces the compiled frontier
 from 22 trials to 11 per candidate while preserving the only swap class that
 can replace two weak lines with a stronger two-line entry. It changes no
 evaluator rubric, evidence authority, layout threshold, or readiness gate.
+
+## 154. Current Stryker lab validates honest base selection (2026-08-21)
+
+The absolute-path merged-code Stryker run
+`CV/.resume_studio/benchmarks/stryker-latest-merged-absolute-20260821/runs/40f4734b66df`
+completed in 2,715.9 seconds with strong fit (97), but the tailored artifact
+was correctly rejected: `do_not_ship`, `blocked`, five tailoring regressions,
+one hard blocker, zero recorded gains, and loss weight 13. Audit repair
+improved the comparison preference key from `-17` to `-13`, but did not make
+the candidate beat its control. The four-role sealed panel completed in every
+round under the fixed contract fingerprint and rubric hash. The worker then
+made the immutable canonical resume the primary PDF and retained the rejected
+candidate as `tailored_candidate.pdf`; this is a winner-selection result, not
+a forced evaluator pass.
+
+The final candidate's losses included authorized REST/API evidence, the
+Quantum project and its validation/award evidence, explicit 4+ agent
+coordination, and portfolio diversity; its repeated AI/RAG/backend narrative
+remained too prominent for the Stryker role. Missing testing, SOLID/design
+patterns, traceability, UI, and stakeholder evidence stayed fit gaps rather
+than being invented. A fresh four-role qualitative jury comparing this
+candidate against the saved Merck healthcare draft completed in 393.7 seconds:
+all factuality and privacy checks passed, but the mixed gains (JWT access,
+document extraction/caching, HackMIT validation) did not outweigh losses in
+REST, safe fallback, explainability, health/security evidence, and distinctive
+portfolio coverage. Merck remains a provisional safer control, not an evidence
+authority or exact hiring score.
