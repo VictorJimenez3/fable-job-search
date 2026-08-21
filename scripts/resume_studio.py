@@ -9167,6 +9167,10 @@ def run_tailoring(
             audit_repair_log.append({
                 "status": "failed",
                 "reason": str(repair_record.get("error") or "repair provider failed"),
+                "post_density": {
+                    "status": "not_run",
+                    "reason": "audit repair did not produce a validated candidate",
+                },
             })
         else:
             repaired_plan, repair_errors = validate_plan(
@@ -9174,7 +9178,14 @@ def run_tailoring(
                 graph=graph, generation=generation,
             )
             if repair_errors:
-                audit_repair_log.append({"status": "rejected", "errors": repair_errors[:12]})
+                audit_repair_log.append({
+                    "status": "rejected",
+                    "errors": repair_errors[:12],
+                    "post_density": {
+                        "status": "not_run",
+                        "reason": "audit repair plan failed source validation",
+                    },
+                })
                 write_json(run_dir / "audit_repair_errors.json", repair_errors)
             else:
                 repair_root = run_dir / "audit_repair_candidate"
@@ -9353,12 +9364,20 @@ def run_tailoring(
                                 "available": repair_review_available,
                                 "roles": repair_critique.get("critic_roles") or [],
                             },
+                            "post_density": {
+                                "status": "not_run",
+                                "reason": "post-repair refill requires an accepted, one-page, sealed-rechecked repair",
+                            },
                         })
                 except (OSError, RuntimeError, ValueError) as exc:
                     plan, chosen, layout, preview = prior_repair_state
                     audit_repair_log.append({
                         "status": "rejected",
                         "reason": "repair candidate failed compilation or validation: %s" % exc,
+                        "post_density": {
+                            "status": "not_run",
+                            "reason": "audit repair candidate failed before the refill prerequisite",
+                        },
                     })
 
     # A repair can be source-valid and still leave the previously selected
