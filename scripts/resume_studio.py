@@ -9246,6 +9246,99 @@ def run_tailoring(
                             "tailoring": repaired_audit.get("tailoring"),
                             "recommended_version": repaired_audit.get("recommended_version"),
                         })
+
+                        # The repair writer is packed independently from the
+                        # prior candidate. It can restore a broad source-aware
+                        # plan, have the one-page packer trim it, and still
+                        # leave measurable room after that trim. Refill this
+                        # exact repaired artifact, then judge the changed
+                        # artifact in a fresh sealed panel. If the refill does
+                        # not improve the source-aware comparison or its panel
+                        # is incomplete, restore the already accepted repair.
+                        pre_density_plan = copy.deepcopy(plan)
+                        pre_density_digest = _stable_digest(plan)
+                        pre_density_state = (
+                            copy.deepcopy(plan), chosen, copy.deepcopy(layout), preview,
+                            copy.deepcopy(critique), review_available,
+                            copy.deepcopy(packing), copy.deepcopy(line_compactions),
+                            copy.deepcopy(space_expansion),
+                        )
+                        fill_post_line_capacity("post_audit_repair_density")
+                        if _stable_digest(plan) != pre_density_digest:
+                            post_density_record: Dict[str, Any] = {
+                                "status": "attempted",
+                                "before_bullet_count": portfolio_metrics(pre_density_plan).get("total_bullets"),
+                                "after_bullet_count": portfolio_metrics(plan).get("total_bullets"),
+                            }
+                            try:
+                                post_density_critique, post_density_records, post_density_available = critique_current(
+                                    "post_audit_repair_critique"
+                                )
+                                critique_records.extend(post_density_records)
+                                post_density_deterministic = deterministic_review(
+                                    context, chosen, layout, plan=plan, catalog=catalog,
+                                )
+                                post_density_changes = content_change_report(
+                                    plan, catalog, chosen,
+                                    context.get("target_keywords"),
+                                    base_tex=base_tex_for_audit,
+                                )
+                                post_density_scored = score_review(
+                                    post_density_critique, post_density_deterministic,
+                                    independent_available=post_density_available,
+                                    review_mode=str(post_density_critique.get("review_mode") or "unavailable"),
+                                    critic_roles=post_density_critique.get("critic_roles") or [],
+                                )
+                                post_density_audit = build_tailoring_audit(
+                                    job, context, match, graph, plan, post_density_changes,
+                                    post_density_deterministic, post_density_scored,
+                                    base_tex_for_audit, chosen,
+                                    run_id=run_id, queue_id=queue_id,
+                                )
+                                post_density_key = tailoring_audit_preference_key(post_density_audit)
+                                post_density_record.update({
+                                    "available": post_density_available,
+                                    "before": repaired_key,
+                                    "after": post_density_key,
+                                    "tailoring": post_density_audit.get("tailoring"),
+                                    "recommended_version": post_density_audit.get("recommended_version"),
+                                })
+                                if post_density_available and post_density_key > repaired_key:
+                                    critique = post_density_critique
+                                    review_available = post_density_available
+                                    post_density_record["status"] = "accepted"
+                                else:
+                                    (
+                                        plan, chosen, layout, preview, critique,
+                                        review_available, packing, line_compactions,
+                                        space_expansion,
+                                    ) = pre_density_state
+                                    write_json(run_dir / "content_plan.json", plan)
+                                    write_json(run_dir / "layout_packing.json", packing)
+                                    post_density_record["status"] = "rejected"
+                                    post_density_record["reason"] = (
+                                        "post-repair density refill did not improve its sealed source-aware "
+                                        "comparison or did not return a complete panel"
+                                    )
+                            except (OSError, RuntimeError, ValueError) as exc:
+                                (
+                                    plan, chosen, layout, preview, critique,
+                                    review_available, packing, line_compactions,
+                                    space_expansion,
+                                ) = pre_density_state
+                                write_json(run_dir / "content_plan.json", plan)
+                                write_json(run_dir / "layout_packing.json", packing)
+                                post_density_record.update({
+                                    "status": "rejected",
+                                    "reason": "post-repair density jury failed: %s" % exc,
+                                })
+                            audit_repair_log[-1]["post_density"] = post_density_record
+                        else:
+                            audit_repair_log[-1]["post_density"] = {
+                                "status": "not_needed",
+                                "before_bullet_count": portfolio_metrics(pre_density_plan).get("total_bullets"),
+                                "after_bullet_count": portfolio_metrics(plan).get("total_bullets"),
+                            }
                     else:
                         plan, chosen, layout, preview = prior_repair_state
                         audit_repair_log.append({
