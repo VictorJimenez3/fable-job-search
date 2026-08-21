@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-08-21 02:01 UTC** · companies polled directly: **1873** (registry 2112) · jobs tracked: **46259** · new this run: **36** · alerts this run: **3**_
+_Last run: **2026-08-21 02:21 UTC** · companies polled directly: **1873** (registry 2112) · jobs tracked: **46259** · new this run: **36** · alerts this run: **3**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -14,7 +14,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 90 🔥 | 28d | Amazon | [Software Development Engineer - Specialist AI Tooling - Specialist Tec](https://www.amazon.jobs/jobs/10486716/apply) | Jersey City, NJ | big_tech | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 89 🔥 | 7d | NVIDIA | [Software Engineer New Grad - Deep Learning Libraries](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Software-Engineer--Deep-Learning-Libraries---New-College-Graduate-2026_JR2023252) | Santa Clara, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 89 🔥 | 19d | TikTok | [Software Development Engineer Graduate - Global E-Commerce-Quality Pla](https://lifeattiktok.com/search/7668827381435517237) | San Jose, CA | big_tech | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
-| 88 🔥 | 1d | ByteDance | [Machine Learning Engineer Graduate - E-Commerce Risk Control](https://jobs.bytedance.com/en/position/7675477660855781637/detail) | San Jose, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 88 🔥 | 2d | ByteDance | [Machine Learning Engineer Graduate - E-Commerce Risk Control](https://jobs.bytedance.com/en/position/7675477660855781637/detail) | San Jose, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 88 🔥 | 29d | NVIDIA | [Software Engineer New Grad - Physical Design Infrastructure](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Software-Engineer--Physical-Design-Infrastructure---New-College-Grad-2026_JR2021823) | Santa Clara, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 87 🔥 | 28d | Medtronic | [Software Engineer 1 - AI-Driven Data Solutions](https://medtronic.wd1.myworkdayjobs.com/redeploymentmedtroniccareers/job/Lafayette-Colorado-United-States-of-America/Software-Engineer-I--AI-Driven-Data-Solutions----Lafayette--CO_R72435) | Lafayette, CO | healthtech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 87 🔥 | 29d | NVIDIA | [Developer Technology Engineer New Grad - Public Sector](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Developer-Technology-Engineer--Public-Sector---New-College-Grad-2026_JR2008990) | Santa Clara, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
