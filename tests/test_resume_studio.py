@@ -345,8 +345,8 @@ def test_objective_resume_assessment_is_target_specific_and_explains_unknown_rev
     assert assessment["version"] == "objective-resume-v1"
     assert assessment["rankable"] is True
     assert assessment["score"] < 92
-    assert assessment["confidence"] == "medium"
-    assert any("No independent reviewer" in item for item in assessment["risks"])
+    assert assessment["confidence"] == "low"
+    assert any("No critic-panel result" in item for item in assessment["risks"])
     assert any(item["name"] == "Target fit" and item["source"] == "resume_match.score" for item in assessment["breakdown"])
     failed = rs.objective_resume_assessment(report, "failed")
     assert failed["score"] is None and failed["rankable"] is False
@@ -1093,7 +1093,7 @@ def test_workshop_ai_returns_candidates_without_mutating_the_current_draft(monke
     rs.write_json(run_dir / "status.json", {"run_id": run_id, "mode": "dream", "status": "complete"})
     monkeypatch.setattr(rs, "source_catalog", lambda root=None: catalog)
     monkeypatch.setattr(rs, "evidence_graph", lambda root=None: {"nodes": []})
-    monkeypatch.setattr(rs, "provider_commands", lambda: {"codex": "/usr/bin/codex", "claude": None})
+    monkeypatch.setattr(rs, "provider_commands", lambda: {"codex": "/usr/bin/codex"})
     line_id = plan["experiences"][0]["bullets"][0]["source_id"]
     monkeypatch.setattr(
         rs,
@@ -1910,7 +1910,7 @@ def test_provider_transcript_uses_final_structured_response(tmp_path):
 def test_provider_policy_pins_luna_to_codex_model_not_a_provider_lane(monkeypatch):
     monkeypatch.setattr(rs.shutil, "which", lambda name: "/usr/bin/" + name)
     commands = rs.provider_commands()
-    assert set(commands) == {"codex", "claude"}
+    assert set(commands) == {"codex"}
     assert "luna" not in commands
     assert rs.CODEX_LUNA_MODEL == "gpt-5.6-luna"
 
@@ -1920,12 +1920,13 @@ def test_codex_effort_profile_spends_depth_on_writing_and_speed_on_mechanics(mon
     monkeypatch.delenv("RESUME_STUDIO_DRAFT_CODEX_EFFORT", raising=False)
     monkeypatch.delenv("RESUME_STUDIO_LINE_EDIT_CODEX_EFFORT", raising=False)
     assert rs.codex_effort_task("draft") == "draft"
-    assert rs.codex_effort_task("critique_claude") == "review"
-    assert rs.codex_effort_task("revision_critique_claude") == "review"
+    assert rs.codex_effort_task("critique_evidence") == "review"
+    assert rs.codex_effort_task("revision_critique_technical") == "review"
     assert rs.codex_effort_task("line_edit_2") == "line_edit"
     assert rs.codex_reasoning_effort("draft") == "high"
     assert rs.codex_reasoning_effort("space_expansion") == "high"
     assert rs.codex_reasoning_effort("line_edit") == "high"
+    assert rs.codex_reasoning_effort("revision_critique_technical", override=rs.CODEX_RECHECK_EFFORT) == "medium"
     monkeypatch.setenv("RESUME_STUDIO_CODEX_EFFORT", "max")
     assert rs.codex_reasoning_effort("draft") == "high"
     monkeypatch.setenv("RESUME_STUDIO_LINE_EDIT_CODEX_EFFORT", "low")
@@ -1935,6 +1936,15 @@ def test_codex_effort_profile_spends_depth_on_writing_and_speed_on_mechanics(mon
 
 def test_provider_error_result_is_not_usable():
     assert not rs.useful_provider_data({"is_error": True}, "draft")
+
+
+def test_role_labeled_critic_response_is_usable():
+    data = {"criteria": {
+        name: {"status": "pass", "reason": "checked"}
+        for name in rs.REVIEW_CRITERIA
+    }}
+    assert rs.useful_provider_data(data, "critique_evidence")
+    assert rs.useful_provider_data(data, "revision_critique_screening")
 
 
 def test_provider_usage_tokens_reads_codex_footer(tmp_path):
@@ -1971,7 +1981,7 @@ def test_ticc_bullet_is_rejected_by_source_addressed_validation():
     assert any("permanently excluded" in error for error in errors)
 
 
-def test_reviewer_prompt_is_independent_and_does_not_sparsify_by_rule():
+def test_reviewer_prompt_is_role_separated_and_does_not_sparsify_by_rule():
     prompt = rs.reviewer_prompt(
         {"company": "Mayo Clinic"},
         "proposed tex",
@@ -1979,12 +1989,13 @@ def test_reviewer_prompt_is_independent_and_does_not_sparsify_by_rule():
         graph_context=[],
         catalog=_fixture_catalog(),
     )
-    assert "independent adversarial resume critic" in prompt
+    assert "Codex Luna multi-role critic jury" in prompt
+    assert "same-model role-separated review" in prompt
     assert "Do not return a replacement plan" in prompt
     assert "Sections and bullet counts are adaptive" in prompt
 
 
-def test_gate_report_never_calls_a_single_provider_review_ready():
+def test_gate_report_never_calls_an_unavailable_panel_review_ready():
     critique = {"provider": "codex", "data": {
         "criteria": {name: {"status": "pass", "reason": "ok"} for name in rs.REVIEW_CRITERIA},
         "blocking_issues": [], "unsupported_claims": [], "missing_evidence": [],
@@ -1997,7 +2008,53 @@ def test_gate_report_never_calls_a_single_provider_review_ready():
     }}
     result = rs.score_review(critique, deterministic, independent_available=False)
     assert result["ready"] is False
+    assert result["gates"]["critic_jury"]["status"] == "fail"
     assert result["gates"]["independent_review"]["status"] == "fail"
+
+
+def test_codex_luna_jury_is_ready_without_claiming_vendor_independence():
+    critique = {"provider": "codex", "data": {
+        "criteria": {name: {"status": "pass", "reason": "role passed"} for name in rs.REVIEW_CRITERIA},
+        "blocking_issues": [], "unsupported_claims": [], "missing_evidence": [],
+        "revision_priorities": [], "line_feedback": [],
+        "portfolio_comparison": {
+            "status": "pass", "reason": "complementary evidence",
+            "preserved_strengths": ["systems evidence"],
+            "gained_strengths": ["healthcare software relevance"],
+            "lost_strengths": [],
+        },
+    }}
+    deterministic = {"gates": {
+        "factual": {"status": "pass", "reason": "ok"},
+        "layout": {"status": "pass", "reason": "ok"},
+        "portfolio": {"status": "pass", "reason": "ok"},
+        "eligibility": {"status": "pass", "reason": "ok"},
+    }}
+    roles = [item["key"] for item in rs.CODEX_CRITIC_ROLES]
+    result = rs.score_review(
+        critique, deterministic, independent_available=True,
+        review_mode=rs.CODEX_REVIEW_MODE, critic_roles=roles,
+    )
+    assert result["ready"] is True
+    assert result["gates"]["critic_jury"]["status"] == "pass"
+    assert result["gates"]["independent_review"]["status"] == "partial"
+    assert result["critic_jury"] == {
+        "available": True,
+        "mode": rs.CODEX_REVIEW_MODE,
+        "roles": roles,
+        "separate_vendor": False,
+    }
+    assert "independent_review" not in {gate["name"] for gate in rs.build_tailoring_audit(
+        {"company": "Example"},
+        {"posting_text": "A real posting " * 100, "job_intelligence": {"posting_available": True}},
+        {"score": 80, "confidence": "high"},
+        {"hash": "graph"},
+        {"experiences": [], "projects": [], "leadership": []},
+        {"rewritten_bullets": [], "added_bullets": [], "removed_canonical_bullets": [], "portfolio_diagnostics": {}},
+        {"gates": deterministic["gates"]},
+        result,
+        "base", "tailored",
+    )["hard_gates"]}
 
 
 def test_wrapped_enhancement_restores_approved_source_text():
@@ -2103,7 +2160,7 @@ def test_score_review_returns_separate_gates_without_a_composite_score():
 
 
 def test_score_review_hard_fails_unsupported_claims():
-    agent = {"provider": "claude", "data": {"criteria": {}, "unsupported_claims": ["invented users"]}}
+    agent = {"provider": "codex", "data": {"criteria": {}, "unsupported_claims": ["invented users"]}}
     result = rs.score_review(
         agent,
         {
@@ -2124,7 +2181,7 @@ def test_score_review_hard_fails_unsupported_claims():
 
 
 def test_score_review_cannot_average_away_failed_eligibility_gate():
-    agent = {"provider": "claude", "data": {
+    agent = {"provider": "codex", "data": {
         "criteria": {name: {"status": "pass", "reason": "ok"} for name in rs.REVIEW_CRITERIA},
         "portfolio_comparison": {"status": "pass", "reason": "better", "preserved_strengths": [], "gained_strengths": [], "lost_strengths": []},
         "unsupported_claims": [], "blocking_issues": [],

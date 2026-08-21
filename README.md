@@ -572,10 +572,13 @@ one-page contract, and owner review. In all modes a deterministic renderer
 uses the locked `CV/immutable/VictorJimenezResume.tex` visual contract;
 models cannot author the LaTeX document, alter the margins or typography, or
 overwrite the canonical resume. Employer headings are company-first. Usable installed
-first-party Codex and Claude Code sessions provide planning and fixed review;
-one may fail independently and the run degrades to the other without API keys.
-The local harness removes API-key environment variables so this owner workflow
-does not silently spend API credits. Nothing from `CV/` is sent to GitHub
+first-party Codex CLI pinned to `gpt-5.6-luna` is the sole provider lane. Each
+enhanced run launches four role-separated Luna critic calls—evidence,
+recruiter, technical, and screening—as a same-model jury. This gives the
+evaluator distinct responsibilities without pretending it is vendor-independent;
+a missing critic result remains visible and blocks readiness. The local harness
+removes API-key environment variables so this owner workflow does not silently
+spend API credits. Nothing from `CV/` is sent to GitHub
 Actions or committed to the public repository.
 
 The role list can be sorted by **Best Radar score**, **Newest**, or the private
@@ -625,8 +628,8 @@ fit, evidence safety, layout safety, and portfolio signal. It compares only
 variants for the same canonical posting, keeps failed/interrupted runs out of
 the winner slot, and shows the component sources, strengths, and limits. This
 is an owner-only decision aid—not a claim that an outside ChatGPT session or a
-hiring manager would choose the same resume. If no independent reviewer result
-exists, the UI says so and lowers confidence rather than inventing a verdict.
+hiring manager would choose the same resume. If no critic-panel result exists,
+the UI says so and lowers confidence rather than inventing a verdict.
 Each saved version also exposes an **ATS keyword map**. Green terms occur in
 the rendered resume, yellow terms are supported by the private evidence bank
 but omitted from that version, and red terms are unsupported. When PDF geometry
@@ -646,8 +649,8 @@ review**. An explained project swap is not counted as a regression, and a
 low-priority context term such as coursework is not treated like lost core
 evidence. When material regressions remain, an evidence-bounded repair pass
 tries once to improve the plan and accepts it only if the compiled comparison
-gets better. Factuality, eligibility, layout, privacy, and independent-review
-failures cannot be averaged away. This is a quality-control and comparison
+gets better. Factuality, eligibility, layout, privacy, and critic-panel failures
+cannot be averaged away. This is a quality-control and comparison
 report—not an ATS score or a prediction of an employer's decision. The full
 `job_intelligence.json` and `tailoring_audit.json` artifacts stay local; cloud
 sync exposes only their sanitized summary.
@@ -674,10 +677,13 @@ until that option exists, the local Pipeline and Google tracker still record
 the stage and Notion leaves the local sync state auditable rather than sending
 an invalid update.
 
-The local engine now uses **high Luna effort for every tailoring stage** by
-standing preference. Lower effort values and `max` are rejected and fall back
-to high, so future runs cannot silently trade away quality or hang in the max
-lane. Only one frontier line-repair pass runs; the deterministic
+The local engine uses **high Luna effort for authoring and the initial critic
+panel** by standing preference. After a writer applies panel feedback, the
+post-revision critic recheck uses a bounded medium-effort Luna call to keep
+four-role verification usable under subscription latency; its effort and
+result are recorded, and a timeout still leaves the run unready. Lower effort
+values and `max` are rejected for ordinary stages and fall back to high. Only
+one frontier line-repair pass runs; the deterministic
 source-authorized compactor remains the fallback. Run reports record the
 stage, model, effort, latency, and observed tokens in **Provider flow, model,
 and usage**. The historical 2026-08-17 Merck comparison produced valid drafts
@@ -688,8 +694,9 @@ Open **Workshop** on a completed run to edit education, skills, experience,
 projects, and leadership lines without touching the original PDF. Saving a
 line creates a unique rendered revision; the AI writing partner returns
 source-grounded candidates for approval, and revision history can revert to an
-earlier draft. The current Mac exposes Codex CLI and Claude Code lanes; a Luna
-lane is only available when a local `luna` executable is installed.
+earlier draft. The current Mac exposes one approved lane: the Codex CLI pinned
+to `gpt-5.6-luna`. The critic panel uses four role-labeled Codex calls; it is
+deliberately not described as an independent vendor review.
 
 Reviewer output is normalized before rendering: repeated selections for one
 source entry are merged so distinct evidence is not silently lost, and

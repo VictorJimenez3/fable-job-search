@@ -2200,3 +2200,27 @@ findings, produces a complete evidence-grounded replacement plan, and is
 accepted only if it beats the prior source-aware comparison key and passes the
 one-page render gate. A missing Claude/independent lane still prevents `ready`;
 the repair pass cannot manufacture independent confidence.
+
+## 146. Resume Studio uses a Codex Luna multi-role jury (2026-08-21)
+
+Victor no longer has Claude Code available, so the active Resume Studio system
+must not discover, call, or describe a Claude provider lane. `provider_commands()`
+now exposes only the first-party Codex CLI, and `run_provider()` pins every
+stage to `gpt-5.6-luna` while stripping API-key and arbitrary-endpoint
+fallbacks. The Mac worker's health contract is correspondingly Codex-only.
+
+The evaluator remains independent from the writer at the responsibility level:
+each enhanced run launches four fresh, role-separated Codex critic calls for
+evidence integrity, recruiter skim quality, technical conviction, and screening
+/eligibility. Their outputs are combined only after structured-response and
+role-label validation. This is useful adversarial coverage, but it is a
+same-model jury—not vendor-independent evidence—and the UI/report says so.
+The new `critic_jury` gate is required for readiness; the old
+`independent_review` field remains a readable compatibility alias and is marked
+partial for same-model jury runs. Missing or malformed role results leave the
+run in review. The initial panel stays on high Luna effort; post-revision
+rechecks use bounded medium effort because the lab showed that four concurrent
+high-effort rechecks could hit the provider timeout after producing no
+structured JSON. This is a latency safeguard, not a readiness bypass: the
+recheck's model/effort/status is recorded and an unavailable recheck leaves the
+final run in review. No email or external delivery is part of this change.
