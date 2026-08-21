@@ -2367,3 +2367,27 @@ document extraction/caching, HackMIT validation) did not outweigh losses in
 REST, safe fallback, explainability, health/security evidence, and distinctive
 portfolio coverage. Merck remains a provisional safer control, not an evidence
 authority or exact hiring score.
+
+## 155. Resume Studio records audit-repair density prerequisites (2026-08-21)
+
+The next Stryker run exercised the post-repair quality path under the merged
+code at
+`CV/.resume_studio/benchmarks/stryker-post-repair-density-20260821/runs/78044c21145b`.
+It ran 3,557.3 seconds with 26 Codex Luna calls; every sealed evidence,
+recruiter, technical, and screening role completed in each recorded round
+under the same contract and rubric hashes. The audit-repair writer produced a
+candidate that failed the one-page geometry prerequisite, so the new
+post-repair density refill correctly did not run. Final geometry recovery
+restored three authorized source lines and passed a fresh sealed panel, but
+the resulting candidate still had zero comparative gains, loss weight 15,
+five regressions, one blocker, and twelve questions. The immutable base was
+therefore selected as the primary artifact again.
+
+The implementation now records `post_density.status` explicitly as
+`accepted`, `rejected`, `not_needed`, or `not_run` in the audit-repair log.
+An accepted repair may consume measured space only through compiled,
+source-authorized additions; the exact changed artifact must pass a fresh
+complete sealed panel and improve the source-aware comparison, otherwise the
+already accepted repair is restored. This improves observability without
+changing the evaluator rubric, evidence authority, geometry gate, or
+readiness thresholds.
