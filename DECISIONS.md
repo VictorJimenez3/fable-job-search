@@ -2294,3 +2294,17 @@ the saved Merck AI PDF with the fresh Stryker candidate and returned
 consensus near-wrap defect plus lost high-information evidence and repeated
 AI/RAG/backend stories. The verdict is qualitative and the Merck run remains
 owner-unapproved; it is not a 0–100 hiring prediction.
+
+## 150. Resume Studio gets a final source-preserving geometry recovery (2026-08-21)
+
+The broad Luna Max lab exposed a real last-mile failure: a Junior ERP
+tailoring run reached the audit-repair stage but ended with one wrapped bullet
+and two near-wraps. Rejecting that artifact was correct, but abandoning the
+run without trying the already-authorized source wording left a deterministic
+quality repair unused. The worker now performs one bounded final recovery when
+the hard one-line gate is still unsafe: restore the exact source text for
+unsafe rewritten bullets, try conservative source-preserving compactions, and
+compile the result. The exact recovered artifact must pass a fresh complete
+sealed four-role panel before acceptance; evaluator criteria, rubric hashes,
+and layout thresholds are unchanged. An unsafe or incompletely rechecked
+candidate remains rejected and the run records `final_geometry_recovery.json`.

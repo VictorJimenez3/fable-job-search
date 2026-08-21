@@ -296,6 +296,13 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   an explicit `partial` compatibility alias for same-model reports and cannot
   downgrade a completed Luna jury by itself. A missing role or unusable
   structured response leaves the run in review.
+- **Final geometry recovery is still a hard gate:** if an audit repair leaves
+  a wrapped or near-wrapped bullet, the worker may restore that bullet's exact
+  authorized source wording and try bounded deterministic compactions. The
+  recovered artifact is sent through a fresh complete sealed panel; an unsafe
+  or incompletely rechecked candidate is rejected, never promoted by the
+  recovery path. The recovery receipt is stored as
+  `final_geometry_recovery.json`.
 
 ### Previous change (verified 2026-08-15)
 

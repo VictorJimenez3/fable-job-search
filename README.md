@@ -689,7 +689,11 @@ control. Four role calls (evidence, recruiter, technical, and screening) must
 all return an attested result; a partial panel cannot become ready. A repair
 candidate is re-rendered and re-evaluated from scratch before it can replace
 the prior candidate. Only one frontier line-repair pass runs; the deterministic
-source-authorized compactor remains the fallback. Run reports record the
+source-authorized compactor remains the fallback. If a later audit repair still
+leaves a wrapped or near-wrapped line, a final deterministic recovery may restore
+the exact authorized source wording and apply bounded source-preserving
+compaction; the exact recovered artifact then receives a fresh complete sealed
+panel before it can be selected. Run reports record the
 stage, model, effort, latency, contract fingerprint, rubric hash, and observed
 tokens in **Provider flow, model, effort, and usage**. If Max times out or a
 contract attestation fails, the run remains review/blocked rather than silently
