@@ -2329,3 +2329,14 @@ unexplained canonical losses, lost supported terminology, project swaps, and
 portfolio-overlap warnings, with explicit rules to restore or justify those
 losses before adding new wording. This remains a writer-input improvement only;
 the sealed evaluator packet, rubric hash, and pass thresholds are unchanged.
+
+## 153. Resume Studio bounds compiled measured-space search (2026-08-21)
+
+The quality lab also exposed an avoidable latency cliff in the deterministic
+page-capacity helper: every candidate could trigger six single-removal and
+fifteen two-removal LaTeX compilations before being rejected. The helper now
+examines the top four removal candidates, retaining the direct trial, all four
+single swaps, and all six two-bullet swaps. This reduces the compiled frontier
+from 22 trials to 11 per candidate while preserving the only swap class that
+can replace two weak lines with a stronger two-line entry. It changes no
+evaluator rubric, evidence authority, layout threshold, or readiness gate.

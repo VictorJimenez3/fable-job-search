@@ -173,6 +173,13 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   The active manifest and final receipts must be recorded here after the lab
   closes; no evaluator result may be altered to force a pass.
 
+- **Compiled space search is bounded:** measured-capacity expansion still
+  permits direct additions, single removals, and two-bullet swaps, but its
+  deterministic removal frontier is capped at the top four candidates. This
+  avoids spending most of a run compiling equivalent low-value combinations;
+  the evaluator, source authority, geometry threshold, and acceptance rules
+  are unchanged. The merged production change is PR #2583 (`48b7d479`).
+
 ### Current change (verified 2026-08-19)
 
 - **Fresh new-grad action queue:** the classic platform defaults New-grad Jobs
