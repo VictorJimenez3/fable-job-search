@@ -677,18 +677,40 @@ until that option exists, the local Pipeline and Google tracker still record
 the stage and Notion leaves the local sync state auditable rather than sending
 an invalid update.
 
-The local engine uses **high Luna effort for authoring and the initial critic
-panel** by standing preference. After a writer applies panel feedback, the
-post-revision critic recheck uses a bounded medium-effort Luna call to keep
-four-role verification usable under subscription latency; its effort and
-result are recorded, and a timeout still leaves the run unready. Lower effort
-values and `max` are rejected for ordinary stages and fall back to high. Only
-one frontier line-repair pass runs; the deterministic
+The active quality lane uses **Codex Luna Max** for the initial authoring pass
+and every critic recheck. Repeated writer repair calls use Luna High after the
+quality lab showed Max consuming its full budget without returning a
+structured replacement; this is recorded as an explicit repair policy rather
+than a hidden fallback. Each critic runs in a fresh, critique-only subprocess
+under the sealed `resume-evaluator-v2-sealed` contract. Its packet contains the
+base resume, candidate resume, job snapshot, authorized evidence, and
+deterministic checks—but no writer prompt, prior review, score, or readiness
+control. Four role calls (evidence, recruiter, technical, and screening) must
+all return an attested result; a partial panel cannot become ready. A repair
+candidate is re-rendered and re-evaluated from scratch before it can replace
+the prior candidate. Only one frontier line-repair pass runs; the deterministic
 source-authorized compactor remains the fallback. Run reports record the
-stage, model, effort, latency, and observed tokens in **Provider flow, model,
-and usage**. The historical 2026-08-17 Merck comparison produced valid drafts
-in 69–82 seconds at low/medium/high, with high having the safest compiled
-geometry; max produced no structured result within 4:51 and is now disabled.
+stage, model, effort, latency, contract fingerprint, rubric hash, and observed
+tokens in **Provider flow, model, effort, and usage**. If Max times out or a
+contract attestation fails, the run remains review/blocked rather than silently
+falling back to an optimistic score.
+
+The parent audit normalizes the panel's prose before making a decision:
+near-identical concerns are retained once with their supporting critic roles,
+while honest candidate-role gaps (for example, testing not present in the
+evidence bank) remain fit warnings rather than fabricated resume blockers.
+Unsupported claims, eligibility conflicts, parsing/layout failures, and real
+tailoring regressions retain their stronger gates. This keeps consensus visible
+without letting four phrasings of one concern masquerade as four independent
+failures.
+
+For broad validation, `scripts/resume_studio_benchmark.py` fetches and matches
+many live postings concurrently, then runs a smaller full-tailoring sample
+balanced across sectors and companies. Its manifest preserves the posting
+fetch results, match control, selected full-run cohort, per-run checkpoint,
+latency, panel completeness, comparative audit outcome, quality rejections, and
+execution failures. This is a lab harness, not a claim that a local evaluator
+predicts hiring outcomes.
 
 Open **Workshop** on a completed run to edit education, skills, experience,
 projects, and leadership lines without touching the original PDF. Saving a
@@ -773,7 +795,7 @@ company by commenting `culture <company>` on an alert issue.
 
 Everything subjective lives in [`profile.yaml`](profile.yaml): sector weights,
 role weights, alert threshold, freshness bonuses, location policy, the
-narrative Claude uses, and explicit favorite score overrides. PM-family weight
+narrative the scoring system uses, and explicit favorite score overrides. PM-family weight
 is intentionally zero and its no-alert behavior is a gate, not a notification
 setting. Edit and push — next run picks it up. Seed companies:
 [`data/companies_seed.yaml`](data/companies_seed.yaml).

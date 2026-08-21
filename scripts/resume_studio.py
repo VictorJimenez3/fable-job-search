@@ -43,6 +43,7 @@ import shutil
 import signal
 import subprocess
 import sys
+import tempfile
 import threading
 import time
 import traceback
@@ -69,6 +70,7 @@ from radar.evidence_review import (BLOCKING_STATUSES, REVIEW_STATUSES,
                                    dismiss_question_hint as dismiss_context_hint,
                                    load_reviews, review_path, review_summary,
                                    upsert_questions)
+from scripts import resume_evaluator
 
 
 RUBRIC_VERSION = "resume-gates-v1"
@@ -77,33 +79,196 @@ JOB_INTELLIGENCE_VERSION = "job-intelligence-v1"
 TAILORING_AUDIT_VERSION = "tailoring-audit-v2"
 CODEX_LUNA_MODEL = "gpt-5.6-luna"
 CODEX_REVIEW_MODE = "codex_luna_multi_role_jury"
-CODEX_RECHECK_EFFORT = "medium"
-CODEX_CRITIC_ROLES = (
-    {
-        "key": "evidence",
-        "label": "Evidence integrity auditor",
-        "focus": "Check provenance, factual boundaries, metrics, qualifiers, and whether every claim is interview-defensible.",
-    },
-    {
-        "key": "recruiter",
-        "label": "Recruiter skim critic",
-        "focus": "Check six-second comprehension, hierarchy, narrative coherence, readability, and whether the strongest evidence is visible quickly.",
-    },
-    {
-        "key": "technical",
-        "label": "Technical hiring-manager critic",
-        "focus": "Check technical conviction, mechanism, scope, engineering judgment, distinct interview threads, and portfolio complementarity.",
-    },
-    {
-        "key": "screening",
-        "label": "Screening and eligibility auditor",
-        "focus": "Check supported terminology, parsing-friendly wording, requirement coverage, hard eligibility constraints, and keyword gaming.",
-    },
-)
+SEALED_EVALUATOR_CONTRACT = resume_evaluator.EVALUATOR_CONTRACT_VERSION
+CODEX_RECHECK_EFFORT = "max"
+CODEX_CRITIC_ROLES = resume_evaluator.ROLE_DEFINITIONS
 REVIEW_CRITERIA = (
     "factual", "target_fit", "evidence", "distinctiveness", "clarity", "privacy",
 )
 STATUS_MULTIPLIER = {"pass": 1.0, "partial": 0.5, "fail": 0.0}
+
+# A critic's ``blocking_issues`` field is intentionally broad: it gives a
+# writer useful repair material, but it must not be treated as a list of
+# equally severe application blockers.  These patterns are a deterministic
+# post-processing boundary between (a) claims/safety/layout failures, (b)
+# tailoring regressions, and (c) honest candidate-role gaps.  The evaluator
+# remains free to describe a concern in its own words; this layer decides how
+# that concern affects readiness.
+CRITIC_HARD_ISSUE_RE = re.compile(
+    r"\b(unsupported\s+(?:or\s+)?(?:fabricated|exaggerated|false)?\s*claim|"
+    r"fabricat(?:ed|ion)|hallucinat(?:ed|ion)|invented\s+(?:claim|experience)|"
+    r"false\s+claim|privacy|confidential|secret|ineligible|eligibility\s+conflict|"
+    r"visa\s+(?:conflict|requirement)|credential\s+(?:conflict|absent)|"
+    r"degree\s+(?:conflict|required|mismatch)|parse(?:r|ing)?\s+(?:failure|error)|"
+    r"compil(?:e|ation)\s+(?:failure|error)|near[- ]?wrap\w*|wrap\w*\s+(?:bullet|line)|"
+    r"right[- ]side\s+slack|one[- ]line\s+(?:safety|check)|layout(?:\s+(?:failure|defect|check))?|"
+    r"readability(?:\s+(?:failure|defect|risk))?)\b",
+    re.I,
+)
+CRITIC_FIT_GAP_RE = re.compile(
+    r"\b(?:not\s+(?:demonstrated|demonstrate|visible|established|explicit|evidenced|shown|legible)|"
+    r"does\s+not\s+(?:demonstrate|evidence|establish|show)|doesn['’]t\s+(?:demonstrate|evidence|show)|"
+    r"not\s+(?:authorized|supported)\s+(?:by\s+)?(?:the\s+)?(?:evidence|packet|source)|"
+    r"unsupported\s+(?:exact\s+)?(?:term|phrase|requirement)|no\s+authorized\s+evidence|"
+    r"\b(?:absent|missing|gap|thin|limited)\b|not\s+at\s+the\s+level)\b",
+    re.I,
+)
+CRITIC_REGRESSION_RE = re.compile(
+    r"\b(?:duplicat(?:e|ed|es|ion)|redundan(?:t|cy)|repetition|repeat\w*|overlap(?:s|ping)?|"
+    r"lost|drop\w*|remov(?:e|ed|es|al)|omitt(?:ed|ing|s)|silently|unexplained|"
+    r"without[^.]{0,80}tradeoff|without\s+explanation|"
+    r"hides?\s+(?:high[- ]value|distinctive)|not\s+dominant|not\s+legible)",
+    re.I,
+)
+
+
+def classify_critic_issue(issue: Any) -> str:
+    """Classify one critic concern without letting fit gaps become blockers."""
+    text = str(issue or "").strip()
+    if not text:
+        return "quality_concern"
+    if CRITIC_HARD_ISSUE_RE.search(text):
+        return "hard_blocker"
+    # A sentence can mention both an absent requirement and the reason it is
+    # absent. Prefer the tailoring-regression interpretation when it says that
+    # authorized/base evidence was removed or replaced by repetitive content.
+    if CRITIC_REGRESSION_RE.search(text):
+        return "tailoring_regression"
+    if CRITIC_FIT_GAP_RE.search(text):
+        return "candidate_fit_gap"
+    return "quality_concern"
+
+
+def critic_issue_finding(issue: Any, kind: str = "") -> Tuple[str, str]:
+    """Map a normalized critic kind to the audit taxonomy and severity."""
+    resolved = kind or classify_critic_issue(issue)
+    if resolved == "hard_blocker":
+        return "BLOCKER", "critical"
+    if resolved == "tailoring_regression":
+        return "REGRESSION", "warning"
+    if resolved == "candidate_fit_gap":
+        return "QUESTIONABLE", "warning"
+    return "QUESTIONABLE", "warning"
+
+
+def _critic_issue_cluster(issue: Any, kind: str) -> str:
+    """Return a narrow semantic family for issues with highly variable prose."""
+    text = str(issue or "")
+    if kind == "hard_blocker" and re.search(
+        r"near[- ]?wrap|wrap\w*|right[- ]side\s+slack|one[- ]line|layout|readability",
+        text, re.I,
+    ):
+        return "layout_safety"
+    return ""
+
+
+def _critic_issue_tokens(value: Any) -> set:
+    """Return stable signal tokens used only to collapse repeated panel prose."""
+    tokens = _resume_tokens(str(value or ""))
+    return {
+        token for token in tokens
+        if len(token) > 2 and token not in {
+            "resume", "resume's", "tailored", "version", "target", "posting",
+            "role", "candidate", "evidence", "signal", "story", "line", "lines",
+            "bullet", "bullets", "section", "selected", "selection", "supplied",
+            "visible", "appears", "appearing", "central", "specific", "material",
+            "high", "value", "technical", "direct", "concrete", "multiple",
+        }
+    }
+
+
+def collapse_critic_issues(records: Iterable[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Collapse near-identical concerns while retaining role agreement.
+
+    The raw child JSON remains untouched.  The parent report receives one
+    finding per underlying issue plus ``supporting_roles`` and
+    ``support_count`` so a four-role consensus is visible without counting
+    four phrasings as four independent regressions.
+    """
+    collapsed: List[Dict[str, Any]] = []
+    for record in records:
+        data = record.get("data") if isinstance(record, dict) else {}
+        role = str(record.get("critic_role") or "") if isinstance(record, dict) else ""
+        for raw_issue in (data.get("blocking_issues") or []) if isinstance(data, dict) else []:
+            issue = str(raw_issue or "").strip()
+            if not issue:
+                continue
+            kind = classify_critic_issue(issue)
+            cluster = _critic_issue_cluster(issue, kind)
+            tokens = _critic_issue_tokens(issue)
+            match = None
+            for existing in collapsed:
+                if existing.get("kind") != kind:
+                    continue
+                if cluster and existing.get("cluster") == cluster:
+                    match = existing
+                    break
+                other = set(existing.get("tokens") or [])
+                if issue.casefold() == str(existing.get("issue") or "").casefold():
+                    match = existing
+                    break
+                if tokens and other:
+                    overlap = len(tokens & other) / max(1, min(len(tokens), len(other)))
+                    union = len(tokens & other) / max(1, len(tokens | other))
+                    if overlap >= 0.50 or union >= 0.30:
+                        match = existing
+                        break
+            if match is None:
+                classification, severity = critic_issue_finding(issue, kind)
+                match = {
+                    "issue": issue,
+                    "kind": kind,
+                    "cluster": cluster,
+                    "classification": classification,
+                    "severity": severity,
+                    "supporting_roles": [],
+                    "support_count": 0,
+                    "variants": [],
+                    "tokens": sorted(tokens),
+                }
+                collapsed.append(match)
+            if role and role not in match["supporting_roles"]:
+                match["supporting_roles"].append(role)
+            match["support_count"] = len(match["supporting_roles"])
+            if issue != match["issue"] and issue not in match["variants"] and len(match["variants"]) < 4:
+                match["variants"].append(issue)
+    for item in collapsed:
+        item.pop("tokens", None)
+        item.pop("cluster", None)
+        item["agreement"] = "consensus" if item["support_count"] >= 2 else "single_role"
+    return collapsed
+
+
+def sealed_panel_status(records: Iterable[Dict[str, Any]], roles: Iterable[Dict[str, Any]]) -> Dict[str, Any]:
+    """Return exact role completeness for one sealed evaluator round.
+
+    Counting successful records is insufficient: a duplicated role or a
+    successful non-sealed record must never substitute for a missing critic.
+    This helper is intentionally deterministic and order-stable for reports
+    and tests.
+    """
+    required = [str(item.get("key") or "") for item in roles if str(item.get("key") or "")]
+    required_set = set(required)
+    attempted_set = {
+        str(record.get("critic_role") or "")
+        for record in records
+        if str(record.get("critic_role") or "") in required_set
+    }
+    completed_set = {
+        str(record.get("critic_role") or "")
+        for record in records
+        if record.get("ok")
+        and record.get("execution_lane") == "sealed_evaluator"
+        and record.get("contract_version") == SEALED_EVALUATOR_CONTRACT
+        and str(record.get("critic_role") or "") in required_set
+    }
+    return {
+        "complete": completed_set == required_set and len(completed_set) == len(required_set),
+        "required_roles": required,
+        "attempted_roles": [role for role in required if role in attempted_set],
+        "completed_roles": [role for role in required if role in completed_set],
+        "failed_roles": [role for role in required if role not in completed_set],
+    }
 MAX_POSTING_CHARS = 12000
 MAX_PROMPT_CHARS = 42000
 RUN_TIMEOUT_SECONDS = 12 * 60
@@ -178,20 +343,19 @@ TAILOR_MODE_ALIASES = {
     "unchained": "generation", "generate": "generation",
     "generation": "generation", "generative": "generation",
 }
-# Victor's standing preference is the high Luna lane for authoring and the
-# initial critic panel. Keep the task map explicit for auditability, but reject
-# lower or experimental environment overrides. A caller may explicitly request
-# the bounded medium-effort post-revision critic recheck below.
-CODEX_EFFORTS = frozenset(("high",))
+# Victor's current lab preference is the Luna Max lane for authoring, revision,
+# and every sealed critic panel. Keep the task map explicit for auditability;
+# lower-effort overrides are rejected so benchmark results remain comparable.
+CODEX_EFFORTS = frozenset(("high", "max"))
 CODEX_TASK_EFFORT_DEFAULTS = {
-    "draft": "high",
-    "synthesis": "high",
-    "gap_analysis": "high",
-    "space_expansion": "high",
-    "line_edit": "high",
-    "revision": "high",
-    "review": "high",
-    "workshop": "high",
+    "draft": "max",
+    "synthesis": "max",
+    "gap_analysis": "max",
+    "space_expansion": "max",
+    "line_edit": "max",
+    "revision": "max",
+    "review": "max",
+    "workshop": "max",
 }
 FORBIDDEN_RESUME_TERM_RE = re.compile(r"\bticc\b", re.I)
 PROTECTED_QUALIFIERS = (
@@ -1689,6 +1853,7 @@ def build_change_findings(
         source_ids: Optional[Iterable[str]] = None,
         requirement_ids: Optional[Iterable[str]] = None,
         action: str = "",
+        critic_consensus: Optional[Dict[str, Any]] = None,
     ) -> None:
         if classification not in {"KEEP_GOOD", "QUESTIONABLE", "REGRESSION", "MISSED_OPPORTUNITY", "BLOCKER"}:
             classification = "QUESTIONABLE"
@@ -1696,6 +1861,7 @@ def build_change_findings(
             "id": "finding:" + _stable_digest({
                 "classification": classification, "reason": reason,
                 "source_ids": list(source_ids or []), "requirement_ids": list(requirement_ids or []),
+                "critic_consensus": critic_consensus or {},
             }, 14),
             "classification": classification,
             "severity": severity if severity in {"info", "warning", "critical"} else "warning",
@@ -1704,6 +1870,15 @@ def build_change_findings(
             "requirement_ids": list(dict.fromkeys(str(value) for value in (requirement_ids or []) if str(value)))[:8],
             "action": str(action or "")[:500],
         }
+        if isinstance(critic_consensus, dict) and critic_consensus:
+            item["critic_consensus"] = {
+                "supporting_roles": list(dict.fromkeys(
+                    str(value) for value in critic_consensus.get("supporting_roles") or [] if str(value)
+                ))[:8],
+                "support_count": int(critic_consensus.get("support_count") or 0),
+                "agreement": str(critic_consensus.get("agreement") or "unknown"),
+                "variants": [str(value)[:500] for value in critic_consensus.get("variants") or []][:4],
+            }
         if item["id"] not in {existing["id"] for existing in findings}:
             findings.append(item)
 
@@ -1850,11 +2025,38 @@ def build_change_findings(
     if panel_available and not isinstance(blocking_issues, list):
         blocking_issues = [blocking_issues]
     if panel_available:
-        for issue in blocking_issues[:20]:
+        assessments = review.get("blocking_issue_assessments")
+        if not isinstance(assessments, list):
+            assessments = []
+            for issue in blocking_issues[:20]:
+                kind = classify_critic_issue(issue)
+                classification, severity = critic_issue_finding(issue, kind)
+                assessments.append({
+                    "issue": str(issue), "kind": kind,
+                    "classification": classification, "severity": severity,
+                    "supporting_roles": [], "support_count": 0,
+                    "agreement": "unknown", "variants": [],
+                })
+        for assessment in assessments[:20]:
+            issue = str(assessment.get("issue") or "").strip()
+            if not issue:
+                continue
+            classification, severity = critic_issue_finding(
+                issue, str(assessment.get("kind") or ""),
+            )
             add(
-                "BLOCKER", "critical",
+                classification, severity,
                 "Critic panel reported a blocking issue: %s" % str(issue),
-                action="Resolve the critic's blocking issue before treating the resume as ready.",
+                action=(
+                    "Resolve this safety or layout failure before treating the resume as ready."
+                    if classification == "BLOCKER" else
+                    "Repair or explicitly preserve the stronger evidence before shipping this tailored version."
+                    if classification == "REGRESSION" else
+                    "Record this as a candidate-role gap; do not insert unsupported terminology."
+                    if str(assessment.get("kind") or "") == "candidate_fit_gap" else
+                    "Confirm the concern during owner review."
+                ),
+                critic_consensus=assessment,
             )
     return findings[:MAX_AUDIT_FINDINGS]
 
@@ -3239,10 +3441,9 @@ def codex_effort_task(label: str) -> str:
 def codex_reasoning_effort(label: str, override: Optional[str] = None) -> str:
     """Return the configured Luna effort for one stage.
 
-    The lookup order makes experiments easy without forcing a permanent
-    configuration change: an explicit call override wins, then a task-specific
-    environment variable, then the global benchmark override, then the safe
-    production default for that task.
+    The lookup order is explicit for auditability. The configured Max lane is
+    the default; unsupported lower-effort overrides fall back to high only for
+    legacy callers, never silently to a different provider.
     """
     task = codex_effort_task(label)
     candidates = [
@@ -3419,6 +3620,194 @@ def run_provider(
             "provider": provider, "ok": False, "error": str(exc),
             "reasoning_effort": requested_effort,
         }
+
+
+def run_sealed_evaluator(
+    packet: Dict[str, Any],
+    run_dir: Path,
+    label: str,
+    timeout: int = RUN_TIMEOUT_SECONDS,
+) -> Dict[str, Any]:
+    """Run one immutable evaluator packet in a fresh, critique-only process.
+
+    This deliberately does not call ``run_provider``.  The writer and the
+    evaluator therefore have separate subprocesses, prompts, schemas, and
+    working directories.  A result is usable only when the child proves the
+    frozen contract, role, and packet hash that the parent supplied.
+    """
+    role = str(packet.get("role") or "")
+    evaluator_root = run_dir / "sealed_evaluator"
+    packet_path = evaluator_root / (label + "_input.json")
+    output_path = evaluator_root / (label + "_result.json")
+    stdout_path = evaluator_root / (label + "_launcher.stdout.txt")
+    stderr_path = evaluator_root / (label + "_launcher.stderr.txt")
+    codex_stdout_path = evaluator_root / (label + "_codex.stdout.json")
+    codex_stderr_path = evaluator_root / (label + "_codex.stderr.txt")
+    evaluator_root.mkdir(parents=True, exist_ok=True)
+    write_json(packet_path, packet)
+    # The child receives a disposable copy in a fresh system-temp directory.
+    # Keeping its cwd and packet away from the writer run directory prevents a
+    # prompt-following evaluator from discovering drafts, prior critiques, or
+    # repair artifacts by filesystem traversal.
+    isolated_root = Path(tempfile.mkdtemp(prefix="resume-evaluator-"))
+    isolated_packet = isolated_root / "packet.json"
+    isolated_output = isolated_root / "result.json"
+    isolated_scratch = isolated_root / "codex"
+    isolated_scratch.mkdir(parents=True, exist_ok=True)
+    isolated_packet.write_text(json.dumps(packet, ensure_ascii=False, indent=2, sort_keys=True))
+    args = [
+        sys.executable,
+        str(SCRIPT_REPO_ROOT / "scripts" / "resume_evaluator.py"),
+        "--packet", str(isolated_packet),
+        "--output", str(isolated_output),
+        "--scratch", str(isolated_scratch),
+        "--timeout", str(max(30, int(timeout))),
+    ]
+    started = time.time()
+    proc = None
+    try:
+        with stdout_path.open("w") as out, stderr_path.open("w") as err:
+            proc = subprocess.Popen(
+                args,
+                cwd=str(isolated_scratch),
+                env=subscription_environment(run_dir),
+                stdout=out,
+                stderr=err,
+                text=True,
+                start_new_session=(os.name == "posix"),
+            )
+            timed_out = False
+            while proc.poll() is None:
+                if time.time() - started >= timeout + 30:
+                    timed_out = True
+                    stop_provider_process(proc)
+                    break
+                time.sleep(0.25)
+        result = read_json(isolated_output, {}) or {}
+        if not isinstance(result, dict):
+            result = {}
+        child_stdout = isolated_scratch / "codex.stdout.json"
+        child_stderr = isolated_scratch / "codex.stderr.txt"
+        if child_stdout.exists():
+            shutil.copyfile(child_stdout, codex_stdout_path)
+        if child_stderr.exists():
+            shutil.copyfile(child_stderr, codex_stderr_path)
+        result["stdout_path"] = str(codex_stdout_path)
+        result["stderr_path"] = str(codex_stderr_path)
+        result.setdefault("provider", "codex")
+        result.setdefault("execution_lane", "sealed_evaluator")
+        result.setdefault("role", role)
+        result.setdefault("elapsed_seconds", round(time.time() - started, 1))
+        result.setdefault("stdout_path", str(stdout_path))
+        result.setdefault("stderr_path", str(stderr_path))
+        if timed_out:
+            result.update({
+                "ok": False,
+                "error": "sealed evaluator launcher timed out after %ss" % (timeout + 30),
+            })
+        elif result.get("ok"):
+            mismatches = []
+            if result.get("contract_version") != SEALED_EVALUATOR_CONTRACT:
+                mismatches.append("contract version")
+            if result.get("role") != role:
+                mismatches.append("role")
+            if result.get("input_sha256") != packet.get("input_sha256"):
+                mismatches.append("input hash")
+            if result.get("execution_lane") != "sealed_evaluator":
+                mismatches.append("execution lane")
+            if result.get("contract_fingerprint") != resume_evaluator.contract_fingerprint():
+                mismatches.append("contract fingerprint")
+            if result.get("rubric_sha256") != resume_evaluator.EVALUATOR_RUBRIC_SHA256:
+                mismatches.append("rubric hash")
+            if mismatches:
+                result.update({
+                    "ok": False,
+                    "error": "sealed evaluator attestation mismatch: %s" % ", ".join(mismatches),
+                })
+        if not result:
+            result = {
+                "provider": "codex", "execution_lane": "sealed_evaluator", "role": role,
+                "ok": False, "error": "sealed evaluator returned no result",
+            }
+        write_json(output_path, result)
+        return result
+    except (OSError, ValueError, TypeError) as exc:
+        if proc is not None:
+            stop_provider_process(proc)
+        return {
+            "provider": "codex", "execution_lane": "sealed_evaluator", "role": role,
+            "ok": False, "error": str(exc),
+            "elapsed_seconds": round(time.time() - started, 1),
+            "stdout_path": str(stdout_path), "stderr_path": str(stderr_path),
+        }
+    finally:
+        shutil.rmtree(isolated_root, ignore_errors=True)
+
+
+def sealed_evaluator_packet(
+    *,
+    role: str,
+    context: Dict[str, Any],
+    base_tex: str,
+    tailored_tex: str,
+    plan: Dict[str, Any],
+    graph_context: List[Dict[str, Any]],
+    catalog: Dict[str, Any],
+    deterministic: Dict[str, Any],
+    changes: Dict[str, Any],
+    run_id: str,
+) -> Dict[str, Any]:
+    """Build the only input shape the sealed evaluator is allowed to read."""
+    selected_plan = {}
+    for section in ("experiences", "projects", "leadership"):
+        selected_plan[section] = []
+        for entry in plan.get(section, []):
+            selected_plan[section].append({
+                "source_id": entry.get("source_id"),
+                "bullets": [
+                    {
+                        key: bullet.get(key)
+                        for key in ("source_id", "source_ids", "evidence_ids", "text")
+                        if key in bullet
+                    }
+                    for bullet in entry.get("bullets", [])
+                ],
+            })
+    deterministic_snapshot = {
+        "rubric_version": deterministic.get("rubric_version"),
+        "hard_fail": deterministic.get("hard_fail"),
+        "warnings": list(deterministic.get("warnings") or [])[:40],
+        "gates": copy.deepcopy(deterministic.get("gates") or {}),
+        "layout": {
+            key: (deterministic.get("layout") or {}).get(key)
+            for key in ("compiled", "pages", "overfull", "density_gap_pt", "horizontal", "vertical_capacity")
+            if key in (deterministic.get("layout") or {})
+        },
+        "style": copy.deepcopy(deterministic.get("style") or {}),
+    }
+    comparison_snapshot = {
+        "keyword_coverage": copy.deepcopy(changes.get("keyword_coverage") or {}),
+        "portfolio_diagnostics": copy.deepcopy(changes.get("portfolio_diagnostics") or {}),
+        "removed_canonical_bullets": copy.deepcopy(changes.get("removed_canonical_bullets") or [])[:30],
+        "unexplained_removed_bullets": copy.deepcopy(changes.get("unexplained_removed_bullets") or [])[:30],
+        "rewritten_bullets": copy.deepcopy(changes.get("rewritten_bullets") or [])[:30],
+        "added_bullets": copy.deepcopy(changes.get("added_bullets") or [])[:30],
+        "selected_plan": selected_plan,
+    }
+    evidence_snapshot = {
+        "graph_context": copy.deepcopy(graph_context or [])[:240],
+        "catalog": catalog_for_prompt(catalog or {}),
+    }
+    return resume_evaluator.make_packet(
+        role=role,
+        job=context,
+        base_text=_latex_plain(base_tex),
+        tailored_text=_latex_plain(tailored_tex),
+        evidence_snapshot=evidence_snapshot,
+        deterministic_snapshot=deterministic_snapshot,
+        comparison_snapshot=comparison_snapshot,
+        run_id=run_id,
+    )
 
 
 def job_context(job: Dict[str, Any]) -> Dict[str, Any]:
@@ -7668,19 +8057,66 @@ def score_review(
     blocking = data.get("blocking_issues", [])
     if not isinstance(blocking, list):
         blocking = [str(blocking)]
-    required_gates = ("factual", "target_fit", "evidence", "distinctiveness", "clarity", "privacy", "layout", "portfolio", "eligibility", "critic_jury", "portfolio_comparison")
-    hard_fail = bool(blocking) or any(gates.get(name, {}).get("status") != "pass" for name in required_gates)
+    assessments = data.get("blocking_issue_assessments")
+    if not isinstance(assessments, list):
+        assessments = []
+        for issue in blocking:
+            kind = classify_critic_issue(issue)
+            classification, severity = critic_issue_finding(issue, kind)
+            assessments.append({
+                "issue": str(issue), "kind": kind, "classification": classification,
+                "severity": severity, "supporting_roles": [], "support_count": 0,
+                "agreement": "unknown", "variants": [],
+            })
+    hard_blocking = [
+        item for item in assessments
+        if str(item.get("kind") or "") == "hard_blocker"
+    ]
+    fit_gaps = [
+        item for item in assessments
+        if str(item.get("kind") or "") == "candidate_fit_gap"
+    ]
+    quality_concerns = [
+        item for item in assessments
+        if str(item.get("kind") or "") in {"tailoring_regression", "quality_concern"}
+    ]
+    # Candidate-role fit is deliberately descriptive, not a readiness gate:
+    # a moderate-fit candidate can still have an excellent, evidence-safe
+    # resume.  Quality/safety gates remain non-averagable. Partial quality
+    # gates produce review rather than a fabricated score.
+    readiness_gates = (
+        "factual", "evidence", "distinctiveness", "clarity", "privacy",
+        "layout", "portfolio", "eligibility", "critic_jury", "portfolio_comparison",
+    )
+    failed_readiness_gates = [
+        name for name in readiness_gates
+        if gates.get(name, {}).get("status") != "pass"
+    ]
+    partial_readiness_gates = [
+        name for name in readiness_gates
+        if gates.get(name, {}).get("status") in {"partial", "unknown"}
+    ]
+    hard_fail = bool(unsupported or hard_blocking or any(
+        gates.get(name, {}).get("status") == "fail" for name in readiness_gates
+    ))
+    needs_review = bool(partial_readiness_gates)
     return {
         "rubric_version": RUBRIC_VERSION,
         "craft_score": None,
         "score": None,
-        "ready": not hard_fail,
+        "ready": not hard_fail and not needs_review,
         "hard_fail": hard_fail,
         "gates": gates,
         "unsupported_claims": unsupported,
         "missing_evidence": data.get("missing_evidence", []),
         "revision_priorities": data.get("revision_priorities", []),
         "blocking_issues": blocking,
+        "blocking_issue_assessments": assessments,
+        "hard_blocking_issues": hard_blocking,
+        "fit_gaps": fit_gaps,
+        "quality_concerns": quality_concerns,
+        "failed_readiness_gates": failed_readiness_gates,
+        "needs_review": needs_review,
         "line_feedback": data.get("line_feedback", []),
         "decision_feedback": decision_feedback[:20],
         "portfolio_comparison": portfolio_comparison,
@@ -7795,8 +8231,16 @@ def run_tailoring(
         "allowed_lanes": [name for name, path in provider_commands().items() if path],
         "codex_model": CODEX_LUNA_MODEL,
         "codex_effort_defaults": dict(CODEX_TASK_EFFORT_DEFAULTS),
+        "repair_effort_override": "high",
+        "sealed_evaluator_effort": resume_evaluator.CODEX_EFFORT,
         "review_mode": CODEX_REVIEW_MODE,
         "critic_roles": [item["key"] for item in CODEX_CRITIC_ROLES],
+        "sealed_evaluator_contract": {
+            "version": SEALED_EVALUATOR_CONTRACT,
+            "fingerprint": resume_evaluator.contract_fingerprint(),
+            "rubric_sha256": resume_evaluator.EVALUATOR_RUBRIC_SHA256,
+            "execution_lane": "sealed_evaluator",
+        },
         "separate_vendor_review": False,
         "local_models_allowed": False,
         "api_fallback_allowed": False,
@@ -8341,6 +8785,7 @@ def run_tailoring(
             }, "review_mode": "unavailable", "critic_roles": []}
         data = copy.deepcopy(records[0].get("data") or {})
         data.setdefault("blocking_issues", [])
+        data.setdefault("blocking_issue_assessments", [])
         data.setdefault("line_feedback", [])
         data.setdefault("unsupported_claims", [])
         data.setdefault("missing_evidence", [])
@@ -8380,6 +8825,12 @@ def run_tailoring(
                     criteria[name] = left
         for key in ("blocking_issues", "unsupported_claims", "missing_evidence", "revision_priorities"):
             data[key] = list(dict.fromkeys(str(value) for value in data.get(key) or []))
+        # Child results remain raw and independently inspectable.  The parent
+        # collapses repeated phrasings only for audit/readiness accounting and
+        # records which critic roles agreed with each underlying concern.
+        issue_assessments = collapse_critic_issues(records)
+        data["blocking_issue_assessments"] = issue_assessments
+        data["blocking_issues"] = [item["issue"] for item in issue_assessments]
         data["line_feedback"] = list({json.dumps(item, sort_keys=True): item for item in data.get("line_feedback") or []}.values())[:20]
         data["decision_feedback"] = list({
             json.dumps(item, sort_keys=True): item
@@ -8409,6 +8860,11 @@ def run_tailoring(
             "data": data,
         }
 
+    try:
+        base_tex_for_panel = (cv_root(repo_root()) / CANONICAL_TEMPLATE).read_text(errors="replace")
+    except OSError:
+        base_tex_for_panel = ""
+
     def critique_current(round_label: str) -> Tuple[Dict[str, Any], List[Dict[str, Any]], bool]:
         critic_roles = list(CODEX_CRITIC_ROLES) if writer == "codex" and "codex" in available else []
         if not critic_roles:
@@ -8416,27 +8872,34 @@ def run_tailoring(
             write_json(run_dir / (round_label + ".json"), critique)
             return critique, [], False
         recheck = round_label != "critique"
-        review_effort = CODEX_RECHECK_EFFORT if recheck else "high"
         update(
             "reviewing",
-            "Running Codex Luna critic roles%s: %s" % (
-                " (measured recheck)" if recheck else "",
+            "Running sealed Codex Luna Max critic roles%s: %s" % (
+                " (recheck)" if recheck else "",
                 ", ".join(item["key"] for item in critic_roles),
             ),
+        )
+        panel_deterministic = deterministic_review(
+            context, chosen, layout, plan=plan, catalog=catalog,
+        )
+        panel_changes = content_change_report(
+            plan, catalog, chosen, context.get("target_keywords"),
+            base_tex=base_tex_for_panel,
         )
         with concurrent.futures.ThreadPoolExecutor(max_workers=len(critic_roles)) as pool:
             futures = {
                 pool.submit(
-                    run_provider, "codex",
-                    reviewer_prompt(
-                        context, chosen, plan=plan, graph_context=graph_context,
-                        catalog=catalog, unrestricted=unrestricted,
-                        generation=generation,
-                        critic_role=role,
+                    run_sealed_evaluator,
+                    sealed_evaluator_packet(
+                        role=role["key"], context=context,
+                        base_tex=base_tex_for_panel, tailored_tex=chosen,
+                        plan=plan, graph_context=graph_context, catalog=catalog,
+                        deterministic=panel_deterministic, changes=panel_changes,
+                        run_id=run_dir.name,
                     ),
-                    run_dir, round_label + "_" + role["key"],
-                    timeout=8 * 60 if not recheck else 6 * 60,
-                    schema=review_schema(), codex_effort=review_effort,
+                    run_dir,
+                    round_label + "_" + role["key"],
+                    timeout=8 * 60,
                 ): role for role in critic_roles
             }
         # Futures complete in arbitrary order; retain the role key alongside
@@ -8457,11 +8920,22 @@ def run_tailoring(
         usable = [record for record in records if record.get("ok")]
         critique = combined_critique(usable)
         critique["critic_round"] = round_label
+        panel_status = sealed_panel_status(records, critic_roles)
+        critique["evaluator_contract"] = {
+            "version": SEALED_EVALUATOR_CONTRACT,
+            "fingerprint": resume_evaluator.contract_fingerprint(),
+            "rubric_sha256": resume_evaluator.EVALUATOR_RUBRIC_SHA256,
+            "execution_lane": "sealed_evaluator",
+            **panel_status,
+        }
         write_json(run_dir / (round_label + ".json"), critique)
         # Keep failed/time-limited role calls in the durable report.  They do
         # not count as a usable panel, but hiding them makes usage and
         # evaluator reliability look better than it was.
-        return critique, records, bool(usable)
+        # A panel is usable for readiness only when every required role has
+        # returned a valid, attested result. Partial feedback can inform a
+        # revision, but it can never turn into a pass.
+        return critique, records, bool(panel_status["complete"])
 
     critique, critique_records, review_available = critique_current("critique")
     revision_records: List[Dict[str, Any]] = []
@@ -8478,7 +8952,12 @@ def run_tailoring(
                 context, plan, critique, catalog, graph=graph,
                 unrestricted=unrestricted, generation=generation,
             ),
-            run_dir, label, timeout=8 * 60,
+            # Repair calls receive the full run budget; a shorter timeout
+            # turns a repairable critique into a stale candidate. The initial
+            # author remains Max; repeated repair is deliberately High
+            # after the lab showed Max spending its whole budget without a
+            # structured replacement.
+            run_dir, label, timeout=RUN_TIMEOUT_SECONDS, codex_effort="high",
             schema=plan_schema(True, generation=generation),
         )
         revision_records.append(revision)
@@ -8547,7 +9026,7 @@ def run_tailoring(
                 context, plan, feedback, catalog, graph=graph,
                 unrestricted=unrestricted, generation=generation,
             ),
-            run_dir, "audit_repair", timeout=8 * 60,
+            run_dir, "audit_repair", timeout=RUN_TIMEOUT_SECONDS, codex_effort="high",
             schema=plan_schema(True, generation=generation),
         )
         repair_record["label"] = "audit_repair"
@@ -8569,21 +9048,34 @@ def run_tailoring(
             else:
                 repair_root = run_dir / "audit_repair_candidate"
                 try:
+                    prior_repair_state = (plan, chosen, layout, preview)
                     repaired_plan, repair_packing = pack_plan_to_page(
                         repaired_plan, catalog, repair_root,
                     )
                     repaired_tex, repaired_layout, repaired_preview = render_candidate(
                         repaired_plan, repair_root,
                     )
+                    # The repair writer changed the candidate after the last
+                    # critic. Evaluate this exact replacement in a fresh
+                    # sealed panel before comparing or accepting it. Reusing
+                    # the old critique here would let a repair pass without
+                    # being judged for newly introduced claims or regressions.
+                    plan, chosen, layout, preview = (
+                        repaired_plan, repaired_tex, repaired_layout, repaired_preview,
+                    )
+                    repair_critique, repair_records, repair_review_available = critique_current(
+                        "audit_repair_critique"
+                    )
+                    critique_records.extend(repair_records)
                     repaired_deterministic = deterministic_review(
                         context, repaired_tex, repaired_layout,
                         plan=repaired_plan, catalog=catalog,
                     )
                     repaired_scored = score_review(
-                        critique, repaired_deterministic,
-                        independent_available=review_available,
-                        review_mode=str(critique.get("review_mode") or "unavailable"),
-                        critic_roles=critique.get("critic_roles") or [],
+                        repair_critique, repaired_deterministic,
+                        independent_available=repair_review_available,
+                        review_mode=str(repair_critique.get("review_mode") or "unavailable"),
+                        critic_roles=repair_critique.get("critic_roles") or [],
                     )
                     repaired_changes = content_change_report(
                         repaired_plan, catalog, repaired_tex,
@@ -8603,8 +9095,9 @@ def run_tailoring(
                         and not repaired_layout.get("overfull")
                         and (repaired_layout.get("horizontal") or {}).get("pass")
                     )
-                    if safe_render and repaired_key > current_key:
-                        plan = repaired_plan
+                    if safe_render and repair_review_available and repaired_key > current_key:
+                        critique = repair_critique
+                        review_available = repair_review_available
                         packing["audit_repair"] = repair_packing
                         packing["audit_repair_comparison"] = {
                             "before": current_key,
@@ -8623,14 +9116,20 @@ def run_tailoring(
                             "recommended_version": repaired_audit.get("recommended_version"),
                         })
                     else:
+                        plan, chosen, layout, preview = prior_repair_state
                         audit_repair_log.append({
                             "status": "rejected",
-                            "reason": "repair did not improve the source-aware comparison or failed layout safety",
+                            "reason": "repair did not improve the source-aware comparison, failed layout safety, or failed its sealed recheck",
                             "before": current_key,
                             "after": repaired_key,
                             "safe_render": safe_render,
+                            "sealed_recheck": {
+                                "available": repair_review_available,
+                                "roles": repair_critique.get("critic_roles") or [],
+                            },
                         })
                 except (OSError, RuntimeError, ValueError) as exc:
+                    plan, chosen, layout, preview = prior_repair_state
                     audit_repair_log.append({
                         "status": "rejected",
                         "reason": "repair candidate failed compilation or validation: %s" % exc,
@@ -8662,10 +9161,13 @@ def run_tailoring(
         provider_records.append({
             "label": str(record.get("label") or "provider"),
             "provider": provider,
+            "execution_lane": str(record.get("execution_lane") or "writer_provider"),
             "model": provider_model_label(provider),
             "reasoning_effort": str(record.get("reasoning_effort") or ""),
             "ok": record.get("ok"), "called": not record.get("skipped", False),
             "elapsed_seconds": record.get("elapsed_seconds"), "usage_tokens": record.get("usage_tokens"),
+            "contract_version": record.get("contract_version"),
+            "input_sha256": record.get("input_sha256"),
         })
     known_by_provider = {
         "codex": [
@@ -8739,6 +9241,11 @@ def run_tailoring(
                 "role": role, "reason": str(item.get("error") or "")[:240],
             })
     critic_history = list(critic_history_by_round.values())
+    final_round = str(critique.get("critic_round") or "")
+    final_panel_status = sealed_panel_status(
+        [item for item in critic_attempts if str(item.get("critic_round") or "") == final_round],
+        CODEX_CRITIC_ROLES,
+    )
     report = {
         "mode": mode_label,
         "pdf_filename": run_pdf_path(run_dir).name,
@@ -8782,10 +9289,15 @@ def run_tailoring(
         "critic_panel": {
             "available": review_available,
             "mode": str(critique.get("review_mode") or "unavailable"),
+            "contract_version": SEALED_EVALUATOR_CONTRACT,
+            "contract_fingerprint": resume_evaluator.contract_fingerprint(),
+            "rubric_sha256": resume_evaluator.EVALUATOR_RUBRIC_SHA256,
+            "execution_lane": "sealed_evaluator",
+            "all_required_roles": bool(final_panel_status["complete"]),
             "roles": list(critique.get("critic_roles") or [])[:8],
             "attempted_roles": critic_roles_attempted[:8],
-            "completed_roles": critic_roles_completed[:8],
-            "failed_roles": critic_roles_failed[:8],
+            "completed_roles": final_panel_status["completed_roles"][:8],
+            "failed_roles": final_panel_status["failed_roles"][:8],
             "history": critic_history[-4:],
             "separate_vendor": False,
         },
@@ -8808,10 +9320,15 @@ def run_tailoring(
         "review_panel": {
             "available": review_available,
             "mode": str(critique.get("review_mode") or "unavailable"),
+            "contract_version": SEALED_EVALUATOR_CONTRACT,
+            "contract_fingerprint": resume_evaluator.contract_fingerprint(),
+            "rubric_sha256": resume_evaluator.EVALUATOR_RUBRIC_SHA256,
+            "execution_lane": "sealed_evaluator",
+            "all_required_roles": bool(final_panel_status["complete"]),
             "roles": list(critique.get("critic_roles") or [])[:8],
             "attempted_roles": critic_roles_attempted[:8],
-            "completed_roles": critic_roles_completed[:8],
-            "failed_roles": critic_roles_failed[:8],
+            "completed_roles": final_panel_status["completed_roles"][:8],
+            "failed_roles": final_panel_status["failed_roles"][:8],
             "history": critic_history[-4:],
             "providers": list(dict.fromkeys(item.get("provider") for item in critic_attempts if item.get("provider"))),
             "separate_vendor": False,
