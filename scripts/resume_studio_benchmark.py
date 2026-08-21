@@ -238,7 +238,11 @@ def select_full_jobs(jobs: Iterable[Dict[str, Any]], limit: int) -> List[Dict[st
     return selected[:target]
 
 
-def _run_one(job: Dict[str, Any], root: Path, benchmark_root: Path, mode: str) -> Dict[str, Any]:
+def _run_one(
+    job: Dict[str, Any], root: Path, benchmark_root: Path, mode: str,
+    quality_profile: str = rs.QUALITY_PROFILE_DEFAULT,
+) -> Dict[str, Any]:
+    quality_profile = rs.normalize_quality_profile(quality_profile)
     run_id = uuid.uuid4().hex[:12]
     run_dir = benchmark_root / "runs" / run_id
     run_dir.mkdir(parents=True, exist_ok=True)
@@ -248,6 +252,7 @@ def _run_one(job: Dict[str, Any], root: Path, benchmark_root: Path, mode: str) -
         "run_id": run_id,
         "status": "running",
         "mode": mode,
+        "quality_profile": quality_profile,
         "job": rs.job_summary(job),
         "started_at": rs.now_iso(),
     }
@@ -264,13 +269,19 @@ def _run_one(job: Dict[str, Any], root: Path, benchmark_root: Path, mode: str) -
     started = time.time()
     try:
         if mode == "ai":
-            rs.run_tailoring(run_dir, job, update, enhance=True)
+            rs.run_tailoring(run_dir, job, update, enhance=True, quality_profile=quality_profile)
         elif mode == "unrestricted":
-            rs.run_tailoring(run_dir, job, update, enhance=True, unrestricted=True)
+            rs.run_tailoring(
+                run_dir, job, update, enhance=True, unrestricted=True,
+                quality_profile=quality_profile,
+            )
         elif mode == "generation":
-            rs.run_tailoring(run_dir, job, update, enhance=True, unrestricted=True, generation=True)
+            rs.run_tailoring(
+                run_dir, job, update, enhance=True, unrestricted=True, generation=True,
+                quality_profile=quality_profile,
+            )
         else:
-            rs.run_tailoring(run_dir, job, update, enhance=False)
+            rs.run_tailoring(run_dir, job, update, enhance=False, quality_profile=quality_profile)
         report = rs.read_json(run_dir / "report.json", {}) or {}
         finished_at = rs.now_iso()
         terminal = rs.read_json(run_dir / "status.json", {}) or status
@@ -287,6 +298,7 @@ def _run_one(job: Dict[str, Any], root: Path, benchmark_root: Path, mode: str) -
             "run_id": run_id,
             "ok": True,
             "mode": mode,
+            "quality_profile": quality_profile,
             "job_id": job.get("id"),
             "company": job.get("company"),
             "title": job.get("title"),
@@ -323,6 +335,7 @@ def _run_one(job: Dict[str, Any], root: Path, benchmark_root: Path, mode: str) -
             "run_id": run_id,
             "ok": False,
             "mode": mode,
+            "quality_profile": quality_profile,
             "job_id": job.get("id"),
             "company": job.get("company"),
             "title": job.get("title"),
@@ -355,6 +368,7 @@ def summarize_report(report: Dict[str, Any]) -> Dict[str, Any]:
         "critic_roles": panel.get("roles"),
         "critic_failed_roles": panel.get("failed_roles"),
         "critic_contract": panel.get("contract_version"),
+        "quality_profile": report.get("quality_profile"),
         "elapsed_seconds": (report.get("run_metrics") or {}).get("elapsed_seconds"),
         "codex_calls": (report.get("usage") or {}).get("codex_calls"),
     }
@@ -405,12 +419,13 @@ def summarize_lab_runs(runs: Iterable[Dict[str, Any]]) -> Dict[str, Any]:
 def run_full(
     jobs: List[Dict[str, Any]], root: Path, benchmark_root: Path, mode: str,
     workers: int, limit: int, on_result: Optional[Any] = None,
+    quality_profile: str = rs.QUALITY_PROFILE_DEFAULT,
 ) -> List[Dict[str, Any]]:
     """Run the expensive cohort concurrently and checkpoint each terminal run."""
     selected = select_full_jobs(jobs, max(1, limit))
     with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
         futures = {
-            pool.submit(_run_one, job, root, benchmark_root, mode): index
+            pool.submit(_run_one, job, root, benchmark_root, mode, quality_profile): index
             for index, job in enumerate(selected)
         }
         completed: List[Dict[str, Any]] = []
@@ -452,6 +467,11 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
     parser.add_argument("--workers", type=int, default=2)
     parser.add_argument("--full-limit", type=int, default=8)
     parser.add_argument("--mode", choices=["used", "ai", "unrestricted", "generation"], default="ai")
+    parser.add_argument(
+        "--quality-profile", choices=sorted(rs.QUALITY_PROFILES),
+        default=rs.QUALITY_PROFILE_DEFAULT,
+        help="Authoring latency/quality lane; the sealed evaluator remains the same.",
+    )
     parser.add_argument("--fetch-only", action="store_true")
     parser.add_argument("--match-only", action="store_true")
     parser.add_argument("--run-full", action="store_true")
@@ -469,6 +489,7 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
             "created_at": rs.now_iso(),
             "selection": {"limit": args.limit, "sector_quotas": SECTOR_QUOTAS},
             "source": "state/jobs.json",
+            "quality_profile": rs.normalize_quality_profile(args.quality_profile),
             "evaluator_contract": {
                 "version": rs.SEALED_EVALUATOR_CONTRACT,
                 "fingerprint": rs.resume_evaluator.contract_fingerprint(),
@@ -478,6 +499,9 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
         selected = select_balanced_jobs(load_jobs(root), args.limit)
         manifest["jobs"] = selected
     manifest["benchmark_version"] = "resume-studio-benchmark-v2"
+    manifest["quality_profile"] = rs.normalize_quality_profile(
+        manifest.get("quality_profile") or args.quality_profile
+    )
     manifest["status"] = "running" if args.run_full else "prepared"
     manifest["updated_at"] = rs.now_iso()
     manifest["evaluator_contract"] = {
@@ -524,6 +548,7 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
         manifest["full_runs"] = run_full(
             manifest.get("jobs") or [], root, benchmark_root, args.mode, args.workers,
             args.full_limit, on_result=checkpoint,
+            quality_profile=manifest["quality_profile"],
         )
         manifest["quality_summary"] = summarize_lab_runs(manifest["full_runs"])
         manifest["status"] = "complete"

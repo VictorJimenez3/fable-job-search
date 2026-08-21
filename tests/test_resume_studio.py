@@ -1274,9 +1274,103 @@ def test_target_priority_outweighs_generic_technical_tiebreakers():
     assert rs._bullet_value(target_specific) > rs._bullet_value(generic)
 
 
+def test_quality_profiles_keep_deep_available_and_default_to_balanced():
+    assert rs.normalize_quality_profile("") == "balanced"
+    assert rs.normalize_quality_profile("unknown") == "balanced"
+    assert rs.QUALITY_PROFILES["balanced"]["revision_rounds"] == 0
+    assert rs.QUALITY_PROFILES["deep"]["revision_rounds"] == 2
+    assert rs.QUALITY_PROFILES["balanced"]["model_space_expansion"] is False
+    assert rs.QUALITY_PROFILES["balanced"]["author_effort"] == "high"
+    assert rs.QUALITY_PROFILES["deep"]["author_effort"] == "max"
+    assert rs.QUALITY_PROFILES["balanced"]["line_editor_effort"] == "high"
+    assert rs.QUALITY_PROFILES["balanced"]["audit_repair"] is False
+    assert rs.QUALITY_PROFILES["balanced"]["evaluator_timeout_seconds"] == 8 * 60
+    assert rs.QUALITY_PROFILES["deep"]["audit_repair"] is True
+    assert len(rs.canonical_control_prompt(_fixture_catalog())) <= rs.CANONICAL_CONTROL_PROMPT_CHARS
+
+
+def test_canonical_control_plan_is_verbatim_source_fallback():
+    catalog = _fixture_catalog()
+    catalog["entries"]["experience:item0"]["bullets"][0]["source"] = "immutable/VictorJimenezResume.tex"
+    plan = rs.canonical_control_plan(catalog)
+    assert plan["experiences"][0]["bullets"][0]["text"] == catalog["entries"]["experience:item0"]["bullets"][0]["text"]
+    assert plan["revision_notes"]
+
+
+def test_control_recovery_restores_omitted_canonical_proof_before_jury(tmp_path):
+    entry_id = "experience:research"
+    catalog = {"entries": {
+        entry_id: {
+            "id": entry_id,
+            "kind": "experience",
+            "company": "NJIT",
+            "role": "Researcher",
+            "dates": "2025 -- 2026",
+            "location": "Newark, NJ",
+            "bullets": [
+                {"id": entry_id + ":b1", "source": "immutable/VictorJimenezResume.tex", "text": "Built a research pipeline"},
+                {"id": entry_id + ":b2", "source": "immutable/VictorJimenezResume.tex", "text": "Ran 20,000 HPC epochs via SLURM and Bash"},
+                {"id": entry_id + ":b3", "source": "CV/cv_full.tex", "text": "Improved a generic workflow across systems"},
+            ],
+        },
+    }}
+    plan = {
+        "experiences": [{
+            "source_id": entry_id,
+            "bullets": [
+                {"source_id": entry_id + ":b1"},
+                {"source_id": entry_id + ":b3"},
+            ],
+        }],
+        "projects": [],
+        "leadership": [],
+    }
+
+    recovered, record = rs.deterministic_control_recovery(
+        plan, catalog, {}, tmp_path,
+    )
+
+    assert record["status"] == "applied"
+    assert [item["source_id"] for item in recovered["experiences"][0]["bullets"]] == [
+        entry_id + ":b1", entry_id + ":b2",
+    ]
+    assert (tmp_path / "control_recovery.json").exists()
+
+
+def test_canonical_control_bonus_protects_high_information_base_line():
+    catalog = _fixture_catalog()
+    catalog["entries"]["experience:item0"]["sources"] = ["immutable/VictorJimenezResume.tex"]
+    catalog["entries"]["experience:item0"]["bullets"][0]["source"] = "immutable/VictorJimenezResume.tex"
+    catalog["entries"]["experience:item0"]["bullets"][0]["text"] = (
+        "Reached 0.984 ROC-AUC on 24,000 player-seasons with stratified validation"
+    )
+    canonical = catalog["entries"]["experience:item0"]["bullets"][0]
+    fresh = {"source_id": "project:new:b1", "priority": 95, "text": "Built a new API"}
+    canonical_value = rs._control_bullet_value({"source_id": canonical["id"], "priority": 80, "text": canonical["text"]}, catalog)
+    fresh_value = rs._control_bullet_value(fresh, catalog)
+    assert canonical_value > fresh_value
+
+
+def test_packer_removal_actions_never_delete_the_last_evidence_bullet():
+    plan = {
+        "experiences": [{
+            "source_id": "experience:item0",
+            "bullets": [
+                {"source_id": "experience:item0:b1", "priority": 1, "text": "First evidence"},
+                {"source_id": "experience:item0:b2", "priority": 2, "text": "Second evidence"},
+            ],
+        }],
+        "projects": [],
+        "leadership": [],
+    }
+    actions = rs._removal_actions(plan, _fixture_catalog())
+    assert actions
+    assert all(action[3] is not None for action in actions)
+
+
 def test_adaptive_portfolio_uses_safety_ceiling_instead_of_density_floor():
     assert rs.MAX_DENSITY_GAP_PT == 24.0
-    assert rs.MIN_TOTAL_BULLETS == 0
+    assert rs.MIN_TOTAL_BULLETS == 1
     assert rs.MAX_TOTAL_BULLETS == rs.MAX_RENDERED_BULLETS
 
 
@@ -1343,6 +1437,35 @@ def test_packer_never_deletes_content_to_recover_from_compile_error(monkeypatch,
     else:
         raise AssertionError("compile failure should stop packing")
     assert rs.portfolio_metrics(plan)["total_bullets"] == original_total
+
+
+def test_packer_preserves_evidence_when_only_horizontal_safety_is_pending(monkeypatch, tmp_path):
+    plan = _fixture_plan()
+    catalog = _fixture_catalog()
+    original_total = rs.portfolio_metrics(plan)["total_bullets"]
+    monkeypatch.setattr(
+        rs,
+        "_compile_plan_attempt",
+        lambda *args, **kwargs: (
+            "safe-page-but-tight tex",
+            {
+                "compiled": True,
+                "pages": 1,
+                "overfull": False,
+                "horizontal": {
+                    "bullets": [{"source_id": "experience:item0:b1", "near_wrap": True}],
+                    "pass": False,
+                    "wrap_count": 0,
+                    "near_wrap_count": 1,
+                },
+                "density_gap_pt": 0.0,
+                "density_pass": True,
+            },
+        ),
+    )
+    packed, receipt = rs.pack_plan_to_page(plan, catalog, tmp_path)
+    assert rs.portfolio_metrics(packed)["total_bullets"] == original_total
+    assert receipt["horizontal_pass"] is False
 
 
 def test_short_one_line_bullet_is_not_failed_for_unused_right_margin(monkeypatch, tmp_path):
@@ -1608,6 +1731,31 @@ def test_change_findings_catch_unsupported_terms_losses_and_missing_supported_ev
     assert rewrite_findings[0]["classification"] == "QUESTIONABLE"
 
 
+def test_change_findings_count_only_panel_confirmed_added_evidence_as_gain():
+    changes = {
+        "added_bullets": [
+            {"source_id": "experience:cie:b11", "text": "Developed a live analytics dashboard with alerts"},
+            {"source_id": "project:weak:b1", "text": "Built a generic Python tool"},
+        ],
+        "keyword_coverage": {"terms": []},
+        "portfolio_diagnostics": {},
+    }
+    review = {"portfolio_comparison": {
+        "gained_strengths": ["Live posture analytics dashboard evidence."],
+    }}
+    findings = rs.build_change_findings(changes, {}, review)
+    assert [item["source_ids"] for item in findings if item["classification"] == "KEEP_GOOD"] == [["experience:cie:b11"]]
+
+
+def test_bare_layout_capacity_language_is_a_regression_not_a_hard_blocker():
+    issue = (
+        "The tailoring drops quantified evidence while the rendered layout still has capacity "
+        "for another standard line."
+    )
+    assert rs.classify_critic_issue(issue) == "tailoring_regression"
+    assert rs.classify_critic_issue("The rendered layout has a material failure with two wraps.") == "hard_blocker"
+
+
 def test_change_findings_do_not_call_low_priority_context_loss_a_regression():
     findings = rs.build_change_findings({
         "keyword_coverage": {"terms": [{
@@ -1650,7 +1798,7 @@ def test_tailoring_recommendation_prefers_base_when_comparison_regresses():
 
 def test_final_winner_never_exposes_a_rejected_tailored_candidate_as_primary():
     assert rs.final_winner_version({"recommended_version": "tailored"}) == "tailored"
-    assert rs.final_winner_version({"recommended_version": "review"}) == "tailored"
+    assert rs.final_winner_version({"recommended_version": "review"}) == "base"
     assert rs.final_winner_version({"recommended_version": "base"}) == "base"
     assert rs.final_winner_version({"recommended_version": "blocked"}) == "base"
 
@@ -2336,6 +2484,36 @@ def test_score_review_hard_fails_unsupported_claims():
     )
     assert result["hard_fail"] is True
     assert result["ready"] is False
+
+
+def test_score_review_ignores_explicit_no_claim_statement():
+    criteria = {name: {"status": "pass", "reason": "checked"} for name in rs.REVIEW_CRITERIA}
+    result = rs.score_review(
+        {"provider": "codex", "data": {
+            "criteria": criteria,
+            "unsupported_claims": [
+                "No unsupported or exaggerated tailored-resume bullet was identified. "
+                "Unit testing is an unsupported target term, not a claim made in the resume."
+            ],
+            "portfolio_comparison": {
+                "status": "pass", "reason": "checked",
+                "preserved_strengths": [], "gained_strengths": [], "lost_strengths": [],
+            },
+        }},
+        {"gates": {
+            "factual": {"status": "pass", "reason": "checked"},
+            "layout": {"status": "pass", "reason": "checked"},
+            "portfolio": {"status": "pass", "reason": "checked"},
+            "eligibility": {"status": "pass", "reason": "checked"},
+        }},
+        independent_available=True,
+        review_mode=rs.CODEX_REVIEW_MODE,
+        critic_roles=[item["key"] for item in rs.CODEX_CRITIC_ROLES],
+    )
+    assert result["hard_fail"] is False
+    assert result["gates"]["factual"]["status"] == "pass"
+    assert result["unsupported_claims"] == []
+    assert len(result["ignored_unsupported_claims"]) == 1
 
 
 def test_score_review_cannot_average_away_failed_eligibility_gate():
