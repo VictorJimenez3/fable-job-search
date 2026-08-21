@@ -724,6 +724,13 @@ four fresh sealed Luna Max critics; the qualitative verdict was
 had a consensus near-wrap/readability defect. The Merck PDF remains
 owner-unapproved and the control reports no exact hiring score.
 
+The primary artifact now follows that comparison decision. When the audit
+returns `base` or `blocked`, Resume Studio publishes the immutable canonical
+PDF as the run's winner and preserves the rejected generated artifact as
+`tailored_candidate.pdf` (with `base_control.tex` and the reason recorded in
+`winner_artifact`). A compiling tailored PDF is therefore never silently
+presented as the best version when the control comparison says otherwise.
+
 Open **Workshop** on a completed run to edit education, skills, experience,
 projects, and leadership lines without touching the original PDF. Saving a
 line creates a unique rendered revision; the AI writing partner returns
