@@ -712,6 +712,14 @@ latency, panel completeness, comparative audit outcome, quality rejections, and
 execution failures. This is a lab harness, not a claim that a local evaluator
 predicts hiring outcomes.
 
+For healthcare-role experiments, a prior saved draft can be used as a
+provisional pairwise control without becoming evidence authority. The completed
+Stryker-vs-Merck control used the best saved Merck AI PDF as the baseline and
+four fresh sealed Luna Max critics; the qualitative verdict was
+`prefer_base_merck` because the Stryker candidate lost distinctive evidence and
+had a consensus near-wrap/readability defect. The Merck PDF remains
+owner-unapproved and the control reports no exact hiring score.
+
 Open **Workshop** on a completed run to edit education, skills, experience,
 projects, and leadership lines without touching the original PDF. Saving a
 line creates a unique rendered revision; the AI writing partner returns

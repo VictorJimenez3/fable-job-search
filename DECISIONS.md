@@ -2282,3 +2282,15 @@ quality rejections separately from execution failures, and exposes the sealed
 evaluator contract alongside progress. This makes a long parallel lab
 recoverable and prevents a quality rejection from being misreported as a
 harness crash.
+
+## 149. Resume Studio uses prior drafts only as explicit pairwise controls (2026-08-21)
+
+Historical company-tailored PDFs remain outputs, not candidate-evidence
+authority. When Victor asks to use one as a starting point, the lab may compare
+it explicitly as a provisional control while the evidence graph remains sourced
+from the canonical/private corpus. A four-role sealed Luna Max control compared
+the saved Merck AI PDF with the fresh Stryker candidate and returned
+`prefer_base_merck`: factuality and privacy passed, but the candidate had a
+consensus near-wrap defect plus lost high-information evidence and repeated
+AI/RAG/backend stories. The verdict is qualitative and the Merck run remains
+owner-unapproved; it is not a 0–100 hiring prediction.

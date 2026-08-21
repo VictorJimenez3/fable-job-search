@@ -163,6 +163,13 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   from execution failure, and records the active evaluator contract. The
   parent audit collapses repeated panel prose with supporting-role counts and
   keeps candidate-role gaps separate from unsupported claims or layout gates.
+  A completed Merck-control comparison used the saved
+  `CV/.resume_studio/runs/b6bf060e3a04/merck_resume_ai.pdf` as the provisional
+  baseline for a fresh Stryker candidate. All four sealed roles completed and
+  recommended `prefer_base_merck`: factual/privacy passed, but the candidate
+  lost high-information evidence, repeated AI/RAG/backend stories, and failed
+  the consensus near-wrap check. This is a qualitative pairwise control, not a
+  score or an owner approval of the Merck draft.
   The active manifest and final receipts must be recorded here after the lab
   closes; no evaluator result may be altered to force a pass.
 
