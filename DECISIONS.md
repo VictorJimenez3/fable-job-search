@@ -2308,3 +2308,14 @@ compile the result. The exact recovered artifact must pass a fresh complete
 sealed four-role panel before acceptance; evaluator criteria, rubric hashes,
 and layout thresholds are unchanged. An unsafe or incompletely rechecked
 candidate remains rejected and the run records `final_geometry_recovery.json`.
+
+## 151. Resume Studio publishes the comparative winner (2026-08-21)
+
+The lab showed that correctly rejecting a tailored candidate was not enough:
+the run could still leave that inferior candidate as the primary PDF while the
+audit recommended the canonical base. The worker now applies the audit's
+`recommended_version` as an artifact-selection contract. `tailored` keeps the
+generated PDF primary; `base` and `blocked` make the immutable canonical PDF
+primary and retain the generated artifact as `tailored_candidate.pdf`, with
+`base_control.tex` and a `winner_artifact` receipt. This changes no evaluator
+rubric, threshold, or evidence authority and never edits the immutable source.

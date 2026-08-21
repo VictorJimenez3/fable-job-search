@@ -2265,6 +2265,78 @@ def tailoring_audit_preference_key(audit: Dict[str, Any]) -> Tuple[int, int, int
     return (rank, -losses, -missed, gains, -questionable)
 
 
+def final_winner_version(audit: Dict[str, Any]) -> str:
+    """Return the artifact that should be shown as the run's primary output.
+
+    A generated candidate is not automatically the winner just because it
+    compiled.  The comparative audit is the control decision: when it prefers
+    the canonical resume, or marks the candidate blocked, the base control is
+    the safe primary artifact.  The tailored candidate remains available as a
+    private diagnostic so a rejected attempt is never mistaken for the best
+    version.
+    """
+    audit = audit if isinstance(audit, dict) else {}
+    recommendation = str(audit.get("recommended_version") or "review").lower()
+    return "base" if recommendation in {"base", "blocked"} else "tailored"
+
+
+def adopt_base_control_winner(
+    run_dir: Path, audit: Dict[str, Any],
+) -> Dict[str, Any]:
+    """Make the immutable base PDF the public winner when the audit says so.
+
+    This only copies private artifacts below the ignored run directory.  It
+    never edits ``CV/immutable`` and never changes evaluator criteria.  The
+    generated candidate is retained under an explicit diagnostic filename so
+    the owner can inspect exactly what lost the comparison.
+    """
+    result: Dict[str, Any] = {
+        "winner_version": final_winner_version(audit),
+        "primary_artifact": run_pdf_path(run_dir).name,
+        "tailored_candidate_artifact": "",
+        "reason": "The comparative audit did not prefer the generated candidate.",
+    }
+    if result["winner_version"] != "base":
+        result["reason"] = "The comparative audit did not prefer the canonical base over the generated candidate."
+        return result
+    canonical_pdf = cv_root(repo_root()) / CANONICAL_PDF
+    candidate_pdf = run_pdf_path(run_dir)
+    if not canonical_pdf.is_file() or not candidate_pdf.is_file():
+        result["winner_version"] = "tailored"
+        result["reason"] = "Base control could not be installed because a required PDF artifact was missing."
+        return result
+    candidate_archive = run_dir / "tailored_candidate.pdf"
+    try:
+        shutil.copy2(candidate_pdf, candidate_archive)
+        candidate_preview = run_preview_path(run_dir)
+        if candidate_preview.is_file():
+            shutil.copy2(candidate_preview, run_dir / "tailored_candidate-preview.png")
+        shutil.copy2(cv_root(repo_root()) / CANONICAL_TEMPLATE, run_dir / "base_control.tex")
+        shutil.copy2(canonical_pdf, candidate_pdf)
+        rendered_preview = render_preview(run_dir)
+    except OSError as exc:
+        result["winner_version"] = "tailored"
+        result["reason"] = "Base control could not be installed: %s" % exc
+        return result
+    result.update({
+        "primary_artifact": candidate_pdf.name,
+        "tailored_candidate_artifact": candidate_archive.name,
+        "base_control_artifact": candidate_pdf.name,
+        "base_control_source": "CV/" + CANONICAL_PDF,
+        "base_control_tex": "base_control.tex",
+        "tailored_candidate_preview": (
+            "tailored_candidate-preview.png"
+            if (run_dir / "tailored_candidate-preview.png").is_file() else ""
+        ),
+        "primary_preview": run_preview_path(run_dir).name if rendered_preview else "",
+        "reason": (
+            "The sealed comparative audit preferred the canonical base; the generated candidate was retained "
+            "as tailored_candidate.pdf for diagnostic comparison."
+        ),
+    })
+    return result
+
+
 def tailoring_repair_feedback(audit: Dict[str, Any], changes: Dict[str, Any]) -> Dict[str, Any]:
     """Turn deterministic audit output into bounded repair instructions."""
     audit = audit if isinstance(audit, dict) else {}
@@ -9294,10 +9366,19 @@ def run_tailoring(
         job, context, match, graph, plan, changes, deterministic, scored,
         base_tex, chosen, run_id=run_id, queue_id=queue_id,
     )
+    winner = adopt_base_control_winner(run_dir, tailoring_audit)
     write_json(run_dir / "job_intelligence.json", context.get("job_intelligence", {}))
     write_json(run_dir / "tailoring_audit.json", tailoring_audit)
-    review_overlay = review_preview_overlay(
-        run_pdf_path(run_dir), plan, changes, changes.get("keyword_coverage")
+    review_overlay = (
+        {
+            "available": False,
+            "winner_version": "base",
+            "reason": "The canonical base PDF is the selected winner; inspect tailored_candidate.pdf for the rejected candidate.",
+        }
+        if winner.get("winner_version") == "base"
+        else review_preview_overlay(
+            run_pdf_path(run_dir), plan, changes, changes.get("keyword_coverage")
+        )
     )
     space_audit_value = space_audit(plan, layout, catalog, space_expansion)
     provider_flow = [
@@ -9355,6 +9436,8 @@ def run_tailoring(
         "mode": mode_label,
         "pdf_filename": run_pdf_path(run_dir).name,
         "preview_filename": run_preview_path(run_dir).name if preview else "",
+        "winner_version": winner.get("winner_version", "tailored"),
+        "winner_artifact": winner,
         "job": job_summary(job),
         "resume_match": match,
         "positioning_thesis": synthesis_data.get("positioning_thesis", ""),
@@ -9387,7 +9470,7 @@ def run_tailoring(
         },
         "portfolio_diagnostics": changes.get("portfolio_diagnostics", {}),
         "owner_summary": owner_change_summary(plan, catalog, changes),
-        "content_plan": {section: synthesis_data.get(section, []) for section in ("experiences", "projects", "leadership")},
+        "content_plan": {section: plan.get(section, []) for section in ("experiences", "projects", "leadership")},
         "layout_packing": packing,
         "format_contract": {"template": "CV/" + CANONICAL_TEMPLATE, "model_can_write_latex_document": False, "font_size_reduction_percent": 0.0, "font_size_increase_percent": 0.0, "allowed_max_reduction_percent": MAX_STYLE_REDUCTION_PERCENT},
         "providers": provider_records,
@@ -9450,6 +9533,9 @@ def run_tailoring(
             "resume.tex", run_pdf_path(run_dir).name, "resume.txt", run_preview_path(run_dir).name if preview else None,
             "job.json", "report.json", "job_context.json", "brief.json", "evidence_catalog.json", "evidence_graph_context.json",
             "job_intelligence.json", "tailoring_audit.json",
+            winner.get("tailored_candidate_artifact") or None,
+            winner.get("tailored_candidate_preview") or None,
+            winner.get("base_control_tex") or None,
             "audit_repair.json" if audit_repair_records else None,
             "final_geometry_recovery.json" if final_geometry_recovery.get("attempted") else None,
             "gap_analysis.json" if generation else None,

@@ -1648,6 +1648,35 @@ def test_tailoring_recommendation_prefers_base_when_comparison_regresses():
     }) > rs.tailoring_audit_preference_key(audit)
 
 
+def test_final_winner_never_exposes_a_rejected_tailored_candidate_as_primary():
+    assert rs.final_winner_version({"recommended_version": "tailored"}) == "tailored"
+    assert rs.final_winner_version({"recommended_version": "review"}) == "tailored"
+    assert rs.final_winner_version({"recommended_version": "base"}) == "base"
+    assert rs.final_winner_version({"recommended_version": "blocked"}) == "base"
+
+
+def test_base_winner_archives_candidate_without_touching_immutable_source(monkeypatch, tmp_path):
+    cv = tmp_path / "CV"
+    immutable = cv / "immutable"
+    immutable.mkdir(parents=True)
+    (immutable / "VictorJimenezResume.pdf").write_bytes(b"canonical-pdf")
+    (immutable / "VictorJimenezResume.tex").write_text("canonical-tex")
+    monkeypatch.setenv("RADAR_ROOT", str(tmp_path))
+    monkeypatch.setenv("CV_ROOT", str(cv))
+    run_dir = cv / ".resume_studio" / "runs" / "abc123def456"
+    run_dir.mkdir(parents=True)
+    (run_dir / "status.json").write_text(json.dumps({"pdf_filename": "company_resume_ai.pdf"}))
+    (run_dir / "company_resume_ai.pdf").write_bytes(b"tailored-pdf")
+
+    result = rs.adopt_base_control_winner(run_dir, {"recommended_version": "base"})
+
+    assert result["winner_version"] == "base"
+    assert (run_dir / "company_resume_ai.pdf").read_bytes() == b"canonical-pdf"
+    assert (run_dir / "tailored_candidate.pdf").read_bytes() == b"tailored-pdf"
+    assert (immutable / "VictorJimenezResume.pdf").read_bytes() == b"canonical-pdf"
+    assert (run_dir / "base_control.tex").read_text() == "canonical-tex"
+
+
 def test_tailoring_audit_keeps_fit_separate_from_tailoring_and_blocks_hard_failures():
     context = {"posting_text": "Required: Python. " * 40, "job_intelligence": {
         "posting_available": True, "posting_snapshot_hash": "post", "hash": "job-intel",

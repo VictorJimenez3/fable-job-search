@@ -303,6 +303,12 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   or incompletely rechecked candidate is rejected, never promoted by the
   recovery path. The recovery receipt is stored as
   `final_geometry_recovery.json`.
+- **The audit decision now controls the primary PDF:** if the comparative audit
+  recommends `base` or marks the tailored artifact `blocked`, the immutable
+  canonical PDF becomes the run's primary winner. The generated candidate is
+  retained as `tailored_candidate.pdf`, alongside `base_control.tex` and a
+  `winner_artifact` receipt. This prevents a rejected tailored draft from
+  being mistaken for the recommended version without changing the evaluator.
 
 ### Previous change (verified 2026-08-15)
 
