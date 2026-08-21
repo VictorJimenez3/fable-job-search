@@ -1,13 +1,13 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-21 13:57 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **136 shown / 11253 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-08-21 14:53 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **136 shown / 11253 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
-| 100 🔥 | 16h | Micron | [Intern - Photomask Wet Process Engineering](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Photomask-Wet-Process-Engineering_JR108464) | Boise, ID - Main Site | semiconductors | workday |
-| 100 🔥 | 16h | Micron | [Intern - Wet Process Fab 4 EDE](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Wet-Process-Fab-4-EDE_JR108959) | Boise, ID - Main Site | semiconductors | workday |
+| 100 🔥 | 17h | Micron | [Intern - Photomask Wet Process Engineering](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Photomask-Wet-Process-Engineering_JR108464) | Boise, ID - Main Site | semiconductors | workday |
+| 100 🔥 | 17h | Micron | [Intern - Wet Process Fab 4 EDE](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Wet-Process-Fab-4-EDE_JR108959) | Boise, ID - Main Site | semiconductors | workday |
 | 99 🔥 | 2d | Micron | [Intern - Advanced DRAM Process Integration](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Advanced-DRAM-Process-Integration_JR107205) | Boise, ID - Main Site | semiconductors | workday |
 | 95 🔥 | 4d | Micron | [Intern - Wet Etch Process Development Engineer](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Wet-Etch-Process-Development-Engineer_JR108050) | Boise, ID - Main Site | semiconductors | workday |
 | 95 🔥 | 4d | Micron | [Intern - Process Development Engineer, Thin Films](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--Thin-Films_JR107323) | Boise, ID - Main Site | semiconductors | workday |
@@ -37,11 +37,11 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 77 ⭐ | 3d | GlobalFoundries | [Yield and Characterization Engineer Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/Yield-and-Characterization-Engineer-Intern--Summer-2027-_JR-2604638) | USA - Vermont - Essex Junction | semiconductors | workday |
 | 77 ⭐ | 3d | GlobalFoundries | [Robotics and Automation Engineering Intern, Junior (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/Robotics-and-Automation-Engineering-Intern--Junior--Summer-2027-_JR-2604660) | USA - Vermont - Essex Junction | semiconductors | workday |
 | 77 ⭐ | 6d | GlobalFoundries | [US Advanced Manufacturing Equipment Engineering Intern, Junior (Summer](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/US-Advanced-Manufacturing-Equipment-Engineering-Intern--Junior--Summer-2027-_JR-2604656) | USA - Vermont - Essex Junction | semiconductors | workday |
-| 76 ⭐ | 7h | AMD | [Research Engineer Intern/Co-op - AMD Research](https://careers.amd.com/jobs/90925?icims=1) | San Jose, CA | other | simplify |
-| 76 ⭐ | 7h | AMD | [Hardware Engineering Intern/Co-op - Undergrad](https://careers.amd.com/jobs/91173?icims=1) | Rochester, NY | other | simplify |
-| 76 ⭐ | 7h | AMD | [Product Development Engineer Intern/Co-op](https://careers.amd.com/jobs/91227?icims=1) | San Jose, CA | other | simplify |
-| 76 ⭐ | 7h | AMD | [Product Development Engineering Intern/Co-op](https://careers.amd.com/jobs/91228?icims=1) | San Jose, CA | other | simplify |
-| 76 ⭐ | 15h | Framatome | [Computer Science Engineer Intern Co-op - Univ/Co-op Technical](https://careers-framatome.icims.com/jobs/3295/job?mobile=true&needsRedirect=false) | Richland, WA | other | simplify |
+| 76 ⭐ | 8h | AMD | [Research Engineer Intern/Co-op - AMD Research](https://careers.amd.com/jobs/90925?icims=1) | San Jose, CA | other | simplify |
+| 76 ⭐ | 8h | AMD | [Hardware Engineering Intern/Co-op - Undergrad](https://careers.amd.com/jobs/91173?icims=1) | Rochester, NY | other | simplify |
+| 76 ⭐ | 8h | AMD | [Product Development Engineer Intern/Co-op](https://careers.amd.com/jobs/91227?icims=1) | San Jose, CA | other | simplify |
+| 76 ⭐ | 8h | AMD | [Product Development Engineering Intern/Co-op](https://careers.amd.com/jobs/91228?icims=1) | San Jose, CA | other | simplify |
+| 76 ⭐ | 16h | Framatome | [Computer Science Engineer Intern Co-op - Univ/Co-op Technical](https://careers-framatome.icims.com/jobs/3295/job?mobile=true&needsRedirect=false) | Richland, WA | other | simplify |
 | 76 ⭐ | 29d | Rantec Power Systems Inc. | [PCB Design Engineer Intern](https://rantecpowersystemsinc.applytojob.com/apply/C88xK8WZio/PCB-Design-Engineering-Intern) | San Luis Obispo, CA | energy | simplify |
 | 75 ⭐ | 7d | Intel | [Physical Design Engineer Intern](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-California-Folsom/Physical-Design-Engineering-Graduate-Intern_JR0283509) | Santa Clara, CA | semiconductors | simplify |
 | 75 ⭐ | 8d | Micron Technology | [Digital IP Design Engineer Intern - DRAM](https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---Main-Site/Intern---Digital-IP-Design-Engineer--DRAM_JR108533) | Boise, ID | semiconductors | simplify |
@@ -54,7 +54,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 75 ⭐ | 21d | Microchip Technology | [Power, Analog and Mixed-Signal IC Product Engineer Intern - Product En](https://wd5.myworkdaysite.com/recruiting/microchiphr/External/job/AZ---Chandler/Intern--Engineering--Product-Engineering-_R3151-26-1) | Chandler, AZ | semiconductors | simplify |
 | 75 ⭐ | 24d | GlobalFoundries | [Device Engineer Intern - Ulp Cmos](https://globalfoundries.wd1.myworkdayjobs.com/External/job/USA---New-York---Malta/Product-Business-Unit-Finance-Intern--Summer-2026-_JR-2502830) | Malta, NY | semiconductors | simplify |
 | 75 ⭐ | 24d | GlobalFoundries | [Device Engineering Intern, ULP CMOS (Summer 2026)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Product-Business-Unit-Finance-Intern--Summer-2026-_JR-2502830) | USA - New York - Malta | semiconductors | workday |
-| 75 ⭐ | 28d | Applied Materials | [2026 Fall Mechanical Engineer Co-op - BS/MS (Gloucester, MA)](https://amat.wd1.myworkdayjobs.com/en-US/External/job/GloucesterMA/XMLNAME-2026-Fall-Mechanical-Engineer-Co-op---BS-MS--Gloucester--MA-_R2611501) | Gloucester,MA | semiconductors | workday |
+| 75 ⭐ | 29d | Applied Materials | [2026 Fall Mechanical Engineer Co-op - BS/MS (Gloucester, MA)](https://amat.wd1.myworkdayjobs.com/en-US/External/job/GloucesterMA/XMLNAME-2026-Fall-Mechanical-Engineer-Co-op---BS-MS--Gloucester--MA-_R2611501) | Gloucester,MA | semiconductors | workday |
 | 73  | 7d | Micron | [Intern - Process Development Engineer, Planar DRAM CMP](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--Planar-DRAM-CMP_JR108060) | Boise, ID - Main Site | semiconductors | workday |
 | 73  | 10d | Montenson | [Sustainability Engineer Intern](https://fa-esgu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/23367) | Denver, CO | other | simplify |
 | 73  | 16d | Micron | [Intern - Process Development Engineer, Dry Etch](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--Dry-Etch_JR107326) | Boise, ID - Main Site | semiconductors | workday |
@@ -104,7 +104,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 9d | GE Vernova | [Engineering Intern](https://gevernova.wd5.myworkdayjobs.com/vernova_externalsite/job/Niskayuna/Engineering-Intern---Power-Conversion---Storage-AI-Tool-Developer--2027_R5049957-2) | Niskayuna, NY | other | simplify |
 | 64  | 10d | OceanComm | [Electronics Technician Intern](https://apply.workable.com/oceancomm/j/AB7EE4F02B/apply) | Chicago, IL | other | simplify |
 | 64  | 10d | Altamira Technologies | [Research and Development Intern](https://jobs.jobvite.com/altamiracorps/job/oHqCAfw3?nl=1&nl=1&fr=false) | Fairborn, OH | other | simplify |
-| 64  | 10d | Vertiv | [Thermal Engineer Intern - Summer 2027](https://egup.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/20278813) | Westerville, OH | other | simplify |
+| 64  | 11d | Vertiv | [Thermal Engineer Intern - Summer 2027](https://egup.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/20278813) | Westerville, OH | other | simplify |
 | 64  | 11d | Moog | [Product Engineering Intern](https://moog.wd5.myworkdayjobs.com/moog_external_career_site/job/Buffalo-NY/Intern--Product-Engineering_R-26-19224) | Buffalo, NY | other | simplify |
 | 64  | 13d | Varda Space | [Applications Engineer Intern](https://job-boards.greenhouse.io/vardaspace/jobs/7824822003) | El Segundo, CA | other | simplify |
 | 64  | 14d | Amcor | [Product Development Engineer Intern](https://amcor.wd5.myworkdayjobs.com/amcor_external_career_site/job/CORP-Evansville-Head-Division-Office-IN/Product-Development-Intern_REQ_94654) | Evansville, IN | other | simplify |
@@ -117,7 +117,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 16d | GE Appliances | [Engineering Co-op](https://haier.wd3.myworkdayjobs.com/ge_appliances/job/USA-LaFayette-GA/Engineering-Co-op-Summer-2027_REQ-26431) | LaFayette, GA | other | simplify |
 | 64  | 17d | SpaceX | [Silicon Engineer Intern/Co-op](https://boards.greenhouse.io/spacex/jobs/8621763002) | Palo Alto, CA | other | simplify |
 | 64  | 17d | StudyFetch | [Engineering Intern](https://ats.rippling.com/studyfetch/jobs/4ab846a3-a963-46c3-a60d-03fa832fa7d5) | Beverly Hills, CA | other | simplify |
-| 64  | 17d | TikTok | [Research Engineer Intern - Monetization Technology - Business Integrit](https://lifeattiktok.com/search/7668204394458466565) | San Jose, CA | other | simplify |
+| 64  | 18d | TikTok | [Research Engineer Intern - Monetization Technology - Business Integrit](https://lifeattiktok.com/search/7668204394458466565) | San Jose, CA | other | simplify |
 | 64  | 18d | Nebo | [Front-End Engineer Intern](https://neboagency.applytojob.com/apply/TtGKnP4ODV/FrontEnd-Engineering-Intern) | Atlanta, GA | other | simplify |
 | 64  | 18d | Nebo | [Back-End Engineer Intern](https://neboagency.applytojob.com/apply/VhgOaS6Nx3/BackEnd-Engineering-Intern) | Atlanta, GA | other | simplify |
 | 64  | 18d | TikTok | [Artificial Intelligence Engineer Intern - Client Architecture](https://lifeattiktok.com/search/7667935738190465285) | San Jose, CA | other | simplify |
@@ -137,7 +137,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 22d | RapDev | [ServiceNow Engineer Intern](https://jobs.ashbyhq.com/rapdev/b022388e-79d0-43b8-b524-64aaed9ff4dc/application?embed=true) | Boston, MA | other | simplify |
 | 64  | 23d | Cloudflare | [Research Engineer Intern](https://boards.greenhouse.io/cloudflare/jobs/8089379) | Austin, TX | other | simplify |
 | 64  | 24d | Motorola | [Systems Engineer Co-op](https://motorolasolutions.wd5.myworkdayjobs.com/Careers/job/Texas-Remote-Work/Systems-Engineer--CO-OP-Program-_R66970) | Texas | other | simplify |
-| 64  | 24d | Smiths Detection Group | [Technical Service Engineer Intern](https://jobs.smartrecruiters.com/SmithsGroup2/744000140008569) | Parsippany-Troy Hills, NJ | other | simplify |
+| 64  | 25d | Smiths Detection Group | [Technical Service Engineer Intern](https://jobs.smartrecruiters.com/SmithsGroup2/744000140008569) | Parsippany-Troy Hills, NJ | other | simplify |
 | 64  | 25d | Waystar | [Application Engineer Co-op](https://waystar.wd1.myworkdayjobs.com/Waystar/job/Atlanta-GA/Application-Engineer-Co-Op_R3313-1) | Atlanta, GA | other | simplify |
 | 64  | 27d | Howmet Aerospace | [Product Engineer Co-op](https://fa-exty-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/118645) | Valparaiso, IN | other | simplify |
 | 64  | 28d | Western Digital | [Failure Analysis Automation Engineer Intern - Failure Analysis Automat](https://jobs.smartrecruiters.com/WesternDigital/744000139338269) | San Jose, CA | other | simplify |
