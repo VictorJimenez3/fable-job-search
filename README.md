@@ -708,6 +708,12 @@ tailoring regressions retain their stronger gates. This keeps consensus visible
 without letting four phrasings of one concern masquerade as four independent
 failures.
 
+Audit repairs now receive an explicit control-loss packet: unexplained
+canonical bullets, supported terms lost from the base, project swaps, and
+portfolio-overlap warnings are listed before the repair writer acts. The
+repair rules prioritize restoring high-value control evidence or explaining a
+real replacement before adding another role-keyword line.
+
 For broad validation, `scripts/resume_studio_benchmark.py` fetches and matches
 many live postings concurrently, then runs a smaller full-tailoring sample
 balanced across sectors and companies. Its manifest preserves the posting

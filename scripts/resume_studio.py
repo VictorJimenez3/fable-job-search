@@ -2353,16 +2353,42 @@ def tailoring_repair_feedback(audit: Dict[str, Any], changes: Dict[str, Any]) ->
         for item in findings
         if item.get("classification") in {"BLOCKER", "REGRESSION", "MISSED_OPPORTUNITY"}
     ][:16]
+    coverage = changes.get("keyword_coverage") or {}
+    portfolio = changes.get("portfolio_diagnostics") or {}
+    comparison_control = {
+        "canonical_bullet_count": int(changes.get("canonical_bullet_count") or 0),
+        "unexplained_removed_bullets": [
+            {
+                "source_id": str(item.get("source_id") or ""),
+                "entry_id": str(item.get("entry_id") or ""),
+                "text": str(item.get("text") or "")[:360],
+            }
+            for item in (changes.get("unexplained_removed_bullets") or [])[:16]
+            if isinstance(item, dict)
+        ],
+        "lost_supported_terms": [
+            str(item.get("term") or "")
+            for item in (coverage.get("terms") or [])
+            if isinstance(item, dict) and item.get("comparison_status") == "lost" and item.get("supported")
+        ][:20],
+        "project_swaps": changes.get("project_swaps") or {},
+        "portfolio_warnings": list(portfolio.get("warnings") or [])[:12],
+        "portfolio_blocking_warnings": list(portfolio.get("blocking_warnings") or [])[:12],
+    }
     return {
         "decision": str(audit.get("decision") or "needs_review"),
         "recommended_version": str(audit.get("recommended_version") or "review"),
         "tailoring": str(audit.get("tailoring") or "inconclusive"),
         "comparison": audit.get("comparison") or {},
         "actionable_findings": actionable,
+        "comparison_control": comparison_control,
         "explained_tradeoffs": list(changes.get("explained_tradeoffs") or [])[:12],
         "rules": [
             "Repair only with authorized source or evidence IDs already present in the plan/catalog.",
-            "Do not restore a base line merely because it existed; restore it when it closes a target-relevant loss.",
+            "Treat canonical evidence as the control: do not remove an unexplained canonical bullet when a safe one-line slot remains.",
+            "Restore the highest-value unexplained canonical losses and lost supported terms before adding new project wording.",
+            "Do not swap a distinctive mechanism, metric, award, or interview thread for a near-duplicate AI/RAG/backend line.",
+            "Do not restore a base line merely because it existed; restore it when it closes a target-relevant loss or prevents avoidable information loss.",
             "Do not remove a deliberate project swap when the decision ledger explains a stronger replacement.",
             "Do not add unsupported job terminology, even if the posting emphasizes it.",
             "Prefer a smaller, coherent portfolio over keyword coverage or page filling.",

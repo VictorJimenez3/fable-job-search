@@ -309,6 +309,11 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   retained as `tailored_candidate.pdf`, alongside `base_control.tex` and a
   `winner_artifact` receipt. This prevents a rejected tailored draft from
   being mistaken for the recommended version without changing the evaluator.
+- **Repair writers now receive explicit control losses:** the feedback packet
+  lists unexplained canonical bullets, supported terms lost from the base,
+  project swaps, and portfolio-overlap warnings. Repair rules restore or
+  justify high-value control evidence before adding another keyword-shaped
+  line; the evaluator and its hashes remain unchanged.
 
 ### Previous change (verified 2026-08-15)
 
