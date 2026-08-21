@@ -281,8 +281,9 @@ selects existing evidence IDs; enhancement mode permits reviewable substantive
 rewrites and multi-source synthesis anchored to those IDs. Both render through
 the exact `CV/resume.tex` format
 with company-first headings, immutable typography/margins/spacing, and a hard
-page-density test (DECISIONS #69). Victor's installed first-party Codex and
-Claude Code clients perform planning and fixed adversarial review. Human stays
+page-density test (DECISIONS #69). The installed Codex CLI, pinned to
+`gpt-5.6-luna`, performs writing plus a four-role, same-model critic jury.
+Human stays
 the author (DECISIONS §6): drafts are reviewed, never auto-submitted. Reports
 expose known Codex token usage and do not imply an exact total when a provider
 omits usage metadata.

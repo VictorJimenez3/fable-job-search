@@ -3,16 +3,16 @@
 
 This is deliberately a local companion, not a hosted CV service.  It reads the
 radar's public job snapshot and Victor's ignored ``CV/`` directory, then can
-ask the installed first-party Codex and Claude Code CLIs to work on a private
+ask the installed first-party Codex CLI to work on a private
 resume draft using their existing local authentication.
 
 The service has two modes:
 
 * ``strict`` selects only existing, human-approved source bullets and runs
   deterministic layout checks against the canonical one-page resume format.
-* ``dream``/``unrestricted`` run independent frontier drafts, a synthesis pass,
-  and separate critique lanes. Codex may apply critique in bounded revision
-  rounds; the reviewer never mutates or self-grades the plan, and the module
+* ``dream``/``unrestricted`` run a frontier draft, a synthesis pass, and a
+  separate Codex Luna multi-role jury. Codex may apply critique in bounded
+  revision rounds; critics never mutate or self-grade the plan, and the module
   reports separate quality gates instead of a composite craft score.
 * ``generation`` adds a requirement-to-evidence gap pass before drafting. It
   may synthesize new bullets and tailored skill lines from authorized Markdown
@@ -76,6 +76,30 @@ OBJECTIVE_RESUME_RUBRIC_VERSION = "objective-resume-v1"
 JOB_INTELLIGENCE_VERSION = "job-intelligence-v1"
 TAILORING_AUDIT_VERSION = "tailoring-audit-v2"
 CODEX_LUNA_MODEL = "gpt-5.6-luna"
+CODEX_REVIEW_MODE = "codex_luna_multi_role_jury"
+CODEX_RECHECK_EFFORT = "medium"
+CODEX_CRITIC_ROLES = (
+    {
+        "key": "evidence",
+        "label": "Evidence integrity auditor",
+        "focus": "Check provenance, factual boundaries, metrics, qualifiers, and whether every claim is interview-defensible.",
+    },
+    {
+        "key": "recruiter",
+        "label": "Recruiter skim critic",
+        "focus": "Check six-second comprehension, hierarchy, narrative coherence, readability, and whether the strongest evidence is visible quickly.",
+    },
+    {
+        "key": "technical",
+        "label": "Technical hiring-manager critic",
+        "focus": "Check technical conviction, mechanism, scope, engineering judgment, distinct interview threads, and portfolio complementarity.",
+    },
+    {
+        "key": "screening",
+        "label": "Screening and eligibility auditor",
+        "focus": "Check supported terminology, parsing-friendly wording, requirement coverage, hard eligibility constraints, and keyword gaming.",
+    },
+)
 REVIEW_CRITERIA = (
     "factual", "target_fit", "evidence", "distinctiveness", "clarity", "privacy",
 )
@@ -154,9 +178,10 @@ TAILOR_MODE_ALIASES = {
     "unchained": "generation", "generate": "generation",
     "generation": "generation", "generative": "generation",
 }
-# Victor's standing preference is the high Luna lane for every tailoring stage.
-# Keep the task map explicit for auditability, but reject lower or experimental
-# effort overrides so a future run cannot silently send max reasoning.
+# Victor's standing preference is the high Luna lane for authoring and the
+# initial critic panel. Keep the task map explicit for auditability, but reject
+# lower or experimental environment overrides. A caller may explicitly request
+# the bounded medium-effort post-revision critic recheck below.
 CODEX_EFFORTS = frozenset(("high",))
 CODEX_TASK_EFFORT_DEFAULTS = {
     "draft": "high",
@@ -1246,7 +1271,7 @@ def portfolio_diagnostics(
 
     This is a review instrument rather than a composite score. It exposes
     breadth, overlap, and stronger unused alternatives so a writer or
-    independent critic can catch a technically polished but strategically
+    role-separated critic panel can catch a technically polished but strategically
     weaker draft.
     """
     entries = catalog.get("entries") or {}
@@ -1465,6 +1490,37 @@ def _stable_digest(value: Any, length: int = 24) -> str:
             default=str,
         ).encode("utf-8", errors="replace")
     return hashlib.sha256(raw).hexdigest()[: max(8, int(length or 24))]
+
+
+def review_panel_available(review: Any) -> bool:
+    """Return whether a usable critique panel completed.
+
+    New runs use a Codex Luna multi-role jury. The legacy boolean/dict field
+    is still understood so saved pre-jury reports remain readable, but no new
+    run depends on a second vendor.
+    """
+    if not isinstance(review, dict):
+        return False
+    jury = review.get("critic_jury")
+    if isinstance(jury, dict) and jury.get("available") is True:
+        return True
+    legacy = review.get("independent_review")
+    if isinstance(legacy, dict):
+        return legacy.get("available") is True
+    return legacy is True
+
+
+def review_panel_mode(review: Any) -> str:
+    if not isinstance(review, dict):
+        return "unavailable"
+    jury = review.get("critic_jury")
+    if isinstance(jury, dict) and jury.get("mode"):
+        return str(jury.get("mode"))
+    if review.get("review_mode"):
+        return str(review.get("review_mode"))
+    if review_panel_available(review):
+        return "independent_provider"
+    return "unavailable"
 
 
 ROLE_TRACK_TERMS = {
@@ -1689,7 +1745,7 @@ def build_change_findings(
         else:
             add(
                 "QUESTIONABLE", "info",
-                "Source-addressed wording change preserved authorized evidence, but its role value still needs independent comparison.",
+                "Source-addressed wording change preserved authorized evidence, but its role value still needs critic-panel comparison.",
                 source_ids, action="Keep only if the paired reviewer confirms better role relevance or clearer proof.",
             )
 
@@ -1786,17 +1842,18 @@ def build_change_findings(
     for claim in unsupported[:20]:
         add(
             "BLOCKER", "critical",
-            "Independent critic reported an unsupported claim: %s" % str(claim),
+            "Critic panel reported an unsupported claim: %s" % str(claim),
             action="Remove or ground the claim in authorized evidence.",
         )
     blocking_issues = review.get("blocking_issues") or []
-    if review.get("independent_review") is True and not isinstance(blocking_issues, list):
+    panel_available = review_panel_available(review)
+    if panel_available and not isinstance(blocking_issues, list):
         blocking_issues = [blocking_issues]
-    if review.get("independent_review") is True:
+    if panel_available:
         for issue in blocking_issues[:20]:
             add(
                 "BLOCKER", "critical",
-                "Independent critic reported a blocking issue: %s" % str(issue),
+                "Critic panel reported a blocking issue: %s" % str(issue),
                 action="Resolve the critic's blocking issue before treating the resume as ready.",
             )
     return findings[:MAX_AUDIT_FINDINGS]
@@ -1813,19 +1870,20 @@ def build_tailoring_audit(
     deterministic_gates = deterministic.get("gates") if isinstance(deterministic.get("gates"), dict) else {}
     review_gates = review.get("gates") if isinstance(review.get("gates"), dict) else {}
     gates = review_gates or deterministic_gates
-    independent_available = bool(review.get("independent_review"))
+    review_available = review_panel_available(review)
+    review_mode = review_panel_mode(review)
 
     def effective_gate(name: str) -> Dict[str, Any]:
         deterministic_gate = deterministic_gates.get(name)
         review_gate = gates.get(name)
         if isinstance(deterministic_gate, dict) and str(deterministic_gate.get("status") or "").lower() == "fail":
             return deterministic_gate
-        if independent_available and isinstance(review_gate, dict) and str(review_gate.get("status") or "").lower() == "fail":
+        if review_available and isinstance(review_gate, dict) and str(review_gate.get("status") or "").lower() == "fail":
             return review_gate
         if isinstance(deterministic_gate, dict):
             return deterministic_gate
-        if not independent_available and name in REVIEW_CRITERIA:
-            return {"status": "unknown", "reason": "independent provider critique unavailable"}
+        if not review_available and name in REVIEW_CRITERIA:
+            return {"status": "unknown", "reason": "Codex Luna critic panel unavailable"}
         return review_gate if isinstance(review_gate, dict) else {}
 
     hard_gate_names = ("factual", "eligibility", "layout", "privacy")
@@ -1835,10 +1893,14 @@ def build_tailoring_audit(
         if str(effective_gate(name).get("status") or "").lower() == "fail"
     ]
     finding_blockers = [item for item in findings if item.get("classification") == "BLOCKER"]
+    # ``independent_review`` is a legacy compatibility alias.  A same-model
+    # Luna jury reports it as partial to make vendor independence explicit,
+    # but that alias must not downgrade the actual jury's readiness.
+    gate_names = (set(gates) | set(deterministic_gates)) - {"independent_review"}
     hard_gates = [
         {"name": str(name), "status": str(effective_gate(name).get("status") or "unknown"),
          "reason": str(effective_gate(name).get("reason") or "")[:500]}
-        for name in sorted(set(gates) | set(deterministic_gates))
+        for name in sorted(gate_names)
         if isinstance(effective_gate(name), dict)
     ]
     intelligence = context.get("job_intelligence") if isinstance(context.get("job_intelligence"), dict) else {}
@@ -1846,7 +1908,7 @@ def build_tailoring_audit(
     unknown_gate = any(item.get("status") in {"partial", "unknown"} for item in hard_gates)
     if hard_failures or finding_blockers:
         readiness = "blocked"
-    elif not posting_available or not independent_available or unknown_gate or review.get("ready") is not True:
+    elif not posting_available or not review_available or unknown_gate or review.get("ready") is not True:
         readiness = "review"
     else:
         readiness = "ready"
@@ -1917,21 +1979,25 @@ def build_tailoring_audit(
         else "partial" if isinstance(required_coverage, (int, float)) and required_coverage < 100
         else "pass"
     )
-    integrity = "fail" if hard_failures or finding_blockers else "partial" if not independent_available or any(item.get("status") in {"partial", "unknown"} for item in hard_gates) else "pass"
+    integrity = "fail" if hard_failures or finding_blockers else "partial" if not review_available or any(item.get("status") in {"partial", "unknown"} for item in hard_gates) else "pass"
     portfolio = changes.get("portfolio_diagnostics") or {}
     efficiency = "fail" if portfolio.get("blocking_warnings") else "partial" if portfolio.get("warnings") else "pass"
     criteria = review_gates
-    human_relevance = "unknown" if not independent_available else str((criteria.get("target_fit") or {}).get("status") or "unknown")
-    technical_conviction = "unknown" if not independent_available else str((criteria.get("evidence") or {}).get("status") or "unknown")
+    human_relevance = "unknown" if not review_available else str((criteria.get("target_fit") or {}).get("status") or "unknown")
+    technical_conviction = "unknown" if not review_available else str((criteria.get("evidence") or {}).get("status") or "unknown")
     dimensions = {
         "fit": {"status": fit_band, "score": score, "source": "resume_match.score"},
         "screening": {"status": screening, "source": "deterministic keyword and layout audit"},
-        "human_relevance": {"status": human_relevance, "source": "independent review"},
-        "technical_conviction": {"status": technical_conviction, "source": "evidence gate and independent review"},
+        "human_relevance": {"status": human_relevance, "source": "Codex Luna critic panel"},
+        "technical_conviction": {"status": technical_conviction, "source": "evidence gate and Codex Luna critic panel"},
         "integrity": {"status": integrity, "source": "factual, eligibility, privacy, and provenance gates"},
         "information_efficiency": {"status": efficiency, "source": "portfolio and density audit"},
     }
-    confidence = "high" if posting_available and independent_available and not unknown_gate else "medium" if posting_available else "low"
+    confidence = (
+        "high" if posting_available and review_available and review_mode == "independent_provider" and not unknown_gate else
+        "medium" if posting_available and review_available else
+        "medium" if posting_available else "low"
+    )
     audit = {
         "version": TAILORING_AUDIT_VERSION,
         "status": "blocked" if readiness == "blocked" else "complete" if readiness == "ready" else "review",
@@ -1946,6 +2012,12 @@ def build_tailoring_audit(
         "tailoring": tailoring,
         "decision": decision,
         "recommended_version": recommended_version,
+        "review": {
+            "available": review_available,
+            "mode": review_mode,
+            "separate_vendor": review_mode == "independent_provider",
+            "critic_roles": list(review.get("critic_roles") or [])[:8],
+        },
         "confidence": confidence,
         "dimensions": dimensions,
         "hard_gates": hard_gates,
@@ -2079,8 +2151,8 @@ def tailoring_audit_summary(audit: Any) -> Dict[str, Any]:
 
     def summary_reason(item: Dict[str, Any]) -> str:
         reason = str(item.get("reason") or "")
-        if reason.startswith("Independent critic reported"):
-            return "Independent critic reported a review blocker; inspect the private local audit."
+        if reason.lower().startswith(("critic panel reported", "independent critic reported")):
+            return "Codex Luna critic panel reported a review blocker; inspect the private local audit."
         return reason[:220]
 
     return {
@@ -2093,6 +2165,11 @@ def tailoring_audit_summary(audit: Any) -> Dict[str, Any]:
         "decision": str(audit.get("decision") or "needs_review"),
         "recommended_version": str(audit.get("recommended_version") or "review"),
         "confidence": str(audit.get("confidence") or "low"),
+        "review": {
+            "available": bool((audit.get("review") or {}).get("available")) if isinstance(audit.get("review"), dict) else False,
+            "mode": str((audit.get("review") or {}).get("mode") or "unavailable") if isinstance(audit.get("review"), dict) else "unavailable",
+            "separate_vendor": bool((audit.get("review") or {}).get("separate_vendor")) if isinstance(audit.get("review"), dict) else False,
+        },
         "run_id": str(audit.get("run_id") or "")[:80],
         "queue_id": str(audit.get("queue_id") or "")[:80],
         "finding_counts": dict(audit.get("finding_counts") or {}),
@@ -2197,14 +2274,11 @@ def objective_resume_assessment(
 
     weighted_total = sum(item["weight"] for item in breakdown)
     score = round(sum(item["score"] * item["weight"] for item in breakdown) / weighted_total, 1) if weighted_total else None
-    independent = review.get("independent_review")
-    if isinstance(independent, dict):
-        independent_available = independent.get("available") is True
-    else:
-        independent_available = independent is True
-    if independent_available:
+    review_available = review_panel_available(review)
+    review_mode = review_panel_mode(review)
+    if review_available and review_mode == "independent_provider":
         confidence = "high" if len(breakdown) >= 4 else "medium"
-    elif len(breakdown) >= 3:
+    elif review_available and len(breakdown) >= 3:
         confidence = "medium"
     elif breakdown:
         confidence = "low"
@@ -2229,8 +2303,10 @@ def objective_resume_assessment(
         risks.append("Validation warnings remain (%d)." % len(warnings))
     if portfolio_warnings:
         risks.append("Portfolio audit has %d warning%s." % (len(portfolio_warnings), "s" if len(portfolio_warnings) != 1 else ""))
-    if not independent_available:
-        risks.append("No independent reviewer result; this is a deterministic shortlist, not a ChatGPT verdict.")
+    if not review_available:
+        risks.append("No critic-panel result; this is a deterministic shortlist, not a ChatGPT verdict.")
+    elif review_mode != "independent_provider":
+        risks.append("Codex Luna multi-role jury is same-model review; keep owner approval as the final checkpoint.")
     if status in {"failed", "interrupted"}:
         risks.insert(0, "Run did not finish successfully, so it is excluded from the winner.")
 
@@ -2532,10 +2608,7 @@ def studio_usage(root: Optional[Path] = None) -> Dict[str, Any]:
     base = studio_root(root)
     now = dt.datetime.now(dt.timezone.utc)
     week_start = (now - dt.timedelta(days=now.weekday())).date().isoformat()
-    totals = {
-        "codex_tokens": 0, "codex_calls": 0,
-        "claude_tokens": 0, "claude_calls": 0,
-    }
+    totals = {"codex_tokens": 0, "codex_calls": 0}
     runs = 0
     completed = 0
     for report_path in (sorted((base / "runs").glob("*/report.json")) if (base / "runs").is_dir() else []):
@@ -2558,13 +2631,6 @@ def studio_usage(root: Optional[Path] = None) -> Dict[str, Any]:
         codex_calls = int(usage.get("codex_calls") or 0)
         totals["codex_tokens"] += codex_tokens
         totals["codex_calls"] += codex_calls
-        for provider in report.get("providers") or []:
-            if not isinstance(provider, dict) or not provider.get("called"):
-                continue
-            name = str(provider.get("provider") or "").split("/")[-1]
-            if name == "claude":
-                totals["claude_calls"] += 1
-                totals["claude_tokens"] += int(provider.get("usage_tokens") or 0)
     configured = os.environ.get("CODEX_WEEKLY_LIMIT_TOKENS", "").strip()
     limit = int(configured) if configured.isdigit() and int(configured) > 0 else None
     return {
@@ -2693,11 +2759,8 @@ def provider_commands() -> Dict[str, Optional[str]]:
     # These are first-party subscription CLIs only.  Do not add Ollama,
     # arbitrary OpenAI-compatible endpoints, or local model servers here.
     # Luna is the Codex model selected for this harness, not a separate local
-    # executable. Claude remains the independent provider lane.
-    return {
-        "codex": shutil.which("codex"),
-        "claude": shutil.which("claude"),
-    }
+    # executable. Codex Luna is the sole approved execution lane.
+    return {"codex": shutil.which("codex")}
 
 
 def subscription_environment(run_dir: Path) -> Dict[str, str]:
@@ -2709,9 +2772,6 @@ def subscription_environment(run_dir: Path) -> Dict[str, str]:
     """
     env = dict(os.environ)
     for name in (
-        "ANTHROPIC_API_KEY",
-        "ANTHROPIC_AUTH_TOKEN",
-        "CLAUDE_CODE_OAUTH_TOKEN",
         "OPENAI_API_KEY",
         "CODEX_API_KEY",
         "LLM_BASE_URL",
@@ -2767,7 +2827,7 @@ def useful_provider_data(data: Dict[str, Any], label: str) -> bool:
         return False
     if label.startswith("workshop"):
         return bool(data.get("suggestions") or str(data.get("reply") or "").strip())
-    if label.startswith("review"):
+    if label.startswith(("review", "critique")) or "_critique" in label:
         criteria = data.get("criteria") if isinstance(data.get("criteria"), dict) else data
         return any(
             isinstance(value, dict) and str(value.get("status", "")).lower() in STATUS_MULTIPLIER
@@ -3193,7 +3253,7 @@ def codex_reasoning_effort(label: str, override: Optional[str] = None) -> str:
     ]
     for value in candidates:
         normalized = str(value or "").strip().lower()
-        if normalized in CODEX_EFFORTS:
+        if normalized in CODEX_EFFORTS or (override is not None and normalized == CODEX_RECHECK_EFFORT):
             return normalized
     return "high"
 
@@ -3202,8 +3262,6 @@ def provider_model_label(provider: str) -> str:
     """Name the approved subscription lane without pretending to know hidden model routing."""
     if str(provider or "") == "codex":
         return CODEX_LUNA_MODEL
-    if str(provider or "") == "claude":
-        return "Claude Code subscription CLI"
     return str(provider or "unknown")
 
 
@@ -3249,43 +3307,31 @@ def run_provider(
     stdout_path = run_dir / ("stdout_" + label + "_" + provider + ".txt")
     stderr_path = run_dir / ("stderr_" + label + "_" + provider + ".txt")
     prompt_path.write_text(prompt)
-    schema = schema or (review_schema() if label.startswith("review") else plan_schema(False))
+    review_label = label.startswith(("review", "critique")) or "_critique" in label
+    schema = schema or (review_schema() if review_label else plan_schema(False))
     schema_path = run_dir / ("schema_" + label + "_" + provider + ".json")
     write_json(schema_path, schema)
-    if provider == "codex":
-        args = [
-            executable,
-            "exec",
-            "-c",
-            "model=" + CODEX_LUNA_MODEL,
-            "-c",
-            "model_reasoning_effort=" + requested_effort,
-            "--sandbox",
-            "read-only",
-            "--ephemeral",
-            "--output-schema",
-            str(schema_path),
-            "-o",
-            str(stdout_path),
-            "-",
-        ]
-    elif provider == "claude":
-        args = [
-            executable,
-            "-p",
-            "--output-format",
-            "json",
-            "--no-session-persistence",
-            "--permission-mode",
-            "plan",
-            "--add-dir",
-            str(cv_root(repo_root())),
-        ]
-    else:
+    if provider != "codex":
         return {
             "provider": provider, "ok": False, "error": "unsupported provider lane",
             "reasoning_effort": requested_effort,
         }
+    args = [
+        executable,
+        "exec",
+        "-c",
+        "model=" + CODEX_LUNA_MODEL,
+        "-c",
+        "model_reasoning_effort=" + requested_effort,
+        "--sandbox",
+        "read-only",
+        "--ephemeral",
+        "--output-schema",
+        str(schema_path),
+        "-o",
+        str(stdout_path),
+        "-",
+    ]
     started = time.time()
     stdout_path.touch()
     try:
@@ -4084,10 +4130,17 @@ def reviewer_prompt(
     catalog: Optional[Dict[str, Any]] = None,
     unrestricted: bool = False,
     generation: bool = False,
+    critic_role: Optional[Dict[str, Any]] = None,
 ) -> str:
+    critic_role = critic_role if isinstance(critic_role, dict) else {}
+    role_label = str(critic_role.get("label") or "general adversarial critic")
+    role_focus = str(critic_role.get("focus") or "Audit the full resume against the target and authorized evidence.")
     return (
-        "You are an independent adversarial resume critic. This is a fresh review: do not "
+        "You are the "
+        + role_label
+        + " in a Codex Luna multi-role critic jury. This is a fresh adversarial review: do not "
         "trust the generation agent, its explanations, or any score it may have claimed. "
+        "This is same-model role-separated review, not a claim of vendor independence. "
         "This request is self-contained: do not inspect the filesystem, run commands, or "
         "read prior generated reports. Use only the target, proposed plan, rendered text, "
         "catalog, and authorized evidence supplied below. Return critique JSON only. "
@@ -4114,6 +4167,9 @@ def reviewer_prompt(
         "privacy: private or startup-sensitive details stay out of publishable copy\n"
         "Do not penalize a draft merely because it is shorter than a human reference. Penalize "
         "actual repetition, weak hierarchy, sparse reasoning, or hard-to-parse writing.\n"
+        "Your assigned focus: "
+        + role_focus
+        + " Report only material issues within that focus, while still escalating any critical factual, eligibility, or privacy failure.\n"
         "Audit the proposed plan against the canonical/current benchmark, but do not apply a blanket "
         "preserve-the-base rule. Creative changes are justified only by meaningful expected hiring-value "
         "gain. Specifically inspect the decision_ledger for low-value paraphrase churn, keyword-only "
@@ -4165,10 +4221,10 @@ def revision_prompt(
     unrestricted: bool = False,
     generation: bool = False,
 ) -> str:
-    """Ask the writer to apply independent criticism without self-grading."""
+    """Ask the writer to apply critic-panel feedback without self-grading."""
     return (
-        "You are Codex, the revision writer for Victor's resume studio. An independent "
-        "critic reviewed the proposed resume below. Apply the highest-value corrections "
+        "You are Codex, the revision writer for Victor's resume studio. The Codex Luna "
+        "critic panel reviewed the proposed resume below. Apply the highest-value corrections "
         "to produce a complete replacement plan. You may change sections, project choices, "
         "bullet count, ordering, and wording when the supplied evidence supports it. Do not "
         "blindly follow a critic that conflicts with source authority. Preserve every factual "
@@ -4189,7 +4245,7 @@ def revision_prompt(
         + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nCurrent plan:\n"
         + json.dumps(plan, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
-        + "\n\nIndependent critique:\n"
+        + "\n\nCodex Luna critic-panel review:\n"
         + json.dumps(critique, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
         + "\n\nAuthorized evidence:\n"
         + json.dumps(evidence_context(graph, context, str(context.get("posting_text") or "")) if graph else [], indent=2, ensure_ascii=False)[:MAX_GRAPH_PROMPT_CHARS]
@@ -4393,7 +4449,7 @@ def workshop_ai(
         raise ValueError("resume line not found")
     context = read_json(run_dir / "job_context.json", {}) or {}
     graph = evidence_graph(root or repo_root())
-    selected = provider or ("codex" if provider_commands().get("codex") else "claude")
+    selected = provider or "codex"
     if not provider_commands().get(selected):
         raise ValueError("Provider is not installed: %s" % selected)
     label = "workshop_%s" % uuid.uuid4().hex[:8]
@@ -7539,13 +7595,20 @@ def deterministic_review(
 def score_review(
     agent_review: Dict[str, Any], deterministic: Dict[str, Any],
     independent_available: bool = False,
+    review_mode: str = "",
+    critic_roles: Optional[Iterable[str]] = None,
 ) -> Dict[str, Any]:
-    """Combine independent critique and deterministic gates without self-scoring.
+    """Combine a critique panel and deterministic gates without self-scoring.
 
     This intentionally returns no composite craft score.  A draft may be
-    useful while still awaiting Victor or an independent provider; that state
-    must remain visible instead of being converted into a flattering number.
+    useful while still awaiting Victor or a critique panel; that state must
+    remain visible instead of being converted into a flattering number. New
+    runs use multiple Codex Luna roles. The old parameter name is retained for
+    compatibility with saved-run/test callers.
     """
+    review_available = bool(independent_available)
+    review_mode = str(review_mode or ("independent_provider" if review_available else "unavailable"))
+    roles = [str(item) for item in (critic_roles or []) if str(item)]
     data = agent_review.get("data") or {}
     criteria = data.get("criteria") if isinstance(data.get("criteria"), dict) else data
     unsupported = data.get("unsupported_claims", [])
@@ -7558,7 +7621,7 @@ def score_review(
     if not isinstance(portfolio_comparison, dict):
         portfolio_comparison = {
             "status": "unknown",
-            "reason": "independent portfolio comparison was not returned",
+            "reason": "critic-panel portfolio comparison was not returned",
             "preserved_strengths": [],
             "gained_strengths": [],
             "lost_strengths": [],
@@ -7574,28 +7637,38 @@ def score_review(
         reason = raw.get("reason", "") if isinstance(raw, dict) else ""
         gates[name] = {"status": status, "reason": reason}
     if unsupported:
-        gates["factual"] = {"status": "fail", "reason": "independent critic reported unsupported claims"}
+        gates["factual"] = {"status": "fail", "reason": "critic panel reported unsupported claims"}
     if "factual" in deterministic_gates and deterministic_gates["factual"].get("status") == "fail":
         gates["factual"] = deterministic_gates["factual"]
     gates["layout"] = deterministic_gates.get("layout", {"status": "fail", "reason": "layout unavailable"})
     gates["portfolio"] = deterministic_gates.get("portfolio", {"status": "fail", "reason": "portfolio unavailable"})
     if "eligibility" in deterministic_gates:
         gates["eligibility"] = deterministic_gates["eligibility"]
+    gates["critic_jury"] = {
+        "status": "pass" if review_available else "fail",
+        "reason": "Codex Luna multi-role critic panel completed" if review_available else "Codex Luna critic panel was unavailable",
+    }
+    # Keep a readable compatibility field for older Resume Bank consumers, but
+    # do not call a same-model jury vendor-independent.
     gates["independent_review"] = {
-        "status": "pass" if independent_available else "fail",
-        "reason": "independent provider critique completed" if independent_available else "no independent provider critique was available",
+        "status": "pass" if review_mode == "independent_provider" else "partial" if review_available else "fail",
+        "reason": (
+            "separate provider critique completed" if review_mode == "independent_provider" else
+            "same-model Codex Luna jury; no separate vendor was used" if review_available else
+            "no critique panel was available"
+        ),
     }
     comparison_status = str(portfolio_comparison.get("status") or "unknown").lower()
     if comparison_status not in {"pass", "partial", "fail"}:
         comparison_status = "fail"
     gates["portfolio_comparison"] = {
         "status": comparison_status,
-        "reason": str(portfolio_comparison.get("reason") or "portfolio comparison unavailable"),
+            "reason": str(portfolio_comparison.get("reason") or "critic-panel portfolio comparison unavailable"),
     }
     blocking = data.get("blocking_issues", [])
     if not isinstance(blocking, list):
         blocking = [str(blocking)]
-    required_gates = ("factual", "target_fit", "evidence", "distinctiveness", "clarity", "privacy", "layout", "portfolio", "eligibility", "independent_review", "portfolio_comparison")
+    required_gates = ("factual", "target_fit", "evidence", "distinctiveness", "clarity", "privacy", "layout", "portfolio", "eligibility", "critic_jury", "portfolio_comparison")
     hard_fail = bool(blocking) or any(gates.get(name, {}).get("status") != "pass" for name in required_gates)
     return {
         "rubric_version": RUBRIC_VERSION,
@@ -7612,7 +7685,15 @@ def score_review(
         "decision_feedback": decision_feedback[:20],
         "portfolio_comparison": portfolio_comparison,
         "reviewer": agent_review.get("provider"),
-        "independent_review": independent_available,
+        "review_mode": review_mode,
+        "critic_roles": roles[:8],
+        "critic_jury": {
+            "available": review_available,
+            "mode": review_mode,
+            "roles": roles[:8],
+            "separate_vendor": review_mode == "independent_provider",
+        },
+        "independent_review": review_mode == "independent_provider" and review_available,
         "deterministic": deterministic,
     }
 
@@ -7714,12 +7795,15 @@ def run_tailoring(
         "allowed_lanes": [name for name, path in provider_commands().items() if path],
         "codex_model": CODEX_LUNA_MODEL,
         "codex_effort_defaults": dict(CODEX_TASK_EFFORT_DEFAULTS),
+        "review_mode": CODEX_REVIEW_MODE,
+        "critic_roles": [item["key"] for item in CODEX_CRITIC_ROLES],
+        "separate_vendor_review": False,
         "local_models_allowed": False,
         "api_fallback_allowed": False,
     }
-    available = [name for name, path in provider_commands().items() if path]
+    available = [name for name, path in provider_commands().items() if path and name == "codex"]
     if not available:
-        raise RuntimeError("No approved Codex or Claude Code subscription CLI is installed")
+        raise RuntimeError("Codex CLI is not installed; Resume Studio requires the Codex Luna lane")
     gap_records: List[Dict[str, Any]] = []
     if generation:
         update("gap_analysis", "Mapping every posting requirement to authorized resume and Markdown evidence")
@@ -7773,11 +7857,11 @@ def run_tailoring(
     })
     mode_label = "generation" if generation else "unrestricted" if unrestricted else "enhanced" if enhance else "source-only"
     prompt = base_prompt(
-        context, "an independent resume evidence strategist", catalog, enhance,
+        context, "a Codex Luna resume evidence strategist", catalog, enhance,
         graph=graph, unrestricted=unrestricted, generation=generation,
     )
     schema = plan_schema(enhance, generation=generation)
-    update("drafting", "Building adaptive %s evidence plans with: %s" % (mode_label, ", ".join(available)))
+    update("drafting", "Building adaptive %s evidence plan with Codex Luna" % mode_label)
     with concurrent.futures.ThreadPoolExecutor(max_workers=len(available)) as pool:
         futures = {
             pool.submit(run_provider, provider, prompt, run_dir, "draft", RUN_TIMEOUT_SECONDS, schema): provider
@@ -7796,7 +7880,7 @@ def run_tailoring(
     if len(successful) == 1 and successful[0].get("provider") == writer:
         synthesis = {
             "provider": writer, "ok": True, "skipped": True,
-            "reason": "Only one usable planning lane was available; its plan was preserved for independent-review status.",
+            "reason": "Codex Luna is the sole author lane; a separate multi-role Luna critic panel follows.",
             "data": successful[0].get("data") or {},
         }
     else:
@@ -8242,19 +8326,19 @@ def run_tailoring(
     def combined_critique(records: List[Dict[str, Any]]) -> Dict[str, Any]:
         if not records:
             return {"provider": "", "ok": False, "data": {
-                "criteria": {name: {"status": "fail", "reason": "no independent critic available"} for name in REVIEW_CRITERIA},
-                "blocking_issues": ["Independent review was unavailable."],
+                "criteria": {name: {"status": "fail", "reason": "no Codex Luna critic panel available"} for name in REVIEW_CRITERIA},
+                "blocking_issues": ["Codex Luna critic panel was unavailable."],
                 "line_feedback": [], "unsupported_claims": [], "missing_evidence": [],
-                "revision_priorities": ["Obtain an independent provider critique before calling this ready."],
+                "revision_priorities": ["Run the Codex Luna critic panel before calling this ready."],
                 "decision_feedback": [],
                 "portfolio_comparison": {
                     "status": "unknown",
-                    "reason": "independent portfolio comparison was unavailable",
+                    "reason": "critic-panel portfolio comparison was unavailable",
                     "preserved_strengths": [],
                     "gained_strengths": [],
                     "lost_strengths": [],
                 },
-            }}
+            }, "review_mode": "unavailable", "critic_roles": []}
         data = copy.deepcopy(records[0].get("data") or {})
         data.setdefault("blocking_issues", [])
         data.setdefault("line_feedback", [])
@@ -8264,7 +8348,7 @@ def run_tailoring(
         data.setdefault("decision_feedback", [])
         data.setdefault("portfolio_comparison", {
             "status": "unknown",
-            "reason": "missing independent portfolio comparison",
+            "reason": "missing critic-panel portfolio comparison",
             "preserved_strengths": [],
             "gained_strengths": [],
             "lost_strengths": [],
@@ -8307,46 +8391,88 @@ def run_tailoring(
             if not isinstance(comparison.get(field), list):
                 comparison[field] = []
         data["portfolio_comparison"] = comparison
-        return {"provider": "+".join(str(item.get("provider") or "") for item in records), "ok": True, "data": data}
+        roles = list(dict.fromkeys(
+            str(item.get("critic_role") or "")
+            for item in records
+            if str(item.get("critic_role") or "")
+        ))
+        data["critic_panel"] = {
+            "mode": CODEX_REVIEW_MODE,
+            "roles": roles[:8],
+            "review_count": len(records),
+        }
+        return {
+            "provider": "codex",
+            "ok": True,
+            "review_mode": CODEX_REVIEW_MODE,
+            "critic_roles": roles[:8],
+            "data": data,
+        }
 
     def critique_current(round_label: str) -> Tuple[Dict[str, Any], List[Dict[str, Any]], bool]:
-        critic_lanes = [name for name in ("claude",) if name in available and name != writer]
-        if not critic_lanes:
+        critic_roles = list(CODEX_CRITIC_ROLES) if writer == "codex" and "codex" in available else []
+        if not critic_roles:
             critique = combined_critique([])
             write_json(run_dir / (round_label + ".json"), critique)
             return critique, [], False
-        update("reviewing", "Running independent critique lanes: %s" % ", ".join(critic_lanes))
-        with concurrent.futures.ThreadPoolExecutor(max_workers=len(critic_lanes)) as pool:
+        recheck = round_label != "critique"
+        review_effort = CODEX_RECHECK_EFFORT if recheck else "high"
+        update(
+            "reviewing",
+            "Running Codex Luna critic roles%s: %s" % (
+                " (measured recheck)" if recheck else "",
+                ", ".join(item["key"] for item in critic_roles),
+            ),
+        )
+        with concurrent.futures.ThreadPoolExecutor(max_workers=len(critic_roles)) as pool:
             futures = {
                 pool.submit(
-                    run_provider, provider,
+                    run_provider, "codex",
                     reviewer_prompt(
                         context, chosen, plan=plan, graph_context=graph_context,
                         catalog=catalog, unrestricted=unrestricted,
                         generation=generation,
+                        critic_role=role,
                     ),
-                    run_dir, round_label + "_" + provider, timeout=8 * 60, schema=review_schema(),
-                ): provider for provider in critic_lanes
+                    run_dir, round_label + "_" + role["key"],
+                    timeout=8 * 60 if not recheck else 6 * 60,
+                    schema=review_schema(), codex_effort=review_effort,
+                ): role for role in critic_roles
             }
-        records = [future.result() for future in concurrent.futures.as_completed(futures)]
+        # Futures complete in arbitrary order; retain the role key alongside
+        # each result so the durable report explains which Luna sub-agent
+        # produced each critique.
+        role_records = []
+        for future in concurrent.futures.as_completed(futures):
+            role = futures[future]
+            record = future.result()
+            record["critic_role"] = role["key"]
+            record["critic_role_label"] = role["label"]
+            role_records.append(record)
+        records = role_records
         for record in records:
-            record["label"] = round_label + "_" + str(record.get("provider") or "unknown")
-            write_json(run_dir / (round_label + "_" + str(record.get("provider") or "unknown") + ".json"), record)
+            record["critic_round"] = round_label
+            record["label"] = round_label + "_" + str(record.get("critic_role") or "critic")
+            write_json(run_dir / (round_label + "_" + str(record.get("critic_role") or "critic") + ".json"), record)
         usable = [record for record in records if record.get("ok")]
         critique = combined_critique(usable)
+        critique["critic_round"] = round_label
         write_json(run_dir / (round_label + ".json"), critique)
-        return critique, usable, bool(usable)
+        # Keep failed/time-limited role calls in the durable report.  They do
+        # not count as a usable panel, but hiding them makes usage and
+        # evaluator reliability look better than it was.
+        return critique, records, bool(usable)
 
-    critique, critique_records, independent_available = critique_current("critique")
+    critique, critique_records, review_available = critique_current("critique")
     revision_records: List[Dict[str, Any]] = []
     revision_log: List[Dict[str, Any]] = []
     for revision_round in range(1, 3):
         critique_data = critique.get("data") or {}
         statuses = [str((critique_data.get("criteria") or {}).get(name, {}).get("status") or "fail") for name in REVIEW_CRITERIA]
-        if not enhance or not independent_available or (not critique_data.get("blocking_issues") and all(status == "pass" for status in statuses)):
+        if not enhance or not review_available or (not critique_data.get("blocking_issues") and all(status == "pass" for status in statuses)):
             break
         label = "revision" if revision_round == 1 else "revision_%s" % revision_round
-        update("revising", "Codex is applying independent critique (pass %s/2)" % revision_round)
+        update("revising", "Codex Luna is applying the critic-panel feedback (pass %s/2)" % revision_round)
         revision = run_provider(
             writer, revision_prompt(
                 context, plan, critique, catalog, graph=graph,
@@ -8375,7 +8501,7 @@ def run_tailoring(
         write_json(run_dir / "layout_packing.json", packing)
         chosen, layout, preview = render_candidate(plan, run_dir)
         revision_log.append({"round": revision_round, "status": "applied", "provider": writer})
-        critique, new_records, independent_available = critique_current(label + "_critique")
+        critique, new_records, review_available = critique_current(label + "_critique")
         critique_records.extend(new_records)
     # A revision is allowed to change wording and flexible front matter, so
     # the final density contract must be checked again after the last critique
@@ -8392,7 +8518,9 @@ def run_tailoring(
         context, chosen, layout, plan=plan, catalog=catalog,
     )
     initial_scored = score_review(
-        critique, initial_deterministic, independent_available=independent_available,
+        critique, initial_deterministic, independent_available=review_available,
+        review_mode=str(critique.get("review_mode") or "unavailable"),
+        critic_roles=critique.get("critic_roles") or [],
     )
     initial_changes = content_change_report(
         plan, catalog, chosen, context.get("target_keywords"), base_tex=base_tex_for_audit,
@@ -8453,7 +8581,9 @@ def run_tailoring(
                     )
                     repaired_scored = score_review(
                         critique, repaired_deterministic,
-                        independent_available=independent_available,
+                        independent_available=review_available,
+                        review_mode=str(critique.get("review_mode") or "unavailable"),
+                        critic_roles=critique.get("critic_roles") or [],
                     )
                     repaired_changes = content_change_report(
                         repaired_plan, catalog, repaired_tex,
@@ -8516,7 +8646,11 @@ def run_tailoring(
         }
         write_json(run_dir / "layout_rejection.json", rejection)
         raise RuntimeError("final resume rejected: %s wrap(s), %s near-wrap(s); see layout_rejection.json" % (rejection["wrap_count"], rejection["near_wrap_count"]))
-    scored = score_review(critique, deterministic, independent_available=independent_available)
+    scored = score_review(
+        critique, deterministic, independent_available=review_available,
+        review_mode=str(critique.get("review_mode") or "unavailable"),
+        critic_roles=critique.get("critic_roles") or [],
+    )
     synthesis_data = plan
     provider_records = []
     all_provider_records = (
@@ -8533,7 +8667,15 @@ def run_tailoring(
             "ok": record.get("ok"), "called": not record.get("skipped", False),
             "elapsed_seconds": record.get("elapsed_seconds"), "usage_tokens": record.get("usage_tokens"),
         })
-    known_by_provider = {name: [int(item.get("usage_tokens")) for item in provider_records if item.get("called") and str(item.get("provider") or "").split("/")[-1] == name and item.get("usage_tokens") is not None] for name in ("codex", "claude")}
+    known_by_provider = {
+        "codex": [
+            int(item.get("usage_tokens"))
+            for item in provider_records
+            if item.get("called")
+            and str(item.get("provider") or "").split("/")[-1] == "codex"
+            and item.get("usage_tokens") is not None
+        ]
+    }
     try:
         base_tex = (cv_root(repo_root()) / CANONICAL_TEMPLATE).read_text(errors="replace")
     except OSError:
@@ -8563,6 +8705,40 @@ def run_tailoring(
         }
         for item in provider_records
     ]
+    critic_attempts = [
+        item for item in critique_records
+        if str(item.get("critic_role") or "")
+    ]
+    critic_roles_attempted = list(dict.fromkeys(
+        str(item.get("critic_role") or "") for item in critic_attempts
+        if str(item.get("critic_role") or "")
+    ))
+    critic_roles_completed = list(dict.fromkeys(
+        str(item.get("critic_role") or "") for item in critic_attempts
+        if item.get("ok") and str(item.get("critic_role") or "")
+    ))
+    critic_roles_failed = list(dict.fromkeys(
+        str(item.get("critic_role") or "") for item in critic_attempts
+        if not item.get("ok") and str(item.get("critic_role") or "")
+    ))
+    critic_history_by_round: Dict[str, Dict[str, Any]] = {}
+    for item in critic_attempts:
+        round_label = str(item.get("critic_round") or "unknown")
+        history = critic_history_by_round.setdefault(round_label, {
+            "round": round_label, "attempted_roles": [],
+            "completed_roles": [], "failed_roles": [],
+        })
+        role = str(item.get("critic_role") or "")
+        if role and role not in history["attempted_roles"]:
+            history["attempted_roles"].append(role)
+        target = "completed_roles" if item.get("ok") else "failed_roles"
+        if role and role not in history[target]:
+            history[target].append(role)
+        if not item.get("ok") and item.get("error"):
+            history.setdefault("failures", []).append({
+                "role": role, "reason": str(item.get("error") or "")[:240],
+            })
+    critic_history = list(critic_history_by_round.values())
     report = {
         "mode": mode_label,
         "pdf_filename": run_pdf_path(run_dir).name,
@@ -8603,6 +8779,16 @@ def run_tailoring(
         "format_contract": {"template": "CV/" + CANONICAL_TEMPLATE, "model_can_write_latex_document": False, "font_size_reduction_percent": 0.0, "font_size_increase_percent": 0.0, "allowed_max_reduction_percent": MAX_STYLE_REDUCTION_PERCENT},
         "providers": provider_records,
         "provider_policy": context["provider_policy"],
+        "critic_panel": {
+            "available": review_available,
+            "mode": str(critique.get("review_mode") or "unavailable"),
+            "roles": list(critique.get("critic_roles") or [])[:8],
+            "attempted_roles": critic_roles_attempted[:8],
+            "completed_roles": critic_roles_completed[:8],
+            "failed_roles": critic_roles_failed[:8],
+            "history": critic_history[-4:],
+            "separate_vendor": False,
+        },
         "evidence_graph": {
             "version": graph.get("version"),
             "hash": graph.get("hash"),
@@ -8611,12 +8797,31 @@ def run_tailoring(
         },
         "usage": {
             **{name + "_tokens": sum(values) for name, values in known_by_provider.items()},
-            **{name + "_calls": sum(1 for item in provider_records if item.get("called") and str(item.get("provider") or "").split("/")[-1] == name) for name in ("codex", "claude")},
+            "codex_calls": sum(
+                1 for item in provider_records
+                if item.get("called") and str(item.get("provider") or "").split("/")[-1] == "codex"
+            ),
             "codex_complete": all(item.get("usage_tokens") is not None for item in provider_records if item.get("called") and str(item.get("provider") or "").split("/")[-1] == "codex"),
         },
         "review": scored,
         "critique": critique,
-        "independent_review": {"available": independent_available, "providers": [item.get("provider") for item in critique_records]},
+        "review_panel": {
+            "available": review_available,
+            "mode": str(critique.get("review_mode") or "unavailable"),
+            "roles": list(critique.get("critic_roles") or [])[:8],
+            "attempted_roles": critic_roles_attempted[:8],
+            "completed_roles": critic_roles_completed[:8],
+            "failed_roles": critic_roles_failed[:8],
+            "history": critic_history[-4:],
+            "providers": list(dict.fromkeys(item.get("provider") for item in critic_attempts if item.get("provider"))),
+            "separate_vendor": False,
+        },
+        "independent_review": {
+            "available": False,
+            "disabled": True,
+            "reason": "Separate-vendor review is disabled; Codex Luna multi-role jury is the configured panel.",
+            "providers": [],
+        },
         "approval_state": "awaiting_review",
         "artifacts": [
             "resume.tex", run_pdf_path(run_dir).name, "resume.txt", run_preview_path(run_dir).name if preview else None,
@@ -8634,7 +8839,7 @@ def run_tailoring(
     report["artifacts"] = [artifact for artifact in report["artifacts"] if artifact]
     make_report(run_dir, report)
     _workshop_state(run_dir, catalog)
-    update("awaiting_review", "Draft and independent critique are ready for Victor's review", report=report)
+    update("awaiting_review", "Draft and Codex Luna critic-panel review are ready for Victor's review", report=report)
 
 
 def run_strict(run_dir: Path, job: Dict[str, Any], update) -> None:
@@ -8868,7 +9073,7 @@ function renderWorkshop(){
   if(!workshopState)return;const job=workshopState.job||{};$('workshopTitle').textContent=(job.company||'Resume')+' · workshop';$('workshopSubtitle').textContent=(job.title||'Tailored draft')+' · edit wording, ask for alternatives, and keep every revision';
   const lines=workshopState.lines||[];$('workshopLineCount').textContent=lines.length+' editable lines';const groups=[];lines.forEach(line=>{let group=groups.find(item=>item.entry_id===line.entry_id);if(!group){group={entry_id:line.entry_id,label:line.entry_label,role:line.role,section:line.section,lines:[]};groups.push(group);}group.lines.push(line);});
   $('workshopLines').innerHTML=groups.map(group=>`<div class="workshop-entry"><h4>${esc(group.label)}${group.role?' · '+esc(group.role):''}</h4>${group.lines.map(line=>`<div class="workshop-line"><div class="line-meta"><span>${esc(line.section)} · ${esc(line.line_id)}</span><span>${line.source_ids?.length>1?'synthesized from '+line.source_ids.length+' sources':'source-grounded'}</span></div><textarea class="line-text" data-line-id="${esc(line.line_id)}">${esc(plainLine(line.text))}</textarea><div class="line-actions"><button data-save-line="${esc(line.line_id)}">Save line</button><button class="secondary" data-ask-line="${esc(line.line_id)}">Ask AI about this</button></div>${line.source_text&&line.source_text!==line.text?`<p class="source-note">Base source: ${esc(plainLine(line.source_text))}</p>`:''}</div>`).join('')}</div>`).join('')||'<p class="sub">No editable lines in this draft.</p>';
-  const providers=workshopState.providers||{};const choices=Object.keys(providers).filter(name=>providers[name]);$('workshopProvider').innerHTML=choices.length?choices.map(name=>`<option value="${esc(name)}">${esc(name==='codex'?'Codex CLI':name==='claude'?'Claude CLI':name)}</option>`).join(''):'<option value="">No local AI CLI</option>';$('workshopAsk').disabled=!choices.length;
+  const providers=workshopState.providers||{};const choices=Object.keys(providers).filter(name=>providers[name]);$('workshopProvider').innerHTML=choices.length?choices.map(name=>`<option value="${esc(name)}">${esc(name==='codex'?'Codex Luna':name)}</option>`).join(''):'<option value="">No local AI CLI</option>';$('workshopAsk').disabled=!choices.length;
   const render=workshopState.last_render||{};$('workshopSaveStatus').textContent=render.revision_id?'revision '+render.revision_id:'original generated draft';const previewUrl=render.preview_url||workshopState.original_preview_url;const pdfUrl=render.pdf_url||workshopState.original_pdf_url;$('workshopPreview').innerHTML=previewUrl?`<img class="workshop-preview" src="${previewUrl}" alt="Rendered resume preview"><iframe class="workshop-preview-frame" src="${pdfUrl}" title="Rendered resume PDF"></iframe><p><a href="${pdfUrl}" target="_blank" rel="noreferrer">Open ${render.revision_id?'workshop':'original'} PDF</a></p>`:pdfUrl?`<div class="preview-fallback"><strong>PDF ready</strong><p class="meta">The browser could not create a thumbnail, but the document is still available.</p><a href="${pdfUrl}" target="_blank" rel="noreferrer">Open resume PDF</a></div>`:'<p class="sub">Preview is not available yet.</p>';
   $('workshopHistory').innerHTML=(workshopState.revisions||[]).map(revision=>`<div class="history-row"><span>${esc(revision.label||revision.kind||'revision')}<br><small>${fmtDate(revision.created_at)}${revision.provider?' · '+esc(revision.provider):''}</small></span><button data-revert-revision="${esc(revision.revision_id)}">Revert</button></div>`).join('')||'<p class="meta">Your first save will appear here.</p>';
   document.querySelectorAll('[data-save-line]').forEach(button=>button.onclick=()=>saveWorkshopLine(button.dataset.saveLine));document.querySelectorAll('[data-ask-line]').forEach(button=>button.onclick=()=>askWorkshop(button.dataset.askLine));document.querySelectorAll('[data-revert-revision]').forEach(button=>button.onclick=()=>revertWorkshop(button.dataset.revertRevision));
@@ -8929,7 +9134,7 @@ UI_HTML = UI_HTML.replace(
 )
 UI_HTML = UI_HTML.replace(
     "function renderUsage(usage){if(!usage)return;$('usageStrip').innerHTML=`<strong>Usage</strong><span><strong>${Number(usage.codex_tokens||0).toLocaleString()}</strong> observed Codex tokens · ${usage.codex_calls||0} calls this week · ${usage.runs||0} saved runs</span><span class=\"meta\">${usage.weekly_limit_tokens?`${usage.percent_of_limit}% of configured limit`:'Plus weekly allowance is not exposed by the local CLI'}</span>;}",
-    "function renderUsage(usage){if(!usage)return;$('usageStrip').innerHTML=`<strong>Usage</strong><span><strong>${Number(usage.codex_tokens||0).toLocaleString()}</strong> Codex · ${Number(usage.claude_tokens||0).toLocaleString()} Claude observed tokens · ${usage.runs||0} saved runs</span><span class=\"meta\">Codex model: gpt-5.6-luna · first-party subscription CLIs only; no local-model or API fallback</span>`;}",
+    "function renderUsage(usage){if(!usage)return;$('usageStrip').innerHTML=`<strong>Usage</strong><span><strong>${Number(usage.codex_tokens||0).toLocaleString()}</strong> Codex Luna observed tokens · ${usage.runs||0} saved runs</span><span class=\"meta\">Codex model: gpt-5.6-luna · first-party subscription CLI only; no local-model or API fallback</span>`;}",
 )
 UI_HTML = UI_HTML.replace(
     "observed Codex tokens · ${usage.codex_calls||0} calls this week",
@@ -8961,7 +9166,7 @@ UI_HTML = UI_HTML.replace(
 )
 UI_HTML = UI_HTML.replace(
     '<div class="action-grid"><div class="action-card"><h3>Used bullets</h3><p>Approved wording and selections only. Your clean comparison baseline.</p><p class="micro">Lowest creative variance · still queues a complete draft</p><button id="strict">Queue used-bullets tailor</button></div><div class="action-card featured"><h3>AI tailor</h3><p>Role-specific rewrites, project swaps, ATS coverage, and a review pass.</p><p class="micro">Evidence-grounded original wording</p><button id="dream">Queue AI tailor</button></div><div class="action-card"><h3>Unrestricted AI tailor</h3><p>Freer synthesis across your CV evidence bank for a sharper, more original argument.</p><p class="micro">Still factual and layout-safe · human-review flag stays visible</p><button id="unrestricted">Queue unrestricted tailor</button></div></div>',
-    '<div class="action-grid"><div class="action-card featured"><h3>1. Take-the-wheel</h3><p>Primary mode: choose the strongest portfolio, surface deeper evidence, and rewrite when the hiring-value gain is real.</p><p class="micro">Creative and adaptive · still evidence-grounded, chronological, and layout-safe</p><button id="unrestricted">Create take-the-wheel draft</button></div><div class="action-card"><h3>2. AI tailor</h3><p>Role-specific project selection, ATS terminology, rewrites, and an independent review pass.</p><p class="micro">Adaptive with a more conservative change threshold</p><button id="dream">Create AI-tailored draft</button></div><div class="action-card"><h3>3. Used bullets</h3><p>Approved wording and selections only. The clean comparison baseline.</p><p class="micro">Lowest creative variance</p><button id="strict">Create used-bullets draft</button></div></div><details class="mode-guide"><summary>How the modes differ</summary><div class="mode-guide-copy"><p><strong>Take-the-wheel:</strong> may substantially restructure the portfolio when stronger verified evidence supports it.</p><p><strong>AI tailor:</strong> makes role-specific changes, but clears a higher bar for replacing already-strong evidence.</p><p><strong>Used bullets:</strong> selects approved source lines with minimal creative variance.</p><p class="meta">All three modes use the same evidence graph, factual checks, one-page contract, chronological experience order, and owner review.</p></div></details>',
+    '<div class="action-grid"><div class="action-card featured"><h3>1. Take-the-wheel</h3><p>Primary mode: choose the strongest portfolio, surface deeper evidence, and rewrite when the hiring-value gain is real.</p><p class="micro">Creative and adaptive · still evidence-grounded, chronological, and layout-safe</p><button id="unrestricted">Create take-the-wheel draft</button></div><div class="action-card"><h3>2. AI tailor</h3><p>Role-specific project selection, ATS terminology, rewrites, and a Codex Luna critic-panel pass.</p><p class="micro">Adaptive with a more conservative change threshold</p><button id="dream">Create AI-tailored draft</button></div><div class="action-card"><h3>3. Used bullets</h3><p>Approved wording and selections only. The clean comparison baseline.</p><p class="micro">Lowest creative variance</p><button id="strict">Create used-bullets draft</button></div></div><details class="mode-guide"><summary>How the modes differ</summary><div class="mode-guide-copy"><p><strong>Take-the-wheel:</strong> may substantially restructure the portfolio when stronger verified evidence supports it.</p><p><strong>AI tailor:</strong> makes role-specific changes, but clears a higher bar for replacing already-strong evidence.</p><p><strong>Used bullets:</strong> selects approved source lines with minimal creative variance.</p><p class="meta">All three modes use the same evidence graph, factual checks, one-page contract, chronological experience order, and owner review.</p></div></details>',
 )
 UI_HTML = UI_HTML.replace(
     '<div class="section-title"><h3>Saved for this posting</h3><button id="allSaved" class="secondary">See all saved resumes</button></div><div id="selectedResumes"></div>',
@@ -9158,7 +9363,7 @@ renderReport=function(status){
   const reviewPreview=overlay.available&&previewUrl?`<div class="audit-card"><h4>Highlighted review render</h4><p class="meta">This is a review overlay on the clean rendered page. The downloadable PDF above is unchanged.</p><div class="review-preview"><img src="${previewUrl}" alt="Clean resume with review highlights">${overlayBoxes}</div><div class="review-legend"><span><i></i>supported ATS term</span><span class="changed"><i></i>meaningful content change</span><span class="both"><i></i>both</span></div></div>`:'';
   let panel=`<section class="audit-shell"><div class="audit-card"><h4>Tailoring audit · what happened</h4><div class="audit-grid"><div class="audit-metric"><strong>${changes.changed_bullet_count||0}</strong><span>meaningful rewrites</span></div><div class="audit-metric"><strong>${(changes.added_bullets||[]).length}</strong><span>new evidence lines surfaced</span></div><div class="audit-metric"><strong>${fmtSeconds(metrics.elapsed_seconds||status.elapsed_seconds)}</strong><span>total run time</span></div></div><p class="meta">${esc(report.owner_summary?.headline||'The report records selection, replacement, and layout decisions.')}</p>${changes.low_value_rewrite_count?`<p class="meta">${changes.low_value_rewrite_count} near-copy paraphrase${changes.low_value_rewrite_count===1?' was':'s were'} suppressed because it added no measurable hiring value.</p>`:''}<p class="meta"><span class="badge ${chronology?'audit-good':'audit-bad'}">${chronology?'Experience chronology preserved':'Chronology needs review'}</span> <span class="badge">${esc(report.mode||status.mode||'tailor')}</span> <span class="badge">PDF: ${esc(report.pdf_filename||status.pdf_filename||'named resume')}</span></p></div>${reviewPreview}`;
   panel+=`<div class="audit-subgrid"><div class="audit-card"><h4>Measured page use</h4><div class="meta">Bottom: <strong>${space.measured_content_bottom_pt==null?'—':space.measured_content_bottom_pt+'pt'}</strong> · reference: <strong>${space.canonical_reference_bottom_pt==null?'—':space.canonical_reference_bottom_pt+'pt'}</strong><br>Clearance gap: <strong>${space.density_gap_pt==null?'—':space.density_gap_pt+'pt'}</strong> · extra-space review: <strong class="${spaceReview?'audit-warn':'audit-good'}">${spaceReview?(oneMore?'one line fits':'measured gap exceeds target'):'no safe addition'}</strong></div><p class="meta">${esc(space.decision||'No space decision recorded.')}</p>${applied.length?'<div>'+applied.map(item=>`<span class="audit-candidate applied">added ${esc(item.source_id||'line')}</span>`).join('')+'</div>':''}${replaced.length?'<details><summary>Replaced lower-value evidence (${replaced.length})</summary>'+replaced.map(item=>`<div class="meta"><strong>${esc(item.source_id||'line')}</strong> · ${esc(item.entry_id||'entry')}<br>${esc(item.text||'')}<br><em>${esc(item.reason||'')}</em></div>`).join('')+'</details>':''}${rejected.length?'<div>'+rejected.map(item=>`<span class="audit-candidate rejected">held ${esc(item.source_id||'candidate')}</span>`).join('')+'</div>':''}</div><div class="audit-card"><h4>Verified evidence left on the table</h4><div class="meta"><strong>${space.unused_candidate_count||candidates.length}</strong> candidate lines inspected${candidates.length?'<br>':''}${candidates.length?candidates.slice(0,8).map(item=>`<div><strong>${esc(item.source_id||'candidate')}</strong> · ${esc(item.text||'')}</div>`).join(''):'<span> No unused strong line was found for the selected portfolio.</span>'}</div></div></div>`;
-  panel+=`<div class="audit-card"><h4>Provider flow, model, and usage</h4><div class="flow">${flowHtml}</div><p class="meta"><strong>This run:</strong> ${Number(usage.codex_tokens||0).toLocaleString()} Codex tokens · ${usage.codex_calls||0} Codex calls · ${Number(usage.claude_tokens||0).toLocaleString()} Claude tokens · ${usage.claude_calls||0} Claude calls</p>${weekly}</div>`;
+  panel+=`<div class="audit-card"><h4>Provider flow, model, and usage</h4><div class="flow">${flowHtml}</div><p class="meta"><strong>This run:</strong> ${Number(usage.codex_tokens||0).toLocaleString()} Codex Luna tokens · ${usage.codex_calls||0} Codex calls</p>${weekly}</div>`;
   panel+=`<div class="audit-card"><h4>Text diff</h4><div class="audit-scroll">${list(rewrites,'rewritten','No meaningful wording rewrites were recorded.')}${list(additions,'added','No canonical-source additions were recorded.')}${list(removals,'removed','No canonical evidence was removed.')}${changes.low_value_rewrite_count?`<p class="meta">${changes.low_value_rewrite_count} low-value paraphrase${changes.low_value_rewrite_count===1?'':'s'} hidden from the substantive diff.</p>`:''}</div></div>`;
   panel+=`<div class="audit-card"><h4>ATS overlay <span class="meta">(review view; the downloadable PDF stays clean)</span></h4><p class="meta">Highlighted terms are supported and rendered in the final text. Missing or unsupported terms remain visible in the full report instead of being stretched.</p><div class="ats-overlay">${atsHtml}</div></div></section>`;
   $('report').insertAdjacentHTML('afterbegin',panel);

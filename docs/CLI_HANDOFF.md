@@ -1,8 +1,7 @@
 # CLI handoff notes
 
-This repository is maintained across more than one coding CLI (including Claude
-and Codex). Keep the repository—not a chat transcript—as the shared source of
-truth.
+This repository is maintained through Codex and repository automation. Keep
+the repository—not a chat transcript—as the shared source of truth.
 
 ## Read first
 
@@ -131,9 +130,12 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
 ### Current change (verified 2026-08-17)
 
 - **Resume Studio effort profile and latency closure:** the local engine keeps
-  Codex pinned to `gpt-5.6-luna` and now uses high reasoning for every stage by
-  Victor's standing preference. Lower effort values and max are rejected and
-  fall back to high. A single line-repair pass now precedes the deterministic
+  Codex pinned to `gpt-5.6-luna` and uses high reasoning for authoring and the
+  initial critic panel by Victor's standing preference. Post-revision critic
+  rechecks use bounded medium effort so all four role calls remain usable under
+  subscription latency; their effort and timeout outcomes remain visible.
+  Lower effort values and max are rejected for ordinary stages and fall back to
+  high. A single line-repair pass now precedes the deterministic
   compactor; the second frontier repair pass was removed after controlled runs
   showed diminishing returns. Every provider-flow row records the selected
   effort alongside model, latency, status, and observed tokens. On the same
@@ -202,8 +204,8 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
 - **Resume Studio cold-start reliability:** the Mac launch agent now retries a
   transient `launchctl` bootstrap race and waits for the private loopback health
   endpoint before reporting installation success. The engine uses the repository
-  Python 3.12 virtualenv and the local provider CLI path, so both Codex and
-  Claude are visible after login. When the persisted job snapshot already has
+  Python 3.12 virtualenv and the local provider CLI path, so the Codex Luna
+  lane is visible after login. When the persisted job snapshot already has
   the active score version, Resume Studio reuses that crawler projection instead
   of rebuilding all 45k records; stale records still take the compatibility
   rebuild path. A clean restart now serves `/api/jobs` in under a second and the
@@ -243,7 +245,27 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   regression, one bounded Codex repair pass proposes a complete replacement
   plan; the worker compiles and compares it, accepting it only when it improves
   the source-aware preference key and passes the one-page geometry gate. A
-  missing independent provider remains `review`, never silently `ready`.
+  missing critic-panel result remains `review`, never silently `ready`.
+
+### Current change (verified 2026-08-21)
+
+- **Codex Luna is the sole Resume Studio provider:** `provider_commands()` now
+  exposes only `codex`; every provider call pins `gpt-5.6-luna`, uses the
+  first-party subscription CLI, and rejects local-model, arbitrary endpoint,
+  API-key, or second-provider fallbacks. The live loopback health check reports
+  `codex: true` and no other provider lane.
+- **Evaluator roles are real, durable sub-runs:** enhanced tailoring launches
+  four concurrent, role-separated critic calls—`evidence`, `recruiter`,
+  `technical`, and `screening`—then combines their critique-only outputs. Each
+  call has its own prompt, schema, transcript, usage record, and durable label
+  such as `critique_evidence`. The panel is a same-model Luna jury, not an
+  independent-vendor claim; old saved reports remain readable through the
+  legacy compatibility fields.
+- **Readiness uses the jury, not a fake vendor gate:** `critic_jury` is the
+  required review gate. The old `independent_review` field is retained only as
+  an explicit `partial` compatibility alias for same-model reports and cannot
+  downgrade a completed Luna jury by itself. A missing role or unusable
+  structured response leaves the run in review.
 
 ### Previous change (verified 2026-08-15)
 
@@ -667,8 +689,9 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   `.venv/bin/python scripts/resume_calibration.py --generate --count 6 --serve`
   and open `http://127.0.0.1:4321/`; generated PDFs and JSONL labels stay under
   `CV/.resume_studio/calibration/`.
-  It uses installed first-party Codex/Claude Code sessions, strips API-key
-  environment variables, and stores all output under `CV/.resume_studio/`.
+  It uses only the installed first-party Codex CLI pinned to `gpt-5.6-luna`,
+  strips API-key environment variables, and stores all output under
+  `CV/.resume_studio/`.
   `CV/immutable/VictorJimenezResume.tex` / `.pdf` is the locked visual baseline;
   TLDP is only one reference artifact. Providers return source-addressed
   content plans, never full LaTeX. The renderer preserves the baseline's
@@ -677,10 +700,9 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   bottom whitespace, or formatting drift. Reports record separate quality
   gates, exclusions, provider calls, and emitted Codex token usage;
   totals are marked incomplete when a provider omits a call's footer.
-  Live validation on 2026-07-31 found the Codex subscription session usable;
-  the installed Claude client returned an organization-level 403 stating that
-  Claude Code subscription access is disabled. The harness fell back to Codex
-  and did not request or consume an Anthropic API key.
+  No API or second-provider fallback is configured; a missing Codex CLI leaves
+  the local engine unavailable rather than silently changing the privacy or
+  billing boundary.
 - **Resume intelligence v1 is shipped locally (DECISIONS #72-74):** the Studio
   builds a source-authority evidence graph from the ignored CV corpus, caches
   public GitHub/Devpost material as corroboration only, and exposes Best,
@@ -707,8 +729,7 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   durable line editor for education, skills, experience, projects, and
   leadership; AI suggestions are opt-in, manual/AI saves render unique PDF
   revisions, and history rollback creates a new revision without overwriting
-  the original. The current machine exposes Codex CLI and Claude Code lanes;
-  Luna remains an optional future lane if its local executable is installed.
+  the original. The current machine exposes only the Codex CLI pinned to Luna.
 - **Resume Studio ATS/change proof is shipped (DECISION #77):** current
   generation prompts inline the bounded CV authority dossier and exact posting
   keyword strategy, permit target-aware project swaps, and report rewritten
@@ -749,18 +770,16 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   superseded records are removed from ranked context. The GitHub refresh keeps
   cached README evidence when the unauthenticated API is rate-limited, and
   reports that condition as stale-data metadata instead of discarding it.
-- **Resume Studio harness v2 is the current contract (DECISION #106):** the
-  candidate portfolio is adaptive; no leadership, project, or bullet-count
-  floor is forced, and no weak backup bullets are added to fill a page. Codex
-  is the primary writer/synthesizer, while Claude is an independent critique
-  lane using a first-party subscription CLI. Codex is pinned to
-  `gpt-5.6-luna`; local models, Ollama, arbitrary endpoints, and API fallbacks
-  are forbidden. The
-  critic returns critique-only gates and line feedback; it cannot replace the
-  plan or grade itself. A compiled draft remains `awaiting_review` until
+- **Resume Studio harness v2 remains the historical contract (DECISION #106):**
+  the candidate portfolio is adaptive; no leadership, project, or bullet-count
+  floor is forced, and no weak backup bullets are added to fill a page. The
+  active Codex Luna lane now performs writing plus the four-role critic jury;
+  local models, Ollama, arbitrary endpoints, and API fallbacks are forbidden.
+  The critic returns critique-only gates and line feedback; it cannot replace
+  the plan or grade itself. A compiled draft remains `awaiting_review` until
   Victor approves a ready gate report, and approval changes only private run
   metadata. Normal bottom clearance is informational; wraps, compile errors,
-  forbidden claims, duplicate evidence, and missing independent review block
+  forbidden claims, duplicate evidence, and missing critic-panel review block
   readiness.
 - **Resume Studio flexible portfolio reserves (DECISION #109):** when an added
   project contributes unique capability coverage, the one-page packer protects
