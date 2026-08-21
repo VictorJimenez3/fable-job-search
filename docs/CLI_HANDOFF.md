@@ -172,10 +172,12 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   score or an owner approval of the Merck draft.
   No evaluator result may be altered to force a pass. The broad cohort
   selected 86 fetched/matched postings and launched a 12-role full sample
-  with two concurrent full-run workers and 16 match workers. At handoff, 7
-  runs had completed with complete four-role panels, 4 were honest
-  quality/layout rejections, and 1 was still running; two earlier abandoned
-  drafting directories were excluded from those counts.
+  with two concurrent full-run workers and 16 match workers. The final
+  receipt is 8 completed full runs with complete four-role panels and 4
+  honest hard-layout rejections; two earlier abandoned drafting directories
+  were excluded from those counts. The completed tailored runs were still
+  mostly `do_not_ship`/`blocked`, which is an evaluator finding rather than a
+  harness success claim.
 
 - **Post-audit density prerequisite receipt (DECISION #155):** the patched
   Stryker run at
