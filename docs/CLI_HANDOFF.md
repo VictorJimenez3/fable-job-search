@@ -153,9 +153,12 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   or score control and runs from a disposable system-temp directory. Four
   roles—evidence, recruiter, technical, and screening—must all return valid
   attested results; duplicate, wrong-lane, or partial panels remain unready.
-  Initial authoring and all evaluator roles use Luna Max; repeated writer
-  repair calls use an explicit Luna High override after Max repair calls timed
-  out without structured replacements. Repair candidates receive a fresh panel
+  The deep authoring lane and all evaluator roles use Luna Max; the normal
+  balanced lane uses Luna High for its first structured plan while keeping Max
+  for every evaluator role. Repeated writer repair calls use an explicit Luna
+  High override after Max repair calls timed out without structured
+  replacements. In the bounded balanced lane, critic-driven repair is disabled;
+  repair candidates in the deep lane receive a fresh panel
   before acceptance. The benchmark
   harness fetches/matches a broad live corpus concurrently, then runs a
   sector/company-balanced full sample under `CV/.resume_studio/benchmarks/`.
@@ -199,6 +202,39 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   avoids spending most of a run compiling equivalent low-value combinations;
   the evaluator, source authority, geometry threshold, and acceptance rules
   are unchanged. The merged production change is PR #2583 (`48b7d479`).
+
+- **Control-preserving balanced lane and geometry-first timing experiment:**
+  the default enhanced run is now `quality_profile=balanced`. It keeps Luna
+  Max for the sealed four-role panel and leaves all evaluator contracts and
+  hard gates intact, but skips model space expansion and critic-driven
+  revision/audit-repair rounds. The deterministic compiler performs control
+  recovery first and a conditional Luna High line-edit pass is used only when
+  geometry is unsafe; `deep` preserves the previous two-round/model-expansion
+  behavior for controlled comparisons.
+  Canonical high-information evidence is now supplied as a bounded control
+  receipt and receives a compile-time removal bonus; panel-confirmed added
+  strengths are the only new positive audit findings. A repair candidate that
+  fails deterministic geometry is recorded and rejected without spending a
+  four-role sealed recheck on an artifact that cannot ship. The fresh paired
+  Stryker/control benchmark is complete under
+  `CV/.resume_studio/benchmarks/quality-timing-experiment-20260821/`.
+
+- **Stryker quality/timing experiment completed:** the old deep Stryker run
+  (`.../runs/78044c21145b`) took 3,557.3 seconds and 26 Luna calls and still
+  selected the immutable base. The bounded complete-panel run
+  (`.../runs/6706937669e7`) took 635.5 seconds and 6 calls, with all four
+  sealed roles complete; it selected the immutable base because the candidate
+  was negative uplift (gain weight 8, loss weight 19 before the parser fix),
+  with repeated AI/RAG evidence, lost 400+ presentation proof, duplicated
+  validation lines, and omitted stronger UI/REST/dashboard/documentation
+  evidence. The candidate remains at `tailored_candidate.pdf` for diagnosis.
+  A separate run (`.../runs/2d6e5155cf93`) exposed a screening-role timeout;
+  the selector is now fail-closed so an incomplete panel can never promote a
+  tailored artifact. The same sealed findings replay to `review/prefer_base`
+  after ignoring an explicit “not a claim made” sentence as a grader
+  false-positive; the base still wins for substantive regressions. Receipts
+  and the post-fix replay are in the benchmark directory, and the fixed
+  evaluator semantics are covered by the focused test suite.
 
 ### Current change (verified 2026-08-19)
 

@@ -2391,3 +2391,71 @@ complete sealed panel and improve the source-aware comparison, otherwise the
 already accepted repair is restored. This improves observability without
 changing the evaluator rubric, evidence authority, geometry gate, or
 readiness thresholds.
+
+## 156. Resume Studio preserves control evidence and bounds the default authoring lane (2026-08-21)
+
+The failed tailored-win cohort exposed two separate product failures that
+must not be solved by weakening the evaluator: the writer/compiler could trade
+away high-information canonical proof for repetitive role keywords, and the
+audit had no positive finding for an added line unless it happened to change
+keyword coverage. The system now supplies a bounded ranked receipt of
+quantified, validated, integration, and ownership evidence from the immutable
+base resume, gives those lines a bounded packing bonus, and counts an added
+line as a gain only when a complete sealed critic panel independently confirms
+the new target-relevant strength. Panel comparison status is conservative
+(the worst determinate role result wins), while an unavailable role does not
+erase determinate comparisons from the other roles. A layout-capacity phrase
+is no longer a hard blocker unless it describes an actual layout failure; the
+deterministic geometry gate remains hard.
+
+The normal enhanced path is now the `balanced` authoring profile: deterministic
+packing first, no model space/line-edit call when the render is already safe,
+and one writer-repair round. The prior frontier remains available as
+`quality_profile=deep` for difficult or controlled runs. A repair candidate
+that fails the deterministic one-page/horizontal prerequisite is rejected with
+an explicit receipt before the expensive four-role recheck. These are writer,
+compiler, and scheduling changes only; the sealed evaluator process, contract
+fingerprint, rubric hash, evidence authority, hard gates, and acceptance
+thresholds remain unchanged. The paired fresh-job experiment recorded under
+`CV/.resume_studio/benchmarks/quality-timing-experiment-20260821/` is the
+validation required before treating the default lane as successful.
+
+## 157. Resume Studio fail-closes incomplete panels and records the timing/quality result (2026-08-21)
+
+The live Stryker experiment separated the timing win from the quality result.
+The prior deep path took 3,557.3 seconds and 26 Codex Luna calls while still
+selecting the immutable base. The bounded `balanced` path completed a full
+four-role panel in 635.5 seconds with 6 calls—about 5.6x faster and 77% fewer
+calls—by removing routine space expansion, critic-driven revision, and
+audit-repair cascades. It retains one conditional line-geometry editor, the
+deterministic compactor, source-addressed control recovery, and the same sealed
+Max evaluator.
+
+The candidate still did not earn a win. The complete panel found negative
+comparative uplift, with gain weight 8 versus loss weight 19 before the
+post-processing correction. The substantive losses were repeated J&J/Multi-
+Agent AI/RAG/backend stories, removal of the 400+ scholar presentation, a
+duplicated All-NBA validation line, and omission of stronger authorized UI,
+REST, dashboard, and documentation evidence. Missing testing, SOLID/design
+patterns, Agile/code review, AngularJS, and formal requirements traceability
+remain candidate-role gaps, not claims to insert. The generated candidate is
+therefore archived as `tailored_candidate.pdf`; the immutable base is primary.
+
+One run also timed out its screening role after 360 seconds while the other
+three roles completed. That exposed a selector bug: partial panel findings
+could influence a `prefer_tailored` recommendation even though readiness was
+correctly false. `final_winner_version` now treats `review` as fail-closed and
+keeps the canonical base primary; partial findings remain diagnostic. The
+normal panel ceiling is 480 seconds per role to reduce provider-jitter false
+failures without restoring the old multi-round cascade.
+
+The same complete panel was replayed after fixing another evaluator parsing
+false positive: a sentence explicitly saying unsupported target terms were
+“not claims made” was previously counted as an unsupported-claim blocker. The
+replay removes that blocker and changes the audit to honest `review`/
+`prefer_base`, but the candidate still loses on seven substantive regressions
+and one missed opportunity (gain weight 8, loss weight 14 after the correction).
+The sealed evaluator contract, rubric hash, and evidence authority were not
+weakened. Receipts are under
+`CV/.resume_studio/benchmarks/quality-timing-experiment-20260821/`, including
+`runs/6706937669e7/post_patch_reanalysis.json`.
