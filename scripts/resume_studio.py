@@ -107,7 +107,8 @@ CRITIC_HARD_ISSUE_RE = re.compile(
 )
 CRITIC_FIT_GAP_RE = re.compile(
     r"\b(?:not\s+(?:demonstrated|demonstrate|visible|established|explicit|evidenced|shown|legible)|"
-    r"does\s+not\s+(?:demonstrate|evidence|establish|show)|doesn['’]t\s+(?:demonstrate|evidence|show)|"
+    r"does\s+not\s+(?:\w+\s+){0,2}(?:demonstrate|evidence|establish|show)|"
+    r"doesn['’]t\s+(?:\w+\s+){0,2}(?:demonstrate|evidence|show)|"
     r"not\s+(?:authorized|supported)\s+(?:by\s+)?(?:the\s+)?(?:evidence|packet|source)|"
     r"unsupported\s+(?:exact\s+)?(?:term|phrase|requirement)|no\s+authorized\s+evidence|"
     r"\b(?:absent|missing|gap|thin|limited)\b|not\s+at\s+the\s+level)\b",

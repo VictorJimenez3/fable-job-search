@@ -2224,6 +2224,9 @@ def test_critic_issue_panel_dedupes_consensus_and_separates_fit_gaps():
     assert layout["classification"] == "BLOCKER"
     assert layout["support_count"] == 2
     assert len(assessments) == 2
+    assert rs.classify_critic_issue(
+        "The resume does not visibly establish stakeholder collaboration."
+    ) == "candidate_fit_gap"
 
 
 def test_score_review_does_not_turn_a_fit_gap_into_a_readiness_failure():
