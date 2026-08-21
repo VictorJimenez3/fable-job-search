@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-21 13:10 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **136 shown / 11253 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-08-21 13:57 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **136 shown / 11253 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -21,7 +21,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 93 🔥 | 16d | Micron | [Intern - Process Pathfinding, DRAM Dry Etch](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Pathfinding--DRAM-Dry-Etch_JR107347) | Boise, ID - Main Site | semiconductors | workday |
 | 93 🔥 | 16d | Micron | [Intern - Process Development Engineer, DRAM Thin Films](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--DRAM-Thin-Films_JR107203) | Boise, ID - Main Site | semiconductors | workday |
 | 88 🔥 | 17d | Micron Technology | [Industrial Engineer Intern - Technology & Products Group - Global Indu](https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---Main-Site/Intern---TPG-Global-IE_JR107486) | Boise, ID | semiconductors | simplify |
-| 87 🔥 | 23h | GlobalFoundries | [Production Control Engineering Intern](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Technology-Development-Engineering-Intern--ULP-CMOS_JR-2503682) | USA - New York - Malta | semiconductors | workday |
+| 87 🔥 | 1d | GlobalFoundries | [Production Control Engineering Intern](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Technology-Development-Engineering-Intern--ULP-CMOS_JR-2503682) | USA - New York - Malta | semiconductors | workday |
 | 86 🔥 | 4d | General Motors | [Battery and Sustainability Intern - Battery Research and Development](https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/Fall-2026-PhD-Battery---Sustainability-Intern---Battery-Research-and-Development_JR-202618049) | Warren, MI | consumer_manufacturing | simplify |
 | 86 🔥 | 4d | General Motors | [Battery & Sustainability Intern - Battery Research and Development](https://generalmotors.wd5.myworkdayjobs.com/Careers_GM/job/Warren-Michigan-United-States-of-America/Fall-2026-PhD-Battery---Sustainability-Intern----Battery-Research-and-Development_JR-202618053) | Warren, MI | consumer_manufacturing | simplify |
 | 86 🔥 | 6d | GlobalFoundries | [Environmental Health & Safety Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/Environmental-Health---Safety-Intern--Summer-2027-_JR-2604242) | USA - Vermont - Essex Junction | semiconductors | workday |
@@ -37,10 +37,10 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 77 ⭐ | 3d | GlobalFoundries | [Yield and Characterization Engineer Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/Yield-and-Characterization-Engineer-Intern--Summer-2027-_JR-2604638) | USA - Vermont - Essex Junction | semiconductors | workday |
 | 77 ⭐ | 3d | GlobalFoundries | [Robotics and Automation Engineering Intern, Junior (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/Robotics-and-Automation-Engineering-Intern--Junior--Summer-2027-_JR-2604660) | USA - Vermont - Essex Junction | semiconductors | workday |
 | 77 ⭐ | 6d | GlobalFoundries | [US Advanced Manufacturing Equipment Engineering Intern, Junior (Summer](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/US-Advanced-Manufacturing-Equipment-Engineering-Intern--Junior--Summer-2027-_JR-2604656) | USA - Vermont - Essex Junction | semiconductors | workday |
-| 76 ⭐ | 6h | AMD | [Research Engineer Intern/Co-op - AMD Research](https://careers.amd.com/jobs/90925?icims=1) | San Jose, CA | other | simplify |
-| 76 ⭐ | 6h | AMD | [Hardware Engineering Intern/Co-op - Undergrad](https://careers.amd.com/jobs/91173?icims=1) | Rochester, NY | other | simplify |
-| 76 ⭐ | 6h | AMD | [Product Development Engineer Intern/Co-op](https://careers.amd.com/jobs/91227?icims=1) | San Jose, CA | other | simplify |
-| 76 ⭐ | 6h | AMD | [Product Development Engineering Intern/Co-op](https://careers.amd.com/jobs/91228?icims=1) | San Jose, CA | other | simplify |
+| 76 ⭐ | 7h | AMD | [Research Engineer Intern/Co-op - AMD Research](https://careers.amd.com/jobs/90925?icims=1) | San Jose, CA | other | simplify |
+| 76 ⭐ | 7h | AMD | [Hardware Engineering Intern/Co-op - Undergrad](https://careers.amd.com/jobs/91173?icims=1) | Rochester, NY | other | simplify |
+| 76 ⭐ | 7h | AMD | [Product Development Engineer Intern/Co-op](https://careers.amd.com/jobs/91227?icims=1) | San Jose, CA | other | simplify |
+| 76 ⭐ | 7h | AMD | [Product Development Engineering Intern/Co-op](https://careers.amd.com/jobs/91228?icims=1) | San Jose, CA | other | simplify |
 | 76 ⭐ | 15h | Framatome | [Computer Science Engineer Intern Co-op - Univ/Co-op Technical](https://careers-framatome.icims.com/jobs/3295/job?mobile=true&needsRedirect=false) | Richland, WA | other | simplify |
 | 76 ⭐ | 29d | Rantec Power Systems Inc. | [PCB Design Engineer Intern](https://rantecpowersystemsinc.applytojob.com/apply/C88xK8WZio/PCB-Design-Engineering-Intern) | San Luis Obispo, CA | energy | simplify |
 | 75 ⭐ | 7d | Intel | [Physical Design Engineer Intern](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-California-Folsom/Physical-Design-Engineering-Graduate-Intern_JR0283509) | Santa Clara, CA | semiconductors | simplify |
