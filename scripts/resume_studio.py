@@ -299,6 +299,11 @@ MIN_RIGHT_SLACK_PT = 12.0
 # after the first pass had already made the line safe.
 MAX_LINE_EDIT_PASSES = 1
 MAX_SPACE_EXPANSION_CANDIDATES = 4
+# Keep the two-bullet replacement path available, but bound its compiled
+# frontier.  The old six-item frontier tried 6 + C(6, 2) = 21 removal sets
+# for every addition; each trial compiles LaTeX, so equivalent low-value
+# swaps could dominate an otherwise bounded run.
+MAX_SPACE_SWAP_CANDIDATES = 4
 MIN_MEANINGFUL_BULLET_CHARS = 48
 # A rewrite this close to its authorized source is normally presentation
 # churn, not a hiring-value improvement.  Keep the source wording unless the
@@ -5817,10 +5822,11 @@ def expand_into_measured_space(
         # enough. Limit the search so a dense run remains bounded while still
         # covering Victor's explicit "replace two weaker bullets with a
         # stronger project" case.
-        attempts.extend(("swap", [action]) for action in removals[:6])
+        removal_frontier = removals[:MAX_SPACE_SWAP_CANDIDATES]
+        attempts.extend(("swap", [action]) for action in removal_frontier)
         attempts.extend(
             ("swap", list(actions))
-            for actions in itertools.combinations(removals[:6], 2)
+            for actions in itertools.combinations(removal_frontier, 2)
         )
         accepted = None
         last_reason = "would displace existing selected evidence or fail the one-page contract"
