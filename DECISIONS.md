@@ -2224,3 +2224,61 @@ high-effort rechecks could hit the provider timeout after producing no
 structured JSON. This is a latency safeguard, not a readiness bypass: the
 recheck's model/effort/status is recorded and an unavailable recheck leaves the
 final run in review. No email or external delivery is part of this change.
+
+## 147. Resume Studio seals evaluator inputs and validates the quality lab (2026-08-21)
+
+The previous same-model jury contract was strengthened into a separate
+`resume-evaluator-v2-sealed` process. Its frozen rubric is hash-attested; the
+writer cannot provide prior critique, writer feedback, readiness, approval, or
+score controls. The evaluator receives only a bounded packet containing the
+base/candidate renders, target posting, authorized evidence, deterministic
+checks, and base-to-candidate comparison. It returns critique-only structured
+findings—never a composite score or readiness decision—and the parent accepts a
+panel only when every required role is present, correctly attested, and running
+in the sealed lane. Repair candidates receive a fresh panel before acceptance.
+The evaluator's temporary cwd is outside the writer run directory and is
+removed after each call; durable artifacts retain the packet/result hashes and
+contract metadata.
+
+The first Stryker lab run measured a real operational boundary: both the
+Max-effort revision and audit-repair writer calls consumed their 480-second
+budgets without structured replacements, while all four Max evaluator roles
+returned valid findings. The active policy therefore keeps Max for initial
+authoring and evaluation, but uses an explicit High-effort override for
+repeated writer repairs so critique can actually produce a candidate. This is
+recorded in provider flow and is subject to another comparative benchmark; it
+is not a readiness bypass.
+
+The quality lab separates broad deterministic coverage from expensive frontier
+calls. `scripts/resume_studio_benchmark.py` fetches and matches a balanced
+posting corpus concurrently, then runs a sector/company-diverse full sample
+through the actual Luna Max writer and sealed evaluator. Manifests retain the
+control cohort, run outcomes, latency, panel completeness, audit findings, and
+failures. This is evidence about pipeline behavior and evaluator reliability,
+not a claim that any local score predicts a hiring outcome. No evaluation
+result may be edited to force a pass.
+
+## 148. Resume Studio normalizes panel consensus and preserves fit gaps (2026-08-21)
+
+Raw critic responses remain durable and role-specific, but the parent audit no
+longer counts every differently worded `blocking_issues` entry as a distinct
+blocker. Near-duplicate concerns are collapsed into one audit finding with
+supporting roles, support count, agreement, and representative variants. This
+prevents a four-role same-model jury from manufacturing a larger loss merely
+through paraphrase while retaining the underlying evidence for inspection.
+
+The parent also classifies concerns into hard safety/layout blockers,
+tailoring regressions, and candidate-role fit gaps. Unsupported or fabricated
+claims, eligibility/privacy conflicts, parser/compile failures, and material
+layout failures remain non-averagable gates. Lost evidence and avoidable
+redundancy remain comparative tailoring regressions. A missing capability such
+as testing that is not present in the authorized evidence bank is recorded as
+a fit gap and cannot justify inserting the job's keyword. Candidate fit is
+therefore descriptive rather than a hidden readiness gate: a moderate-fit
+candidate can still have a high-quality, evidence-safe tailored resume.
+
+The benchmark manifest now checkpoints each completed full run, records
+quality rejections separately from execution failures, and exposes the sealed
+evaluator contract alongside progress. This makes a long parallel lab
+recoverable and prevents a quality rejection from being misreported as a
+harness crash.

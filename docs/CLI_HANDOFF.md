@@ -143,6 +143,29 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   high produced the safest compiled geometry, while max was stopped after
   4:51 without a structured response and is now disabled.
 
+### Current change (lab in progress, 2026-08-21)
+
+- **Sealed Luna Max evaluator and broad quality lab:** Resume Studio now uses
+  the `resume-evaluator-v2-sealed` critique-only contract. The writer supplies
+  only an attested packet containing the base/candidate renders, posting,
+  authorized evidence, deterministic checks, and comparative diff. A fresh
+  evaluator process receives no writer prompt, prior review, readiness state,
+  or score control and runs from a disposable system-temp directory. Four
+  roles—evidence, recruiter, technical, and screening—must all return valid
+  attested results; duplicate, wrong-lane, or partial panels remain unready.
+  Initial authoring and all evaluator roles use Luna Max; repeated writer
+  repair calls use an explicit Luna High override after Max repair calls timed
+  out without structured replacements. Repair candidates receive a fresh panel
+  before acceptance. The benchmark
+  harness fetches/matches a broad live corpus concurrently, then runs a
+  sector/company-balanced full sample under `CV/.resume_studio/benchmarks/`.
+  Its manifest checkpoints each terminal run, distinguishes quality rejection
+  from execution failure, and records the active evaluator contract. The
+  parent audit collapses repeated panel prose with supporting-role counts and
+  keeps candidate-role gaps separate from unsupported claims or layout gates.
+  The active manifest and final receipts must be recorded here after the lab
+  closes; no evaluator result may be altered to force a pass.
+
 ### Current change (verified 2026-08-19)
 
 - **Fresh new-grad action queue:** the classic platform defaults New-grad Jobs

@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 
 import pytest
@@ -18,6 +19,49 @@ def test_response_data_preserves_structured_plan():
     raw = json.dumps({"experiences": [{"source_id": "experience:a"}], "projects": []})
     data = rs.response_data(raw)
     assert data["experiences"][0]["source_id"] == "experience:a"
+
+
+def test_sealed_panel_requires_each_attested_role_exactly_once():
+    roles = [
+        {"key": "evidence"},
+        {"key": "recruiter"},
+    ]
+    records = [
+        {"critic_role": "evidence", "ok": True, "execution_lane": "sealed_evaluator", "contract_version": rs.SEALED_EVALUATOR_CONTRACT},
+        {"critic_role": "evidence", "ok": True, "execution_lane": "sealed_evaluator", "contract_version": rs.SEALED_EVALUATOR_CONTRACT},
+        {"critic_role": "recruiter", "ok": True, "execution_lane": "writer_provider", "contract_version": rs.SEALED_EVALUATOR_CONTRACT},
+    ]
+    status = rs.sealed_panel_status(records, roles)
+    assert status["complete"] is False
+    assert status["completed_roles"] == ["evidence"]
+    assert status["failed_roles"] == ["recruiter"]
+
+
+def test_sealed_evaluator_uses_disposable_cwd_and_persists_attestation(tmp_path, monkeypatch):
+    fake_bin = tmp_path / "bin"
+    fake_bin.mkdir()
+    fake_codex = fake_bin / "codex"
+    fake_codex.write_text(
+        "#!/usr/bin/env python3\n"
+        "import json, sys\n"
+        "out = sys.argv[sys.argv.index('-o') + 1]\n"
+        "result = {'criteria': {name: {'status': 'pass', 'reason': 'checked'} for name in ('factual', 'target_fit', 'evidence', 'distinctiveness', 'clarity', 'privacy')}, 'blocking_issues': [], 'line_feedback': [], 'unsupported_claims': [], 'missing_evidence': [], 'revision_priorities': [], 'decision_feedback': [], 'portfolio_comparison': {'status': 'pass', 'reason': 'checked', 'preserved_strengths': [], 'gained_strengths': [], 'lost_strengths': []}}\n"
+        "open(out, 'w').write(json.dumps(result))\n"
+    )
+    fake_codex.chmod(0o755)
+    monkeypatch.setenv("PATH", str(fake_bin) + os.pathsep + os.environ.get("PATH", ""))
+    packet = rs.resume_evaluator.make_packet(
+        role="evidence", job={"company": "Example", "title": "Engineer"},
+        base_text="base", tailored_text="tailored", evidence_snapshot={},
+        deterministic_snapshot={}, comparison_snapshot={}, run_id="run-1",
+    )
+    run_dir = tmp_path / "run"
+    result = rs.run_sealed_evaluator(packet, run_dir, "evidence", timeout=30)
+    assert result["ok"] is True
+    assert result["execution_lane"] == "sealed_evaluator"
+    assert result["contract_version"] == rs.SEALED_EVALUATOR_CONTRACT
+    assert Path(result["stdout_path"]).exists()
+    assert not (run_dir / "sealed_evaluator" / "evidence_scratch").exists()
 
 
 def test_write_json_uses_an_atomic_worker_specific_temp_file(tmp_path):
@@ -1923,15 +1967,15 @@ def test_codex_effort_profile_spends_depth_on_writing_and_speed_on_mechanics(mon
     assert rs.codex_effort_task("critique_evidence") == "review"
     assert rs.codex_effort_task("revision_critique_technical") == "review"
     assert rs.codex_effort_task("line_edit_2") == "line_edit"
-    assert rs.codex_reasoning_effort("draft") == "high"
-    assert rs.codex_reasoning_effort("space_expansion") == "high"
-    assert rs.codex_reasoning_effort("line_edit") == "high"
-    assert rs.codex_reasoning_effort("revision_critique_technical", override=rs.CODEX_RECHECK_EFFORT) == "medium"
+    assert rs.codex_reasoning_effort("draft") == "max"
+    assert rs.codex_reasoning_effort("space_expansion") == "max"
+    assert rs.codex_reasoning_effort("line_edit") == "max"
+    assert rs.codex_reasoning_effort("revision_critique_technical", override=rs.CODEX_RECHECK_EFFORT) == "max"
     monkeypatch.setenv("RESUME_STUDIO_CODEX_EFFORT", "max")
-    assert rs.codex_reasoning_effort("draft") == "high"
+    assert rs.codex_reasoning_effort("draft") == "max"
     monkeypatch.setenv("RESUME_STUDIO_LINE_EDIT_CODEX_EFFORT", "low")
-    assert rs.codex_reasoning_effort("line_edit") == "high"
-    assert rs.codex_reasoning_effort("draft", override="max") == "high"
+    assert rs.codex_reasoning_effort("line_edit") == "max"
+    assert rs.codex_reasoning_effort("draft", override="max") == "max"
 
 
 def test_provider_error_result_is_not_usable():
@@ -2157,6 +2201,65 @@ def test_score_review_returns_separate_gates_without_a_composite_score():
     assert result["gates"]["factual"]["status"] == "pass"
     assert result["gates"]["target_fit"]["status"] == "partial"
     assert result["decision_feedback"] == []
+
+
+def test_critic_issue_panel_dedupes_consensus_and_separates_fit_gaps():
+    records = [
+        {"critic_role": "evidence", "data": {"blocking_issues": [
+            "Automated testing is not demonstrated and no authorized evidence supports it.",
+            "The rendered snapshot reports three near-wraps below the one-line safety threshold.",
+        ]}},
+        {"critic_role": "technical", "data": {"blocking_issues": [
+            "The resume does not demonstrate automated testing at the level requested.",
+            "The rendered page has near-wrap bullets and a material readability risk.",
+        ]}},
+    ]
+
+    assessments = rs.collapse_critic_issues(records)
+
+    fit_gap = next(item for item in assessments if item["kind"] == "candidate_fit_gap")
+    layout = next(item for item in assessments if item["kind"] == "hard_blocker")
+    assert fit_gap["classification"] == "QUESTIONABLE"
+    assert fit_gap["support_count"] == 2
+    assert layout["classification"] == "BLOCKER"
+    assert layout["support_count"] == 2
+    assert len(assessments) == 2
+
+
+def test_score_review_does_not_turn_a_fit_gap_into_a_readiness_failure():
+    criteria = {name: {"status": "pass", "reason": "checked"} for name in rs.REVIEW_CRITERIA}
+    criteria["target_fit"] = {"status": "partial", "reason": "testing is not evidenced"}
+    agent = {"provider": "codex", "data": {
+        "criteria": criteria,
+        "blocking_issues": ["Automated testing is not demonstrated; no authorized evidence supports it."],
+        "blocking_issue_assessments": [{
+            "issue": "Automated testing is not demonstrated; no authorized evidence supports it.",
+            "kind": "candidate_fit_gap", "classification": "QUESTIONABLE", "severity": "warning",
+            "supporting_roles": ["technical"], "support_count": 1,
+        }],
+        "unsupported_claims": [],
+        "portfolio_comparison": {
+            "status": "pass", "reason": "comparison checked",
+            "preserved_strengths": [], "gained_strengths": [], "lost_strengths": [],
+        },
+    }}
+    deterministic = {"gates": {
+        "factual": {"status": "pass", "reason": "ok"},
+        "layout": {"status": "pass", "reason": "ok"},
+        "portfolio": {"status": "pass", "reason": "ok"},
+        "eligibility": {"status": "pass", "reason": "ok"},
+    }}
+
+    result = rs.score_review(
+        agent, deterministic, independent_available=True,
+        review_mode=rs.CODEX_REVIEW_MODE,
+        critic_roles=[item["key"] for item in rs.CODEX_CRITIC_ROLES],
+    )
+
+    assert result["gates"]["target_fit"]["status"] == "partial"
+    assert result["hard_fail"] is False
+    assert result["ready"] is True
+    assert result["fit_gaps"][0]["kind"] == "candidate_fit_gap"
 
 
 def test_score_review_hard_fails_unsupported_claims():

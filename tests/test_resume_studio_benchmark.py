@@ -1,0 +1,66 @@
+from scripts import resume_studio_benchmark as benchmark
+
+
+def _job(job_id, sector, company, score):
+    return {
+        "id": job_id,
+        "sector": sector,
+        "company": company,
+        "title": "Software Engineer",
+        "url": "https://example.com/" + job_id,
+        "alert_ok": True,
+        "posting_fetch": {"ok": True},
+        "benchmark_match": {"score": score},
+    }
+
+
+def test_full_selection_round_robins_across_sectors_before_score():
+    jobs = [
+        _job("h1", "healthtech", "Health A", 100),
+        _job("h2", "healthtech", "Health B", 99),
+        _job("f1", "fintech", "Finance A", 70),
+        _job("a1", "ai_lab", "AI A", 60),
+        _job("o1", "other", "Other A", 50),
+    ]
+    selected = benchmark.select_full_jobs(jobs, 4)
+    assert [item["id"] for item in selected] == ["h1", "a1", "f1", "o1"]
+
+
+def test_full_selection_avoids_same_company_until_diversity_is_exhausted():
+    jobs = [
+        _job("a1", "ai_lab", "Same Co", 100),
+        _job("a2", "ai_lab", "Same Co", 99),
+        _job("f1", "fintech", "Other Co", 50),
+    ]
+    selected = benchmark.select_full_jobs(jobs, 3)
+    assert [item["id"] for item in selected] == ["a1", "f1", "a2"]
+
+
+def test_lab_summary_keeps_failures_and_panel_blockers_visible():
+    summary = benchmark.summarize_lab_runs([
+        {
+            "ok": True,
+            "summary": {
+                "audit_readiness": "blocked",
+                "audit_decision": "do_not_ship",
+                "uplift_band": "negative",
+                "critic_available": True,
+                "critic_failed_roles": ["technical"],
+                "finding_counts": {"BLOCKER": 2},
+                "elapsed_seconds": 12.5,
+            },
+        },
+        {
+            "ok": False,
+            "error": "final resume rejected: 0 wrap(s), 1 near-wrap(s)",
+            "failure_class": "quality_rejection",
+        },
+    ])
+    assert summary["runs"] == 2
+    assert summary["successful_runs"] == 1
+    assert summary["failed_runs"] == 1
+    assert summary["quality_rejections"] == 1
+    assert summary["execution_failures"] == 0
+    assert summary["complete_critic_panels"] == 0
+    assert summary["runs_with_blockers"] == 1
+    assert summary["readiness"] == {"blocked": 1}
