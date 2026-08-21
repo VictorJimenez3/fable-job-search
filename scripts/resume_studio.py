@@ -9313,6 +9313,7 @@ def run_tailoring(
                                         review_available, packing, line_compactions,
                                         space_expansion,
                                     ) = pre_density_state
+                                    chosen, layout, preview = render_candidate(plan, run_dir)
                                     write_json(run_dir / "content_plan.json", plan)
                                     write_json(run_dir / "layout_packing.json", packing)
                                     post_density_record["status"] = "rejected"
@@ -9326,6 +9327,7 @@ def run_tailoring(
                                     review_available, packing, line_compactions,
                                     space_expansion,
                                 ) = pre_density_state
+                                chosen, layout, preview = render_candidate(plan, run_dir)
                                 write_json(run_dir / "content_plan.json", plan)
                                 write_json(run_dir / "layout_packing.json", packing)
                                 post_density_record.update({
