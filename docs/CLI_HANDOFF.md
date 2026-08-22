@@ -130,22 +130,17 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
 ### Current change (verified 2026-08-17)
 
 - **Resume Studio effort profile and latency closure:** the local engine keeps
-  Codex pinned to `gpt-5.6-luna` and uses high reasoning for authoring and the
-  initial critic panel by Victor's standing preference. Post-revision critic
-  rechecks use bounded medium effort so all four role calls remain usable under
-  subscription latency; their effort and timeout outcomes remain visible.
-  Lower effort values and max are rejected for ordinary stages and fall back to
-  high. A single line-repair pass now precedes the deterministic
-  compactor; the second frontier repair pass was removed after controlled runs
-  showed diminishing returns. Every provider-flow row records the selected
-  effort alongside model, latency, status, and observed tokens. On the same
-  Merck posting, Luna low/medium/high returned valid plans in 69/82/76 seconds;
-  high produced the safest compiled geometry, while max was stopped after
-  4:51 without a structured response and is now disabled.
+  Codex pinned to `gpt-5.6-luna` and uses one consistent High effort level for
+  ordinary planning, writing, line editing, and every evaluator role. Max is
+  reserved for the explicit deep quality frontier or a deliberate override.
+  A single line-repair pass now precedes the deterministic compactor; the
+  second frontier repair pass was removed after controlled runs showed
+  diminishing returns. Every provider-flow row records the selected effort
+  alongside model, latency, status, and observed tokens.
 
 ### Current change (verified 2026-08-21)
 
-- **Sealed Luna Max evaluator and broad quality lab:** Resume Studio now uses
+- **Sealed evaluator and broad quality lab:** Resume Studio now uses
   the `resume-evaluator-v2-sealed` critique-only contract. The writer supplies
   only an attested packet containing the base/candidate renders, posting,
   authorized evidence, deterministic checks, and comparative diff. A fresh
@@ -153,11 +148,10 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   or score control and runs from a disposable system-temp directory. Four
   roles—evidence, recruiter, technical, and screening—must all return valid
   attested results; duplicate, wrong-lane, or partial panels remain unready.
-  The deep authoring lane and all evaluator roles use Luna Max; the normal
-  balanced lane uses Luna High for its first structured plan while keeping Max
-  for every evaluator role. Repeated writer repair calls use an explicit Luna
-  High override after Max repair calls timed out without structured
-  replacements. In the bounded balanced lane, critic-driven repair is disabled;
+  The deep authoring lane and evaluator roles may use Luna Max; the ordinary
+  balanced and Unchained lanes use Luna High for every provider stage,
+  including all evaluator roles. Repeated writer repair calls use the same
+  explicit High lane. In the bounded balanced lane, critic-driven repair is disabled;
   repair candidates in the deep lane receive a fresh panel
   before acceptance. The benchmark
   harness fetches/matches a broad live corpus concurrently, then runs a
@@ -406,6 +400,29 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   `software engineering`/UI opportunity; it remains `awaiting_review`, not
   auto-approved, because the panel is same-model Luna rather than independent
   hiring validation.
+
+- **Fresh-open High-effort cohort and speed bound (verified 2026-08-22):**
+  `CV/.resume_studio/benchmarks/20260822T041401Z-0b2ad7/manifest.json` selected
+  roles listed within seven days, excluded terminal records, rejected definitive
+  closed-page banners, and completed 8/8 full runs. Every run completed the
+  evidence, recruiter, technical, and screening roles; 5 preferred the tailored
+  candidate and 3 correctly stayed base/blocked. Every provider call used
+  `gpt-5.6-luna` at High effort, with per-stage latency and total elapsed time
+  recorded in the manifest. The receipts showed optional line editing and
+  repeated measured-space trials as the timing bottleneck, so ordinary balanced
+  and search lanes now use a three-minute line-editor fallback, two post-line
+  density rounds, and a two-candidate compiled swap frontier. Deep retains the
+  larger frontier for explicit quality experiments; the evaluator contract and
+  fail-closed winner selection are unchanged.
+
+- **Post-fix evidence guard spot check (verified 2026-08-22):** two additional
+  fresh open roles (Neuralink and Qualcomm) completed in roughly 653 seconds
+  each with complete four-role High panels and no Max calls. Neuralink was a
+  `prefer_tailored` review; Qualcomm was correctly `do_not_ship`/`blocked` for
+  an unsupported `pytest` Skills addition and a harmful project tradeoff. The
+  follow-up patch now rejects newly introduced Skills technologies unless the
+  cited claim-authorized evidence actually supports them, and removes repeated
+  metric/mechanism anchors within one entry before packing.
 
 ### Previous change (verified 2026-08-15)
 

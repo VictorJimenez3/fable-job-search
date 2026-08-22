@@ -78,12 +78,14 @@ from scripts import resume_evaluator
 # the two version strings as if they were one rubric.
 RUBRIC_VERSION = "resume-deterministic-gates-v1"
 OBJECTIVE_RESUME_RUBRIC_VERSION = "objective-resume-v1"
-JOB_INTELLIGENCE_VERSION = "job-intelligence-v1"
+JOB_INTELLIGENCE_VERSION = "job-intelligence-v2"
 TAILORING_AUDIT_VERSION = "tailoring-audit-v2"
 CODEX_LUNA_MODEL = "gpt-5.6-luna"
 CODEX_REVIEW_MODE = "codex_luna_multi_role_jury"
 SEALED_EVALUATOR_CONTRACT = resume_evaluator.EVALUATOR_CONTRACT_VERSION
-CODEX_RECHECK_EFFORT = "max"
+# High is the single ordinary production effort. Max remains available only
+# through an explicit quality-frontier profile or override.
+CODEX_RECHECK_EFFORT = "high"
 CODEX_CRITIC_ROLES = resume_evaluator.ROLE_DEFINITIONS
 QUALITY_PROFILE_DEFAULT = "balanced"
 QUALITY_PROFILES = {
@@ -92,6 +94,7 @@ QUALITY_PROFILES = {
     "deep": {
         "author_effort": "max",
         "line_editor_effort": "max",
+        "line_editor_timeout_seconds": 6 * 60,
         "evaluator_effort": "max",
         "revision_rounds": 2,
         "model_space_expansion": True,
@@ -99,20 +102,22 @@ QUALITY_PROFILES = {
         "line_editor_fallback": False,
         "audit_repair": True,
         "evaluator_timeout_seconds": 8 * 60,
+        "max_post_line_density_rounds": 4,
     },
     # Balanced is the normal application lane: deterministic density and
     # control-preservation run first, while Luna is reserved for decisions the
     # compiler cannot safely make. This removes two common serial calls without
     # weakening the sealed evaluator or any hard gate.
     "balanced": {
-        # High remains the approved Luna lane but avoids spending the Max
-        # budget on the first structured plan; the independent evaluator stays
-        # Max and can reject an overconfident author.
+        # High is the one ordinary Luna lane; the independent evaluator uses
+        # the same effort so timing comparisons are easy to interpret.
         "author_effort": "high",
         "line_editor_effort": "high",
-        # The evaluator is the quality gate, so changing authoring effort does
-        # not silently weaken the independent comparison panel.
-        "evaluator_effort": "max",
+        # Geometry editing is a fallback, not a second author. If Luna does
+        # not return promptly, the source-preserving compactor and sealed
+        # panel still receive a complete candidate.
+        "line_editor_timeout_seconds": 3 * 60,
+        "evaluator_effort": "high",
         # The normal lane is a bounded final-candidate experiment: let the
         # sealed panel judge the compiled candidate once, then select base or
         # tailored. Critic-driven rewriting remains available in ``deep``;
@@ -123,19 +128,21 @@ QUALITY_PROFILES = {
         "model_line_editor": False,
         "line_editor_fallback": True,
         "audit_repair": False,
-        # A single Luna Max role occasionally needs just over six minutes.
+        # A single Luna role occasionally needs just over six minutes.
         # The normal lane is still bounded to one panel; this ceiling avoids
         # turning provider jitter into a false incomplete review while keeping
         # the old multi-round cascade out of the default path.
         "evaluator_timeout_seconds": 8 * 60,
+        "max_post_line_density_rounds": 2,
     },
     # ``search`` is the quality-first experimental lane. It wraps several
     # complete ``search_single`` candidates; each candidate is still judged
     # by the unchanged sealed jury before it can replace the base control.
     "search": {
-        "author_effort": "max",
+        "author_effort": "high",
         "line_editor_effort": "high",
-        "evaluator_effort": "max",
+        "line_editor_timeout_seconds": 3 * 60,
+        "evaluator_effort": "high",
         "revision_rounds": 0,
         "model_space_expansion": False,
         "model_line_editor": False,
@@ -146,6 +153,7 @@ QUALITY_PROFILES = {
         # approve the draft it just caused.
         "audit_repair": True,
         "evaluator_timeout_seconds": 8 * 60,
+        "max_post_line_density_rounds": 2,
         "candidate_variants": 3,
         "child_profile": "search_single",
     },
@@ -153,15 +161,17 @@ QUALITY_PROFILES = {
     # separate from balanced lets the search policy evolve independently from
     # ordinary single-candidate runs.
     "search_single": {
-        "author_effort": "max",
+        "author_effort": "high",
         "line_editor_effort": "high",
-        "evaluator_effort": "max",
+        "line_editor_timeout_seconds": 3 * 60,
+        "evaluator_effort": "high",
         "revision_rounds": 0,
         "model_space_expansion": False,
         "model_line_editor": False,
         "line_editor_fallback": True,
         "audit_repair": True,
         "evaluator_timeout_seconds": 8 * 60,
+        "max_post_line_density_rounds": 2,
         "candidate_variants": 0,
         "child_profile": "",
     },
@@ -182,7 +192,8 @@ QUALITY_PROFILES = {
         # useful without spending the Max budget on duplicated strategy text.
         "gap_analysis_effort": "high",
         "line_editor_effort": "high",
-        "evaluator_effort": "max",
+        "line_editor_timeout_seconds": 3 * 60,
+        "evaluator_effort": "high",
         "revision_rounds": 0,
         "model_space_expansion": False,
         # A clean page is not an instruction to fill every remaining line.
@@ -195,6 +206,7 @@ QUALITY_PROFILES = {
         "audit_repair": False,
         "target_opportunity_replacement": True,
         "evaluator_timeout_seconds": 8 * 60,
+        "max_post_line_density_rounds": 2,
         "candidate_variants": 0,
         "child_profile": "",
     },
@@ -544,7 +556,10 @@ MAX_SPACE_EXPANSION_CANDIDATES = 4
 # frontier.  The old six-item frontier tried 6 + C(6, 2) = 21 removal sets
 # for every addition; each trial compiles LaTeX, so equivalent low-value
 # swaps could dominate an otherwise bounded run.
-MAX_SPACE_SWAP_CANDIDATES = 4
+# Two lower-value removals are enough to test an atomic stronger replacement.
+# A four-item frontier created 4 + C(4, 2) compiled trials per addition, which
+# was expensive and encouraged low-signal portfolio churn.
+MAX_SPACE_SWAP_CANDIDATES = 2
 MIN_MEANINGFUL_BULLET_CHARS = 48
 # A rewrite this close to its authorized source is normally presentation
 # churn, not a hiring-value improvement.  Keep the source wording unless the
@@ -605,19 +620,19 @@ TAILOR_MODE_ALIASES = {
     "unchained": "generation", "generate": "generation",
     "generation": "generation", "generative": "generation",
 }
-# Victor's current lab preference is the Luna Max lane for authoring, revision,
-# and every sealed critic panel. Keep the task map explicit for auditability;
-# lower-effort overrides are rejected so benchmark results remain comparable.
+# Victor's ordinary lab preference is one Luna High effort level. Keep the task
+# map explicit for auditability; Max is an explicit quality frontier rather
+# than a hidden default that makes timing comparisons incomparable.
 CODEX_EFFORTS = frozenset(("high", "max"))
 CODEX_TASK_EFFORT_DEFAULTS = {
-    "draft": "max",
-    "synthesis": "max",
-    "gap_analysis": "max",
-    "space_expansion": "max",
-    "line_edit": "max",
-    "revision": "max",
-    "review": "max",
-    "workshop": "max",
+    "draft": "high",
+    "synthesis": "high",
+    "gap_analysis": "high",
+    "space_expansion": "high",
+    "line_edit": "high",
+    "revision": "high",
+    "review": "high",
+    "workshop": "high",
 }
 FORBIDDEN_RESUME_TERM_RE = re.compile(r"\bticc\b", re.I)
 PROTECTED_QUALIFIERS = (
@@ -649,6 +664,7 @@ TARGET_KEYWORD_TERMS = (
     "postgres", "pgvector", "mongodb", "sqlite", "git", "github", "rest api", "api",
     "rag", "llm", "gemini", "agentic", "inference", "training", "quantization",
     "optimization", "hpc", "real-time", "multimodal", "data pipeline", "microservices",
+    "pytest",
 )
 LEGACY_TARGET_KEYWORD_TERMS = (
     "machine learning", "deep learning", "computer vision", "software engineering",
@@ -662,6 +678,7 @@ LEGACY_TARGET_KEYWORD_TERMS = (
     "postgres", "pgvector", "mongodb", "sqlite", "git", "github", "rest api", "api",
     "rag", "llm", "gemini", "agentic", "inference", "training", "quantization",
     "optimization", "hpc", "real-time", "multimodal", "data pipeline", "microservices",
+    "pytest",
 )
 PORTFOLIO_CAPS = {
     # Provider safety ceilings.  None of these are required for a valid plan.
@@ -2091,10 +2108,13 @@ ROLE_TRACK_TERMS = {
     "systems_performance": {
         "systems", "performance", "hpc", "cuda", "distributed", "parallel",
         "compiler", "inference", "optimization", "infrastructure", "slurm",
+        "network", "networking", "latency", "throughput", "linux", "gpu",
+        "profiling", "scalability", "architecture",
     },
     "backend_infrastructure": {
         "backend", "api", "service", "services", "cloud", "docker",
         "kubernetes", "database", "databases", "platform", "deployment",
+        "microservice", "microservices", "rest", "integration", "reliability",
     },
     "ml_research": {
         "machine", "learning", "deep", "model", "models", "research",
@@ -2104,7 +2124,138 @@ ROLE_TRACK_TERMS = {
         "data", "analytics", "analysis", "sql", "pipeline", "pipelines",
         "warehouse", "statistics", "visualization", "etl", "feature",
     },
+    "product_software": {
+        "software", "development", "frontend", "fullstack", "full-stack", "web",
+        "ui", "ux", "testing", "agile", "angular", "react", "javascript",
+        "typescript", "requirements", "documentation", "git",
+    },
 }
+
+ROLE_TRACK_LABELS = {
+    "systems_performance": "systems / performance / networking",
+    "backend_infrastructure": "backend / infrastructure / APIs",
+    "ml_research": "ML / research",
+    "data_platform": "data / analytics / platform",
+    "product_software": "product software / web development",
+    "general_software": "general software engineering",
+}
+
+# Multi-word signals carry more meaning than isolated common words such as
+# software or data. The profile is intentionally small and deterministic: it
+# is a role-focus receipt, not a second opaque classifier.
+ROLE_TRACK_PHRASES = {
+    "systems_performance": (
+        "high performance", "high-performance", "distributed systems",
+        "parallel computing", "computer architecture", "network engineering",
+        "network performance", "low latency", "high throughput", "gpu computing",
+        "performance engineering", "systems programming", "systems software",
+    ),
+    "backend_infrastructure": (
+        "backend systems", "backend services", "rest api", "restful api",
+        "web services", "microservices", "cloud infrastructure", "data platform",
+        "software integration", "api integration", "platform engineering",
+    ),
+    "ml_research": (
+        "machine learning", "deep learning", "large language model",
+        "computer vision", "natural language processing", "model development",
+        "research engineer", "research engineering",
+    ),
+    "data_platform": (
+        "data engineering", "data pipeline", "data pipelines", "data platform",
+        "data warehouse", "data quality", "business intelligence",
+    ),
+    "product_software": (
+        "software engineering", "software development", "web application",
+        "user interface", "front end", "front-end", "full stack", "full-stack",
+        "unit testing", "test-driven", "requirements gathering",
+    ),
+}
+
+
+def _role_signal_present(text: str, signal: str) -> bool:
+    """Match a role signal as a phrase/word, not a substring of another word."""
+    escaped = re.escape(str(signal or "").strip()).replace(r"\ ", r"\s+")
+    return bool(escaped and re.search(r"(?<![a-z0-9])" + escaped + r"(?![a-z0-9])", text, re.I))
+
+
+def role_track_profile(job: Dict[str, Any], posting_text: str) -> Dict[str, Any]:
+    """Return an auditable role-focus ranking for a posting.
+
+    Title signals count more than body mentions, phrase signals count more
+    than generic single words, and repeated body boilerplate does not inflate
+    a track without bound. This keeps broad postings from making every
+    sentence equally important while preserving ambiguity when tracks are
+    genuinely close.
+    """
+    title = clean_text(str(job.get("title") or "")).lower()
+    body = clean_text(str(posting_text or "")).lower()
+    scores: Dict[str, float] = {}
+    details: Dict[str, Dict[str, Any]] = {}
+    for track, terms in ROLE_TRACK_TERMS.items():
+        matched_phrases = [
+            phrase for phrase in ROLE_TRACK_PHRASES.get(track, ())
+            if _role_signal_present(title + " " + body, phrase)
+        ]
+        title_terms = [term for term in terms if _role_signal_present(title, term)]
+        body_terms = [term for term in terms if _role_signal_present(body, term)]
+        # A title hit is a strong routing signal. Body phrase hits are useful,
+        # but cap their total so boilerplate cannot dominate the title.
+        score = (len(title_terms) * 4.0) + (len(matched_phrases) * 3.0)
+        score += min(12.0, len(set(body_terms) - set(title_terms)) * 1.25)
+        if score:
+            scores[track] = round(score, 2)
+            details[track] = {
+                "title_terms": sorted(title_terms),
+                "phrases": sorted(matched_phrases),
+                "body_terms": sorted(body_terms),
+            }
+    ranked = sorted(scores, key=lambda track: (-scores[track], track))
+    if not ranked:
+        return {
+            "primary_track": "general_software",
+            "primary_label": ROLE_TRACK_LABELS["general_software"],
+            "confidence": "low",
+            "secondary_tracks": [],
+            "scores": [],
+            "signals": {},
+            "rule": "No role-family signal was strong enough; use general software weighting.",
+        }
+    primary = ranked[0]
+    primary_score = scores[primary]
+    secondary = [
+        track for track in ranked[1:4]
+        # Keep real secondary surfaces visible even when the title makes the
+        # primary track dominant. Confidence uses the margin separately; a
+        # low-scoring adjacent track must not silently become co-primary.
+        if scores[track] >= 2.5
+    ]
+    runner_up = scores[secondary[0]] if secondary else 0.0
+    if primary_score >= 10.0 and runner_up < primary_score * 0.72:
+        confidence = "high"
+    elif secondary and runner_up >= primary_score * 0.82:
+        confidence = "ambiguous"
+    else:
+        confidence = "moderate"
+    return {
+        "primary_track": primary,
+        "primary_label": ROLE_TRACK_LABELS.get(primary, primary),
+        "confidence": confidence,
+        "secondary_tracks": secondary,
+        "scores": [
+            {
+                "track": track,
+                "label": ROLE_TRACK_LABELS.get(track, track),
+                "score": scores[track],
+                "signals": details.get(track, {}),
+            }
+            for track in ranked[:4]
+        ],
+        "signals": details,
+        "rule": (
+            "Primary track is weighted first; secondary tracks remain eligible for supported evidence, "
+            "but an adjacent keyword cannot displace a stronger primary-track proof point without an explicit tradeoff."
+        ),
+    }
 
 
 def build_job_intelligence(
@@ -2195,21 +2346,42 @@ def build_job_intelligence(
             reason="This application-level constraint is evaluated outside resume wording.",
         )
 
-    haystack = (str(job.get("title") or "") + " " + text).lower()
-    tokens = set(re.findall(r"[a-z0-9+#.]+", haystack))
-    track_scores = {
-        track: len(tokens & terms)
-        for track, terms in ROLE_TRACK_TERMS.items()
-    }
-    tracks = [track for track, score in sorted(track_scores.items(), key=lambda pair: (-pair[1], pair[0])) if score]
+    role_focus = role_track_profile(job, text)
+    tracks = [
+        str(item.get("track") or "")
+        for item in role_focus.get("scores") or []
+        if str(item.get("track") or "")
+    ]
     if not tracks:
         tracks = ["general_software"]
-    if len(tracks) > 1 and track_scores.get(tracks[1], 0) >= max(2, track_scores.get(tracks[0], 0) - 1):
-        track_confidence = "ambiguous"
-    elif track_scores.get(tracks[0], 0) >= 3:
-        track_confidence = "high"
-    else:
-        track_confidence = "low"
+    primary_track = str(role_focus.get("primary_track") or tracks[0])
+    secondary_tracks = set(
+        str(value) for value in role_focus.get("secondary_tracks") or []
+        if str(value)
+    )
+    # Attach role affinity to each requirement so the writer and evaluator can
+    # distinguish a primary-track loss from an adjacent keyword omission.
+    for requirement in requirements:
+        requirement_text = " ".join((
+            str(requirement.get("requirement") or ""),
+            " ".join(str(value) for value in requirement.get("exact_terms") or []),
+        ))
+        requirement_focus = role_track_profile({}, requirement_text)
+        requirement_tracks = [
+            str(item.get("track") or "")
+            for item in requirement_focus.get("scores") or []
+            if str(item.get("track") or "")
+        ]
+        requirement["role_tracks"] = requirement_tracks[:3]
+        if primary_track in requirement_tracks:
+            requirement["role_relevance"] = "primary"
+            requirement["role_priority"] = 1.0
+        elif secondary_tracks.intersection(requirement_tracks):
+            requirement["role_relevance"] = "secondary"
+            requirement["role_priority"] = 0.8
+        else:
+            requirement["role_relevance"] = "general"
+            requirement["role_priority"] = 0.6
 
     match = match if isinstance(match, dict) else {}
     match_score = match.get("score")
@@ -2224,7 +2396,10 @@ def build_job_intelligence(
         "posting_chars": len(text),
         "posting_snapshot_hash": _stable_digest(text),
         "role_tracks": tracks[:4],
-        "track_confidence": track_confidence,
+        "primary_role_track": primary_track,
+        "secondary_role_tracks": sorted(secondary_tracks),
+        "track_confidence": str(role_focus.get("confidence") or "low"),
+        "role_focus": role_focus,
         "requirements": requirements[:80],
         "hard_blockers": eligibility_blocks,
         "fit": {
@@ -4668,6 +4843,9 @@ def gap_analysis_prompt(
         "company": context.get("company"),
         "title": context.get("title"),
         "posting_text": context.get("posting_text"),
+        "role_focus": role_track_profile(
+            context, str(context.get("posting_text") or "")
+        ),
     }
     return (
         "Return the requested JSON strategy now; do not narrate progress, promise future work, or "
@@ -4683,6 +4861,9 @@ def gap_analysis_prompt(
         "claim. Exact ATS wording is useful only when the cited evidence genuinely supports it. "
         "Treat the resume as one information budget: stronger gap-filling evidence may replace a "
         "redundant bullet, project, coursework, or awards. Preserve chronology and factual qualifiers. "
+        "Use the supplied role_focus as a routing aid: identify the primary role track first, then "
+        "rank supported evidence for that track above adjacent requirements. If the posting is genuinely "
+        "broad or ambiguous, say so in the strategy instead of trying to satisfy every subrole equally. "
         "Every requirements[].exact_terms value must come verbatim from the supplied Exact ATS "
         "inventory. Do not create requirements about output format, chronology, evidence review, "
         "or the analysis process. Include a term in must_cover_terms only when direct or adjacent "
@@ -4904,6 +5085,11 @@ Victor-specific guardrails:
 - Never invent metrics, users, adoption, production status, scope, accuracy,
   dates, technologies, or business outcomes.
 - Every selected claim must be traceable to CV/ source material.
+- Do not merge a mechanism, qualifier, metric, or causal relationship from
+  separate source bullets into one stronger-sounding claim unless the supplied
+  sources explicitly connect those facts. When sources authorize adjacent
+  facts but not their relationship, keep the boundary visible or use separate
+  bullets; citation count is not proof of semantic linkage.
 - Projects may be selected for prestige or award value even when their stack is
   not a direct keyword match, but explain that tradeoff.
 - Prefer one distinct job per bullet: leadership, technical artifact, result,
@@ -4963,6 +5149,13 @@ Victor-specific guardrails:
   validation, and the number of distinct interview stories. A good bullet can
   still be the wrong portfolio choice if it repeats a stronger experience
   story or displaces a better project.
+- Use the deterministic job_intelligence.role_focus as a routing receipt. The
+  primary role track is the center of gravity; secondary tracks may add
+  supported evidence, but a generic adjacent keyword must not displace a
+  stronger primary-track mechanism, metric, validation result, or ownership
+  proof without an explicit decision-ledger tradeoff. When confidence is
+  ambiguous, preserve breadth and explain the ambiguity rather than pretending
+  the posting is one narrow role.
 - For technical software-engineering roles, Resident Assistant/community
   leadership is discretionary. Select it only when it adds a needed,
   otherwise-uncovered signal and no stronger unused project or technical
@@ -5789,6 +5982,33 @@ def validate_plan(
                                 break
                     if len(cited) >= 8:
                         break
+                # A Skills rewrite may cite several valid bullets while still
+                # smuggling in one unsupported technology.  Verify every
+                # target-vocabulary term newly introduced relative to the
+                # canonical Skills line against the cited claim-authorized
+                # nodes; unrelated citations do not authorize the addition.
+                source_text = str(skill_lines[line_id].get("text") or "")
+                cited_nodes = [
+                    node for node in graph.get("nodes", [])
+                    if str(node.get("id") or "") in cited
+                    and str(node.get("id") or "") in claim_authorities
+                ]
+                cited_text = " ".join(
+                    " ".join((str(node.get("heading") or ""), str(node.get("text") or "")))
+                    for node in cited_nodes
+                )
+                unsupported_introduced = [
+                    term for term in TARGET_KEYWORD_TERMS
+                    if _keyword_present(term, text)
+                    and not _keyword_present(term, source_text)
+                    and not _keyword_affirmed(term, cited_text)
+                ]
+                if unsupported_introduced:
+                    validation_warnings.append(
+                        "dropped Skills rewrite %s with unsupported introduced term(s): %s"
+                        % (line_id, ", ".join(unsupported_introduced[:8]))
+                    )
+                    continue
                 if not cited or not set(cited) & claim_authorities:
                     validation_warnings.append(
                         "dropped Skills rewrite %s without claim-authorizing evidence" % line_id
@@ -7182,19 +7402,24 @@ def curate_candidate_portfolio(
         retained_entries = []
         for entry in curated.get(section, []):
             retained = []
+            entry_seen_texts: List[str] = []
             for bullet in entry.get("bullets", []):
                 text = str(bullet.get("text") or "")
-                if any(_same_resume_bullet(text, existing) for existing in seen_texts):
+                if (
+                    any(_same_resume_bullet(text, existing) for existing in seen_texts)
+                    or any(_same_entry_resume_bullet(text, existing) for existing in entry_seen_texts)
+                ):
                     actions.append({
                         "kind": "near_duplicate",
                         "section": section,
                         "entry_id": str(entry.get("source_id") or ""),
                         "source_id": str(bullet.get("source_id") or ""),
-                        "reason": "removed a repeated claim before layout packing",
+                        "reason": "removed a repeated claim or repeated proof anchors before layout packing",
                     })
                     continue
                 retained.append(bullet)
                 seen_texts.append(text)
+                entry_seen_texts.append(text)
             if retained:
                 entry["bullets"] = retained
                 retained_entries.append(entry)
@@ -10627,7 +10852,8 @@ def run_tailoring(
         update("line_editing", "Repairing rendered one-line geometry (pass %s/%s)" % (line_round, line_edit_passes))
         line_edit = run_provider(
             writer, line_editor_prompt(context, plan, layout, graph), run_dir, label,
-            timeout=6 * 60, schema=plan_schema(True, generation=generation),
+            timeout=int(profile.get("line_editor_timeout_seconds") or 3 * 60),
+            schema=plan_schema(True, generation=generation),
             codex_effort=profile["line_editor_effort"],
         )
         line_edits.append(line_edit)
@@ -10823,7 +11049,8 @@ def run_tailoring(
                             write_json(run_dir / "content_plan.json", plan)
                             write_json(run_dir / "layout_packing.json", packing)
 
-        for density_round in range(1, 5):
+        max_density_rounds = int(profile.get("max_post_line_density_rounds") or 2)
+        for density_round in range(1, max_density_rounds + 1):
             capacity_open = measured_space_available(layout)
             density_gap = layout.get("density_gap_pt")
             if not capacity_open and not (
@@ -11238,7 +11465,8 @@ def run_tailoring(
         recheck = round_label != "critique"
         update(
             "reviewing",
-            "Running sealed Codex Luna Max critic roles%s: %s" % (
+            "Running sealed Codex Luna critic roles at %s%s: %s" % (
+                profile.get("evaluator_effort") or resume_evaluator.CODEX_EFFORT,
                 " (recheck)" if recheck else "",
                 ", ".join(item["key"] for item in critic_roles),
             ),

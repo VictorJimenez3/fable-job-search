@@ -31,7 +31,7 @@ from typing import Any, Dict, Iterable, Optional
 EVALUATOR_CONTRACT_VERSION = "resume-evaluator-v2-sealed"
 EVALUATOR_RUBRIC_VERSION = "resume-gates-v2-sealed"
 CODEX_MODEL = "gpt-5.6-luna"
-CODEX_EFFORT = "max"
+CODEX_EFFORT = "high"
 CODEX_EFFORTS = frozenset(("high", "max"))
 REVIEW_CRITERIA = (
     "factual", "target_fit", "evidence", "distinctiveness", "clarity", "privacy",
@@ -304,6 +304,29 @@ def result_schema() -> Dict[str, Any]:
 
 def _prompt(packet: Dict[str, Any]) -> str:
     role = next(item for item in ROLE_DEFINITIONS if item["key"] == packet["role"])
+    intelligence = packet.get("job", {}).get("job_intelligence", {})
+    focus = intelligence.get("role_focus", {}) if isinstance(intelligence, dict) else {}
+    primary = str(
+        focus.get("primary_label")
+        or focus.get("primary_track")
+        or "the role's central work"
+    )
+    secondary = [
+        str(value) for value in focus.get("secondary_tracks", [])
+        if str(value)
+    ] if isinstance(focus, dict) else []
+    focus_instruction = (
+        "Role-focus receipt: the deterministic router identifies %s as the primary track"
+        % primary
+    )
+    if secondary:
+        focus_instruction += " with adjacent tracks %s" % ", ".join(secondary)
+    focus_instruction += (
+        ". Use that receipt to weight comparative evidence: a supported primary-track "
+        "mechanism or ownership proof should not be treated as interchangeable with a "
+        "generic adjacent keyword. If the receipt is ambiguous, preserve that ambiguity "
+        "in the critique rather than forcing a single-role interpretation."
+    )
     return (
         "You are a sealed resume quality evaluator. This is a fresh process and a critique-only task. "
         "Do not inspect files, run commands, use prior reports, or trust any writer explanation. "
@@ -321,6 +344,8 @@ def _prompt(packet: Dict[str, Any]) -> str:
         "treat measured bottom clearance as a layout fact, not a defect, when the candidate is already "
         "within that budget. Do not demand filler solely because one more bullet fits; flag an omission "
         "only when an authorized, materially useful signal fits without violating the budget.\n\n"
+        + focus_instruction
+        + "\n\n"
         "Packet:\n%s"
     ) % (
         EVALUATOR_CONTRACT_VERSION,

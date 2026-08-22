@@ -2519,3 +2519,52 @@ The artifact is therefore `winner_version=tailored` and
 not independent-vendor or hiring-outcome validation. The result is a
 measurable comparative improvement for this posting, not an 84/100 hiring
 prediction or evidence that every role will improve.
+
+## 160. Ordinary tailoring uses one High effort and routes broad roles by primary track (2026-08-22)
+
+The normal Resume Studio and benchmark paths now use one explicit
+`gpt-5.6-luna` High effort level for gap analysis, authoring, line editing, and
+all four sealed evaluator roles. Max remains available only for the deliberate
+`deep` quality frontier or an explicit override. This makes timing and quality
+comparisons interpretable and matches Victor's standing preference; provider
+flow still records model, effort, latency, status, and observed tokens for
+every stage.
+
+Job intelligence is now `job-intelligence-v2`. It produces a deterministic,
+auditable role-focus receipt with a primary track, adjacent tracks, confidence,
+matched title/body signals, and per-requirement role relevance. The tailor and
+sealed evaluator are told to preserve primary-track mechanisms, metrics,
+validation, and ownership evidence when an adjacent ATS term competes for the
+same page space. This addresses the observed Stryker ambiguity without
+pretending that a routing label changes candidate fit or authorizes unsupported
+claims. Hard eligibility and evidence gates remain unchanged.
+
+The benchmark now selects recently listed, non-terminal roles by default,
+rejects definitive closed-page banners after fetching, and preserves the
+fresh-open check plus provider timing/effort metadata in its manifest. This
+creates a repeatable test set from the live radar rather than recycling old
+experiments.
+
+## 161. Ordinary geometry cleanup is time-bounded after the fresh cohort (2026-08-22)
+
+The fresh-open eight-role High-effort cohort completed 8/8 runs with complete
+four-role panels, but receipts showed that the optional line editor and the
+post-edit deterministic density search could dominate wall time. The ordinary
+balanced/search lanes therefore cap the line-editor fallback at three minutes,
+cap post-edit density expansion at two rounds, and test only the top two
+removal candidates for a two-bullet swap. The `deep` profile retains the longer
+frontier for explicit quality experiments. These are scheduling/search bounds;
+they do not weaken evidence authority, the sealed evaluator, the geometry gate,
+or the fail-closed base-versus-tailored decision.
+
+## 162. Reject repeated proof anchors and ungrounded Skills additions before judging (2026-08-22)
+
+The post-fix Neuralink/Qualcomm validation confirmed complete High panels but
+also exposed two writer-side weaknesses. Same-entry bullets could repeat a
+metric/mechanism story without enough textual similarity for the old duplicate
+guard, and a Skills rewrite could cite valid evidence while adding an unrelated
+technology such as `pytest`. The curator now removes the lower-priority
+same-entry proof duplicate using shared anchors, while Skills validation checks
+every newly introduced target-vocabulary term against the cited
+claim-authorized nodes. These changes reduce known regressions without changing
+the evaluator rubric or treating keyword coverage as evidence.

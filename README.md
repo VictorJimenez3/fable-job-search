@@ -677,13 +677,11 @@ until that option exists, the local Pipeline and Google tracker still record
 the stage and Notion leaves the local sync state auditable rather than sending
 an invalid update.
 
-The normal **balanced** quality lane uses **Codex Luna High** for the initial
-structured authoring pass and **Codex Luna Max** for every independent critic
-recheck. The deliberately deeper `deep` profile retains Max for initial
-authoring as well. Its repeated writer-repair calls use Luna High after the
-quality lab showed Max consuming its full budget without returning a
-structured replacement; this is recorded as an explicit repair policy rather
-than a hidden fallback. Each critic runs in a fresh, critique-only subprocess
+The normal **balanced** and **Unchained** quality lanes use one consistent
+**Codex Luna High** effort level for planning, authoring, line editing, and
+every independent critic recheck. The deliberately deeper `deep` profile
+retains Max for an explicit quality-frontier comparison. Each critic runs in a
+fresh, critique-only subprocess
 under the sealed `resume-evaluator-v2-sealed` contract. Its packet contains the
 base resume, candidate resume, job snapshot, authorized evidence, and
 deterministic checks—but no writer prompt, prior review, score, or readiness
@@ -717,13 +715,25 @@ repair rules prioritize restoring high-value control evidence or explaining a
 real replacement before adding another role-keyword line.
 
 The normal application lane is the bounded **balanced** authoring profile. It
-keeps the same sealed Luna Max critic panel and hard gates, but lets the
+keeps the same sealed critic panel and hard gates, but lets the
 deterministic compiler handle measured page packing and control recovery first,
 skips model space expansion and critic-driven revision/audit-repair rounds, and
-uses at most one conditional Luna High line-edit pass when geometry is unsafe.
-The original two-round frontier remains available for a deliberately deeper run
-with `--quality-profile deep`; changing profiles never changes the evaluator
-contract or turns a rejected candidate into a pass.
+uses at most one conditional Luna High line-edit pass when geometry is unsafe,
+with a three-minute fallback timeout. Its post-edit density search is capped at
+two rounds and two removal candidates per swap, so spare page capacity cannot
+turn into an unbounded compile loop. The deterministic source-preserving
+compactor remains available after that cap. Max is not used by this normal path;
+the original two-round frontier remains available for a deliberately deeper run
+with `--quality-profile deep`.
+Changing profiles never changes the evaluator contract or turns a rejected
+candidate into a pass.
+
+Before writing, Resume Studio emits a deterministic role-focus receipt with a
+primary track, adjacent tracks, confidence, and matched posting signals. This
+lets a broad networking/performance posting prioritize systems evidence over
+generic web or ATS wording. It is a routing aid, not evidence that the
+candidate has a missing skill; unsupported requirements remain gaps and hard
+eligibility blockers remain outside the tailoring tradeoff.
 
 The compiler also treats quantified, validated, integration, and ownership
 proof from the locked base resume as control evidence during overflow packing.
@@ -733,11 +743,32 @@ keyword-only gains and a bookkeeping blind spot from driving the comparison.
 
 For broad validation, `scripts/resume_studio_benchmark.py` fetches and matches
 many live postings concurrently, then runs a smaller full-tailoring sample
-balanced across sectors and companies. Its manifest preserves the posting
-fetch results, match control, selected full-run cohort, per-run checkpoint,
-latency, panel completeness, comparative audit outcome, quality rejections, and
-execution failures. This is a lab harness, not a claim that a local evaluator
-predicts hiring outcomes.
+balanced across sectors and companies. By default it selects roles first listed
+within the last seven days, excludes terminal radar records, and rejects a
+fetched page with a definitive closed/filled banner. Its manifest preserves the
+posting fetch/open check, match control, selected full-run cohort, per-run
+checkpoint, latency, model, reasoning effort, panel completeness, comparative
+audit outcome, quality rejections, and execution failures. This is a lab
+harness, not a claim that a local evaluator predicts hiring outcomes.
+
+The fresh-open eight-role validation at
+`CV/.resume_studio/benchmarks/20260822T041401Z-0b2ad7/manifest.json` completed
+8/8 runs with complete four-role panels: 5 comparative tailored preferences and
+3 honest base/blocked decisions. Every provider call used `gpt-5.6-luna` at
+High effort; the manifest records per-stage latency and total run time. This
+demonstrates a quality-control system, not a universal win rate: the blocked
+cases exposed eligibility, unsupported-claim, and redundancy failures, while
+the five preferred-tailored results remain human review rather than automatic
+approval.
+
+The post-fix spot check then ran two additional fresh open roles (Neuralink and
+Qualcomm) in parallel. Both completed all four High critic roles in about 11
+minutes each; Neuralink preferred tailored, while Qualcomm was blocked because
+the panel found an unsupported Skills technology and a damaging project swap.
+That rejection is an intended quality result. The writer-side guards now catch
+same-entry repeated proof anchors and newly introduced Skills technologies
+without matching claim-authorized evidence before a candidate reaches the
+panel.
 
 For healthcare-role experiments, a prior saved draft can be used as a
 provisional pairwise control without becoming evidence authority. The completed

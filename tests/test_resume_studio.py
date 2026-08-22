@@ -1164,6 +1164,28 @@ def test_downstream_validation_preserves_existing_generation_skills(monkeypatch)
     assert normalized["front_matter_rewrites"][0]["line_id"] == "front:skills:3"
 
 
+def test_skills_validator_rejects_new_technology_without_matching_cited_evidence(monkeypatch):
+    catalog = _fixture_catalog()
+    graph = {"nodes": [{
+        "id": "doc:skills", "heading": "Skills", "text": "Used GitHub",
+        "claim_allowed": True,
+    }]}
+    plan = _fixture_plan()
+    plan["front_matter_rewrites"] = [{
+        "line_id": "front:skills:3",
+        "text": "Data & Tools: GitHub, pytest",
+        "evidence_ids": ["doc:skills"],
+        "why": "Target testing term",
+    }]
+    monkeypatch.setattr(rs, "front_matter_catalog", lambda _root: [{
+        "line_id": "front:skills:3", "text": "Data & Tools: GitHub",
+    }])
+    normalized, errors = rs.validate_plan(plan, catalog, enhance=False, graph=graph)
+    assert not errors
+    assert normalized["front_matter_rewrites"] == []
+    assert any("unsupported introduced term" in warning for warning in normalized["validation_warnings"])
+
+
 def test_workshop_edit_creates_revision_without_overwriting_original_plan(monkeypatch, tmp_path):
     catalog = _fixture_catalog()
     plan, errors = rs.validate_plan(_fixture_plan(), catalog, enhance=False)
@@ -1400,7 +1422,12 @@ def test_quality_profiles_keep_deep_available_and_default_to_balanced():
     assert rs.QUALITY_PROFILES["balanced"]["author_effort"] == "high"
     assert rs.QUALITY_PROFILES["deep"]["author_effort"] == "max"
     assert rs.QUALITY_PROFILES["balanced"]["line_editor_effort"] == "high"
-    assert rs.QUALITY_PROFILES["balanced"]["evaluator_effort"] == "max"
+    assert rs.QUALITY_PROFILES["balanced"]["line_editor_timeout_seconds"] == 3 * 60
+    assert rs.QUALITY_PROFILES["balanced"]["evaluator_effort"] == "high"
+    assert rs.QUALITY_PROFILES["balanced"]["max_post_line_density_rounds"] == 2
+    assert rs.MAX_SPACE_SWAP_CANDIDATES == 2
+    assert rs.resume_evaluator.CODEX_EFFORT == "high"
+    assert all(value == "high" for value in rs.CODEX_TASK_EFFORT_DEFAULTS.values())
     assert rs.QUALITY_PROFILES["balanced"]["audit_repair"] is False
     assert rs.QUALITY_PROFILES["balanced"]["evaluator_timeout_seconds"] == 8 * 60
     assert rs.QUALITY_PROFILES["deep"]["audit_repair"] is True
@@ -1661,6 +1688,23 @@ def test_methodology_curator_caps_density_sorts_strength_and_removes_duplicates(
     assert len(curated["leadership"]) <= rs.PORTFOLIO_CAPS["leadership"]["entries"]
     assert all(len(entry["bullets"]) <= rs.PORTFOLIO_CAPS["experiences"]["bullets"] for entry in curated["experiences"])
     assert all(len(entry["bullets"]) <= rs.PORTFOLIO_CAPS["projects"]["bullets"] for entry in curated["projects"])
+
+
+def test_curator_removes_same_entry_repeated_metric_story():
+    plan = {
+        "experiences": [],
+        "projects": [{
+            "source_id": "project:metrics",
+            "bullets": [
+                {"source_id": "project:metrics:b1", "text": "Calibrated wearable sensors in under a minute across 10,000 samples", "priority": 80},
+                {"source_id": "project:metrics:b2", "text": "Improved wearable calibration to sub-minute performance over 10,000 samples", "priority": 40},
+            ],
+        }],
+        "leadership": [],
+    }
+    curated = rs.curate_candidate_portfolio(plan)
+    assert [item["source_id"] for item in curated["projects"][0]["bullets"]] == ["project:metrics:b1"]
+    assert any(action["kind"] == "near_duplicate" for action in curated["portfolio_budget"]["actions"])
 
 
 def test_packer_never_deletes_content_to_recover_from_compile_error(monkeypatch, tmp_path):
@@ -1939,6 +1983,38 @@ def test_job_intelligence_separates_fit_tracks_terms_and_hard_eligibility():
     cuda = next(item for item in intelligence["requirements"] if item["requirement"] == "CUDA")
     assert cuda["evidence_status"] == "unsupported"
     assert cuda["recommended_action"] == "leave_gap"
+    assert intelligence["primary_role_track"] == "systems_performance"
+    assert intelligence["role_focus"]["primary_label"] == "systems / performance / networking"
+
+
+def test_role_focus_prioritizes_networking_over_generic_software_boilerplate():
+    intelligence = rs.build_job_intelligence(
+        {"title": "Software Development Engineer"},
+        (
+            "Build and optimize network performance for distributed systems. "
+            "Work on low-latency services, throughput, Linux, and scalable "
+            "infrastructure. Collaborate with software development teams."
+        ),
+    )
+    assert intelligence["primary_role_track"] == "systems_performance"
+    assert "backend_infrastructure" in intelligence["role_tracks"]
+    assert intelligence["role_focus"]["confidence"] in {"moderate", "high", "ambiguous"}
+
+
+def test_role_focus_marks_adjacent_requirements_without_flattening_them():
+    intelligence = rs.build_job_intelligence(
+        {"title": "Software Engineer"},
+        "Build a web application with REST APIs and unit testing.",
+        target_keywords={"terms": [
+            {"term": "REST", "importance": "required", "supported": True, "source_ids": ["cv:b1"]},
+            {"term": "unit testing", "importance": "required", "supported": False, "source_ids": []},
+        ]},
+    )
+    rest = next(item for item in intelligence["requirements"] if item["requirement"] == "REST")
+    testing = next(item for item in intelligence["requirements"] if item["requirement"] == "unit testing")
+    assert rest["role_relevance"] in {"primary", "secondary", "general"}
+    assert testing["evidence_status"] == "unsupported"
+    assert testing["recommended_action"] == "leave_gap"
 
 
 def test_content_change_report_marks_base_term_gains_and_losses():
@@ -2509,10 +2585,10 @@ def test_codex_effort_profile_spends_depth_on_writing_and_speed_on_mechanics(mon
     assert rs.codex_effort_task("critique_evidence") == "review"
     assert rs.codex_effort_task("revision_critique_technical") == "review"
     assert rs.codex_effort_task("line_edit_2") == "line_edit"
-    assert rs.codex_reasoning_effort("draft") == "max"
-    assert rs.codex_reasoning_effort("space_expansion") == "max"
-    assert rs.codex_reasoning_effort("line_edit") == "max"
-    assert rs.codex_reasoning_effort("revision_critique_technical", override=rs.CODEX_RECHECK_EFFORT) == "max"
+    assert rs.codex_reasoning_effort("draft") == "high"
+    assert rs.codex_reasoning_effort("space_expansion") == "high"
+    assert rs.codex_reasoning_effort("line_edit") == "high"
+    assert rs.codex_reasoning_effort("revision_critique_technical", override=rs.CODEX_RECHECK_EFFORT) == "high"
     monkeypatch.setenv("RESUME_STUDIO_CODEX_EFFORT", "max")
     assert rs.codex_reasoning_effort("draft") == "max"
     monkeypatch.setenv("RESUME_STUDIO_LINE_EDIT_CODEX_EFFORT", "low")
