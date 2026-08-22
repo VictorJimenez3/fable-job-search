@@ -1533,6 +1533,39 @@ def _missing_protected_qualifiers(source: str, candidate: str) -> List[str]:
     return missing
 
 
+# These are high-risk claim anchors: a writer may rephrase connective prose,
+# but it must not move a technology, implementation surface, or concrete
+# mechanism from another source bullet without citing that source. This is a
+# deliberately narrow provenance lint, not a full semantic parser.
+CLAIM_BOUNDARY_TECH_TERMS = (
+    "c++", "c#", "python", "java", "javascript", "typescript", "react",
+    "next.js", "bert", "fastapi", "flask", "pytorch", "tensorflow", "sql",
+    "bash", "linux", "slurm", "gpu", "hpc", "jwt", "oauth", "rest", "api",
+    "database", "sqlite", "mongodb", "postgres", "alloydb", "pgvector", "rag",
+    "retrieval", "agent", "agents", "streaming", "asynchronous", "async",
+    "backend", "frontend", "network", "storage", "cache", "schema", "endpoint",
+    "dashboard", "simulation", "monte carlo", "row-level", "role-based",
+    "multi-user", "computer vision",
+)
+
+
+def _unsupported_introduced_claim_anchors(
+    source: str, candidate: str, authorized_sources: Iterable[str],
+) -> List[str]:
+    """Return high-risk terms in a rewrite absent from its cited sources."""
+    authorized_text = " ".join(
+        _latex_plain(str(value or "")) for value in authorized_sources
+    )
+    source_plain = _latex_plain(str(source or ""))
+    candidate_plain = _latex_plain(str(candidate or ""))
+    return [
+        term for term in CLAIM_BOUNDARY_TECH_TERMS
+        if _keyword_present(term, candidate_plain)
+        and not _keyword_present(term, source_plain)
+        and not _keyword_present(term, authorized_text)
+    ]
+
+
 def _entry_bullets(source: str, after: int) -> List[str]:
     start = source.find("\\resumeItemListStart", after)
     if start < 0:
@@ -1755,6 +1788,45 @@ def canonical_resume_benchmark(catalog: Dict[str, Any]) -> Dict[str, Any]:
         "projects": projects,
         "canonical_bullets": canonical_bullets,
     }
+
+
+def _project_tradeoff_source_errors(
+    plan: Dict[str, Any], catalog: Dict[str, Any],
+) -> List[str]:
+    """Require exact source accountability when a canonical project is dropped.
+
+    A project-level explanation is not enough to account for every mechanism
+    inside the omitted project. Requiring each canonical bullet ID keeps a
+    legitimate swap auditable and prevents one unmentioned high-information
+    line from disappearing behind a broadly reasonable portfolio rationale.
+    """
+    selected_project_ids = {
+        str(entry.get("source_id") or "")
+        for entry in (plan.get("projects") or [])
+        if isinstance(entry, dict)
+    }
+    ledger_source_ids = {
+        str(source_id)
+        for item in (plan.get("decision_ledger") or [])
+        if isinstance(item, dict)
+        for source_id in (item.get("source_ids") or [])
+        if str(source_id)
+    }
+    errors = []
+    for project in canonical_resume_benchmark(catalog).get("projects", []):
+        entry_id = str(project.get("source_id") or "")
+        if not entry_id or entry_id in selected_project_ids:
+            continue
+        missing = [
+            str(source_id) for source_id in (project.get("bullet_ids") or [])
+            if str(source_id) and str(source_id) not in ledger_source_ids
+        ]
+        if missing:
+            errors.append(
+                "project tradeoff for %s must name every omitted canonical bullet source_id; missing: %s"
+                % (entry_id, ", ".join(missing[:8]))
+            )
+    return errors
 
 
 def canonical_control_evidence(
@@ -3954,10 +4026,11 @@ def plan_schema(enhance: bool, generation: bool = False) -> Dict[str, Any]:
             "target_signal": {"type": "string"},
             "why_stronger": {"type": "string"},
             "signal_lost": {"type": "string"},
+            "source_ids": {"type": "array", "items": {"type": "string"}, "maxItems": 12},
         },
         "required": [
             "action", "current_evidence", "replacement_or_exclusion",
-            "target_signal", "why_stronger", "signal_lost",
+            "target_signal", "why_stronger", "signal_lost", "source_ids",
         ],
         "additionalProperties": False,
     }
@@ -4806,7 +4879,7 @@ def _keyword_affirmed(term: str, text: str) -> bool:
         + _keyword_pattern(term)
         + r"|"
         + _keyword_pattern(term)
-        + r".{0,70}\b(?:not authorized|not supported|without confirmation|without additional confirmation)\b",
+        + r"(?:(?!\b(?:and|but|while|although)\b)[^.!?;,]){0,70}\b(?:unsupported|not authorized|not supported|without confirmation|without additional confirmation|absent|missing)\b",
         window,
         re.I,
     )
@@ -5009,6 +5082,14 @@ def normalize_gap_analysis(
             str(raw.get("candidate_angle") or ""),
             str(raw.get("reason") or ""),
         ))
+        evidence_text = " ".join(
+            " ".join((
+                str(node_by_id[node_id].get("heading") or ""),
+                str(node_by_id[node_id].get("text") or ""),
+            ))
+            for node_id in (raw.get("evidence_ids") or [])
+            if str(node_id) in node_by_id
+        )
         for value in raw.get("exact_terms") or []:
             term = str(value or "").strip().lower()[:80]
             explicitly_denied = (
@@ -5017,7 +5098,13 @@ def normalize_gap_analysis(
             )
             if (
                 term in allowed_terms and _keyword_present(term, posting)
-                and not explicitly_denied and term not in exact_terms
+                and not explicitly_denied
+                and (
+                    _keyword_present(term, requirement)
+                    or _keyword_present(term, evidence_explanation)
+                    or _keyword_present(term, evidence_text)
+                )
+                and term not in exact_terms
             ):
                 exact_terms.append(term)
                 represented_terms.add(term)
@@ -5361,6 +5448,23 @@ Victor-specific guardrails:
     generation_text = json.dumps(
         context.get("generation_strategy") or {}, indent=2, ensure_ascii=False,
     )
+    generation_strategy = context.get("generation_strategy") or {}
+    supported_skills_checklist = [
+        {
+            "requirement": str(item.get("requirement") or "")[:240],
+            "exact_terms": list(item.get("exact_terms") or [])[:8],
+            "evidence_status": str(item.get("evidence_status") or ""),
+            "evidence_ids": list(item.get("evidence_ids") or [])[:8],
+            "recommended_action": str(item.get("recommended_action") or ""),
+        }
+        for item in (generation_strategy.get("requirements") or [])
+        if isinstance(item, dict)
+        and item.get("evidence_status") in {"direct", "adjacent"}
+        and item.get("recommended_action") == "tailor_skills"
+    ][:8]
+    skills_checklist_text = json.dumps(
+        supported_skills_checklist, indent=2, ensure_ascii=False,
+    )
     control_text = canonical_control_prompt(catalog, context.get("target_keywords"))
     variant_text = str(variant_instruction or "").strip()
     if variant_text:
@@ -5403,6 +5507,11 @@ Victor-specific guardrails:
         + json.dumps(HUMAN_PORTFOLIO_CAPS, indent=2, ensure_ascii=False)
         + (("\n\nBinding requirement-to-evidence strategy (act on its supported opportunities):\n"
             + generation_text[:18000]) if generation else "")
+        + (("\n\nShort supported-skills checklist (binding in generation mode):\n"
+            "For each listed requirement, either surface the exact supported terms in a meaningful cited body line "
+            "or use one existing Skills rewrite with the listed evidence_ids. Do not omit a direct supported item "
+            "merely because the page is full; do not add it if the cited evidence cannot authorize the wording.\n"
+            + skills_checklist_text) if generation and supported_skills_checklist else "")
     )
 
 
@@ -5991,6 +6100,13 @@ def validate_plan(
         str(node.get("id")) for node in (graph or {}).get("nodes", [])
         if node.get("claim_allowed")
     }
+    evidence_text_by_id = {
+        str(node.get("id") or ""): " ".join((
+            str(node.get("heading") or ""), str(node.get("text") or "")
+        ))
+        for node in (graph or {}).get("nodes", [])
+        if str(node.get("id") or "")
+    }
     errors: List[str] = []
     normalized = dict(plan)
     validation_warnings: List[str] = []
@@ -6009,6 +6125,9 @@ def validate_plan(
                 "target_signal", "why_stronger", "signal_lost",
             )
         })
+        normalized["decision_ledger"][-1]["source_ids"] = list(dict.fromkeys(
+            str(value) for value in (item.get("source_ids") or []) if str(value)
+        ))[:12]
     raw_front_matter = plan.get("front_matter_policy")
     if not isinstance(raw_front_matter, dict):
         raw_front_matter = {}
@@ -6134,6 +6253,8 @@ def validate_plan(
             rebucketed[target_section].append(selection)
     for section, selections in rebucketed.items():
         normalized[section] = selections
+    if enhance:
+        errors.extend(_project_tradeoff_source_errors(normalized, catalog))
     used_entries = set()
     used_bullets = set()
     for kind, minimum, maximum in (
@@ -6293,6 +6414,24 @@ def validate_plan(
                             )
                     if bullet_id not in supporting_ids:
                         supporting_ids.insert(0, bullet_id)
+                authorized_sources = [bullet_bank[bullet_id]]
+                for supporting_id in supporting_ids:
+                    if supporting_id in all_bullet_bank:
+                        authorized_sources.append(all_bullet_bank[supporting_id])
+                    elif supporting_id in evidence_text_by_id and supporting_id in claim_authorities:
+                        authorized_sources.append(evidence_text_by_id[supporting_id])
+                for cited_id in cited:
+                    if cited_id in evidence_text_by_id and cited_id in claim_authorities:
+                        authorized_sources.append(evidence_text_by_id[cited_id])
+                unsupported_anchors = _unsupported_introduced_claim_anchors(
+                    bullet_bank[bullet_id], text, authorized_sources,
+                )
+                if unsupported_anchors:
+                    validation_warnings.append(
+                        "reverted enhanced bullet %s after it introduced uncited claim anchor(s): %s"
+                        % (bullet_id, ", ".join(unsupported_anchors[:8]))
+                    )
+                    text = bullet_bank[bullet_id]
                 selected_bullets.append({
                     "source_id": bullet_id,
                     "source_ids": supporting_ids,
@@ -6918,13 +7057,13 @@ def deterministic_control_recovery(
     The author can make a valid but strategically poor choice: keep several
     generated project bullets while dropping a canonical HPC, validation, or
     mechanism line. This bounded pass does not invent or rewrite anything. It
-    makes at most one source-verbatim canonical replacement per selected entry
-    and, when enabled, removes at most one non-canonical bullet when a selected
-    project is clearly repeating an experience signal family. The sealed panel
-    still decides whether the resulting candidate actually improved the job
-    match. Audit repairs use the canonical-replacement portion only: a repair
-    should not receive a second deterministic portfolio edit before its fresh
-    sealed recheck.
+    restores omitted canonical lines whenever a selected non-canonical line is
+    available to displace, and, when enabled, removes at most one additional
+    non-canonical bullet when a selected project is clearly repeating an
+    experience signal family. The sealed panel still decides whether the
+    resulting candidate actually improved the job match. Audit repairs use the
+    canonical-replacement portion only: a repair should not receive a second
+    deterministic portfolio edit before its fresh sealed recheck.
     """
     recovered = copy.deepcopy(plan)
     entries = catalog.get("entries") or {}
@@ -7008,47 +7147,59 @@ def deterministic_control_recovery(
                 omitted = [item for item in omitted if item not in explained]
                 if not omitted:
                     continue
-            target = None
-            target_index = -1
-            for index, bullet in enumerate(selection.get("bullets", []) or []):
-                if not _is_canonical_source(source_bullets.get(str(bullet.get("source_id") or ""), {}).get("source")):
-                    target = bullet
-                    target_index = index
-                    break
-            if target is None:
-                ranked_targets = sorted(
-                    enumerate(selection.get("bullets", []) or []),
-                    key=lambda item: (
-                        control_scores.get(str(item[1].get("source_id") or ""), 0),
-                        _bullet_value(item[1]),
-                    ),
+            remaining_omitted = list(omitted)
+            while remaining_omitted:
+                source_id = str(remaining_omitted[0].get("id") or "")
+                omitted_families = set(
+                    _portfolio_signal_families(remaining_omitted[0].get("text") or "")
                 )
-                if ranked_targets:
-                    candidate_score = control_scores.get(str(omitted[0].get("id") or ""), 0)
-                    index, possible = ranked_targets[0]
-                    possible_score = control_scores.get(str(possible.get("source_id") or ""), 0)
-                    if candidate_score > possible_score:
-                        target, target_index = possible, index
-            if target is None or target_index < 0:
-                continue
-            source_id = str(omitted[0].get("id") or "")
-            replacement = make_bullet(
-                source_id,
-                "Recovered canonical proof before independent judging; replaced lower-information selected evidence.",
-            )
-            if not replacement:
-                continue
-            old_id = str(target.get("source_id") or "")
-            selection["bullets"][target_index] = replacement
-            restored_ids.add(source_id)
-            actions.append({
-                "kind": "canonical_replacement",
-                "section": section,
-                "entry_id": entry_id,
-                "restored_source_id": source_id,
-                "replaced_source_id": old_id,
-                "reason": "canonical proof priority exceeded the selected replacement",
-            })
+                noncanonical_targets = [
+                    (index, bullet)
+                    for index, bullet in enumerate(selection.get("bullets", []) or [])
+                    if not _is_canonical_source(
+                        source_bullets.get(str(bullet.get("source_id") or ""), {}).get("source")
+                    )
+                ]
+                if not noncanonical_targets:
+                    break
+                # Restore every omitted canonical line that has a selected
+                # noncanonical line to displace. A new source line may add
+                # value, but it cannot silently spend the same entry's
+                # canonical mechanism/metric budget. If one new line is
+                # genuinely worth keeping, the author can preserve it by
+                # explicitly naming the canonical source it replaces.
+                ranked_targets = []
+                for index, bullet in noncanonical_targets:
+                    target_families = set(
+                        _portfolio_signal_families(bullet.get("text") or "")
+                    )
+                    shared = len(target_families & omitted_families)
+                    ranked_targets.append((
+                        shared,
+                        -_control_bullet_value(bullet, catalog),
+                        -index,
+                        index,
+                        bullet,
+                    ))
+                _shared, _value, _order, target_index, target = max(ranked_targets)
+                replacement = make_bullet(
+                    source_id,
+                    "Recovered canonical proof before independent judging; replaced lower-information selected evidence.",
+                )
+                if not replacement:
+                    break
+                old_id = str(target.get("source_id") or "")
+                selection["bullets"][target_index] = replacement
+                restored_ids.add(source_id)
+                actions.append({
+                    "kind": "canonical_replacement",
+                    "section": section,
+                    "entry_id": entry_id,
+                    "restored_source_id": source_id,
+                    "replaced_source_id": old_id,
+                    "reason": "canonical proof priority exceeded the selected replacement",
+                })
+                remaining_omitted.pop(0)
 
     # Then make one narrow overlap repair. This specifically targets a
     # non-canonical project bullet whose signal family is already established
@@ -7395,6 +7546,11 @@ def deterministic_role_evidence_floor(
             "secondary_terms": candidate.get("secondary_terms") or [],
             "required_hits": candidate.get("required_hits") or [],
             "candidate_score": candidate.get("score"),
+            "tradeoff_source_ids": [
+                str(bullet.get("id") or "")
+                for bullet in (entries.get(remove_id) or {}).get("bullets") or []
+                if _is_canonical_source(bullet.get("source")) and str(bullet.get("id") or "")
+            ],
             "reason": "An omitted source-authorized project cleared the bounded role-surface margin over the weakest selected project.",
         })
 
@@ -7410,6 +7566,15 @@ def deterministic_role_evidence_floor(
             "reason": "candidate roster could not be changed safely",
         }
 
+    trial.setdefault("decision_ledger", []).extend({
+        "action": "role-evidence floor replacement",
+        "current_evidence": action.get("replaced_project_id") or "",
+        "replacement_or_exclusion": action.get("restored_project_id") or "",
+        "target_signal": ", ".join(action.get("primary_terms") or action.get("required_hits") or []),
+        "why_stronger": action.get("reason") or "",
+        "signal_lost": "Adjacent project evidence was displaced only after the role-surface margin was measured.",
+        "source_ids": list(action.get("tradeoff_source_ids") or []),
+    } for action in actions)
     normalized, errors = validate_plan(
         trial, catalog, enhance=True, graph=graph,
     )
@@ -7453,16 +7618,8 @@ def deterministic_role_evidence_floor(
             "candidates": omitted[:6],
             "actions": actions,
             "reason": "page packer did not retain every role-floor project",
-        }
+    }
     trial = enforce_experience_order(packed, catalog)
-    trial.setdefault("decision_ledger", []).extend({
-        "action": "role-evidence floor replacement",
-        "current_evidence": action.get("replaced_project_id") or "",
-        "replacement_or_exclusion": action.get("restored_project_id") or "",
-        "target_signal": ", ".join(action.get("primary_terms") or action.get("required_hits") or []),
-        "why_stronger": action.get("reason") or "",
-        "signal_lost": "Adjacent project evidence was displaced only after the role-surface margin was measured.",
-    } for action in actions)
     receipt = {
         "attempted": True,
         "status": "applied",
@@ -8267,7 +8424,7 @@ def _ledger_text(item: Dict[str, Any]) -> str:
         str(item.get(field) or "")
         for field in (
             "action", "current_evidence", "replacement_or_exclusion",
-            "target_signal", "why_stronger", "signal_lost",
+            "target_signal", "why_stronger", "signal_lost", "source_ids",
         )
     ).strip()
 
@@ -8288,26 +8445,24 @@ def _ledger_explains_removed_evidence(
     A canonical resume is a benchmark, not a preservation contract.  The old
     audit treated every omitted line as a loss, which punished explicit,
     evidence-backed project swaps.  This matcher is intentionally conservative:
-    it requires either an exact source/entry ID or several distinctive label
-    tokens in the decision ledger.
+    a bullet-level omission must name the exact source ID (or quote enough of
+    the omitted line to identify it). Merely naming the project or saying that
+    projects were reordered is not enough, because that can hide a lost
+    mechanism inside an otherwise valid project-level tradeoff.
     """
     source_id = str(removed.get("source_id") or "")
-    entry_id = str(removed.get("entry_id") or "")
-    entry = entries.get(entry_id) or {}
-    label = " ".join(
-        str(entry.get(field) or "")
-        for field in ("heading", "company", "role")
-    )
-    label_tokens = _meaningful_label_tokens(label)
     for item in ledger:
         text = _ledger_text(item).lower()
         if source_id and source_id.lower() in text:
             return item
-        if entry_id and entry_id.lower() in text:
-            return item
-        if label_tokens:
-            matches = sum(token in text for token in label_tokens)
-            if matches >= min(3, len(label_tokens)):
+        removed_tokens = _meaningful_label_tokens(removed.get("text") or "")
+        if removed_tokens:
+            matches = sum(token in text for token in removed_tokens)
+            # Require a recognizable portion of the actual omitted line, not
+            # just its parent heading. Short lines need three tokens; longer
+            # lines need roughly half of their distinctive tokens.
+            threshold = max(3, int((len(removed_tokens) + 1) * 0.5))
+            if matches >= min(threshold, len(removed_tokens)):
                 return item
     return None
 
@@ -8795,10 +8950,20 @@ def portfolio_search_candidate_summary(
         audit.get("review", {}).get("available")
         if isinstance(audit.get("review"), dict) else False
     ) and bool(panel.get("all_required_roles"))
+    # The comparative audit and the critic-jury readiness gates answer
+    # different questions.  A jury can prefer the tailored draft while still
+    # marking a non-averagable quality gate (for example distinctiveness) as a
+    # hard failure.  Portfolio search must never promote that candidate just
+    # because its aggregate audit says ``prefer_tailored``.
+    critic_hard_fail = bool(
+        isinstance(report.get("review"), dict)
+        and report["review"].get("hard_fail") is True
+    )
     eligible = bool(
         winner == "tailored"
         and recommendation == "tailored"
         and complete_panel
+        and not critic_hard_fail
         and str(audit.get("decision") or "") == "prefer_tailored"
     )
     return {
@@ -8814,6 +8979,7 @@ def portfolio_search_candidate_summary(
         "tailoring": str(audit.get("tailoring") or "unknown"),
         "decision": str(audit.get("decision") or ""),
         "complete_panel": complete_panel,
+        "critic_hard_fail": critic_hard_fail,
         "eligible_positive_win": eligible,
         "preference_key": list(tailoring_audit_preference_key(audit)),
         "finding_counts": dict(audit.get("finding_counts") or {}),

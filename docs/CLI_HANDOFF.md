@@ -178,6 +178,70 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
 
 ### Current change (verified 2026-08-22)
 
+- **Source-level provenance guard:** enhanced rewrites now revert a narrow set
+  of high-risk technical/implementation anchors when the primary bullet and
+  its cited `source_ids`/`evidence_ids` do not authorize them. This catches the
+  Anduril SynapSense failure where C++/asynchronous/backend wording was merged
+  into a dashboard bullet with only the dashboard citation. A fresh replay at
+  `CV/.resume_studio/benchmarks/provenance-fix-anduril-20260822/runs/pending-1787393270`
+  completed in 551.4 seconds with High Luna calls and all four critic roles;
+  it produced no added unsupported bullet and correctly selected the base.
+
+- **Canonical-loss explanation tightened:** control recovery restores every
+  omitted canonical line that has a noncanonical selected line to displace,
+  unless the ledger names the exact source tradeoff. A generic project reorder
+  no longer explains a lost bullet; the audit needs the exact source ID or
+  enough of the omitted line to identify it. This keeps the evaluator from
+  hiding a lost mechanism behind a valid project-level narrative. Focused
+  Resume Studio coverage is now 154 tests.
+
+- **Supported-skills generation checklist:** generation prompts now include a
+  compact checklist of direct/adjacent `tailor_skills` requirements with exact
+  terms and authorized evidence IDs. The writer may surface a term in cited
+  body evidence or one existing Skills rewrite, but the checklist never
+  authorizes unsupported additions. The fresh-open Nucleus replay at
+  `CV/.resume_studio/benchmarks/skills-checklist-nucleus-20260822/runs/pending-1787394155`
+  completed in 609.5 seconds with Luna High and all four critic roles. It added
+  supported REST/access-control evidence and no unsupported claims, but still
+  omitted authorized documentation/PostgreSQL/Linux/AWS signals and dropped
+  the distinctive Quantum project; the audit correctly kept the base/blocked.
+
+- **Planner denial normalization:** postfix negative language such as “Linux
+  administration and AWS are unsupported” is now recognized before gap terms
+  are promoted into supported ATS/generation evidence. The corrected Nucleus
+  replay at
+  `CV/.resume_studio/benchmarks/denial-fix-nucleus-20260822/runs/pending-1787395673`
+  completed in 570.8 seconds with Luna High and all four critic roles. Its
+  checklist contained documentation and Docker only; the audit moved from
+  `tailoring: regressed` to `tailoring: improved`, with no unsupported rendered
+  claim, but correctly stayed `do_not_ship`/blocked for eligibility and a
+  remaining portfolio regression.
+
+- **Canonical project tradeoff preflight:** enhanced plans that drop a
+  canonical project must name every omitted canonical bullet `source_id` in
+  the decision ledger. A parent project explanation cannot hide a missing
+  mechanism. The Stryker replay would now fail closed on the omitted Quantum
+  historical-market pipeline bullet (`...:b3`) before judging; valid swaps
+  remain allowed when their source-level tradeoff is complete. Focused Resume
+  Studio coverage is now 156 tests.
+
+- **Requirement-term association guard:** gap-analysis terms now survive
+  normalization only when they appear in the requirement, its rationale, or
+  cited authorized evidence. This blocks the Stryker failure where generic
+  `software engineering` was attached to networking and AngularJS requirements;
+  deterministic inventory terms remain available independently. Focused
+  Resume Studio coverage is now 158 tests.
+
+- **Portfolio-search hard-gate promotion:** a three-variant Stryker search
+  exposed that a candidate could receive `prefer_tailored` from the comparative
+  audit while the sealed panel still reported a hard failure. Portfolio search
+  now requires a complete four-role panel with `review.hard_fail == false` in
+  addition to the positive comparative decision. Each child receipt records
+  `critic_hard_fail`, so relative uplift and promotion safety remain separate.
+  The post-fix Stryker replay completed three candidates in 388.5 seconds wall
+  time with complete Luna High panels and selected the canonical base because
+  none produced a material positive win.
+
 - **Final-artifact portfolio guard:** late revision, density, and audit-repair
   passes can return a new source-addressed plan after the initial packer and
   sealed panel. The exact final plan now passes one deterministic duplicate and

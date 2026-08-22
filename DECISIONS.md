@@ -2663,3 +2663,132 @@ with the unresolved experience and clearance blockers, so the audit selected
 the immutable base (`do_not_ship`/`blocked`). This confirms that Unchained is a
 creative authoring lane, not an approval shortcut; generated breadth must
 still survive exact source scrutiny.
+
+## 169. Enforce source-level provenance for rewritten technical claims (2026-08-22)
+
+The Anduril replay exposed two related quality-control gaps. First, an author
+could replace several canonical bullets inside one selected project with
+noncanonical lines, leaving a distinct mechanism unprotected while the audit
+accepted a vague project-level “reorder” explanation. Source recovery now
+restores every omitted canonical line for which a selected noncanonical line is
+available to displace, unless the ledger names the exact source tradeoff. When
+the replacement and omitted line share a signal family, the redundant addition
+is displaced first. The audit likewise requires the exact omitted source ID or
+enough of the omitted line to identify it; naming only the parent project is
+not an explanation for losing a bullet.
+The structured decision ledger now also accepts explicit `source_ids`, so a
+provider can record the exact tradeoff without burying an identifier in prose.
+
+Second, the author rewrote a SynapSense dashboard line with C++/asynchronous/
+backend claims while citing only the dashboard source bullet. Enhanced-plan
+validation now lints a narrow set of high-risk technology and implementation
+anchors. An introduced anchor must appear in the primary bullet or in a cited
+supporting/claim-authorized source; otherwise the line reverts to its
+authoritative wording before the sealed panel. This is provenance lint, not a
+semantic truth oracle; public corroborating nodes remain non-authorizing, and
+the independent four-role panel remains mandatory.
+
+The post-fix Anduril replay completed in 551.4 seconds with `gpt-5.6-luna`
+High at every quality-critical stage and all four critic roles complete. It
+selected the canonical project portfolio, produced no added unsupported
+bullet, and correctly stayed `base`/`blocked` because of the experience
+eligibility blocker and six supported-but-unsurfaced terms. Focused Resume
+Studio tests cover both the canonical recovery and uncited-anchor reversion.
+
+## 170. Give generation a compact supported-skills checklist, but keep recall fail-closed (2026-08-22)
+
+Gap analysis can identify supported fundamentals that a writer still omits,
+so ordinary generation now receives a compact checklist containing only
+direct/adjacent requirements marked `tailor_skills`, their exact terms, and
+authorized evidence IDs. The instruction is binding but conservative: surface
+the term in a meaningful cited body line or one existing Skills rewrite, and
+never add a term whose evidence cannot authorize it. This is a writer recall
+aid, not a reason to relax the evaluator or force every posting term into the
+resume.
+
+The fresh-open Nucleus Biologics replay was a useful negative result. It
+completed in 609.5 seconds with `gpt-5.6-luna` High at every quality-critical
+stage and all four critic roles. The draft added defensible REST/access-control
+evidence and introduced no unsupported claim, but still omitted authorized
+documentation, PostgreSQL, Linux, AWS, and communication signals while
+dropping the distinctive Quantum Stock Simulator portfolio. The sealed audit
+therefore kept the base and marked the application blocked for the unresolved
+experience requirement. The checklist is retained as a measured hypothesis;
+future work should improve evidence selection/packing rather than turn it into
+a keyword quota.
+
+## 171. Reject planner-denied technologies before supported-term promotion (2026-08-22)
+
+The first checklist replay exposed a normalization edge case: a gap-analysis
+reason such as “Docker is supported; Linux/AWS are unsupported” could still
+promote the later-mentioned terms because denial matching only recognized
+“do not claim AWS”-style wording. The denial detector now recognizes postfix
+forms such as “AWS is unsupported” while respecting sentence boundaries, so a
+negative mention cannot become a supported generation opportunity.
+
+The corrected Nucleus replay at
+`CV/.resume_studio/benchmarks/denial-fix-nucleus-20260822/runs/pending-1787395673`
+completed in 570.8 seconds with `gpt-5.6-luna` High and all four critic roles.
+Its normalized checklist contained documentation and Docker only; Linux and
+AWS were excluded. The comparative audit moved from `tailoring: regressed` to
+`tailoring: improved`, with no unsupported rendered claim, but remained
+`do_not_ship`/blocked because the eligibility gate and a remaining portfolio
+regression still dominated. This is evidence-grounding progress, not proof
+that the Nucleus application is ready.
+
+## 172. Require bullet-level ledgers for dropped canonical projects (2026-08-22)
+
+The Stryker replay exposed a remaining accountability hole: the writer
+correctly explained replacing Quantum Stock Simulator with a healthcare/security
+project, but named only two of the three removed Quantum bullets. The omitted
+historical-market data pipeline therefore disappeared behind a valid
+project-level rationale. Enhanced-plan validation now rejects a dropped
+canonical project unless its decision ledger names every omitted canonical
+bullet `source_id`; a project heading or parent entry ID is not enough.
+
+This is a preflight safety gate, not a preservation mandate. A well-supported
+project swap can still pass when every displaced source line is explicitly
+accounted for, and the sealed panel still judges the resulting artifact. The
+old Stryker plan is now rejected by the deterministic preflight with the exact
+missing `...:b3` source ID. Focused Resume Studio coverage is 156 tests.
+
+## 173. Reject semantically misplaced gap-analysis terms (2026-08-22)
+
+The Stryker gap map also attached the generic `software engineering` term to
+networking-protocol and AngularJS requirements. Normalization now retains a
+provider term only when it appears in the requirement, the provider's
+explanation, or the cited authorized evidence. The deterministic ATS inventory
+still restores independently supported terms, so this removes a bad
+requirement-to-term association without hiding legitimate coverage.
+
+Focused Resume Studio coverage is now 158 tests. The old Stryker artifact was
+already correctly blocked by the sealed panel; this change prevents its
+misplaced checklist associations from reaching a future generation prompt.
+
+## 174. Portfolio search must honor critic hard gates (2026-08-22)
+
+The first three-variant Stryker portfolio search found a subtle promotion
+bug. The product-integration candidate received a comparative
+`prefer_tailored` audit, but its sealed critic panel also marked
+`distinctiveness` as a hard failure. The search wrapper considered the audit
+decision and panel completeness but ignored the separate `review.hard_fail`
+field, so it could have published a relative winner that had not cleared a
+non-averagable quality gate.
+
+Portfolio-search eligibility now requires all of the following: the tailored
+candidate wins the comparative audit, all four critic roles complete, and the
+sealed review reports no hard failure. The wrapper records
+`critic_hard_fail` in each candidate summary, and focused coverage includes a
+positive candidate that is rejected when that flag is true. This preserves
+the useful distinction between “better than the base” and “safe enough to
+promote”; partial fit/readability concerns can remain `review`, but a failed
+factuality, privacy, geometry, eligibility, distinctiveness, or other sealed
+quality gate cannot be averaged away.
+
+The post-fix Stryker rerun at
+`CV/.resume_studio/benchmarks/portfolio-search-stryker-postfix-20260822/manifest.json`
+completed three concurrent candidates in 388.5 seconds wall time. All three
+had complete four-role Luna High panels, but none earned a material positive
+comparative win; the canonical base remained primary. This is the desired
+fail-closed result for this posting, not a claim that portfolio search always
+improves a resume. Focused Resume Studio coverage remains 158 tests.

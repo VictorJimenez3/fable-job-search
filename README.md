@@ -805,6 +805,65 @@ If the guard removes or reorders evidence, the exact resulting PDF is compiled
 and judged again by a complete four-role Luna High panel; an old panel is never
 reused for a changed artifact. The receipt is `final_portfolio_guard.json`.
 
+Rewritten technical claims also pass a narrow provenance lint before judging:
+terms such as C++, Python, React, APIs, streaming, asynchronous processing, or
+backend machinery must appear in the primary source line or a cited supporting
+source. Otherwise the exact authoritative source wording is restored. This
+prevents a writer from merging a mechanism from one bullet into another while
+keeping only the first bullet's citation. A fresh Anduril replay completed all
+four High critic roles in 551.4 seconds, surfaced no added unsupported bullet,
+and correctly kept the canonical base because eligibility and evidence gaps
+still dominated.
+
+Generation also receives a compact supported-skills checklist built from the
+job-intelligence evidence map. It includes only direct/adjacent requirements
+that are authorized for a `tailor_skills` action, with the exact terms and
+evidence IDs needed to support them. The checklist asks the writer to surface
+those terms in meaningful cited body evidence or one existing Skills rewrite;
+it is not a keyword quota and does not override the sealed audit. The Nucleus
+Biologics replay is documented as a negative experiment: it gained supported
+REST/access-control evidence without unsupported claims, but still lost a
+distinctive project and omitted several authorized signals, so the immutable
+base remained the recommendation.
+
+The normalization boundary also rejects planner-denied terms in postfix form
+(for example, “AWS is unsupported”) before they are promoted into supported
+ATS or generation opportunities. This prevents a gap-analysis explanation from
+accidentally turning a negative mention into a checklist item. The corrected
+Nucleus replay moved the comparative tailoring state from `regressed` to
+`improved`, but remained blocked for eligibility and a remaining portfolio
+regression.
+
+Enhanced project swaps also pass a source-level preflight: if a canonical
+project is dropped, the decision ledger must name every omitted canonical
+bullet ID. This preserves creative, evidence-backed swaps while preventing a
+single high-information mechanism from disappearing behind a project-level
+explanation. The Stryker replay demonstrated the gate: its healthcare/security
+swap omitted Quantum's historical-market pipeline ID, so the candidate would
+now fail closed before reaching the sealed comparison.
+
+Gap-analysis terms are also semantically checked before promotion: a provider
+cannot attach a generic supported term to an unrelated requirement unless the
+term appears in that requirement, its rationale, or the cited authorized
+evidence. Deterministic inventory terms are still retained separately. This
+keeps the requirement-to-evidence map useful for reasoning instead of letting
+an ATS vocabulary item masquerade as role understanding.
+
+Portfolio search applies one additional fail-closed rule: a candidate cannot
+be promoted merely because its comparative audit says `prefer_tailored`. The
+sealed review must also report no hard failure and all four critic roles must
+complete. This matters because a candidate can be relatively better than its
+base while still failing a non-averagable quality gate such as
+distinctiveness. The search receipt records that gate explicitly as
+`critic_hard_fail`; a partial `review` remains visible for human inspection
+instead of being converted into a false ready state.
+
+The post-fix Stryker replay completed three concurrent candidates in 388.5
+seconds wall time with complete four-role Luna High panels. All three were
+rejected as material improvements and the canonical base stayed primary.
+That is a useful negative result: the search explored alternatives, but did
+not turn a relative or cosmetic change into an application-ready winner.
+
 The duplicate detector also recognizes a small set of repeated mechanisms such
 as resampling/stratified validation and calibration, including across an
 experience and project when two distinctive terms and a shared metric support
