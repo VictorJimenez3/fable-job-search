@@ -73,7 +73,10 @@ from radar.evidence_review import (BLOCKING_STATUSES, REVIEW_STATUSES,
 from scripts import resume_evaluator
 
 
-RUBRIC_VERSION = "resume-gates-v1"
+# The deterministic gates and the sealed Luna evaluator have separate frozen
+# contracts.  Naming the former explicitly prevents a reviewer from reading
+# the two version strings as if they were one rubric.
+RUBRIC_VERSION = "resume-deterministic-gates-v1"
 OBJECTIVE_RESUME_RUBRIC_VERSION = "objective-resume-v1"
 JOB_INTELLIGENCE_VERSION = "job-intelligence-v1"
 TAILORING_AUDIT_VERSION = "tailoring-audit-v2"
@@ -89,6 +92,7 @@ QUALITY_PROFILES = {
     "deep": {
         "author_effort": "max",
         "line_editor_effort": "max",
+        "evaluator_effort": "max",
         "revision_rounds": 2,
         "model_space_expansion": True,
         "model_line_editor": True,
@@ -106,6 +110,9 @@ QUALITY_PROFILES = {
         # Max and can reject an overconfident author.
         "author_effort": "high",
         "line_editor_effort": "high",
+        # The evaluator is the quality gate, so changing authoring effort does
+        # not silently weaken the independent comparison panel.
+        "evaluator_effort": "max",
         # The normal lane is a bounded final-candidate experiment: let the
         # sealed panel judge the compiled candidate once, then select base or
         # tailored. Critic-driven rewriting remains available in ``deep``;
@@ -122,6 +129,75 @@ QUALITY_PROFILES = {
         # the old multi-round cascade out of the default path.
         "evaluator_timeout_seconds": 8 * 60,
     },
+    # ``search`` is the quality-first experimental lane. It wraps several
+    # complete ``search_single`` candidates; each candidate is still judged
+    # by the unchanged sealed jury before it can replace the base control.
+    "search": {
+        "author_effort": "max",
+        "line_editor_effort": "high",
+        "evaluator_effort": "max",
+        "revision_rounds": 0,
+        "model_space_expansion": False,
+        "model_line_editor": False,
+        "line_editor_fallback": True,
+        # A rejected candidate gets one critique-directed repair, then a
+        # fresh sealed panel. This is the quality-first distinction from the
+        # old single-shot tailor: critique may inform a new draft, but cannot
+        # approve the draft it just caused.
+        "audit_repair": True,
+        "evaluator_timeout_seconds": 8 * 60,
+        "candidate_variants": 3,
+        "child_profile": "search_single",
+    },
+    # Internal child profile for the portfolio-search wrapper. Keeping it
+    # separate from balanced lets the search policy evolve independently from
+    # ordinary single-candidate runs.
+    "search_single": {
+        "author_effort": "max",
+        "line_editor_effort": "high",
+        "evaluator_effort": "max",
+        "revision_rounds": 0,
+        "model_space_expansion": False,
+        "model_line_editor": False,
+        "line_editor_fallback": True,
+        "audit_repair": True,
+        "evaluator_timeout_seconds": 8 * 60,
+        "candidate_variants": 0,
+        "child_profile": "",
+    },
+    # This is the production policy for the UI's Unchained generation mode.
+    # It gets one high-effort source-grounded author, deterministic packing and
+    # control recovery, then a bounded source-grounded opportunity counterfactual
+    # before the sealed jury.  The lab's repair loop did not produce a positive
+    # Stryker comparison and added roughly twelve minutes, so Unchained does not
+    # pay for that blind rewrite/recheck cascade.  It intentionally does not pay
+    # for three independent portfolio candidates; that remains a lab/search
+    # policy until its quality win rate justifies the latency.
+    "unchained": {
+        # High is intentional here: the Max generation call timed out after
+        # 720s on a full requirement map, while the quality-critical repair
+        # and sealed jury still run with their stronger bounded lanes.
+        "author_effort": "high",
+        # Requirement mapping is planning, not final prose. High keeps it
+        # useful without spending the Max budget on duplicated strategy text.
+        "gap_analysis_effort": "high",
+        "line_editor_effort": "high",
+        "evaluator_effort": "max",
+        "revision_rounds": 0,
+        "model_space_expansion": False,
+        # A clean page is not an instruction to fill every remaining line.
+        # Unchained should preserve a coherent skim and let the sealed panel
+        # judge a deliberately short candidate rather than creating density
+        # churn from deterministic unused-bullet guesses.
+        "deterministic_space_expansion": False,
+        "model_line_editor": False,
+        "line_editor_fallback": True,
+        "audit_repair": False,
+        "target_opportunity_replacement": True,
+        "evaluator_timeout_seconds": 8 * 60,
+        "candidate_variants": 0,
+        "child_profile": "",
+    },
 }
 CANONICAL_CONTROL_PROMPT_LIMIT = 12
 CANONICAL_CONTROL_PROMPT_CHARS = 7000
@@ -129,6 +205,46 @@ REVIEW_CRITERIA = (
     "factual", "target_fit", "evidence", "distinctiveness", "clarity", "privacy",
 )
 STATUS_MULTIPLIER = {"pass": 1.0, "partial": 0.5, "fail": 0.0}
+
+# These are deliberately different editorial hypotheses, not three copies of
+# "add more keywords." Every hypothesis still uses the same source-addressed
+# schema and must beat the canonical base through the same sealed evaluator
+# contract before it can become the primary artifact.
+PORTFOLIO_SEARCH_VARIANTS = (
+    {
+        "id": "control_preserver",
+        "label": "Control-preserving marginal-value pass",
+        "instruction": (
+            "Start from the canonical resume as a strong control. Make only changes with a clear, material "
+            "target-specific gain. Preserve quantified proof, external validation, technical mechanisms, "
+            "communication/ownership evidence, and scope qualifiers unless an actually stronger replacement "
+            "is present. A near-base candidate is a successful outcome; do not create novelty for its own sake. "
+            "Prefer at most a few high-confidence changes over broad portfolio churn."
+        ),
+    },
+    {
+        "id": "product_integration",
+        "label": "Product and integration portfolio pass",
+        "instruction": (
+            "Build the strongest product-facing software argument the posting actually supports: surface user-facing "
+            "interfaces, APIs, data flow, reliability, security, integration, documentation, and stakeholder-facing "
+            "evidence when authorized. Keep the resume's most distinctive proof and interview threads; never trade a "
+            "strong mechanism or validation result for a generic domain keyword. Treat repeated AI/RAG/backend lines "
+            "as competing for one information budget, not as independent reasons to add more."
+        ),
+    },
+    {
+        "id": "systems_ml",
+        "label": "Systems and technical-conviction portfolio pass",
+        "instruction": (
+            "Build a technically deep but complementary systems/ML argument: show concrete APIs, data systems, "
+            "security, performance, validation, algorithms, or compute mechanisms that the target values. Avoid "
+            "duplicating the same agent/RAG/cloud story across sections. Preserve communication, leadership, "
+            "external-validation, and unusual technical evidence when they add distinct conviction. Unsupported "
+            "testing, process, framework, or technology requirements remain explicit gaps."
+        ),
+    },
+)
 
 
 def normalize_quality_profile(value: Any) -> str:
@@ -204,6 +320,7 @@ CRITIC_FIT_GAP_RE = re.compile(
 CRITIC_REGRESSION_RE = re.compile(
     r"\b(?:duplicat(?:e|ed|es|ion)|redundan(?:t|cy)|repetition|repeat\w*|overlap(?:s|ping)?|"
     r"lost|drop\w*|remov(?:e|ed|es|al)|omitt(?:ed|ing|s)|silently|unexplained|"
+    r"no\s+longer|weaken\w*|sacrific\w*|"
     r"without[^.]{0,80}tradeoff|without\s+explanation|"
     r"hides?\s+(?:high[- ]value|distinctive)|not\s+dominant|not\s+legible)",
     re.I,
@@ -247,13 +364,40 @@ def _critic_issue_cluster(issue: Any, kind: str) -> str:
         text, re.I,
     ):
         return "layout_safety"
+    if kind == "tailoring_regression":
+        # A panel commonly describes one loss in three different ways: the
+        # recruiter names the visible qualifier, the screening critic names
+        # the quantified selection, and the evidence critic names the
+        # underlying replacement.  These are one opportunity-cost issue, not
+        # three regressions.  Keep the families deliberately narrow so a
+        # generic "removed" sentence cannot collapse unrelated changes.
+        if re.search(
+            r"\b(?:fellowship|funding|selection|external[- ]validation|prestige|selected\s+(?:for|to\s+lead))\b",
+            text, re.I,
+        ):
+            return "external_validation_loss"
+        if re.search(
+            r"\b(?:sqlite|schema|tables?|data[- ]fusion|data[- ]architecture|unif(?:y|ied|ying)|integration\s+evidence)\b",
+            text, re.I,
+        ):
+            return "data_architecture_loss"
+        if re.search(
+            r"\b(?:redundan(?:t|cy)|overlap(?:s|ping)?|repeats?|duplicate(?:d|s)?|repetition)\b",
+            text, re.I,
+        ):
+            return "portfolio_overlap"
+        if re.search(
+            r"\b(?:prototype|proof\s+of\s+concept|\bpoc\b|demo|scope[- ]limiting)\b",
+            text, re.I,
+        ):
+            return "scope_qualifier_loss"
     return ""
 
 
 def _critic_issue_tokens(value: Any) -> set:
     """Return stable signal tokens used only to collapse repeated panel prose."""
     tokens = _resume_tokens(str(value or ""))
-    return {
+    result = {
         token for token in tokens
         if len(token) > 2 and token not in {
             "resume", "resume's", "tailored", "version", "target", "posting",
@@ -263,6 +407,16 @@ def _critic_issue_tokens(value: Any) -> set:
             "high", "value", "technical", "direct", "concrete", "multiple",
         }
     }
+    # Preserve normalized numeric anchors.  ``_resume_tokens`` splits
+    # ``$8,000`` into ``8`` and ``000``; the normalized anchor lets the
+    # fellowship loss cluster across critics without making short numeric
+    # fragments part of the generic prose similarity calculation.
+    result.update(
+        "number:" + anchor.lstrip("$").replace(",", "")
+        for anchor in _resume_numeric_anchors(str(value or ""))
+        if anchor
+    )
+    return result
 
 
 def collapse_critic_issues(records: Iterable[Dict[str, Any]]) -> List[Dict[str, Any]]:
@@ -413,6 +567,18 @@ MAX_RENDERED_BULLETS = 40
 # compiler may never satisfy the one-page contract by deleting every bullet.
 MIN_TOTAL_BULLETS = 1
 MAX_TOTAL_BULLETS = MAX_RENDERED_BULLETS
+# A one-page PDF can technically fit more, but a recruiter cannot skim every
+# line with equal weight. These are editorial budgets for *tailored* plans,
+# not claims about the immutable control. They prevent an author from winning
+# page geometry by adding a fifth project or six near-duplicate experience
+# bullets. The reducer below is source-addressed, conservative, and auditable.
+HUMAN_PORTFOLIO_POLICY_VERSION = "human-skim-budget-v1"
+HUMAN_PORTFOLIO_CAPS = {
+    "total_bullets": 25,
+    "project_entries": 4,
+    "project_bullets": 11,
+    "experience_bullets_per_entry": 5,
+}
 MAX_AUTHORITY_CONTEXT_CHARS = 16000
 MAX_METHODOLOGY_CONTEXT_CHARS = 12000
 MAX_CONTEXT_PROMPT_CHARS = 12000
@@ -2330,9 +2496,26 @@ def build_change_findings(
             classification, severity = critic_issue_finding(
                 issue, str(assessment.get("kind") or ""),
             )
+            support_count = int(assessment.get("support_count") or 0)
+            # A single role's concern is valuable repair material, but it is
+            # not enough evidence to call the candidate demonstrably worse.
+            # Keep hard safety failures fail-closed; downgrade only
+            # non-hard tailoring claims until another role or deterministic
+            # diff confirms the loss.  This prevents correlated/unstable
+            # prose from turning a mixed tradeoff into a false regression.
+            if (
+                classification == "REGRESSION"
+                and support_count == 1
+                and str(assessment.get("kind") or "") != "hard_blocker"
+            ):
+                classification = "QUESTIONABLE"
+                severity = "warning"
+                issue_reason = "Single-critic concern requiring confirmation: %s" % issue
+            else:
+                issue_reason = "Critic panel reported a blocking issue: %s" % issue
             add(
                 classification, severity,
-                "Critic panel reported a blocking issue: %s" % str(issue),
+                issue_reason,
                 action=(
                     "Resolve this safety or layout failure before treating the resume as ready."
                     if classification == "BLOCKER" else
@@ -2355,6 +2538,26 @@ def build_tailoring_audit(
 ) -> Dict[str, Any]:
     """Return the comparative, hard-gated decision artifact for one run."""
     findings = build_change_findings(changes, deterministic, review)
+    candidate_delta = candidate_delta_summary(changes)
+    if not candidate_delta["material"]:
+        # Critic panels often describe the candidate's missing UI, testing, or
+        # documentation evidence even when the candidate is byte-for-byte
+        # equivalent in substance to the base. Those are useful base-resume
+        # diagnostics, but calling them tailoring regressions is misleading
+        # and can trigger an expensive repair of an artifact that did not
+        # change. Keep the findings visible while removing the false causal
+        # attribution.
+        for finding in findings:
+            if finding.get("classification") == "REGRESSION":
+                finding["classification"] = "QUESTIONABLE"
+                finding["severity"] = "warning"
+                finding["reason"] = (
+                    "Baseline diagnostic; the candidate had no material delta from the canonical control. "
+                    + str(finding.get("reason") or "")
+                )[:700]
+                finding["action"] = (
+                    "Treat this as a base-resume gap, not a tailoring regression; only change it with authorized evidence."
+                )
     deterministic_gates = deterministic.get("gates") if isinstance(deterministic.get("gates"), dict) else {}
     review_gates = review.get("gates") if isinstance(review.get("gates"), dict) else {}
     gates = review_gates or deterministic_gates
@@ -2420,7 +2623,9 @@ def build_tailoring_audit(
         5 if item.get("severity") == "critical" else 2 if item.get("severity") == "warning" else 1
         for item in findings if item.get("classification") == "MISSED_OPPORTUNITY"
     )
-    if losses and losses >= max(1, gains):
+    if not candidate_delta["material"]:
+        tailoring = "unchanged"
+    elif losses and losses >= max(1, gains):
         tailoring = "regressed"
     elif gains > losses:
         tailoring = "improved"
@@ -2446,7 +2651,7 @@ def build_tailoring_audit(
         # primary until the owner can review or a complete panel returns.
         recommended_version = "review"
         decision = "needs_review"
-    elif tailoring == "regressed":
+    elif tailoring in {"regressed", "unchanged"}:
         recommended_version = "base"
         decision = "prefer_base"
     elif tailoring == "improved" and not critical_missed:
@@ -2456,6 +2661,7 @@ def build_tailoring_audit(
         recommended_version = "review"
         decision = "needs_review"
     uplift_band = (
+        "neutral" if not candidate_delta["material"] else
         "negative" if loss_weight > gain_weight else
         "positive" if gain_weight > loss_weight and not critical_missed else
         "uncertain"
@@ -2505,6 +2711,7 @@ def build_tailoring_audit(
             "hard_blockers": list(intelligence.get("hard_blockers") or []),
         },
         "tailoring": tailoring,
+        "candidate_delta": candidate_delta,
         "decision": decision,
         "recommended_version": recommended_version,
         "review": {
@@ -2525,6 +2732,8 @@ def build_tailoring_audit(
             "recommended_version": recommended_version,
             "decision": decision,
             "uplift_band": uplift_band,
+            "material_delta": bool(candidate_delta["material"]),
+            "delta_reasons": list(candidate_delta.get("reasons") or []),
             "gain_weight": gain_weight,
             "loss_weight": loss_weight,
             "missed_opportunity_weight": missed_weight,
@@ -2548,7 +2757,7 @@ def tailoring_audit_preference_key(audit: Dict[str, Any]) -> Tuple[int, int, int
     """Order two candidate drafts without pretending to predict hiring."""
     audit = audit if isinstance(audit, dict) else {}
     recommendation = str(audit.get("recommended_version") or "review")
-    rank = {"tailored": 3, "review": 2, "base": 1, "blocked": 0}.get(recommendation, 2)
+    rank = {"tailored": 3, "review": 2, "base": 1, "unchanged": 1, "blocked": 0}.get(recommendation, 2)
     comparison = audit.get("comparison") if isinstance(audit.get("comparison"), dict) else {}
     gains = int(comparison.get("gain_weight") or 0)
     losses = int(comparison.get("loss_weight") or 0)
@@ -2685,6 +2894,7 @@ def tailoring_repair_feedback(audit: Dict[str, Any], changes: Dict[str, Any]) ->
         "rules": [
             "Repair only with authorized source or evidence IDs already present in the plan/catalog.",
             "Treat canonical evidence as the control: do not remove an unexplained canonical bullet when a safe one-line slot remains.",
+            "Stay within the human skim budget: at most 25 bullets, four project entries, 11 project bullets, and five bullets per experience entry.",
             "Restore the highest-value unexplained canonical losses and lost supported terms before adding new project wording.",
             "Do not swap a distinctive mechanism, metric, award, or interview thread for a near-duplicate AI/RAG/backend line.",
             "Do not restore a base line merely because it existed; restore it when it closes a target-relevant loss or prevents avoidable information loss.",
@@ -2713,6 +2923,10 @@ def tailoring_repair_prompt(
         "canonical formatting contract. If a gap is unsupported, leave it as a gap rather than inserting the term. "
         + ("Use a sharp role-specific argument, but remain evidence-bounded. " if unrestricted else "Keep the repair conservative and evidence-first. ")
         + ("Preserve supported generation-mode gap closure only when it remains source-authorized. " if generation else "")
+        + "Stay within the human skim budget: at most 25 rendered bullets, four project headings, 11 project bullets, "
+        + "and five bullets per experience entry. Remove portfolio expansion before removing distinctive canonical "
+        + "mechanisms or validation. A healthtech prototype or synthetic assessment must retain its research/demo "
+        + "boundary; do not let words such as safe, clinical, or validated imply more than the source proves.\n\n"
         + "\n\nTarget context:\n"
         + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nCurrent plan:\n"
@@ -3786,22 +4000,31 @@ def workshop_schema() -> Dict[str, Any]:
 
 
 def provider_data_from_files(stdout_path: Path, stderr_path: Path, label: str) -> Optional[Dict[str, Any]]:
-    """Recover a final response even if a CLI lingers after emitting it."""
-    for path in (stdout_path, stderr_path):
-        try:
-            raw = path.read_text(errors="replace")
-        except OSError:
+    """Recover a final response from the CLI's declared output file.
+
+    Do not parse stderr as a fallback.  Codex can echo prompts, tool traces,
+    and retrieved context there; those blobs may themselves contain a JSON
+    object with the plan's top-level keys.  Treating that object as the model
+    answer is a silent writer-contamination bug: the run appears successful
+    while the real author response is still pending.  The ``-o`` output file
+    is the only response channel authorized by ``run_provider`` and remains
+    sufficient for recovering a response from a CLI that lingers afterward.
+    """
+    del stderr_path
+    try:
+        raw = stdout_path.read_text(errors="replace")
+    except OSError:
+        return None
+    if not raw.strip():
+        return None
+    candidates = [raw] + list(reversed(raw.splitlines()))
+    for candidate in candidates:
+        parsed = extract_json(candidate)
+        if not isinstance(parsed, dict):
             continue
-        if not raw.strip():
-            continue
-        candidates = [raw] + list(reversed(raw.splitlines()))
-        for candidate in candidates:
-            parsed = extract_json(candidate)
-            if not isinstance(parsed, dict):
-                continue
-            data = response_data(json.dumps(parsed, ensure_ascii=False))
-            if useful_provider_data(data, label):
-                return data
+        data = response_data(json.dumps(parsed, ensure_ascii=False))
+        if useful_provider_data(data, label):
+            return data
     return None
 
 
@@ -4027,6 +4250,7 @@ def run_sealed_evaluator(
     run_dir: Path,
     label: str,
     timeout: int = RUN_TIMEOUT_SECONDS,
+    evaluator_effort: Optional[str] = None,
 ) -> Dict[str, Any]:
     """Run one immutable evaluator packet in a fresh, critique-only process.
 
@@ -4063,6 +4287,10 @@ def run_sealed_evaluator(
         "--scratch", str(isolated_scratch),
         "--timeout", str(max(30, int(timeout))),
     ]
+    requested_effort = str(evaluator_effort or resume_evaluator.CODEX_EFFORT).strip().lower()
+    if requested_effort not in getattr(resume_evaluator, "CODEX_EFFORTS", {resume_evaluator.CODEX_EFFORT}):
+        requested_effort = resume_evaluator.CODEX_EFFORT
+    args.extend(["--effort", requested_effort])
     started = time.time()
     proc = None
     try:
@@ -4097,6 +4325,7 @@ def run_sealed_evaluator(
         result.setdefault("provider", "codex")
         result.setdefault("execution_lane", "sealed_evaluator")
         result.setdefault("role", role)
+        result.setdefault("reasoning_effort", requested_effort)
         result.setdefault("elapsed_seconds", round(time.time() - started, 1))
         result.setdefault("stdout_path", str(stdout_path))
         result.setdefault("stderr_path", str(stderr_path))
@@ -4136,7 +4365,7 @@ def run_sealed_evaluator(
             stop_provider_process(proc)
         return {
             "provider": "codex", "execution_lane": "sealed_evaluator", "role": role,
-            "ok": False, "error": str(exc),
+            "ok": False, "reasoning_effort": requested_effort, "error": str(exc),
             "elapsed_seconds": round(time.time() - started, 1),
             "stdout_path": str(stdout_path), "stderr_path": str(stderr_path),
         }
@@ -4158,6 +4387,7 @@ def sealed_evaluator_packet(
     run_id: str,
 ) -> Dict[str, Any]:
     """Build the only input shape the sealed evaluator is allowed to read."""
+    portfolio_snapshot = portfolio_metrics(plan) if isinstance(plan, dict) else {}
     selected_plan = {}
     for section in ("experiences", "projects", "leadership"):
         selected_plan[section] = []
@@ -4183,6 +4413,8 @@ def sealed_evaluator_packet(
             for key in ("compiled", "pages", "overfull", "density_gap_pt", "horizontal", "vertical_capacity")
             if key in (deterministic.get("layout") or {})
         },
+        "human_skim_budget": copy.deepcopy(portfolio_snapshot.get("human_skim_budget") or {}),
+        "content_bullet_count": int(portfolio_snapshot.get("total_bullets") or 0),
         "style": copy.deepcopy(deterministic.get("style") or {}),
     }
     comparison_snapshot = {
@@ -4664,6 +4896,7 @@ def base_prompt(
     graph: Optional[Dict[str, Any]] = None,
     unrestricted: bool = False,
     generation: bool = False,
+    variant_instruction: str = "",
 ) -> str:
     role_guardrails = """
 Victor-specific guardrails:
@@ -4718,6 +4951,13 @@ Victor-specific guardrails:
   is no required leadership section, project count, or bullet floor. Every
   selected bullet must introduce a distinct, defensible interview thread;
   lower-ranked candidates are packing alternatives, not filler.
+- Human skim budget for this tailored candidate: target at most 25 rendered
+  bullets, four project headings, 11 project bullets, and five bullets per
+  experience entry. Do not use spare LaTeX space to exceed that budget. If a
+  new project is added, first prove that it earns a slot over the canonical
+  project evidence it displaces; preserve distinctive mechanisms, validation,
+  ownership, and external proof over a fifth adjacent project. Treat every
+  project heading as a real skim cost.
 - Choose the portfolio before polishing individual lines. Compare the
   whole-resume signal: technical breadth, project differentiation, external
   validation, and the number of distinct interview stories. A good bullet can
@@ -4733,12 +4973,12 @@ Victor-specific guardrails:
   control, document processing at scale, caching, or a different product
   boundary—or yield its slot to a stronger nonredundant project. Keep a strong
   fifth experience bullet when the page can carry it.
-- Coursework, the HackMIT acceptance-pool proof bullet, and the aggregated
-  Awards skill line are flexible reserves. Keep them by default, but when page
-  space is genuinely needed, reclaim them in this order: coursework first,
-  then the HackMIT acceptance/selection bullet if present, then Awards. This
-  reserve policy must run before deleting strong technical experience/project
-  evidence. Record the tradeoff in decision_ledger or the packing report.
+- Coursework and the aggregated Awards skill line are flexible reserves. Keep
+  them by default, but when page space is genuinely needed, reclaim coursework
+  first and Awards second. Treat quantified external-selection proof (including
+  the HackMIT acceptance line) as substantive evidence, not an automatic
+  reserve: preserve it unless a clearly stronger distinct replacement is
+  already present and the tradeoff is explicit.
 - Victor's immutable human references are quality and visual benchmarks, not a
   mandatory portfolio shape. Use available page space for strong evidence when
   it genuinely earns space; if measured capacity can carry a verified unused
@@ -4820,7 +5060,13 @@ Victor-specific guardrails:
             "\n- Source-only mode is selection, not rewriting. Choose source IDs only; the harness will copy every heading and bullet verbatim."
         )
     role_guardrails += "\n- TICC is permanently excluded from every resume; never select, rewrite, or mention that activity, even for a TLDP target."
-    context_text = json.dumps(context, indent=2, ensure_ascii=False)
+    # The generation strategy is included in its own bounded section below.
+    # Omitting the duplicate copy from the broad context block materially
+    # reduces Unchained author latency after a successful gap-analysis pass.
+    prompt_context = copy.deepcopy(context)
+    if generation:
+        prompt_context.pop("generation_strategy", None)
+    context_text = json.dumps(prompt_context, indent=2, ensure_ascii=False)
     catalog_text = json.dumps(catalog_for_prompt(catalog), indent=2, ensure_ascii=False)
     graph_text = json.dumps(
         evidence_context(graph, context, str(context.get("posting_text") or "")) if graph else [],
@@ -4833,6 +5079,14 @@ Victor-specific guardrails:
         context.get("generation_strategy") or {}, indent=2, ensure_ascii=False,
     )
     control_text = canonical_control_prompt(catalog, context.get("target_keywords"))
+    variant_text = str(variant_instruction or "").strip()
+    if variant_text:
+        role_guardrails += (
+            "\n\nIndependent portfolio-search hypothesis (one candidate among several):\n"
+            + variant_text[:2400]
+            + "\nThis hypothesis is not an instruction to force a change. Return the strongest plan you can defend; "
+            "the sealed comparative jury, not this hypothesis, decides whether it beat the canonical base."
+        )
     return (
         "You are the "
         + role
@@ -4862,6 +5116,8 @@ Victor-specific guardrails:
         + graph_text[:MAX_GRAPH_PROMPT_CHARS]
         + "\n\nExact ATS keyword strategy:\n"
         + json.dumps(context.get("target_keywords") or {}, indent=2, ensure_ascii=False)
+        + "\n\nHuman skim budget (binding editorial constraint):\n"
+        + json.dumps(HUMAN_PORTFOLIO_CAPS, indent=2, ensure_ascii=False)
         + (("\n\nBinding requirement-to-evidence strategy (act on its supported opportunities):\n"
             + generation_text[:18000]) if generation else "")
     )
@@ -4902,7 +5158,7 @@ def synthesis_prompt(
         + ("You may substantially rewrite or synthesize bullet text from the authorized source bank; preserve the primary source_id, add all supporting source IDs, and retain every scope-limiting qualifier. " if enhance else "Select source IDs verbatim; do not rewrite bullets. ")
         + ("This is the unrestricted creative pass: write genuinely original, role-specific bullets and make decisive project swaps when the evidence supports them; do not collapse back to base-resume phrasing. " if unrestricted else "")
         + ("This is the unchained generation pass: use the requirement-to-evidence strategy to close material supported gaps with newly synthesized bullets or evidence-backed Skills rewrites, and explain every gap left open. " if generation else "")
-        + "Choose the stronger defensible plan rather than averaging it. Judge the whole portfolio before individual wording: preserve strong fifth experience bullets when space permits, remove Resident Assistant before a stronger unused technical project, and do not spend a project slot repeating an experience's agents/RAG/retrieval story unless the project adds a materially distinct engineering surface. If the rendered page needs room for a distinct project or bullet, use flexible reserves before substantive evidence: coursework first, then the HackMIT acceptance-pool bullet when present, then Awards. Do not change an already strong line merely to make the draft look tailored. Compare each substantive swap, exclusion, rewrite, or reorder with the canonical/current benchmark and record the hiring-value gain and important signal lost in decision_ledger. High-value changes include stronger unused evidence, a materially better project, a newly exposed technical dimension, useful ordering, accurate ATS terminology, and reduced redundancy; low-value paraphrase churn is not a goal. Preserve reverse-chronological job order unless the exception is genuinely stronger and explicitly recorded. \n\n"
+        + "Choose the stronger defensible plan rather than averaging it. Judge the whole portfolio before individual wording: preserve strong fifth experience bullets when space permits, remove Resident Assistant before a stronger unused technical project, and do not spend a project slot repeating an experience's agents/RAG/retrieval story unless the project adds a materially distinct engineering surface. If the rendered page needs room for a distinct project or bullet, use optional coursework first and the aggregate Awards line second; do not treat quantified external-selection proof such as the HackMIT acceptance line as automatic filler. Do not change an already strong line merely to make the draft look tailored. Compare each substantive swap, exclusion, rewrite, or reorder with the canonical/current benchmark and record the hiring-value gain and important signal lost in decision_ledger. High-value changes include stronger unused evidence, a materially better project, a newly exposed technical dimension, useful ordering, accurate ATS terminology, and reduced redundancy; low-value paraphrase churn is not a goal. Preserve reverse-chronological job order unless the exception is genuinely stronger and explicitly recorded. \n\n"
         "Job context:\n"
         + json.dumps(context, indent=2, ensure_ascii=False)[:MAX_CONTEXT_PROMPT_CHARS]
         + "\n\nEvidence catalog:\n"
@@ -4917,6 +5173,8 @@ def synthesis_prompt(
         + resume_authority_context(repo_root())
         + "\n\nExact ATS keyword strategy:\n"
         + json.dumps(context.get("target_keywords") or {}, indent=2, ensure_ascii=False)
+        + "\n\nHuman skim budget (binding editorial constraint):\n"
+        + json.dumps(HUMAN_PORTFOLIO_CAPS, indent=2, ensure_ascii=False)
         + "\n\nCompeting drafts:\n"
         + json.dumps(packed, indent=2, ensure_ascii=False)[:MAX_PROMPT_CHARS]
     )
@@ -5685,6 +5943,20 @@ def validate_plan(
                             % (bullet_id, ", ".join(unknown))
                         )
                         cited = [value for value in cited if value in evidence_ids]
+                    # A model can copy the primary source ID correctly while
+                    # making a small transcription error in the corresponding
+                    # evidence citation (for example, repeating one segment
+                    # of a project ID).  The source bullet itself is safe to
+                    # use as a citation only when the graph attests that exact
+                    # node and marks it claim-authorized.  This repairs a
+                    # bounded identifier typo without accepting prose or
+                    # inventing evidence, and leaves an auditable warning.
+                    if not set(cited) & claim_authorities and bullet_id in claim_authorities:
+                        cited.append(bullet_id)
+                        validation_warnings.append(
+                            "repaired evidence citation for %s to its claim-authorized source bullet"
+                            % bullet_id
+                        )
                     if not cited:
                         errors.append("enhanced bullet %s has no evidence_ids" % bullet_id)
                         continue
@@ -6329,6 +6601,7 @@ def deterministic_distinctive_replacement(
 def deterministic_control_recovery(
     plan: Dict[str, Any], catalog: Dict[str, Any],
     keyword_strategy: Optional[Dict[str, Any]], run_dir: Path,
+    trim_overlap: bool = True,
 ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
     """Recover high-information base proof before independent judging.
 
@@ -6336,9 +6609,12 @@ def deterministic_control_recovery(
     generated project bullets while dropping a canonical HPC, validation, or
     mechanism line. This bounded pass does not invent or rewrite anything. It
     makes at most one source-verbatim canonical replacement per selected entry
-    and removes at most one non-canonical bullet when a selected project is
-    clearly repeating an experience signal family. The sealed panel still
-    decides whether the resulting candidate actually improved the job match.
+    and, when enabled, removes at most one non-canonical bullet when a selected
+    project is clearly repeating an experience signal family. The sealed panel
+    still decides whether the resulting candidate actually improved the job
+    match. Audit repairs use the canonical-replacement portion only: a repair
+    should not receive a second deterministic portfolio edit before its fresh
+    sealed recheck.
     """
     recovered = copy.deepcopy(plan)
     entries = catalog.get("entries") or {}
@@ -6358,6 +6634,11 @@ def deterministic_control_recovery(
     }
     actions: List[Dict[str, Any]] = []
     restored_ids = set()
+    skipped_explained: List[Dict[str, Any]] = []
+    decision_ledger = [
+        item for item in (recovered.get("decision_ledger") or [])
+        if isinstance(item, dict)
+    ]
 
     def make_bullet(source_id: str, rationale: str) -> Optional[Dict[str, Any]]:
         source = source_bullets.get(source_id)
@@ -6395,6 +6676,28 @@ def deterministic_control_recovery(
             omitted.sort(key=lambda bullet: (-control_scores.get(str(bullet.get("id") or ""), 0), str(bullet.get("id") or "")))
             if not omitted:
                 continue
+            # An explicit source-grounded tradeoff is already the author's
+            # claim that the omitted canonical line lost a marginal slot to a
+            # stronger target-specific replacement. Do not silently undo that
+            # editorial decision with a generic proof-priority heuristic. If
+            # the choice is wrong, the sealed panel and audit repair can still
+            # reject it; unexplained losses remain eligible for recovery.
+            explained = [
+                bullet for bullet in omitted
+                if _ledger_explicitly_names_source(
+                    str(bullet.get("id") or ""), decision_ledger,
+                )
+            ]
+            if explained:
+                skipped_explained.append({
+                    "section": section,
+                    "entry_id": entry_id,
+                    "source_ids": [str(item.get("id") or "") for item in explained],
+                    "reason": "explicit decision_ledger tradeoff preserved before independent judging",
+                })
+                omitted = [item for item in omitted if item not in explained]
+                if not omitted:
+                    continue
             target = None
             target_index = -1
             for index, bullet in enumerate(selection.get("bullets", []) or []):
@@ -6440,7 +6743,7 @@ def deterministic_control_recovery(
     # Then make one narrow overlap repair. This specifically targets a
     # non-canonical project bullet whose signal family is already established
     # by experience, and only when the project has more than four bullets.
-    diagnostics = portfolio_diagnostics(recovered, catalog)
+    diagnostics = portfolio_diagnostics(recovered, catalog) if trim_overlap else {}
     overlap_ids = {
         str(item.get("source_id") or "")
         for item in diagnostics.get("project_overlap", [])
@@ -6485,6 +6788,7 @@ def deterministic_control_recovery(
         "status": "applied" if actions else "not_needed",
         "actions": actions,
         "restored_source_ids": sorted(restored_ids),
+        "skipped_explained": skipped_explained,
         "reason": (
             "Recovered canonical proof and/or trimmed one repeated project signal before sealed review."
             if actions else "No bounded control recovery cleared its deterministic conditions."
@@ -6492,6 +6796,349 @@ def deterministic_control_recovery(
     }
     write_json(run_dir / "control_recovery.json", record)
     return recovered, record
+
+
+def deterministic_target_opportunity_replacement(
+    plan: Dict[str, Any], catalog: Dict[str, Any], graph: Dict[str, Any],
+    context: Dict[str, Any], run_dir: Path,
+) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+    """Surface one buried, authorized requirement opportunity before judging.
+
+    Unchained generation can correctly identify a requirement-to-evidence
+    mapping and still omit the best source line because the author is solving
+    a crowded page-selection problem.  This bounded pass turns only the
+    strongest *supported* opportunity into one compiled counterfactual: it
+    adds a source-verbatim bullet from an already selected entry and removes
+    the lowest-marginal selected line needed to pay for it.  It never adds a
+    heading, invents wording, or bypasses the sealed jury.  If the result is
+    not one-page safe or the addition is packed away, the original plan is
+    returned unchanged.
+
+    This is deliberately one opportunity, not a deterministic keyword
+    optimizer.  The panel must still establish whether the newly visible
+    evidence beats the control resume.
+    """
+    original = copy.deepcopy(plan)
+    strategy = context.get("generation_strategy")
+    if not isinstance(strategy, dict):
+        return original, {
+            "attempted": False, "status": "not_available",
+            "reason": "generation strategy unavailable",
+        }
+    requirements = strategy.get("requirements") or []
+    if not isinstance(requirements, list):
+        return original, {
+            "attempted": False, "status": "not_available",
+            "reason": "generation requirements were not a list",
+        }
+
+    entries = catalog.get("entries") or {}
+    source_bullets = {
+        str(bullet.get("id") or ""): bullet
+        for entry in entries.values()
+        for bullet in entry.get("bullets") or []
+        if str(bullet.get("id") or "")
+    }
+    bullet_locations = {
+        str(bullet.get("id") or ""): (section, entry)
+        for section in ("experiences", "projects", "leadership")
+        for entry in original.get(section, []) or []
+        for bullet in entry.get("bullets") or []
+        if str(bullet.get("id") or "")
+    }
+    entry_locations = {
+        str(entry.get("source_id") or ""): (section, entry)
+        for section in ("experiences", "projects", "leadership")
+        for entry in original.get(section, []) or []
+        if str(entry.get("source_id") or "")
+    }
+    selected_ids = _selected_bullet_ids(original)
+    allowed_ids = {
+        str(node.get("id") or "")
+        for node in (graph or {}).get("nodes", [])
+        if node.get("claim_allowed") and str(node.get("id") or "")
+    }
+    if not allowed_ids:
+        return original, {
+            "attempted": False,
+            "status": "not_available",
+            "reason": "evidence graph had no claim-allowed source nodes",
+        }
+    role_tracks = set(
+        str(value) for value in
+        ((context.get("job_intelligence") or {}).get("role_tracks") or [])
+    )
+
+    def requirement_text(item: Dict[str, Any]) -> str:
+        return " ".join(
+            str(item.get(field) or "")
+            for field in ("requirement", "candidate_angle", "reason", "target_signal")
+        ) + " " + " ".join(str(value) for value in item.get("exact_terms") or [])
+
+    def opportunity_score(item: Dict[str, Any], source_text: str) -> Tuple[float, str]:
+        req_text = requirement_text(item)
+        req_tokens = _resume_tokens(req_text)
+        source_tokens = _resume_tokens(source_text)
+        overlap = len(req_tokens & source_tokens)
+        importance = str(item.get("importance") or "mentioned").lower()
+        score = float(TAILORING_PRIORITY_WEIGHTS.get(importance, 1) * 10)
+        score += min(18.0, float(overlap * 3))
+        if str(item.get("evidence_status") or "").lower() == "direct":
+            score += 12.0
+        if str(item.get("recommended_action") or "").lower() in {"synthesize", "rewrite", "tailor_skills"}:
+            score += 6.0
+        # These are high-value surfaces for a buried source line. They are
+        # used only as a ranking tie-breaker after source authority and the
+        # requirement map have been established.
+        if re.search(
+            r"\b(?:dashboard|interface|display|web|rest|endpoint|flask|react|"
+            r"testing|documentation|stakeholder|reliab|integration)\b",
+            source_text + " " + req_text, re.I,
+        ):
+            score += 12.0
+        return score, req_text
+
+    candidates: List[Dict[str, Any]] = []
+    for item in requirements:
+        if not isinstance(item, dict):
+            continue
+        status = str(item.get("evidence_status") or "").lower()
+        action = str(item.get("recommended_action") or "").lower()
+        if status not in {"direct", "adjacent", "supported"}:
+            continue
+        if action not in {"keep", "rewrite", "synthesize", "tailor_skills", "surface"}:
+            continue
+        for raw_id in item.get("evidence_ids") or []:
+            source_id = str(raw_id or "")
+            source = source_bullets.get(source_id)
+            if not source or source_id in selected_ids:
+                continue
+            if allowed_ids and source_id not in allowed_ids:
+                continue
+            location = bullet_locations.get(source_id)
+            if location is None:
+                location = entry_locations.get(source_id.rsplit(":b", 1)[0])
+            if location is None:
+                # A new heading is outside this pass's bounded contract. The
+                # author/search lanes remain responsible for whole-project
+                # alternatives.
+                continue
+            section, target_entry = location
+            source_text = _latex_plain(str(source.get("text") or ""))
+            if not source_text or any(
+                _same_entry_resume_bullet(source_text, _latex_plain(str(bullet.get("text") or "")))
+                for bullet in target_entry.get("bullets") or []
+            ):
+                continue
+            score, req_text = opportunity_score(item, source_text)
+            candidates.append({
+                "source_id": source_id,
+                "entry_id": str(target_entry.get("source_id") or ""),
+                "section": section,
+                "text": str(source.get("text") or ""),
+                "score": score,
+                "requirement": str(item.get("requirement") or "")[:300],
+                "requirement_text": req_text[:700],
+                "importance": str(item.get("importance") or "mentioned"),
+                "target_signal": str(item.get("candidate_angle") or item.get("requirement") or "")[:400],
+                "source": str(source.get("source") or ""),
+            })
+    if not candidates:
+        return original, {
+            "attempted": False, "status": "not_available",
+            "reason": "no unused, source-authorized bullet from a supported selected-entry opportunity",
+        }
+    candidates.sort(key=lambda item: (-float(item["score"]), str(item["source_id"])))
+    chosen = candidates[0]
+    target_entry = next(
+        entry for entry in original.get(chosen["section"], []) or []
+        if str(entry.get("source_id") or "") == chosen["entry_id"]
+    )
+    source_by_id = source_bullets
+    usage_counts: Dict[str, int] = {}
+    for item in requirements:
+        if not isinstance(item, dict):
+            continue
+        for value in item.get("evidence_ids") or []:
+            usage_counts[str(value)] = usage_counts.get(str(value), 0) + 1
+
+    def removal_cost(bullet: Dict[str, Any]) -> float:
+        source_id = str(bullet.get("source_id") or "")
+        text = _latex_plain(str(bullet.get("text") or ""))
+        cost = _control_bullet_value(bullet, catalog)
+        if _is_canonical_source((source_by_id.get(source_id) or {}).get("source")):
+            cost += 8.0
+        if _resume_numeric_anchors(text):
+            cost += 24.0
+        if "external_validation" in _portfolio_signal_families(text):
+            cost += 20.0
+        cost += min(12.0, float(usage_counts.get(source_id, 0) * 4))
+        families = set(_portfolio_signal_families(text))
+        if (
+            "systems_performance" in role_tracks
+            and "systems_reliability" in families
+        ) or (
+            "backend_infrastructure" in role_tracks
+            and "backend_api" in families
+        ):
+            cost += 14.0
+        return cost
+
+    same_entry_limit = (
+        HUMAN_PORTFOLIO_CAPS["experience_bullets_per_entry"]
+        if chosen["section"] == "experiences"
+        else PORTFOLIO_CAPS.get(chosen["section"], {}).get("bullets", 8)
+    )
+    removal: Optional[Tuple[str, str]] = None
+    if len(target_entry.get("bullets", []) or []) >= same_entry_limit:
+        eligible = [
+            bullet for bullet in target_entry.get("bullets", []) or []
+            if str(bullet.get("source_id") or "") != chosen["source_id"]
+            and len(target_entry.get("bullets", []) or []) > 1
+        ]
+        if eligible:
+            selected = min(eligible, key=lambda bullet: (
+                removal_cost(bullet), str(bullet.get("source_id") or "")
+            ))
+            removal = (chosen["section"], str(selected.get("source_id") or ""))
+    if removal is None:
+        total = portfolio_metrics(original).get("total_bullets", 0)
+        if total >= HUMAN_PORTFOLIO_CAPS["total_bullets"]:
+            global_candidates = []
+            for section in ("projects", "leadership"):
+                for entry in original.get(section, []) or []:
+                    for bullet in entry.get("bullets", []) or []:
+                        if len(entry.get("bullets", []) or []) <= 1:
+                            continue
+                        global_candidates.append((removal_cost(bullet), section, str(bullet.get("source_id") or "")))
+            if global_candidates:
+                _, section, source_id = min(global_candidates, key=lambda value: (value[0], value[1], value[2]))
+                removal = (section, source_id)
+    if len(target_entry.get("bullets", []) or []) >= same_entry_limit and removal is None:
+        return original, {
+            "attempted": True, "status": "not_available",
+            "source_id": chosen["source_id"],
+            "requirement": chosen["requirement"],
+            "reason": "supported opportunity had no safe marginal line to displace",
+        }
+
+    trial = copy.deepcopy(original)
+    target = next(
+        entry for entry in trial.get(chosen["section"], []) or []
+        if str(entry.get("source_id") or "") == chosen["entry_id"]
+    )
+    addition = {
+        "source_id": chosen["source_id"],
+        "source_ids": [chosen["source_id"]],
+        "evidence_ids": [chosen["source_id"]],
+        "text": chosen["text"],
+        "priority": 90,
+        "candidate_rationale": "Surfaced buried authorized evidence for: %s" % chosen["requirement"],
+    }
+    target.setdefault("bullets", []).append(addition)
+    removed_text = ""
+    if removal is not None:
+        removal_section, removal_source_id = removal
+        for entry in trial.get(removal_section, []) or []:
+            for index, bullet in enumerate(entry.get("bullets", []) or []):
+                if str(bullet.get("source_id") or "") == removal_source_id:
+                    removed_text = _latex_plain(str(bullet.get("text") or ""))
+                    entry["bullets"].pop(index)
+                    break
+            if removed_text:
+                break
+    trial.setdefault("decision_ledger", []).append({
+        "action": "Surface buried authorized evidence for a mapped role opportunity",
+        "current_evidence": removal[1] if removal else "",
+        "replacement_or_exclusion": chosen["source_id"],
+        "target_signal": chosen["target_signal"],
+        "why_stronger": "The requirement map identifies this unused source line as supported evidence for a target opportunity; the pass pays for it with the lowest-marginal selected line available under the skim budget.",
+        "signal_lost": removed_text,
+    })
+    normalized, errors = validate_plan(
+        trial, catalog, enhance=True, graph=graph, generation=True,
+    )
+    if errors:
+        return original, {
+            "attempted": True, "status": "rejected",
+            "source_id": chosen["source_id"], "requirement": chosen["requirement"],
+            "reason": "source validation rejected the bounded opportunity: " + "; ".join(errors[:4]),
+        }
+    try:
+        packed, packing = pack_plan_to_page(normalized, catalog, run_dir / "packing")
+    except (OSError, RuntimeError, ValueError) as exc:
+        return original, {
+            "attempted": True, "status": "rejected",
+            "source_id": chosen["source_id"], "requirement": chosen["requirement"],
+            "reason": "bounded opportunity failed compiled packing: %s" % exc,
+        }
+    if chosen["source_id"] not in _selected_bullet_ids(packed):
+        return original, {
+            "attempted": True, "status": "rejected",
+            "source_id": chosen["source_id"], "requirement": chosen["requirement"],
+            "reason": "page packer did not retain the target opportunity",
+        }
+    candidate_root = run_dir / "candidate"
+    candidate_tex = render_plan(packed, catalog, repo_root())
+    candidate_root.mkdir(parents=True, exist_ok=True)
+    (candidate_root / "resume.tex").write_text(candidate_tex)
+    compiled = compile_resume(candidate_root)
+    candidate_layout = pdf_layout(candidate_root, compiled, plan=packed)
+    compactions: List[Dict[str, Any]] = []
+    if not (candidate_layout.get("horizontal") or {}).get("pass"):
+        compacted, compact_layout, compactions = compact_plan_to_geometry(
+            packed, candidate_layout, catalog, run_dir / "geometry",
+        )
+        if compactions:
+            packed = compacted
+            candidate_tex = render_plan(packed, catalog, repo_root())
+            (candidate_root / "resume.tex").write_text(candidate_tex)
+            compiled = compile_resume(candidate_root)
+            candidate_layout = pdf_layout(candidate_root, compiled, plan=packed)
+    safe = bool(
+        candidate_layout.get("compiled")
+        and candidate_layout.get("pages") == 1
+        and not candidate_layout.get("overfull")
+        and (candidate_layout.get("horizontal") or {}).get("pass")
+        and chosen["source_id"] in _selected_bullet_ids(packed)
+    )
+    original_ids = _selected_bullet_ids(original)
+    packed_ids = _selected_bullet_ids(packed)
+    actual_added = sorted(packed_ids - original_ids)
+    actual_removed = sorted(original_ids - packed_ids)
+    receipt = {
+        "attempted": True,
+        "status": "applied" if safe else "rejected",
+        "source_id": chosen["source_id"],
+        "entry_id": chosen["entry_id"],
+        "requirement": chosen["requirement"],
+        "importance": chosen["importance"],
+        "target_signal": chosen["target_signal"],
+        "source": chosen["source"],
+        "score": round(chosen["score"], 1),
+        "requested_removed_source_id": removal[1] if removal else "",
+        "removed_source_id": actual_removed[0] if len(actual_removed) == 1 else "",
+        "actual_added_source_ids": actual_added,
+        "actual_removed_source_ids": actual_removed,
+        "removed_text": removed_text,
+        "compactions": compactions,
+        "packing": packing,
+        "layout": {
+            "compiled": candidate_layout.get("compiled"),
+            "pages": candidate_layout.get("pages"),
+            "near_wrap_count": (candidate_layout.get("horizontal") or {}).get("near_wrap_count", 0),
+            "horizontal_pass": bool((candidate_layout.get("horizontal") or {}).get("pass")),
+        },
+        "reason": (
+            "Applied one compiled, source-verbatim opportunity replacement before sealed judging."
+            if safe else
+            "Rejected the opportunity because the final compiled geometry gate was unsafe."
+        ),
+    }
+    if not safe:
+        return original, receipt
+    write_json(run_dir / "receipt.json", receipt)
+    return packed, receipt
 
 
 def _render_bullets(bullets: List[Dict[str, str]]) -> List[str]:
@@ -6518,13 +7165,19 @@ def expand_candidate_portfolio(
 def curate_candidate_portfolio(
     candidate_plan: Dict[str, Any], catalog: Optional[Dict[str, Any]] = None
 ) -> Dict[str, Any]:
-    """Remove only duplicate evidence before compile-time packing.
+    """Apply bounded source-aware curation before compile-time packing.
 
-    Section choice and ordering are editorial decisions owned by the agent,
-    not deterministic defaults inherited from the general resume.
+    The model still owns the role thesis, evidence ranking, and wording. This
+    last-mile pass only enforces a human skim budget that geometry cannot
+    express: no fifth project, no oversized experience block, and no portfolio
+    expansion that displaces all of the canonical project proof. Every removal
+    is recorded in ``portfolio_budget`` so the evaluator can distinguish a
+    deliberate budget decision from lost evidence.
     """
     curated = copy.deepcopy(candidate_plan)
+    catalog = catalog or {}
     seen_texts: List[str] = []
+    actions: List[Dict[str, Any]] = []
     for section in ("experiences", "projects", "leadership"):
         retained_entries = []
         for entry in curated.get(section, []):
@@ -6532,6 +7185,13 @@ def curate_candidate_portfolio(
             for bullet in entry.get("bullets", []):
                 text = str(bullet.get("text") or "")
                 if any(_same_resume_bullet(text, existing) for existing in seen_texts):
+                    actions.append({
+                        "kind": "near_duplicate",
+                        "section": section,
+                        "entry_id": str(entry.get("source_id") or ""),
+                        "source_id": str(bullet.get("source_id") or ""),
+                        "reason": "removed a repeated claim before layout packing",
+                    })
                     continue
                 retained.append(bullet)
                 seen_texts.append(text)
@@ -6539,6 +7199,185 @@ def curate_candidate_portfolio(
                 entry["bullets"] = retained
                 retained_entries.append(entry)
         curated[section] = retained_entries
+
+    entries = catalog.get("entries") or {}
+
+    def source_is_canonical(source_id: str) -> bool:
+        source = entries.get(str(source_id).split(":b", 1)[0], {})
+        # Entry-level lookup above is not sufficient for all catalog shapes;
+        # use the exact bullet source when available.
+        for bullet in source.get("bullets", []) or []:
+            if str(bullet.get("id") or "") == str(source_id):
+                return _is_canonical_source(bullet.get("source"))
+        for entry in entries.values():
+            for bullet in entry.get("bullets", []) or []:
+                if str(bullet.get("id") or "") == str(source_id):
+                    return _is_canonical_source(bullet.get("source"))
+        return False
+
+    def bullet_value(bullet: Dict[str, Any]) -> float:
+        # _control_bullet_value is defined later in the module but is present
+        # by the time this runtime path is called. Keep the fallback for small
+        # isolated tests that import this helper with a fixture catalog.
+        try:
+            return _control_bullet_value(bullet, catalog)
+        except NameError:
+            return _bullet_value(bullet)
+
+    def entry_value(entry: Dict[str, Any]) -> float:
+        bullets = entry.get("bullets", []) or []
+        return sum(bullet_value(bullet) for bullet in bullets) / max(1, len(bullets) + 1)
+
+    def remove_bullet(section: str, entry_index: int, bullet_index: int, reason: str) -> None:
+        entry = curated[section][entry_index]
+        removed = entry.get("bullets", []).pop(bullet_index)
+        actions.append({
+            "kind": "skim_budget",
+            "section": section,
+            "entry_id": str(entry.get("source_id") or ""),
+            "source_id": str(removed.get("source_id") or ""),
+            "reason": reason,
+            "canonical_source": source_is_canonical(str(removed.get("source_id") or "")),
+        })
+
+    def project_entry_is_canonical(entry: Dict[str, Any], canonical_ids: set) -> bool:
+        return str(entry.get("source_id") or "") in canonical_ids
+
+    # A new project is allowed to replace a canonical one only when the model
+    # selects four or fewer projects. If it expands beyond the control roster,
+    # remove the extra non-canonical entry first. This specifically prevents a
+    # health/keyword-adjacent fifth project from crowding out stronger proof.
+    canonical_project_ids = {
+        str(item.get("source_id") or "")
+        for item in (canonical_resume_benchmark(catalog).get("projects") or [])
+        if item.get("source_id")
+    }
+    while len(curated.get("projects", [])) > HUMAN_PORTFOLIO_CAPS["project_entries"]:
+        projects = curated["projects"]
+        noncanonical = [
+            (index, entry) for index, entry in enumerate(projects)
+            if not project_entry_is_canonical(entry, canonical_project_ids)
+        ]
+        pool = noncanonical or list(enumerate(projects))
+        index, entry = min(
+            pool,
+            key=lambda item: (entry_value(item[1]), str(item[1].get("source_id") or "")),
+        )
+        removed = projects.pop(index)
+        actions.append({
+            "kind": "project_roster_cap",
+            "section": "projects",
+            "entry_id": str(removed.get("source_id") or ""),
+            "source_id": str(removed.get("source_id") or ""),
+            "reason": (
+                "removed non-canonical project expansion to preserve a four-project skim budget"
+                if noncanonical else
+                "removed lowest-value project to preserve a four-project skim budget"
+            ),
+            "canonical_source": project_entry_is_canonical(removed, canonical_project_ids),
+        })
+
+    # Keep each experience legible as one coherent interview thread. Prefer
+    # dropping a non-canonical/low-value line; do not delete the last bullet.
+    for entry_index, entry in enumerate(curated.get("experiences", []) or []):
+        while len(entry.get("bullets", []) or []) > HUMAN_PORTFOLIO_CAPS["experience_bullets_per_entry"]:
+            candidates = list(enumerate(entry.get("bullets", []) or []))
+            noncanonical = [
+                item for item in candidates
+                if not source_is_canonical(str(item[1].get("source_id") or ""))
+            ]
+            pool = noncanonical or candidates
+            bullet_index, _ = min(
+                pool,
+                key=lambda item: (bullet_value(item[1]), str(item[1].get("source_id") or "")),
+            )
+            remove_bullet(
+                "experiences", entry_index, bullet_index,
+                "trimmed experience entry to the human skim budget",
+            )
+
+    # Project entries are the most common place for a model to add breadth
+    # without adding a new interview thread. Keep a bounded project budget and
+    # favor canonical, mechanism-bearing lines when trimming.
+    def project_bullet_count() -> int:
+        return sum(len(entry.get("bullets", []) or []) for entry in curated.get("projects", []) or [])
+
+    while project_bullet_count() > HUMAN_PORTFOLIO_CAPS["project_bullets"]:
+        candidates: List[Tuple[int, int, Dict[str, Any]]] = []
+        for entry_index, entry in enumerate(curated.get("projects", []) or []):
+            bullets = entry.get("bullets", []) or []
+            if len(bullets) <= 1:
+                continue
+            heading = _latex_plain(str((entries.get(str(entry.get("source_id") or "")) or {}).get("heading") or ""))
+            for bullet_index, bullet in enumerate(bullets):
+                text = _latex_plain(str(bullet.get("text") or ""))
+                # A repeated award line is the safest first trim when the
+                # project heading already carries the same recognition.
+                award_duplicate = bool(
+                    re.search(r"1st place|best security|overall|hack", heading, re.I)
+                    and re.search(r"\b(?:won|selected|place|competitors?)\b", text, re.I)
+                )
+                score = bullet_value(bullet)
+                if award_duplicate:
+                    score -= 30.0
+                if source_is_canonical(str(bullet.get("source_id") or "")):
+                    score += 18.0
+                candidates.append((entry_index, bullet_index, {"bullet": bullet, "score": score}))
+        if not candidates:
+            break
+        entry_index, bullet_index, _ = min(
+            candidates,
+            key=lambda item: (item[2]["score"], str(item[2]["bullet"].get("source_id") or "")),
+        )
+        remove_bullet(
+            "projects", entry_index, bullet_index,
+            "trimmed lowest-marginal-value project line to the project skim budget",
+        )
+
+    # Finally cap the whole tailored artifact. Prefer project/leadership lines
+    # over chronological experience, then prefer non-canonical evidence. This
+    # is a space allocation rule, not a claim that the omitted fact is false.
+    def total_bullet_count() -> int:
+        return sum(
+            len(entry.get("bullets", []) or [])
+            for section in ("experiences", "projects", "leadership")
+            for entry in curated.get(section, []) or []
+        )
+
+    while total_bullet_count() > HUMAN_PORTFOLIO_CAPS["total_bullets"]:
+        candidates = []
+        for section_rank, section in enumerate(("leadership", "projects", "experiences")):
+            for entry_index, entry in enumerate(curated.get(section, []) or []):
+                bullets = entry.get("bullets", []) or []
+                if len(bullets) <= 1:
+                    continue
+                for bullet_index, bullet in enumerate(bullets):
+                    score = bullet_value(bullet)
+                    if source_is_canonical(str(bullet.get("source_id") or "")):
+                        score += 18.0
+                    candidates.append((
+                        section_rank, score, section, entry_index, bullet_index,
+                        str(bullet.get("source_id") or ""),
+                    ))
+        if not candidates:
+            break
+        _, _, section, entry_index, bullet_index, _ = min(
+            candidates, key=lambda item: (item[0], item[1], item[5])
+        )
+        remove_bullet(
+            section, entry_index, bullet_index,
+            "trimmed lowest-marginal-value evidence to the total human skim budget",
+        )
+
+    curated["portfolio_budget"] = {
+        "version": HUMAN_PORTFOLIO_POLICY_VERSION,
+        "caps": dict(HUMAN_PORTFOLIO_CAPS),
+        "actions": actions,
+        "decision": (
+            "Applied source-aware human skim budget before compiled packing."
+            if actions else "Candidate already fit the source-aware human skim budget."
+        ),
+    }
 
     return curated
 
@@ -6581,6 +7420,20 @@ def portfolio_metrics(plan: Dict[str, Any]) -> Dict[str, Any]:
         "total_bullets": len(bullets),
         "min_total_bullets": None,
         "max_total_bullets": MAX_TOTAL_BULLETS,
+        "human_skim_budget": {
+            "version": HUMAN_PORTFOLIO_POLICY_VERSION,
+            "caps": dict(HUMAN_PORTFOLIO_CAPS),
+            "within_budget": (
+                len(bullets) <= HUMAN_PORTFOLIO_CAPS["total_bullets"]
+                and counts["projects"]["entries"] <= HUMAN_PORTFOLIO_CAPS["project_entries"]
+                and counts["projects"]["bullets"] <= HUMAN_PORTFOLIO_CAPS["project_bullets"]
+                and all(
+                    len(entry.get("bullets", []) or [])
+                    <= HUMAN_PORTFOLIO_CAPS["experience_bullets_per_entry"]
+                    for entry in plan.get("experiences", []) or []
+                )
+            ),
+        },
         "duplicates": duplicates,
         "violations": violations,
     }
@@ -6644,6 +7497,18 @@ def _ledger_explains_removed_evidence(
             if matches >= min(3, len(label_tokens)):
                 return item
     return None
+
+
+def _ledger_explicitly_names_source(source_id: str, ledger: List[Dict[str, Any]]) -> bool:
+    """Return whether a tradeoff names this exact source bullet ID."""
+    needle = str(source_id or "").strip().lower()
+    if not needle:
+        return False
+    return any(
+        needle in _ledger_text(item).lower()
+        for item in ledger
+        if isinstance(item, dict)
+    )
 
 
 def content_change_report(
@@ -6947,6 +7812,94 @@ def content_change_report(
     }
 
 
+def candidate_delta_summary(changes: Dict[str, Any]) -> Dict[str, Any]:
+    """Describe whether a candidate materially differs from the base control.
+
+    A rendered PDF can differ from the immutable control because a line
+    compactor removed a word or changed punctuation.  Those changes should be
+    visible in the diff, but they are not a reason to launch a twelve-minute
+    semantic repair pass.  Conversely, a new supported term, source-backed
+    rewrite, project swap, or evidence replacement is material even when the
+    page still contains the same number of bullets.
+    """
+    changes = changes if isinstance(changes, dict) else {}
+    reasons: List[str] = []
+
+    def mark(reason: str) -> None:
+        if reason and reason not in reasons:
+            reasons.append(reason)
+
+    if changes.get("added_bullets"):
+        mark("new source-backed evidence line(s)")
+    if changes.get("removed_canonical_bullets"):
+        mark("canonical evidence line(s) removed or replaced")
+    swaps = changes.get("project_swaps") if isinstance(changes.get("project_swaps"), dict) else {}
+    if swaps.get("swapped_in") or swaps.get("swapped_out"):
+        mark("project portfolio changed")
+    order = changes.get("experience_order") if isinstance(changes.get("experience_order"), dict) else {}
+    if order.get("changed"):
+        mark("experience order changed")
+    if changes.get("removed_front_matter"):
+        mark("front matter removed")
+    for rewrite in changes.get("front_matter_rewrites") or []:
+        if not isinstance(rewrite, dict):
+            continue
+        if str(rewrite.get("source_text") or "") != str(rewrite.get("final_text") or ""):
+            mark("evidence-backed Skills rewrite")
+    coverage = changes.get("keyword_coverage") if isinstance(changes.get("keyword_coverage"), dict) else {}
+    if coverage.get("gained_terms"):
+        mark("supported target terminology surfaced")
+    if coverage.get("lost_terms"):
+        mark("supported target terminology lost")
+    for term in coverage.get("terms") or []:
+        if not isinstance(term, dict):
+            continue
+        if term.get("comparison_status") == "gained":
+            mark("supported target terminology surfaced")
+        elif term.get("comparison_status") == "lost":
+            mark("supported target terminology lost")
+
+    for rewrite in changes.get("rewritten_bullets") or []:
+        if not isinstance(rewrite, dict):
+            continue
+        source_id = str(rewrite.get("source_id") or "")
+        supporting = {
+            str(value) for value in (rewrite.get("source_ids") or []) if str(value)
+        }
+        if supporting - {source_id}:
+            mark("bullet synthesized from multiple authorized sources")
+            continue
+        if rewrite.get("added_supported_terms") or rewrite.get("dropped_supported_terms"):
+            mark("supported target terminology changed in a bullet")
+            continue
+        source_text = str(rewrite.get("source_text") or "")
+        final_text = str(rewrite.get("final_text") or "")
+        if _resume_numeric_anchors(source_text) != _resume_numeric_anchors(final_text):
+            mark("quantified proof changed")
+            continue
+        # Treat a close, same-signal-family edit as layout/editorial churn.
+        # A materially different sentence remains eligible for repair even if
+        # it did not happen to contain one of the known posting terms.
+        source_families = set(_portfolio_signal_families(source_text))
+        final_families = set(_portfolio_signal_families(final_text))
+        if (
+            _resume_text_similarity(source_text, final_text) < 0.76
+            or source_families != final_families
+        ):
+            mark("material source-addressed wording rewrite")
+
+    return {
+        "material": bool(reasons),
+        "status": "material" if reasons else "unchanged",
+        "reasons": reasons[:12],
+    }
+
+
+def has_material_candidate_delta(changes: Dict[str, Any]) -> bool:
+    """Return whether a candidate earned a semantic comparison/repair pass."""
+    return bool(candidate_delta_summary(changes).get("material"))
+
+
 def owner_change_summary(
     plan: Dict[str, Any], catalog: Dict[str, Any], changes: Dict[str, Any],
 ) -> Dict[str, Any]:
@@ -6997,6 +7950,305 @@ def owner_change_summary(
             for item in ledger[:6]
         ],
     }
+
+
+def portfolio_search_variant_cards(
+    job: Optional[Dict[str, Any]] = None, limit: int = 3,
+) -> List[Dict[str, Any]]:
+    """Return stable, role-agnostic editorial hypotheses for search runs.
+
+    The cards are intentionally not selected from keyword overlap.  They are
+    diversity controls for the author search: one conservative control pass,
+    one product/integration pass, and one systems/technical-conviction pass.
+    The target posting and evidence graph remain the authority inside each
+    child run.
+    """
+    del job  # The cards are fixed to keep cross-job experiments comparable.
+    count = max(1, min(int(limit or 3), len(PORTFOLIO_SEARCH_VARIANTS)))
+    return [copy.deepcopy(item) for item in PORTFOLIO_SEARCH_VARIANTS[:count]]
+
+
+def portfolio_search_candidate_summary(
+    variant: Dict[str, Any], report: Optional[Dict[str, Any]],
+    elapsed_seconds: float = 0.0, error: str = "",
+) -> Dict[str, Any]:
+    """Summarize one search child without inventing a composite quality score."""
+    report = report if isinstance(report, dict) else {}
+    audit = report.get("tailoring_audit") if isinstance(report.get("tailoring_audit"), dict) else {}
+    panel = report.get("critic_panel") if isinstance(report.get("critic_panel"), dict) else {}
+    recommendation = str(audit.get("recommended_version") or "review").lower()
+    winner = str(report.get("winner_version") or "base").lower()
+    complete_panel = bool(
+        audit.get("review", {}).get("available")
+        if isinstance(audit.get("review"), dict) else False
+    ) and bool(panel.get("all_required_roles"))
+    eligible = bool(
+        winner == "tailored"
+        and recommendation == "tailored"
+        and complete_panel
+        and str(audit.get("decision") or "") == "prefer_tailored"
+    )
+    return {
+        "variant_id": str(variant.get("id") or ""),
+        "variant_label": str(variant.get("label") or ""),
+        "run_dir": str(variant.get("run_dir") or ""),
+        "ok": bool(report),
+        "error": str(error or "")[:500],
+        "elapsed_seconds": round(float(elapsed_seconds or 0.0), 1),
+        "winner_version": winner,
+        "recommended_version": recommendation,
+        "audit_status": str(audit.get("status") or "unknown"),
+        "tailoring": str(audit.get("tailoring") or "unknown"),
+        "decision": str(audit.get("decision") or ""),
+        "complete_panel": complete_panel,
+        "eligible_positive_win": eligible,
+        "preference_key": list(tailoring_audit_preference_key(audit)),
+        "finding_counts": dict(audit.get("finding_counts") or {}),
+        "run_id": str(report.get("run_id") or ""),
+    }
+
+
+def _copy_if_present(source: Path, target: Path) -> bool:
+    if not source.is_file():
+        return False
+    target.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(source, target)
+    return True
+
+
+def _write_resume_text_from_pdf(pdf: Path, target: Path) -> None:
+    pdftotext = shutil.which("pdftotext")
+    if not pdftotext or not pdf.is_file():
+        return
+    try:
+        text = subprocess.check_output([pdftotext, str(pdf), "-"], timeout=30, text=True)
+    except (OSError, subprocess.SubprocessError):
+        return
+    target.write_text(text)
+
+
+def run_portfolio_search(
+    run_dir: Path, job: Dict[str, Any], update, *, enhance: bool,
+    unrestricted: bool = False, generation: bool = False,
+) -> None:
+    """Run several complete author/jury candidates and publish only a win.
+
+    This is deliberately a wrapper around the existing single-candidate path,
+    rather than a second evaluator. Every child gets its own prompt, render,
+    source audit, and sealed four-role panel. A child can become the published
+    candidate only when the existing comparative audit says ``prefer_tailored``
+    and every required critic role completed. Otherwise the immutable base is
+    the parent run's primary artifact.
+    """
+    started = time.time()
+    parent_run_id = str(job.get("_resume_studio_run_id") or uuid.uuid4().hex[:12])
+    queue_id = str(job.get("_resume_studio_queue_id") or "")
+    cards = portfolio_search_variant_cards(job, limit=QUALITY_PROFILES["search"].get("candidate_variants", 3))
+    search_root = run_dir / "portfolio_search"
+    search_root.mkdir(parents=True, exist_ok=True)
+    update("searching", "Generating %s independent evidence portfolios before judging them" % len(cards))
+
+    def run_child(card: Dict[str, Any]) -> Dict[str, Any]:
+        child_started = time.time()
+        variant_id = str(card.get("id") or "variant")
+        child_dir = search_root / variant_id
+        child_dir.mkdir(parents=True, exist_ok=True)
+        # Child receipts use the same twelve-hex run-id shape as ordinary
+        # Studio runs, while remaining stable and distinct inside a parent.
+        child_run_id = hashlib.sha256(
+            (parent_run_id + ":" + variant_id).encode("utf-8")
+        ).hexdigest()[:12]
+        child_job = copy.deepcopy(job)
+        child_job["_resume_studio_run_id"] = child_run_id
+        child_job["_resume_studio_queue_id"] = queue_id
+        write_json(child_dir / "status.json", {
+            "run_id": child_run_id, "status": "queued", "step": "queued",
+            "message": "Portfolio-search child queued", "variant_id": variant_id,
+            "variant_label": card.get("label"), "created_at": now_iso(),
+        })
+
+        def child_update(step: str, message: str, **extra: Any) -> None:
+            current = read_json(child_dir / "status.json", {}) or {}
+            current.update({
+                "run_id": child_run_id,
+                "status": "awaiting_review" if step == "awaiting_review" else "running",
+                "step": step, "message": message, "updated_at": now_iso(),
+            })
+            current.update(extra)
+            write_json(child_dir / "status.json", current)
+
+        try:
+            run_tailoring(
+                child_dir, child_job, child_update, enhance=enhance,
+                unrestricted=unrestricted, generation=generation,
+                quality_profile="search_single",
+                variant_instruction=str(card.get("instruction") or ""),
+                _search_child=True,
+            )
+            report = read_json(child_dir / "report.json", {}) or {}
+            record = portfolio_search_candidate_summary(
+                {**card, "run_dir": str(child_dir)}, report,
+                elapsed_seconds=time.time() - child_started,
+            )
+            record["report_path"] = str(child_dir / "report.json")
+            return record
+        except Exception as exc:  # noqa: BLE001 - preserve one failed child
+            trace = traceback.format_exc()
+            (child_dir / "error.log").write_text(trace)
+            write_json(child_dir / "status.json", {
+                "run_id": child_run_id, "status": "failed", "step": "error",
+                "message": str(exc)[:500], "error_log": "error.log",
+                "finished_at": now_iso(), "updated_at": now_iso(),
+            })
+            return portfolio_search_candidate_summary(
+                {**card, "run_dir": str(child_dir)}, None,
+                elapsed_seconds=time.time() - child_started, error=str(exc),
+            )
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, len(cards))) as pool:
+        futures = [pool.submit(run_child, card) for card in cards]
+        records = [future.result() for future in futures]
+    variant_order = {
+        str(card.get("id") or ""): index
+        for index, card in enumerate(cards)
+    }
+    records.sort(key=lambda item: variant_order.get(str(item.get("variant_id") or ""), 999))
+
+    complete_wins = [item for item in records if item.get("eligible_positive_win")]
+    complete_wins.sort(
+        key=lambda item: (tuple(item.get("preference_key") or []), -float(item.get("elapsed_seconds") or 0.0)),
+        reverse=True,
+    )
+    selected = complete_wins[0] if complete_wins else None
+    diagnostic_candidates = [item for item in records if item.get("ok")]
+    diagnostic_candidates.sort(
+        key=lambda item: (tuple(item.get("preference_key") or []), item.get("complete_panel"), -float(item.get("elapsed_seconds") or 0.0)),
+        reverse=True,
+    )
+    diagnostic = diagnostic_candidates[0] if diagnostic_candidates else None
+    chosen_record = selected or diagnostic
+    selected_dir = Path(str(chosen_record.get("run_dir") or "")) if chosen_record else None
+    selected_report = read_json(selected_dir / "report.json", {}) if selected_dir else {}
+    selected_report = selected_report if isinstance(selected_report, dict) else {}
+    parent_pdf = run_pdf_path(run_dir)
+    parent_pdf.parent.mkdir(parents=True, exist_ok=True)
+    winner_version = "tailored" if selected else "base"
+    copied_candidate = False
+
+    if selected and selected_dir:
+        source_pdf = run_pdf_path(selected_dir)
+        _copy_if_present(source_pdf, parent_pdf)
+        for name in ("resume.tex", "resume.txt"):
+            _copy_if_present(selected_dir / name, run_dir / name)
+        _copy_if_present(run_preview_path(selected_dir), run_preview_path(run_dir))
+    else:
+        canonical_pdf = cv_root(repo_root()) / CANONICAL_PDF
+        canonical_tex = cv_root(repo_root()) / CANONICAL_TEMPLATE
+        _copy_if_present(canonical_pdf, parent_pdf)
+        _copy_if_present(canonical_tex, run_dir / "resume.tex")
+        _write_resume_text_from_pdf(parent_pdf, run_dir / "resume.txt")
+        render_preview(run_dir)
+
+    # Keep the best rejected/generated candidate available for diagnosis, but
+    # never let it become the primary artifact merely because it compiled.
+    if diagnostic and selected_dir:
+        diagnostic_candidate = selected_dir / "tailored_candidate.pdf"
+        if diagnostic_candidate.is_file():
+            copied_candidate = _copy_if_present(diagnostic_candidate, run_dir / "tailored_candidate.pdf")
+            _copy_if_present(
+                selected_dir / "tailored_candidate-preview.png",
+                run_dir / "tailored_candidate-preview.png",
+            )
+    if winner_version == "base":
+        _copy_if_present(cv_root(repo_root()) / CANONICAL_TEMPLATE, run_dir / "base_control.tex")
+
+    # Copy the selected child's durable decision artifacts to the parent root;
+    # all child prompts/raw jury receipts remain under portfolio_search/.
+    if selected_dir:
+        for name in (
+            "job_context.json", "job_intelligence.json", "brief.json",
+            "evidence_catalog.json", "evidence_graph_context.json",
+            "content_plan.json", "candidate_plan.json", "layout_packing.json",
+            "tailoring_audit.json", "critique.json", "revision_log.json",
+            "post_line_density.json", "final_geometry_recovery.json",
+        ):
+            _copy_if_present(selected_dir / name, run_dir / name)
+
+    if selected_report:
+        report = copy.deepcopy(selected_report)
+    else:
+        report = {
+            "mode": "generation" if generation else "unrestricted" if unrestricted else "enhanced",
+            "job": job_summary(job),
+            "winner_version": "base",
+            "resume_match": {},
+            "tailoring_audit": {
+                "status": "review", "readiness": "review", "tailoring": "unknown",
+                "decision": "needs_review", "recommended_version": "review",
+                "review": {"available": False, "mode": "unavailable", "critic_roles": []},
+                "comparison": {"uplift_band": "uncertain", "gain_weight": 0, "loss_weight": 0, "missed_opportunity_weight": 0},
+                "finding_counts": {},
+            },
+            "review": {"ready": False, "hard_fail": False, "needs_review": True},
+            "approval_state": "awaiting_review",
+        }
+    report["run_id"] = parent_run_id
+    report["quality_profile"] = "search"
+    report["winner_version"] = winner_version
+    report["pdf_filename"] = parent_pdf.name
+    report["approval_state"] = "awaiting_review"
+    report["run_metrics"] = {
+        **(report.get("run_metrics") if isinstance(report.get("run_metrics"), dict) else {}),
+        "portfolio_search_elapsed_seconds": round(time.time() - started, 1),
+    }
+    report["portfolio_search"] = {
+        "version": "portfolio-search-v1",
+        "candidate_count": len(cards),
+        "completed_candidates": sum(1 for item in records if item.get("ok")),
+        "complete_panels": sum(1 for item in records if item.get("complete_panel")),
+        "positive_wins": len(complete_wins),
+        "selected_variant": selected.get("variant_id") if selected else "base_control",
+        "diagnostic_variant": diagnostic.get("variant_id") if diagnostic else "",
+        "selection_rule": "Only a complete sealed-panel prefer_tailored result may replace the canonical base; otherwise base remains primary.",
+        "candidates": records,
+    }
+    report["winner_artifact"] = {
+        "winner_version": winner_version,
+        "primary_artifact": parent_pdf.name,
+        "tailored_candidate_artifact": "tailored_candidate.pdf" if copied_candidate else "",
+        "base_control_artifact": parent_pdf.name if winner_version == "base" else "",
+        "base_control_tex": "base_control.tex" if winner_version == "base" else "",
+        "reason": (
+            "A complete sealed-panel candidate won the comparative audit."
+            if selected else
+            "No complete candidate earned prefer_tailored; the immutable canonical base remains primary."
+        ),
+    }
+    report["artifacts"] = list(dict.fromkeys([
+        "resume.tex", parent_pdf.name, "resume.txt", run_preview_path(run_dir).name,
+        "job.json", "report.json", "portfolio_search.json", "job_context.json",
+        "job_intelligence.json", "brief.json", "evidence_catalog.json",
+        "evidence_graph_context.json", "content_plan.json", "candidate_plan.json",
+        "layout_packing.json", "tailoring_audit.json", "critique.json",
+        "tailored_candidate.pdf" if copied_candidate else "",
+        "tailored_candidate-preview.png" if (run_dir / "tailored_candidate-preview.png").is_file() else "",
+        "base_control.tex" if winner_version == "base" else "",
+    ]))
+    report["artifacts"] = [item for item in report["artifacts"] if item]
+    write_json(run_dir / "portfolio_search.json", report["portfolio_search"])
+    write_json(run_dir / "report.json", report)
+    try:
+        _workshop_state(run_dir, source_catalog(repo_root()))
+    except (OSError, RuntimeError, ValueError):
+        pass
+    update(
+        "awaiting_review",
+        "Portfolio search complete: %s" % (
+            "a sealed-panel candidate beat the canonical base" if selected else
+            "the canonical base remains primary after candidate rejection"
+        ),
+        report=report,
+    )
 
 
 def merge_edited_bullets(candidate_plan: Dict[str, Any], edited_plan: Dict[str, Any]) -> Dict[str, Any]:
@@ -7714,32 +8966,15 @@ def _removal_actions(
     return actions
 
 
-def _hackmit_acceptance_removal(plan: Dict[str, Any]) -> Optional[Tuple[float, str, int, int]]:
-    """Locate the low-signal HackMIT selection proof reserve.
-
-    The acceptance-pool line is useful prestige context, but once the project
-    itself is selected it is less valuable than another distinct technical
-    bullet. Keep this narrow: only the HackMIT acceptance/selection bullet is
-    eligible, never the project's implementation evidence.
-    """
-    for section in ("projects",):
-        for entry_index, entry in enumerate(plan.get(section, [])):
-            for bullet_index, bullet in enumerate(entry.get("bullets", [])):
-                text = _latex_plain(str(bullet.get("text") or ""))
-                lowered = text.lower()
-                if "hackmit" in lowered and "acceptance" in lowered:
-                    return (0.0, section, entry_index, bullet_index)
-    return None
-
-
 def _reclaim_flexible_content(plan: Dict[str, Any]) -> Optional[Dict[str, Any]]:
     """Use flexible content in Victor's preferred order before strong evidence.
 
-    Coursework is the first reserve. The HackMIT acceptance-pool line is the
-    next reserve because it duplicates the project's prestige context without
-    adding a new technical capability. Awards are flexible too, but remain
-    ahead of removing substantive technical evidence only after that project
-    proof has been considered.
+    Coursework is the first reserve and the aggregate Awards line is the
+    second. A quantified external-selection line is not a generic reserve:
+    it can be the strongest distinctiveness proof in a project and must be
+    compared like substantive evidence. If a candidate truly needs another
+    removal after optional front matter is gone, the normal control-aware
+    removal ranking decides rather than deleting HackMIT by name.
     """
     policy = plan.setdefault("front_matter_policy", {"coursework": "keep", "awards": "keep"})
     if str(policy.get("coursework") or "keep") == "keep":
@@ -7748,13 +8983,6 @@ def _reclaim_flexible_content(plan: Dict[str, Any]) -> Optional[Dict[str, Any]]:
             "kind": "front_matter",
             "field": "coursework",
             "reason": "reclaimed flexible coursework space before removing strong resume evidence",
-        }
-    hackmit_action = _hackmit_acceptance_removal(plan)
-    if hackmit_action:
-        return {
-            "kind": "deferred_bullet_removal",
-            "action": hackmit_action,
-            "reason": "removed redundant HackMIT selection proof before substantive technical evidence",
         }
     if str(policy.get("awards") or "keep") == "keep":
         policy["awards"] = "omit"
@@ -7900,6 +9128,12 @@ def pack_plan_to_page(
         "strategy": "adaptive evidence portfolio with compile-measured overflow removal",
         "attempts": attempts,
         "kept_bullets": len(kept_ids),
+        "human_skim_budget": plan.get("portfolio_budget") or {
+            "version": HUMAN_PORTFOLIO_POLICY_VERSION,
+            "caps": dict(HUMAN_PORTFOLIO_CAPS),
+            "actions": [],
+            "decision": "No pre-packing budget receipt was present.",
+        },
         "excluded_bullet_ids": sorted(value for value in all_ids - kept_ids if value),
         "removed_front_matter": [
             item for item in removed if item.get("kind") == "front_matter"
@@ -8425,6 +9659,13 @@ def render_preview(run_dir: Path) -> Optional[str]:
 
 def compile_resume(run_dir: Path) -> Dict[str, Any]:
     assert_resume_workspace(run_dir)
+    # Callers may hand us a repository-relative private run directory (the
+    # portfolio-search children do this intentionally).  Tectonic receives
+    # ``cwd=run_dir`` below, so a relative ``--outdir`` would be resolved a
+    # second time and look like ``run_dir/run_dir``.  Resolve once at the
+    # process boundary; this keeps the compile contract identical for direct,
+    # nested, and concurrent runs.
+    run_dir = Path(run_dir).resolve()
     tex = run_dir / "resume.tex"
     if not tex.exists():
         return {"compiled": False, "error": "resume.tex was not produced"}
@@ -8968,10 +10209,18 @@ def run_tailoring(
     unrestricted: bool = False,
     generation: bool = False,
     quality_profile: str = QUALITY_PROFILE_DEFAULT,
+    variant_instruction: str = "",
+    _search_child: bool = False,
 ) -> None:
     run_started_clock = time.time()
     run_started_at = now_iso()
     quality_profile = normalize_quality_profile(quality_profile)
+    if quality_profile == "search" and not _search_child:
+        run_portfolio_search(
+            run_dir, job, update, enhance=enhance, unrestricted=unrestricted,
+            generation=generation,
+        )
+        return
     profile = QUALITY_PROFILES[quality_profile]
     run_id = str(job.get("_resume_studio_run_id") or "")
     queue_id = str(job.get("_resume_studio_queue_id") or "")
@@ -8994,7 +10243,7 @@ def run_tailoring(
         "codex_model": CODEX_LUNA_MODEL,
         "codex_effort_defaults": dict(CODEX_TASK_EFFORT_DEFAULTS),
         "repair_effort_override": "high",
-        "sealed_evaluator_effort": resume_evaluator.CODEX_EFFORT,
+        "sealed_evaluator_effort": profile.get("evaluator_effort") or resume_evaluator.CODEX_EFFORT,
         "review_mode": CODEX_REVIEW_MODE,
         "critic_roles": [item["key"] for item in CODEX_CRITIC_ROLES],
         "sealed_evaluator_contract": {
@@ -9008,6 +10257,7 @@ def run_tailoring(
         "api_fallback_allowed": False,
         "quality_profile": quality_profile,
         "quality_profile_policy": dict(profile),
+        "portfolio_variant_instruction": str(variant_instruction or "")[:2400],
     }
     available = [name for name, path in provider_commands().items() if path and name == "codex"]
     if not available:
@@ -9023,14 +10273,33 @@ def run_tailoring(
             "gap_analysis",
             timeout=5 * 60,
             schema=gap_analysis_schema(),
+            codex_effort=profile.get("gap_analysis_effort") or profile["author_effort"],
         )
         gap_record["label"] = "gap_analysis"
         gap_records.append(gap_record)
         write_json(run_dir / "gap_analysis.json", gap_record)
-        context["generation_strategy"] = normalize_gap_analysis(
-            gap_record.get("data") or {}, context["target_keywords"], catalog,
-            graph, str(context.get("posting_text") or ""),
-        )
+        if gap_record.get("ok"):
+            context["generation_strategy"] = normalize_gap_analysis(
+                gap_record.get("data") or {}, context["target_keywords"], catalog,
+                graph, str(context.get("posting_text") or ""),
+            )
+        else:
+            # Keep generation recoverable when the planning call times out,
+            # but make the degradation explicit. The author may use the
+            # deterministic supported-term strategy; it must not pretend that
+            # a full requirement map was completed.
+            context["generation_strategy"] = {
+                "version": "gap-analysis-fallback-v1",
+                "status": "unavailable",
+                "portfolio_strategy": (
+                    "Gap analysis was unavailable; use the deterministic supported-term strategy only. "
+                    "Do not infer unsupported requirements or claim that every posting requirement was mapped."
+                ),
+                "requirements": [],
+                "must_cover_terms": [],
+                "honest_gaps": [],
+                "error": str(gap_record.get("error") or "gap analysis provider failed")[:500],
+            }
         context["target_keywords"] = apply_gap_support_to_keywords(
             context["target_keywords"], context["generation_strategy"],
         )
@@ -9068,6 +10337,7 @@ def run_tailoring(
     prompt = base_prompt(
         context, "a Codex Luna resume evidence strategist", catalog, enhance,
         graph=graph, unrestricted=unrestricted, generation=generation,
+        variant_instruction=variant_instruction,
     )
     schema = plan_schema(enhance, generation=generation)
     update("drafting", "Building adaptive %s evidence plan with Codex Luna" % mode_label)
@@ -9085,11 +10355,44 @@ def run_tailoring(
         write_json(run_dir / (draft.get("provider", "unknown") + "_draft.json"), draft)
     successful = [draft for draft in drafts if draft.get("ok")]
     if not successful:
-        raise RuntimeError("Approved provider lanes returned no usable evidence plan; inspect *_draft.json")
+        # A timed-out or malformed author must not turn the whole application
+        # into a hard failure. Fall back to the immutable, source-addressed
+        # control and still run the same packing, geometry, and sealed audit.
+        # This is deliberately not reported as a tailored win: it produces a
+        # usable base artifact plus an honest provider-failure receipt.
+        fallback_data = canonical_control_plan(catalog)
+        fallback_plan, fallback_errors = validate_plan(
+            fallback_data, catalog, enhance, graph=graph, generation=generation,
+        )
+        if fallback_errors:
+            write_json(run_dir / "plan_errors.json", [
+                "canonical control fallback: %s" % error for error in fallback_errors
+            ])
+            raise RuntimeError(
+                "Approved provider lanes returned no usable evidence plan and the canonical fallback failed; "
+                "inspect *_draft.json and plan_errors.json"
+            )
+        fallback_record = {
+            "provider": "deterministic",
+            "ok": True,
+            "label": "canonical_control_fallback",
+            "reasoning_effort": "none",
+            "data": fallback_plan,
+            "fallback": True,
+            "error_context": [
+                str(draft.get("error") or "provider returned no usable plan")[:500]
+                for draft in drafts
+            ],
+        }
+        drafts.append(fallback_record)
+        successful = [fallback_record]
+        write_json(run_dir / "canonical_control_fallback.json", fallback_record)
 
     writer = "codex" if any(item.get("provider") == "codex" for item in successful) else successful[0].get("provider")
     update("synthesis", "Codex is synthesizing the strongest adaptive evidence plan")
-    if len(successful) == 1 and successful[0].get("provider") == writer:
+    if len(successful) == 1 and (
+        successful[0].get("provider") == writer or successful[0].get("fallback")
+    ):
         synthesis = {
             "provider": writer, "ok": True, "skipped": True,
             "reason": "Codex Luna is the sole author lane; a separate multi-role Luna critic panel follows.",
@@ -9176,6 +10479,57 @@ def run_tailoring(
         preview_value = render_preview(attempt_root)
         return tex_value, layout_value, preview_value
 
+    def recover_repair_geometry(
+        value: Dict[str, Any], value_layout: Dict[str, Any], recovery_root: Path,
+    ) -> Tuple[Dict[str, Any], str, Dict[str, Any], Optional[str], bool, Dict[str, Any]]:
+        """Try deterministic source-preserving geometry recovery for a repair.
+
+        A repair writer can make the right portfolio decision and still return
+        a candidate that is one near-wrap away from being shippable.  The
+        normal final recovery below handles the already-selected candidate;
+        this earlier pass gives a source-valid audit repair the same bounded
+        deterministic opportunity before it is rejected.  No new evidence or
+        wording is invented here, and a successful recovery still receives a
+        fresh sealed panel before acceptance.
+        """
+        recovery_root.mkdir(parents=True, exist_ok=True)
+        recovered, restored_ids = restore_wrapped_source_text(value, value_layout, catalog)
+        source_root = recovery_root / "source_restore"
+        _, source_layout, _ = render_candidate(recovered, source_root)
+        compacted, _, compactions = compact_plan_to_geometry(
+            recovered, source_layout, catalog, recovery_root,
+        )
+        changed = bool(restored_ids or compactions)
+        receipt: Dict[str, Any] = {
+            "attempted": True,
+            "restored_source_ids": list(restored_ids),
+            "compactions": list(compactions),
+            "changed": changed,
+        }
+        if not changed:
+            receipt.update({
+                "safe_render": False,
+                "status": "no_safe_deterministic_change",
+            })
+            return value, "", value_layout, None, False, receipt
+        candidate_root = recovery_root / "candidate"
+        candidate_tex, candidate_layout, candidate_preview = render_candidate(
+            compacted, candidate_root,
+        )
+        safe = bool(
+            candidate_layout.get("compiled")
+            and candidate_layout.get("pages") == 1
+            and not candidate_layout.get("overfull")
+            and (candidate_layout.get("horizontal") or {}).get("pass")
+        )
+        receipt.update({
+            "safe_render": safe,
+            "status": "safe" if safe else "still_unsafe",
+            "wrap_count": (candidate_layout.get("horizontal") or {}).get("wrap_count", 0),
+            "near_wrap_count": (candidate_layout.get("horizontal") or {}).get("near_wrap_count", 0),
+        })
+        return compacted, candidate_tex, candidate_layout, candidate_preview, safe, receipt
+
     update("packing", "Packing the strongest role-specific evidence without portfolio floors")
     plan, packing = pack_plan_to_page(candidate_plan, catalog, run_dir)
     write_json(run_dir / "content_plan.json", plan)
@@ -9236,7 +10590,7 @@ def run_tailoring(
     # source catalog as a deterministic last-mile fallback, then compile every
     # candidate trial. Existing selected entries are preferred; new entries
     # arrive only as atomic two-bullet groups.
-    if enhance and (
+    if enhance and profile.get("deterministic_space_expansion", True) and (
         measured_space_available(layout)
         or (isinstance(layout.get("density_gap_pt"), (int, float)) and layout["density_gap_pt"] > MAX_DENSITY_GAP_PT)
     ):
@@ -9335,10 +10689,14 @@ def run_tailoring(
     post_line_density: List[Dict[str, Any]] = []
     post_line_attempted: set = set()
     distinctive_replacement_attempted = False
+    target_opportunity: Dict[str, Any] = {
+        "attempted": False,
+        "status": "not_run",
+    }
 
     def fill_post_line_capacity(round_label: str) -> None:
         nonlocal plan, packing, chosen, layout, preview, line_compactions, distinctive_replacement_attempted
-        if not enhance:
+        if not enhance or not profile.get("deterministic_space_expansion", True):
             return
         # A revision can reintroduce a near-wrap after the first compaction
         # pass. Repair that geometry before deciding whether to add more.
@@ -9614,6 +10972,33 @@ def run_tailoring(
 
     fill_post_line_capacity("post_line_density")
 
+    # The generation author can identify the right source evidence and still
+    # leave one high-value line buried in the candidate's history. Give only
+    # Unchained one deterministic, source-verbatim counterfactual before the
+    # sealed panel. It must compile, remain within the human skim budget, and
+    # survive the same base-vs-tailored jury; this is an opportunity probe, not
+    # an ATS keyword insertion rule.
+    if generation and profile.get("target_opportunity_replacement", False):
+        update(
+            "target_opportunity",
+            "Surfacing one buried source-grounded requirement opportunity",
+        )
+        opportunity_plan, target_opportunity = deterministic_target_opportunity_replacement(
+            plan,
+            catalog,
+            graph,
+            context,
+            run_dir / "target_opportunity",
+        )
+        if target_opportunity.get("status") == "applied":
+            plan = opportunity_plan
+            chosen, layout, preview = render_candidate(plan, run_dir)
+            packing["target_opportunity"] = target_opportunity
+            write_json(run_dir / "content_plan.json", plan)
+            write_json(run_dir / "layout_packing.json", packing)
+    # Keep the artifact list truthful for non-generation modes as well.
+    write_json(run_dir / "target_opportunity.json", target_opportunity)
+
     def combined_critique(records: List[Dict[str, Any]]) -> Dict[str, Any]:
         if not records:
             return {"provider": "", "ok": False, "data": {
@@ -9879,6 +11264,7 @@ def run_tailoring(
                     run_dir,
                     round_label + "_" + role["key"],
                     timeout=int(profile.get("evaluator_timeout_seconds") or 8 * 60),
+                    evaluator_effort=profile.get("evaluator_effort") or resume_evaluator.CODEX_EFFORT,
                 ): role for role in critic_roles
             }
         # Futures complete in arbitrary order; retain the role key alongside
@@ -9998,7 +11384,8 @@ def run_tailoring(
         initial_deterministic, initial_scored, base_tex_for_audit, chosen,
         run_id=run_id, queue_id=queue_id,
     )
-    repair_needed = enhance and bool(profile.get("audit_repair")) and (
+    initial_candidate_delta = candidate_delta_summary(initial_changes)
+    repair_needed = enhance and bool(profile.get("audit_repair")) and initial_candidate_delta["material"] and (
         initial_audit.get("tailoring") == "regressed"
         or any(
             item.get("classification") in {"REGRESSION", "BLOCKER"}
@@ -10006,6 +11393,16 @@ def run_tailoring(
             if isinstance(item, dict)
         )
     )
+    if enhance and bool(profile.get("audit_repair")) and not initial_candidate_delta["material"]:
+        audit_repair_log.append({
+            "status": "skipped",
+            "reason": "candidate matched the canonical control in all material dimensions; semantic repair would add latency without a changed artifact",
+            "candidate_delta": initial_candidate_delta,
+            "post_density": {
+                "status": "not_run",
+                "reason": "no material base-to-candidate delta",
+            },
+        })
     if repair_needed:
         update("audit_repair", "Repairing source-aware regressions before selecting the final draft")
         feedback = tailoring_repair_feedback(initial_audit, initial_changes)
@@ -10049,18 +11446,47 @@ def run_tailoring(
                 repair_root = run_dir / "audit_repair_candidate"
                 try:
                     prior_repair_state = (plan, chosen, layout, preview)
+                    # The repair writer is judged as a new candidate, but the
+                    # packing stage must not silently trade away a stronger
+                    # canonical proof line before that fresh jury sees it.
+                    # Reuse only the source-verbatim canonical replacement
+                    # guard; overlap trimming remains disabled for repairs so
+                    # the repair writer's portfolio decision is not edited a
+                    # second time by a deterministic heuristic.
+                    repaired_plan, repair_control_recovery = deterministic_control_recovery(
+                        repaired_plan,
+                        catalog,
+                        context.get("target_keywords"),
+                        repair_root / "control_recovery",
+                        trim_overlap=False,
+                    )
                     repaired_plan, repair_packing = pack_plan_to_page(
                         repaired_plan, catalog, repair_root,
                     )
+                    repair_packing["control_recovery"] = repair_control_recovery
                     repaired_tex, repaired_layout, repaired_preview = render_candidate(
                         repaired_plan, repair_root,
                     )
+                    repair_geometry_recovery: Dict[str, Any] = {
+                        "attempted": False,
+                        "status": "not_needed",
+                    }
                     safe_render = bool(
                         repaired_layout.get("compiled")
                         and repaired_layout.get("pages") == 1
                         and not repaired_layout.get("overfull")
                         and (repaired_layout.get("horizontal") or {}).get("pass")
                     )
+                    if not safe_render:
+                        (
+                            repaired_plan, repaired_tex, repaired_layout, repaired_preview,
+                            safe_render, repair_geometry_recovery,
+                        ) = recover_repair_geometry(
+                            repaired_plan,
+                            repaired_layout,
+                            repair_root / "geometry_recovery",
+                        )
+                        repair_packing["geometry_recovery"] = repair_geometry_recovery
                     plan, chosen, layout, preview = (
                         repaired_plan, repaired_tex, repaired_layout, repaired_preview,
                     )
@@ -10256,6 +11682,7 @@ def run_tailoring(
                             "before": current_key,
                             "after": repaired_key,
                             "safe_render": safe_render,
+                            "geometry_recovery": repair_geometry_recovery,
                             "sealed_recheck": {
                                 "available": repair_review_available,
                                 "roles": repair_critique.get("critic_roles") or [],
@@ -10508,6 +11935,7 @@ def run_tailoring(
         "run_id": run_id,
         "line_compactions": line_compactions,
         "final_geometry_recovery": final_geometry_recovery,
+        "target_opportunity": target_opportunity,
         "audit_repair_log": audit_repair_log,
         "post_line_density": post_line_density,
         "validation_warnings": synthesis_data.get("validation_warnings", []),
@@ -10588,6 +12016,7 @@ def run_tailoring(
             "resume.tex", run_pdf_path(run_dir).name, "resume.txt", run_preview_path(run_dir).name if preview else None,
             "job.json", "report.json", "job_context.json", "brief.json", "evidence_catalog.json", "evidence_graph_context.json",
             "job_intelligence.json", "tailoring_audit.json",
+            "target_opportunity.json",
             winner.get("tailored_candidate_artifact") or None,
             winner.get("tailored_candidate_preview") or None,
             winner.get("base_control_tex") or None,
@@ -10622,7 +12051,7 @@ def run_unrestricted(run_dir: Path, job: Dict[str, Any], update) -> None:
 def run_generation(run_dir: Path, job: Dict[str, Any], update) -> None:
     run_tailoring(
         run_dir, job, update, enhance=True, unrestricted=True,
-        generation=True,
+        generation=True, quality_profile="unchained",
     )
 
 

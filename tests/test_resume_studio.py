@@ -56,10 +56,11 @@ def test_sealed_evaluator_uses_disposable_cwd_and_persists_attestation(tmp_path,
         deterministic_snapshot={}, comparison_snapshot={}, run_id="run-1",
     )
     run_dir = tmp_path / "run"
-    result = rs.run_sealed_evaluator(packet, run_dir, "evidence", timeout=30)
+    result = rs.run_sealed_evaluator(packet, run_dir, "evidence", timeout=30, evaluator_effort="high")
     assert result["ok"] is True
     assert result["execution_lane"] == "sealed_evaluator"
     assert result["contract_version"] == rs.SEALED_EVALUATOR_CONTRACT
+    assert result["reasoning_effort"] == "high"
     assert Path(result["stdout_path"]).exists()
     assert not (run_dir / "sealed_evaluator" / "evidence_scratch").exists()
 
@@ -69,6 +70,29 @@ def test_write_json_uses_an_atomic_worker_specific_temp_file(tmp_path):
     rs.write_json(target, {"ok": True})
     assert json.loads(target.read_text()) == {"ok": True}
     assert list(tmp_path.glob("*.tmp")) == []
+
+
+def test_compile_resume_resolves_relative_run_dir_before_invoking_tectonic(tmp_path, monkeypatch):
+    run_dir = tmp_path / "relative-run"
+    run_dir.mkdir()
+    (run_dir / "resume.tex").write_text("\\documentclass{article}\\begin{document}ok\\end{document}")
+    calls = {}
+
+    def fake_run(args, **kwargs):
+        calls["args"] = args
+        calls["kwargs"] = kwargs
+        run_dir.joinpath("resume.pdf").write_bytes(b"pdf")
+        return type("Completed", (), {"returncode": 0, "stdout": "compiled"})()
+
+    monkeypatch.chdir(tmp_path.parent)
+    monkeypatch.setattr(rs.shutil, "which", lambda name: "/usr/bin/tectonic" if name == "tectonic" else None)
+    monkeypatch.setattr(rs.subprocess, "run", fake_run)
+
+    result = rs.compile_resume(Path(tmp_path.name) / "relative-run")
+
+    assert result["compiled"] is True
+    assert calls["kwargs"]["cwd"] == str(run_dir.resolve())
+    assert str(run_dir.resolve()) in calls["args"]
 
 
 def test_context_questions_group_a_capability_across_postings_and_authorize_only_used_answers(tmp_path):
@@ -200,6 +224,99 @@ def test_resume_report_exposes_change_and_layout_safety_language():
     assert "Experience chronology preserved" in rs.UI_HTML
     assert "Tailoring decision" in rs.UI_HTML
     assert "Compared with the original resume for this posting" in rs.UI_HTML
+
+
+def test_portfolio_search_uses_distinct_editorial_hypotheses():
+    cards = rs.portfolio_search_variant_cards({}, limit=3)
+    assert [item["id"] for item in cards] == [
+        "control_preserver", "product_integration", "systems_ml",
+    ]
+    assert len({item["instruction"] for item in cards}) == 3
+    assert all("keyword" not in item["instruction"].lower() or "generic domain keyword" in item["instruction"].lower() for item in cards)
+
+
+def test_portfolio_search_only_qualifies_complete_positive_tailored_wins():
+    variant = {"id": "control_preserver", "label": "Control"}
+    base_audit = {
+        "recommended_version": "tailored", "decision": "prefer_tailored",
+        "review": {"available": True}, "finding_counts": {},
+        "comparison": {"gain_weight": 4, "loss_weight": 0, "missed_opportunity_weight": 0},
+    }
+    incomplete = rs.portfolio_search_candidate_summary(
+        variant,
+        {"winner_version": "tailored", "tailoring_audit": base_audit,
+         "critic_panel": {"all_required_roles": False}},
+    )
+    assert incomplete["eligible_positive_win"] is False
+    assert incomplete["complete_panel"] is False
+
+    complete = rs.portfolio_search_candidate_summary(
+        variant,
+        {"winner_version": "tailored", "tailoring_audit": base_audit,
+         "critic_panel": {"all_required_roles": True}},
+    )
+    assert complete["eligible_positive_win"] is True
+    assert complete["complete_panel"] is True
+
+
+def test_portfolio_search_does_not_treat_review_or_base_as_a_win():
+    variant = {"id": "systems_ml", "label": "Systems"}
+    for winner, recommendation, decision in (
+        ("base", "base", "prefer_base"),
+        ("base", "review", "needs_review"),
+        ("tailored", "review", "needs_review"),
+    ):
+        summary = rs.portfolio_search_candidate_summary(
+            variant,
+            {
+                "winner_version": winner,
+                "tailoring_audit": {
+                    "recommended_version": recommendation,
+                    "decision": decision,
+                    "review": {"available": True},
+                    "finding_counts": {},
+                    "comparison": {},
+                },
+                "critic_panel": {"all_required_roles": True},
+            },
+        )
+        assert summary["eligible_positive_win"] is False
+
+
+def test_human_skim_budget_removes_noncanonical_project_expansion(monkeypatch):
+    catalog = _fixture_catalog()
+    extra_id = "project:item4"
+    catalog["entries"][extra_id] = {
+        "id": extra_id,
+        "kind": "project",
+        "heading": "\\textbf{Project 4} | \\emph{Python}",
+        "bullets": [
+            {"id": extra_id + ":b1", "text": "\\textbf{Built a distinct project} with evidence"},
+            {"id": extra_id + ":b2", "text": "\\textbf{Improved project workflow} across systems"},
+        ],
+    }
+    monkeypatch.setattr(
+        rs,
+        "canonical_resume_benchmark",
+        lambda _catalog: {"projects": [{"source_id": "project:item%s" % index} for index in range(4)]},
+    )
+    plan = _fixture_plan()
+    plan["projects"].append({
+        "source_id": extra_id,
+        "bullets": [{"source_id": extra_id + ":b1"}, {"source_id": extra_id + ":b2"}],
+        "why": "extra target evidence",
+    })
+    plan, errors = rs.validate_plan(plan, catalog, enhance=False)
+    assert not errors
+
+    curated = rs.curate_candidate_portfolio(plan, catalog)
+
+    assert extra_id not in {item["source_id"] for item in curated["projects"]}
+    assert any(
+        action["kind"] == "project_roster_cap"
+        for action in curated["portfolio_budget"]["actions"]
+    )
+    assert rs.portfolio_metrics(curated)["human_skim_budget"]["within_budget"] is True
 
 
 def test_production_bridge_accepts_only_bounded_public_job_snapshots():
@@ -1283,10 +1400,28 @@ def test_quality_profiles_keep_deep_available_and_default_to_balanced():
     assert rs.QUALITY_PROFILES["balanced"]["author_effort"] == "high"
     assert rs.QUALITY_PROFILES["deep"]["author_effort"] == "max"
     assert rs.QUALITY_PROFILES["balanced"]["line_editor_effort"] == "high"
+    assert rs.QUALITY_PROFILES["balanced"]["evaluator_effort"] == "max"
     assert rs.QUALITY_PROFILES["balanced"]["audit_repair"] is False
     assert rs.QUALITY_PROFILES["balanced"]["evaluator_timeout_seconds"] == 8 * 60
     assert rs.QUALITY_PROFILES["deep"]["audit_repair"] is True
+    assert rs.QUALITY_PROFILES["unchained"]["author_effort"] == "high"
+    assert rs.QUALITY_PROFILES["unchained"]["audit_repair"] is False
+    assert rs.QUALITY_PROFILES["unchained"]["target_opportunity_replacement"] is True
+    assert rs.QUALITY_PROFILES["unchained"]["deterministic_space_expansion"] is False
     assert len(rs.canonical_control_prompt(_fixture_catalog())) <= rs.CANONICAL_CONTROL_PROMPT_CHARS
+
+
+def test_unchained_generation_uses_quality_first_profile(monkeypatch, tmp_path):
+    captured = {}
+
+    def fake_run_tailoring(run_dir, job, update, **kwargs):
+        captured.update(kwargs)
+
+    monkeypatch.setattr(rs, "run_tailoring", fake_run_tailoring)
+    rs.run_generation(tmp_path, {"company": "Acme"}, lambda *args, **kwargs: None)
+    assert captured["generation"] is True
+    assert captured["unrestricted"] is True
+    assert captured["quality_profile"] == "unchained"
 
 
 def test_canonical_control_plan_is_verbatim_source_fallback():
@@ -1335,6 +1470,116 @@ def test_control_recovery_restores_omitted_canonical_proof_before_jury(tmp_path)
         entry_id + ":b1", entry_id + ":b2",
     ]
     assert (tmp_path / "control_recovery.json").exists()
+
+
+def test_control_recovery_respects_an_explicit_source_grounded_tradeoff(tmp_path):
+    entry_id = "project:target"
+    catalog = {"entries": {
+        entry_id: {
+            "id": entry_id,
+            "kind": "project",
+            "heading": "\\textbf{Target Project}",
+            "bullets": [
+                {"id": entry_id + ":b1", "source": "immutable/VictorJimenezResume.tex", "text": "Won a quantified canonical award"},
+                {"id": entry_id + ":b2", "source": "immutable/VictorJimenezResume.tex", "text": "Built a canonical API"},
+                {"id": entry_id + ":b3", "source": "CV/cv_full.tex", "text": "Built a target-specific REST interface"},
+            ],
+        },
+    }}
+    plan = {
+        "experiences": [],
+        "projects": [{
+            "source_id": entry_id,
+            "bullets": [
+                {"source_id": entry_id + ":b2", "priority": 70},
+                {"source_id": entry_id + ":b3", "priority": 90},
+            ],
+        }],
+        "leadership": [],
+        "decision_ledger": [{
+            "action": "Replace canonical award",
+            "current_evidence": entry_id + ":b1 — quantified canonical award",
+            "replacement_or_exclusion": entry_id + ":b3 — target-specific REST interface",
+            "target_signal": "REST",
+            "why_stronger": "Directly answers the target's supported interface requirement.",
+            "signal_lost": "Award proof",
+        }],
+    }
+
+    recovered, record = rs.deterministic_control_recovery(plan, catalog, {}, tmp_path)
+
+    assert entry_id + ":b3" in {
+        item["source_id"] for item in recovered["projects"][0]["bullets"]
+    }
+    assert record["status"] == "applied" or record["status"] == "not_needed"
+    assert record["skipped_explained"][0]["source_ids"] == [entry_id + ":b1"]
+
+
+def test_target_opportunity_replacement_surfaces_only_allowed_unused_source_line(
+    tmp_path, monkeypatch,
+):
+    catalog = _fixture_catalog()
+    plan = _fixture_plan()
+    plan["experiences"][0]["bullets"] = [
+        {"source_id": "experience:item0:b1"},
+        {"source_id": "experience:item0:b2"},
+    ]
+    for section in ("experiences", "projects", "leadership"):
+        for selection in plan[section]:
+            entry = catalog["entries"][selection["source_id"]]
+            text_by_id = {item["id"]: item["text"] for item in entry["bullets"]}
+            for bullet in selection["bullets"]:
+                bullet["text"] = text_by_id[bullet["source_id"]]
+    graph = {
+        "nodes": [
+            {"id": bullet["id"], "claim_allowed": True}
+            for entry in catalog["entries"].values()
+            for bullet in entry["bullets"]
+        ]
+    }
+    context = {
+        "generation_strategy": {
+            "requirements": [{
+                "requirement": "Stakeholder presentation",
+                "importance": "required",
+                "evidence_status": "direct",
+                "evidence_ids": ["experience:item0:b3"],
+                "recommended_action": "surface",
+                "candidate_angle": "Make the presentation evidence visible.",
+            }],
+        },
+        "job_intelligence": {"role_tracks": ["backend_infrastructure"]},
+    }
+
+    monkeypatch.setattr(
+        rs,
+        "pack_plan_to_page",
+        lambda value, _catalog, _run_dir: (value, {"fake_pack": True}),
+    )
+    monkeypatch.setattr(rs, "render_plan", lambda *_args, **_kwargs: "resume")
+    monkeypatch.setattr(rs, "compile_resume", lambda _run_dir: {"compiled": True})
+    monkeypatch.setattr(
+        rs,
+        "pdf_layout",
+        lambda *_args, **_kwargs: {
+            "compiled": True,
+            "pages": 1,
+            "overfull": False,
+            "horizontal": {"pass": True, "near_wrap_count": 0},
+        },
+    )
+
+    result, receipt = rs.deterministic_target_opportunity_replacement(
+        plan, catalog, graph, context, tmp_path,
+    )
+
+    assert receipt["status"] == "applied"
+    assert receipt["source_id"] == "experience:item0:b3"
+    assert receipt["actual_added_source_ids"] == ["experience:item0:b3"]
+    assert receipt["actual_removed_source_ids"] == []
+    selected = rs._selected_bullet_ids(result)
+    assert "experience:item0:b3" in selected
+    assert "experience:item0:b1" in selected
 
 
 def test_canonical_control_bonus_protects_high_information_base_line():
@@ -1899,6 +2144,35 @@ def test_tailoring_audit_keeps_fit_separate_from_tailoring_and_blocks_hard_failu
     assert blocked["readiness"] == "blocked"
 
 
+def test_tailoring_audit_labels_a_noop_as_unchanged_not_regressed():
+    context = {"posting_text": "Required: Python. " * 40, "job_intelligence": {
+        "posting_available": True, "posting_snapshot_hash": "post", "hash": "job-intel",
+        "hard_blockers": [],
+    }}
+    match = {"score": 82, "confidence": "high", "missing_requirements": []}
+    graph = {"hash": "graph"}
+    gates = {name: {"status": "pass", "reason": "ok"} for name in rs.REVIEW_CRITERIA}
+    gates.update({"layout": {"status": "pass", "reason": "ok"}, "eligibility": {"status": "pass", "reason": "ok"}, "portfolio": {"status": "pass", "reason": "ok"}})
+    review = {
+        "gates": gates,
+        "independent_review": True,
+        "ready": True,
+        "unsupported_claims": [],
+        "blocking_issues": ["The selected portfolio repeats an existing backend story."],
+    }
+    audit = rs.build_tailoring_audit(
+        {"id": "job-1", "title": "Engineer"}, context, match, graph, {},
+        {"keyword_coverage": {"terms": [], "gained_terms": [], "lost_terms": []}, "portfolio_diagnostics": {}},
+        {"gates": gates}, review, "Python", "Python",
+    )
+    assert audit["tailoring"] == "unchanged"
+    assert audit["candidate_delta"]["material"] is False
+    assert audit["recommended_version"] == "base"
+    assert audit["decision"] == "prefer_base"
+    assert audit["finding_counts"]["REGRESSION"] == 0
+    assert any(item["classification"] == "QUESTIONABLE" for item in audit["findings"])
+
+
 
 def test_tailoring_audit_summary_keeps_gains_and_not_questionable_improved():
     audit = {
@@ -2004,14 +2278,12 @@ def test_flexible_content_reclaim_order_protects_technical_evidence():
     assert plan["front_matter_policy"]["coursework"] == "omit"
 
     second = rs._reclaim_flexible_content(plan)
-    assert second["kind"] == "deferred_bullet_removal"
-    removed = rs._apply_removal(plan, second["action"])
-    assert removed["value"]["source_id"] == "project:hackmit:b2"
-    assert len(plan["projects"][0]["bullets"]) == 1
+    assert second["field"] == "awards"
+    assert plan["front_matter_policy"]["awards"] == "omit"
+    assert len(plan["projects"][0]["bullets"]) == 2
 
     third = rs._reclaim_flexible_content(plan)
-    assert third["field"] == "awards"
-    assert plan["front_matter_policy"]["awards"] == "omit"
+    assert third is None
 
 
 def test_validation_preserves_and_normalizes_decision_ledger():
@@ -2132,7 +2404,6 @@ def test_renderer_omits_sections_the_adaptive_plan_does_not_need(tmp_path):
 def test_provider_transcript_uses_final_structured_response(tmp_path):
     stdout = tmp_path / "stdout.txt"
     stderr = tmp_path / "stderr.txt"
-    stdout.write_text("")
     final = {
         "positioning_thesis": "targeted engineer",
         "selected_evidence": [], "excluded_evidence": [],
@@ -2140,15 +2411,86 @@ def test_provider_transcript_uses_final_structured_response(tmp_path):
         "projects": [{"source_id": "project:a"}],
         "leadership": [], "revision_notes": [],
     }
+    stdout.write_text("progress\n" + json.dumps(final) + "\n")
     stderr.write_text(
-        "intermediate\n"
-        + json.dumps({"experiences": [], "projects": []})
-        + "\n"
-        + json.dumps(final)
+        "prompt context containing a decoy plan\n"
+        + json.dumps({
+            "positioning_thesis": "prompt echo",
+            "experiences": [], "projects": [], "leadership": [],
+        })
         + "\n"
     )
     data = rs.provider_data_from_files(stdout, stderr, "draft")
     assert data["experiences"][0]["source_id"] == "experience:a"
+
+
+def test_provider_transcript_ignores_stderr_prompt_echo_when_output_is_empty(tmp_path):
+    stdout = tmp_path / "stdout.txt"
+    stderr = tmp_path / "stderr.txt"
+    stdout.write_text("")
+    stderr.write_text(json.dumps({
+        "positioning_thesis": "prompt echo",
+        "experiences": [], "projects": [], "leadership": [],
+    }))
+    assert rs.provider_data_from_files(stdout, stderr, "draft") is None
+
+
+def test_validate_plan_repairs_a_typo_to_a_claim_authorized_source_bullet():
+    catalog = {
+        "entries": {
+            "project:rest": {
+                "id": "project:rest", "kind": "project",
+                "heading": "\\textbf{REST Project}",
+                "bullets": [{
+                    "id": "project:rest:b1",
+                    "text": "\\textbf{Built 11 REST endpoints} for a client workflow",
+                }],
+            },
+        },
+    }
+    graph = {"nodes": [{
+        "id": "project:rest:b1", "claim_allowed": True,
+        "text": "Built 11 REST endpoints for a client workflow",
+    }]}
+    plan, errors = rs.validate_plan({
+        "experiences": [],
+        "projects": [{
+            "source_id": "project:rest",
+            "bullets": [{
+                "source_id": "project:rest:b1",
+                "text": "\\textbf{Built 11 REST endpoints} for a client workflow",
+                "evidence_ids": ["project:rest:rest:b1"],
+            }],
+        }],
+        "leadership": [],
+    }, catalog, enhance=True, graph=graph)
+    assert not errors
+    assert plan["projects"][0]["bullets"][0]["evidence_ids"] == ["project:rest:b1"]
+    assert any("repaired evidence citation" in warning for warning in plan["validation_warnings"])
+
+
+def test_candidate_delta_ignores_layout_churn_but_keeps_real_evidence_changes():
+    layout_churn = rs.candidate_delta_summary({
+        "rewritten_bullets": [{
+            "source_id": "experience:cie:b1",
+            "source_text": "Chosen to lead healthcare research, receiving an $8,000 fellowship to develop a wearable posture-monitoring prototype",
+            "final_text": "Chosen to lead healthcare research; received an $8,000 fellowship for a wearable posture-monitoring prototype",
+            "source_ids": ["experience:cie:b1"],
+            "added_supported_terms": [], "dropped_supported_terms": [],
+        }],
+        "keyword_coverage": {"gained_terms": [], "lost_terms": []},
+        "project_swaps": {"swapped_in": [], "swapped_out": []},
+        "front_matter_rewrites": [], "removed_front_matter": [],
+        "experience_order": {"changed": False},
+    })
+    assert layout_churn["status"] == "unchanged"
+
+    material = rs.candidate_delta_summary({
+        "added_bullets": [{"source_id": "project:rest:b1"}],
+        "keyword_coverage": {"gained_terms": ["REST"], "lost_terms": []},
+    })
+    assert material["material"] is True
+    assert "new source-backed evidence line(s)" in material["reasons"]
 
 
 def test_provider_policy_pins_luna_to_codex_model_not_a_provider_lane(monkeypatch):
@@ -2427,6 +2769,52 @@ def test_critic_issue_panel_dedupes_consensus_and_separates_fit_gaps():
     assert rs.classify_critic_issue(
         "The resume does not visibly establish stakeholder collaboration."
     ) == "candidate_fit_gap"
+
+
+def test_critic_issue_panel_clusters_variable_wording_by_underlying_loss_family():
+    records = [
+        {"critic_role": "evidence", "data": {"blocking_issues": [
+            "The tailoring removes the $8,000 fellowship/selected-to-lead signal and the concrete 6-table SQLite architecture.",
+            "Multi-Agent and Emotion overlap the J&J AI, backend, retrieval, and integration stories.",
+        ]}},
+        {"critic_role": "recruiter", "data": {"blocking_issues": [
+            "The posture section no longer communicates its $8,000 fellowship selection or prototype qualifier.",
+            "Multi-Agent Workspace repeats the J&J agent/RAG/retrieval/FastAPI story.",
+        ]}},
+        {"critic_role": "screening", "data": {"blocking_issues": [
+            "The tailored version removes the $8,000 fellowship/selection evidence without an equivalent distinction.",
+            "The selected portfolio retains a high-overlap All-NBA project.",
+        ]}},
+    ]
+
+    assessments = rs.collapse_critic_issues(records)
+
+    assert len(assessments) == 2
+    external = next(item for item in assessments if "fellowship" in item["issue"].lower())
+    overlap = next(item for item in assessments if "overlap" in item["issue"].lower() or "repeats" in item["issue"].lower())
+    assert external["support_count"] == 3
+    assert external["agreement"] == "consensus"
+    assert overlap["support_count"] == 3
+    assert overlap["agreement"] == "consensus"
+
+
+def test_single_role_tailoring_regression_stays_reviewable_not_conclusive():
+    findings = rs.build_change_findings(
+        {}, {}, {
+            "critic_jury": {"available": True},
+            "blocking_issue_assessments": [{
+                "issue": "The tailored version removed a strong quantified proof point.",
+                "kind": "tailoring_regression",
+                "support_count": 1,
+                "supporting_roles": ["recruiter"],
+                "agreement": "single_role",
+            }],
+        },
+    )
+    assert len(findings) == 1
+    assert findings[0]["classification"] == "QUESTIONABLE"
+    assert findings[0]["critic_consensus"]["support_count"] == 1
+    assert "Single-critic concern" in findings[0]["reason"]
 
 
 def test_score_review_does_not_turn_a_fit_gap_into_a_readiness_failure():

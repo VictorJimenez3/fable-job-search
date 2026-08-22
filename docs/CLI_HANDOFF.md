@@ -377,6 +377,25 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   project swaps, and portfolio-overlap warnings. Repair rules restore or
   justify high-value control evidence before adding another keyword-shaped
   line; the evaluator and its hashes remain unchanged.
+- **Unchained frontier calibration (verified 2026-08-21/22):** the fresh
+  Stryker generation run took 1,596.4 seconds and 12 Codex Luna calls; all
+  initial and recheck evidence, recruiter, technical, and screening roles
+  completed, but the immutable base still won the comparative audit. The
+  candidate's UI/REST additions were genuine, while stronger proof and
+  portfolio breadth were lost, so this was an honest quality rejection rather
+  than a worker failure. The audit now repairs provider-typo citations only to
+  exact graph-authorized source IDs, labels material no-op candidates as
+  `unchanged` and skips their repair cascade, clusters semantically identical
+  panel concerns, and treats a single non-hard-role regression as
+  `QUESTIONABLE` pending confirmation.
+- **Bounded Unchained opportunity pass:** before the sealed jury, generation
+  may test one unused, claim-authorized, source-verbatim line from an already
+  selected entry, paying for it with a bounded marginal replacement and a
+  fresh compile/layout gate. It cannot invent wording or approve the change.
+  Unchained's old audit-repair/recheck cascade is disabled after adding about
+  twelve minutes without a positive Stryker comparison; `deep` and `search`
+  retain repair for controlled experiments. This improves the default timing
+  path without weakening the four-role Max evaluator or any hard gate.
 
 ### Previous change (verified 2026-08-15)
 

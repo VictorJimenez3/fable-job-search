@@ -2459,3 +2459,36 @@ The sealed evaluator contract, rubric hash, and evidence authority were not
 weakened. Receipts are under
 `CV/.resume_studio/benchmarks/quality-timing-experiment-20260821/`, including
 `runs/6706937669e7/post_patch_reanalysis.json`.
+
+## 158. Resume Studio calibrates change attribution and bounds Unchained opportunity search (2026-08-21)
+
+The next fresh Unchained Stryker run completed in 1,596.4 seconds with 12
+Codex Luna calls and 188,841 recorded tokens. Every initial and recheck role
+in the sealed evidence, recruiter, technical, and screening panels completed,
+but the final comparative decision still preferred the immutable base. The
+candidate had real UI/REST gains, yet also lost or weakened stronger
+source-backed proof and left portfolio gaps; the system correctly did not turn
+those mixed findings into a tailored win. This is the current quality result,
+not an execution failure.
+
+Three evaluator/harness corrections are now part of the contract around that
+result. A source citation with a provider typo is repaired only to the exact
+primary graph-authorized bullet, rather than making the whole plan look
+unsupported. A candidate with no material base-to-tailored change is labeled
+`unchanged` and skips semantic repair, so layout-only churn cannot trigger a
+rewriting cascade. Finally, the parent clusters variable same-loss wording by
+semantic family and demotes a regression raised by only one non-hard role to a
+reviewable `QUESTIONABLE` finding; hard safety, privacy, eligibility, and
+unsupported-claim gates remain fail-closed.
+
+The production Unchained profile now uses a high-effort author/planner, a Max
+sealed evaluator, and one deterministic opportunity counterfactual before the
+panel. That pass may surface exactly one unused, claim-authorized,
+source-verbatim line from an already selected entry, paying for it with a
+bounded marginal replacement and compiling it before judgment. It cannot add a
+heading, invent a term, or approve its own change. The old Unchained
+audit-repair/recheck cascade is disabled because the Stryker lab showed it
+added roughly twelve minutes without producing a positive comparison; the
+deep/search lanes retain repair for controlled quality experiments. No
+evaluator rubric, evidence authority, readiness gate, or production artifact
+was weakened, and the new path is covered by the repository test suite.

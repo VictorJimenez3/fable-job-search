@@ -21,7 +21,6 @@ import json
 import os
 import re
 import shutil
-import signal
 import subprocess
 import sys
 import time
@@ -33,6 +32,7 @@ EVALUATOR_CONTRACT_VERSION = "resume-evaluator-v2-sealed"
 EVALUATOR_RUBRIC_VERSION = "resume-gates-v2-sealed"
 CODEX_MODEL = "gpt-5.6-luna"
 CODEX_EFFORT = "max"
+CODEX_EFFORTS = frozenset(("high", "max"))
 REVIEW_CRITERIA = (
     "factual", "target_fit", "evidence", "distinctiveness", "clarity", "privacy",
 )
@@ -317,7 +317,11 @@ def _prompt(packet: Dict[str, Any]) -> str:
         "coverage as improvement when it costs evidence, clarity, distinctiveness, or truthfulness. "
         "Flag unsupported or exaggerated claims, eligibility conflicts, lost strong evidence, duplicate "
         "stories, and material readability or hierarchy problems. Preserve prototype, synthetic, demo, "
-        "simulation, and scope qualifiers.\n\nPacket:\n%s"
+        "simulation, and scope qualifiers. The deterministic snapshot may include a human-skim budget: "
+        "treat measured bottom clearance as a layout fact, not a defect, when the candidate is already "
+        "within that budget. Do not demand filler solely because one more bullet fits; flag an omission "
+        "only when an authorized, materially useful signal fits without violating the budget.\n\n"
+        "Packet:\n%s"
     ) % (
         EVALUATOR_CONTRACT_VERSION,
         EVALUATOR_RUBRIC_VERSION,
@@ -357,20 +361,24 @@ def _provider_env(run_dir: Path) -> Dict[str, str]:
 
 
 def _stop(proc: subprocess.Popen) -> None:
+    """Stop only the Codex child owned by this evaluator process.
+
+    The parent Resume Studio launcher already places this evaluator in its
+    own process group.  The Codex child must therefore stay in that inherited
+    group so a parent timeout can reap the whole evaluator tree.  Killing the
+    child's process group here would also kill this evaluator (and can race
+    the parent launcher), while creating a new session leaves an orphan after
+    the outer launcher is stopped.  Direct termination is the correct inner
+    boundary; the outer process-group cleanup handles launcher timeouts.
+    """
     try:
         if proc.poll() is not None:
             return
-        if os.name == "posix":
-            os.killpg(os.getpgid(proc.pid), signal.SIGTERM)
-        else:
-            proc.terminate()
+        proc.terminate()
         proc.wait(timeout=5)
     except (OSError, subprocess.TimeoutExpired):
         try:
-            if os.name == "posix":
-                os.killpg(os.getpgid(proc.pid), signal.SIGKILL)
-            else:
-                proc.kill()
+            proc.kill()
             proc.wait(timeout=5)
         except (OSError, subprocess.TimeoutExpired):
             pass
@@ -426,7 +434,13 @@ def _validate_result(value: Any) -> Dict[str, Any]:
     return value
 
 
-def evaluate_packet(packet_path: Path, output_path: Path, scratch: Path, timeout: int) -> int:
+def evaluate_packet(
+    packet_path: Path, output_path: Path, scratch: Path, timeout: int,
+    effort: str = CODEX_EFFORT,
+) -> int:
+    requested_effort = str(effort or CODEX_EFFORT).strip().lower()
+    if requested_effort not in CODEX_EFFORTS:
+        requested_effort = CODEX_EFFORT
     try:
         packet = json.loads(packet_path.read_text())
         validate_packet(packet, expected_role=str(packet.get("role") or ""))
@@ -442,7 +456,7 @@ def evaluate_packet(packet_path: Path, output_path: Path, scratch: Path, timeout
         schema_path.write_text(json.dumps(result_schema(), indent=2, sort_keys=True))
         args = [
             codex, "exec", "-c", "model=" + CODEX_MODEL,
-            "-c", "model_reasoning_effort=" + CODEX_EFFORT,
+            "-c", "model_reasoning_effort=" + requested_effort,
             "--sandbox", "read-only", "--ephemeral", "--skip-git-repo-check",
             "--output-schema", str(schema_path), "-o", str(stdout_path), "-",
         ]
@@ -450,7 +464,7 @@ def evaluate_packet(packet_path: Path, output_path: Path, scratch: Path, timeout
         with stderr_path.open("w") as err, stdout_path.open("w") as out:
             proc = subprocess.Popen(
                 args, cwd=str(scratch), env=_provider_env(scratch), stdin=subprocess.PIPE,
-                stdout=out, stderr=err, text=True, start_new_session=(os.name == "posix"),
+                stdout=out, stderr=err, text=True, start_new_session=False,
             )
             try:
                 proc.stdin.write(_prompt(packet))
@@ -473,7 +487,7 @@ def evaluate_packet(packet_path: Path, output_path: Path, scratch: Path, timeout
             "contract_fingerprint": contract_fingerprint(),
             "rubric_sha256": EVALUATOR_RUBRIC_SHA256,
             "input_sha256": packet["input_sha256"],
-            "reasoning_effort": CODEX_EFFORT,
+            "reasoning_effort": requested_effort,
             "elapsed_seconds": round(time.time() - started, 1),
             "data": result,
             "stdout_path": str(stdout_path),
@@ -487,6 +501,7 @@ def evaluate_packet(packet_path: Path, output_path: Path, scratch: Path, timeout
             "role": str(packet.get("role") if isinstance(locals().get("packet"), dict) else ""),
             "contract_version": EVALUATOR_CONTRACT_VERSION,
             "contract_fingerprint": contract_fingerprint() if contract_is_intact() else "",
+            "reasoning_effort": requested_effort,
             "error": str(exc),
         }
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -500,8 +515,11 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--scratch", required=True, type=Path)
     parser.add_argument("--timeout", type=int, default=8 * 60)
+    parser.add_argument("--effort", choices=sorted(CODEX_EFFORTS), default=CODEX_EFFORT)
     args = parser.parse_args(argv)
-    return evaluate_packet(args.packet, args.output, args.scratch, max(30, args.timeout))
+    return evaluate_packet(
+        args.packet, args.output, args.scratch, max(30, args.timeout), args.effort,
+    )
 
 
 if __name__ == "__main__":
