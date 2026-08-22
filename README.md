@@ -584,7 +584,11 @@ Actions or committed to the public repository.
 The role list can be sorted by **Best Radar score**, **Newest**, or the private
 **Resume Match** rubric. Match analysis reports requirement coverage, evidence
 strength, domain relevance, eligibility, distinctiveness, confidence, gaps,
-and source IDs; selected roles can be rechecked against the full posting.
+and source IDs; selected roles can be rechecked against the full posting. Before
+you queue a draft, the cloud workspace shows a **Posting → evidence map** with
+the capabilities already supported, preferred matches, and explicit gaps. A
+title-only cloud preview is labeled low confidence; the private engine is what
+fetches the posting and performs the source-level map.
 Generation asks for a ranked evidence portfolio and lets the deterministic
 page packer choose how much verified evidence the target can honestly carry;
 there is no fixed entry or bullet quota. Actual PDF line widths hard-fail
@@ -630,6 +634,10 @@ the winner slot, and shows the component sources, strengths, and limits. This
 is an owner-only decision aid—not a claim that an outside ChatGPT session or a
 hiring manager would choose the same resume. If no critic-panel result exists,
 the UI says so and lowers confidence rather than inventing a verdict.
+The card preview is the objective winner's preview when a rankable winner
+exists, even if a newer draft was saved afterward; the expanded list still
+shows the latest draft and every other version so the visual and the label
+cannot disagree.
 Each saved version also exposes an **ATS keyword map**. Green terms occur in
 the rendered resume, yellow terms are supported by the private evidence bank
 but omitted from that version, and red terms are unsupported. When PDF geometry

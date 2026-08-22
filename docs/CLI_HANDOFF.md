@@ -127,6 +127,16 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   capability. Existing old bank reports without geometry degrade to the
   term list or an explicit unavailable state.
 
+- **Resume Studio review-first surface (verified 2026-08-22):** the cloud
+  posting workspace now exposes a Posting → evidence map before queueing, with
+  matched capabilities, preferred matches, explicit gaps, confidence, and
+  surfaced source labels. Completed runs show the same requirement map and
+  immediately render the saved ATS term/line overlay inside the result panel.
+  Grouped Resume Bank cards use the objective winner's preview as their primary
+  image, while keeping the newest and all historical versions expandable. The
+  map and overlay are diagnostic only; unsupported terms remain gaps and the
+  clean PDF remains unmodified.
+
 ### Current change (verified 2026-08-17)
 
 - **Resume Studio effort profile and latency closure:** the local engine keeps

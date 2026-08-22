@@ -2792,3 +2792,21 @@ had complete four-role Luna High panels, but none earned a material positive
 comparative win; the canonical base remained primary. This is the desired
 fail-closed result for this posting, not a claim that portfolio search always
 improves a resume. Focused Resume Studio coverage remains 158 tests.
+
+## 175. Resume Studio shows the decision before and after generation (2026-08-22)
+
+The cloud control plane now exposes a compact **Posting → evidence map** on the
+selected role and on a completed run. It separates candidate-role fit from the
+later base-versus-tailored audit, labels title-only previews as low confidence,
+and shows matched capabilities, preferred matches, explicit gaps, and the
+source labels used by the private matcher. This keeps the user's choice of
+tailoring mode explainable before spending a Luna run and preserves honest
+unknowns when the Mac engine is offline.
+
+Completed runs also reuse the saved ATS term inventory and review-only PDF
+geometry immediately in the result panel. The downloadable PDF remains clean.
+Grouped bank cards display the objective winner's preview when a rankable
+version exists, while the expanded card retains the newest draft and every
+version. The UI therefore treats the winner label, the visual preview, and the
+comparison list as one coherent decision surface. No diagnostic map or
+objective rank is a recruiter ATS score or an automatic submission decision.
