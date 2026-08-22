@@ -479,6 +479,15 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   replay produced loss weight 14, no unsupported-claim hard failure, and still
   correctly stayed base for eligibility and genuine portfolio redundancy.
 
+- **Unchained fail-closed stress test:** the post-fix Anduril Unchained run
+  completed in 601.0 seconds with Luna High throughout. It surfaced a
+  supported Python/simulation opportunity, but the writer broadened SynapSense
+  into unsupported asynchronous/Python-module and behavioral-monitoring
+  claims. The sealed evidence panel caught those claims plus the unresolved
+  experience and clearance blockers, leaving the immutable base as the primary
+  `do_not_ship`/`blocked` artifact. This is expected quality-control behavior,
+  not a successful-tailor claim.
+
 ### Previous change (verified 2026-08-15)
 
 - **Resume Studio grouped bank and context loop:** the cloud Studio uses the live Job Radar

@@ -763,6 +763,12 @@ blocker, while the no-floor High replay had loss weight 14, no unsupported-claim
 hard failure, and still correctly stayed base for eligibility and genuine
 portfolio redundancy.
 
+The post-fix Unchained Anduril stress test also stayed fail-closed: its
+601-second High run found a supported Python/simulation opportunity, but the
+writer broadened SynapSense into unsupported asynchronous/Python-module and
+behavioral-monitoring claims. The sealed panel caught those claims and the
+clearance/experience blockers, so the immutable base remained primary.
+
 For broad validation, `scripts/resume_studio_benchmark.py` fetches and matches
 many live postings concurrently, then runs a smaller full-tailoring sample
 balanced across sectors and companies. By default it selects roles first listed

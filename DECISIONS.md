@@ -2650,3 +2650,16 @@ loss weight 24 plus an unsupported-claim blocker, while the no-floor High
 replay had loss weight 14, no unsupported-claim hard failure, and still
 correctly stayed base because of eligibility and genuine portfolio
 redundancy.
+
+## 168. Unchained stress test must fail closed on broadened claims (2026-08-22)
+
+The post-fix Unchained Anduril run completed in 601.0 seconds using
+`gpt-5.6-luna` High for gap analysis, drafting, line editing, and all four
+critic roles. Its opportunity pass found an authorized Python/simulation
+line, but the writer also broadened SynapSense into unsupported claims about
+asynchronous processing, Python modules, behavioral monitoring, and inferred
+emotional responses. The sealed evidence panel reported those claims along
+with the unresolved experience and clearance blockers, so the audit selected
+the immutable base (`do_not_ship`/`blocked`). This confirms that Unchained is a
+creative authoring lane, not an approval shortcut; generated breadth must
+still survive exact source scrutiny.
