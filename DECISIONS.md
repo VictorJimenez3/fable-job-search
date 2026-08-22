@@ -2568,3 +2568,20 @@ same-entry proof duplicate using shared anchors, while Skills validation checks
 every newly introduced target-vocabulary term against the cited
 claim-authorized nodes. These changes reduce known regressions without changing
 the evaluator rubric or treating keyword coverage as evidence.
+
+## 163. Re-seal the exact final artifact after late portfolio mutations (2026-08-22)
+
+The fresh-open cohort showed a remaining quality-control loophole: revision,
+density, and audit-repair passes can legitimately return a new source-addressed
+plan after the original packer's duplicate guard and sealed panel. That allowed
+the final PDF to reintroduce same-entry repeated metric/mechanism stories such
+as the 2.74% validation or 10,000-sample calibration evidence. The curator now
+selects the stronger source line when a same-entry semantic duplicate is found,
+and `deterministic_final_portfolio_guard` runs on the exact final plan after all
+late mutations. If it changes the plan, the result must compile safely and
+receive a fresh complete four-role sealed panel; the prior panel is never reused
+for a changed artifact. If the recheck is incomplete, the run fails closed and
+the generated artifact remains diagnostic. The guard is source-preserving and
+does not add keywords, rewrite claims, or alter evaluator thresholds. Focused
+tests cover the reintroduced-duplicate case and the deterministic portfolio
+metrics receipt.

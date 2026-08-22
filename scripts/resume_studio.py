@@ -7405,17 +7405,51 @@ def curate_candidate_portfolio(
             entry_seen_texts: List[str] = []
             for bullet in entry.get("bullets", []):
                 text = str(bullet.get("text") or "")
-                if (
-                    any(_same_resume_bullet(text, existing) for existing in seen_texts)
-                    or any(_same_entry_resume_bullet(text, existing) for existing in entry_seen_texts)
-                ):
+                same_entry_index = next(
+                    (
+                        index for index, existing in enumerate(entry_seen_texts)
+                        if _same_entry_resume_bullet(text, existing)
+                    ),
+                    None,
+                )
+                global_duplicate = any(
+                    _same_resume_bullet(text, existing) for existing in seen_texts
+                )
+                if global_duplicate or same_entry_index is not None:
+                    replaced_existing = None
+                    if same_entry_index is not None:
+                        existing_bullet = retained[same_entry_index]
+                        if _control_bullet_value(bullet, catalog) > _control_bullet_value(existing_bullet, catalog):
+                            replaced_existing = existing_bullet
+                            retained[same_entry_index] = bullet
+                            old_text = entry_seen_texts[same_entry_index]
+                            entry_seen_texts[same_entry_index] = text
+                            seen_texts[:] = [text if value == old_text else value for value in seen_texts]
+                    if replaced_existing is not None:
+                        removed_source_id = str(replaced_existing.get("source_id") or "")
+                        duplicate_of = str(bullet.get("source_id") or "")
+                    else:
+                        removed_source_id = str(bullet.get("source_id") or "")
+                        duplicate_of = str(
+                            retained[same_entry_index].get("source_id") or ""
+                        ) if same_entry_index is not None else ""
                     actions.append({
                         "kind": "near_duplicate",
                         "section": section,
                         "entry_id": str(entry.get("source_id") or ""),
-                        "source_id": str(bullet.get("source_id") or ""),
-                        "reason": "removed a repeated claim or repeated proof anchors before layout packing",
+                        "source_id": removed_source_id,
+                        "reason": (
+                            "replaced a weaker repeated claim with a stronger source-addressed line"
+                            if replaced_existing is not None
+                            else "removed a repeated claim or repeated proof anchors before layout packing"
+                        ),
+                        "duplicate_of": duplicate_of,
                     })
+                    if replaced_existing is None:
+                        continue
+                    # The new line is already retained and its provenance is
+                    # represented in the replacement action; do not append it
+                    # a second time below.
                     continue
                 retained.append(bullet)
                 seen_texts.append(text)
@@ -7426,6 +7460,52 @@ def curate_candidate_portfolio(
         curated[section] = retained_entries
 
     entries = catalog.get("entries") or {}
+
+    # The first pass above catches obvious repeats while it walks the source
+    # order. A writer/revision can phrase the same measured story differently
+    # enough that it survives that pass, though. Re-check each entry as a
+    # bounded semantic duplicate set and remove the lower-value member. This
+    # is deliberately limited to one entry: two different entries may share a
+    # broad capability without being the same interview story.
+    for section in ("experiences", "projects", "leadership"):
+        for entry in curated.get(section, []) or []:
+            bullets = entry.get("bullets", []) or []
+            while True:
+                duplicate_pair: Optional[Tuple[int, int]] = None
+                for left_index, left in enumerate(bullets):
+                    for right_index in range(left_index + 1, len(bullets)):
+                        right = bullets[right_index]
+                        if _same_entry_resume_bullet(
+                            str(left.get("text") or ""),
+                            str(right.get("text") or ""),
+                        ):
+                            duplicate_pair = (left_index, right_index)
+                            break
+                    if duplicate_pair is not None:
+                        break
+                if duplicate_pair is None:
+                    break
+                left_index, right_index = duplicate_pair
+                left, right = bullets[left_index], bullets[right_index]
+                # Keep the stronger source-addressed line. The score is only
+                # used to choose which duplicate to remove; it never creates
+                # or rewrites evidence.
+                left_score = _control_bullet_value(left, catalog)
+                right_score = _control_bullet_value(right, catalog)
+                remove_index = right_index if left_score >= right_score else left_index
+                removed = bullets.pop(remove_index)
+                actions.append({
+                    "kind": "semantic_duplicate",
+                    "section": section,
+                    "entry_id": str(entry.get("source_id") or ""),
+                    "source_id": str(removed.get("source_id") or ""),
+                    "reason": (
+                        "removed the lower-value member of a same-entry repeated metric/mechanism story"
+                    ),
+                    "duplicate_of": str(
+                        (left if remove_index == right_index else right).get("source_id") or ""
+                    ),
+                })
 
     def source_is_canonical(source_id: str) -> bool:
         source = entries.get(str(source_id).split(":b", 1)[0], {})
@@ -7607,6 +7687,41 @@ def curate_candidate_portfolio(
     return curated
 
 
+def deterministic_final_portfolio_guard(
+    plan: Dict[str, Any], catalog: Dict[str, Any],
+) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+    """Apply the last deterministic skim/duplicate guard to the exact draft.
+
+    Curation normally happens before packing, but later revision, density, and
+    repair passes can introduce a repeated source story after that checkpoint.
+    This guard is intentionally not a new author: it only applies the existing
+    source-aware curation policy and chronology rule. Callers must compile the
+    returned plan and, when it changes, run a fresh sealed panel against the
+    resulting artifact.
+    """
+    before_signature = _plan_source_signature(plan)
+    guarded = enforce_experience_order(curate_candidate_portfolio(plan, catalog), catalog)
+    after_signature = _plan_source_signature(guarded)
+    budget = guarded.get("portfolio_budget") if isinstance(guarded, dict) else {}
+    actions = list((budget or {}).get("actions") or []) if isinstance(budget, dict) else []
+    changed = before_signature != after_signature
+    return guarded, {
+        "attempted": True,
+        "changed": changed,
+        "before_bullet_count": sum(len(entry.get("bullets", []) or []) for section in ("experiences", "projects", "leadership") for entry in plan.get(section, []) or []),
+        "after_bullet_count": sum(len(entry.get("bullets", []) or []) for section in ("experiences", "projects", "leadership") for entry in guarded.get(section, []) or []),
+        "actions": actions,
+        "removed_source_ids": [
+            str(item.get("source_id") or "") for item in actions
+            if str(item.get("source_id") or "")
+        ],
+        "reason": (
+            "Applied final source-aware duplicate/skim guard; exact artifact requires fresh sealed review."
+            if changed else "Final artifact already satisfied the source-aware duplicate/skim guard."
+        ),
+    }
+
+
 def portfolio_metrics(plan: Dict[str, Any]) -> Dict[str, Any]:
     counts = {
         section: {
@@ -7615,16 +7730,26 @@ def portfolio_metrics(plan: Dict[str, Any]) -> Dict[str, Any]:
         }
         for section in ("experiences", "projects", "leadership")
     }
-    bullets = [
-        bullet
+    bullet_records = [
+        (bullet, str(entry.get("source_id") or ""))
         for section in ("experiences", "projects", "leadership")
         for entry in plan.get(section, [])
         for bullet in entry.get("bullets", [])
     ]
     duplicates = []
-    for index, bullet in enumerate(bullets):
-        for other in bullets[index + 1 :]:
-            if _same_resume_bullet(str(bullet.get("text") or ""), str(other.get("text") or "")):
+    for index, (bullet, entry_id) in enumerate(bullet_records):
+        for other, other_entry_id in bullet_records[index + 1 :]:
+            same_entry = bool(entry_id and entry_id == other_entry_id)
+            if (
+                _same_resume_bullet(str(bullet.get("text") or ""), str(other.get("text") or ""))
+                or (
+                    same_entry
+                    and _same_entry_resume_bullet(
+                        str(bullet.get("text") or ""),
+                        str(other.get("text") or ""),
+                    )
+                )
+            ):
                 duplicates.append([bullet.get("source_id"), other.get("source_id")])
     violations = []
     for section, cap in PORTFOLIO_CAPS.items():
@@ -7633,23 +7758,23 @@ def portfolio_metrics(plan: Dict[str, Any]) -> Dict[str, Any]:
         for entry_index, entry in enumerate(plan.get(section, [])):
             if len(entry.get("bullets", [])) > cap["bullets"]:
                 violations.append("%s exceeds the per-entry bullet cap" % entry.get("source_id"))
-    if len(bullets) > MAX_TOTAL_BULLETS:
+    if len(bullet_records) > MAX_TOTAL_BULLETS:
         violations.append("resume exceeds %s bullets" % MAX_TOTAL_BULLETS)
-    if len(bullets) < MIN_TOTAL_BULLETS:
+    if len(bullet_records) < MIN_TOTAL_BULLETS:
         violations.append("resume needs at least %s distinct bullets" % MIN_TOTAL_BULLETS)
     if duplicates:
         violations.append("resume contains duplicate or near-duplicate bullets")
     return {
         "pass": not violations,
         "counts": counts,
-        "total_bullets": len(bullets),
+        "total_bullets": len(bullet_records),
         "min_total_bullets": None,
         "max_total_bullets": MAX_TOTAL_BULLETS,
         "human_skim_budget": {
             "version": HUMAN_PORTFOLIO_POLICY_VERSION,
             "caps": dict(HUMAN_PORTFOLIO_CAPS),
             "within_budget": (
-                len(bullets) <= HUMAN_PORTFOLIO_CAPS["total_bullets"]
+                len(bullet_records) <= HUMAN_PORTFOLIO_CAPS["total_bullets"]
                 and counts["projects"]["entries"] <= HUMAN_PORTFOLIO_CAPS["project_entries"]
                 and counts["projects"]["bullets"] <= HUMAN_PORTFOLIO_CAPS["project_bullets"]
                 and all(
@@ -12019,6 +12144,72 @@ def run_tailoring(
             final_geometry_recovery["error"] = str(exc)
             plan, chosen, layout, preview, critique, review_available = prior_geometry_state
         write_json(run_dir / "final_geometry_recovery.json", final_geometry_recovery)
+
+    # Revision, density, and audit-repair passes are allowed to return a new
+    # source-addressed plan. That is useful, but it means the earlier packer's
+    # duplicate guard is no longer necessarily the guard for the final PDF.
+    # Re-apply the bounded policy to the exact artifact and seal-review any
+    # real change. This closes the loophole where a later writer reintroduced
+    # the repeated 10,000-sample/2.74%-validation story after it was initially
+    # removed.
+    final_portfolio_guard: Dict[str, Any] = {
+        "attempted": False,
+        "changed": False,
+        "status": "not_run",
+    }
+    guarded_plan, guard_record = deterministic_final_portfolio_guard(plan, catalog)
+    final_portfolio_guard.update(guard_record)
+    if guard_record.get("changed"):
+        prior_guard_state = (plan, chosen, layout, preview, critique, review_available)
+        guard_root = run_dir / "final_portfolio_guard"
+        try:
+            guard_tex, guard_layout, guard_preview = render_candidate(
+                guarded_plan, guard_root,
+            )
+            safe_guard = bool(
+                guard_layout.get("compiled")
+                and guard_layout.get("pages") == 1
+                and not guard_layout.get("overfull")
+                and (guard_layout.get("horizontal") or {}).get("pass")
+            )
+            final_portfolio_guard["safe_render"] = safe_guard
+            if safe_guard:
+                plan, chosen, layout, preview = (
+                    guarded_plan, guard_tex, guard_layout, guard_preview,
+                )
+                packing["final_portfolio_guard"] = final_portfolio_guard
+                write_json(run_dir / "content_plan.json", plan)
+                write_json(run_dir / "layout_packing.json", packing)
+                guard_critique, guard_records, guard_available = critique_current(
+                    "final_portfolio_guard_critique"
+                )
+                critique_records.extend(guard_records)
+                final_portfolio_guard["sealed_recheck"] = {
+                    "available": guard_available,
+                    "roles": guard_critique.get("critic_roles") or [],
+                }
+                if guard_available:
+                    critique = guard_critique
+                    review_available = guard_available
+                    final_portfolio_guard["status"] = "accepted_after_sealed_recheck"
+                else:
+                    # Never reuse the prior panel for a changed artifact. The
+                    # safe deterministic result remains inspectable, but the
+                    # audit must fail closed until its exact draft is judged.
+                    critique = combined_critique([])
+                    critique["critic_round"] = "final_portfolio_guard_critique"
+                    review_available = False
+                    final_portfolio_guard["status"] = "accepted_geometry_only_incomplete_sealed_recheck"
+            else:
+                plan, chosen, layout, preview, critique, review_available = prior_guard_state
+                final_portfolio_guard["status"] = "rejected_unsafe_render"
+        except (OSError, RuntimeError, ValueError) as exc:
+            plan, chosen, layout, preview, critique, review_available = prior_guard_state
+            final_portfolio_guard["status"] = "rejected_error"
+            final_portfolio_guard["error"] = str(exc)
+    else:
+        final_portfolio_guard["status"] = "not_needed"
+    write_json(run_dir / "final_portfolio_guard.json", final_portfolio_guard)
 
     deterministic = deterministic_review(context, chosen, layout, plan=plan, catalog=catalog)
     if not (layout.get("horizontal") or {}).get("pass"):

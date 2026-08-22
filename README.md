@@ -770,6 +770,13 @@ same-entry repeated proof anchors and newly introduced Skills technologies
 without matching claim-authorized evidence before a candidate reaches the
 panel.
 
+The final artifact also receives a last source-aware portfolio guard after all
+revision, density, and repair passes. This closes the case where a later writer
+reintroduced a duplicate metric/mechanism story after an earlier curation step.
+If the guard removes or reorders evidence, the exact resulting PDF is compiled
+and judged again by a complete four-role Luna High panel; an old panel is never
+reused for a changed artifact. The receipt is `final_portfolio_guard.json`.
+
 For healthcare-role experiments, a prior saved draft can be used as a
 provisional pairwise control without becoming evidence authority. The completed
 Stryker-vs-Merck control used the best saved Merck AI PDF as the baseline and

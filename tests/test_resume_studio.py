@@ -1707,6 +1707,44 @@ def test_curator_removes_same_entry_repeated_metric_story():
     assert any(action["kind"] == "near_duplicate" for action in curated["portfolio_budget"]["actions"])
 
 
+def test_final_portfolio_guard_catches_reintroduced_semantic_duplicate_and_keeps_stronger_line():
+    plan = {
+        "experiences": [],
+        "projects": [{
+            "source_id": "project:metrics",
+            "bullets": [
+                {"source_id": "project:metrics:b1", "text": "Calibrated wearable sensors in under a minute across 10,000 samples", "priority": 40},
+                {"source_id": "project:metrics:b2", "text": "Improved wearable calibration to sub-minute performance over 10,000 samples", "priority": 90},
+            ],
+        }],
+        "leadership": [],
+    }
+    guarded, receipt = rs.deterministic_final_portfolio_guard(plan, {})
+
+    assert receipt["changed"] is True
+    assert [item["source_id"] for item in guarded["projects"][0]["bullets"]] == ["project:metrics:b2"]
+    assert receipt["removed_source_ids"] == ["project:metrics:b1"]
+
+
+def test_portfolio_metrics_reports_same_entry_semantic_duplicates():
+    plan = {
+        "experiences": [],
+        "projects": [{
+            "source_id": "project:metrics",
+            "bullets": [
+                {"source_id": "project:metrics:b1", "text": "Calibrated wearable sensors in under a minute across 10,000 samples"},
+                {"source_id": "project:metrics:b2", "text": "Improved wearable calibration to sub-minute performance over 10,000 samples"},
+            ],
+        }],
+        "leadership": [],
+    }
+
+    metrics = rs.portfolio_metrics(plan)
+
+    assert metrics["pass"] is False
+    assert metrics["duplicates"] == [["project:metrics:b1", "project:metrics:b2"]]
+
+
 def test_packer_never_deletes_content_to_recover_from_compile_error(monkeypatch, tmp_path):
     plan = _fixture_plan()
     original_total = rs.portfolio_metrics(plan)["total_bullets"]

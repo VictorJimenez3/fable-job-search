@@ -176,6 +176,19 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   mostly `do_not_ship`/`blocked`, which is an evaluator finding rather than a
   harness success claim.
 
+### Current change (verified 2026-08-22)
+
+- **Final-artifact portfolio guard:** late revision, density, and audit-repair
+  passes can return a new source-addressed plan after the initial packer and
+  sealed panel. The exact final plan now passes one deterministic duplicate and
+  human-skim-budget guard. Same-entry repeated metric/mechanism stories keep
+  the stronger authorized line; no new terminology or claims are created. If
+  the guard changes the plan, Resume Studio compiles it and runs a fresh
+  complete four-role sealed panel. It never reuses the prior panel for a
+  changed artifact; an incomplete recheck fails closed. Receipts are written
+  to `final_portfolio_guard.json` and `layout_packing.json`, and focused tests
+  cover both the stronger-line selection and duplicate metrics diagnostic.
+
 - **Post-audit density prerequisite receipt (DECISION #155):** the patched
   Stryker run at
   `CV/.resume_studio/benchmarks/stryker-post-repair-density-20260821/runs/78044c21145b`
@@ -198,8 +211,8 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   are unchanged. The merged production change is PR #2583 (`48b7d479`).
 
 - **Control-preserving balanced lane and geometry-first timing experiment:**
-  the default enhanced run is now `quality_profile=balanced`. It keeps Luna
-  Max for the sealed four-role panel and leaves all evaluator contracts and
+  the default enhanced run is now `quality_profile=balanced`. It uses Luna
+  High for the sealed four-role panel and leaves all evaluator contracts and
   hard gates intact, but skips model space expansion and critic-driven
   revision/audit-repair rounds. The deterministic compiler performs control
   recovery first and a conditional Luna High line-edit pass is used only when
