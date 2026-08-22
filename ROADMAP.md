@@ -414,6 +414,34 @@ allowed only when the deterministic comparison finds material loss, and its
 compiled candidate must beat the prior preference key. Independent-provider
 absence remains a visible review limitation.
 
+Evidence-preserving tailoring lab — ✅ SHIPPED 2026-08-22 (DECISIONS #166-173).
+Ordinary High-effort lanes no longer trade away distinctive mechanism or
+validation evidence to consume microscopic measured page capacity; geometry
+recovery remains hard-gated and source-preserving. A project-level role-evidence
+floor is retained as an explicit lab helper but disabled by default until it
+earns a sealed positive comparison. Fresh-open post-fix tests recorded a real
+`prefer_tailored` Uber result and correctly held Nucleus/ByteDance at the base
+when application or evidence blockers dominated. Source-level provenance lint
+now rejects uncited technical claim merges before the jury, and canonical-loss
+explanations require exact source-level accountability.
+Generation also receives a compact evidence-backed supported-skills checklist;
+the first Nucleus replay improved defensible API/access-control recall but still
+failed the comparative audit, so the checklist remains a measured hypothesis
+rather than a keyword-completion rule.
+Planner-denial normalization now prevents negative mentions such as
+“AWS is unsupported” from becoming supported generation opportunities; the
+corrected Nucleus replay moved tailoring from regressed to improved but still
+failed closed on eligibility and portfolio quality.
+Canonical project swaps now require every omitted bullet source ID in their
+ledger, closing the remaining project-level explanation loophole found in the
+Stryker replay.
+Requirement-term association is now checked at normalization so the planning
+map cannot turn generic ATS vocabulary into false role-specific evidence.
+Portfolio search also honors the sealed panel's hard-failure state: a relative
+`prefer_tailored` result cannot replace the base when any non-averagable critic
+gate fails. The post-fix Stryker replay explored three complete candidates in
+parallel and kept the base when none produced a material positive win.
+
 ## Pipeline intelligence
 - **Resume UAT and outcome learning** — future idea: if enough applications,
   interviews, and eventual outcomes accumulate, compare resume variants and

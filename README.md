@@ -584,7 +584,11 @@ Actions or committed to the public repository.
 The role list can be sorted by **Best Radar score**, **Newest**, or the private
 **Resume Match** rubric. Match analysis reports requirement coverage, evidence
 strength, domain relevance, eligibility, distinctiveness, confidence, gaps,
-and source IDs; selected roles can be rechecked against the full posting.
+and source IDs; selected roles can be rechecked against the full posting. Before
+you queue a draft, the cloud workspace shows a **Posting → evidence map** with
+the capabilities already supported, preferred matches, and explicit gaps. A
+title-only cloud preview is labeled low confidence; the private engine is what
+fetches the posting and performs the source-level map.
 Generation asks for a ranked evidence portfolio and lets the deterministic
 page packer choose how much verified evidence the target can honestly carry;
 there is no fixed entry or bullet quota. Actual PDF line widths hard-fail
@@ -630,6 +634,10 @@ the winner slot, and shows the component sources, strengths, and limits. This
 is an owner-only decision aid—not a claim that an outside ChatGPT session or a
 hiring manager would choose the same resume. If no critic-panel result exists,
 the UI says so and lowers confidence rather than inventing a verdict.
+The card preview is the objective winner's preview when a rankable winner
+exists, even if a newer draft was saved afterward; the expanded list still
+shows the latest draft and every other version so the visual and the label
+cannot disagree.
 Each saved version also exposes an **ATS keyword map**. Green terms occur in
 the rendered resume, yellow terms are supported by the private evidence bank
 but omitted from that version, and red terms are unsupported. When PDF geometry
@@ -677,13 +685,11 @@ until that option exists, the local Pipeline and Google tracker still record
 the stage and Notion leaves the local sync state auditable rather than sending
 an invalid update.
 
-The normal **balanced** quality lane uses **Codex Luna High** for the initial
-structured authoring pass and **Codex Luna Max** for every independent critic
-recheck. The deliberately deeper `deep` profile retains Max for initial
-authoring as well. Its repeated writer-repair calls use Luna High after the
-quality lab showed Max consuming its full budget without returning a
-structured replacement; this is recorded as an explicit repair policy rather
-than a hidden fallback. Each critic runs in a fresh, critique-only subprocess
+The normal **balanced** and **Unchained** quality lanes use one consistent
+**Codex Luna High** effort level for planning, authoring, line editing, and
+every independent critic recheck. The deliberately deeper `deep` profile
+retains Max for an explicit quality-frontier comparison. Each critic runs in a
+fresh, critique-only subprocess
 under the sealed `resume-evaluator-v2-sealed` contract. Its packet contains the
 base resume, candidate resume, job snapshot, authorized evidence, and
 deterministic checks—but no writer prompt, prior review, score, or readiness
@@ -717,13 +723,27 @@ repair rules prioritize restoring high-value control evidence or explaining a
 real replacement before adding another role-keyword line.
 
 The normal application lane is the bounded **balanced** authoring profile. It
-keeps the same sealed Luna Max critic panel and hard gates, but lets the
+keeps the same sealed critic panel and hard gates, but lets the
 deterministic compiler handle measured page packing and control recovery first,
 skips model space expansion and critic-driven revision/audit-repair rounds, and
-uses at most one conditional Luna High line-edit pass when geometry is unsafe.
-The original two-round frontier remains available for a deliberately deeper run
-with `--quality-profile deep`; changing profiles never changes the evaluator
-contract or turns a rejected candidate into a pass.
+uses at most one conditional Luna High line-edit pass when geometry is unsafe,
+with a three-minute fallback timeout. Its post-edit density search is capped at
+two rounds and is disabled for content swaps in the ordinary lane, so a
+microscopic measured gap cannot trade away a stronger mechanism or validation
+result. The deterministic source-preserving compactor remains available for
+geometry safety, while content replacements must come from the authored role
+thesis or an explicitly judged search candidate. Max is not used by this normal path;
+the original two-round frontier remains available for a deliberately deeper run
+with `--quality-profile deep`.
+Changing profiles never changes the evaluator contract or turns a rejected
+candidate into a pass.
+
+Before writing, Resume Studio emits a deterministic role-focus receipt with a
+primary track, adjacent tracks, confidence, and matched posting signals. This
+lets a broad networking/performance posting prioritize systems evidence over
+generic web or ATS wording. It is a routing aid, not evidence that the
+candidate has a missing skill; unsupported requirements remain gaps and hard
+eligibility blockers remain outside the tailoring tradeoff.
 
 The compiler also treats quantified, validated, integration, and ownership
 proof from the locked base resume as control evidence during overflow packing.
@@ -731,13 +751,138 @@ An added line counts as a positive tailoring gain only when the sealed panel
 independently confirms the new target-relevant strength. This prevents both
 keyword-only gains and a bookkeeping blind spot from driving the comparison.
 
+The lab caught a subtle version of this failure: a `0.03--0.06pt` capacity
+signal caused deterministic density recovery to replace distinctive evidence
+with unused but weaker lines. Ordinary `balanced`, `search`, and
+`search_single` runs now preserve the authored portfolio and use density logic
+only as a geometry guard. A post-fix fresh-open Uber run completed in 631.9
+seconds with Luna High at every quality-critical stage, a complete four-role
+panel, no blockers, and `prefer_tailored`; the final artifact had no blind
+density swap.
+
+The role-evidence floor remains a lab-only hypothesis. It can identify an
+omitted primary-track project, but the Anduril experiment showed that a
+plausible project-level swap can still displace more distinctive evidence.
+The ordinary profiles therefore record it as disabled rather than silently
+mutating every authored portfolio; a future positive sealed comparison must
+justify enabling it. A same-job ByteDance replay improved the failure mode:
+the floor-enabled candidate had loss weight 24 plus an unsupported-claim
+blocker, while the no-floor High replay had loss weight 14, no unsupported-claim
+hard failure, and still correctly stayed base for eligibility and genuine
+portfolio redundancy.
+
+The post-fix Unchained Anduril stress test also stayed fail-closed: its
+601-second High run found a supported Python/simulation opportunity, but the
+writer broadened SynapSense into unsupported asynchronous/Python-module and
+behavioral-monitoring claims. The sealed panel caught those claims and the
+clearance/experience blockers, so the immutable base remained primary.
+
 For broad validation, `scripts/resume_studio_benchmark.py` fetches and matches
 many live postings concurrently, then runs a smaller full-tailoring sample
-balanced across sectors and companies. Its manifest preserves the posting
-fetch results, match control, selected full-run cohort, per-run checkpoint,
-latency, panel completeness, comparative audit outcome, quality rejections, and
-execution failures. This is a lab harness, not a claim that a local evaluator
-predicts hiring outcomes.
+balanced across sectors and companies. By default it selects roles first listed
+within the last seven days, excludes terminal radar records, and rejects a
+fetched page with a definitive closed/filled banner. Its manifest preserves the
+posting fetch/open check, match control, selected full-run cohort, per-run
+checkpoint, latency, model, reasoning effort, panel completeness, comparative
+audit outcome, quality rejections, and execution failures. This is a lab
+harness, not a claim that a local evaluator predicts hiring outcomes.
+
+The fresh-open eight-role validation at
+`CV/.resume_studio/benchmarks/20260822T041401Z-0b2ad7/manifest.json` completed
+8/8 runs with complete four-role panels: 5 comparative tailored preferences and
+3 honest base/blocked decisions. Every provider call used `gpt-5.6-luna` at
+High effort; the manifest records per-stage latency and total run time. This
+demonstrates a quality-control system, not a universal win rate: the blocked
+cases exposed eligibility, unsupported-claim, and redundancy failures, while
+the five preferred-tailored results remain human review rather than automatic
+approval.
+
+The post-fix spot check then ran two additional fresh open roles (Neuralink and
+Qualcomm) in parallel. Both completed all four High critic roles in about 11
+minutes each; Neuralink preferred tailored, while Qualcomm was blocked because
+the panel found an unsupported Skills technology and a damaging project swap.
+That rejection is an intended quality result. The writer-side guards now catch
+same-entry repeated proof anchors and newly introduced Skills technologies
+without matching claim-authorized evidence before a candidate reaches the
+panel.
+
+The final artifact also receives a last source-aware portfolio guard after all
+revision, density, and repair passes. This closes the case where a later writer
+reintroduced a duplicate metric/mechanism story after an earlier curation step.
+If the guard removes or reorders evidence, the exact resulting PDF is compiled
+and judged again by a complete four-role Luna High panel; an old panel is never
+reused for a changed artifact. The receipt is `final_portfolio_guard.json`.
+
+Rewritten technical claims also pass a narrow provenance lint before judging:
+terms such as C++, Python, React, APIs, streaming, asynchronous processing, or
+backend machinery must appear in the primary source line or a cited supporting
+source. Otherwise the exact authoritative source wording is restored. This
+prevents a writer from merging a mechanism from one bullet into another while
+keeping only the first bullet's citation. A fresh Anduril replay completed all
+four High critic roles in 551.4 seconds, surfaced no added unsupported bullet,
+and correctly kept the canonical base because eligibility and evidence gaps
+still dominated.
+
+Generation also receives a compact supported-skills checklist built from the
+job-intelligence evidence map. It includes only direct/adjacent requirements
+that are authorized for a `tailor_skills` action, with the exact terms and
+evidence IDs needed to support them. The checklist asks the writer to surface
+those terms in meaningful cited body evidence or one existing Skills rewrite;
+it is not a keyword quota and does not override the sealed audit. The Nucleus
+Biologics replay is documented as a negative experiment: it gained supported
+REST/access-control evidence without unsupported claims, but still lost a
+distinctive project and omitted several authorized signals, so the immutable
+base remained the recommendation.
+
+The normalization boundary also rejects planner-denied terms in postfix form
+(for example, “AWS is unsupported”) before they are promoted into supported
+ATS or generation opportunities. This prevents a gap-analysis explanation from
+accidentally turning a negative mention into a checklist item. The corrected
+Nucleus replay moved the comparative tailoring state from `regressed` to
+`improved`, but remained blocked for eligibility and a remaining portfolio
+regression.
+
+Enhanced project swaps also pass a source-level preflight: if a canonical
+project is dropped, the decision ledger must name every omitted canonical
+bullet ID. This preserves creative, evidence-backed swaps while preventing a
+single high-information mechanism from disappearing behind a project-level
+explanation. The Stryker replay demonstrated the gate: its healthcare/security
+swap omitted Quantum's historical-market pipeline ID, so the candidate would
+now fail closed before reaching the sealed comparison.
+
+Gap-analysis terms are also semantically checked before promotion: a provider
+cannot attach a generic supported term to an unrelated requirement unless the
+term appears in that requirement, its rationale, or the cited authorized
+evidence. Deterministic inventory terms are still retained separately. This
+keeps the requirement-to-evidence map useful for reasoning instead of letting
+an ATS vocabulary item masquerade as role understanding.
+
+Portfolio search applies one additional fail-closed rule: a candidate cannot
+be promoted merely because its comparative audit says `prefer_tailored`. The
+sealed review must also report no hard failure and all four critic roles must
+complete. This matters because a candidate can be relatively better than its
+base while still failing a non-averagable quality gate such as
+distinctiveness. The search receipt records that gate explicitly as
+`critic_hard_fail`; a partial `review` remains visible for human inspection
+instead of being converted into a false ready state.
+
+The post-fix Stryker replay completed three concurrent candidates in 388.5
+seconds wall time with complete four-role Luna High panels. All three were
+rejected as material improvements and the canonical base stayed primary.
+That is a useful negative result: the search explored alternatives, but did
+not turn a relative or cosmetic change into an application-ready winner.
+
+The duplicate detector also recognizes a small set of repeated mechanisms such
+as resampling/stratified validation and calibration, including across an
+experience and project when two distinctive terms and a shared metric support
+the match. Generic overlap alone cannot delete evidence; the affected real-role
+cases are rerun in the lab before this is considered a measured improvement.
+
+Geometry recovery has the same evidence boundary: after the bounded High line
+editor times out, it may restore an authoritative shorter source line or use a
+source-preserving Skills abbreviation, then compile again. It cannot lower the
+one-line threshold or invent wording. The exact Anduril failure was rescued in
+an offline compile check and is being rerun through the full evaluator.
 
 For healthcare-role experiments, a prior saved draft can be used as a
 provisional pairwise control without becoming evidence authority. The completed

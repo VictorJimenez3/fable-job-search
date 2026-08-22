@@ -2459,3 +2459,354 @@ The sealed evaluator contract, rubric hash, and evidence authority were not
 weakened. Receipts are under
 `CV/.resume_studio/benchmarks/quality-timing-experiment-20260821/`, including
 `runs/6706937669e7/post_patch_reanalysis.json`.
+
+## 158. Resume Studio calibrates change attribution and bounds Unchained opportunity search (2026-08-21)
+
+The next fresh Unchained Stryker run completed in 1,596.4 seconds with 12
+Codex Luna calls and 188,841 recorded tokens. Every initial and recheck role
+in the sealed evidence, recruiter, technical, and screening panels completed,
+but the final comparative decision still preferred the immutable base. The
+candidate had real UI/REST gains, yet also lost or weakened stronger
+source-backed proof and left portfolio gaps; the system correctly did not turn
+those mixed findings into a tailored win. This is the current quality result,
+not an execution failure.
+
+Three evaluator/harness corrections are now part of the contract around that
+result. A source citation with a provider typo is repaired only to the exact
+primary graph-authorized bullet, rather than making the whole plan look
+unsupported. A candidate with no material base-to-tailored change is labeled
+`unchanged` and skips semantic repair, so layout-only churn cannot trigger a
+rewriting cascade. Finally, the parent clusters variable same-loss wording by
+semantic family and demotes a regression raised by only one non-hard role to a
+reviewable `QUESTIONABLE` finding; hard safety, privacy, eligibility, and
+unsupported-claim gates remain fail-closed.
+
+The production Unchained profile now uses a high-effort author/planner, a Max
+sealed evaluator, and one deterministic opportunity counterfactual before the
+panel. That pass may surface exactly one unused, claim-authorized,
+source-verbatim line from an already selected entry, paying for it with a
+bounded marginal replacement and compiling it before judgment. It cannot add a
+heading, invent a term, or approve its own change. The old Unchained
+audit-repair/recheck cascade is disabled because the Stryker lab showed it
+added roughly twelve minutes without producing a positive comparison; the
+deep/search lanes retain repair for controlled quality experiments. No
+evaluator rubric, evidence authority, readiness gate, or production artifact
+was weakened, and the new path is covered by the repository test suite.
+
+## 159. Unchained produces a positive Stryker pairwise result without hiding tradeoffs (2026-08-22)
+
+The first end-to-end validation of the integrated Unchained path completed at
+`CV/.resume_studio/benchmarks/unchained-frontier-validation-20260822/runs/88ff48da72e5`.
+It took 909.2 seconds (15m09s) and 7 Codex Luna calls, versus 1,596.4 seconds
+and 12 calls for the preceding Stryker run that still selected the base. The
+new bounded opportunity pass surfaced the exact authorized REST endpoint line
+`project:emotion-aware-ai-transcription-1st-place-ai-anal:b6`, compiled a
+one-page artifact with zero near-wraps, and displaced no existing bullet.
+
+All four sealed Max critics completed. Their comparative audit preferred the
+tailored candidate with gain weight 7 versus loss weight 4: it confirmed
+explainable-AI outputs with confidence labels/reasoning traces/citations,
+JWT-verified row-level access, and explicit 11-endpoint REST/API ownership.
+The audit still records two regressions and one missed opportunity: the
+tailored version loses J&J Pandas/SQL version-conflict evidence, loses the
+Multi-Agent 4+ agent-coordination mechanism, and does not explicitly surface
+the supported `software engineering` term/UI ownership. Those remain visible
+questions rather than being averaged away. No hard blocker was found.
+
+The artifact is therefore `winner_version=tailored` and
+`recommended_version=tailored`, but `approval_state=awaiting_review` and
+`review_ready=false` remain correct because this is a same-model Luna jury,
+not independent-vendor or hiring-outcome validation. The result is a
+measurable comparative improvement for this posting, not an 84/100 hiring
+prediction or evidence that every role will improve.
+
+## 160. Ordinary tailoring uses one High effort and routes broad roles by primary track (2026-08-22)
+
+The normal Resume Studio and benchmark paths now use one explicit
+`gpt-5.6-luna` High effort level for gap analysis, authoring, line editing, and
+all four sealed evaluator roles. Max remains available only for the deliberate
+`deep` quality frontier or an explicit override. This makes timing and quality
+comparisons interpretable and matches Victor's standing preference; provider
+flow still records model, effort, latency, status, and observed tokens for
+every stage.
+
+Job intelligence is now `job-intelligence-v2`. It produces a deterministic,
+auditable role-focus receipt with a primary track, adjacent tracks, confidence,
+matched title/body signals, and per-requirement role relevance. The tailor and
+sealed evaluator are told to preserve primary-track mechanisms, metrics,
+validation, and ownership evidence when an adjacent ATS term competes for the
+same page space. This addresses the observed Stryker ambiguity without
+pretending that a routing label changes candidate fit or authorizes unsupported
+claims. Hard eligibility and evidence gates remain unchanged.
+
+The benchmark now selects recently listed, non-terminal roles by default,
+rejects definitive closed-page banners after fetching, and preserves the
+fresh-open check plus provider timing/effort metadata in its manifest. This
+creates a repeatable test set from the live radar rather than recycling old
+experiments.
+
+## 161. Ordinary geometry cleanup is time-bounded after the fresh cohort (2026-08-22)
+
+The fresh-open eight-role High-effort cohort completed 8/8 runs with complete
+four-role panels, but receipts showed that the optional line editor and the
+post-edit deterministic density search could dominate wall time. The ordinary
+balanced/search lanes therefore cap the line-editor fallback at three minutes,
+cap post-edit density expansion at two rounds, and test only the top two
+removal candidates for a two-bullet swap. The `deep` profile retains the longer
+frontier for explicit quality experiments. These are scheduling/search bounds;
+they do not weaken evidence authority, the sealed evaluator, the geometry gate,
+or the fail-closed base-versus-tailored decision.
+
+## 162. Reject repeated proof anchors and ungrounded Skills additions before judging (2026-08-22)
+
+The post-fix Neuralink/Qualcomm validation confirmed complete High panels but
+also exposed two writer-side weaknesses. Same-entry bullets could repeat a
+metric/mechanism story without enough textual similarity for the old duplicate
+guard, and a Skills rewrite could cite valid evidence while adding an unrelated
+technology such as `pytest`. The curator now removes the lower-priority
+same-entry proof duplicate using shared anchors, while Skills validation checks
+every newly introduced target-vocabulary term against the cited
+claim-authorized nodes. These changes reduce known regressions without changing
+the evaluator rubric or treating keyword coverage as evidence.
+
+## 163. Re-seal the exact final artifact after late portfolio mutations (2026-08-22)
+
+The fresh-open cohort showed a remaining quality-control loophole: revision,
+density, and audit-repair passes can legitimately return a new source-addressed
+plan after the original packer's duplicate guard and sealed panel. That allowed
+the final PDF to reintroduce same-entry repeated metric/mechanism stories such
+as the 2.74% validation or 10,000-sample calibration evidence. The curator now
+selects the stronger source line when a same-entry semantic duplicate is found,
+and `deterministic_final_portfolio_guard` runs on the exact final plan after all
+late mutations. If it changes the plan, the result must compile safely and
+receive a fresh complete four-role sealed panel; the prior panel is never reused
+for a changed artifact. If the recheck is incomplete, the run fails closed and
+the generated artifact remains diagnostic. The guard is source-preserving and
+does not add keywords, rewrite claims, or alter evaluator thresholds. Focused
+tests cover the reintroduced-duplicate case and the deterministic portfolio
+metrics receipt.
+
+## 164. Detect repeated mechanism stories without generic cross-entry false positives (2026-08-22)
+
+The first final-guard cohort found a residual form of duplication: two All-NBA
+bullets could repeat `resampling`/`stratified validation` without sharing a
+numeric anchor, and a PostureMax project could repeat the experience's
+10,000-sample calibration story across entries. Same-entry duplicate detection
+now recognizes a narrow, two-term mechanism bundle for validation,
+calibration, debugging, and troubleshooting. Cross-entry deletion is stricter:
+it requires two distinctive shared terms plus a shared numeric anchor, or the
+same mechanism bundle. Generic words such as `workflow`, `systems`, and `AI`
+cannot delete a project on their own. The resulting curator replay removed the
+two observed regressions while preserving generic fixture breadth; real-role
+reruns are required before treating this as a quality improvement.
+
+## 165. Use authoritative source wording as a bounded geometry fallback (2026-08-22)
+
+The mechanism-guard Anduril replay exposed a separate reliability gap: the
+High line editor timed out at its three-minute cap, and the deterministic
+compactor could not shorten a long Skills row or an expanded posture bullet,
+so the hard one-line gate rejected an otherwise source-valid candidate. The
+geometry compactor now tries the exact shorter authoritative source wording
+when a generated line is unsafe, plus source-preserving abbreviations for
+long Skills labels. On the failed Anduril artifact this produced a one-page
+PDF with zero wraps and zero near-wraps in an offline compiled check. The
+result still requires the normal sealed panel; the fallback cannot invent a
+claim or lower the geometry threshold.
+
+## 166. Do not spend microscopic page capacity by trading away evidence (2026-08-22)
+
+The first portfolio-search receipts exposed a writer-side regression that the
+duplicate guard could not catch: after authoring, the deterministic density
+pass saw only `0.03--0.06pt` of measured capacity and swapped out distinctive
+mechanisms such as secure collaboration, market-data calibration, transcript
+synchronization, or qubit encoding for unused but less informative lines.
+The sealed jury correctly rejected those candidates, but the system had
+already spent latency creating a worse artifact.
+
+Ordinary `balanced`, `search`, and `search_single` profiles now disable
+deterministic content expansion. They still enforce the hard one-page and
+one-line geometry gates, preserve source-aware control recovery, and retain
+the complete sealed panel. A content replacement must come from the authored
+role thesis or an explicitly tested search candidate, not from microscopic
+whitespace. The explicit `deep` profile remains available for controlled
+frontier experiments. On the post-fix Uber fresh-open case, the unchanged
+High Luna author/panel produced a `prefer_tailored` result in 631.9 seconds
+with no blockers; the final plan matched the authored portfolio and no blind
+density swap occurred.
+
+## 167. Keep project-level role-floor swaps experimental until they win (2026-08-22)
+
+The role-evidence floor is retained as a tested lab helper because it can
+identify an omitted project with a stronger primary-track mechanism than the
+author selected. It is not enabled in `balanced`, `search`, or
+`search_single`: the Anduril experiment showed that even a plausible React/
+systems project can displace more distinctive evidence and remain a negative
+comparative result. Independent portfolio variants and the sealed panel are a
+better experiment for this hypothesis than silently mutating every authored
+candidate. The run receipt now records `disabled_by_quality_profile` so the
+absence is explicit rather than mistaken for a missing evaluator stage. A
+same-job A/B replay supports that choice: ByteDance with the floor enabled had
+loss weight 24 plus an unsupported-claim blocker, while the no-floor High
+replay had loss weight 14, no unsupported-claim hard failure, and still
+correctly stayed base because of eligibility and genuine portfolio
+redundancy.
+
+## 168. Unchained stress test must fail closed on broadened claims (2026-08-22)
+
+The post-fix Unchained Anduril run completed in 601.0 seconds using
+`gpt-5.6-luna` High for gap analysis, drafting, line editing, and all four
+critic roles. Its opportunity pass found an authorized Python/simulation
+line, but the writer also broadened SynapSense into unsupported claims about
+asynchronous processing, Python modules, behavioral monitoring, and inferred
+emotional responses. The sealed evidence panel reported those claims along
+with the unresolved experience and clearance blockers, so the audit selected
+the immutable base (`do_not_ship`/`blocked`). This confirms that Unchained is a
+creative authoring lane, not an approval shortcut; generated breadth must
+still survive exact source scrutiny.
+
+## 169. Enforce source-level provenance for rewritten technical claims (2026-08-22)
+
+The Anduril replay exposed two related quality-control gaps. First, an author
+could replace several canonical bullets inside one selected project with
+noncanonical lines, leaving a distinct mechanism unprotected while the audit
+accepted a vague project-level “reorder” explanation. Source recovery now
+restores every omitted canonical line for which a selected noncanonical line is
+available to displace, unless the ledger names the exact source tradeoff. When
+the replacement and omitted line share a signal family, the redundant addition
+is displaced first. The audit likewise requires the exact omitted source ID or
+enough of the omitted line to identify it; naming only the parent project is
+not an explanation for losing a bullet.
+The structured decision ledger now also accepts explicit `source_ids`, so a
+provider can record the exact tradeoff without burying an identifier in prose.
+
+Second, the author rewrote a SynapSense dashboard line with C++/asynchronous/
+backend claims while citing only the dashboard source bullet. Enhanced-plan
+validation now lints a narrow set of high-risk technology and implementation
+anchors. An introduced anchor must appear in the primary bullet or in a cited
+supporting/claim-authorized source; otherwise the line reverts to its
+authoritative wording before the sealed panel. This is provenance lint, not a
+semantic truth oracle; public corroborating nodes remain non-authorizing, and
+the independent four-role panel remains mandatory.
+
+The post-fix Anduril replay completed in 551.4 seconds with `gpt-5.6-luna`
+High at every quality-critical stage and all four critic roles complete. It
+selected the canonical project portfolio, produced no added unsupported
+bullet, and correctly stayed `base`/`blocked` because of the experience
+eligibility blocker and six supported-but-unsurfaced terms. Focused Resume
+Studio tests cover both the canonical recovery and uncited-anchor reversion.
+
+## 170. Give generation a compact supported-skills checklist, but keep recall fail-closed (2026-08-22)
+
+Gap analysis can identify supported fundamentals that a writer still omits,
+so ordinary generation now receives a compact checklist containing only
+direct/adjacent requirements marked `tailor_skills`, their exact terms, and
+authorized evidence IDs. The instruction is binding but conservative: surface
+the term in a meaningful cited body line or one existing Skills rewrite, and
+never add a term whose evidence cannot authorize it. This is a writer recall
+aid, not a reason to relax the evaluator or force every posting term into the
+resume.
+
+The fresh-open Nucleus Biologics replay was a useful negative result. It
+completed in 609.5 seconds with `gpt-5.6-luna` High at every quality-critical
+stage and all four critic roles. The draft added defensible REST/access-control
+evidence and introduced no unsupported claim, but still omitted authorized
+documentation, PostgreSQL, Linux, AWS, and communication signals while
+dropping the distinctive Quantum Stock Simulator portfolio. The sealed audit
+therefore kept the base and marked the application blocked for the unresolved
+experience requirement. The checklist is retained as a measured hypothesis;
+future work should improve evidence selection/packing rather than turn it into
+a keyword quota.
+
+## 171. Reject planner-denied technologies before supported-term promotion (2026-08-22)
+
+The first checklist replay exposed a normalization edge case: a gap-analysis
+reason such as “Docker is supported; Linux/AWS are unsupported” could still
+promote the later-mentioned terms because denial matching only recognized
+“do not claim AWS”-style wording. The denial detector now recognizes postfix
+forms such as “AWS is unsupported” while respecting sentence boundaries, so a
+negative mention cannot become a supported generation opportunity.
+
+The corrected Nucleus replay at
+`CV/.resume_studio/benchmarks/denial-fix-nucleus-20260822/runs/pending-1787395673`
+completed in 570.8 seconds with `gpt-5.6-luna` High and all four critic roles.
+Its normalized checklist contained documentation and Docker only; Linux and
+AWS were excluded. The comparative audit moved from `tailoring: regressed` to
+`tailoring: improved`, with no unsupported rendered claim, but remained
+`do_not_ship`/blocked because the eligibility gate and a remaining portfolio
+regression still dominated. This is evidence-grounding progress, not proof
+that the Nucleus application is ready.
+
+## 172. Require bullet-level ledgers for dropped canonical projects (2026-08-22)
+
+The Stryker replay exposed a remaining accountability hole: the writer
+correctly explained replacing Quantum Stock Simulator with a healthcare/security
+project, but named only two of the three removed Quantum bullets. The omitted
+historical-market data pipeline therefore disappeared behind a valid
+project-level rationale. Enhanced-plan validation now rejects a dropped
+canonical project unless its decision ledger names every omitted canonical
+bullet `source_id`; a project heading or parent entry ID is not enough.
+
+This is a preflight safety gate, not a preservation mandate. A well-supported
+project swap can still pass when every displaced source line is explicitly
+accounted for, and the sealed panel still judges the resulting artifact. The
+old Stryker plan is now rejected by the deterministic preflight with the exact
+missing `...:b3` source ID. Focused Resume Studio coverage is 156 tests.
+
+## 173. Reject semantically misplaced gap-analysis terms (2026-08-22)
+
+The Stryker gap map also attached the generic `software engineering` term to
+networking-protocol and AngularJS requirements. Normalization now retains a
+provider term only when it appears in the requirement, the provider's
+explanation, or the cited authorized evidence. The deterministic ATS inventory
+still restores independently supported terms, so this removes a bad
+requirement-to-term association without hiding legitimate coverage.
+
+Focused Resume Studio coverage is now 158 tests. The old Stryker artifact was
+already correctly blocked by the sealed panel; this change prevents its
+misplaced checklist associations from reaching a future generation prompt.
+
+## 174. Portfolio search must honor critic hard gates (2026-08-22)
+
+The first three-variant Stryker portfolio search found a subtle promotion
+bug. The product-integration candidate received a comparative
+`prefer_tailored` audit, but its sealed critic panel also marked
+`distinctiveness` as a hard failure. The search wrapper considered the audit
+decision and panel completeness but ignored the separate `review.hard_fail`
+field, so it could have published a relative winner that had not cleared a
+non-averagable quality gate.
+
+Portfolio-search eligibility now requires all of the following: the tailored
+candidate wins the comparative audit, all four critic roles complete, and the
+sealed review reports no hard failure. The wrapper records
+`critic_hard_fail` in each candidate summary, and focused coverage includes a
+positive candidate that is rejected when that flag is true. This preserves
+the useful distinction between “better than the base” and “safe enough to
+promote”; partial fit/readability concerns can remain `review`, but a failed
+factuality, privacy, geometry, eligibility, distinctiveness, or other sealed
+quality gate cannot be averaged away.
+
+The post-fix Stryker rerun at
+`CV/.resume_studio/benchmarks/portfolio-search-stryker-postfix-20260822/manifest.json`
+completed three concurrent candidates in 388.5 seconds wall time. All three
+had complete four-role Luna High panels, but none earned a material positive
+comparative win; the canonical base remained primary. This is the desired
+fail-closed result for this posting, not a claim that portfolio search always
+improves a resume. Focused Resume Studio coverage remains 158 tests.
+
+## 175. Resume Studio shows the decision before and after generation (2026-08-22)
+
+The cloud control plane now exposes a compact **Posting → evidence map** on the
+selected role and on a completed run. It separates candidate-role fit from the
+later base-versus-tailored audit, labels title-only previews as low confidence,
+and shows matched capabilities, preferred matches, explicit gaps, and the
+source labels used by the private matcher. This keeps the user's choice of
+tailoring mode explainable before spending a Luna run and preserves honest
+unknowns when the Mac engine is offline.
+
+Completed runs also reuse the saved ATS term inventory and review-only PDF
+geometry immediately in the result panel. The downloadable PDF remains clean.
+Grouped bank cards display the objective winner's preview when a rankable
+version exists, while the expanded card retains the newest draft and every
+version. The UI therefore treats the winner label, the visual preview, and the
+comparison list as one coherent decision surface. No diagnostic map or
+objective rank is a recruiter ATS score or an automatic submission decision.

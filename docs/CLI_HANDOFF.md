@@ -127,25 +127,30 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   capability. Existing old bank reports without geometry degrade to the
   term list or an explicit unavailable state.
 
+- **Resume Studio review-first surface (verified 2026-08-22):** the cloud
+  posting workspace now exposes a Posting → evidence map before queueing, with
+  matched capabilities, preferred matches, explicit gaps, confidence, and
+  surfaced source labels. Completed runs show the same requirement map and
+  immediately render the saved ATS term/line overlay inside the result panel.
+  Grouped Resume Bank cards use the objective winner's preview as their primary
+  image, while keeping the newest and all historical versions expandable. The
+  map and overlay are diagnostic only; unsupported terms remain gaps and the
+  clean PDF remains unmodified.
+
 ### Current change (verified 2026-08-17)
 
 - **Resume Studio effort profile and latency closure:** the local engine keeps
-  Codex pinned to `gpt-5.6-luna` and uses high reasoning for authoring and the
-  initial critic panel by Victor's standing preference. Post-revision critic
-  rechecks use bounded medium effort so all four role calls remain usable under
-  subscription latency; their effort and timeout outcomes remain visible.
-  Lower effort values and max are rejected for ordinary stages and fall back to
-  high. A single line-repair pass now precedes the deterministic
-  compactor; the second frontier repair pass was removed after controlled runs
-  showed diminishing returns. Every provider-flow row records the selected
-  effort alongside model, latency, status, and observed tokens. On the same
-  Merck posting, Luna low/medium/high returned valid plans in 69/82/76 seconds;
-  high produced the safest compiled geometry, while max was stopped after
-  4:51 without a structured response and is now disabled.
+  Codex pinned to `gpt-5.6-luna` and uses one consistent High effort level for
+  ordinary planning, writing, line editing, and every evaluator role. Max is
+  reserved for the explicit deep quality frontier or a deliberate override.
+  A single line-repair pass now precedes the deterministic compactor; the
+  second frontier repair pass was removed after controlled runs showed
+  diminishing returns. Every provider-flow row records the selected effort
+  alongside model, latency, status, and observed tokens.
 
 ### Current change (verified 2026-08-21)
 
-- **Sealed Luna Max evaluator and broad quality lab:** Resume Studio now uses
+- **Sealed evaluator and broad quality lab:** Resume Studio now uses
   the `resume-evaluator-v2-sealed` critique-only contract. The writer supplies
   only an attested packet containing the base/candidate renders, posting,
   authorized evidence, deterministic checks, and comparative diff. A fresh
@@ -153,11 +158,10 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   or score control and runs from a disposable system-temp directory. Four
   roles—evidence, recruiter, technical, and screening—must all return valid
   attested results; duplicate, wrong-lane, or partial panels remain unready.
-  The deep authoring lane and all evaluator roles use Luna Max; the normal
-  balanced lane uses Luna High for its first structured plan while keeping Max
-  for every evaluator role. Repeated writer repair calls use an explicit Luna
-  High override after Max repair calls timed out without structured
-  replacements. In the bounded balanced lane, critic-driven repair is disabled;
+  The deep authoring lane and evaluator roles may use Luna Max; the ordinary
+  balanced and Unchained lanes use Luna High for every provider stage,
+  including all evaluator roles. Repeated writer repair calls use the same
+  explicit High lane. In the bounded balanced lane, critic-driven repair is disabled;
   repair candidates in the deep lane receive a fresh panel
   before acceptance. The benchmark
   harness fetches/matches a broad live corpus concurrently, then runs a
@@ -182,6 +186,99 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   mostly `do_not_ship`/`blocked`, which is an evaluator finding rather than a
   harness success claim.
 
+### Current change (verified 2026-08-22)
+
+- **Source-level provenance guard:** enhanced rewrites now revert a narrow set
+  of high-risk technical/implementation anchors when the primary bullet and
+  its cited `source_ids`/`evidence_ids` do not authorize them. This catches the
+  Anduril SynapSense failure where C++/asynchronous/backend wording was merged
+  into a dashboard bullet with only the dashboard citation. A fresh replay at
+  `CV/.resume_studio/benchmarks/provenance-fix-anduril-20260822/runs/pending-1787393270`
+  completed in 551.4 seconds with High Luna calls and all four critic roles;
+  it produced no added unsupported bullet and correctly selected the base.
+
+- **Canonical-loss explanation tightened:** control recovery restores every
+  omitted canonical line that has a noncanonical selected line to displace,
+  unless the ledger names the exact source tradeoff. A generic project reorder
+  no longer explains a lost bullet; the audit needs the exact source ID or
+  enough of the omitted line to identify it. This keeps the evaluator from
+  hiding a lost mechanism behind a valid project-level narrative. Focused
+  Resume Studio coverage is now 154 tests.
+
+- **Supported-skills generation checklist:** generation prompts now include a
+  compact checklist of direct/adjacent `tailor_skills` requirements with exact
+  terms and authorized evidence IDs. The writer may surface a term in cited
+  body evidence or one existing Skills rewrite, but the checklist never
+  authorizes unsupported additions. The fresh-open Nucleus replay at
+  `CV/.resume_studio/benchmarks/skills-checklist-nucleus-20260822/runs/pending-1787394155`
+  completed in 609.5 seconds with Luna High and all four critic roles. It added
+  supported REST/access-control evidence and no unsupported claims, but still
+  omitted authorized documentation/PostgreSQL/Linux/AWS signals and dropped
+  the distinctive Quantum project; the audit correctly kept the base/blocked.
+
+- **Planner denial normalization:** postfix negative language such as “Linux
+  administration and AWS are unsupported” is now recognized before gap terms
+  are promoted into supported ATS/generation evidence. The corrected Nucleus
+  replay at
+  `CV/.resume_studio/benchmarks/denial-fix-nucleus-20260822/runs/pending-1787395673`
+  completed in 570.8 seconds with Luna High and all four critic roles. Its
+  checklist contained documentation and Docker only; the audit moved from
+  `tailoring: regressed` to `tailoring: improved`, with no unsupported rendered
+  claim, but correctly stayed `do_not_ship`/blocked for eligibility and a
+  remaining portfolio regression.
+
+- **Canonical project tradeoff preflight:** enhanced plans that drop a
+  canonical project must name every omitted canonical bullet `source_id` in
+  the decision ledger. A parent project explanation cannot hide a missing
+  mechanism. The Stryker replay would now fail closed on the omitted Quantum
+  historical-market pipeline bullet (`...:b3`) before judging; valid swaps
+  remain allowed when their source-level tradeoff is complete. Focused Resume
+  Studio coverage is now 156 tests.
+
+- **Requirement-term association guard:** gap-analysis terms now survive
+  normalization only when they appear in the requirement, its rationale, or
+  cited authorized evidence. This blocks the Stryker failure where generic
+  `software engineering` was attached to networking and AngularJS requirements;
+  deterministic inventory terms remain available independently. Focused
+  Resume Studio coverage is now 158 tests.
+
+- **Portfolio-search hard-gate promotion:** a three-variant Stryker search
+  exposed that a candidate could receive `prefer_tailored` from the comparative
+  audit while the sealed panel still reported a hard failure. Portfolio search
+  now requires a complete four-role panel with `review.hard_fail == false` in
+  addition to the positive comparative decision. Each child receipt records
+  `critic_hard_fail`, so relative uplift and promotion safety remain separate.
+  The post-fix Stryker replay completed three candidates in 388.5 seconds wall
+  time with complete Luna High panels and selected the canonical base because
+  none produced a material positive win.
+
+- **Final-artifact portfolio guard:** late revision, density, and audit-repair
+  passes can return a new source-addressed plan after the initial packer and
+  sealed panel. The exact final plan now passes one deterministic duplicate and
+  human-skim-budget guard. Same-entry repeated metric/mechanism stories keep
+  the stronger authorized line; no new terminology or claims are created. If
+  the guard changes the plan, Resume Studio compiles it and runs a fresh
+  complete four-role sealed panel. It never reuses the prior panel for a
+  changed artifact; an incomplete recheck fails closed. Receipts are written
+  to `final_portfolio_guard.json` and `layout_packing.json`, and focused tests
+  cover both the stronger-line selection and duplicate metrics diagnostic.
+
+- **Mechanism-story duplicate guard:** the same final guard now catches
+  repeated validation/calibration mechanisms even when the bullets do not
+  repeat a number. Cross-entry deletion is stricter than same-entry review and
+  requires two distinctive shared terms with a shared metric, or the narrow
+  mechanism bundle; generic words cannot erase a project. This specifically
+  targets the ByteDance All-NBA and Anduril posture regressions found in the
+  fresh cohort. The affected roles are being rerun before this is treated as a
+  measured gain.
+
+- **Geometry fallback after High timeout:** if the bounded line editor times
+  out, the deterministic compactor may now restore a shorter authoritative
+  source line and use source-preserving Skills abbreviations before failing the
+  one-line gate. This rescued the exact failed Anduril artifact in an offline
+  compile check (zero wraps/near-wraps); the real-role rerun still must pass a
+  complete sealed panel.
+
 - **Post-audit density prerequisite receipt (DECISION #155):** the patched
   Stryker run at
   `CV/.resume_studio/benchmarks/stryker-post-repair-density-20260821/runs/78044c21145b`
@@ -204,8 +301,8 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   are unchanged. The merged production change is PR #2583 (`48b7d479`).
 
 - **Control-preserving balanced lane and geometry-first timing experiment:**
-  the default enhanced run is now `quality_profile=balanced`. It keeps Luna
-  Max for the sealed four-role panel and leaves all evaluator contracts and
+  the default enhanced run is now `quality_profile=balanced`. It uses Luna
+  High for the sealed four-role panel and leaves all evaluator contracts and
   hard gates intact, but skips model space expansion and critic-driven
   revision/audit-repair rounds. The deterministic compiler performs control
   recovery first and a conditional Luna High line-edit pass is used only when
@@ -377,6 +474,93 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   project swaps, and portfolio-overlap warnings. Repair rules restore or
   justify high-value control evidence before adding another keyword-shaped
   line; the evaluator and its hashes remain unchanged.
+- **Unchained frontier calibration (verified 2026-08-21/22):** the fresh
+  Stryker generation run took 1,596.4 seconds and 12 Codex Luna calls; all
+  initial and recheck evidence, recruiter, technical, and screening roles
+  completed, but the immutable base still won the comparative audit. The
+  candidate's UI/REST additions were genuine, while stronger proof and
+  portfolio breadth were lost, so this was an honest quality rejection rather
+  than a worker failure. The audit now repairs provider-typo citations only to
+  exact graph-authorized source IDs, labels material no-op candidates as
+  `unchanged` and skips their repair cascade, clusters semantically identical
+  panel concerns, and treats a single non-hard-role regression as
+  `QUESTIONABLE` pending confirmation.
+- **Bounded Unchained opportunity pass:** before the sealed jury, generation
+  may test one unused, claim-authorized, source-verbatim line from an already
+  selected entry, paying for it with a bounded marginal replacement and a
+  fresh compile/layout gate. It cannot invent wording or approve the change.
+  Unchained's old audit-repair/recheck cascade is disabled after adding about
+  twelve minutes without a positive Stryker comparison; `deep` and `search`
+  retain repair for controlled experiments. This improves the default timing
+  path without weakening the four-role High evaluator or any hard gate.
+- **Integrated-path Stryker validation (verified 2026-08-22):** run
+  `CV/.resume_studio/benchmarks/unchained-frontier-validation-20260822/runs/88ff48da72e5`
+  completed in 909.2 seconds with 7 Codex calls. The target opportunity pass
+  surfaced authorized REST endpoint evidence, all four Max roles completed,
+  and the audit preferred the tailored artifact with gain weight 7 versus loss
+  weight 4 and no blockers. The same report retains two regressions (lost
+  J&J Pandas/SQL evidence and lost 4+ agent coordination) plus one missed
+  `software engineering`/UI opportunity; it remains `awaiting_review`, not
+  auto-approved, because the panel is same-model Luna rather than independent
+  hiring validation.
+
+- **Fresh-open High-effort cohort and speed bound (verified 2026-08-22):**
+  `CV/.resume_studio/benchmarks/20260822T041401Z-0b2ad7/manifest.json` selected
+  roles listed within seven days, excluded terminal records, rejected definitive
+  closed-page banners, and completed 8/8 full runs. Every run completed the
+  evidence, recruiter, technical, and screening roles; 5 preferred the tailored
+  candidate and 3 correctly stayed base/blocked. Every provider call used
+  `gpt-5.6-luna` at High effort, with per-stage latency and total elapsed time
+  recorded in the manifest. The receipts showed optional line editing and
+  repeated measured-space trials as the timing bottleneck, so ordinary balanced
+  and search lanes now use a three-minute line-editor fallback, two post-line
+  density rounds, and a two-candidate compiled swap frontier. Deep retains the
+  larger frontier for explicit quality experiments; the evaluator contract and
+  fail-closed winner selection are unchanged.
+
+- **Post-fix evidence guard spot check (verified 2026-08-22):** two additional
+  fresh open roles (Neuralink and Qualcomm) completed in roughly 653 seconds
+  each with complete four-role High panels and no Max calls. Neuralink was a
+  `prefer_tailored` review; Qualcomm was correctly `do_not_ship`/`blocked` for
+  an unsupported `pytest` Skills addition and a harmful project tradeoff. The
+  follow-up patch now rejects newly introduced Skills technologies unless the
+  cited claim-authorized evidence actually supports them, and removes repeated
+  metric/mechanism anchors within one entry before packing.
+
+- **Microscopic-density swap removed (verified 2026-08-22):** portfolio-search
+  receipts showed that the deterministic post-edit density pass could see only
+  `0.03--0.06pt` of spare capacity and replace distinctive mechanism evidence
+  with unused but weaker lines. The sealed jury rejected those candidates, but
+  the swap was still wasted authoring latency and made the candidate worse.
+  Ordinary `balanced`, `search`, and `search_single` profiles now disable
+  deterministic content expansion while retaining hard geometry gates,
+  source-aware control recovery, and the complete sealed panel. The explicit
+  `deep` frontier remains available for controlled experiments. The first
+  post-fix fresh-open Uber run used Luna High throughout, completed in 631.9
+  seconds, and earned `prefer_tailored` with zero blockers; its final PDF
+  preserved the authored portfolio because no blind density swap ran. The
+  Nucleus follow-up completed in 675.0 seconds with all High panel roles and
+  correctly stayed base/blocked on application constraints.
+
+- **Role-evidence floor remains experimental:** the project-level floor can
+  find an omitted primary-track project, but the Anduril experiment showed
+  that a plausible replacement can still displace more distinctive evidence.
+  It is therefore disabled in ordinary and search profiles; its receipt says
+  `disabled_by_quality_profile` and the helper remains available for explicit
+  lab tests. It will need a sealed positive win before becoming a default
+  mutation. A same-job ByteDance A/B supports that decision: floor enabled
+  produced loss weight 24 plus an unsupported-claim blocker; no-floor High
+  replay produced loss weight 14, no unsupported-claim hard failure, and still
+  correctly stayed base for eligibility and genuine portfolio redundancy.
+
+- **Unchained fail-closed stress test:** the post-fix Anduril Unchained run
+  completed in 601.0 seconds with Luna High throughout. It surfaced a
+  supported Python/simulation opportunity, but the writer broadened SynapSense
+  into unsupported asynchronous/Python-module and behavioral-monitoring
+  claims. The sealed evidence panel caught those claims plus the unresolved
+  experience and clearance blockers, leaving the immutable base as the primary
+  `do_not_ship`/`blocked` artifact. This is expected quality-control behavior,
+  not a successful-tailor claim.
 
 ### Previous change (verified 2026-08-15)
 

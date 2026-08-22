@@ -4,14 +4,14 @@
 The benchmark deliberately separates cheap corpus coverage from expensive AI
 tailoring.  ``--fetch-only``/``--match-only`` can cover dozens of live jobs in
 parallel; ``--run-full`` then runs a smaller, balanced set through the real
-Luna Max writer plus sealed evaluator.  Every run stays below ignored
+Luna High writer plus sealed evaluator by default.  Every run stays below ignored
 ``CV/.resume_studio/benchmarks/`` and records latency, gate outcomes, panel
 completeness, and comparative uplift.
 
 Examples::
 
     .venv/bin/python scripts/resume_studio_benchmark.py \
-        --limit 48 --fetch-workers 12 --fetch-only
+        --limit 48 --fresh-days 7 --fetch-workers 12 --fetch-only
     .venv/bin/python scripts/resume_studio_benchmark.py \
         --manifest CV/.resume_studio/benchmarks/<id>/manifest.json \
         --run-full --full-limit 8 --workers 2
@@ -37,6 +37,13 @@ ROLE_RE = re.compile(
     r"\b(software|machine learning|ml engineer|data scientist|data engineer|"
     r"ai engineer|research engineer|backend|full[ -]?stack|frontend|"
     r"systems engineer|platform|developer)\b",
+    re.I,
+)
+DEFINITIVE_CLOSED_RE = re.compile(
+    r"(?:this\s+job|this\s+position|this\s+role)\s+(?:has\s+been\s+|is\s+)?"
+    r"(?:closed|filled)|"
+    r"(?:no\s+longer|not\s+currently)\s+(?:accepting\s+applications|available|open)|"
+    r"(?:job|position|role)\s+(?:not\s+found|is\s+no\s+longer\s+available)",
     re.I,
 )
 EXCLUDE_TITLE_RE = re.compile(
@@ -69,9 +76,21 @@ def load_jobs(root: Path) -> List[Dict[str, Any]]:
     return [item for item in jobs if isinstance(item, dict)]
 
 
-def job_eligible_for_benchmark(job: Dict[str, Any]) -> bool:
+def job_eligible_for_benchmark(
+    job: Dict[str, Any], fresh_days: Optional[float] = None,
+    now: Optional[float] = None,
+) -> bool:
     title = str(job.get("title") or "")
     url = str(job.get("url") or "")
+    if str(job.get("posting_status") or "open").lower() in {"expired", "filled", "archived"}:
+        return False
+    if job.get("closed_at"):
+        return False
+    if fresh_days is not None:
+        posted_at = float(job.get("posted_at") or 0)
+        clock = float(now if now is not None else time.time())
+        if not posted_at or posted_at > clock + 86400 or clock - posted_at > float(fresh_days) * 86400:
+            return False
     return bool(
         url.startswith(("http://", "https://"))
         and ROLE_RE.search(title)
@@ -91,8 +110,14 @@ def _stable_key(job: Dict[str, Any]) -> Tuple[Any, ...]:
     )
 
 
-def select_balanced_jobs(jobs: Iterable[Dict[str, Any]], limit: int) -> List[Dict[str, Any]]:
-    candidates = [job for job in jobs if job_eligible_for_benchmark(job)]
+def select_balanced_jobs(
+    jobs: Iterable[Dict[str, Any]], limit: int, fresh_days: Optional[float] = None,
+    now: Optional[float] = None,
+) -> List[Dict[str, Any]]:
+    candidates = [
+        job for job in jobs
+        if job_eligible_for_benchmark(job, fresh_days=fresh_days, now=now)
+    ]
     grouped: Dict[str, List[Dict[str, Any]]] = {sector: [] for sector in SECTOR_ORDER}
     for job in candidates:
         grouped.setdefault(str(job.get("sector") or "other"), []).append(job)
@@ -131,9 +156,11 @@ def _fetch_one(job: Dict[str, Any]) -> Dict[str, Any]:
     try:
         text = rs.fetch_job_description(job)
         result["posting_text"] = text
+        still_open = not bool(DEFINITIVE_CLOSED_RE.search(text))
         result["posting_fetch"] = {
-            "ok": len(text) >= 300,
+            "ok": len(text) >= 300 and still_open,
             "chars": len(text),
+            "still_open": still_open,
             "elapsed_seconds": round(time.time() - started, 2),
         }
     except Exception as exc:  # noqa: BLE001 - benchmark records source failures
@@ -368,6 +395,16 @@ def summarize_report(report: Dict[str, Any]) -> Dict[str, Any]:
         "critic_roles": panel.get("roles"),
         "critic_failed_roles": panel.get("failed_roles"),
         "critic_contract": panel.get("contract_version"),
+        "provider_flow": [
+            {
+                "label": item.get("label"),
+                "model": item.get("model"),
+                "effort": item.get("reasoning_effort"),
+                "elapsed_seconds": item.get("elapsed_seconds"),
+                "status": item.get("status"),
+            }
+            for item in (report.get("provider_flow") or [])
+        ],
         "quality_profile": report.get("quality_profile"),
         "elapsed_seconds": (report.get("run_metrics") or {}).get("elapsed_seconds"),
         "codex_calls": (report.get("usage") or {}).get("codex_calls"),
@@ -462,6 +499,10 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", type=Path)
     parser.add_argument("--limit", type=int, default=48)
+    parser.add_argument(
+        "--fresh-days", type=float, default=7,
+        help="Only select postings first listed within this many days and still open.",
+    )
     parser.add_argument("--fetch-workers", type=int, default=12)
     parser.add_argument("--match-workers", type=int, default=8)
     parser.add_argument("--workers", type=int, default=2)
@@ -487,7 +528,10 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
         manifest = {
             "benchmark_version": "resume-studio-benchmark-v1",
             "created_at": rs.now_iso(),
-            "selection": {"limit": args.limit, "sector_quotas": SECTOR_QUOTAS},
+            "selection": {
+                "limit": args.limit, "fresh_days": args.fresh_days,
+                "sector_quotas": SECTOR_QUOTAS,
+            },
             "source": "state/jobs.json",
             "quality_profile": rs.normalize_quality_profile(args.quality_profile),
             "evaluator_contract": {
@@ -496,7 +540,9 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
                 "rubric_sha256": rs.resume_evaluator.EVALUATOR_RUBRIC_SHA256,
             },
         }
-        selected = select_balanced_jobs(load_jobs(root), args.limit)
+        selected = select_balanced_jobs(
+            load_jobs(root), args.limit, fresh_days=args.fresh_days,
+        )
         manifest["jobs"] = selected
     manifest["benchmark_version"] = "resume-studio-benchmark-v2"
     manifest["quality_profile"] = rs.normalize_quality_profile(

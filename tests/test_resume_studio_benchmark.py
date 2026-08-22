@@ -1,3 +1,5 @@
+import time
+
 from scripts import resume_studio_benchmark as benchmark
 
 
@@ -64,3 +66,51 @@ def test_lab_summary_keeps_failures_and_panel_blockers_visible():
     assert summary["complete_critic_panels"] == 0
     assert summary["runs_with_blockers"] == 1
     assert summary["readiness"] == {"blocked": 1}
+
+
+def test_benchmark_fresh_selection_excludes_terminal_and_old_roles():
+    now = time.time()
+    jobs = [
+        {
+            **_job("new", "healthtech", "New Co", 80),
+            "posted_at": int(now - 2 * 86400),
+            "posting_status": "open",
+        },
+        {
+            **_job("old", "healthtech", "Old Co", 80),
+            "posted_at": int(now - 10 * 86400),
+            "posting_status": "open",
+        },
+        {
+            **_job("closed", "healthtech", "Closed Co", 80),
+            "posted_at": int(now - 1 * 86400),
+            "posting_status": "expired",
+            "closed_at": int(now - 100),
+        },
+    ]
+    selected = benchmark.select_balanced_jobs(jobs, 8, fresh_days=7, now=now)
+    assert [item["id"] for item in selected] == ["new"]
+
+
+def test_benchmark_marks_definitive_closed_page_as_not_open():
+    assert benchmark.DEFINITIVE_CLOSED_RE.search("This job has been closed.")
+    assert not benchmark.DEFINITIVE_CLOSED_RE.search(
+        "We build closed-loop systems and accept applications online."
+    )
+
+
+def test_benchmark_summary_preserves_model_effort_and_latency():
+    result = benchmark.summarize_report({
+        "tailoring_audit": {},
+        "provider_flow": [{
+            "label": "draft",
+            "model": "gpt-5.6-luna",
+            "reasoning_effort": "high",
+            "elapsed_seconds": 12.4,
+            "status": "complete",
+        }],
+        "usage": {"codex_calls": 1},
+    })
+    assert result["provider_flow"][0]["model"] == "gpt-5.6-luna"
+    assert result["provider_flow"][0]["effort"] == "high"
+    assert result["provider_flow"][0]["elapsed_seconds"] == 12.4

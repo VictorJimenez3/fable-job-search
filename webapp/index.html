@@ -296,6 +296,20 @@
   .studio-note { background:var(--code); border:1px solid var(--line); border-radius:7px; padding:.6rem .7rem; color:var(--muted); font-size:.74rem; }
   .studio-note strong { color:var(--ink); }
   .studio-empty { padding:2rem .75rem; text-align:center; color:var(--muted); }
+  .studio-requirement-map { margin-top:.7rem; border:1px solid var(--line); border-radius:8px; background:var(--paper); }
+  .studio-requirement-map > summary { cursor:pointer; list-style:none; padding:.55rem .65rem; }
+  .studio-requirement-map > summary::-webkit-details-marker { display:none; }
+  .studio-requirement-body { padding:0 .65rem .65rem; }
+  .studio-requirement-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.5rem; }
+  .studio-requirement-group { border:1px solid var(--line); border-radius:6px; padding:.45rem; min-width:0; }
+  .studio-requirement-group h5 { margin:0 0 .3rem; font-size:.68rem; }
+  .studio-requirement-item { display:block; border-left:3px solid var(--line); padding:.28rem .35rem; margin:.22rem 0; font-size:.68rem; line-height:1.3; }
+  .studio-requirement-item.pass { border-left-color:var(--accent); background:color-mix(in srgb,var(--accent) 10%,transparent); }
+  .studio-requirement-item.gap { border-left-color:var(--danger); background:color-mix(in srgb,var(--danger) 8%,transparent); }
+  .studio-requirement-item.preferred { border-left-color:var(--amber); background:color-mix(in srgb,var(--amber) 9%,transparent); }
+  .studio-requirement-source { display:block; color:var(--muted); font-size:.6rem; margin-top:.08rem; }
+  .studio-result .keyword-audit { margin-top:.6rem; }
+  @media(max-width:650px){.studio-requirement-grid{grid-template-columns:1fr;}}
   .studio-badge { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:.06rem .42rem; font:600 .62rem ui-monospace,Menlo,monospace; color:var(--muted); }
   .studio-badge.good { color:var(--accent-ink); border-color:var(--accent-ink); }
   .studio-badge.warn { color:var(--amber); border-color:var(--amber); }
@@ -3278,6 +3292,23 @@ function studioRunStatusText(status) {
   return `${status.job?.company||status.job?.title||"Resume Studio"}: ${status.message||status.status||"working"}`;
 }
 function studioMatchFor(j) { return S.testing.match?.job_id === j.id ? S.testing.match.resume_match : testingMatch(j); }
+function studioRequirementLabel(value) {
+  return String(value||"").replace(/^skill:/i,"").replace(/^eligibility:/i,"eligibility · ").replaceAll("_"," ");
+}
+function studioRequirementMapHTML(match) {
+  const value = match && typeof match === "object" ? match : {};
+  const matched = Array.isArray(value.matched_requirements) ? value.matched_requirements.filter(Boolean) : [];
+  const preferred = Array.isArray(value.preferred_matches) ? value.preferred_matches.filter(Boolean) : [];
+  const missing = Array.isArray(value.missing_requirements) ? value.missing_requirements.filter(Boolean) : [];
+  if (!matched.length && !preferred.length && !missing.length) {
+    if (value.confidence !== "low") return "";
+    return `<details class="studio-requirement-map"><summary><strong>Posting → evidence map</strong> ${studioBadge("low-confidence preview","warn")}</summary><div class="studio-requirement-body"><p class="sub">The cloud preview only sees the title and Radar metadata. Connect the private Mac engine to fetch the posting and map its requirements to your authorized evidence.</p></div></details>`;
+  }
+  const item = (text, state, source="") => `<div class="studio-requirement-item ${state}"><strong>${esc(studioRequirementLabel(text))}</strong>${source?`<span class="studio-requirement-source">${esc(source)}</span>`:""}</div>`;
+  const sources = (value.sources||[]).slice(0,3).map(source=>source.heading||source.source||source.id).filter(Boolean);
+  const sourceNote = sources.length ? `Top evidence sources surfaced: ${sources.join(" · ")}.` : "The private match keeps source IDs with the run for deeper inspection.";
+  return `<details class="studio-requirement-map" open><summary><strong>Posting → evidence map</strong> ${studioBadge(`${matched.length} covered`,matched.length?"good":"warn")} ${studioBadge(`${missing.length} gaps`,missing.length?"bad":"good")} ${value.confidence?studioBadge(`${value.confidence} confidence`,value.confidence==="high"?"good":"warn"):""}</summary><div class="studio-requirement-body"><p class="sub">This is candidate-role fit, separate from the later base-versus-tailored quality decision. Supported requirements can be surfaced only when the evidence graph authorizes them; gaps stay visible and are never invented. ${esc(sourceNote)}</p><div class="studio-requirement-grid"><div class="studio-requirement-group"><h5>Covered by your evidence · ${matched.length}</h5>${matched.map(text=>item(text,"pass","authorized evidence match")).join("")||'<p class="sub">No required capability is confirmed yet.</p>'}</div><div class="studio-requirement-group"><h5>Posting gaps · ${missing.length}</h5>${missing.map(text=>item(text,"gap","leave visible · ask Context &amp; Q&amp;A if this may be buried evidence")).join("")||'<p class="sub">No hard gaps detected.</p>'}</div></div>${preferred.length?`<div class="studio-requirement-group" style="margin-top:.5rem"><h5>Preferred matches · ${preferred.length}</h5>${preferred.map(text=>item(text,"preferred","supported preferred signal")).join("")}</div>`:""}</div></details>`;
+}
 function studioJobListHTML(rows) {
   return rows.slice(0,S.testing.shown).map(({job,match})=>`<button class="studio-job ${S.testing.selectedId===job.id?'selected':''}" onclick='selectStudioJob("${job.id}")'>
     <span class="match-score">${S.testing.match?.job_id===job.id ? S.testing.match.resume_match.score : match.score}</span>
@@ -3294,10 +3325,14 @@ function studioResultHTML(status) {
   const preview = status.preview_filename ? `<a class="act" href="${studioArtifact(status.run_id,status.preview_filename)}" target="_blank" rel="noopener">open preview ↗</a>` : "";
   const reportLink = `<a class="act" href="${studioArtifact(status.run_id,"report.json")}" target="_blank" rel="noopener">audit JSON ↗</a>`;
   const reviewText = review.ready===true ? "All required gates pass; inspect the draft before approval." : "Human review is required before this can be treated as ready.";
+  const auditEntry = {...status, report};
+  const keywordMap = keywordAuditForEntry(auditEntry);
   return `<div class="studio-result"><h3>${status.status==="awaiting_review"?"Draft awaiting your review":"Saved draft"} ${studioBadge(studioModeLabel(status.mode||report.mode),"good")}</h3>
     <p class="sub">${esc(reviewText)} ${report.resume_match?`Resume Match ${esc(report.resume_match.score)}/100.`:""}</p>
     ${Object.keys(gates).length?`<div class="facts">${Object.entries(gates).map(([name,gate])=>studioBadge(`${name}: ${gate.status}`,gate.status==="pass"?"good":gate.status==="fail"?"bad":"warn")).join("")}</div>`:""}
+    ${studioRequirementMapHTML(report.resume_match||{})}
     ${tailoringAuditHTML(report.tailoring_audit_summary||report.tailoring_audit)}
+    ${keywordMap?keywordAuditHTML(auditEntry):""}
     <div class="studio-links">${pdf}${preview}${reportLink}<button class="act" onclick='openResumeWorkshop("${esc(status.run_id)}")'>workshop ↗</button></div></div>`;
 }
 function studioLibraryHTML() {
@@ -3316,9 +3351,43 @@ async function reviewKeywordInContext(term) {
   showResumeContext();
   if(S.testing.engine==="online")await loadResumeContext();
 }
+function keywordAuditFromReport(report) {
+  const value = report && typeof report === "object" ? report : {};
+  const coverage = value.keyword_audit && typeof value.keyword_audit === "object"
+    ? value.keyword_audit
+    : value.content_changes?.keyword_coverage;
+  if (!coverage || typeof coverage !== "object" || !Array.isArray(coverage.terms) || !coverage.terms.length) return null;
+  const terms = coverage.terms.map(item=>({
+    term:item?.term, importance:item?.importance, required:Boolean(item?.required), preferred:Boolean(item?.preferred),
+    supported:Boolean(item?.supported), rendered:Boolean(item?.rendered), status:item?.status,
+    support_kind:item?.support_kind, source_ids:Array.isArray(item?.source_ids)?item.source_ids:[],
+  })).filter(item=>item.term);
+  const overlay = value.review_overlay && typeof value.review_overlay === "object" ? value.review_overlay : {};
+  return {
+    posting_available:Boolean(coverage.posting_available),
+    detected_count:Number(coverage.detected_count||terms.length),
+    supported_count:Number(coverage.supported_count||terms.filter(item=>item.supported).length),
+    covered_count:Number(coverage.covered_count||terms.filter(item=>item.supported&&item.rendered).length),
+    supported_coverage_percent:Number.isFinite(Number(coverage.supported_coverage_percent??coverage.supported_exact_coverage_percent))?Number(coverage.supported_coverage_percent??coverage.supported_exact_coverage_percent):null,
+    overall_coverage_percent:Number.isFinite(Number(coverage.overall_coverage_percent??coverage.exact_coverage_percent))?Number(coverage.overall_coverage_percent??coverage.exact_coverage_percent):null,
+    terms,
+    overlay:{available:overlay.available===true, boxes:Array.isArray(overlay.boxes)?overlay.boxes:[]},
+  };
+}
+function keywordAuditForEntry(entry) {
+  if (entry?.keyword_audit && typeof entry.keyword_audit === "object") return entry.keyword_audit;
+  return keywordAuditFromReport(entry?.report || entry);
+}
+function resumePreviewURL(entry) {
+  const cloud = cloudBankArtifactUrl(entry,"preview");
+  if (cloud) return cloud;
+  const runId = entry?.run_id;
+  const name = entry?.preview_filename || entry?.report?.preview_filename;
+  return runId && name ? studioArtifact(runId,name) : "";
+}
 function atsPct(value) { const number=Number(value); return Number.isFinite(number)?Math.max(0,Math.min(100,number)):null; }
 function keywordAuditHTML(entry) {
-  const audit=entry.keyword_audit, preview=cloudBankArtifactUrl(entry,"preview");
+  const audit=keywordAuditForEntry(entry), preview=resumePreviewURL(entry);
   if(!audit?.posting_available||!(audit.terms||[]).length)return `<details class="keyword-audit"><summary><strong>ATS keyword map</strong> ${studioBadge("not available","warn")}</summary><div class="keyword-audit-body"><p class="sub">This older draft did not preserve a posting keyword audit. Its PDF and objective review are still available.</p></div></details>`;
   const terms=audit.terms||[], boxes=audit.overlay?.boxes||[];
   const groups={covered:terms.filter(item=>item.supported&&item.rendered),available:terms.filter(item=>item.supported&&!item.rendered),missing:terms.filter(item=>!item.supported)};
@@ -3353,11 +3422,13 @@ function resumeBankVersionHTML(entry, ranking=null) {
   return `<div class="resume-bank-version-wrap"><div class="resume-bank-version"><div><strong>${esc(studioModeLabel(entry.mode))} ${rankBadge}</strong><p class="sub">${esc(entry.created_at||"date unavailable")} · ${entry.storage==="cloud"?"cloud":"local"} ${studioBadge(entry.status||"saved",statusKind)}</p></div><div class="acts resume-bank-actions">${pdf?`<a class="act" href="${pdf}" target="_blank" rel="noopener">PDF ↗</a>`:""}${preview?`<a class="act" href="${preview}" target="_blank" rel="noopener">clean preview ↗</a>`:""}${report?`<a class="act" href="${report}" target="_blank" rel="noopener">audit ↗</a>`:""}${posting?`<a class="act" href="${posting}" target="_blank" rel="noopener">posting ↗</a>`:""}${inspect}${workshop}</div></div>${tailoringAuditHTML(entry.tailoring_audit)}${keywordAuditHTML(entry)}</div>`;
 }
 function resumeBankGroupHTML(group) {
-  const latest=group.versions[0], job=latest.job||{}, preview=cloudBankArtifactUrl(latest,"preview"), ranked=objectiveRankings(group), winner=ranked.find(item=>item.assessment.rankable&&Number.isFinite(Number(item.assessment.score)));
+  const latest=group.versions[0], job=latest.job||{}, ranked=objectiveRankings(group), winner=ranked.find(item=>item.assessment.rankable&&Number.isFinite(Number(item.assessment.score))), primary=winner?.entry||latest, preview=cloudBankArtifactUrl(primary,"preview");
   const statuses=[...new Set(group.versions.map(entry=>entry.status).filter(Boolean))];
+  const primaryLabel=winner?`Objective winner: ${studioModeLabel(primary.mode)} ${studioBadge(`${winner.assessment.score}/100`,"good")}`:"Latest saved version";
+  const latestNote=winner&&resumeBankKey(primary)!==resumeBankKey(latest)?` · latest saved: ${esc(studioModeLabel(latest.mode))}`:"";
   return `<details class="resume-bank-card"><summary><div class="resume-bank-card-head"><div><h3>${esc(job.company||"Unknown company")}</h3><p class="sub">${esc(job.title||"Untitled role")}</p></div><span class="chip good">${group.versions.length} version${group.versions.length===1?"":"s"}</span></div>
-    ${preview?`<img class="resume-bank-preview" loading="lazy" src="${preview}" alt="${esc(job.company||"Resume")} latest preview">`:'<div class="resume-bank-preview empty">No preview was produced for the latest version.</div>'}
-    <p class="sub">Latest: ${esc(studioModeLabel(latest.mode))} · ${esc(latest.created_at||"date unavailable")}${winner?` · best: ${esc(studioModeLabel(winner.entry.mode))} ${studioBadge(`${winner.assessment.score}/100`,"good")}`:""}</p><div class="facts">${statuses.map(value=>studioBadge(value,value==="failed"?"bad":"good")).join("")}<span class="chip">click to see every version · compare objectively</span></div></summary>
+    ${preview?`<img class="resume-bank-preview" loading="lazy" src="${preview}" alt="${esc(job.company||"Resume")} ${winner?"objective winner":"latest"} preview">`:'<div class="resume-bank-preview empty">No preview was produced for the selected version.</div>'}
+    <p class="sub">${primaryLabel} · ${esc(primary.created_at||"date unavailable")}${latestNote}</p><div class="facts">${statuses.map(value=>studioBadge(value,value==="failed"?"bad":"good")).join("")}<span class="chip">click to see every version · compare objectively</span></div></summary>
     <div>${objectiveRankingHTML(group)}${ranked.map(item=>resumeBankVersionHTML(item.entry,item)).join("")}</div></details>`;
 }
 function renderResumeBankView() {
@@ -3397,7 +3468,7 @@ function renderStudioWorkspace() {
   const engineBadge = engineOnline ? studioBadge("private engine connected","good") : S.testing.engine === "offline" ? studioBadge("private engine offline","warn") : studioBadge("checking private engine");
   workspace.innerHTML = `<div class="studio-selected"><div class="bar" style="justify-content:space-between;margin:0"><div>${engineBadge} ${selected.alert_ok?studioBadge("eligible","good"):studioBadge("dashboard review","warn")}</div><div class="acts"><button class="act" onclick="showResumeContext()">context &amp; questions${S.testing.match?.context_summary?.open_questions!=null?` · ${S.testing.match.context_summary.open_questions} open`:""}</button><a class="act" href="${esc(safeExternalURL(selected.url))}" target="_blank" rel="noopener noreferrer">open posting ↗</a></div></div>
     <h2>${esc(selected.company)} · ${esc(selected.title)}</h2><div class="sub studio-meta">${esc((selected.locations||[]).join(", ")||"location unknown")} · Radar ${selected.score??"–"} · ${ago(postedTs(selected))||"date unknown"}</div>
-    <div class="facts" style="margin-top:.45rem">${match.score!=null?studioBadge(`Resume Match ${match.score}/100`,match.confidence==="low"?"warn":"good"):""}${(match.clusters||[]).slice(0,6).map(c=>studioBadge(c.replaceAll("_"," "))).join("")}</div></div>
+    <div class="facts" style="margin-top:.45rem">${match.score!=null?studioBadge(`Resume Match ${match.score}/100`,match.confidence==="low"?"warn":"good"):""}${(match.clusters||[]).slice(0,6).map(c=>studioBadge(c.replaceAll("_"," "))).join("")}</div>${studioRequirementMapHTML(match)}</div>
     <div class="studio-note" style="margin-top:.65rem"><strong>One system, two safe layers.</strong> This cloud workspace owns the selection, private queue, and run status. The Mac engine owns your evidence graph, provider calls, PDF rendering, and revisions. ${engineOnline?"Queued work can run now.":cloudReady?"The Mac is offline, but this posting can be saved to the private cloud queue and dispatched automatically when the engine reconnects.":"Connect Google to enable the private cloud queue."}</div>
     <div class="studio-actions">
       <div class="studio-action"><h4>Used bullets</h4><p>Approved wording and selections only. Your clean comparison baseline.</p><button class="act" ${canQueue?"":"disabled"} onclick="queueResumeMode('used')">${studioQueueActionLabel("used")}</button></div>

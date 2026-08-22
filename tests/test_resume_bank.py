@@ -43,6 +43,10 @@ def test_resume_bank_frontend_keeps_local_engine_as_sync_source():
     assert "queue_id:item.queue_id" in html
     assert "function tailoringAuditHTML" in html
     assert "This compares the tailored resume with the original" in html
+    assert "function studioRequirementMapHTML" in html
+    assert "Posting → evidence map" in html
+    assert "keywordAuditFromReport" in html
+    assert "keywordMap?keywordAuditHTML(auditEntry)" in html
 
 
 def test_resume_bank_exposes_owner_only_objective_per_posting_comparison():
@@ -54,6 +58,8 @@ def test_resume_bank_exposes_owner_only_objective_per_posting_comparison():
     assert "not a hiring prediction" in html
     assert "transparent match, evidence-safety, layout, and portfolio signals" in html
     assert "entry.objective" in api
+    assert "Objective winner" in html
+    assert 'primary=winner?.entry||latest' in html
 
 
 def test_resume_bank_exposes_visual_keyword_audit_and_context_followup():

@@ -57,7 +57,7 @@ def test_frozen_rubric_hash_and_contract_are_intact():
     assert evaluator.contract_is_intact()
     assert evaluator.rubric_sha256() == evaluator.EVALUATOR_RUBRIC_SHA256
     assert evaluator.EVALUATOR_CONTRACT_VERSION == "resume-evaluator-v2-sealed"
-    assert evaluator.contract_fingerprint() == "a564be6f09dc15a0bd9d25b0d6ba580afcb29d305c79338b11572b83f54934d2"
+    assert evaluator.contract_fingerprint() == "57856391849c31326519ca21e9b7572b76d14ff7e350c5183b9b3700c610b58e"
 
 
 def test_packet_is_immutable_attested_and_excludes_writer_control_fields():
