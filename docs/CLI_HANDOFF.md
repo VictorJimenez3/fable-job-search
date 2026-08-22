@@ -198,6 +198,13 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   fresh cohort. The affected roles are being rerun before this is treated as a
   measured gain.
 
+- **Geometry fallback after High timeout:** if the bounded line editor times
+  out, the deterministic compactor may now restore a shorter authoritative
+  source line and use source-preserving Skills abbreviations before failing the
+  one-line gate. This rescued the exact failed Anduril artifact in an offline
+  compile check (zero wraps/near-wraps); the real-role rerun still must pass a
+  complete sealed panel.
+
 - **Post-audit density prerequisite receipt (DECISION #155):** the patched
   Stryker run at
   `CV/.resume_studio/benchmarks/stryker-post-repair-density-20260821/runs/78044c21145b`

@@ -783,6 +783,12 @@ experience and project when two distinctive terms and a shared metric support
 the match. Generic overlap alone cannot delete evidence; the affected real-role
 cases are rerun in the lab before this is considered a measured improvement.
 
+Geometry recovery has the same evidence boundary: after the bounded High line
+editor times out, it may restore an authoritative shorter source line or use a
+source-preserving Skills abbreviation, then compile again. It cannot lower the
+one-line threshold or invent wording. The exact Anduril failure was rescued in
+an offline compile check and is being rerun through the full evaluator.
+
 For healthcare-role experiments, a prior saved draft can be used as a
 provisional pairwise control without becoming evidence authority. The completed
 Stryker-vs-Merck control used the best saved Merck AI PDF as the baseline and

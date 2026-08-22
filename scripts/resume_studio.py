@@ -9577,12 +9577,27 @@ def _line_compaction_candidates(text: str, source_text: str) -> List[str]:
         seen.add(value)
         candidates.append(value)
 
+    # If a writer expanded an authoritative source line into a longer
+    # role-specific variant, the exact source wording is the safest geometry
+    # fallback. It may surrender a nonessential paraphrase, but it cannot
+    # invent a new claim and the resulting artifact is still sealed-reviewed.
+    if source_text and len(_latex_plain(source_text)) < len(_latex_plain(current)):
+        add(source_text)
+
     # Prefer terminology already authorized by the source bullet. These are
     # common resume compressions, not new claims.
     if "poc" in source_plain:
         add(re.sub(r"\bproof of concept\b", "POC", current, flags=re.I))
     if "rag" in source_plain:
         add(re.sub(r"\bretrieval[- ]augmented generation\b", "RAG", current, flags=re.I))
+    # Skills rows are especially vulnerable to a single wrap when a writer
+    # preserves every expanded label. These are abbreviations of terminology
+    # already present in the source row, not new capabilities; the full forms
+    # remain available in the evidence packet and posting diff.
+    add(re.sub(r"\bMachine Learning\b", "ML", current, flags=re.I))
+    add(re.sub(r"\bComputer Vision\b", "CV", current, flags=re.I))
+    add(re.sub(r"\bLarge Language Models\b", "LLMs", current, flags=re.I))
+    add(re.sub(r"\bAgentic AI\b", "Agentic", current, flags=re.I))
     add(re.sub(r"\blearned features\b", "features", current, flags=re.I))
     add(re.sub(r"\bacross RNN/LLM architectures\b", "in RNN/LLM architectures", current, flags=re.I))
     # Compact common list/connective wording without dropping a technical

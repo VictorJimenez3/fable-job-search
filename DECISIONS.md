@@ -2599,3 +2599,16 @@ same mechanism bundle. Generic words such as `workflow`, `systems`, and `AI`
 cannot delete a project on their own. The resulting curator replay removed the
 two observed regressions while preserving generic fixture breadth; real-role
 reruns are required before treating this as a quality improvement.
+
+## 165. Use authoritative source wording as a bounded geometry fallback (2026-08-22)
+
+The mechanism-guard Anduril replay exposed a separate reliability gap: the
+High line editor timed out at its three-minute cap, and the deterministic
+compactor could not shorten a long Skills row or an expanded posture bullet,
+so the hard one-line gate rejected an otherwise source-valid candidate. The
+geometry compactor now tries the exact shorter authoritative source wording
+when a generated line is unsafe, plus source-preserving abbreviations for
+long Skills labels. On the failed Anduril artifact this produced a one-page
+PDF with zero wraps and zero near-wraps in an offline compiled check. The
+result still requires the normal sealed panel; the fallback cannot invent a
+claim or lower the geometry threshold.
