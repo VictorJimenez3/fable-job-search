@@ -2810,3 +2810,19 @@ version exists, while the expanded card retains the newest draft and every
 version. The UI therefore treats the winner label, the visual preview, and the
 comparison list as one coherent decision surface. No diagnostic map or
 objective rank is a recruiter ATS score or an automatic submission decision.
+
+## 176. Explain tailoring modes in the cloud workspace (2026-08-22)
+
+The cloud Resume Studio now explains the four live tailoring modes in the same
+workspace where they are selected. **Unchained generation** is labeled as the
+recommended, most autonomous path: it maps the full posting to authorized
+evidence and may synthesize grounded bullets or Skills lines. **Take-the-wheel
+(moderate)** remains adaptive but more preservation-oriented, **AI tailor** is
+the conservative role-specific lane, and **Used bullets** is the source-only
+comparison baseline. The labels are not stale compatibility text; they map to
+the existing `generation`, `unrestricted`, `ai`, and `used` execution modes.
+
+The explanation also states the shared safeguards: evidence authority,
+factuality, one-page geometry, chronology, and final review. The app does not
+promise that broader AI control will beat the immutable base; the fail-closed
+comparison may still retain the original resume.

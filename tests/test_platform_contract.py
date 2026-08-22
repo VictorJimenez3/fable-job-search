@@ -282,6 +282,10 @@ def test_platform_resume_studio_is_one_cloud_workspace_with_private_engine_fallb
     assert "tailor here" in html
     assert "Take-the-wheel (moderate)" in html
     assert "Unchained generation" in html
+    assert "function studioModeGuideHTML" in html
+    assert "AI takes the lead → Unchained" in html
+    assert "Most autonomous" in html
+    assert "These are still active modes, not obsolete labels" in html
     assert "Take-the-wheel (moderate)" in studio
     assert "Queue Take-the-wheel" in studio
     assert "DEFAULT_BRIDGE_ORIGINS" in studio

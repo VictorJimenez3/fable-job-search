@@ -137,6 +137,14 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   map and overlay are diagnostic only; unsupported terms remain gaps and the
   clean PDF remains unmodified.
 
+- **Resume Studio mode guide (verified 2026-08-22):** the cloud workspace now
+  explains the four active controls where they are selected. Unchained
+  generation is explicitly the broadest, most autonomous lane; Take-the-wheel
+  (moderate) is adaptive but more preservation-oriented; AI tailor is the
+  conservative role-specific lane; and Used bullets is the source-only
+  comparison baseline. The guide names the existing backend modes and repeats
+  the shared evidence, factuality, geometry, chronology, and final-review gates.
+
 ### Current change (verified 2026-08-17)
 
 - **Resume Studio effort profile and latency closure:** the local engine keeps

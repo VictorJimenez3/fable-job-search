@@ -282,6 +282,14 @@
   .studio-action h4 { margin:0 0 .2rem; font-size:.82rem; }
   .studio-action p { min-height:2.6rem; margin:.2rem 0 .55rem; color:var(--muted); font-size:.72rem; }
   .studio-action button { width:100%; }
+  .studio-mode-guide { margin:.7rem 0; border:1px solid var(--accent); border-radius:8px; background:color-mix(in srgb,var(--accent) 7%,var(--paper)); padding:.65rem .75rem; }
+  .studio-mode-guide h4 { margin:0; font-size:.8rem; }
+  .studio-mode-guide p { margin:.25rem 0 0; color:var(--muted); font-size:.72rem; }
+  .studio-mode-list { display:grid; gap:.35rem; margin-top:.55rem; }
+  .studio-mode-row { display:grid; grid-template-columns:minmax(145px,.7fr) minmax(0,1.3fr); gap:.55rem; padding:.4rem 0; border-top:1px solid var(--line); font-size:.7rem; }
+  .studio-mode-row strong { color:var(--ink); }
+  .studio-mode-row span { color:var(--muted); }
+  .studio-mode-note { margin-top:.55rem!important; padding-top:.45rem; border-top:1px solid var(--line); }
   .studio-status { border-left:3px solid var(--accent); padding:.55rem .7rem; background:var(--code); border-radius:0 6px 6px 0; white-space:pre-wrap; font-size:.78rem; }
   .studio-status.warn { border-color:var(--amber); }
   .studio-status.bad { border-color:var(--danger); }
@@ -309,7 +317,7 @@
   .studio-requirement-item.preferred { border-left-color:var(--amber); background:color-mix(in srgb,var(--amber) 9%,transparent); }
   .studio-requirement-source { display:block; color:var(--muted); font-size:.6rem; margin-top:.08rem; }
   .studio-result .keyword-audit { margin-top:.6rem; }
-  @media(max-width:650px){.studio-requirement-grid{grid-template-columns:1fr;}}
+  @media(max-width:650px){.studio-requirement-grid{grid-template-columns:1fr;}.studio-mode-row{grid-template-columns:1fr;gap:.12rem;}}
   .studio-badge { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:.06rem .42rem; font:600 .62rem ui-monospace,Menlo,monospace; color:var(--muted); }
   .studio-badge.good { color:var(--accent-ink); border-color:var(--accent-ink); }
   .studio-badge.warn { color:var(--amber); border-color:var(--amber); }
@@ -3071,7 +3079,7 @@ function resumeBatchCandidates() {
     .sort((a,b) => (b.score || 0) - (a.score || 0) || String(a.company).localeCompare(String(b.company)));
 }
 function resumeBatchModeOptions(mode) {
-  return [["unrestricted","Take-the-wheel (moderate)"],["ai","AI tailor"],["used","Used bullets"],["generation","Unchained generation"]]
+  return [["generation","Unchained generation · AI takes the lead"],["unrestricted","Take-the-wheel (moderate)"],["ai","AI tailor"],["used","Used bullets"]]
     .map(([value,label]) => `<option value="${value}" ${mode===value?"selected":""}>${label}</option>`).join("");
 }
 function resumeBatchStatusKind(status) {
@@ -3104,6 +3112,7 @@ function renderResumeBatchView() {
   <div class="lane">
     <div class="bar" style="justify-content:space-between"><div><h3>Added today <span class="sub">${candidates.length} role${candidates.length===1?"":"s"}</span></h3><p class="sub" style="margin:0">Up to ${RESUME_BATCH_LIMIT} drafts per batch · local calendar day · current non-terminal postings only.</p></div><div class="acts"><button class="act" onclick="selectAllResumeBatch()" ${candidates.length?"":"disabled"}>select up to ${RESUME_BATCH_LIMIT}</button><button class="act" onclick="clearResumeBatch()" ${selected.size?"":"disabled"}>clear</button></div></div>
     ${candidates.length ? `<div class="bar" style="margin:.7rem 0"><label class="sub">draft mode <select id="resumeBatchMode" onchange="resumeBatchState().mode=this.value;rTesting()">${resumeBatchModeOptions(batch.mode)}</select></label><button class="act primary" onclick="queueResumeBatch()" ${!canQueue || !selected.size || queueing?"disabled":""}>${queueing?"Queueing…":`queue ${selected.size} draft${selected.size===1?"":"s"}`}</button><span class="sub">${engineOnline?`${selected.size} selected · Mac worker ready`:cloudReady?`${selected.size} selected · saved privately for the Mac worker`:`connect Google to enable the private queue`}</span></div>
+      ${studioModeGuideHTML(true)}
       <div class="studio-jobs">${candidates.map(job => `<label class="studio-job" style="cursor:pointer"><input type="checkbox" style="margin-right:.55rem" ${selected.has(job.id)?"checked":""} onchange='toggleResumeBatchSelection(${JSON.stringify(job.id)},this.checked)'><span><strong>${esc(job.company)}</strong><small>${esc(job.title)} · Radar ${job.score??"–"} · added ${new Date(job._resumeAddedAt*1000).toLocaleTimeString([], {hour:"numeric",minute:"2-digit"})} · ${esc(job._resumeStage)}</small></span></label>`).join("")}</div>`
       : `<div class="studio-empty"><h3>Nothing added today yet</h3><p>Add roles from Jobs with <strong>save to apply</strong>; they will appear here automatically. Existing active roles can still be tailored one at a time from their row or drawer.</p><button class="act primary" onclick="S.tab='jobs';render()">open Jobs</button></div>`}
   </div>
@@ -3447,8 +3456,22 @@ function renderResumeBankView() {
   <p class="sub">${groups.length} jobs · ${entries.length} versions</p><section class="resume-bank-grid">${groups.length?groups.map(resumeBankGroupHTML).join(""):"<div class=\"lane\"><p class=\"sub\">No bank entries match this filter. Start the private engine to load the local bank, or connect Google and sync it.</p></div>"}</section>`;
 }
 function studioQueueActionLabel(mode) {
-  const labels = {used:"used-bullets tailor", ai:"AI tailor", unrestricted:"Take-the-wheel", generation:"unchained draft"};
+  const labels = {used:"used-bullets tailor", ai:"AI tailor", unrestricted:"Take-the-wheel", generation:"Unchained generation"};
   return S.testing.engine === "online" ? `Queue ${labels[mode]}` : `Queue ${labels[mode]} in private cloud`;
+}
+function studioModeGuideHTML(compact=false) {
+  const rows = `<div class="studio-mode-list">
+    <div class="studio-mode-row"><strong>Unchained generation <span class="chip good">recommended</span></strong><span>Most autonomous. Maps the whole posting to your evidence, searches for buried support, and may write new source-grounded bullets or Skills lines.</span></div>
+    <div class="studio-mode-row"><strong>Take-the-wheel (moderate)</strong><span>Adaptive portfolio selection and rewriting, but with a stronger preference for preserving already-good evidence.</span></div>
+    <div class="studio-mode-row"><strong>AI tailor</strong><span>Conservative role-specific edits: project selection, supported terminology, rewrites, and the same review gates.</span></div>
+    <div class="studio-mode-row"><strong>Used bullets</strong><span>Baseline only. Selects approved source wording and does not create new wording.</span></div>
+  </div>`;
+  return `<section class="studio-mode-guide" aria-label="Resume Studio mode guide">
+    <div class="bar" style="justify-content:space-between;gap:.5rem"><h4>Which mode should I use?</h4><span class="chip good">AI takes the lead → Unchained</span></div>
+    <p><strong>For the most hands-off result, choose Unchained generation.</strong> It gives the AI the broadest control over the tailoring argument while keeping the evidence, factuality, one-page, and final-review safeguards.</p>
+    ${compact?`<details><summary>What do the other modes mean?</summary>${rows}</details>`:rows}
+    <p class="studio-mode-note">These are still active modes, not obsolete labels. Every mode uses the same private evidence graph and can be rejected in favor of the original resume when the tailored version is not safely better.</p>
+  </section>`;
 }
 function renderStudioWorkspace() {
   const selected = jobById(S.testing.selectedId);
@@ -3470,11 +3493,12 @@ function renderStudioWorkspace() {
     <h2>${esc(selected.company)} · ${esc(selected.title)}</h2><div class="sub studio-meta">${esc((selected.locations||[]).join(", ")||"location unknown")} · Radar ${selected.score??"–"} · ${ago(postedTs(selected))||"date unknown"}</div>
     <div class="facts" style="margin-top:.45rem">${match.score!=null?studioBadge(`Resume Match ${match.score}/100`,match.confidence==="low"?"warn":"good"):""}${(match.clusters||[]).slice(0,6).map(c=>studioBadge(c.replaceAll("_"," "))).join("")}</div>${studioRequirementMapHTML(match)}</div>
     <div class="studio-note" style="margin-top:.65rem"><strong>One system, two safe layers.</strong> This cloud workspace owns the selection, private queue, and run status. The Mac engine owns your evidence graph, provider calls, PDF rendering, and revisions. ${engineOnline?"Queued work can run now.":cloudReady?"The Mac is offline, but this posting can be saved to the private cloud queue and dispatched automatically when the engine reconnects.":"Connect Google to enable the private cloud queue."}</div>
+    ${studioModeGuideHTML()}
     <div class="studio-actions">
       <div class="studio-action"><h4>Used bullets</h4><p>Approved wording and selections only. Your clean comparison baseline.</p><button class="act" ${canQueue?"":"disabled"} onclick="queueResumeMode('used')">${studioQueueActionLabel("used")}</button></div>
       <div class="studio-action"><h4>AI tailor</h4><p>Role-specific rewrites, project swaps, ATS coverage, and a review pass.</p><button class="act" ${canQueue?"":"disabled"} onclick="queueResumeMode('ai')">${studioQueueActionLabel("ai")}</button></div>
-      <div class="studio-action featured"><h4>Take-the-wheel (moderate)</h4><p>Adaptive portfolio changes when stronger verified evidence supports them.</p><button class="act primary" ${canQueue?"":"disabled"} onclick="queueResumeMode('unrestricted')">${studioQueueActionLabel("unrestricted")}</button></div>
-      <div class="studio-action"><h4>Unchained generation</h4><p>Requirement-to-evidence audit with source-grounded generated bullets or Skills lines.</p><button class="act" ${canQueue?"":"disabled"} onclick="queueResumeMode('generation')">${studioQueueActionLabel("generation")}</button></div>
+      <div class="studio-action"><h4>Take-the-wheel (moderate)</h4><p>Adaptive portfolio changes when stronger verified evidence supports them.</p><button class="act" ${canQueue?"":"disabled"} onclick="queueResumeMode('unrestricted')">${studioQueueActionLabel("unrestricted")}</button></div>
+      <div class="studio-action featured"><h4>Unchained generation <span class="chip good">recommended</span></h4><p>Broadest AI control: audit requirements, search your evidence, and generate supported bullets or Skills lines.</p><button class="act primary" ${canQueue?"":"disabled"} onclick="queueResumeMode('generation')">${studioQueueActionLabel("generation")}</button></div>
     </div>
     ${run?`<div class="studio-status ${run.status==='failed'?'bad':busy?'warn':''}">${esc(studioRunStatusText(run))}</div>`:""}
     ${studioResultHTML(run)}
