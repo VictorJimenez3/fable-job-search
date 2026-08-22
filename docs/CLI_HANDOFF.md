@@ -418,7 +418,7 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   Unchained's old audit-repair/recheck cascade is disabled after adding about
   twelve minutes without a positive Stryker comparison; `deep` and `search`
   retain repair for controlled experiments. This improves the default timing
-  path without weakening the four-role Max evaluator or any hard gate.
+  path without weakening the four-role High evaluator or any hard gate.
 - **Integrated-path Stryker validation (verified 2026-08-22):** run
   `CV/.resume_studio/benchmarks/unchained-frontier-validation-20260822/runs/88ff48da72e5`
   completed in 909.2 seconds with 7 Codex calls. The target opportunity pass
@@ -452,6 +452,32 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   follow-up patch now rejects newly introduced Skills technologies unless the
   cited claim-authorized evidence actually supports them, and removes repeated
   metric/mechanism anchors within one entry before packing.
+
+- **Microscopic-density swap removed (verified 2026-08-22):** portfolio-search
+  receipts showed that the deterministic post-edit density pass could see only
+  `0.03--0.06pt` of spare capacity and replace distinctive mechanism evidence
+  with unused but weaker lines. The sealed jury rejected those candidates, but
+  the swap was still wasted authoring latency and made the candidate worse.
+  Ordinary `balanced`, `search`, and `search_single` profiles now disable
+  deterministic content expansion while retaining hard geometry gates,
+  source-aware control recovery, and the complete sealed panel. The explicit
+  `deep` frontier remains available for controlled experiments. The first
+  post-fix fresh-open Uber run used Luna High throughout, completed in 631.9
+  seconds, and earned `prefer_tailored` with zero blockers; its final PDF
+  preserved the authored portfolio because no blind density swap ran. The
+  Nucleus follow-up completed in 675.0 seconds with all High panel roles and
+  correctly stayed base/blocked on application constraints.
+
+- **Role-evidence floor remains experimental:** the project-level floor can
+  find an omitted primary-track project, but the Anduril experiment showed
+  that a plausible replacement can still displace more distinctive evidence.
+  It is therefore disabled in ordinary and search profiles; its receipt says
+  `disabled_by_quality_profile` and the helper remains available for explicit
+  lab tests. It will need a sealed positive win before becoming a default
+  mutation. A same-job ByteDance A/B supports that decision: floor enabled
+  produced loss weight 24 plus an unsupported-claim blocker; no-floor High
+  replay produced loss weight 14, no unsupported-claim hard failure, and still
+  correctly stayed base for eligibility and genuine portfolio redundancy.
 
 ### Previous change (verified 2026-08-15)
 

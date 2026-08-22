@@ -2612,3 +2612,41 @@ long Skills labels. On the failed Anduril artifact this produced a one-page
 PDF with zero wraps and zero near-wraps in an offline compiled check. The
 result still requires the normal sealed panel; the fallback cannot invent a
 claim or lower the geometry threshold.
+
+## 166. Do not spend microscopic page capacity by trading away evidence (2026-08-22)
+
+The first portfolio-search receipts exposed a writer-side regression that the
+duplicate guard could not catch: after authoring, the deterministic density
+pass saw only `0.03--0.06pt` of measured capacity and swapped out distinctive
+mechanisms such as secure collaboration, market-data calibration, transcript
+synchronization, or qubit encoding for unused but less informative lines.
+The sealed jury correctly rejected those candidates, but the system had
+already spent latency creating a worse artifact.
+
+Ordinary `balanced`, `search`, and `search_single` profiles now disable
+deterministic content expansion. They still enforce the hard one-page and
+one-line geometry gates, preserve source-aware control recovery, and retain
+the complete sealed panel. A content replacement must come from the authored
+role thesis or an explicitly tested search candidate, not from microscopic
+whitespace. The explicit `deep` profile remains available for controlled
+frontier experiments. On the post-fix Uber fresh-open case, the unchanged
+High Luna author/panel produced a `prefer_tailored` result in 631.9 seconds
+with no blockers; the final plan matched the authored portfolio and no blind
+density swap occurred.
+
+## 167. Keep project-level role-floor swaps experimental until they win (2026-08-22)
+
+The role-evidence floor is retained as a tested lab helper because it can
+identify an omitted project with a stronger primary-track mechanism than the
+author selected. It is not enabled in `balanced`, `search`, or
+`search_single`: the Anduril experiment showed that even a plausible React/
+systems project can displace more distinctive evidence and remain a negative
+comparative result. Independent portfolio variants and the sealed panel are a
+better experiment for this hypothesis than silently mutating every authored
+candidate. The run receipt now records `disabled_by_quality_profile` so the
+absence is explicit rather than mistaken for a missing evaluator stage. A
+same-job A/B replay supports that choice: ByteDance with the floor enabled had
+loss weight 24 plus an unsupported-claim blocker, while the no-floor High
+replay had loss weight 14, no unsupported-claim hard failure, and still
+correctly stayed base because of eligibility and genuine portfolio
+redundancy.

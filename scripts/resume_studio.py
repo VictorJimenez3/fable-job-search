@@ -127,6 +127,12 @@ QUALITY_PROFILES = {
         "model_space_expansion": False,
         "model_line_editor": False,
         "line_editor_fallback": True,
+        # A measured spare line is not permission to swap out a stronger
+        # mechanism or validation result. The lab found that a 0.03--0.06pt
+        # capacity signal caused density recovery to replace exactly the
+        # distinctive evidence the comparative jury later said was lost.
+        "deterministic_space_expansion": False,
+        "role_evidence_floor": False,
         "audit_repair": False,
         # A single Luna role occasionally needs just over six minutes.
         # The normal lane is still bounded to one panel; this ceiling avoids
@@ -147,6 +153,10 @@ QUALITY_PROFILES = {
         "model_space_expansion": False,
         "model_line_editor": False,
         "line_editor_fallback": True,
+        # Search compares whole authored candidates. Do not mutate one after
+        # authoring merely because the page has microscopic spare capacity.
+        "deterministic_space_expansion": False,
+        "role_evidence_floor": False,
         # A rejected candidate gets one critique-directed repair, then a
         # fresh sealed panel. This is the quality-first distinction from the
         # old single-shot tailor: critique may inform a new draft, but cannot
@@ -169,6 +179,8 @@ QUALITY_PROFILES = {
         "model_space_expansion": False,
         "model_line_editor": False,
         "line_editor_fallback": True,
+        "deterministic_space_expansion": False,
+        "role_evidence_floor": False,
         "audit_repair": True,
         "evaluator_timeout_seconds": 8 * 60,
         "max_post_line_density_rounds": 2,
@@ -2216,6 +2228,37 @@ ROLE_TRACK_PHRASES = {
         "unit testing", "test-driven", "requirements gathering",
     ),
 }
+
+# These are deliberately mechanism-level terms rather than a copy of the ATS
+# inventory.  The role-evidence floor uses them to protect one omitted project
+# with a materially stronger role surface (for example, React/multi-user web
+# software or C++ streaming) from being crowded out by an adjacent keyword
+# project.  It never creates wording or treats a term in Skills as equivalent
+# to an implemented artifact.
+ROLE_FLOOR_TERMS = {
+    "systems_performance": (
+        "c++", "real-time", "streaming", "gpu", "hpc", "slurm", "latency",
+        "throughput", "performance", "parallel", "systems", "multithread",
+    ),
+    "backend_infrastructure": (
+        "fastapi", "rest", "api", "backend", "service", "database", "cloud",
+        "deployment", "reliability", "integration", "sql",
+    ),
+    "ml_research": (
+        "machine learning", "deep learning", "pytorch", "computer vision",
+        "model", "validation", "research", "rnn", "llm", "training",
+    ),
+    "data_platform": (
+        "data pipeline", "sql", "etl", "statistics", "visualization",
+        "analytics", "data quality", "feature",
+    ),
+    "product_software": (
+        "react", "javascript", "typescript", "web", "frontend", "front end",
+        "full stack", "multi-user", "real-time collaboration", "access control",
+        "document", "testing", "software engineering",
+    ),
+}
+ROLE_EVIDENCE_FLOOR_VERSION = "role-evidence-floor-v1"
 
 
 def _role_signal_present(text: str, signal: str) -> bool:
@@ -4285,9 +4328,10 @@ def codex_effort_task(label: str) -> str:
 def codex_reasoning_effort(label: str, override: Optional[str] = None) -> str:
     """Return the configured Luna effort for one stage.
 
-    The lookup order is explicit for auditability. The configured Max lane is
-    the default; unsupported lower-effort overrides fall back to high only for
-    legacy callers, never silently to a different provider.
+    The lookup order is explicit for auditability. Ordinary tasks default to
+    the configured High lane; Max is an explicit profile/override rather than
+    a hidden fallback. Unsupported lower-effort overrides fall back to high
+    only for legacy callers, never silently to a different provider.
     """
     task = codex_effort_task(label)
     candidates = [
@@ -7062,6 +7106,377 @@ def deterministic_control_recovery(
     }
     write_json(run_dir / "control_recovery.json", record)
     return recovered, record
+
+
+def deterministic_role_evidence_floor(
+    plan: Dict[str, Any], catalog: Dict[str, Any], context: Dict[str, Any],
+    graph: Optional[Dict[str, Any]], run_dir: Path,
+) -> Tuple[Dict[str, Any], Dict[str, Any]]:
+    """Protect omitted project-level evidence for the role's real center of gravity.
+
+    The canonical control recovery above can only replace a bullet inside an
+    entry the author already selected.  That leaves a blind spot: a valid
+    author plan can omit an entire React, C++, or systems project and spend the
+    project budget on adjacent ML/keyword evidence instead.  This floor is a
+    narrow counterfactual, not a preserve-the-base rule:
+
+    * it considers only source-authorized project entries (canonical or
+      current evidence-bank bullets attested by the evidence graph);
+    * it scores implemented mechanism terms against the deterministic primary
+      and secondary role tracks plus the requirement map;
+    * it replaces at most one weak project entry; ambiguity changes the
+      comparison margin, not the number of deterministic edits;
+    * it compiles the result before returning it; and
+    * the normal sealed jury still decides whether the replacement beats base.
+
+    This specifically prevents keyword-adjacent projects from displacing a
+    materially better role surface while keeping the final judgment
+    comparative and fail-closed.
+    """
+    original = copy.deepcopy(plan)
+    intelligence = context.get("job_intelligence") if isinstance(context, dict) else {}
+    intelligence = intelligence if isinstance(intelligence, dict) else {}
+    primary = str(intelligence.get("primary_role_track") or "").strip()
+    secondary = [
+        str(value) for value in (intelligence.get("secondary_role_tracks") or [])
+        if str(value)
+    ]
+    if not primary or primary not in ROLE_FLOOR_TERMS:
+        return original, {
+            "attempted": False,
+            "status": "not_available",
+            "version": ROLE_EVIDENCE_FLOOR_VERSION,
+            "reason": "no supported deterministic primary role track",
+        }
+
+    entries = catalog.get("entries") or {}
+    selected_projects = [
+        entry for entry in original.get("projects", []) or []
+        if str(entry.get("source_id") or "")
+    ]
+    selected_ids = {str(entry.get("source_id") or "") for entry in selected_projects}
+    graph_authority = {
+        str(node.get("id") or "")
+        for node in (graph or {}).get("nodes", [])
+        if node.get("claim_allowed") and str(node.get("id") or "")
+    }
+    eligible_project_ids = set()
+    for entry_id, entry in entries.items():
+        if str(entry.get("kind") or "") != "project":
+            continue
+        eligible_bullets = [
+            bullet for bullet in (entry.get("bullets") or [])
+            if _is_canonical_source(bullet.get("source"))
+            or str(bullet.get("id") or "") in graph_authority
+        ]
+        if len(eligible_bullets) >= 2:
+            eligible_project_ids.add(str(entry_id))
+    if not eligible_project_ids:
+        return original, {
+            "attempted": False,
+            "status": "not_available",
+            "version": ROLE_EVIDENCE_FLOOR_VERSION,
+            "reason": "catalog has no canonical project control entries",
+        }
+
+    requirements = [
+        item for item in (intelligence.get("requirements") or [])
+        if isinstance(item, dict)
+    ]
+    required_source_bonus: Dict[str, float] = {}
+    required_terms: Dict[str, List[str]] = {}
+    for item in requirements:
+        importance = str(item.get("importance") or "mentioned").lower()
+        role_relevance = str(item.get("role_relevance") or "general").lower()
+        if importance not in {"required", "responsibility", "eligibility"} and role_relevance != "primary":
+            continue
+        bonus = 9.0 if role_relevance == "primary" else 5.0
+        if importance == "required":
+            bonus += 3.0
+        terms = [
+            str(value).lower() for value in (item.get("exact_terms") or [])
+            if str(value).strip()
+        ]
+        for source_id in item.get("evidence_ids") or []:
+            source_key = str(source_id)
+            required_source_bonus[source_key] = max(
+                bonus, required_source_bonus.get(source_key, 0.0)
+            )
+            required_terms.setdefault(source_key, []).extend(terms)
+
+    keyword_sources: Dict[str, List[Tuple[str, float]]] = {}
+    for item in (context.get("target_keywords") or {}).get("terms", []) if isinstance(context, dict) else []:
+        if not isinstance(item, dict) or not item.get("supported"):
+            continue
+        term = str(item.get("term") or "").lower()
+        if not term:
+            continue
+        weight = 3.0 if item.get("required") else 1.5
+        for source_id in item.get("source_ids") or []:
+            keyword_sources.setdefault(str(source_id), []).append((term, weight))
+
+    def matching_terms(text: str, track: str) -> List[str]:
+        return [
+            term for term in ROLE_FLOOR_TERMS.get(track, ())
+            if _role_signal_present(text, term)
+        ]
+
+    def score_entry(entry: Dict[str, Any]) -> Dict[str, Any]:
+        eligible_bullets = [
+            bullet for bullet in (entry.get("bullets") or [])
+            if _is_canonical_source(bullet.get("source"))
+            or str(bullet.get("id") or "") in graph_authority
+        ]
+        bullet_scores = []
+        for bullet in eligible_bullets:
+            source_id = str(bullet.get("id") or "")
+            text = _latex_plain(str(bullet.get("text") or ""))
+            primary_terms = matching_terms(text, primary)
+            secondary_terms = sorted({
+                term for track in secondary
+                for term in matching_terms(text, track)
+            })
+            score = 0.0
+            score += 5.0 * len(primary_terms)
+            score += 1.75 * len(secondary_terms)
+            score += required_source_bonus.get(source_id, 0.0)
+            score += sum(weight for term, weight in keyword_sources.get(source_id, []) if _role_signal_present(text, term))
+            score += min(4.0, 1.25 * len(_portfolio_signal_families(text)))
+            score += min(3.0, 1.0 * len(_resume_numeric_anchors(text)))
+            bullet_scores.append({
+                "source_id": source_id,
+                "text": str(bullet.get("text") or ""),
+                "score": round(score, 2),
+                "primary_terms": primary_terms,
+                "secondary_terms": secondary_terms,
+                "required_terms": sorted(set(required_terms.get(source_id, []))),
+            })
+        bullet_scores.sort(key=lambda item: (-float(item["score"]), str(item["source_id"])))
+        top = bullet_scores[:2]
+        primary_terms = sorted({term for item in top for term in item["primary_terms"]})
+        secondary_terms = sorted({term for item in top for term in item["secondary_terms"]})
+        required_hits = sorted({term for item in top for term in item["required_terms"]})
+        return {
+            "entry_id": str(entry.get("id") or ""),
+            "label": _project_heading(entry.get("heading") or entry.get("id") or ""),
+            "score": round(sum(float(item["score"]) for item in top), 2),
+            "primary_terms": primary_terms,
+            "secondary_terms": secondary_terms,
+            "required_hits": required_hits,
+            "bullets": bullet_scores,
+            "eligible_bullet_count": len(eligible_bullets),
+        }
+
+    scored_entries = {
+        entry_id: score_entry(entry)
+        for entry_id, entry in entries.items()
+        if str(entry.get("kind") or "") == "project"
+        and entry_id in eligible_project_ids
+    }
+    omitted = [
+        item for entry_id, item in scored_entries.items()
+        if entry_id not in selected_ids
+        and (item["primary_terms"] or item["required_hits"])
+    ]
+    selected_scores = {
+        entry_id: scored_entries.get(entry_id) or score_entry(entries.get(entry_id) or {})
+        for entry_id in selected_ids
+    }
+    if not omitted:
+        return original, {
+            "attempted": True,
+            "status": "not_needed",
+            "version": ROLE_EVIDENCE_FLOOR_VERSION,
+            "primary_role_track": primary,
+            "secondary_role_tracks": secondary,
+            "candidates": [],
+            "actions": [],
+            "reason": "no omitted canonical project had a supported primary/required role surface",
+        }
+
+    omitted.sort(key=lambda item: (-float(item["score"]), item["entry_id"]))
+    selected_project_scores = [
+        item for item in selected_scores.values()
+        if item.get("entry_id") in selected_ids
+    ]
+    selected_project_scores.sort(key=lambda item: (float(item.get("score") or 0), item.get("entry_id") or ""))
+    # Even an ambiguous posting gets one bounded role-floor edit. A second
+    # attractive project is a portfolio hypothesis, not deterministic truth;
+    # adding it here can solve one omission by displacing a different
+    # distinctive interview story. The search profile can explore that
+    # alternative under fresh sealed panels.
+    max_replacements = 1
+    trial = copy.deepcopy(original)
+    actions: List[Dict[str, Any]] = []
+    chosen_candidates: List[Dict[str, Any]] = []
+    remaining_selected = list(selected_project_scores)
+    for candidate in omitted:
+        if len(chosen_candidates) >= max_replacements:
+            break
+        weak = remaining_selected[0] if remaining_selected else None
+        weak_score = float(weak.get("score") or 0) if weak else 0.0
+        candidate_score = float(candidate.get("score") or 0)
+        # A project must earn a real role surface, and an omitted project must
+        # clear a meaningful margin over the weakest selected project. This
+        # keeps ordinary tailoring from drifting toward a canonical project
+        # merely because it contains one shared keyword.
+        minimum = 12.0 if not candidate.get("required_hits") else 10.0
+        if candidate_score < minimum or candidate_score < weak_score + 7.0:
+            continue
+        if not weak:
+            chosen_candidates.append(candidate)
+            continue
+        chosen_candidates.append(candidate)
+        remaining_selected.pop(0)
+
+    if not chosen_candidates:
+        return original, {
+            "attempted": True,
+            "status": "not_needed",
+            "version": ROLE_EVIDENCE_FLOOR_VERSION,
+            "primary_role_track": primary,
+            "secondary_role_tracks": secondary,
+            "candidates": omitted[:6],
+            "actions": [],
+            "reason": "omitted role evidence did not clear the bounded replacement margin",
+        }
+
+    for candidate in chosen_candidates:
+        entry_id = candidate["entry_id"]
+        remove_id = ""
+        source_entry = entries.get(entry_id) or {}
+        selected_bullets = [
+            bullet for bullet in candidate.get("bullets") or []
+            if str(bullet.get("source_id") or "")
+        ][:2]
+        if len(selected_bullets) < 2:
+            continue
+        new_entry = {
+            "source_id": entry_id,
+            "bullets": [{
+                "source_id": item["source_id"],
+                "source_ids": [item["source_id"]],
+                "evidence_ids": [item["source_id"]],
+                "text": item["text"],
+                "priority": max(75, min(100, int(round(item["score"])))),
+                "candidate_rationale": "Role-evidence floor preserved an omitted source-authorized project surface for %s." % primary,
+            } for item in selected_bullets],
+            "why": "Role-evidence floor preserved a materially stronger supported role surface before sealed judging.",
+        }
+        trial.setdefault("projects", []).append(new_entry)
+        # Replace the current lowest-scoring project when the roster is full;
+        # otherwise the normal packer may retain the additional entry.
+        if len(trial.get("projects", []) or []) > HUMAN_PORTFOLIO_CAPS["project_entries"]:
+            removable = [
+                entry for entry in trial.get("projects", []) or []
+                if str(entry.get("source_id") or "") != entry_id
+                and str(entry.get("source_id") or "") in selected_ids
+            ]
+            if not removable:
+                continue
+            remove_id = str(min(
+                removable,
+                key=lambda entry: (
+                    float((selected_scores.get(str(entry.get("source_id") or "")) or {}).get("score") or 0),
+                    str(entry.get("source_id") or ""),
+                ),
+            ).get("source_id") or "")
+            trial["projects"] = [
+                entry for entry in trial.get("projects", []) or []
+                if str(entry.get("source_id") or "") != str(remove_id or "")
+            ]
+        actions.append({
+            "kind": "role_evidence_floor_replacement",
+            "replaced_project_id": remove_id,
+            "restored_project_id": entry_id,
+            "restored_label": candidate.get("label") or entry_id,
+            "primary_role_track": primary,
+            "primary_terms": candidate.get("primary_terms") or [],
+            "secondary_terms": candidate.get("secondary_terms") or [],
+            "required_hits": candidate.get("required_hits") or [],
+            "candidate_score": candidate.get("score"),
+            "reason": "An omitted source-authorized project cleared the bounded role-surface margin over the weakest selected project.",
+        })
+
+    if not actions:
+        return original, {
+            "attempted": True,
+            "status": "not_needed",
+            "version": ROLE_EVIDENCE_FLOOR_VERSION,
+            "primary_role_track": primary,
+            "secondary_role_tracks": secondary,
+            "candidates": omitted[:6],
+            "actions": [],
+            "reason": "candidate roster could not be changed safely",
+        }
+
+    normalized, errors = validate_plan(
+        trial, catalog, enhance=True, graph=graph,
+    )
+    if errors:
+        return original, {
+            "attempted": True,
+            "status": "rejected",
+            "version": ROLE_EVIDENCE_FLOOR_VERSION,
+            "primary_role_track": primary,
+            "secondary_role_tracks": secondary,
+            "candidates": omitted[:6],
+            "actions": actions,
+            "reason": "source validation rejected the bounded role floor: " + "; ".join(errors[:4]),
+        }
+    try:
+        packed, packing = pack_plan_to_page(
+            normalized, catalog, run_dir / "packing",
+        )
+    except (OSError, RuntimeError, ValueError) as exc:
+        return original, {
+            "attempted": True,
+            "status": "rejected",
+            "version": ROLE_EVIDENCE_FLOOR_VERSION,
+            "primary_role_track": primary,
+            "secondary_role_tracks": secondary,
+            "candidates": omitted[:6],
+            "actions": actions,
+            "reason": "bounded role floor failed compiled packing: %s" % exc,
+        }
+    restored_ids = {
+        str(item.get("restored_project_id") or "") for item in actions
+    }
+    packed_ids = {str(entry.get("source_id") or "") for entry in packed.get("projects", []) or []}
+    if not restored_ids <= packed_ids:
+        return original, {
+            "attempted": True,
+            "status": "rejected",
+            "version": ROLE_EVIDENCE_FLOOR_VERSION,
+            "primary_role_track": primary,
+            "secondary_role_tracks": secondary,
+            "candidates": omitted[:6],
+            "actions": actions,
+            "reason": "page packer did not retain every role-floor project",
+        }
+    trial = enforce_experience_order(packed, catalog)
+    trial.setdefault("decision_ledger", []).extend({
+        "action": "role-evidence floor replacement",
+        "current_evidence": action.get("replaced_project_id") or "",
+        "replacement_or_exclusion": action.get("restored_project_id") or "",
+        "target_signal": ", ".join(action.get("primary_terms") or action.get("required_hits") or []),
+        "why_stronger": action.get("reason") or "",
+        "signal_lost": "Adjacent project evidence was displaced only after the role-surface margin was measured.",
+    } for action in actions)
+    receipt = {
+        "attempted": True,
+        "status": "applied",
+        "version": ROLE_EVIDENCE_FLOOR_VERSION,
+        "primary_role_track": primary,
+        "secondary_role_tracks": secondary,
+        "track_confidence": intelligence.get("track_confidence"),
+        "candidates": omitted[:6],
+        "actions": actions,
+        "packing": packing,
+        "reason": "Applied a bounded source-authorized role-evidence floor; the exact artifact still requires sealed comparative judging.",
+    }
+    write_json(run_dir / "role_evidence_floor.json", receipt)
+    return trial, receipt
 
 
 def deterministic_target_opportunity_replacement(
@@ -10856,10 +11271,22 @@ def run_tailoring(
         plan_errors = plan_errors + ["selected deterministic canonical-control fallback"]
     candidate_plan = expand_candidate_portfolio(candidate_plan, catalog, enhance)
     control_recovery: Dict[str, Any] = {"attempted": False, "status": "not_run"}
+    role_evidence_floor: Dict[str, Any] = {"attempted": False, "status": "not_run"}
     if enhance:
         candidate_plan, control_recovery = deterministic_control_recovery(
             candidate_plan, catalog, context.get("target_keywords"), run_dir,
         )
+        if profile.get("role_evidence_floor", False):
+            candidate_plan, role_evidence_floor = deterministic_role_evidence_floor(
+                candidate_plan, catalog, context, graph, run_dir / "role_evidence_floor",
+            )
+        else:
+            role_evidence_floor = {
+                "attempted": False,
+                "status": "disabled_by_quality_profile",
+                "version": ROLE_EVIDENCE_FLOOR_VERSION,
+                "reason": "project-level role swaps remain a lab hypothesis until a sealed positive win justifies default mutation",
+            }
     write_json(run_dir / "candidate_plan.json", candidate_plan)
     write_json(run_dir / "brief.json", {
         "positioning_thesis": candidate_plan.get("positioning_thesis", ""),
@@ -10875,6 +11302,7 @@ def run_tailoring(
         "provider_policy": context["provider_policy"],
         "quality_profile": quality_profile,
         "control_recovery": control_recovery,
+        "role_evidence_floor": role_evidence_floor,
         "evidence_graph": {
             "version": graph.get("version"),
             "hash": graph.get("hash"),
@@ -12418,6 +12846,7 @@ def run_tailoring(
         "line_compactions": line_compactions,
         "final_geometry_recovery": final_geometry_recovery,
         "target_opportunity": target_opportunity,
+        "role_evidence_floor": role_evidence_floor,
         "audit_repair_log": audit_repair_log,
         "post_line_density": post_line_density,
         "validation_warnings": synthesis_data.get("validation_warnings", []),

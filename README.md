@@ -720,9 +720,11 @@ deterministic compiler handle measured page packing and control recovery first,
 skips model space expansion and critic-driven revision/audit-repair rounds, and
 uses at most one conditional Luna High line-edit pass when geometry is unsafe,
 with a three-minute fallback timeout. Its post-edit density search is capped at
-two rounds and two removal candidates per swap, so spare page capacity cannot
-turn into an unbounded compile loop. The deterministic source-preserving
-compactor remains available after that cap. Max is not used by this normal path;
+two rounds and is disabled for content swaps in the ordinary lane, so a
+microscopic measured gap cannot trade away a stronger mechanism or validation
+result. The deterministic source-preserving compactor remains available for
+geometry safety, while content replacements must come from the authored role
+thesis or an explicitly judged search candidate. Max is not used by this normal path;
 the original two-round frontier remains available for a deliberately deeper run
 with `--quality-profile deep`.
 Changing profiles never changes the evaluator contract or turns a rejected
@@ -740,6 +742,26 @@ proof from the locked base resume as control evidence during overflow packing.
 An added line counts as a positive tailoring gain only when the sealed panel
 independently confirms the new target-relevant strength. This prevents both
 keyword-only gains and a bookkeeping blind spot from driving the comparison.
+
+The lab caught a subtle version of this failure: a `0.03--0.06pt` capacity
+signal caused deterministic density recovery to replace distinctive evidence
+with unused but weaker lines. Ordinary `balanced`, `search`, and
+`search_single` runs now preserve the authored portfolio and use density logic
+only as a geometry guard. A post-fix fresh-open Uber run completed in 631.9
+seconds with Luna High at every quality-critical stage, a complete four-role
+panel, no blockers, and `prefer_tailored`; the final artifact had no blind
+density swap.
+
+The role-evidence floor remains a lab-only hypothesis. It can identify an
+omitted primary-track project, but the Anduril experiment showed that a
+plausible project-level swap can still displace more distinctive evidence.
+The ordinary profiles therefore record it as disabled rather than silently
+mutating every authored portfolio; a future positive sealed comparison must
+justify enabling it. A same-job ByteDance replay improved the failure mode:
+the floor-enabled candidate had loss weight 24 plus an unsupported-claim
+blocker, while the no-floor High replay had loss weight 14, no unsupported-claim
+hard failure, and still correctly stayed base for eligibility and genuine
+portfolio redundancy.
 
 For broad validation, `scripts/resume_studio_benchmark.py` fetches and matches
 many live postings concurrently, then runs a smaller full-tailoring sample

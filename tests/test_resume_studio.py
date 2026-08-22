@@ -1460,6 +1460,8 @@ def test_quality_profiles_keep_deep_available_and_default_to_balanced():
     assert rs.QUALITY_PROFILES["balanced"]["revision_rounds"] == 0
     assert rs.QUALITY_PROFILES["deep"]["revision_rounds"] == 2
     assert rs.QUALITY_PROFILES["balanced"]["model_space_expansion"] is False
+    assert rs.QUALITY_PROFILES["balanced"]["deterministic_space_expansion"] is False
+    assert rs.QUALITY_PROFILES["balanced"]["role_evidence_floor"] is False
     assert rs.QUALITY_PROFILES["balanced"]["author_effort"] == "high"
     assert rs.QUALITY_PROFILES["deep"]["author_effort"] == "max"
     assert rs.QUALITY_PROFILES["balanced"]["line_editor_effort"] == "high"
@@ -1476,6 +1478,10 @@ def test_quality_profiles_keep_deep_available_and_default_to_balanced():
     assert rs.QUALITY_PROFILES["unchained"]["audit_repair"] is False
     assert rs.QUALITY_PROFILES["unchained"]["target_opportunity_replacement"] is True
     assert rs.QUALITY_PROFILES["unchained"]["deterministic_space_expansion"] is False
+    assert rs.QUALITY_PROFILES["search"]["deterministic_space_expansion"] is False
+    assert rs.QUALITY_PROFILES["search_single"]["deterministic_space_expansion"] is False
+    assert rs.QUALITY_PROFILES["search"]["role_evidence_floor"] is False
+    assert rs.QUALITY_PROFILES["search_single"]["role_evidence_floor"] is False
     assert len(rs.canonical_control_prompt(_fixture_catalog())) <= rs.CANONICAL_CONTROL_PROMPT_CHARS
 
 
@@ -1581,6 +1587,73 @@ def test_control_recovery_respects_an_explicit_source_grounded_tradeoff(tmp_path
     }
     assert record["status"] == "applied" or record["status"] == "not_needed"
     assert record["skipped_explained"][0]["source_ids"] == [entry_id + ":b1"]
+
+
+def test_role_evidence_floor_recovers_omitted_primary_track_project(tmp_path, monkeypatch):
+    entries = {}
+    for index in range(4):
+        entry_id = "project:adjacent-%s" % index
+        entries[entry_id] = {
+            "id": entry_id,
+            "kind": "project",
+            "heading": "\\textbf{Adjacent Project %s}" % index,
+            "bullets": [
+                {"id": entry_id + ":b1", "source": "immutable/VictorJimenezResume.tex", "text": "Built a quantum simulation pipeline"},
+                {"id": entry_id + ":b2", "source": "immutable/VictorJimenezResume.tex", "text": "Validated model output with quantified results"},
+            ],
+        }
+    target_id = "project:multi-agent-workspace"
+    entries[target_id] = {
+        "id": target_id,
+        "kind": "project",
+        "heading": "\\textbf{Multi-Agent Workspace}",
+        "bullets": [
+            {"id": target_id + ":b1", "source": "immutable/VictorJimenezResume.tex", "text": "Built a React web application with real-time collaboration"},
+            {"id": target_id + ":b2", "source": "immutable/VictorJimenezResume.tex", "text": "Implemented secure multi-user document access control"},
+        ],
+    }
+    catalog = {"entries": entries}
+    plan = {
+        "experiences": [],
+        "projects": [{
+            "source_id": "project:adjacent-%s" % index,
+            "bullets": [
+                {"source_id": "project:adjacent-%s:b1" % index, "text": "Built a quantum simulation pipeline", "evidence_ids": ["project:adjacent-%s:b1" % index]},
+                {"source_id": "project:adjacent-%s:b2" % index, "text": "Validated model output with quantified results", "evidence_ids": ["project:adjacent-%s:b2" % index]},
+            ],
+        } for index in range(4)],
+        "leadership": [],
+    }
+    graph = {"nodes": [
+        {"id": bullet["id"], "claim_allowed": True}
+        for entry in entries.values() for bullet in entry["bullets"]
+    ]}
+    context = {
+        "target_keywords": {"terms": [{
+            "term": "react", "supported": True, "required": True,
+            "source_ids": [target_id + ":b1"],
+        }]},
+        "job_intelligence": {
+            "primary_role_track": "product_software",
+            "secondary_role_tracks": ["systems_performance"],
+            "track_confidence": "ambiguous",
+            "requirements": [{
+                "importance": "required", "role_relevance": "primary",
+                "exact_terms": ["react"], "evidence_ids": [target_id + ":b1"],
+            }],
+        },
+    }
+    monkeypatch.setattr(rs, "pack_plan_to_page", lambda value, _catalog, _run_dir: (value, {"fake_pack": True}))
+
+    recovered, receipt = rs.deterministic_role_evidence_floor(
+        plan, catalog, context, graph, tmp_path,
+    )
+
+    assert receipt["status"] == "applied"
+    assert target_id in {entry["source_id"] for entry in recovered["projects"]}
+    assert len(recovered["projects"]) == 4
+    assert len(receipt["actions"]) == 1
+    assert receipt["actions"][0]["restored_project_id"] == target_id
 
 
 def test_target_opportunity_replacement_surfaces_only_allowed_unused_source_line(

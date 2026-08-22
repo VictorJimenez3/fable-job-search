@@ -414,6 +414,15 @@ allowed only when the deterministic comparison finds material loss, and its
 compiled candidate must beat the prior preference key. Independent-provider
 absence remains a visible review limitation.
 
+Evidence-preserving tailoring lab — ✅ SHIPPED 2026-08-22 (DECISIONS #166-167).
+Ordinary High-effort lanes no longer trade away distinctive mechanism or
+validation evidence to consume microscopic measured page capacity; geometry
+recovery remains hard-gated and source-preserving. A project-level role-evidence
+floor is retained as an explicit lab helper but disabled by default until it
+earns a sealed positive comparison. Fresh-open post-fix tests recorded a real
+`prefer_tailored` Uber result and correctly held Nucleus/ByteDance at the base
+when application or evidence blockers dominated.
+
 ## Pipeline intelligence
 - **Resume UAT and outcome learning** — future idea: if enough applications,
   interviews, and eventual outcomes accumulate, compare resume variants and
