@@ -777,6 +777,12 @@ If the guard removes or reorders evidence, the exact resulting PDF is compiled
 and judged again by a complete four-role Luna High panel; an old panel is never
 reused for a changed artifact. The receipt is `final_portfolio_guard.json`.
 
+The duplicate detector also recognizes a small set of repeated mechanisms such
+as resampling/stratified validation and calibration, including across an
+experience and project when two distinctive terms and a shared metric support
+the match. Generic overlap alone cannot delete evidence; the affected real-role
+cases are rerun in the lab before this is considered a measured improvement.
+
 For healthcare-role experiments, a prior saved draft can be used as a
 provisional pairwise control without becoming evidence authority. The completed
 Stryker-vs-Merck control used the best saved Merck AI PDF as the baseline and

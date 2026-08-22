@@ -1326,6 +1326,40 @@ def test_same_entry_repeated_metric_and_proof_is_detected():
         "Led a 3-person team building an AlloyDB foundation",
         "Unified 3 AI systems into one conversation timeline",
     )
+    assert rs._same_entry_resume_bullet(
+        "Reached 0.984 ROC-AUC and 94% recall using resampling and stratified validation",
+        "Trained three classifiers with resampling and stratified validation for rare selections",
+    )
+
+
+def test_curator_removes_cross_entry_repeated_posture_story():
+    plan = {
+        "experiences": [{
+            "source_id": "experience:posture",
+            "bullets": [{
+                "source_id": "experience:posture:b3",
+                "text": "Designed a sub-minute calibration workflow capturing 10,000+ motion samples for adaptive model training",
+                "priority": 90,
+            }],
+        }],
+        "projects": [{
+            "source_id": "project:posturemax",
+            "bullets": [{
+                "source_id": "project:posturemax:b2",
+                "text": "Captured 10,000+ calibration samples to personalize live posture feedback",
+                "priority": 70,
+            }],
+        }],
+        "leadership": [],
+    }
+
+    curated = rs.curate_candidate_portfolio(plan)
+
+    assert curated["projects"] == []
+    assert any(
+        action["source_id"] == "project:posturemax:b2"
+        for action in curated["portfolio_budget"]["actions"]
+    )
 
 
 def test_near_copy_rewrite_is_rejected_as_low_value_churn():

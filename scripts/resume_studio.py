@@ -1439,21 +1439,67 @@ def _resume_numeric_anchors(value: str) -> set:
 
 
 def _same_entry_resume_bullet(left: str, right: str) -> bool:
-    """Detect two phrasings of the same evidence inside one entry."""
+    """Detect two phrasings of the same evidence story.
+
+    The caller usually applies this within one source entry, but the same
+    conservative test is also useful across an experience and project: a
+    project repeating a quantified experience story is not new breadth. The
+    mechanism fallback covers cases such as two All-NBA bullets that share
+    resampling/stratified validation but do not repeat a number.
+    """
     if _same_resume_bullet(left, right):
         return True
     shared_numbers = _resume_numeric_anchors(left) & _resume_numeric_anchors(right)
     if not shared_numbers:
-        return False
+        shared_mechanisms = _resume_tokens(left) & _resume_tokens(right) & {
+            "resampling", "rebalancing", "stratified", "validation",
+            "calibration", "debugging", "troubleshooting",
+        }
+        return len(shared_mechanisms) >= 2
     generic = {
         "built", "engineered", "developed", "designed", "implemented",
         "led", "using", "across", "real", "time", "data", "system",
+        "systems", "workflow", "workflows", "project", "experience",
+        "item", "items", "findings", "stakeholders", "presented",
+        "improved", "created", "delivered", "with", "for",
     }
     shared_terms = {
         term for term in (_resume_tokens(left) & _resume_tokens(right)) - generic
         if re.search(r"[a-z]", term)
     }
     return bool(shared_terms)
+
+
+def _same_cross_entry_resume_bullet(left: str, right: str) -> bool:
+    """Use a stricter story test before dropping a project for an experience.
+
+    Shared numbers plus one common word are enough to flag two lines inside a
+    single entry for human review, but not enough to delete evidence across
+    entries (for example, ``3 AI systems`` and a ``3-person team``). Cross-entry
+    removal requires two distinctive shared terms or a strong shared
+    mechanism bundle.
+    """
+    if _same_resume_bullet(left, right):
+        return True
+    shared_numbers = _resume_numeric_anchors(left) & _resume_numeric_anchors(right)
+    generic = {
+        "built", "engineered", "developed", "designed", "implemented",
+        "led", "using", "across", "real", "time", "data", "system",
+        "systems", "workflow", "workflows", "project", "experience",
+        "item", "items", "findings", "stakeholders", "presented",
+        "improved", "created", "delivered", "with", "for",
+    }
+    shared_terms = {
+        term for term in (_resume_tokens(left) & _resume_tokens(right)) - generic
+        if re.search(r"[a-z]", term)
+    }
+    if shared_numbers and len(shared_terms) >= 2:
+        return True
+    shared_mechanisms = shared_terms & {
+        "resampling", "rebalancing", "stratified", "validation",
+        "calibration", "debugging", "troubleshooting",
+    }
+    return len(shared_mechanisms) >= 2
 
 
 def _missing_protected_qualifiers(source: str, candidate: str) -> List[str]:
@@ -7413,7 +7459,9 @@ def curate_candidate_portfolio(
                     None,
                 )
                 global_duplicate = any(
-                    _same_resume_bullet(text, existing) for existing in seen_texts
+                    _same_resume_bullet(text, existing)
+                    or _same_cross_entry_resume_bullet(text, existing)
+                    for existing in seen_texts
                 )
                 if global_duplicate or same_entry_index is not None:
                     replaced_existing = None

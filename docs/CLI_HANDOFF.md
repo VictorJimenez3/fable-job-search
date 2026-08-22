@@ -189,6 +189,15 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   to `final_portfolio_guard.json` and `layout_packing.json`, and focused tests
   cover both the stronger-line selection and duplicate metrics diagnostic.
 
+- **Mechanism-story duplicate guard:** the same final guard now catches
+  repeated validation/calibration mechanisms even when the bullets do not
+  repeat a number. Cross-entry deletion is stricter than same-entry review and
+  requires two distinctive shared terms with a shared metric, or the narrow
+  mechanism bundle; generic words cannot erase a project. This specifically
+  targets the ByteDance All-NBA and Anduril posture regressions found in the
+  fresh cohort. The affected roles are being rerun before this is treated as a
+  measured gain.
+
 - **Post-audit density prerequisite receipt (DECISION #155):** the patched
   Stryker run at
   `CV/.resume_studio/benchmarks/stryker-post-repair-density-20260821/runs/78044c21145b`

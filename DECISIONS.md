@@ -2585,3 +2585,17 @@ the generated artifact remains diagnostic. The guard is source-preserving and
 does not add keywords, rewrite claims, or alter evaluator thresholds. Focused
 tests cover the reintroduced-duplicate case and the deterministic portfolio
 metrics receipt.
+
+## 164. Detect repeated mechanism stories without generic cross-entry false positives (2026-08-22)
+
+The first final-guard cohort found a residual form of duplication: two All-NBA
+bullets could repeat `resampling`/`stratified validation` without sharing a
+numeric anchor, and a PostureMax project could repeat the experience's
+10,000-sample calibration story across entries. Same-entry duplicate detection
+now recognizes a narrow, two-term mechanism bundle for validation,
+calibration, debugging, and troubleshooting. Cross-entry deletion is stricter:
+it requires two distinctive shared terms plus a shared numeric anchor, or the
+same mechanism bundle. Generic words such as `workflow`, `systems`, and `AI`
+cannot delete a project on their own. The resulting curator replay removed the
+two observed regressions while preserving generic fixture breadth; real-role
+reruns are required before treating this as a quality improvement.
