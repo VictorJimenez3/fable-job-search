@@ -2492,3 +2492,30 @@ added roughly twelve minutes without producing a positive comparison; the
 deep/search lanes retain repair for controlled quality experiments. No
 evaluator rubric, evidence authority, readiness gate, or production artifact
 was weakened, and the new path is covered by the repository test suite.
+
+## 159. Unchained produces a positive Stryker pairwise result without hiding tradeoffs (2026-08-22)
+
+The first end-to-end validation of the integrated Unchained path completed at
+`CV/.resume_studio/benchmarks/unchained-frontier-validation-20260822/runs/88ff48da72e5`.
+It took 909.2 seconds (15m09s) and 7 Codex Luna calls, versus 1,596.4 seconds
+and 12 calls for the preceding Stryker run that still selected the base. The
+new bounded opportunity pass surfaced the exact authorized REST endpoint line
+`project:emotion-aware-ai-transcription-1st-place-ai-anal:b6`, compiled a
+one-page artifact with zero near-wraps, and displaced no existing bullet.
+
+All four sealed Max critics completed. Their comparative audit preferred the
+tailored candidate with gain weight 7 versus loss weight 4: it confirmed
+explainable-AI outputs with confidence labels/reasoning traces/citations,
+JWT-verified row-level access, and explicit 11-endpoint REST/API ownership.
+The audit still records two regressions and one missed opportunity: the
+tailored version loses J&J Pandas/SQL version-conflict evidence, loses the
+Multi-Agent 4+ agent-coordination mechanism, and does not explicitly surface
+the supported `software engineering` term/UI ownership. Those remain visible
+questions rather than being averaged away. No hard blocker was found.
+
+The artifact is therefore `winner_version=tailored` and
+`recommended_version=tailored`, but `approval_state=awaiting_review` and
+`review_ready=false` remain correct because this is a same-model Luna jury,
+not independent-vendor or hiring-outcome validation. The result is a
+measurable comparative improvement for this posting, not an 84/100 hiring
+prediction or evidence that every role will improve.

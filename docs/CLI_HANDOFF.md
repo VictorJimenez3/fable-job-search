@@ -396,6 +396,16 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   twelve minutes without a positive Stryker comparison; `deep` and `search`
   retain repair for controlled experiments. This improves the default timing
   path without weakening the four-role Max evaluator or any hard gate.
+- **Integrated-path Stryker validation (verified 2026-08-22):** run
+  `CV/.resume_studio/benchmarks/unchained-frontier-validation-20260822/runs/88ff48da72e5`
+  completed in 909.2 seconds with 7 Codex calls. The target opportunity pass
+  surfaced authorized REST endpoint evidence, all four Max roles completed,
+  and the audit preferred the tailored artifact with gain weight 7 versus loss
+  weight 4 and no blockers. The same report retains two regressions (lost
+  J&J Pandas/SQL evidence and lost 4+ agent coordination) plus one missed
+  `software engineering`/UI opportunity; it remains `awaiting_review`, not
+  auto-approved, because the panel is same-model Luna rather than independent
+  hiring validation.
 
 ### Previous change (verified 2026-08-15)
 
