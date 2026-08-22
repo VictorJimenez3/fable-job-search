@@ -1,6 +1,6 @@
 # 🎯 Job Radar — internship dashboard
 
-_Last run: **2026-08-22 07:01 UTC** · companies polled directly: **756** (registry 914) · jobs tracked: **13698** · new this run: **346** · alerts this run: **21**_
+_Last run: **2026-08-22 07:08 UTC** · companies polled directly: **763** (registry 914) · jobs tracked: **13711** · new this run: **13** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -89,7 +89,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 80 ⭐ | 16d | TikTok | [Backend Software Engineer Intern - Creation Platform - 2027 Summer](https://lifeattiktok.com/search/7670289874020993285) | San Jose, CA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 80 ⭐ | 16d | Snowflake | [Software Engineer - Openflow](https://jobs.ashbyhq.com/snowflake/22c61c00-65a5-4952-9a02-d897d4960437) | US-CA-Menlo Park | big_tech | — | [posting](https://jobs.ashbyhq.com/snowflake/22c61c00-65a5-4952-9a02-d897d4960437) |
 | 80 ⭐ | 17d | TikTok | [Software Engineer Intern - Transaction Platform - 2027 Summer](https://lifeattiktok.com/search/7669943120351906053) | San Jose, CA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
-| 80 ⭐ | 17d | Intel | [AI Software Engineer Graduate Intern](https://www.dreamworkhq.com/job/1d393864-5e0b-4d0d-bd1c-0b71ea528f9c?utm_source=github&utm_campaign=gh-tech-internships) | Virtual US | other | — | [Dreamwork tech internship board](https://github.com/dreamworkhq/Tech-Internships-2027) |
+| 80 ⭐ | 18d | Intel | [AI Software Engineer Graduate Intern](https://www.dreamworkhq.com/job/1d393864-5e0b-4d0d-bd1c-0b71ea528f9c?utm_source=github&utm_campaign=gh-tech-internships) | Virtual US | other | — | [Dreamwork tech internship board](https://github.com/dreamworkhq/Tech-Internships-2027) |
 | 80 ⭐ | 18d | TikTok | [Software Engineer Intern - Global CRM - 2027 Summer](https://lifeattiktok.com/search/7669711844487399685) | San Jose, CA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 80 ⭐ | 18d | TikTok | [Software Engineer Intern - AI Agent & Global Revenue Platform - 2027 S](https://lifeattiktok.com/search/7669712589169117445) | San Jose, CA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 80 ⭐ | 18d | TikTok | [Frontend Engineer Intern - Global CRM - 2027 Summer](https://lifeattiktok.com/search/7669711026846058757) | San Jose, CA | other | — | [SpeedyApply internship board](https://github.com/speedyapply/2027-SWE-College-Jobs) |
