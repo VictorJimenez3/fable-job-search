@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-23 14:38 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **144 shown / 11265 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-08-23 14:59 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **144 shown / 11265 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -85,7 +85,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 66  | 4d | Zipline | [Long Range Platform Hardware Engineering Intern](https://www.zipline.com/open-roles?gh_jid=7891460003) | South SF | other | simplify |
 | 66  | 4d | Avery Dennison | [RFID Applications Engineer Co-op - Summer 2027 - Plus one semester](https://jobs.smartrecruiters.com/AveryDennison/744000144153141) | Miamisburg, OH | other | simplify |
 | 66  | 4d | Wabtec | [Engineering Intern](https://jobs.smartrecruiters.com/Wabtec/3743990014652807) | Erie, PA | other | simplify |
-| 66  | 4d | Sherwin-Williams | [IT Database Engineer Co-op](https://ejhp.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/2621017) | Cleveland, OH | other | simplify |
+| 66  | 5d | Sherwin-Williams | [IT Database Engineer Co-op](https://ejhp.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/2621017) | Cleveland, OH | other | simplify |
 | 66  | 5d | KOSTAL Group | [Systems Engineering Intern](https://jobs.smartrecruiters.com/KOSTALGroup/744000138137225) | Troy, MI | other | simplify |
 | 66  | 5d | L3Harris Technologies | [Integration/Test Engineering Intern](https://jobs.l3harris.com/job/Ashburn-IntegrationTest-Engineering-Internship-VA-20147/1420071500/?ats=successfactors) | Ashburn, VA | other | simplify |
 | 66  | 5d | GE Aerospace | [Aerospace Engineering Engines Co-op - Computer or Software Engineering](https://geaerospace.wd5.myworkdayjobs.com/ge_externalsite/job/Evendale/Engines-Engineering-Co-op---Computer-or-Software-Engineering---US---Fall-2027_R5029637-1) | Lynn, MA | other | simplify |
