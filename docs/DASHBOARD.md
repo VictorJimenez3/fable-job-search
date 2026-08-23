@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-23 07:00 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **144 shown / 11265 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-08-23 07:46 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **144 shown / 11265 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -9,9 +9,9 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 100 🔥 | 1d | Micron | [Intern - Metrology Process Development Engineer](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Metrology-Process-Development-Engineer_JR108851) | Boise, ID - Main Site | semiconductors | workday |
 | 99 🔥 | 2d | Micron | [Intern - Photomask Wet Process Engineering](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Photomask-Wet-Process-Engineering_JR108464) | Boise, ID - Main Site | semiconductors | workday |
 | 99 🔥 | 2d | Micron | [Intern - Wet Process Fab 4 EDE](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Wet-Process-Fab-4-EDE_JR108959) | Boise, ID - Main Site | semiconductors | workday |
-| 95 🔥 | 3d | Micron | [Intern - Advanced DRAM Process Integration](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Advanced-DRAM-Process-Integration_JR107205) | Boise, ID - Main Site | semiconductors | workday |
-| 95 🔥 | 5d | Micron | [Intern - Wet Etch Process Development Engineer](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Wet-Etch-Process-Development-Engineer_JR108050) | Boise, ID - Main Site | semiconductors | workday |
-| 95 🔥 | 5d | Micron | [Intern - Process Development Engineer, Thin Films](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--Thin-Films_JR107323) | Boise, ID - Main Site | semiconductors | workday |
+| 95 🔥 | 4d | Micron | [Intern - Advanced DRAM Process Integration](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Advanced-DRAM-Process-Integration_JR107205) | Boise, ID - Main Site | semiconductors | workday |
+| 95 🔥 | 6d | Micron | [Intern - Wet Etch Process Development Engineer](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Wet-Etch-Process-Development-Engineer_JR108050) | Boise, ID - Main Site | semiconductors | workday |
+| 95 🔥 | 6d | Micron | [Intern - Process Development Engineer, Thin Films](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Development-Engineer--Thin-Films_JR107323) | Boise, ID - Main Site | semiconductors | workday |
 | 93 🔥 | 8d | GlobalFoundries | [Advanced Manufacturing Engineering Intern, Process & Equipment (Summer](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Advanced-Manufacturing-Engineering-Intern--Process---Equipment--Summer-2027-_JR-2604591) | USA - New York - Malta | semiconductors | workday |
 | 93 🔥 | 8d | GlobalFoundries | [Advanced Manufacturing Process Engineering Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/Advanced-Manufacturing-Process-Engineering-Intern--Summer-2027-_JR-2604659) | USA - Vermont - Essex Junction | semiconductors | workday |
 | 93 🔥 | 9d | Micron | [Intern - DRAM Process Integration](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---DRAM-Process-Integration_JR108075) | Boise, ID - Main Site | semiconductors | workday |
@@ -41,8 +41,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 77 ⭐ | 4d | Micron | [Design Verification Engineer Intern](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Jalisco-Mexico/Design-Verification-Engineer-Intern_JR107487) | Jalisco, Mexico | semiconductors | workday |
 | 77 ⭐ | 5d | GlobalFoundries | [Yield and Characterization Engineer Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/Yield-and-Characterization-Engineer-Intern--Summer-2027-_JR-2604638) | USA - Vermont - Essex Junction | semiconductors | workday |
 | 77 ⭐ | 5d | GlobalFoundries | [Robotics and Automation Engineering Intern, Junior (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/Robotics-and-Automation-Engineering-Intern--Junior--Summer-2027-_JR-2604660) | USA - Vermont - Essex Junction | semiconductors | workday |
-| 76 ⭐ | 16h | Springs Window Fashions | [Textile Engineering Intern - Summer 2027](https://careers-springswindowfashions.icims.com/jobs/12881/job?mobile=true&needsRedirect=false) | Middleton, WI | other | simplify |
-| 76 ⭐ | 16h | Springs Window Fashions | [Application Engineering Intern - Summer 2027](https://careers-springswindowfashions.icims.com/jobs/12893/job?mobile=true&needsRedirect=false) | Long Island City, Queens, NY | other | simplify |
+| 76 ⭐ | 17h | Springs Window Fashions | [Textile Engineering Intern - Summer 2027](https://careers-springswindowfashions.icims.com/jobs/12881/job?mobile=true&needsRedirect=false) | Middleton, WI | other | simplify |
+| 76 ⭐ | 17h | Springs Window Fashions | [Application Engineering Intern - Summer 2027](https://careers-springswindowfashions.icims.com/jobs/12893/job?mobile=true&needsRedirect=false) | Long Island City, Queens, NY | other | simplify |
 | 76 ⭐ | 1d | Hitachi | [Engineering Intern](https://hitachi.wd1.myworkdayjobs.com/hitachi/job/Raleigh-North-Carolina-United-States/XMLNAME-2027-Summer-Engineering-Intern---Raleigh_R0142571) | Raleigh, NC | other | simplify |
 | 76 ⭐ | 1d | Analog Devices | [Algorithm Development Engineer Intern](https://analogdevices.wd1.myworkdayjobs.com/External/job/US-MA-Wilmington/Algorithm-Development-Engineer-Intern_R265306-1) | Wilmington, MA | other | simplify |
 | 76 ⭐ | 1d | Analog Devices | [Systems Integration Engineer Intern](https://analogdevices.wd1.myworkdayjobs.com/External/job/US-NC-Durham/System-Integration-Engineer-Intern_R265305) | Wilmington, MA | other | simplify |
@@ -91,7 +91,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 66  | 5d | GE Aerospace | [Aerospace Engineering Engines Co-op - Computer or Software Engineering](https://geaerospace.wd5.myworkdayjobs.com/ge_externalsite/job/Evendale/Engines-Engineering-Co-op---Computer-or-Software-Engineering---US---Fall-2027_R5029637-1) | Lynn, MA | other | simplify |
 | 66  | 5d | Renesas Electronics | [Digital Design Engineer Intern](https://jobs.smartrecruiters.com/RenesasElectronics/744000143930119) | Duluth, GA | other | simplify |
 | 66  | 6d | RTX | [Systems Engineering Intern](https://globalhr.wd5.myworkdayjobs.com/fr-CA/Private_Posting_No_TMP/job/US-RI-PORTSMOUTH-PS1--1847-W-Main-Rd--NIMITZ-BLDG/XMLNAME-2027-Portsmouth-Systems-Engineering-Intern_01867557) | Portsmouth, RI | other | simplify |
-| 64  | 7d | Dedalus Labs | [Design Engineer Intern](https://jobs.ashbyhq.com/dedalus-labs/bcd6db2e-400b-4ffa-aef3-0948a7b558c2/application?embed=true) | SF | other | simplify |
+| 64  | 8d | Dedalus Labs | [Design Engineer Intern](https://jobs.ashbyhq.com/dedalus-labs/bcd6db2e-400b-4ffa-aef3-0948a7b558c2/application?embed=true) | SF | other | simplify |
 | 64  | 8d | ByteDance | [Self-Built Engineer Intern - CDN Platform](https://jobs.bytedance.com/en/position/7673608499872827701/detail) | Seattle, WA | other | simplify |
 | 64  | 9d | MPR Associates | [Engineer Co-op - Multiple Teams](https://careers-mpr.icims.com/jobs/1524/job?mobile=true&needsRedirect=false) | Salt Lake City, UT | other | simplify |
 | 64  | 9d | Pacific Northwest National Laboratory | [Undergraduate Technical Intern - Nuclear Facility](https://careers.pnnl.gov/jobs/12027?icims=1) | Richland, WA | other | simplify |
