@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-08-23 02:01 UTC** · companies polled directly: **1898** (registry 2142) · jobs tracked: **47538** · new this run: **12** · alerts this run: **4**_
+_Last run: **2026-08-23 02:03 UTC** · companies polled directly: **1898** (registry 2142) · jobs tracked: **47538** · new this run: **12** · alerts this run: **4**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -14,7 +14,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 89 🔥 | 9d | NVIDIA | [Software Engineer New Grad - Deep Learning Libraries](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Software-Engineer--Deep-Learning-Libraries---New-College-Graduate-2026_JR2023252) | Santa Clara, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 89 🔥 | 21d | TikTok | [Software Development Engineer Graduate - Global E-Commerce-Quality Pla](https://lifeattiktok.com/search/7668827381435517237) | San Jose, CA | big_tech | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 88 🔥 | 3d | Amazon | [Front-End Engineer - Amazon Connect - AWS](https://www.amazon.jobs/jobs/10508283/apply) | Seattle, WA | big_tech | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs)<br>[www.amazon.jobs fallback](https://www.amazon.jobs/jobs/10510073/apply) |
-| 87 🔥 | 3d | ByteDance | [Machine Learning Engineer Graduate - E-Commerce Risk Control](https://jobs.bytedance.com/en/position/7675477660855781637/detail) | San Jose, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 87 🔥 | 4d | ByteDance | [Machine Learning Engineer Graduate - E-Commerce Risk Control](https://jobs.bytedance.com/en/position/7675477660855781637/detail) | San Jose, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 86 🔥 | 10d | Apple | [Software Engineer - Applied Machine Learning - IS&T](https://jobs.apple.com/en-us/details/200677645) | Austin, TX | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 86 🔥 | 12d | Microsoft | [Software Engineer 1/2 - Identity and Network Access](https://apply.careers.microsoft.com/careers/job/1970393556953615) | Mountain View, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 86 🔥 | 17d | Microsoft | [Software Development Consultant - Technology Consulting](https://apply.careers.microsoft.com/careers/job/1970393556857973) | Springfield, VA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
