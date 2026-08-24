@@ -562,6 +562,8 @@ many DOM mutations while the build is running.
 If that queue item's completed tailoring run selects the base resume, recovery
 uses the immutable canonical resume instead of launching another identical
 tailoring run after a worker restart.
+Startup recovery also marks any already-queued duplicate as superseded when a
+terminal run exists for the same application queue item.
 
 To connect the Mac once:
 

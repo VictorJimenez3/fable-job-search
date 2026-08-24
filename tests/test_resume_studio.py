@@ -666,6 +666,43 @@ def test_run_manager_repairs_shutdown_failure_on_next_start(tmp_path):
     manager.shutdown(wait=False)
 
 
+def test_run_manager_does_not_recover_duplicate_application_run(tmp_path):
+    class RecordingExecutor:
+        def __init__(self):
+            self.calls = []
+
+        def submit(self, *args, **kwargs):
+            self.calls.append(args)
+            return None
+
+        def shutdown(self, *args, **kwargs):
+            return None
+
+    runs = tmp_path / "CV" / ".resume_studio" / "runs"
+    for run_id, status in (("0123456789ab", "awaiting_review"), ("abcdef012345", "queued")):
+        run_dir = runs / run_id
+        run_dir.mkdir(parents=True)
+        rs.write_json(run_dir / "job.json", {"id": "job-1", "company": "Acme", "title": "Engineer"})
+        rs.write_json(run_dir / "status.json", {
+            "run_id": run_id, "mode": "ai", "status": status,
+            "queue_id": "application-queue-1", "step": status, "message": status,
+        })
+    manager = rs.RunManager(tmp_path, max_workers=1)
+    manager.executor.shutdown(wait=False)
+    recorder = RecordingExecutor()
+    manager.executor = recorder
+
+    summary = manager.recover_pending()
+
+    assert summary["recovered"] == 0
+    assert summary["skipped_duplicate"] == 1
+    assert recorder.calls == []
+    duplicate = json.loads((runs / "abcdef012345" / "status.json").read_text())
+    assert duplicate["status"] == "failed"
+    assert duplicate["error_code"] == "duplicate_application_run"
+    manager.shutdown(wait=False)
+
+
 def test_run_manager_marks_submitted_work_recoverable_during_shutdown(tmp_path):
     class NoopExecutor:
         def shutdown(self, *args, **kwargs):

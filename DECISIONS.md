@@ -3018,3 +3018,6 @@ A terminal Resume Studio run is also idempotent per application queue item. If
 its safe winner is the base version, recovery uses the immutable canonical
 resume; it does not reinterpret that reviewed outcome as missing and launch an
 unbounded sequence of duplicate tailoring runs.
+Engine recovery enforces the same invariant: a queued/running run sharing an
+application queue id with a terminal run is marked superseded and is not
+resubmitted.

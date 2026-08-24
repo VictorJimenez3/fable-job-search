@@ -13586,6 +13586,7 @@ class RunManager:
             "reset_running": 0,
             "failed_invalid": 0,
             "repaired_shutdown_failures": 0,
+            "skipped_duplicate": 0,
         }
 
     def health(self) -> Dict[str, Any]:
@@ -13736,6 +13737,7 @@ class RunManager:
             "reset_running": 0,
             "failed_invalid": 0,
             "repaired_shutdown_failures": 0,
+            "skipped_duplicate": 0,
         }
         identity = engine_runtime_identity(self.workers)
         if identity["restart_required"]:
@@ -13746,6 +13748,17 @@ class RunManager:
         if not runs.is_dir():
             self._last_recovery = summary
             return summary
+        terminal_queue_ids = set()
+        for candidate in runs.iterdir():
+            if not candidate.is_dir() or not re.fullmatch(r"[a-f0-9]{12}", candidate.name):
+                continue
+            candidate_status = read_json(candidate / "status.json", {}) or {}
+            if (
+                isinstance(candidate_status, dict)
+                and candidate_status.get("status") in {"complete", "completed", "awaiting_review", "failed"}
+                and str(candidate_status.get("queue_id") or "")
+            ):
+                terminal_queue_ids.add(str(candidate_status.get("queue_id")))
         for run_dir in sorted(runs.iterdir(), key=lambda item: item.name):
             if not run_dir.is_dir() or not re.fullmatch(r"[a-f0-9]{12}", run_dir.name):
                 continue
@@ -13761,6 +13774,15 @@ class RunManager:
                 status.get("status") not in {"queued", "running"}
                 and not repairable_shutdown_failure
             ):
+                continue
+            queue_id = str(status.get("queue_id") or "")
+            if queue_id and queue_id in terminal_queue_ids:
+                self.update(
+                    run_id, run_dir, "failed", "superseded",
+                    "A terminal run already exists for this application queue item; duplicate recovery was skipped.",
+                    error_code="duplicate_application_run",
+                )
+                summary["skipped_duplicate"] += 1
                 continue
             with self.lock:
                 if run_id in self._submitted:

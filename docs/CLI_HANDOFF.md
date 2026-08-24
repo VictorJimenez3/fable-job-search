@@ -106,6 +106,10 @@ Before changing the radar, read these in order:
   for the same application queue item is authoritative even when its winner is
   the base resume. Recovery returns the immutable fallback and does not launch
   another expensive tailoring run.
+- **Duplicate-run recovery guard (implemented 2026-08-24):** engine startup
+  does not recover a queued/running application-tailor duplicate when a terminal
+  run already exists for that queue id. The duplicate becomes an inspectable
+  `failed`/`duplicate_application_run` record.
 
 ### vNext foundation (implemented and verified 2026-08-16)
 
