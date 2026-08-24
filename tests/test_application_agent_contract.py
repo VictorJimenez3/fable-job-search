@@ -14,7 +14,9 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
 
     assert "Application Agent is private to the repository owner" in api
     assert "requireMutationRequest(req, res)" in api
-    assert "resumeDriveAccess" in api
+    assert "resumeStorageAccess" in api
+    assert "Application Agent" in api and "Payload JSON" in api
+    assert "writeSheetStore" in api and 'storage: "sheet"' in api
     assert "application-context.json" in api and "application-context.md" in api
     assert "application-queue.json" in api and "application-issues.md" in api
     assert "application-agent-pairing.json" in api
@@ -22,8 +24,11 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "awaiting_confirmation" in local and "attestation" in local
     assert "verify_submission_page" in service
     assert "/api/application/form" in service and "/api/application/confirm" in service
+    assert "application_resume_status" in service and "/api/application/resume" in service
     assert '"content_scripts"' in extension and '"<all_urls>"' in extension
     for provider in ("workday", "greenhouse", "lever", "ashby", "smartrecruiters"):
         assert provider in adapters
     assert "JOB_RADAR_SUBMISSION_APPROVED" in (ROOT / "browser-extension" / "content.js").read_text()
+    assert "ensureResumeForApplication" in (ROOT / "browser-extension" / "background.js").read_text()
+    assert "JOB_RADAR_RESUME_STATUS" in (ROOT / "browser-extension" / "content.js").read_text()
     assert "/api/application-agent" in routing and "application_agent=1" in routing

@@ -3656,3 +3656,46 @@ def test_artifact_path_cannot_escape_run_dir(tmp_path):
     outside.write_text("secret")
     target = (run_dir / ".." / ".." / "secret.txt").resolve()
     assert run_dir.resolve() not in target.parents
+
+
+def test_application_resume_status_waits_for_matching_tailor(monkeypatch):
+    entries = [{
+        "source": "run", "entry_id": "run-1", "run_id": "run-1", "status": "running",
+        "queue_id": "application-queue-1", "mode": "ai", "updated_at": "2026-08-24T12:00:00Z",
+        "message": "tailoring",
+    }]
+    monkeypatch.setattr(rs, "resume_library", lambda *args, **kwargs: entries)
+
+    result = rs.application_resume_status({"id": "job-1"}, queue_id="queue-1")
+
+    assert result["status"] == "running"
+    assert result["run_id"] == "run-1"
+    assert result["mode"] == "ai"
+
+
+def test_application_resume_status_prefers_safe_tailored_pdf(monkeypatch):
+    entries = [{
+        "source": "run", "entry_id": "run-2", "run_id": "run-2", "status": "complete",
+        "has_pdf": True, "winner_version": "tailored", "mode": "ai", "approval_state": "approved",
+        "pdf_filename": "acme_resume.pdf", "updated_at": "2026-08-24T12:00:00Z",
+        "objective": {"rankable": True, "score": 88},
+    }]
+    monkeypatch.setattr(rs, "resume_library", lambda *args, **kwargs: entries)
+
+    result = rs.application_resume_status({"id": "job-1"})
+
+    assert result["status"] == "ready"
+    assert result["source"] == "tailored"
+    assert result["winner_version"] == "tailored"
+    assert result["needs_owner_review"] is False
+
+
+def test_application_resume_status_only_falls_back_when_requested(monkeypatch):
+    monkeypatch.setattr(rs, "resume_library", lambda *args, **kwargs: [])
+
+    missing = rs.application_resume_status({"id": "job-1"})
+    fallback = rs.application_resume_status({"id": "job-1"}, allow_fallback=True)
+
+    assert missing["status"] == "missing"
+    assert fallback["status"] == "fallback"
+    assert fallback["source"] == "immutable"

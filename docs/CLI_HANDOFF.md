@@ -35,6 +35,25 @@ Before changing the radar, read these in order:
 
 ## Current operational facts (verified 2026-08-19)
 
+### Current change (verified 2026-08-24)
+
+- **Application queue storage no longer depends on free Drive quota:** the
+  production owner path uses the existing private Job Radar workbook and a
+  bounded `Application Agent` tab for sanitized queue, context, issue, and
+  pairing records. The legacy app-created Drive JSON/Markdown path remains a
+  fallback when no workbook ID is available. This directly addresses the
+  production error `The user's Drive storage quota has been exceeded.` without
+  deleting or moving Victor's files.
+- **Autopilot now gates form filling on Resume Studio:** the Mac extension
+  checks for a safe tailored winner for the exact posting, starts the existing
+  AI tailor run if needed, waits for its durable terminal result, and records a
+  canonical-resume fallback when no safe tailored winner is published. Chrome
+  still pauses for local resume-file selection, unknown answers, sensitive
+  fields, attestations, changed pages, and final Submit confirmation.
+- **Operational test:** the production storage path must be rechecked after the
+  deployment by queueing one saved role and verifying it appears as stored with
+  `storage: "sheet"`; no application submission is part of this test.
+
 ### vNext foundation (implemented and verified 2026-08-16)
 
 - **Staged product:** `/vnext/` is a React/TypeScript workspace with cursor

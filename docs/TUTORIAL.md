@@ -192,10 +192,20 @@ Set it up once:
 The extension sends visible field labels, control types, options, and a
 page-shape fingerprint to the loopback agent. It never sends raw page HTML,
 cookies, passwords, or the CV to Drive. The local JSON bank is mirrored to the
-owner's app-created Drive folder as `application-context.json` and readable
-`application-context.md`; the queue and sanitized issue ledger have matching
-JSON/Markdown files. Use the Radar UI to edit answers. Markdown is a readable
-mirror, not the authoritative editor.
+owner's existing private Job Radar Google Sheet in an **Application Agent** tab
+when Drive storage quota is full. If the Sheet is unavailable, the existing
+app-created Drive folder remains the JSON/Markdown fallback. Use the Radar UI
+to edit answers; stored Sheet payloads and Markdown are readable mirrors, not
+the authoritative editor.
+
+Before opening a form, the extension checks Resume Studio for a safe tailored
+PDF for that exact posting. If none exists, it starts the existing AI tailor
+run and waits. A rejected or not-yet-approved tailor falls back to the
+immutable canonical resume, while the browser still pauses at the local
+resume-file picker because Chrome cannot silently choose a file for a page.
+All other approved repetitive fields and ordinary **Next** pages can continue
+until a real answer, attestation, sensitive field, or final confirmation needs
+you.
 
 Approved answers—including approved sensitive answers—may be reused, but the
 full proposed values appear on the final review card. The agent stops for a

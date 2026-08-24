@@ -4084,6 +4084,68 @@ def resume_library(root: Optional[Path] = None, query: str = "", job_id: str = "
     return filtered[:max(1, min(int(limit or 200), 500))]
 
 
+def application_resume_status(
+    job: Dict[str, Any], root: Optional[Path] = None, queue_id: str = "",
+    allow_fallback: bool = False,
+) -> Dict[str, Any]:
+    """Resolve the Resume Studio artifact an application session may use.
+
+    Application Autopilot asks this local service before it starts scanning an
+    employer form.  A safe tailored winner is preferred, an in-flight matching
+    run is reported so the extension can wait, and the immutable resume remains
+    the last-resort control when a tailor honestly rejects its own candidate.
+    The browser still pauses on the resume-file control because file uploads
+    cannot be selected silently by a Chrome extension.
+    """
+    job_id = str((job or {}).get("id") or "")
+    entries = resume_library(root, job_id=job_id, limit=100) if job_id else []
+    active_queue = "application-%s" % str(queue_id or "").strip()[:80] if queue_id else ""
+    running = [
+        item for item in entries
+        if item.get("source") == "run"
+        and item.get("status") in {"queued", "running"}
+        and (not active_queue or str(item.get("queue_id") or "") == active_queue)
+    ]
+    if running:
+        current = sorted(running, key=lambda item: (item.get("updated_at") or "", item.get("entry_id") or ""), reverse=True)[0]
+        return {
+            "status": "running", "source": "resume_studio", "run_id": current.get("run_id") or current.get("entry_id") or "",
+            "message": current.get("message") or "Resume Studio is tailoring this role.",
+            "mode": current.get("mode") or "ai",
+        }
+    tailored = [
+        item for item in entries
+        if item.get("source") == "run"
+        and item.get("has_pdf")
+        and item.get("status") in {"complete", "completed", "awaiting_review"}
+        and item.get("winner_version") == "tailored"
+        and item.get("mode") in {"used", "ai", "unrestricted", "generation"}
+    ]
+    if tailored:
+        selected = sorted(tailored, key=lambda item: (
+            item.get("status") == "complete", bool((item.get("objective") or {}).get("rankable")),
+            float((item.get("objective") or {}).get("score") or -1), item.get("updated_at") or "",
+        ), reverse=True)[0]
+        return {
+            "status": "ready", "source": "tailored", "run_id": selected.get("run_id") or selected.get("entry_id") or "",
+            "mode": selected.get("mode") or "ai", "resume_status": selected.get("status") or "awaiting_review",
+            "approval_state": selected.get("approval_state") or "awaiting_review",
+            "winner_version": "tailored", "pdf_filename": selected.get("pdf_filename") or "",
+            "message": "Resume Studio found a safe tailored winner for this role.",
+            "needs_owner_review": selected.get("status") != "complete" or selected.get("approval_state") != "approved",
+        }
+    if allow_fallback:
+        return {
+            "status": "fallback", "source": "immutable", "mode": "canonical",
+            "message": "Resume Studio did not publish a safe tailored winner; use the immutable canonical resume.",
+            "needs_owner_review": True,
+        }
+    return {
+        "status": "missing", "source": "resume_studio", "recommended_mode": "ai",
+        "message": "No safe tailored Resume Studio winner exists for this role yet.",
+    }
+
+
 def studio_usage(root: Optional[Path] = None) -> Dict[str, Any]:
     """Aggregate observed provider usage from durable run reports.
 
@@ -14352,7 +14414,8 @@ class StudioHandler(BaseHTTPRequestHandler):
         self.send_header("X-Frame-Options", "DENY")
         self.send_header("Referrer-Policy", "no-referrer")
         origin = str(self.headers.get("Origin") or "")
-        if self.path.startswith("/api/application/") and origin.startswith("chrome-extension://"):
+        cors_paths = self.path.startswith("/api/application/") or urlparse(self.path).path in {"/api/run", "/api/library"}
+        if cors_paths and origin.startswith("chrome-extension://"):
             self.send_header("Access-Control-Allow-Origin", origin)
             self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
             self.send_header("Access-Control-Allow-Headers", "Content-Type")
@@ -14375,7 +14438,7 @@ class StudioHandler(BaseHTTPRequestHandler):
     def do_OPTIONS(self) -> None:
         if self.reject_bad_host():
             return
-        if self.path.startswith("/api/application/"):
+        if self.path.startswith("/api/application/") or urlparse(self.path).path in {"/api/run", "/api/library"}:
             origin = str(self.headers.get("Origin") or "")
             if origin.startswith("chrome-extension://"):
                 self.send_response(HTTPStatus.NO_CONTENT)
@@ -14481,6 +14544,13 @@ class StudioHandler(BaseHTTPRequestHandler):
                 "sessions": len(application_sessions(repo_root())),
                 "open_issues": len(list_application_issues(repo_root(), status="open")),
             })
+        if parsed.path == "/api/application/resume":
+            params = parse_qs(parsed.query)
+            job_id = params.get("job_id", [""])[0]
+            job = current_scored_jobs(repo_root()).get(job_id)
+            if not job:
+                return self.send_json({"error": "job not found"}, HTTPStatus.NOT_FOUND)
+            return self.send_json(application_resume_status(job, repo_root(), queue_id=params.get("queue_id", [""])[0]))
         if parsed.path == "/api/application/context":
             return self.send_json(application_context(repo_root()))
         if parsed.path == "/api/application/issues":
@@ -14571,7 +14641,7 @@ class StudioHandler(BaseHTTPRequestHandler):
             "/api/run", "/api/run/approve", "/api/match", "/api/evidence/refresh", "/api/evidence/review",
             "/api/context/job", "/api/context/answer", "/api/context/hint", "/api/context/hint/dismiss",
             "/api/workshop/edit", "/api/workshop/ai", "/api/workshop/revert",
-            "/api/application/session", "/api/application/form", "/api/application/review",
+            "/api/application/session", "/api/application/resume", "/api/application/form", "/api/application/review",
             "/api/application/answer", "/api/application/mapping", "/api/application/event",
             "/api/application/confirm", "/api/application/verify", "/api/application/issue",
         }:
@@ -14581,6 +14651,19 @@ class StudioHandler(BaseHTTPRequestHandler):
             if length > 100_000:
                 raise ValueError("request too large")
             body = json.loads(self.rfile.read(length) or b"{}")
+            if parsed.path == "/api/application/resume":
+                job_id = str(body.get("job_id") or "")
+                job = current_scored_jobs(repo_root()).get(job_id)
+                if not job:
+                    imported = bridged_job(body.get("job"))
+                    if imported and str(imported.get("id") or "") == job_id:
+                        job = imported
+                if not job:
+                    return self.send_json({"error": "job not found"}, HTTPStatus.NOT_FOUND)
+                return self.send_json(application_resume_status(
+                    job, repo_root(), queue_id=str(body.get("queue_id") or ""),
+                    allow_fallback=bool(body.get("allow_fallback")),
+                ))
             if parsed.path == "/api/application/session":
                 job = body.get("job") if isinstance(body.get("job"), dict) else body
                 return self.send_json(create_application_session(

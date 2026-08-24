@@ -1587,6 +1587,7 @@ async function loadApplicationAgent(renderNow=true) {
       applicationCloudGet("queue"), applicationCloudGet("context"), applicationCloudGet("issues"),
     ]);
     S.applicationAgent = {...S.applicationAgent, status:"online", error:"",
+      storage:queue.storage||context.storage||issues.storage||"drive",
       items:Array.isArray(queue.items)?queue.items:[], context:context.context||null,
       issues:Array.isArray(issues.issues)?issues.issues:[]};
     if (canWrite()) {
@@ -1675,7 +1676,7 @@ async function pairApplicationMac() {
 async function saveApplicationContext() {
   const question=$("agentContextQuestion")?.value.trim(), value=$("agentContextAnswer")?.value.trim(), category=$("agentContextCategory")?.value.trim();
   if (!question||!value) { toast("Add both a question and answer"); return; }
-  try { await applicationCloudPost("answer", {question,value,category}); $("agentContextQuestion").value="";$("agentContextAnswer").value="";await loadApplicationAgent(false);rApplicationAgent();toast("Answer banked in private Drive JSON + Markdown"); }
+  try { await applicationCloudPost("answer", {question,value,category}); $("agentContextQuestion").value="";$("agentContextAnswer").value="";await loadApplicationAgent(false);rApplicationAgent();toast("Answer banked in the private application context"); }
   catch(error) { toast(error.message.slice(0,150)); }
 }
 async function refreshApplicationAgent() { await loadApplicationAgent(false); rApplicationAgent(); }
@@ -1684,6 +1685,7 @@ function rApplicationAgent() {
   if (!S.auth.owner) { S.tab="jobs"; rJobs(); return; }
   if (S.applicationAgent.status === "checking") { loadApplicationAgent(false).then(()=>{if(S.tab==="agent")rApplicationAgent();}); return; }
   const data=S.applicationAgent, items=data.items||[], candidates=applicationAgentCandidates(), selected=new Set(data.selected||[]);
+  if(data.storage==="sheet") setTimeout(()=>toast("Drive quota is full; the existing private Job Radar Sheet is storing Autopilot state."),0);
   const queueSummary=items.filter(item=>APPLICATION_ACTIVE_STATES.has(item.state)).length;
   const contextAnswers=data.context?.answers||[];
   const token=data.pairingToken;

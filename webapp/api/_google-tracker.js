@@ -105,6 +105,19 @@ async function resumeDriveAccess(personal, ownerFallback = false) {
   throw new Error("Connect Google to enable the private cloud Resume Bank");
 }
 
+// Resume Studio and the application agent share the same owner workbook.  A
+// Drive file upload can fail when the account's storage quota is exhausted
+// even though edits to an existing app-created Sheet still work.  Expose the
+// workbook identity alongside the token so private control-plane state can
+// use that existing file without creating more Drive files.
+async function resumeStorageAccess(personal, ownerFallback = false) {
+  const access = await resumeDriveAccess(personal, ownerFallback);
+  const spreadsheetId = hasPersonalSession(personal)
+    ? String(personal?.s || "")
+    : ownerFallback ? ownerSheetId() : "";
+  return {...access, spreadsheetId};
+}
+
 function rangeUrl(spreadsheetId, range, sheetTab, suffix = "") {
   return `${SHEETS_API}/${spreadsheetId}/values/${encodeURIComponent(`${sheetTab}!${range}`)}${suffix}`;
 }
@@ -793,4 +806,4 @@ async function updateUserTracker(login, accountKeys, payload, personal = null) {
 module.exports = { configured, personalConfigured, hasPersonalSession, userTracker,
   updateUserTracker, resolveAccount, PERSONAL_HEADERS, ACCOUNT_HEADERS, PREFERENCE_HEADERS,
   VALID_POSTING_STATUSES, tabForProfile, internshipTab, preferencesTab, optionalReadFailure,
-  resumeDriveAccess, ownerDriveConfigured };
+  resumeDriveAccess, resumeStorageAccess, ownerDriveConfigured };

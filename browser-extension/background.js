@@ -1,6 +1,7 @@
 const LOCAL_ORIGIN = "http://127.0.0.1:4317";
 const DEFAULT_CLOUD_URL = "https://job-radar-newgrad.vercel.app";
 const BATCH_RUNNING_STATES = new Set(["opening", "filling", "submitting"]);
+const RESUME_TERMINAL_STATES = new Set(["complete", "awaiting_review", "failed"]);
 const tabs = new Map();
 
 function safeURL(value) {
@@ -44,6 +45,58 @@ async function createSession(tabId, job, mode = "per_role", queueId = "") {
   });
   tabs.set(tabId, {...tabs.get(tabId), job, mode, queueId, sessionId: session.session_id, state: session.state});
   return session;
+}
+
+function wait(milliseconds) {
+  return new Promise(resolve => setTimeout(resolve, milliseconds));
+}
+
+async function ensureResumeForApplication(tabId, row) {
+  if (!row?.job) throw new Error("A job is required before Resume Studio can tailor it");
+  if (row.resumeInfo) return row.resumeInfo;
+  if (row.resumePromise) return row.resumePromise;
+  row.resumePromise = (async () => {
+    const queueId = row.queueId || "";
+    const resumeRequest = {method: "POST", body: JSON.stringify({
+      job_id: row.job.id, job: row.job, queue_id: queueId,
+    })};
+    let status = await local("/api/application/resume", resumeRequest);
+    if (status.status === "missing") {
+      if (queueId) await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+        action: "queue_update", queue_id: queueId, state: "opening",
+        message: "Resume Studio is tailoring this role before form filling.",
+      })});
+      status = await local("/api/run", {method: "POST", body: JSON.stringify({
+        job_id: row.job.id, mode: "ai", queue_id: `application-${queueId}`, job_snapshot: row.job,
+      })});
+    }
+    if (status.status === "running" || status.status === "queued") {
+      const runId = status.run_id;
+      if (!runId) throw new Error("Resume Studio did not return a run id");
+      const deadline = Date.now() + 20 * 60 * 1000;
+      while (Date.now() < deadline) {
+        await wait(1800);
+        status = await local(`/api/run?id=${encodeURIComponent(runId)}`);
+        if (RESUME_TERMINAL_STATES.has(status.status)) break;
+      }
+      if (!RESUME_TERMINAL_STATES.has(status.status)) throw new Error("Resume Studio is still working; retry this role after it finishes");
+      if (status.status === "failed") throw new Error(status.message || "Resume Studio could not produce a draft");
+      status = await local("/api/application/resume", {method: "POST", body: JSON.stringify({
+        job_id: row.job.id, job: row.job, queue_id: queueId, allow_fallback: true,
+      })});
+    }
+    if (!["ready", "fallback"].includes(status.status)) throw new Error(status.message || "Resume Studio did not produce a usable resume result");
+    row.resumeInfo = status;
+    if (queueId) await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+      action: "queue_update", queue_id: queueId, state: "opening",
+      resume: status,
+      message: status.message || "Resume Studio finished the application resume check.",
+    })});
+    await send(tabId, {type: "JOB_RADAR_RESUME_STATUS", resume: status});
+    return status;
+  })();
+  try { return await row.resumePromise; }
+  finally { row.resumePromise = null; }
 }
 
 async function send(tabId, message) {
@@ -129,7 +182,20 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
     if (message?.type === "JOB_RADAR_START") return startJob(message.job, message.mode, message.queueId);
     if (message?.type === "JOB_RADAR_CONTENT_READY" && tabId) {
       let row = tabs.get(tabId);
-      if (row && !row.sessionId) await createSession(tabId, row.job, row.mode, row.queueId);
+      if (row && !row.sessionId) {
+        try {
+          await ensureResumeForApplication(tabId, row);
+        } catch (error) {
+          if (row.queueId) {
+            try { await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+              action: "queue_update", queue_id: row.queueId, state: "blocked",
+              message: "Application paused before filling because Resume Studio needs attention.", error: error.message,
+            })}); } catch (_) {}
+          }
+          return {session_id: "", configured: Boolean(row), error: error.message};
+        }
+        await createSession(tabId, row.job, row.mode, row.queueId);
+      }
       row = tabs.get(tabId);
       return {session_id: row?.sessionId || "", configured: Boolean(row)};
     }

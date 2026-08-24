@@ -506,16 +506,27 @@ clicked until Victor confirms that card.** A confirmation from the phone is
 single-use, expires after 15 minutes, and is rejected if the Mac is no longer
 on the same page.
 
+Before the extension creates an application session, it checks the local
+Resume Studio library for a safe tailored PDF for that exact posting. If none
+exists, it starts the existing AI tailor run and waits for its terminal result.
+If the run does not publish a safe tailored winner, it records that decision
+and uses the immutable canonical resume as the controlled fallback. Chrome
+still pauses at the resume-file picker because a normal extension cannot
+silently select a local file; the rest of the visible repetitive form can
+continue automatically.
+
 The workflow supports both one-role launch from a Jobs card and sequential
 batch queueing from the phone. Blocked roles park in the private queue while
 other roles continue. Answers and field mappings are durable context: the
 owner can add them in the Autopilot tab, from the extension popup, or while
 answering a blocker. Local JSON remains the machine source of truth under
-`CV/.resume_studio/application_agent.json`; the owner-only Drive integration
-mirrors it as `application-context.json` plus readable `application-context.md`,
-along with `application-queue.json` and a sanitized `application-issues.md`.
-The app UI is authoritative; the Markdown file is a readable/export mirror,
-not an arbitrary-edit interface.
+`CV/.resume_studio/application_agent.json`. The owner-only cloud control plane
+uses the existing private Job Radar Google Sheet's **Application Agent** tab
+when the Google account's storage quota is full, so queueing does not create
+new Drive files. When that workbook is unavailable, the existing app-created
+Drive JSON/Markdown mirror remains the fallback. The app UI is authoritative;
+the Sheet payload and Markdown file are storage/export mirrors, not arbitrary
+edit interfaces.
 
 To connect the Mac once:
 
@@ -529,8 +540,8 @@ To connect the Mac once:
    `scripts/resume-studio-service/install.sh`. Click **Apply with Agent** from
    a saved role, or queue a batch from Autopilot.
 
-The pairing token grants only the private application-agent Drive files and
-can be replaced/revoked. Raw CV files, provider sessions, browser cookies,
+The pairing token grants only the private application-agent control-plane
+records and can be replaced/revoked. Raw CV files, provider sessions, browser cookies,
 DOM dumps, and passwords never sync to Drive. The issue ledger records page,
 provider, field, and fingerprint observations without pretending that the
 system repaired itself; ask Codex to repair a repeated issue so the fix can

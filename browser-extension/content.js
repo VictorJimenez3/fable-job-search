@@ -156,6 +156,10 @@
   async function scan() {
     if (!sessionId) {
       const ready = await say({type: "JOB_RADAR_CONTENT_READY", url: location.href});
+      if (ready?.error) {
+        showBanner("Application paused", text(ready.error, 600), "warn", '<button data-action="retry">retry</button>');
+        return;
+      }
       sessionId = ready?.session_id || "";
     }
     if (!sessionId) return;
@@ -186,6 +190,17 @@
 
   chrome.runtime.onMessage.addListener((message) => {
     if (message?.type === "JOB_RADAR_RESCAN") { lastFingerprint = ""; scheduleScan(0); return; }
+    if (message?.type === "JOB_RADAR_RESUME_STATUS") {
+      const resume = message.resume || {};
+      showBanner(
+        resume.status === "fallback" ? "Resume Studio used the canonical resume" : "Resume Studio prepared this role",
+        text(resume.message || "A role-specific resume result is ready. The browser will still pause before a resume-file upload.", 600),
+        resume.status === "fallback" ? "warn" : "info",
+        '<button data-action="hide">dismiss</button>',
+      );
+      scheduleScan(0, true);
+      return;
+    }
     if (message?.type !== "JOB_RADAR_SUBMISSION_APPROVED") return;
     void (async () => {
       const snapshot = extract();

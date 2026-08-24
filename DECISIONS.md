@@ -2905,3 +2905,24 @@ an explicit owner promotion creates a control; promoting another control for a
 family revokes the prior active profile while retaining its history. This
 keeps the idea useful when a role-family winner is genuinely better without
 letting a good-looking draft become an unreviewed new source of truth.
+
+## 180. Application queue tolerates a full Google storage account (2026-08-24)
+
+Victor's production account had 462.91 GB of Google storage in use, including
+447.5 GB of Photos. The Application Agent previously created or updated
+private Drive JSON/Markdown files, so a full account made an otherwise valid
+queue action fail before any role was stored. The owner-only control plane now
+uses the existing private Job Radar workbook and creates one `Application
+Agent` tab whose bounded rows hold sanitized queue, context, issue, and pairing
+records as JSON cells. The legacy app-created Drive folder remains a fallback
+when a workbook ID is not available. The implementation does not delete or
+move user files and does not put CVs, cookies, passwords, or DOM dumps in the
+Sheet.
+
+Application Autopilot now checks the local Resume Studio library before opening
+the employer form. It reuses a safe tailored winner for the exact posting,
+starts the existing AI run when none exists, waits for the persisted terminal
+state, and records an immutable canonical fallback when tailoring does not
+publish a safe winner. Resume-file selection still pauses for the owner because
+Chrome extensions cannot silently set a local file input, and final submission
+remains owner-confirmed and page-bound.

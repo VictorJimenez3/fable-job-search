@@ -2,7 +2,8 @@
 //
 // The Mac browser remains the execution boundary.  This route stores only
 // the private application context, queue state, issue ledger, and an
-// explicit short-lived review card in the owner's app-created Drive folder.
+// explicit short-lived review card in the owner's existing private workbook
+// when possible, with the legacy app-created Drive folder as a fallback.
 // It never stores a CV, browser cookie, provider session, or DOM dump.
 const crypto = require("crypto");
 const { OWNER, session, requireMutationRequest } = require("./_lib");
@@ -10,8 +11,12 @@ const tracker = require("./_google-tracker");
 
 const DRIVE_FILES_API = "https://www.googleapis.com/drive/v3/files";
 const DRIVE_UPLOAD_API = "https://www.googleapis.com/upload/drive/v3/files";
+const SHEETS_API = "https://sheets.googleapis.com/v4/spreadsheets";
 const VERSION = "application-agent-v1";
 const FOLDER_PROPERTY = "jobRadarApplicationAgent";
+const APPLICATION_SHEET = "Application Agent";
+const APPLICATION_SHEET_HEADERS = ["Record Type", "Record ID", "Payload JSON"];
+const APPLICATION_SHEET_MAX_ROWS = 2200;
 const FILES = {
   context: ["application-context.json", "jobRadarApplicationContext"],
   contextMarkdown: ["application-context.md", "jobRadarApplicationContextMarkdown"],
@@ -104,6 +109,146 @@ async function uploadFile(token, {id = "", metadata, content, contentType}) {
   });
 }
 
+function storageToken(access) {
+  return access?.access?.token || access?.token || "";
+}
+
+function spreadsheetId(access) {
+  return String(access?.access?.spreadsheetId || access?.spreadsheetId || "").trim();
+}
+
+function sheetRange(spreadsheet, range) {
+  return `${SHEETS_API}/${encodeURIComponent(spreadsheet)}/values/${encodeURIComponent(range)}`;
+}
+
+async function sheetJson(url, token, options = {}) {
+  const response = await fetch(url, {
+    ...options,
+    headers: {Authorization: `Bearer ${token}`, "Content-Type": "application/json", ...(options.headers || {})},
+  });
+  let data = {};
+  try { data = await response.json(); } catch {}
+  if (!response.ok) {
+    const message = data.error?.message || data.error || `Google Sheet ${response.status}`;
+    throw new Error(String(message).slice(0, 260));
+  }
+  return data;
+}
+
+async function ensureApplicationSheet(token, spreadsheet) {
+  const metadata = await sheetJson(
+    `${SHEETS_API}/${encodeURIComponent(spreadsheet)}?fields=sheets(properties(sheetId,title))`, token,
+  );
+  let sheet = (metadata.sheets || []).find(item => item.properties?.title === APPLICATION_SHEET);
+  if (!sheet) {
+    const created = await sheetJson(`${SHEETS_API}/${encodeURIComponent(spreadsheet)}:batchUpdate`, token, {
+      method: "POST",
+      body: JSON.stringify({requests: [{addSheet: {properties: {
+        title: APPLICATION_SHEET,
+        gridProperties: {rowCount: APPLICATION_SHEET_MAX_ROWS, columnCount: APPLICATION_SHEET_HEADERS.length},
+      }}}]}),
+    });
+    sheet = (created.replies || []).find(item => item.addSheet?.properties)?.addSheet;
+  }
+  if (!sheet?.properties?.title) throw new Error("Google Sheet could not create the Application Agent tab");
+  const header = await sheetJson(sheetRange(spreadsheet, `${APPLICATION_SHEET}!A1:C1`), token);
+  const values = header.values || [];
+  const matches = APPLICATION_SHEET_HEADERS.every((value, index) => String(values[0]?.[index] || "") === value);
+  if (!matches) {
+    await sheetJson(`${sheetRange(spreadsheet, `${APPLICATION_SHEET}!A1:C1`)}?valueInputOption=RAW`, token, {
+      method: "PUT", body: JSON.stringify({range: `${APPLICATION_SHEET}!A1:C1`, majorDimension: "ROWS", values: [APPLICATION_SHEET_HEADERS]}),
+    });
+  }
+  return sheet;
+}
+
+function emptySheetStore() {
+  return {
+    version: VERSION, updated_at: "",
+    context: {version: VERSION, updated_at: "", answers: [], mappings: {}},
+    queue: {version: VERSION, updated_at: "", items: []},
+    issues: {version: VERSION, updated_at: "", issues: []},
+    pairing: {version: VERSION, updated_at: "", tokens: []},
+  };
+}
+
+function parseSheetPayload(value) {
+  try {
+    const parsed = JSON.parse(String(value || ""));
+    return parsed && typeof parsed === "object" ? parsed : null;
+  } catch { return null; }
+}
+
+async function readSheetStore(token, spreadsheet) {
+  await ensureApplicationSheet(token, spreadsheet);
+  const data = await sheetJson(sheetRange(spreadsheet, `${APPLICATION_SHEET}!A2:C${APPLICATION_SHEET_MAX_ROWS}`), token);
+  const store = emptySheetStore();
+  for (const row of data.values || []) {
+    const kind = String(row[0] || "").trim();
+    const id = String(row[1] || "").trim();
+    const value = parseSheetPayload(row[2]);
+    if (!kind || !value) continue;
+    if (kind === "queue" && id) store.queue.items.push(value);
+    else if (kind === "context" && id) store.context.answers.push(value);
+    else if (kind === "context_meta" && id === "mappings" && value.mappings && typeof value.mappings === "object") store.context.mappings = value.mappings;
+    else if (kind === "issue" && id) store.issues.issues.push(value);
+    else if (kind === "pairing" && id) store.pairing.tokens.push(value);
+  }
+  return store;
+}
+
+function sheetStoreRows(store) {
+  const rows = [APPLICATION_SHEET_HEADERS];
+  for (const item of (store.queue?.items || []).slice(0, MAX_QUEUE)) {
+    if (item?.queue_id) rows.push(["queue", item.queue_id, JSON.stringify(item)]);
+  }
+  for (const item of (store.context?.answers || []).slice(0, MAX_ANSWERS)) {
+    if (item?.answer_id) rows.push(["context", item.answer_id, JSON.stringify(item)]);
+  }
+  rows.push(["context_meta", "mappings", JSON.stringify({mappings: store.context?.mappings || {}})]);
+  for (const item of (store.issues?.issues || []).slice(0, MAX_ISSUES)) {
+    if (item?.issue_id) rows.push(["issue", item.issue_id, JSON.stringify(item)]);
+  }
+  for (const item of (store.pairing?.tokens || []).slice(0, MAX_ANSWERS)) {
+    if (item?.token_hash) rows.push(["pairing", item.token_hash, JSON.stringify(item)]);
+  }
+  return rows;
+}
+
+async function writeSheetStore(token, spreadsheet, store) {
+  const rows = sheetStoreRows(store);
+  if (rows.length > APPLICATION_SHEET_MAX_ROWS) throw new Error("Application Agent Sheet reached its row limit");
+  await ensureApplicationSheet(token, spreadsheet);
+  await sheetJson(`${sheetRange(spreadsheet, `${APPLICATION_SHEET}!A2:C${APPLICATION_SHEET_MAX_ROWS}`)}:clear`, token, {
+    method: "POST", body: JSON.stringify({}),
+  });
+  await sheetJson(`${sheetRange(spreadsheet, `${APPLICATION_SHEET}!A1:C${rows.length}`)}?valueInputOption=RAW`, token, {
+    method: "PUT", body: JSON.stringify({range: `${APPLICATION_SHEET}!A1:C${rows.length}`, majorDimension: "ROWS", values: rows}),
+  });
+  return {version: VERSION, updated_at: new Date().toISOString(), ...store};
+}
+
+async function appDocument(access, kind) {
+  const token = storageToken(access);
+  const spreadsheet = spreadsheetId(access);
+  if (spreadsheet) {
+    const store = await readSheetStore(token, spreadsheet);
+    return {storage: "sheet", token, spreadsheet, store, value: store[kind] || emptyFor(kind)};
+  }
+  const folder = access.folder || await ensureFolder(token);
+  const current = await readDocument(token, folder, kind);
+  return {storage: "drive", token, folder, ...current};
+}
+
+async function writeAppDocument(state, kind, value) {
+  if (state.storage === "sheet") {
+    state.store[kind] = value;
+    await writeSheetStore(state.token, state.spreadsheet, state.store);
+    return {file: null, value};
+  }
+  return writeDocument(state.token, state.folder, state, kind, value);
+}
+
 async function findFile(token, folder, descriptor) {
   const [name, property] = descriptor;
   const files = await listFiles(token,
@@ -188,11 +333,19 @@ function publicReview(value) {
 
 function publicQueueItem(item) {
   const value = item && typeof item === "object" ? item : {};
+  const resume = value.resume && typeof value.resume === "object" ? value.resume : null;
   return {
     queue_id: clean(value.queue_id, 100), state: QUEUE_STATES.has(value.state) ? value.state : "queued",
     session_id: clean(value.session_id, 100), message: clean(value.message, 800), error: clean(value.error, 800),
     created_at: clean(value.created_at, 80), updated_at: clean(value.updated_at, 80),
     job: safeJob(value.job), blockers: Array.isArray(value.blockers) ? value.blockers.slice(0, 80) : [],
+    resume: resume ? {
+      status: clean(resume.status, 30), source: clean(resume.source, 40), run_id: clean(resume.run_id, 100),
+      mode: clean(resume.mode, 40), resume_status: clean(resume.resume_status, 40),
+      approval_state: clean(resume.approval_state, 40), winner_version: clean(resume.winner_version, 40),
+      pdf_filename: clean(resume.pdf_filename, 180), message: clean(resume.message, 500),
+      needs_owner_review: Boolean(resume.needs_owner_review),
+    } : null,
     review: publicReview(value.review), confirmation: value.confirmation ? {
       review_hash: clean(value.confirmation.review_hash, 100),
       page_fingerprint: clean(value.confirmation.page_fingerprint, 100),
@@ -252,19 +405,18 @@ function tokenMatches(token, hash) {
 async function ownerAccess(req) {
   const auth = ownerSession(req);
   if (auth.error) throw Object.assign(new Error(auth.error), {statusCode: auth.error === "sign in first" ? 401 : 403});
-  const access = await tracker.resumeDriveAccess(auth.current.pt, true);
-  return {access, current: auth.current, owner: true};
+  const access = await tracker.resumeStorageAccess(auth.current.pt, true);
+  return {...access, current: auth.current, owner: true};
 }
 
 async function tokenAccess(req) {
   const token = clean(req.headers["x-job-radar-agent"] || req.query?.agent_token, 180);
   if (!token) return null;
-  const access = await tracker.resumeDriveAccess(null, true);
-  const folder = await ensureFolder(access.token);
-  const pairing = await readDocument(access.token, folder, "pairing");
+  const access = await tracker.resumeStorageAccess(null, true);
+  const pairing = await appDocument(access, "pairing");
   const valid = (pairing.value.tokens || []).find(item => item?.revoked_at ? false : tokenMatches(token, item?.token_hash));
   if (!valid) throw Object.assign(new Error("Mac pairing token is invalid or revoked"), {statusCode: 403});
-  return {access, folder, owner: false, agent: true};
+  return {...access, folder: pairing.folder, owner: false, agent: true};
 }
 
 async function accessFor(req, mutation = false) {
@@ -275,19 +427,16 @@ async function accessFor(req, mutation = false) {
 
 async function createPairing(req, res, access) {
   const token = crypto.randomBytes(32).toString("base64url");
-  const folder = await ensureFolder(access.token);
-  const current = await readDocument(access.token, folder, "pairing");
+  const current = await appDocument(access, "pairing");
   const now = new Date().toISOString();
   const tokens = (Array.isArray(current.value.tokens) ? current.value.tokens : []).map(item => item && !item.revoked_at ? {...item, revoked_at: now} : item);
   tokens.push({token_hash: hashToken(token), created_at: now, label: "Mac application agent"});
-  await writeDocument(access.token, folder, current, "pairing", {tokens});
+  await writeAppDocument(current, "pairing", {tokens});
   res.status(200).json({ok: true, agent_token: token, message: "Copy this token into the private Mac extension setup. It is shown once and can be revoked from Job Radar."});
 }
 
 async function updateQueue(access, payload) {
-  const folder = access.folder || await ensureFolder(access.access?.token || access.token);
-  const token = access.access?.token || access.token;
-  const current = await readDocument(token, folder, "queue");
+  const current = await appDocument(access, "queue");
   const queue = queueDocument(current.value);
   const now = new Date().toISOString();
   let item = null;
@@ -307,6 +456,7 @@ async function updateQueue(access, payload) {
     if (payload.session_id !== undefined) item.session_id = clean(payload.session_id, 100);
     if (payload.message !== undefined) item.message = clean(payload.message, 800);
     if (payload.error !== undefined) item.error = clean(payload.error, 800);
+    if (payload.resume !== undefined) item.resume = publicQueueItem({resume: payload.resume}).resume;
     if (Array.isArray(payload.blockers)) item.blockers = payload.blockers.slice(0, 80);
     if (payload.review !== undefined) item.review = publicReview(payload.review);
     if (payload.confirmation !== undefined) item.confirmation = payload.confirmation;
@@ -316,7 +466,7 @@ async function updateQueue(access, payload) {
     }
     item.updated_at = now;
   }
-  const written = await writeDocument(token, folder, current, "queue", {items: queue.items});
+  const written = await writeAppDocument(current, "queue", {items: queue.items});
   return {item: publicQueueItem(written.value.items.find(candidate => candidate.queue_id === item.queue_id) || item), duplicate: false};
 }
 
@@ -326,9 +476,7 @@ function reviewExpired(review) {
 }
 
 async function confirmQueue(access, payload) {
-  const token = access.access?.token || access.token;
-  const folder = access.folder || await ensureFolder(token);
-  const current = await readDocument(token, folder, "queue");
+  const current = await appDocument(access, "queue");
   const queue = queueDocument(current.value);
   const item = queue.items.find(candidate => candidate.queue_id === clean(payload.queue_id, 100));
   if (!item || !item.review) throw new Error("application review card not found");
@@ -353,14 +501,12 @@ async function confirmQueue(access, payload) {
   item.state = "submitting";
   item.message = "Owner confirmed. The paired Mac may submit only on the matching page.";
   item.updated_at = new Date().toISOString();
-  await writeDocument(token, folder, current, "queue", {items: queue.items});
+  await writeAppDocument(current, "queue", {items: queue.items});
   return {ok: true, item: publicQueueItem(item)};
 }
 
 async function saveContext(access, payload) {
-  const token = access.access?.token || access.token;
-  const folder = access.folder || await ensureFolder(token);
-  const current = await readDocument(token, folder, "context");
+  const current = await appDocument(access, "context");
   const context = contextDocument(current.value);
   const answer = payload.answer && typeof payload.answer === "object" ? payload.answer : payload;
   const question = clean(answer.question || answer.label, 1200);
@@ -379,28 +525,24 @@ async function saveContext(access, payload) {
   };
   context.answers = [next, ...context.answers.filter(item => item.answer_id !== answerId)].slice(0, MAX_ANSWERS);
   if (answer.field_key) context.mappings[clean(answer.field_key, 240)] = answerId;
-  const written = await writeDocument(token, folder, current, "context", context);
-  await writeTextDocument(token, folder, "contextMarkdown", contextMarkdown(written.value));
+  const written = await writeAppDocument(current, "context", context);
+  if (current.storage !== "sheet") await writeTextDocument(current.token, current.folder, "contextMarkdown", contextMarkdown(written.value));
   return {ok: true, answer: next, context: contextDocument(written.value)};
 }
 
 async function saveMapping(access, payload) {
-  const token = access.access?.token || access.token;
-  const folder = access.folder || await ensureFolder(token);
-  const current = await readDocument(token, folder, "context");
+  const current = await appDocument(access, "context");
   const context = contextDocument(current.value);
   const key = clean(payload.field_key, 240), answerId = clean(payload.answer_id, 100);
   if (!key || !context.answers.some(item => item.answer_id === answerId)) throw new Error("valid field mapping required");
   context.mappings[key] = answerId;
-  const written = await writeDocument(token, folder, current, "context", context);
-  await writeTextDocument(token, folder, "contextMarkdown", contextMarkdown(written.value));
+  const written = await writeAppDocument(current, "context", context);
+  if (current.storage !== "sheet") await writeTextDocument(current.token, current.folder, "contextMarkdown", contextMarkdown(written.value));
   return {ok: true, field_key: key, answer_id: answerId};
 }
 
 async function saveIssue(access, payload) {
-  const token = access.access?.token || access.token;
-  const folder = access.folder || await ensureFolder(token);
-  const current = await readDocument(token, folder, "issues");
+  const current = await appDocument(access, "issues");
   const issue = {
     issue_id: clean(payload.issue_id, 100) || crypto.randomBytes(10).toString("hex"),
     session_id: clean(payload.session_id, 100), type: clean(payload.issue_type || payload.type, 80) || "unknown",
@@ -409,28 +551,26 @@ async function saveIssue(access, payload) {
     selector_kind: clean(payload.selector_kind, 80), status: "open", created_at: new Date().toISOString(),
   };
   const issues = [{...issue}, ...(Array.isArray(current.value.issues) ? current.value.issues : [])].slice(0, MAX_ISSUES);
-  const written = await writeDocument(token, folder, current, "issues", {issues});
-  await writeTextDocument(token, folder, "issuesMarkdown", issuesMarkdown(written.value));
+  const written = await writeAppDocument(current, "issues", {issues});
+  if (current.storage !== "sheet") await writeTextDocument(current.token, current.folder, "issuesMarkdown", issuesMarkdown(written.value));
   return {ok: true, issue};
 }
 
 async function readView(access, view, sessionId = "") {
-  const token = access.access?.token || access.token;
-  const folder = access.folder || await ensureFolder(token);
   if (view === "context") {
-    const result = await readDocument(token, folder, "context");
-    return {version: VERSION, connected: true, context: contextDocument(result.value)};
+    const result = await appDocument(access, "context");
+    return {version: VERSION, connected: true, storage: result.storage, context: contextDocument(result.value)};
   }
   if (view === "issues") {
-    const result = await readDocument(token, folder, "issues");
-    return {version: VERSION, connected: true, issues: Array.isArray(result.value.issues) ? result.value.issues.slice(0, MAX_ISSUES) : []};
+    const result = await appDocument(access, "issues");
+    return {version: VERSION, connected: true, storage: result.storage, issues: Array.isArray(result.value.issues) ? result.value.issues.slice(0, MAX_ISSUES) : []};
   }
-  const result = await readDocument(token, folder, "queue");
+  const result = await appDocument(access, "queue");
   const queue = queueDocument(result.value);
   if (view === "session") {
-    return {version: VERSION, connected: true, session: queue.items.find(item => item.session_id === clean(sessionId, 100)) || null};
+    return {version: VERSION, connected: true, storage: result.storage, session: queue.items.find(item => item.session_id === clean(sessionId, 100)) || null};
   }
-  return {version: VERSION, connected: true, items: queue.items.map(publicQueueItem)};
+  return {version: VERSION, connected: true, storage: result.storage, items: queue.items.map(publicQueueItem)};
 }
 
 module.exports = async (req, res) => {
@@ -449,16 +589,14 @@ module.exports = async (req, res) => {
     const action = clean(payload.action, 40);
     if (action === "pair") {
       if (agentAccess) throw Object.assign(new Error("owner session required to pair a Mac"), {statusCode: 403});
-      await createPairing(req, res, access.access);
+      await createPairing(req, res, access);
       return;
     }
     if (action === "revoke_pair") {
-      const token = access.access.token;
-      const folder = await ensureFolder(token);
-      const current = await readDocument(token, folder, "pairing");
+      const current = await appDocument(access, "pairing");
       const tokenHash = clean(payload.token_hash, 128);
       const tokens = (current.value.tokens || []).map(item => item.token_hash === tokenHash ? {...item, revoked_at: new Date().toISOString()} : item);
-      await writeDocument(token, folder, current, "pairing", {tokens});
+      await writeAppDocument(current, "pairing", {tokens});
       res.status(200).json({ok: true}); return;
     }
     if (action === "queue" || action === "queue_update") {
