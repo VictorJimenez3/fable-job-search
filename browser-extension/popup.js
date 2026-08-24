@@ -38,5 +38,16 @@ document.querySelector("#saveConfig").onclick = async () => {
   const result = await send("JOB_RADAR_SET_CONFIG", {config: {cloudUrl: document.querySelector("#cloudUrl").value, agentToken: document.querySelector("#agentToken").value}});
   document.querySelector("#status").textContent = result?.error || "Pairing saved.";
 };
-document.querySelector("#sync").onclick = async () => { await send("JOB_RADAR_SYNC_NOW"); document.querySelector("#status").textContent = "Queue sync requested."; setTimeout(render, 400); };
+document.querySelector("#sync").onclick = async () => {
+  const button = document.querySelector("#sync");
+  button.disabled = true;
+  document.querySelector("#status").textContent = "Syncing private queue…";
+  const result = await send("JOB_RADAR_SYNC_NOW");
+  if (result?.error) document.querySelector("#status").textContent = `Queue sync failed: ${result.error}`;
+  else if (result?.ok) document.querySelector("#status").textContent =
+    `Queue synced · ${result.queued || 0} waiting · ${result.active || 0} active`;
+  else document.querySelector("#status").textContent = "Queue sync did not complete.";
+  button.disabled = false;
+  setTimeout(render, 400);
+};
 void render();

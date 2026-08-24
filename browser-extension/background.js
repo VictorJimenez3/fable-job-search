@@ -138,7 +138,11 @@ async function syncSession(tabId) {
 
 async function syncCloudQueue() {
   let data;
-  try { data = await cloud("/api/application-agent?view=queue"); } catch (error) { console.warn("Job Radar queue", error); return; }
+  try { data = await cloud("/api/application-agent?view=queue"); }
+  catch (error) {
+    console.warn("Job Radar queue", error);
+    return {ok: false, error: error.message || String(error)};
+  }
   try {
     const context = await cloud("/api/application-agent?view=context");
     const stored = await chrome.storage.local.get({contextUpdatedAt: ""});
@@ -166,6 +170,8 @@ async function syncCloudQueue() {
     }
   }
   for (const tabId of tabs.keys()) await syncSession(tabId);
+  return {ok: true, queued: items.filter(item => item.state === "queued").length,
+    active: items.filter(item => BATCH_RUNNING_STATES.has(item.state)).length};
 }
 
 chrome.runtime.onInstalled.addListener(() => {
@@ -268,7 +274,7 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
       await chrome.storage.local.set(next);
       return {ok: true, ...next, agentToken: next.agentToken ? "saved" : "missing"};
     }
-    if (message?.type === "JOB_RADAR_SYNC_NOW") { await syncCloudQueue(); return {ok: true}; }
+    if (message?.type === "JOB_RADAR_SYNC_NOW") return syncCloudQueue();
     return {ok: false};
   })().then(value => respond(value)).catch(error => respond({error: error.message || String(error)}));
   return true;
