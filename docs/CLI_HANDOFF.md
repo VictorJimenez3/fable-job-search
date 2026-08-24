@@ -86,7 +86,8 @@ Before changing the radar, read these in order:
   lifecycle status and reject roles already marked expired or filled. A legacy
   queued role that opens an explicit “job not found”/“job has closed”/Workday
   “page … doesn't exist” page is marked failed before Resume Studio starts or
-  any form field is filled.
+  any form field is filled. The guard runs before initial attachment and again
+  on later DOM mutations because some ATS tombstones render asynchronously.
 - **Visible queue controls (implemented 2026-08-24):** the production queue
   button disables and reads `queueing…` while writes are in flight. Opening and
   filling rows expose Stop; terminal cloud states detach the paired tab executor

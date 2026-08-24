@@ -3003,6 +3003,8 @@ owner a clear reason to refresh or skip the role. Queue writes expose an
 in-progress control state, and Stop/Skip is authoritative: terminal cloud state
 detaches the corresponding browser executor so later local session sync cannot
 reactivate it.
+Unavailable-page detection is not only an initial preflight: it precedes every
+form plan so late-rendered ATS tombstones fail the active session as well.
 
 The executor's queue alarm is treated as recoverable runtime state. Every
 service-worker load, extension install/reload, and Chrome startup recreates the

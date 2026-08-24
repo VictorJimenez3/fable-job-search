@@ -60,6 +60,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "job not found" in content
     assert "job (?:has |is )?closed" in content
     assert "page (?:you are looking for )?" in content
+    assert "const blocked = await say({type: \"JOB_RADAR_PAGE_BLOCKED\"" in content
     assert "pageFailure: unavailable" in content
     assert "JOB_RADAR_AGENT_STOP" in content
     assert "scanRunning" in content and "scanAgain" in content

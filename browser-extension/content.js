@@ -181,9 +181,9 @@
   async function scan() {
     if (stopped) return;
     const snapshot = extract();
+    const unavailable = unavailablePostingReason(snapshot);
     let ready = null;
     if (!sessionId) {
-      const unavailable = unavailablePostingReason(snapshot);
       ready = await say({type: "JOB_RADAR_CONTENT_READY", url: location.href, pageFailure: unavailable});
       if (ready?.error) {
         showBanner("Application paused", text(ready.error, 600), "warn", '<button data-action="retry">retry</button>');
@@ -197,15 +197,16 @@
       }
       sessionId = ready?.session_id || "";
     }
-    if (!sessionId) {
-      const unavailable = unavailablePostingReason(snapshot);
-      if (ready?.configured && unavailable && !pageFailureReported) {
+    if (unavailable && !pageFailureReported) {
+      const blocked = await say({type: "JOB_RADAR_PAGE_BLOCKED", reason: unavailable});
+      if (blocked?.ok) {
         pageFailureReported = true;
+        stopped = true;
         showBanner("Application stopped · posting unavailable", unavailable, "warn");
-        void say({type: "JOB_RADAR_PAGE_BLOCKED", reason: unavailable});
+        return;
       }
-      return;
     }
+    if (!sessionId) return;
     const shape = JSON.stringify(snapshot.fields.map(field => [field.field_id, field.label, field.type, field.required, field.options]));
     if (shape === lastFingerprint) return;
     lastFingerprint = shape;
