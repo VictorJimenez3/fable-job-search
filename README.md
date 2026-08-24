@@ -521,12 +521,12 @@ other roles continue. Answers and field mappings are durable context: the
 owner can add them in the Autopilot tab, from the extension popup, or while
 answering a blocker. Local JSON remains the machine source of truth under
 `CV/.resume_studio/application_agent.json`. The owner-only cloud control plane
-uses the existing private Job Radar Google Sheet's **Application Agent** tab
-when the Google account's storage quota is full, so queueing does not create
-new Drive files. When that workbook is unavailable, the existing app-created
-Drive JSON/Markdown mirror remains the fallback. The app UI is authoritative;
-the Sheet payload and Markdown file are storage/export mirrors, not arbitrary
-edit interfaces.
+uses the existing private production datastore as its primary queue/context
+store, then the private Job Radar Google Sheet's **Application Agent** tab, and
+only then the legacy app-created Drive JSON/Markdown mirror. This keeps
+queueing alive when the Google account's storage quota blocks every Drive/Sheet
+write. The app UI is authoritative; database, Sheet, and Markdown payloads are
+storage/export mirrors, not arbitrary edit interfaces.
 
 To connect the Mac once:
 

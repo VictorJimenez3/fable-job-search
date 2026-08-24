@@ -38,12 +38,12 @@ Before changing the radar, read these in order:
 ### Current change (verified 2026-08-24)
 
 - **Application queue storage no longer depends on free Drive quota:** the
-  production owner path uses the existing private Job Radar workbook and a
-  bounded `Application Agent` tab for sanitized queue, context, issue, and
-  pairing records. The legacy app-created Drive JSON/Markdown path remains a
-  fallback when no workbook ID is available. This directly addresses the
-  production error `The user's Drive storage quota has been exceeded.` without
-  deleting or moving Victor's files.
+  production owner path uses the existing private Postgres datastore for one
+  sanitized Autopilot state payload. The existing Job Radar workbook's bounded
+  `Application Agent` tab and legacy app-created Drive JSON/Markdown path remain
+  compatibility fallbacks, so the production error `The user's Drive storage
+  quota has been exceeded.` cannot block a queue write. No Victor files are
+  deleted or moved.
 - **Autopilot now gates form filling on Resume Studio:** the Mac extension
   checks for a safe tailored winner for the exact posting, starts the existing
   AI tailor run if needed, waits for its durable terminal result, and records a

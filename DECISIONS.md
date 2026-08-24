@@ -2912,12 +2912,11 @@ Victor's production account had 462.91 GB of Google storage in use, including
 447.5 GB of Photos. The Application Agent previously created or updated
 private Drive JSON/Markdown files, so a full account made an otherwise valid
 queue action fail before any role was stored. The owner-only control plane now
-uses the existing private Job Radar workbook and creates one `Application
-Agent` tab whose bounded rows hold sanitized queue, context, issue, and pairing
-records as JSON cells. The legacy app-created Drive folder remains a fallback
-when a workbook ID is not available. The implementation does not delete or
-move user files and does not put CVs, cookies, passwords, or DOM dumps in the
-Sheet.
+uses the existing private production datastore first, with the existing Job
+Radar workbook's bounded `Application Agent` tab and the legacy app-created
+Drive folder as compatibility fallbacks. The database row holds only one
+sanitized owner state payload; it does not delete or move user files and does
+not put CVs, cookies, passwords, or DOM dumps in Google or Postgres.
 
 Application Autopilot now checks the local Resume Studio library before opening
 the employer form. It reuses a safe tailored winner for the exact posting,

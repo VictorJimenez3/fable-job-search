@@ -17,6 +17,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "resumeStorageAccess" in api
     assert "Application Agent" in api and "Payload JSON" in api
     assert "writeSheetStore" in api and 'storage: "sheet"' in api
+    assert "automation_runs" in api and 'storage: "database"' in api
     assert "application-context.json" in api and "application-context.md" in api
     assert "application-queue.json" in api and "application-issues.md" in api
     assert "application-agent-pairing.json" in api

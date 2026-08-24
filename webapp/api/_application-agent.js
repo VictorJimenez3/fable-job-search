@@ -8,6 +8,7 @@
 const crypto = require("crypto");
 const { OWNER, session, requireMutationRequest } = require("./_lib");
 const tracker = require("./_google-tracker");
+const privateDb = require("./v1/_db");
 
 const DRIVE_FILES_API = "https://www.googleapis.com/drive/v3/files";
 const DRIVE_UPLOAD_API = "https://www.googleapis.com/upload/drive/v3/files";
@@ -172,6 +173,80 @@ function emptySheetStore() {
   };
 }
 
+const DATABASE_STATE_KIND = "application_agent_state";
+const DATABASE_STATE_KEY = `owner:${String(OWNER).toLowerCase()}`;
+
+function databaseConfigured() {
+  return Boolean(privateDb && typeof privateDb.configured === "function" && privateDb.configured());
+}
+
+function normalizeStore(value) {
+  const empty = emptySheetStore();
+  const source = value && typeof value === "object" ? value : {};
+  return {
+    version: VERSION, updated_at: clean(source.updated_at, 80),
+    context: {...empty.context, ...(source.context && typeof source.context === "object" ? source.context : {})},
+    queue: {...empty.queue, ...(source.queue && typeof source.queue === "object" ? source.queue : {})},
+    issues: {...empty.issues, ...(source.issues && typeof source.issues === "object" ? source.issues : {})},
+    pairing: {...empty.pairing, ...(source.pairing && typeof source.pairing === "object" ? source.pairing : {})},
+  };
+}
+
+function storeHasData(store) {
+  return Boolean(
+    (store?.queue?.items || []).length ||
+    (store?.context?.answers || []).length ||
+    Object.keys(store?.context?.mappings || {}).length ||
+    (store?.issues?.issues || []).length ||
+    (store?.pairing?.tokens || []).length
+  );
+}
+
+async function readDatabaseStore() {
+  const result = await privateDb.database().query(
+    "select payload from automation_runs where kind = $1 and idempotency_key = $2 limit 1",
+    [DATABASE_STATE_KIND, DATABASE_STATE_KEY],
+  );
+  return normalizeStore(result.rows[0]?.payload);
+}
+
+async function writeDatabaseStore(store) {
+  const next = normalizeStore(store);
+  next.updated_at = new Date().toISOString();
+  await privateDb.database().query(`
+    insert into automation_runs (id, profile_id, kind, payload, idempotency_key, created_at)
+    values ($1, null, $2, $3::json, $4, now())
+    on conflict (idempotency_key) do update set payload = excluded.payload, created_at = now()
+  `, [crypto.randomUUID(), DATABASE_STATE_KIND, JSON.stringify(next), DATABASE_STATE_KEY]);
+  return next;
+}
+
+async function readLegacyStore(access) {
+  const candidates = [];
+  for (const personal of [access.current?.pt || null, null]) {
+    try {
+      const candidate = await tracker.resumeStorageAccess(personal, true);
+      const identity = `${candidate.source}:${candidate.spreadsheetId || "drive"}`;
+      if (!candidates.some(item => item.identity === identity)) candidates.push({identity, access: candidate});
+    } catch {}
+  }
+  for (const candidate of candidates) {
+    try {
+      const files = await listFiles(candidate.access.token,
+        `trashed = false and mimeType = 'application/vnd.google-apps.folder' and ` +
+        `appProperties has { key='${FOLDER_PROPERTY}' and value='${VERSION}' }`);
+      const folder = files[0];
+      if (!folder?.id) continue;
+      const store = emptySheetStore();
+      for (const kind of ["context", "queue", "issues", "pairing"]) {
+        store[kind] = (await readDocument(candidate.access.token, folder, kind)).value;
+      }
+      if (storeHasData(store)) return store;
+    } catch {}
+  }
+  return emptySheetStore();
+}
+
 function parseSheetPayload(value) {
   try {
     const parsed = JSON.parse(String(value || ""));
@@ -229,6 +304,15 @@ async function writeSheetStore(token, spreadsheet, store) {
 }
 
 async function appDocument(access, kind) {
+  if (access.storage === "database") {
+    let store = await readDatabaseStore();
+    if (!access.databaseLegacyChecked && !storeHasData(store)) {
+      access.databaseLegacyChecked = true;
+      const legacy = await readLegacyStore(access);
+      if (storeHasData(legacy)) store = await writeDatabaseStore(legacy);
+    }
+    return {storage: "database", store, value: store[kind] || emptyFor(kind)};
+  }
   const token = storageToken(access);
   const spreadsheet = spreadsheetId(access);
   if (spreadsheet) {
@@ -241,6 +325,12 @@ async function appDocument(access, kind) {
 }
 
 async function writeAppDocument(state, kind, value) {
+  if (state.storage === "database") {
+    state.store[kind] = value;
+    const written = await writeDatabaseStore(state.store);
+    state.store = written;
+    return {file: null, value: written[kind] || value};
+  }
   if (state.storage === "sheet") {
     state.store[kind] = value;
     await writeSheetStore(state.token, state.spreadsheet, state.store);
@@ -405,6 +495,7 @@ function tokenMatches(token, hash) {
 async function ownerAccess(req) {
   const auth = ownerSession(req);
   if (auth.error) throw Object.assign(new Error(auth.error), {statusCode: auth.error === "sign in first" ? 401 : 403});
+  if (databaseConfigured()) return {storage: "database", current: auth.current, owner: true};
   const access = await tracker.resumeStorageAccess(auth.current.pt, true);
   return {...access, current: auth.current, owner: true};
 }
@@ -412,7 +503,9 @@ async function ownerAccess(req) {
 async function tokenAccess(req) {
   const token = clean(req.headers["x-job-radar-agent"] || req.query?.agent_token, 180);
   if (!token) return null;
-  const access = await tracker.resumeStorageAccess(null, true);
+  const access = databaseConfigured()
+    ? {storage: "database"}
+    : await tracker.resumeStorageAccess(null, true);
   const pairing = await appDocument(access, "pairing");
   const valid = (pairing.value.tokens || []).find(item => item?.revoked_at ? false : tokenMatches(token, item?.token_hash));
   if (!valid) throw Object.assign(new Error("Mac pairing token is invalid or revoked"), {statusCode: 403});
