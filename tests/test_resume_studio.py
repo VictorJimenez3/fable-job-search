@@ -3699,3 +3699,20 @@ def test_application_resume_status_only_falls_back_when_requested(monkeypatch):
     assert missing["status"] == "missing"
     assert fallback["status"] == "fallback"
     assert fallback["source"] == "immutable"
+
+
+def test_application_resume_status_does_not_regenerate_terminal_base_winner(monkeypatch):
+    entries = [{
+        "source": "run", "entry_id": "run-base", "run_id": "run-base",
+        "status": "awaiting_review", "queue_id": "application-queue-1",
+        "has_pdf": True, "winner_version": "base", "mode": "ai",
+        "updated_at": "2026-08-24T12:00:00Z",
+    }]
+    monkeypatch.setattr(rs, "resume_library", lambda *args, **kwargs: entries)
+
+    result = rs.application_resume_status({"id": "job-1"}, queue_id="queue-1")
+
+    assert result["status"] == "fallback"
+    assert result["source"] == "immutable"
+    assert result["run_id"] == "run-base"
+    assert "already finished" in result["message"]

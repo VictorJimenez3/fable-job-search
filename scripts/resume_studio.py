@@ -4134,6 +4134,24 @@ def application_resume_status(
             "message": "Resume Studio found a safe tailored winner for this role.",
             "needs_owner_review": selected.get("status") != "complete" or selected.get("approval_state") != "approved",
         }
+    terminal_for_queue = [
+        item for item in entries
+        if active_queue
+        and item.get("source") == "run"
+        and item.get("status") in {"complete", "completed", "awaiting_review", "failed"}
+        and str(item.get("queue_id") or "") == active_queue
+    ]
+    if terminal_for_queue:
+        selected = sorted(terminal_for_queue, key=lambda item: (
+            item.get("updated_at") or "", item.get("entry_id") or "",
+        ), reverse=True)[0]
+        return {
+            "status": "fallback", "source": "immutable", "mode": "canonical",
+            "run_id": selected.get("run_id") or selected.get("entry_id") or "",
+            "resume_status": selected.get("status") or "awaiting_review",
+            "message": "Resume Studio already finished this queued role without a safe tailored winner; use the immutable canonical resume.",
+            "needs_owner_review": True,
+        }
     if allow_fallback:
         return {
             "status": "fallback", "source": "immutable", "mode": "canonical",

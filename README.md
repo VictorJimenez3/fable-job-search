@@ -559,6 +559,9 @@ does not scan the dashboard DOM as though it were an employer application.
 Employer-page scans and session creation are serialized per tab. A long Resume
 Studio build therefore produces one application session even when the ATS emits
 many DOM mutations while the build is running.
+If that queue item's completed tailoring run selects the base resume, recovery
+uses the immutable canonical resume instead of launching another identical
+tailoring run after a worker restart.
 
 To connect the Mac once:
 

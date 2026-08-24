@@ -3013,3 +3013,8 @@ Application attachment is a single-flight operation at both boundaries. The
 content script serializes DOM scans, and the worker shares one resume/session
 promise for every tab. ATS mutation bursts must never create parallel sessions
 or let retention pruning invalidate the session ID held by the page.
+
+A terminal Resume Studio run is also idempotent per application queue item. If
+its safe winner is the base version, recovery uses the immutable canonical
+resume; it does not reinterpret that reviewed outcome as missing and launch an
+unbounded sequence of duplicate tailoring runs.

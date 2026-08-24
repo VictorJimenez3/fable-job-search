@@ -102,6 +102,10 @@ Before changing the radar, read these in order:
   background session creation are serialized per tab. This prevents a long
   Resume Studio run plus rapid ATS mutations from creating duplicate sessions
   and pruning the session ID returned to the page.
+- **Application-tailor idempotency (implemented 2026-08-24):** a terminal run
+  for the same application queue item is authoritative even when its winner is
+  the base resume. Recovery returns the immutable fallback and does not launch
+  another expensive tailoring run.
 
 ### vNext foundation (implemented and verified 2026-08-16)
 
