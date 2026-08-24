@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-08-24 21:12 UTC** · companies polled directly: **1907** (registry 2152) · jobs tracked: **48313** · new this run: **45** · alerts this run: **3**_
+_Last run: **2026-08-24 21:27 UTC** · companies polled directly: **1907** (registry 2152) · jobs tracked: **48305** · new this run: **45** · alerts this run: **3**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -23,8 +23,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 85 🔥 | 9d | Apple | [Applied Data Solutions Program - Software Engineering - Full-Time Oppo](https://jobs.apple.com/en-us/details/200677717) | Austin, TX | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 85 🔥 | 12d | Apple | [Software Engineer - Information Systems and Technology - Early Career](https://jobs.apple.com/en-us/details/200677377) | Austin, TX | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 85 🔥 | 13d | TikTok | [Software Engineer Graduate - Recommendation - TikTok AI Search & Visua](https://lifeattiktok.com/search/7672517471946000645) | San Jose, CA | big_tech | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) · [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 84 ⭐ | 2d | CVS Health | [Data Science Analyst](https://jobright.ai/jobs/info/6a893ff14afae74a0834e6dd?utm_campaign=Data%20Analysis&utm_source=1103) | New York, NY, United States | healthtech | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 84 ⭐ | 2d | Tesla | [AI Safety Operator](https://www.tesla.com/careers/search/job/266088) | Jacksonville, FL | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 84 ⭐ | 3d | CVS Health | [Data Science Analyst](https://cvshealth.wd1.myworkdayjobs.com/en-US/CVS_Health_Careers/job/NY---New-York/Data-Analyst_R0993501-1) | NY - New York | healthtech | no-history | [Direct company / ATS monitoring](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad)<br>[Jobright fallback](https://jobright.ai/jobs/info/6a893ff14afae74a0834e6dd?utm_campaign=Data%20Analysis&utm_source=1103) |
 | 84 ⭐ | 4d | TikTok | [Machine Learning Engineer Graduate - E-Commerce Supply Chain & Logisti](https://lifeattiktok.com/search/7675843332462872885) | Seattle, WA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 84 ⭐ | 6d | Stryker | [Software Development Engineer](https://stryker.wd1.myworkdayjobs.com/StrykerCareers/job/Indiana-Fort-Wayne-1950-West-Cook-Road/Software-Development-Engineer_R570340) | Fort Wayne, IN | healthtech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) · [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad)<br>[Jobright fallback](https://jobright.ai/jobs/info/6a84cded2f4f0014cae23254?utm_campaign=Software%20Engineering&utm_source=1103) |
 | 84 ⭐ | 7d | TikTok | [Machine Learning Engineer Graduate - E-Commerce Governance](https://lifeattiktok.com/search/7674025781001062709) | Seattle, WA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
