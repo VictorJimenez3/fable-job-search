@@ -1,3 +1,4 @@
+import datetime as dt
 import json
 import os
 from pathlib import Path
@@ -560,6 +561,147 @@ def test_run_manager_snapshots_job_and_assigns_named_pdf(tmp_path):
     assert status["pdf_filename"] == "acme_labs_resume_ai.pdf"
     assert status["queue_id"] == "queue-123"
     assert json.loads((run_dir / "job.json").read_text())["company"] == "Acme Labs"
+
+
+def test_resume_library_preserves_queue_status_and_exposes_staleness(tmp_path):
+    run_id = "0123456789ab"
+    run_dir = tmp_path / "CV" / ".resume_studio" / "runs" / run_id
+    run_dir.mkdir(parents=True)
+    old = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=1)).isoformat()
+    rs.write_json(run_dir / "job.json", {"id": "job-1", "company": "Acme Labs", "title": "ML Engineer"})
+    rs.write_json(run_dir / "status.json", {
+        "run_id": run_id,
+        "mode": "generation",
+        "status": "queued",
+        "step": "queued",
+        "message": "Queued",
+        "created_at": old,
+        "updated_at": old,
+    })
+    entry = rs.resume_library(tmp_path)[0]
+    assert entry["status"] == "queued"
+    assert entry["status"] != "interrupted"
+    assert entry["stale"] is True
+    assert "recoverable" in entry["stale_reason"]
+
+
+def test_run_manager_recovers_queued_and_running_snapshots(tmp_path):
+    class RecordingExecutor:
+        def __init__(self):
+            self.calls = []
+
+        def submit(self, *args, **kwargs):
+            self.calls.append(args)
+            return None
+
+        def shutdown(self, *args, **kwargs):
+            return None
+
+    runs = tmp_path / "CV" / ".resume_studio" / "runs"
+    for run_id, status in (("0123456789ab", "queued"), ("abcdef012345", "running")):
+        run_dir = runs / run_id
+        run_dir.mkdir(parents=True)
+        rs.write_json(run_dir / "job.json", {
+            "id": "job-" + run_id,
+            "company": "Acme Labs",
+            "title": "ML Engineer",
+        })
+        rs.write_json(run_dir / "status.json", {
+            "run_id": run_id, "mode": "generation", "status": status,
+            "step": "drafting", "message": "Working",
+        })
+    complete_dir = runs / "fedcba543210"
+    complete_dir.mkdir(parents=True)
+    rs.write_json(complete_dir / "job.json", {"id": "job-done", "company": "Done", "title": "Engineer"})
+    rs.write_json(complete_dir / "status.json", {"run_id": complete_dir.name, "mode": "generation", "status": "awaiting_review"})
+
+    manager = rs.RunManager(tmp_path, max_workers=1)
+    manager.executor.shutdown(wait=False)
+    recorder = RecordingExecutor()
+    manager.executor = recorder
+    summary = manager.recover_pending()
+
+    assert summary["recovered"] == 2
+    assert summary["reset_running"] == 1
+    assert len(recorder.calls) == 2
+    recovered = json.loads((runs / "abcdef012345" / "status.json").read_text())
+    assert recovered["status"] == "queued"
+    assert recovered["recovered_from_status"] == "running"
+    assert recovered["recovery_reason"] == "engine_restart"
+    assert json.loads((complete_dir / "status.json").read_text())["status"] == "awaiting_review"
+    manager.shutdown(wait=False)
+
+
+def test_run_manager_repairs_shutdown_failure_on_next_start(tmp_path):
+    class RecordingExecutor:
+        def __init__(self):
+            self.calls = []
+
+        def submit(self, *args, **kwargs):
+            self.calls.append(args)
+            return None
+
+        def shutdown(self, *args, **kwargs):
+            return None
+
+    run_id = "0123456789ab"
+    run_dir = tmp_path / "CV" / ".resume_studio" / "runs" / run_id
+    run_dir.mkdir(parents=True)
+    rs.write_json(run_dir / "job.json", {"id": "job-1", "company": "Acme", "title": "Engineer"})
+    rs.write_json(run_dir / "status.json", {
+        "run_id": run_id, "mode": "generation", "status": "failed", "step": "error",
+        "message": "cannot schedule new futures after interpreter shutdown",
+    })
+    manager = rs.RunManager(tmp_path, max_workers=1)
+    manager.executor.shutdown(wait=False)
+    recorder = RecordingExecutor()
+    manager.executor = recorder
+    summary = manager.recover_pending()
+    assert summary["repaired_shutdown_failures"] == 1
+    assert summary["recovered"] == 1
+    saved = json.loads((run_dir / "status.json").read_text())
+    assert saved["status"] == "queued"
+    assert saved["recovered_from_status"] == "failed"
+    assert saved["recovery_reason"] == "interpreter_shutdown_repair"
+    manager.shutdown(wait=False)
+
+
+def test_run_manager_marks_submitted_work_recoverable_during_shutdown(tmp_path):
+    class NoopExecutor:
+        def shutdown(self, *args, **kwargs):
+            return None
+
+    run_id = "0123456789ab"
+    run_dir = tmp_path / "CV" / ".resume_studio" / "runs" / run_id
+    run_dir.mkdir(parents=True)
+    rs.write_json(run_dir / "status.json", {
+        "run_id": run_id, "mode": "generation", "status": "running",
+        "step": "drafting", "started_at": "old",
+    })
+    manager = rs.RunManager(tmp_path, max_workers=1)
+    manager.executor.shutdown(wait=False)
+    manager.executor = NoopExecutor()
+    manager._submitted.add(run_id)
+    manager.shutdown(wait=False)
+    saved = json.loads((run_dir / "status.json").read_text())
+    assert saved["status"] == "queued"
+    assert saved["shutdown_requeue"] is True
+    assert saved["recovery_reason"] == "engine_shutdown"
+
+
+def test_run_manager_bounds_workers_and_rejects_stale_runtime(monkeypatch, tmp_path):
+    assert rs.configured_run_workers(0) == 1
+    assert rs.configured_run_workers(99) == rs.MAX_RUN_WORKERS
+    assert rs.configured_run_workers("not-a-number") == rs.DEFAULT_RUN_WORKERS
+    assert rs.configured_run_workers(3) == 3
+
+    monkeypatch.setattr(rs, "_sha256_file", lambda path: "changed-on-disk")
+    manager = rs.RunManager(tmp_path, max_workers=1)
+    with pytest.raises(rs.ResumeStudioRuntimeStale, match="source changed"):
+        manager.start({"id": "job-1", "company": "Acme", "title": "Engineer"}, "generation")
+    assert manager.health()["workers"] == 1
+    assert manager.health()["shutdown"] is False
+    manager.shutdown(wait=False)
 
 
 def test_run_manager_exposes_owner_checkpoint_instead_of_marking_draft_complete(monkeypatch, tmp_path):
@@ -1560,6 +1702,87 @@ def test_canonical_control_plan_is_verbatim_source_fallback():
     plan = rs.canonical_control_plan(catalog)
     assert plan["experiences"][0]["bullets"][0]["text"] == catalog["entries"]["experience:item0"]["bullets"][0]["text"]
     assert plan["revision_notes"]
+
+
+def test_role_control_falls_back_to_immutable_when_reference_is_not_approved(tmp_path, monkeypatch):
+    cv = tmp_path / "CV"
+    immutable = cv / "immutable"
+    immutable.mkdir(parents=True)
+    (immutable / "VictorJimenezResume.tex").write_text("canonical")
+    (immutable / "VictorJimenezResume.pdf").write_bytes(b"canonical")
+    monkeypatch.setenv("RADAR_ROOT", str(tmp_path))
+    monkeypatch.setenv("CV_ROOT", str(cv))
+
+    control = rs.resolve_comparison_control(tmp_path, {
+        "id": "control-old", "source": "run", "entry_id": "abc123def456",
+        "role_family": "general_swe_cloud", "label": "Old control",
+    })
+
+    assert control["id"] == rs.IMMUTABLE_COMPARISON_CONTROL_ID
+    assert control["resolution"] == "fallback"
+    assert "not owner-approved" in control["fallback_reason"]
+
+
+def test_approved_role_control_resolves_only_a_tailored_winner(tmp_path, monkeypatch):
+    cv = tmp_path / "CV"
+    immutable = cv / "immutable"
+    immutable.mkdir(parents=True)
+    (immutable / "VictorJimenezResume.tex").write_text("canonical")
+    (immutable / "VictorJimenezResume.pdf").write_bytes(b"canonical")
+    run_dir = cv / ".resume_studio" / "runs" / "abc123def456"
+    run_dir.mkdir(parents=True)
+    (run_dir / "status.json").write_text(json.dumps({
+        "approval_state": "approved", "pdf_filename": "approved_resume_ai.pdf",
+    }))
+    (run_dir / "report.json").write_text(json.dumps({
+        "approval_state": "approved", "winner_version": "tailored",
+    }))
+    (run_dir / "resume.tex").write_text("approved role control")
+    (run_dir / "approved_resume_ai.pdf").write_bytes(b"approved")
+    monkeypatch.setenv("RADAR_ROOT", str(tmp_path))
+    monkeypatch.setenv("CV_ROOT", str(cv))
+
+    control = rs.resolve_comparison_control(tmp_path, {
+        "id": "control-good", "source": "run", "entry_id": "abc123def456",
+        "role_family": "general_swe_cloud", "label": "General SWE / Cloud",
+    })
+
+    assert control["available"] is True
+    assert control["reference_only"] is True
+    assert control["_baseline_tex"] == "approved role control"
+
+
+def test_role_control_diff_shows_supported_term_losses_and_gains():
+    result = rs.comparison_control_diff(
+        {
+            "id": "control-good", "label": "General SWE / Cloud",
+            "role_family": "general_swe_cloud", "source": "run",
+            "entry_id": "abc123def456", "available": True,
+            "approved": True, "reference_only": True,
+            "_baseline_tex": "Python SQL REST APIs",
+        },
+        {"terms": [
+            {"term": "Python", "supported": True},
+            {"term": "SQL", "supported": True},
+            {"term": "Git", "supported": True},
+        ]},
+        "Python Git",
+    )
+
+    assert result["lost_terms"] == ["SQL"]
+    assert result["gained_terms"] == ["Git"]
+    assert result["scope"] == "secondary_reference"
+
+
+def test_comparison_control_summary_does_not_expose_local_artifact_paths():
+    summary = rs.comparison_control_summary({
+        "id": "control-good", "source": "run", "entry_id": "abc123def456",
+        "artifact": "CV/.resume_studio/runs/abc123def456/approved_resume_ai.pdf",
+        "available": True, "approved": True, "reference_only": True,
+    })
+
+    assert summary["artifact"] == "approved tailored PDF"
+    assert "CV/" not in json.dumps(summary)
 
 
 def test_control_recovery_restores_omitted_canonical_proof_before_jury(tmp_path):

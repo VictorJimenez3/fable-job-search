@@ -488,6 +488,54 @@ Mac (`brew install gh && gh auth login`). Logs: `~/.jobradar/logs/enrich.log`.
 The companion releases the model from memory after every request; confirm with
 `ollama ps` (it should show no loaded model between enrichment cycles).
 
+## Owner-only Application Autopilot
+
+The owner-only **Autopilot** tab and the companion Chrome extension turn the
+Radar's official apply link into a supervised, reusable form workflow. The
+extension covers Workday, Greenhouse, Lever, Ashby, and SmartRecruiters first,
+with a generic DOM fallback for other ATS pages. It extracts visible form
+structure only, asks the local deterministic agent for decisions, fills
+approved repetitive fields, and advances ordinary multi-page **Next** steps.
+
+It pauses instead of guessing when a required answer is missing, an essay or
+cover-letter question is new, a sensitive field is unknown, a resume file must
+be selected, an attestation appears, or the page no longer matches the
+approved fingerprint. Approved sensitive answers may be reused, but every
+proposed value is shown again in the final review card. **Submit is never
+clicked until Victor confirms that card.** A confirmation from the phone is
+single-use, expires after 15 minutes, and is rejected if the Mac is no longer
+on the same page.
+
+The workflow supports both one-role launch from a Jobs card and sequential
+batch queueing from the phone. Blocked roles park in the private queue while
+other roles continue. Answers and field mappings are durable context: the
+owner can add them in the Autopilot tab, from the extension popup, or while
+answering a blocker. Local JSON remains the machine source of truth under
+`CV/.resume_studio/application_agent.json`; the owner-only Drive integration
+mirrors it as `application-context.json` plus readable `application-context.md`,
+along with `application-queue.json` and a sanitized `application-issues.md`.
+The app UI is authoritative; the Markdown file is a readable/export mirror,
+not an arbitrary-edit interface.
+
+To connect the Mac once:
+
+1. Sign in as `VictorJimenez3`, open **Autopilot**, choose **pair Mac**, and
+   copy the one-time token.
+2. In Chrome, load the unpacked `browser-extension/` directory at
+   `chrome://extensions` with Developer mode enabled, open the extension
+   popup, and paste the token.
+3. Start the existing private service with
+   `.venv/bin/python scripts/resume_studio.py` or install
+   `scripts/resume-studio-service/install.sh`. Click **Apply with Agent** from
+   a saved role, or queue a batch from Autopilot.
+
+The pairing token grants only the private application-agent Drive files and
+can be replaced/revoked. Raw CV files, provider sessions, browser cookies,
+DOM dumps, and passwords never sync to Drive. The issue ledger records page,
+provider, field, and fingerprint observations without pretending that the
+system repaired itself; ask Codex to repair a repeated issue so the fix can
+include a fixture and adapter test.
+
 ## Owner-only Resume Studio
 
 Resume Studio is the private Victor-first application harness. It reads the
@@ -560,6 +608,21 @@ login, install the owner Mac service once:
 ```bash
 bash scripts/resume-studio-service/install.sh
 ```
+
+The service defaults to two concurrent full tailoring runs and persists each
+job snapshot under `CV/.resume_studio/runs/`. If the Mac service is restarted,
+queued work and runs abandoned mid-step are requeued automatically; the bank
+keeps the truthful `queued`/`running` state and exposes a separate attention
+warning when a status has gone quiet for 30 minutes. The health endpoint also
+reports the loaded source fingerprint and asks for a restart when the checkout
+changed, preventing an old daemon from accepting new work with an outdated
+evaluator contract. For a controlled batch, set `RESUME_STUDIO_WORKERS=1` to
+`4` when installing the service; two remains the safe default for provider
+usage and Mac resources.
+The service shutdown path also terminates its tracked Codex process groups, so
+restarting the companion does not leave orphaned provider calls consuming the
+subscription in the background. Its launchd job has a 30-second graceful exit
+window, and reinstall uses a non-forcing start so that cleanup can finish.
 
 Open `http://127.0.0.1:4317/`. **Unchained generation** is the deepest mode: it
 maps every material posting requirement to the complete authorized evidence
@@ -638,6 +701,18 @@ The card preview is the objective winner's preview when a rankable winner
 exists, even if a newer draft was saved afterward; the expanded list still
 shows the latest draft and every other version so the visual and the label
 cannot disagree.
+
+The bank also has optional **Permanent role controls** for reusable comparison
+baselines: **General SWE / Cloud**, **Healthcare / Scientific AI**, **ML /
+Research**, and **Data / Analytics**. A control is created only when Victor has
+inspected the PDF, approved the run, and explicitly promotes a tailored winner
+from the cloud bank. Promoting a new control for a family revokes the previous
+active control while retaining its history. These controls are secondary
+references that show supported term and signal-family gains/losses; the locked
+immutable resume remains the universal audit floor and automatic fallback. A
+missing, stale, revoked, or non-approved reference therefore cannot block a
+run or silently become the base. Historical Google/Merck drafts remain
+provisional controls until this same approval and promotion step.
 Each saved version also exposes an **ATS keyword map**. Green terms occur in
 the rendered resume, yellow terms are supported by the private evidence bank
 but omitted from that version, and red terms are unsupported. When PDF geometry

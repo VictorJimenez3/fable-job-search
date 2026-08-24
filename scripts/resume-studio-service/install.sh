@@ -12,6 +12,15 @@ LOG_DIR="$PRIVATE_ROOT/logs"
 PLIST_DIR="$HOME/Library/LaunchAgents"
 PLIST_PATH="$PLIST_DIR/com.jobradar.resume-studio.plist"
 SERVICE_DOMAIN="gui/$(id -u)"
+WORKERS="${RESUME_STUDIO_WORKERS:-2}"
+
+case "$WORKERS" in
+  1|2|3|4) ;;
+  *)
+    echo "RESUME_STUDIO_WORKERS must be an integer from 1 to 4" >&2
+    exit 1
+    ;;
+esac
 
 if [ ! -x "$PYTHON_BIN" ]; then
   echo "Resume Studio requires the repository virtual environment: $PYTHON_BIN" >&2
@@ -38,10 +47,14 @@ cat > "$PLIST_PATH" <<PLIST
   </array>
   <key>WorkingDirectory</key><string>$REPO_DIR</string>
   <key>EnvironmentVariables</key>
-  <dict><key>PATH</key><string>$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string></dict>
+  <dict>
+    <key>PATH</key><string>$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+    <key>RESUME_STUDIO_WORKERS</key><string>$WORKERS</string>
+  </dict>
   <key>RunAtLoad</key><true/>
   <key>KeepAlive</key><true/>
   <key>ThrottleInterval</key><integer>10</integer>
+  <key>ExitTimeOut</key><integer>30</integer>
   <key>ProcessType</key><string>Interactive</string>
   <key>StandardOutPath</key><string>$LOG_DIR/service.log</string>
   <key>StandardErrorPath</key><string>$LOG_DIR/service.log</string>
@@ -56,20 +69,25 @@ launchctl bootout "$SERVICE_LABEL" 2>/dev/null || true
 # reinstalling the companion does not leave Resume Studio offline on a transient
 # "Input/output error" (exit 5).
 bootstrapped=false
-for attempt in 1 2 3; do
+for attempt in 1 2 3 4 5; do
   if launchctl bootstrap "$SERVICE_DOMAIN" "$PLIST_PATH" 2>/dev/null; then
     bootstrapped=true
     break
   fi
   launchctl bootout "$SERVICE_LABEL" 2>/dev/null || true
-  sleep 1
+  # launchd removes the old job asynchronously; a one-second retry loop was
+  # still racy on a busy login session. Give teardown a little more room.
+  sleep 2
 done
 if [ "$bootstrapped" != true ]; then
   echo "Could not bootstrap Resume Studio with launchd: $PLIST_PATH" >&2
   exit 1
 fi
 
-launchctl kickstart -k "$SERVICE_LABEL"
+# RunAtLoad starts the freshly bootstrapped job. A non-forcing kickstart keeps
+# this reinstall path from turning a graceful shutdown into SIGKILL while
+# provider process groups are being reaped.
+launchctl kickstart "$SERVICE_LABEL"
 launchctl print "$SERVICE_LABEL" >/dev/null
 
 # launchctl can report an active job a moment before Python has bound the

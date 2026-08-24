@@ -45,8 +45,10 @@ migration for compatibility.
   sponsor context, score, salary, culture, and age. DOL history is company-level
   context only; the posting's own visa wording remains primary and no-history
   does not mean a company will not sponsor. The
-  **apply ↗** button opens the employer posting; when you are signed in it also
-  saves a new role to **To apply** without pretending you submitted it.
+  **apply ↗** button starts the owner Application Agent when the Chrome
+  extension is paired; otherwise it opens the employer posting normally. When
+  you are signed in it also saves a new role to **To apply** without claiming
+  that it was submitted.
   You can also click a Jobs row once to save it (green), then click that saved
   row again to exclude it (red). Turn on **show excluded** to restore a red row;
   this is a reversible view preference, not a score or notification change.
@@ -172,6 +174,38 @@ uses its own jobs, scoring profile, pipeline state, and labeled GitHub issues.
 It shares this repository's Notion integration, so tracked ChemE roles enter
 the same Applications database instead of creating a second Notion system.
 
+## Private Application Autopilot
+
+The owner-only **Autopilot** tab is the phone/control surface for the paired
+Mac Chrome extension. It supports one-role launch from a Jobs card and a
+sequential batch queue. The first adapters are Workday, Greenhouse, Lever,
+Ashby, and SmartRecruiters; other pages use a conservative generic fallback.
+
+Set it up once:
+
+1. Sign in as `@VictorJimenez3`, open **Autopilot**, and choose **pair Mac**.
+2. Copy the one-time token into the unpacked `browser-extension/` popup after
+   enabling Developer mode at `chrome://extensions`.
+3. Keep the private Resume Studio service running at
+   `http://127.0.0.1:4317/` (the launchd installer can keep it alive).
+
+The extension sends visible field labels, control types, options, and a
+page-shape fingerprint to the loopback agent. It never sends raw page HTML,
+cookies, passwords, or the CV to Drive. The local JSON bank is mirrored to the
+owner's app-created Drive folder as `application-context.json` and readable
+`application-context.md`; the queue and sanitized issue ledger have matching
+JSON/Markdown files. Use the Radar UI to edit answers. Markdown is a readable
+mirror, not the authoritative editor.
+
+Approved answers—including approved sensitive answers—may be reused, but the
+full proposed values appear on the final review card. The agent stops for a
+new essay, unknown required/sensitive field, file upload, attestation, selector
+failure, or changed page. Phone confirmation is a single-use, 15-minute
+approval tied to the review hash and page fingerprint. A blocked role stays in
+the queue while later roles can continue. Repeated adapter problems go into
+the private issue ledger; ask Codex to repair them so each fix includes a
+fixture and regression test.
+
 ## Private Resume Studio
 
 Resume Studio has one user-facing cloud control plane. In production, sign in
@@ -222,6 +256,17 @@ for that posting and marks the current winner. Open **show rubric sources** to
 see the target-fit, evidence-safety, layout, and portfolio inputs. It is a
 private comparison aid, not an automatic application choice or a prediction of
 what a hiring manager will do; missing independent review is shown as a limit.
+
+The bank's **Permanent role controls** section is deliberately opt-in. After
+you inspect and approve a tailored PDF, sync that entry to the cloud bank and
+promote it for the matching family—General SWE / Cloud, Healthcare / Scientific
+AI, ML / Research, or Data / Analytics. The next posting in that family can
+show the approved version as a reusable comparison reference. It does not
+replace the locked canonical resume, change evidence authority, or bypass the
+tailoring audit. If a control is missing, revoked, stale, or not actually
+approved, Studio uses the immutable default automatically. Promoting another
+control for the same family retires the old one but keeps its history; **revoke
+control** returns that family to the immutable default.
 
 Open **Context & Q&A** to inspect what the tailoring engine can actually use.
 The right side lists authorized facts and their exact source. The left side
@@ -381,8 +426,11 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
    **Not started**. Victor can expand **Tracker options** to enable a Google
    Sheets mirror; it is never enabled merely because Google is connected.
    (The action also teaches the ranker you like companies like this.)
-4. When you actually apply, open the entry in Notion and **change its status
-   yourself** (Applied, etc.). The radar never guesses whether you applied.
+4. When you use Autopilot, the extension fills approved repetitive fields and
+   pauses on missing answers, essays, unknown sensitive fields, attestations,
+   or a final review. A Submit click requires your full-card confirmation. A
+   successful confirmed click is reported back to the private queue; email and
+   tracker reconciliation remain the final lifecycle safety net.
    For a live posting you find outside the radar, open the platform's
    **Pipeline** tab and use **Add a role you found yourself**. It creates a
    saved To apply item in the in-house tracker and Notion, clearly marked as a

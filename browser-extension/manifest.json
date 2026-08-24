@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Job Radar Application Agent",
+  "description": "Owner-controlled autofill for Job Radar applications.",
+  "version": "0.1.0",
+  "permissions": ["alarms", "storage", "tabs"],
+  "host_permissions": [
+    "http://127.0.0.1:4317/*",
+    "http://localhost:4317/*",
+    "https://job-radar-newgrad.vercel.app/*",
+    "https://*.vercel.app/*",
+    "https://*.greenhouse.io/*",
+    "https://*.greenhouse.com/*",
+    "https://*.lever.co/*",
+    "https://*.ashbyhq.com/*",
+    "https://*.smartrecruiters.com/*",
+    "https://*.myworkdayjobs.com/*",
+    "https://*.myworkdaysite.com/*",
+    "<all_urls>"
+  ],
+  "action": {"default_title": "Job Radar Agent", "default_popup": "popup.html"},
+  "background": {"service_worker": "background.js", "type": "module"},
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["ats-adapters.js", "content.js"],
+    "run_at": "document_idle"
+  ]
+}

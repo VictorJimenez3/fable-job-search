@@ -25,10 +25,14 @@ def test_resume_bank_is_owner_only_private_drive_storage():
     assert "function auditSummary" in api
     assert "tailoring_audit" in api
     assert "queue_id: clean(entry.queue_id" in api
+    assert "resume-studio-control-profiles.json" in api
+    assert "control_promote" in api and "control_revoke" in api
+    assert "only an owner-approved tailored winner" in api
 
 
 def test_resume_bank_frontend_keeps_local_engine_as_sync_source():
     html = (ROOT / "webapp" / "index.html").read_text()
+    studio = (ROOT / "scripts" / "resume_studio.py").read_text()
 
     assert "cloudLibrary" in html
     assert "sync local bank" in html
@@ -43,6 +47,8 @@ def test_resume_bank_frontend_keeps_local_engine_as_sync_source():
     assert "queue_id:item.queue_id" in html
     assert "function tailoringAuditHTML" in html
     assert "This compares the tailored resume with the original" in html
+    assert "approveCloudRun" in html
+    assert "action==='approve'" in studio
     assert "function studioRequirementMapHTML" in html
     assert "Posting → evidence map" in html
     assert "keywordAuditFromReport" in html
@@ -75,3 +81,15 @@ def test_resume_bank_exposes_visual_keyword_audit_and_context_followup():
     assert "not in this place" in html
     assert "entry.keyword_audit" in api
     assert "keyword_audit:entry.keyword_audit||cloud.keyword_audit" in html
+
+
+def test_resume_bank_exposes_opt_in_role_family_controls_and_safe_fallback():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    studio = (ROOT / "scripts" / "resume_studio.py").read_text()
+    assert "Permanent role controls" in html
+    assert "queueControlReference" in html
+    assert "Immutable default" in html
+    assert "secondary reference" in html
+    assert "resolve_comparison_control" in studio
+    assert "The selected role-family control reference was invalid" in studio
+    assert "comparison_control_diff" in studio

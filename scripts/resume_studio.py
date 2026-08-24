@@ -70,7 +70,104 @@ from radar.evidence_review import (BLOCKING_STATUSES, REVIEW_STATUSES,
                                    dismiss_question_hint as dismiss_context_hint,
                                    load_reviews, review_path, review_summary,
                                    upsert_questions)
+from radar.application_agent import (
+    add_issue as add_application_issue,
+    apply_confirmation as apply_application_confirmation,
+    create_session as create_application_session,
+    get_session as get_application_session,
+    list_issues as list_application_issues,
+    plan_form as plan_application_form,
+    prepare_review as prepare_application_review,
+    public_context as application_context,
+    public_sessions as application_sessions,
+    record_event as record_application_event,
+    save_answer as save_application_answer,
+    save_mapping as save_application_mapping,
+    store_path as application_store_path,
+    verify_submission_page as verify_application_submission_page,
+)
 from scripts import resume_evaluator
+
+
+ENGINE_SOURCE_PATH = Path(__file__).resolve()
+ENGINE_EVALUATOR_SOURCE_PATH = Path(resume_evaluator.__file__).resolve()
+ENGINE_RUNTIME_VERSION = "resume-studio-runtime-v3"
+
+
+def _sha256_file(path: Path) -> str:
+    """Return a stable source identity without shelling out to git.
+
+    Resume Studio is commonly started by launchd from a dirty checkout.  A git
+    commit is therefore not a sufficient runtime identity: the service can
+    keep an old module loaded after the file on disk has changed.  Hashing the
+    loaded script at import and comparing it with the current file gives the
+    service an honest, local-only stale-process check.
+    """
+    digest = hashlib.sha256()
+    try:
+        with path.open("rb") as handle:
+            for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+                digest.update(chunk)
+    except OSError:
+        return "unavailable"
+    return digest.hexdigest()
+
+
+ENGINE_LOADED_SOURCE_FINGERPRINT = _sha256_file(ENGINE_SOURCE_PATH)
+ENGINE_LOADED_EVALUATOR_SOURCE_FINGERPRINT = _sha256_file(ENGINE_EVALUATOR_SOURCE_PATH)
+
+
+def engine_runtime_identity(workers: Optional[int] = None) -> Dict[str, Any]:
+    """Describe the code and evaluator contract currently serving requests."""
+    disk_fingerprint = _sha256_file(ENGINE_SOURCE_PATH)
+    disk_evaluator_fingerprint = _sha256_file(ENGINE_EVALUATOR_SOURCE_PATH)
+    evaluator_stale = disk_evaluator_fingerprint != ENGINE_LOADED_EVALUATOR_SOURCE_FINGERPRINT
+    stale = disk_fingerprint != ENGINE_LOADED_SOURCE_FINGERPRINT or evaluator_stale
+    value: Dict[str, Any] = {
+        "version": ENGINE_RUNTIME_VERSION,
+        "pid": os.getpid(),
+        "loaded_source_fingerprint": ENGINE_LOADED_SOURCE_FINGERPRINT,
+        "disk_source_fingerprint": disk_fingerprint,
+        "loaded_evaluator_source_fingerprint": ENGINE_LOADED_EVALUATOR_SOURCE_FINGERPRINT,
+        "disk_evaluator_source_fingerprint": disk_evaluator_fingerprint,
+        "evaluator_source_stale": evaluator_stale,
+        "restart_required": stale,
+        "evaluator_contract": resume_evaluator.contract_fingerprint(),
+    }
+    if workers is not None:
+        value["workers"] = int(workers)
+    return value
+
+
+DEFAULT_RUN_WORKERS = 2
+MAX_RUN_WORKERS = 4
+RUN_STALE_AFTER_SECONDS = 30 * 60
+
+
+def configured_run_workers(value: Any = None) -> int:
+    """Return a bounded worker count for local tailoring runs.
+
+    Two full runs is the safe default for a Mac-bound Codex queue.  The
+    environment knob is intentionally capped so a typo or an overenthusiastic
+    batch cannot silently create an unbounded provider storm.
+    """
+    raw = os.environ.get("RESUME_STUDIO_WORKERS") if value is None else value
+    try:
+        parsed = int(str(raw).strip()) if raw is not None and str(raw).strip() else DEFAULT_RUN_WORKERS
+    except (TypeError, ValueError):
+        parsed = DEFAULT_RUN_WORKERS
+    return max(1, min(MAX_RUN_WORKERS, parsed))
+
+
+def timestamp_age_seconds(value: Any) -> Optional[float]:
+    """Return the age of an ISO timestamp, or ``None`` when it is invalid."""
+    stamp = str(value or "").strip()
+    if not stamp:
+        return None
+    try:
+        return max(0.0, time.time() - dt.datetime.fromisoformat(stamp.replace("Z", "+00:00")).timestamp())
+    except (ValueError, TypeError, OverflowError):
+        return None
 
 
 # The deterministic gates and the sealed Luna evaluator have separate frozen
@@ -80,6 +177,8 @@ RUBRIC_VERSION = "resume-deterministic-gates-v1"
 OBJECTIVE_RESUME_RUBRIC_VERSION = "objective-resume-v1"
 JOB_INTELLIGENCE_VERSION = "job-intelligence-v2"
 TAILORING_AUDIT_VERSION = "tailoring-audit-v2"
+COMPARISON_CONTROL_VERSION = "comparison-control-v1"
+IMMUTABLE_COMPARISON_CONTROL_ID = "immutable-default"
 CODEX_LUNA_MODEL = "gpt-5.6-luna"
 CODEX_REVIEW_MODE = "codex_luna_multi_role_jury"
 SEALED_EVALUATOR_CONTRACT = resume_evaluator.EVALUATOR_CONTRACT_VERSION
@@ -563,6 +662,28 @@ MIN_RIGHT_SLACK_PT = 12.0
 # compactor takes over.  A second frontier call was usually paraphrase churn
 # after the first pass had already made the line safe.
 MAX_LINE_EDIT_PASSES = 1
+
+_ACTIVE_PROVIDER_PROCESSES: Dict[int, subprocess.Popen] = {}
+_ACTIVE_PROVIDER_PROCESSES_LOCK = threading.Lock()
+
+
+def register_provider_process(proc: subprocess.Popen) -> None:
+    """Track provider launchers so a launchd stop can reap the full tree."""
+    with _ACTIVE_PROVIDER_PROCESSES_LOCK:
+        _ACTIVE_PROVIDER_PROCESSES[proc.pid] = proc
+
+
+def unregister_provider_process(proc: subprocess.Popen) -> None:
+    with _ACTIVE_PROVIDER_PROCESSES_LOCK:
+        _ACTIVE_PROVIDER_PROCESSES.pop(proc.pid, None)
+
+
+def stop_all_provider_processes() -> None:
+    """Terminate every provider process owned by this engine instance."""
+    with _ACTIVE_PROVIDER_PROCESSES_LOCK:
+        processes = list(_ACTIVE_PROVIDER_PROCESSES.values())
+    for proc in processes:
+        stop_provider_process(proc)
 MAX_SPACE_EXPANSION_CANDIDATES = 4
 # Keep the two-bullet replacement path available, but bound its compiled
 # frontier.  The old six-item frontier tried 6 + C(6, 2) = 21 removal sets
@@ -1975,6 +2096,192 @@ def _portfolio_signal_families(text: Any) -> List[str]:
     ]
 
 
+def comparison_control_summary(control: Any) -> Dict[str, Any]:
+    """Return a cloud-safe receipt for the control selected for a run.
+
+    A role-family control is a reference artifact, not a new source of truth.
+    Keep the artifact text and local paths out of reports that may be synced to
+    the cloud; the receipt is enough to explain which approved run was used and
+    whether the engine fell back to the immutable resume.
+    """
+    value = control if isinstance(control, dict) else {}
+    source = str(value.get("source") or "immutable")[:40]
+    control_id = str(value.get("id") or IMMUTABLE_COMPARISON_CONTROL_ID)[:120]
+    if control_id == IMMUTABLE_COMPARISON_CONTROL_ID or source == "immutable":
+        artifact_label = "immutable canonical resume"
+    elif source == "run":
+        artifact_label = "approved tailored PDF"
+    else:
+        artifact_label = "private resume artifact"
+    return {
+        "version": COMPARISON_CONTROL_VERSION,
+        "id": str(value.get("id") or IMMUTABLE_COMPARISON_CONTROL_ID)[:120],
+        "label": str(value.get("label") or "Immutable default")[:180],
+        "role_family": str(value.get("role_family") or "all")[:80],
+        "source": source,
+        "entry_id": str(value.get("entry_id") or "")[:80],
+        "run_id": str(value.get("run_id") or value.get("entry_id") or "")[:80],
+        "artifact": artifact_label,
+        "available": bool(value.get("available")),
+        "approved": bool(value.get("approved")),
+        "selected": bool(value.get("selected", True)),
+        "resolution": str(value.get("resolution") or "selected")[:40],
+        "fallback_reason": str(value.get("fallback_reason") or "")[:280],
+        "reference_only": bool(value.get("reference_only", False)),
+    }
+
+
+def immutable_comparison_control() -> Dict[str, Any]:
+    """Describe the locked resume as the universal, always-available floor."""
+    return {
+        "version": COMPARISON_CONTROL_VERSION,
+        "id": IMMUTABLE_COMPARISON_CONTROL_ID,
+        "label": "Immutable default",
+        "role_family": "all",
+        "source": "immutable",
+        "artifact": "immutable canonical resume",
+        "available": True,
+        "approved": True,
+        "selected": True,
+        "resolution": "fallback",
+        "reference_only": False,
+        "_baseline_tex": "",
+    }
+
+
+def resolve_comparison_control(
+    root: Optional[Path] = None, requested: Any = None,
+) -> Dict[str, Any]:
+    """Resolve an owner-approved role control to a local private run artifact.
+
+    The cloud queue carries only a sanitized run reference. If the reference
+    is missing, stale, not approved, or no longer has a source artifact, the
+    immutable resume wins automatically. This makes a cloud/UI mismatch a
+    safe fallback rather than a reason to fail or silently use an old draft.
+    """
+    fallback = immutable_comparison_control()
+    value = requested if isinstance(requested, dict) else {}
+    requested_id = str(value.get("id") or "").strip()
+    if not requested_id or requested_id == IMMUTABLE_COMPARISON_CONTROL_ID:
+        return fallback
+    source = str(value.get("source") or "run").strip().lower()
+    entry_id = str(value.get("entry_id") or value.get("run_id") or "").strip()
+    if source != "run" or not re.fullmatch(r"[a-f0-9]{12}", entry_id):
+        fallback["resolution"] = "fallback"
+        fallback["fallback_reason"] = "The selected role-family control reference was invalid."
+        fallback["requested_id"] = requested_id[:120]
+        return fallback
+    directory = studio_root(root or repo_root()) / "runs" / entry_id
+    status = read_json(directory / "status.json", {}) or {}
+    report = read_json(directory / "report.json", {}) or {}
+    approved = str(
+        status.get("approval_state") or report.get("approval_state") or ""
+    ).lower() == "approved"
+    winner = str(
+        report.get("winner_version")
+        or (report.get("winner_artifact") or {}).get("winner_version")
+        or ""
+    ).lower()
+    tex_path = directory / "resume.tex"
+    pdf_path = run_pdf_path(directory)
+    if (
+        not directory.is_dir()
+        or not approved
+        or winner != "tailored"
+        or not tex_path.is_file()
+        or not pdf_path.is_file()
+    ):
+        reasons = []
+        if not directory.is_dir() or not tex_path.is_file() or not pdf_path.is_file():
+            reasons.append("the local control artifact is unavailable")
+        if not approved:
+            reasons.append("the source run is not owner-approved")
+        if winner != "tailored":
+            reasons.append("the source run did not publish a tailored winner")
+        fallback["fallback_reason"] = "; ".join(reasons)[:280]
+        fallback["requested_id"] = requested_id[:120]
+        fallback["requested_entry_id"] = entry_id
+        return fallback
+    try:
+        baseline_tex = tex_path.read_text(errors="replace")
+    except OSError:
+        baseline_tex = ""
+    if not baseline_tex.strip():
+        fallback["fallback_reason"] = "The selected role-family control had no readable source artifact."
+        fallback["requested_id"] = requested_id[:120]
+        fallback["requested_entry_id"] = entry_id
+        return fallback
+    return {
+        "version": COMPARISON_CONTROL_VERSION,
+        "id": requested_id[:120],
+        "label": str(value.get("label") or "Approved role-family control")[:180],
+        "role_family": str(value.get("role_family") or "all")[:80],
+        "source": "run",
+        "entry_id": entry_id,
+        "run_id": entry_id,
+        "artifact": "approved tailored PDF",
+        "available": True,
+        "approved": True,
+        "selected": True,
+        "resolution": "approved_role_control",
+        "reference_only": True,
+        "_baseline_tex": baseline_tex,
+    }
+
+
+def comparison_control_diff(
+    control: Any, keyword_strategy: Any, candidate_tex: str,
+) -> Dict[str, Any]:
+    """Compare the final candidate with the selected role-family reference.
+
+    This is deliberately secondary to the existing immutable-control audit.
+    It surfaces supported term and signal-family gains/losses so Victor can
+    see why a prior control influenced the decision without letting historical
+    wording override the current evidence graph or hard gates.
+    """
+    value = control if isinstance(control, dict) else immutable_comparison_control()
+    baseline_tex = str(value.get("_baseline_tex") or "")
+    if not baseline_tex and str(value.get("id") or "") == IMMUTABLE_COMPARISON_CONTROL_ID:
+        try:
+            baseline_tex = (cv_root(repo_root()) / CANONICAL_TEMPLATE).read_text(errors="replace")
+        except OSError:
+            baseline_tex = ""
+    keyword_strategy = keyword_strategy if isinstance(keyword_strategy, dict) else {}
+    baseline_text = _latex_plain(baseline_tex)
+    candidate_text = _latex_plain(candidate_tex)
+    terms = [
+        str(item.get("term") or "")
+        for item in keyword_strategy.get("terms") or []
+        if isinstance(item, dict) and item.get("supported") and str(item.get("term") or "")
+    ]
+    baseline_terms = sorted({term for term in terms if _keyword_present(term, baseline_text)})
+    candidate_terms = sorted({term for term in terms if _keyword_present(term, candidate_text)})
+    lost_terms = sorted(set(baseline_terms) - set(candidate_terms))
+    gained_terms = sorted(set(candidate_terms) - set(baseline_terms))
+    baseline_families = sorted(_portfolio_signal_families(baseline_text))
+    candidate_families = sorted(_portfolio_signal_families(candidate_text))
+    lost_families = sorted(set(baseline_families) - set(candidate_families))
+    return {
+        **comparison_control_summary(value),
+        "scope": "secondary_reference" if value.get("reference_only") else "immutable_primary",
+        "supported_term_count": len(terms),
+        "baseline_covered_count": len(baseline_terms),
+        "candidate_covered_count": len(candidate_terms),
+        "baseline_coverage_percent": round(100 * len(baseline_terms) / max(1, len(terms))),
+        "candidate_coverage_percent": round(100 * len(candidate_terms) / max(1, len(terms))),
+        "gained_terms": gained_terms[:30],
+        "lost_terms": lost_terms[:30],
+        "baseline_signal_families": baseline_families[:20],
+        "candidate_signal_families": candidate_families[:20],
+        "lost_signal_families": lost_families[:20],
+        "warning": (
+            "Candidate loses supported role terms or technical signal families present in the selected control; review the diff."
+            if lost_terms or lost_families else
+            "Candidate does not lose a supported term or signal family from the selected control."
+        ),
+    }
+
+
 def portfolio_diagnostics(
     plan: Dict[str, Any], catalog: Dict[str, Any],
 ) -> Dict[str, Any]:
@@ -2871,6 +3178,7 @@ def build_tailoring_audit(
     graph: Dict[str, Any], plan: Dict[str, Any], changes: Dict[str, Any],
     deterministic: Dict[str, Any], review: Dict[str, Any],
     base_tex: str, tailored_tex: str, run_id: str = "", queue_id: str = "",
+    comparison_control: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     """Return the comparative, hard-gated decision artifact for one run."""
     findings = build_change_findings(changes, deterministic, review)
@@ -3084,6 +3392,11 @@ def build_tailoring_audit(
         "job_intelligence_hash": str(intelligence.get("hash") or ""),
         "run_id": str(run_id or ""),
         "queue_id": str(queue_id or ""),
+        "comparison_control": comparison_control_diff(
+            comparison_control or immutable_comparison_control(),
+            context.get("target_keywords"),
+            tailored_tex,
+        ),
     }
     audit["hash"] = _stable_digest(audit)
     return audit
@@ -3307,6 +3620,16 @@ def tailoring_audit_summary(audit: Any) -> Dict[str, Any]:
             return "Codex Luna critic panel reported a review blocker; inspect the private local audit."
         return reason[:220]
 
+    control = audit.get("comparison_control") if isinstance(audit.get("comparison_control"), dict) else immutable_comparison_control()
+    control_summary = comparison_control_summary(control)
+    for key in (
+        "scope", "supported_term_count", "baseline_covered_count", "candidate_covered_count",
+        "baseline_coverage_percent", "candidate_coverage_percent", "gained_terms", "lost_terms",
+        "baseline_signal_families", "candidate_signal_families", "lost_signal_families", "warning",
+    ):
+        if key in control:
+            control_summary[key] = control.get(key)
+
     return {
         "version": str(audit.get("version") or TAILORING_AUDIT_VERSION),
         "available": True,
@@ -3333,6 +3656,7 @@ def tailoring_audit_summary(audit: Any) -> Dict[str, Any]:
             for item in audit.get("tradeoffs") or []
             if isinstance(item, dict) and str(item.get("reason") or "")
         ))[:4],
+        "comparison_control": control_summary,
         "hash": str(audit.get("hash") or ""),
     }
 
@@ -3611,14 +3935,14 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
         except OSError:
             created_at = ""
     display_status = str(status.get("status") or ("complete" if report or pdf.exists() else "unknown"))
-    if display_status in {"queued", "running"}:
-        stamp = str(status.get("updated_at") or status.get("created_at") or "")
-        try:
-            age = time.time() - dt.datetime.fromisoformat(stamp.replace("Z", "+00:00")).timestamp()
-        except (ValueError, TypeError, OverflowError):
-            age = 0
-        if age > 30 * 60:
-            display_status = "interrupted"
+    status_age_seconds = timestamp_age_seconds(
+        status.get("updated_at") or status.get("created_at")
+    )
+    stale = bool(
+        display_status in {"queued", "running"}
+        and status_age_seconds is not None
+        and status_age_seconds > RUN_STALE_AFTER_SECONDS
+    )
     objective = objective_resume_assessment(report, display_status)
     changes = report.get("content_changes") if isinstance(report.get("content_changes"), dict) else {}
     coverage = changes.get("keyword_coverage") if isinstance(changes.get("keyword_coverage"), dict) else {}
@@ -3672,7 +3996,7 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
         "overlay": {"available": bool(overlay.get("available") and overlay_boxes), "boxes": overlay_boxes},
     }
     artifacts = []
-    for name in (public_pdf_name, public_preview_name, "job.json", "job_context.json", "report.json", "content_plan.json", "candidate_plan.json", "layout_packing.json", "job_intelligence.json", "tailoring_audit.json", "resume.tex", "resume.txt", "workshop.json"):
+    for name in (public_pdf_name, public_preview_name, "job.json", "job_context.json", "report.json", "content_plan.json", "candidate_plan.json", "layout_packing.json", "job_intelligence.json", "tailoring_audit.json", "comparison_control.json", "resume.tex", "resume.txt", "workshop.json"):
         if (directory / name).is_file():
             artifacts.append(name)
     # Keep legacy physical artifacts discoverable while presenting an
@@ -3693,12 +4017,22 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
         "mode": mode,
         "created_at": created_at,
         "updated_at": str(status.get("updated_at") or created_at),
+        "status_age_seconds": round(status_age_seconds, 1) if status_age_seconds is not None else None,
+        "stale": stale,
+        "stale_reason": (
+            "No status update for more than %d minutes; the run is still recoverable and may be requeued."
+            % (RUN_STALE_AFTER_SECONDS // 60)
+            if stale else ""
+        ),
+        "engine_runtime": status.get("engine_runtime") if isinstance(status.get("engine_runtime"), dict) else {},
         "job": job_summary(job, resume_match),
         "pdf_filename": public_pdf_name,
         "preview_filename": public_preview_name if preview.is_file() else "",
         "has_pdf": pdf.is_file(),
         "has_posting_snapshot": bool(str(context.get("posting_text") or job.get("description") or "").strip()),
         "has_workshop": source == "run" and (directory / "content_plan.json").is_file(),
+        "approval_state": str(status.get("approval_state") or report.get("approval_state") or "awaiting_review")[:40],
+        "winner_version": str(report.get("winner_version") or (report.get("winner_artifact") or {}).get("winner_version") or "")[:24],
         "craft_score": review.get("craft_score"),
         "ready": review.get("ready"),
         "review_plan_applied": report.get("review_plan_applied"),
@@ -4496,6 +4830,7 @@ def run_provider(
     ]
     started = time.time()
     stdout_path.touch()
+    proc: Optional[subprocess.Popen] = None
     try:
         with stderr_path.open("w") as err, stdout_path.open("w") as out:
             proc = subprocess.Popen(
@@ -4508,6 +4843,7 @@ def run_provider(
                 text=True,
                 start_new_session=(os.name == "posix"),
             )
+            register_provider_process(proc)
             try:
                 proc.stdin.write(prompt)
                 proc.stdin.close()
@@ -4581,6 +4917,9 @@ def run_provider(
             "provider": provider, "ok": False, "error": str(exc),
             "reasoning_effort": requested_effort,
         }
+    finally:
+        if proc is not None:
+            unregister_provider_process(proc)
 
 
 def run_sealed_evaluator(
@@ -4642,6 +4981,7 @@ def run_sealed_evaluator(
                 text=True,
                 start_new_session=(os.name == "posix"),
             )
+            register_provider_process(proc)
             timed_out = False
             while proc.poll() is None:
                 if time.time() - started >= timeout + 30:
@@ -4708,6 +5048,8 @@ def run_sealed_evaluator(
             "stdout_path": str(stdout_path), "stderr_path": str(stderr_path),
         }
     finally:
+        if proc is not None:
+            unregister_provider_process(proc)
         shutil.rmtree(isolated_root, ignore_errors=True)
 
 
@@ -9009,6 +9351,7 @@ def _write_resume_text_from_pdf(pdf: Path, target: Path) -> None:
 def run_portfolio_search(
     run_dir: Path, job: Dict[str, Any], update, *, enhance: bool,
     unrestricted: bool = False, generation: bool = False,
+    comparison_control: Any = None,
 ) -> None:
     """Run several complete author/jury candidates and publish only a win.
 
@@ -9022,6 +9365,8 @@ def run_portfolio_search(
     started = time.time()
     parent_run_id = str(job.get("_resume_studio_run_id") or uuid.uuid4().hex[:12])
     queue_id = str(job.get("_resume_studio_queue_id") or "")
+    parent_control = resolve_comparison_control(repo_root(), comparison_control)
+    write_json(run_dir / "comparison_control.json", comparison_control_summary(parent_control))
     cards = portfolio_search_variant_cards(job, limit=QUALITY_PROFILES["search"].get("candidate_variants", 3))
     search_root = run_dir / "portfolio_search"
     search_root.mkdir(parents=True, exist_ok=True)
@@ -9176,6 +9521,9 @@ def run_portfolio_search(
     report["winner_version"] = winner_version
     report["pdf_filename"] = parent_pdf.name
     report["approval_state"] = "awaiting_review"
+    report["comparison_control"] = comparison_control_summary(
+        (report.get("comparison_control") if isinstance(report.get("comparison_control"), dict) else parent_control)
+    )
     report["run_metrics"] = {
         **(report.get("run_metrics") if isinstance(report.get("run_metrics"), dict) else {}),
         "portfolio_search_elapsed_seconds": round(time.time() - started, 1),
@@ -9206,6 +9554,7 @@ def run_portfolio_search(
     report["artifacts"] = list(dict.fromkeys([
         "resume.tex", parent_pdf.name, "resume.txt", run_preview_path(run_dir).name,
         "job.json", "report.json", "portfolio_search.json", "job_context.json",
+        "comparison_control.json",
         "job_intelligence.json", "brief.json", "evidence_catalog.json",
         "evidence_graph_context.json", "content_plan.json", "candidate_plan.json",
         "layout_packing.json", "tailoring_audit.json", "critique.json",
@@ -11209,15 +11558,17 @@ def run_tailoring(
     run_started_clock = time.time()
     run_started_at = now_iso()
     quality_profile = normalize_quality_profile(quality_profile)
+    requested_comparison_control = job.get("_resume_studio_control_profile")
     if quality_profile == "search" and not _search_child:
         run_portfolio_search(
             run_dir, job, update, enhance=enhance, unrestricted=unrestricted,
-            generation=generation,
+            generation=generation, comparison_control=requested_comparison_control,
         )
         return
     profile = QUALITY_PROFILES[quality_profile]
     run_id = str(job.get("_resume_studio_run_id") or "")
     queue_id = str(job.get("_resume_studio_queue_id") or "")
+    comparison_control = resolve_comparison_control(repo_root(), requested_comparison_control)
     # Queue/run correlation is local operational metadata, never prompt or
     # evidence content. Keep it out of the persisted public posting snapshot.
     job = {key: value for key, value in job.items() if not str(key).startswith("_resume_studio_")}
@@ -11304,6 +11655,7 @@ def run_tailoring(
         context.get("target_keywords"), context.get("generation_strategy"),
     )
     context["posting_snapshot_hash"] = context["job_intelligence"].get("posting_snapshot_hash", "")
+    write_json(run_dir / "comparison_control.json", comparison_control_summary(comparison_control))
     write_json(run_dir / "job_context.json", context)
     write_json(run_dir / "evidence_catalog.json", catalog_for_prompt(catalog))
     write_json(run_dir / "evidence_graph_context.json", graph_context)
@@ -12922,6 +13274,7 @@ def run_tailoring(
     tailoring_audit = build_tailoring_audit(
         job, context, match, graph, plan, changes, deterministic, scored,
         base_tex, chosen, run_id=run_id, queue_id=queue_id,
+        comparison_control=comparison_control,
     )
     winner = adopt_base_control_winner(run_dir, tailoring_audit)
     write_json(run_dir / "job_intelligence.json", context.get("job_intelligence", {}))
@@ -13019,6 +13372,7 @@ def run_tailoring(
         "content_changes": changes,
         "tailoring_audit": tailoring_audit,
         "tailoring_audit_summary": tailoring_audit_summary(tailoring_audit),
+        "comparison_control": comparison_control_summary(comparison_control),
         "review_overlay": review_overlay,
         "space_audit": space_audit_value,
         "provider_flow": provider_flow,
@@ -13093,6 +13447,7 @@ def run_tailoring(
             "resume.tex", run_pdf_path(run_dir).name, "resume.txt", run_preview_path(run_dir).name if preview else None,
             "job.json", "report.json", "job_context.json", "brief.json", "evidence_catalog.json", "evidence_graph_context.json",
             "job_intelligence.json", "tailoring_audit.json",
+            "comparison_control.json",
             "target_opportunity.json",
             winner.get("tailored_candidate_artifact") or None,
             winner.get("tailored_candidate_preview") or None,
@@ -13132,13 +13487,121 @@ def run_generation(run_dir: Path, job: Dict[str, Any], update) -> None:
     )
 
 
-class RunManager:
-    def __init__(self, root: Optional[Path] = None):
-        self.root = root or repo_root()
-        self.executor = concurrent.futures.ThreadPoolExecutor(max_workers=2)
-        self.lock = threading.Lock()
+class ResumeStudioRuntimeStale(RuntimeError):
+    """Raised when a launchd process has older code than the checkout."""
 
-    def start(self, job: Dict[str, Any], mode: str, queue_id: str = "") -> Dict[str, Any]:
+
+class RunManager:
+    def __init__(self, root: Optional[Path] = None, max_workers: Any = None):
+        self.root = root or repo_root()
+        self.workers = configured_run_workers(max_workers)
+        self.executor = concurrent.futures.ThreadPoolExecutor(max_workers=self.workers)
+        self.lock = threading.Lock()
+        self._submitted: set = set()
+        self._futures: Dict[str, Any] = {}
+        self._shutdown = False
+        self._last_recovery: Dict[str, Any] = {
+            "at": "",
+            "recovered": 0,
+            "reset_running": 0,
+            "failed_invalid": 0,
+            "repaired_shutdown_failures": 0,
+        }
+
+    def health(self) -> Dict[str, Any]:
+        """Return operational state without treating age as a terminal status."""
+        with self.lock:
+            submitted = list(self._submitted)
+        running = 0
+        queued = 0
+        for run_id in submitted:
+            value = read_json(studio_root(self.root) / "runs" / run_id / "status.json", {}) or {}
+            if value.get("status") == "running":
+                running += 1
+            elif value.get("status") == "queued":
+                queued += 1
+        return {
+            "workers": self.workers,
+            "submitted": len(submitted),
+            "running": running,
+            "queued": queued,
+            "shutdown": self._shutdown,
+            "last_recovery": copy.deepcopy(self._last_recovery),
+        }
+
+    def shutdown(self, wait: bool = False) -> None:
+        """Stop accepting work and leave queued snapshots recoverable."""
+        self._shutdown = True
+        self._requeue_submitted_for_shutdown()
+        try:
+            # Cancel queued futures even when waiting for active workers. The
+            # active workers have already been made durable as queued above;
+            # running them during interpreter shutdown is what caused the
+            # nested-pool "cannot schedule new futures" failure.
+            self.executor.shutdown(wait=wait, cancel_futures=True)
+        except TypeError:  # Python 3.8-compatible fallback for the helper/tests.
+            self.executor.shutdown(wait=wait)
+
+    def _requeue_submitted_for_shutdown(self) -> None:
+        with self.lock:
+            submitted = list(self._submitted)
+        stopped_at = now_iso()
+        for run_id in submitted:
+            run_dir = studio_root(self.root) / "runs" / run_id
+            path = run_dir / "status.json"
+            value = read_json(path, {}) or {}
+            if not isinstance(value, dict) or value.get("status") not in {"queued", "running"}:
+                continue
+            value.update({
+                "status": "queued",
+                "step": "queued",
+                "message": "Resume Studio is restarting; the run will be recovered automatically",
+                "updated_at": stopped_at,
+                "shutdown_requeue": True,
+                "recovery_reason": "engine_shutdown",
+            })
+            for key in ("started_at", "finished_at", "elapsed_seconds"):
+                value.pop(key, None)
+            write_json(path, value)
+
+    def _future_done(self, run_id: str, future: Any) -> None:
+        with self.lock:
+            self._futures.pop(run_id, None)
+            self._submitted.discard(run_id)
+
+    def _submit(self, run_id: str, run_dir: Path, job: Dict[str, Any], mode: str) -> bool:
+        with self.lock:
+            if self._shutdown or run_id in self._submitted:
+                return False
+            self._submitted.add(run_id)
+        try:
+            future = self.executor.submit(self._worker, run_id, run_dir, job, mode)
+        except Exception as exc:
+            with self.lock:
+                self._submitted.discard(run_id)
+            self.update(
+                run_id, run_dir, "failed", "queue_error",
+                "Could not submit the run to the local worker pool: %s" % exc,
+                error_code="queue_submit_failed",
+            )
+            return False
+        if future is not None and hasattr(future, "add_done_callback"):
+            with self.lock:
+                self._futures[run_id] = future
+            future.add_done_callback(lambda completed: self._future_done(run_id, completed))
+        return True
+
+    def start(
+        self, job: Dict[str, Any], mode: str, queue_id: str = "",
+        control_profile: Optional[Dict[str, Any]] = None,
+    ) -> Dict[str, Any]:
+        identity = engine_runtime_identity(self.workers)
+        if identity["restart_required"]:
+            raise ResumeStudioRuntimeStale(
+                "Resume Studio source changed while this service was running; restart the local engine before queueing new work."
+            )
+        if self._shutdown:
+            raise RuntimeError("Resume Studio is shutting down; retry after it restarts.")
         mode = normalize_tailor_mode(mode)
         queue_id = str(queue_id or "").strip()[:80]
         run_id = uuid.uuid4().hex[:12]
@@ -13157,23 +13620,138 @@ class RunManager:
             "pdf_filename": pdf_filename,
             "preview_filename": Path(pdf_filename).stem + "-preview.png",
             "run_dir": str(run_dir),
+            "engine_runtime": identity,
+            "recovery_count": 0,
         }
         if queue_id:
             status["queue_id"] = queue_id
+        if isinstance(control_profile, dict):
+            status["comparison_control_profile"] = comparison_control_summary(control_profile)
         # Keep the historical posting record attached to the run even if the
         # radar later removes or updates the live job.  This is private ignored
         # state, not a second source of truth for the public radar database.
-        write_json(run_dir / "job.json", copy.deepcopy(job))
+        job_snapshot = copy.deepcopy(job)
+        if isinstance(control_profile, dict):
+            job_snapshot["_resume_studio_control_profile"] = copy.deepcopy(control_profile)
+        write_json(run_dir / "job.json", job_snapshot)
         write_json(run_dir / "status.json", status)
-        worker_job = copy.deepcopy(job)
+        worker_job = copy.deepcopy(job_snapshot)
         worker_job["_resume_studio_run_id"] = run_id
         worker_job["_resume_studio_queue_id"] = queue_id
-        self.executor.submit(self._worker, run_id, run_dir, worker_job, mode)
+        self._submit(run_id, run_dir, worker_job, mode)
         return status
+
+    def recover_pending(self) -> Dict[str, Any]:
+        """Requeue snapshots left queued/running by a prior engine process.
+
+        Run state is deliberately file-backed, while the executor is not.  A
+        launchd restart therefore resets abandoned ``running`` snapshots to
+        ``queued`` and submits both them and pre-existing queued snapshots to
+        the new bounded pool.  Completed, failed, and owner-review runs are
+        never replayed.
+        """
+        summary = {
+            "at": now_iso(),
+            "recovered": 0,
+            "reset_running": 0,
+            "failed_invalid": 0,
+            "repaired_shutdown_failures": 0,
+        }
+        identity = engine_runtime_identity(self.workers)
+        if identity["restart_required"]:
+            summary["error"] = "runtime source is stale"
+            self._last_recovery = summary
+            return summary
+        runs = studio_root(self.root) / "runs"
+        if not runs.is_dir():
+            self._last_recovery = summary
+            return summary
+        for run_dir in sorted(runs.iterdir(), key=lambda item: item.name):
+            if not run_dir.is_dir() or not re.fullmatch(r"[a-f0-9]{12}", run_dir.name):
+                continue
+            run_id = run_dir.name
+            status_path = run_dir / "status.json"
+            status = read_json(status_path, {}) or {}
+            repairable_shutdown_failure = bool(
+                isinstance(status, dict)
+                and status.get("status") == "failed"
+                and "interpreter shutdown" in str(status.get("message") or "").lower()
+            )
+            if not isinstance(status, dict) or (
+                status.get("status") not in {"queued", "running"}
+                and not repairable_shutdown_failure
+            ):
+                continue
+            with self.lock:
+                if run_id in self._submitted:
+                    continue
+            job = read_json(run_dir / "job.json", {}) or {}
+            if not isinstance(job, dict) or not job:
+                self.update(
+                    run_id, run_dir, "failed", "recovery_error",
+                    "Queued run has no durable job snapshot and cannot be resumed.",
+                    error_code="missing_job_snapshot",
+                    recovery_attempted_at=summary["at"],
+                )
+                summary["failed_invalid"] += 1
+                continue
+            try:
+                mode = normalize_tailor_mode(str(status.get("mode") or ""))
+            except ValueError as exc:
+                self.update(
+                    run_id, run_dir, "failed", "recovery_error", str(exc),
+                    error_code="invalid_run_mode",
+                    recovery_attempted_at=summary["at"],
+                )
+                summary["failed_invalid"] += 1
+                continue
+            previous_status = str(status.get("status"))
+            recovered = copy.deepcopy(status)
+            recovery_count = recovered.get("recovery_count")
+            try:
+                recovery_count = int(recovery_count or 0) + 1
+            except (TypeError, ValueError):
+                recovery_count = 1
+            recovered.update({
+                "status": "queued",
+                "step": "queued",
+                "message": "Recovered after Resume Studio restart; waiting for a worker",
+                "updated_at": summary["at"],
+                "recovered_at": summary["at"],
+                "recovery_count": recovery_count,
+                "recovery_reason": "engine_restart",
+                "engine_runtime": identity,
+            })
+            if previous_status == "running":
+                recovered["recovered_from_status"] = "running"
+                summary["reset_running"] += 1
+            elif repairable_shutdown_failure:
+                recovered["recovered_from_status"] = "failed"
+                recovered["recovery_reason"] = "interpreter_shutdown_repair"
+                summary["repaired_shutdown_failures"] += 1
+            for key in ("started_at", "finished_at", "elapsed_seconds"):
+                recovered.pop(key, None)
+            write_json(status_path, recovered)
+            worker_job = copy.deepcopy(job)
+            worker_job["_resume_studio_run_id"] = run_id
+            worker_job["_resume_studio_queue_id"] = str(recovered.get("queue_id") or "")
+            if self._submit(run_id, run_dir, worker_job, mode):
+                summary["recovered"] += 1
+        self._last_recovery = summary
+        return summary
 
     def update(self, run_id: str, run_dir: Path, status: str, step: str, message: str, **extra) -> None:
         path = run_dir / "status.json"
         value = read_json(path, {}) or {}
+        if self._shutdown and status != "queued":
+            status = "queued"
+            step = "queued"
+            message = "Resume Studio is restarting; the run will be recovered automatically"
+            extra = dict(extra)
+            extra["shutdown_requeue"] = True
+            extra["recovery_reason"] = "engine_shutdown"
+            extra.pop("finished_at", None)
+            extra.pop("elapsed_seconds", None)
         value.update({"run_id": run_id, "status": status, "step": step, "message": message, "updated_at": now_iso()})
         value.update(extra)
         write_json(path, value)
@@ -13181,9 +13759,18 @@ class RunManager:
     def _worker(self, run_id: str, run_dir: Path, job: Dict[str, Any], mode: str) -> None:
         started_clock = time.time()
         started_at = now_iso()
+        identity = engine_runtime_identity(self.workers)
+        if identity["restart_required"]:
+            self.update(
+                run_id, run_dir, "queued", "stale_runtime",
+                "The source checkout changed before this run started; waiting for an engine restart.",
+                restart_required=True,
+                engine_runtime=identity,
+            )
+            return
         self.update(
             run_id, run_dir, "running", "starting", "Starting the approved tailoring lanes",
-            started_at=started_at,
+            started_at=started_at, engine_runtime=identity,
         )
 
         def update(step: str, message: str, **extra: Any) -> None:
@@ -13208,16 +13795,32 @@ class RunManager:
             (run_dir / "error.log").write_text(trace)
             self.update(run_id, run_dir, "failed", "error", str(exc), error_log="error.log")
         finally:
-            current = read_json(run_dir / "status.json", {}) or {}
-            self.update(
-                run_id,
-                run_dir,
-                str(current.get("status") or "failed"),
-                str(current.get("step") or "error"),
-                str(current.get("message") or "Run ended"),
-                finished_at=now_iso(),
-                elapsed_seconds=round(time.time() - started_clock, 1),
-            )
+            current_identity = engine_runtime_identity(self.workers)
+            if self._shutdown:
+                self.update(
+                    run_id, run_dir, "queued", "queued",
+                    "Resume Studio is restarting; the run will be recovered automatically",
+                    shutdown_requeue=True,
+                    recovery_reason="engine_shutdown",
+                )
+            elif current_identity["restart_required"]:
+                self.update(
+                    run_id, run_dir, "queued", "stale_runtime",
+                    "The source checkout changed during this run; waiting for an engine restart before retrying.",
+                    restart_required=True,
+                    engine_runtime=current_identity,
+                )
+            else:
+                current = read_json(run_dir / "status.json", {}) or {}
+                self.update(
+                    run_id,
+                    run_dir,
+                    str(current.get("status") or "failed"),
+                    str(current.get("step") or "error"),
+                    str(current.get("message") or "Run ended"),
+                    finished_at=now_iso(),
+                    elapsed_seconds=round(time.time() - started_clock, 1),
+                )
 
     def get(self, run_id: str) -> Optional[Dict[str, Any]]:
         path = studio_root(self.root) / "runs" / run_id / "status.json"
@@ -13455,6 +14058,30 @@ UI_HTML = UI_HTML.replace(
 
 
 UI_HTML = UI_HTML.replace(
+    "</head>",
+    "<style>.warning{color:var(--warn)}.status.stale{border-color:var(--warn)}</style></head>",
+)
+UI_HTML = UI_HTML.replace(
+    "queue_id:payload.queue_id,job_snapshot:payload.job_snapshot",
+    "queue_id:payload.queue_id,control_profile:payload.control_profile||null,job_snapshot:payload.job_snapshot",
+)
+UI_HTML = UI_HTML.replace(
+    "function modeLabel(mode){return ({used:'Used bullets',strict:'Used bullets','source-only':'Used bullets',ai:'AI tailor',dream:'AI tailor',enhanced:'AI tailor',unrestricted:'Take-the-wheel'})[mode]||'Tailor';}",
+    "function modeLabel(mode){return ({used:'Used bullets',strict:'Used bullets','source-only':'Used bullets',ai:'AI tailor',dream:'AI tailor',enhanced:'AI tailor',unrestricted:'Take-the-wheel',generation:'Unchained generation'})[mode]||'Tailor';}",
+)
+UI_HTML = UI_HTML.replace(
+    "function renderQueue(){const active=libraryEntries.filter(entry=>entry.status==='queued'||entry.status==='running');const queued=active.filter(entry=>entry.status==='queued').length,running=active.filter(entry=>entry.status==='running').length;const strip=$('queueStrip');if(!active.length){strip.classList.add('hidden');return;}strip.classList.remove('hidden');$('queueSummary').textContent=`${queued} queued · ${running} running · ${active.length} total`;}",
+    "function renderQueue(){const active=libraryEntries.filter(entry=>entry.status==='queued'||entry.status==='running');const queued=active.filter(entry=>entry.status==='queued').length,running=active.filter(entry=>entry.status==='running').length,stale=active.filter(entry=>entry.stale).length;const strip=$('queueStrip');if(!active.length){strip.classList.add('hidden');return;}strip.classList.remove('hidden');$('queueSummary').textContent=`${queued} queued · ${running} running · ${active.length} total${stale?` · ${stale} need attention`:''}`;}",
+)
+UI_HTML = UI_HTML.replace(
+    "const workshop=entry.has_workshop?`<button data-open-workshop data-run=\"${esc(entry.run_id)}\">Open workshop</button>`:'';const warning=entry.legacy?'<span class=\"legacy\">legacy experiment</span>':'';return `<article class=\"resume-card\">",
+    "const workshop=entry.has_workshop?`<button data-open-workshop data-run=\"${esc(entry.run_id)}\">Open workshop</button>`:'';const warning=entry.legacy?'<span class=\"legacy\">legacy experiment</span>':'';const stale=entry.stale?`<div class=\"warning\">${esc(entry.stale_reason||'This run needs engine attention; it remains recoverable.')}</div>`:'';return `<article class=\"resume-card\">",
+)
+UI_HTML = UI_HTML.replace(
+    "${job.resume_match?` · Match ${esc(job.resume_match.score)}/100`:''}</div><div class=\"card-actions\">",
+    "${job.resume_match?` · Match ${esc(job.resume_match.score)}/100`:''}</div>${stale}<div class=\"card-actions\">",
+)
+UI_HTML = UI_HTML.replace(
     "function showView(view){",
     """const baseRenderReport=renderReport;
 renderReport=function(status){
@@ -13673,6 +14300,23 @@ UI_HTML = UI_HTML.replace(
 )
 
 
+# The application agent shares the same loopback bridge as Resume Studio.  The
+# browser extension talks to its JSON API directly; the hosted owner UI uses
+# the existing postMessage bridge so no public CV or local-service port is
+# exposed to the internet.
+UI_HTML = UI_HTML.replace(
+    "else if(action==='queue')data=await bridgeFetch('/api/run'",
+    "else if(action==='application_health')data=await bridgeFetch('/api/application/health');else if(action==='application_context')data=await bridgeFetch('/api/application/context');else if(action==='application_issues')data=await bridgeFetch('/api/application/issues?status='+encodeURIComponent(payload.status||''));else if(action==='application_sessions')data=await bridgeFetch('/api/application/sessions');else if(action==='application_session')data=await bridgeFetch('/api/application/session?session_id='+encodeURIComponent(payload.session_id||''));else if(action==='application_session_create')data=await bridgeFetch('/api/application/session',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='application_form')data=await bridgeFetch('/api/application/form',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='application_review')data=await bridgeFetch('/api/application/review',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='application_answer')data=await bridgeFetch('/api/application/answer',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='application_mapping')data=await bridgeFetch('/api/application/mapping',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='application_event')data=await bridgeFetch('/api/application/event',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='application_confirm')data=await bridgeFetch('/api/application/confirm',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='application_verify')data=await bridgeFetch('/api/application/verify',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='application_issue')data=await bridgeFetch('/api/application/issue',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='queue')data=await bridgeFetch('/api/run'",
+)
+
+# Approval is intentionally routed through the same private loopback bridge as
+# queueing.  The hosted UI may request approval, but the local engine remains
+# the authority that verifies the review gates and writes the private bank.
+UI_HTML = UI_HTML.replace(
+    "else if(action==='queue')data=await bridgeFetch('/api/run'",
+    "else if(action==='approve')data=await bridgeFetch('/api/run/approve',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({run_id:payload.run_id})});else if(action==='queue')data=await bridgeFetch('/api/run'",
+)
+
 # The cloud control plane forwards the bounded public posting snapshot through
 # the loopback bridge so a newly crawled role can still be matched or queued
 # before the Mac checkout has ingested the same job ID.
@@ -13707,6 +14351,12 @@ class StudioHandler(BaseHTTPRequestHandler):
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("X-Frame-Options", "DENY")
         self.send_header("Referrer-Policy", "no-referrer")
+        origin = str(self.headers.get("Origin") or "")
+        if self.path.startswith("/api/application/") and origin.startswith("chrome-extension://"):
+            self.send_header("Access-Control-Allow-Origin", origin)
+            self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+            self.send_header("Access-Control-Allow-Headers", "Content-Type")
+            self.send_header("Vary", "Origin")
         super().end_headers()
 
     def valid_host(self) -> bool:
@@ -13725,6 +14375,16 @@ class StudioHandler(BaseHTTPRequestHandler):
     def do_OPTIONS(self) -> None:
         if self.reject_bad_host():
             return
+        if self.path.startswith("/api/application/"):
+            origin = str(self.headers.get("Origin") or "")
+            if origin.startswith("chrome-extension://"):
+                self.send_response(HTTPStatus.NO_CONTENT)
+                self.send_header("Access-Control-Allow-Origin", origin)
+                self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+                self.send_header("Access-Control-Allow-Headers", "Content-Type")
+                self.send_header("Vary", "Origin")
+                self.end_headers()
+                return
         self.send_json({"error": "cross-origin access is disabled"}, HTTPStatus.METHOD_NOT_ALLOWED)
 
     def log_message(self, format: str, *args) -> None:  # keep terminal output useful
@@ -13765,8 +14425,13 @@ class StudioHandler(BaseHTTPRequestHandler):
             return self.send_bytes(UI_HTML.encode("utf-8"), "text/html; charset=utf-8")
         if parsed.path == "/api/health":
             graph = evidence_graph(repo_root())
+            runtime = engine_runtime_identity(self.manager.workers)
             return self.send_json({
                 "ok": True,
+                "ready": not runtime["restart_required"],
+                "restart_required": runtime["restart_required"],
+                "runtime": runtime,
+                "queue": self.manager.health(),
                 "providers": {k: bool(v) for k, v in provider_commands().items()},
                 "cv_present": cv_root(repo_root()).is_dir(),
                 "evidence_graph": {"version": graph.get("version"), "nodes": len(graph.get("nodes", [])), "hash": graph.get("hash")},
@@ -13808,6 +14473,27 @@ class StudioHandler(BaseHTTPRequestHandler):
             return self.send_json(evidence_review_view(repo_root()))
         if parsed.path == "/api/context":
             return self.send_json(context_inventory(repo_root()))
+        if parsed.path == "/api/application/health":
+            return self.send_json({
+                "ok": True,
+                "version": "application-agent-v1",
+                "store": str(application_store_path(repo_root())),
+                "sessions": len(application_sessions(repo_root())),
+                "open_issues": len(list_application_issues(repo_root(), status="open")),
+            })
+        if parsed.path == "/api/application/context":
+            return self.send_json(application_context(repo_root()))
+        if parsed.path == "/api/application/issues":
+            status = parse_qs(parsed.query).get("status", [""])[0]
+            return self.send_json({"issues": list_application_issues(repo_root(), status=status)})
+        if parsed.path == "/api/application/sessions":
+            return self.send_json({"sessions": application_sessions(repo_root())})
+        if parsed.path == "/api/application/session":
+            session_id = parse_qs(parsed.query).get("session_id", [""])[0]
+            session = get_application_session(repo_root(), session_id)
+            if not session:
+                return self.send_json({"error": "application session not found"}, HTTPStatus.NOT_FOUND)
+            return self.send_json(session)
         if parsed.path == "/api/posting":
             params = parse_qs(parsed.query)
             source = params.get("source", [""])[0]
@@ -13885,6 +14571,9 @@ class StudioHandler(BaseHTTPRequestHandler):
             "/api/run", "/api/run/approve", "/api/match", "/api/evidence/refresh", "/api/evidence/review",
             "/api/context/job", "/api/context/answer", "/api/context/hint", "/api/context/hint/dismiss",
             "/api/workshop/edit", "/api/workshop/ai", "/api/workshop/revert",
+            "/api/application/session", "/api/application/form", "/api/application/review",
+            "/api/application/answer", "/api/application/mapping", "/api/application/event",
+            "/api/application/confirm", "/api/application/verify", "/api/application/issue",
         }:
             return self.send_json({"error": "not found"}, HTTPStatus.NOT_FOUND)
         try:
@@ -13892,6 +14581,61 @@ class StudioHandler(BaseHTTPRequestHandler):
             if length > 100_000:
                 raise ValueError("request too large")
             body = json.loads(self.rfile.read(length) or b"{}")
+            if parsed.path == "/api/application/session":
+                job = body.get("job") if isinstance(body.get("job"), dict) else body
+                return self.send_json(create_application_session(
+                    repo_root(), job,
+                    mode=str(body.get("mode") or "per_role"),
+                    queue_id=str(body.get("queue_id") or ""),
+                ), HTTPStatus.CREATED)
+            if parsed.path == "/api/application/form":
+                return self.send_json(plan_application_form(
+                    repo_root(),
+                    str(body.get("session_id") or ""),
+                    str(body.get("page_url") or ""),
+                    body.get("fields") if isinstance(body.get("fields"), list) else [],
+                    final=bool(body.get("final")),
+                ))
+            if parsed.path == "/api/application/review":
+                return self.send_json({"review": prepare_application_review(
+                    repo_root(),
+                    str(body.get("session_id") or ""),
+                    body.get("fields") if isinstance(body.get("fields"), list) else None,
+                )})
+            if parsed.path == "/api/application/answer":
+                return self.send_json(save_application_answer(
+                    repo_root(),
+                    question=str(body.get("question") or body.get("label") or ""),
+                    value=str(body.get("value") or body.get("answer") or ""),
+                    category=str(body.get("category") or ""),
+                    reusable=bool(body.get("reusable", True)),
+                    sensitive=body.get("sensitive"),
+                    answer_id=str(body.get("answer_id") or ""),
+                    variants=body.get("variants") if isinstance(body.get("variants"), list) else [],
+                    evidence_ids=body.get("evidence_ids") if isinstance(body.get("evidence_ids"), list) else [],
+                    session_id=str(body.get("session_id") or ""),
+                ))
+            if parsed.path == "/api/application/mapping":
+                return self.send_json(save_application_mapping(
+                    repo_root(), str(body.get("field_key") or ""), str(body.get("answer_id") or "")))
+            if parsed.path == "/api/application/event":
+                return self.send_json(record_application_event(
+                    repo_root(), str(body.get("session_id") or ""), str(body.get("state") or ""),
+                    message=str(body.get("message") or ""), error=str(body.get("error") or "")))
+            if parsed.path == "/api/application/confirm":
+                return self.send_json(apply_application_confirmation(
+                    repo_root(), str(body.get("session_id") or ""), str(body.get("review_hash") or ""),
+                    str(body.get("nonce") or ""), page_fingerprint=str(body.get("page_fingerprint") or "")))
+            if parsed.path == "/api/application/verify":
+                return self.send_json(verify_application_submission_page(
+                    repo_root(), str(body.get("session_id") or ""), str(body.get("page_url") or ""),
+                    body.get("fields") if isinstance(body.get("fields"), list) else []))
+            if parsed.path == "/api/application/issue":
+                return self.send_json(add_application_issue(
+                    repo_root(), str(body.get("session_id") or ""), str(body.get("issue_type") or "unknown"),
+                    str(body.get("message") or ""), field_label=str(body.get("field_label") or ""),
+                    page_url=str(body.get("page_url") or ""), fingerprint=str(body.get("fingerprint") or ""),
+                    selector_kind=str(body.get("selector_kind") or "")))
             if parsed.path == "/api/evidence/refresh":
                 graph = evidence_graph(repo_root(), refresh_public=True)
                 return self.send_json({
@@ -13981,8 +14725,15 @@ class StudioHandler(BaseHTTPRequestHandler):
                 })
             mode = str(body.get("mode") or "")
             queue_id = str(body.get("queue_id") or "").strip()[:80]
-            status = self.manager.start(job, mode, queue_id=queue_id)
+            control_profile = body.get("control_profile")
+            if not isinstance(control_profile, dict):
+                control_profile = None
+            status = self.manager.start(
+                job, mode, queue_id=queue_id, control_profile=control_profile,
+            )
             return self.send_json(status, HTTPStatus.ACCEPTED)
+        except ResumeStudioRuntimeStale as exc:
+            return self.send_json({"error": str(exc), "restart_required": True}, HTTPStatus.CONFLICT)
         except (ValueError, RuntimeError, json.JSONDecodeError) as exc:
             return self.send_json({"error": str(exc)}, HTTPStatus.BAD_REQUEST)
 
@@ -13992,17 +14743,31 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=4317)
     args = parser.parse_args(list(argv) if argv is not None else None)
+    recovery = StudioHandler.manager.recover_pending()
     server = ThreadingHTTPServer((args.host, args.port), StudioHandler)
     print("Resume Studio: http://%s:%s/" % (args.host, args.port))
     print("Private CV root: %s" % cv_root(repo_root()))
     print("Providers: %s" % ", ".join(name for name, path in provider_commands().items() if path) or "none")
+    print("Recovered runs: %s" % recovery.get("recovered", 0))
+
+    def handle_sigterm(signum, frame) -> None:
+        del frame
+        stop_all_provider_processes()
+        StudioHandler.manager.shutdown(wait=False)
+        # The queue snapshots and provider termination have already happened.
+        # Bypass Python's executor atexit join so a nested worker pool cannot
+        # race interpreter shutdown and turn recoverable work into a failure.
+        os._exit(128 + signum)
+
+    signal.signal(signal.SIGTERM, handle_sigterm)
     try:
         server.serve_forever()
     except KeyboardInterrupt:
         print("\nResume Studio stopped")
     finally:
         server.server_close()
-        StudioHandler.manager.executor.shutdown(wait=False)
+        stop_all_provider_processes()
+        StudioHandler.manager.shutdown(wait=False)
     return 0
 
 

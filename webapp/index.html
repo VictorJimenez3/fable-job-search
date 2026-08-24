@@ -282,6 +282,14 @@
   .studio-action h4 { margin:0 0 .2rem; font-size:.82rem; }
   .studio-action p { min-height:2.6rem; margin:.2rem 0 .55rem; color:var(--muted); font-size:.72rem; }
   .studio-action button { width:100%; }
+  .studio-mode-guide { margin:.7rem 0; border:1px solid var(--accent); border-radius:8px; background:color-mix(in srgb,var(--accent) 7%,var(--paper)); padding:.65rem .75rem; }
+  .studio-mode-guide h4 { margin:0; font-size:.8rem; }
+  .studio-mode-guide p { margin:.25rem 0 0; color:var(--muted); font-size:.72rem; }
+  .studio-mode-list { display:grid; gap:.35rem; margin-top:.55rem; }
+  .studio-mode-row { display:grid; grid-template-columns:minmax(145px,.7fr) minmax(0,1.3fr); gap:.55rem; padding:.4rem 0; border-top:1px solid var(--line); font-size:.7rem; }
+  .studio-mode-row strong { color:var(--ink); }
+  .studio-mode-row span { color:var(--muted); }
+  .studio-mode-note { margin-top:.55rem!important; padding-top:.45rem; border-top:1px solid var(--line); }
   .studio-status { border-left:3px solid var(--accent); padding:.55rem .7rem; background:var(--code); border-radius:0 6px 6px 0; white-space:pre-wrap; font-size:.78rem; }
   .studio-status.warn { border-color:var(--amber); }
   .studio-status.bad { border-color:var(--danger); }
@@ -295,6 +303,12 @@
   .studio-run .sub { font-size:.68rem; }
   .studio-note { background:var(--code); border:1px solid var(--line); border-radius:7px; padding:.6rem .7rem; color:var(--muted); font-size:.74rem; }
   .studio-note strong { color:var(--ink); }
+  .studio-control-note,.studio-control-audit { background:var(--paper); border:1px solid var(--accent-ink); border-radius:7px; padding:.55rem .65rem; margin:.45rem 0; color:var(--muted); font-size:.72rem; }
+  .studio-control-note strong,.studio-control-audit strong { color:var(--ink); }
+  .resume-control-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:.55rem; margin-top:.5rem; }
+  .resume-control-card { border:1px solid var(--line); border-radius:7px; padding:.55rem .65rem; background:var(--paper); font-size:.74rem; }
+  .resume-control-candidates { display:grid; gap:.35rem; margin-top:.35rem; }
+  .resume-control-candidate { display:flex; justify-content:space-between; gap:.6rem; align-items:center; border-top:1px solid var(--line); padding:.4rem 0; font-size:.72rem; }
   .studio-empty { padding:2rem .75rem; text-align:center; color:var(--muted); }
   .studio-requirement-map { margin-top:.7rem; border:1px solid var(--line); border-radius:8px; background:var(--paper); }
   .studio-requirement-map > summary { cursor:pointer; list-style:none; padding:.55rem .65rem; }
@@ -309,7 +323,7 @@
   .studio-requirement-item.preferred { border-left-color:var(--amber); background:color-mix(in srgb,var(--amber) 9%,transparent); }
   .studio-requirement-source { display:block; color:var(--muted); font-size:.6rem; margin-top:.08rem; }
   .studio-result .keyword-audit { margin-top:.6rem; }
-  @media(max-width:650px){.studio-requirement-grid{grid-template-columns:1fr;}}
+  @media(max-width:650px){.studio-requirement-grid{grid-template-columns:1fr;}.studio-mode-row{grid-template-columns:1fr;gap:.12rem;}}
   .studio-badge { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:.06rem .42rem; font:600 .62rem ui-monospace,Menlo,monospace; color:var(--muted); }
   .studio-badge.good { color:var(--accent-ink); border-color:var(--accent-ink); }
   .studio-badge.warn { color:var(--amber); border-color:var(--amber); }
@@ -350,6 +364,20 @@
   .context-hint .acts { margin-top:.3rem; }
   .context-hint-form { border-top:1px dashed var(--line); margin-top:.55rem; padding-top:.45rem; }
   .context-fact { border-top:1px solid var(--line); padding:.55rem 0; }
+  .agent-grid { display:grid; grid-template-columns:minmax(300px,.9fr) minmax(360px,1.1fr); gap:.9rem; }
+  .agent-card { border:1px solid var(--line); background:var(--card); border-radius:8px; padding:.7rem; margin:.55rem 0; }
+  .agent-card h3, .agent-card h4 { margin:0 0 .35rem; }
+  .agent-queue-row { display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:.55rem; align-items:start; border-top:1px solid var(--line); padding:.6rem 0; }
+  .agent-queue-row:first-child { border-top:0; }
+  .agent-review { border-left:3px solid var(--accent); background:var(--paper); padding:.55rem .65rem; margin-top:.5rem; }
+  .agent-review-field { border-top:1px dashed var(--line); padding:.35rem 0; font-size:.74rem; }
+  .agent-review-field:first-child { border-top:0; }
+  .agent-review-value { display:block; white-space:pre-wrap; word-break:break-word; margin-top:.12rem; }
+  .agent-blocker { border-left:3px solid var(--danger); padding:.4rem .5rem; margin:.35rem 0; background:color-mix(in srgb,var(--danger) 8%,transparent); font-size:.74rem; }
+  .agent-token { word-break:break-all; background:var(--code); border:1px dashed var(--amber); padding:.45rem; border-radius:5px; font:.72rem ui-monospace,Menlo,monospace; }
+  .agent-issue { border-top:1px solid var(--line); padding:.45rem 0; font-size:.72rem; }
+  .agent-issue:first-child { border-top:0; }
+  @media(max-width:700px){.agent-grid{grid-template-columns:1fr;}.agent-queue-row{grid-template-columns:auto minmax(0,1fr);}.agent-queue-row .acts{grid-column:2;}}
   .resume-bank-preview-link { display:block; margin:.6rem 0; }
   .resume-bank-preview { display:block; width:100%; height:220px; object-fit:contain; object-position:top center; background:#fff; border:1px solid var(--line); border-radius:5px; }
   .resume-bank-preview.empty { display:grid; place-items:center; color:var(--muted); font-size:.74rem; text-align:center; padding:.8rem; }
@@ -492,11 +520,12 @@ const S = {           // app state
   tab:"jobs", filter:{...DEFAULT_FILTER, ...storedFilter()}, shown:250,
   wsTab:"fit",
   testing:{q:"", sort:"resume", shown:40, selectedId:"", engine:"checking", engineError:"", match:null,
-    library:[], cloudLibrary:[], cloudBank:{status:"checking",error:"",updated_at:"",needsGoogle:false},
+    library:[], cloudLibrary:[], controlProfiles:[], cloudBank:{status:"checking",error:"",updated_at:"",needsGoogle:false},
     cloudQueue:{status:"checking",items:[],error:"",needsGoogle:false}, bankView:false, contextView:false,
     bankQuery:"", bankMode:"all", bankStatus:"all", bankEra:"current", context:null, contextQuery:"", contextError:"", contextScanError:"",
     sync:{state:"idle",done:0,total:0,error:""}, activeRunId:"", runStatus:null,
     batchView:false, batch:{mode:"unrestricted",selected:[],runs:[],state:"idle",error:""}},
+  applicationAgent:{status:"checking",items:[],context:null,issues:[],sessions:[],error:"",pairingToken:"",selected:[]},
   boot:{phase:"starting", jobsReady:false, inFlight:false, errors:[]},
   marquee:new Set(["meta","apple","amazon","netflix","google","microsoft","nvidia",
     "anthropic","openai","deepmind","genentech","moderna","regeneron",
@@ -536,6 +565,7 @@ function activateLane(mode, rerender=true) {
 }
 try { S.lane = LANE_CONFIG[localStorage.getItem("jr_active_lane")] ? localStorage.getItem("jr_active_lane") : "new_grad"; } catch {}
 activateLane(S.lane, false);
+try { if (location.hash.replace(/^#/, "") === "agent") S.tab = "agent"; } catch {}
 const norm = s => (s||"").toLowerCase().replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();
 function trackerBackend() {
   // Victor's repository workflow is Notion-first. Google Sheets is an
@@ -1490,19 +1520,174 @@ async function actApplied(j) {
   catch(e){ toast("Failed: "+e.message.slice(0,90)); }
   return false;
 }
-function startApply(j) {
+async function startApply(j) {
   if (!j || !j.url) return;
-  openExternal(j.url);
+  let queueId = "";
+  if (S.auth?.owner) {
+    try {
+      const queued = await applicationCloudPost("queue", {job: applicationAgentJob(j)});
+      queueId = queued.item?.queue_id || "";
+    } catch (error) {
+      toast(`Application queue unavailable · starting local agent (${error.message.slice(0,80)})`);
+    }
+  }
+  let agentStarted = false;
+  const started = event => {
+    if (event.source !== window || event.data?.type !== "job-radar:agent-started" || event.data.job_id !== j.id) return;
+    agentStarted = true;
+    window.removeEventListener("message", started);
+    toast("Application Agent opened the posting · filling approved fields");
+  };
+  window.addEventListener("message", started);
+  window.postMessage({type:"job-radar:start-application", job:resumeStudioSnapshot(j), mode:"per_role", queueId}, "*");
+  setTimeout(() => {
+    window.removeEventListener("message", started);
+    if (!agentStarted) openExternal(j.url);
+  }, 900);
   const lane = laneOf(j.id, appliedById());
   if (!lane && canWrite()) {
     actTrack(j, true).then(ok=>toast(ok
-      ? "Application opened · saved to To apply"
-      : "Application opened · saving failed, so use Save when you return"));
+      ? "Application Agent started · saved to To apply"
+      : "Application started · saving failed, so use Save when you return"));
   } else {
-    toast(lane === "applied" ? "Application opened · already marked applied"
-      : lane === "saved" ? "Application opened · already in To apply"
-      : "Application opened · save it when you want it in your pipeline");
+    toast(lane === "applied" ? "Application Agent started · already marked applied"
+      : lane === "saved" ? "Application Agent started · already in To apply"
+      : "Application Agent started · save it when you want it in your pipeline");
   }
+}
+
+/* ---------- owner Application Agent ----------------------------------- */
+const APPLICATION_ACTIVE_STATES = new Set(["queued","opening","filling","blocked","awaiting_confirmation","submitting"]);
+function applicationAgentJob(j) {
+  return {id:j?.id, company:j?.company, title:j?.title, url:j?.url,
+    locations:Array.isArray(j?.locations)?j.locations.slice(0,12):[], score:j?.score, posted_at:j?.posted_at??null};
+}
+async function applicationCloudGet(view="queue", params={}) {
+  const query = new URLSearchParams({view, ...params});
+  const response = await fetch(`/api/application-agent?${query}`, {credentials:"same-origin", cache:"no-store"});
+  let data={}; try { data=await response.json(); } catch (_) {}
+  if (!response.ok) throw new Error(data.error || `Application Agent returned ${response.status}`);
+  return data;
+}
+async function applicationCloudPost(action, payload={}) {
+  const response = await fetch("/api/application-agent", {method:"POST", credentials:"same-origin",
+    headers:{"content-type":"application/json"}, body:JSON.stringify({action,...payload})});
+  let data={}; try { data=await response.json(); } catch (_) {}
+  if (!response.ok) throw new Error(data.error || `Application Agent returned ${response.status}`);
+  return data;
+}
+function applicationLocalRequest(action, payload={}) {
+  return bridgeRequest(`application_${action}`, payload);
+}
+async function loadApplicationAgent(renderNow=true) {
+  if (!S.auth?.owner) return [];
+  S.applicationAgent.status = "checking";
+  try {
+    const [queue, context, issues] = await Promise.all([
+      applicationCloudGet("queue"), applicationCloudGet("context"), applicationCloudGet("issues"),
+    ]);
+    S.applicationAgent = {...S.applicationAgent, status:"online", error:"",
+      items:Array.isArray(queue.items)?queue.items:[], context:context.context||null,
+      issues:Array.isArray(issues.issues)?issues.issues:[]};
+    if (canWrite()) {
+      for (const item of S.applicationAgent.items) {
+        if (item.state !== "submitted") continue;
+        const job = S.jobs[item.job?.id];
+        const current = job && appliedById()[job.id];
+        if (job && (!current || current.stage !== "applied")) {
+          try { await actApplied(job); } catch (_) {}
+        }
+      }
+    }
+  } catch (error) {
+    S.applicationAgent = {...S.applicationAgent, status:"unavailable", error:error.message,
+      items:[], context:null, issues:[]};
+  }
+  if (renderNow && S.tab === "agent") rApplicationAgent();
+  return S.applicationAgent.items;
+}
+function applicationAgentStatusLabel(state) {
+  return ({queued:"queued",opening:"opening",filling:"filling",blocked:"needs your answer",
+    awaiting_confirmation:"ready for confirmation",submitting:"submitting",submitted:"submitted",
+    failed:"failed",skipped:"skipped",cancelled:"cancelled"})[state] || state || "queued";
+}
+function applicationAgentStatusKind(state) {
+  return ["submitted"].includes(state) ? "good" : ["blocked","awaiting_confirmation","failed"].includes(state) ? "warn" : "";
+}
+function applicationAgentReviewHTML(item) {
+  const review=item?.review;
+  if (!review) return "";
+  const fields=(review.fields||[]).map(field=>`<div class="agent-review-field"><strong>${esc(field.label||field.category||"field")}</strong>${field.sensitive?` <span class="chip warn">sensitive</span>`:""}<span class="sub">${esc(field.category||"other")}${field.required?" · required":""}</span><span class="agent-review-value">${esc(field.value||"(empty — owner must review)")}</span></div>`).join("");
+  const action = item.state === "awaiting_confirmation"
+    ? `<div class="acts" style="margin-top:.45rem"><button class="act primary" onclick='confirmApplicationAgent(${JSON.stringify(item.queue_id)})'>confirm and allow Submit</button><button class="act" onclick='skipApplicationAgent(${JSON.stringify(item.queue_id)})'>skip this role</button></div>`
+    : item.state === "submitting" ? '<p class="sub">Owner confirmed. Waiting for the paired Mac to verify the page and click Submit.</p>' : '';
+  return `<div class="agent-review"><div class="bar" style="justify-content:space-between;margin:0"><strong>Full review card · ${esc(review.provider||"ATS")}</strong><span class="chip warn">page-bound</span></div><p class="sub">${esc(review.url||item.job?.url||"")}<br>Fingerprint <span class="mono">${esc(review.page_fingerprint||"unknown")}</span> · expires ${esc(review.expires_at||"soon")}</p>${fields||'<p class="sub">No proposed values were captured.</p>'}${action}</div>`;
+}
+function applicationAgentBlockersHTML(item) {
+  const blockers=item?.blockers||[];
+  if (!blockers.length) return "";
+  return `<div class="agent-review" style="border-color:var(--danger)"><strong>Agent paused · your answer is needed</strong>${blockers.map((blocker,index)=>`<div class="agent-blocker"><strong>${esc(blocker.label||blocker.category||"required field")}</strong><br>${esc(blocker.reason||"No approved answer exists.")}<textarea rows="2" data-agent-answer="${esc(item.queue_id)}-${index}" placeholder="Your answer (bullets are fine)"></textarea><div class="acts"><button class="act" onclick='answerApplicationAgent(${JSON.stringify(item.queue_id)},${index},${JSON.stringify(blocker.question||blocker.label||blocker.category||"application question")},${JSON.stringify(blocker.category||"other")})'>save answer &amp; retry</button></div></div>`).join("")}</div>`;
+}
+function applicationAgentQueueHTML(items) {
+  if (!items.length) return '<p class="sub">No application roles are queued. Select saved roles below or start one from a job card.</p>';
+  return items.slice(0,80).map(item=>`<div class="agent-queue-row"><span class="chip ${applicationAgentStatusKind(item.state)}">${esc(applicationAgentStatusLabel(item.state))}</span><div><strong>${esc(item.job?.company||"Role")}</strong><br><span class="sub">${esc(item.job?.title||"")} · ${esc(item.provider||item.review?.provider||"")} · ${esc(item.message||"")}</span>${item.error?`<p class="sub" style="color:var(--danger)">${esc(item.error)}</p>`:""}${applicationAgentBlockersHTML(item)}${applicationAgentReviewHTML(item)}</div><div class="acts">${["queued","blocked","awaiting_confirmation","failed"].includes(item.state)?`<button class="act" onclick='refreshApplicationAgent()'>refresh</button>`:""}${["queued","blocked","awaiting_confirmation"].includes(item.state)?`<button class="act" onclick='skipApplicationAgent(${JSON.stringify(item.queue_id)})'>skip</button>`:""}</div></div>`).join("");
+}
+function applicationAgentCandidates() {
+  return Object.values(S.jobs||{}).filter(job=>{
+    const entry=appliedById()[job.id], stage=entry?.stage||"";
+    return entry && ["saved","to_tailor"].includes(stage) && !applicationInactive(entry);
+  }).sort((a,b)=>(Number(b.score)||0)-(Number(a.score)||0)).slice(0,80);
+}
+async function queueApplicationBatch() {
+  const candidates=new Map(applicationAgentCandidates().map(job=>[job.id,job]));
+  const jobs=(S.applicationAgent.selected||[]).map(id=>candidates.get(id)).filter(Boolean).slice(0,30);
+  if (!jobs.length) { toast("Select at least one saved role"); return; }
+  try {
+    for (const job of jobs) {
+      await applicationCloudPost("queue", {job:applicationAgentJob(job)});
+      if (!laneOf(job.id, appliedById())) await actTrack(job, true);
+    }
+    S.applicationAgent.selected=[];
+    await loadApplicationAgent(false); rApplicationAgent();
+    toast(`${jobs.length} application${jobs.length===1?"":"s"} queued for the paired Mac`);
+  } catch (error) { toast(error.message.slice(0,150)); }
+}
+async function confirmApplicationAgent(queueId) {
+  const item=(S.applicationAgent.items||[]).find(row=>row.queue_id===queueId);
+  if (!item?.review) return;
+  try { await applicationCloudPost("confirm", {queue_id:queueId, review_hash:item.review.review_hash, nonce:item.review.nonce, page_fingerprint:item.review.page_fingerprint}); await loadApplicationAgent(false); rApplicationAgent(); toast("Confirmed · the paired Mac may submit this matching page"); }
+  catch(error) { toast(error.message.slice(0,150)); }
+}
+async function answerApplicationAgent(queueId,index,question,category) {
+  const field=document.querySelector(`[data-agent-answer="${CSS.escape(`${queueId}-${index}`)}"]`), value=field?.value.trim();
+  if (!value) { toast("Add the answer first"); return; }
+  try { await applicationCloudPost("answer", {question,value,category}); await loadApplicationAgent(false); rApplicationAgent(); toast("Saved to the private context bank · the Mac will retry"); }
+  catch(error) { toast(error.message.slice(0,150)); }
+}
+async function skipApplicationAgent(queueId) {
+  try { await applicationCloudPost("queue_update", {queue_id:queueId,state:"skipped",message:"Skipped by Victor"}); await loadApplicationAgent(false); rApplicationAgent(); }
+  catch(error) { toast(error.message.slice(0,150)); }
+}
+async function pairApplicationMac() {
+  try { const data=await applicationCloudPost("pair"); S.applicationAgent.pairingToken=data.agent_token||""; rApplicationAgent(); toast("Mac pairing created · copy the token now"); }
+  catch(error) { toast(error.message.slice(0,150)); }
+}
+async function saveApplicationContext() {
+  const question=$("agentContextQuestion")?.value.trim(), value=$("agentContextAnswer")?.value.trim(), category=$("agentContextCategory")?.value.trim();
+  if (!question||!value) { toast("Add both a question and answer"); return; }
+  try { await applicationCloudPost("answer", {question,value,category}); $("agentContextQuestion").value="";$("agentContextAnswer").value="";await loadApplicationAgent(false);rApplicationAgent();toast("Answer banked in private Drive JSON + Markdown"); }
+  catch(error) { toast(error.message.slice(0,150)); }
+}
+async function refreshApplicationAgent() { await loadApplicationAgent(false); rApplicationAgent(); }
+function rApplicationAgent() {
+  if (!S.auth) { rJobs(); return; }
+  if (!S.auth.owner) { S.tab="jobs"; rJobs(); return; }
+  if (S.applicationAgent.status === "checking") { loadApplicationAgent(false).then(()=>{if(S.tab==="agent")rApplicationAgent();}); return; }
+  const data=S.applicationAgent, items=data.items||[], candidates=applicationAgentCandidates(), selected=new Set(data.selected||[]);
+  const queueSummary=items.filter(item=>APPLICATION_ACTIVE_STATES.has(item.state)).length;
+  const contextAnswers=data.context?.answers||[];
+  const token=data.pairingToken;
+  $("main").innerHTML=`<section class="testing-hero"><div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">${queueSummary} active</span><span class="chip">${contextAnswers.length} approved answers</span></div><div class="acts"><button class="act" onclick="refreshApplicationAgent()">refresh</button><button class="act primary" onclick="pairApplicationMac()">pair Mac</button></div></div><h2>Application Autopilot</h2><p class="sub">The Mac extension fills approved repetitive fields and keeps moving through ordinary pages. It pauses on missing information, essays, unknown sensitive fields, attestations, and the final Submit action. Every final confirmation shows the exact values and page fingerprint.</p>${data.error?`<div class="note"><strong>Private Drive unavailable.</strong> ${esc(data.error)} Connect Google, then refresh.</div>`:""}${token?`<div class="note"><strong>Copy this Mac pairing token now.</strong><div class="agent-token">${esc(token)}</div><p class="sub">It is shown once. Paste it into the Job Radar extension popup; revoke it by creating a new pairing if needed.</p></div>`:""}</section><div class="agent-grid"><section class="lane"><div class="bar" style="justify-content:space-between"><h3>Application queue</h3><span class="sub">${items.length} stored</span></div><div class="note">Batch runs are sequential per browser tab. A blocked role parks here while later roles can continue. The app never clicks Submit without your confirmation.</div>${applicationAgentQueueHTML(items)}</section><section class="lane"><h3>Queue saved roles from your phone</h3><p class="sub">Select roles already in To apply / To tailor. The paired Mac opens them later and reports blockers here.</p>${candidates.length?`<div class="bar"><button class="act" onclick='S.applicationAgent.selected=${JSON.stringify(candidates.map(job=>job.id))};rApplicationAgent()'>select all</button><button class="act" onclick='S.applicationAgent.selected=[];rApplicationAgent()'>clear</button><button class="act primary" onclick="queueApplicationBatch()" ${selected.size?"":"disabled"}>queue ${selected.size||0} role${selected.size===1?"":"s"}</button></div><div>${candidates.map(job=>`<label class="agent-card" style="display:flex;gap:.5rem;align-items:flex-start;margin:.35rem 0"><input type="checkbox" ${selected.has(job.id)?"checked":""} onchange='const next=new Set(S.applicationAgent.selected||[]);this.checked?next.add(${JSON.stringify(job.id)}):next.delete(${JSON.stringify(job.id)});S.applicationAgent.selected=[...next];rApplicationAgent()'><span><strong>${esc(job.company)}</strong><br><span class="sub">${esc(job.title)} · ${esc((appliedById()[job.id]||{}).stage||"saved")}</span></span></label>`).join("")}</div>`:'<p class="sub">Save a role from Jobs first.</p>'}<h3 style="margin-top:1rem">Add an answer to the private bank</h3><p class="sub">Bullets are enough. The bank keeps the exact question, category, sensitivity, and reuse choice.</p><input id="agentContextQuestion" placeholder="Question or field label"><select id="agentContextCategory"><option value="other">other</option><option value="essay">essay</option><option value="work_authorization">work authorization</option><option value="education">education</option><option value="portfolio_link">portfolio link</option></select><textarea id="agentContextAnswer" rows="4" placeholder="Your approved answer"></textarea><button class="act primary" onclick="saveApplicationContext()">save answer</button><h3 style="margin-top:1rem">Issue ledger</h3><p class="sub">Sanitized adapter notes are kept private. Ask Codex to repair an issue; it will add a fixture and adapter test before changing behavior.</p>${(data.issues||[]).slice(0,12).map(issue=>`<div class="agent-issue"><strong>${esc(issue.type||"issue")}</strong> · ${esc(issue.provider||"")}<br>${esc(issue.message||"")}<br><span class="sub">${esc(issue.fingerprint||"")} · ${esc(issue.created_at||"")}</span></div>`).join("")||'<p class="sub">No issues recorded.</p>'}</section></div>`;
 }
 
 /* ---------- tutorial + account workspace ------------------------------ */
@@ -1635,7 +1820,7 @@ function tutorialContent(tab) {
       <div class="tut-step"><span><b>Save to To apply.</b> This is the shortlist. After OAuth login, the mark follows your account across devices.</span></div>
       <div class="tut-step"><span><b>Click Apply.</b> The employer page opens in a new tab and the radar saves the role first when your tracker is available.</span></div>
       <div class="tut-step"><span><b>Mark the real stage.</b> Applied means you actually submitted. Later OA, Interview, Rejected, and Closed stages stay visible in Pipeline.</span></div></div>
-    <div class="tut-note">The radar never submits an application for you. It opens the employer’s official application link and records the stage you choose.</div>`;
+    <div class="tut-note">The ordinary Apply button still opens the official link. Owner Autopilot can fill approved fields and click Submit only after you confirm its full, page-bound review card; unknown answers, essays, and attestations remain paused for you.</div>`;
   if (tab === "accounts") return accountTutorialHTML();
   if (tab === "sheets") return `<div class="tut-kicker">Your private tracker</div><h2>Google Sheets in your own Drive</h2>
     <p class="sub">When you connect Google, Job Radar creates a workbook owned by that Google account with separate Applications, Internships, and Preferences tabs. The app uses the selected lane tab as durable storage while keeping the OAuth token server-side.</p>
@@ -1680,8 +1865,8 @@ function renderLaneSwitch() {
 function render() {
   renderBootNotice();
   renderLaneSwitch();
-  const tabs = S.auth?.owner ? [...TABS.slice(0,-1), ["taste","My job preferences"], ["testing","Resume Studio"], TABS.at(-1)] : TABS;
-  if (["testing","taste"].includes(S.tab) && !S.auth?.owner) S.tab = "jobs";
+  const tabs = S.auth?.owner ? [...TABS.slice(0,-1), ["taste","My job preferences"], ["testing","Resume Studio"], ["agent","Autopilot"], TABS.at(-1)] : TABS;
+  if (["testing","taste","agent"].includes(S.tab) && S.auth && !S.auth.owner) S.tab = "jobs";
   $("#nav").innerHTML = tabs.map(([k,l]) =>
     `<button class="${S.tab===k?'on':''}" onclick="S.tab='${k}';render()">${l}</button>`).join("") +
     `<button onclick="window.open('https://github.com/${REPO}/issues','_blank')">Issues ↗</button>` +
@@ -1701,7 +1886,7 @@ function render() {
     `<span><b>${toTailor.length}</b>to tailor</span>` +
     `<span><b>${done.length}</b>applied</span>`;
   ({jobs:rJobs, pipeline:rPipe, history:rHistory, companies:rCos, interview:rInterview,
-    ai:rAI, taste:rTaste, testing:rTesting, settings:rSet})[S.tab]();
+    ai:rAI, taste:rTaste, testing:rTesting, agent:rApplicationAgent, settings:rSet})[S.tab]();
 }
 
 function rowHTML(j, byId) {
@@ -2849,6 +3034,7 @@ async function studioRequest(path, options={}) {
     if (path === "/api/context/answer" && method === "POST") return bridgeRequest("context_answer", requestBody);
     if (path === "/api/context/hint" && method === "POST") return bridgeRequest("context_hint", requestBody);
     if (path === "/api/context/hint/dismiss" && method === "POST") return bridgeRequest("context_hint_dismiss", requestBody);
+    if (path === "/api/run/approve" && method === "POST") return bridgeRequest("approve", requestBody);
     if (path === "/api/run" && method === "POST") return bridgeRequest("queue", requestBody);
     if (path === "/api/run" && method === "GET") return bridgeRequest("status", {id:new URLSearchParams(path.split("?")[1]||"").get("id")||""});
   }
@@ -2914,6 +3100,46 @@ function objectiveRankingHTML(group) {
   const strengths=(assessment.strengths||[]).slice(0,3), risks=(assessment.risks||[]).slice(0,4);
   return `<div class="resume-objective"><div class="bar" style="justify-content:space-between"><h4>Objective ranking · best for this posting</h4>${studioBadge(`${assessment.score}/100 · ${assessment.confidence} confidence`,assessment.confidence==="high"?"good":assessment.confidence==="medium"?"warn":"")}</div><p class="sub"><strong>${esc(studioModeLabel(winner.entry.mode))}</strong> is currently #1 among ${ranked.length} saved version${ranked.length===1?"":"s"}. ${esc(assessment.note||"Per-posting decision aid; not a hiring prediction.")}</p><div class="resume-objective-grid"><div>${ranked.map(item=>{const a=item.assessment, score=Number(a.score);return `<div class="resume-objective-rank"><span><strong>#${item.rank} · ${esc(studioModeLabel(item.entry.mode))}</strong><br><span class="sub">${esc(item.entry.status||"saved")} · ${esc(a.confidence||"unranked")}</span></span><span class="resume-objective-score">${a.rankable&&Number.isFinite(score)?`${score}/100`:"not ranked"}</span></div>`;}).join("")}</div><div><strong class="sub">Why this version</strong>${strengths.length?`<ul class="resume-objective-list">${strengths.map(item=>`<li>${esc(item)}</li>`).join("")}</ul>`:""}${risks.length?`<p class="sub" style="margin-top:.55rem"><strong>Limits</strong></p><ul class="resume-objective-list">${risks.map(item=>`<li>${esc(item)}</li>`).join("")}</ul>`:""}</div></div>${breakdown.length?`<details style="margin-top:.55rem"><summary>show rubric sources</summary>${breakdown.map(item=>`<div style="margin-top:.4rem"><div class="bar" style="justify-content:space-between"><span class="sub">${esc(item.name)} · ${item.weight}%</span><span class="sub">${item.score}/100</span></div><div class="resume-objective-bar"><span style="width:${Math.max(0,Math.min(100,Number(item.score)||0))}%"></span></div><p class="sub">${esc(item.source)} · ${esc(item.detail)}</p></div>`).join("")}</details>`:""}</div>`;
 }
+const RESUME_CONTROL_LABELS = {
+  general_swe_cloud:"General SWE / Cloud",
+  healthcare_scientific_ai:"Healthcare / Scientific AI",
+  ml_research:"ML / Research",
+  data_analytics:"Data / Analytics",
+  other:"Other role family",
+};
+function roleFamilyLabel(value) { return RESUME_CONTROL_LABELS[value] || "Other role family"; }
+function roleFamilyForJob(job) {
+  const text=(job?.company||"")+" "+(job?.title||"")+" "+(job?.sector||"");
+  const lowered=text.toLowerCase();
+  if (/health|healthcare|clinical|biomedical|pharma|life science|medical|drug|scientific|merck|stryker/.test(lowered)) return "healthcare_scientific_ai";
+  if (/research|scientist|machine learning|\bml\b|artificial intelligence|\bai\b|deep learning|nlp|computer vision/.test(lowered)) return "ml_research";
+  if (/data scientist|analytics|analyst|business intelligence|\bdata\b/.test(lowered)) return "data_analytics";
+  return "general_swe_cloud";
+}
+function activeResumeControl(job) {
+  const family=roleFamilyForJob(job), profiles=Array.isArray(S.testing.controlProfiles)?S.testing.controlProfiles:[];
+  return profiles.find(item=>item.status==="active"&&item.role_family===family) || profiles.find(item=>item.id==="immutable-default") || {
+    id:"immutable-default",label:"Immutable default",role_family:"all",source:"immutable",status:"active",immutable:true,
+  };
+}
+function queueControlReference(job) {
+  const control=activeResumeControl(job);
+  if (!control || control.id==="immutable-default") return null;
+  return {id:control.id,label:control.label,role_family:control.role_family,source:control.source,entry_id:control.entry_id,run_id:control.run_id};
+}
+function resumeControlSummaryHTML(job) {
+  const family=roleFamilyForJob(job), control=activeResumeControl(job), roleLabel=roleFamilyLabel(family);
+  const fallback=control?.id==="immutable-default";
+  return '<div class="studio-control-note"><strong>Comparison control</strong> · '+esc(control?.label||"Immutable default")+' '+studioBadge(fallback?"safety floor":"approved role reference",fallback?"warn":"good")+
+    '<p class="sub">Role family: '+esc(roleLabel)+'. '+(fallback?"No approved role-family control is active, so this posting uses the locked default.":"This approved prior winner is a secondary reference; the locked default still decides hard safety and primary-winner fallback.")+'</p></div>';
+}
+function resumeControlsHTML() {
+  const profiles=(S.testing.controlProfiles||[]).filter(item=>item.id!=="immutable-default");
+  const cards=profiles.length?profiles.map(item=>'<div class="resume-control-card"><div class="bar" style="justify-content:space-between"><strong>'+esc(item.label||roleFamilyLabel(item.role_family))+'</strong>'+studioBadge(item.status||"active",item.status==="active"?"good":"warn")+'</div><p class="sub">'+esc(roleFamilyLabel(item.role_family))+' · '+esc(item.source||"bank reference")+(item.entry_id?" · "+esc(item.entry_id):"")+'</p>'+(item.status==="active"?'<button class="act" onclick="revokeResumeControl('+JSON.stringify(item.id)+')">revoke control</button>':'<span class="sub">revoked; retained for audit history</span>')+'</div>').join(""):'<p class="sub">No role-family controls are active yet. Promote a reviewed winner from a bank card when one earns it.</p>';
+  const candidates=resumeBankEntries().filter(entry=>entry.storage==="cloud"&&entry.status==="complete"&&entry.approval_state==="approved"&&entry.winner_version==="tailored").slice(0,8);
+  const candidateHTML=candidates.length?'<div style="margin-top:.7rem"><strong>Approved candidates</strong><p class="sub">Promote only after you have inspected the PDF and audit.</p><div class="resume-control-candidates">'+candidates.map(entry=>'<div class="resume-control-candidate"><span><strong>'+esc(entry.job?.company||"Approved winner")+'</strong><br><span class="sub">'+esc(entry.job?.title||"")+' · '+esc(roleFamilyLabel(roleFamilyForJob(entry.job)))+'</span></span><button class="act" onclick="promoteResumeControlByKey(&quot;run&quot;,&quot;'+esc(entry.entry_id)+'&quot;)">promote</button></div>').join("")+'</div></div>':'';
+  return '<section class="lane" style="margin-bottom:.8rem"><div class="bar" style="justify-content:space-between"><div><h3>Permanent role controls</h3><p class="sub">These are reusable comparison references, not automatic replacements. Only an owner-approved tailored winner can be promoted; the immutable default is always available.</p></div><span class="chip">'+profiles.filter(item=>item.status==="active").length+' active</span></div><div class="resume-control-grid"><div class="resume-control-card"><strong>Immutable default</strong><p class="sub">Locked canonical resume · universal safety floor · cannot be revoked.</p></div>'+cards+'</div>'+candidateHTML+'</section>';
+}
 function cloudBankArtifactUrl(entry, kind) {
   if (entry?.storage === "cloud") return entry.urls?.[kind] || "";
   if (!entry?.entry_id || !entry?.source) return "";
@@ -2929,8 +3155,12 @@ async function loadCloudResumeBank(render=true) {
     let data={}; try { data=await response.json(); } catch (_) {}
     if (!response.ok) throw new Error(data.error || `Cloud Resume Bank returned ${response.status}`);
     S.testing.cloudLibrary = Array.isArray(data.resumes) ? data.resumes : [];
+    S.testing.controlProfiles = Array.isArray(data.controls) ? data.controls : [{
+      id:"immutable-default",label:"Immutable default",role_family:"all",source:"immutable",status:"active",immutable:true,
+    }];
     S.testing.cloudBank = {status:"online", error:"", updated_at:data.updated_at||"", needsGoogle:false};
   } catch (error) {
+    S.testing.controlProfiles = [{id:"immutable-default",label:"Immutable default",role_family:"all",source:"immutable",status:"active",immutable:true}];
     S.testing.cloudBank = {status:"unavailable", error:error.message, updated_at:"", needsGoogle:/Connect Google/i.test(error.message)};
   }
   if (render && S.tab === "testing") rTesting();
@@ -2942,6 +3172,36 @@ async function cloudResumeBankPost(entry, artifact=null, artifacts=[]) {
   let data={}; try { data=await response.json(); } catch (_) {}
   if (!response.ok) throw new Error(data.error || `Cloud Resume Bank returned ${response.status}`);
   return data;
+}
+async function cloudResumeControlPost(action, payload={}) {
+  const response=await fetch("/api/resume-bank",{method:"POST",credentials:"same-origin",
+    headers:{"content-type":"application/json"},body:JSON.stringify({action,...payload})});
+  let data={}; try { data=await response.json(); } catch (_) {}
+  if (!response.ok) throw new Error(data.error || "Resume control update failed");
+  return data;
+}
+async function promoteResumeControl(entry) {
+  const family=roleFamilyForJob(entry?.job||{});
+  if (entry?.approval_state!=="approved" || entry?.winner_version!=="tailored") {
+    toast("Only an owner-approved tailored winner can become a permanent control"); return;
+  }
+  if (!confirm("Promote this approved winner as the reusable "+roleFamilyLabel(family)+" control? The immutable default remains the safety floor.")) return;
+  try {
+    await cloudResumeControlPost("control_promote",{source:entry.source,entry_id:entry.entry_id,role_family:family,
+      label:roleFamilyLabel(family)+" · "+(entry.job?.company||"approved winner")});
+    await loadCloudResumeBank(false); rTesting(); toast("Permanent role-family control saved");
+  } catch (error) { toast(error.message.slice(0,150)); }
+}
+function promoteResumeControlByKey(source, entryId) {
+  const entry=resumeBankEntries().find(item=>item.source===source&&item.entry_id===entryId);
+  if (entry) promoteResumeControl(entry);
+}
+async function revokeResumeControl(id) {
+  if (!confirm("Revoke this role-family control? Existing runs keep their receipt; future queues fall back to the immutable default.")) return;
+  try {
+    await cloudResumeControlPost("control_revoke",{id});
+    await loadCloudResumeBank(false); rTesting(); toast("Role-family control revoked");
+  } catch (error) { toast(error.message.slice(0,150)); }
 }
 function cloudQueueJob(job) {
   return {
@@ -2987,7 +3247,7 @@ function cloudQueueSummaryHTML() {
   return `<div class="note" role="status"><strong>Private cloud queue · ${pending} pending.</strong> ${items.length?items.map(item=>`${esc(item.job?.company||"Role")} · ${esc(item.job?.title||"")} · ${esc(studioModeLabel(item.mode))} · ${esc(cloudQueueStatusLabel(item))}`).join("<br>"):"Nothing is waiting."}${allItems.length>items.length?`<br><span class="sub">${allItems.length-items.length} more items are stored privately.</span>`:""}</div>`;
 }
 async function queueCloudResumeItem(job, mode) {
-  const result = await cloudResumeQueuePost("queue", {job:cloudQueueJob(job), mode});
+  const result = await cloudResumeQueuePost("queue", {job:cloudQueueJob(job), mode, control_profile:queueControlReference(job)});
   await loadCloudResumeQueue(false);
   return result.item;
 }
@@ -3071,7 +3331,7 @@ function resumeBatchCandidates() {
     .sort((a,b) => (b.score || 0) - (a.score || 0) || String(a.company).localeCompare(String(b.company)));
 }
 function resumeBatchModeOptions(mode) {
-  return [["unrestricted","Take-the-wheel (moderate)"],["ai","AI tailor"],["used","Used bullets"],["generation","Unchained generation"]]
+  return [["generation","Unchained generation · AI takes the lead"],["unrestricted","Take-the-wheel (moderate)"],["ai","AI tailor"],["used","Used bullets"]]
     .map(([value,label]) => `<option value="${value}" ${mode===value?"selected":""}>${label}</option>`).join("");
 }
 function resumeBatchStatusKind(status) {
@@ -3104,6 +3364,7 @@ function renderResumeBatchView() {
   <div class="lane">
     <div class="bar" style="justify-content:space-between"><div><h3>Added today <span class="sub">${candidates.length} role${candidates.length===1?"":"s"}</span></h3><p class="sub" style="margin:0">Up to ${RESUME_BATCH_LIMIT} drafts per batch · local calendar day · current non-terminal postings only.</p></div><div class="acts"><button class="act" onclick="selectAllResumeBatch()" ${candidates.length?"":"disabled"}>select up to ${RESUME_BATCH_LIMIT}</button><button class="act" onclick="clearResumeBatch()" ${selected.size?"":"disabled"}>clear</button></div></div>
     ${candidates.length ? `<div class="bar" style="margin:.7rem 0"><label class="sub">draft mode <select id="resumeBatchMode" onchange="resumeBatchState().mode=this.value;rTesting()">${resumeBatchModeOptions(batch.mode)}</select></label><button class="act primary" onclick="queueResumeBatch()" ${!canQueue || !selected.size || queueing?"disabled":""}>${queueing?"Queueing…":`queue ${selected.size} draft${selected.size===1?"":"s"}`}</button><span class="sub">${engineOnline?`${selected.size} selected · Mac worker ready`:cloudReady?`${selected.size} selected · saved privately for the Mac worker`:`connect Google to enable the private queue`}</span></div>
+      ${studioModeGuideHTML(true)}
       <div class="studio-jobs">${candidates.map(job => `<label class="studio-job" style="cursor:pointer"><input type="checkbox" style="margin-right:.55rem" ${selected.has(job.id)?"checked":""} onchange='toggleResumeBatchSelection(${JSON.stringify(job.id)},this.checked)'><span><strong>${esc(job.company)}</strong><small>${esc(job.title)} · Radar ${job.score??"–"} · added ${new Date(job._resumeAddedAt*1000).toLocaleTimeString([], {hour:"numeric",minute:"2-digit"})} · ${esc(job._resumeStage)}</small></span></label>`).join("")}</div>`
       : `<div class="studio-empty"><h3>Nothing added today yet</h3><p>Add roles from Jobs with <strong>save to apply</strong>; they will appear here automatically. Existing active roles can still be tailored one at a time from their row or drawer.</p><button class="act primary" onclick="S.tab='jobs';render()">open Jobs</button></div>`}
   </div>
@@ -3175,7 +3436,7 @@ async function queueResumeBatch() {
         const queued = await queueCloudResumeItem(job, batch.mode);
         Object.assign(row, {queue_id:queued.queue_id,status:queued.state||"queued",message:queued.message||"saved in the private cloud queue"});
       } else {
-        const status = await studioRequest("/api/run", {method:"POST",body:JSON.stringify({job_id:job.id,mode:batch.mode})});
+        const status = await studioRequest("/api/run", {method:"POST",body:JSON.stringify({job_id:job.id,mode:batch.mode,control_profile:queueControlReference(job)})});
         Object.assign(row, {run_id:status.run_id,status:status.status||"queued",message:status.message||"waiting for a private worker"});
       }
       try {
@@ -3323,7 +3584,8 @@ function studioResultHTML(status) {
   if (status.status === "failed") return `<div class="studio-result"><h3>Draft failed safely</h3><p class="sub">${esc(status.message||"The run failed before producing a resume.")} No canonical resume was changed.</p></div>`;
   const pdf = status.pdf_filename ? `<a class="act" href="${studioArtifact(status.run_id,status.pdf_filename)}" target="_blank" rel="noopener">open PDF ↗</a>` : "";
   const preview = status.preview_filename ? `<a class="act" href="${studioArtifact(status.run_id,status.preview_filename)}" target="_blank" rel="noopener">open preview ↗</a>` : "";
-  const reportLink = `<a class="act" href="${studioArtifact(status.run_id,"report.json")}" target="_blank" rel="noopener">audit JSON ↗</a>`;
+  const reportLink = `<a class="act" href="${studioArtifact(status.run_id,"report.json")}" target="_blank" rel="noopener">audit JSON ↗</a>`+
+    (status.status==="awaiting_review"&&review.ready===true?'<button class="act primary" onclick="approveCloudRun(\''+esc(status.run_id)+'\')">approve final PDF</button>':"");
   const reviewText = review.ready===true ? "All required gates pass; inspect the draft before approval." : "Human review is required before this can be treated as ready.";
   const auditEntry = {...status, report};
   const keywordMap = keywordAuditForEntry(auditEntry);
@@ -3334,6 +3596,15 @@ function studioResultHTML(status) {
     ${tailoringAuditHTML(report.tailoring_audit_summary||report.tailoring_audit)}
     ${keywordMap?keywordAuditHTML(auditEntry):""}
     <div class="studio-links">${pdf}${preview}${reportLink}<button class="act" onclick='openResumeWorkshop("${esc(status.run_id)}")'>workshop ↗</button></div></div>`;
+}
+async function approveCloudRun(runId) {
+  try {
+    const updated=await studioRequest("/api/run/approve",{method:"POST",body:JSON.stringify({run_id:runId})});
+    if (S.testing.activeRunId===runId) S.testing.runStatus=updated;
+    await refreshResumeLibrary(false);
+    renderStudioWorkspace();
+    toast("Draft approved privately · sync the bank to make it eligible as a permanent control");
+  } catch (error) { toast("Approval unavailable: "+error.message.slice(0,130)); }
 }
 function studioLibraryHTML() {
   const entries = resumeBankEntries().slice(0,8);
@@ -3407,7 +3678,9 @@ function tailoringAuditHTML(value) {
   if(!audit||audit.available===false)return `<details class="keyword-audit"><summary><strong>Tailoring audit</strong> ${studioBadge("not available","warn")}</summary><div class="keyword-audit-body"><p class="sub">This run has no comparative audit artifact yet. Queue it through the current private Mac worker to generate one.</p></div></details>`;
   const fit=typeof audit.fit==="object"?audit.fit.band:audit.fit||"unknown", readiness=audit.readiness||"review", tailoring=audit.tailoring||"inconclusive";
   const kind=value=>value==="ready"||value==="improved"||value==="strong"?"good":value==="blocked"||value==="regressed"?"bad":"warn";
-  const list=(items,label)=>Array.isArray(items)&&items.length?`<p class="sub" style="margin:.35rem 0"><strong>${label}</strong></p><ul class="resume-objective-list">${items.slice(0,4).map(item=>`<li>${esc(item)}</li>`).join("")}</ul>`:"";
+  const control=audit.comparison_control&&typeof audit.comparison_control==="object"?audit.comparison_control:null;
+  const controlHTML=control?`<div class="studio-control-audit"><strong>Compared against</strong> · ${esc(control.label||"Immutable default")} ${studioBadge(control.reference_only?"secondary reference":"immutable safety floor",control.reference_only?"good":"warn")}<p class="sub">${esc(control.warning||"The immutable default remains the hard-gated primary comparison.")}</p>${Array.isArray(control.lost_terms)&&control.lost_terms.length?`<p class="sub"><strong>Lost versus this control:</strong> ${esc(control.lost_terms.slice(0,8).join(", "))}</p>`:""}${Array.isArray(control.gained_terms)&&control.gained_terms.length?`<p class="sub"><strong>Added versus this control:</strong> ${esc(control.gained_terms.slice(0,8).join(", "))}</p>`:""}</div>`:"";
+  const list=(items,label)=>(label==="Supported gains"?controlHTML:"")+(Array.isArray(items)&&items.length?`<p class="sub" style="margin:.35rem 0"><strong>${label}</strong></p><ul class="resume-objective-list">${items.slice(0,4).map(item=>`<li>${esc(item)}</li>`).join("")}</ul>`:"");
   const recommendation=audit.recommended_version||"review",decision=audit.decision||"needs_review";
   return `<details class="keyword-audit" open><summary><strong>Tailoring audit</strong> ${studioBadge(`fit: ${fit}`,kind(fit))} ${studioBadge(`tailoring: ${tailoring}`,kind(tailoring))} ${studioBadge(`readiness: ${readiness}`,kind(readiness))} ${studioBadge(`recommend: ${recommendation}`,recommendation==="tailored"?"good":recommendation==="base"||recommendation==="blocked"?"bad":"warn")} ${studioBadge(`${audit.confidence||"low"} confidence`,audit.confidence==="high"?"good":"warn")}</summary><div class="keyword-audit-body"><p class="sub">This compares the tailored resume with the original for this posting. It is not a hiring prediction. <strong>${esc(decision.replaceAll("_"," "))}</strong></p>${list(audit.gains,"Supported gains")}${list(audit.losses,"Losses or missed opportunities")}${list(audit.tradeoffs,"Explained tradeoffs")}${list(audit.blockers,"Blockers")}</div></details>`;
 }
@@ -3447,8 +3720,22 @@ function renderResumeBankView() {
   <p class="sub">${groups.length} jobs · ${entries.length} versions</p><section class="resume-bank-grid">${groups.length?groups.map(resumeBankGroupHTML).join(""):"<div class=\"lane\"><p class=\"sub\">No bank entries match this filter. Start the private engine to load the local bank, or connect Google and sync it.</p></div>"}</section>`;
 }
 function studioQueueActionLabel(mode) {
-  const labels = {used:"used-bullets tailor", ai:"AI tailor", unrestricted:"Take-the-wheel", generation:"unchained draft"};
+  const labels = {used:"used-bullets tailor", ai:"AI tailor", unrestricted:"Take-the-wheel", generation:"Unchained generation"};
   return S.testing.engine === "online" ? `Queue ${labels[mode]}` : `Queue ${labels[mode]} in private cloud`;
+}
+function studioModeGuideHTML(compact=false) {
+  const rows = `<div class="studio-mode-list">
+    <div class="studio-mode-row"><strong>Unchained generation <span class="chip good">recommended</span></strong><span>Most autonomous. Maps the whole posting to your evidence, searches for buried support, and may write new source-grounded bullets or Skills lines.</span></div>
+    <div class="studio-mode-row"><strong>Take-the-wheel (moderate)</strong><span>Adaptive portfolio selection and rewriting, but with a stronger preference for preserving already-good evidence.</span></div>
+    <div class="studio-mode-row"><strong>AI tailor</strong><span>Conservative role-specific edits: project selection, supported terminology, rewrites, and the same review gates.</span></div>
+    <div class="studio-mode-row"><strong>Used bullets</strong><span>Baseline only. Selects approved source wording and does not create new wording.</span></div>
+  </div>`;
+  return `<section class="studio-mode-guide" aria-label="Resume Studio mode guide">
+    <div class="bar" style="justify-content:space-between;gap:.5rem"><h4>Which mode should I use?</h4><span class="chip good">AI takes the lead → Unchained</span></div>
+    <p><strong>For the most hands-off result, choose Unchained generation.</strong> It gives the AI the broadest control over the tailoring argument while keeping the evidence, factuality, one-page, and final-review safeguards.</p>
+    ${compact?`<details><summary>What do the other modes mean?</summary>${rows}</details>`:rows}
+    <p class="studio-mode-note">These are still active modes, not obsolete labels. Every mode uses the same private evidence graph and can be rejected in favor of the original resume when the tailored version is not safely better.</p>
+  </section>`;
 }
 function renderStudioWorkspace() {
   const selected = jobById(S.testing.selectedId);
@@ -3469,12 +3756,13 @@ function renderStudioWorkspace() {
   workspace.innerHTML = `<div class="studio-selected"><div class="bar" style="justify-content:space-between;margin:0"><div>${engineBadge} ${selected.alert_ok?studioBadge("eligible","good"):studioBadge("dashboard review","warn")}</div><div class="acts"><button class="act" onclick="showResumeContext()">context &amp; questions${S.testing.match?.context_summary?.open_questions!=null?` · ${S.testing.match.context_summary.open_questions} open`:""}</button><a class="act" href="${esc(safeExternalURL(selected.url))}" target="_blank" rel="noopener noreferrer">open posting ↗</a></div></div>
     <h2>${esc(selected.company)} · ${esc(selected.title)}</h2><div class="sub studio-meta">${esc((selected.locations||[]).join(", ")||"location unknown")} · Radar ${selected.score??"–"} · ${ago(postedTs(selected))||"date unknown"}</div>
     <div class="facts" style="margin-top:.45rem">${match.score!=null?studioBadge(`Resume Match ${match.score}/100`,match.confidence==="low"?"warn":"good"):""}${(match.clusters||[]).slice(0,6).map(c=>studioBadge(c.replaceAll("_"," "))).join("")}</div>${studioRequirementMapHTML(match)}</div>
-    <div class="studio-note" style="margin-top:.65rem"><strong>One system, two safe layers.</strong> This cloud workspace owns the selection, private queue, and run status. The Mac engine owns your evidence graph, provider calls, PDF rendering, and revisions. ${engineOnline?"Queued work can run now.":cloudReady?"The Mac is offline, but this posting can be saved to the private cloud queue and dispatched automatically when the engine reconnects.":"Connect Google to enable the private cloud queue."}</div>
+    ${resumeControlSummaryHTML(selected)}<div class="studio-note" style="margin-top:.65rem"><strong>One system, two safe layers.</strong> This cloud workspace owns the selection, private queue, and run status. The Mac engine owns your evidence graph, provider calls, PDF rendering, and revisions. ${engineOnline?"Queued work can run now.":cloudReady?"The Mac is offline, but this posting can be saved to the private cloud queue and dispatched automatically when the engine reconnects.":"Connect Google to enable the private cloud queue."}</div>
+    ${studioModeGuideHTML()}
     <div class="studio-actions">
       <div class="studio-action"><h4>Used bullets</h4><p>Approved wording and selections only. Your clean comparison baseline.</p><button class="act" ${canQueue?"":"disabled"} onclick="queueResumeMode('used')">${studioQueueActionLabel("used")}</button></div>
       <div class="studio-action"><h4>AI tailor</h4><p>Role-specific rewrites, project swaps, ATS coverage, and a review pass.</p><button class="act" ${canQueue?"":"disabled"} onclick="queueResumeMode('ai')">${studioQueueActionLabel("ai")}</button></div>
-      <div class="studio-action featured"><h4>Take-the-wheel (moderate)</h4><p>Adaptive portfolio changes when stronger verified evidence supports them.</p><button class="act primary" ${canQueue?"":"disabled"} onclick="queueResumeMode('unrestricted')">${studioQueueActionLabel("unrestricted")}</button></div>
-      <div class="studio-action"><h4>Unchained generation</h4><p>Requirement-to-evidence audit with source-grounded generated bullets or Skills lines.</p><button class="act" ${canQueue?"":"disabled"} onclick="queueResumeMode('generation')">${studioQueueActionLabel("generation")}</button></div>
+      <div class="studio-action"><h4>Take-the-wheel (moderate)</h4><p>Adaptive portfolio changes when stronger verified evidence supports them.</p><button class="act" ${canQueue?"":"disabled"} onclick="queueResumeMode('unrestricted')">${studioQueueActionLabel("unrestricted")}</button></div>
+      <div class="studio-action featured"><h4>Unchained generation <span class="chip good">recommended</span></h4><p>Broadest AI control: audit requirements, search your evidence, and generate supported bullets or Skills lines.</p><button class="act primary" ${canQueue?"":"disabled"} onclick="queueResumeMode('generation')">${studioQueueActionLabel("generation")}</button></div>
     </div>
     ${run?`<div class="studio-status ${run.status==='failed'?'bad':busy?'warn':''}">${esc(studioRunStatusText(run))}</div>`:""}
     ${studioResultHTML(run)}
@@ -3540,7 +3828,7 @@ async function drainCloudResumeQueue() {
       try {
         await updateCloudResumeItem(item.queue_id, "dispatching", {message:"Dispatching to the private Mac worker…"});
         const status = await studioRequest("/api/run", {method:"POST",body:JSON.stringify({
-          job_id:item.job.id, mode:item.mode, queue_id:item.queue_id, job_snapshot:cloudQueueJob(item.job),
+          job_id:item.job.id, mode:item.mode, queue_id:item.queue_id, control_profile:item.control_profile||null, job_snapshot:cloudQueueJob(item.job),
         })});
         const running = {...item, state:"running", run_id:status.run_id, message:status.message||"running on the private Mac worker"};
         updateResumeBatchQueueRow(item.queue_id, {status:"running",run_id:status.run_id,message:running.message});
@@ -3618,7 +3906,7 @@ async function queueResumeMode(mode) {
   if (!selected) return;
   try {
     if (S.testing.engine === "online") {
-      const status = await studioRequest("/api/run", {method:"POST",body:JSON.stringify({job_id:selected.id,mode})});
+      const status = await studioRequest("/api/run", {method:"POST",body:JSON.stringify({job_id:selected.id,mode,control_profile:queueControlReference(selected)})});
       S.testing.activeRunId = status.run_id; S.testing.runStatus = status; renderStudioWorkspace(); pollResumeRun(status.run_id);
     } else if (cloudQueueOnline()) {
       const queued = await queueCloudResumeItem(selected, mode);
@@ -3661,6 +3949,7 @@ function rTesting() {
   }
   if (S.testing.bankView) {
     $("#main").innerHTML = renderResumeBankView();
+    $("#main").insertAdjacentHTML("afterbegin", resumeControlsHTML());
     const bankQ=$("#resumeBankQ"), bankMode=$("#resumeBankMode"), bankStatus=$("#resumeBankStatus"), bankEra=$("#resumeBankEra");
     if (bankQ) bankQ.oninput=()=>{S.testing.bankQuery=bankQ.value;clearTimeout(window.resumeBankSearchTimer);window.resumeBankSearchTimer=setTimeout(rTesting,180);};
     if (bankMode) bankMode.onchange=()=>{S.testing.bankMode=bankMode.value;rTesting();};

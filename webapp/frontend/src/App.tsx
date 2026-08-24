@@ -205,7 +205,7 @@ function Shell() {
   return (
     <div className="app-shell">
       <header><div><span className="brand-mark">JR</span><div><h1>Job Radar</h1><p>Fresh, eligible opportunities first.</p></div></div>
-        <nav aria-label="Primary"><NavLink to="/jobs">Jobs</NavLink><NavLink to="/applications">Applications</NavLink><NavLink to="/companies">Companies</NavLink><NavLink to="/resume">Resume Studio</NavLink><NavLink to="/settings">Settings</NavLink></nav>
+        <nav aria-label="Primary"><NavLink to="/jobs">Jobs</NavLink><NavLink to="/applications">Applications</NavLink><NavLink to="/companies">Companies</NavLink><a href="/#agent">Autopilot</a><NavLink to="/resume">Resume Studio</NavLink><NavLink to="/settings">Settings</NavLink></nav>
       </header>
       <main><Routes><Route path="/jobs" element={<JobsView profile={profile} setProfile={setProfile} />} /><Route path="/applications" element={<ApplicationsView profile={profile} />} /><Route path="/companies" element={<CompaniesView profile={profile} />} /><Route path="/resume" element={<LegacyView kind="resume" />} /><Route path="/settings" element={<LegacyView kind="settings" />} /><Route path="*" element={<Navigate to="/jobs" replace />} /></Routes></main>
     </div>

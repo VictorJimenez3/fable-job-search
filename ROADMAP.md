@@ -414,6 +414,15 @@ allowed only when the deterministic comparison finds material loss, and its
 compiled candidate must beat the prior preference key. Independent-provider
 absence remains a visible review limitation.
 
+Permanent role-family comparison controls — ✅ SHIPPED 2026-08-23 (DECISION
+#179). The owner can explicitly promote a synced, approved tailored winner to
+one reusable General SWE / Cloud, Healthcare / Scientific AI, ML / Research,
+or Data / Analytics control. The cloud registry keeps history and revokes the
+previous active control for that family. The local engine verifies the private
+run, approval, tailored winner, and source artifacts before using it as a
+secondary comparison reference; every invalid or unavailable reference falls
+back to the immutable canonical resume, which remains the hard audit floor.
+
 Evidence-preserving tailoring lab — ✅ SHIPPED 2026-08-22 (DECISIONS #166-173).
 Ordinary High-effort lanes no longer trade away distinctive mechanism or
 validation evidence to consume microscopic measured page capacity; geometry
@@ -486,15 +495,22 @@ parallel and kept the base when none produced a material positive win.
 ## Content
 - **Auto cover-letter skeletons** for S-tier roles only, same review-file
   flow as CV tailoring above.
-- **Local application-answer vault** — keep reusable answers (graduation,
-  work authorization/sponsorship, location, portfolio links, short project
-  blurbs) outside this public repo, then expose copy buttons and a per-job
-  checklist in the workspace. Candidate reviews every answer; no blind form
-  submission. This is the next application-speed QoL step after the shipped
-  open/save flow and should reuse the Mac-local privacy boundary from #29.
-- **Application autofill and submission — ⏸️ DEFERRED.** The next major stage
-  after finding, saving, and tailoring. Start with owner-reviewed form fill and
-  answer reuse; do not blindly submit, bypass attestations, or conceal failures.
+- **Local application-answer vault + supervised autofill — ✅ SHIPPED 2026-08-23
+  (DECISION #178).** The owner-only Application Agent stores reusable,
+  sensitivity-labeled answers and field mappings under the ignored Mac
+  `CV/.resume_studio/` boundary, mirrors them to private Drive JSON/Markdown,
+  and exposes a phone-visible sequential queue. Workday, Greenhouse, Lever,
+  Ashby, and SmartRecruiters receive named adapter hints with a generic
+  fallback. Approved values fill automatically; missing answers, essays,
+  unknown sensitive fields, file uploads, attestations, and adapter failures
+  remain visible blockers.
+- **Owner-confirmed application submission — ✅ SHIPPED 2026-08-23
+  (DECISION #178).** The extension can click a matching final Submit control
+  only after a full page-bound review card is confirmed locally or from the
+  owner phone. Confirmations are single-use and expire after 15 minutes. A
+  changed page fails closed; the issue ledger records a sanitized observation.
+  Multi-user storage, unattended submission, attestation bypass, and recruiter
+  messaging remain deliberately out of scope.
 
 ## Ops
 - **Company-research backlog throughput — ✅ checkpointing + retry visibility shipped.** The

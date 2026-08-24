@@ -137,6 +137,22 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   map and overlay are diagnostic only; unsupported terms remain gaps and the
   clean PDF remains unmodified.
 
+### Current change (verified 2026-08-23)
+
+- **Opt-in permanent role-family controls:** the cloud Resume Bank stores a
+  private `resume-studio-control-profiles.json` registry in the owner's Drive.
+  The immutable canonical resume is always present as the safety floor. A
+  role-family control can be promoted only from a synced, complete,
+  owner-approved run whose published winner is the tailored artifact and whose
+  PDF is present. The cloud queue carries only a sanitized control reference;
+  the local engine resolves it against the private run directory and falls
+  back to the immutable default if the reference is missing, revoked, stale,
+  unapproved, or lacks the source PDF/TeX. The selected control is a secondary
+  comparison reference, so its supported-term and signal-family diff is
+  visible without weakening the existing canonical audit gates. Promotion is
+  per family and revokes the prior active profile while retaining history.
+  No Google/Merck historical draft is auto-promoted.
+
 ### Current change (verified 2026-08-17)
 
 - **Resume Studio effort profile and latency closure:** the local engine keeps
@@ -332,6 +348,60 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   false-positive; the base still wins for substantive regressions. Receipts
   and the post-fix replay are in the benchmark directory, and the fixed
   evaluator semantics are covered by the focused test suite.
+
+### Current change (verified 2026-08-23)
+
+- **Resume Studio runtime and queue recovery:** the local engine now records a
+  source fingerprint, evaluator contract, process ID, and worker count in
+  health/run metadata. A launchd process whose loaded source differs from the
+  checkout reports `restart_required` and refuses new queue requests instead of
+  running an outdated evaluator contract. On startup, the bounded worker pool
+  scans durable run snapshots, resets abandoned `running` work to `queued`,
+  and resumes both queued and interrupted runs; completed, failed, and
+  owner-review runs are not replayed. The default remains two workers, with a
+  service-install override capped at four. A narrowly recognized historical
+  `cannot schedule new futures after interpreter shutdown` record is repaired
+  once as queued so the shutdown hardening does not strand work created by the
+  old daemon.
+
+- **Truthful queue status:** the library no longer relabels an old queued or
+  running run as `interrupted` merely because its timestamp is older than 30
+  minutes. It preserves the actual persisted state and exposes age/staleness
+  as separate metadata and an attention warning, so backlog age cannot be
+  mistaken for a terminal failure. Focused Resume Studio coverage is now 163
+  tests. Provider launchers are tracked and terminated with the service, so a
+  launchd restart does not leave orphaned Codex calls behind. The launchd
+  plist now gives graceful shutdown 30 seconds and the installer no longer
+  force-kills a freshly bootstrapped service; the SIGTERM path snapshots,
+  reaps providers, cancels queued futures, and exits without an interpreter
+  atexit join.
+
+### Current change (verified 2026-08-23)
+
+- **Owner-only Application Autopilot:** `radar/application_agent.py` now owns
+  a deterministic local form decision engine and durable context/session/issue
+  bank under ignored `CV/.resume_studio/application_agent.json`. The existing
+  loopback Resume Studio service exposes `/api/application/*` routes and the
+  Chrome extension sends visible field structure only. Named adapter hints
+  cover Workday, Greenhouse, Lever, Ashby, and SmartRecruiters; generic pages
+  remain conservative.
+- **Private Drive control plane:** `webapp/api/application-agent.js` stores
+  `application-context.json`, readable `application-context.md`,
+  `application-queue.json`, and a sanitized issue ledger in a separate
+  app-created private Drive folder. The owner UI edits context; Markdown is a
+  mirror. A hashed, revocable one-time pairing token lets the Mac extension
+  poll the queue without receiving the owner's session cookie.
+- **Review boundary:** approved answers may autofill, including approved
+  sensitive answers, but unknown required/essay/sensitive fields, file uploads,
+  attestations, and adapter failures block. The extension advances ordinary
+  multi-page steps, never clicks Submit until a full owner review is confirmed,
+  and verifies the page fingerprint again immediately before the click. Phone
+  confirmation is single-use and expires after 15 minutes. A queued batch is
+  sequential per browser; blocked roles park while later roles continue.
+- **Validation:** focused application-agent tests cover context reuse,
+  sensitive blockers, final review/fingerprint checks, issue persistence, and
+  the owner/Drive/extension contract. The new unpacked extension lives under
+  `browser-extension/`; no extension ID or provider secret is committed.
 
 ### Current change (verified 2026-08-19)
 
@@ -1167,11 +1237,11 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   momentum and compensation can compensate for weaker ordinary dimensions.
   Sector points have diminishing influence and hard gates remain absolute.
 - **Still deliberately deferred:** semantic/vector RAG, multi-user CV/provider
-  storage, owner-reviewed application autofill/submission, and recruiter
-  identification/asking with approval before send. Email-based applied
-  detection is also parked until the multi-user privacy model exists. The
-  current product stops at finding, saving, tailoring, opening the application,
-  and providing public recruiter-search links/templates.
+  storage, and recruiter identification/asking with approval before send.
+  Owner-only application autofill/submission is now shipped in the separate
+  Application Agent boundary (DECISION #178); it remains deliberately
+  unavailable to other users and never bypasses attestations. Email-based
+  applied detection is also parked until the multi-user privacy model exists.
   **Next UI TODO:** add a hierarchical location selector: expand United States
   into selectable states, but keep non-US locations at country level only. This
   must consume the current location fields without changing the scraper,

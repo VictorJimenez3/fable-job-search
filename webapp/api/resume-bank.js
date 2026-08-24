@@ -19,6 +19,11 @@ const MAX_ENTRIES = 500;
 const INDEX_FILENAME = "resume-bank-index.json";
 const QUEUE_VERSION = "v1";
 const QUEUE_FILENAME = "resume-studio-cloud-queue.json";
+const CONTROL_VERSION = "v1";
+const CONTROL_FILENAME = "resume-studio-control-profiles.json";
+const CONTROL_ROLE_FAMILIES = new Set([
+  "general_swe_cloud", "healthcare_scientific_ai", "ml_research", "data_analytics", "other",
+]);
 const MAX_QUEUE_ITEMS = 100;
 const QUEUE_MODES = new Set(["used", "ai", "unrestricted", "generation"]);
 const QUEUE_STATES = new Set(["queued", "dispatching", "running", "awaiting_review", "complete", "failed", "cancelled"]);
@@ -127,6 +132,10 @@ function auditSummary(value) {
   const list = (field, limit) => Array.isArray(audit[field])
     ? audit[field].map(item => clean(item, 240)).filter(Boolean).slice(0, limit)
     : [];
+  const control = audit.comparison_control && typeof audit.comparison_control === "object" ? audit.comparison_control : {};
+  const controlList = (field, limit) => Array.isArray(control[field])
+    ? control[field].map(item => clean(item, 240)).filter(Boolean).slice(0, limit)
+    : [];
   return {
     version: clean(audit.version, 80), available,
     status: clean(audit.status, 24), readiness: clean(audit.readiness, 24),
@@ -135,6 +144,19 @@ function auditSummary(value) {
     run_id: clean(audit.run_id, 80), queue_id: clean(audit.queue_id, 80),
     finding_counts: Object.fromEntries(Object.entries(counts).slice(0, 8).map(([key, value]) => [clean(key, 60), Number(value || 0)])),
     blockers: list("blockers", 6), gains: list("gains", 4), losses: list("losses", 6),
+    comparison_control: {
+      id: clean(control.id, 120), label: clean(control.label, 180), role_family: clean(control.role_family, 80),
+      source: clean(control.source, 40), entry_id: clean(control.entry_id, 120), run_id: clean(control.run_id, 80),
+      artifact: clean(control.artifact, 220), available: control.available === true,
+      approved: control.approved === true, reference_only: control.reference_only === true,
+      scope: clean(control.scope, 40), warning: clean(control.warning, 280),
+      lost_terms: controlList("lost_terms", 30), gained_terms: controlList("gained_terms", 30),
+      lost_signal_families: controlList("lost_signal_families", 20),
+      candidate_covered_count: Number(control.candidate_covered_count || 0),
+      baseline_covered_count: Number(control.baseline_covered_count || 0),
+      candidate_coverage_percent: Number.isFinite(Number(control.candidate_coverage_percent)) ? Number(control.candidate_coverage_percent) : null,
+      baseline_coverage_percent: Number.isFinite(Number(control.baseline_coverage_percent)) ? Number(control.baseline_coverage_percent) : null,
+    },
     hash: clean(audit.hash, 80),
   };
 }
@@ -149,6 +171,86 @@ async function bankIndex(token, folder) {
   if (!index || typeof index !== "object") index = {};
   if (!Array.isArray(index.entries)) index.entries = [];
   return {file: files[0], index: {version: BANK_VERSION, updated_at: clean(index.updated_at, 80), entries: index.entries.slice(0, MAX_ENTRIES)}};
+}
+
+function normalizedControl(value) {
+  const control = value && typeof value === "object" ? value : {};
+  const family = control.id === "immutable-default" ? "all" : String(control.role_family || "");
+  return {
+    id: clean(control.id, 120), label: clean(control.label, 180),
+    role_family: family === "all" || CONTROL_ROLE_FAMILIES.has(family) ? family : "other",
+    source: clean(control.source, 40), entry_id: clean(control.entry_id, 120),
+    run_id: clean(control.run_id || control.entry_id, 80),
+    artifact: clean(control.artifact, 220), status: ["active", "revoked"].includes(control.status)
+      ? control.status : "active",
+    approved_at: clean(control.approved_at, 80), revoked_at: clean(control.revoked_at, 80),
+    approved_by: clean(control.approved_by, 80),
+  };
+}
+
+function immutableControl() {
+  return {
+    id: "immutable-default", label: "Immutable default", role_family: "all",
+    source: "immutable", entry_id: "", run_id: "",
+    artifact: "immutable canonical resume", status: "active",
+    approved_at: "implicit", revoked_at: "", approved_by: "system",
+    immutable: true, always_available: true,
+  };
+}
+
+async function controlIndex(token, folder) {
+  const files = await listFiles(token,
+    `'${folder.id}' in parents and trashed = false and name = '${CONTROL_FILENAME}' and ` +
+    "appProperties has { key='resumeStudioControlProfiles' and value='v1' }",
+    "files(id,name,mimeType,appProperties,parents,size,modifiedTime)");
+  const file = files[0] || null;
+  let profiles = [];
+  let updated_at = "";
+  if (file?.id) {
+    try {
+      const parsed = JSON.parse((await readFile(token, file.id)).toString("utf8"));
+      profiles = Array.isArray(parsed?.profiles) ? parsed.profiles.map(normalizedControl).filter(item => item.id) : [];
+      updated_at = clean(parsed?.updated_at, 80);
+    } catch {}
+  }
+  return {file, index: {version: CONTROL_VERSION, updated_at, profiles: profiles.slice(0, 100)}};
+}
+
+async function writeControlIndex(token, folder, current, profiles) {
+  const metadata = {name: CONTROL_FILENAME, mimeType: "application/json",
+    appProperties: {resumeStudioControlProfiles: CONTROL_VERSION}};
+  if (!current.file?.id) metadata.parents = [folder.id];
+  const content = Buffer.from(JSON.stringify({version: CONTROL_VERSION,
+    updated_at: new Date().toISOString(), profiles: profiles.slice(0, 100).map(normalizedControl)}));
+  return uploadFile(token, {id: current.file?.id || "", metadata, content, contentType: "application/json"});
+}
+
+function publicControls(current) {
+  const index = current?.index || {};
+  return [immutableControl(), ...(Array.isArray(index.profiles) ? index.profiles : [])]
+    .map(normalizedControl)
+    .map(item => ({...item, immutable: item.id === "immutable-default", always_available: item.id === "immutable-default"}));
+}
+
+function controlReference(value) {
+  const control = value && typeof value === "object" ? value : {};
+  const id = clean(control.id, 120);
+  if (!id || id === "immutable-default") return null;
+  return {
+    id, label: clean(control.label, 180), role_family: CONTROL_ROLE_FAMILIES.has(String(control.role_family || ""))
+      ? String(control.role_family) : "other",
+    source: clean(control.source, 40) || "run", entry_id: clean(control.entry_id, 120),
+    run_id: clean(control.run_id || control.entry_id, 80),
+  };
+}
+
+async function activeControlReference(token, folder, value) {
+  const reference = controlReference(value);
+  if (!reference) return null;
+  const current = await controlIndex(token, folder);
+  const profile = current.index.profiles.find(item => item.id === reference.id && item.status === "active");
+  if (!profile) throw new Error("selected role-family control is no longer active");
+  return controlReference(profile);
 }
 
 async function writeIndex(token, folder, current, index) {
@@ -171,6 +273,8 @@ function normalizedEntry(value) {
     preview_filename: entry.preview_filename ? safeName(entry.preview_filename) : "",
     has_pdf: Boolean(entry.has_pdf), has_posting_snapshot: Boolean(entry.has_posting_snapshot),
     has_workshop: Boolean(entry.has_workshop), craft_score: entry.craft_score ?? null,
+    approval_state: clean(entry.approval_state, 40) || "awaiting_review",
+    winner_version: clean(entry.winner_version, 24),
     ready: entry.ready === true, validation_warnings: Array.isArray(entry.validation_warnings)
       ? entry.validation_warnings.map(item => clean(item, 280)).slice(0, 30) : [],
     objective: entry.objective && typeof entry.objective === "object" ? {
@@ -291,6 +395,7 @@ function publicQueueItem(value) {
     state: QUEUE_STATES.has(item.state) ? item.state : "queued",
     run_id: clean(item.run_id, 80), message: clean(item.message, 500), error: clean(item.error, 500),
     created_at: clean(item.created_at, 80), updated_at: clean(item.updated_at, 80),
+    control_profile: controlReference(item.control_profile),
     job: queueJob(item.job),
   };
 }
@@ -336,6 +441,7 @@ async function enqueueCloudRun(token, value) {
   const job = queueJob(value?.job);
   if (!job) throw new Error("invalid public posting snapshot");
   const {folder, current} = await getQueue(token);
+  const control_profile = await activeControlReference(token, folder, value?.control_profile);
   const duplicate = current.items.find(item => item.job?.id === job.id && item.mode === mode &&
     ["queued", "dispatching", "running", "awaiting_review"].includes(item.state));
   if (duplicate) return {item: publicQueueItem(duplicate), duplicate: true};
@@ -343,7 +449,7 @@ async function enqueueCloudRun(token, value) {
   const item = {
     queue_id: crypto.randomBytes(12).toString("hex"), mode, state: "queued", run_id: "",
     message: "Saved in the private cloud queue; waiting for the Mac worker.", error: "",
-    created_at: now, updated_at: now, job,
+    created_at: now, updated_at: now, job, control_profile,
   };
   const items = [item, ...current.items].slice(0, MAX_QUEUE_ITEMS);
   await writeQueue(token, folder, current, items);
@@ -417,6 +523,53 @@ async function syncEntry(token, value, artifact, artifactList = []) {
   return normalizedEntry(stored);
 }
 
+async function promoteControl(token, value) {
+  const source = clean(value?.source, 40);
+  const entry_id = clean(value?.entry_id, 120);
+  const role_family = String(value?.role_family || "").trim();
+  if (source !== "run" || !entry_id || !CONTROL_ROLE_FAMILIES.has(role_family) || role_family === "other") {
+    throw new Error("choose a valid role-family control from an owner-approved run");
+  }
+  const {folder, current: bank} = await getBank(token);
+  const entry = bank.index.entries.find(item => entryId(item) === `${source}:${entry_id}`);
+  if (!entry) throw new Error("sync this Resume Bank entry to the cloud before promoting it");
+  if (entry.status !== "complete" || entry.approval_state !== "approved" || entry.winner_version !== "tailored" || !entry.has_pdf) {
+    throw new Error("only an owner-approved tailored winner can become a permanent role-family control");
+  }
+  const controls = await controlIndex(token, folder);
+  const existing = controls.index.profiles.find(item => item.source === source && item.entry_id === entry_id && item.role_family === role_family && item.status === "active");
+  if (existing) return normalizedControl(existing);
+  const profileId = `control-${crypto.createHash("sha256").update(`${source}:${entry_id}:${role_family}`).digest("hex").slice(0, 20)}`;
+  const profile = normalizedControl({
+    id: profileId,
+    label: clean(value?.label, 180) || `${role_family} control`,
+    role_family, source, entry_id, run_id: entry.run_id || entry_id,
+    artifact: `${entry_id}/${entry.pdf_filename}`,
+    status: "active", approved_at: new Date().toISOString(), approved_by: OWNER,
+  });
+  const replacedAt = new Date().toISOString();
+  const next = [profile, ...controls.index.profiles
+    .filter(item => item.id !== profile.id)
+    .map(item => item.role_family === role_family && item.status === "active"
+      ? {...item, status: "revoked", revoked_at: replacedAt}
+      : item)];
+  await writeControlIndex(token, folder, controls, next);
+  return profile;
+}
+
+async function revokeControl(token, value) {
+  const id = clean(value?.id, 120);
+  if (!id || id === "immutable-default") throw new Error("the immutable default cannot be revoked");
+  const {folder} = await getBank(token);
+  const controls = await controlIndex(token, folder);
+  const profile = controls.index.profiles.find(item => item.id === id);
+  if (!profile) throw new Error("role-family control not found");
+  profile.status = "revoked";
+  profile.revoked_at = new Date().toISOString();
+  await writeControlIndex(token, folder, controls, controls.index.profiles);
+  return normalizedControl(profile);
+}
+
 module.exports = async (req, res) => {
   try {
     const access = await contextFor(req);
@@ -426,7 +579,8 @@ module.exports = async (req, res) => {
         res.status(200).json({configured: true, connected: true, source: access.source,
           queue_version: QUEUE_VERSION, items: current.items.map(publicQueueItem)}); return;
       }
-      const {current} = await getBank(access.token);
+      const {folder, current} = await getBank(access.token);
+      const controls = await controlIndex(access.token, folder);
       const artifactId = clean(req.query?.artifact, 160);
       if (artifactId) {
         if (!/^[A-Za-z0-9_-]+$/.test(artifactId) || !findArtifact(current.index, artifactId)) {
@@ -441,7 +595,8 @@ module.exports = async (req, res) => {
         res.status(200).end(data); return;
       }
       res.status(200).json({configured: true, connected: true, source: access.source,
-        updated_at: current.index.updated_at, resumes: publicEntries(current.index)}); return;
+        updated_at: current.index.updated_at, resumes: publicEntries(current.index),
+        controls: publicControls(controls), controls_updated_at: controls.index.updated_at}); return;
     }
     if (req.method === "POST") {
       if (!requireMutationRequest(req, res)) return;
@@ -451,6 +606,12 @@ module.exports = async (req, res) => {
       }
       if (payload.action === "queue_update") {
         res.status(200).json({ok: true, ...(await updateCloudRun(access.token, payload))}); return;
+      }
+      if (payload.action === "control_promote") {
+        res.status(200).json({ok: true, control: await promoteControl(access.token, payload)}); return;
+      }
+      if (payload.action === "control_revoke") {
+        res.status(200).json({ok: true, control: await revokeControl(access.token, payload)}); return;
       }
       const entry = await syncEntry(access.token, payload.entry, payload.artifact, payload.artifacts);
       res.status(200).json({ok: true, entry: publicEntries({entries: [{...entry, artifact_refs: {}}]})[0]}); return;

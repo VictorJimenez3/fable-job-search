@@ -2810,3 +2810,98 @@ version exists, while the expanded card retains the newest draft and every
 version. The UI therefore treats the winner label, the visual preview, and the
 comparison list as one coherent decision surface. No diagnostic map or
 objective rank is a recruiter ATS score or an automatic submission decision.
+
+## 176. Resume Studio persists queue recovery and rejects stale daemons (2026-08-23)
+
+The local engine's executor is intentionally ephemeral, but run snapshots are
+durable. On service startup, queued snapshots are submitted to the bounded
+worker pool and snapshots left `running` by a prior process are reset to
+`queued` with a recovery receipt before submission. Completed, failed, and
+owner-review runs remain terminal and are never replayed. The default is two
+full-run workers; the launchd installer accepts `RESUME_STUDIO_WORKERS=1..4`
+and clamps the operational surface to that range.
+
+The service also hashes its loaded source and compares it with the current
+checkout on every health/start preflight. A stale process remains observable
+so an operator can restart it, but it refuses new runs rather than silently
+using an outdated evaluator/runtime contract. Queue age is separate from
+status: an old `queued` or `running` record may be marked for attention, but
+is not relabeled `interrupted` without an actual persisted interruption. This
+keeps status, recovery, and evaluator provenance auditable across launchd
+restarts. Provider subprocess groups are tracked by the parent service and
+terminated during shutdown so the restart boundary also closes the usage and
+process-lifetime boundary.
+
+## 177. Resume Studio uses a graceful launchd shutdown boundary (2026-08-23)
+
+The launchd installer now gives Resume Studio a 30-second `SIGTERM` grace
+window and starts a freshly bootstrapped job without a forcing `kickstart -k`.
+This is part of the queue contract: the parent first records submitted work as
+recoverable, terminates its tracked Codex process groups, cancels queued
+futures, and exits through a direct signal path rather than entering Python's
+executor atexit join. A short launchd timeout or forced restart can otherwise
+orphan provider calls or let a worker write a shutdown failure after the queue
+snapshot has been interrupted.
+
+## 178. Application Autopilot is a private, owner-confirmed browser loop (2026-08-23)
+
+The user asked for the repetitive part of applying to be automatic while
+keeping job choice and non-repetitive answers human. The public Simplify
+workflow confirms the useful interaction model—profile-backed repeated-field
+autofill, exact-question answer reuse, multipage assistance, and an editable
+review before submission—but its public help material does not provide a
+documented integration API. Job Radar therefore recreates the workflow behind
+its own Chrome extension and deterministic local agent rather than depending
+on an undocumented provider surface.
+
+The first production coverage set is Workday, Greenhouse, Lever, Ashby, and
+SmartRecruiters, with named adapter hints for stable labels/keys and a generic
+fallback. The extension sends visible form structure to the existing
+loopback-only Resume Studio service; the local agent stores approved answers,
+field mappings, sessions, fingerprints, and sanitized issues under the ignored
+`CV/.resume_studio/` boundary. It never receives a CV, cookie, password,
+provider session, raw HTML dump, or LinkedIn data. Unknown required fields,
+new essays, unknown sensitive fields, resume uploads, attestations, changed
+selectors, and failed adapters become durable blockers instead of guesses.
+
+The owner-only production control plane uses the existing least-privilege
+Google Drive path but a separate app-created `Job Radar Application Agent`
+folder. It mirrors machine JSON as `application-context.json`,
+`application-queue.json`, and issue JSON plus readable Markdown companions.
+The app UI edits context; Markdown is an export/read mirror, so arbitrary edits
+cannot silently change matching behavior. A revocable, one-time Mac pairing
+token lets the extension poll the private queue without exposing the owner's
+session cookie. The token is stored hashed in Drive.
+
+The queue supports explicit per-role launches and sequential batches. A blocked
+role parks while later roles can continue. Approved sensitive answers may be
+reused, but every proposed value is rendered in a final review card. Submit is
+allowed only after the owner confirms the exact review hash, nonce, and current
+page fingerprint. The approval is single-use and expires after 15 minutes;
+the local agent performs a read-only fingerprint check immediately before the
+extension clicks the final Submit control. A successful click is recorded as
+`submitted`, and the owner UI reconciles that terminal state to the existing
+application stage when it next loads. There is no unattended submission,
+attestation bypass, self-modifying code, multi-user context store, or recruiter
+messaging.
+
+## 179. Permanent role-family controls remain opt-in and fail closed (2026-08-23)
+
+The owner asked whether a strong resume should become a reusable baseline rather
+than comparing every future draft only with the generic default. Resume Studio
+now supports explicit, per-family controls for General SWE / Cloud, Healthcare
+/ Scientific AI, ML / Research, and Data / Analytics. The cloud Resume Bank
+stores only a sanitized reference in its private Drive control registry; the
+local engine resolves that reference to a private run artifact and verifies the
+source run is complete, owner-approved, the tailored winner, and still has both
+source TeX and PDF. A missing, revoked, stale, malformed, or unapproved
+reference falls back to the immutable canonical resume and records why.
+
+The selected role control is a secondary comparison reference. It can expose
+supported keyword and portfolio-signal losses or gains, but it cannot weaken
+the immutable baseline's factuality, eligibility, privacy, layout, or sealed
+review gates, and it cannot auto-promote historical Google/Merck drafts. Only
+an explicit owner promotion creates a control; promoting another control for a
+family revokes the prior active profile while retaining its history. This
+keeps the idea useful when a role-family winner is genuinely better without
+letting a good-looking draft become an unreviewed new source of truth.
