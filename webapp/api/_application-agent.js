@@ -137,19 +137,27 @@ async function sheetJson(url, token, options = {}) {
 }
 
 async function ensureApplicationSheet(token, spreadsheet) {
-  const metadata = await sheetJson(
-    `${SHEETS_API}/${encodeURIComponent(spreadsheet)}?fields=sheets(properties(sheetId,title))`, token,
-  );
+  const metadataUrl = `${SHEETS_API}/${encodeURIComponent(spreadsheet)}?fields=sheets(properties(sheetId,title))`;
+  const metadata = await sheetJson(metadataUrl, token);
   let sheet = (metadata.sheets || []).find(item => item.properties?.title === APPLICATION_SHEET);
   if (!sheet) {
-    const created = await sheetJson(`${SHEETS_API}/${encodeURIComponent(spreadsheet)}:batchUpdate`, token, {
-      method: "POST",
-      body: JSON.stringify({requests: [{addSheet: {properties: {
-        title: APPLICATION_SHEET,
-        gridProperties: {rowCount: APPLICATION_SHEET_MAX_ROWS, columnCount: APPLICATION_SHEET_HEADERS.length},
-      }}}]}),
-    });
-    sheet = (created.replies || []).find(item => item.addSheet?.properties)?.addSheet;
+    try {
+      const created = await sheetJson(`${SHEETS_API}/${encodeURIComponent(spreadsheet)}:batchUpdate`, token, {
+        method: "POST",
+        body: JSON.stringify({requests: [{addSheet: {properties: {
+          title: APPLICATION_SHEET,
+          gridProperties: {rowCount: APPLICATION_SHEET_MAX_ROWS, columnCount: APPLICATION_SHEET_HEADERS.length},
+        }}}]}),
+      });
+      sheet = (created.replies || []).find(item => item.addSheet?.properties)?.addSheet;
+    } catch (error) {
+      // Two browser tabs can initialize the queue at the same time. Google
+      // rejects the second addSheet request even though the desired state is
+      // already present; re-read and continue with the winner's tab.
+      if (!/already exists/i.test(String(error.message || error))) throw error;
+      const current = await sheetJson(metadataUrl, token);
+      sheet = (current.sheets || []).find(item => item.properties?.title === APPLICATION_SHEET);
+    }
   }
   if (!sheet?.properties?.title) throw new Error("Google Sheet could not create the Application Agent tab");
   const header = await sheetJson(sheetRange(spreadsheet, `${APPLICATION_SHEET}!A1:C1`), token);

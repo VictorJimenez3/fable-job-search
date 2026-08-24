@@ -2925,3 +2925,17 @@ state, and records an immutable canonical fallback when tailoring does not
 publish a safe winner. Resume-file selection still pauses for the owner because
 Chrome extensions cannot silently set a local file input, and final submission
 remains owner-confirmed and page-bound.
+
+## 181. Production Autopilot uses the editable vmj Sheet, not the quota-locked mirror (2026-08-24)
+
+The production Vercel project does not currently have `DATABASE_URL`, so the
+staged Postgres fallback is not active. Victor's connected Google session was
+re-authorized against the existing editable `vmj@njit.edu` workbook, and the
+owner-only queue/context state uses its bounded `Application Agent` tab. The
+older `victormjimenez2017@gmail.com` owner mirror remains optional tracker
+history only; its full Drive account cannot be the Autopilot storage target.
+Resume Studio's Markdown and generated artifacts stay local by default. The
+application Sheet stores only sanitized queue/context/control-plane metadata,
+never CVs, cookies, passwords, provider sessions, or DOM dumps. Sheet-tab
+initialization is idempotent so concurrent Autopilot page loads cannot turn an
+already-created tab into a false quota/storage error.
