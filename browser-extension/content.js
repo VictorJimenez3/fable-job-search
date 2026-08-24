@@ -106,7 +106,7 @@
   function unavailablePostingReason(snapshot) {
     if (snapshot.fields.some(field => field.type !== "button")) return "";
     const body = text(document.body?.innerText || "", 8000).toLowerCase();
-    if (/job not found|position (?:is )?(?:filled|closed)|no longer accepting|role (?:is )?expired/.test(body)) {
+    if (/job not found|(?:this )?job (?:has |is )?closed|position (?:is )?(?:filled|closed)|no longer accepting|role (?:is )?expired/.test(body)) {
       return "The opened posting is no longer available, so the agent stopped before filling anything.";
     }
     return "";

@@ -55,6 +55,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "reconcileTerminalTabs" in background
     assert "JOB_RADAR_AGENT_STOP" in background
     assert "job not found" in content
+    assert "job (?:has |is )?closed" in content
     assert "pageFailure: unavailable" in content
     assert "JOB_RADAR_AGENT_STOP" in content
     assert "posting_status" in api

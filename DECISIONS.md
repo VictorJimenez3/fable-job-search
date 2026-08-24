@@ -2995,8 +2995,8 @@ forever merely because its in-memory tab map survived longer than navigation.
 
 Application queue payloads preserve the posting lifecycle status and reject new
 queue requests for roles already marked expired or filled. If a previously
-queued role reaches an employer page that explicitly says the job is not found,
-closed, filled, or no longer accepting applications, the Mac agent records a
+queued role reaches an employer or handoff page that explicitly says the job is
+not found, has closed, is filled, or is no longer accepting applications, the Mac agent records a
 failed queue state before starting Resume Studio and stops before filling. This
 avoids treating a dead listing page as an active application and leaves the
 owner a clear reason to refresh or skip the role. Queue writes expose an
