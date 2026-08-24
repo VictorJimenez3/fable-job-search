@@ -3005,6 +3005,9 @@ detaches the corresponding browser executor so later local session sync cannot
 reactivate it.
 Unavailable-page detection is not only an initial preflight: it precedes every
 form plan so late-rendered ATS tombstones fail the active session as well.
+The Autopilot candidate picker excludes terminal current postings before a
+queue request is possible, while server and employer-page lifecycle checks
+remain defense in depth.
 
 The executor's queue alarm is treated as recoverable runtime state. Every
 service-worker load, extension install/reload, and Chrome startup recreates the

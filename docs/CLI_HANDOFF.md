@@ -88,6 +88,9 @@ Before changing the radar, read these in order:
   “page … doesn't exist” page is marked failed before Resume Studio starts or
   any form field is filled. The guard runs before initial attachment and again
   on later DOM mutations because some ATS tombstones render asynchronously.
+- **Candidate lifecycle filter (implemented 2026-08-24):** Autopilot's saved
+  role picker omits jobs whose current radar posting is expired/filled. This is
+  the first UI guard; the API and employer-page checks remain authoritative.
 - **Visible queue controls (implemented 2026-08-24):** the production queue
   button disables and reads `queueing…` while writes are in flight. Opening and
   filling rows expose Stop; terminal cloud states detach the paired tab executor

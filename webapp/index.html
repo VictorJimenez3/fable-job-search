@@ -1637,7 +1637,7 @@ function applicationAgentQueueHTML(items) {
 function applicationAgentCandidates() {
   return Object.values(S.jobs||{}).filter(job=>{
     const entry=appliedById()[job.id], stage=entry?.stage||"";
-    return entry && ["saved","to_tailor"].includes(stage) && !applicationInactive(entry);
+    return entry && ["saved","to_tailor"].includes(stage) && !applicationInactive(entry) && !isTerminalPosting(job);
   }).sort((a,b)=>(Number(b.score)||0)-(Number(a.score)||0)).slice(0,80);
 }
 async function queueApplicationBatch() {

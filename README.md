@@ -551,6 +551,8 @@ before any form field is filled. Workday's “page you are looking for doesn't
 exist” tombstone is handled the same way.
 The unavailable-page check runs again on later DOM mutations, so an ATS that
 renders its tombstone after initial page load still stops before a form plan.
+Expired/filled saved roles are omitted from Autopilot's candidate picker; they
+remain visible in History but cannot be selected into a new application batch.
 The availability check runs before Resume Studio work begins. Queue controls
 show an in-progress state to prevent duplicate clicks, and opening/filling rows
 have a Stop control that also detaches the paired browser executor.

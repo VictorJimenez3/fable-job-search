@@ -71,4 +71,5 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     frontend = (ROOT / "webapp" / "index.html").read_text()
     assert "queueing…" in frontend
     assert "queueActionId" in frontend
+    assert "!isTerminalPosting(job)" in frontend
     assert "/api/application-agent" in routing and "application_agent=1" in routing
