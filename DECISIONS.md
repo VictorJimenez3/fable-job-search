@@ -3003,3 +3003,8 @@ owner a clear reason to refresh or skip the role. Queue writes expose an
 in-progress control state, and Stop/Skip is authoritative: terminal cloud state
 detaches the corresponding browser executor so later local session sync cannot
 reactivate it.
+
+The executor's queue alarm is treated as recoverable runtime state. Every
+service-worker load, extension install/reload, and Chrome startup recreates the
+alarm and requests an immediate sync; progress must not depend on the owner
+opening the extension popup after a restart.

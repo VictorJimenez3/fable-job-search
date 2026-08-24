@@ -91,6 +91,9 @@ Before changing the radar, read these in order:
   filling rows expose Stop; terminal cloud states detach the paired tab executor
   so a skipped role cannot be advanced or changed back to active on the next
   sync.
+- **Worker wake recovery (implemented 2026-08-24):** module load, extension
+  install/reload, and Chrome startup all recreate the one-minute alarm and
+  immediately sync the queue. The popup is not required to restart queued work.
 
 ### vNext foundation (implemented and verified 2026-08-16)
 

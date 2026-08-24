@@ -551,6 +551,9 @@ before any form field is filled.
 The availability check runs before Resume Studio work begins. Queue controls
 show an in-progress state to prevent duplicate clicks, and opening/filling rows
 have a Stop control that also detaches the paired browser executor.
+The worker recreates its one-minute alarm and performs an immediate queue sync
+whenever Chrome or the extension starts, so queued work does not depend on
+opening the popup after a restart.
 
 To connect the Mac once:
 

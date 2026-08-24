@@ -54,6 +54,8 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert 'if (row && message.pageFailure)' in background
     assert "reconcileTerminalTabs" in background
     assert "JOB_RADAR_AGENT_STOP" in background
+    assert "chrome.runtime.onStartup.addListener(scheduleQueueSync)" in background
+    assert "scheduleQueueSync();" in background
     assert "job not found" in content
     assert "job (?:has |is )?closed" in content
     assert "pageFailure: unavailable" in content

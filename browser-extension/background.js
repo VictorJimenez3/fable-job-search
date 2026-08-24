@@ -308,13 +308,17 @@ async function syncCloudQueue() {
   finally { syncPromise = null; }
 }
 
-chrome.runtime.onInstalled.addListener(() => {
+function scheduleQueueSync() {
   chrome.alarms.create("job-radar-application-sync", {periodInMinutes: 1});
-});
+  void syncCloudQueue();
+}
+chrome.runtime.onInstalled.addListener(scheduleQueueSync);
+chrome.runtime.onStartup.addListener(scheduleQueueSync);
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === "job-radar-application-sync") void syncCloudQueue();
 });
 chrome.tabs.onRemoved.addListener((tabId) => tabs.delete(tabId));
+scheduleQueueSync();
 
 chrome.runtime.onMessage.addListener((message, sender, respond) => {
   const tabId = sender.tab?.id;
