@@ -6,7 +6,7 @@
 // when possible, with the legacy app-created Drive folder as a fallback.
 // It never stores a CV, browser cookie, provider session, or DOM dump.
 const crypto = require("crypto");
-const { OWNER, session, requireMutationRequest } = require("./_lib");
+const { OWNER, session, unseal, seal, requireMutationRequest } = require("./_lib");
 const tracker = require("./_google-tracker");
 const privateDb = require("./v1/_db");
 
@@ -509,11 +509,19 @@ async function ownerAccess(req) {
 }
 
 async function tokenAccess(req) {
-  const token = clean(req.headers["x-job-radar-agent"] || req.query?.agent_token, 180);
+  const token = clean(req.headers["x-job-radar-agent"] || req.query?.agent_token, 2000);
   if (!token) return null;
+  // When Postgres is not configured, a paired extension has no browser
+  // session cookie. Carry the owner's sealed personal tracker grant in the
+  // pairing token so the executor can reach the same private Sheet that
+  // created the pairing. The grant remains encrypted with SESSION_SECRET;
+  // the extension only stores an opaque bearer token and never sees OAuth
+  // credentials. Legacy random tokens still use the owner fallback grant.
+  const sealed = unseal(token);
+  const personal = sealed?.kind === "job-radar-application-pairing" ? sealed.pt : null;
   const access = databaseConfigured()
     ? {storage: "database"}
-    : await tracker.resumeStorageAccess(null, true);
+    : await tracker.resumeStorageAccess(personal, true);
   const pairing = await appDocument(access, "pairing");
   const valid = (pairing.value.tokens || []).find(item => item?.revoked_at ? false : tokenMatches(token, item?.token_hash));
   if (!valid) throw Object.assign(new Error("Mac pairing token is invalid or revoked"), {statusCode: 403});
@@ -527,7 +535,10 @@ async function accessFor(req, mutation = false) {
 }
 
 async function createPairing(req, res, access) {
-  const token = crypto.randomBytes(32).toString("base64url");
+  const random = crypto.randomBytes(32).toString("base64url");
+  const token = access.storage === "database" || !access.current?.pt?.r
+    ? random
+    : seal({kind: "job-radar-application-pairing", t: Date.now(), random, pt: access.current.pt});
   const current = await appDocument(access, "pairing");
   const now = new Date().toISOString();
   const tokens = (Array.isArray(current.value.tokens) ? current.value.tokens : []).map(item => item && !item.revoked_at ? {...item, revoked_at: now} : item);

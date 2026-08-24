@@ -2939,3 +2939,16 @@ application Sheet stores only sanitized queue/context/control-plane metadata,
 never CVs, cookies, passwords, provider sessions, or DOM dumps. Sheet-tab
 initialization is idempotent so concurrent Autopilot page loads cannot turn an
 already-created tab into a false quota/storage error.
+
+## 182. Pairing carries the selected private Sheet boundary (2026-08-24)
+
+Production does not currently have `DATABASE_URL`, so a Mac extension request
+does not have the owner's browser session cookie. The previous fallback tried
+the expired global Google grant even after Victor re-authorized the editable
+`vmj@njit.edu` workbook. New pairing tokens therefore seal the current
+personal tracker metadata with `SESSION_SECRET`; the server can refresh the
+same private Sheet grant when the extension presents the opaque token. The
+OAuth material remains server-decryptable only, pairing revocation still lives
+in the Application Agent tab, and the extension never receives a raw OAuth
+credential. Legacy random tokens remain compatible while the Postgres path is
+available for deployments that configure it.

@@ -21,6 +21,9 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "application-context.json" in api and "application-context.md" in api
     assert "application-queue.json" in api and "application-issues.md" in api
     assert "application-agent-pairing.json" in api
+    assert 'job-radar-application-pairing' in api
+    assert 'unseal(token)' in api
+    assert 'access.current?.pt' in api
     assert "DOM dump" in api and "provider session" in api
     assert "awaiting_confirmation" in local and "attestation" in local
     assert "verify_submission_page" in service

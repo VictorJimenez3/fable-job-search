@@ -55,6 +55,12 @@ Before changing the radar, read these in order:
   deployment by opening Autopilot and verifying the queue loads without a
   storage error and reports `storage: "sheet"`; no application submission is
   part of this test.
+- **Pairing repair (verified 2026-08-24):** when Postgres is absent, the Mac
+  executor now receives an opaque sealed pairing token carrying the already
+  authorized personal Sheet grant. This keeps extension sync on the same
+  `vmj@njit.edu` workbook instead of falling back to the expired owner mirror
+  grant. Creating a new pair revokes the previous token; no OAuth secret is
+  exposed to the extension.
 
 ### vNext foundation (implemented and verified 2026-08-16)
 
