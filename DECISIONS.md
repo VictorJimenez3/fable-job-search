@@ -3026,3 +3026,19 @@ unbounded sequence of duplicate tailoring runs.
 Engine recovery enforces the same invariant: a queued/running run sharing an
 application queue id with a terminal run is marked superseded and is not
 resubmitted.
+
+## 187. Resume profile extraction excludes template metadata (2026-08-24)
+
+Only rendered, owner-authored canonical resume content may seed reusable
+application answers. LaTeX comments and template attribution URLs are excluded,
+and an existing canonical-derived answer is refreshed when the canonical source
+changes. The paired extension may replace the same canonical answer in the
+private Sheet when its value differs; owner-created noncanonical answers are
+never overwritten by this repair.
+
+Choice controls are also conservative: radio buttons and checkboxes remain
+owner decisions even when an option label resembles a reusable profile field
+such as LinkedIn, Website, or a location. After an extension restart, blocked
+or review-ready work may reattach only to the most recently used exact-match
+posting tab. It
+must not create a duplicate tab or hold later queued roles behind a parked item.

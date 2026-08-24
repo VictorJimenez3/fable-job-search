@@ -41,6 +41,9 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert 'action: "answers"' in (ROOT / "browser-extension" / "background.js").read_text()
     background = (ROOT / "browser-extension" / "background.js").read_text()
     assert "recoverOrphanedQueue" in background
+    assert 'parkedButAttachable = ["blocked", "awaiting_confirmation"]' in background
+    assert "lastAccessed" in background
+    assert 'cloudAnswer.value !== answer.value' in background
     assert "repairTrackedTabs" in background
     assert "navigateQueuedTab" in background
     assert "Chrome did not navigate the paired tab" in background

@@ -192,7 +192,9 @@ async function repairTrackedTabs(items) {
 async function recoverOrphanedQueue(items) {
   const openTabs = await chrome.tabs.query({});
   for (const item of items) {
-    if (!["opening", "filling"].includes(item.state)) continue;
+    const activelyRunning = ["opening", "filling"].includes(item.state);
+    const parkedButAttachable = ["blocked", "awaiting_confirmation"].includes(item.state);
+    if (!activelyRunning && !parkedButAttachable) continue;
     const tracked = [...tabs.entries()].find(([, row]) => row.queueId === item.queue_id);
     if (tracked) {
       const [tabId, row] = tracked;
@@ -204,12 +206,25 @@ async function recoverOrphanedQueue(items) {
       tabs.delete(tabId);
     }
     const target = safeURL(item.job?.url);
-    const existing = openTabs.find(tab => target && safeURL(tab.url) === target);
+    const existing = openTabs
+      .filter(tab => target && safeURL(tab.url) === target)
+      .sort((left, right) => Number(right.lastAccessed || 0) - Number(left.lastAccessed || 0))[0];
     if (existing) {
       try { await chrome.tabs.reload(existing.id); } catch (error) { console.warn("Job Radar could not reload matching application tab", error); }
-      tabs.set(existing.id, {job: item.job, mode: "batch", queueId: item.queue_id, sessionId: "", createdAt: Date.now()});
+      let sessionId = "";
+      if (item.session_id) {
+        try {
+          const session = await local(`/api/application/session?session_id=${encodeURIComponent(item.session_id)}`);
+          if (session?.session_id === item.session_id) sessionId = item.session_id;
+        } catch (_) {}
+      }
+      tabs.set(existing.id, {job: item.job, mode: "batch", queueId: item.queue_id, sessionId, createdAt: Date.now()});
       continue;
     }
+    // A blocked/review-ready role is intentionally parked. Reattach it only
+    // to its exact existing page; never open a surprise duplicate tab or let
+    // it hold up later queued roles.
+    if (parkedButAttachable) continue;
     try {
       await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
         action: "queue_update", queue_id: item.queue_id, state: "queued",
@@ -271,10 +286,15 @@ async function syncCloudQueueImpl() {
     // safe baseline; essays and attestations still require the owner.
     try {
       const localContext = await local("/api/application/context");
-      const cloudIds = new Set((context.context?.answers || []).map(answer => answer.answer_id).filter(Boolean));
-      const missing = (localContext.answers || []).filter(answer => answer?.answer_id && !cloudIds.has(answer.answer_id));
-      if (missing.length) {
-        const synced = await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({action: "answers", answers: missing})});
+      const cloudAnswers = new Map((context.context?.answers || []).filter(answer => answer?.answer_id).map(answer => [answer.answer_id, answer]));
+      const localChanges = (localContext.answers || []).filter(answer => {
+        if (!answer?.answer_id) return false;
+        const cloudAnswer = cloudAnswers.get(answer.answer_id);
+        if (!cloudAnswer) return true;
+        return (answer.evidence_ids || []).includes("canonical-resume") && cloudAnswer.value !== answer.value;
+      });
+      if (localChanges.length) {
+        const synced = await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({action: "answers", answers: localChanges})});
         if (synced.context) context.context = synced.context;
       }
     } catch (error) {

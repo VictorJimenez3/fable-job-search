@@ -145,6 +145,19 @@ def infer_category(field: Dict[str, Any]) -> str:
     field_type = clean_text(field.get("type"), 32).lower()
     if field_type == "file":
         return "resume_file"
+    # A choice control is an owner decision, not a reusable text field. ATS
+    # pages often label options "LinkedIn", "Website", or with a city; using
+    # those option labels as profile categories produces a false fill.
+    if field_type in {"checkbox", "radio"}:
+        if re.search(r"\b(disability|disabled|accommodation)\b", label):
+            return "disability"
+        if re.search(r"\b(veteran|military)\b", label):
+            return "veteran_status"
+        if re.search(r"\b(gender|sex)\b", label):
+            return "gender"
+        if re.search(r"\b(race|ethnicity|ethnic)\b", label):
+            return "race_ethnicity"
+        return "attestation"
     if "cover letter" in label:
         return "cover_letter"
     if re.search(r"\b(first|given) name\b", label):
@@ -181,12 +194,12 @@ def infer_category(field: Dict[str, Any]) -> str:
         return "attestation"
     if field_type in {"checkbox", "radio"} and len(label) > 35:
         return "attestation"
+    if "education" in label or re.search(r"\b(school|university|college|degree|major|graduat)\b", label):
+        return "education"
     if field_type == "textarea" or len(label) > 65 or re.search(
         r"\b(why|describe|tell us|explain|essay|interest|motivat|experience with|anything else)\b", label
     ):
         return "essay"
-    if "education" in label or re.search(r"\b(school|university|college|degree|major|graduat)\b", label):
-        return "education"
     if re.search(r"\b(resume|cv)\b", label):
         return "resume_file"
     return "other"
@@ -259,6 +272,10 @@ def _canonical_resume_answers(root: Path) -> Dict[str, Dict[str, Any]]:
     if not source:
         return {}
 
+    # Template attribution and other LaTeX comments are not candidate profile
+    # data. They can contain public URLs before the actual resume header.
+    source = "\n".join(line.split("%", 1)[0] for line in source.splitlines())
+
     def match(pattern: str) -> str:
         found = re.search(pattern, source, flags=re.IGNORECASE)
         return clean_text(found.group(1) if found else "", VALUE_LIMIT)
@@ -330,15 +347,26 @@ def load_store(root: Path) -> Dict[str, Any]:
     defaults = _canonical_resume_answers(root)
     if defaults:
         answers = base["context"]["answers"]
-        missing = {
-            answer_id: answer
-            for answer_id, answer in defaults.items()
-            if answer_id not in answers
-        }
-        if missing:
-            answers.update(missing)
+        changed: Dict[str, Dict[str, Any]] = {}
+        for answer_id, answer in defaults.items():
+            existing = answers.get(answer_id)
+            canonical_existing = isinstance(existing, dict) and (
+                existing.get("source") == "canonical-resume"
+                or "canonical-resume" in (existing.get("evidence_ids") or [])
+            )
+            comparable = (
+                "question", "normalized_question", "variants", "category",
+                "value", "reusable", "sensitive", "evidence_ids", "source",
+            )
+            if not isinstance(existing, dict) or (
+                canonical_existing
+                and any(existing.get(key) != answer.get(key) for key in comparable)
+            ):
+                changed[answer_id] = answer
+        if changed:
+            answers.update(changed)
             mappings = base["context"]["mappings"]
-            for answer_id, answer in missing.items():
+            for answer_id, answer in changed.items():
                 mappings.setdefault(answer["normalized_question"], answer_id)
             write_store(root, base)
     if not isinstance(base.get("sessions"), dict):

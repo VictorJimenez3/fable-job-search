@@ -535,12 +535,17 @@ On first use, the local agent seeds only deterministic profile fields already
 present in the canonical local resume—name, contact details, school, and public
 profile links—and the paired extension mirrors those answers into the private
 Sheet. This removes repetitive blank-field work without inventing claims.
+LaTeX comments and template credits are excluded from that extraction, and a
+stale canonical-derived value is repaired locally and in the private Sheet.
 Essays, attestations, work-authorization or other sensitive choices,
 resume-file selection, and final submission still stop for Victor.
 If Chrome or the extension restarts, opening/filling queue items reattach to a
 matching application tab or return to the queue instead of being left falsely
-active; an item already at Submit is never requeued automatically. Queue tab
-startup is verified as well: the extension explicitly navigates a new tab,
+active; an item already at Submit is never requeued automatically. Blocked and
+review-ready items also reattach to their most recently used exact-match tab
+without opening duplicates or preventing later queued roles from continuing.
+Queue tab startup is verified as well: the extension explicitly navigates a
+new tab,
 waits for a real web URL, repairs tracked blank tabs, and requeues a role when
 Chrome cannot open it. While Resume Studio is preparing a role, the employer
 page shows a live “Agent preparing this role” banner so a long tailoring wait

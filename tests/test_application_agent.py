@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 
 import pytest
@@ -34,6 +35,8 @@ def test_top_five_provider_and_sensitive_categories_are_deterministic():
     assert infer_category({"label": "Work authorization", "type": "select"}) == "work_authorization"
     assert infer_category({"label": "Tell us why you want this role", "type": "textarea"}) == "essay"
     assert infer_category({"label": "I certify that the information is accurate", "type": "checkbox"}) == "attestation"
+    assert infer_category({"label": "LinkedIn", "type": "checkbox"}) == "attestation"
+    assert infer_category({"label": "School", "name": "a-very-long-generated-field-name-that-must-not-turn-school-into-an-essay", "type": "text"}) == "education"
 
 
 def test_approved_answers_fill_and_unknown_fields_pause(tmp_path: Path):
@@ -57,7 +60,8 @@ def test_canonical_resume_seeds_deterministic_profile_fields(tmp_path: Path):
     resume = tmp_path / "CV" / "immutable" / "VictorJimenezResume.tex"
     resume.parent.mkdir(parents=True)
     resume.write_text(
-        r"""\textbf{\Huge \scshape Victor Jimenez}
+        r"""% Based off of: https://github.com/sb2nov/resume
+        \textbf{\Huge \scshape Victor Jimenez}
         \href{mailto:victor@example.com}{victor@example.com}
         (201) 555-0100
         \href{https://www.linkedin.com/in/vmj3}{linkedin.com/in/vmj3}
@@ -81,6 +85,31 @@ def test_canonical_resume_seeds_deterministic_profile_fields(tmp_path: Path):
         "Victor Jimenez", "victor@example.com", "(201) 555-0100",
     }
     assert result["blockers"][0]["category"] == "essay"
+
+
+def test_canonical_resume_repairs_a_stale_seeded_profile_value(tmp_path: Path):
+    resume = tmp_path / "CV" / "immutable" / "VictorJimenezResume.tex"
+    resume.parent.mkdir(parents=True)
+    resume.write_text(
+        r"""% Based off of: https://github.com/sb2nov/resume
+        \textbf{\Huge \scshape Victor Jimenez}
+        \href{https://github.com/VictorJimenez3}{github.com/VictorJimenez3}""",
+        encoding="utf-8",
+    )
+    create_session(tmp_path, job())
+    path = tmp_path / "CV" / ".resume_studio" / "application_agent.json"
+    stored = json.loads(path.read_text(encoding="utf-8"))
+    stored["context"]["answers"]["canonical-github"]["value"] = "https://github.com/sb2nov"
+    path.write_text(json.dumps(stored), encoding="utf-8")
+
+    result = plan_form(
+        tmp_path,
+        create_session(tmp_path, job())["session_id"],
+        job()["url"],
+        [{"field_id": "github", "label": "Github Link", "type": "text", "required": True}],
+    )
+
+    assert result["fills"][0]["value"] == "https://github.com/VictorJimenez3"
 
 
 def test_final_review_is_explicit_and_page_bound(tmp_path: Path):

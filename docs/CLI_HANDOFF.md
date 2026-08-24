@@ -115,6 +115,13 @@ Before changing the radar, read these in order:
   does not recover a queued/running application-tailor duplicate when a terminal
   run already exists for that queue id. The duplicate becomes an inspectable
   `failed`/`duplicate_application_run` record.
+- **Blocked-tab restart recovery and canonical-contact repair (implemented
+  2026-08-24):** after an extension restart, blocked and review-ready queue
+  items reattach to the most recently used exact-match employer tab without spawning a
+  duplicate or blocking later queue work. Canonical profile seeding strips
+  LaTeX comments, refreshes stale canonical-derived values, and syncs corrected
+  canonical values back to the private Application Agent Sheet. Choice inputs
+  remain owner decisions even when an option label resembles a profile field.
 
 ### vNext foundation (implemented and verified 2026-08-16)
 
