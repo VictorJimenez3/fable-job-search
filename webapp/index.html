@@ -1637,11 +1637,23 @@ function applicationAgentReviewHTML(item) {
 function applicationAgentBlockerGroupLabel(category) {
   return ({resume_file:"Resume selection",essay:"Written response",cover_letter:"Cover letter",work_authorization:"Work authorization",sponsorship:"Sponsorship",education:"Education",location:"Location",salary:"Compensation",other:"Other required field"})[category] || "Owner decision";
 }
+function applicationAgentBlockerEntries(item) {
+  const answers=S.applicationAgent.context?.answers||[];
+  const normalize=value=>String(value||"").toLowerCase().replace(/[^a-z0-9@+_.?/-]+/g," ").replace(/\s+/g," ").trim();
+  return (item?.blockers||[]).map((blocker,index)=>({blocker,index})).filter(({blocker})=>{
+    const category=blocker.category||"other";
+    const optionalChoice=["attestation","disability","veteran_status","gender","race_ethnicity","demographic"].includes(category) && !blocker.required;
+    if (optionalChoice) return false;
+    const label=normalize(blocker.label||blocker.question||"");
+    return !answers.some(answer=>[answer.question,...(answer.variants||[])].map(normalize).includes(label));
+  });
+}
 function applicationAgentBlockersHTML(item) {
-  const blockers=item?.blockers||[];
-  if (!blockers.length) return "";
+  const entries=applicationAgentBlockerEntries(item);
+  if (!entries.length) return "";
+  const blockers=entries.map(entry=>entry.blocker);
   const groups=new Map();
-  blockers.forEach((blocker,index)=>{const category=blocker.category||"other";const rows=groups.get(category)||[];rows.push({blocker,index});groups.set(category,rows);});
+  entries.forEach(({blocker,index})=>{const category=blocker.category||"other";const rows=groups.get(category)||[];rows.push({blocker,index});groups.set(category,rows);});
   const groupHTML=[...groups.entries()].map(([category,rows])=>`<section class="agent-blocker-group"><div class="agent-blocker-group-title"><span>${esc(applicationAgentBlockerGroupLabel(category))}</span><span class="chip warn">${rows.length} item${rows.length===1?"":"s"}</span></div>${rows.map(({blocker,index})=>`<div class="agent-blocker"><div class="agent-blocker-title"><strong>${esc(blocker.label||blocker.category||"required field")}</strong>${blocker.required?'<span class="chip warn">required</span>':''}</div><p class="agent-blocker-reason">${esc(blocker.reason||"No approved answer exists.")}</p><textarea rows="3" data-agent-answer="${esc(item.queue_id)}-${index}" placeholder="Only answer if this is genuinely role-specific (bullets are fine)"></textarea><div class="acts"><button class="act" onclick='answerApplicationAgent(${JSON.stringify(item.queue_id)},${index},${JSON.stringify(blocker.question||blocker.label||blocker.category||"application question")},${JSON.stringify(blocker.category||"other")})'>save answer &amp; retry</button></div></div>`).join("")}</section>`).join("");
   return `<div class="agent-review" style="border-color:var(--danger)"><div class="agent-review-heading"><strong>Agent paused · ${blockers.length} owner decision${blockers.length===1?"":"s"}</strong><span class="chip warn">not a system error</span><p class="sub">Approved profile, authorization, demographic, and relocation answers are handled automatically. Only unresolved required fields and written responses appear here.</p></div><div class="agent-blockers">${groupHTML}</div></div>`;
 }

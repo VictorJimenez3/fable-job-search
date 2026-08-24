@@ -14736,6 +14736,7 @@ class StudioHandler(BaseHTTPRequestHandler):
                     answer_id=str(body.get("answer_id") or ""),
                     variants=body.get("variants") if isinstance(body.get("variants"), list) else [],
                     fallback_for=body.get("fallback_for") if isinstance(body.get("fallback_for"), list) else [],
+                    select_all=bool(body.get("select_all")),
                     evidence_ids=body.get("evidence_ids") if isinstance(body.get("evidence_ids"), list) else [],
                     session_id=str(body.get("session_id") or ""),
                 ))

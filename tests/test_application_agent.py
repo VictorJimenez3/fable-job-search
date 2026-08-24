@@ -105,6 +105,21 @@ def test_race_fallback_is_used_only_when_hispanic_option_is_absent(tmp_path: Pat
     assert result["fills"][0]["field_id"] == "black"
 
 
+def test_location_select_all_answer_fills_each_relocation_checkbox(tmp_path: Path):
+    save_answer(tmp_path, "All applicable locations", "all", category="location", select_all=True)
+    session = create_session(tmp_path, job())
+    result = plan_form(
+        tmp_path,
+        session["session_id"],
+        job()["url"],
+        [
+            {"field_id": "ny", "label": "New York, NY", "group_question": "Which locations are you willing to relocate to?", "type": "checkbox", "group_options": ["New York, NY", "San Francisco, CA"]},
+            {"field_id": "sf", "label": "San Francisco, CA", "group_question": "Which locations are you willing to relocate to?", "type": "checkbox", "group_options": ["New York, NY", "San Francisco, CA"]},
+        ],
+    )
+    assert [item["field_id"] for item in result["fills"]] == ["ny", "sf"]
+
+
 def test_canonical_resume_seeds_deterministic_profile_fields(tmp_path: Path):
     resume = tmp_path / "CV" / "immutable" / "VictorJimenezResume.tex"
     resume.parent.mkdir(parents=True)

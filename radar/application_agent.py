@@ -153,7 +153,7 @@ def infer_category(field: Dict[str, Any]) -> str:
             return "sponsorship"
         if re.search(r"\b(work authorization|legally authorized|authorized to work)\b", label):
             return "work_authorization"
-        if re.search(r"\b(relocat|location preference|willing to move)\b", label):
+        if re.search(r"\b(relocat\w*|location preference|willing to move)\b", label):
             return "location"
         if re.search(r"\b(disability|disabled|accommodation)\b", label):
             return "disability"
@@ -482,6 +482,15 @@ def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any]) -> List[Dic
             continue
         if _answer_allowed_for_field(answer, field) and _answer_matches_field(answer, field, normalized):
             values.append(answer)
+    if not values and category == "location" and clean_text(field.get("type"), 32).lower() == "checkbox":
+        group_question = normalize_question(field.get("group_question"))
+        if "relocat" in group_question:
+            values.extend(
+                answer for answer in answers.values()
+                if isinstance(answer, dict)
+                and answer.get("select_all")
+                and clean_text(answer.get("category"), 80) == "location"
+            )
     choice_control = (
         clean_text(field.get("type"), 32).lower() in {"radio", "checkbox", "button", "select"}
         or bool(field.get("options"))
@@ -794,6 +803,7 @@ def save_answer(
     answer_id: str = "",
     variants: Optional[Iterable[str]] = None,
     fallback_for: Optional[Iterable[str]] = None,
+    select_all: bool = False,
     evidence_ids: Optional[Iterable[str]] = None,
     session_id: str = "",
 ) -> Dict[str, Any]:
@@ -813,6 +823,7 @@ def save_answer(
         "normalized_question": normalized,
         "variants": list(dict.fromkeys([clean_text(item, QUESTION_LIMIT) for item in (variants or []) if clean_text(item, QUESTION_LIMIT)] + list(existing.get("variants") or [])))[:30],
         "fallback_for": list(dict.fromkeys([clean_text(item, QUESTION_LIMIT) for item in (fallback_for or []) if clean_text(item, QUESTION_LIMIT)] + list(existing.get("fallback_for") or [])))[:20],
+        "select_all": bool(select_all) or bool(existing.get("select_all")),
         "category": category,
         "value": value,
         "reusable": bool(reusable),
