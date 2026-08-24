@@ -3059,3 +3059,16 @@ group. The Autopilot UI groups remaining blockers by decision type, gives each
 one a readable answer area, and states that banked repetitive fields were
 handled automatically. Sensitive answer values remain local/private and are
 not committed to the repository.
+
+## 189. Bank confirmed form answers and exact written responses (2026-08-24)
+
+The owner confirmed additional repetitive application answers and asked that
+the remaining custom questions be handled from the private Resume Studio
+context. The local bank now stores Anchor Days, LLM experience, a personal LLM
+project, Newark, NJ, May 2027 graduation, and undergraduate/bachelors degree
+answers. It also stores source-backed answers for the active Notion AI
+experience and AI technology prompts. The Notion motivation response is
+explicitly non-reusable and tied to that employer question, so a plausible
+answer is not silently copied into another company's application. The agent
+continues to stop for genuinely new or ambiguous questions, resume selection,
+attestations that are not explicitly approved, and final Submit confirmation.

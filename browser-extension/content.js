@@ -39,8 +39,11 @@
     const label = id ? document.querySelector(`label[for="${CSS.escape(id)}"]`) : null;
     const aria = element.getAttribute("aria-label") || (element.getAttribute("aria-labelledby") || "").split(/\s+/).map(value => document.getElementById(value)?.textContent || "").join(" ");
     const parentLabel = element.closest("label")?.textContent || "";
+    const container = element.closest(".ashby-application-form-field-entry, [data-field-path], fieldset, [role='group']");
+    const containerLabel = [...(container?.querySelectorAll("legend, label, [class*='question-title'], [class*='question-label'], [class*='form-question'], [class*='label']") || [])]
+      .map(node => text(node.textContent, 500)).find(value => value && value.toLowerCase() !== text(element.getAttribute("placeholder"), 500).toLowerCase()) || "";
     const previous = element.previousElementSibling?.textContent || element.parentElement?.querySelector("label")?.textContent || "";
-    return text(ats.labelFor(element) || aria || label?.textContent || parentLabel || element.getAttribute("placeholder") || element.getAttribute("name") || element.id || previous, 500);
+    return text(ats.labelFor(element) || aria || label?.textContent || parentLabel || containerLabel || element.getAttribute("placeholder") || element.getAttribute("name") || element.id || previous, 500);
   }
 
   function optionGroup(element) {
@@ -94,7 +97,7 @@
       const type = element.getAttribute("contenteditable") === "true" ? "textarea" : text(element.getAttribute("type") || element.tagName, 32).toLowerCase();
       if (["hidden", "button", "submit", "reset", "image"].includes(type)) return;
       const label = labelFor(element);
-      const groupQuestion = ["radio", "checkbox"].includes(type) ? controlGroupQuestion(element, label) : "";
+      const groupQuestion = controlGroupQuestion(element, label);
       const baseFieldId = text(element.getAttribute("data-job-radar-field") || ats.fieldKey(element) || `${type}-${index}`, 160);
       let fieldId = baseFieldId;
       if (usedFieldIds.has(fieldId)) fieldId = `${baseFieldId}-${index}`.slice(0, 160);

@@ -208,9 +208,12 @@ until a real answer, attestation, sensitive field, or final confirmation needs
 you.
 
 Approved answers—including approved sensitive answers—may be reused, but the
-full proposed values appear on the final review card. The agent stops for a
-new essay, unknown required/sensitive field, file upload, attestation, selector
-failure, or changed page. Phone confirmation is a single-use, 15-minute
+full proposed values appear on the final review card. This includes repeated
+work schedule, LLM-experience, location, education, and other owner-confirmed
+questions. A concise written answer may also be saved for an exact recurring
+prompt, while employer-specific answers remain non-reusable. The agent stops
+for a new essay, unknown required/sensitive field, file upload, attestation,
+selector failure, or changed page. Phone confirmation is a single-use, 15-minute
 approval tied to the review hash and page fingerprint. A blocked role stays in
 the queue while later roles can continue. Repeated adapter problems go into
 the private issue ledger; ask Codex to repair them so each fix includes a

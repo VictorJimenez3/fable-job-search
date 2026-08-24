@@ -38,6 +38,8 @@ def test_top_five_provider_and_sensitive_categories_are_deterministic():
     assert infer_category({"label": "LinkedIn", "type": "checkbox"}) == "attestation"
     assert infer_category({"label": "Yes", "group_question": "Are you legally authorized to work in the US?", "type": "button"}) == "work_authorization"
     assert infer_category({"label": "He/Him", "group_question": "Pronouns", "type": "button"}) == "gender"
+    assert infer_category({"label": "Yes", "group_question": "Do you have experience with LLMs?", "type": "button"}) == "llm_experience"
+    assert infer_category({"label": "Yes", "group_question": "Can you work from our offices on Anchor Days?", "type": "button"}) == "work_schedule"
     assert infer_category({"label": "School", "name": "a-very-long-generated-field-name-that-must-not-turn-school-into-an-essay", "type": "text"}) == "education"
 
 
@@ -75,6 +77,32 @@ def test_approved_choice_answers_fill_attestations_and_optional_demographics(tmp
     )
     assert result["state"] == "filling"
     assert {item["category"] for item in result["fills"]} == {"gender", "disability", "work_authorization"}
+    assert not result["blockers"]
+
+
+def test_category_specific_answers_fill_repeated_yes_groups_and_text_fields(tmp_path: Path):
+    save_answer(tmp_path, "Anchor Days", "Yes", category="work_schedule", variants=["Can you commit to working from one of our offices on Anchor Days each week?"])
+    save_answer(tmp_path, "Do you have experience with LLMs?", "Yes", category="llm_experience")
+    save_answer(tmp_path, "Have you built a personal project using LLMs?", "Yes", category="llm_experience")
+    save_answer(tmp_path, "Current Location", "Newark, NJ", category="location", variants=["Start typing..."])
+    save_answer(tmp_path, "Graduation Date", "May 2027", category="education", variants=["Pick date..."])
+    save_answer(tmp_path, "Please describe your AI experience.", "- Built an agentic LLM proof of concept.", category="essay")
+    session = create_session(tmp_path, job())
+    result = plan_form(
+        tmp_path,
+        session["session_id"],
+        job()["url"],
+        [
+            {"field_id": "anchor", "label": "Yes", "group_question": "Can you commit to working from one of our offices on Anchor Days each week?", "type": "button", "required": True, "group_options": ["Yes", "No"]},
+            {"field_id": "llm", "label": "Yes", "group_question": "Do you have experience with LLMs?", "type": "button", "required": True, "group_options": ["Yes", "No"]},
+            {"field_id": "project", "label": "Yes", "group_question": "Have you built a personal project using LLMs?", "type": "button", "required": True, "group_options": ["Yes", "No"]},
+            {"field_id": "location", "label": "Start typing...", "type": "combobox", "required": True},
+            {"field_id": "graduation", "label": "Pick date...", "type": "text", "required": True},
+            {"field_id": "ai", "label": "Please describe your AI experience.", "type": "textarea", "required": True},
+        ],
+    )
+    assert result["state"] == "filling"
+    assert {item["field_id"] for item in result["fills"]} == {"anchor", "llm", "project", "location", "graduation", "ai"}
     assert not result["blockers"]
 
 

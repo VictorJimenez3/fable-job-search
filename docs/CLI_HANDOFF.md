@@ -132,6 +132,15 @@ Before changing the radar, read these in order:
   buttons are extracted and filled, and the Autopilot queue now uses full-width
   grouped blocker cards with larger answer areas so only unresolved required
   fields and essays demand attention.
+- **Owner-confirmed application context (implemented 2026-08-24):** the local
+  private bank now contains Victor's confirmed Anchor Days, LLM experience,
+  personal LLM project, Newark location, May 2027 graduation month/year, and
+  undergraduate/bachelors degree choice, plus source-backed AI and technology
+  responses for the active Notion form. Generic placeholders such as Ashby's
+  `Start typing...` and `Pick date...` are matched through stored variants.
+  The extension classifies LLM and Anchor Days button groups as their own
+  categories and prioritizes category-specific answers when several groups use
+  the same option label such as `Yes`.
 
 ### vNext foundation (implemented and verified 2026-08-16)
 

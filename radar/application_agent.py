@@ -148,7 +148,11 @@ def infer_category(field: Dict[str, Any]) -> str:
     # A choice control is an owner decision, not a reusable text field. ATS
     # pages often label options "LinkedIn", "Website", or with a city; using
     # those option labels as profile categories produces a false fill.
-    if field_type in {"checkbox", "radio"}:
+    if field_type in {"checkbox", "radio", "button", "select"}:
+        if re.search(r"\b(llm\w*|large language model|language model|generative ai)\b", label):
+            return "llm_experience"
+        if re.search(r"\b(anchor days|work from our offices|on[- ]?site|in[- ]?office)\b", label):
+            return "work_schedule"
         if re.search(r"\b(sponsor|sponsorship|visa)\b", label):
             return "sponsorship"
         if re.search(r"\b(work authorization|legally authorized|authorized to work)\b", label):
@@ -163,7 +167,8 @@ def infer_category(field: Dict[str, Any]) -> str:
             return "gender"
         if re.search(r"\b(race|ethnicity|ethnic)\b", label):
             return "race_ethnicity"
-        return "attestation"
+        if field_type in {"checkbox", "radio", "button"}:
+            return "attestation"
     if "cover letter" in label:
         return "cover_letter"
     if re.search(r"\b(first|given) name\b", label):
@@ -447,7 +452,13 @@ def _answer_allowed_for_field(answer: Dict[str, Any], field: Dict[str, Any]) -> 
 def _answer_matches_field(answer: Dict[str, Any], field: Dict[str, Any], normalized: str) -> bool:
     variants = [normalize_question(answer.get("question"))]
     variants.extend(normalize_question(item) for item in answer.get("variants", []) if item)
-    if normalized and normalized in variants:
+    field_questions = [
+        normalized,
+        normalize_question(field.get("group_question")),
+        normalize_question(field.get("question")),
+        normalize_question(field.get("label")),
+    ]
+    if any(question and question in variants for question in field_questions):
         return True
     field_type = clean_text(field.get("type"), 32).lower()
     option_label = field.get("option_label")
@@ -491,6 +502,15 @@ def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any]) -> List[Dic
                 and answer.get("select_all")
                 and clean_text(answer.get("category"), 80) == "location"
             )
+    # Several ATS forms reuse short option labels such as "Yes" and "No".
+    # Prefer an answer from the field's inferred category so one approved
+    # decision cannot accidentally satisfy a different choice group.
+    category_values = [
+        answer for answer in values
+        if clean_text(answer.get("category"), 80) == category
+    ]
+    if category_values:
+        values = category_values + [answer for answer in values if answer not in category_values]
     choice_control = (
         clean_text(field.get("type"), 32).lower() in {"radio", "checkbox", "button", "select"}
         or bool(field.get("options"))

@@ -538,14 +538,19 @@ present in the canonical local resume—name, contact details, school, and publi
 profile links—and the paired extension mirrors those answers into the private
 Sheet. Victor can also keep explicit owner-approved choices in that private
 bank, so repeat questions such as work authorization, sponsorship, relocation,
-and demographic controls are filled without repeated manual entry. A
+and demographic controls, work schedule, and LLM experience are filled
+without repeated manual entry. Exact owner-approved written answers can also
+be banked for recurring prompts; employer-specific responses stay tied to that
+question and are not reused as generic claims. A
 preferred choice can have an explicit fallback that is used only when the
 preferred option is absent from a question group. This removes repetitive
 blank-field work without inventing claims. LaTeX comments and template
 credits are excluded from canonical extraction, and a stale canonical-derived
 value is repaired locally and in the private Sheet. Only genuinely unknown
-required fields, new essays, resume-file selection, and final submission stop
-for Victor.
+required fields, new essays without an approved answer, resume-file selection,
+and final submission stop for Victor. Fields with generic placeholders, such as
+a location combobox or date textbox, are matched using the nearest employer
+question label and approved variants.
 If Chrome or the extension restarts, opening/filling queue items reattach to a
 matching application tab or return to the queue instead of being left falsely
 active; an item already at Submit is never requeued automatically. Blocked and
