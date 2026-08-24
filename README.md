@@ -554,6 +554,8 @@ have a Stop control that also detaches the paired browser executor.
 The worker recreates its one-minute alarm and performs an immediate queue sync
 whenever Chrome or the extension starts, so queued work does not depend on
 opening the popup after a restart.
+On Job Radar itself, the content script only relays explicit start commands; it
+does not scan the dashboard DOM as though it were an employer application.
 
 To connect the Mac once:
 

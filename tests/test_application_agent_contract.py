@@ -60,6 +60,8 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "job (?:has |is )?closed" in content
     assert "pageFailure: unavailable" in content
     assert "JOB_RADAR_AGENT_STOP" in content
+    assert 'if (isRadar)' in content and 'job-radar:agent-started' in content
+    assert content.index('job-radar:agent-started') < content.index("return;\n  }", content.index('job-radar:agent-started'))
     assert "posting_status" in api
     assert "no longer open" in api
     frontend = (ROOT / "webapp" / "index.html").read_text()

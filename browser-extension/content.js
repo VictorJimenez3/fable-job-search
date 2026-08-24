@@ -23,6 +23,7 @@
       void say({type: "JOB_RADAR_START", job, mode: event.data.mode || "per_role", queueId: event.data.queueId || ""})
         .then(result => window.postMessage({type: "job-radar:agent-started", job_id: job.id, ok: !result?.error}, "*"));
     });
+    return;
   }
 
   function visible(element) {

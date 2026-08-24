@@ -94,6 +94,10 @@ Before changing the radar, read these in order:
 - **Worker wake recovery (implemented 2026-08-24):** module load, extension
   install/reload, and Chrome startup all recreate the one-minute alarm and
   immediately sync the queue. The popup is not required to restart queued work.
+- **Dashboard isolation (implemented 2026-08-24):** the content script returns
+  after installing Job Radar's start-command bridge. It does not form-scan the
+  production dashboard or keep the service worker awake with irrelevant DOM
+  mutations.
 
 ### vNext foundation (implemented and verified 2026-08-16)
 
