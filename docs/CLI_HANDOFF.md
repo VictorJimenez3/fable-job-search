@@ -98,6 +98,10 @@ Before changing the radar, read these in order:
   after installing Job Radar's start-command bridge. It does not form-scan the
   production dashboard or keep the service worker awake with irrelevant DOM
   mutations.
+- **Single-session attachment (implemented 2026-08-24):** page scans and
+  background session creation are serialized per tab. This prevents a long
+  Resume Studio run plus rapid ATS mutations from creating duplicate sessions
+  and pruning the session ID returned to the page.
 
 ### vNext foundation (implemented and verified 2026-08-16)
 

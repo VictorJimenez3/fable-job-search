@@ -6,6 +6,8 @@
   let banner = null;
   let pageFailureReported = false;
   let stopped = false;
+  let scanRunning = false;
+  let scanAgain = false;
   const isRadar = /(^|\.)job-radar-newgrad\.vercel\.app$|(^|\.)vercel\.app$/.test(location.hostname) ||
     location.hostname === "victorjimenez3.github.io" && location.pathname.startsWith("/fable-job-search/");
 
@@ -164,7 +166,17 @@
     if (stopped) return;
     if (force) lastFingerprint = "";
     clearTimeout(scanTimer);
-    scanTimer = setTimeout(scan, delay);
+    scanTimer = setTimeout(() => void runScan(), delay);
+  }
+  async function runScan() {
+    if (stopped) return;
+    if (scanRunning) { scanAgain = true; return; }
+    scanRunning = true;
+    try { await scan(); }
+    finally {
+      scanRunning = false;
+      if (scanAgain) { scanAgain = false; scheduleScan(0); }
+    }
   }
   async function scan() {
     if (stopped) return;

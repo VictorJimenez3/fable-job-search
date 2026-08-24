@@ -111,6 +111,24 @@ async function ensureResumeForApplication(tabId, row) {
   finally { row.resumePromise = null; }
 }
 
+async function ensureApplicationSession(tabId, row) {
+  if (row?.sessionId) return row;
+  if (row?.sessionPromise) return row.sessionPromise;
+  row.sessionPromise = (async () => {
+    await send(tabId, {type: "JOB_RADAR_AGENT_STATUS", title: "Agent preparing this role", message: "Resume Studio is checking for a tailored resume before the form is filled. Submit remains untouched."});
+    await ensureResumeForApplication(tabId, row);
+    const current = tabs.get(tabId);
+    if (!current) throw new Error("The paired application tab detached while Resume Studio was working");
+    if (!current.sessionId) await createSession(tabId, current.job, current.mode, current.queueId);
+    return tabs.get(tabId);
+  })();
+  try { return await row.sessionPromise; }
+  finally {
+    const current = tabs.get(tabId);
+    if (current) current.sessionPromise = null;
+  }
+}
+
 async function send(tabId, message) {
   try { return await chrome.tabs.sendMessage(tabId, message); } catch (_) { return null; }
 }
@@ -336,8 +354,7 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
       }
       if (row && !row.sessionId) {
         try {
-          await send(tabId, {type: "JOB_RADAR_AGENT_STATUS", title: "Agent preparing this role", message: "Resume Studio is checking for a tailored resume before the form is filled. Submit remains untouched."});
-          await ensureResumeForApplication(tabId, row);
+          row = await ensureApplicationSession(tabId, row);
         } catch (error) {
           if (row.queueId) {
             try { await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
@@ -347,7 +364,6 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
           }
           return {session_id: "", configured: Boolean(row), error: error.message};
         }
-        await createSession(tabId, row.job, row.mode, row.queueId);
       }
       row = tabs.get(tabId);
       return {session_id: row?.sessionId || "", configured: Boolean(row)};

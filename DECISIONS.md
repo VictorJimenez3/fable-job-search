@@ -3008,3 +3008,8 @@ The executor's queue alarm is treated as recoverable runtime state. Every
 service-worker load, extension install/reload, and Chrome startup recreates the
 alarm and requests an immediate sync; progress must not depend on the owner
 opening the extension popup after a restart.
+
+Application attachment is a single-flight operation at both boundaries. The
+content script serializes DOM scans, and the worker shares one resume/session
+promise for every tab. ATS mutation bursts must never create parallel sessions
+or let retention pruning invalidate the session ID held by the page.

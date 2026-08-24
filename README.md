@@ -556,6 +556,9 @@ whenever Chrome or the extension starts, so queued work does not depend on
 opening the popup after a restart.
 On Job Radar itself, the content script only relays explicit start commands; it
 does not scan the dashboard DOM as though it were an employer application.
+Employer-page scans and session creation are serialized per tab. A long Resume
+Studio build therefore produces one application session even when the ATS emits
+many DOM mutations while the build is running.
 
 To connect the Mac once:
 

@@ -35,6 +35,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
         assert provider in adapters
     assert "JOB_RADAR_SUBMISSION_APPROVED" in (ROOT / "browser-extension" / "content.js").read_text()
     assert "ensureResumeForApplication" in (ROOT / "browser-extension" / "background.js").read_text()
+    assert "ensureApplicationSession" in (ROOT / "browser-extension" / "background.js").read_text()
     assert "JOB_RADAR_RESUME_STATUS" in (ROOT / "browser-extension" / "content.js").read_text()
     assert "Google Sheets is rate-limited" in (ROOT / "browser-extension" / "background.js").read_text()
     assert 'action: "answers"' in (ROOT / "browser-extension" / "background.js").read_text()
@@ -60,6 +61,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "job (?:has |is )?closed" in content
     assert "pageFailure: unavailable" in content
     assert "JOB_RADAR_AGENT_STOP" in content
+    assert "scanRunning" in content and "scanAgain" in content
     assert 'if (isRadar)' in content and 'job-radar:agent-started' in content
     assert content.index('job-radar:agent-started') < content.index("return;\n  }", content.index('job-radar:agent-started'))
     assert "posting_status" in api
