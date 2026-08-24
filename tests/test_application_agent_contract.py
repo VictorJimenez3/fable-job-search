@@ -5,7 +5,8 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 def test_application_agent_keeps_owner_cloud_and_local_boundaries():
-    api = (ROOT / "webapp" / "api" / "application-agent.js").read_text()
+    api = (ROOT / "webapp" / "api" / "_application-agent.js").read_text()
+    routing = (ROOT / "webapp" / "vercel.json").read_text()
     local = (ROOT / "radar" / "application_agent.py").read_text()
     service = (ROOT / "scripts" / "resume_studio.py").read_text()
     extension = (ROOT / "browser-extension" / "manifest.json").read_text()
@@ -25,3 +26,4 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     for provider in ("workday", "greenhouse", "lever", "ashby", "smartrecruiters"):
         assert provider in adapters
     assert "JOB_RADAR_SUBMISSION_APPROVED" in (ROOT / "browser-extension" / "content.js").read_text()
+    assert "/api/application-agent" in routing and "application_agent=1" in routing

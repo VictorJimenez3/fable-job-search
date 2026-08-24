@@ -8,6 +8,7 @@
 const crypto = require("crypto");
 const { OWNER, session, requireMutationRequest } = require("./_lib");
 const tracker = require("./_google-tracker");
+const applicationAgent = require("./_application-agent");
 
 const DRIVE_FILES_API = "https://www.googleapis.com/drive/v3/files";
 const DRIVE_UPLOAD_API = "https://www.googleapis.com/upload/drive/v3/files";
@@ -571,6 +572,7 @@ async function revokeControl(token, value) {
 }
 
 module.exports = async (req, res) => {
+  if (String(req.query?.application_agent || "") === "1") return applicationAgent(req, res);
   try {
     const access = await contextFor(req);
     if (req.method === "GET") {

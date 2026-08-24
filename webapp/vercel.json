@@ -27,6 +27,7 @@
     }
   ],
   "rewrites": [
+    {"source": "/api/application-agent", "destination": "/api/resume-bank?application_agent=1"},
     {"source": "/api/v1/:path*", "destination": "/api/v1/router?path=:path"},
     {"source": "/vnext", "destination": "/vnext/index.html"}
   ]
