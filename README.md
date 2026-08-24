@@ -547,7 +547,8 @@ page shows a live “Agent preparing this role” banner so a long tailoring wai
 is distinguishable from a broken or unpaired tab. Roles already marked expired
 or filled cannot be newly queued; a legacy queue item that opens an explicit
 “job not found,” “job has closed,” or equivalent closed page fails visibly
-before any form field is filled.
+before any form field is filled. Workday's “page you are looking for doesn't
+exist” tombstone is handled the same way.
 The availability check runs before Resume Studio work begins. Queue controls
 show an in-progress state to prevent duplicate clicks, and opening/filling rows
 have a Stop control that also detaches the paired browser executor.

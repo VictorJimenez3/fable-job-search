@@ -59,6 +59,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "scheduleQueueSync();" in background
     assert "job not found" in content
     assert "job (?:has |is )?closed" in content
+    assert "page (?:you are looking for )?" in content
     assert "pageFailure: unavailable" in content
     assert "JOB_RADAR_AGENT_STOP" in content
     assert "scanRunning" in content and "scanAgain" in content
