@@ -537,6 +537,9 @@ profile links—and the paired extension mirrors those answers into the private
 Sheet. This removes repetitive blank-field work without inventing claims.
 Essays, attestations, work-authorization or other sensitive choices,
 resume-file selection, and final submission still stop for Victor.
+If Chrome or the extension restarts, opening/filling queue items reattach to a
+matching application tab or return to the queue instead of being left falsely
+active; an item already at Submit is never requeued automatically.
 
 To connect the Mac once:
 

@@ -2967,3 +2967,12 @@ attestations, work authorization, unknown sensitive choices, resume-file
 selection, and final submission remain owner-gated. The browser banner therefore
 describes a pause for owner action—not a runtime error—while preserving the
 fail-closed behavior for anything that cannot be answered deterministically.
+
+## 184. Recover orphaned browser queue items (2026-08-24)
+
+The paired extension treats its browser-tab map as a runtime cache, not durable
+state. When Chrome or the extension restarts, an item left in opening/filling
+must either reattach to an already-open application URL or return to queued;
+it must not remain falsely active forever. New tab creation also verifies the
+returned tab URL and explicitly updates it when Chrome created an about:blank
+tab first. Submitting items are never requeued by this recovery path.

@@ -118,8 +118,30 @@ async function startJob(job, mode = "per_role", queueId = "") {
   const url = safeURL(job?.url);
   if (!url || !job?.id || !job?.company || !job?.title) throw new Error("A complete safe job snapshot is required");
   const tab = await chrome.tabs.create({url, active: true});
+  if (!safeURL(tab.url) || safeURL(tab.url) !== url) await chrome.tabs.update(tab.id, {url, active: true});
   tabs.set(tab.id, {job, mode, queueId, sessionId: "", createdAt: Date.now()});
   return {tab_id: tab.id, url};
+}
+
+async function recoverOrphanedQueue(items) {
+  const openTabs = await chrome.tabs.query({});
+  for (const item of items) {
+    if (!["opening", "filling"].includes(item.state) || [...tabs.values()].some(row => row.queueId === item.queue_id)) continue;
+    const target = safeURL(item.job?.url);
+    const existing = openTabs.find(tab => target && safeURL(tab.url) === target);
+    if (existing) {
+      tabs.set(existing.id, {job: item.job, mode: "batch", queueId: item.queue_id, sessionId: "", createdAt: Date.now()});
+      continue;
+    }
+    try {
+      await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+        action: "queue_update", queue_id: item.queue_id, state: "queued",
+        message: "Requeued after the paired agent restarted before an application tab attached.",
+      })});
+      item.state = "queued";
+      item.message = "Requeued after the paired agent restarted before an application tab attached.";
+    } catch (error) { console.warn("Job Radar orphan recovery", error); }
+  }
 }
 
 async function syncSession(tabId) {
@@ -185,6 +207,7 @@ async function syncCloudQueueImpl() {
     console.warn("Job Radar context sync", error);
   }
   const items = Array.isArray(data.items) ? data.items : [];
+  await recoverOrphanedQueue(items);
   let batchRunning = items.some(item => BATCH_RUNNING_STATES.has(item.state)) ||
     [...tabs.values()].some(row => row.queueId && BATCH_RUNNING_STATES.has(row.state || "opening"));
   for (const item of items) {

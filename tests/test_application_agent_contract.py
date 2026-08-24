@@ -38,4 +38,6 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "JOB_RADAR_RESUME_STATUS" in (ROOT / "browser-extension" / "content.js").read_text()
     assert "Google Sheets is rate-limited" in (ROOT / "browser-extension" / "background.js").read_text()
     assert 'action: "answers"' in (ROOT / "browser-extension" / "background.js").read_text()
+    assert "recoverOrphanedQueue" in (ROOT / "browser-extension" / "background.js").read_text()
+    assert "chrome.tabs.update" in (ROOT / "browser-extension" / "background.js").read_text()
     assert "/api/application-agent" in routing and "application_agent=1" in routing

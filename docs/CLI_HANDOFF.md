@@ -68,6 +68,10 @@ Before changing the radar, read these in order:
   Agent Sheet. Essays, attestations, work authorization, resume-file selection,
   and final Submit remain explicit owner blockers. The employer-page banner
   labels these pauses as action needed rather than system errors.
+- **Queue restart recovery (verified 2026-08-24):** the extension verifies the
+  URL after opening a queued role and repairs an about:blank result. After a
+  Chrome/extension restart, opening/filling items reattach to a matching
+  application tab or are returned to queued; submitting items remain untouched.
 
 ### vNext foundation (implemented and verified 2026-08-16)
 
