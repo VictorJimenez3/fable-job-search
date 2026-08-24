@@ -539,7 +539,17 @@ Essays, attestations, work-authorization or other sensitive choices,
 resume-file selection, and final submission still stop for Victor.
 If Chrome or the extension restarts, opening/filling queue items reattach to a
 matching application tab or return to the queue instead of being left falsely
-active; an item already at Submit is never requeued automatically.
+active; an item already at Submit is never requeued automatically. Queue tab
+startup is verified as well: the extension explicitly navigates a new tab,
+waits for a real web URL, repairs tracked blank tabs, and requeues a role when
+Chrome cannot open it. While Resume Studio is preparing a role, the employer
+page shows a live “Agent preparing this role” banner so a long tailoring wait
+is distinguishable from a broken or unpaired tab. Roles already marked expired
+or filled cannot be newly queued; a legacy queue item that opens an explicit
+“job not found” or closed page fails visibly before any form field is filled.
+The availability check runs before Resume Studio work begins. Queue controls
+show an in-progress state to prevent duplicate clicks, and opening/filling rows
+have a Stop control that also detaches the paired browser executor.
 
 To connect the Mac once:
 

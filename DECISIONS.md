@@ -2976,3 +2976,30 @@ must either reattach to an already-open application URL or return to queued;
 it must not remain falsely active forever. New tab creation also verifies the
 returned tab URL and explicitly updates it when Chrome created an about:blank
 tab first. Submitting items are never requeued by this recovery path.
+
+## 185. Never leave a queued role active on an unverified tab (2026-08-24)
+
+Chrome can report a newly created tab before its navigation is visible to the
+extension. The executor now creates the tab first, explicitly navigates it,
+waits for Chrome to report a real web URL, and removes the tab if navigation
+fails. A tracked about:blank tab is repaired on the next sync; a matching
+ already-open employer tab is reloaded so a stale content script from before an
+ extension restart cannot be mistaken for a live attachment. If repair still
+ fails, a role without a live application session returns to queued, while a
+ role with a live session is marked failed rather than silently duplicated.
+An opening/filling map entry without an attached content session is trusted
+only for a short navigation grace period, so a worker cannot keep a role active
+forever merely because its in-memory tab map survived longer than navigation.
+
+## 186. Fail closed on stale postings (2026-08-24)
+
+Application queue payloads preserve the posting lifecycle status and reject new
+queue requests for roles already marked expired or filled. If a previously
+queued role reaches an employer page that explicitly says the job is not found,
+closed, filled, or no longer accepting applications, the Mac agent records a
+failed queue state before starting Resume Studio and stops before filling. This
+avoids treating a dead listing page as an active application and leaves the
+owner a clear reason to refresh or skip the role. Queue writes expose an
+in-progress control state, and Stop/Skip is authoritative: terminal cloud state
+detaches the corresponding browser executor so later local session sync cannot
+reactivate it.

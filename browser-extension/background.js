@@ -2,6 +2,7 @@ const LOCAL_ORIGIN = "http://127.0.0.1:4317";
 const DEFAULT_CLOUD_URL = "https://job-radar-newgrad.vercel.app";
 const BATCH_RUNNING_STATES = new Set(["opening", "filling", "submitting"]);
 const RESUME_TERMINAL_STATES = new Set(["complete", "awaiting_review", "failed"]);
+const TERMINAL_QUEUE_STATES = new Set(["submitted", "failed", "skipped", "cancelled"]);
 const tabs = new Map();
 let syncPromise = null;
 let syncBlockedUntil = 0;
@@ -114,22 +115,80 @@ async function send(tabId, message) {
   try { return await chrome.tabs.sendMessage(tabId, message); } catch (_) { return null; }
 }
 
+async function navigateQueuedTab(tabId, url) {
+  const target = safeURL(url);
+  if (!target) throw new Error("A safe application URL is required");
+  await chrome.tabs.update(tabId, {url: target, active: true});
+  const deadline = Date.now() + 8_000;
+  while (Date.now() < deadline) {
+    const current = await chrome.tabs.get(tabId);
+    if (safeURL(current?.url)) return current;
+    await wait(250);
+  }
+  throw new Error("Chrome did not navigate the paired tab to the queued application URL");
+}
+
 async function startJob(job, mode = "per_role", queueId = "") {
   const url = safeURL(job?.url);
   if (!url || !job?.id || !job?.company || !job?.title) throw new Error("A complete safe job snapshot is required");
-  const tab = await chrome.tabs.create({url, active: true});
-  if (!safeURL(tab.url) || safeURL(tab.url) !== url) await chrome.tabs.update(tab.id, {url, active: true});
-  tabs.set(tab.id, {job, mode, queueId, sessionId: "", createdAt: Date.now()});
-  return {tab_id: tab.id, url};
+  const tab = await chrome.tabs.create({active: true});
+  try {
+    const opened = await navigateQueuedTab(tab.id, url);
+    tabs.set(tab.id, {job, mode, queueId, sessionId: "", createdAt: Date.now()});
+    return {tab_id: tab.id, url: opened.url || url};
+  } catch (error) {
+    try { await chrome.tabs.remove(tab.id); } catch (_) {}
+    throw error;
+  }
+}
+
+async function repairTrackedTabs(items) {
+  for (const [tabId, row] of tabs) {
+    const target = safeURL(row.job?.url);
+    if (!row.queueId || !target) continue;
+    let current;
+    try { current = await chrome.tabs.get(tabId); } catch (_) { tabs.delete(tabId); continue; }
+    if (safeURL(current?.url)) continue;
+    try {
+      await navigateQueuedTab(tabId, target);
+    } catch (error) {
+      tabs.delete(tabId);
+      const item = items.find(value => value.queue_id === row.queueId);
+      const state = row.sessionId ? "failed" : "queued";
+      if (item) {
+        item.state = state;
+        item.message = row.sessionId
+          ? "The paired application tab disappeared before the agent could continue."
+          : "Requeued because Chrome did not open the paired application tab.";
+      }
+      try { await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+        action: "queue_update", queue_id: row.queueId,
+        state,
+        message: item?.message || "The paired application tab could not be repaired.",
+        error: error.message,
+      })}); } catch (_) {}
+    }
+  }
 }
 
 async function recoverOrphanedQueue(items) {
   const openTabs = await chrome.tabs.query({});
   for (const item of items) {
-    if (!["opening", "filling"].includes(item.state) || [...tabs.values()].some(row => row.queueId === item.queue_id)) continue;
+    if (!["opening", "filling"].includes(item.state)) continue;
+    const tracked = [...tabs.entries()].find(([, row]) => row.queueId === item.queue_id);
+    if (tracked) {
+      const [tabId, row] = tracked;
+      let current;
+      try { current = await chrome.tabs.get(tabId); } catch (_) { current = null; }
+      const livePage = Boolean(safeURL(current?.url));
+      const withinAttachGrace = livePage && !row.sessionId && Date.now() - Number(row.createdAt || 0) < 20_000;
+      if (livePage && (row.sessionId || withinAttachGrace)) continue;
+      tabs.delete(tabId);
+    }
     const target = safeURL(item.job?.url);
     const existing = openTabs.find(tab => target && safeURL(tab.url) === target);
     if (existing) {
+      try { await chrome.tabs.reload(existing.id); } catch (error) { console.warn("Job Radar could not reload matching application tab", error); }
       tabs.set(existing.id, {job: item.job, mode: "batch", queueId: item.queue_id, sessionId: "", createdAt: Date.now()});
       continue;
     }
@@ -141,6 +200,15 @@ async function recoverOrphanedQueue(items) {
       item.state = "queued";
       item.message = "Requeued after the paired agent restarted before an application tab attached.";
     } catch (error) { console.warn("Job Radar orphan recovery", error); }
+  }
+}
+
+async function reconcileTerminalTabs(items) {
+  const states = new Map(items.map(item => [item.queue_id, item.state]));
+  for (const [tabId, row] of tabs) {
+    if (!row.queueId || !TERMINAL_QUEUE_STATES.has(states.get(row.queueId))) continue;
+    await send(tabId, {type: "JOB_RADAR_AGENT_STOP", message: "This queue item is no longer active. The page will not be filled or advanced."});
+    tabs.delete(tabId);
   }
 }
 
@@ -207,6 +275,8 @@ async function syncCloudQueueImpl() {
     console.warn("Job Radar context sync", error);
   }
   const items = Array.isArray(data.items) ? data.items : [];
+  await reconcileTerminalTabs(items);
+  await repairTrackedTabs(items);
   await recoverOrphanedQueue(items);
   let batchRunning = items.some(item => BATCH_RUNNING_STATES.has(item.state)) ||
     [...tabs.values()].some(row => row.queueId && BATCH_RUNNING_STATES.has(row.state || "opening"));
@@ -252,8 +322,17 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
     if (message?.type === "JOB_RADAR_START") return startJob(message.job, message.mode, message.queueId);
     if (message?.type === "JOB_RADAR_CONTENT_READY" && tabId) {
       let row = tabs.get(tabId);
+      if (row && message.pageFailure) {
+        const reason = String(message.pageFailure).slice(0, 800);
+        if (row.queueId) await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+          action: "queue_update", queue_id: row.queueId, state: "failed", message: reason, error: reason,
+        })});
+        tabs.delete(tabId);
+        return {session_id: "", configured: true, blocked: true};
+      }
       if (row && !row.sessionId) {
         try {
+          await send(tabId, {type: "JOB_RADAR_AGENT_STATUS", title: "Agent preparing this role", message: "Resume Studio is checking for a tailored resume before the form is filled. Submit remains untouched."});
           await ensureResumeForApplication(tabId, row);
         } catch (error) {
           if (row.queueId) {
@@ -278,6 +357,17 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
       row.state = plan.state;
       if (row.queueId) void syncSession(tabId);
       return plan;
+    }
+    if (message?.type === "JOB_RADAR_PAGE_BLOCKED" && tabId) {
+      const row = tabs.get(tabId);
+      if (!row?.queueId) return {ok: false, error: "Start this application from Job Radar first."};
+      const reason = String(message.reason || "The opened posting does not contain an active application form.").slice(0, 800);
+      row.state = "failed";
+      await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+        action: "queue_update", queue_id: row.queueId, state: "failed", message: reason, error: reason,
+      })});
+      tabs.delete(tabId);
+      return {ok: true};
     }
     if (message?.type === "JOB_RADAR_EVENT" && tabId) {
       const row = tabs.get(tabId);

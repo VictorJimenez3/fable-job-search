@@ -434,6 +434,7 @@ function safeJob(value) {
     locations: Array.isArray(job.locations) ? job.locations.map(item => clean(item, 160)).filter(Boolean).slice(0, 12) : [],
     score: Number.isFinite(Number(job.score)) ? Number(job.score) : 0,
     posted_at: job.posted_at ?? null,
+    posting_status: clean(job.posting_status, 40),
   };
 }
 
@@ -579,6 +580,9 @@ async function updateQueue(access, payload) {
   if (payload.action === "queue") {
     const job = safeJob(payload.job);
     if (!job) throw new Error("valid job snapshot required");
+    if (["expired", "filled"].includes(job.posting_status)) {
+      throw new Error("This posting is no longer open; refresh Jobs before queueing it.");
+    }
     item = queue.items.find(candidate => candidate.job?.id === job.id && ACTIVE_QUEUE_STATES.has(candidate.state));
     if (item) return {item, duplicate: true};
     item = publicQueueItem({queue_id: crypto.randomBytes(14).toString("hex"), state: "queued", session_id: "", message: "Waiting for the paired Mac browser", error: "", created_at: now, updated_at: now, job, blockers: [], review: null, confirmation: null});

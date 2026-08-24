@@ -38,6 +38,28 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "JOB_RADAR_RESUME_STATUS" in (ROOT / "browser-extension" / "content.js").read_text()
     assert "Google Sheets is rate-limited" in (ROOT / "browser-extension" / "background.js").read_text()
     assert 'action: "answers"' in (ROOT / "browser-extension" / "background.js").read_text()
-    assert "recoverOrphanedQueue" in (ROOT / "browser-extension" / "background.js").read_text()
-    assert "chrome.tabs.update" in (ROOT / "browser-extension" / "background.js").read_text()
+    background = (ROOT / "browser-extension" / "background.js").read_text()
+    assert "recoverOrphanedQueue" in background
+    assert "repairTrackedTabs" in background
+    assert "navigateQueuedTab" in background
+    assert "Chrome did not navigate the paired tab" in background
+    assert "withinAttachGrace" in background
+    assert "chrome.tabs.update" in background
+    assert "chrome.tabs.reload" in background
+    assert "chrome.tabs.remove" in background
+    content = (ROOT / "browser-extension" / "content.js").read_text()
+    assert "JOB_RADAR_AGENT_STATUS" in background
+    assert "JOB_RADAR_AGENT_STATUS" in content
+    assert "JOB_RADAR_PAGE_BLOCKED" in background
+    assert 'if (row && message.pageFailure)' in background
+    assert "reconcileTerminalTabs" in background
+    assert "JOB_RADAR_AGENT_STOP" in background
+    assert "job not found" in content
+    assert "pageFailure: unavailable" in content
+    assert "JOB_RADAR_AGENT_STOP" in content
+    assert "posting_status" in api
+    assert "no longer open" in api
+    frontend = (ROOT / "webapp" / "index.html").read_text()
+    assert "queueing…" in frontend
+    assert "queueActionId" in frontend
     assert "/api/application-agent" in routing and "application_agent=1" in routing

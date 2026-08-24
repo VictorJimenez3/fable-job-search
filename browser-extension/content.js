@@ -4,6 +4,8 @@
   let scanTimer = 0;
   let lastFingerprint = "";
   let banner = null;
+  let pageFailureReported = false;
+  let stopped = false;
   const isRadar = /(^|\.)job-radar-newgrad\.vercel\.app$|(^|\.)vercel\.app$/.test(location.hostname) ||
     location.hostname === "victorjimenez3.github.io" && location.pathname.startsWith("/fable-job-search/");
 
@@ -101,6 +103,15 @@
     return [...document.querySelectorAll("input,textarea,select,[contenteditable='true']")].find(element => element.id === fieldId || element.name === fieldId) || null;
   }
 
+  function unavailablePostingReason(snapshot) {
+    if (snapshot.fields.some(field => field.type !== "button")) return "";
+    const body = text(document.body?.innerText || "", 8000).toLowerCase();
+    if (/job not found|position (?:is )?(?:filled|closed)|no longer accepting|role (?:is )?expired/.test(body)) {
+      return "The opened posting is no longer available, so the agent stopped before filling anything.";
+    }
+    return "";
+  }
+
   function setNativeValue(element, value) {
     const prototype = element instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
     const descriptor = Object.getOwnPropertyDescriptor(prototype, "value");
@@ -149,21 +160,39 @@
   }
 
   function scheduleScan(delay = 350, force = false) {
+    if (stopped) return;
     if (force) lastFingerprint = "";
     clearTimeout(scanTimer);
     scanTimer = setTimeout(scan, delay);
   }
   async function scan() {
+    if (stopped) return;
+    const snapshot = extract();
+    let ready = null;
     if (!sessionId) {
-      const ready = await say({type: "JOB_RADAR_CONTENT_READY", url: location.href});
+      const unavailable = unavailablePostingReason(snapshot);
+      ready = await say({type: "JOB_RADAR_CONTENT_READY", url: location.href, pageFailure: unavailable});
       if (ready?.error) {
         showBanner("Application paused", text(ready.error, 600), "warn", '<button data-action="retry">retry</button>');
         return;
       }
+      if (ready?.blocked && unavailable) {
+        pageFailureReported = true;
+        stopped = true;
+        showBanner("Application stopped · posting unavailable", unavailable, "warn");
+        return;
+      }
       sessionId = ready?.session_id || "";
     }
-    if (!sessionId) return;
-    const snapshot = extract();
+    if (!sessionId) {
+      const unavailable = unavailablePostingReason(snapshot);
+      if (ready?.configured && unavailable && !pageFailureReported) {
+        pageFailureReported = true;
+        showBanner("Application stopped · posting unavailable", unavailable, "warn");
+        void say({type: "JOB_RADAR_PAGE_BLOCKED", reason: unavailable});
+      }
+      return;
+    }
     const shape = JSON.stringify(snapshot.fields.map(field => [field.field_id, field.label, field.type, field.required, field.options]));
     if (shape === lastFingerprint) return;
     lastFingerprint = shape;
@@ -189,6 +218,17 @@
   }
 
   chrome.runtime.onMessage.addListener((message) => {
+    if (message?.type === "JOB_RADAR_AGENT_STOP") {
+      stopped = true;
+      sessionId = "";
+      clearTimeout(scanTimer);
+      showBanner("Application stopped", text(message.message || "This queue item is no longer active.", 600), "warn");
+      return;
+    }
+    if (message?.type === "JOB_RADAR_AGENT_STATUS") {
+      showBanner(text(message.title || "Agent working", 120), text(message.message || "The paired agent is working on this role.", 600), "info");
+      return;
+    }
     if (message?.type === "JOB_RADAR_RESCAN") { lastFingerprint = ""; scheduleScan(0); return; }
     if (message?.type === "JOB_RADAR_RESUME_STATUS") {
       const resume = message.resume || {};

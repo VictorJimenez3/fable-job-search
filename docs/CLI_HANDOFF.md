@@ -72,6 +72,25 @@ Before changing the radar, read these in order:
   URL after opening a queued role and repairs an about:blank result. After a
   Chrome/extension restart, opening/filling items reattach to a matching
   application tab or are returned to queued; submitting items remain untouched.
+- **Blank-tab guard (implemented 2026-08-24):** queue startup now creates a
+  blank tab, explicitly navigates it, waits for a real web URL, and closes the
+  tab if Chrome never navigates. A tracked blank tab is repaired during sync;
+  roles without a live session return to queued instead of remaining falsely
+  `filling`. A tracked page without an attached content session is only trusted
+  during a short navigation grace period.
+- **Preparation feedback (implemented 2026-08-24):** when the employer page is
+  attached but Resume Studio is still checking or tailoring the role, the
+  extension shows an explicit preparation banner rather than leaving the page
+  visually idle.
+- **Stale-posting guard (implemented 2026-08-24):** queue requests now carry
+  lifecycle status and reject roles already marked expired or filled. A legacy
+  queued role that opens an explicit “job not found”/closed page is marked
+  failed before Resume Studio starts or any form field is filled.
+- **Visible queue controls (implemented 2026-08-24):** the production queue
+  button disables and reads `queueing…` while writes are in flight. Opening and
+  filling rows expose Stop; terminal cloud states detach the paired tab executor
+  so a skipped role cannot be advanced or changed back to active on the next
+  sync.
 
 ### vNext foundation (implemented and verified 2026-08-16)
 

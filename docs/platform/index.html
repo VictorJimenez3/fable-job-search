@@ -525,7 +525,7 @@ const S = {           // app state
     bankQuery:"", bankMode:"all", bankStatus:"all", bankEra:"current", context:null, contextQuery:"", contextError:"", contextScanError:"",
     sync:{state:"idle",done:0,total:0,error:""}, activeRunId:"", runStatus:null,
     batchView:false, batch:{mode:"unrestricted",selected:[],runs:[],state:"idle",error:""}},
-  applicationAgent:{status:"checking",items:[],context:null,issues:[],sessions:[],error:"",pairingToken:"",selected:[]},
+  applicationAgent:{status:"checking",items:[],context:null,issues:[],sessions:[],error:"",pairingToken:"",selected:[],queueing:false,queueActionId:""},
   boot:{phase:"starting", jobsReady:false, inFlight:false, errors:[]},
   marquee:new Set(["meta","apple","amazon","netflix","google","microsoft","nvidia",
     "anthropic","openai","deepmind","genentech","moderna","regeneron",
@@ -1560,7 +1560,8 @@ async function startApply(j) {
 const APPLICATION_ACTIVE_STATES = new Set(["queued","opening","filling","blocked","awaiting_confirmation","submitting"]);
 function applicationAgentJob(j) {
   return {id:j?.id, company:j?.company, title:j?.title, url:j?.url,
-    locations:Array.isArray(j?.locations)?j.locations.slice(0,12):[], score:j?.score, posted_at:j?.posted_at??null};
+    locations:Array.isArray(j?.locations)?j.locations.slice(0,12):[], score:j?.score, posted_at:j?.posted_at??null,
+    posting_status:j?.posting_status||""};
 }
 async function applicationCloudGet(view="queue", params={}) {
   const query = new URLSearchParams({view, ...params});
@@ -1631,7 +1632,7 @@ function applicationAgentBlockersHTML(item) {
 }
 function applicationAgentQueueHTML(items) {
   if (!items.length) return '<p class="sub">No application roles are queued. Select saved roles below or start one from a job card.</p>';
-  return items.slice(0,80).map(item=>`<div class="agent-queue-row"><span class="chip ${applicationAgentStatusKind(item.state)}">${esc(applicationAgentStatusLabel(item.state))}</span><div><strong>${esc(item.job?.company||"Role")}</strong><br><span class="sub">${esc(item.job?.title||"")} · ${esc(item.provider||item.review?.provider||"")} · ${esc(item.message||"")}</span>${item.error?`<p class="sub" style="color:var(--danger)">${esc(item.error)}</p>`:""}${applicationAgentBlockersHTML(item)}${applicationAgentReviewHTML(item)}</div><div class="acts">${["queued","blocked","awaiting_confirmation","failed"].includes(item.state)?`<button class="act" onclick='refreshApplicationAgent()'>refresh</button>`:""}${["queued","blocked","awaiting_confirmation"].includes(item.state)?`<button class="act" onclick='skipApplicationAgent(${JSON.stringify(item.queue_id)})'>skip</button>`:""}</div></div>`).join("");
+  return items.slice(0,80).map(item=>{const stopping=S.applicationAgent.queueActionId===item.queue_id, canStop=["queued","opening","filling","blocked","awaiting_confirmation"].includes(item.state);return `<div class="agent-queue-row"><span class="chip ${applicationAgentStatusKind(item.state)}">${esc(applicationAgentStatusLabel(item.state))}</span><div><strong>${esc(item.job?.company||"Role")}</strong><br><span class="sub">${esc(item.job?.title||"")} · ${esc(item.provider||item.review?.provider||"")} · ${esc(item.message||"")}</span>${item.error?`<p class="sub" style="color:var(--danger)">${esc(item.error)}</p>`:""}${applicationAgentBlockersHTML(item)}${applicationAgentReviewHTML(item)}</div><div class="acts">${["queued","blocked","awaiting_confirmation","failed"].includes(item.state)?`<button class="act" onclick='refreshApplicationAgent()'>refresh</button>`:""}${canStop?`<button class="act" ${stopping?"disabled":""} onclick='skipApplicationAgent(${JSON.stringify(item.queue_id)})'>${stopping?"stopping…":["opening","filling"].includes(item.state)?"stop":"skip"}</button>`:""}</div></div>`}).join("");
 }
 function applicationAgentCandidates() {
   return Object.values(S.jobs||{}).filter(job=>{
@@ -1640,9 +1641,11 @@ function applicationAgentCandidates() {
   }).sort((a,b)=>(Number(b.score)||0)-(Number(a.score)||0)).slice(0,80);
 }
 async function queueApplicationBatch() {
+  if (S.applicationAgent.queueing) return;
   const candidates=new Map(applicationAgentCandidates().map(job=>[job.id,job]));
   const jobs=(S.applicationAgent.selected||[]).map(id=>candidates.get(id)).filter(Boolean).slice(0,30);
   if (!jobs.length) { toast("Select at least one saved role"); return; }
+  S.applicationAgent.queueing=true; rApplicationAgent();
   try {
     for (const job of jobs) {
       await applicationCloudPost("queue", {job:applicationAgentJob(job)});
@@ -1652,6 +1655,7 @@ async function queueApplicationBatch() {
     await loadApplicationAgent(false); rApplicationAgent();
     toast(`${jobs.length} application${jobs.length===1?"":"s"} queued for the paired Mac`);
   } catch (error) { toast(error.message.slice(0,150)); }
+  finally { S.applicationAgent.queueing=false; if(S.tab==="agent")rApplicationAgent(); }
 }
 async function confirmApplicationAgent(queueId) {
   const item=(S.applicationAgent.items||[]).find(row=>row.queue_id===queueId);
@@ -1666,8 +1670,11 @@ async function answerApplicationAgent(queueId,index,question,category) {
   catch(error) { toast(error.message.slice(0,150)); }
 }
 async function skipApplicationAgent(queueId) {
-  try { await applicationCloudPost("queue_update", {queue_id:queueId,state:"skipped",message:"Skipped by Victor"}); await loadApplicationAgent(false); rApplicationAgent(); }
+  if (S.applicationAgent.queueActionId) return;
+  S.applicationAgent.queueActionId=queueId; rApplicationAgent();
+  try { await applicationCloudPost("queue_update", {queue_id:queueId,state:"skipped",message:"Stopped by Victor"}); await loadApplicationAgent(false); rApplicationAgent(); }
   catch(error) { toast(error.message.slice(0,150)); }
+  finally { S.applicationAgent.queueActionId=""; if(S.tab==="agent")rApplicationAgent(); }
 }
 async function pairApplicationMac() {
   try { const data=await applicationCloudPost("pair"); S.applicationAgent.pairingToken=data.agent_token||""; rApplicationAgent(); toast("Mac pairing created · copy the token now"); }
@@ -1684,12 +1691,15 @@ function rApplicationAgent() {
   if (!S.auth) { rJobs(); return; }
   if (!S.auth.owner) { S.tab="jobs"; rJobs(); return; }
   if (S.applicationAgent.status === "checking") { loadApplicationAgent(false).then(()=>{if(S.tab==="agent")rApplicationAgent();}); return; }
-  const data=S.applicationAgent, items=data.items||[], candidates=applicationAgentCandidates(), selected=new Set(data.selected||[]);
+  const data=S.applicationAgent, items=data.items||[], candidates=applicationAgentCandidates(), selected=new Set(data.selected||[]), queueing=Boolean(data.queueing);
   if(data.storage==="sheet") setTimeout(()=>toast("Drive file storage is full; the existing private Google Sheet is storing Autopilot state."),0);
   const queueSummary=items.filter(item=>APPLICATION_ACTIVE_STATES.has(item.state)).length;
   const contextAnswers=data.context?.answers||[];
   const token=data.pairingToken;
-  $("main").innerHTML=`<section class="testing-hero"><div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">${queueSummary} active</span><span class="chip">${contextAnswers.length} approved answers</span></div><div class="acts"><button class="act" onclick="refreshApplicationAgent()">refresh</button><button class="act primary" onclick="pairApplicationMac()">pair Mac</button></div></div><h2>Application Autopilot</h2><p class="sub">The Mac extension fills approved repetitive fields and keeps moving through ordinary pages. It pauses on missing information, essays, unknown sensitive fields, attestations, and the final Submit action. Every final confirmation shows the exact values and page fingerprint.</p>${data.error?`<div class="note"><strong>Private application storage unavailable.</strong> ${esc(data.error)} Connect Google, then refresh.</div>`:""}${token?`<div class="note"><strong>Copy this Mac pairing token now.</strong><div class="agent-token">${esc(token)}</div><p class="sub">It is shown once. Paste it into the Job Radar extension popup; revoke it by creating a new pairing if needed.</p></div>`:""}</section><div class="agent-grid"><section class="lane"><div class="bar" style="justify-content:space-between"><h3>Application queue</h3><span class="sub">${items.length} stored</span></div><div class="note">Batch runs are sequential per browser tab. A blocked role parks here while later roles can continue. The app never clicks Submit without your confirmation.</div>${applicationAgentQueueHTML(items)}</section><section class="lane"><h3>Queue saved roles from your phone</h3><p class="sub">Select roles already in To apply / To tailor. The paired Mac opens them later and reports blockers here.</p>${candidates.length?`<div class="bar"><button class="act" onclick='S.applicationAgent.selected=${JSON.stringify(candidates.map(job=>job.id))};rApplicationAgent()'>select all</button><button class="act" onclick='S.applicationAgent.selected=[];rApplicationAgent()'>clear</button><button class="act primary" onclick="queueApplicationBatch()" ${selected.size?"":"disabled"}>queue ${selected.size||0} role${selected.size===1?"":"s"}</button></div><div>${candidates.map(job=>`<label class="agent-card" style="display:flex;gap:.5rem;align-items:flex-start;margin:.35rem 0"><input type="checkbox" ${selected.has(job.id)?"checked":""} onchange='const next=new Set(S.applicationAgent.selected||[]);this.checked?next.add(${JSON.stringify(job.id)}):next.delete(${JSON.stringify(job.id)});S.applicationAgent.selected=[...next];rApplicationAgent()'><span><strong>${esc(job.company)}</strong><br><span class="sub">${esc(job.title)} · ${esc((appliedById()[job.id]||{}).stage||"saved")}</span></span></label>`).join("")}</div>`:'<p class="sub">Save a role from Jobs first.</p>'}<h3 style="margin-top:1rem">Add an answer to the private bank</h3><p class="sub">Bullets are enough. The bank keeps the exact question, category, sensitivity, and reuse choice.</p><input id="agentContextQuestion" placeholder="Question or field label"><select id="agentContextCategory"><option value="other">other</option><option value="essay">essay</option><option value="work_authorization">work authorization</option><option value="education">education</option><option value="portfolio_link">portfolio link</option></select><textarea id="agentContextAnswer" rows="4" placeholder="Your approved answer"></textarea><button class="act primary" onclick="saveApplicationContext()">save answer</button><h3 style="margin-top:1rem">Issue ledger</h3><p class="sub">Sanitized adapter notes are kept private. Ask Codex to repair an issue; it will add a fixture and adapter test before changing behavior.</p>${(data.issues||[]).slice(0,12).map(issue=>`<div class="agent-issue"><strong>${esc(issue.type||"issue")}</strong> · ${esc(issue.provider||"")}<br>${esc(issue.message||"")}<br><span class="sub">${esc(issue.fingerprint||"")} · ${esc(issue.created_at||"")}</span></div>`).join("")||'<p class="sub">No issues recorded.</p>'}</section></div>`;
+  const candidateHTML=candidates.length?`<div class="bar"><button class="act" onclick='S.applicationAgent.selected=${JSON.stringify(candidates.map(job=>job.id))};rApplicationAgent()' ${queueing?"disabled":""}>select all</button><button class="act" onclick='S.applicationAgent.selected=[];rApplicationAgent()' ${queueing?"disabled":""}>clear</button><button class="act primary" aria-busy="${queueing}" onclick="queueApplicationBatch()" ${!selected.size||queueing?"disabled":""}>${queueing?"queueing…":`queue ${selected.size||0} role${selected.size===1?"":"s"}`}</button></div><div>${candidates.map(job=>`<label class="agent-card" style="display:flex;gap:.5rem;align-items:flex-start;margin:.35rem 0"><input type="checkbox" ${selected.has(job.id)?"checked":""} ${queueing?"disabled":""} onchange='const next=new Set(S.applicationAgent.selected||[]);this.checked?next.add(${JSON.stringify(job.id)}):next.delete(${JSON.stringify(job.id)});S.applicationAgent.selected=[...next];rApplicationAgent()'><span><strong>${esc(job.company)}</strong><br><span class="sub">${esc(job.title)} · ${esc((appliedById()[job.id]||{}).stage||"saved")}</span></span></label>`).join("")}</div>`:'<p class="sub">Save a role from Jobs first.</p>';
+  const queueingNote=queueing?'<div class="note" role="status"><strong>Queueing selected roles…</strong> Keep this tab open until the queue count updates.</div>':"";
+  const issueHTML=(data.issues||[]).slice(0,12).map(issue=>`<div class="agent-issue"><strong>${esc(issue.type||"issue")}</strong> · ${esc(issue.provider||"")}<br>${esc(issue.message||"")}<br><span class="sub">${esc(issue.fingerprint||"")} · ${esc(issue.created_at||"")}</span></div>`).join("")||'<p class="sub">No issues recorded.</p>';
+  $("main").innerHTML=`<section class="testing-hero"><div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">${queueSummary} active</span><span class="chip">${contextAnswers.length} approved answers</span></div><div class="acts"><button class="act" onclick="refreshApplicationAgent()">refresh</button><button class="act primary" onclick="pairApplicationMac()">pair Mac</button></div></div><h2>Application Autopilot</h2><p class="sub">The Mac extension fills approved repetitive fields and keeps moving through ordinary pages. It pauses on missing information, essays, unknown sensitive fields, attestations, and the final Submit action. Every final confirmation shows the exact values and page fingerprint.</p>${data.error?`<div class="note"><strong>Private application storage unavailable.</strong> ${esc(data.error)} Connect Google, then refresh.</div>`:""}${token?`<div class="note"><strong>Copy this Mac pairing token now.</strong><div class="agent-token">${esc(token)}</div><p class="sub">It is shown once. Paste it into the Job Radar extension popup; revoke it by creating a new pairing if needed.</p></div>`:""}</section><div class="agent-grid"><section class="lane"><div class="bar" style="justify-content:space-between"><h3>Application queue</h3><span class="sub">${items.length} stored</span></div><div class="note">Batch runs are sequential per browser tab. A blocked role parks here while later roles can continue. The app never clicks Submit without your confirmation.</div>${applicationAgentQueueHTML(items)}</section><section class="lane"><h3>Queue saved roles from your phone</h3><p class="sub">Select roles already in To apply / To tailor. The paired Mac opens them later and reports blockers here.</p>${queueingNote}${candidateHTML}<h3 style="margin-top:1rem">Add an answer to the private bank</h3><p class="sub">Bullets are enough. The bank keeps the exact question, category, sensitivity, and reuse choice.</p><input id="agentContextQuestion" placeholder="Question or field label"><select id="agentContextCategory"><option value="other">other</option><option value="essay">essay</option><option value="work_authorization">work authorization</option><option value="education">education</option><option value="portfolio_link">portfolio link</option></select><textarea id="agentContextAnswer" rows="4" placeholder="Your approved answer"></textarea><button class="act primary" onclick="saveApplicationContext()">save answer</button><h3 style="margin-top:1rem">Issue ledger</h3><p class="sub">Sanitized adapter notes are kept private. Ask Codex to repair an issue; it will add a fixture and adapter test before changing behavior.</p>${issueHTML}</section></div>`;
 }
 
 /* ---------- tutorial + account workspace ------------------------------ */
