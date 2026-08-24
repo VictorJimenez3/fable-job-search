@@ -531,6 +531,13 @@ owner explicitly syncs the Resume Bank. The app UI is authoritative; Sheet,
 database, and Markdown payloads are storage/export mirrors, not arbitrary edit
 interfaces.
 
+On first use, the local agent seeds only deterministic profile fields already
+present in the canonical local resume—name, contact details, school, and public
+profile links—and the paired extension mirrors those answers into the private
+Sheet. This removes repetitive blank-field work without inventing claims.
+Essays, attestations, work-authorization or other sensitive choices,
+resume-file selection, and final submission still stop for Victor.
+
 To connect the Mac once:
 
 1. Sign in as `VictorJimenez3`, open **Autopilot**, choose **pair Mac**, and

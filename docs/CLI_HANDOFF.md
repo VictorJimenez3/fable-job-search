@@ -61,6 +61,13 @@ Before changing the radar, read these in order:
   `vmj@njit.edu` workbook instead of falling back to the expired owner mirror
   grant. Creating a new pair revokes the previous token; no OAuth secret is
   exposed to the extension.
+- **Deterministic profile baseline (verified 2026-08-24):** on first local
+  Application Agent use, the ignored local context bank imports only the
+  canonical resume's owner-authored name, contact, school, and public profile
+  links. A paired extension mirrors those answers into the private Application
+  Agent Sheet. Essays, attestations, work authorization, resume-file selection,
+  and final Submit remain explicit owner blockers. The employer-page banner
+  labels these pauses as action needed rather than system errors.
 
 ### vNext foundation (implemented and verified 2026-08-16)
 

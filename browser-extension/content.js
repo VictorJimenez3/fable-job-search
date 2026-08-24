@@ -173,7 +173,7 @@
     const blockers = plan.blockers || [];
     if (blockers.length) {
       const items = blockers.map(item => `<li><strong>${text(item.label, 200)}</strong><br>${text(item.reason, 300)}</li>`).join("");
-      showBanner("Agent paused · your answer is needed", `<ul style="margin:5px 0 0 18px;padding:0">${items}</ul>`, "warn", '<button data-action="popup">open answer panel</button><button data-action="retry">retry after answering</button>');
+      showBanner("Action needed · not a system error", `<div style="margin-bottom:6px">The agent filled what was already approved, then stopped safely for owner-only information.</div><ul style="margin:5px 0 0 18px;padding:0">${items}</ul>`, "warn", '<button data-action="popup">open answer panel</button><button data-action="retry">retry after answering</button>');
       return;
     }
     if (plan.review) {

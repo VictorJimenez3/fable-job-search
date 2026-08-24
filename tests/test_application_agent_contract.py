@@ -17,6 +17,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "resumeStorageAccess" in api
     assert "Application Agent" in api and "Payload JSON" in api
     assert "writeSheetStore" in api and 'storage: "sheet"' in api
+    assert "SHEET_CACHE_TTL_MS" in api and "saveContextBatch" in api
     assert "automation_runs" in api and 'storage: "database"' in api
     assert "application-context.json" in api and "application-context.md" in api
     assert "application-queue.json" in api and "application-issues.md" in api
@@ -35,4 +36,6 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "JOB_RADAR_SUBMISSION_APPROVED" in (ROOT / "browser-extension" / "content.js").read_text()
     assert "ensureResumeForApplication" in (ROOT / "browser-extension" / "background.js").read_text()
     assert "JOB_RADAR_RESUME_STATUS" in (ROOT / "browser-extension" / "content.js").read_text()
+    assert "Google Sheets is rate-limited" in (ROOT / "browser-extension" / "background.js").read_text()
+    assert 'action: "answers"' in (ROOT / "browser-extension" / "background.js").read_text()
     assert "/api/application-agent" in routing and "application_agent=1" in routing

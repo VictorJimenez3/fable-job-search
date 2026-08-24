@@ -30,6 +30,9 @@ const MAX_QUEUE = 200;
 const MAX_ANSWERS = 500;
 const MAX_ISSUES = 300;
 const REVIEW_TTL_MS = 15 * 60 * 1000;
+const SHEET_CACHE_TTL_MS = 15 * 1000;
+const sheetReadyCache = new Map();
+const sheetStoreCache = new Map();
 const SENSITIVE_CATEGORIES = new Set(["work_authorization", "sponsorship", "disability", "veteran_status", "gender", "race_ethnicity", "demographic", "salary", "address", "phone"]);
 const ACTIVE_QUEUE_STATES = new Set(["queued", "opening", "filling", "blocked", "awaiting_confirmation", "submitting"]);
 const QUEUE_STATES = new Set([...ACTIVE_QUEUE_STATES, "submitted", "failed", "skipped", "cancelled"]);
@@ -136,7 +139,22 @@ async function sheetJson(url, token, options = {}) {
   return data;
 }
 
+function cloneJSON(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+function freshCacheValue(cache, key) {
+  const entry = cache.get(key);
+  if (!entry || entry.expires_at <= Date.now()) {
+    cache.delete(key);
+    return null;
+  }
+  return cloneJSON(entry.value);
+}
+
 async function ensureApplicationSheet(token, spreadsheet) {
+  const cached = freshCacheValue(sheetReadyCache, spreadsheet);
+  if (cached) return cached;
   const metadataUrl = `${SHEETS_API}/${encodeURIComponent(spreadsheet)}?fields=sheets(properties(sheetId,title))`;
   const metadata = await sheetJson(metadataUrl, token);
   let sheet = (metadata.sheets || []).find(item => item.properties?.title === APPLICATION_SHEET);
@@ -168,6 +186,7 @@ async function ensureApplicationSheet(token, spreadsheet) {
       method: "PUT", body: JSON.stringify({range: `${APPLICATION_SHEET}!A1:C1`, majorDimension: "ROWS", values: [APPLICATION_SHEET_HEADERS]}),
     });
   }
+  sheetReadyCache.set(spreadsheet, {expires_at: Date.now() + SHEET_CACHE_TTL_MS, value: sheet});
   return sheet;
 }
 
@@ -263,6 +282,8 @@ function parseSheetPayload(value) {
 }
 
 async function readSheetStore(token, spreadsheet) {
+  const cached = freshCacheValue(sheetStoreCache, spreadsheet);
+  if (cached) return cached;
   await ensureApplicationSheet(token, spreadsheet);
   const data = await sheetJson(sheetRange(spreadsheet, `${APPLICATION_SHEET}!A2:C${APPLICATION_SHEET_MAX_ROWS}`), token);
   const store = emptySheetStore();
@@ -277,6 +298,7 @@ async function readSheetStore(token, spreadsheet) {
     else if (kind === "issue" && id) store.issues.issues.push(value);
     else if (kind === "pairing" && id) store.pairing.tokens.push(value);
   }
+  sheetStoreCache.set(spreadsheet, {expires_at: Date.now() + SHEET_CACHE_TTL_MS, value: store});
   return store;
 }
 
@@ -308,7 +330,9 @@ async function writeSheetStore(token, spreadsheet, store) {
   await sheetJson(`${sheetRange(spreadsheet, `${APPLICATION_SHEET}!A1:C${rows.length}`)}?valueInputOption=RAW`, token, {
     method: "PUT", body: JSON.stringify({range: `${APPLICATION_SHEET}!A1:C${rows.length}`, majorDimension: "ROWS", values: rows}),
   });
-  return {version: VERSION, updated_at: new Date().toISOString(), ...store};
+  const written = {version: VERSION, updated_at: new Date().toISOString(), ...store};
+  sheetStoreCache.set(spreadsheet, {expires_at: Date.now() + SHEET_CACHE_TTL_MS, value: written});
+  return written;
 }
 
 async function appDocument(access, kind) {
@@ -617,10 +641,7 @@ async function confirmQueue(access, payload) {
   return {ok: true, item: publicQueueItem(item)};
 }
 
-async function saveContext(access, payload) {
-  const current = await appDocument(access, "context");
-  const context = contextDocument(current.value);
-  const answer = payload.answer && typeof payload.answer === "object" ? payload.answer : payload;
+function mergeContextAnswer(context, answer) {
   const question = clean(answer.question || answer.label, 1200);
   const value = clean(answer.value || answer.answer, 20000);
   if (!question || !value) throw new Error("question and answer are required");
@@ -637,9 +658,28 @@ async function saveContext(access, payload) {
   };
   context.answers = [next, ...context.answers.filter(item => item.answer_id !== answerId)].slice(0, MAX_ANSWERS);
   if (answer.field_key) context.mappings[clean(answer.field_key, 240)] = answerId;
+  return next;
+}
+
+async function saveContext(access, payload) {
+  const current = await appDocument(access, "context");
+  const context = contextDocument(current.value);
+  const answer = payload.answer && typeof payload.answer === "object" ? payload.answer : payload;
+  const next = mergeContextAnswer(context, answer);
   const written = await writeAppDocument(current, "context", context);
   if (current.storage !== "sheet") await writeTextDocument(current.token, current.folder, "contextMarkdown", contextMarkdown(written.value));
   return {ok: true, answer: next, context: contextDocument(written.value)};
+}
+
+async function saveContextBatch(access, payload) {
+  const answers = Array.isArray(payload.answers) ? payload.answers.filter(item => item && typeof item === "object") : [];
+  if (!answers.length) throw new Error("answers are required");
+  const current = await appDocument(access, "context");
+  const context = contextDocument(current.value);
+  const saved = answers.slice(0, MAX_ANSWERS).map(answer => mergeContextAnswer(context, answer));
+  const written = await writeAppDocument(current, "context", context);
+  if (current.storage !== "sheet") await writeTextDocument(current.token, current.folder, "contextMarkdown", contextMarkdown(written.value));
+  return {ok: true, answers: saved, context: contextDocument(written.value)};
 }
 
 async function saveMapping(access, payload) {
@@ -719,6 +759,7 @@ module.exports = async (req, res) => {
       res.status(200).json(await confirmQueue(access, payload)); return;
     }
     if (action === "answer") { res.status(200).json(await saveContext(access, payload)); return; }
+    if (action === "answers") { res.status(200).json(await saveContextBatch(access, payload)); return; }
     if (action === "save_mapping") { res.status(200).json(await saveMapping(access, payload)); return; }
     if (action === "report_issue") { res.status(200).json(await saveIssue(access, payload)); return; }
     throw Object.assign(new Error("unsupported application-agent action"), {statusCode: 400});

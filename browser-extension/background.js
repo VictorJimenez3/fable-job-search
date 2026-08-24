@@ -3,6 +3,17 @@ const DEFAULT_CLOUD_URL = "https://job-radar-newgrad.vercel.app";
 const BATCH_RUNNING_STATES = new Set(["opening", "filling", "submitting"]);
 const RESUME_TERMINAL_STATES = new Set(["complete", "awaiting_review", "failed"]);
 const tabs = new Map();
+let syncPromise = null;
+let syncBlockedUntil = 0;
+
+function noteQuota(error) {
+  const message = String(error?.message || error || "");
+  if (/quota exceeded|rate limit|too many requests|\b429\b/i.test(message)) {
+    syncBlockedUntil = Math.max(syncBlockedUntil, Date.now() + 30_000);
+    return "Google Sheets is rate-limited; sync is paused briefly and will retry automatically.";
+  }
+  return message || "Queue sync failed";
+}
 
 function safeURL(value) {
   try {
@@ -136,15 +147,32 @@ async function syncSession(tabId) {
   }
 }
 
-async function syncCloudQueue() {
+async function syncCloudQueueImpl() {
   let data;
   try { data = await cloud("/api/application-agent?view=queue"); }
   catch (error) {
     console.warn("Job Radar queue", error);
-    return {ok: false, error: error.message || String(error)};
+    return {ok: false, error: noteQuota(error)};
   }
+  let syncError = "";
   try {
     const context = await cloud("/api/application-agent?view=context");
+    // The local bank can contain deterministic owner-authored profile fields
+    // derived from the canonical resume. Seed those into the private cloud
+    // bank once so the production page and every paired Mac share the same
+    // safe baseline; essays and attestations still require the owner.
+    try {
+      const localContext = await local("/api/application/context");
+      const cloudIds = new Set((context.context?.answers || []).map(answer => answer.answer_id).filter(Boolean));
+      const missing = (localContext.answers || []).filter(answer => answer?.answer_id && !cloudIds.has(answer.answer_id));
+      if (missing.length) {
+        const synced = await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({action: "answers", answers: missing})});
+        if (synced.context) context.context = synced.context;
+      }
+    } catch (error) {
+      syncError = noteQuota(error);
+      console.warn("Job Radar profile context sync", error);
+    }
     const stored = await chrome.storage.local.get({contextUpdatedAt: ""});
     if (context.context?.updated_at && context.context.updated_at !== stored.contextUpdatedAt) {
       for (const answer of context.context.answers || []) {
@@ -152,7 +180,10 @@ async function syncCloudQueue() {
       }
       await chrome.storage.local.set({contextUpdatedAt: context.context.updated_at});
     }
-  } catch (error) { console.warn("Job Radar context sync", error); }
+  } catch (error) {
+    syncError = noteQuota(error);
+    console.warn("Job Radar context sync", error);
+  }
   const items = Array.isArray(data.items) ? data.items : [];
   let batchRunning = items.some(item => BATCH_RUNNING_STATES.has(item.state)) ||
     [...tabs.values()].some(row => row.queueId && BATCH_RUNNING_STATES.has(row.state || "opening"));
@@ -170,8 +201,18 @@ async function syncCloudQueue() {
     }
   }
   for (const tabId of tabs.keys()) await syncSession(tabId);
-  return {ok: true, queued: items.filter(item => item.state === "queued").length,
+  return {ok: !syncError, error: syncError, queued: items.filter(item => item.state === "queued").length,
     active: items.filter(item => BATCH_RUNNING_STATES.has(item.state)).length};
+}
+
+async function syncCloudQueue() {
+  if (syncPromise) return syncPromise;
+  if (Date.now() < syncBlockedUntil) {
+    return {ok: false, error: "Google Sheets is rate-limited; sync is paused briefly and will retry automatically."};
+  }
+  syncPromise = syncCloudQueueImpl();
+  try { return await syncPromise; }
+  finally { syncPromise = null; }
 }
 
 chrome.runtime.onInstalled.addListener(() => {

@@ -2952,3 +2952,18 @@ OAuth material remains server-decryptable only, pairing revocation still lives
 in the Application Agent tab, and the extension never receives a raw OAuth
 credential. Legacy random tokens remain compatible while the Postgres path is
 available for deployments that configure it.
+
+## 183. Seed only deterministic canonical profile fields (2026-08-24)
+
+The local Application Agent now derives a small reusable baseline from the
+owner's ignored canonical resume on first use: name, email, phone, school, and
+public LinkedIn/GitHub links when present. The paired extension mirrors those
+answers into the already-selected private Application Agent Sheet so production
+queue sessions do not begin with an empty bank for fields the owner has already
+authored.
+
+This is intentionally narrower than general resume extraction. Essays,
+attestations, work authorization, unknown sensitive choices, resume-file
+selection, and final submission remain owner-gated. The browser banner therefore
+describes a pause for owner action—not a runtime error—while preserving the
+fail-closed behavior for anything that cannot be answered deterministically.

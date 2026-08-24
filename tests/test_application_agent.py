@@ -53,6 +53,36 @@ def test_approved_answers_fill_and_unknown_fields_pause(tmp_path: Path):
     assert result["blockers"][0]["category"] == "work_authorization"
 
 
+def test_canonical_resume_seeds_deterministic_profile_fields(tmp_path: Path):
+    resume = tmp_path / "CV" / "immutable" / "VictorJimenezResume.tex"
+    resume.parent.mkdir(parents=True)
+    resume.write_text(
+        r"""\textbf{\Huge \scshape Victor Jimenez}
+        \href{mailto:victor@example.com}{victor@example.com}
+        (201) 555-0100
+        \href{https://www.linkedin.com/in/vmj3}{linkedin.com/in/vmj3}
+        \href{https://github.com/VictorJimenez3}{github.com/VictorJimenez3}
+        {\large New Jersey Institute of Technology}{\large Newark, NJ}""",
+        encoding="utf-8",
+    )
+    session = create_session(tmp_path, job())
+    result = plan_form(
+        tmp_path,
+        session["session_id"],
+        job()["url"],
+        [
+            {"field_id": "name", "label": "Full Name", "type": "text", "required": True},
+            {"field_id": "email", "label": "Email", "type": "email", "required": True},
+            {"field_id": "phone", "label": "Phone", "type": "tel", "required": True},
+            {"field_id": "essay", "label": "Why this role?", "type": "textarea", "required": True},
+        ],
+    )
+    assert {item["value"] for item in result["fills"]} == {
+        "Victor Jimenez", "victor@example.com", "(201) 555-0100",
+    }
+    assert result["blockers"][0]["category"] == "essay"
+
+
 def test_final_review_is_explicit_and_page_bound(tmp_path: Path):
     save_answer(tmp_path, "Email address", "victor@example.com", category="email")
     save_answer(tmp_path, "Why do you want this role?", "I build reliable systems.", category="essay")

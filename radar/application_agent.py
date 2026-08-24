@@ -236,6 +236,71 @@ def markdown_path(root: Path) -> Path:
     return root / "CV" / APPLICATION_AGENT_DIRNAME / APPLICATION_AGENT_MARKDOWN
 
 
+def _canonical_resume_answers(root: Path) -> Dict[str, Dict[str, Any]]:
+    """Derive only deterministic profile fields from the local canonical CV.
+
+    These values are already owner-authored source data.  They stay local until
+    the extension's normal private-bank sync sends them to the owner's private
+    Application Agent Sheet.  Essays, attestations, work authorization, and
+    other judgment-heavy fields are deliberately excluded.
+    """
+    candidates = (
+        root / "CV" / "immutable" / "VictorJimenezResume.tex",
+        root / "CV" / "cv_full.tex",
+    )
+    source = ""
+    for path in candidates:
+        try:
+            source = path.read_text(encoding="utf-8")
+            if source.strip():
+                break
+        except OSError:
+            continue
+    if not source:
+        return {}
+
+    def match(pattern: str) -> str:
+        found = re.search(pattern, source, flags=re.IGNORECASE)
+        return clean_text(found.group(1) if found else "", VALUE_LIMIT)
+
+    values = {
+        "full_name": match(r"\\textbf\{\\Huge\s+\\scshape\s+([^}]+)\}"),
+        "email": match(r"(?:mailto:)?([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})"),
+        "phone": match(r"(\(\d{3}\)\s*\d{3}[-\s]\d{4})"),
+        "linkedin": match(r"((?:https?://)?(?:www\.)?linkedin\.com/in/[A-Za-z0-9_-]+)"),
+        "github": match(r"((?:https?://)?github\.com/[A-Za-z0-9_-]+)"),
+        "school": match(r"\{\\large\s+([^}]*Institute[^}]*)\}"),
+    }
+    categories = {
+        "full_name": "full_name", "email": "email", "phone": "phone",
+        "linkedin": "linkedin", "github": "portfolio_link", "school": "education",
+    }
+    answers: Dict[str, Dict[str, Any]] = {}
+    for key, value in values.items():
+        if not value:
+            continue
+        question = {
+            "full_name": "Full Name", "email": "Email", "phone": "Phone",
+            "linkedin": "LinkedIn Profile", "github": "Github Link", "school": "School",
+        }[key]
+        category = categories[key]
+        answer_id = f"canonical-{key}"
+        answers[answer_id] = {
+            "answer_id": answer_id,
+            "question": question,
+            "normalized_question": normalize_question(question),
+            "variants": [question, key.replace("_", " ")],
+            "category": category,
+            "value": value,
+            "reusable": True,
+            "sensitive": category in SENSITIVE_CATEGORIES,
+            "evidence_ids": ["canonical-resume"],
+            "source": "canonical-resume",
+            "updated_at": utc_now(),
+        }
+    return answers
+
+
 def _default_store() -> Dict[str, Any]:
     return {
         "version": APPLICATION_AGENT_VERSION,
@@ -262,6 +327,20 @@ def load_store(root: Path) -> Dict[str, Any]:
         base["context"]["answers"] = {}
     if not isinstance(base["context"].get("mappings"), dict):
         base["context"]["mappings"] = {}
+    defaults = _canonical_resume_answers(root)
+    if defaults:
+        answers = base["context"]["answers"]
+        missing = {
+            answer_id: answer
+            for answer_id, answer in defaults.items()
+            if answer_id not in answers
+        }
+        if missing:
+            answers.update(missing)
+            mappings = base["context"]["mappings"]
+            for answer_id, answer in missing.items():
+                mappings.setdefault(answer["normalized_question"], answer_id)
+            write_store(root, base)
     if not isinstance(base.get("sessions"), dict):
         base["sessions"] = {}
     if not isinstance(base.get("issues"), list):
