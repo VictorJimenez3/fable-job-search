@@ -487,6 +487,7 @@ function contextDocument(value) {
     answer_id: clean(answer?.answer_id, 100), question: clean(answer?.question, 1200),
     normalized_question: clean(answer?.normalized_question, 1200),
     variants: Array.isArray(answer?.variants) ? answer.variants.map(item => clean(item, 1200)).slice(0, 30) : [],
+    fallback_for: Array.isArray(answer?.fallback_for) ? answer.fallback_for.map(item => clean(item, 1200)).slice(0, 20) : [],
     category: clean(answer?.category, 80), value: clean(answer?.value, 20000),
     reusable: answer?.reusable !== false, sensitive: Boolean(answer?.sensitive),
     evidence_ids: Array.isArray(answer?.evidence_ids) ? answer.evidence_ids.map(item => clean(item, 140)).slice(0, 20) : [],
@@ -656,6 +657,7 @@ function mergeContextAnswer(context, answer) {
   const next = {
     answer_id: answerId, question, normalized_question: normalized,
     variants: [...new Set([...(Array.isArray(answer.variants) ? answer.variants : []), ...(existing.variants || [])].map(item => clean(item, 1200)).filter(Boolean))].slice(0, 30),
+    fallback_for: [...new Set([...(Array.isArray(answer.fallback_for) ? answer.fallback_for : []), ...(existing.fallback_for || [])].map(item => clean(item, 1200)).filter(Boolean))].slice(0, 20),
     category, value, reusable: answer.reusable !== false,
     sensitive: Boolean(answer.sensitive) || SENSITIVE_CATEGORIES.has(category), evidence_ids: Array.isArray(answer.evidence_ids) ? answer.evidence_ids.map(item => clean(item, 140)).slice(0, 20) : [],
     updated_at: new Date().toISOString(),

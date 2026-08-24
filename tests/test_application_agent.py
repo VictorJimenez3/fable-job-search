@@ -36,6 +36,8 @@ def test_top_five_provider_and_sensitive_categories_are_deterministic():
     assert infer_category({"label": "Tell us why you want this role", "type": "textarea"}) == "essay"
     assert infer_category({"label": "I certify that the information is accurate", "type": "checkbox"}) == "attestation"
     assert infer_category({"label": "LinkedIn", "type": "checkbox"}) == "attestation"
+    assert infer_category({"label": "Yes", "group_question": "Are you legally authorized to work in the US?", "type": "button"}) == "work_authorization"
+    assert infer_category({"label": "He/Him", "group_question": "Pronouns", "type": "button"}) == "gender"
     assert infer_category({"label": "School", "name": "a-very-long-generated-field-name-that-must-not-turn-school-into-an-essay", "type": "text"}) == "education"
 
 
@@ -54,6 +56,53 @@ def test_approved_answers_fill_and_unknown_fields_pause(tmp_path: Path):
     assert result["state"] == "blocked"
     assert result["fills"][0]["value"] == "victor@example.com"
     assert result["blockers"][0]["category"] == "work_authorization"
+
+
+def test_approved_choice_answers_fill_attestations_and_optional_demographics(tmp_path: Path):
+    save_answer(tmp_path, "Male", "Male", category="gender")
+    save_answer(tmp_path, "I decline to self-identify", "I decline to self-identify", category="disability")
+    save_answer(tmp_path, "Yes", "Yes", category="work_authorization")
+    session = create_session(tmp_path, job())
+    result = plan_form(
+        tmp_path,
+        session["session_id"],
+        job()["url"],
+        [
+            {"field_id": "gender", "label": "Male", "group_question": "Gender", "type": "radio", "required": False, "group_options": ["Male", "Female"]},
+            {"field_id": "disability", "label": "I decline to self-identify", "group_question": "Disability status", "type": "button", "required": False, "group_options": ["I decline to self-identify", "Yes"]},
+            {"field_id": "auth", "label": "Yes", "group_question": "Are you legally authorized to work in the US?", "type": "button", "required": True, "group_options": ["Yes", "No"]},
+        ],
+    )
+    assert result["state"] == "filling"
+    assert {item["category"] for item in result["fills"]} == {"gender", "disability", "work_authorization"}
+    assert not result["blockers"]
+
+
+def test_race_fallback_is_used_only_when_hispanic_option_is_absent(tmp_path: Path):
+    save_answer(tmp_path, "Hispanic or Latino", "Hispanic or Latino", category="race_ethnicity")
+    save_answer(
+        tmp_path,
+        "Black or African American",
+        "Black or African American",
+        category="race_ethnicity",
+        fallback_for=["Hispanic or Latino", "Hispanic", "Latino"],
+    )
+    session = create_session(tmp_path, job())
+    fields = [
+        {"field_id": "hispanic", "label": "Hispanic or Latino", "group_question": "Race/Ethnicity", "type": "radio", "group_options": ["Hispanic or Latino", "Black or African American"]},
+        {"field_id": "black", "label": "Black or African American", "group_question": "Race/Ethnicity", "type": "radio", "group_options": ["Hispanic or Latino", "Black or African American"]},
+    ]
+    result = plan_form(tmp_path, session["session_id"], job()["url"], fields)
+    assert [item["field_id"] for item in result["fills"]] == ["hispanic"]
+
+    session = create_session(tmp_path, job())
+    result = plan_form(
+        tmp_path,
+        session["session_id"],
+        job()["url"],
+        [{**fields[1], "group_options": ["Black or African American", "White"]}],
+    )
+    assert result["fills"][0]["field_id"] == "black"
 
 
 def test_canonical_resume_seeds_deterministic_profile_fields(tmp_path: Path):

@@ -122,6 +122,16 @@ Before changing the radar, read these in order:
   LaTeX comments, refreshes stale canonical-derived values, and syncs corrected
   canonical values back to the private Application Agent Sheet. Choice inputs
   remain owner decisions even when an option label resembles a profile field.
+- **Choice-bank and blocker UI repair (implemented 2026-08-24):** the private
+  context bank now drives radio, checkbox, select, and ATS button groups using
+  exact option labels. Explicit owner-approved answers can cover work
+  authorization, sponsorship, relocation, pronouns/gender, veteran status,
+  disability, and race/ethnicity; an explicitly marked fallback is skipped
+  whenever its preferred option is present. Optional demographic controls no
+  longer block a queue item when no answer is banked. Ashby-style `data-option`
+  buttons are extracted and filled, and the Autopilot queue now uses full-width
+  grouped blocker cards with larger answer areas so only unresolved required
+  fields and essays demand attention.
 
 ### vNext foundation (implemented and verified 2026-08-16)
 

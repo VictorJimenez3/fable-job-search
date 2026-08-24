@@ -43,6 +43,36 @@
     return text(ats.labelFor(element) || aria || label?.textContent || parentLabel || element.getAttribute("placeholder") || element.getAttribute("name") || element.id || previous, 500);
   }
 
+  function optionGroup(element) {
+    const container = element.closest("[data-field-path], .ashby-application-form-field-entry, fieldset, [role='group']");
+    if (!container) return {container: null, question: "", key: "", options: []};
+    const label = container.querySelector("label, legend, [class*='question-title'], [class*='label']");
+    const buttons = [...container.querySelectorAll("button[data-option], [role='option']")].filter(visible);
+    const options = buttons.map(button => text(button.textContent || button.getAttribute("data-option"), 180)).filter(Boolean);
+    const input = container.querySelector("input[name], select[name], textarea[name]");
+    const key = text(container.getAttribute("data-field-path") || input?.getAttribute("name") || label?.textContent, 180);
+    return {container, question: text(label?.textContent || "", 500), key, options};
+  }
+
+  function controlGroupQuestion(element, label) {
+    const container = element.closest("fieldset, [role='group'], [data-field-path], .ashby-application-form-field-entry");
+    if (!container) return "";
+    const candidates = [...container.querySelectorAll("legend, [class*='question-title'], [class*='question-label'], [class*='form-question']")]
+      .map(node => text(node.textContent, 500)).filter(Boolean);
+    return candidates.find(candidate => text(candidate).toLowerCase() !== text(label).toLowerCase()) || "";
+  }
+
+  function optionValue(element, group) {
+    const pressed = element.getAttribute("aria-pressed");
+    const selected = element.getAttribute("aria-selected");
+    const dataSelected = element.getAttribute("data-selected");
+    if (pressed === "true" || selected === "true" || dataSelected === "true") return true;
+    if (pressed === "false" || selected === "false" || dataSelected === "false") return false;
+    const classes = String(element.className || "").toLowerCase();
+    if (/\b(selected|checked|active)\b/.test(classes)) return true;
+    return false;
+  }
+
   function optionData(element) {
     if (element.tagName === "SELECT") return [...element.options].map(option => ({value: option.value, label: text(option.textContent, 180)})).slice(0, 100);
     if (element.type === "radio" || element.type === "checkbox") return [{value: element.value, label: labelFor(element)}];
@@ -51,6 +81,7 @@
 
   function currentValue(element, type) {
     if (type === "checkbox" || type === "radio") return Boolean(element.checked);
+    if (type === "button" || element.tagName === "BUTTON" || element.getAttribute("role") === "option") return optionValue(element, optionGroup(element));
     if (element.tagName === "SELECT") return text(element.selectedOptions?.[0]?.textContent || element.value, 500);
     return text(element.value || element.textContent, 500);
   }
@@ -63,6 +94,7 @@
       const type = element.getAttribute("contenteditable") === "true" ? "textarea" : text(element.getAttribute("type") || element.tagName, 32).toLowerCase();
       if (["hidden", "button", "submit", "reset", "image"].includes(type)) return;
       const label = labelFor(element);
+      const groupQuestion = ["radio", "checkbox"].includes(type) ? controlGroupQuestion(element, label) : "";
       const baseFieldId = text(element.getAttribute("data-job-radar-field") || ats.fieldKey(element) || `${type}-${index}`, 160);
       let fieldId = baseFieldId;
       if (usedFieldIds.has(fieldId)) fieldId = `${baseFieldId}-${index}`.slice(0, 160);
@@ -71,7 +103,7 @@
         field_id: fieldId,
         id: text(element.id, 160), name: text(element.getAttribute("name"), 160),
         autocomplete: text(element.getAttribute("autocomplete"), 100),
-        label, question: label, placeholder: text(element.getAttribute("placeholder"), 300),
+        label, question: label, group_question: groupQuestion, placeholder: text(element.getAttribute("placeholder"), 300),
         type, required: Boolean(element.required || element.getAttribute("aria-required") === "true"),
         options: optionData(element),
         value: currentValue(element, type),
@@ -79,12 +111,49 @@
       element.setAttribute("data-job-radar-field", fields.at(-1).field_id);
     });
     const radioGroups = new Map();
-    fields.filter(field => field.type === "radio" && field.name).forEach(field => {
+    fields.filter(field => ["radio", "checkbox"].includes(field.type) && field.name).forEach(field => {
       const group = radioGroups.get(field.name) || [];
       group.push(field);
       radioGroups.set(field.name, group);
     });
     for (const group of radioGroups.values()) {
+      const groupOptions = group.map(field => field.label).filter(Boolean);
+      const groupQuestion = group.map(field => field.group_question).find(Boolean) || "";
+      group.forEach(field => { field.group_options = groupOptions; if (groupQuestion) field.group_question = groupQuestion; });
+      if (group.some(field => field.value === true)) {
+        group.forEach(field => { if (!field.value) field.required = false; });
+      }
+    }
+    const optionButtons = [...document.querySelectorAll("button[data-option], [role='option']")].filter(visible);
+    const optionGroups = new Map();
+    optionButtons.forEach((element, index) => {
+      const group = optionGroup(element);
+      const label = text(element.textContent || element.getAttribute("data-option"), 180);
+      if (!label || !group.question) return;
+      const groupKey = group.key || group.question;
+      const options = group.options.length ? group.options : [label];
+      const base = `option-${groupKey}-${label}`.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+      let fieldId = text(base || `option-${index}`, 160);
+      if (usedFieldIds.has(fieldId)) fieldId = `${fieldId}-${index}`.slice(0, 160);
+      usedFieldIds.add(fieldId);
+      const field = {
+        field_id: fieldId,
+        id: text(element.id, 160), name: text(element.getAttribute("name"), 160),
+        label, question: label, group_question: group.question, group_key: groupKey,
+        group_options: options, option_label: label, type: "button",
+        required: Boolean(group.container?.querySelector("[required], [aria-required='true']")) || /\*/.test(group.question),
+        is_option: true, options: options.map(option => ({value: option, label: option})),
+        value: optionValue(element, group),
+      };
+      fields.push(field);
+      element.setAttribute("data-job-radar-field", field.field_id);
+      const siblings = optionGroups.get(groupKey) || [];
+      siblings.push(field);
+      optionGroups.set(groupKey, siblings);
+    });
+    for (const group of optionGroups.values()) {
+      const groupOptions = group.map(field => field.label).filter(Boolean);
+      group.forEach(field => { field.group_options = groupOptions; });
       if (group.some(field => field.value === true)) {
         group.forEach(field => { if (!field.value) field.required = false; });
       }
@@ -103,7 +172,7 @@
   function findField(fieldId) {
     const exact = document.querySelector(`[data-job-radar-field="${CSS.escape(fieldId)}"]`);
     if (exact) return exact;
-    return [...document.querySelectorAll("input,textarea,select,[contenteditable='true']")].find(element => element.id === fieldId || element.name === fieldId) || null;
+    return [...document.querySelectorAll("input,textarea,select,button,[role='button'],[role='option'],[contenteditable='true']")].find(element => element.id === fieldId || element.name === fieldId) || null;
   }
 
   function unavailablePostingReason(snapshot) {
@@ -135,12 +204,22 @@
       return true;
     }
     if (element.type === "checkbox" || element.type === "radio") {
-      const truthy = /^(1|true|yes|y|agree|authorized|eligible)$/i.test(String(value || ""));
+      const matchesOption = wanted && (String(element.value || "").toLowerCase() === wanted || text(labelFor(element)).toLowerCase().includes(wanted));
+      const truthy = matchesOption || /^(1|true|yes|y|agree|authorized|eligible|none)$/i.test(String(value || ""));
       if (element.type === "checkbox") element.checked = truthy;
-      else if (String(element.value || "").toLowerCase() === wanted || text(labelFor(element)).toLowerCase().includes(wanted)) element.checked = true;
+      else if (matchesOption || truthy) element.checked = true;
       element.dispatchEvent(new Event("input", {bubbles: true}));
       element.dispatchEvent(new Event("change", {bubbles: true}));
       return true;
+    }
+    if (element.tagName === "BUTTON" || element.getAttribute("role") === "option" || element.getAttribute("data-option")) {
+      if (currentValue(element, "button")) return true;
+      const label = text(element.textContent || element.getAttribute("data-option"), 300).toLowerCase();
+      if (wanted === "true" || wanted === "1" || wanted === "yes" || wanted === "y" || label === wanted || label.includes(wanted)) {
+        element.click();
+        return true;
+      }
+      return false;
     }
     if (element.isContentEditable) { element.textContent = value; element.dispatchEvent(new InputEvent("input", {bubbles: true, inputType: "insertText", data: String(value)})); return true; }
     setNativeValue(element, value);
@@ -207,7 +286,7 @@
       }
     }
     if (!sessionId) return;
-    const shape = JSON.stringify(snapshot.fields.map(field => [field.field_id, field.label, field.type, field.required, field.options]));
+    const shape = JSON.stringify(snapshot.fields.map(field => [field.field_id, field.label, field.group_question, field.type, field.required, field.value, field.options]));
     if (shape === lastFingerprint) return;
     lastFingerprint = shape;
     const plan = await say({type: "JOB_RADAR_FORM", pageUrl: location.href, fields: snapshot.fields, final: snapshot.final});

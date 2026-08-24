@@ -3042,3 +3042,20 @@ such as LinkedIn, Website, or a location. After an extension restart, blocked
 or review-ready work may reattach only to the most recently used exact-match
 posting tab. It
 must not create a duplicate tab or hold later queued roles behind a parked item.
+
+## 188. Reuse explicit choice answers and show only real blockers (2026-08-24)
+
+Victor wants the application loop to remember repetitive owner decisions while
+leaving genuinely personal or role-specific work for him. The private context
+bank therefore supports exact option matching for native radio/checkbox/select
+controls and ATS button groups such as Ashby's Yes/No controls. A stored answer
+is still explicit owner approval; the deterministic agent never invents a
+choice from a resume or from a category alone. Optional demographic controls
+remain non-blocking when no approved answer exists, while required
+work-authorization, sponsorship, essay, resume-file, and other unknown fields
+still pause the queue. A fallback answer is represented as private metadata and
+is suppressed whenever its preferred option is present in the same control
+group. The Autopilot UI groups remaining blockers by decision type, gives each
+one a readable answer area, and states that banked repetitive fields were
+handled automatically. Sensitive answer values remain local/private and are
+not committed to the repository.

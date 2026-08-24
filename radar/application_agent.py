@@ -139,7 +139,7 @@ def infer_category(field: Dict[str, Any]) -> str:
     label = normalize_question(
         " ".join(
             clean_text(field.get(key), 500)
-            for key in ("label", "question", "name", "id", "autocomplete", "placeholder")
+            for key in ("label", "question", "group_question", "name", "id", "autocomplete", "placeholder")
         )
     )
     field_type = clean_text(field.get("type"), 32).lower()
@@ -149,11 +149,17 @@ def infer_category(field: Dict[str, Any]) -> str:
     # pages often label options "LinkedIn", "Website", or with a city; using
     # those option labels as profile categories produces a false fill.
     if field_type in {"checkbox", "radio"}:
+        if re.search(r"\b(sponsor|sponsorship|visa)\b", label):
+            return "sponsorship"
+        if re.search(r"\b(work authorization|legally authorized|authorized to work)\b", label):
+            return "work_authorization"
+        if re.search(r"\b(relocat|location preference|willing to move)\b", label):
+            return "location"
         if re.search(r"\b(disability|disabled|accommodation)\b", label):
             return "disability"
         if re.search(r"\b(veteran|military)\b", label):
             return "veteran_status"
-        if re.search(r"\b(gender|sex)\b", label):
+        if re.search(r"\b(gender|sex|pronoun|pronouns)\b", label):
             return "gender"
         if re.search(r"\b(race|ethnicity|ethnic)\b", label):
             return "race_ethnicity"
@@ -186,7 +192,7 @@ def infer_category(field: Dict[str, Any]) -> str:
         return "disability"
     if re.search(r"\b(veteran|military)\b", label):
         return "veteran_status"
-    if re.search(r"\b(gender|sex)\b", label):
+    if re.search(r"\b(gender|sex|pronoun|pronouns)\b", label):
         return "gender"
     if re.search(r"\b(race|ethnicity|ethnic)\b", label):
         return "race_ethnicity"
@@ -421,6 +427,42 @@ def write_context_markdown(root: Path, store: Dict[str, Any]) -> Path:
     return path
 
 
+def _answer_allowed_for_field(answer: Dict[str, Any], field: Dict[str, Any]) -> bool:
+    """Honor an explicit fallback only when the preferred option is absent."""
+    fallback_for = answer.get("fallback_for")
+    if not isinstance(fallback_for, list) or not fallback_for:
+        return True
+    options = field.get("options") or []
+    group_options = field.get("group_options") or []
+    labels = []
+    for option in [*options, *group_options]:
+        if isinstance(option, dict):
+            labels.append(option.get("label") or option.get("value"))
+        else:
+            labels.append(option)
+    normalized_options = {normalize_question(item) for item in labels if normalize_question(item)}
+    return not any(normalize_question(item) in normalized_options for item in fallback_for)
+
+
+def _answer_matches_field(answer: Dict[str, Any], field: Dict[str, Any], normalized: str) -> bool:
+    variants = [normalize_question(answer.get("question"))]
+    variants.extend(normalize_question(item) for item in answer.get("variants", []) if item)
+    if normalized and normalized in variants:
+        return True
+    field_type = clean_text(field.get("type"), 32).lower()
+    option_label = field.get("option_label")
+    if option_label or field_type in {"radio", "checkbox", "button"}:
+        selected_label = option_label or field.get("label")
+        return normalize_question(selected_label) in variants
+    options = field.get("options") or []
+    group_options = field.get("group_options") or []
+    for option in [*options, *group_options]:
+        option_label = option.get("label") if isinstance(option, dict) else option
+        if normalize_question(option_label) in variants:
+            return True
+    return False
+
+
 def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any]) -> List[Dict[str, Any]]:
     answers = (store.get("context") or {}).get("answers", {})
     if not isinstance(answers, dict):
@@ -432,28 +474,37 @@ def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any]) -> List[Dic
     mapped_id = mappings.get(key) or mappings.get(category)
     values: List[Dict[str, Any]] = []
     if mapped_id and isinstance(answers.get(mapped_id), dict):
-        values.append(answers[mapped_id])
+        mapped = answers[mapped_id]
+        if _answer_allowed_for_field(mapped, field):
+            values.append(mapped)
     for answer in answers.values():
         if not isinstance(answer, dict) or answer in values:
             continue
-        variants = [normalize_question(answer.get("question"))]
-        variants.extend(normalize_question(item) for item in answer.get("variants", []) if item)
-        if normalized and normalized in variants:
+        if _answer_allowed_for_field(answer, field) and _answer_matches_field(answer, field, normalized):
             values.append(answer)
-    if not values and category not in {"other", "essay", "attestation", "resume_file"}:
+    choice_control = (
+        clean_text(field.get("type"), 32).lower() in {"radio", "checkbox", "button", "select"}
+        or bool(field.get("options"))
+        or bool(field.get("group_options"))
+    )
+    if not values and not choice_control and category not in {"other", "essay", "attestation", "resume_file"}:
         for answer in answers.values():
             if not isinstance(answer, dict) or not answer.get("reusable", True):
                 continue
-            if clean_text(answer.get("category"), 80) == category:
+            if clean_text(answer.get("category"), 80) == category and _answer_allowed_for_field(answer, field):
                 values.append(answer)
     return values
 
 
 def _field_review(field: Dict[str, Any], value: Any = "", answer: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
     category = clean_text(field.get("category") or infer_category(field), 80)
+    label = clean_text(field.get("label") or field.get("question") or field.get("name"), 500)
+    group_question = clean_text(field.get("group_question"), 500)
+    if group_question and normalize_question(group_question) != normalize_question(label):
+        label = f"{group_question} · {label}"[:500]
     return {
         "field_id": clean_text(field.get("field_id") or field.get("id"), 160),
-        "label": clean_text(field.get("label") or field.get("question") or field.get("name"), 500),
+        "label": label,
         "category": category,
         "type": clean_text(field.get("type"), 32).lower(),
         "required": bool(field.get("required")),
@@ -461,6 +512,21 @@ def _field_review(field: Dict[str, Any], value: Any = "", answer: Optional[Dict[
         "value": display_field_value(value),
         "answer_id": clean_text((answer or {}).get("answer_id"), 100),
     }
+
+
+def _approved_fill_value(field: Dict[str, Any], answer: Dict[str, Any]) -> str:
+    """Adapt one approved answer to the exact option rendered by an ATS."""
+    field_type = clean_text(field.get("type"), 32).lower()
+    if field_type in {"radio", "checkbox", "button"}:
+        return clean_text(field.get("option_label") or field.get("label") or answer.get("value"), VALUE_LIMIT)
+    if field_type == "select":
+        variants = {normalize_question(answer.get("question"))}
+        variants.update(normalize_question(item) for item in answer.get("variants", []) if item)
+        for option in field.get("options") or []:
+            label = option.get("label") if isinstance(option, dict) else option
+            if normalize_question(label) in variants:
+                return clean_text(option.get("value") if isinstance(option, dict) else label, VALUE_LIMIT)
+    return clean_text(answer.get("value"), VALUE_LIMIT)
 
 
 def _new_session(job: Dict[str, Any], mode: str = "per_role", queue_id: str = "") -> Dict[str, Any]:
@@ -539,6 +605,16 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
         candidates = _answer_candidates(store, field)
         answer = candidates[0] if candidates else None
         if category == "attestation":
+            if answer and clean_text(answer.get("value"), VALUE_LIMIT):
+                fills.append({
+                    "field_id": field["field_id"],
+                    "value": _approved_fill_value(field, answer),
+                    "answer_id": clean_text(answer.get("answer_id"), 100),
+                    "category": category,
+                    "sensitive": sensitive,
+                    "options": field.get("options") or [],
+                })
+                continue
             if has_field_value(field.get("value")):
                 item = _field_review(field, field.get("value"))
                 item["owner_provided"] = True
@@ -546,7 +622,10 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
                 continue
             item = _field_review(field)
             item["reason"] = "Check this attestation on the page yourself, then retry so it appears on the final review card."
-            blockers.append(item)
+            if field["required"]:
+                blockers.append(item)
+            else:
+                optional_review.append(item)
             continue
         if category in {"resume_file"}:
             if has_field_value(field.get("value")):
@@ -562,7 +641,7 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
                 optional_review.append(item)
             continue
         if answer and clean_text(answer.get("value"), VALUE_LIMIT):
-            value = clean_text(answer.get("value"), VALUE_LIMIT)
+            value = _approved_fill_value(field, answer)
             fills.append({
                 "field_id": field["field_id"],
                 "value": value,
@@ -583,7 +662,8 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
             if field["required"]
             else "No approved answer exists; review or answer it if the employer asks for it."
         )
-        if category in {"essay", "cover_letter"} or field["required"] or sensitive:
+        owner_only = category in {"work_authorization", "sponsorship"}
+        if category in {"essay", "cover_letter"} or field["required"] or owner_only:
             blockers.append(item)
         else:
             optional_review.append(item)
@@ -713,6 +793,7 @@ def save_answer(
     sensitive: Optional[bool] = None,
     answer_id: str = "",
     variants: Optional[Iterable[str]] = None,
+    fallback_for: Optional[Iterable[str]] = None,
     evidence_ids: Optional[Iterable[str]] = None,
     session_id: str = "",
 ) -> Dict[str, Any]:
@@ -731,6 +812,7 @@ def save_answer(
         "question": question,
         "normalized_question": normalized,
         "variants": list(dict.fromkeys([clean_text(item, QUESTION_LIMIT) for item in (variants or []) if clean_text(item, QUESTION_LIMIT)] + list(existing.get("variants") or [])))[:30],
+        "fallback_for": list(dict.fromkeys([clean_text(item, QUESTION_LIMIT) for item in (fallback_for or []) if clean_text(item, QUESTION_LIMIT)] + list(existing.get("fallback_for") or [])))[:20],
         "category": category,
         "value": value,
         "reusable": bool(reusable),

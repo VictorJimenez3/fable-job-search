@@ -498,11 +498,13 @@ structure only, asks the local deterministic agent for decisions, fills
 approved repetitive fields, and advances ordinary multi-page **Next** steps.
 
 It pauses instead of guessing when a required answer is missing, an essay or
-cover-letter question is new, a sensitive field is unknown, a resume file must
-be selected, an attestation appears, or the page no longer matches the
-approved fingerprint. Approved sensitive answers may be reused, but every
-proposed value is shown again in the final review card. **Submit is never
-clicked until Victor confirms that card.** A confirmation from the phone is
+cover-letter question is new, a sensitive field has no approved match, a resume
+file must be selected, or the page no longer matches the approved fingerprint.
+Owner-approved choice answers can be reused for radio, checkbox, select, and
+ATS button controls; optional demographic fields do not interrupt the queue
+when no approved answer exists. Every proposed value is shown again in the
+final review card. **Submit is never clicked until Victor confirms that card.**
+A confirmation from the phone is
 single-use, expires after 15 minutes, and is rejected if the Mac is no longer
 on the same page.
 
@@ -534,11 +536,16 @@ interfaces.
 On first use, the local agent seeds only deterministic profile fields already
 present in the canonical local resume—name, contact details, school, and public
 profile links—and the paired extension mirrors those answers into the private
-Sheet. This removes repetitive blank-field work without inventing claims.
-LaTeX comments and template credits are excluded from that extraction, and a
-stale canonical-derived value is repaired locally and in the private Sheet.
-Essays, attestations, work-authorization or other sensitive choices,
-resume-file selection, and final submission still stop for Victor.
+Sheet. Victor can also keep explicit owner-approved choices in that private
+bank, so repeat questions such as work authorization, sponsorship, relocation,
+and demographic controls are filled without repeated manual entry. A
+preferred choice can have an explicit fallback that is used only when the
+preferred option is absent from a question group. This removes repetitive
+blank-field work without inventing claims. LaTeX comments and template
+credits are excluded from canonical extraction, and a stale canonical-derived
+value is repaired locally and in the private Sheet. Only genuinely unknown
+required fields, new essays, resume-file selection, and final submission stop
+for Victor.
 If Chrome or the extension restarts, opening/filling queue items reattach to a
 matching application tab or return to the queue instead of being left falsely
 active; an item already at Submit is never requeued automatically. Blocked and
