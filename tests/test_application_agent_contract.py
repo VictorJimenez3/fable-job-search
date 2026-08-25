@@ -30,6 +30,8 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "verify_submission_page" in service
     assert "/api/application/form" in service and "/api/application/confirm" in service
     assert "application_resume_status" in service and "/api/application/resume" in service
+    assert "application_resume_file" in service and "/api/application/resume-file" in service
+    assert "application_essay_answer" in service and "warm-scholarship-essay" in service
     assert '"content_scripts"' in extension and '"<all_urls>"' in extension
     for provider in ("workday", "greenhouse", "lever", "ashby", "smartrecruiters"):
         assert provider in adapters
@@ -40,6 +42,9 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "Google Sheets is rate-limited" in (ROOT / "browser-extension" / "background.js").read_text()
     assert 'action: "answers"' in (ROOT / "browser-extension" / "background.js").read_text()
     background = (ROOT / "browser-extension" / "background.js").read_text()
+    content = (ROOT / "browser-extension" / "content.js").read_text()
+    assert "localFile" in background and "maxConcurrentApplications" in background
+    assert "new DataTransfer()" in content and "new File(" in content
     assert "recoverOrphanedQueue" in background
     assert 'parkedButAttachable = ["blocked", "awaiting_confirmation"]' in background
     assert "lastAccessed" in background
@@ -51,7 +56,6 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "chrome.tabs.update" in background
     assert "chrome.tabs.reload" in background
     assert "chrome.tabs.remove" in background
-    content = (ROOT / "browser-extension" / "content.js").read_text()
     assert "JOB_RADAR_AGENT_STATUS" in background
     assert "JOB_RADAR_AGENT_STATUS" in content
     assert "JOB_RADAR_PAGE_BLOCKED" in background

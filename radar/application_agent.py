@@ -663,7 +663,7 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
                 optional_review.append(item)
                 continue
             item = _field_review(field)
-            item["reason"] = "The browser agent does not choose or upload a resume file without an explicit file selection."
+            item["reason"] = "Resume Studio has not supplied a local PDF to the browser agent yet."
             if field["required"]:
                 blockers.append(item)
             else:

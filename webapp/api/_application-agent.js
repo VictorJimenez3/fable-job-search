@@ -461,12 +461,14 @@ function publicQueueItem(item) {
     queue_id: clean(value.queue_id, 100), state: QUEUE_STATES.has(value.state) ? value.state : "queued",
     session_id: clean(value.session_id, 100), message: clean(value.message, 800), error: clean(value.error, 800),
     created_at: clean(value.created_at, 80), updated_at: clean(value.updated_at, 80),
+    retry_requested_at: clean(value.retry_requested_at, 80),
     job: safeJob(value.job), blockers: Array.isArray(value.blockers) ? value.blockers.slice(0, 80) : [],
     resume: resume ? {
       status: clean(resume.status, 30), source: clean(resume.source, 40), run_id: clean(resume.run_id, 100),
       mode: clean(resume.mode, 40), resume_status: clean(resume.resume_status, 40),
       approval_state: clean(resume.approval_state, 40), winner_version: clean(resume.winner_version, 40),
       pdf_filename: clean(resume.pdf_filename, 180), message: clean(resume.message, 500),
+      fallback_profile: clean(resume.fallback_profile, 40), file_ready: Boolean(resume.file_ready),
       needs_owner_review: Boolean(resume.needs_owner_review),
     } : null,
     review: publicReview(value.review), confirmation: value.confirmation ? {
@@ -598,6 +600,7 @@ async function updateQueue(access, payload) {
     if (payload.session_id !== undefined) item.session_id = clean(payload.session_id, 100);
     if (payload.message !== undefined) item.message = clean(payload.message, 800);
     if (payload.error !== undefined) item.error = clean(payload.error, 800);
+    if (payload.retry_requested_at !== undefined) item.retry_requested_at = clean(payload.retry_requested_at, 80);
     if (payload.resume !== undefined) item.resume = publicQueueItem({resume: payload.resume}).resume;
     if (Array.isArray(payload.blockers)) item.blockers = payload.blockers.slice(0, 80);
     if (payload.review !== undefined) item.review = publicReview(payload.review);

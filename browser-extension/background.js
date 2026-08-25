@@ -25,7 +25,7 @@ function safeURL(value) {
 }
 
 async function config() {
-  const stored = await chrome.storage.local.get({cloudUrl: DEFAULT_CLOUD_URL, agentToken: "", autoContinue: true});
+  const stored = await chrome.storage.local.get({cloudUrl: DEFAULT_CLOUD_URL, agentToken: "", autoContinue: true, maxConcurrentApplications: 3});
   return {...stored, cloudUrl: String(stored.cloudUrl || DEFAULT_CLOUD_URL).replace(/\/$/, "")};
 }
 
@@ -37,6 +37,23 @@ async function local(path, init = {}) {
   const body = await response.json().catch(() => ({}));
   if (!response.ok) throw new Error(body.error || `Local agent returned ${response.status}`);
   return body;
+}
+
+async function localFile(path, init = {}) {
+  const response = await fetch(`${LOCAL_ORIGIN}${path}`, {
+    ...init,
+    headers: {"Content-Type": "application/json", ...(init.headers || {})},
+  });
+  if (!response.ok) {
+    const body = await response.json().catch(() => ({}));
+    throw new Error(body.error || `Local agent returned ${response.status}`);
+  }
+  const bytes = new Uint8Array(await response.arrayBuffer());
+  let binary = "";
+  for (let offset = 0; offset < bytes.length; offset += 0x8000) {
+    binary += String.fromCharCode(...bytes.subarray(offset, offset + 0x8000));
+  }
+  return btoa(binary);
 }
 
 async function cloud(path, init = {}) {
@@ -98,6 +115,14 @@ async function ensureResumeForApplication(tabId, row) {
       })});
     }
     if (!["ready", "fallback"].includes(status.status)) throw new Error(status.message || "Resume Studio did not produce a usable resume result");
+    if (!status.file_ready || !status.pdf_filename) throw new Error(status.message || "Resume Studio selected a resume but its PDF is unavailable");
+    row.resumeFile = {
+      name: status.pdf_filename,
+      type: "application/pdf",
+      base64: await localFile("/api/application/resume-file", {method: "POST", body: JSON.stringify({
+        job_id: row.job.id, job: row.job, queue_id: queueId,
+      })}),
+    };
     row.resumeInfo = status;
     if (queueId) await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
       action: "queue_update", queue_id: queueId, state: "opening",
@@ -133,10 +158,10 @@ async function send(tabId, message) {
   try { return await chrome.tabs.sendMessage(tabId, message); } catch (_) { return null; }
 }
 
-async function navigateQueuedTab(tabId, url) {
+async function navigateQueuedTab(tabId, url, active = true) {
   const target = safeURL(url);
   if (!target) throw new Error("A safe application URL is required");
-  await chrome.tabs.update(tabId, {url: target, active: true});
+  await chrome.tabs.update(tabId, {url: target, active});
   const deadline = Date.now() + 8_000;
   while (Date.now() < deadline) {
     const current = await chrome.tabs.get(tabId);
@@ -149,9 +174,10 @@ async function navigateQueuedTab(tabId, url) {
 async function startJob(job, mode = "per_role", queueId = "") {
   const url = safeURL(job?.url);
   if (!url || !job?.id || !job?.company || !job?.title) throw new Error("A complete safe job snapshot is required");
-  const tab = await chrome.tabs.create({active: true});
+  const active = mode !== "batch";
+  const tab = await chrome.tabs.create({active});
   try {
-    const opened = await navigateQueuedTab(tab.id, url);
+    const opened = await navigateQueuedTab(tab.id, url, active);
     tabs.set(tab.id, {job, mode, queueId, sessionId: "", createdAt: Date.now()});
     return {tab_id: tab.id, url: opened.url || url};
   } catch (error) {
@@ -316,14 +342,28 @@ async function syncCloudQueueImpl() {
   await reconcileTerminalTabs(items);
   await repairTrackedTabs(items);
   await recoverOrphanedQueue(items);
-  let batchRunning = items.some(item => BATCH_RUNNING_STATES.has(item.state)) ||
-    [...tabs.values()].some(row => row.queueId && BATCH_RUNNING_STATES.has(row.state || "opening"));
   for (const item of items) {
-    if (batchRunning) break;
+    const tracked = [...tabs.entries()].find(([, row]) => row.queueId === item.queue_id);
+    if (!tracked || !item.retry_requested_at) continue;
+    const [tabId, row] = tracked;
+    if (row.lastRetryRequestedAt === item.retry_requested_at) continue;
+    row.lastRetryRequestedAt = item.retry_requested_at;
+    row.essayAttempts = new Set();
+    await send(tabId, {type: "JOB_RADAR_RESCAN"});
+  }
+  const settings = await config();
+  const maxConcurrent = Math.max(1, Math.min(5, Number(settings.maxConcurrentApplications) || 3));
+  const runningQueueIds = new Set([
+    ...items.filter(item => BATCH_RUNNING_STATES.has(item.state)).map(item => item.queue_id),
+    ...[...tabs.values()].filter(row => row.queueId && BATCH_RUNNING_STATES.has(row.state || "opening")).map(row => row.queueId),
+  ]);
+  let slots = Math.max(0, maxConcurrent - runningQueueIds.size);
+  for (const item of items) {
+    if (slots <= 0) break;
     if (item.state === "queued" && ![...tabs.values()].some(row => row.queueId === item.queue_id)) {
       try {
         const started = await startJob(item.job, "batch", item.queue_id);
-        batchRunning = true;
+        slots -= 1;
         await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
           action: "queue_update", queue_id: item.queue_id, state: "opening", message: "Opening on the paired Mac",
         })});
@@ -391,9 +431,56 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
     if (message?.type === "JOB_RADAR_FORM" && tabId) {
       const row = tabs.get(tabId);
       if (!row?.sessionId) return {error: "Start this application from Job Radar first."};
-      const plan = await local("/api/application/form", {method: "POST", body: JSON.stringify({
-        session_id: row.sessionId, page_url: message.pageUrl, fields: message.fields || [], final: Boolean(message.final),
+      const fields = (message.fields || []).map(field => field.type === "file" && row.resumeFile
+        ? {...field, value: row.resumeFile.name}
+        : field);
+      let plan = await local("/api/application/form", {method: "POST", body: JSON.stringify({
+        session_id: row.sessionId, page_url: message.pageUrl, fields, final: Boolean(message.final),
       })});
+      const writtenBlockers = (plan.blockers || []).filter(blocker => ["essay", "cover_letter"].includes(blocker.category));
+      row.essayAttempts = row.essayAttempts || new Set();
+      let generatedAnswer = false;
+      for (const blocker of writtenBlockers) {
+        const attemptKey = `${blocker.category}:${blocker.label}`;
+        if (row.essayAttempts.has(attemptKey)) continue;
+        row.essayAttempts.add(attemptKey);
+        const sourceField = fields.find(field => field.field_id === blocker.field_id) || {};
+        const limitText = `${sourceField.label || ""} ${sourceField.placeholder || ""}`;
+        const limitMatch = limitText.match(/([\d,]+)\s*(?:character|char)s?/i);
+        const characterLimit = Number(String(limitMatch?.[1] || "").replace(/,/g, "")) || Number(sourceField.maxlength) || 0;
+        try {
+          if (row.queueId) await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+            action: "queue_update", queue_id: row.queueId, state: "filling",
+            message: "Drafting a role-specific written response with warm-scholarship-essay.",
+          })});
+          const generated = await local("/api/application/essay", {method: "POST", body: JSON.stringify({
+            session_id: row.sessionId, job: row.job, question: blocker.label,
+            category: blocker.category, character_limit: characterLimit,
+          })});
+          if (generated?.answer) {
+            generatedAnswer = true;
+            try { await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+              action: "answer", ...generated.answer,
+            })}); } catch (_) {}
+          }
+        } catch (error) {
+          blocker.reason = `The warm writing skill needs your input: ${error.message}`;
+        }
+      }
+      if (generatedAnswer) {
+        plan = await local("/api/application/form", {method: "POST", body: JSON.stringify({
+          session_id: row.sessionId, page_url: message.pageUrl, fields, final: Boolean(message.final),
+        })});
+      }
+      if (row.resumeFile) {
+        for (const field of fields.filter(field => field.type === "file")) {
+          plan.fills = [...(plan.fills || []), {
+            field_id: field.field_id, value: row.resumeFile.name, category: "resume_file",
+            sensitive: false, options: [], file: row.resumeFile,
+          }];
+        }
+        plan.blockers = (plan.blockers || []).filter(blocker => blocker.category !== "resume_file");
+      }
       row.state = plan.state;
       if (row.queueId) void syncSession(tabId);
       return plan;

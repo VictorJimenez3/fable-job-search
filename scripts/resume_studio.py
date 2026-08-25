@@ -4094,8 +4094,9 @@ def application_resume_status(
     employer form.  A safe tailored winner is preferred, an in-flight matching
     run is reported so the extension can wait, and the immutable resume remains
     the last-resort control when a tailor honestly rejects its own candidate.
-    The browser still pauses on the resume-file control because file uploads
-    cannot be selected silently by a Chrome extension.
+    The selected PDF stays on Victor's Mac.  The paired extension fetches it
+    from the loopback-only service and places it in the employer file control;
+    only the filename and progress metadata are mirrored to the cloud queue.
     """
     job_id = str((job or {}).get("id") or "")
     entries = resume_library(root, job_id=job_id, limit=100) if job_id else []
@@ -4131,6 +4132,7 @@ def application_resume_status(
             "mode": selected.get("mode") or "ai", "resume_status": selected.get("status") or "awaiting_review",
             "approval_state": selected.get("approval_state") or "awaiting_review",
             "winner_version": "tailored", "pdf_filename": selected.get("pdf_filename") or "",
+            "file_ready": True,
             "message": "Resume Studio found a safe tailored winner for this role.",
             "needs_owner_review": selected.get("status") != "complete" or selected.get("approval_state") != "approved",
         }
@@ -4145,23 +4147,87 @@ def application_resume_status(
         selected = sorted(terminal_for_queue, key=lambda item: (
             item.get("updated_at") or "", item.get("entry_id") or "",
         ), reverse=True)[0]
-        return {
-            "status": "fallback", "source": "immutable", "mode": "canonical",
-            "run_id": selected.get("run_id") or selected.get("entry_id") or "",
+        fallback = application_fallback_resume(job, root)
+        result = {
+            **fallback,
+            "tailor_run_id": selected.get("run_id") or selected.get("entry_id") or "",
             "resume_status": selected.get("status") or "awaiting_review",
-            "message": "Resume Studio already finished this queued role without a safe tailored winner; use the immutable canonical resume.",
+            "message": "Resume Studio already finished this queued role without a safe tailored winner; %s" % fallback["message"],
             "needs_owner_review": True,
         }
+        if fallback.get("source") == "immutable":
+            result["run_id"] = selected.get("run_id") or selected.get("entry_id") or ""
+        return result
     if allow_fallback:
-        return {
-            "status": "fallback", "source": "immutable", "mode": "canonical",
-            "message": "Resume Studio did not publish a safe tailored winner; use the immutable canonical resume.",
-            "needs_owner_review": True,
-        }
+        return application_fallback_resume(job, root)
     return {
         "status": "missing", "source": "resume_studio", "recommended_mode": "ai",
         "message": "No safe tailored Resume Studio winner exists for this role yet.",
     }
+
+
+def application_fallback_resume(job: Dict[str, Any], root: Optional[Path] = None) -> Dict[str, Any]:
+    """Choose an owner-authorized reference resume before the canonical base."""
+    company = str((job or {}).get("company") or "").lower()
+    target = " ".join(str((job or {}).get(key) or "") for key in ("company", "title", "sector", "description")).lower()
+    if "merck" in company or re.search(r"\b(pharma|biotech|healthcare|clinical|drug|medical)\b", target):
+        profile = "merck"
+    elif "nvidia" in company or re.search(r"\b(ai|machine learning|deep learning|llm|model|data scien)\w*\b", target):
+        profile = "nvidia"
+    elif "google" in company or re.search(r"\b(software|data|engineer|developer|cloud|technical)\w*\b", target):
+        profile = "google"
+    else:
+        profile = ""
+    references = [
+        item for item in resume_library(root, limit=500)
+        if item.get("source") == "run"
+        and item.get("has_pdf")
+        and item.get("status") in {"complete", "completed", "awaiting_review"}
+        and item.get("winner_version") == "tailored"
+        and profile in str((item.get("job") or {}).get("company") or "").strip().lower()
+    ] if profile else []
+    if references:
+        selected = sorted(references, key=lambda item: (
+            bool((item.get("objective") or {}).get("rankable")),
+            float((item.get("objective") or {}).get("score") or -1),
+            item.get("updated_at") or "",
+        ), reverse=True)[0]
+        label = str((selected.get("job") or {}).get("company") or profile.title())
+        return {
+            "status": "fallback", "source": "reference", "mode": "approved_reference",
+            "run_id": selected.get("run_id") or selected.get("entry_id") or "",
+            "pdf_filename": selected.get("pdf_filename") or "",
+            "fallback_profile": profile, "file_ready": True,
+            "message": "Use the owner-approved %s reference resume for this role." % label,
+            "needs_owner_review": False,
+        }
+    canonical = cv_root(root) / CANONICAL_PDF
+    return {
+        "status": "fallback", "source": "immutable", "mode": "canonical",
+        "pdf_filename": canonical.name, "fallback_profile": "base",
+        "file_ready": canonical.is_file(),
+        "message": "Use the immutable canonical resume as the safe default.",
+        "needs_owner_review": not canonical.is_file(),
+    }
+
+
+def application_resume_file(
+    job: Dict[str, Any], root: Optional[Path] = None, queue_id: str = "",
+) -> Tuple[Dict[str, Any], Optional[Path]]:
+    """Resolve the exact local PDF selected for an application form."""
+    status = application_resume_status(job, root, queue_id=queue_id, allow_fallback=True)
+    target: Optional[Path] = None
+    if status.get("source") in {"tailored", "reference"}:
+        directory = _library_dir(root, "run", str(status.get("run_id") or ""))
+        if directory is not None:
+            target = artifact_target(directory, str(status.get("pdf_filename") or ""))
+    elif status.get("source") == "immutable":
+        candidate = (cv_root(root) / CANONICAL_PDF).resolve()
+        if candidate.is_file():
+            target = candidate
+    if target is None or target.suffix.lower() != ".pdf" or not target.is_file():
+        return ({**status, "file_ready": False, "message": "The selected local resume PDF is unavailable."}, None)
+    return ({**status, "file_ready": True, "pdf_filename": status.get("pdf_filename") or target.name}, target)
 
 
 def studio_usage(root: Optional[Path] = None) -> Dict[str, Any]:
@@ -4393,6 +4459,8 @@ def useful_provider_data(data: Dict[str, Any], label: str) -> bool:
         return False
     if label.startswith("workshop"):
         return bool(data.get("suggestions") or str(data.get("reply") or "").strip())
+    if label.startswith("application_essay"):
+        return bool(str(data.get("answer") or "").strip()) or bool(data.get("needs_owner_input"))
     if label.startswith(("review", "critique")) or "_critique" in label:
         criteria = data.get("criteria") if isinstance(data.get("criteria"), dict) else data
         return any(
@@ -4404,6 +4472,84 @@ def useful_provider_data(data: Dict[str, Any], label: str) -> bool:
     if label.startswith("gap_analysis"):
         return isinstance(data.get("requirements"), list) and isinstance(data.get("portfolio_strategy"), str)
     return all(key in data for key in ("experiences", "projects", "leadership", "positioning_thesis"))
+
+
+def application_essay_schema() -> Dict[str, Any]:
+    return {
+        "type": "object",
+        "properties": {
+            "answer": {"type": "string"},
+            "needs_owner_input": {"type": "boolean"},
+            "missing_facts": {"type": "array", "items": {"type": "string"}, "maxItems": 5},
+            "evidence_ids": {"type": "array", "items": {"type": "string"}, "maxItems": 12},
+            "assumption": {"type": "string"},
+        },
+        "required": ["answer", "needs_owner_input", "missing_facts", "evidence_ids", "assumption"],
+        "additionalProperties": False,
+    }
+
+
+def application_essay_answer(
+    root: Path, job: Dict[str, Any], question: str, session_id: str = "",
+    character_limit: int = 0, category: str = "essay",
+) -> Dict[str, Any]:
+    """Draft one role-specific response with Victor's installed warm-writing skill."""
+    question = str(question or "").strip()[:1200]
+    if not question:
+        raise ValueError("application question is required")
+    skill_path = Path.home() / ".codex" / "skills" / "warm-scholarship-essay" / "SKILL.md"
+    if not skill_path.is_file():
+        raise RuntimeError("warm-scholarship-essay skill is not installed on this Mac")
+    private_root = studio_root(root) / "application_answers" / uuid.uuid4().hex[:12]
+    private_root.mkdir(parents=True, exist_ok=True)
+    inventory = context_inventory(root, limit=180)
+    facts = [
+        {key: item.get(key) for key in ("id", "source", "heading", "text", "authority", "review_status")}
+        for item in inventory.get("facts", [])
+    ]
+    profile_text = (root / "profile.yaml").read_text(errors="replace") if (root / "profile.yaml").is_file() else ""
+    prompt = (
+        "Use the installed $warm-scholarship-essay skill for this job-application response. "
+        "The exact skill instructions are included below and are mandatory. Return only JSON matching the schema. "
+        "Treat this as a short application essay, even when the employer calls it an open response. Never invent facts. "
+        "Write in Victor's direct, straightforward voice, with no em dashes. If a truthful, specific answer cannot be "
+        "written from the supplied evidence, set needs_owner_input true, leave answer empty, and list only the smallest "
+        "missing facts needed. Respect the exact character limit when it is positive.\n\n"
+        "EXACT QUESTION:\n" + question + "\n\n"
+        "CHARACTER LIMIT:\n" + str(max(0, int(character_limit or 0))) + "\n\n"
+        "ROLE:\n" + json.dumps({
+            "company": job.get("company"), "title": job.get("title"),
+            "locations": job.get("locations") or [], "description": str(job.get("description") or "")[:MAX_POSTING_CHARS],
+        }, ensure_ascii=False, indent=2) + "\n\n"
+        "VICTOR PROFILE:\n" + profile_text[:12000] + "\n\n"
+        "AUTHORIZED PRIVATE EVIDENCE:\n" + json.dumps(facts, ensure_ascii=False, indent=2)[:24000] + "\n\n"
+        "WARM SCHOLARSHIP ESSAY SKILL:\n" + skill_path.read_text(errors="replace")[:16000]
+    )
+    result = run_provider(
+        "codex", prompt[:MAX_PROMPT_CHARS], private_root,
+        "application_essay_%s" % uuid.uuid4().hex[:8], timeout=5 * 60,
+        schema=application_essay_schema(),
+    )
+    write_json(private_root / "result.json", result)
+    if not result.get("ok"):
+        raise RuntimeError(result.get("error") or "warm application response generation failed")
+    data = result.get("data") or {}
+    answer = str(data.get("answer") or "").strip()
+    if data.get("needs_owner_input") or not answer:
+        missing = "; ".join(str(item) for item in (data.get("missing_facts") or []) if str(item).strip())
+        raise ValueError(missing or "This response needs one role-specific fact from Victor")
+    if character_limit and len(answer) > int(character_limit):
+        raise RuntimeError("Generated response exceeded the employer's character limit")
+    saved = save_application_answer(
+        root, question=question, value=answer,
+        category=category if category in {"essay", "cover_letter"} else "essay", reusable=False,
+        evidence_ids=data.get("evidence_ids") or [], session_id=session_id,
+    )
+    return {
+        "ok": True, "answer": saved, "skill": "warm-scholarship-essay",
+        "assumption": str(data.get("assumption") or "")[:800],
+        "provider": "codex", "usage_tokens": result.get("usage_tokens"),
+    }
 
 
 def plan_schema(enhance: bool, generation: bool = False) -> Dict[str, Any]:
@@ -14681,8 +14827,8 @@ class StudioHandler(BaseHTTPRequestHandler):
             "/api/run", "/api/run/approve", "/api/match", "/api/evidence/refresh", "/api/evidence/review",
             "/api/context/job", "/api/context/answer", "/api/context/hint", "/api/context/hint/dismiss",
             "/api/workshop/edit", "/api/workshop/ai", "/api/workshop/revert",
-            "/api/application/session", "/api/application/resume", "/api/application/form", "/api/application/review",
-            "/api/application/answer", "/api/application/mapping", "/api/application/event",
+            "/api/application/session", "/api/application/resume", "/api/application/resume-file", "/api/application/form", "/api/application/review",
+            "/api/application/answer", "/api/application/essay", "/api/application/mapping", "/api/application/event",
             "/api/application/confirm", "/api/application/verify", "/api/application/issue",
         }:
             return self.send_json({"error": "not found"}, HTTPStatus.NOT_FOUND)
@@ -14704,6 +14850,19 @@ class StudioHandler(BaseHTTPRequestHandler):
                     job, repo_root(), queue_id=str(body.get("queue_id") or ""),
                     allow_fallback=bool(body.get("allow_fallback")),
                 ))
+            if parsed.path == "/api/application/resume-file":
+                job_id = str(body.get("job_id") or "")
+                job = current_scored_jobs(repo_root()).get(job_id)
+                if not job:
+                    imported = bridged_job(body.get("job"))
+                    if imported and str(imported.get("id") or "") == job_id:
+                        job = imported
+                if not job:
+                    return self.send_json({"error": "job not found"}, HTTPStatus.NOT_FOUND)
+                status, target = application_resume_file(job, repo_root(), str(body.get("queue_id") or ""))
+                if target is None:
+                    return self.send_json({"error": status.get("message") or "resume PDF unavailable"}, HTTPStatus.NOT_FOUND)
+                return self.send_bytes(target.read_bytes(), "application/pdf", download_name=str(status.get("pdf_filename") or target.name))
             if parsed.path == "/api/application/session":
                 job = body.get("job") if isinstance(body.get("job"), dict) else body
                 return self.send_json(create_application_session(
@@ -14718,6 +14877,17 @@ class StudioHandler(BaseHTTPRequestHandler):
                     str(body.get("page_url") or ""),
                     body.get("fields") if isinstance(body.get("fields"), list) else [],
                     final=bool(body.get("final")),
+                ))
+            if parsed.path == "/api/application/essay":
+                job = body.get("job") if isinstance(body.get("job"), dict) else {}
+                imported = bridged_job(job)
+                if imported:
+                    job = {**job, **imported, "description": job.get("description") or imported.get("description") or ""}
+                return self.send_json(application_essay_answer(
+                    repo_root(), job, str(body.get("question") or ""),
+                    session_id=str(body.get("session_id") or ""),
+                    character_limit=int(body.get("character_limit") or 0),
+                    category=str(body.get("category") or "essay"),
                 ))
             if parsed.path == "/api/application/review":
                 return self.send_json({"review": prepare_application_review(

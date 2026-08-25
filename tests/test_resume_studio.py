@@ -3753,3 +3753,39 @@ def test_application_resume_status_does_not_regenerate_terminal_base_winner(monk
     assert result["source"] == "immutable"
     assert result["run_id"] == "run-base"
     assert "already finished" in result["message"]
+
+
+def test_application_resume_status_uses_owner_authorized_reference(monkeypatch):
+    entries = [{
+        "source": "run", "entry_id": "abc123def456", "run_id": "abc123def456",
+        "status": "complete", "has_pdf": True, "winner_version": "tailored",
+        "pdf_filename": "nvidia_resume_ai.pdf", "updated_at": "2026-08-24T12:00:00Z",
+        "objective": {"rankable": True, "score": 82},
+        "job": {"company": "NVIDIA", "title": "AI Engineer"},
+    }]
+    monkeypatch.setattr(rs, "resume_library", lambda *args, **kwargs: entries if not kwargs.get("job_id") else [])
+
+    result = rs.application_resume_status(
+        {"id": "job-new", "company": "Notion", "title": "Machine Learning Engineer"},
+        allow_fallback=True,
+    )
+
+    assert result["source"] == "reference"
+    assert result["fallback_profile"] == "nvidia"
+    assert result["pdf_filename"] == "nvidia_resume_ai.pdf"
+
+
+def test_application_resume_file_returns_selected_local_pdf(tmp_path, monkeypatch):
+    run_dir = tmp_path / "CV" / ".resume_studio" / "runs" / "abc123def456"
+    run_dir.mkdir(parents=True)
+    pdf = run_dir / "resume.pdf"
+    pdf.write_bytes(b"%PDF-1.4\nlocal-only\n")
+    monkeypatch.setattr(rs, "application_resume_status", lambda *args, **kwargs: {
+        "status": "ready", "source": "tailored", "run_id": "abc123def456",
+        "pdf_filename": "acme_resume_ai.pdf", "file_ready": True,
+    })
+
+    status, selected = rs.application_resume_file({"id": "job-1"}, tmp_path)
+
+    assert status["file_ready"] is True
+    assert selected == pdf

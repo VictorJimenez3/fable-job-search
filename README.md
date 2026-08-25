@@ -497,9 +497,9 @@ with a generic DOM fallback for other ATS pages. It extracts visible form
 structure only, asks the local deterministic agent for decisions, fills
 approved repetitive fields, and advances ordinary multi-page **Next** steps.
 
-It pauses instead of guessing when a required answer is missing, an essay or
-cover-letter question is new, a sensitive field has no approved match, a resume
-file must be selected, or the page no longer matches the approved fingerprint.
+It pauses instead of guessing when a required answer is missing, a written
+response cannot be grounded in Victor's private evidence, a sensitive field
+has no approved match, or the page no longer matches the approved fingerprint.
 Owner-approved choice answers can be reused for radio, checkbox, select, and
 ATS button controls; optional demographic fields do not interrupt the queue
 when no approved answer exists. Every proposed value is shown again in the
@@ -511,15 +511,17 @@ on the same page.
 Before the extension creates an application session, it checks the local
 Resume Studio library for a safe tailored PDF for that exact posting. If none
 exists, it starts the existing AI tailor run and waits for its terminal result.
-If the run does not publish a safe tailored winner, it records that decision
-and uses the immutable canonical resume as the controlled fallback. Chrome
-still pauses at the resume-file picker because a normal extension cannot
-silently select a local file; the rest of the visible repetitive form can
-continue automatically.
+If the run does not publish a safe tailored winner, it selects an
+owner-authorized Google, NVIDIA, or Merck reference by role fit, then the
+immutable canonical resume as the final fallback. The PDF bytes stay on the
+Mac and move directly from the loopback Resume Studio service into the
+employer's file control; Drive stores only queue metadata. New essays and
+personal responses use Victor's installed `warm-scholarship-essay` skill and
+private evidence, pausing only when a truthful answer needs a missing fact.
 
-The workflow supports both one-role launch from a Jobs card and sequential
-batch queueing from the phone. Blocked roles park in the private queue while
-other roles continue. Answers and field mappings are durable context: the
+The workflow supports both one-role launch from a Jobs card and a bounded batch
+of up to three application tabs from the phone. Blocked roles park without
+losing their tab or answers while open slots continue. Answers and field mappings are durable context: the
 owner can add them in the Autopilot tab, from the extension popup, or while
 answering a blocker. Local JSON remains the machine source of truth under
 `CV/.resume_studio/application_agent.json`. The owner-only cloud control plane

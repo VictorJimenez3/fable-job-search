@@ -86,6 +86,7 @@
     if (type === "checkbox" || type === "radio") return Boolean(element.checked);
     if (type === "button" || element.tagName === "BUTTON" || element.getAttribute("role") === "option") return optionValue(element, optionGroup(element));
     if (element.tagName === "SELECT") return text(element.selectedOptions?.[0]?.textContent || element.value, 500);
+    if (type === "file") return text(element.files?.[0]?.name || "", 500);
     return text(element.value || element.textContent, 500);
   }
 
@@ -106,6 +107,7 @@
         field_id: fieldId,
         id: text(element.id, 160), name: text(element.getAttribute("name"), 160),
         autocomplete: text(element.getAttribute("autocomplete"), 100),
+        maxlength: Number(element.getAttribute("maxlength") || 0) || 0,
         label, question: label, group_question: groupQuestion, placeholder: text(element.getAttribute("placeholder"), 300),
         type, required: Boolean(element.required || element.getAttribute("aria-required") === "true"),
         options: optionData(element),
@@ -196,8 +198,23 @@
     element.dispatchEvent(new Event("blur", {bubbles: true}));
   }
 
-  function chooseOption(element, value, options) {
+  function chooseOption(element, value, options, file = null) {
     const wanted = String(value || "").trim().toLowerCase();
+    if (element.type === "file") {
+      if (!file?.base64 || !file?.name) return false;
+      try {
+        const binary = atob(file.base64);
+        const bytes = new Uint8Array(binary.length);
+        for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
+        const transfer = new DataTransfer();
+        transfer.items.add(new File([bytes], file.name, {type: file.type || "application/pdf", lastModified: Date.now()}));
+        element.files = transfer.files;
+        element.dispatchEvent(new Event("input", {bubbles: true}));
+        element.dispatchEvent(new Event("change", {bubbles: true}));
+        element.dispatchEvent(new Event("blur", {bubbles: true}));
+        return element.files?.[0]?.name === file.name;
+      } catch (_) { return false; }
+    }
     if (element.tagName === "SELECT") {
       const option = [...element.options].find(candidate => candidate.value.toLowerCase() === wanted || candidate.textContent.trim().toLowerCase() === wanted || candidate.textContent.trim().toLowerCase().includes(wanted));
       if (!option) return false;
@@ -294,7 +311,19 @@
     lastFingerprint = shape;
     const plan = await say({type: "JOB_RADAR_FORM", pageUrl: location.href, fields: snapshot.fields, final: snapshot.final});
     if (!plan || plan.error) { showBanner("Job Radar Agent", text(plan?.error || "The local agent is unavailable.", 500), "bad", '<button data-action="retry">retry</button>'); return; }
-    (plan.fills || []).forEach(fill => { const element = findField(fill.field_id); if (element) chooseOption(element, fill.value, fill.options); });
+    const failedFiles = [];
+    (plan.fills || []).forEach(fill => {
+      const element = findField(fill.field_id);
+      if (!element) return;
+      const filled = chooseOption(element, fill.value, fill.options, fill.file);
+      if (fill.file && !filled) failedFiles.push(fill);
+    });
+    if (failedFiles.length) {
+      const reason = `Resume Studio selected ${text(failedFiles[0].file?.name || "a PDF", 180)}, but this page rejected the automatic upload.`;
+      await say({type: "JOB_RADAR_EVENT", state: "blocked", message: reason, error: reason});
+      showBanner("Application paused · resume upload failed", reason, "warn", '<button data-action="retry">retry upload</button>');
+      return;
+    }
     const blockers = plan.blockers || [];
     if (blockers.length) {
       const items = blockers.map(item => `<li><strong>${text(item.label, 200)}</strong><br>${text(item.reason, 300)}</li>`).join("");
@@ -330,7 +359,7 @@
       const resume = message.resume || {};
       showBanner(
         resume.status === "fallback" ? "Resume Studio used the canonical resume" : "Resume Studio prepared this role",
-        text(resume.message || "A role-specific resume result is ready. The browser will still pause before a resume-file upload.", 600),
+        text(resume.message || "A role-specific resume is ready and will be uploaded automatically when the form asks for it.", 600),
         resume.status === "fallback" ? "warn" : "info",
         '<button data-action="hide">dismiss</button>',
       );

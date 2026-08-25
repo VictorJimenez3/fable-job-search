@@ -510,6 +510,23 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   the owner/Drive/extension contract. The new unpacked extension lives under
   `browser-extension/`; no extension ID or provider secret is committed.
 
+### Current change (2026-08-24, pending production verification)
+
+- **Automatic local resume upload:** Resume Studio now resolves the exact safe
+  tailored PDF or an owner-authorized Google/NVIDIA/Merck/base fallback and
+  serves its bytes only over loopback. The extension creates the browser
+  `File`, fills the employer upload control, and mirrors only the filename and
+  progress to the cloud queue. Resume PDFs do not consume Drive quota.
+- **Concurrent durable execution:** the paired Mac may run up to three batch
+  tabs. Blocked and confirmation-ready roles park without consuming a slot;
+  each row exposes resume choice, stage progress, employer-page access, and a
+  durable continue signal for a manual step.
+- **Written responses:** new essay and personal-response blockers call the
+  installed `warm-scholarship-essay` skill through the existing local Codex
+  subscription lane. Exact prompts, limits, role context, profile, and
+  claim-authorized private evidence are supplied. Unsupported responses remain
+  visible blockers instead of being invented.
+
 ### Current change (verified 2026-08-19)
 
 - **Fresh new-grad action queue:** the classic platform defaults New-grad Jobs

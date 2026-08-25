@@ -3072,3 +3072,26 @@ explicitly non-reusable and tied to that employer question, so a plausible
 answer is not silently copied into another company's application. The agent
 continues to stop for genuinely new or ambiguous questions, resume selection,
 attestations that are not explicitly approved, and final Submit confirmation.
+
+## 190. Application artifacts stay local while execution becomes concurrent (2026-08-24)
+
+Application Autopilot consumes Resume Studio's selected artifact instead of
+turning a known PDF into an owner blocker. The loopback service returns the
+exact tailored PDF; when tailoring has no safe winner, Victor's explicitly
+authorized Google, NVIDIA, and Merck references are selected by role signal
+before the immutable canonical base. PDF bytes never enter the cloud control
+plane. The Chrome extension constructs a browser `File`, assigns it to the
+visible upload control, and records the filename in the review state.
+
+Phone batches are bounded to three active application tabs. Blocked and
+confirmation-ready roles preserve their local tab/session but do not consume
+an execution slot, and a durable retry timestamp lets the phone ask the paired
+Mac to rescan after a manual step. Production exposes a per-role stage strip,
+resume selection, employer link, blocker text, and final review state.
+
+Role-specific essays and personal responses use Victor's installed
+`warm-scholarship-essay` skill through the existing local Codex subscription
+lane. The model receives the exact employer prompt and limit plus private,
+claim-authorized context. Generated answers are non-reusable by default; when
+the evidence is insufficient, the role remains blocked with the smallest
+missing fact instead of a fabricated response.
