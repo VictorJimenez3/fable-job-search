@@ -358,7 +358,7 @@
     if (message?.type === "JOB_RADAR_RESUME_STATUS") {
       const resume = message.resume || {};
       showBanner(
-        resume.status === "fallback" ? "Resume Studio used the canonical resume" : "Resume Studio prepared this role",
+        resume.status === "fallback" ? "Resume Studio selected a fallback resume" : "Resume Studio prepared this role",
         text(resume.message || "A role-specific resume is ready and will be uploaded automatically when the form asks for it.", 600),
         resume.status === "fallback" ? "warn" : "info",
         '<button data-action="hide">dismiss</button>',

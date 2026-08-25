@@ -1641,7 +1641,8 @@ function applicationAgentResumeHTML(item) {
   const resume=item?.resume;
   if (!resume) return '<p class="agent-resume sub">Resume: waiting for Resume Studio</p>';
   const source=resume.source==="tailored"?"tailored for this role":resume.source==="reference"?`${resume.fallback_profile||"approved"} fallback`:"base fallback";
-  return `<p class="agent-resume sub"><strong>Resume:</strong> ${esc(resume.pdf_filename||"preparing PDF")} · ${esc(source)}${resume.file_ready?" · ready to upload":" · local file unavailable"}</p>`;
+  const readiness=resume.file_ready?"ready to upload":resume.pdf_filename?"selected on Mac; awaiting agent refresh":"preparing local PDF";
+  return `<p class="agent-resume sub"><strong>Resume:</strong> ${esc(resume.pdf_filename||"preparing PDF")} · ${esc(source)} · ${readiness}</p>`;
 }
 function applicationAgentReviewHTML(item) {
   const review=item?.review;
