@@ -312,12 +312,67 @@ async function syncSession(tabId) {
   }
 }
 
+const RECOVERABLE_QUEUE_STATES = new Set(["queued", "opening", "filling", "blocked", "awaiting_confirmation", "submitting"]);
+
+function localQueueRecoveryItems(value) {
+  const sessions = Array.isArray(value?.sessions) ? value.sessions : [];
+  const latest = new Map();
+  for (const session of sessions) {
+    if (!session || !RECOVERABLE_QUEUE_STATES.has(session.state)) continue;
+    const queueId = String(session.queue_id || "").trim();
+    const job = session.job;
+    if (!queueId || !job?.id || !job?.company || !job?.title || !job?.url) continue;
+    const current = latest.get(queueId);
+    const stamp = Date.parse(String(session.updated_at || "")) || 0;
+    const currentStamp = Date.parse(String(current?.updated_at || "")) || 0;
+    if (!current || stamp >= currentStamp) latest.set(queueId, session);
+  }
+  return [...latest.values()].map(session => ({
+    queue_id: session.queue_id,
+    session_id: session.session_id || "",
+    state: session.state,
+    created_at: session.created_at || "",
+    updated_at: session.updated_at || "",
+    message: session.last_message || session.last_error || `Recovered local ${session.state} session`,
+    error: session.last_error || "",
+    job: session.job,
+    blockers: Array.isArray(session.blockers) ? session.blockers : [],
+    resume: session.resume || null,
+    review: session.review || null,
+    confirmation: session.confirmation || null,
+  }));
+}
+
+async function recoverLocalQueue() {
+  let localSessions;
+  try { localSessions = await local("/api/application/sessions"); }
+  catch (error) { return {items: [], error: noteQuota(error)}; }
+  const items = localQueueRecoveryItems(localSessions);
+  if (!items.length) return {items: [], error: ""};
+  try {
+    const result = await cloud("/api/application-agent", {
+      method: "POST", body: JSON.stringify({action: "recover", items}),
+    });
+    return {items: Array.isArray(result.items) ? result.items : [], error: "", recovered: result.recovered || []};
+  } catch (error) {
+    return {items: [], error: noteQuota(error)};
+  }
+}
+
 async function syncCloudQueueImpl() {
   let data;
   try { data = await cloud("/api/application-agent?view=queue"); }
   catch (error) {
     console.warn("Job Radar queue", error);
     return {ok: false, error: noteQuota(error)};
+  }
+  let recoveryError = "";
+  try {
+    const recovery = await recoverLocalQueue();
+    recoveryError = recovery.error || "";
+    if (recovery.items.length) data = {...data, items: recovery.items};
+  } catch (error) {
+    recoveryError = noteQuota(error);
   }
   let syncError = "";
   try {
@@ -354,6 +409,7 @@ async function syncCloudQueueImpl() {
     syncError = noteQuota(error);
     console.warn("Job Radar context sync", error);
   }
+  if (recoveryError && !syncError) syncError = recoveryError;
   const items = Array.isArray(data.items) ? data.items : [];
   await reconcileTerminalTabs(items);
   await repairTrackedTabs(items);

@@ -615,6 +615,60 @@ async function updateQueue(access, payload) {
   return {item: publicQueueItem(written.value.items.find(candidate => candidate.queue_id === item.queue_id) || item), duplicate: false};
 }
 
+async function recoverQueue(access, payload) {
+  // The paired Mac is the execution boundary and may outlive a browser tab
+  // or a cloud-sheet refresh. Reconcile only active, already-sanitized local
+  // snapshots, preserving their queue IDs so an existing local session can
+  // continue instead of opening a duplicate application.
+  if (!access.agent) throw Object.assign(new Error("paired Mac access required"), {statusCode: 403});
+  const current = await appDocument(access, "queue");
+  const queue = queueDocument(current.value);
+  const existingIds = new Set(queue.items.map(item => item.queue_id));
+  const recovered = [];
+  const skipped = [];
+  const candidates = Array.isArray(payload.items) ? payload.items.slice(0, MAX_QUEUE) : [];
+  for (const candidate of candidates) {
+    const queueId = clean(candidate?.queue_id, 100);
+    const job = safeJob(candidate?.job);
+    const state = QUEUE_STATES.has(candidate?.state) ? candidate.state : "queued";
+    if (!queueId || !job || !ACTIVE_QUEUE_STATES.has(state)) {
+      skipped.push({queue_id: queueId, reason: "invalid active queue snapshot"});
+      continue;
+    }
+    if (existingIds.has(queueId)) {
+      skipped.push({queue_id: queueId, reason: "already present"});
+      continue;
+    }
+    const item = publicQueueItem({
+      queue_id: queueId,
+      session_id: candidate.session_id,
+      state,
+      message: candidate.message || "Recovered from the paired Mac",
+      error: candidate.error,
+      created_at: candidate.created_at,
+      updated_at: candidate.updated_at,
+      job,
+      blockers: candidate.blockers,
+      resume: candidate.resume,
+      review: candidate.review,
+      confirmation: candidate.confirmation,
+    });
+    if (!item.queue_id || !item.job) {
+      skipped.push({queue_id: queueId, reason: "snapshot did not pass validation"});
+      continue;
+    }
+    recovered.push(item);
+    existingIds.add(queueId);
+  }
+  if (!recovered.length) return {recovered: [], skipped, items: queue.items.map(publicQueueItem)};
+  queue.items = [...recovered, ...queue.items].slice(0, MAX_QUEUE);
+  const written = await writeAppDocument(current, "queue", {items: queue.items});
+  return {
+    recovered: recovered.map(publicQueueItem), skipped,
+    items: queueDocument(written.value).items.map(publicQueueItem),
+  };
+}
+
 function reviewExpired(review) {
   const expiry = Date.parse(String(review?.expires_at || ""));
   return !Number.isFinite(expiry) || expiry < Date.now();
@@ -765,6 +819,7 @@ module.exports = async (req, res) => {
     if (action === "queue" || action === "queue_update") {
       res.status(200).json({ok: true, ...(await updateQueue(access, {...payload, action: action === "queue" ? "queue" : "queue_update"}))}); return;
     }
+    if (action === "recover") { res.status(200).json({ok: true, ...(await recoverQueue(access, payload))}); return; }
     if (action === "confirm") {
       if (agentAccess) throw Object.assign(new Error("owner session required to confirm an application"), {statusCode: 403});
       res.status(200).json(await confirmQueue(access, payload)); return;

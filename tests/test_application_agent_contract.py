@@ -17,6 +17,8 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "resumeStorageAccess" in api
     assert "Application Agent" in api and "Payload JSON" in api
     assert "writeSheetStore" in api and 'storage: "sheet"' in api
+    assert "async function recoverQueue" in api and 'action === "recover"' in api
+    assert "paired Mac access required" in api
     assert "SHEET_CACHE_TTL_MS" in api and "saveContextBatch" in api
     assert "automation_runs" in api and 'storage: "database"' in api
     assert "application-context.json" in api and "application-context.md" in api
@@ -58,6 +60,8 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "Do not click Next in the same turn as a file assignment" in content
     assert "Review ready · no changes applied" in content
     assert "recoverOrphanedQueue" in background
+    assert "localQueueRecoveryItems" in background and 'action: "recover"' in background
+    assert "RECOVERABLE_QUEUE_STATES" in background
     assert 'parkedButAttachable = ["blocked", "awaiting_confirmation"]' in background
     assert "lastAccessed" in background
     assert 'cloudAnswer.value !== answer.value' in background
@@ -102,3 +106,6 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "/api/application-agent" in routing and "application_agent=1" in routing
     assert "compactApplicationReviewFields" in frontend
     assert ".agent-review-field > strong, .agent-review-field > .sub" in frontend
+    assert "cloudReturnedEmpty" in frontend
+    assert "Private Google Sheet connected." in frontend
+    assert "Drive file storage is full" not in frontend
