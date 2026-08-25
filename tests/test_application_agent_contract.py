@@ -35,7 +35,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "application_resume_file" in service and "/api/application/resume-file" in service
     assert "application_essay_answer" in service and "warm-scholarship-essay" in service
     assert '"content_scripts"' in extension and '"<all_urls>"' in extension
-    assert '"version": "0.2.4"' in extension
+    assert '"version": "0.2.6"' in extension
     for provider in ("workday", "greenhouse", "lever", "ashby", "smartrecruiters"):
         assert provider in adapters
     assert "JOB_RADAR_SUBMISSION_APPROVED" in (ROOT / "browser-extension" / "content.js").read_text()
@@ -90,6 +90,16 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "JOB_RADAR_AGENT_STOP" in background
     assert "chrome.runtime.onStartup.addListener(scheduleQueueSync)" in background
     assert "scheduleQueueSync();" in background
+    assert "chrome.runtime.reload()" in background
+    assert "JOB_RADAR_RELOAD_EXTENSION" in background
+    assert "RADAR_PAGE_ORIGINS" in background
+    assert "Only the Job Radar popup or owner Job Radar page can request a reload." in background
+    popup = (ROOT / "browser-extension" / "popup.js").read_text()
+    popup_html = (ROOT / "browser-extension" / "popup.html").read_text()
+    assert 'send("JOB_RADAR_RELOAD_EXTENSION")' in popup
+    assert 'id="reload"' in popup_html and 'id="version"' in popup_html
+    assert "job-radar:extension-command" in content
+    assert "JOB_RADAR_SYNC_NOW" in content
     assert "job not found" in content
     assert "job (?:has |is )?closed" in content
     assert "page (?:you are looking for )?" in content
@@ -102,6 +112,8 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "posting_status" in api
     assert "no longer open" in api
     frontend = (ROOT / "webapp" / "index.html").read_text()
+    assert "controlApplicationAgentExtension" in frontend
+    assert "sendApplicationPairingToExtension" in frontend
     assert "queueing…" in frontend
     assert "queueActionId" in frontend
     assert "!isTerminalPosting(job)" in frontend

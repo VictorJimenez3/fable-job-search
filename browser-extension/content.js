@@ -8,7 +8,7 @@
   let stopped = false;
   let scanRunning = false;
   let scanAgain = false;
-  const isRadar = /(^|\.)job-radar-newgrad\.vercel\.app$|(^|\.)vercel\.app$/.test(location.hostname) ||
+  const isRadar = location.hostname === "job-radar-newgrad.vercel.app" ||
     location.hostname === "victorjimenez3.github.io" && location.pathname.startsWith("/fable-job-search/");
 
   function text(value, limit = 500) { return String(value || "").replace(/\s+/g, " ").trim().slice(0, limit); }
@@ -19,7 +19,25 @@
 
   if (isRadar) {
     window.addEventListener("message", (event) => {
-      if (event.source !== window || event.data?.type !== "job-radar:start-application") return;
+      if (event.source !== window || event.origin !== location.origin) return;
+      if (event.data?.type === "job-radar:extension-command") {
+        const command = String(event.data.command || "");
+        const messageType = {reload_extension: "JOB_RADAR_RELOAD_EXTENSION", sync_queue: "JOB_RADAR_SYNC_NOW", set_pairing: "JOB_RADAR_SET_CONFIG"}[command];
+        if (!messageType) return;
+        const requestId = text(event.data.requestId, 120);
+        const message = {type: messageType, source: "radar-page", requestId};
+        if (command === "set_pairing") {
+          message.config = {
+            cloudUrl: text(event.data.cloudUrl, 300),
+            agentToken: text(event.data.agentToken, 500),
+          };
+        }
+        void say(message).then(result => window.postMessage({
+          type: "job-radar:extension-command-result", requestId, command, result,
+        }, location.origin));
+        return;
+      }
+      if (event.data?.type !== "job-radar:start-application") return;
       const job = event.data.job;
       if (!job || !safeURL(job.url)) return;
       void say({type: "JOB_RADAR_START", job, mode: event.data.mode || "per_role", queueId: event.data.queueId || ""})

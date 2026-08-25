@@ -578,7 +578,15 @@ show an in-progress state to prevent duplicate clicks, and opening/filling rows
 have a Stop control that also detaches the paired browser executor.
 The worker recreates its one-minute alarm and performs an immediate queue sync
 whenever Chrome or the extension starts, so queued work does not depend on
-opening the popup after a restart.
+opening the popup after a restart. If the worker needs a controlled restart,
+the extension popup's **reload extension** button sends a popup-only request,
+acknowledges it, and then calls Chrome's extension reload API. The fresh worker
+starts its normal alarm and queue sync; sync or quota errors never trigger an
+automatic reload loop. The owner-only Autopilot page also exposes **sync Mac**,
+**restart extension**, and **send pairing to extension** controls. Those
+commands travel through the installed content script and are accepted only
+from the production Job Radar origins; they do not require access to Chrome's
+internal extension manager.
 Resume uploads are single-shot: when an ATS exposes duplicate file controls,
 the extension selects the empty required/named resume control, keeps an
 accepted file in place across DOM scans, and waits for employer validation

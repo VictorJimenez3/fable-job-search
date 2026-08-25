@@ -1,6 +1,8 @@
 async function send(type, value = {}) {
   return chrome.runtime.sendMessage({type, ...value});
 }
+const version = document.querySelector("#version");
+if (version) version.textContent = `v${chrome.runtime.getManifest().version}`;
 function esc(value) { return String(value || "").replace(/[&<>\"]/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[char])); }
 function formatSession(session) {
   if (!session) return `<div class="card muted">Open an application from Job Radar to attach the agent.</div>`;
@@ -49,5 +51,17 @@ document.querySelector("#sync").onclick = async () => {
   else document.querySelector("#status").textContent = "Queue sync did not complete.";
   button.disabled = false;
   setTimeout(render, 400);
+};
+document.querySelector("#reload").onclick = async () => {
+  const button = document.querySelector("#reload");
+  button.disabled = true;
+  document.querySelector("#status").textContent = "Reloading extension…";
+  const result = await send("JOB_RADAR_RELOAD_EXTENSION");
+  if (result?.error) {
+    document.querySelector("#status").textContent = `Extension reload failed: ${result.error}`;
+    button.disabled = false;
+    return;
+  }
+  document.querySelector("#status").textContent = "Reload requested; reopen the popup after it restarts.";
 };
 void render();

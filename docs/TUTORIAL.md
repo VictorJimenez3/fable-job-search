@@ -189,6 +189,16 @@ Set it up once:
 3. Keep the private Resume Studio service running at
    `http://127.0.0.1:4317/` (the launchd installer can keep it alive).
 
+The extension popup shows its loaded version. If its worker needs a controlled
+restart, click **reload extension** there; the popup-only command acknowledges
+the request, reloads the extension, and lets the fresh worker immediately
+recreate its alarm and sync the queue. It is intentionally not tied to sync
+errors, so a pairing or quota problem remains visible instead of causing a
+reload loop. The Autopilot page also has **sync Mac**, **restart extension**, and
+**send pairing to extension** controls. They use the installed content script
+and are limited to the production owner page, so Chrome's extension manager is
+not part of the normal workflow.
+
 The extension sends visible field labels, control types, options, and a
 page-shape fingerprint to the loopback agent. It never sends raw page HTML,
 cookies, passwords, or the CV to Drive. The local JSON bank is mirrored to the

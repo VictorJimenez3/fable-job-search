@@ -3137,3 +3137,30 @@ choice group without clicking either option. Owner-facing review and blocker
 surfaces collapse radio, checkbox, button, and duplicate resume siblings into
 one question, while preserving raw field IDs and values for final page-bound
 verification.
+
+## 194. Use a popup-only extension self-reload (2026-08-25)
+
+The unpacked Chrome extension sometimes needs a worker restart after code or
+runtime state changes, but navigating to `chrome://extensions` is not a safe
+automation dependency. The popup now exposes a controlled **reload extension**
+action. The background worker accepts it only from its own extension UI or the
+origin-checked Job Radar page,
+acknowledges the request, waits briefly for the response, and then calls
+`chrome.runtime.reload()`. Module startup recreates the queue alarm and performs
+the normal immediate sync. Sync failures do not auto-trigger reloads, avoiding
+loops that could conceal expired pairing tokens, quota limits, or real cloud
+errors. The first load of a changed unpacked source still requires one manual
+Chrome reload; subsequent worker restarts use this path.
+
+## 195. Relay owner Autopilot controls through the installed content script (2026-08-25)
+
+The Chrome connector can operate ordinary Job Radar tabs but cannot operate
+Chrome's internal extension pages or popup surface. To keep the workflow
+controllable without raw debugging, the owner-only Autopilot page now sends a
+narrow command through the already-installed Job Radar content script. The
+background worker accepts only exact production Job Radar origins and only
+reload, queue-sync, or pairing-storage commands. The page exposes **sync Mac**,
+**restart extension**, and **send pairing to extension** controls with visible
+timeouts and errors. The bridge does not allow form filling, submission, or
+arbitrary extension API calls, and the production origin is checked again in
+the worker because content-script messages are not a trust boundary.

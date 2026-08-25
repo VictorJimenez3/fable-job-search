@@ -3,9 +3,53 @@ const DEFAULT_CLOUD_URL = "https://job-radar-newgrad.vercel.app";
 const BATCH_RUNNING_STATES = new Set(["opening", "filling", "submitting"]);
 const RESUME_TERMINAL_STATES = new Set(["complete", "awaiting_review", "failed"]);
 const TERMINAL_QUEUE_STATES = new Set(["submitted", "failed", "skipped", "cancelled"]);
+const RADAR_PAGE_ORIGINS = new Set(["https://job-radar-newgrad.vercel.app", "https://victorjimenez3.github.io"]);
 const tabs = new Map();
 let syncPromise = null;
 let syncBlockedUntil = 0;
+let reloadScheduled = false;
+
+function extensionPopupSender(sender) {
+  const popupURL = chrome.runtime.getURL("popup.html");
+  return String(sender?.url || "").startsWith(popupURL);
+}
+
+function radarPageSender(sender) {
+  if (!sender?.tab?.id || !sender?.url) return false;
+  try { return RADAR_PAGE_ORIGINS.has(new URL(sender.url).origin); }
+  catch (_) { return false; }
+}
+
+function extensionControlSender(sender, message = {}) {
+  return extensionPopupSender(sender) || message.source === "radar-page" && radarPageSender(sender);
+}
+
+function requestExtensionReload(sender, message = {}) {
+  if (!extensionControlSender(sender, message)) {
+    return {ok: false, error: "Only the Job Radar popup or owner Job Radar page can request a reload."};
+  }
+  if (typeof chrome.runtime.reload !== "function") {
+    return {ok: false, error: "This Chrome version cannot reload the extension from the extension UI."};
+  }
+  if (reloadScheduled) return {ok: true, reloading: true};
+  reloadScheduled = true;
+  // Let the popup receive the acknowledgement before the worker terminates.
+  setTimeout(() => {
+    try { chrome.runtime.reload(); }
+    catch (error) {
+      reloadScheduled = false;
+      console.warn("Job Radar extension reload failed", error);
+    }
+  }, 75);
+  return {ok: true, reloading: true};
+}
+
+function requestQueueSync(sender, message = {}) {
+  if (!extensionControlSender(sender, message)) {
+    return {ok: false, error: "Only the Job Radar popup or owner Job Radar page can sync the queue."};
+  }
+  return syncCloudQueue();
+}
 
 function noteQuota(error) {
   const message = String(error?.message || error || "");
@@ -637,12 +681,14 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
       })});
     }
     if (message?.type === "JOB_RADAR_GET_CONFIG") return config();
+    if (message?.type === "JOB_RADAR_RELOAD_EXTENSION") return requestExtensionReload(sender, message);
     if (message?.type === "JOB_RADAR_SET_CONFIG") {
+      if (!extensionControlSender(sender, message)) return {ok: false, error: "Pairing can only be written by the Job Radar popup or owner page."};
       const next = {...message.config, cloudUrl: String(message.config?.cloudUrl || DEFAULT_CLOUD_URL).replace(/\/$/, "")};
       await chrome.storage.local.set(next);
       return {ok: true, ...next, agentToken: next.agentToken ? "saved" : "missing"};
     }
-    if (message?.type === "JOB_RADAR_SYNC_NOW") return syncCloudQueue();
+    if (message?.type === "JOB_RADAR_SYNC_NOW") return requestQueueSync(sender, message);
     return {ok: false};
   })().then(value => respond(value)).catch(error => respond({error: error.message || String(error)}));
   return true;

@@ -99,6 +99,21 @@ Before changing the radar, read these in order:
 - **Worker wake recovery (implemented 2026-08-24):** module load, extension
   install/reload, and Chrome startup all recreate the one-minute alarm and
   immediately sync the queue. The popup is not required to restart queued work.
+- **Controlled extension self-reload (implemented 2026-08-25):** the popup now
+  displays the loaded extension version and provides a popup-only **reload
+  extension** action. The worker acknowledges the request before calling
+  `chrome.runtime.reload()`, then its module startup recreates the alarm and
+  syncs the queue. It does not auto-reload on sync errors, so pairing and quota
+  failures remain diagnosable. One manual reload is still required after a
+  source-code change to load the new unpacked version.
+- **Owner-page extension control bridge (implemented 2026-08-25):** the
+  production Autopilot page now exposes **sync Mac**, **restart extension**, and
+  **send pairing to extension**. The installed content script relays only those
+  commands, the worker checks the sender's exact production origin, and the
+  page shows a timeout/error if the extension is absent. This removes the
+  normal dependency on the Chrome extension manager; the unpacked extension
+  still needs one manual reload after this source change so version `0.2.6`
+  loads the bridge.
 - **Dashboard isolation (implemented 2026-08-24):** the content script returns
   after installing Job Radar's start-command bridge. It does not form-scan the
   production dashboard or keep the service worker awake with irrelevant DOM
