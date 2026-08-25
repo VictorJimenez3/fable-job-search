@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-08-25 18:45 UTC** · companies polled directly: **1928** (registry 2173) · jobs tracked: **49043** · new this run: **33** · alerts this run: **2**_
+_Last run: **2026-08-25 18:57 UTC** · companies polled directly: **1928** (registry 2173) · jobs tracked: **49043** · new this run: **33** · alerts this run: **2**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -64,7 +64,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 82 ⭐ | 24d | Quora | [Software Engineer New Grad - Machine Learning Platform](https://jobs.ashbyhq.com/quora/452afc2e-0c79-41f8-8201-1aab7df775db/application?embed=true) | Remote in USA | other | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 82 ⭐ | 24d | Quora | [Software Engineer, Machine Learning Platform, New Grad - Quora (Remote](https://jobs.ashbyhq.com/quora/452afc2e-0c79-41f8-8201-1aab7df775db) | Remote - Multiple Locations | other | likely | [Direct company / ATS monitoring](https://github.com/vanshb03/New-Grad-2026) |
 | 81 ⭐ | 18h | Netrolynx AI | [. Net Developer](https://jobright.ai/jobs/info/6a8d48f2581f2d7bfdfe6fa7?utm_campaign=Software%20Engineering&utm_source=1103) | United Kingdom | ai_lab | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 81 ⭐ | 20h | Johns Hopkins Applied Physics Laborato | [Artificial Intelligence and Complex Systems BS/MS](https://careers.jhuapl.edu/jobs/59664?icims=1) | Laurel, MD | other | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 81 ⭐ | 21h | Johns Hopkins Applied Physics Laborato | [Artificial Intelligence and Complex Systems BS/MS](https://careers.jhuapl.edu/jobs/59664?icims=1) | Laurel, MD | other | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 5d | Destiny Healthcare Services | [Junior Data Analyst](https://jobright.ai/jobs/info/6a8713ffe8b6601d1290183e?utm_campaign=Data%20Analysis&utm_source=1103) | Canada | healthtech | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 81 ⭐ | 5d | Destiny Healthcare Services | [Junior Data Analyst](https://jobright.ai/jobs/info/6a86ff39cde3717f9e9af8c8?utm_campaign=Data%20Analysis&utm_source=1103) | United States | healthtech | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 81 ⭐ | 6d | SpaceX | [New Graduate Engineer, Software Security - '26/'27 (Starlink)](https://boards.greenhouse.io/spacex/jobs/8724316002?gh_jid=8724316002) | Hawthorne, CA | big_tech | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
