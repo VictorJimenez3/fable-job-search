@@ -55,6 +55,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "Resume uploaded; waiting for the employer form to validate the PDF" in content
     assert "element.files?.[0]?.name === file.name" in content
     assert "Do not click Next in the same turn as a file assignment" in content
+    assert "Review ready · no changes applied" in content
     assert "recoverOrphanedQueue" in background
     assert 'parkedButAttachable = ["blocked", "awaiting_confirmation"]' in background
     assert "lastAccessed" in background

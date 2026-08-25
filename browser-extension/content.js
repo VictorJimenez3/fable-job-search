@@ -315,7 +315,15 @@
     if (shape === lastFingerprint) return;
     lastFingerprint = shape;
     const plan = await say({type: "JOB_RADAR_FORM", pageUrl: location.href, fields: snapshot.fields, final: snapshot.final});
-    if (!plan || plan.error) { showBanner("Job Radar Agent", text(plan?.error || "The local agent is unavailable.", 500), "bad", '<button data-action="retry">retry</button>'); return; }
+    if (!plan || plan.error) {
+      const message = text(plan?.error || "The local agent is unavailable.", 500);
+      if (/application review is ready/i.test(message)) {
+        showBanner("Review ready · no changes applied", "The page already matches the saved review. Rescan only after you intentionally change an answer.", "info", '<button data-action="retry">re-scan</button>');
+      } else {
+        showBanner("Job Radar Agent", message, "bad", '<button data-action="retry">retry</button>');
+      }
+      return;
+    }
     const failedFiles = [];
     let uploadedResume = false;
     (plan.fills || []).forEach(fill => {
