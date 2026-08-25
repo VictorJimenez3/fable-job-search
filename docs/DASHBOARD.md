@@ -1,12 +1,12 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-08-25 12:02 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **150 shown / 11281 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-08-25 13:10 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **150 shown / 11281 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
-| 98 🔥 | 20h | Micron | [Intern - EDE Thin Films Equipment Engineering](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---EDE-Thin-Films-Equipment-Engineering_JR108977) | Boise, ID - Main Site | semiconductors | workday |
+| 98 🔥 | 21h | Micron | [Intern - EDE Thin Films Equipment Engineering](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---EDE-Thin-Films-Equipment-Engineering_JR108977) | Boise, ID - Main Site | semiconductors | workday |
 | 95 🔥 | 3d | Micron | [Intern - Metrology Process Development Engineer](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Metrology-Process-Development-Engineer_JR108851) | Boise, ID - Main Site | semiconductors | workday |
 | 95 🔥 | 4d | Micron | [Intern - Photomask Wet Process Engineering](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Photomask-Wet-Process-Engineering_JR108464) | Boise, ID - Main Site | semiconductors | workday |
 | 95 🔥 | 4d | Micron | [Intern - Wet Process Fab 4 EDE](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Wet-Process-Fab-4-EDE_JR108959) | Boise, ID - Main Site | semiconductors | workday |
@@ -33,7 +33,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 78 ⭐ | 3d | Solid Power | [Product Engineer Intern](https://job-boards.greenhouse.io/solidpower/jobs/6150710004) | Thornton, CO | energy | simplify |
 | 78 ⭐ | 5d | Eversource Energy | [Asset Management Technology Engineer Intern - Fall 2026](https://eversource.wd1.myworkdayjobs.com/ExternalSite/job/Hartford-CT/Asset-Management-Technology--Engineering-Intern--Fall-2026-_R-031600) | Hartford, CT | energy | simplify |
 | 77 ⭐ | 3d | Elevate Semiconductor | [Product Engineering Intern](https://apply.workable.com/elevate-semiconductor/j/F234DECA3C/apply) | San Diego, CA | semiconductors | simplify |
-| 77 ⭐ | 4d | GlobalFoundries | [Production Control Engineering Intern](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Technology-Development-Engineering-Intern--ULP-CMOS_JR-2503682) | USA - New York - Malta | semiconductors | workday |
+| 77 ⭐ | 5d | GlobalFoundries | [Production Control Engineering Intern](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Technology-Development-Engineering-Intern--ULP-CMOS_JR-2503682) | USA - New York - Malta | semiconductors | workday |
 | 77 ⭐ | 5d | Freeform | [Materials Engineer Intern](https://job-boards.greenhouse.io/freeformfuturecorp/jobs/7907965003) | LA | other | simplify |
 | 77 ⭐ | 5d | RTX | [Chemistry Materials Engineer Intern](https://globalhr.wd5.myworkdayjobs.com/fr-CA/Private_Posting_No_TMP/job/US-MA-ANDOVER-AN1--350-Lowell-St--AN1-ESSEX-BLDG/Chemistry-Materials-Engineer-Intern--Onsite-_01868041) | Andover, MA | other | simplify |
 | 77 ⭐ | 5d | Micron Technology | [SoC RTL Design Engineer Intern - HBM](https://micron.wd1.myworkdayjobs.com/External/job/Folsom-CA/Intern---HBM-SoC-RTL-Design-Engineer_JR109290) | Folsom, CA | semiconductors | simplify |
@@ -42,14 +42,14 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 77 ⭐ | 6d | Filtration Group | [Product Development Intern - Material Science](https://careers-filtrationgroupcorp.icims.com/jobs/7379/job?mobile=true&needsRedirect=false) | Chicopee, MA | other | simplify |
 | 77 ⭐ | 6d | GlobalFoundries | [Technology Development Engineering Intern, Power GaN (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/Technology-Development-Engineering-Intern--Power-GaN--Summer-2027-_JR-2604411) | USA - Vermont - Essex Junction | semiconductors | workday |
 | 77 ⭐ | 6d | Micron | [Design Verification Engineer Intern](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Jalisco-Mexico/Design-Verification-Engineer-Intern_JR107487) | Jalisco, Mexico | semiconductors | workday |
-| 76 ⭐ | 3h | L3Harris Technologies | [Security Research Engineer Intern](https://jobs.l3harris.com/job/Herndon-Intern,-Security-Research-Engineer-VA-20171/1422834800/?ats=successfactors) | Herndon, VA | other | simplify |
-| 76 ⭐ | 5h | AMD | [ASIC Package Engineer Intern Co-op](https://careers.amd.com/jobs/91469?icims=1) | San Jose, CA | other | simplify |
-| 76 ⭐ | 5h | AMD | [ASIC Package Engineering Co-op/Intern](https://careers.amd.com/jobs/91463?icims=1) | San Jose, CA | other | simplify |
-| 76 ⭐ | 5h | AMD | [ASIC Package Engineering Intern Co-op](https://careers.amd.com/jobs/91466?icims=1) | Secaucus, NJ | other | simplify |
-| 76 ⭐ | 8h | Fortive | [Field Service Engineer Co-op](https://ejta.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/10270) | United States | other | simplify |
-| 76 ⭐ | 11h | John Deere | [Robotics Engineer Intern](https://johndeere.eightfold.ai/careers/job/137483008064) | Ames, IA | other | simplify |
-| 76 ⭐ | 12h | Cadence Design Systems | [Product Engineering Intern - Electronics Hardware Design](https://cadence.wd1.myworkdayjobs.com/University_Talent/job/Burlington-MA/Product-Engineering-Internship--Electronics-Hardware-Design--Fall-2026-_R54158-1) | Burlington, MA | other | simplify |
-| 76 ⭐ | 21h | BNY | [Engineering Intern - Engineering - Developer](https://eofe.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/81254) | Pittsburgh, PA | other | simplify |
+| 76 ⭐ | 4h | L3Harris Technologies | [Security Research Engineer Intern](https://jobs.l3harris.com/job/Herndon-Intern,-Security-Research-Engineer-VA-20171/1422834800/?ats=successfactors) | Herndon, VA | other | simplify |
+| 76 ⭐ | 6h | AMD | [ASIC Package Engineer Intern Co-op](https://careers.amd.com/jobs/91469?icims=1) | San Jose, CA | other | simplify |
+| 76 ⭐ | 6h | AMD | [ASIC Package Engineering Co-op/Intern](https://careers.amd.com/jobs/91463?icims=1) | San Jose, CA | other | simplify |
+| 76 ⭐ | 6h | AMD | [ASIC Package Engineering Intern Co-op](https://careers.amd.com/jobs/91466?icims=1) | Secaucus, NJ | other | simplify |
+| 76 ⭐ | 9h | Fortive | [Field Service Engineer Co-op](https://ejta.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/10270) | United States | other | simplify |
+| 76 ⭐ | 13h | John Deere | [Robotics Engineer Intern](https://johndeere.eightfold.ai/careers/job/137483008064) | Ames, IA | other | simplify |
+| 76 ⭐ | 13h | Cadence Design Systems | [Product Engineering Intern - Electronics Hardware Design](https://cadence.wd1.myworkdayjobs.com/University_Talent/job/Burlington-MA/Product-Engineering-Internship--Electronics-Hardware-Design--Fall-2026-_R54158-1) | Burlington, MA | other | simplify |
+| 76 ⭐ | 22h | BNY | [Engineering Intern - Engineering - Developer](https://eofe.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/81254) | Pittsburgh, PA | other | simplify |
 | 76 ⭐ | 9d | BP | [Reservoir Engineer Intern - Summer Internship](https://bpinternational.wd3.myworkdayjobs.com/bpEarlyCareers/job/United-States-of-America---Texas---Houston/Summer-Intern---Reservoir-Engineer---Houston--TX_RQ114655-2) | Houston, TX | energy | simplify |
 | 75 ⭐ | 7d | GlobalFoundries | [Yield and Characterization Engineer Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/Yield-and-Characterization-Engineer-Intern--Summer-2027-_JR-2604638) | USA - Vermont - Essex Junction | semiconductors | workday |
 | 75 ⭐ | 7d | GlobalFoundries | [Robotics and Automation Engineering Intern, Junior (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/Robotics-and-Automation-Engineering-Intern--Junior--Summer-2027-_JR-2604660) | USA - Vermont - Essex Junction | semiconductors | workday |
