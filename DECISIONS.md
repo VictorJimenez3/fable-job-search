@@ -3102,3 +3102,15 @@ once selected, sibling radio/button options are alternatives rather than new
 blockers. Sensitive choice answers may not cross demographic categories. A
 review-ready row also exposes a page re-scan so a corrected local decision
 engine can invalidate and rebuild the review without discarding the session.
+
+## 191. Resume uploads are single-shot and validation-gated (2026-08-25)
+
+ATS pages may render more than one file control for the same resume, and their
+React upload handlers can restart validation when a new `File` object is
+assigned during a later DOM scan. The extension therefore selects only the
+empty required/named resume control, never overwrites an already accepted file,
+and waits for a follow-up scan before clicking Next. The local session keeps a
+non-error progress message such as “resume uploaded; waiting for employer
+validation” so the cloud queue distinguishes a normal upload wait from a
+failure. This preserves automatic execution while avoiding duplicate uploads
+and premature page transitions.

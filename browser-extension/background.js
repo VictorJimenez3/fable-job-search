@@ -158,6 +158,22 @@ async function send(tabId, message) {
   try { return await chrome.tabs.sendMessage(tabId, message); } catch (_) { return null; }
 }
 
+function resumeFieldsNeedingUpload(fields) {
+  const candidates = (fields || []).filter(field => {
+    if (String(field?.type || "").toLowerCase() !== "file") return false;
+    // Once an ATS has accepted a file, never replace it during a later DOM
+    // scan. Replacing the File object is what caused Ashby to restart its
+    // upload validation and surface a transient posting error.
+    return !String(field?.value || "").trim();
+  });
+  if (!candidates.length) return [];
+  const named = candidates.filter(field => /resume|cv/i.test([
+    field.label, field.question, field.name, field.id, field.autocomplete,
+  ].filter(Boolean).join(" ")));
+  const required = (named.length ? named : candidates).find(field => Boolean(field.required));
+  return [required || named[0] || candidates[0]];
+}
+
 async function navigateQueuedTab(tabId, url, active = true) {
   const target = safeURL(url);
   if (!target) throw new Error("A safe application URL is required");
@@ -281,7 +297,7 @@ async function syncSession(tabId) {
       method: "POST",
       body: JSON.stringify({action: "queue_update", queue_id: row.queueId, session_id: row.sessionId,
         state: session.state, blockers: session.blockers || [], review: session.review || null,
-        message: session.last_error || session.state, error: session.last_error || ""}),
+        message: session.last_message || session.last_error || session.state, error: session.last_error || ""}),
     });
     const item = (await cloud("/api/application-agent?view=queue")).items?.find(value => value.queue_id === row.queueId);
     if (item?.confirmation && session.state === "awaiting_confirmation") {
@@ -473,7 +489,10 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
         })});
       }
       if (row.resumeFile) {
-        for (const field of fields.filter(field => field.type === "file")) {
+        // A few ATSs render a blank, optional file input beside the required
+        // resume control. Upload exactly once to the required/named control;
+        // never overwrite an input that already has a file after a rescan.
+        for (const field of resumeFieldsNeedingUpload(fields)) {
           plan.fills = [...(plan.fills || []), {
             field_id: field.field_id, value: row.resumeFile.name, category: "resume_file",
             sensitive: false, options: [], file: row.resumeFile,

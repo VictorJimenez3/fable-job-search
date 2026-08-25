@@ -588,6 +588,7 @@ def _new_session(job: Dict[str, Any], mode: str = "per_role", queue_id: str = ""
         "review": None,
         "confirmation": None,
         "last_form": None,
+        "last_message": "",
         "last_error": "",
     }
 
@@ -928,6 +929,7 @@ def record_event(root: Path, session_id: str, state: str, message: str = "", err
     if not isinstance(session, dict):
         raise ValueError("application session not found")
     session["state"] = state
+    session["last_message"] = clean_text(message, 1000)
     session["last_error"] = clean_text(error or (message if state == "failed" else ""), 1000)
     if state in TERMINAL_STATES:
         session["confirmation"] = None

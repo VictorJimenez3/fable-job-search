@@ -510,7 +510,7 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   the owner/Drive/extension contract. The new unpacked extension lives under
   `browser-extension/`; no extension ID or provider secret is committed.
 
-### Current change (2026-08-24, pending production verification)
+### Current change (2026-08-25, pending production verification)
 
 - **Automatic local resume upload:** Resume Studio now resolves the exact safe
   tailored PDF or an owner-authorized Google/NVIDIA/Merck/base fallback and
@@ -526,6 +526,13 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   subscription lane. Exact prompts, limits, role context, profile, and
   claim-authorized private evidence are supplied. Unsupported responses remain
   visible blockers instead of being invented.
+- **Resume upload hardening:** the extension now chooses one empty,
+  required/named resume input when an ATS renders duplicate file controls. It
+  does not replace an accepted `File` object on later DOM scans and waits for a
+  clean follow-up scan before advancing a Next step. The local session records
+  a normal upload-validation progress message so Autopilot does not present a
+  transient employer upload wait as a failure. Extension source changes need
+  one final unpacked-extension reload after production verification.
 
 ### Current change (verified 2026-08-19)
 

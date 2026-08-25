@@ -202,6 +202,11 @@
     const wanted = String(value || "").trim().toLowerCase();
     if (element.type === "file") {
       if (!file?.base64 || !file?.name) return false;
+      // React-based ATS forms can trigger a second scan after the upload
+      // event. Reusing the accepted file is safe; assigning a new File object
+      // restarts provider-side validation and can make the posting look
+      // broken while the upload is still settling.
+      if (element.files?.[0]?.name === file.name) return true;
       try {
         const binary = atob(file.base64);
         const bytes = new Uint8Array(binary.length);
@@ -312,16 +317,28 @@
     const plan = await say({type: "JOB_RADAR_FORM", pageUrl: location.href, fields: snapshot.fields, final: snapshot.final});
     if (!plan || plan.error) { showBanner("Job Radar Agent", text(plan?.error || "The local agent is unavailable.", 500), "bad", '<button data-action="retry">retry</button>'); return; }
     const failedFiles = [];
+    let uploadedResume = false;
     (plan.fills || []).forEach(fill => {
       const element = findField(fill.field_id);
       if (!element) return;
       const filled = chooseOption(element, fill.value, fill.options, fill.file);
       if (fill.file && !filled) failedFiles.push(fill);
+      if (fill.file && filled) uploadedResume = true;
     });
     if (failedFiles.length) {
       const reason = `Resume Studio selected ${text(failedFiles[0].file?.name || "a PDF", 180)}, but this page rejected the automatic upload.`;
       await say({type: "JOB_RADAR_EVENT", state: "blocked", message: reason, error: reason});
       showBanner("Application paused · resume upload failed", reason, "warn", '<button data-action="retry">retry upload</button>');
+      return;
+    }
+    if (uploadedResume) {
+      // Do not click Next in the same turn as a file assignment. Let the ATS
+      // render its accepted-file state, then let the next scan continue with
+      // the already-selected file and no second upload.
+      await say({type: "JOB_RADAR_EVENT", state: "filling", message: "Resume uploaded; waiting for the employer form to validate the PDF before continuing."});
+      showBanner("Resume uploaded · waiting for the posting", "The selected PDF is in the employer form. Waiting for the upload validation to finish before continuing.", "info", '<button data-action="hide">hide</button>');
+      lastFingerprint = "";
+      scheduleScan(1400);
       return;
     }
     const blockers = plan.blockers || [];

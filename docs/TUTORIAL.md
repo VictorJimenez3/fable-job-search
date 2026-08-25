@@ -201,18 +201,17 @@ Sheet, and Markdown payloads are storage mirrors, not the authoritative editor.
 Before opening a form, the extension checks Resume Studio for a safe tailored
 PDF for that exact posting. If none exists, it starts the existing AI tailor
 run and waits. A rejected or not-yet-approved tailor falls back to the
-immutable canonical resume, while the browser still pauses at the local
-resume-file picker because Chrome cannot silently choose a file for a page.
-All other approved repetitive fields and ordinary **Next** pages can continue
-until a real answer, attestation, sensitive field, or final confirmation needs
-you.
+immutable canonical resume, then the paired local agent uploads that exact PDF
+to the employer form and waits for the ATS to validate it. All other approved
+repetitive fields and ordinary **Next** pages can continue until a real answer,
+attestation, sensitive field, or final confirmation needs you.
 
 Approved answers—including approved sensitive answers—may be reused, but the
 full proposed values appear on the final review card. This includes repeated
 work schedule, LLM-experience, location, education, and other owner-confirmed
 questions. A concise written answer may also be saved for an exact recurring
 prompt, while employer-specific answers remain non-reusable. The agent stops
-for a new essay, unknown required/sensitive field, file upload, attestation,
+for a new essay, unknown required/sensitive field, attestation,
 selector failure, or changed page. Phone confirmation is a single-use, 15-minute
 approval tied to the review hash and page fingerprint. A blocked role stays in
 the queue while later roles can continue. Repeated adapter problems go into

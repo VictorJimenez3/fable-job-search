@@ -549,8 +549,9 @@ preferred option is absent from a question group. This removes repetitive
 blank-field work without inventing claims. LaTeX comments and template
 credits are excluded from canonical extraction, and a stale canonical-derived
 value is repaired locally and in the private Sheet. Only genuinely unknown
-required fields, new essays without an approved answer, resume-file selection,
-and final submission stop for Victor. Fields with generic placeholders, such as
+required fields, new essays without an approved answer, and final submission
+stop for Victor. Resume Studio supplies and uploads the selected local PDF
+automatically. Fields with generic placeholders, such as
 a location combobox or date textbox, are matched using the nearest employer
 question label and approved variants.
 If Chrome or the extension restarts, opening/filling queue items reattach to a
@@ -578,6 +579,11 @@ have a Stop control that also detaches the paired browser executor.
 The worker recreates its one-minute alarm and performs an immediate queue sync
 whenever Chrome or the extension starts, so queued work does not depend on
 opening the popup after a restart.
+Resume uploads are single-shot: when an ATS exposes duplicate file controls,
+the extension selects the empty required/named resume control, keeps an
+accepted file in place across DOM scans, and waits for employer validation
+before advancing. The queue mirrors this as normal progress rather than a
+failure.
 On Job Radar itself, the content script only relays explicit start commands; it
 does not scan the dashboard DOM as though it were an employer application.
 Employer-page scans and session creation are serialized per tab. A long Resume

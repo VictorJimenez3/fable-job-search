@@ -12,6 +12,7 @@ from radar.application_agent import (
     list_issues,
     plan_form,
     provider_for_url,
+    record_event,
     save_answer,
     verify_submission_page,
 )
@@ -58,6 +59,20 @@ def test_approved_answers_fill_and_unknown_fields_pause(tmp_path: Path):
     assert result["state"] == "blocked"
     assert result["fills"][0]["value"] == "victor@example.com"
     assert result["blockers"][0]["category"] == "work_authorization"
+
+
+def test_non_error_application_progress_message_is_persisted(tmp_path: Path):
+    session = create_session(tmp_path, job())
+    result = record_event(
+        tmp_path,
+        session["session_id"],
+        "filling",
+        message="Resume uploaded; waiting for employer validation.",
+    )
+    assert result["state"] == "filling"
+    stored = get_session(tmp_path, session["session_id"])
+    assert stored["last_message"] == "Resume uploaded; waiting for employer validation."
+    assert stored["last_error"] == ""
 
 
 def test_approved_choice_answers_fill_attestations_and_optional_demographics(tmp_path: Path):
