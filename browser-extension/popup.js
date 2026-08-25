@@ -45,7 +45,7 @@ document.querySelector("#sync").onclick = async () => {
   const result = await send("JOB_RADAR_SYNC_NOW");
   if (result?.error) document.querySelector("#status").textContent = `Queue sync failed: ${result.error}`;
   else if (result?.ok) document.querySelector("#status").textContent =
-    `Queue synced · ${result.queued || 0} waiting · ${result.active || 0} active`;
+    `Queue synced · ${result.queued || 0} waiting · ${result.active || 0} active${result.recovered ? ` · ${result.recovered} recovered` : ""}`;
   else document.querySelector("#status").textContent = "Queue sync did not complete.";
   button.disabled = false;
   setTimeout(render, 400);

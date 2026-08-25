@@ -367,9 +367,11 @@ async function syncCloudQueueImpl() {
     return {ok: false, error: noteQuota(error)};
   }
   let recoveryError = "";
+  let recoveredCount = 0;
   try {
     const recovery = await recoverLocalQueue();
     recoveryError = recovery.error || "";
+    recoveredCount = Array.isArray(recovery.recovered) ? recovery.recovered.length : 0;
     if (recovery.items.length) data = {...data, items: recovery.items};
   } catch (error) {
     recoveryError = noteQuota(error);
@@ -444,7 +446,8 @@ async function syncCloudQueueImpl() {
     }
   }
   for (const tabId of tabs.keys()) await syncSession(tabId);
-  return {ok: !syncError, error: syncError, queued: items.filter(item => item.state === "queued").length,
+  return {ok: !syncError, error: syncError, recovered: recoveredCount,
+    queued: items.filter(item => item.state === "queued").length,
     active: items.filter(item => BATCH_RUNNING_STATES.has(item.state)).length};
 }
 
