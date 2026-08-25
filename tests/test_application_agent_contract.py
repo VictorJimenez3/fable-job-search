@@ -33,7 +33,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "application_resume_file" in service and "/api/application/resume-file" in service
     assert "application_essay_answer" in service and "warm-scholarship-essay" in service
     assert '"content_scripts"' in extension and '"<all_urls>"' in extension
-    assert '"version": "0.2.1"' in extension
+    assert '"version": "0.2.2"' in extension
     for provider in ("workday", "greenhouse", "lever", "ashby", "smartrecruiters"):
         assert provider in adapters
     assert "JOB_RADAR_SUBMISSION_APPROVED" in (ROOT / "browser-extension" / "content.js").read_text()
@@ -70,6 +70,10 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "chrome.tabs.remove" in background
     assert "JOB_RADAR_AGENT_STATUS" in background
     assert "JOB_RADAR_AGENT_STATUS" in content
+    assert 'document.querySelectorAll("#job-radar-application-agent")' in content
+    assert "existingBanners.slice(1).forEach(node => node.remove())" in content
+    assert "box-sizing:border-box" in content
+    assert "overflow-wrap:anywhere" in content
     assert "JOB_RADAR_PAGE_BLOCKED" in background
     assert 'if (row && message.pageFailure)' in background
     assert "reconcileTerminalTabs" in background

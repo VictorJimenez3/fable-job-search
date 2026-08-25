@@ -252,13 +252,22 @@
   }
 
   function showBanner(title, body, kind = "info", actions = "") {
-    if (!banner) {
+    // Extension reloads can leave an older content-script instance alive in an
+    // already-open tab. Reuse the canonical node and remove any duplicates so
+    // status updates never render on top of one another.
+    const existingBanners = [...document.querySelectorAll("#job-radar-application-agent")];
+    if (existingBanners.length) {
+      banner = existingBanners[0];
+      existingBanners.slice(1).forEach(node => node.remove());
+    }
+    if (!banner || !banner.isConnected) {
       banner = document.createElement("div");
       banner.id = "job-radar-application-agent";
-      banner.style.cssText = "position:fixed;z-index:2147483647;right:16px;top:16px;width:min(390px,calc(100vw - 32px));max-height:70vh;overflow:auto;background:#101820;color:#eef5f2;border:1px solid #4caf8a;border-radius:10px;box-shadow:0 10px 35px #0008;padding:14px;font:13px/1.45 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif";
+      banner.style.cssText = "box-sizing:border-box;display:block;position:fixed;z-index:2147483647;right:16px;top:16px;width:min(390px,calc(100vw - 32px));max-height:70vh;overflow:auto;background:#101820;color:#eef5f2;border:1px solid #4caf8a;border-radius:10px;box-shadow:0 10px 35px #0008;padding:14px;font:13px/1.45 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;white-space:normal;overflow-wrap:anywhere;word-break:break-word";
       document.documentElement.appendChild(banner);
     }
-    banner.innerHTML = `<strong style="display:block;margin-bottom:5px">${title}</strong><div style="color:#bdccc7">${body}</div>${actions ? `<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">${actions}</div>` : ""}`;
+    banner.setAttribute("aria-live", "polite");
+    banner.innerHTML = `<strong style="box-sizing:border-box;display:block;margin:0 0 7px;line-height:1.3;white-space:normal;overflow-wrap:anywhere;word-break:break-word">${title}</strong><div style="box-sizing:border-box;display:block;color:#bdccc7;line-height:1.45;white-space:normal;overflow-wrap:anywhere;word-break:break-word">${body}</div>${actions ? `<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">${actions}</div>` : ""}`;
     banner.querySelectorAll("button").forEach(button => button.onclick = () => {
       if (button.dataset.action === "retry") scheduleScan(0, true);
       if (button.dataset.action === "popup") chrome.action?.openPopup?.();

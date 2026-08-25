@@ -531,8 +531,10 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   does not replace an accepted `File` object on later DOM scans and waits for a
   clean follow-up scan before advancing a Next step. The local session records
   a normal upload-validation progress message so Autopilot does not present a
-  transient employer upload wait as a failure. Extension source changes need
-  one final unpacked-extension reload after production verification.
+  transient employer upload wait as a failure. Extension source changes also
+  deduplicate the floating status banner and force long messages to wrap, so
+  an extension reload cannot leave overlapping preparation messages. The
+  unpacked extension needs one final reload after production verification.
 
 ### Current change (verified 2026-08-19)
 

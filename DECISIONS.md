@@ -3117,3 +3117,11 @@ and premature page transitions. The loopback decision engine also rejects an
 identical review-ready rescan with no field changes, so an older unpacked
 extension cannot mutate the employer page while Victor is between extension
 reloads; a changed field still rebuilds the review.
+
+## 192. Application status banners are singleton, wrapped UI (2026-08-25)
+
+Reloading an unpacked content script can leave an older instance alive in an
+already-open employer tab. Every status update therefore reuses the canonical
+banner node, removes duplicate nodes, and applies explicit block wrapping and
+line spacing. This keeps preparation, upload-validation, and blocker messages
+readable while preserving the underlying pause/resume state machine.
