@@ -325,6 +325,22 @@ def test_final_review_is_explicit_and_page_bound(tmp_path: Path):
         verify_submission_page(tmp_path, session["session_id"], job()["url"], changed)
 
 
+def test_identical_review_rescan_is_rejected_until_the_page_changes(tmp_path: Path):
+    save_answer(tmp_path, "Email", "victor@example.com", category="email")
+    session = create_session(tmp_path, job())
+    fields = [
+        {"field_id": "email", "label": "Email", "type": "email", "required": True, "value": ""},
+        {"field_id": "submit", "label": "Submit application", "type": "button", "is_submit": True},
+    ]
+    first = plan_form(tmp_path, session["session_id"], job()["url"], fields, final=True)
+    assert first["state"] == "awaiting_confirmation"
+    with pytest.raises(ValueError, match="review is already current"):
+        plan_form(tmp_path, session["session_id"], job()["url"], fields, final=True)
+    changed = [{**fields[0], "value": "victor@example.com"}, fields[1]]
+    rebuilt = plan_form(tmp_path, session["session_id"], job()["url"], changed, final=True)
+    assert rebuilt["state"] == "awaiting_confirmation"
+
+
 def test_owner_entered_essay_and_checked_attestation_are_reviewable(tmp_path: Path):
     session = create_session(tmp_path, job())
     fields = [

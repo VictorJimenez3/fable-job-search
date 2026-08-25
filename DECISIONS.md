@@ -3113,4 +3113,7 @@ and waits for a follow-up scan before clicking Next. The local session keeps a
 non-error progress message such as “resume uploaded; waiting for employer
 validation” so the cloud queue distinguishes a normal upload wait from a
 failure. This preserves automatic execution while avoiding duplicate uploads
-and premature page transitions.
+and premature page transitions. The loopback decision engine also rejects an
+identical review-ready rescan with no field changes, so an older unpacked
+extension cannot mutate the employer page while Victor is between extension
+reloads; a changed field still rebuilds the review.

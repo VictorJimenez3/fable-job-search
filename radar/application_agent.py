@@ -247,6 +247,22 @@ def form_fingerprint(url: Any, fields: Iterable[Dict[str, Any]]) -> str:
     return hashlib.sha256(encoded.encode("utf-8")).hexdigest()[:32]
 
 
+def _form_value_signature(fields: Iterable[Dict[str, Any]]) -> List[Tuple[str, str, str, bool]]:
+    """Capture values that must change before a review-ready rescan is useful."""
+    signature: List[Tuple[str, str, str, bool]] = []
+    for index, field in enumerate(fields):
+        if not isinstance(field, dict) or field.get("hidden"):
+            continue
+        field_id = clean_text(field.get("field_id") or field.get("id") or f"field-{index}", 160)
+        signature.append((
+            field_id,
+            clean_text(field.get("type"), 32).lower(),
+            display_field_value(field.get("value", "")),
+            bool(field.get("is_submit")),
+        ))
+    return signature
+
+
 def review_hash(value: Dict[str, Any]) -> str:
     encoded = json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
     return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
@@ -619,6 +635,13 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
     session = store.get("sessions", {}).get(clean_text(session_id, 100))
     if not isinstance(session, dict):
         raise ValueError("application session not found")
+    incoming_fields = [field for field in fields if isinstance(field, dict)]
+    previous_form = session.get("last_form") or {}
+    if session.get("state") == "awaiting_confirmation" and previous_form:
+        same_shape = form_fingerprint(page_url, incoming_fields) == clean_text(session.get("page_fingerprint"), 80)
+        same_values = _form_value_signature(incoming_fields) == _form_value_signature(previous_form.get("fields") or [])
+        if same_shape and same_values:
+            raise ValueError("application review is already current; no page change was detected")
     normalized_fields: List[Dict[str, Any]] = []
     fills: List[Dict[str, Any]] = []
     blockers: List[Dict[str, Any]] = []
