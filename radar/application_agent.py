@@ -253,9 +253,16 @@ def _form_value_signature(fields: Iterable[Dict[str, Any]]) -> List[Tuple[str, s
     for index, field in enumerate(fields):
         if not isinstance(field, dict) or field.get("hidden"):
             continue
-        field_id = clean_text(field.get("field_id") or field.get("id") or f"field-{index}", 160)
+        stable_label = " ".join(
+            clean_text(field.get(key), 500)
+            for key in ("group_question", "label", "option_label", "question")
+            if clean_text(field.get(key), 500)
+        )
+        field_key = normalize_question(stable_label) or normalize_question(
+            field.get("name") or field.get("id") or f"field-{index}"
+        )
         signature.append((
-            field_id,
+            field_key,
             clean_text(field.get("type"), 32).lower(),
             display_field_value(field.get("value", "")),
             bool(field.get("is_submit")),
@@ -642,6 +649,10 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
         same_values = _form_value_signature(incoming_fields) == _form_value_signature(previous_form.get("fields") or [])
         if same_shape and same_values:
             raise ValueError("application review is already current; no page change was detected")
+        # Do not let a provider's own rerender or an older unpacked extension
+        # turn a review card back into a fill pass. An explicit rescan clears
+        # this lock through record_event before the next form plan.
+        raise ValueError("application review is ready; use an explicit rescan before changing the page")
     normalized_fields: List[Dict[str, Any]] = []
     fills: List[Dict[str, Any]] = []
     blockers: List[Dict[str, Any]] = []
@@ -954,6 +965,9 @@ def record_event(root: Path, session_id: str, state: str, message: str = "", err
     session["state"] = state
     session["last_message"] = clean_text(message, 1000)
     session["last_error"] = clean_text(error or (message if state == "failed" else ""), 1000)
+    if state == "filling":
+        session["review"] = None
+        session["confirmation"] = None
     if state in TERMINAL_STATES:
         session["confirmation"] = None
         if state == "submitted":

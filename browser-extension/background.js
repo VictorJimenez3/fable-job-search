@@ -558,6 +558,15 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
       return result;
     }
     if (message?.type === "JOB_RADAR_RESCAN" && tabId) {
+      const row = tabs.get(tabId);
+      if (row?.sessionId) {
+        try {
+          await local("/api/application/event", {method: "POST", body: JSON.stringify({
+            session_id: row.sessionId, state: "filling", message: "Owner requested a fresh application-page scan.",
+          })});
+          row.state = "filling";
+        } catch (_) {}
+      }
       await send(tabId, {type: "JOB_RADAR_RESCAN"});
       return {ok: true};
     }

@@ -50,6 +50,8 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "resumeFieldsNeedingUpload" in background
     assert "never overwrite an input that already has a file after a rescan" in background
     assert "last_message || session.last_error || session.state" in background
+    assert "Owner requested a fresh application-page scan." in background
+    assert "use an explicit rescan before changing the page" in local
     assert "Resume uploaded; waiting for the employer form to validate the PDF" in content
     assert "element.files?.[0]?.name === file.name" in content
     assert "Do not click Next in the same turn as a file assignment" in content

@@ -337,6 +337,9 @@ def test_identical_review_rescan_is_rejected_until_the_page_changes(tmp_path: Pa
     with pytest.raises(ValueError, match="review is already current"):
         plan_form(tmp_path, session["session_id"], job()["url"], fields, final=True)
     changed = [{**fields[0], "value": "victor@example.com"}, fields[1]]
+    with pytest.raises(ValueError, match="explicit rescan"):
+        plan_form(tmp_path, session["session_id"], job()["url"], changed, final=True)
+    record_event(tmp_path, session["session_id"], "filling", message="Owner requested a fresh application-page scan.")
     rebuilt = plan_form(tmp_path, session["session_id"], job()["url"], changed, final=True)
     assert rebuilt["state"] == "awaiting_confirmation"
 
