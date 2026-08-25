@@ -33,6 +33,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "application_resume_file" in service and "/api/application/resume-file" in service
     assert "application_essay_answer" in service and "warm-scholarship-essay" in service
     assert '"content_scripts"' in extension and '"<all_urls>"' in extension
+    assert '"version": "0.2.1"' in extension
     for provider in ("workday", "greenhouse", "lever", "ashby", "smartrecruiters"):
         assert provider in adapters
     assert "JOB_RADAR_SUBMISSION_APPROVED" in (ROOT / "browser-extension" / "content.js").read_text()
