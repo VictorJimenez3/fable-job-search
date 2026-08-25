@@ -452,6 +452,15 @@ def _answer_allowed_for_field(answer: Dict[str, Any], field: Dict[str, Any]) -> 
 def _answer_matches_field(answer: Dict[str, Any], field: Dict[str, Any], normalized: str) -> bool:
     variants = [normalize_question(answer.get("question"))]
     variants.extend(normalize_question(item) for item in answer.get("variants", []) if item)
+    variants.append(normalize_question(answer.get("value")))
+    field_type = clean_text(field.get("type"), 32).lower()
+    option_label = field.get("option_label")
+    if option_label or field_type in {"radio", "checkbox", "button"}:
+        # ATS option groups repeat the same group question on every sibling.
+        # Matching that question alone would approve both Yes and No.  Each
+        # rendered option must match the approved answer's actual value/label.
+        selected_label = option_label or field.get("label")
+        return normalize_question(selected_label) in variants
     field_questions = [
         normalized,
         normalize_question(field.get("group_question")),
@@ -460,11 +469,6 @@ def _answer_matches_field(answer: Dict[str, Any], field: Dict[str, Any], normali
     ]
     if any(question and question in variants for question in field_questions):
         return True
-    field_type = clean_text(field.get("type"), 32).lower()
-    option_label = field.get("option_label")
-    if option_label or field_type in {"radio", "checkbox", "button"}:
-        selected_label = option_label or field.get("label")
-        return normalize_question(selected_label) in variants
     options = field.get("options") or []
     group_options = field.get("group_options") or []
     for option in [*options, *group_options]:
@@ -502,6 +506,11 @@ def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any]) -> List[Dic
                 and answer.get("select_all")
                 and clean_text(answer.get("category"), 80) == "location"
             )
+    choice_control = (
+        clean_text(field.get("type"), 32).lower() in {"radio", "checkbox", "button", "select"}
+        or bool(field.get("options"))
+        or bool(field.get("group_options"))
+    )
     # Several ATS forms reuse short option labels such as "Yes" and "No".
     # Prefer an answer from the field's inferred category so one approved
     # decision cannot accidentally satisfy a different choice group.
@@ -509,13 +518,10 @@ def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any]) -> List[Dic
         answer for answer in values
         if clean_text(answer.get("category"), 80) == category
     ]
-    if category_values:
+    if choice_control and category in SENSITIVE_CATEGORIES:
+        values = category_values
+    elif category_values:
         values = category_values + [answer for answer in values if answer not in category_values]
-    choice_control = (
-        clean_text(field.get("type"), 32).lower() in {"radio", "checkbox", "button", "select"}
-        or bool(field.get("options"))
-        or bool(field.get("group_options"))
-    )
     if not values and not choice_control and category not in {"other", "essay", "attestation", "resume_file"}:
         for answer in answers.values():
             if not isinstance(answer, dict) or not answer.get("reusable", True):
@@ -549,7 +555,7 @@ def _approved_fill_value(field: Dict[str, Any], answer: Dict[str, Any]) -> str:
     if field_type in {"radio", "checkbox", "button"}:
         return clean_text(field.get("option_label") or field.get("label") or answer.get("value"), VALUE_LIMIT)
     if field_type == "select":
-        variants = {normalize_question(answer.get("question"))}
+        variants = {normalize_question(answer.get("question")), normalize_question(answer.get("value"))}
         variants.update(normalize_question(item) for item in answer.get("variants", []) if item)
         for option in field.get("options") or []:
             label = option.get("label") if isinstance(option, dict) else option
@@ -696,6 +702,36 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
             blockers.append(item)
         else:
             optional_review.append(item)
+
+    # A radio/button option group represents one decision.  Once an approved
+    # answer selects one option (for example sponsorship = None), sibling
+    # options are alternatives, not four additional unanswered questions.
+    # Checkboxes remain independent because those groups may be multi-select.
+    field_by_id = {field["field_id"]: field for field in normalized_fields}
+
+    def single_choice_group(field: Dict[str, Any]) -> str:
+        if clean_text(field.get("type"), 32).lower() not in {"radio", "button"}:
+            return ""
+        return clean_text(
+            field.get("name") or field.get("group_key") or field.get("group_question"),
+            500,
+        )
+
+    resolved_groups = {
+        single_choice_group(field_by_id.get(fill.get("field_id"), {}))
+        for fill in fills
+        if single_choice_group(field_by_id.get(fill.get("field_id"), {}))
+    }
+    if resolved_groups:
+        selected_ids = {fill.get("field_id") for fill in fills}
+
+        def unresolved_alternative(item: Dict[str, Any]) -> bool:
+            field = field_by_id.get(item.get("field_id"), {})
+            group = single_choice_group(field)
+            return bool(group and group in resolved_groups and item.get("field_id") not in selected_ids)
+
+        blockers = [item for item in blockers if not unresolved_alternative(item)]
+        optional_review = [item for item in optional_review if not unresolved_alternative(item)]
 
     fingerprint = form_fingerprint(page_url, normalized_fields)
     session["url"] = safe_url(page_url) or session.get("url", "")

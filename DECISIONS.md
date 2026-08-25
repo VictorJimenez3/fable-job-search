@@ -3095,3 +3095,10 @@ lane. The model receives the exact employer prompt and limit plus private,
 claim-authorized context. Generated answers are non-reusable by default; when
 the evidence is insufficient, the role remains blocked with the smallest
 missing fact instead of a fabricated response.
+
+Single-choice ATS groups are resolved as one decision. An approved option must
+match the rendered option value itself, not merely the shared group question;
+once selected, sibling radio/button options are alternatives rather than new
+blockers. Sensitive choice answers may not cross demographic categories. A
+review-ready row also exposes a page re-scan so a corrected local decision
+engine can invalidate and rebuild the review without discarding the session.

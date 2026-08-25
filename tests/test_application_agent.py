@@ -148,6 +148,64 @@ def test_location_select_all_answer_fills_each_relocation_checkbox(tmp_path: Pat
     assert [item["field_id"] for item in result["fills"]] == ["ny", "sf"]
 
 
+def test_selected_sponsorship_radio_suppresses_alternative_option_blockers(tmp_path: Path):
+    save_answer(
+        tmp_path, "None", "None", category="sponsorship",
+        variants=["No", "No sponsorship", "I do not require sponsorship"],
+    )
+    session = create_session(tmp_path, job())
+    options = ["OPT", "H1B", "TN", "None", "Other"]
+    fields = [
+        {
+            "field_id": f"visa-{index}", "name": "visa-status", "label": option,
+            "group_question": "Will you require sponsorship?", "type": "radio",
+            "required": False, "group_options": options,
+        }
+        for index, option in enumerate(options)
+    ]
+
+    result = plan_form(tmp_path, session["session_id"], job()["url"], fields)
+
+    assert [item["field_id"] for item in result["fills"]] == ["visa-3"]
+    assert result["blockers"] == []
+    assert result["optional_review"] == []
+
+
+def test_radio_group_fills_only_the_approved_option(tmp_path: Path):
+    save_answer(
+        tmp_path, "Anchor Days", "Yes", category="work_schedule",
+        variants=["Can you commit to Anchor Days each week?"],
+    )
+    session = create_session(tmp_path, job())
+    fields = [
+        {
+            "field_id": f"anchor-{option.lower()}", "name": "anchor-days",
+            "label": option, "group_question": "Can you commit to Anchor Days each week?",
+            "type": "radio", "required": True, "group_options": ["Yes", "No"],
+        }
+        for option in ("Yes", "No")
+    ]
+
+    result = plan_form(tmp_path, session["session_id"], job()["url"], fields)
+
+    assert [item["field_id"] for item in result["fills"]] == ["anchor-yes"]
+    assert result["blockers"] == []
+
+
+def test_sensitive_decline_answer_does_not_cross_demographic_categories(tmp_path: Path):
+    save_answer(tmp_path, "Prefer not to say", "Prefer not to say", category="disability")
+    save_answer(tmp_path, "Male", "Male", category="gender")
+    session = create_session(tmp_path, job())
+    fields = [
+        {"field_id": "male", "name": "gender", "label": "Male", "group_question": "Gender", "type": "radio", "group_options": ["Male", "Prefer not to say"]},
+        {"field_id": "decline", "name": "gender", "label": "Prefer not to say", "group_question": "Gender", "type": "radio", "group_options": ["Male", "Prefer not to say"]},
+    ]
+
+    result = plan_form(tmp_path, session["session_id"], job()["url"], fields)
+
+    assert [item["field_id"] for item in result["fills"]] == ["male"]
+
+
 def test_canonical_resume_seeds_deterministic_profile_fields(tmp_path: Path):
     resume = tmp_path / "CV" / "immutable" / "VictorJimenezResume.tex"
     resume.parent.mkdir(parents=True)
