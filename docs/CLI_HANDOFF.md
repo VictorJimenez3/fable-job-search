@@ -141,6 +141,13 @@ Before changing the radar, read these in order:
   The extension classifies LLM and Anchor Days button groups as their own
   categories and prioritizes category-specific answers when several groups use
   the same option label such as `Yes`.
+- **Choice-loop and review-card hardening (implemented 2026-08-25):** short
+  choices such as `Yes` and `No` are now reusable only within their inferred
+  category, so a sponsorship answer cannot satisfy an unrelated employer
+  attestation. The extension fails closed if the server ever returns two
+  alternatives from one radio/button group. Review and blocker cards collapse
+  option siblings and duplicate resume controls into one readable question,
+  while retaining every raw field for page-bound verification.
 
 ### vNext foundation (implemented and verified 2026-08-16)
 

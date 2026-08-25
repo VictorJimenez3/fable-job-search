@@ -541,7 +541,11 @@ def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any]) -> List[Dic
         answer for answer in values
         if clean_text(answer.get("category"), 80) == category
     ]
-    if choice_control and category in SENSITIVE_CATEGORIES:
+    if choice_control:
+        # A short option label such as "Yes" or "No" is not globally
+        # reusable. Restrict every choice control to its inferred category;
+        # otherwise sponsorship answers can satisfy an unrelated attestation
+        # and the browser may receive both Yes and No fills for one group.
         values = category_values
     elif category_values:
         values = category_values + [answer for answer in values if answer not in category_values]
@@ -554,6 +558,82 @@ def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any]) -> List[Dic
     return values
 
 
+def _choice_group_key(field: Dict[str, Any]) -> str:
+    """Return a stable key for one rendered choice group."""
+    field_type = clean_text(field.get("type"), 32).lower()
+    category = clean_text(field.get("category") or infer_category(field), 80)
+    if field_type == "file" and category == "resume_file":
+        return "file:resume_file"
+    if field_type not in {"radio", "checkbox", "button"}:
+        return ""
+    if field_type == "button":
+        identity = field.get("group_key") or field.get("group_question")
+    elif field_type == "checkbox":
+        identity = field.get("group_question") or field.get("name")
+    else:
+        identity = field.get("name") or field.get("group_question")
+    identity = normalize_question(identity)
+    return f"{category}:{identity}" if identity else ""
+
+
+def _review_value_selected(value: Any) -> bool:
+    normalized = normalize_question(value)
+    return bool(normalized and normalized not in {"unchecked", "false", "0", "empty"})
+
+
+def _compact_review_items(items: Iterable[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Collapse option siblings into one owner-facing review row.
+
+    The raw form remains in ``last_form`` for fingerprinting and verification.
+    This compact representation is only the review/blocker surface, where
+    five radio options should be one question with one selected answer.
+    """
+    compact: List[Dict[str, Any]] = []
+    group_indexes: Dict[str, int] = {}
+    for raw in items:
+        if not isinstance(raw, dict):
+            continue
+        group = _choice_group_key(raw)
+        if not group:
+            compact.append(copy.deepcopy(raw))
+            continue
+        selected = _review_value_selected(raw.get("value"))
+        field_id = clean_text(raw.get("field_id"), 160)
+        index = group_indexes.get(group)
+        if index is None:
+            entry = copy.deepcopy(raw)
+            entry["grouped"] = True
+            entry["field_ids"] = [field_id] if field_id else []
+            entry["values_by_field_id"] = {field_id: raw.get("value", "")} if field_id else {}
+            entry["selected_field_ids"] = [field_id] if selected and field_id else []
+            entry["option_labels"] = [clean_text(raw.get("option_label") or raw.get("label"), 500)]
+            entry["label"] = clean_text(raw.get("group_question"), 500) or clean_text(raw.get("label"), 500) or clean_text(raw.get("category"), 80)
+            entry["question"] = clean_text(raw.get("group_question") or raw.get("question") or entry["label"], 1200)
+            entry["value"] = raw.get("value", "") if selected else ""
+            entry["answer_id"] = clean_text(raw.get("answer_id"), 100) if selected else ""
+            group_indexes[group] = len(compact)
+            compact.append(entry)
+            continue
+        entry = compact[index]
+        if field_id:
+            entry.setdefault("field_ids", []).append(field_id)
+            entry.setdefault("values_by_field_id", {})[field_id] = raw.get("value", "")
+            if selected:
+                entry.setdefault("selected_field_ids", []).append(field_id)
+        option_label = clean_text(raw.get("option_label") or raw.get("label"), 500)
+        if option_label and option_label not in entry.setdefault("option_labels", []):
+            entry["option_labels"].append(option_label)
+        if selected and not _review_value_selected(entry.get("value")):
+            entry["value"] = raw.get("value", "")
+            entry["answer_id"] = clean_text(raw.get("answer_id"), 100)
+        raw_label = clean_text(raw.get("label"), 500)
+        if raw_label and (not clean_text(entry.get("label"), 500) or normalize_question(entry.get("label")) == normalize_question(entry.get("category"))):
+            entry["label"] = raw_label
+        entry["required"] = bool(entry.get("required") or raw.get("required"))
+        entry["sensitive"] = bool(entry.get("sensitive") or raw.get("sensitive"))
+    return compact
+
+
 def _field_review(field: Dict[str, Any], value: Any = "", answer: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
     category = clean_text(field.get("category") or infer_category(field), 80)
     label = clean_text(field.get("label") or field.get("question") or field.get("name"), 500)
@@ -563,6 +643,10 @@ def _field_review(field: Dict[str, Any], value: Any = "", answer: Optional[Dict[
     return {
         "field_id": clean_text(field.get("field_id") or field.get("id"), 160),
         "label": label,
+        "question": clean_text(field.get("question") or group_question or label, 1200),
+        "group_question": group_question,
+        "group_key": clean_text(field.get("group_key") or field.get("name"), 500),
+        "option_label": clean_text(field.get("option_label") or field.get("label"), 500),
         "category": category,
         "type": clean_text(field.get("type"), 32).lower(),
         "required": bool(field.get("required")),
@@ -779,12 +863,14 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
         "fields": normalized_fields,
         "final": bool(final),
     }
-    session["blockers"] = blockers
-    session["optional_review"] = optional_review
+    display_blockers = _compact_review_items(blockers)
+    display_optional_review = _compact_review_items(optional_review)
+    session["blockers"] = display_blockers
+    session["optional_review"] = display_optional_review
     session["review"] = None
     session["confirmation"] = None
     fill_by_id = {item["field_id"]: item for item in fills}
-    session["review_fields"] = []
+    review_fields: List[Dict[str, Any]] = []
     for field in normalized_fields:
         if field.get("is_submit"):
             continue
@@ -793,7 +879,8 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
         if decision:
             answer = {"answer_id": decision.get("answer_id")}
         review_value = decision.get("value") if decision else field.get("value", "")
-        session["review_fields"].append(_field_review(field, review_value, answer))
+        review_fields.append(_field_review(field, review_value, answer))
+    session["review_fields"] = _compact_review_items(review_fields)
     session["state"] = "blocked" if blockers else "filling"
     if final and not blockers:
         _prepare_review(session)
@@ -805,8 +892,8 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
         "fingerprint": fingerprint,
         "state": session["state"],
         "fills": fills,
-        "blockers": blockers,
-        "optional_review": optional_review,
+        "blockers": display_blockers,
+        "optional_review": display_optional_review,
         "review": copy.deepcopy(session.get("review")),
         "pages_seen": session["pages_seen"],
     }
@@ -868,7 +955,7 @@ def prepare_review(root: Path, session_id: str, fields: Optional[Iterable[Dict[s
     if not isinstance(session, dict):
         raise ValueError("application session not found")
     if fields is not None:
-        session["review_fields"] = [
+        review_fields = [
             _field_review(
                 dict(field),
                 field.get("value") or field.get("proposed_value") or "",
@@ -877,6 +964,7 @@ def prepare_review(root: Path, session_id: str, fields: Optional[Iterable[Dict[s
             for field in fields
             if isinstance(field, dict) and not field.get("is_submit")
         ]
+        session["review_fields"] = _compact_review_items(review_fields)
     if session.get("blockers"):
         raise ValueError("application has unresolved blockers")
     review = _prepare_review(session)
@@ -1017,11 +1105,21 @@ def verify_submission_page(root: Path, session_id: str, page_url: str, fields: I
     actual = form_fingerprint(page_url, live_fields)
     if not expected or expected != actual:
         raise ValueError("the application page changed after confirmation")
-    expected_values = {
-        normalize_question(field.get("field_id") or field.get("label")): display_field_value(field.get("value"))
-        for field in (session.get("review") or {}).get("fields", [])
-        if isinstance(field, dict)
-    }
+    expected_values: Dict[str, str] = {}
+    for field in (session.get("review") or {}).get("fields", []):
+        if not isinstance(field, dict):
+            continue
+        grouped_values = field.get("values_by_field_id")
+        if isinstance(grouped_values, dict):
+            expected_values.update({
+                normalize_question(key): display_field_value(value)
+                for key, value in grouped_values.items()
+                if normalize_question(key)
+            })
+            continue
+        key = normalize_question(field.get("field_id") or field.get("label"))
+        if key:
+            expected_values[key] = display_field_value(field.get("value"))
     live_values = {
         normalize_question(field.get("field_id") or normalized_field_key(field)): display_field_value(field.get("value"))
         for field in live_fields

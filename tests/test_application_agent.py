@@ -121,6 +121,53 @@ def test_category_specific_answers_fill_repeated_yes_groups_and_text_fields(tmp_
     assert not result["blockers"]
 
 
+def test_unrelated_yes_no_answers_cannot_fill_a_generic_attestation(tmp_path: Path):
+    save_answer(tmp_path, "Yes", "Yes", category="work_authorization")
+    save_answer(tmp_path, "None", "None", category="sponsorship", variants=["No"])
+    session = create_session(tmp_path, job())
+    question = "I can attend the required coordination hours each week. *"
+    result = plan_form(
+        tmp_path,
+        session["session_id"],
+        job()["url"],
+        [
+            {"field_id": "coord-yes", "label": "Yes", "group_question": question, "type": "button", "required": True, "group_key": "coordination", "group_options": ["Yes", "No"]},
+            {"field_id": "coord-no", "label": "No", "group_question": question, "type": "button", "required": True, "group_key": "coordination", "group_options": ["Yes", "No"]},
+        ],
+    )
+    assert result["fills"] == []
+    assert result["state"] == "blocked"
+    assert len(result["blockers"]) == 1
+    assert result["blockers"][0]["label"] == question
+
+
+def test_review_collapses_choice_siblings_and_duplicate_resume_inputs(tmp_path: Path):
+    save_answer(tmp_path, "Male", "Male", category="gender")
+    session = create_session(tmp_path, job())
+    result = plan_form(
+        tmp_path,
+        session["session_id"],
+        job()["url"],
+        [
+            {"field_id": "gender-male", "name": "gender", "label": "Male", "group_question": "How would you describe your gender identity?", "type": "radio", "required": False, "group_options": ["Male", "Female"]},
+            {"field_id": "gender-female", "name": "gender", "label": "Female", "group_question": "How would you describe your gender identity?", "type": "radio", "required": False, "group_options": ["Male", "Female"]},
+            {"field_id": "resume-empty", "label": "", "category": "resume_file", "type": "file", "required": False, "value": ""},
+            {"field_id": "resume", "label": "Resume", "category": "resume_file", "type": "file", "required": True, "value": "tailored.pdf"},
+        ],
+        final=True,
+    )
+    assert result["state"] == "awaiting_confirmation"
+    fields = result["review"]["fields"]
+    assert len(fields) == 2
+    gender = next(field for field in fields if field["category"] == "gender")
+    resume = next(field for field in fields if field["category"] == "resume_file")
+    assert gender["label"] == "How would you describe your gender identity?"
+    assert gender["value"] == "Male"
+    assert gender["field_ids"] == ["gender-male", "gender-female"]
+    assert resume["label"] == "Resume"
+    assert resume["value"] == "tailored.pdf"
+
+
 def test_race_fallback_is_used_only_when_hispanic_option_is_absent(tmp_path: Path):
     save_answer(tmp_path, "Hispanic or Latino", "Hispanic or Latino", category="race_ethnicity")
     save_answer(

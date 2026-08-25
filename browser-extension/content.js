@@ -198,6 +198,29 @@
     element.dispatchEvent(new Event("blur", {bubbles: true}));
   }
 
+  function choiceGroupKey(field) {
+    const type = String(field?.type || "").toLowerCase();
+    if (!['radio', 'button'].includes(type)) return "";
+    const identity = type === "button"
+      ? field.group_key || field.group_question
+      : field.name || field.group_question;
+    return String(identity || "").replace(/\s+/g, " ").trim().toLowerCase();
+  }
+
+  function conflictingChoiceFills(fills, fields) {
+    const byId = new Map((fields || []).map(field => [field.field_id, field]));
+    const groups = new Map();
+    for (const fill of fills || []) {
+      const field = byId.get(fill.field_id);
+      const group = choiceGroupKey(field);
+      if (!group) continue;
+      const ids = groups.get(group) || new Set();
+      ids.add(fill.field_id);
+      groups.set(group, ids);
+    }
+    return [...groups.entries()].filter(([, ids]) => ids.size > 1).map(([group]) => group);
+  }
+
   function chooseOption(element, value, options, file = null) {
     const wanted = String(value || "").trim().toLowerCase();
     if (element.type === "file") {
@@ -223,6 +246,7 @@
     if (element.tagName === "SELECT") {
       const option = [...element.options].find(candidate => candidate.value.toLowerCase() === wanted || candidate.textContent.trim().toLowerCase() === wanted || candidate.textContent.trim().toLowerCase().includes(wanted));
       if (!option) return false;
+      if (element.value === option.value) return true;
       element.value = option.value;
       element.dispatchEvent(new Event("input", {bubbles: true}));
       element.dispatchEvent(new Event("change", {bubbles: true}));
@@ -231,6 +255,7 @@
     if (element.type === "checkbox" || element.type === "radio") {
       const matchesOption = wanted && (String(element.value || "").toLowerCase() === wanted || text(labelFor(element)).toLowerCase().includes(wanted));
       const truthy = matchesOption || /^(1|true|yes|y|agree|authorized|eligible|none)$/i.test(String(value || ""));
+      if (element.checked === truthy) return true;
       if (element.type === "checkbox") element.checked = truthy;
       else if (matchesOption || truthy) element.checked = true;
       element.dispatchEvent(new Event("input", {bubbles: true}));
@@ -238,15 +263,20 @@
       return true;
     }
     if (element.tagName === "BUTTON" || element.getAttribute("role") === "option" || element.getAttribute("data-option")) {
-      if (currentValue(element, "button")) return true;
       const label = text(element.textContent || element.getAttribute("data-option"), 300).toLowerCase();
-      if (wanted === "true" || wanted === "1" || wanted === "yes" || wanted === "y" || label === wanted || label.includes(wanted)) {
-        element.click();
-        return true;
-      }
-      return false;
+      const matchesWanted = wanted === "true" || wanted === "1" || wanted === "yes" || wanted === "y" || label === wanted || label.includes(wanted);
+      if (!matchesWanted) return false;
+      if (currentValue(element, "button")) return true;
+      element.click();
+      return true;
     }
-    if (element.isContentEditable) { element.textContent = value; element.dispatchEvent(new InputEvent("input", {bubbles: true, inputType: "insertText", data: String(value)})); return true; }
+    if (element.isContentEditable) {
+      if (text(element.textContent) === text(value)) return true;
+      element.textContent = value;
+      element.dispatchEvent(new InputEvent("input", {bubbles: true, inputType: "insertText", data: String(value)}));
+      return true;
+    }
+    if (String(element.value || "") === String(value || "")) return true;
     setNativeValue(element, value);
     return true;
   }
@@ -331,6 +361,13 @@
       } else {
         showBanner("Job Radar Agent", message, "bad", '<button data-action="retry">retry</button>');
       }
+      return;
+    }
+    const choiceConflicts = conflictingChoiceFills(plan.fills, snapshot.fields);
+    if (choiceConflicts.length) {
+      const reason = "The agent returned conflicting choices for one question, so no choice was clicked. The page is paused safely.";
+      await say({type: "JOB_RADAR_EVENT", state: "blocked", message: reason, error: reason});
+      showBanner("Application paused · conflicting choices", reason, "warn", '<button data-action="retry">retry after refresh</button>');
       return;
     }
     const failedFiles = [];

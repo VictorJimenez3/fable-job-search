@@ -3125,3 +3125,15 @@ already-open employer tab. Every status update therefore reuses the canonical
 banner node, removes duplicate nodes, and applies explicit block wrapping and
 line spacing. This keeps preparation, upload-validation, and blocker messages
 readable while preserving the underlying pause/resume state machine.
+
+## 193. Choice plans fail closed and review groups are compact (2026-08-25)
+
+Generic employer questions frequently reuse short labels such as `Yes` and
+`No`. A choice planner must therefore restrict reusable answers to the field's
+inferred category; otherwise a saved sponsorship or authorization answer can
+produce two fills for an unrelated attestation and make the browser oscillate
+between alternatives. The extension also rejects conflicting fills for one
+choice group without clicking either option. Owner-facing review and blocker
+surfaces collapse radio, checkbox, button, and duplicate resume siblings into
+one question, while preserving raw field IDs and values for final page-bound
+verification.

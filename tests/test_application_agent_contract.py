@@ -33,7 +33,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "application_resume_file" in service and "/api/application/resume-file" in service
     assert "application_essay_answer" in service and "warm-scholarship-essay" in service
     assert '"content_scripts"' in extension and '"<all_urls>"' in extension
-    assert '"version": "0.2.2"' in extension
+    assert '"version": "0.2.3"' in extension
     for provider in ("workday", "greenhouse", "lever", "ashby", "smartrecruiters"):
         assert provider in adapters
     assert "JOB_RADAR_SUBMISSION_APPROVED" in (ROOT / "browser-extension" / "content.js").read_text()
@@ -74,6 +74,10 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "existingBanners.slice(1).forEach(node => node.remove())" in content
     assert "box-sizing:border-box" in content
     assert "overflow-wrap:anywhere" in content
+    assert "function conflictingChoiceFills" in content
+    assert "Application paused · conflicting choices" in content
+    assert "if (element.checked === truthy) return true" in content
+    assert "if (String(element.value || \"\") === String(value || \"\")) return true" in content
     assert "JOB_RADAR_PAGE_BLOCKED" in background
     assert 'if (row && message.pageFailure)' in background
     assert "reconcileTerminalTabs" in background
@@ -96,3 +100,5 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "queueActionId" in frontend
     assert "!isTerminalPosting(job)" in frontend
     assert "/api/application-agent" in routing and "application_agent=1" in routing
+    assert "compactApplicationReviewFields" in frontend
+    assert ".agent-review-field > strong, .agent-review-field > .sub" in frontend

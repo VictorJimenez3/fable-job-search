@@ -379,7 +379,9 @@
   .agent-review { border-left:3px solid var(--accent); background:var(--paper); padding:.8rem .9rem; margin-top:.7rem; border-radius:0 8px 8px 0; min-width:0; }
   .agent-review-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:.7rem; flex-wrap:wrap; }
   .agent-review-heading .sub { flex:1 1 100%; margin:0; }
-  .agent-review-field { border-top:1px dashed var(--line); padding:.35rem 0; font-size:.74rem; }
+  .agent-review-field { border-top:1px dashed var(--line); padding:.35rem 0; font-size:.74rem; min-width:0; }
+  .agent-review-field > strong, .agent-review-field > .sub { display:block; line-height:1.35; overflow-wrap:anywhere; }
+  .agent-review-field > .sub { margin-top:.12rem; }
   .agent-review-field:first-child { border-top:0; }
   .agent-review-value { display:block; white-space:pre-wrap; word-break:break-word; margin-top:.12rem; }
   .agent-blockers { display:grid; gap:.75rem; margin-top:.75rem; }
@@ -1644,10 +1646,55 @@ function applicationAgentResumeHTML(item) {
   const readiness=resume.file_ready?"ready to upload":resume.pdf_filename?"selected on Mac; awaiting agent refresh":"preparing local PDF";
   return `<p class="agent-resume sub"><strong>Resume:</strong> ${esc(resume.pdf_filename||"preparing PDF")} · ${esc(source)} · ${readiness}</p>`;
 }
+function applicationAgentReviewGroupKey(field) {
+  const type=String(field?.type||"").toLowerCase();
+  const category=String(field?.category||"other");
+  if (type==="file" && category==="resume_file") return "file:resume_file";
+  if (!["radio","checkbox","button"].includes(type)) return "";
+  let identity=type==="button"?(field.group_key||field.group_question):type==="checkbox"?(field.group_question||field.name):(field.name||field.group_question);
+  const label=String(field?.label||"");
+  if (!identity && label.includes(" · ")) identity=label.split(" · ")[0];
+  identity=String(identity||"").replace(/\s+/g," ").trim().toLowerCase();
+  return identity?`${category}:${identity}`:"";
+}
+function applicationAgentReviewSelected(value) {
+  const normalized=String(value||"").replace(/\s+/g," ").trim().toLowerCase();
+  return Boolean(normalized && !["unchecked","false","0","empty"].includes(normalized));
+}
+function compactApplicationReviewFields(fields) {
+  const output=[];
+  const groups=new Map();
+  for (const raw of fields||[]) {
+    if (!raw || raw.grouped) { if (raw) output.push({...raw}); continue; }
+    const group=applicationAgentReviewGroupKey(raw);
+    if (!group) { output.push({...raw}); continue; }
+    const label=String(raw.label||raw.category||"field");
+    const parts=label.split(" · ");
+    const question=String(raw.group_question||parts.slice(0,-1).join(" · ")||label);
+    const option=String(raw.option_label||parts.at(-1)||label);
+    const selected=applicationAgentReviewSelected(raw.value);
+    let entry=groups.get(group);
+    if (!entry) {
+      entry={...raw, grouped:true, label:question, question, value:selected?raw.value:"", answer_id:selected?raw.answer_id||"":"", field_ids:[], values_by_field_id:{}, selected_field_ids:[], option_labels:[]};
+      groups.set(group,entry); output.push(entry);
+    }
+    if (raw.field_id) {
+      entry.field_ids.push(raw.field_id);
+      entry.values_by_field_id[raw.field_id]=raw.value||"";
+      if (selected) entry.selected_field_ids.push(raw.field_id);
+    }
+    if (option && !entry.option_labels.includes(option)) entry.option_labels.push(option);
+    if (selected && !applicationAgentReviewSelected(entry.value)) { entry.value=raw.value; entry.answer_id=raw.answer_id||""; }
+    entry.required=Boolean(entry.required||raw.required);
+    entry.sensitive=Boolean(entry.sensitive||raw.sensitive);
+    if ((!entry.label || entry.label===entry.category) && question!==entry.category) entry.label=question;
+  }
+  return output;
+}
 function applicationAgentReviewHTML(item) {
   const review=item?.review;
   if (!review) return "";
-  const fields=(review.fields||[]).map(field=>`<div class="agent-review-field"><strong>${esc(field.label||field.category||"field")}</strong>${field.sensitive?` <span class="chip warn">sensitive</span>`:""}<span class="sub">${esc(field.category||"other")}${field.required?" · required":""}</span><span class="agent-review-value">${esc(field.value||"(empty — owner must review)")}</span></div>`).join("");
+  const fields=compactApplicationReviewFields(review.fields||[]).map(field=>`<div class="agent-review-field"><strong>${esc(field.label||field.category||"field")}${field.sensitive?` <span class="chip warn">sensitive</span>`:""}</strong><span class="sub">${esc(field.category||"other")}${field.required?" · required":""}${!field.value&&field.option_labels?.length?` · options: ${esc(field.option_labels.join(", "))}`:""}</span><span class="agent-review-value">${esc(field.value||"(not selected — owner must review)")}</span></div>`).join("");
   const action = item.state === "awaiting_confirmation"
     ? `<div class="acts" style="margin-top:.45rem"><button class="act primary" onclick='confirmApplicationAgent(${JSON.stringify(item.queue_id)})'>confirm and allow Submit</button><button class="act" onclick='skipApplicationAgent(${JSON.stringify(item.queue_id)})'>skip this role</button></div>`
     : item.state === "submitting" ? '<p class="sub">Owner confirmed. Waiting for the paired Mac to verify the page and click Submit.</p>' : '';
