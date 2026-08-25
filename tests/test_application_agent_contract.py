@@ -44,6 +44,8 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     background = (ROOT / "browser-extension" / "background.js").read_text()
     content = (ROOT / "browser-extension" / "content.js").read_text()
     assert "localFile" in background and "maxConcurrentApplications" in background
+    assert "row?.sessionId && row?.resumeFile" in background
+    assert "!row.sessionId || !row.resumeFile" in background
     assert "new DataTransfer()" in content and "new File(" in content
     assert "recoverOrphanedQueue" in background
     assert 'parkedButAttachable = ["blocked", "awaiting_confirmation"]' in background

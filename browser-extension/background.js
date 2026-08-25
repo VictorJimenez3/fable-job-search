@@ -137,7 +137,7 @@ async function ensureResumeForApplication(tabId, row) {
 }
 
 async function ensureApplicationSession(tabId, row) {
-  if (row?.sessionId) return row;
+  if (row?.sessionId && row?.resumeFile) return row;
   if (row?.sessionPromise) return row.sessionPromise;
   row.sessionPromise = (async () => {
     await send(tabId, {type: "JOB_RADAR_AGENT_STATUS", title: "Agent preparing this role", message: "Resume Studio is checking for a tailored resume before the form is filled. Submit remains untouched."});
@@ -412,7 +412,7 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
         tabs.delete(tabId);
         return {session_id: "", configured: true, blocked: true};
       }
-      if (row && !row.sessionId) {
+      if (row && (!row.sessionId || !row.resumeFile)) {
         try {
           row = await ensureApplicationSession(tabId, row);
         } catch (error) {
