@@ -6735,6 +6735,19 @@
   "status": "active",
   "token": "walleyecapital-external-students"
  },
+ "greenhouse:whitewatermidstream": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1787771919,
+  "last_ok": 1787771919,
+  "name": "WhiteWater Midstream",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "whitewatermidstream"
+ },
  "greenhouse:whoop": {
   "ats": "greenhouse",
   "extra": {},
@@ -10217,6 +10230,22 @@
   "status": "active",
   "token": "fa-ewjt-saasfaprod1"
  },
+ "oracle_orc:fa-ewmy-saasfaprod1:CX_1": {
+  "ats": "oracle_orc",
+  "extra": {
+   "host": "fa-ewmy-saasfaprod1.fa.ocs.oraclecloud.com",
+   "site": "CX_1"
+  },
+  "failures": 0,
+  "first_seen": 1787771919,
+  "last_ok": 1787771920,
+  "name": "Verisk",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "fa-ewmy-saasfaprod1"
+ },
  "oracle_orc:fa-ewub-saasfaprod1:CX_26": {
   "ats": "oracle_orc",
   "extra": {
@@ -11734,7 +11763,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787763514,
+  "last_ok": 1787771938,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12000,7 +12029,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1787763503,
+  "last_ok": 1787771925,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12129,7 +12158,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787763516,
+  "last_ok": 1787771938,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13749,7 +13778,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1787763501,
+  "last_ok": 1787771923,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14549,7 +14578,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787763511,
+  "last_ok": 1787771934,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14658,7 +14687,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787763504,
+  "last_ok": 1787771926,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -15377,7 +15406,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787763511,
+  "last_ok": 1787771936,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16150,6 +16179,22 @@
   "sector": "",
   "status": "active",
   "token": "jackson"
+ },
+ "workday:jainglobal:ExternalSite": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "ExternalSite"
+  },
+  "failures": 0,
+  "first_seen": 1787771919,
+  "last_ok": 1787771919,
+  "name": "Jain Global",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "jainglobal"
  },
  "workday:jci:JCI": {
   "ats": "workday",
@@ -17063,7 +17108,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787763505,
+  "last_ok": 1787771928,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -19097,7 +19142,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1787763506,
+  "last_ok": 1787771930,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
