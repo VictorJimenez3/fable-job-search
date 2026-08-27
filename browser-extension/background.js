@@ -1,3 +1,4 @@
+import {resumeFileAccepted, resumeFieldsNeedingUpload} from "./application-fields.mjs";
 const LOCAL_ORIGIN = "http://127.0.0.1:4317";
 const DEFAULT_CLOUD_URL = "https://job-radar-newgrad.vercel.app";
 const BATCH_RUNNING_STATES = new Set(["opening", "filling", "submitting"]);
@@ -31,7 +32,7 @@ function requestExtensionReload(sender, message = {}) {
   if (typeof chrome.runtime.reload !== "function") {
     return {ok: false, error: "This Chrome version cannot reload the extension from the extension UI."};
   }
-  if (reloadScheduled) return {ok: true, reloading: true};
+  if (reloadScheduled) return {ok: true, reloading: true, extensionVersion: chrome.runtime.getManifest().version};
   reloadScheduled = true;
   // Let the popup receive the acknowledgement before the worker terminates.
   setTimeout(() => {
@@ -41,14 +42,15 @@ function requestExtensionReload(sender, message = {}) {
       console.warn("Job Radar extension reload failed", error);
     }
   }, 75);
-  return {ok: true, reloading: true};
+  return {ok: true, reloading: true, extensionVersion: chrome.runtime.getManifest().version};
 }
 
-function requestQueueSync(sender, message = {}) {
+async function requestQueueSync(sender, message = {}) {
   if (!extensionControlSender(sender, message)) {
     return {ok: false, error: "Only the Job Radar popup or owner Job Radar page can sync the queue."};
   }
-  return syncCloudQueue();
+  const result = await syncCloudQueue();
+  return {...result, extensionVersion: chrome.runtime.getManifest().version};
 }
 
 function noteQuota(error) {
@@ -202,22 +204,6 @@ async function send(tabId, message) {
   try { return await chrome.tabs.sendMessage(tabId, message); } catch (_) { return null; }
 }
 
-function resumeFieldsNeedingUpload(fields) {
-  const candidates = (fields || []).filter(field => {
-    if (String(field?.type || "").toLowerCase() !== "file") return false;
-    // Once an ATS has accepted a file, never replace it during a later DOM
-    // scan. Replacing the File object is what caused Ashby to restart its
-    // upload validation and surface a transient posting error.
-    return !String(field?.value || "").trim();
-  });
-  if (!candidates.length) return [];
-  const named = candidates.filter(field => /resume|cv/i.test([
-    field.label, field.question, field.name, field.id, field.autocomplete,
-  ].filter(Boolean).join(" ")));
-  const required = (named.length ? named : candidates).find(field => Boolean(field.required));
-  return [required || named[0] || candidates[0]];
-}
-
 async function navigateQueuedTab(tabId, url, active = true) {
   const target = safeURL(url);
   if (!target) throw new Error("A safe application URL is required");
@@ -357,6 +343,15 @@ async function syncSession(tabId) {
 }
 
 const RECOVERABLE_QUEUE_STATES = new Set(["queued", "opening", "filling", "blocked", "awaiting_confirmation", "submitting"]);
+const AUTO_RECOVERABLE_BLOCKERS = new Set(["resume_file", "essay", "cover_letter"]);
+
+function recoveredSessionState(session) {
+  const blockers = Array.isArray(session?.blockers) ? session.blockers : [];
+  if (session?.state !== "blocked" || !blockers.length) return session?.state;
+  return blockers.every(blocker => AUTO_RECOVERABLE_BLOCKERS.has(String(blocker?.category || "")))
+    ? "queued"
+    : session.state;
+}
 
 function localQueueRecoveryItems(value) {
   const sessions = Array.isArray(value?.sessions) ? value.sessions : [];
@@ -371,20 +366,25 @@ function localQueueRecoveryItems(value) {
     const currentStamp = Date.parse(String(current?.updated_at || "")) || 0;
     if (!current || stamp >= currentStamp) latest.set(queueId, session);
   }
-  return [...latest.values()].map(session => ({
+  return [...latest.values()].map(session => {
+    const state = recoveredSessionState(session);
+    return ({
     queue_id: session.queue_id,
     session_id: session.session_id || "",
-    state: session.state,
+    state,
     created_at: session.created_at || "",
     updated_at: session.updated_at || "",
-    message: session.last_message || session.last_error || `Recovered local ${session.state} session`,
+    message: state === "queued" && session.state === "blocked"
+      ? "Requeued because Resume Studio or the writing agent can now resolve the saved blockers."
+      : session.last_message || session.last_error || `Recovered local ${session.state} session`,
     error: session.last_error || "",
     job: session.job,
     blockers: Array.isArray(session.blockers) ? session.blockers : [],
     resume: session.resume || null,
     review: session.review || null,
     confirmation: session.confirmation || null,
-  }));
+    });
+  });
 }
 
 async function recoverLocalQueue() {
@@ -550,9 +550,10 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
     if (message?.type === "JOB_RADAR_FORM" && tabId) {
       const row = tabs.get(tabId);
       if (!row?.sessionId) return {error: "Start this application from Job Radar first."};
-      const fields = (message.fields || []).map(field => field.type === "file" && row.resumeFile
-        ? {...field, value: row.resumeFile.name}
-        : field);
+      // Keep the employer page's real file values. Pretending every file input
+      // already contains the resume makes the later upload selector return an
+      // empty list and can also mistake a cover-letter control for Resume.
+      const fields = (message.fields || []).map(field => ({...field}));
       let plan = await local("/api/application/form", {method: "POST", body: JSON.stringify({
         session_id: row.sessionId, page_url: message.pageUrl, fields, final: Boolean(message.final),
       })});
@@ -595,13 +596,18 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
         // A few ATSs render a blank, optional file input beside the required
         // resume control. Upload exactly once to the required/named control;
         // never overwrite an input that already has a file after a rescan.
-        for (const field of resumeFieldsNeedingUpload(fields)) {
+        const resumeTargets = resumeFieldsNeedingUpload(fields);
+        const resumeAccepted = resumeFileAccepted(fields);
+        for (const field of resumeTargets) {
           plan.fills = [...(plan.fills || []), {
             field_id: field.field_id, value: row.resumeFile.name, category: "resume_file",
             sensitive: false, options: [], file: row.resumeFile,
           }];
         }
-        plan.blockers = (plan.blockers || []).filter(blocker => blocker.category !== "resume_file");
+        if (resumeAccepted || resumeTargets.length) {
+          plan.blockers = (plan.blockers || []).filter(blocker => blocker.category !== "resume_file");
+          plan.optional_review = (plan.optional_review || []).filter(item => item.category !== "resume_file");
+        }
       }
       row.state = plan.state;
       if (row.queueId) void syncSession(tabId);
@@ -686,7 +692,7 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
       if (!extensionControlSender(sender, message)) return {ok: false, error: "Pairing can only be written by the Job Radar popup or owner page."};
       const next = {...message.config, cloudUrl: String(message.config?.cloudUrl || DEFAULT_CLOUD_URL).replace(/\/$/, "")};
       await chrome.storage.local.set(next);
-      return {ok: true, ...next, agentToken: next.agentToken ? "saved" : "missing"};
+      return {ok: true, ...next, agentToken: next.agentToken ? "saved" : "missing", extensionVersion: chrome.runtime.getManifest().version};
     }
     if (message?.type === "JOB_RADAR_SYNC_NOW") return requestQueueSync(sender, message);
     return {ok: false};

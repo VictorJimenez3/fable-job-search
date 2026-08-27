@@ -108,12 +108,18 @@ Before changing the radar, read these in order:
   source-code change to load the new unpacked version.
 - **Owner-page extension control bridge (implemented 2026-08-25):** the
   production Autopilot page now exposes **sync Mac**, **restart extension**, and
-  **send pairing to extension**. The installed content script relays only those
+  **pair & sync Mac**. The installed content script relays only those
   commands, the worker checks the sender's exact production origin, and the
   page shows a timeout/error if the extension is absent. This removes the
   normal dependency on the Chrome extension manager; the unpacked extension
-  still needs one manual reload after this source change so version `0.2.6`
+  still needs one manual reload after this source change so version `0.2.7`
   loads the bridge.
+- **Resume/file and loop hardening (implemented 2026-08-26):** version `0.2.7`
+  keeps real employer file values during planning, excludes cover-letter and
+  supporting controls from resume upload, auto-requeues legacy resume/essay-only
+  blocks, and pauses repeated form cycles after 12 scans in 45 seconds.
+  Autopilot serializes extension actions and can renew pairing plus recover the
+  queue in one explicit click.
 - **Dashboard isolation (implemented 2026-08-24):** the content script returns
   after installing Job Radar's start-command bridge. It does not form-scan the
   production dashboard or keep the service worker awake with irrelevant DOM

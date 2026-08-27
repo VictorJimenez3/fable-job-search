@@ -35,7 +35,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "application_resume_file" in service and "/api/application/resume-file" in service
     assert "application_essay_answer" in service and "warm-scholarship-essay" in service
     assert '"content_scripts"' in extension and '"<all_urls>"' in extension
-    assert '"version": "0.2.6"' in extension
+    assert '"version": "0.2.7"' in extension
     for provider in ("workday", "greenhouse", "lever", "ashby", "smartrecruiters"):
         assert provider in adapters
     assert "JOB_RADAR_SUBMISSION_APPROVED" in (ROOT / "browser-extension" / "content.js").read_text()
@@ -51,6 +51,9 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "!row.sessionId || !row.resumeFile" in background
     assert "new DataTransfer()" in content and "new File(" in content
     assert "resumeFieldsNeedingUpload" in background
+    assert 'from "./application-fields.mjs"' in background
+    assert "resumeFileAccepted" in background
+    assert "Pretending every file input" in background
     assert "never overwrite an input that already has a file after a rescan" in background
     assert "last_message || session.last_error || session.state" in background
     assert "Owner requested a fresh application-page scan." in background
@@ -92,6 +95,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "scheduleQueueSync();" in background
     assert "chrome.runtime.reload()" in background
     assert "JOB_RADAR_RELOAD_EXTENSION" in background
+    assert "extensionVersion: chrome.runtime.getManifest().version" in background
     assert "RADAR_PAGE_ORIGINS" in background
     assert "Only the Job Radar popup or owner Job Radar page can request a reload." in background
     popup = (ROOT / "browser-extension" / "popup.js").read_text()
@@ -107,6 +111,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "pageFailure: unavailable" in content
     assert "JOB_RADAR_AGENT_STOP" in content
     assert "scanRunning" in content and "scanAgain" in content
+    assert "LOOP_SCAN_LIMIT" in content and "Application paused · repeated form cycle" in content
     assert 'if (isRadar)' in content and 'job-radar:agent-started' in content
     assert content.index('job-radar:agent-started') < content.index("return;\n  }", content.index('job-radar:agent-started'))
     assert "posting_status" in api
@@ -114,6 +119,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     frontend = (ROOT / "webapp" / "index.html").read_text()
     assert "controlApplicationAgentExtension" in frontend
     assert "sendApplicationPairingToExtension" in frontend
+    assert "extension v${esc(data.extensionVersion)}" in frontend
     assert "queueing…" in frontend
     assert "queueActionId" in frontend
     assert "!isTerminalPosting(job)" in frontend

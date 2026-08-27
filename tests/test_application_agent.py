@@ -42,6 +42,25 @@ def test_top_five_provider_and_sensitive_categories_are_deterministic():
     assert infer_category({"label": "Yes", "group_question": "Do you have experience with LLMs?", "type": "button"}) == "llm_experience"
     assert infer_category({"label": "Yes", "group_question": "Can you work from our offices on Anchor Days?", "type": "button"}) == "work_schedule"
     assert infer_category({"label": "School", "name": "a-very-long-generated-field-name-that-must-not-turn-school-into-an-essay", "type": "text"}) == "education"
+    assert infer_category({"label": "Resume", "type": "file"}) == "resume_file"
+    assert infer_category({"label": "Cover Letter", "type": "file"}) == "cover_letter_file"
+    assert infer_category({"label": "Official transcript", "type": "file"}) == "supporting_file"
+
+
+def test_required_cover_letter_file_is_not_treated_as_resume(tmp_path: Path):
+    session = create_session(tmp_path, job())
+    result = plan_form(
+        tmp_path,
+        session["session_id"],
+        job()["url"],
+        [
+            {"field_id": "resume", "label": "Resume", "type": "file", "required": True, "value": "tailored.pdf"},
+            {"field_id": "cover", "label": "Cover Letter", "type": "file", "required": True, "value": ""},
+        ],
+    )
+    assert result["state"] == "blocked"
+    assert [item["category"] for item in result["blockers"]] == ["cover_letter_file"]
+    assert "separate cover-letter file" in result["blockers"][0]["reason"]
 
 
 def test_approved_answers_fill_and_unknown_fields_pause(tmp_path: Path):

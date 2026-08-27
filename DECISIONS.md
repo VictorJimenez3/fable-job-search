@@ -3164,3 +3164,22 @@ reload, queue-sync, or pairing-storage commands. The page exposes **sync Mac**,
 timeouts and errors. The bridge does not allow form filling, submission, or
 arbitrary extension API calls, and the production origin is checked again in
 the worker because content-script messages are not a trust boundary.
+
+## 196. Preserve real file state and circuit-break repeated application scans (2026-08-26)
+
+Resume planning must use the employer page's actual file values. Marking every
+file input as if it already contained the selected PDF prevents the upload
+selector from finding the required control and can conflate Resume with a
+cover letter. File targeting is now a separately tested pure extension helper:
+it prefers an empty required/named resume input, treats accepted resumes as
+terminal for upload, excludes cover letters and supporting attachments, and
+fails closed when multiple unnamed controls are ambiguous. The local planner
+classifies required cover-letter and supporting files separately so they remain
+visible blockers instead of receiving the resume.
+
+Provider rerenders can still alternate otherwise valid choices. The content
+script therefore opens a recoverable circuit after 12 scans of the same form
+structure within 45 seconds, records the tab as blocked, and requires one
+explicit retry before scanning again. Owner Autopilot controls also serialize
+pair, sync, and restart actions, show their busy state, and combine pairing
+renewal with queue recovery in one explicit **pair & sync Mac** action.

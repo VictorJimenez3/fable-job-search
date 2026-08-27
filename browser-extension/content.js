@@ -8,6 +8,10 @@
   let stopped = false;
   let scanRunning = false;
   let scanAgain = false;
+  let loopPaused = false;
+  let structuralScans = [];
+  const LOOP_SCAN_LIMIT = 12;
+  const LOOP_SCAN_WINDOW_MS = 45_000;
   const isRadar = location.hostname === "job-radar-newgrad.vercel.app" ||
     location.hostname === "victorjimenez3.github.io" && location.pathname.startsWith("/fable-job-search/");
 
@@ -317,7 +321,11 @@
     banner.setAttribute("aria-live", "polite");
     banner.innerHTML = `<strong style="box-sizing:border-box;display:block;margin:0 0 7px;line-height:1.3;white-space:normal;overflow-wrap:anywhere;word-break:break-word">${title}</strong><div style="box-sizing:border-box;display:block;color:#bdccc7;line-height:1.45;white-space:normal;overflow-wrap:anywhere;word-break:break-word">${body}</div>${actions ? `<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">${actions}</div>` : ""}`;
     banner.querySelectorAll("button").forEach(button => button.onclick = () => {
-      if (button.dataset.action === "retry") scheduleScan(0, true);
+      if (button.dataset.action === "retry") {
+        loopPaused = false;
+        structuralScans = [];
+        scheduleScan(0, true);
+      }
       if (button.dataset.action === "popup") chrome.action?.openPopup?.();
       if (button.dataset.action === "hide") banner.remove();
     });
@@ -325,6 +333,8 @@
 
   function scheduleScan(delay = 350, force = false) {
     if (stopped) return;
+    if (loopPaused && !force) return;
+    if (force) loopPaused = false;
     if (force) lastFingerprint = "";
     clearTimeout(scanTimer);
     scanTimer = setTimeout(() => void runScan(), delay);
@@ -338,6 +348,16 @@
       scanRunning = false;
       if (scanAgain) { scanAgain = false; scheduleScan(0); }
     }
+  }
+  function scanLoopDetected(snapshot) {
+    const now = Date.now();
+    const structure = JSON.stringify(snapshot.fields.map(field => [
+      field.field_id, field.label, field.group_question, field.type,
+      field.required, field.options, Boolean(field.is_next), Boolean(field.is_submit),
+    ]));
+    structuralScans = structuralScans.filter(item => now - item.at <= LOOP_SCAN_WINDOW_MS);
+    structuralScans.push({at: now, structure});
+    return structuralScans.filter(item => item.structure === structure).length >= LOOP_SCAN_LIMIT;
   }
   async function scan() {
     if (stopped) return;
@@ -371,6 +391,13 @@
     const shape = JSON.stringify(snapshot.fields.map(field => [field.field_id, field.label, field.group_question, field.type, field.required, field.value, field.options]));
     if (shape === lastFingerprint) return;
     lastFingerprint = shape;
+    if (scanLoopDetected(snapshot)) {
+      const reason = "The form changed choices repeatedly without making progress. The agent stopped this tab before it could loop again.";
+      loopPaused = true;
+      await say({type: "JOB_RADAR_EVENT", state: "blocked", message: reason, error: reason});
+      showBanner("Application paused · repeated form cycle", reason, "warn", '<button data-action="retry">retry one fresh scan</button>');
+      return;
+    }
     const plan = await say({type: "JOB_RADAR_FORM", pageUrl: location.href, fields: snapshot.fields, final: snapshot.final});
     if (!plan || plan.error) {
       const message = text(plan?.error || "The local agent is unavailable.", 500);

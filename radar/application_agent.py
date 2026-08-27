@@ -144,6 +144,10 @@ def infer_category(field: Dict[str, Any]) -> str:
     )
     field_type = clean_text(field.get("type"), 32).lower()
     if field_type == "file":
+        if "cover letter" in label:
+            return "cover_letter_file"
+        if re.search(r"\b(transcript|portfolio|work sample|writing sample|supporting|attachment|certificate|photo|headshot)\b", label):
+            return "supporting_file"
         return "resume_file"
     # A choice control is an owner decision, not a reusable text field. ATS
     # pages often label options "LinkedIn", "Website", or with a city; using
@@ -789,6 +793,23 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
                 continue
             item = _field_review(field)
             item["reason"] = "Resume Studio has not supplied a local PDF to the browser agent yet."
+            if field["required"]:
+                blockers.append(item)
+            else:
+                optional_review.append(item)
+            continue
+        if category in {"cover_letter_file", "supporting_file"}:
+            if has_field_value(field.get("value")):
+                item = _field_review(field, field.get("value"))
+                item["owner_provided"] = True
+                optional_review.append(item)
+                continue
+            item = _field_review(field)
+            item["reason"] = (
+                "This employer requires a separate cover-letter file that is not generated automatically."
+                if category == "cover_letter_file"
+                else "This employer requires a separate supporting file that is not available in the approved file bank."
+            )
             if field["required"]:
                 blockers.append(item)
             else:

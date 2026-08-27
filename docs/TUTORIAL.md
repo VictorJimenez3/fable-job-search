@@ -183,9 +183,11 @@ Ashby, and SmartRecruiters; other pages use a conservative generic fallback.
 
 Set it up once:
 
-1. Sign in as `@VictorJimenez3`, open **Autopilot**, and choose **pair Mac**.
-2. Copy the one-time token into the unpacked `browser-extension/` popup after
-   enabling Developer mode at `chrome://extensions`.
+1. Load the unpacked `browser-extension/` once after enabling Developer mode at
+   `chrome://extensions`.
+2. Sign in as `@VictorJimenez3`, open **Autopilot**, and choose **pair & sync
+   Mac**. The owner page sends the one-time token directly to the installed
+   extension and recovers the local queue; the popup is only a fallback.
 3. Keep the private Resume Studio service running at
    `http://127.0.0.1:4317/` (the launchd installer can keep it alive).
 
@@ -195,9 +197,9 @@ the request, reloads the extension, and lets the fresh worker immediately
 recreate its alarm and sync the queue. It is intentionally not tied to sync
 errors, so a pairing or quota problem remains visible instead of causing a
 reload loop. The Autopilot page also has **sync Mac**, **restart extension**, and
-**send pairing to extension** controls. They use the installed content script
-and are limited to the production owner page, so Chrome's extension manager is
-not part of the normal workflow.
+**pair & sync Mac** controls. They disable and show progress while an action is
+running, use the installed content script, and are limited to the production
+owner page, so Chrome's extension manager is not part of the normal workflow.
 
 The extension sends visible field labels, control types, options, and a
 page-shape fingerprint to the loopback agent. It never sends raw page HTML,

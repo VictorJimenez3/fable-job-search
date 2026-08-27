@@ -583,15 +583,16 @@ the extension popup's **reload extension** button sends a popup-only request,
 acknowledges it, and then calls Chrome's extension reload API. The fresh worker
 starts its normal alarm and queue sync; sync or quota errors never trigger an
 automatic reload loop. The owner-only Autopilot page also exposes **sync Mac**,
-**restart extension**, and **send pairing to extension** controls. Those
+**restart extension**, and **pair & sync Mac** controls. Those
 commands travel through the installed content script and are accepted only
 from the production Job Radar origins; they do not require access to Chrome's
 internal extension manager.
 Resume uploads are single-shot: when an ATS exposes duplicate file controls,
-the extension selects the empty required/named resume control, keeps an
-accepted file in place across DOM scans, and waits for employer validation
-before advancing. The queue mirrors this as normal progress rather than a
-failure.
+the extension selects the empty required/named resume control, never treats a
+cover letter or supporting attachment as Resume, keeps an accepted file in
+place across DOM scans, and waits for employer validation before advancing.
+The queue mirrors this as normal progress rather than a failure. A repeated
+choice cycle pauses after a bounded number of scans instead of oscillating.
 On Job Radar itself, the content script only relays explicit start commands; it
 does not scan the dashboard DOM as though it were an employer application.
 Employer-page scans and session creation are serialized per tab. A long Resume
@@ -605,11 +606,12 @@ terminal run exists for the same application queue item.
 
 To connect the Mac once:
 
-1. Sign in as `VictorJimenez3`, open **Autopilot**, choose **pair Mac**, and
-   copy the one-time token.
-2. In Chrome, load the unpacked `browser-extension/` directory at
-   `chrome://extensions` with Developer mode enabled, open the extension
-   popup, and paste the token.
+1. In Chrome, load the unpacked `browser-extension/` directory at
+   `chrome://extensions` with Developer mode enabled.
+2. Sign in as `VictorJimenez3`, open **Autopilot**, and choose **pair & sync
+   Mac**. The owner page sends the one-time token directly to the installed
+   extension and immediately recovers the local queue. The popup remains a
+   fallback for the first installation only.
 3. Start the existing private service with
    `.venv/bin/python scripts/resume_studio.py` or install
    `scripts/resume-studio-service/install.sh`. Click **Apply with Agent** from
