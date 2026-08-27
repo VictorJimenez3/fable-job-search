@@ -10,12 +10,14 @@
   let scanAgain = false;
   let loopPaused = false;
   let structuralScans = [];
-  const LOOP_SCAN_LIMIT = 12;
+  const uploadedFiles = new Map();
+  const LOOP_SCAN_LIMIT = 4;
   const LOOP_SCAN_WINDOW_MS = 45_000;
   const isRadar = location.hostname === "job-radar-newgrad.vercel.app" ||
     location.hostname === "victorjimenez3.github.io" && location.pathname.startsWith("/fable-job-search/");
 
   function text(value, limit = 500) { return String(value || "").replace(/\s+/g, " ").trim().slice(0, limit); }
+  function wait(milliseconds) { return new Promise(resolve => setTimeout(resolve, milliseconds)); }
   function safeURL(value) { try { const url = new URL(String(value || "")); return ["http:", "https:"].includes(url.protocol) && !url.username && !url.password ? url.href : ""; } catch (_) { return ""; } }
   function say(message) { return chrome.runtime.sendMessage(message).catch(() => null); }
   const ats = window.JobRadarATS || {providerForURL: () => "generic", adapter: () => ({}), fieldKey: () => "", labelFor: () => "", isSubmitLabel: value => /apply|submit|finish|complete/i.test(value), isNextLabel: value => /next|continue|review|save/i.test(value)};
@@ -104,12 +106,34 @@
     return [];
   }
 
-  function currentValue(element, type) {
+  function uploadedFileKey(element, fieldId = "") {
+    return `${location.origin}${location.pathname}:${fieldId || element.getAttribute("data-job-radar-field") || element.id || element.name || "file"}`;
+  }
+
+  function rememberedUploadedFile(element, fieldId = "") {
+    const exactKey = uploadedFileKey(element, fieldId);
+    const remembered = uploadedFiles.get(exactKey);
+    if (!remembered?.name) return "";
+    const container = element.closest(".ashby-application-form-field-entry, [data-field-path], fieldset, label, [class*='upload'], [class*='file']")
+      || element.parentElement?.parentElement || element.parentElement;
+    const nearby = text(container?.innerText || container?.textContent || "", 2400).toLowerCase();
+    const filename = text(remembered.name, 500).toLowerCase();
+    if (/upload failed|invalid file|unsupported file|file too large|could not upload|try again/i.test(nearby)) return "";
+    // Some React ATS controls consume the File and clear input.files before
+    // their accepted-file chip renders. The successful assignment is valid
+    // short-lived evidence; after that, require the employer UI to retain the
+    // filename so a genuinely rejected upload can be retried safely.
+    if (filename && nearby.includes(filename)) return remembered.name;
+    return Date.now() - Number(remembered.at || 0) < 20_000 ? remembered.name : "";
+  }
+
+  function currentValue(element, type, fieldId = "") {
     if (type === "checkbox" || type === "radio") return Boolean(element.checked);
     if (type === "button" || element.tagName === "BUTTON" || element.getAttribute("role") === "option") return optionValue(element, optionGroup(element));
     if (element.tagName === "SELECT") return text(element.selectedOptions?.[0]?.textContent || element.value, 500);
-    if (type === "file") return text(element.files?.[0]?.name || "", 500);
-    return text(element.value || element.textContent, 500);
+    if (type === "file") return text(element.files?.[0]?.name || rememberedUploadedFile(element, fieldId), 500);
+    const limit = type === "textarea" || element.isContentEditable ? 20_000 : 4_000;
+    return text(element.value || element.textContent, limit);
   }
 
   function extract() {
@@ -133,7 +157,7 @@
         label, question: label, group_question: groupQuestion, placeholder: text(element.getAttribute("placeholder"), 300),
         type, required: Boolean(element.required || element.getAttribute("aria-required") === "true"),
         options: optionData(element),
-        value: currentValue(element, type),
+        value: currentValue(element, type, fieldId),
       });
       element.setAttribute("data-job-radar-field", fields.at(-1).field_id);
     });
@@ -211,13 +235,38 @@
     return "";
   }
 
-  function setNativeValue(element, value) {
+  function applicationBoundaryReason() {
+    const host = location.hostname.toLowerCase();
+    if (/\b(jobright\.ai|simplify\.jobs|linkedin\.com|indeed\.com)\b/.test(host)) {
+      return "This is an aggregator detail page, not the employer application. Job Radar paused before touching its search or sign-in fields. Open the direct employer Apply link in this same tab to continue automatically.";
+    }
+    return "";
+  }
+
+  function directApplicationURL() {
+    const currentHost = location.hostname.toLowerCase();
+    const candidates = [...document.querySelectorAll("a[href]")].map((anchor, index) => {
+      const label = text(anchor.textContent || anchor.getAttribute("aria-label") || anchor.title, 240);
+      if (!/\b(apply|application|continue to job|company site)\b/i.test(label)) return null;
+      const href = safeURL(anchor.href);
+      if (!href) return null;
+      const url = new URL(href);
+      const host = url.hostname.toLowerCase();
+      if (host === currentHost || /\b(jobright\.ai|simplify\.jobs|linkedin\.com|indeed\.com)\b/.test(host)) return null;
+      const direct = /\b(ashbyhq\.com|greenhouse\.(?:io|com)|lever\.co|smartrecruiters\.com|myworkdayjobs\.com|myworkdaysite\.com)\b/.test(host)
+        || /\b(careers?|jobs?)\b/.test(host);
+      return {href, index, score: direct ? 3 : 1};
+    }).filter(Boolean).sort((left, right) => right.score - left.score || left.index - right.index);
+    return candidates[0]?.href || "";
+  }
+
+  function setNativeValue(element, value, {blur = true} = {}) {
     const prototype = element instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
     const descriptor = Object.getOwnPropertyDescriptor(prototype, "value");
     if (descriptor?.set) descriptor.set.call(element, value); else element.value = value;
     element.dispatchEvent(new Event("input", {bubbles: true}));
     element.dispatchEvent(new Event("change", {bubbles: true}));
-    element.dispatchEvent(new Event("blur", {bubbles: true}));
+    if (blur) element.dispatchEvent(new Event("blur", {bubbles: true}));
   }
 
   function choiceGroupKey(field) {
@@ -243,7 +292,7 @@
     return [...groups.entries()].filter(([, ids]) => ids.size > 1).map(([group]) => group);
   }
 
-  function chooseOption(element, value, options, file = null) {
+  async function chooseOption(element, value, options, file = null) {
     const wanted = String(value || "").trim().toLowerCase();
     if (element.type === "file") {
       if (!file?.base64 || !file?.name) return false;
@@ -251,7 +300,7 @@
       // event. Reusing the accepted file is safe; assigning a new File object
       // restarts provider-side validation and can make the posting look
       // broken while the upload is still settling.
-      if (element.files?.[0]?.name === file.name) return true;
+      if (element.files?.[0]?.name === file.name || rememberedUploadedFile(element) === file.name) return true;
       try {
         const binary = atob(file.base64);
         const bytes = new Uint8Array(binary.length);
@@ -259,10 +308,15 @@
         const transfer = new DataTransfer();
         transfer.items.add(new File([bytes], file.name, {type: file.type || "application/pdf", lastModified: Date.now()}));
         element.files = transfer.files;
+        if (element.files?.[0]?.name !== file.name) return false;
+        // Remember the accepted assignment before dispatching provider events.
+        // An event handler may synchronously replace the input or clear its
+        // FileList after consuming it.
+        uploadedFiles.set(uploadedFileKey(element), {name: file.name, at: Date.now()});
         element.dispatchEvent(new Event("input", {bubbles: true}));
         element.dispatchEvent(new Event("change", {bubbles: true}));
         element.dispatchEvent(new Event("blur", {bubbles: true}));
-        return element.files?.[0]?.name === file.name;
+        return true;
       } catch (_) { return false; }
     }
     if (element.tagName === "SELECT") {
@@ -297,6 +351,31 @@
       element.textContent = value;
       element.dispatchEvent(new InputEvent("input", {bubbles: true, inputType: "insertText", data: String(value)}));
       return true;
+    }
+    const isCombobox = element.getAttribute("role") === "combobox" || Boolean(element.getAttribute("aria-autocomplete"));
+    if (isCombobox) {
+      if (String(element.value || "") === String(value || "") && element.getAttribute("aria-expanded") !== "true") return true;
+      element.focus();
+      setNativeValue(element, value, {blur: false});
+      await wait(140);
+      const controlsId = element.getAttribute("aria-controls");
+      const controlled = controlsId ? document.getElementById(controlsId) : null;
+      const candidates = [...(controlled || document).querySelectorAll("[role='option']")].filter(visible);
+      const normalizedWanted = text(value, 500).toLowerCase();
+      const exact = candidates.find(option => {
+        const label = text(option.textContent, 500).toLowerCase();
+        return label === normalizedWanted || label.includes(normalizedWanted) || normalizedWanted.includes(label);
+      });
+      const highlighted = candidates.find(option => option.getAttribute("aria-selected") === "true");
+      const selected = exact || highlighted;
+      if (selected) {
+        selected.click();
+        await wait(100);
+      } else {
+        element.dispatchEvent(new Event("blur", {bubbles: true}));
+      }
+      return String(element.value || "").trim() === String(value || "").trim()
+        && element.getAttribute("aria-invalid") !== "true";
     }
     if (String(element.value || "") === String(value || "")) return true;
     setNativeValue(element, value);
@@ -353,19 +432,26 @@
     const now = Date.now();
     const structure = JSON.stringify(snapshot.fields.map(field => [
       field.field_id, field.label, field.group_question, field.type,
-      field.required, field.options, Boolean(field.is_next), Boolean(field.is_submit),
+      field.required, field.options, field.value, Boolean(field.is_next), Boolean(field.is_submit),
     ]));
     structuralScans = structuralScans.filter(item => now - item.at <= LOOP_SCAN_WINDOW_MS);
     structuralScans.push({at: now, structure});
+    // Count the complete live value signature, not just the static form
+    // structure. A long form can legitimately need many passes; it is only a
+    // loop when the same values recur without net progress.
     return structuralScans.filter(item => item.structure === structure).length >= LOOP_SCAN_LIMIT;
   }
   async function scan() {
     if (stopped) return;
     const snapshot = extract();
     const unavailable = unavailablePostingReason(snapshot);
+    const pageBoundary = applicationBoundaryReason();
     let ready = null;
     if (!sessionId) {
-      ready = await say({type: "JOB_RADAR_CONTENT_READY", url: location.href, pageFailure: unavailable});
+      ready = await say({
+        type: "JOB_RADAR_CONTENT_READY", url: location.href, pageFailure: unavailable,
+        pageBoundary, directApplicationUrl: pageBoundary ? directApplicationURL() : "",
+      });
       if (ready?.error) {
         showBanner("Application paused", text(ready.error, 600), "warn", '<button data-action="retry">retry</button>');
         return;
@@ -374,6 +460,15 @@
         pageFailureReported = true;
         stopped = true;
         showBanner("Application stopped · posting unavailable", unavailable, "warn");
+        return;
+      }
+      if (ready?.boundary && pageBoundary) {
+        stopped = true;
+        showBanner(
+          ready?.navigating ? "Opening the direct employer application" : "Application paused · direct employer link needed",
+          ready?.navigating ? "The aggregator exposed a safe external Apply link. Job Radar is continuing in this tab automatically." : pageBoundary,
+          ready?.navigating ? "info" : "warn",
+        );
         return;
       }
       sessionId = ready?.session_id || "";
@@ -415,15 +510,24 @@
       showBanner("Application paused · conflicting choices", reason, "warn", '<button data-action="retry">retry after refresh</button>');
       return;
     }
+    const fileFills = (plan.fills || []).filter(fill => fill.file);
+    const fillsThisPass = fileFills.length ? fileFills : (plan.fills || []);
     const failedFiles = [];
+    const deferredFills = [];
     let uploadedResume = false;
-    (plan.fills || []).forEach(fill => {
+    let appliedFills = 0;
+    for (const fill of fillsThisPass) {
       const element = findField(fill.field_id);
-      if (!element) return;
-      const filled = chooseOption(element, fill.value, fill.options, fill.file);
+      if (!element) {
+        if (fill.file) failedFiles.push(fill); else deferredFills.push(fill);
+        continue;
+      }
+      const filled = await chooseOption(element, fill.value, fill.options, fill.file);
       if (fill.file && !filled) failedFiles.push(fill);
       if (fill.file && filled) uploadedResume = true;
-    });
+      if (!fill.file && filled) appliedFills += 1;
+      if (!fill.file && !filled) deferredFills.push(fill);
+    }
     if (failedFiles.length) {
       const reason = `Resume Studio selected ${text(failedFiles[0].file?.name || "a PDF", 180)}, but this page rejected the automatic upload.`;
       await say({type: "JOB_RADAR_EVENT", state: "blocked", message: reason, error: reason});
@@ -438,6 +542,19 @@
       showBanner("Resume uploaded · waiting for the posting", "The selected PDF is in the employer form. Waiting for the upload validation to finish before continuing.", "info", '<button data-action="hide">hide</button>');
       lastFingerprint = "";
       scheduleScan(1400);
+      return;
+    }
+    if (deferredFills.length) {
+      showBanner("Agent continuing after the form changed", `${deferredFills.length} field${deferredFills.length === 1 ? "" : "s"} moved while the page was updating. Rescanning the live form now.`, "info");
+      lastFingerprint = "";
+      scheduleScan(650);
+      return;
+    }
+    if (appliedFills) {
+      await say({type: "JOB_RADAR_EVENT", state: "filling", message: `Applied ${appliedFills} approved field${appliedFills === 1 ? "" : "s"}; verifying the live page before continuing.`});
+      showBanner("Agent verifying this page", `${appliedFills} approved field${appliedFills === 1 ? "" : "s"} applied. The agent is checking that the employer page kept each value before moving on.`, "info");
+      lastFingerprint = "";
+      scheduleScan(650);
       return;
     }
     const blockers = plan.blockers || [];

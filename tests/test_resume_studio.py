@@ -22,6 +22,41 @@ def test_response_data_preserves_structured_plan():
     assert data["experiences"][0]["source_id"] == "experience:a"
 
 
+def test_application_essay_prompt_uses_approved_context_and_no_fake_zero_limit(tmp_path, monkeypatch):
+    skill = tmp_path / ".codex" / "skills" / "warm-scholarship-essay" / "SKILL.md"
+    skill.parent.mkdir(parents=True)
+    skill.write_text("Write directly. Never invent facts. No em dashes.")
+    monkeypatch.setattr(Path, "home", classmethod(lambda cls: tmp_path))
+    monkeypatch.setattr(rs, "context_inventory", lambda root, limit=180: {"facts": []})
+    monkeypatch.setattr(rs, "application_context", lambda root: {"answers": [{
+        "question": "Why do you want to work at Notion?",
+        "value": "I care about tools that turn complex work into useful systems.",
+        "category": "essay", "reusable": True, "evidence_ids": ["owner-confirmed"],
+    }]})
+    captured = {}
+
+    def fake_provider(provider, prompt, *args, **kwargs):
+        captured["prompt"] = prompt
+        return {"ok": True, "data": {
+            "answer": "I care about tools that turn complex work into useful systems.",
+            "needs_owner_input": False, "missing_facts": [],
+            "evidence_ids": ["owner-confirmed"], "assumption": "",
+        }}
+
+    monkeypatch.setattr(rs, "run_provider", fake_provider)
+    result = rs.application_essay_answer(
+        tmp_path,
+        {"company": "Notion", "title": "Software Engineer", "description": "Build collaborative AI products."},
+        "Why do you want to work at Notion?",
+        session_id="session-1",
+    )
+
+    assert result["ok"] is True
+    assert captured["prompt"].count("No explicit limit") == 2
+    assert "APPROVED APPLICATION CONTEXT" in captured["prompt"]
+    assert "I care about tools that turn complex work into useful systems." in captured["prompt"]
+
+
 def test_sealed_panel_requires_each_attested_role_exactly_once():
     roles = [
         {"key": "evidence"},

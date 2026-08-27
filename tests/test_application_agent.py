@@ -1,4 +1,5 @@
 import json
+import datetime as dt
 from pathlib import Path
 
 import pytest
@@ -38,9 +39,14 @@ def test_top_five_provider_and_sensitive_categories_are_deterministic():
     assert infer_category({"label": "I certify that the information is accurate", "type": "checkbox"}) == "attestation"
     assert infer_category({"label": "LinkedIn", "type": "checkbox"}) == "attestation"
     assert infer_category({"label": "Yes", "group_question": "Are you legally authorized to work in the US?", "type": "button"}) == "work_authorization"
+    assert infer_category({"label": "Yes", "group_question": "Are you legally authorized to work in that country?", "type": "button"}) == "work_authorization"
     assert infer_category({"label": "He/Him", "group_question": "Pronouns", "type": "button"}) == "gender"
     assert infer_category({"label": "Yes", "group_question": "Do you have experience with LLMs?", "type": "button"}) == "llm_experience"
     assert infer_category({"label": "Yes", "group_question": "Can you work from our offices on Anchor Days?", "type": "button"}) == "work_schedule"
+    assert infer_category({"label": "Yes", "group_question": "Can you attend Quora coordination hours?", "type": "button"}) == "work_schedule"
+    assert infer_category({"label": "Python", "group_question": "Preferred programming language for your interview", "type": "button"}) == "interview_language"
+    assert infer_category({"label": "Bachelor's Degree", "group_question": "Degree Type", "type": "button"}) == "education"
+    assert infer_category({"label": "United States", "group_question": "Country where you are seeking work", "type": "button"}) == "work_location"
     assert infer_category({"label": "School", "name": "a-very-long-generated-field-name-that-must-not-turn-school-into-an-essay", "type": "text"}) == "education"
     assert infer_category({"label": "Resume", "type": "file"}) == "resume_file"
     assert infer_category({"label": "Cover Letter", "type": "file"}) == "cover_letter_file"
@@ -94,6 +100,67 @@ def test_non_error_application_progress_message_is_persisted(tmp_path: Path):
     assert stored["last_error"] == ""
 
 
+def test_repeated_queue_attachment_reuses_one_durable_session(tmp_path: Path):
+    first = create_session(tmp_path, job(), mode="batch", queue_id="queue-1")
+    second = create_session(tmp_path, job(), mode="batch", queue_id="queue-1")
+
+    assert second["session_id"] == first["session_id"]
+    assert second["queue_id"] == "queue-1"
+
+
+def test_country_word_does_not_hide_work_authorization_choice(tmp_path: Path):
+    save_answer(tmp_path, "Yes", "Yes", category="work_authorization")
+    session = create_session(tmp_path, job())
+    result = plan_form(
+        tmp_path,
+        session["session_id"],
+        job()["url"],
+        [
+            {"field_id": "auth-yes", "label": "Yes", "group_question": "Are you legally authorized to work in that country?", "type": "button", "required": True, "group_options": ["Yes", "No"]},
+            {"field_id": "auth-no", "label": "No", "group_question": "Are you legally authorized to work in that country?", "type": "button", "required": True, "group_options": ["Yes", "No"]},
+        ],
+    )
+
+    assert result["state"] == "filling"
+    assert [(item["field_id"], item["value"]) for item in result["fills"]] == [("auth-yes", "Yes")]
+    assert result["blockers"] == []
+
+
+def test_saved_scan_reclassifies_stale_work_authorization_category(tmp_path: Path):
+    save_answer(tmp_path, "Yes", "Yes", category="work_authorization")
+    session = create_session(tmp_path, job())
+    fields = [
+        {
+            "field_id": "auth-yes",
+            "label": "Yes",
+            "group_question": "Are you legally authorized to work in that country?",
+            "group_key": "work-auth",
+            "type": "button",
+            "required": True,
+            "group_options": ["Yes", "No"],
+            "category": "work_location",
+            "value": False,
+        },
+        {
+            "field_id": "auth-no",
+            "label": "No",
+            "group_question": "Are you legally authorized to work in that country?",
+            "group_key": "work-auth",
+            "type": "button",
+            "required": True,
+            "group_options": ["Yes", "No"],
+            "category": "work_location",
+            "value": False,
+        },
+    ]
+
+    result = plan_form(tmp_path, session["session_id"], job()["url"], fields)
+
+    assert [(item["field_id"], item["value"]) for item in result["fills"]] == [("auth-yes", "Yes")]
+    stored = get_session(tmp_path, session["session_id"])
+    assert {item["category"] for item in stored["last_form"]["fields"]} == {"work_authorization"}
+
+
 def test_approved_choice_answers_fill_attestations_and_optional_demographics(tmp_path: Path):
     save_answer(tmp_path, "Male", "Male", category="gender")
     save_answer(tmp_path, "I decline to self-identify", "I decline to self-identify", category="disability")
@@ -140,6 +207,72 @@ def test_category_specific_answers_fill_repeated_yes_groups_and_text_fields(tmp_
     assert not result["blockers"]
 
 
+def test_education_answers_require_an_exact_field_match(tmp_path: Path):
+    save_answer(
+        tmp_path, "Degree Type", "Undergraduate/Bachelors", category="education",
+        variants=["Bachelor's Degree", "Bachelor degree"],
+    )
+    session = create_session(tmp_path, job())
+    fields = [
+        {"field_id": "school", "label": "School Name", "type": "text", "required": True},
+        {"field_id": "major", "label": "Discipline/Field of Study", "type": "text", "required": True},
+        {"field_id": "graduation", "label": "Graduation Date", "type": "text", "required": True},
+    ]
+
+    missing = plan_form(tmp_path, session["session_id"], job()["url"], fields)
+
+    assert missing["fills"] == []
+    assert {item["field_id"] for item in missing["blockers"]} == {"school", "major", "graduation"}
+
+    save_answer(tmp_path, "School Name", "New Jersey Institute of Technology", category="education", variants=["University", "College"])
+    save_answer(tmp_path, "Discipline/Field of Study", "Computer Science", category="education", variants=["Major", "Field of Study"])
+    save_answer(tmp_path, "Graduation Date", "May 2027", category="education", variants=["Expected graduation date", "Pick date..."])
+    matched = plan_form(tmp_path, session["session_id"], job()["url"], fields)
+
+    assert {item["field_id"]: item["value"] for item in matched["fills"]} == {
+        "school": "New Jersey Institute of Technology",
+        "major": "Computer Science",
+        "graduation": "May 2027",
+    }
+    assert matched["blockers"] == []
+
+
+def test_optional_unknown_written_fields_do_not_pause_the_application(tmp_path: Path):
+    session = create_session(tmp_path, job())
+    result = plan_form(
+        tmp_path,
+        session["session_id"],
+        job()["url"],
+        [
+            {"field_id": "other", "label": "If selected Other, please explain", "type": "textarea", "required": False},
+            {"field_id": "submit", "label": "Submit application", "type": "button", "is_submit": True},
+        ],
+        final=True,
+    )
+
+    assert result["state"] == "awaiting_confirmation"
+    assert result["blockers"] == []
+    assert [item["field_id"] for item in result["optional_review"]] == ["other"]
+    assert result["review"]["fields"] == []
+
+
+def test_role_specific_written_answer_cannot_leak_into_another_application(tmp_path: Path):
+    first_session = create_session(tmp_path, job())
+    save_answer(
+        tmp_path, "Why do you want to work here?", "This answer is specific to Example Co.",
+        category="essay", reusable=False, session_id=first_session["session_id"],
+    )
+    field = {"field_id": "why", "label": "Why do you want to work here?", "type": "textarea", "required": True}
+
+    first = plan_form(tmp_path, first_session["session_id"], job()["url"], [field])
+    assert first["fills"][0]["value"] == "This answer is specific to Example Co."
+
+    second_session = create_session(tmp_path, {**job(), "id": "job-2", "company": "Different Co"})
+    second = plan_form(tmp_path, second_session["session_id"], job()["url"], [field])
+    assert second["fills"] == []
+    assert second["blockers"][0]["category"] == "essay"
+
+
 def test_unrelated_yes_no_answers_cannot_fill_a_generic_attestation(tmp_path: Path):
     save_answer(tmp_path, "Yes", "Yes", category="work_authorization")
     save_answer(tmp_path, "None", "None", category="sponsorship", variants=["No"])
@@ -168,8 +301,8 @@ def test_review_collapses_choice_siblings_and_duplicate_resume_inputs(tmp_path: 
         session["session_id"],
         job()["url"],
         [
-            {"field_id": "gender-male", "name": "gender", "label": "Male", "group_question": "How would you describe your gender identity?", "type": "radio", "required": False, "group_options": ["Male", "Female"]},
-            {"field_id": "gender-female", "name": "gender", "label": "Female", "group_question": "How would you describe your gender identity?", "type": "radio", "required": False, "group_options": ["Male", "Female"]},
+            {"field_id": "gender-male", "name": "gender", "label": "Male", "group_question": "How would you describe your gender identity?", "type": "radio", "required": False, "group_options": ["Male", "Female"], "value": True},
+            {"field_id": "gender-female", "name": "gender", "label": "Female", "group_question": "How would you describe your gender identity?", "type": "radio", "required": False, "group_options": ["Male", "Female"], "value": False},
             {"field_id": "resume-empty", "label": "", "category": "resume_file", "type": "file", "required": False, "value": ""},
             {"field_id": "resume", "label": "Resume", "category": "resume_file", "type": "file", "required": True, "value": "tailored.pdf"},
         ],
@@ -353,6 +486,15 @@ def test_final_review_is_explicit_and_page_bound(tmp_path: Path):
         {"field_id": "submit", "label": "Submit application", "type": "button", "is_submit": True},
     ]
     result = plan_form(tmp_path, session["session_id"], job()["url"], fields, final=True)
+    assert result["state"] == "filling"
+    assert result["review"] is None
+    assert {item["field_id"] for item in result["fills"]} == {"email", "why"}
+    live_fields = [
+        {**fields[0], "value": "victor@example.com"},
+        {**fields[1], "value": "I build reliable systems."},
+        fields[2],
+    ]
+    result = plan_form(tmp_path, session["session_id"], job()["url"], live_fields, final=True)
     assert result["state"] == "awaiting_confirmation"
     assert result["review"]["fields"][0]["value"] == "victor@example.com"
     assert result["review"]["fields"][1]["value"] == "I build reliable systems."
@@ -366,11 +508,6 @@ def test_final_review_is_explicit_and_page_bound(tmp_path: Path):
         result["review"]["page_fingerprint"],
     )
     assert get_session(tmp_path, session["session_id"])["state"] == "submitting"
-    live_fields = [
-        {**fields[0], "value": "victor@example.com"},
-        {**fields[1], "value": "I build reliable systems."},
-        fields[2],
-    ]
     assert verify_submission_page(tmp_path, session["session_id"], job()["url"], live_fields)["ok"] is True
 
     changed_value = [live_fields[0], {**live_fields[1], "value": "A different answer"}, fields[2]]
@@ -399,15 +536,48 @@ def test_identical_review_rescan_is_rejected_until_the_page_changes(tmp_path: Pa
         {"field_id": "submit", "label": "Submit application", "type": "button", "is_submit": True},
     ]
     first = plan_form(tmp_path, session["session_id"], job()["url"], fields, final=True)
-    assert first["state"] == "awaiting_confirmation"
-    with pytest.raises(ValueError, match="review is already current"):
-        plan_form(tmp_path, session["session_id"], job()["url"], fields, final=True)
+    assert first["state"] == "filling"
+    assert first["review"] is None
     changed = [{**fields[0], "value": "victor@example.com"}, fields[1]]
-    with pytest.raises(ValueError, match="explicit rescan"):
+    reviewed = plan_form(tmp_path, session["session_id"], job()["url"], changed, final=True)
+    assert reviewed["state"] == "awaiting_confirmation"
+    with pytest.raises(ValueError, match="review is already current"):
         plan_form(tmp_path, session["session_id"], job()["url"], changed, final=True)
+    different = [{**fields[0], "value": "other@example.com"}, fields[1]]
+    with pytest.raises(ValueError, match="explicit rescan"):
+        plan_form(tmp_path, session["session_id"], job()["url"], different, final=True)
     record_event(tmp_path, session["session_id"], "filling", message="Owner requested a fresh application-page scan.")
     rebuilt = plan_form(tmp_path, session["session_id"], job()["url"], changed, final=True)
     assert rebuilt["state"] == "awaiting_confirmation"
+
+
+def test_recent_owner_click_can_confirm_an_expired_but_unchanged_review(tmp_path: Path):
+    save_answer(tmp_path, "Email", "victor@example.com", category="email")
+    session = create_session(tmp_path, job())
+    fields = [
+        {"field_id": "email", "label": "Email", "type": "email", "required": True, "value": "victor@example.com"},
+        {"field_id": "submit", "label": "Submit application", "type": "button", "is_submit": True},
+    ]
+    reviewed = plan_form(tmp_path, session["session_id"], job()["url"], fields, final=True)
+    store_path = tmp_path / "CV" / ".resume_studio" / "application_agent.json"
+    stored = json.loads(store_path.read_text(encoding="utf-8"))
+    stored["sessions"][session["session_id"]]["review"]["expires_at"] = "2020-01-01T00:00:00Z"
+    store_path.write_text(json.dumps(stored), encoding="utf-8")
+
+    with pytest.raises(ValueError, match="review confirmation expired"):
+        apply_confirmation(
+            tmp_path, session["session_id"], reviewed["review"]["review_hash"],
+            reviewed["review"]["nonce"], reviewed["review"]["page_fingerprint"],
+        )
+
+    now = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
+    renewed = apply_confirmation(
+        tmp_path, session["session_id"], reviewed["review"]["review_hash"],
+        reviewed["review"]["nonce"], reviewed["review"]["page_fingerprint"],
+        owner_approved_at=now.isoformat().replace("+00:00", "Z"),
+        approval_expires_at=(now + dt.timedelta(minutes=15)).isoformat().replace("+00:00", "Z"),
+    )
+    assert renewed["state"] == "submitting"
 
 
 def test_owner_entered_essay_and_checked_attestation_are_reviewable(tmp_path: Path):

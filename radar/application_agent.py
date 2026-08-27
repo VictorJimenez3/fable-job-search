@@ -65,12 +65,27 @@ SENSITIVE_CATEGORIES = {
     "phone",
 }
 
+# Only categories with one unambiguous profile value may fall back by category
+# alone. Education and location intentionally stay out of this set: a broad
+# category match can otherwise put a degree into a school/major/date field or a
+# relocation answer into a current-location field.
+SAFE_CATEGORY_FALLBACKS = {
+    "full_name",
+    "first_name",
+    "last_name",
+    "email",
+    "phone",
+    "linkedin",
+    "portfolio_link",
+}
+
 QUESTION_LIMIT = 1200
 VALUE_LIMIT = 20000
 MAX_CONTEXT_ENTRIES = 500
 MAX_SESSIONS = 100
 MAX_ISSUES = 300
 REVIEW_TTL_SECONDS = 15 * 60
+CONFIRMATION_TTL_SECONDS = 24 * 60 * 60
 
 
 def utc_now() -> str:
@@ -153,14 +168,22 @@ def infer_category(field: Dict[str, Any]) -> str:
     # pages often label options "LinkedIn", "Website", or with a city; using
     # those option labels as profile categories produces a false fill.
     if field_type in {"checkbox", "radio", "button", "select"}:
+        if re.search(r"\b(preferred programming language|interview language|language for (?:your )?interview)\b", label):
+            return "interview_language"
+        if re.search(r"\b(coordination hours|availability hours|core hours)\b", label):
+            return "work_schedule"
         if re.search(r"\b(llm\w*|large language model|language model|generative ai)\b", label):
             return "llm_experience"
         if re.search(r"\b(anchor days|work from our offices|on[- ]?site|in[- ]?office)\b", label):
             return "work_schedule"
+        if re.search(r"\b(school|university|college|degree|major|field of study|graduat)\b", label):
+            return "education"
         if re.search(r"\b(sponsor|sponsorship|visa)\b", label):
             return "sponsorship"
         if re.search(r"\b(work authorization|legally authorized|authorized to work)\b", label):
             return "work_authorization"
+        if re.search(r"\b(country|countries)\b", label) and re.search(r"\b(work|employment|hired|seeking)\b", label):
+            return "work_location"
         if re.search(r"\b(relocat\w*|location preference|willing to move)\b", label):
             return "location"
         if re.search(r"\b(disability|disabled|accommodation)\b", label):
@@ -340,11 +363,14 @@ def _canonical_resume_answers(root: Path) -> Dict[str, Dict[str, Any]]:
         }[key]
         category = categories[key]
         answer_id = f"canonical-{key}"
+        variants = [question, key.replace("_", " ")]
+        if key == "school":
+            variants.extend(["School Name", "University", "College", "University or College"])
         answers[answer_id] = {
             "answer_id": answer_id,
             "question": question,
             "normalized_question": normalize_question(question),
-            "variants": [question, key.replace("_", " ")],
+            "variants": variants,
             "category": category,
             "value": value,
             "reusable": True,
@@ -505,7 +531,7 @@ def _answer_matches_field(answer: Dict[str, Any], field: Dict[str, Any], normali
     return False
 
 
-def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any]) -> List[Dict[str, Any]]:
+def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any], session_id: str = "") -> List[Dict[str, Any]]:
     answers = (store.get("context") or {}).get("answers", {})
     if not isinstance(answers, dict):
         return []
@@ -515,12 +541,19 @@ def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any]) -> List[Dic
     mappings = (store.get("context") or {}).get("mappings", {})
     mapped_id = mappings.get(key) or mappings.get(category)
     values: List[Dict[str, Any]] = []
+    def available(answer: Any) -> bool:
+        if not isinstance(answer, dict):
+            return False
+        if answer.get("reusable", True):
+            return True
+        return bool(session_id and session_id in (answer.get("session_ids") or []))
+
     if mapped_id and isinstance(answers.get(mapped_id), dict):
         mapped = answers[mapped_id]
-        if _answer_allowed_for_field(mapped, field):
+        if available(mapped) and _answer_allowed_for_field(mapped, field):
             values.append(mapped)
     for answer in answers.values():
-        if not isinstance(answer, dict) or answer in values:
+        if not available(answer) or answer in values:
             continue
         if _answer_allowed_for_field(answer, field) and _answer_matches_field(answer, field, normalized):
             values.append(answer)
@@ -529,7 +562,7 @@ def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any]) -> List[Dic
         if "relocat" in group_question:
             values.extend(
                 answer for answer in answers.values()
-                if isinstance(answer, dict)
+                if available(answer)
                 and answer.get("select_all")
                 and clean_text(answer.get("category"), 80) == "location"
             )
@@ -553,13 +586,40 @@ def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any]) -> List[Dic
         values = category_values
     elif category_values:
         values = category_values + [answer for answer in values if answer not in category_values]
-    if not values and not choice_control and category not in {"other", "essay", "attestation", "resume_file"}:
+    if not values and not choice_control and category in SAFE_CATEGORY_FALLBACKS:
         for answer in answers.values():
             if not isinstance(answer, dict) or not answer.get("reusable", True):
                 continue
             if clean_text(answer.get("category"), 80) == category and _answer_allowed_for_field(answer, field):
                 values.append(answer)
     return values
+
+
+def _field_value_matches_fill(field: Dict[str, Any], value: Any) -> bool:
+    """Return whether the employer page already contains an approved value.
+
+    Form planning is deliberately two-pass. The first pass returns only
+    changes that the browser still needs to apply. A later scan can create the
+    final review only after those exact values are visible on the live page.
+    """
+    field_type = clean_text(field.get("type"), 32).lower()
+    current = field.get("value")
+    if field_type in {"radio", "checkbox", "button"}:
+        return current is True or normalize_question(current) in {"checked", "true", "1"}
+    if field_type == "select":
+        current_value = normalize_question(current)
+        wanted = normalize_question(value)
+        if current_value and current_value == wanted:
+            return True
+        for option in field.get("options") or []:
+            if not isinstance(option, dict):
+                continue
+            option_value = normalize_question(option.get("value"))
+            option_label = normalize_question(option.get("label"))
+            if wanted in {option_value, option_label} and current_value in {option_value, option_label}:
+                return True
+        return False
+    return normalize_question(current) == normalize_question(value) and bool(normalize_question(value))
 
 
 def _choice_group_key(field: Dict[str, Any]) -> str:
@@ -682,6 +742,7 @@ def _new_session(job: Dict[str, Any], mode: str = "per_role", queue_id: str = ""
         "title": clean_text(job.get("title"), 360),
         "url": safe_url(job.get("url")),
         "locations": [clean_text(item, 160) for item in (job.get("locations") or [])[:12]],
+        "description": clean_text(job.get("description"), VALUE_LIMIT),
     }
     return {
         "session_id": uuid.uuid4().hex,
@@ -706,6 +767,48 @@ def _new_session(job: Dict[str, Any], mode: str = "per_role", queue_id: str = ""
 
 def create_session(root: Path, job: Dict[str, Any], mode: str = "per_role", queue_id: str = "") -> Dict[str, Any]:
     store = load_store(root)
+    clean_queue_id = clean_text(queue_id, 100)
+    clean_job_id = clean_text(job.get("id"), 160)
+    clean_job_url = safe_url(job.get("url"))
+    if clean_queue_id:
+        matching = [
+            session for session in store.get("sessions", {}).values()
+            if isinstance(session, dict)
+            and clean_text(session.get("queue_id"), 100) == clean_queue_id
+            and (
+                clean_text((session.get("job") or {}).get("id"), 160) == clean_job_id
+                or safe_url((session.get("job") or {}).get("url")) == clean_job_url
+            )
+        ]
+        if matching:
+            matching.sort(
+                key=lambda session: timestamp(session.get("updated_at")) or timestamp(session.get("created_at")) or 0,
+                reverse=True,
+            )
+            session = matching[0]
+            # A worker restart or repeated queue click must reattach to the
+            # same durable session. Creating another session for one queue ID
+            # loses generated writing, review state, and page progress.
+            session["mode"] = mode if mode in {"per_role", "batch"} else session.get("mode", "per_role")
+            session["job"] = _new_session(job, mode=mode, queue_id=clean_queue_id)["job"]
+            session["url"] = session["job"]["url"]
+            session["provider"] = provider_for_url(session["url"])
+            if session.get("state") in TERMINAL_STATES:
+                session.update({
+                    "state": "queued", "blockers": [], "optional_review": [],
+                    "review": None, "confirmation": None, "last_error": "",
+                    "last_message": "Reopened the existing queue session for a fresh live-page check.",
+                })
+            for duplicate in matching[1:]:
+                if duplicate.get("state") not in TERMINAL_STATES:
+                    duplicate.update({
+                        "state": "cancelled", "review": None, "confirmation": None,
+                        "last_error": "",
+                        "last_message": f"Superseded by durable session {session['session_id']} for the same queue item.",
+                        "updated_at": utc_now(),
+                    })
+            _save_session(root, store, session)
+            return public_session(session)
     session = _new_session(job, mode=mode, queue_id=queue_id)
     store["sessions"][session["session_id"]] = session
     store["sessions"] = dict(list(store["sessions"].items())[-MAX_SESSIONS:])
@@ -743,6 +846,7 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
         raise ValueError("application review is ready; use an explicit rescan before changing the page")
     normalized_fields: List[Dict[str, Any]] = []
     fills: List[Dict[str, Any]] = []
+    decisions: List[Dict[str, Any]] = []
     blockers: List[Dict[str, Any]] = []
     optional_review: List[Dict[str, Any]] = []
     for index, raw in enumerate(fields):
@@ -752,7 +856,10 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
         field["field_id"] = clean_text(field.get("field_id") or field.get("id") or f"field-{index}", 160)
         field["label"] = clean_text(field.get("label") or field.get("question") or field.get("name"), 500)
         field["type"] = clean_text(field.get("type"), 32).lower()
-        field["category"] = clean_text(field.get("category") or infer_category(field), 80)
+        # Category is derived from the live field structure. Never trust a
+        # category echoed from an older saved scan: classifier fixes would
+        # otherwise leave recovered sessions stuck on the stale value.
+        field["category"] = clean_text(infer_category(field), 80)
         field["required"] = bool(field.get("required"))
         field["is_submit"] = bool(field.get("is_submit"))
         normalized_fields.append(field)
@@ -760,18 +867,21 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
             continue
         category = field["category"]
         sensitive = is_sensitive(category, field)
-        candidates = _answer_candidates(store, field)
+        candidates = _answer_candidates(store, field, session["session_id"])
         answer = candidates[0] if candidates else None
         if category == "attestation":
             if answer and clean_text(answer.get("value"), VALUE_LIMIT):
-                fills.append({
+                decision = {
                     "field_id": field["field_id"],
                     "value": _approved_fill_value(field, answer),
                     "answer_id": clean_text(answer.get("answer_id"), 100),
                     "category": category,
                     "sensitive": sensitive,
                     "options": field.get("options") or [],
-                })
+                }
+                decisions.append(decision)
+                if not _field_value_matches_fill(field, decision["value"]):
+                    fills.append(decision)
                 continue
             if has_field_value(field.get("value")):
                 item = _field_review(field, field.get("value"))
@@ -817,14 +927,17 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
             continue
         if answer and clean_text(answer.get("value"), VALUE_LIMIT):
             value = _approved_fill_value(field, answer)
-            fills.append({
+            decision = {
                 "field_id": field["field_id"],
                 "value": value,
                 "answer_id": clean_text(answer.get("answer_id"), 100),
                 "category": category,
                 "sensitive": sensitive,
                 "options": field.get("options") or [],
-            })
+            }
+            decisions.append(decision)
+            if not _field_value_matches_fill(field, value):
+                fills.append(decision)
             continue
         if has_field_value(field.get("value")):
             item = _field_review(field, field.get("value"))
@@ -838,7 +951,7 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
             else "No approved answer exists; review or answer it if the employer asks for it."
         )
         owner_only = category in {"work_authorization", "sponsorship"}
-        if category in {"essay", "cover_letter"} or field["required"] or owner_only:
+        if field["required"] or owner_only:
             blockers.append(item)
         else:
             optional_review.append(item)
@@ -859,11 +972,11 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
 
     resolved_groups = {
         single_choice_group(field_by_id.get(fill.get("field_id"), {}))
-        for fill in fills
+        for fill in decisions
         if single_choice_group(field_by_id.get(fill.get("field_id"), {}))
     }
     if resolved_groups:
-        selected_ids = {fill.get("field_id") for fill in fills}
+        selected_ids = {fill.get("field_id") for fill in decisions}
 
         def unresolved_alternative(item: Dict[str, Any]) -> bool:
             field = field_by_id.get(item.get("field_id"), {})
@@ -890,7 +1003,7 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
     session["optional_review"] = display_optional_review
     session["review"] = None
     session["confirmation"] = None
-    fill_by_id = {item["field_id"]: item for item in fills}
+    fill_by_id = {item["field_id"]: item for item in decisions}
     review_fields: List[Dict[str, Any]] = []
     for field in normalized_fields:
         if field.get("is_submit"):
@@ -903,7 +1016,10 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
         review_fields.append(_field_review(field, review_value, answer))
     session["review_fields"] = _compact_review_items(review_fields)
     session["state"] = "blocked" if blockers else "filling"
-    if final and not blockers:
+    # Never mint a review token from values that have only been planned. The
+    # browser applies this pass, rescans, and receives a page-bound review only
+    # after the employer DOM reports the approved values back.
+    if final and not blockers and not fills:
         _prepare_review(session)
     _save_session(root, store, session)
     return {
@@ -948,13 +1064,21 @@ def _prepare_review(session: Dict[str, Any]) -> Dict[str, Any]:
         # POSTs the final snapshot; this fallback still yields a safe card.
         proposed.append(_field_review(field, "", answer))
         proposed[-1]["category"] = category
+    review_fields = session.get("review_fields") or proposed
+    # Untouched optional controls are not owner decisions and made the old
+    # review card enormous. Keep every required field and every actual value,
+    # including sensitive values, while omitting blank optional noise.
+    review_fields = [
+        field for field in review_fields
+        if field.get("required") or _review_value_selected(field.get("value"))
+    ]
     review_payload = {
         "session_id": session["session_id"],
         "job": session.get("job") or {},
         "url": session.get("url") or "",
         "provider": session.get("provider") or "generic",
         "page_fingerprint": session.get("page_fingerprint") or "",
-        "fields": session.get("review_fields") or proposed,
+        "fields": review_fields,
         "blockers": session.get("blockers") or [],
     }
     digest = review_hash(review_payload)
@@ -1027,6 +1151,12 @@ def save_answer(
         "category": category,
         "value": value,
         "reusable": bool(reusable),
+        "session_ids": (
+            [] if reusable else list(dict.fromkeys(
+                ([clean_text(session_id, 100)] if clean_text(session_id, 100) else [])
+                + [clean_text(item, 100) for item in (existing.get("session_ids") or []) if clean_text(item, 100)]
+            ))[:20]
+        ),
         "sensitive": bool(is_sensitive(category) if sensitive is None else sensitive),
         "evidence_ids": [clean_text(item, 140) for item in (evidence_ids or []) if clean_text(item, 140)][:20],
         "updated_at": utc_now(),
@@ -1086,7 +1216,15 @@ def record_event(root: Path, session_id: str, state: str, message: str = "", err
     return public_session(session)
 
 
-def apply_confirmation(root: Path, session_id: str, review_hash_value: str, nonce: str, page_fingerprint: str = "") -> Dict[str, Any]:
+def apply_confirmation(
+    root: Path,
+    session_id: str,
+    review_hash_value: str,
+    nonce: str,
+    page_fingerprint: str = "",
+    owner_approved_at: str = "",
+    approval_expires_at: str = "",
+) -> Dict[str, Any]:
     store = load_store(root)
     session = store["sessions"].get(clean_text(session_id, 100))
     if not isinstance(session, dict) or not isinstance(session.get("review"), dict):
@@ -1098,17 +1236,32 @@ def apply_confirmation(root: Path, session_id: str, review_hash_value: str, nonc
         raise ValueError("review card changed; reopen it before confirming")
     if not secrets.compare_digest(clean_text(review.get("nonce"), 100), clean_text(nonce, 100)):
         raise ValueError("review confirmation token is invalid")
+    now = dt.datetime.now(dt.timezone.utc).timestamp()
     expires = timestamp(review.get("expires_at"))
-    if expires is None or expires < dt.datetime.now(dt.timezone.utc).timestamp():
-        raise ValueError("review confirmation expired")
+    effective_expiry = expires
+    if expires is None or expires < now:
+        approved = timestamp(owner_approved_at)
+        renewed_expiry = timestamp(approval_expires_at)
+        # A recent owner click may renew an old display card only briefly.
+        # Hash, nonce, fingerprint, and live field values are still checked
+        # independently before the browser is allowed to click Submit.
+        fresh_owner_action = (
+            approved is not None
+            and renewed_expiry is not None
+            and now - CONFIRMATION_TTL_SECONDS <= approved <= now + 60
+            and now < renewed_expiry <= approved + CONFIRMATION_TTL_SECONDS + 60
+        )
+        if not fresh_owner_action:
+            raise ValueError("review confirmation expired")
+        effective_expiry = renewed_expiry
     expected = clean_text(review.get("page_fingerprint"), 80)
     if page_fingerprint and expected and not secrets.compare_digest(expected, clean_text(page_fingerprint, 80)):
         raise ValueError("the application page changed; review it again")
     session["confirmation"] = {
         "review_hash": review["review_hash"],
         "page_fingerprint": expected,
-        "approved_at": utc_now(),
-        "expires_at": review["expires_at"],
+        "approved_at": clean_text(owner_approved_at, 80) or utc_now(),
+        "expires_at": clean_text(approval_expires_at, 80) if effective_expiry != expires else review["expires_at"],
     }
     session["state"] = "submitting"
     _save_session(root, store, session)

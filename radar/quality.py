@@ -50,7 +50,7 @@ _PENALTY_WRONG_ROLE = 25
 _PENALTY_SOME_EXPERIENCE = 10
 _PENALTY_DEGREE_MISMATCH = 45
 
-PROMPT = """You screen job postings for a computer-science new grad (class of 2026, US).
+PROMPT = """You screen job postings for a computer-science new grad (class of 2027, US).
 Job: {title} — {company}
 Posting text (may be truncated or noisy):
 ---

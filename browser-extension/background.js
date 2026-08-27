@@ -70,6 +70,22 @@ function safeURL(value) {
   } catch (_) { return ""; }
 }
 
+function applicationIdentity(value) {
+  const job = value?.job && typeof value.job === "object" ? value.job : value;
+  const href = safeURL(job?.url || value?.url || value);
+  if (href) {
+    const url = new URL(href);
+    url.hash = "";
+    for (const key of [...url.searchParams.keys()]) {
+      if (/^(?:utm_.+|embed|source|ref|referrer)$/i.test(key)) url.searchParams.delete(key);
+    }
+    const path = url.pathname.replace(/\/$/, "") || "/";
+    return `url:${url.origin.toLowerCase()}${path}${url.search}`;
+  }
+  const id = String(job?.id || "").trim();
+  return id ? `id:${id}` : "";
+}
+
 async function config() {
   const stored = await chrome.storage.local.get({cloudUrl: DEFAULT_CLOUD_URL, agentToken: "", autoContinue: true, maxConcurrentApplications: 3});
   return {...stored, cloudUrl: String(stored.cloudUrl || DEFAULT_CLOUD_URL).replace(/\/$/, "")};
@@ -118,7 +134,8 @@ async function createSession(tabId, job, mode = "per_role", queueId = "") {
   const session = await local("/api/application/session", {
     method: "POST", body: JSON.stringify({job, mode, queue_id: queueId}),
   });
-  tabs.set(tabId, {...tabs.get(tabId), job, mode, queueId, sessionId: session.session_id, state: session.state});
+  tabs.set(tabId, {...tabs.get(tabId), job, mode, queueId, sessionId: session.session_id,
+    state: session.state, essayAttempts: new Set()});
   return session;
 }
 
@@ -221,6 +238,15 @@ async function startJob(job, mode = "per_role", queueId = "") {
   const url = safeURL(job?.url);
   if (!url || !job?.id || !job?.company || !job?.title) throw new Error("A complete safe job snapshot is required");
   const active = mode !== "batch";
+  const existing = (await chrome.tabs.query({}))
+    .filter(candidate => !tabs.has(candidate.id) && applicationIdentity(candidate) === applicationIdentity(job))
+    .sort((left, right) => Number(right.lastAccessed || 0) - Number(left.lastAccessed || 0))[0];
+  if (existing) {
+    tabs.set(existing.id, {job, mode, queueId, sessionId: "", createdAt: Date.now(), state: "opening"});
+    if (active) await chrome.tabs.update(existing.id, {active: true});
+    await send(existing.id, {type: "JOB_RADAR_RESCAN"});
+    return {tab_id: existing.id, url: existing.url || url, reused: true};
+  }
   const tab = await chrome.tabs.create({active});
   try {
     const opened = await navigateQueuedTab(tab.id, url, active);
@@ -263,10 +289,12 @@ async function repairTrackedTabs(items) {
 
 async function recoverOrphanedQueue(items) {
   const openTabs = await chrome.tabs.query({});
+  const claimedTabIds = new Set(tabs.keys());
   for (const item of items) {
     const activelyRunning = ["opening", "filling"].includes(item.state);
     const parkedButAttachable = ["blocked", "awaiting_confirmation"].includes(item.state);
-    if (!activelyRunning && !parkedButAttachable) continue;
+    const recoveredQueueWithSession = item.state === "queued" && Boolean(item.session_id);
+    if (!activelyRunning && !parkedButAttachable && !recoveredQueueWithSession) continue;
     const tracked = [...tabs.entries()].find(([, row]) => row.queueId === item.queue_id);
     if (tracked) {
       const [tabId, row] = tracked;
@@ -279,10 +307,9 @@ async function recoverOrphanedQueue(items) {
     }
     const target = safeURL(item.job?.url);
     const existing = openTabs
-      .filter(tab => target && safeURL(tab.url) === target)
+      .filter(tab => !claimedTabIds.has(tab.id) && target && applicationIdentity(tab) === applicationIdentity(item.job))
       .sort((left, right) => Number(right.lastAccessed || 0) - Number(left.lastAccessed || 0))[0];
     if (existing) {
-      try { await chrome.tabs.reload(existing.id); } catch (error) { console.warn("Job Radar could not reload matching application tab", error); }
       let sessionId = "";
       if (item.session_id) {
         try {
@@ -291,6 +318,8 @@ async function recoverOrphanedQueue(items) {
         } catch (_) {}
       }
       tabs.set(existing.id, {job: item.job, mode: "batch", queueId: item.queue_id, sessionId, createdAt: Date.now()});
+      claimedTabIds.add(existing.id);
+      await send(existing.id, {type: "JOB_RADAR_RESCAN"});
       continue;
     }
     // A blocked/review-ready role is intentionally parked. Reattach it only
@@ -334,7 +363,10 @@ async function syncSession(tabId) {
       await local("/api/application/confirm", {method: "POST", body: JSON.stringify({
         session_id: row.sessionId, review_hash: item.confirmation.review_hash,
         nonce: item.review?.nonce || "", page_fingerprint: item.confirmation.page_fingerprint,
+        owner_approved_at: item.confirmation.approved_at || "",
+        approval_expires_at: item.confirmation.expires_at || "",
       })});
+      row.state = "submitting";
       await send(tabId, {type: "JOB_RADAR_SUBMISSION_APPROVED"});
     }
   } catch (error) {
@@ -347,14 +379,19 @@ const AUTO_RECOVERABLE_BLOCKERS = new Set(["resume_file", "essay", "cover_letter
 
 function recoveredSessionState(session) {
   const blockers = Array.isArray(session?.blockers) ? session.blockers : [];
+  // Display-card expiry is not a reason to make the owner reopen the ATS.
+  // A fresh Confirm action is valid only for the exact stored hash, nonce,
+  // and fingerprint, and the live page is still reverified before Submit.
+  if (session?.state === "awaiting_confirmation") return session.state;
   if (session?.state !== "blocked" || !blockers.length) return session?.state;
   return blockers.every(blocker => AUTO_RECOVERABLE_BLOCKERS.has(String(blocker?.category || "")))
     ? "queued"
     : session.state;
 }
 
-function localQueueRecoveryItems(value) {
+function localQueueRecoveryItems(value, cloudItems = []) {
   const sessions = Array.isArray(value?.sessions) ? value.sessions : [];
+  const cloudByQueue = new Map((Array.isArray(cloudItems) ? cloudItems : []).map(item => [item?.queue_id, item]));
   const latest = new Map();
   for (const session of sessions) {
     if (!session || !RECOVERABLE_QUEUE_STATES.has(session.state)) continue;
@@ -366,41 +403,97 @@ function localQueueRecoveryItems(value) {
     const currentStamp = Date.parse(String(current?.updated_at || "")) || 0;
     if (!current || stamp >= currentStamp) latest.set(queueId, session);
   }
-  return [...latest.values()].map(session => {
-    const state = recoveredSessionState(session);
+  const statePriority = {submitting: 6, awaiting_confirmation: 5, filling: 4, opening: 3, blocked: 2, queued: 1};
+  const uniqueSessions = [...latest.values()].sort((left, right) => {
+    const stateDelta = (statePriority[right?.state] || 0) - (statePriority[left?.state] || 0);
+    if (stateDelta) return stateDelta;
+    return (Date.parse(String(right?.updated_at || "")) || 0) - (Date.parse(String(left?.updated_at || "")) || 0);
+  }).filter((session, index, all) => {
+    const identity = applicationIdentity(session.job);
+    return identity && all.findIndex(candidate => applicationIdentity(candidate.job) === identity) === index;
+  });
+  return uniqueSessions.map(session => {
+    const cloudItem = cloudByQueue.get(session.queue_id);
+    const confirmedSameReview = Boolean(
+      cloudItem?.confirmation
+      && session?.review
+      && cloudItem.confirmation.review_hash === session.review.review_hash
+      && cloudItem.confirmation.page_fingerprint === session.review.page_fingerprint
+    );
+    const state = confirmedSameReview ? session.state : recoveredSessionState(session);
+    const recoveryReset = state === "queued" && session.state !== "queued";
     return ({
     queue_id: session.queue_id,
     session_id: session.session_id || "",
     state,
     created_at: session.created_at || "",
     updated_at: session.updated_at || "",
-    message: state === "queued" && session.state === "blocked"
-      ? "Requeued because Resume Studio or the writing agent can now resolve the saved blockers."
+    recovery_reset: recoveryReset,
+    message: recoveryReset
+      ? session.state === "awaiting_confirmation"
+        ? "Requeued because the saved page-bound confirmation expired. A fresh review will be created from the live page."
+        : "Requeued because Resume Studio or the writing agent can now resolve the saved blockers."
       : session.last_message || session.last_error || `Recovered local ${session.state} session`,
     error: session.last_error || "",
     job: session.job,
-    blockers: Array.isArray(session.blockers) ? session.blockers : [],
+    blockers: recoveryReset ? [] : Array.isArray(session.blockers) ? session.blockers : [],
     resume: session.resume || null,
-    review: session.review || null,
-    confirmation: session.confirmation || null,
+    review: recoveryReset ? null : session.review || null,
+    confirmation: recoveryReset ? null : session.confirmation || null,
     });
   });
 }
 
-async function recoverLocalQueue() {
+async function recoverLocalQueue(cloudItems = []) {
   let localSessions;
   try { localSessions = await local("/api/application/sessions"); }
   catch (error) { return {items: [], error: noteQuota(error)}; }
-  const items = localQueueRecoveryItems(localSessions);
+  const items = localQueueRecoveryItems(localSessions, cloudItems);
   if (!items.length) return {items: [], error: ""};
   try {
     const result = await cloud("/api/application-agent", {
       method: "POST", body: JSON.stringify({action: "recover", items}),
     });
+    for (const item of items.filter(value => value.recovery_reset && value.session_id)) {
+      try {
+        await local("/api/application/event", {method: "POST", body: JSON.stringify({
+          session_id: item.session_id, state: "filling",
+          message: "Recovered from a stale blocker or expired page-bound review; rebuilding from the live page.",
+        })});
+      } catch (error) { console.warn("Job Radar local recovery reset", error); }
+    }
     return {items: Array.isArray(result.items) ? result.items : [], error: "", recovered: result.recovered || []};
   } catch (error) {
     return {items: [], error: noteQuota(error)};
   }
+}
+
+function reusableAnswerSignature(answer = {}) {
+  const list = value => (Array.isArray(value) ? value : [])
+    .map(item => String(item || "").trim()).filter(Boolean).sort();
+  return JSON.stringify({
+    question: String(answer.question || "").trim(),
+    value: String(answer.value || "").trim(),
+    category: String(answer.category || "").trim(),
+    variants: list(answer.variants),
+    fallback_for: list(answer.fallback_for),
+    reusable: answer.reusable !== false,
+    sensitive: Boolean(answer.sensitive),
+    select_all: Boolean(answer.select_all),
+  });
+}
+
+function localAnswerShouldSync(answer, cloudAnswer) {
+  if (!answer?.answer_id) return false;
+  // Role-specific generated writing stays with its local application session.
+  // Publishing it as a global cloud-bank answer can put one company's essay
+  // into another company's form when the prompt wording happens to match.
+  if (answer.reusable === false) return false;
+  if (!cloudAnswer) return true;
+  if ((answer.evidence_ids || []).includes("canonical-resume") && cloudAnswer.value !== answer.value) return true;
+  const localAt = Date.parse(String(answer.updated_at || "")) || 0;
+  const cloudAt = Date.parse(String(cloudAnswer.updated_at || "")) || 0;
+  return localAt > cloudAt && reusableAnswerSignature(answer) !== reusableAnswerSignature(cloudAnswer);
 }
 
 async function syncCloudQueueImpl() {
@@ -413,7 +506,7 @@ async function syncCloudQueueImpl() {
   let recoveryError = "";
   let recoveredCount = 0;
   try {
-    const recovery = await recoverLocalQueue();
+    const recovery = await recoverLocalQueue(data.items || []);
     recoveryError = recovery.error || "";
     recoveredCount = Array.isArray(recovery.recovered) ? recovery.recovered.length : 0;
     if (recovery.items.length) data = {...data, items: recovery.items};
@@ -431,10 +524,7 @@ async function syncCloudQueueImpl() {
       const localContext = await local("/api/application/context");
       const cloudAnswers = new Map((context.context?.answers || []).filter(answer => answer?.answer_id).map(answer => [answer.answer_id, answer]));
       const localChanges = (localContext.answers || []).filter(answer => {
-        if (!answer?.answer_id) return false;
-        const cloudAnswer = cloudAnswers.get(answer.answer_id);
-        if (!cloudAnswer) return true;
-        return (answer.evidence_ids || []).includes("canonical-resume") && cloudAnswer.value !== answer.value;
+        return localAnswerShouldSync(answer, cloudAnswers.get(answer?.answer_id));
       });
       if (localChanges.length) {
         const synced = await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({action: "answers", answers: localChanges})});
@@ -446,7 +536,17 @@ async function syncCloudQueueImpl() {
     }
     const stored = await chrome.storage.local.get({contextUpdatedAt: ""});
     if (context.context?.updated_at && context.context.updated_at !== stored.contextUpdatedAt) {
+      const localBeforeImport = await local("/api/application/context");
+      const localById = new Map((localBeforeImport.answers || []).filter(answer => answer?.answer_id).map(answer => [answer.answer_id, answer]));
       for (const answer of context.context.answers || []) {
+        // Generated application writing is intentionally session-local. A
+        // historical cloud copy must never overwrite a fresh answer for the
+        // current company, even when the normalized prompt is identical.
+        if (answer.reusable === false) continue;
+        const localAnswer = localById.get(answer.answer_id);
+        const localAt = Date.parse(String(localAnswer?.updated_at || "")) || 0;
+        const cloudAt = Date.parse(String(answer.updated_at || "")) || 0;
+        if (localAnswer && localAt > cloudAt) continue;
         await local("/api/application/answer", {method: "POST", body: JSON.stringify(answer)});
       }
       await chrome.storage.local.set({contextUpdatedAt: context.context.updated_at});
@@ -523,6 +623,25 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
     if (message?.type === "JOB_RADAR_START") return startJob(message.job, message.mode, message.queueId);
     if (message?.type === "JOB_RADAR_CONTENT_READY" && tabId) {
       let row = tabs.get(tabId);
+      if (row && message.pageBoundary) {
+        const reason = String(message.pageBoundary).slice(0, 800);
+        const directUrl = safeURL(message.directApplicationUrl);
+        if (directUrl) {
+          row.job = {...row.job, url: directUrl};
+          row.state = "opening";
+          if (row.queueId) await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+            action: "queue_update", queue_id: row.queueId, state: "opening",
+            message: "Following the aggregator's direct employer Apply link automatically.", error: "",
+          })});
+          await navigateQueuedTab(tabId, directUrl, Boolean(sender.tab?.active));
+          return {session_id: "", configured: true, boundary: true, navigating: true};
+        }
+        row.state = "blocked";
+        if (row.queueId) await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+          action: "queue_update", queue_id: row.queueId, state: "blocked", message: reason, error: "",
+        })});
+        return {session_id: "", configured: true, boundary: true};
+      }
       if (row && message.pageFailure) {
         const reason = String(message.pageFailure).slice(0, 800);
         if (row.queueId) await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
@@ -561,13 +680,15 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
       row.essayAttempts = row.essayAttempts || new Set();
       let generatedAnswer = false;
       for (const blocker of writtenBlockers) {
-        const attemptKey = `${blocker.category}:${blocker.label}`;
+        const attemptKey = `${row.sessionId}:${blocker.category}:${blocker.label}`;
         if (row.essayAttempts.has(attemptKey)) continue;
         row.essayAttempts.add(attemptKey);
         const sourceField = fields.find(field => field.field_id === blocker.field_id) || {};
         const limitText = `${sourceField.label || ""} ${sourceField.placeholder || ""}`;
         const limitMatch = limitText.match(/([\d,]+)\s*(?:character|char)s?/i);
         const characterLimit = Number(String(limitMatch?.[1] || "").replace(/,/g, "")) || Number(sourceField.maxlength) || 0;
+        const wordLimitMatch = limitText.match(/([\d,]+)\s*words?/i);
+        const wordLimit = Number(String(wordLimitMatch?.[1] || "").replace(/,/g, "")) || 0;
         try {
           if (row.queueId) await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
             action: "queue_update", queue_id: row.queueId, state: "filling",
@@ -575,13 +696,15 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
           })});
           const generated = await local("/api/application/essay", {method: "POST", body: JSON.stringify({
             session_id: row.sessionId, job: row.job, question: blocker.label,
-            category: blocker.category, character_limit: characterLimit,
+            category: blocker.category, character_limit: characterLimit, word_limit: wordLimit,
           })});
           if (generated?.answer) {
             generatedAnswer = true;
-            try { await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
-              action: "answer", ...generated.answer,
-            })}); } catch (_) {}
+            if (generated.answer.reusable !== false) {
+              try { await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+                action: "answer", ...generated.answer,
+              })}); } catch (_) {}
+            }
           }
         } catch (error) {
           blocker.reason = `The warm writing skill needs your input: ${error.message}`;
@@ -607,6 +730,7 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
         if (resumeAccepted || resumeTargets.length) {
           plan.blockers = (plan.blockers || []).filter(blocker => blocker.category !== "resume_file");
           plan.optional_review = (plan.optional_review || []).filter(item => item.category !== "resume_file");
+          if (plan.state === "blocked" && !(plan.blockers || []).length) plan.state = "filling";
         }
       }
       row.state = plan.state;

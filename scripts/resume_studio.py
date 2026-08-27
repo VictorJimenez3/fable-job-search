@@ -4491,7 +4491,7 @@ def application_essay_schema() -> Dict[str, Any]:
 
 def application_essay_answer(
     root: Path, job: Dict[str, Any], question: str, session_id: str = "",
-    character_limit: int = 0, category: str = "essay",
+    character_limit: int = 0, word_limit: int = 0, category: str = "essay",
 ) -> Dict[str, Any]:
     """Draft one role-specific response with Victor's installed warm-writing skill."""
     question = str(question or "").strip()[:1200]
@@ -4507,6 +4507,15 @@ def application_essay_answer(
         {key: item.get(key) for key in ("id", "source", "heading", "text", "authority", "review_status")}
         for item in inventory.get("facts", [])
     ]
+    approved_application_answers = [
+        {
+            "question": item.get("question"), "value": item.get("value"),
+            "category": item.get("category"), "evidence_ids": item.get("evidence_ids") or [],
+        }
+        for item in application_context(root).get("answers", [])
+        if item.get("reusable") is not False
+        and item.get("category") in {"essay", "cover_letter", "llm_experience", "work_schedule", "education", "location"}
+    ][:120]
     profile_text = (root / "profile.yaml").read_text(errors="replace") if (root / "profile.yaml").is_file() else ""
     prompt = (
         "Use the installed $warm-scholarship-essay skill for this job-application response. "
@@ -4514,14 +4523,18 @@ def application_essay_answer(
         "Treat this as a short application essay, even when the employer calls it an open response. Never invent facts. "
         "Write in Victor's direct, straightforward voice, with no em dashes. If a truthful, specific answer cannot be "
         "written from the supplied evidence, set needs_owner_input true, leave answer empty, and list only the smallest "
-        "missing facts needed. Respect the exact character limit when it is positive.\n\n"
+        "missing facts needed. Answer the exact question immediately, use concrete evidence, and do not turn the resume "
+        "into a paragraph. Victor's current expected NJIT graduation is May 2027; any 2026 graduation reference in older "
+        "evidence is stale. Respect every positive character or word limit.\n\n"
         "EXACT QUESTION:\n" + question + "\n\n"
-        "CHARACTER LIMIT:\n" + str(max(0, int(character_limit or 0))) + "\n\n"
+        "CHARACTER LIMIT:\n" + (str(max(0, int(character_limit))) if character_limit else "No explicit limit") + "\n\n"
+        "WORD LIMIT:\n" + (str(max(0, int(word_limit))) if word_limit else "No explicit limit") + "\n\n"
         "ROLE:\n" + json.dumps({
             "company": job.get("company"), "title": job.get("title"),
             "locations": job.get("locations") or [], "description": str(job.get("description") or "")[:MAX_POSTING_CHARS],
         }, ensure_ascii=False, indent=2) + "\n\n"
         "VICTOR PROFILE:\n" + profile_text[:12000] + "\n\n"
+        "APPROVED APPLICATION CONTEXT:\n" + json.dumps(approved_application_answers, ensure_ascii=False, indent=2)[:16000] + "\n\n"
         "AUTHORIZED PRIVATE EVIDENCE:\n" + json.dumps(facts, ensure_ascii=False, indent=2)[:24000] + "\n\n"
         "WARM SCHOLARSHIP ESSAY SKILL:\n" + skill_path.read_text(errors="replace")[:16000]
     )
@@ -4540,6 +4553,11 @@ def application_essay_answer(
         raise ValueError(missing or "This response needs one role-specific fact from Victor")
     if character_limit and len(answer) > int(character_limit):
         raise RuntimeError("Generated response exceeded the employer's character limit")
+    if word_limit and len(re.findall(r"\S+", answer)) > int(word_limit):
+        raise RuntimeError("Generated response exceeded the employer's word limit")
+    answer = re.sub(r"\s*—\s*", ", ", answer)
+    if re.search(r"\b(?:class of|graduat(?:e|ing|ion)[^.!?]{0,30})\s*2026\b", answer, re.IGNORECASE):
+        raise RuntimeError("Generated response used the stale 2026 graduation year instead of May 2027")
     saved = save_application_answer(
         root, question=question, value=answer,
         category=category if category in {"essay", "cover_letter"} else "essay", reusable=False,
@@ -14887,6 +14905,7 @@ class StudioHandler(BaseHTTPRequestHandler):
                     repo_root(), job, str(body.get("question") or ""),
                     session_id=str(body.get("session_id") or ""),
                     character_limit=int(body.get("character_limit") or 0),
+                    word_limit=int(body.get("word_limit") or 0),
                     category=str(body.get("category") or "essay"),
                 ))
             if parsed.path == "/api/application/review":
@@ -14920,7 +14939,9 @@ class StudioHandler(BaseHTTPRequestHandler):
             if parsed.path == "/api/application/confirm":
                 return self.send_json(apply_application_confirmation(
                     repo_root(), str(body.get("session_id") or ""), str(body.get("review_hash") or ""),
-                    str(body.get("nonce") or ""), page_fingerprint=str(body.get("page_fingerprint") or "")))
+                    str(body.get("nonce") or ""), page_fingerprint=str(body.get("page_fingerprint") or ""),
+                    owner_approved_at=str(body.get("owner_approved_at") or ""),
+                    approval_expires_at=str(body.get("approval_expires_at") or "")))
             if parsed.path == "/api/application/verify":
                 return self.send_json(verify_application_submission_page(
                     repo_root(), str(body.get("session_id") or ""), str(body.get("page_url") or ""),

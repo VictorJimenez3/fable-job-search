@@ -30,6 +30,7 @@ const MAX_QUEUE = 200;
 const MAX_ANSWERS = 500;
 const MAX_ISSUES = 300;
 const REVIEW_TTL_MS = 15 * 60 * 1000;
+const CONFIRMATION_TTL_MS = 24 * 60 * 60 * 1000;
 const SHEET_CACHE_TTL_MS = 15 * 1000;
 const sheetReadyCache = new Map();
 const sheetStoreCache = new Map();
@@ -432,10 +433,63 @@ function safeJob(value) {
   return {
     id, company, title, url,
     locations: Array.isArray(job.locations) ? job.locations.map(item => clean(item, 160)).filter(Boolean).slice(0, 12) : [],
+    description: clean(job.description, 20000),
     score: Number.isFinite(Number(job.score)) ? Number(job.score) : 0,
     posted_at: job.posted_at ?? null,
     posting_status: clean(job.posting_status, 40),
   };
+}
+
+function queueJobIdentity(value) {
+  const job = value?.job && typeof value.job === "object" ? value.job : value;
+  try {
+    const url = new URL(String(job?.url || ""));
+    url.hash = "";
+    for (const key of [...url.searchParams.keys()]) {
+      if (/^(?:utm_.+|embed|source|ref|referrer)$/i.test(key)) url.searchParams.delete(key);
+    }
+    const path = url.pathname.replace(/\/$/, "") || "/";
+    return `url:${url.origin.toLowerCase()}${path}${url.search}`;
+  } catch {
+    const id = clean(job?.id, 160);
+    return id ? `id:${id}` : "";
+  }
+}
+
+function collapseActiveQueueDuplicates(items) {
+  const priority = {submitting: 7, awaiting_confirmation: 6, filling: 5, opening: 4, blocked: 3, queued: 2};
+  const groups = new Map();
+  for (const item of items) {
+    if (!ACTIVE_QUEUE_STATES.has(item.state)) continue;
+    const identity = queueJobIdentity(item);
+    if (!identity) continue;
+    const group = groups.get(identity) || [];
+    group.push(item);
+    groups.set(identity, group);
+  }
+  const cancelled = [];
+  const now = new Date().toISOString();
+  for (const group of groups.values()) {
+    if (group.length < 2) continue;
+    group.sort((left, right) => {
+      const reviewDelta = Number(Boolean(right.confirmation || right.review)) - Number(Boolean(left.confirmation || left.review));
+      if (reviewDelta) return reviewDelta;
+      const stateDelta = (priority[right.state] || 0) - (priority[left.state] || 0);
+      if (stateDelta) return stateDelta;
+      return (Date.parse(right.updated_at || "") || 0) - (Date.parse(left.updated_at || "") || 0);
+    });
+    const winner = group[0];
+    for (const duplicate of group.slice(1)) {
+      duplicate.state = "cancelled";
+      duplicate.review = null;
+      duplicate.confirmation = null;
+      duplicate.error = "";
+      duplicate.message = `Duplicate queue entry collapsed automatically; continuing as ${winner.queue_id}.`;
+      duplicate.updated_at = now;
+      cancelled.push({queue_id: duplicate.queue_id, winner_queue_id: winner.queue_id});
+    }
+  }
+  return {changed: cancelled.length > 0, cancelled};
 }
 
 function publicReview(value) {
@@ -475,6 +529,8 @@ function publicQueueItem(item) {
       review_hash: clean(value.confirmation.review_hash, 100),
       page_fingerprint: clean(value.confirmation.page_fingerprint, 100),
       expires_at: clean(value.confirmation.expires_at, 80),
+      approved_at: clean(value.confirmation.approved_at, 80),
+      review_was_expired: Boolean(value.confirmation.review_was_expired),
     } : null,
   };
 }
@@ -587,8 +643,13 @@ async function updateQueue(access, payload) {
     if (["expired", "filled"].includes(job.posting_status)) {
       throw new Error("This posting is no longer open; refresh Jobs before queueing it.");
     }
-    item = queue.items.find(candidate => candidate.job?.id === job.id && ACTIVE_QUEUE_STATES.has(candidate.state));
-    if (item) return {item, duplicate: true};
+    const collapsed = collapseActiveQueueDuplicates(queue.items);
+    item = queue.items.find(candidate => ACTIVE_QUEUE_STATES.has(candidate.state)
+      && (candidate.job?.id === job.id || queueJobIdentity(candidate) === queueJobIdentity(job)));
+    if (item) {
+      if (collapsed.changed) await writeAppDocument(current, "queue", {items: queue.items});
+      return {item: publicQueueItem(item), duplicate: true};
+    }
     item = publicQueueItem({queue_id: crypto.randomBytes(14).toString("hex"), state: "queued", session_id: "", message: "Waiting for the paired Mac browser", error: "", created_at: now, updated_at: now, job, blockers: [], review: null, confirmation: null});
     queue.items = [item, ...queue.items].slice(0, MAX_QUEUE);
   } else {
@@ -623,8 +684,10 @@ async function recoverQueue(access, payload) {
   if (!access.agent) throw Object.assign(new Error("paired Mac access required"), {statusCode: 403});
   const current = await appDocument(access, "queue");
   const queue = queueDocument(current.value);
-  const existingIds = new Set(queue.items.map(item => item.queue_id));
+  const initialCollapse = collapseActiveQueueDuplicates(queue.items);
+  const existingById = new Map(queue.items.map((item, index) => [item.queue_id, {item, index}]));
   const recovered = [];
+  const added = [];
   const skipped = [];
   const candidates = Array.isArray(payload.items) ? payload.items.slice(0, MAX_QUEUE) : [];
   for (const candidate of candidates) {
@@ -633,10 +696,6 @@ async function recoverQueue(access, payload) {
     const state = QUEUE_STATES.has(candidate?.state) ? candidate.state : "queued";
     if (!queueId || !job || !ACTIVE_QUEUE_STATES.has(state)) {
       skipped.push({queue_id: queueId, reason: "invalid active queue snapshot"});
-      continue;
-    }
-    if (existingIds.has(queueId)) {
-      skipped.push({queue_id: queueId, reason: "already present"});
       continue;
     }
     const item = publicQueueItem({
@@ -657,14 +716,37 @@ async function recoverQueue(access, payload) {
       skipped.push({queue_id: queueId, reason: "snapshot did not pass validation"});
       continue;
     }
+    const existing = existingById.get(queueId);
+    if (existing) {
+      const currentItem = Number.isInteger(existing.addedIndex) ? added[existing.addedIndex] : existing.item;
+      if (!ACTIVE_QUEUE_STATES.has(currentItem.state)) {
+        skipped.push({queue_id: queueId, reason: "terminal cloud item is authoritative"});
+        continue;
+      }
+      const forceReset = candidate?.recovery_reset === true;
+      const candidateAt = Date.parse(String(candidate?.updated_at || "")) || 0;
+      const existingAt = Date.parse(String(currentItem.updated_at || "")) || 0;
+      if (!forceReset && candidateAt <= existingAt) {
+        skipped.push({queue_id: queueId, reason: "cloud item is already current"});
+        continue;
+      }
+      if (Number.isInteger(existing.addedIndex)) added[existing.addedIndex] = item;
+      else queue.items[existing.index] = item;
+      existing.item = item;
+      recovered.push(item);
+      continue;
+    }
     recovered.push(item);
-    existingIds.add(queueId);
+    added.push(item);
+    existingById.set(queueId, {item, index: -1, addedIndex: added.length - 1});
   }
-  if (!recovered.length) return {recovered: [], skipped, items: queue.items.map(publicQueueItem)};
-  queue.items = [...recovered, ...queue.items].slice(0, MAX_QUEUE);
+  if (!recovered.length && !initialCollapse.changed) return {recovered: [], skipped, items: queue.items.map(publicQueueItem)};
+  queue.items = [...added, ...queue.items].slice(0, MAX_QUEUE);
+  const finalCollapse = collapseActiveQueueDuplicates(queue.items);
   const written = await writeAppDocument(current, "queue", {items: queue.items});
   return {
     recovered: recovered.map(publicQueueItem), skipped,
+    collapsed: [...initialCollapse.cancelled, ...finalCollapse.cancelled],
     items: queueDocument(written.value).items.map(publicQueueItem),
   };
 }
@@ -680,7 +762,7 @@ async function confirmQueue(access, payload) {
   const item = queue.items.find(candidate => candidate.queue_id === clean(payload.queue_id, 100));
   if (!item || !item.review) throw new Error("application review card not found");
   if (item.confirmation || item.state === "submitting") throw new Error("application review confirmation has already been consumed");
-  if (reviewExpired(item.review)) throw new Error("application review expired; reopen the page");
+  const expiredReview = reviewExpired(item.review);
   const storedNonce = Buffer.from(clean(item.review.nonce, 100));
   const suppliedNonce = Buffer.from(clean(payload.nonce, 100));
   const nonceMatches = storedNonce.length === suppliedNonce.length && crypto.timingSafeEqual(storedNonce, suppliedNonce);
@@ -690,15 +772,22 @@ async function confirmQueue(access, payload) {
   if (payload.page_fingerprint && clean(item.review.page_fingerprint, 100) !== clean(payload.page_fingerprint, 100)) {
     throw new Error("the application page changed; reopen the review card");
   }
+  const approvedAt = new Date();
   item.confirmation = {
     review_hash: item.review.review_hash,
     nonce: item.review.nonce,
     page_fingerprint: clean(item.review.page_fingerprint, 100),
-    expires_at: item.review.expires_at,
-    approved_at: new Date().toISOString(),
+    // A click is a fresh owner action even if the displayed review card aged
+    // out. The Mac still verifies the exact hash, nonce, page fingerprint,
+    // and every live field before Submit, so reopening the page adds no safety.
+    expires_at: new Date(approvedAt.getTime() + CONFIRMATION_TTL_MS).toISOString(),
+    approved_at: approvedAt.toISOString(),
+    review_was_expired: expiredReview,
   };
   item.state = "submitting";
-  item.message = "Owner confirmed. The paired Mac may submit only on the matching page.";
+  item.message = expiredReview
+    ? "Owner confirmed the saved review. The paired Mac is revalidating the unchanged live page before Submit."
+    : "Owner confirmed. The paired Mac may submit only on the matching page.";
   item.updated_at = new Date().toISOString();
   await writeAppDocument(current, "queue", {items: queue.items});
   return {ok: true, item: publicQueueItem(item)};

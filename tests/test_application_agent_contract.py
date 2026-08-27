@@ -35,7 +35,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "application_resume_file" in service and "/api/application/resume-file" in service
     assert "application_essay_answer" in service and "warm-scholarship-essay" in service
     assert '"content_scripts"' in extension and '"<all_urls>"' in extension
-    assert '"version": "0.2.7"' in extension
+    assert '"version": "0.2.9"' in extension
     for provider in ("workday", "greenhouse", "lever", "ashby", "smartrecruiters"):
         assert provider in adapters
     assert "JOB_RADAR_SUBMISSION_APPROVED" in (ROOT / "browser-extension" / "content.js").read_text()
@@ -55,17 +55,25 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "resumeFileAccepted" in background
     assert "Pretending every file input" in background
     assert "never overwrite an input that already has a file after a rescan" in background
+    assert "localAnswerShouldSync" in background and "reusableAnswerSignature" in background
+    assert "answer.reusable === false" in background and "localBeforeImport" in background
+    assert "confirmedSameReview" in background
+    assert "owner_approved_at" in background and "approval_expires_at" in background
     assert "last_message || session.last_error || session.state" in background
     assert "Owner requested a fresh application-page scan." in background
     assert "use an explicit rescan before changing the page" in local
     assert "Resume uploaded; waiting for the employer form to validate the PDF" in content
     assert "element.files?.[0]?.name === file.name" in content
+    assert "rememberedUploadedFile" in content and "fillsThisPass" in content
+    assert "directApplicationURL" in content and "directApplicationUrl" in background
     assert "Do not click Next in the same turn as a file assignment" in content
     assert "Review ready · no changes applied" in content
     assert "recoverOrphanedQueue" in background
+    assert "applicationIdentity" in background and "claimedTabIds" in background
     assert "localQueueRecoveryItems" in background and 'action: "recover"' in background
     assert "RECOVERABLE_QUEUE_STATES" in background
     assert "recovered: recoveredCount" in background
+    assert "recovery_reset" in background
     assert "recovered" in (ROOT / "browser-extension" / "popup.js").read_text()
     assert 'parkedButAttachable = ["blocked", "awaiting_confirmation"]' in background
     assert "lastAccessed" in background
@@ -75,7 +83,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "Chrome did not navigate the paired tab" in background
     assert "withinAttachGrace" in background
     assert "chrome.tabs.update" in background
-    assert "chrome.tabs.reload" in background
+    assert "reused: true" in background
     assert "chrome.tabs.remove" in background
     assert "JOB_RADAR_AGENT_STATUS" in background
     assert "JOB_RADAR_AGENT_STATUS" in content
@@ -112,14 +120,22 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "JOB_RADAR_AGENT_STOP" in content
     assert "scanRunning" in content and "scanAgain" in content
     assert "LOOP_SCAN_LIMIT" in content and "Application paused · repeated form cycle" in content
+    assert "field.options, field.value" in content
+    assert 'type === "textarea" || element.isContentEditable ? 20_000' in content
+    assert "const remembered = uploadedFiles.get(exactKey)" in content
     assert 'if (isRadar)' in content and 'job-radar:agent-started' in content
     assert content.index('job-radar:agent-started') < content.index("return;\n  }", content.index('job-radar:agent-started'))
     assert "posting_status" in api
     assert "no longer open" in api
+    assert "collapseActiveQueueDuplicates" in api and "queueJobIdentity" in api
     frontend = (ROOT / "webapp" / "index.html").read_text()
     assert "controlApplicationAgentExtension" in frontend
     assert "sendApplicationPairingToExtension" in frontend
+    assert "applicationAgentURL" in frontend
+    assert 'command==="sync_queue"?30000' in frontend
+    assert "retireTerminalApplicationQueueItems" in frontend
     assert "extension v${esc(data.extensionVersion)}" in frontend
+    assert "jr_extension_reload_pending" in frontend and "reconnectApplicationAgentAfterReload" in frontend
     assert "queueing…" in frontend
     assert "queueActionId" in frontend
     assert "!isTerminalPosting(job)" in frontend

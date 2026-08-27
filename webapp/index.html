@@ -481,7 +481,7 @@
 // derived from the URL; a Vercel backend supplies /api/config. Only edit ME
 // (used to fill outreach templates) and, if self-hosting on Vercel, the env
 // vars documented in docs/FORKING.md.
-const ME = { name: "Victor", school: "NJIT", grad: "CS '26" };
+const ME = { name: "Victor", school: "NJIT", grad: "CS '27" };
 const PROFILE = "new_grad";
 let REPO = "VictorJimenez3/fable-job-search";
 let BRANCH = "claude/newgrad-job-search-system-9gbj9k";
@@ -1575,10 +1575,21 @@ async function startApply(j) {
 
 /* ---------- owner Application Agent ----------------------------------- */
 const APPLICATION_ACTIVE_STATES = new Set(["queued","opening","filling","blocked","awaiting_confirmation","submitting"]);
+function applicationAgentURL(j) {
+  const candidates=[j?.url,...(Array.isArray(j?.alternate_urls)?j.alternate_urls:[])].filter(Boolean);
+  const scored=candidates.map((value,index)=>{try{
+    const url=new URL(value), host=url.hostname.toLowerCase();
+    if(!["http:","https:"].includes(url.protocol)||url.username||url.password)return null;
+    const aggregator=/\b(jobright\.ai|simplify\.jobs|linkedin\.com|indeed\.com)\b/.test(host);
+    const direct=/\b(ashbyhq\.com|greenhouse\.(?:io|com)|lever\.co|smartrecruiters\.com|myworkdayjobs\.com|myworkdaysite\.com|jobs\.apple\.com|amazon\.jobs)\b/.test(host)||/\b(careers?|jobs?)\b/.test(host);
+    return {url:url.href,index,score:direct?3:aggregator?0:1};
+  }catch{return null;}}).filter(Boolean).sort((a,b)=>b.score-a.score||a.index-b.index);
+  return scored[0]?.url||j?.url||"";
+}
 function applicationAgentJob(j) {
-  return {id:j?.id, company:j?.company, title:j?.title, url:j?.url,
+  return {id:j?.id, company:j?.company, title:j?.title, url:applicationAgentURL(j),
     locations:Array.isArray(j?.locations)?j.locations.slice(0,12):[], score:j?.score, posted_at:j?.posted_at??null,
-    posting_status:j?.posting_status||""};
+    posting_status:j?.posting_status||"", description:String(j?.description||"").slice(0,20000)};
 }
 async function applicationCloudGet(view="queue", params={}) {
   const query = new URLSearchParams({view, ...params});
@@ -1707,7 +1718,7 @@ function applicationAgentReviewHTML(item) {
   const action = item.state === "awaiting_confirmation"
     ? `<div class="acts" style="margin-top:.45rem"><button class="act primary" onclick='confirmApplicationAgent(${JSON.stringify(item.queue_id)})'>confirm and allow Submit</button><button class="act" onclick='skipApplicationAgent(${JSON.stringify(item.queue_id)})'>skip this role</button></div>`
     : item.state === "submitting" ? '<p class="sub">Owner confirmed. Waiting for the paired Mac to verify the page and click Submit.</p>' : '';
-  return `<div class="agent-review"><div class="bar" style="justify-content:space-between;margin:0"><strong>Full review card · ${esc(review.provider||"ATS")}</strong><span class="chip warn">page-bound</span></div><p class="sub">${esc(review.url||item.job?.url||"")}<br>Fingerprint <span class="mono">${esc(review.page_fingerprint||"unknown")}</span> · expires ${esc(review.expires_at||"soon")}</p>${fields||'<p class="sub">No proposed values were captured.</p>'}${action}</div>`;
+  return `<div class="agent-review"><div class="bar" style="justify-content:space-between;margin:0"><strong>Full review card · ${esc(review.provider||"ATS")}</strong><span class="chip warn">page-bound</span></div><p class="sub">${esc(review.url||item.job?.url||"")}<br>Fingerprint <span class="mono">${esc(review.page_fingerprint||"unknown")}</span> · display card expires ${esc(review.expires_at||"soon")}. If it aged out, Confirm still makes the Mac revalidate this exact live page without asking you to reopen it.</p>${fields||'<p class="sub">No proposed values were captured.</p>'}${action}</div>`;
 }
 function applicationAgentBlockerGroupLabel(category) {
   return ({resume_file:"Resume selection",essay:"Written response",cover_letter:"Cover letter",work_authorization:"Work authorization",sponsorship:"Sponsorship",education:"Education",location:"Location",salary:"Compensation",other:"Other required field"})[category] || "Owner decision";
@@ -1734,7 +1745,7 @@ function applicationAgentBlockersHTML(item) {
 }
 function applicationAgentQueueHTML(items) {
   if (!items.length) return '<p class="sub">No application roles are queued. Select saved roles below or start one from a job card.</p>';
-  return items.slice(0,80).map(item=>{const stopping=S.applicationAgent.queueActionId===item.queue_id, canStop=["queued","opening","filling","blocked","awaiting_confirmation"].includes(item.state);return `<div class="agent-queue-row"><span class="chip ${applicationAgentStatusKind(item.state)}">${esc(applicationAgentStatusLabel(item.state))}</span><div><strong>${esc(item.job?.company||"Role")}</strong><br><span class="sub">${esc(item.job?.title||"")} · ${esc(item.provider||item.review?.provider||"")} · ${esc(item.message||"")}</span>${applicationAgentProgressHTML(item)}${applicationAgentResumeHTML(item)}${item.error?`<p class="sub" style="color:var(--danger)">${esc(item.error)}</p>`:""}${applicationAgentBlockersHTML(item)}${applicationAgentReviewHTML(item)}</div><div class="acts"><a class="act" href="${esc(item.job?.url||"#")}" target="_blank" rel="noreferrer">open</a>${["blocked","awaiting_confirmation","failed"].includes(item.state)?`<button class="act" onclick='continueApplicationAgent(${JSON.stringify(item.queue_id)})'>${item.state==="awaiting_confirmation"?"re-scan page":"I handled it · continue"}</button>`:""}${["queued","blocked","awaiting_confirmation","failed"].includes(item.state)?`<button class="act" onclick='refreshApplicationAgent()'>refresh</button>`:""}${canStop?`<button class="act" ${stopping?"disabled":""} onclick='skipApplicationAgent(${JSON.stringify(item.queue_id)})'>${stopping?"stopping…":["opening","filling"].includes(item.state)?"stop":"skip"}</button>`:""}</div></div>`}).join("");
+  return items.slice(0,80).map(item=>{const stopping=S.applicationAgent.queueActionId===item.queue_id, canStop=["queued","opening","filling","blocked","awaiting_confirmation"].includes(item.state);return `<div class="agent-queue-row"><span class="chip ${applicationAgentStatusKind(item.state)}">${esc(applicationAgentStatusLabel(item.state))}</span><div><strong>${esc(item.job?.company||"Role")}</strong><br><span class="sub">${esc(item.job?.title||"")} · ${esc(item.provider||item.review?.provider||"")} · ${esc(item.message||"")}</span>${applicationAgentProgressHTML(item)}${applicationAgentResumeHTML(item)}${item.error?`<p class="sub" style="color:var(--danger)">${esc(item.error)}</p>`:""}${applicationAgentBlockersHTML(item)}${applicationAgentReviewHTML(item)}</div><div class="acts"><a class="act" href="${esc(item.review?.url||item.job?.url||"#")}" target="_blank" rel="noreferrer">open</a>${["blocked","failed"].includes(item.state)?`<button class="act" onclick='continueApplicationAgent(${JSON.stringify(item.queue_id)})'>${item.state==="failed"?"retry":"I answered it · continue"}</button>`:""}${["queued","blocked","awaiting_confirmation","failed"].includes(item.state)?`<button class="act" onclick='refreshApplicationAgent()'>refresh</button>`:""}${canStop?`<button class="act" ${stopping?"disabled":""} onclick='skipApplicationAgent(${JSON.stringify(item.queue_id)})'>${stopping?"stopping…":["opening","filling"].includes(item.state)?"stop":"skip"}</button>`:""}</div></div>`}).join("");
 }
 function applicationAgentCandidates() {
   return Object.values(S.jobs||{}).filter(job=>{
@@ -1762,7 +1773,7 @@ async function queueApplicationBatch() {
 async function confirmApplicationAgent(queueId) {
   const item=(S.applicationAgent.items||[]).find(row=>row.queue_id===queueId);
   if (!item?.review) return;
-  try { await applicationCloudPost("confirm", {queue_id:queueId, review_hash:item.review.review_hash, nonce:item.review.nonce, page_fingerprint:item.review.page_fingerprint}); await loadApplicationAgent(false); rApplicationAgent(); toast("Confirmed · the paired Mac may submit this matching page"); }
+  try { await applicationCloudPost("confirm", {queue_id:queueId, review_hash:item.review.review_hash, nonce:item.review.nonce, page_fingerprint:item.review.page_fingerprint}); await loadApplicationAgent(false); rApplicationAgent(); toast("Confirmed · the Mac is revalidating this exact page before Submit"); }
   catch(error) { toast(error.message.slice(0,150)); }
 }
 async function answerApplicationAgent(queueId,index,question,category) {
@@ -1794,6 +1805,7 @@ async function pairApplicationMac() {
     const paired=await applicationAgentExtensionCommand("set_pairing",{cloudUrl:location.origin,agentToken:token});
     S.applicationAgent.extensionVersion=paired?.extensionVersion||S.applicationAgent.extensionVersion;
     if (paired?.error) throw new Error(paired.error);
+    await retireTerminalApplicationQueueItems();
     const synced=await applicationAgentExtensionCommand("sync_queue");
     S.applicationAgent.extensionVersion=synced?.extensionVersion||S.applicationAgent.extensionVersion;
     if (synced?.error) throw new Error(synced.error);
@@ -1806,10 +1818,12 @@ async function pairApplicationMac() {
   } finally { S.applicationAgent.extensionAction=""; if(S.tab==="agent")rApplicationAgent(); }
 }
 let applicationAgentExtensionSequence=0;
+let applicationAgentReloadReconnectStarted=false;
 function applicationAgentExtensionCommand(command,payload={}) {
   return new Promise((resolve,reject)=>{
     const requestId=`agent-extension-${Date.now()}-${++applicationAgentExtensionSequence}`;
-    const timer=setTimeout(()=>{window.removeEventListener("message",receive);reject(new Error("The paired extension did not answer. Open the Job Radar extension once, then retry."));},5000);
+    const timeout=command==="sync_queue"?30000:command==="set_pairing"?10000:5000;
+    const timer=setTimeout(()=>{window.removeEventListener("message",receive);reject(new Error("The paired extension did not answer. Open the Job Radar extension once, then retry."));},timeout);
     function receive(event) {
       if (event.source!==window||event.origin!==location.origin||event.data?.type!=="job-radar:extension-command-result"||event.data.requestId!==requestId) return;
       clearTimeout(timer); window.removeEventListener("message",receive); resolve(event.data.result||{});
@@ -1822,15 +1836,45 @@ async function controlApplicationAgentExtension(command) {
   if (S.applicationAgent.extensionAction) return;
   S.applicationAgent.extensionAction=command; rApplicationAgent();
   try {
+    if(command==="sync_queue")await retireTerminalApplicationQueueItems();
     const result=await applicationAgentExtensionCommand(command);
     S.applicationAgent.extensionVersion=result?.extensionVersion||S.applicationAgent.extensionVersion;
     if (result?.error) throw new Error(result.error);
     if (command==="sync_queue") { S.applicationAgent.pairingNeedsRepair=false; await loadApplicationAgent(false); rApplicationAgent(); toast(`Mac queue sync finished · ${result.recovered||0} recovered`); }
-    else toast("Extension reload requested · queue sync will start when it restarts");
+    else {
+      sessionStorage.setItem("jr_extension_reload_pending","1");
+      history.replaceState(null,"",`${location.pathname}${location.search}#agent`);
+      toast("Extension updated · reconnecting the queue automatically");
+      setTimeout(()=>location.reload(),650);
+    }
   } catch(error) {
     if (/invalid|revoked|pair this mac/i.test(error.message)) S.applicationAgent.pairingNeedsRepair=true;
     toast(error.message.slice(0,180));
   } finally { S.applicationAgent.extensionAction=""; if(S.tab==="agent")rApplicationAgent(); }
+}
+function reconnectApplicationAgentAfterReload() {
+  if (applicationAgentReloadReconnectStarted || !S.auth?.owner || sessionStorage.getItem("jr_extension_reload_pending")!=="1") return;
+  applicationAgentReloadReconnectStarted=true;
+  void (async()=>{
+    let lastError=null;
+    for(let attempt=0;attempt<3;attempt+=1){
+      if(attempt)await new Promise(resolve=>setTimeout(resolve,1200*(attempt+1)));
+      try{
+        await retireTerminalApplicationQueueItems();
+        const synced=await applicationAgentExtensionCommand("sync_queue");
+        if(synced?.error)throw new Error(synced.error);
+        S.applicationAgent.extensionVersion=synced?.extensionVersion||S.applicationAgent.extensionVersion;
+        S.applicationAgent.pairingNeedsRepair=false;
+        sessionStorage.removeItem("jr_extension_reload_pending");
+        await loadApplicationAgent(false);
+        if(S.tab==="agent")rApplicationAgent();
+        toast(`Extension v${S.applicationAgent.extensionVersion||"current"} reconnected · queue synced`);
+        return;
+      }catch(error){lastError=error;}
+    }
+    applicationAgentReloadReconnectStarted=false;
+    toast(`Extension restarted, but queue reconnect needs a retry · ${String(lastError?.message||lastError||"").slice(0,120)}`);
+  })();
 }
 async function sendApplicationPairingToExtension() {
   const token=S.applicationAgent.pairingToken;
@@ -1841,6 +1885,7 @@ async function sendApplicationPairingToExtension() {
     const paired=await applicationAgentExtensionCommand("set_pairing",{cloudUrl:location.origin,agentToken:token});
     S.applicationAgent.extensionVersion=paired?.extensionVersion||S.applicationAgent.extensionVersion;
     if (paired?.error) throw new Error(paired.error);
+    await retireTerminalApplicationQueueItems();
     const synced=await applicationAgentExtensionCommand("sync_queue");
     S.applicationAgent.extensionVersion=synced?.extensionVersion||S.applicationAgent.extensionVersion;
     if (synced?.error) throw new Error(synced.error);
@@ -1848,6 +1893,13 @@ async function sendApplicationPairingToExtension() {
     await loadApplicationAgent(false); rApplicationAgent(); toast(`Pairing sent · Mac queue sync finished · ${synced.recovered||0} recovered`);
   } catch(error) { toast(error.message.slice(0,180)); }
   finally { S.applicationAgent.extensionAction=""; if(S.tab==="agent")rApplicationAgent(); }
+}
+async function retireTerminalApplicationQueueItems() {
+  const stale=(S.applicationAgent.items||[]).filter(item=>APPLICATION_ACTIVE_STATES.has(item.state)&&isTerminalPosting(S.jobs[item.job?.id]||item.job||{}));
+  if(!stale.length)return 0;
+  await Promise.all(stale.map(item=>applicationCloudPost("queue_update",{queue_id:item.queue_id,state:"skipped",error:"",message:"Skipped automatically because the current Job Radar record says this posting is closed."})));
+  await loadApplicationAgent(false); if(S.tab==="agent")rApplicationAgent();
+  return stale.length;
 }
 async function saveApplicationContext() {
   const question=$("agentContextQuestion")?.value.trim(), value=$("agentContextAnswer")?.value.trim(), category=$("agentContextCategory")?.value.trim();
@@ -1860,6 +1912,7 @@ function rApplicationAgent() {
   if (!S.auth) { rJobs(); return; }
   if (!S.auth.owner) { S.tab="jobs"; rJobs(); return; }
   if (S.applicationAgent.status === "checking") { loadApplicationAgent(false).then(()=>{if(S.tab==="agent")rApplicationAgent();}); return; }
+  reconnectApplicationAgentAfterReload();
   const data=S.applicationAgent, items=data.items||[], candidates=applicationAgentCandidates(), selected=new Set(data.selected||[]), queueing=Boolean(data.queueing), extensionAction=data.extensionAction||"";
   const queueSummary=items.filter(item=>APPLICATION_ACTIVE_STATES.has(item.state)).length;
   const contextAnswers=data.context?.answers||[];
@@ -2507,7 +2560,7 @@ function templates(j) {
   const first = t => t.split(",")[0];
   return [
 ["Recruiter DM", `Hi {name} — I'm ${ME.name}, a CS senior at ${ME.school} graduating this spring. I just saw the ${j.title} opening at ${j.company} and applied — it's squarely what I've been building toward (${j.sector==="healthtech"?"my clinical-data pipeline project maps right onto it":"my ML/data projects map right onto it"}). Would you be open to a quick chat, or could you point me to the right recruiter for university hiring? Thank you!`],
-["Referral ask (alum)", `Hey {name} — fellow NJIT ${""}Highlander here (CS '26). I'm applying to the ${j.title} role at ${j.company} and it genuinely fits what I've been working on. If you feel comfortable, would you be open to referring me or sharing a bit about the team? Happy to send my resume + a short blurb to make it zero-effort. Either way, congrats on ${first(j.company)} — the work looks awesome.`],
+["Referral ask (alum)", `Hey {name} — fellow NJIT ${""}Highlander here (CS '27). I'm applying to the ${j.title} role at ${j.company} and it genuinely fits what I've been working on. If you feel comfortable, would you be open to referring me or sharing a bit about the team? Happy to send my resume + a short blurb to make it zero-effort. Either way, congrats on ${first(j.company)} — the work looks awesome.`],
 ["Follow-up (1 week)", `Hi {name} — following up on the ${j.title} role at ${j.company} I applied to on {date}. Still very interested; since applying I ${"{recent win, e.g. shipped X}"}. If there's anything else useful I can send over, happy to. Thanks for your time!`]];
 }
 const jobById = id => S.jobs[id] || S.applied.find(a=>a.id===id);
