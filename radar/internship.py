@@ -369,7 +369,6 @@ def match(eligibility: dict, expected_graduation: str | date | None) -> str:
 
 
 def gates(job: Job) -> tuple[bool, bool, list[str]]:
-    text = f"{job.title}\n{job.description or ''}"
     reasons: list[str] = []
     if not job.profile:
         job.profile = "internship"

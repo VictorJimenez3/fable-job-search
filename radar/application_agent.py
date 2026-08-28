@@ -20,10 +20,10 @@ import re
 import secrets
 import tempfile
 import uuid
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Tuple
+from typing import Any
 from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
-
 
 APPLICATION_AGENT_VERSION = "application-agent-v1"
 APPLICATION_AGENT_DIRNAME = ".resume_studio"
@@ -90,10 +90,10 @@ CONFIRMATION_TTL_SECONDS = 24 * 60 * 60
 
 
 def utc_now() -> str:
-    return dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    return dt.datetime.now(dt.UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
-def timestamp(value: Any) -> Optional[float]:
+def timestamp(value: Any) -> float | None:
     try:
         return dt.datetime.fromisoformat(str(value).replace("Z", "+00:00")).timestamp()
     except (TypeError, ValueError, OverflowError, OSError):
@@ -133,7 +133,7 @@ def safe_url(value: Any) -> str:
     return parsed.geturl()[:2500]
 
 
-def application_identity(job: Dict[str, Any]) -> str:
+def application_identity(job: dict[str, Any]) -> str:
     """Return the stable identity of one employer application.
 
     Cloud queue IDs can change when tracker rows are repaired or reimported.
@@ -169,7 +169,7 @@ def provider_for_url(value: Any) -> str:
     return "generic"
 
 
-def normalized_field_key(field: Dict[str, Any]) -> str:
+def normalized_field_key(field: dict[str, Any]) -> str:
     return normalize_question(
         field.get("autocomplete")
         or field.get("name")
@@ -179,7 +179,7 @@ def normalized_field_key(field: Dict[str, Any]) -> str:
     )
 
 
-def infer_category(field: Dict[str, Any]) -> str:
+def infer_category(field: dict[str, Any]) -> str:
     label = normalize_question(
         " ".join(
             clean_text(field.get(key), 500)
@@ -272,14 +272,14 @@ def infer_category(field: Dict[str, Any]) -> str:
     return "other"
 
 
-def is_sensitive(category: str, field: Optional[Dict[str, Any]] = None) -> bool:
+def is_sensitive(category: str, field: dict[str, Any] | None = None) -> bool:
     if category in SENSITIVE_CATEGORIES:
         return True
     label = normalize_question((field or {}).get("label") or (field or {}).get("question"))
     return bool(re.search(r"\b(ssn|social security|date of birth|dob|passport)\b", label))
 
 
-def form_fingerprint(url: Any, fields: Iterable[Dict[str, Any]]) -> str:
+def form_fingerprint(url: Any, fields: Iterable[dict[str, Any]]) -> str:
     parsed = urlparse(safe_url(url))
     shape = {
         "origin": f"{parsed.scheme}://{parsed.netloc}".lower(),
@@ -303,9 +303,9 @@ def form_fingerprint(url: Any, fields: Iterable[Dict[str, Any]]) -> str:
     return hashlib.sha256(encoded.encode("utf-8")).hexdigest()[:32]
 
 
-def _form_value_signature(fields: Iterable[Dict[str, Any]]) -> List[Tuple[str, str, str, bool]]:
+def _form_value_signature(fields: Iterable[dict[str, Any]]) -> list[tuple[str, str, str, bool]]:
     """Capture values that must change before a review-ready rescan is useful."""
-    signature: List[Tuple[str, str, str, bool]] = []
+    signature: list[tuple[str, str, str, bool]] = []
     for index, field in enumerate(fields):
         if not isinstance(field, dict) or field.get("hidden"):
             continue
@@ -326,7 +326,7 @@ def _form_value_signature(fields: Iterable[Dict[str, Any]]) -> List[Tuple[str, s
     return signature
 
 
-def review_hash(value: Dict[str, Any]) -> str:
+def review_hash(value: dict[str, Any]) -> str:
     encoded = json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
     return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
 
@@ -339,7 +339,7 @@ def markdown_path(root: Path) -> Path:
     return root / "CV" / APPLICATION_AGENT_DIRNAME / APPLICATION_AGENT_MARKDOWN
 
 
-def _canonical_resume_answers(root: Path) -> Dict[str, Dict[str, Any]]:
+def _canonical_resume_answers(root: Path) -> dict[str, dict[str, Any]]:
     """Derive only deterministic profile fields from the local canonical CV.
 
     These values are already owner-authored source data.  They stay local until
@@ -382,7 +382,7 @@ def _canonical_resume_answers(root: Path) -> Dict[str, Dict[str, Any]]:
         "full_name": "full_name", "email": "email", "phone": "phone",
         "linkedin": "linkedin", "github": "portfolio_link", "school": "education",
     }
-    answers: Dict[str, Dict[str, Any]] = {}
+    answers: dict[str, dict[str, Any]] = {}
     for key, value in values.items():
         if not value:
             continue
@@ -411,7 +411,7 @@ def _canonical_resume_answers(root: Path) -> Dict[str, Dict[str, Any]]:
     return answers
 
 
-def _default_store() -> Dict[str, Any]:
+def _default_store() -> dict[str, Any]:
     return {
         "version": APPLICATION_AGENT_VERSION,
         "updated_at": utc_now(),
@@ -421,7 +421,7 @@ def _default_store() -> Dict[str, Any]:
     }
 
 
-def _session_survival_rank(session: Dict[str, Any]) -> Tuple[int, int, float, str]:
+def _session_survival_rank(session: dict[str, Any]) -> tuple[int, int, float, str]:
     state_priority = {
         "submitting": 9,
         "awaiting_confirmation": 8,
@@ -442,7 +442,7 @@ def _session_survival_rank(session: Dict[str, Any]) -> Tuple[int, int, float, st
     )
 
 
-def _collapse_active_session_duplicates(store: Dict[str, Any]) -> int:
+def _collapse_active_session_duplicates(store: dict[str, Any]) -> int:
     """Keep one active durable session for each employer application.
 
     Older extension versions could recover one queue row into many sessions,
@@ -464,7 +464,7 @@ def _collapse_active_session_duplicates(store: Dict[str, Any]) -> int:
         lambda session: clean_text(session.get("queue_id"), 100),
         lambda session: application_identity(session.get("job") or {"url": session.get("url")}),
     ):
-        groups: Dict[str, List[Dict[str, Any]]] = {}
+        groups: dict[str, list[dict[str, Any]]] = {}
         for session in active:
             if session.get("state") not in ACTIVE_STATES:
                 continue
@@ -491,7 +491,7 @@ def _collapse_active_session_duplicates(store: Dict[str, Any]) -> int:
     return changed
 
 
-def load_store(root: Path) -> Dict[str, Any]:
+def load_store(root: Path) -> dict[str, Any]:
     path = store_path(root)
     try:
         value = json.loads(path.read_text(encoding="utf-8"))
@@ -510,7 +510,7 @@ def load_store(root: Path) -> Dict[str, Any]:
     defaults = _canonical_resume_answers(root)
     if defaults:
         answers = base["context"]["answers"]
-        changed: Dict[str, Dict[str, Any]] = {}
+        changed: dict[str, dict[str, Any]] = {}
         for answer_id, answer in defaults.items():
             existing = answers.get(answer_id)
             canonical_existing = isinstance(existing, dict) and (
@@ -541,7 +541,7 @@ def load_store(root: Path) -> Dict[str, Any]:
     return base
 
 
-def write_store(root: Path, store: Dict[str, Any]) -> None:
+def write_store(root: Path, store: dict[str, Any]) -> None:
     path = store_path(root)
     path.parent.mkdir(parents=True, exist_ok=True)
     store["version"] = APPLICATION_AGENT_VERSION
@@ -559,7 +559,7 @@ def write_store(root: Path, store: Dict[str, Any]) -> None:
             pass
 
 
-def write_context_markdown(root: Path, store: Dict[str, Any]) -> Path:
+def write_context_markdown(root: Path, store: dict[str, Any]) -> Path:
     """Write a readable local mirror; JSON remains the machine source of truth."""
     path = markdown_path(root)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -586,7 +586,7 @@ def write_context_markdown(root: Path, store: Dict[str, Any]) -> Path:
     return path
 
 
-def _answer_allowed_for_field(answer: Dict[str, Any], field: Dict[str, Any]) -> bool:
+def _answer_allowed_for_field(answer: dict[str, Any], field: dict[str, Any]) -> bool:
     """Honor an explicit fallback only when the preferred option is absent."""
     fallback_for = answer.get("fallback_for")
     if not isinstance(fallback_for, list) or not fallback_for:
@@ -603,7 +603,7 @@ def _answer_allowed_for_field(answer: Dict[str, Any], field: Dict[str, Any]) -> 
     return not any(normalize_question(item) in normalized_options for item in fallback_for)
 
 
-def _answer_matches_field(answer: Dict[str, Any], field: Dict[str, Any], normalized: str) -> bool:
+def _answer_matches_field(answer: dict[str, Any], field: dict[str, Any], normalized: str) -> bool:
     variants = [normalize_question(answer.get("question"))]
     variants.extend(normalize_question(item) for item in answer.get("variants", []) if item)
     variants.append(normalize_question(answer.get("value")))
@@ -632,7 +632,7 @@ def _answer_matches_field(answer: Dict[str, Any], field: Dict[str, Any], normali
     return False
 
 
-def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any], session_id: str = "") -> List[Dict[str, Any]]:
+def _answer_candidates(store: dict[str, Any], field: dict[str, Any], session_id: str = "") -> list[dict[str, Any]]:
     answers = (store.get("context") or {}).get("answers", {})
     if not isinstance(answers, dict):
         return []
@@ -641,7 +641,7 @@ def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any], session_id:
     key = normalized_field_key(field)
     mappings = (store.get("context") or {}).get("mappings", {})
     mapped_id = mappings.get(key) or mappings.get(category)
-    values: List[Dict[str, Any]] = []
+    values: list[dict[str, Any]] = []
     def available(answer: Any) -> bool:
         if not isinstance(answer, dict):
             return False
@@ -701,7 +701,7 @@ def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any], session_id:
     return values
 
 
-def _field_value_matches_fill(field: Dict[str, Any], value: Any) -> bool:
+def _field_value_matches_fill(field: dict[str, Any], value: Any) -> bool:
     """Return whether the employer page already contains an approved value.
 
     Form planning is deliberately two-pass. The first pass returns only
@@ -728,7 +728,7 @@ def _field_value_matches_fill(field: Dict[str, Any], value: Any) -> bool:
     return normalize_question(current) == normalize_question(value) and bool(normalize_question(value))
 
 
-def _choice_group_key(field: Dict[str, Any]) -> str:
+def _choice_group_key(field: dict[str, Any]) -> str:
     """Return a stable key for one rendered choice group."""
     field_type = clean_text(field.get("type"), 32).lower()
     category = clean_text(field.get("category") or infer_category(field), 80)
@@ -751,15 +751,15 @@ def _review_value_selected(value: Any) -> bool:
     return bool(normalized and normalized not in {"unchecked", "false", "0", "empty"})
 
 
-def _compact_review_items(items: Iterable[Dict[str, Any]]) -> List[Dict[str, Any]]:
+def _compact_review_items(items: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
     """Collapse option siblings into one owner-facing review row.
 
     The raw form remains in ``last_form`` for fingerprinting and verification.
     This compact representation is only the review/blocker surface, where
     five radio options should be one question with one selected answer.
     """
-    compact: List[Dict[str, Any]] = []
-    group_indexes: Dict[str, int] = {}
+    compact: list[dict[str, Any]] = []
+    group_indexes: dict[str, int] = {}
     for raw in items:
         if not isinstance(raw, dict):
             continue
@@ -804,7 +804,7 @@ def _compact_review_items(items: Iterable[Dict[str, Any]]) -> List[Dict[str, Any
     return compact
 
 
-def _field_review(field: Dict[str, Any], value: Any = "", answer: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+def _field_review(field: dict[str, Any], value: Any = "", answer: dict[str, Any] | None = None) -> dict[str, Any]:
     category = clean_text(field.get("category") or infer_category(field), 80)
     label = clean_text(field.get("label") or field.get("question") or field.get("name"), 500)
     group_question = clean_text(field.get("group_question"), 500)
@@ -826,7 +826,7 @@ def _field_review(field: Dict[str, Any], value: Any = "", answer: Optional[Dict[
     }
 
 
-def _approved_fill_value(field: Dict[str, Any], answer: Dict[str, Any]) -> str:
+def _approved_fill_value(field: dict[str, Any], answer: dict[str, Any]) -> str:
     """Adapt one approved answer to the exact option rendered by an ATS."""
     field_type = clean_text(field.get("type"), 32).lower()
     if field_type in {"radio", "checkbox", "button"}:
@@ -841,7 +841,7 @@ def _approved_fill_value(field: Dict[str, Any], answer: Dict[str, Any]) -> str:
     return clean_text(answer.get("value"), VALUE_LIMIT)
 
 
-def _new_session(job: Dict[str, Any], mode: str = "per_role", queue_id: str = "") -> Dict[str, Any]:
+def _new_session(job: dict[str, Any], mode: str = "per_role", queue_id: str = "") -> dict[str, Any]:
     clean_job = {
         "id": clean_text(job.get("id"), 160),
         "company": clean_text(job.get("company"), 240),
@@ -871,7 +871,7 @@ def _new_session(job: Dict[str, Any], mode: str = "per_role", queue_id: str = ""
     }
 
 
-def create_session(root: Path, job: Dict[str, Any], mode: str = "per_role", queue_id: str = "") -> Dict[str, Any]:
+def create_session(root: Path, job: dict[str, Any], mode: str = "per_role", queue_id: str = "") -> dict[str, Any]:
     store = load_store(root)
     clean_queue_id = clean_text(queue_id, 100)
     clean_job_identity = application_identity(job)
@@ -939,19 +939,19 @@ def create_session(root: Path, job: Dict[str, Any], mode: str = "per_role", queu
     return public_session(session)
 
 
-def get_session(root: Path, session_id: str) -> Optional[Dict[str, Any]]:
+def get_session(root: Path, session_id: str) -> dict[str, Any] | None:
     store = load_store(root)
     session = store.get("sessions", {}).get(clean_text(session_id, 100))
     return copy.deepcopy(session) if isinstance(session, dict) else None
 
 
-def _save_session(root: Path, store: Dict[str, Any], session: Dict[str, Any]) -> None:
+def _save_session(root: Path, store: dict[str, Any], session: dict[str, Any]) -> None:
     session["updated_at"] = utc_now()
     store["sessions"][session["session_id"]] = session
     write_store(root, store)
 
 
-def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[str, Any]], final: bool = False) -> Dict[str, Any]:
+def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[dict[str, Any]], final: bool = False) -> dict[str, Any]:
     store = load_store(root)
     session = store.get("sessions", {}).get(clean_text(session_id, 100))
     if not isinstance(session, dict):
@@ -967,11 +967,11 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
         # turn a review card back into a fill pass. An explicit rescan clears
         # this lock through record_event before the next form plan.
         raise ValueError("application review is ready; use an explicit rescan before changing the page")
-    normalized_fields: List[Dict[str, Any]] = []
-    fills: List[Dict[str, Any]] = []
-    decisions: List[Dict[str, Any]] = []
-    blockers: List[Dict[str, Any]] = []
-    optional_review: List[Dict[str, Any]] = []
+    normalized_fields: list[dict[str, Any]] = []
+    fills: list[dict[str, Any]] = []
+    decisions: list[dict[str, Any]] = []
+    blockers: list[dict[str, Any]] = []
+    optional_review: list[dict[str, Any]] = []
     for index, raw in enumerate(fields):
         if not isinstance(raw, dict) or raw.get("hidden"):
             continue
@@ -1085,7 +1085,7 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
     # Checkboxes remain independent because those groups may be multi-select.
     field_by_id = {field["field_id"]: field for field in normalized_fields}
 
-    def single_choice_group(field: Dict[str, Any]) -> str:
+    def single_choice_group(field: dict[str, Any]) -> str:
         if clean_text(field.get("type"), 32).lower() not in {"radio", "button"}:
             return ""
         return clean_text(
@@ -1101,7 +1101,7 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
     if resolved_groups:
         selected_ids = {fill.get("field_id") for fill in decisions}
 
-        def unresolved_alternative(item: Dict[str, Any]) -> bool:
+        def unresolved_alternative(item: dict[str, Any]) -> bool:
             field = field_by_id.get(item.get("field_id"), {})
             group = single_choice_group(field)
             return bool(group and group in resolved_groups and item.get("field_id") not in selected_ids)
@@ -1127,7 +1127,7 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
     session["review"] = None
     session["confirmation"] = None
     fill_by_id = {item["field_id"]: item for item in decisions}
-    review_fields: List[Dict[str, Any]] = []
+    review_fields: list[dict[str, Any]] = []
     for field in normalized_fields:
         if field.get("is_submit"):
             continue
@@ -1159,10 +1159,10 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[
     }
 
 
-def _prepare_review(session: Dict[str, Any]) -> Dict[str, Any]:
+def _prepare_review(session: dict[str, Any]) -> dict[str, Any]:
     form = session.get("last_form") or {}
     fields = form.get("fields") or []
-    proposed: List[Dict[str, Any]] = []
+    proposed: list[dict[str, Any]] = []
     for field in fields:
         if field.get("is_submit"):
             continue
@@ -1209,7 +1209,7 @@ def _prepare_review(session: Dict[str, Any]) -> Dict[str, Any]:
         **review_payload,
         "review_hash": digest,
         "nonce": secrets.token_urlsafe(24),
-        "expires_at": (dt.datetime.now(dt.timezone.utc) + dt.timedelta(seconds=REVIEW_TTL_SECONDS)).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+        "expires_at": (dt.datetime.now(dt.UTC) + dt.timedelta(seconds=REVIEW_TTL_SECONDS)).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "created_at": utc_now(),
     }
     session["review"] = review
@@ -1217,7 +1217,7 @@ def _prepare_review(session: Dict[str, Any]) -> Dict[str, Any]:
     return review
 
 
-def prepare_review(root: Path, session_id: str, fields: Optional[Iterable[Dict[str, Any]]] = None) -> Dict[str, Any]:
+def prepare_review(root: Path, session_id: str, fields: Iterable[dict[str, Any]] | None = None) -> dict[str, Any]:
     store = load_store(root)
     session = store.get("sessions", {}).get(clean_text(session_id, 100))
     if not isinstance(session, dict):
@@ -1246,21 +1246,21 @@ def save_answer(
     value: str,
     category: str = "",
     reusable: bool = True,
-    sensitive: Optional[bool] = None,
+    sensitive: bool | None = None,
     answer_id: str = "",
-    variants: Optional[Iterable[str]] = None,
-    fallback_for: Optional[Iterable[str]] = None,
+    variants: Iterable[str] | None = None,
+    fallback_for: Iterable[str] | None = None,
     select_all: bool = False,
-    evidence_ids: Optional[Iterable[str]] = None,
+    evidence_ids: Iterable[str] | None = None,
     session_id: str = "",
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     question = clean_text(question, QUESTION_LIMIT)
     value = clean_text(value, VALUE_LIMIT)
     if not question or not value:
         raise ValueError("question and answer are required")
     normalized = normalize_question(question)
     category = clean_text(category, 80) or "other"
-    generated_id = hashlib.sha256(f"{category}:{normalized}".encode("utf-8")).hexdigest()[:24]
+    generated_id = hashlib.sha256(f"{category}:{normalized}".encode()).hexdigest()[:24]
     answer_id = clean_text(answer_id, 100) or generated_id
     store = load_store(root)
     existing = store["context"]["answers"].get(answer_id) or {}
@@ -1302,7 +1302,7 @@ def save_answer(
     return copy.deepcopy(answer)
 
 
-def save_mapping(root: Path, field_key: str, answer_id: str) -> Dict[str, Any]:
+def save_mapping(root: Path, field_key: str, answer_id: str) -> dict[str, Any]:
     field_key = normalize_question(field_key)
     answer_id = clean_text(answer_id, 100)
     if not field_key or not answer_id:
@@ -1316,7 +1316,7 @@ def save_mapping(root: Path, field_key: str, answer_id: str) -> Dict[str, Any]:
     return {"field_key": field_key, "answer_id": answer_id}
 
 
-def record_event(root: Path, session_id: str, state: str, message: str = "", error: str = "") -> Dict[str, Any]:
+def record_event(root: Path, session_id: str, state: str, message: str = "", error: str = "") -> dict[str, Any]:
     state = clean_text(state, 40).lower()
     if state not in SESSION_STATES:
         raise ValueError("invalid application session state")
@@ -1347,7 +1347,7 @@ def apply_confirmation(
     page_fingerprint: str = "",
     owner_approved_at: str = "",
     approval_expires_at: str = "",
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     store = load_store(root)
     session = store["sessions"].get(clean_text(session_id, 100))
     if not isinstance(session, dict) or not isinstance(session.get("review"), dict):
@@ -1359,7 +1359,7 @@ def apply_confirmation(
         raise ValueError("review card changed; reopen it before confirming")
     if not secrets.compare_digest(clean_text(review.get("nonce"), 100), clean_text(nonce, 100)):
         raise ValueError("review confirmation token is invalid")
-    now = dt.datetime.now(dt.timezone.utc).timestamp()
+    now = dt.datetime.now(dt.UTC).timestamp()
     expires = timestamp(review.get("expires_at"))
     effective_expiry = expires
     if expires is None or expires < now:
@@ -1391,7 +1391,7 @@ def apply_confirmation(
     return {"ok": True, "session_id": session["session_id"], "state": session["state"], "page_fingerprint": expected}
 
 
-def verify_submission_page(root: Path, session_id: str, page_url: str, fields: Iterable[Dict[str, Any]]) -> Dict[str, Any]:
+def verify_submission_page(root: Path, session_id: str, page_url: str, fields: Iterable[dict[str, Any]]) -> dict[str, Any]:
     """Check that a remotely approved review still describes the live page."""
     session = get_session(root, session_id)
     if not session or session.get("state") != "submitting":
@@ -1402,7 +1402,7 @@ def verify_submission_page(root: Path, session_id: str, page_url: str, fields: I
     actual = form_fingerprint(page_url, live_fields)
     if not expected or expected != actual:
         raise ValueError("the application page changed after confirmation")
-    expected_values: Dict[str, str] = {}
+    expected_values: dict[str, str] = {}
     for field in (session.get("review") or {}).get("fields", []):
         if not isinstance(field, dict):
             continue
@@ -1426,7 +1426,7 @@ def verify_submission_page(root: Path, session_id: str, page_url: str, fields: I
         if key and live_values.get(key) != value:
             raise ValueError("application field values changed after confirmation")
     expiry = timestamp(confirmation.get("expires_at"))
-    if expiry is None or expiry < dt.datetime.now(dt.timezone.utc).timestamp():
+    if expiry is None or expiry < dt.datetime.now(dt.UTC).timestamp():
         raise ValueError("submission confirmation expired")
     return {"ok": True, "session_id": session["session_id"], "page_fingerprint": actual}
 
@@ -1440,7 +1440,7 @@ def add_issue(
     page_url: str = "",
     fingerprint: str = "",
     selector_kind: str = "",
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     store = load_store(root)
     issue = {
         "issue_id": uuid.uuid4().hex[:20],
@@ -1460,7 +1460,7 @@ def add_issue(
     return copy.deepcopy(issue)
 
 
-def list_issues(root: Path, status: str = "") -> List[Dict[str, Any]]:
+def list_issues(root: Path, status: str = "") -> list[dict[str, Any]]:
     store = load_store(root)
     rows = [item for item in store.get("issues", []) if isinstance(item, dict)]
     if status:
@@ -1468,7 +1468,7 @@ def list_issues(root: Path, status: str = "") -> List[Dict[str, Any]]:
     return copy.deepcopy(rows)
 
 
-def public_session(session: Dict[str, Any]) -> Dict[str, Any]:
+def public_session(session: dict[str, Any]) -> dict[str, Any]:
     value = copy.deepcopy(session)
     value.pop("last_form", None)
     value.pop("review_fields", None)
@@ -1477,7 +1477,7 @@ def public_session(session: Dict[str, Any]) -> Dict[str, Any]:
     return value
 
 
-def public_context(root: Path) -> Dict[str, Any]:
+def public_context(root: Path) -> dict[str, Any]:
     store = load_store(root)
     answers = list(store.get("context", {}).get("answers", {}).values())
     answers.sort(key=lambda item: str(item.get("updated_at") or ""), reverse=True)
@@ -1490,7 +1490,7 @@ def public_context(root: Path) -> Dict[str, Any]:
     }
 
 
-def public_sessions(root: Path) -> List[Dict[str, Any]]:
+def public_sessions(root: Path) -> list[dict[str, Any]]:
     store = load_store(root)
     rows = [public_session(item) for item in store.get("sessions", {}).values() if isinstance(item, dict)]
     rows.sort(key=lambda item: str(item.get("updated_at") or ""), reverse=True)

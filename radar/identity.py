@@ -10,7 +10,6 @@ from __future__ import annotations
 
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
-
 _TRACKING_KEYS = {
     "ref", "referrer", "source", "src", "job_source", "jobsource",
     "lever-source", "lever_source",

@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import re
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from ..http import get_json, get_text
 from ..models import Job
@@ -54,7 +54,7 @@ def _simplify_like(url: str, source: str) -> list[Job]:
             source_url=info(source)[1],
             locations=locs,
             posted_at=int(posted) if posted else None,
-            remote=any("remote" in (l or "").lower() for l in locs),
+            remote=any("remote" in (location or "").lower() for location in locs),
         ))
     return out
 
@@ -84,8 +84,8 @@ _JR_ROW = re.compile(
 def _md_date_to_epoch(s: str) -> int | None:
     """'Jul 05' → epoch, assuming the most recent occurrence of that date."""
     try:
-        now = datetime.now(timezone.utc)
-        d = datetime.strptime(f"{s} {now.year}", "%b %d %Y").replace(tzinfo=timezone.utc)
+        now = datetime.now(UTC)
+        d = datetime.strptime(f"{s} {now.year}", "%b %d %Y").replace(tzinfo=UTC)
         if d > now:  # e.g. seeing "Dec 30" in January
             d = d.replace(year=now.year - 1)
         return int(d.timestamp())

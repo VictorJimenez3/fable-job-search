@@ -6,10 +6,10 @@ label while keeping claims concise and auditable.
 """
 from __future__ import annotations
 
+from .company_research import claim_text
+from .company_research import dossier_for as research_for
 from .culture import dossier_for
-from .company_research import claim_text, dossier_for as research_for
 from .models import norm
-
 
 KNOWN: dict[str, tuple[str, str]] = {
     "anduril": ("defense technology", "autonomous defense systems"),

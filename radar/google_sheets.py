@@ -6,8 +6,8 @@ only HTTPS APIs and ``requests`` so it adds no heavyweight Google dependency.
 """
 from __future__ import annotations
 
-from datetime import datetime, timezone
 import time
+from datetime import UTC, datetime
 from urllib.parse import quote
 
 import requests
@@ -198,7 +198,7 @@ def create_tracker(title: str | None = None) -> dict:
 
 
 def _iso(epoch: int | None) -> str:
-    return (datetime.fromtimestamp(epoch, timezone.utc).isoformat(timespec="seconds")
+    return (datetime.fromtimestamp(epoch, UTC).isoformat(timespec="seconds")
             if epoch else "")
 
 

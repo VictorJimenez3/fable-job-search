@@ -226,6 +226,7 @@ def deduplicate_entries(applied: list[dict]) -> int:
 def _reply(event: dict, body: str) -> None:
     """Post a comment reply on the issue this event belongs to."""
     import requests
+
     from .config import github_repo
     token = env("GITHUB_TOKEN")
     number = (event.get("issue") or {}).get("number")
@@ -356,7 +357,7 @@ def handle_event(event_path: str) -> None:
     changed = 0
     taste_changed = False
 
-    labels = [l["name"] for l in (event.get("issue") or {}).get("labels", [])]
+    labels = [label["name"] for label in (event.get("issue") or {}).get("labels", [])]
     # tokenless platform path: a freshly opened issue whose body carries
     # commands (save <id>, applied <url>, skip <company>). The owner check
     # above is the gate; the issue is auto-closed when processed.
@@ -467,6 +468,7 @@ def handle_event(event_path: str) -> None:
 def _close_command_issue(event: dict) -> None:
     """Tidy up a processed tokenless command issue (best-effort)."""
     import requests
+
     from .config import github_repo
     token = env("GITHUB_TOKEN")
     number = (event.get("issue") or {}).get("number")
@@ -489,6 +491,7 @@ def reconcile_checkboxes() -> int:
     changes); this idempotent sweep guarantees nothing Victor checked is ever
     silently lost. Runs on a schedule and on demand."""
     import requests
+
     from .config import github_repo
     token = env("GITHUB_TOKEN")
     if not token:

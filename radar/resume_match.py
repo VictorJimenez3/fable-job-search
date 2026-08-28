@@ -7,21 +7,19 @@ may consume its evidence, but cannot change its rubric or score.
 """
 from __future__ import annotations
 
+import base64
 import hashlib
 import html
 import json
 import re
 import time
-import base64
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Tuple
+from typing import Any
 
 import requests
 
-from radar.evidence_review import (BLOCKING_STATUSES, apply_reviews,
-                                   load_reviews, owner_answer_nodes,
-                                   review_summary)
-
+from radar.evidence_review import BLOCKING_STATUSES, apply_reviews, load_reviews, owner_answer_nodes, review_summary
 
 MATCH_VERSION = "resume-match-v4"
 PUBLIC_CACHE_SECONDS = 7 * 86400
@@ -88,7 +86,7 @@ def _sha(value: str, length: int = 16) -> str:
     return hashlib.sha256(value.encode("utf-8", errors="replace")).hexdigest()[:length]
 
 
-def _authority(path: str) -> Tuple[int, bool, str]:
+def _authority(path: str) -> tuple[int, bool, str]:
     normalized = path.replace("\\", "/")
     if normalized.endswith("experiences/JJ_SOURCE_OF_TRUTH.md"):
         return 100, True, "experience source of truth"
@@ -119,13 +117,13 @@ def _strip_markup(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
 
-def _markdown_nodes(path: Path, cv_dir: Path) -> List[Dict[str, Any]]:
+def _markdown_nodes(path: Path, cv_dir: Path) -> list[dict[str, Any]]:
     relative = str(path.relative_to(cv_dir))
     authority, claim_allowed, source_kind = _authority(relative)
     text = path.read_text(errors="replace")
     heading = ""
-    buffer: List[str] = []
-    nodes: List[Dict[str, Any]] = []
+    buffer: list[str] = []
+    nodes: list[dict[str, Any]] = []
 
     def flush() -> None:
         paragraph = _strip_markup(" ".join(buffer))
@@ -157,7 +155,7 @@ def _markdown_nodes(path: Path, cv_dir: Path) -> List[Dict[str, Any]]:
     return nodes
 
 
-def _catalog_nodes(catalog: Dict[str, Any]) -> List[Dict[str, Any]]:
+def _catalog_nodes(catalog: dict[str, Any]) -> list[dict[str, Any]]:
     nodes = []
     for entry in catalog.get("entries", {}).values():
         label = entry.get("heading") or "%s - %s" % (entry.get("company", ""), entry.get("role", ""))
@@ -183,7 +181,7 @@ def _public_cache_path(studio_dir: Path) -> Path:
     return studio_dir / "public_portfolio_sources.json"
 
 
-def refresh_public_sources(studio_dir: Path, force: bool = False, session=requests) -> Dict[str, Any]:
+def refresh_public_sources(studio_dir: Path, force: bool = False, session=requests) -> dict[str, Any]:
     """Refresh bounded GitHub/Devpost corroboration with a local cache.
 
     Repository metadata alone is too shallow for technical tailoring, so the
@@ -198,9 +196,9 @@ def refresh_public_sources(studio_dir: Path, force: bool = False, session=reques
     if not force and cached.get("fetched_at", 0) > time.time() - PUBLIC_CACHE_SECONDS:
         return cached
 
-    records: List[Dict[str, Any]] = []
-    errors: List[str] = []
-    warnings: List[str] = []
+    records: list[dict[str, Any]] = []
+    errors: list[str] = []
+    warnings: list[str] = []
     cached_records = {
         str(record.get("id")): record
         for record in cached.get("records", [])
@@ -308,9 +306,9 @@ def refresh_public_sources(studio_dir: Path, force: bool = False, session=reques
 def build_evidence_graph(
     cv_dir: Path,
     studio_dir: Path,
-    catalog: Dict[str, Any],
+    catalog: dict[str, Any],
     refresh_public: bool = False,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     nodes = _catalog_nodes(catalog)
     source_fingerprints = []
     for path in sorted(cv_dir.rglob("*.md")):
@@ -375,9 +373,9 @@ def _requirement_terms(text: str, markers: Iterable[str]) -> set[str]:
     return found
 
 
-def posting_eligibility_blocks(text: str) -> List[str]:
+def posting_eligibility_blocks(text: str) -> list[str]:
     """Candidate-level requirements that a strong portfolio cannot offset."""
-    blocks: List[str] = []
+    blocks: list[str] = []
     normalized_text = re.sub(r"\bph\.?\s*d\.?\b", "phd", text or "", flags=re.I)
     normalized_text = re.sub(r"\bm\.?\s*s\.?\b", "ms", normalized_text, flags=re.I)
     for sentence in re.split(r"[\n.!?;]+", normalized_text):
@@ -406,7 +404,7 @@ def posting_eligibility_blocks(text: str) -> List[str]:
     return list(dict.fromkeys(blocks))
 
 
-def _role_clusters(job: Dict[str, Any], posting_text: str) -> set[str]:
+def _role_clusters(job: dict[str, Any], posting_text: str) -> set[str]:
     title = str(job.get("title") or "")
     clusters = _cluster_hits(_tokens(title))
     if not clusters:
@@ -416,20 +414,20 @@ def _role_clusters(job: Dict[str, Any], posting_text: str) -> set[str]:
     return clusters
 
 
-def _node_specificity(node: Dict[str, Any]) -> float:
+def _node_specificity(node: dict[str, Any]) -> float:
     text = str(node.get("text") or "")
     metric = bool(re.search(r"\b\d[\d,.]*\+?%?|\$\d|\b(?:won|selected|award|grant|first place)\b", text, re.I))
     mechanism = len(_cluster_hits(set(node.get("tokens") or []))) >= 2
     return min(1.0, 0.45 + (0.3 if metric else 0) + (0.25 if mechanism else 0))
 
 
-def score_resume_match(job: Dict[str, Any], graph: Dict[str, Any], posting_text: str = "") -> Dict[str, Any]:
+def score_resume_match(job: dict[str, Any], graph: dict[str, Any], posting_text: str = "") -> dict[str, Any]:
     """Return a fixed-rubric private match score with source-level reasons."""
     runtime = graph.get("_runtime_index")
     if not isinstance(runtime, dict):
         supported = {name: [] for name in CAPABILITY_CLUSTERS}
-        token_strength: Dict[str, float] = {}
-        token_nodes: Dict[str, List[Dict[str, Any]]] = {}
+        token_strength: dict[str, float] = {}
+        token_nodes: dict[str, list[dict[str, Any]]] = {}
         for node in graph.get("nodes", []):
             if not node.get("claim_allowed"):
                 continue
@@ -510,7 +508,7 @@ def score_resume_match(job: Dict[str, Any], graph: Dict[str, Any], posting_text:
             relevant_nodes.extend((runtime.get("token_nodes") or {}).get(token) or [])
     unique_nodes = {node["id"]: node for node in relevant_nodes}.values()
 
-    def target_rank(node: Dict[str, Any]) -> Tuple[float, int]:
+    def target_rank(node: dict[str, Any]) -> tuple[float, int]:
         node_tokens = set(node.get("tokens") or [])
         overlap = len(target_tokens & node_tokens)
         cluster_overlap = len(relevant_clusters & _cluster_hits(node_tokens))
@@ -611,7 +609,7 @@ def score_resume_match(job: Dict[str, Any], graph: Dict[str, Any], posting_text:
     }
 
 
-def job_match_hash(job: Dict[str, Any], posting_text: str = "") -> str:
+def job_match_hash(job: dict[str, Any], posting_text: str = "") -> str:
     stable = {
         "id": job.get("id"), "company": job.get("company"), "title": job.get("title"),
         "sector": job.get("sector"), "alert_ok": job.get("alert_ok"),
@@ -621,8 +619,8 @@ def job_match_hash(job: Dict[str, Any], posting_text: str = "") -> str:
 
 
 def evidence_context(
-    graph: Dict[str, Any], job: Dict[str, Any], posting_text: str = "", limit: int = 120
-) -> List[Dict[str, Any]]:
+    graph: dict[str, Any], job: dict[str, Any], posting_text: str = "", limit: int = 120
+) -> list[dict[str, Any]]:
     """Return the most target-relevant source nodes for frontier prompts."""
     target_tokens = _tokens(
         "%s %s %s %s" % (

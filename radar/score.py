@@ -850,7 +850,7 @@ def calibrate_score(raw_utility: float) -> int:
     raw = max(0.0, float(raw_utility))
     if raw >= anchors[-1][0]:
         return 100
-    for (x0, y0), (x1, y1) in zip(anchors, anchors[1:]):
+    for (x0, y0), (x1, y1) in zip(anchors, anchors[1:], strict=True):
         if raw <= x1:
             ratio = (raw - x0) / (x1 - x0)
             return max(0, min(100, round(y0 + ratio * (y1 - y0))))

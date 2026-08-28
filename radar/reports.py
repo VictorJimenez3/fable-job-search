@@ -9,7 +9,6 @@ from pathlib import Path
 from . import state
 from .config import DOCS_DIR, env, github_owner, github_repo
 
-
 REPORT_THRESHOLD = 3
 REPORT_TYPES = {"expired", "filled", "duplicate", "wrong", "other"}
 REPORT_RE = re.compile(r"radar-report:\s*([a-f0-9]{16})", re.I)

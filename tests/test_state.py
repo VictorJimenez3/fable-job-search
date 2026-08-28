@@ -16,6 +16,7 @@ def test_jobs_save_omits_only_reconstructible_defaults(tmp_path, monkeypatch):
                 "company": "Acme",
                 "title": "Software Engineer",
                 "score": 72,
+                "score_version": 1,
                 "score_dimensions": dimensions,
                 "score_dimensions_raw": dict(dimensions),
                 "score_reasons": ["base utility +5"],
@@ -47,6 +48,7 @@ def test_jobs_save_keeps_nondefault_and_disabled_dimension_values(tmp_path, monk
         "jobs.json",
         {
             "job-1": {
+                "score_version": 1,
                 "remote": True,
                 "alert_ok": True,
                 "posting_status": "expired",

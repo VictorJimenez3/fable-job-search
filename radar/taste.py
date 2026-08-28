@@ -15,7 +15,6 @@ from .config import DOCS_DIR, profile_id
 from .models import norm
 from .score import FEEDBACK_STOPWORDS, _title_tokens
 
-
 REASONS = {
     "up": {"company", "role", "both"},
     "down": {"company", "role", "eligibility", "location", "other"},

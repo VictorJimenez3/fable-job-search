@@ -22,6 +22,20 @@ and notification setting.
 **[→ Cross-CLI handoff notes](docs/CLI_HANDOFF.md)** ·
 **[→ Resume Studio CLI guide](docs/RESUME_CLI.md)**
 
+## Start here
+
+| Need | Read or run |
+| --- | --- |
+| Understand the system | [`CLAUDE.md`](CLAUDE.md) → [`README.md`](README.md) → [`DECISIONS.md`](DECISIONS.md) |
+| Use the owner workflow | [`TUTORIAL.md`](docs/TUTORIAL.md) and [`RESUME_CLI.md`](docs/RESUME_CLI.md) |
+| Operate or repair automation | [`CLI_HANDOFF.md`](docs/CLI_HANDOFF.md), then the relevant `.github/workflows/` file |
+| Run checks locally | `.venv/bin/python -m pytest tests/ -q` · `.venv/bin/python -m compileall -q radar tests` · `cmp webapp/index.html docs/platform/index.html` |
+| Publish a validated change | Push a feature branch and open a PR into `claude/newgrad-job-search-system-9gbj9k`; production deploys follow a green `tests` run |
+
+Generated state and dashboard files are outputs, not hand-edit surfaces. Change
+the crawler, scorer, or renderer and regenerate them with the documented CLI;
+keep the reason in [`DECISIONS.md`](DECISIONS.md) when a repair is deliberate.
+
 The friendly Vercel URL is the canonical production door. Production deploys
 run from `claude/newgrad-job-search-system-9gbj9k` and promote the newest build
 to `job-radar-newgrad.vercel.app`; users should never need a deployment-specific

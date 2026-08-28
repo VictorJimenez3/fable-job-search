@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import re
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import requests
 
@@ -32,7 +32,7 @@ def lane_label() -> str:
 
 
 def _alert_title(job: dict) -> str:
-    stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    stamp = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
     prefix = "🎓 Internship" if profile_id() == "internship" else "🎯"
     return f"{prefix} {job['company']} — {job['title'][:72]} · {stamp}"
 
@@ -154,7 +154,7 @@ def _existing_alert_ids(repo: str, *, since: int | None = None) -> set[str]:
     params = {"labels": LABEL, "state": "all", "per_page": 100}
     if since:
         # Give clock skew and a manually edited issue a small cushion.
-        stamp = datetime.fromtimestamp(max(0, since - 300), timezone.utc)
+        stamp = datetime.fromtimestamp(max(0, since - 300), UTC)
         params["since"] = stamp.isoformat().replace("+00:00", "Z")
     while True:
         response = requests.get(

@@ -17,7 +17,6 @@ from pathlib import Path
 
 from .config import STATE_DIR, profile_id
 
-
 # GitHub rejects blobs larger than 100 MiB. Leave enough room for a crawl to
 # report and recover before a generated commit reaches that hard boundary.
 DEFAULT_MAX_JOB_SNAPSHOT_BYTES = 95 * 1024 * 1024
@@ -70,6 +69,11 @@ def load(name: str, default, namespace: str | None = None):
 def _compact_job_record(record: object) -> object:
     """Return a sparse, lossless-on-read copy of one generated job record."""
     if not isinstance(record, dict):
+        return record
+    # Only fully scored crawler output is guaranteed to have every omitted
+    # default reconstructible. Keep hand-authored/legacy rows byte-for-byte
+    # compatible with callers that still inspect optional keys directly.
+    if not record.get("score_version") or record.get("manual_added"):
         return record
     compact = dict(record)
     if compact.get("score_dimensions_raw") == compact.get("score_dimensions"):
