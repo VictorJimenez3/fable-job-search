@@ -7,6 +7,7 @@ import pytest
 
 from radar.application_agent import (
     add_issue,
+    application_identity,
     apply_confirmation,
     create_session,
     get_session,
@@ -110,6 +111,25 @@ def test_repeated_queue_attachment_reuses_one_durable_session(tmp_path: Path):
     assert second["queue_id"] == "queue-1"
 
 
+def test_application_identity_ignores_referral_parameters_but_keeps_job_parameters():
+    base = {"id": "old-id", "url": "https://jobs.example.com/apply/1?job=42&utm_source=radar&embed=true#form"}
+    replay = {"id": "old-id", "url": "https://JOBS.EXAMPLE.COM/apply/1/?embed=false&job=42&utm_campaign=jobs"}
+    different = {"id": "old-id", "url": "https://jobs.example.com/apply/1?job=43"}
+
+    assert application_identity(base) == application_identity(replay)
+    assert application_identity(base) != application_identity(different)
+
+
+def test_new_queue_id_reattaches_to_active_employer_application(tmp_path: Path):
+    first = create_session(tmp_path, job(), mode="batch", queue_id="queue-old")
+    refreshed = {**job(), "url": f"{job()['url']}?utm_source=tracker&embed=true"}
+    second = create_session(tmp_path, refreshed, mode="batch", queue_id="queue-current")
+
+    assert second["session_id"] == first["session_id"]
+    assert second["queue_id"] == "queue-current"
+    assert len([row for row in public_sessions(tmp_path) if row["state"] not in {"cancelled", "failed", "skipped", "submitted"}]) == 1
+
+
 def test_loading_old_store_collapses_active_duplicate_queue_sessions(tmp_path: Path):
     first = create_session(tmp_path, job(), mode="batch", queue_id="queue-1")
     path = tmp_path / "CV" / ".resume_studio" / "application_agent.json"
@@ -128,6 +148,29 @@ def test_loading_old_store_collapses_active_duplicate_queue_sessions(tmp_path: P
     assert rows[first["session_id"]]["state"] == "filling"
     assert rows["duplicate-session"]["state"] == "cancelled"
     assert rows["duplicate-session"]["superseded_by"] == first["session_id"]
+
+
+def test_loading_old_store_collapses_same_application_across_queue_ids(tmp_path: Path):
+    first = create_session(tmp_path, job(), mode="batch", queue_id="queue-old")
+    path = tmp_path / "CV" / ".resume_studio" / "application_agent.json"
+    store = json.loads(path.read_text())
+    duplicate = copy.deepcopy(store["sessions"][first["session_id"]])
+    duplicate["session_id"] = "new-queue-session"
+    duplicate["queue_id"] = "queue-current"
+    duplicate["job"]["url"] += "?utm_source=tracker&embed=true"
+    duplicate["url"] = duplicate["job"]["url"]
+    duplicate["state"] = "queued"
+    duplicate["updated_at"] = "2026-08-20T00:00:00Z"
+    store["sessions"][duplicate["session_id"]] = duplicate
+    store["sessions"][first["session_id"]]["state"] = "filling"
+    store["sessions"][first["session_id"]]["updated_at"] = "2026-08-21T00:00:00Z"
+    path.write_text(json.dumps(store))
+
+    rows = {row["session_id"]: row for row in public_sessions(tmp_path)}
+
+    assert rows[first["session_id"]]["state"] == "filling"
+    assert rows["new-queue-session"]["state"] == "cancelled"
+    assert rows["new-queue-session"]["superseded_by"] == first["session_id"]
 
 
 def test_country_word_does_not_hide_work_authorization_choice(tmp_path: Path):
@@ -209,8 +252,12 @@ def test_category_specific_answers_fill_repeated_yes_groups_and_text_fields(tmp_
     save_answer(tmp_path, "Have you built a personal project using LLMs?", "Yes", category="llm_experience")
     save_answer(tmp_path, "Current Location", "Newark, NJ", category="location", variants=["Start typing..."])
     save_answer(tmp_path, "Graduation Date", "May 2027", category="education", variants=["Pick date..."])
-    save_answer(tmp_path, "Please describe your AI experience.", "- Built an agentic LLM proof of concept.", category="essay")
     session = create_session(tmp_path, job())
+    save_answer(
+        tmp_path, "Please describe your AI experience.",
+        "- Built an agentic LLM proof of concept.", category="essay",
+        reusable=False, session_id=session["session_id"],
+    )
     result = plan_form(
         tmp_path,
         session["session_id"],
@@ -293,6 +340,36 @@ def test_role_specific_written_answer_cannot_leak_into_another_application(tmp_p
     second = plan_form(tmp_path, second_session["session_id"], job()["url"], [field])
     assert second["fills"] == []
     assert second["blockers"][0]["category"] == "essay"
+
+
+def test_owner_writing_context_does_not_replace_the_generated_essay(tmp_path: Path):
+    session = create_session(tmp_path, job())
+    save_answer(
+        tmp_path, "Context for: Why do you want to work here?", "I use the product with student teams.",
+        category="essay_context", reusable=False, session_id=session["session_id"],
+    )
+    result = plan_form(
+        tmp_path, session["session_id"], job()["url"],
+        [{"field_id": "why", "label": "Why do you want to work here?", "type": "textarea", "required": True}],
+    )
+
+    assert result["fills"] == []
+    assert result["blockers"][0]["category"] == "essay"
+
+
+def test_reusable_essay_answer_never_bypasses_role_specific_generation(tmp_path: Path):
+    session = create_session(tmp_path, job())
+    save_answer(
+        tmp_path, "Why do you want to work here?", "A stale employer-specific answer.",
+        category="essay", reusable=True,
+    )
+    result = plan_form(
+        tmp_path, session["session_id"], job()["url"],
+        [{"field_id": "why", "label": "Why do you want to work here?", "type": "textarea", "required": True}],
+    )
+
+    assert result["fills"] == []
+    assert result["blockers"][0]["category"] == "essay"
 
 
 def test_unrelated_yes_no_answers_cannot_fill_a_generic_attestation(tmp_path: Path):
@@ -500,8 +577,11 @@ def test_canonical_resume_repairs_a_stale_seeded_profile_value(tmp_path: Path):
 
 def test_final_review_is_explicit_and_page_bound(tmp_path: Path):
     save_answer(tmp_path, "Email address", "victor@example.com", category="email")
-    save_answer(tmp_path, "Why do you want this role?", "I build reliable systems.", category="essay")
     session = create_session(tmp_path, job())
+    save_answer(
+        tmp_path, "Why do you want this role?", "I build reliable systems.", category="essay",
+        reusable=False, session_id=session["session_id"],
+    )
     fields = [
         {"field_id": "email", "label": "Email", "type": "email", "required": True},
         {"field_id": "why", "label": "Why do you want this role?", "type": "textarea", "required": True},

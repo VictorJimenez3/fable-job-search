@@ -617,6 +617,7 @@ async function syncCloudQueueImpl() {
   } catch (error) {
     recoveryError = noteQuota(error);
   }
+  const contextQueueItems = Array.isArray(data.items) ? data.items : [];
   let syncError = "";
   try {
     const context = await cloud("/api/application-agent?view=context");
@@ -638,10 +639,23 @@ async function syncCloudQueueImpl() {
       syncError = noteQuota(error);
       console.warn("Job Radar profile context sync", error);
     }
+    const localBeforeImport = await local("/api/application/context");
+    const localById = new Map((localBeforeImport.answers || []).filter(answer => answer?.answer_id).map(answer => [answer.answer_id, answer]));
+    for (const answer of context.context?.answers || []) {
+      if (answer.reusable !== false) continue;
+      for (const queueId of answer.queue_ids || []) {
+        const item = contextQueueItems.find(candidate => candidate.queue_id === queueId);
+        if (!item?.session_id || TERMINAL_QUEUE_STATES.has(item.state)) continue;
+        const localAnswer = localById.get(answer.answer_id);
+        if (localAnswer?.value === answer.value && (localAnswer.session_ids || []).includes(item.session_id)) continue;
+        const imported = await local("/api/application/answer", {method: "POST", body: JSON.stringify({
+          ...answer, reusable: false, session_id: item.session_id,
+        })});
+        if (imported?.answer_id) localById.set(imported.answer_id, imported);
+      }
+    }
     const stored = await chrome.storage.local.get({contextUpdatedAt: ""});
     if (context.context?.updated_at && context.context.updated_at !== stored.contextUpdatedAt) {
-      const localBeforeImport = await local("/api/application/context");
-      const localById = new Map((localBeforeImport.answers || []).filter(answer => answer?.answer_id).map(answer => [answer.answer_id, answer]));
       for (const answer of context.context.answers || []) {
         // Generated application writing is intentionally session-local. A
         // historical cloud copy must never overwrite a fresh answer for the
@@ -888,9 +902,21 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
     }
     if (message?.type === "JOB_RADAR_SAVE_ANSWER") {
       const row = tabId ? tabs.get(tabId) : null;
-      const answer = {...message.answer, session_id: row?.sessionId || ""};
+      const supplied = message.answer && typeof message.answer === "object" ? message.answer : {};
+      const sourceCategory = String(supplied.category || "other");
+      const written = ["essay", "cover_letter"].includes(sourceCategory);
+      const sourceQuestion = String(supplied.question || supplied.label || "").trim();
+      const answer = {
+        ...supplied,
+        question: written ? `Context for: ${sourceQuestion}` : sourceQuestion,
+        category: written ? "essay_context" : sourceCategory,
+        reusable: !written,
+        queue_ids: written && row?.queueId ? [row.queueId] : [],
+        session_id: row?.sessionId || "",
+      };
       const result = await local("/api/application/answer", {method: "POST", body: JSON.stringify(answer)});
       try { await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({action: "answer", ...answer})}); } catch (_) {}
+      if (row) row.essayAttempts = new Set();
       return result;
     }
     if (message?.type === "JOB_RADAR_CONFIRM_LOCAL") {

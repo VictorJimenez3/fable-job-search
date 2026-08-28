@@ -28,11 +28,19 @@ def test_application_essay_prompt_uses_approved_context_and_no_fake_zero_limit(t
     skill.write_text("Write directly. Never invent facts. No em dashes.")
     monkeypatch.setattr(Path, "home", classmethod(lambda cls: tmp_path))
     monkeypatch.setattr(rs, "context_inventory", lambda root, limit=180: {"facts": []})
-    monkeypatch.setattr(rs, "application_context", lambda root: {"answers": [{
-        "question": "Why do you want to work at Notion?",
-        "value": "I care about tools that turn complex work into useful systems.",
-        "category": "essay", "reusable": True, "evidence_ids": ["owner-confirmed"],
-    }]})
+    monkeypatch.setattr(rs, "application_context", lambda root: {"answers": [
+        {
+            "question": "Why do you want to work at Notion?",
+            "value": "I care about tools that turn complex work into useful systems.",
+            "category": "essay", "reusable": True, "evidence_ids": ["owner-confirmed"],
+        },
+        {
+            "question": "Context for: Why do you want to work at Notion?",
+            "value": "I use Notion to organize projects with student teams.",
+            "category": "essay_context", "reusable": False, "session_ids": ["session-1"],
+            "evidence_ids": ["owner-provided"],
+        },
+    ]})
     captured = {}
 
     def fake_provider(provider, prompt, *args, **kwargs):
@@ -55,6 +63,27 @@ def test_application_essay_prompt_uses_approved_context_and_no_fake_zero_limit(t
     assert captured["prompt"].count("No explicit limit") == 2
     assert "APPROVED APPLICATION CONTEXT" in captured["prompt"]
     assert "I care about tools that turn complex work into useful systems." in captured["prompt"]
+    assert "OWNER-PROVIDED CONTEXT FOR THIS APPLICATION" in captured["prompt"]
+    assert "I use Notion to organize projects with student teams." in captured["prompt"]
+
+
+def test_application_essay_checks_character_limit_after_removing_em_dash(tmp_path, monkeypatch):
+    skill = tmp_path / ".codex" / "skills" / "warm-scholarship-essay" / "SKILL.md"
+    skill.parent.mkdir(parents=True)
+    skill.write_text("No em dashes.")
+    monkeypatch.setattr(Path, "home", classmethod(lambda cls: tmp_path))
+    monkeypatch.setattr(rs, "context_inventory", lambda root, limit=180: {"facts": []})
+    monkeypatch.setattr(rs, "application_context", lambda root: {"answers": []})
+    monkeypatch.setattr(rs, "run_provider", lambda *args, **kwargs: {"ok": True, "data": {
+        "answer": "A—B", "needs_owner_input": False, "missing_facts": [],
+        "evidence_ids": [], "assumption": "",
+    }})
+
+    with pytest.raises(RuntimeError, match="character limit"):
+        rs.application_essay_answer(
+            tmp_path, {"company": "Example", "title": "Engineer"},
+            "Why this role?", session_id="session-1", character_limit=3,
+        )
 
 
 def test_sealed_panel_requires_each_attested_role_exactly_once():

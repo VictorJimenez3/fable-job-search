@@ -3238,3 +3238,24 @@ source graph remain unchanged. Saved artifacts without a content plan are
 explicitly non-editable rather than routed through an unsafe PDF-to-source
 conversion. Vercel does not query Notion live; stale tracker state requires the
 existing sync/backfill path with `NOTION_TOKEN`.
+
+## 200. Scope written answers and keep database fallback independent of Drive (2026-08-28)
+
+Two final Autopilot boundaries were tightened after exercising the queue and
+cloud runtime. First, an `essay` or `cover_letter` answer is never reusable
+merely because it is present in the context bank. Only an answer tied to the
+current local application session can be pasted into that exact employer
+form; otherwise Resume Studio must generate it through the installed
+`warm-scholarship-essay` skill using the exact prompt, private evidence, and
+owner-provided `essay_context`. This prevents an old employer-specific answer
+from leaking into a new application while retaining the user's reusable
+choice/profile bank.
+
+Second, the staged Postgres adapter is a complete storage backend, not a
+Drive-backed mode. Its single sanitized application-state payload must not
+attempt to write Drive JSON or Markdown companions without a Drive folder.
+The legacy Drive backend continues to publish readable mirrors, and the
+production Sheet backend remains the current `vmj@njit.edu` path. The runtime
+regression test now exercises two queue-scoped written contexts, a reusable
+global answer, and their distinct cloud IDs; the full repository suite remains
+green.

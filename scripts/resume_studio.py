@@ -4996,15 +4996,25 @@ def application_essay_answer(
         {key: item.get(key) for key in ("id", "source", "heading", "text", "authority", "review_status")}
         for item in inventory.get("facts", [])
     ]
+    application_answers = application_context(root).get("answers", [])
     approved_application_answers = [
         {
             "question": item.get("question"), "value": item.get("value"),
             "category": item.get("category"), "evidence_ids": item.get("evidence_ids") or [],
         }
-        for item in application_context(root).get("answers", [])
+        for item in application_answers
         if item.get("reusable") is not False
         and item.get("category") in {"essay", "cover_letter", "llm_experience", "work_schedule", "education", "location"}
     ][:120]
+    scoped_writing_context = [
+        {
+            "question": item.get("question"), "value": item.get("value"),
+            "category": item.get("category"), "evidence_ids": item.get("evidence_ids") or [],
+        }
+        for item in application_answers
+        if session_id and session_id in (item.get("session_ids") or [])
+        and item.get("category") in {"essay_context", "essay", "cover_letter"}
+    ][:40]
     profile_text = (root / "profile.yaml").read_text(errors="replace") if (root / "profile.yaml").is_file() else ""
     prompt = (
         "Use the installed $warm-scholarship-essay skill for this job-application response. "
@@ -5024,6 +5034,7 @@ def application_essay_answer(
         }, ensure_ascii=False, indent=2) + "\n\n"
         "VICTOR PROFILE:\n" + profile_text[:12000] + "\n\n"
         "APPROVED APPLICATION CONTEXT:\n" + json.dumps(approved_application_answers, ensure_ascii=False, indent=2)[:16000] + "\n\n"
+        "OWNER-PROVIDED CONTEXT FOR THIS APPLICATION:\n" + json.dumps(scoped_writing_context, ensure_ascii=False, indent=2)[:8000] + "\n\n"
         "AUTHORIZED PRIVATE EVIDENCE:\n" + json.dumps(facts, ensure_ascii=False, indent=2)[:24000] + "\n\n"
         "WARM SCHOLARSHIP ESSAY SKILL:\n" + skill_path.read_text(errors="replace")[:16000]
     )
@@ -5040,11 +5051,11 @@ def application_essay_answer(
     if data.get("needs_owner_input") or not answer:
         missing = "; ".join(str(item) for item in (data.get("missing_facts") or []) if str(item).strip())
         raise ValueError(missing or "This response needs one role-specific fact from Victor")
+    answer = re.sub(r"\s*—\s*", ", ", answer)
     if character_limit and len(answer) > int(character_limit):
         raise RuntimeError("Generated response exceeded the employer's character limit")
     if word_limit and len(re.findall(r"\S+", answer)) > int(word_limit):
         raise RuntimeError("Generated response exceeded the employer's word limit")
-    answer = re.sub(r"\s*—\s*", ", ", answer)
     if re.search(r"\b(?:class of|graduat(?:e|ing|ion)[^.!?]{0,30})\s*2026\b", answer, re.IGNORECASE):
         raise RuntimeError("Generated response used the stale 2026 graduation year instead of May 2027")
     saved = save_application_answer(

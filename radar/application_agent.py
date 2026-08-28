@@ -22,7 +22,7 @@ import tempfile
 import uuid
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
-from urllib.parse import urlparse
+from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
 
 APPLICATION_AGENT_VERSION = "application-agent-v1"
@@ -131,6 +131,34 @@ def safe_url(value: Any) -> str:
     if parsed.scheme not in {"http", "https"} or parsed.username or parsed.password or not parsed.netloc:
         return ""
     return parsed.geturl()[:2500]
+
+
+def application_identity(job: Dict[str, Any]) -> str:
+    """Return the stable identity of one employer application.
+
+    Cloud queue IDs can change when tracker rows are repaired or reimported.
+    The employer application URL is normalized with presentation and referral
+    parameters removed while job-selecting parameters remain. Pair it with the
+    job ID when available so an employer that reuses one form URL cannot inherit
+    a different role's session-scoped writing.
+    """
+    url = safe_url((job or {}).get("url"))
+    if url:
+        parsed = urlparse(url)
+        query = sorted(
+            (key, value)
+            for key, value in parse_qsl(parsed.query, keep_blank_values=True)
+            if not re.match(r"^(?:utm_.+|embed|source|ref|referrer)$", key, flags=re.IGNORECASE)
+        )
+        path = parsed.path.rstrip("/") or "/"
+        canonical = urlunparse((
+            parsed.scheme.lower(), parsed.netloc.lower(), path, "",
+            urlencode(query, doseq=True), "",
+        ))
+        job_id = clean_text((job or {}).get("id"), 160)
+        return f"url:{canonical}|id:{job_id}" if job_id else f"url:{canonical}"
+    job_id = clean_text((job or {}).get("id"), 160)
+    return f"id:{job_id}" if job_id else ""
 
 
 def provider_for_url(value: Any) -> str:
@@ -415,39 +443,51 @@ def _session_survival_rank(session: Dict[str, Any]) -> Tuple[int, int, float, st
 
 
 def _collapse_active_session_duplicates(store: Dict[str, Any]) -> int:
-    """Keep one active durable session for each cloud queue item.
+    """Keep one active durable session for each employer application.
 
-    Older extension versions could recover the same queue row into many local
-    sessions. They are retained as cancelled audit history, while the most
-    advanced session keeps the live page/review state.
+    Older extension versions could recover one queue row into many sessions,
+    and tracker repairs could give the same employer URL a new queue ID. The
+    duplicates remain as cancelled audit history while the most advanced
+    session keeps the live page/review state.
     """
     sessions = store.get("sessions") if isinstance(store.get("sessions"), dict) else {}
-    groups: Dict[str, List[Dict[str, Any]]] = {}
-    for session in sessions.values():
-        if not isinstance(session, dict) or session.get("state") not in ACTIVE_STATES:
-            continue
-        queue_id = clean_text(session.get("queue_id"), 100)
-        if queue_id:
-            groups.setdefault(queue_id, []).append(session)
     changed = 0
     updated_at = utc_now()
-    for group in groups.values():
-        if len(group) < 2:
-            continue
-        winner = sorted(group, key=_session_survival_rank, reverse=True)[0]
-        for duplicate in group:
-            if duplicate is winner:
+    active = [
+        session for session in sessions.values()
+        if isinstance(session, dict) and session.get("state") in ACTIVE_STATES
+    ]
+
+    # Run both identities as passes. This also handles old chains where one
+    # pair shares a queue ID and another pair shares the employer URL.
+    for identity in (
+        lambda session: clean_text(session.get("queue_id"), 100),
+        lambda session: application_identity(session.get("job") or {"url": session.get("url")}),
+    ):
+        groups: Dict[str, List[Dict[str, Any]]] = {}
+        for session in active:
+            if session.get("state") not in ACTIVE_STATES:
                 continue
-            duplicate.update({
-                "state": "cancelled",
-                "review": None,
-                "confirmation": None,
-                "last_error": "",
-                "last_message": f"Superseded by durable session {winner.get('session_id')} for the same queue item.",
-                "superseded_by": clean_text(winner.get("session_id"), 100),
-                "updated_at": updated_at,
-            })
-            changed += 1
+            key = identity(session)
+            if key:
+                groups.setdefault(key, []).append(session)
+        for group in groups.values():
+            if len(group) < 2:
+                continue
+            winner = sorted(group, key=_session_survival_rank, reverse=True)[0]
+            for duplicate in group:
+                if duplicate is winner:
+                    continue
+                duplicate.update({
+                    "state": "cancelled",
+                    "review": None,
+                    "confirmation": None,
+                    "last_error": "",
+                    "last_message": f"Superseded by durable session {winner.get('session_id')} for the same employer application.",
+                    "superseded_by": clean_text(winner.get("session_id"), 100),
+                    "updated_at": updated_at,
+                })
+                changed += 1
     return changed
 
 
@@ -605,6 +645,11 @@ def _answer_candidates(store: Dict[str, Any], field: Dict[str, Any], session_id:
     def available(answer: Any) -> bool:
         if not isinstance(answer, dict):
             return False
+        # Written responses are generated for the exact employer prompt by
+        # Resume Studio. Even an older reusable essay answer is context, not a
+        # permission to paste stale employer-specific prose into a new form.
+        if category in {"essay", "cover_letter"}:
+            return bool(session_id and session_id in (answer.get("session_ids") or []))
         if answer.get("reusable", True):
             return True
         return bool(session_id and session_id in (answer.get("session_ids") or []))
@@ -829,8 +874,7 @@ def _new_session(job: Dict[str, Any], mode: str = "per_role", queue_id: str = ""
 def create_session(root: Path, job: Dict[str, Any], mode: str = "per_role", queue_id: str = "") -> Dict[str, Any]:
     store = load_store(root)
     clean_queue_id = clean_text(queue_id, 100)
-    clean_job_id = clean_text(job.get("id"), 160)
-    clean_job_url = safe_url(job.get("url"))
+    clean_job_identity = application_identity(job)
     if clean_queue_id:
         matching = [
             session for session in store.get("sessions", {}).values()
@@ -861,6 +905,31 @@ def create_session(root: Path, job: Dict[str, Any], mode: str = "per_role", queu
                         "last_message": f"Superseded by durable session {session['session_id']} for the same queue item.",
                         "updated_at": utc_now(),
                     })
+            _save_session(root, store, session)
+            return public_session(session)
+    if clean_job_identity:
+        matching = [
+            session for session in store.get("sessions", {}).values()
+            if isinstance(session, dict)
+            and session.get("state") in ACTIVE_STATES
+            and application_identity(session.get("job") or {"url": session.get("url")}) == clean_job_identity
+        ]
+        if matching:
+            matching.sort(key=_session_survival_rank, reverse=True)
+            session = matching[0]
+            session["queue_id"] = clean_queue_id or clean_text(session.get("queue_id"), 100)
+            session["mode"] = mode if mode in {"per_role", "batch"} else session.get("mode", "per_role")
+            session["job"] = _new_session(job, mode=mode, queue_id=session["queue_id"])["job"]
+            session["url"] = session["job"]["url"]
+            session["provider"] = provider_for_url(session["url"])
+            session["last_message"] = "Reattached the current queue item to the existing employer application session."
+            for duplicate in matching[1:]:
+                duplicate.update({
+                    "state": "cancelled", "review": None, "confirmation": None,
+                    "last_error": "",
+                    "last_message": f"Superseded by durable session {session['session_id']} for the same employer application.",
+                    "superseded_by": session["session_id"], "updated_at": utc_now(),
+                })
             _save_session(root, store, session)
             return public_session(session)
     session = _new_session(job, mode=mode, queue_id=queue_id)

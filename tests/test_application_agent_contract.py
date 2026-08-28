@@ -35,7 +35,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "application_resume_file" in service and "/api/application/resume-file" in service
     assert "application_essay_answer" in service and "warm-scholarship-essay" in service
     assert '"content_scripts"' in extension and '"<all_urls>"' in extension
-    assert '"version": "0.3.1"' in extension
+    assert '"version": "0.3.2"' in extension
     for provider in ("workday", "greenhouse", "lever", "ashby", "smartrecruiters"):
         assert provider in adapters
     assert "JOB_RADAR_SUBMISSION_APPROVED" in (ROOT / "browser-extension" / "content.js").read_text()
@@ -57,6 +57,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "never overwrite an input that already has a file after a rescan" in background
     assert "localAnswerShouldSync" in background and "reusableAnswerSignature" in background
     assert "answer.reusable === false" in background and "localBeforeImport" in background
+    assert "answer.queue_ids || []" in background and "essay_context" in background
     assert "confirmedSameReview" in background
     assert "owner_approved_at" in background and "approval_expires_at" in background
     assert "last_message || session.last_error || session.state" in background
@@ -138,6 +139,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert 'action: "queue_many"' in background
     assert "/api/application/tracker-sync" in background and "request_tracker_sync" in service
     assert "_collapse_active_session_duplicates" in local
+    assert "application_identity" in local
     frontend = (ROOT / "webapp" / "index.html").read_text()
     assert "controlApplicationAgentExtension" in frontend
     assert "probeApplicationAgentExtension" in frontend
@@ -159,4 +161,5 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "cloudReturnedEmpty" in frontend
     assert "reconcileAutopilotChoices" in frontend and "queueAutopilotJobs" in frontend
     assert "Private Google Sheet connected." in frontend
+    assert 'category:"essay_context"' in frontend and "queue_ids:[queueId]" in frontend
     assert "Drive file storage is full" not in frontend

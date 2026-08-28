@@ -33,6 +33,28 @@ Before changing the radar, read these in order:
   `docs/feed.xml`, or `docs/internships/`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
+### Current change (2026-08-28)
+
+- **Application Agent storage fallback fixed:** the Postgres application-state
+  path now writes only its sanitized database payload. It no longer calls the
+  Drive Markdown mirror without a Drive folder, which was the source of the
+  `undefined.id` failure after a successful database write. The legacy Drive
+  path still receives its readable Markdown companions, and the Sheet path
+  remains the production `vmj@njit.edu` target.
+- **Written-response scoping tightened:** reusable profile answers continue to
+  fill deterministic choice/text fields, but `essay` and `cover_letter`
+  controls require a session-scoped generated answer. Owner context is stored
+  as `essay_context`, passed to the installed `warm-scholarship-essay` skill,
+  and cannot be pasted directly into a new employer's essay. Queue-scoped cloud
+  answers include their queue IDs, so tracker repairs cannot leak writing
+  between roles.
+- **Frontend mirror repaired:** `docs/platform/index.html` was copied from
+  canonical `webapp/index.html` after the Autopilot UI changes. The required
+  byte-for-byte invariant now passes.
+- **Validation:** targeted application/cloud/essay/extension coverage is green
+  (46 tests). The full suite is green after the mirror repair (572 tests); the
+  pre-repair run had only the expected mirror mismatch.
+
 ### Resume Studio local access (implemented 2026-08-27)
 
 - Generated resume filenames now use `victor_jimenez_<company>.pdf` for every
@@ -166,7 +188,7 @@ Before changing the radar, read these in order:
   normal dependency on the Chrome extension manager; the unpacked extension
   still needs one manual reload after this source change so version `0.2.7`
   loads the bridge.
-- **Resume/file and loop hardening (implemented 2026-08-26):** version `0.2.7`
+- **Resume/file and loop hardening (implemented 2026-08-26):** version `0.3.2`
   keeps real employer file values during planning, excludes cover-letter and
   supporting controls from resume upload, auto-requeues legacy resume/essay-only
   blocks, and pauses repeated form cycles after 12 scans in 45 seconds.

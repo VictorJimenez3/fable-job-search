@@ -6,10 +6,14 @@ if (version) version.textContent = `v${chrome.runtime.getManifest().version}`;
 function esc(value) { return String(value || "").replace(/[&<>\"]/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[char])); }
 function formatSession(session) {
   if (!session) return `<div class="card muted">Open an application from Job Radar to attach the agent.</div>`;
-  const blockers = (session.blockers || []).map(item => `<li><strong>${esc(item.label)}</strong><br>${esc(item.reason)}</li>`).join("");
+  const blockerItems = session.blockers || [];
   const fields = (session.review?.fields || []).map(field => `<div><strong>${esc(field.label)}</strong><br><span class="muted">${esc(field.category)}${field.sensitive ? " · sensitive" : ""}</span><pre>${esc(field.value || "(empty / owner must review)")}</pre></div>`).join("");
   const review = session.review ? `<h2>Final review</h2><div class="card">${fields || "No proposed fields"}<button id="confirm" class="primary">confirm and allow Submit</button></div>` : "";
-  const answer = blockers ? `<h2>Needs your answer</h2><div class="card"><ul>${blockers}</ul><label>Answer the selected question<textarea id="answer"></textarea></label><label>Question / field key<input id="question" placeholder="copy the field label above"></label><button id="saveAnswer">save answer and retry</button></div>` : "";
+  const answers = blockerItems.map((item, index) => {
+    const written = ["essay", "cover_letter"].includes(String(item.category || ""));
+    return `<div class="card"><strong>${esc(item.label || item.question || item.category)}</strong><p class="muted">${esc(item.reason || "The answer is not in your bank yet.")}</p><label>${written ? "Facts or bullets for the writing agent" : "Your approved answer"}<textarea data-answer-index="${index}"></textarea></label><button data-save-answer="${index}">${written ? "save context and write" : "save answer and retry"}</button></div>`;
+  }).join("");
+  const answer = answers ? `<h2>Needs your input</h2>${answers}` : "";
   return `<div class="card"><strong>${esc(session.job?.company)} · ${esc(session.job?.title)}</strong><br><span class="muted">${esc(session.provider)} · ${esc(session.state)} · ${session.pages_seen || 0} page(s)</span></div>${answer}${review}`;
 }
 async function render() {
@@ -27,14 +31,20 @@ async function render() {
     document.querySelector("#status").textContent = result?.error || "Confirmed; the matching page may submit.";
     setTimeout(render, 400);
   };
-  const saveAnswer = document.querySelector("#saveAnswer");
-  if (saveAnswer) saveAnswer.onclick = async () => {
-    saveAnswer.disabled = true;
-    const result = await send("JOB_RADAR_SAVE_ANSWER", {answer: {question: document.querySelector("#question").value, value: document.querySelector("#answer").value}});
-    document.querySelector("#status").textContent = result?.error || "Answer saved; retrying the form.";
+  document.querySelectorAll("[data-save-answer]").forEach(button => button.onclick = async () => {
+    const index = Number(button.dataset.saveAnswer);
+    const blocker = data?.session?.blockers?.[index];
+    const value = document.querySelector(`[data-answer-index="${index}"]`)?.value.trim();
+    if (!blocker || !value) { document.querySelector("#status").textContent = "Add the requested information first."; return; }
+    button.disabled = true;
+    const result = await send("JOB_RADAR_SAVE_ANSWER", {answer: {
+      question: blocker.question || blocker.label || blocker.category,
+      value, category: blocker.category || "other",
+    }});
+    document.querySelector("#status").textContent = result?.error || (["essay", "cover_letter"].includes(blocker.category) ? "Context saved; writing a fresh response." : "Answer saved; retrying the form.");
     await send("JOB_RADAR_RESCAN");
     setTimeout(render, 400);
-  };
+  });
 }
 document.querySelector("#saveConfig").onclick = async () => {
   const result = await send("JOB_RADAR_SET_CONFIG", {config: {cloudUrl: document.querySelector("#cloudUrl").value, agentToken: document.querySelector("#agentToken").value}});

@@ -555,6 +555,7 @@ function contextDocument(value) {
     select_all: Boolean(answer?.select_all),
     category: clean(answer?.category, 80), value: clean(answer?.value, 20000),
     reusable: answer?.reusable !== false, sensitive: Boolean(answer?.sensitive),
+    queue_ids: Array.isArray(answer?.queue_ids) ? [...new Set(answer.queue_ids.map(item => clean(item, 100)).filter(Boolean))].slice(0, 20) : [],
     evidence_ids: Array.isArray(answer?.evidence_ids) ? answer.evidence_ids.map(item => clean(item, 140)).slice(0, 20) : [],
     updated_at: clean(answer?.updated_at, 80),
   })).filter(answer => answer.answer_id && answer.value).slice(0, MAX_ANSWERS) : [];
@@ -567,7 +568,7 @@ function contextMarkdown(value) {
   const context = contextDocument(value);
   const lines = ["# Job Radar application context", "", "This file is a readable mirror. Use Job Radar to edit answers so matching and approval metadata remain intact.", "", `Updated: ${context.updated_at || new Date().toISOString()}`, ""];
   for (const answer of context.answers) {
-    lines.push(`## ${answer.question || answer.category}`, "", `- Category: \`${answer.category || "other"}\`${answer.sensitive ? " · sensitive" : ""}`, `- Reusable: \`${answer.reusable}\``, "", answer.value, "");
+    lines.push(`## ${answer.question || answer.category}`, "", `- Category: \`${answer.category || "other"}\`${answer.sensitive ? " · sensitive" : ""}`, `- Reusable: \`${answer.reusable}\``, ...(answer.queue_ids?.length ? [`- Queue scope: ${answer.queue_ids.join(", ")}`] : []), "", answer.value, "");
   }
   return lines.join("\n");
 }
@@ -846,15 +847,23 @@ function mergeContextAnswer(context, answer) {
   const value = clean(answer.value || answer.answer, 20000);
   if (!question || !value) throw new Error("question and answer are required");
   const normalized = clean(answer.normalized_question || question.toLowerCase().replace(/[^a-z0-9@+_.?/-]+/g, " ").replace(/\s+/g, " "), 1200);
-  const answerId = clean(answer.answer_id, 100) || hashToken(`${clean(answer.category, 80) || "other"}:${normalized}`).slice(0, 24);
-  const existing = context.answers.find(item => item.answer_id === answerId) || {};
   const category = clean(answer.category, 80) || "other";
+  const reusable = answer.reusable !== false;
+  const requestedQueueIds = Array.isArray(answer.queue_ids)
+    ? [...new Set(answer.queue_ids.map(item => clean(item, 100)).filter(Boolean))].slice(0, 20) : [];
+  if (!reusable && !requestedQueueIds.length && !clean(answer.answer_id, 100)) {
+    throw new Error("role-specific context requires a queue scope");
+  }
+  const scope = reusable ? "" : `:${requestedQueueIds[0] || "existing"}`;
+  const answerId = clean(answer.answer_id, 100) || hashToken(`${category}:${normalized}${scope}`).slice(0, 24);
+  const existing = context.answers.find(item => item.answer_id === answerId) || {};
+  const queueIds = reusable ? [] : [...new Set([...requestedQueueIds, ...(existing.queue_ids || [])])].slice(0, 20);
   const next = {
     answer_id: answerId, question, normalized_question: normalized,
     variants: [...new Set([...(Array.isArray(answer.variants) ? answer.variants : []), ...(existing.variants || [])].map(item => clean(item, 1200)).filter(Boolean))].slice(0, 30),
     fallback_for: [...new Set([...(Array.isArray(answer.fallback_for) ? answer.fallback_for : []), ...(existing.fallback_for || [])].map(item => clean(item, 1200)).filter(Boolean))].slice(0, 20),
     select_all: Boolean(answer.select_all) || Boolean(existing.select_all),
-    category, value, reusable: answer.reusable !== false,
+    category, value, reusable, queue_ids: queueIds,
     sensitive: Boolean(answer.sensitive) || SENSITIVE_CATEGORIES.has(category), evidence_ids: Array.isArray(answer.evidence_ids) ? answer.evidence_ids.map(item => clean(item, 140)).slice(0, 20) : [],
     updated_at: new Date().toISOString(),
   };
@@ -869,7 +878,7 @@ async function saveContext(access, payload) {
   const answer = payload.answer && typeof payload.answer === "object" ? payload.answer : payload;
   const next = mergeContextAnswer(context, answer);
   const written = await writeAppDocument(current, "context", context);
-  if (current.storage !== "sheet") await writeTextDocument(current.token, current.folder, "contextMarkdown", contextMarkdown(written.value));
+  if (current.storage === "drive") await writeTextDocument(current.token, current.folder, "contextMarkdown", contextMarkdown(written.value));
   return {ok: true, answer: next, context: contextDocument(written.value)};
 }
 
@@ -880,7 +889,7 @@ async function saveContextBatch(access, payload) {
   const context = contextDocument(current.value);
   const saved = answers.slice(0, MAX_ANSWERS).map(answer => mergeContextAnswer(context, answer));
   const written = await writeAppDocument(current, "context", context);
-  if (current.storage !== "sheet") await writeTextDocument(current.token, current.folder, "contextMarkdown", contextMarkdown(written.value));
+  if (current.storage === "drive") await writeTextDocument(current.token, current.folder, "contextMarkdown", contextMarkdown(written.value));
   return {ok: true, answers: saved, context: contextDocument(written.value)};
 }
 
@@ -891,7 +900,7 @@ async function saveMapping(access, payload) {
   if (!key || !context.answers.some(item => item.answer_id === answerId)) throw new Error("valid field mapping required");
   context.mappings[key] = answerId;
   const written = await writeAppDocument(current, "context", context);
-  if (current.storage !== "sheet") await writeTextDocument(current.token, current.folder, "contextMarkdown", contextMarkdown(written.value));
+  if (current.storage === "drive") await writeTextDocument(current.token, current.folder, "contextMarkdown", contextMarkdown(written.value));
   return {ok: true, field_key: key, answer_id: answerId};
 }
 
@@ -906,7 +915,7 @@ async function saveIssue(access, payload) {
   };
   const issues = [{...issue}, ...(Array.isArray(current.value.issues) ? current.value.issues : [])].slice(0, MAX_ISSUES);
   const written = await writeAppDocument(current, "issues", {issues});
-  if (current.storage !== "sheet") await writeTextDocument(current.token, current.folder, "issuesMarkdown", issuesMarkdown(written.value));
+  if (current.storage === "drive") await writeTextDocument(current.token, current.folder, "issuesMarkdown", issuesMarkdown(written.value));
   return {ok: true, issue};
 }
 

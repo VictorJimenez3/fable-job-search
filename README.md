@@ -531,7 +531,9 @@ tab for queue/context state; production is intentionally using Victor's
 editable `vmj@njit.edu` workbook rather than the quota-locked legacy owner
 mirror. The legacy app-created Drive JSON/Markdown path remains a compatibility
 fallback, while the staged Postgres adapter is dormant until `DATABASE_URL` is
-configured. Resume Studio Markdown and generated files remain local unless the
+configured. When Postgres is enabled, application state is stored as one
+sanitized database payload and does not attempt a Drive Markdown write. Resume
+Studio Markdown and generated files remain local unless the
 owner explicitly syncs the Resume Bank. The app UI is authoritative; Sheet,
 database, and Markdown payloads are storage/export mirrors, not arbitrary edit
 interfaces.
@@ -544,7 +546,10 @@ bank, so repeat questions such as work authorization, sponsorship, relocation,
 and demographic controls, work schedule, and LLM experience are filled
 without repeated manual entry. Exact owner-approved written answers can also
 be banked for recurring prompts; employer-specific responses stay tied to that
-question and are not reused as generic claims. A
+question and are not reused as generic claims. Role-specific essays and cover
+letters are always generated through the installed `warm-scholarship-essay`
+skill for the exact employer prompt; owner-provided context is supplied as
+evidence, not pasted as a stale answer. A
 preferred choice can have an explicit fallback that is used only when the
 preferred option is absent from a question group. This removes repetitive
 blank-field work without inventing claims. LaTeX comments and template
