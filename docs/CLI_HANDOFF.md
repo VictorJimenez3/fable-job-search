@@ -52,7 +52,7 @@ Before changing the radar, read these in order:
   canonical `webapp/index.html` after the Autopilot UI changes. The required
   byte-for-byte invariant now passes.
 - **Validation:** targeted application/cloud/essay/extension coverage is green
-  (46 tests). The full suite is green after the mirror repair (572 tests); the
+  (46 tests). The full suite is green after the mirror repair (574 tests); the
   pre-repair run had only the expected mirror mismatch.
 
 ### Resume Studio local access (implemented 2026-08-27)
