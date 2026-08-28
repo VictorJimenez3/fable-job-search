@@ -542,7 +542,7 @@ const S = {           // app state
     bankQuery:"", bankMode:"all", bankStatus:"all", bankEra:"current", context:null, contextQuery:"", contextError:"", contextScanError:"",
     sync:{state:"idle",done:0,total:0,error:""}, activeRunId:"", runStatus:null,
     batchView:false, batch:{mode:"unrestricted",selected:[],runs:[],state:"idle",error:""}},
-  applicationAgent:{status:"checking",items:[],context:null,issues:[],sessions:[],error:"",pairingToken:"",selected:[],queueing:false,queueActionId:"",extensionAction:"",extensionVersion:"",pairingNeedsRepair:false},
+  applicationAgent:{status:"checking",items:[],context:null,issues:[],sessions:[],error:"",pairingToken:"",selected:[],queueing:false,queueActionId:"",expandedQueueId:"",extensionAction:"",extensionVersion:"",extensionConnected:false,extensionConfigured:false,extensionProbeStarted:false,automationEnabled:false,localReady:false,localAnswerCount:0,extensionStatusError:"",pairingNeedsRepair:false},
   boot:{phase:"starting", jobsReady:false, inFlight:false, errors:[]},
   marquee:new Set(["meta","apple","amazon","netflix","google","microsoft","nvidia",
     "anthropic","openai","deepmind","genentech","moderna","regeneron",
@@ -1796,7 +1796,15 @@ function applicationAgentBlockersHTML(item) {
 }
 function applicationAgentQueueHTML(items) {
   if (!items.length) return '<p class="sub">No application roles are queued. Select saved roles below or start one from a job card.</p>';
-  return items.slice(0,80).map(item=>{const stopping=S.applicationAgent.queueActionId===item.queue_id, canStop=["queued","opening","filling","blocked","awaiting_confirmation"].includes(item.state);return `<div class="agent-queue-row"><span class="chip ${applicationAgentStatusKind(item.state)}">${esc(applicationAgentStatusLabel(item.state))}</span><div><strong>${esc(item.job?.company||"Role")}</strong><br><span class="sub">${esc(item.job?.title||"")} · ${esc(item.provider||item.review?.provider||"")} · ${esc(item.message||"")}</span>${applicationAgentProgressHTML(item)}${applicationAgentResumeHTML(item)}${item.error?`<p class="sub" style="color:var(--danger)">${esc(item.error)}</p>`:""}${applicationAgentBlockersHTML(item)}${applicationAgentReviewHTML(item)}</div><div class="acts"><a class="act" href="${esc(item.review?.url||item.job?.url||"#")}" target="_blank" rel="noreferrer">open</a>${["blocked","failed"].includes(item.state)?`<button class="act" onclick='continueApplicationAgent(${JSON.stringify(item.queue_id)})'>${item.state==="failed"?"retry":"I answered it · continue"}</button>`:""}${["queued","blocked","awaiting_confirmation","failed"].includes(item.state)?`<button class="act" onclick='refreshApplicationAgent()'>refresh</button>`:""}${canStop?`<button class="act" ${stopping?"disabled":""} onclick='skipApplicationAgent(${JSON.stringify(item.queue_id)})'>${stopping?"stopping…":["opening","filling"].includes(item.state)?"stop":"skip"}</button>`:""}</div></div>`}).join("");
+  const visible=items.slice(0,80);
+  const automatic=visible.find(item=>["blocked","awaiting_confirmation","failed"].includes(item.state));
+  const requested=S.applicationAgent.expandedQueueId;
+  const expandedId=requested==="__none__"?"":visible.some(item=>item.queue_id===requested)?requested:(automatic?.queue_id||"");
+  return visible.map(item=>{const expanded=item.queue_id===expandedId, stopping=S.applicationAgent.queueActionId===item.queue_id, canStop=["queued","opening","filling","blocked","awaiting_confirmation"].includes(item.state), detailCount=(item.blockers||[]).length+(item.review?.fields||[]).length;return `<div class="agent-queue-row"><span class="chip ${applicationAgentStatusKind(item.state)}">${esc(applicationAgentStatusLabel(item.state))}</span><div><strong>${esc(item.job?.company||"Role")}</strong><br><span class="sub">${esc(item.job?.title||"")} · ${esc(item.provider||item.review?.provider||"")} · ${esc(item.message||"")}</span>${applicationAgentProgressHTML(item)}${applicationAgentResumeHTML(item)}${item.error?`<p class="sub" style="color:var(--danger)">${esc(item.error)}</p>`:""}${expanded?`${applicationAgentBlockersHTML(item)}${applicationAgentReviewHTML(item)}`:""}</div><div class="acts">${detailCount?`<button class="act" aria-expanded="${expanded}" onclick='toggleApplicationAgentDetails(${JSON.stringify(item.queue_id)},${expanded})'>${expanded?"hide details":`details · ${detailCount}`}</button>`:""}<a class="act" href="${esc(item.review?.url||item.job?.url||"#")}" target="_blank" rel="noreferrer">open</a>${["blocked","failed"].includes(item.state)?`<button class="act" onclick='continueApplicationAgent(${JSON.stringify(item.queue_id)})'>${item.state==="failed"?"retry":"I answered it · continue"}</button>`:""}${["queued","blocked","awaiting_confirmation","failed"].includes(item.state)?`<button class="act" onclick='refreshApplicationAgent()'>refresh</button>`:""}${canStop?`<button class="act" ${stopping?"disabled":""} onclick='skipApplicationAgent(${JSON.stringify(item.queue_id)})'>${stopping?"stopping…":["opening","filling"].includes(item.state)?"stop":"skip"}</button>`:""}</div></div>`}).join("");
+}
+function toggleApplicationAgentDetails(queueId,currentlyExpanded=false) {
+  S.applicationAgent.expandedQueueId=currentlyExpanded?"__none__":queueId;
+  rApplicationAgent();
 }
 function applicationAgentCandidates() {
   return Object.values(S.jobs||{}).filter(job=>{
@@ -1853,10 +1861,12 @@ async function pairApplicationMac() {
     S.applicationAgent.pairingToken=token; rApplicationAgent();
     const paired=await applicationAgentExtensionCommand("set_pairing",{cloudUrl:location.origin,agentToken:token});
     S.applicationAgent.extensionVersion=paired?.extensionVersion||S.applicationAgent.extensionVersion;
+    S.applicationAgent.extensionConnected=true; S.applicationAgent.extensionConfigured=true;
     if (paired?.error) throw new Error(paired.error);
     await retireTerminalApplicationQueueItems();
     const synced=await applicationAgentExtensionCommand("sync_queue");
     S.applicationAgent.extensionVersion=synced?.extensionVersion||S.applicationAgent.extensionVersion;
+    S.applicationAgent.automationEnabled=true;
     if (synced?.error) throw new Error(synced.error);
     S.applicationAgent.pairingToken="";
     await loadApplicationAgent(false); rApplicationAgent();
@@ -1868,6 +1878,7 @@ async function pairApplicationMac() {
 }
 let applicationAgentExtensionSequence=0;
 let applicationAgentReloadReconnectStarted=false;
+let applicationAgentStatusProbePromise=null;
 function applicationAgentExtensionCommand(command,payload={}) {
   return new Promise((resolve,reject)=>{
     const requestId=`agent-extension-${Date.now()}-${++applicationAgentExtensionSequence}`;
@@ -1881,6 +1892,34 @@ function applicationAgentExtensionCommand(command,payload={}) {
     window.postMessage({type:"job-radar:extension-command",command,requestId,...payload},location.origin);
   });
 }
+async function probeApplicationAgentExtension(renderNow=true) {
+  if (applicationAgentStatusProbePromise) return applicationAgentStatusProbePromise;
+  S.applicationAgent.extensionProbeStarted=true;
+  applicationAgentStatusProbePromise=(async()=>{
+    try {
+      const result=await applicationAgentExtensionCommand("status");
+      if(result?.error)throw new Error(result.error);
+      Object.assign(S.applicationAgent,{
+        extensionConnected:true,
+        extensionVersion:result.extensionVersion||S.applicationAgent.extensionVersion,
+        extensionConfigured:Boolean(result.configured),
+        automationEnabled:Boolean(result.automationEnabled),
+        localReady:Boolean(result.localReady),
+        localAnswerCount:Number(result.localAnswerCount)||0,
+        extensionStatusError:result.localError||"",
+        pairingNeedsRepair:!result.configured,
+      });
+      return result;
+    } catch(error) {
+      Object.assign(S.applicationAgent,{extensionConnected:false,extensionStatusError:String(error.message||error).slice(0,180)});
+      return null;
+    } finally {
+      applicationAgentStatusProbePromise=null;
+      if(renderNow&&S.tab==="agent")rApplicationAgent();
+    }
+  })();
+  return applicationAgentStatusProbePromise;
+}
 async function controlApplicationAgentExtension(command) {
   if (S.applicationAgent.extensionAction) return;
   S.applicationAgent.extensionAction=command; rApplicationAgent();
@@ -1888,12 +1927,13 @@ async function controlApplicationAgentExtension(command) {
     if(command==="sync_queue")await retireTerminalApplicationQueueItems();
     const result=await applicationAgentExtensionCommand(command);
     S.applicationAgent.extensionVersion=result?.extensionVersion||S.applicationAgent.extensionVersion;
+    S.applicationAgent.extensionConnected=true;
     if (result?.error) throw new Error(result.error);
-    if (command==="sync_queue") { S.applicationAgent.pairingNeedsRepair=false; await loadApplicationAgent(false); rApplicationAgent(); toast(`Mac queue sync finished · ${result.recovered||0} recovered`); }
+    if (command==="sync_queue") { S.applicationAgent.pairingNeedsRepair=false; S.applicationAgent.extensionConfigured=true; S.applicationAgent.automationEnabled=true; await probeApplicationAgentExtension(false); await loadApplicationAgent(false); rApplicationAgent(); toast(`Mac queue sync finished · ${result.recovered||0} recovered`); }
     else {
       sessionStorage.setItem("jr_extension_reload_pending","1");
       history.replaceState(null,"",`${location.pathname}${location.search}#agent`);
-      toast("Extension updated · reconnecting the queue automatically");
+      toast("Extension reload requested · reconnecting safely");
       setTimeout(()=>location.reload(),650);
     }
   } catch(error) {
@@ -1909,15 +1949,22 @@ function reconnectApplicationAgentAfterReload() {
     for(let attempt=0;attempt<3;attempt+=1){
       if(attempt)await new Promise(resolve=>setTimeout(resolve,1200*(attempt+1)));
       try{
-        await retireTerminalApplicationQueueItems();
-        const synced=await applicationAgentExtensionCommand("sync_queue");
-        if(synced?.error)throw new Error(synced.error);
-        S.applicationAgent.extensionVersion=synced?.extensionVersion||S.applicationAgent.extensionVersion;
-        S.applicationAgent.pairingNeedsRepair=false;
+        const status=await applicationAgentExtensionCommand("status");
+        if(status?.error)throw new Error(status.error);
+        Object.assign(S.applicationAgent,{
+          extensionConnected:true,
+          extensionVersion:status.extensionVersion||S.applicationAgent.extensionVersion,
+          extensionConfigured:Boolean(status.configured),
+          automationEnabled:Boolean(status.automationEnabled),
+          localReady:Boolean(status.localReady),
+          localAnswerCount:Number(status.localAnswerCount)||0,
+          extensionStatusError:status.localError||"",
+          pairingNeedsRepair:!status.configured,
+        });
         sessionStorage.removeItem("jr_extension_reload_pending");
         await loadApplicationAgent(false);
         if(S.tab==="agent")rApplicationAgent();
-        toast(`Extension v${S.applicationAgent.extensionVersion||"current"} reconnected · queue synced`);
+        toast(`Extension v${S.applicationAgent.extensionVersion||"current"} reconnected · ${S.applicationAgent.automationEnabled?"automation running":"ready to sync"}`);
         return;
       }catch(error){lastError=error;}
     }
@@ -1933,10 +1980,12 @@ async function sendApplicationPairingToExtension() {
   try {
     const paired=await applicationAgentExtensionCommand("set_pairing",{cloudUrl:location.origin,agentToken:token});
     S.applicationAgent.extensionVersion=paired?.extensionVersion||S.applicationAgent.extensionVersion;
+    S.applicationAgent.extensionConnected=true; S.applicationAgent.extensionConfigured=true;
     if (paired?.error) throw new Error(paired.error);
     await retireTerminalApplicationQueueItems();
     const synced=await applicationAgentExtensionCommand("sync_queue");
     S.applicationAgent.extensionVersion=synced?.extensionVersion||S.applicationAgent.extensionVersion;
+    S.applicationAgent.automationEnabled=true;
     if (synced?.error) throw new Error(synced.error);
     S.applicationAgent.pairingToken=""; S.applicationAgent.pairingNeedsRepair=false;
     await loadApplicationAgent(false); rApplicationAgent(); toast(`Pairing sent · Mac queue sync finished · ${synced.recovered||0} recovered`);
@@ -1956,15 +2005,17 @@ async function saveApplicationContext() {
   try { await applicationCloudPost("answer", {question,value,category}); $("agentContextQuestion").value="";$("agentContextAnswer").value="";await loadApplicationAgent(false);rApplicationAgent();toast("Answer banked in the private application context"); }
   catch(error) { toast(error.message.slice(0,150)); }
 }
-async function refreshApplicationAgent() { await loadApplicationAgent(false); rApplicationAgent(); }
+async function refreshApplicationAgent() { await loadApplicationAgent(false); S.applicationAgent.extensionProbeStarted=false; await probeApplicationAgentExtension(false); rApplicationAgent(); }
 function rApplicationAgent() {
   if (!S.auth) { rJobs(); return; }
   if (!S.auth.owner) { S.tab="jobs"; rJobs(); return; }
   if (S.applicationAgent.status === "checking") { loadApplicationAgent(false).then(()=>{if(S.tab==="agent")rApplicationAgent();}); return; }
   reconnectApplicationAgentAfterReload();
   const data=S.applicationAgent, items=data.items||[], candidates=applicationAgentCandidates(), selected=new Set(data.selected||[]), queueing=Boolean(data.queueing), extensionAction=data.extensionAction||"";
+  if(!data.extensionProbeStarted&&!applicationAgentReloadReconnectStarted&&!applicationAgentStatusProbePromise)void probeApplicationAgentExtension(true);
   const queueSummary=items.filter(item=>APPLICATION_ACTIVE_STATES.has(item.state)).length;
   const contextAnswers=data.context?.answers||[];
+  const approvedAnswerCount=Math.max(contextAnswers.length,Number(data.localAnswerCount)||0);
   const token=data.pairingToken;
   const candidateHTML=candidates.length?`<div class="bar"><button class="act" onclick='S.applicationAgent.selected=${JSON.stringify(candidates.map(job=>job.id))};rApplicationAgent()' ${queueing?"disabled":""}>select all</button><button class="act" onclick='S.applicationAgent.selected=[];rApplicationAgent()' ${queueing?"disabled":""}>clear</button><button class="act primary" aria-busy="${queueing}" onclick="queueApplicationBatch()" ${!selected.size||queueing?"disabled":""}>${queueing?"queueing…":`queue ${selected.size||0} role${selected.size===1?"":"s"}`}</button></div><div>${candidates.map(job=>`<label class="agent-card" style="display:flex;gap:.5rem;align-items:flex-start;margin:.35rem 0"><input type="checkbox" ${selected.has(job.id)?"checked":""} ${queueing?"disabled":""} onchange='const next=new Set(S.applicationAgent.selected||[]);this.checked?next.add(${JSON.stringify(job.id)}):next.delete(${JSON.stringify(job.id)});S.applicationAgent.selected=[...next];rApplicationAgent()'><span><strong>${esc(job.company)}</strong><br><span class="sub">${esc(job.title)} · ${esc((appliedById()[job.id]||{}).stage||"saved")}</span></span></label>`).join("")}</div>`:'<p class="sub">Save a role from Jobs first.</p>';
   const queueingNote=queueing?'<div class="note" role="status"><strong>Queueing selected roles…</strong> Keep this tab open until the queue count updates.</div>':"";
@@ -1972,7 +2023,9 @@ function rApplicationAgent() {
   const storageNote=data.storage==="sheet"?'<div class="note"><strong>Private Google Sheet connected.</strong> Queue and answers are stored in the Application Agent tab. Resume PDFs stay on the Mac.</div>':'';
   const pairingRepairNote=data.pairingNeedsRepair?'<div class="note" role="status"><strong>Mac pairing expired.</strong> Use repair &amp; sync once. The page sends the new token directly to the extension and immediately recovers the local queue.</div>':'';
   const busy=Boolean(extensionAction), syncLabel=extensionAction==="sync_queue"?"syncing…":"sync Mac", restartLabel=extensionAction==="reload_extension"?"restarting…":"restart extension", pairLabel=extensionAction==="pairing"?"pairing…":data.pairingNeedsRepair?"repair & sync Mac":"pair & sync Mac";
-  $("main").innerHTML=`<section class="testing-hero"><div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">${queueSummary} active</span><span class="chip">${contextAnswers.length} approved answers</span>${data.extensionVersion?`<span class="chip">extension v${esc(data.extensionVersion)}</span>`:""}</div><div class="acts"><button class="act" onclick="refreshApplicationAgent()">refresh</button><button class="act" aria-busy="${extensionAction==="sync_queue"}" ${busy?"disabled":""} onclick="controlApplicationAgentExtension('sync_queue')">${syncLabel}</button><button class="act" aria-busy="${extensionAction==="reload_extension"}" ${busy?"disabled":""} onclick="controlApplicationAgentExtension('reload_extension')">${restartLabel}</button><button class="act primary" aria-busy="${extensionAction==="pairing"}" ${busy?"disabled":""} onclick="pairApplicationMac()">${pairLabel}</button></div></div><h2>Application Autopilot</h2><p class="sub">The paired Mac prepares and uploads the best tailored resume, fills known repetitive answers, and drafts role-specific written responses with warm-scholarship-essay. It pauses only when a truthful answer needs information that is not in your bank and before the final Submit action.</p>${storageNote}${pairingRepairNote}${data.error?`<div class="note"><strong>Private application storage needs attention.</strong> ${esc(data.error)}</div>`:""}${token?`<div class="note"><strong>Copy this Mac pairing token now.</strong><div class="agent-token">${esc(token)}</div><p class="sub">It is shown once. <button class="act" ${busy?"disabled":""} onclick="sendApplicationPairingToExtension()">send pairing to extension</button> You can also use the extension controls above to sync or restart it without opening Chrome's extension manager.</p></div>`:""}</section><div class="agent-grid"><section class="lane"><div class="bar" style="justify-content:space-between"><h3>Application queue</h3><span class="sub">${items.length} stored</span></div><div class="note">The paired Mac runs up to 3 application tabs at once. A role that needs you parks without losing its page or answers, while open slots continue other roles. Resume PDFs remain local and do not use Drive storage.</div>${applicationAgentQueueHTML(items)}</section><section class="lane"><h3>Queue saved roles from your phone</h3><p class="sub">Select roles already in To apply / To tailor. The paired Mac opens them later and reports live progress here.</p>${queueingNote}${candidateHTML}<h3 style="margin-top:1rem">Add an answer to the private bank</h3><p class="sub">Bullets are enough. The bank keeps the exact question, category, sensitivity, and reuse choice.</p><input id="agentContextQuestion" placeholder="Question or field label"><select id="agentContextCategory"><option value="other">other</option><option value="essay">essay</option><option value="work_authorization">work authorization</option><option value="sponsorship">sponsorship</option><option value="education">education</option><option value="portfolio_link">portfolio link</option></select><textarea id="agentContextAnswer" rows="4" placeholder="Your approved answer"></textarea><button class="act primary" onclick="saveApplicationContext()">save answer</button><h3 style="margin-top:1rem">Issue ledger</h3><p class="sub">Sanitized adapter notes are kept private. Ask Codex to repair an issue; it will add a fixture and adapter test before changing behavior.</p>${issueHTML}</section></div>`;
+  const macState=data.extensionConnected?(data.localReady?(data.automationEnabled?"Mac running":"Mac ready · paused"):"extension connected · worker offline"):"extension not detected";
+  const macKind=data.extensionConnected&&data.localReady?"good":"warn";
+  $("main").innerHTML=`<section class="testing-hero"><div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">${queueSummary} active</span><span class="chip">${approvedAnswerCount} approved answers</span><span class="chip ${macKind}">${esc(macState)}</span>${data.extensionVersion?`<span class="chip">extension v${esc(data.extensionVersion)}</span>`:""}</div><div class="acts"><button class="act" onclick="refreshApplicationAgent()">refresh</button><button class="act" aria-busy="${extensionAction==="sync_queue"}" ${busy?"disabled":""} onclick="controlApplicationAgentExtension('sync_queue')">${syncLabel}</button><button class="act" aria-busy="${extensionAction==="reload_extension"}" ${busy?"disabled":""} onclick="controlApplicationAgentExtension('reload_extension')">${restartLabel}</button><button class="act primary" aria-busy="${extensionAction==="pairing"}" ${busy?"disabled":""} onclick="pairApplicationMac()">${pairLabel}</button></div></div><h2>Application Autopilot</h2><p class="sub">The paired Mac prepares and uploads the best tailored resume, fills known repetitive answers, and drafts role-specific written responses with warm-scholarship-essay. It pauses only when a truthful answer needs information that is not in your bank and before the final Submit action.</p>${storageNote}${pairingRepairNote}${data.extensionStatusError&&data.extensionConnected?`<div class="note"><strong>Mac worker needs attention.</strong> ${esc(data.extensionStatusError)}</div>`:""}${data.error?`<div class="note"><strong>Private application storage needs attention.</strong> ${esc(data.error)}</div>`:""}${token?`<div class="note"><strong>Copy this Mac pairing token now.</strong><div class="agent-token">${esc(token)}</div><p class="sub">It is shown once. <button class="act" ${busy?"disabled":""} onclick="sendApplicationPairingToExtension()">send pairing to extension</button> You can also use the extension controls above to sync or restart it without opening Chrome's extension manager.</p></div>`:""}</section><div class="agent-grid"><section class="lane"><div class="bar" style="justify-content:space-between"><h3>Application queue</h3><span class="sub">${items.length} stored</span></div><div class="note">The paired Mac runs up to 3 application tabs at once. A role that needs you parks without losing its page or answers, while open slots continue other roles. Resume PDFs remain local and do not use Drive storage.</div>${applicationAgentQueueHTML(items)}</section><section class="lane"><h3>Queue saved roles from your phone</h3><p class="sub">Select roles already in To apply / To tailor. The paired Mac opens them later and reports live progress here.</p>${queueingNote}${candidateHTML}<h3 style="margin-top:1rem">Add an answer to the private bank</h3><p class="sub">Bullets are enough. The bank keeps the exact question, category, sensitivity, and reuse choice.</p><input id="agentContextQuestion" placeholder="Question or field label"><select id="agentContextCategory"><option value="other">other</option><option value="essay">essay</option><option value="work_authorization">work authorization</option><option value="sponsorship">sponsorship</option><option value="education">education</option><option value="portfolio_link">portfolio link</option></select><textarea id="agentContextAnswer" rows="4" placeholder="Your approved answer"></textarea><button class="act primary" onclick="saveApplicationContext()">save answer</button><h3 style="margin-top:1rem">Issue ledger</h3><p class="sub">Sanitized adapter notes are kept private. Ask Codex to repair an issue; it will add a fixture and adapter test before changing behavior.</p>${issueHTML}</section></div>`;
 }
 
 /* ---------- tutorial + account workspace ------------------------------ */
