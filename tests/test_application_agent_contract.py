@@ -35,7 +35,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "application_resume_file" in service and "/api/application/resume-file" in service
     assert "application_essay_answer" in service and "warm-scholarship-essay" in service
     assert '"content_scripts"' in extension and '"<all_urls>"' in extension
-    assert '"version": "0.3.0"' in extension
+    assert '"version": "0.3.1"' in extension
     for provider in ("workday", "greenhouse", "lever", "ashby", "smartrecruiters"):
         assert provider in adapters
     assert "JOB_RADAR_SUBMISSION_APPROVED" in (ROOT / "browser-extension" / "content.js").read_text()
@@ -103,6 +103,10 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "scheduleQueueSync();" in background
     assert "chrome.runtime.reload()" in background
     assert "JOB_RADAR_RELOAD_EXTENSION" in background
+    assert "JOB_RADAR_STATUS" in background and "requestExtensionStatus" in background
+    assert "syncCloudQueueIfEnabled" in background
+    assert "automationEnabled: false" in background
+    assert "automationEnabled: true" in background
     assert "extensionVersion: chrome.runtime.getManifest().version" in background
     assert "RADAR_PAGE_ORIGINS" in background
     assert "Only the Job Radar popup or owner Job Radar page can request a reload." in background
@@ -112,6 +116,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert 'id="reload"' in popup_html and 'id="version"' in popup_html
     assert "job-radar:extension-command" in content
     assert "JOB_RADAR_SYNC_NOW" in content
+    assert 'status: "JOB_RADAR_STATUS"' in content
     assert "job not found" in content
     assert "job (?:has |is )?closed" in content
     assert "page (?:you are looking for )?" in content
@@ -135,6 +140,8 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "_collapse_active_session_duplicates" in local
     frontend = (ROOT / "webapp" / "index.html").read_text()
     assert "controlApplicationAgentExtension" in frontend
+    assert "probeApplicationAgentExtension" in frontend
+    assert "Mac ready · paused" in frontend
     assert "sendApplicationPairingToExtension" in frontend
     assert "applicationAgentURL" in frontend
     assert 'command==="sync_queue"?30000' in frontend

@@ -28,7 +28,7 @@
       if (event.source !== window || event.origin !== location.origin) return;
       if (event.data?.type === "job-radar:extension-command") {
         const command = String(event.data.command || "");
-        const messageType = {reload_extension: "JOB_RADAR_RELOAD_EXTENSION", sync_queue: "JOB_RADAR_SYNC_NOW", set_pairing: "JOB_RADAR_SET_CONFIG"}[command];
+        const messageType = {status: "JOB_RADAR_STATUS", reload_extension: "JOB_RADAR_RELOAD_EXTENSION", sync_queue: "JOB_RADAR_SYNC_NOW", set_pairing: "JOB_RADAR_SET_CONFIG"}[command];
         if (!messageType) return;
         const requestId = text(event.data.requestId, 120);
         const message = {type: messageType, source: "radar-page", requestId};

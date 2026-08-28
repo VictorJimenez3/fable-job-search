@@ -49,8 +49,42 @@ async function requestQueueSync(sender, message = {}) {
   if (!extensionControlSender(sender, message)) {
     return {ok: false, error: "Only the Job Radar popup or owner Job Radar page can sync the queue."};
   }
+  // Queue sync is the one control that activates employer-page automation.
+  // A reload or read-only health probe must never start filling applications.
+  await chrome.storage.local.set({automationEnabled: true});
   const result = await syncCloudQueue();
-  return {...result, extensionVersion: chrome.runtime.getManifest().version};
+  return {...result, automationEnabled: true, extensionVersion: chrome.runtime.getManifest().version};
+}
+
+async function requestExtensionStatus(sender, message = {}) {
+  if (!extensionControlSender(sender, message)) {
+    return {ok: false, error: "Only the Job Radar popup or owner Job Radar page can read extension status."};
+  }
+  const settings = await config();
+  const stored = await chrome.storage.local.get({automationEnabled: false});
+  let localReady = false;
+  let localError = "";
+  let localAnswerCount = 0;
+  try {
+    const health = await local("/api/health");
+    localReady = Boolean(health?.ready);
+    if (!localReady) localError = "Resume Studio is not ready.";
+    if (localReady) {
+      const context = await local("/api/application/context");
+      localAnswerCount = Array.isArray(context?.answers) ? context.answers.length : 0;
+    }
+  } catch (error) {
+    localError = String(error?.message || error || "Resume Studio is unavailable");
+  }
+  return {
+    ok: true,
+    extensionVersion: chrome.runtime.getManifest().version,
+    configured: Boolean(settings.agentToken),
+    automationEnabled: Boolean(stored.automationEnabled),
+    localReady,
+    localAnswerCount,
+    localError,
+  };
 }
 
 function noteQuota(error) {
@@ -676,14 +710,22 @@ async function syncCloudQueue() {
   finally { syncPromise = null; }
 }
 
+async function syncCloudQueueIfEnabled() {
+  const stored = await chrome.storage.local.get({automationEnabled: false});
+  if (!stored.automationEnabled) {
+    return {ok: true, paused: true, queued: 0, active: 0};
+  }
+  return syncCloudQueue();
+}
+
 function scheduleQueueSync() {
   chrome.alarms.create("job-radar-application-sync", {periodInMinutes: 1});
-  void syncCloudQueue();
+  void syncCloudQueueIfEnabled();
 }
 chrome.runtime.onInstalled.addListener(scheduleQueueSync);
 chrome.runtime.onStartup.addListener(scheduleQueueSync);
 chrome.alarms.onAlarm.addListener((alarm) => {
-  if (alarm.name === "job-radar-application-sync") void syncCloudQueue();
+  if (alarm.name === "job-radar-application-sync") void syncCloudQueueIfEnabled();
 });
 chrome.tabs.onRemoved.addListener((tabId) => tabs.delete(tabId));
 scheduleQueueSync();
@@ -882,6 +924,7 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
       })});
     }
     if (message?.type === "JOB_RADAR_GET_CONFIG") return config();
+    if (message?.type === "JOB_RADAR_STATUS") return requestExtensionStatus(sender, message);
     if (message?.type === "JOB_RADAR_RELOAD_EXTENSION") return requestExtensionReload(sender, message);
     if (message?.type === "JOB_RADAR_SET_CONFIG") {
       if (!extensionControlSender(sender, message)) return {ok: false, error: "Pairing can only be written by the Job Radar popup or owner page."};
@@ -895,6 +938,7 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
   return true;
 });
 
-// A service worker can sleep between alarms; a manual popup action should
-// always be able to pull a queue immediately.
-void syncCloudQueue();
+// Wake the service worker without turning a safe reload into queue activation.
+// Once the owner has explicitly synced, the persisted flag keeps automation
+// running across worker sleeps and Chrome restarts.
+void syncCloudQueueIfEnabled();
