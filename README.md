@@ -1196,10 +1196,19 @@ setting. Edit and push — next run picks it up. Seed companies:
 
 - **State** (`state/*.json`) is committed back by CI after each run: seen jobs,
   the company registry, learned taste, applied log, run stats, company research,
-  AI usage, and provider benchmark results.
+  AI usage, and provider benchmark results. Job snapshots use a sparse,
+  backward-compatible JSON representation and fail before replacement at
+  95 MiB, leaving headroom below GitHub's 100 MiB blob limit. If that guard
+  trips, shard the datastore or complete the verified Postgres cutover; do not
+  raise the production limit past the repository host's boundary.
 - **Score maintenance** runs every six hours and verifies that every stored job
   carries the current score/rules version before publishing a repaired snapshot.
 - GitHub cron is best-effort: `*/30` in practice fires every 30–60 min.
+- Production Vercel deploys are triggered by a green `tests` workflow for the
+  exact commit, then verify that the friendly alias serves that build's SHA.
+  A manual deploy is accepted only from the production branch. Cancelled or
+  timed-out automation is retried once by `workflow-recovery` and then gets an
+  actionable repair issue.
 - Scheduled workflows pause after 60 days without repo activity; any commit
   (including CI's own) resets the clock, so this is only relevant if the radar
   is disabled. GitHub also emails you before pausing.

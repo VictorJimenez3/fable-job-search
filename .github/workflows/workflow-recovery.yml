@@ -34,7 +34,7 @@ permissions:
 jobs:
   retry-once:
     if: >-
-      github.event.workflow_run.conclusion == 'failure' &&
+      contains(fromJSON('["failure","cancelled","timed_out"]'), github.event.workflow_run.conclusion) &&
       github.event.workflow_run.run_attempt == 1
     runs-on: ubuntu-latest
     steps:
@@ -57,11 +57,14 @@ jobs:
               "",
               "Tell Codex: fix workflow run " + run.html_url,
             ].join("\n");
-            async function upsertIssue() {
-              const listed = await github.rest.issues.listForRepo({
+            async function findIssue() {
+              const listed = await github.paginate(github.rest.issues.listForRepo, {
                 owner, repo, state: "open", per_page: 100,
               });
-              const existing = listed.data.find(issue => issue.title === title);
+              return listed.find(issue => issue.title === title);
+            }
+            async function upsertIssue() {
+              const existing = await findIssue();
               if (existing) {
                 await github.rest.issues.update({
                   owner, repo, issue_number: existing.number, body,
@@ -71,10 +74,10 @@ jobs:
               }
             }
             try {
-              await github.request(
-                "POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun-failed-jobs",
-                {owner, repo, run_id: run.id}
-              );
+              const endpoint = run.conclusion === "cancelled" || run.conclusion === "timed_out"
+                ? "POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun"
+                : "POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun-failed-jobs";
+              await github.request(endpoint, {owner, repo, run_id: run.id});
               core.notice("Requested one automatic rerun for " + run.html_url);
             } catch (error) {
               await upsertIssue();
@@ -85,7 +88,7 @@ jobs:
 
   escalate-after-retry:
     if: >-
-      github.event.workflow_run.conclusion == 'failure' &&
+      contains(fromJSON('["failure","cancelled","timed_out"]'), github.event.workflow_run.conclusion) &&
       github.event.workflow_run.run_attempt > 1
     runs-on: ubuntu-latest
     steps:
@@ -108,10 +111,10 @@ jobs:
               "",
               "Tell Codex: fix workflow run " + run.html_url,
             ].join("\n");
-            const listed = await github.rest.issues.listForRepo({
+            const listed = await github.paginate(github.rest.issues.listForRepo, {
               owner, repo, state: "open", per_page: 100,
             });
-            const existing = listed.data.find(issue => issue.title === title);
+            const existing = listed.find(issue => issue.title === title);
             if (existing) {
               await github.rest.issues.update({
                 owner, repo, issue_number: existing.number, body,
@@ -134,10 +137,10 @@ jobs:
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const title = "Automation failure: " + run.name;
-            const listed = await github.rest.issues.listForRepo({
+            const listed = await github.paginate(github.rest.issues.listForRepo, {
               owner, repo, state: "open", per_page: 100,
             });
-            const existing = listed.data.find(issue => issue.title === title);
+            const existing = listed.find(issue => issue.title === title);
             if (!existing) {
               core.notice("Workflow recovered; no open repair issue found.");
               return;

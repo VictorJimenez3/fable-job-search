@@ -1,11 +1,9 @@
 name: deploy platform to Vercel
 
 on:
-  push:
-    branches: [claude/newgrad-job-search-system-9gbj9k]
-    paths:
-      - "webapp/**"
-      - ".github/workflows/vercel-production.yml"
+  workflow_run:
+    workflows: [tests]
+    types: [completed]
   workflow_dispatch:
 
 concurrency:
@@ -14,6 +12,12 @@ concurrency:
 
 jobs:
   deploy:
+    if: >-
+      (github.event_name == 'workflow_dispatch' &&
+       github.ref == 'refs/heads/claude/newgrad-job-search-system-9gbj9k') ||
+      (github.event_name == 'workflow_run' &&
+       github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_branch == 'claude/newgrad-job-search-system-9gbj9k')
     name: build, deploy, and keep the friendly alias current
     runs-on: ubuntu-latest
     environment: production
@@ -24,11 +28,14 @@ jobs:
       VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
       VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }}
       VERCEL_ALIAS: ${{ vars.VERCEL_ALIAS }}
+      RADAR_BUILD_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
     defaults:
       run:
         working-directory: webapp
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.ref }}
 
       - name: Check deployment settings
         run: |
@@ -69,7 +76,7 @@ jobs:
       - name: Verify the friendly URL serves this build
         run: |
           for attempt in 1 2 3 4 5; do
-            if curl --fail --silent --show-error "https://$VERCEL_ALIAS/" | grep -qi "Best Match lookback"; then
+            if curl --fail --silent --show-error "https://$VERCEL_ALIAS/" | grep -Fq "job-radar-build\" content=\"$RADAR_BUILD_SHA\""; then
               echo "friendly alias is serving the new platform build"
               exit 0
             fi
