@@ -253,6 +253,23 @@ Or install the login service once so production links always work:
 bash scripts/resume-studio-service/install.sh
 ```
 
+If Codex usage is unavailable—or a good resume for the same role family already
+exists—use the local bank without starting a generation run:
+
+```bash
+.venv/bin/python -m radar.cli resume-studio bank
+.venv/bin/python -m radar.cli resume-studio offline-tailor \
+  --company "Acme" --title "Backend Engineer"
+```
+
+The offline command ranks existing PDFs and copies the best approved one,
+unchanged, to `CV/tailored/offline/victor_jimenez_acme.pdf`. Add a posting with
+`--description-file /absolute/path/job.txt` for better target-term matching.
+If the bank has no approved match, inspect candidates with `--include-review`;
+that flag is review-only and prints a warning. See
+[`RESUME_CLI.md`](RESUME_CLI.md) for approval, export, usage, and troubleshooting
+commands.
+
 You can also stay in the production platform: sign in as `VictorJimenez3`,
 open **Resume Studio**, or press **tailor** beside any Jobs posting. That is
 the canonical cloud control plane for the same private engine. It shows the
@@ -274,6 +291,17 @@ only creates reviewable Resume Bank drafts—it moves successful roles into the
 Pipeline's **To tailor** lane, does not change them to Applied, and never
 submits an application. If you use Victor's Notion tracker, add a `To tailor`
 status option manually; Notion's API cannot create status options.
+
+Use **Tailor all To tailor** when you want the Notion queue processed as a
+batch. It uses every current, non-terminal role whose latest synced tracker
+stage is `To tailor`, preselects the full set, and asks you to confirm before
+queueing because a large batch can use substantial Codex allowance. It creates
+private drafts only; it does not mark anything Applied or submit applications.
+The platform reads the repository's latest Notion sync, so run the existing
+Notion tracker sync/backfill if the count is stale. From Resume bank, choose
+**Edit resume** on a saved version to open the protected local Workshop from
+the platform. **Save line** is a local edit and renders a new private revision;
+the original PDF remains untouched. **Ask AI about this** may use Codex.
 
 Inside an expanded job card, **Objective ranking** sorts the finished variants
 for that posting and marks the current winner. Open **show rubric sources** to
@@ -362,9 +390,12 @@ using any application material. The system preserves the master CV as the
 evidence bank and never auto-submits a resume. Use **Resume bank** in the
 header to revisit any saved run or legacy experiment; selecting another
 posting does not remove the previous result. Select **View audit** on a saved
-run to rehydrate the same visual audit used for new runs. New PDFs use a company-identifiable name such as
-`mayo_clinic_resume_ai.pdf`, and the preview response preserves that name when
-the file is opened or downloaded. Project headings use `|` separators. TICC is
+run to rehydrate the same visual audit used for new runs. New PDFs use the
+owner/company name such as `victor_jimenez_mayo_clinic.pdf`, and the preview
+response preserves that name when the file is opened or downloaded. Recent
+primary PDFs are also copied to `CV/tailored/`, one newest usable file per
+company; see [`RESUME_CLI.md`](RESUME_CLI.md) for the local commands. Project
+headings use `|` separators. TICC is
 never emitted by generation or workshop editing, even when it appears in a
 local historical source; the source files themselves are not changed. Each new
 run stores a private posting snapshot beside its artifacts.

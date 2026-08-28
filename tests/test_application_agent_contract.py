@@ -35,7 +35,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "application_resume_file" in service and "/api/application/resume-file" in service
     assert "application_essay_answer" in service and "warm-scholarship-essay" in service
     assert '"content_scripts"' in extension and '"<all_urls>"' in extension
-    assert '"version": "0.2.9"' in extension
+    assert '"version": "0.3.0"' in extension
     for provider in ("workday", "greenhouse", "lever", "ashby", "smartrecruiters"):
         assert provider in adapters
     assert "JOB_RADAR_SUBMISSION_APPROVED" in (ROOT / "browser-extension" / "content.js").read_text()
@@ -128,6 +128,11 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "posting_status" in api
     assert "no longer open" in api
     assert "collapseActiveQueueDuplicates" in api and "queueJobIdentity" in api
+    assert 'payload.action === "queue_many"' in api
+    assert "importTrackerChoices" in background and "trackerChoiceTime" in background
+    assert 'action: "queue_many"' in background
+    assert "/api/application/tracker-sync" in background and "request_tracker_sync" in service
+    assert "_collapse_active_session_duplicates" in local
     frontend = (ROOT / "webapp" / "index.html").read_text()
     assert "controlApplicationAgentExtension" in frontend
     assert "sendApplicationPairingToExtension" in frontend
@@ -143,5 +148,6 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "compactApplicationReviewFields" in frontend
     assert ".agent-review-field > strong, .agent-review-field > .sub" in frontend
     assert "cloudReturnedEmpty" in frontend
+    assert "reconcileAutopilotChoices" in frontend and "queueAutopilotJobs" in frontend
     assert "Private Google Sheet connected." in frontend
     assert "Drive file storage is full" not in frontend

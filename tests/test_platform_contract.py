@@ -36,6 +36,23 @@ def test_platform_exposes_owner_batch_resume_tailoring_for_today():
     assert "to_tailor" in (ROOT / "webapp" / "api" / "v1" / "_applications.js").read_text()
 
 
+def test_platform_exposes_synced_notion_tailor_batch_and_protected_resume_editor():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    bank = (ROOT / "webapp" / "api" / "resume-bank.js").read_text()
+    assert "Autopilot To tailor" in html
+    assert "function resumeNotionTailorCandidates()" in html
+    assert "RESUME_NOTION_BATCH_LIMIT = 500" in html
+    assert "latest synced Notion state" in html
+    assert "Notion → Resume Studio → Application Autopilot" in html
+    assert "window.confirm" not in html
+    assert "queueAutopilotJobs(jobs)" in html
+    assert "const workerCount = engineOnline ? Math.min(4, jobs.length) : 1" in html
+    assert "Edit resume" in html
+    assert "original PDF stays untouched" in html
+    assert "no editable source" in html
+    assert "MAX_QUEUE_ITEMS = 500" in bank
+
+
 def test_platform_defensively_hides_closed_link_signal_and_exposes_family_identity():
     html = (ROOT / "webapp" / "index.html").read_text()
     dedupe = (ROOT / "radar" / "dedupe.py").read_text()

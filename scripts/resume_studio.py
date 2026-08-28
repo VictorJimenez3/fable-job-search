@@ -22,8 +22,9 @@ Run with::
 
     .venv/bin/python scripts/resume_studio.py
 
-Then open http://127.0.0.1:4317/ .  All generated material stays below the
-ignored ``CV/.resume_studio/`` directory.
+Then open http://127.0.0.1:4317/ .  Private run history stays below the
+ignored ``CV/.resume_studio/`` directory. The newest primary PDFs are also
+copied to the easy-to-find ``CV/tailored/`` folder.
 """
 
 from __future__ import annotations
@@ -115,6 +116,45 @@ def _sha256_file(path: Path) -> str:
 
 ENGINE_LOADED_SOURCE_FINGERPRINT = _sha256_file(ENGINE_SOURCE_PATH)
 ENGINE_LOADED_EVALUATOR_SOURCE_FINGERPRINT = _sha256_file(ENGINE_EVALUATOR_SOURCE_PATH)
+_TRACKER_SYNC_LOCK = threading.Lock()
+_TRACKER_SYNC_LAST_REQUEST = 0.0
+TRACKER_SYNC_MIN_INTERVAL_SECONDS = 15 * 60
+
+
+def request_tracker_sync(root: Optional[Path] = None) -> Dict[str, Any]:
+    """Nudge the existing secret-backed GitHub tracker reconciliation.
+
+    The local companion never receives the Notion secret. It asks the already
+    configured workflow to run, at most once per interval, so a paired Mac can
+    recover from GitHub's delayed scheduled runs without owner clicks.
+    """
+    global _TRACKER_SYNC_LAST_REQUEST
+    base = (root or repo_root()).resolve()
+    now = time.time()
+    with _TRACKER_SYNC_LOCK:
+        remaining = TRACKER_SYNC_MIN_INTERVAL_SECONDS - (now - _TRACKER_SYNC_LAST_REQUEST)
+        if _TRACKER_SYNC_LAST_REQUEST and remaining > 0:
+            return {"ok": True, "triggered": False, "retry_after_seconds": int(remaining)}
+        _TRACKER_SYNC_LAST_REQUEST = now
+    gh = shutil.which("gh")
+    if not gh:
+        with _TRACKER_SYNC_LOCK:
+            _TRACKER_SYNC_LAST_REQUEST = 0.0
+        return {"ok": False, "triggered": False, "error": "GitHub CLI is unavailable"}
+    try:
+        result = subprocess.run(
+            [gh, "workflow", "run", "tracker-sync.yml"],
+            cwd=str(base), capture_output=True, text=True, timeout=20, check=False,
+        )
+    except (OSError, subprocess.SubprocessError) as exc:
+        with _TRACKER_SYNC_LOCK:
+            _TRACKER_SYNC_LAST_REQUEST = 0.0
+        return {"ok": False, "triggered": False, "error": str(exc)[:300]}
+    if result.returncode != 0:
+        with _TRACKER_SYNC_LOCK:
+            _TRACKER_SYNC_LAST_REQUEST = 0.0
+        return {"ok": False, "triggered": False, "error": (result.stderr or result.stdout or "workflow dispatch failed")[:300]}
+    return {"ok": True, "triggered": True, "message": "Notion tracker reconciliation requested"}
 
 
 def engine_runtime_identity(workers: Optional[int] = None) -> Dict[str, Any]:
@@ -863,6 +903,23 @@ def studio_root(root: Optional[Path] = None) -> Path:
     return cv_root(root) / ".resume_studio"
 
 
+TAILORED_RESUME_DIRNAME = "tailored"
+TAILORED_RESUME_INDEX = "index.json"
+CURATED_RESUME_STATUSES = {"complete", "completed", "awaiting_review"}
+OFFLINE_RESUME_DIRNAME = "offline"
+OFFLINE_RESUME_INDEX = "index.json"
+
+
+def tailored_resume_root(root: Optional[Path] = None) -> Path:
+    """Return the visible folder containing the newest local resume copies."""
+    return cv_root(root) / TAILORED_RESUME_DIRNAME
+
+
+def offline_resume_root(root: Optional[Path] = None) -> Path:
+    """Return the visible folder for unchanged offline role selections."""
+    return tailored_resume_root(root) / OFFLINE_RESUME_DIRNAME
+
+
 def canonical_resume_lock(root: Optional[Path] = None) -> Dict[str, Any]:
     """Describe the immutable files that Resume Studio is never allowed to write."""
     cv = cv_root(root).resolve()
@@ -1464,15 +1521,114 @@ def _slug(value: str) -> str:
 
 
 def resume_pdf_filename(job: Dict[str, Any], mode: str = "ai") -> str:
-    """Return the human-readable filename shown for a generated resume.
+    """Return Victor's stable, employer-facing filename for a generated PDF.
 
-    Every new PDF includes a company slug and a use-case suffix so opening
-    several drafts cannot hide which role each artifact belongs to.
+    ``mode`` remains an accepted argument for callers and old records, but it
+    intentionally does not appear in the filename. A resume should identify
+    its owner and target company without exposing an internal generation lane.
     """
     company = re.sub(r"[^a-z0-9]+", "_", str(job.get("company") or "company").lower()).strip("_")
-    normalized = normalize_tailor_mode(mode)
-    suffix = "unchained" if normalized == "generation" else "ai"
-    return "%s_resume_%s.pdf" % (company[:64] or "company", suffix)
+    return "victor_jimenez_%s.pdf" % (company[:64] or "company")
+
+
+def _resume_record_timestamp(value: Any, fallback: Optional[float] = None) -> dt.datetime:
+    """Parse a run timestamp, falling back to filesystem time when needed."""
+    raw = str(value or "").strip()
+    if raw:
+        try:
+            parsed = dt.datetime.fromisoformat(raw.replace("Z", "+00:00"))
+            return parsed.astimezone(dt.timezone.utc) if parsed.tzinfo else parsed.replace(tzinfo=dt.timezone.utc)
+        except ValueError:
+            pass
+    return dt.datetime.fromtimestamp(fallback or time.time(), dt.timezone.utc)
+
+
+def export_local_tailored_resumes(
+    root: Optional[Path] = None,
+    since_days: Optional[int] = 14,
+) -> Dict[str, Any]:
+    """Keep one newest usable primary PDF per company in ``CV/tailored``.
+
+    The private run directories remain the source of truth. This folder is a
+    convenience export for local applications, so it deliberately excludes
+    failed runs and diagnostic ``tailored_candidate.pdf`` files. A recent
+    ``awaiting_review`` run is included but marked in ``index.json`` so Victor
+    can inspect it before applying.
+    """
+    root = root or repo_root()
+    destination = tailored_resume_root(root)
+    destination.mkdir(parents=True, exist_ok=True)
+    cutoff = None
+    if since_days is not None:
+        cutoff = dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=max(0, int(since_days)))
+
+    newest: Dict[str, Tuple[dt.datetime, Path, Dict[str, Any], Dict[str, Any], Path]] = {}
+    runs = studio_root(root) / "runs"
+    if runs.is_dir():
+        for run_dir in runs.iterdir():
+            if not run_dir.is_dir():
+                continue
+            status = read_json(run_dir / "status.json", {}) or {}
+            if not isinstance(status, dict) or status.get("status") not in CURATED_RESUME_STATUSES:
+                continue
+            job = read_json(run_dir / "job.json", {}) or status.get("job") or {}
+            if not isinstance(job, dict) or not str(job.get("company") or "").strip():
+                continue
+            pdf = run_pdf_path(run_dir)
+            if not pdf.is_file():
+                continue
+            timestamp = _resume_record_timestamp(status.get("created_at"), run_dir.stat().st_mtime)
+            if cutoff and timestamp < cutoff:
+                continue
+            filename = resume_pdf_filename(job, str(status.get("mode") or "ai"))
+            key = filename.lower()
+            current = newest.get(key)
+            candidate = (timestamp, run_dir, status, job, pdf)
+            if current is None or (timestamp, run_dir.name) > (current[0], current[1].name):
+                newest[key] = candidate
+
+    managed_patterns = ("victor_jimenez_*.pdf", "victor_jimenez_*-preview.png")
+    for pattern in managed_patterns:
+        for existing in destination.glob(pattern):
+            if existing.is_file():
+                existing.unlink()
+
+    entries: List[Dict[str, Any]] = []
+    for filename, (timestamp, run_dir, status, job, pdf) in sorted(
+        newest.items(), key=lambda item: item[1][0], reverse=True
+    ):
+        target = destination / filename
+        shutil.copy2(pdf, target)
+        preview = run_preview_path(run_dir)
+        preview_name = Path(filename).stem + "-preview.png"
+        if preview.is_file():
+            shutil.copy2(preview, destination / preview_name)
+        entries.append({
+            "filename": filename,
+            "preview_filename": preview_name if preview.is_file() else "",
+            "company": str(job.get("company") or ""),
+            "title": str(job.get("title") or ""),
+            "created_at": timestamp.isoformat(timespec="seconds"),
+            "status": str(status.get("status") or ""),
+            "mode": str(status.get("mode") or ""),
+            "run_id": run_dir.name,
+            "review_required": str(status.get("status") or "") != "complete",
+        })
+
+    write_json(destination / TAILORED_RESUME_INDEX, {
+        "generated_at": now_iso(),
+        "source": "CV/.resume_studio/runs",
+        "selection": "newest usable primary PDF per company",
+        "since_days": since_days,
+        "count": len(entries),
+        "resumes": entries,
+    })
+    return {
+        "folder": str(destination),
+        "count": len(entries),
+        "since_days": since_days,
+        "resumes": entries,
+    }
 
 
 def run_pdf_path(run_dir: Path) -> Path:
@@ -1481,7 +1637,9 @@ def run_pdf_path(run_dir: Path) -> Path:
     configured = str(status.get("pdf_filename") or "").strip()
     if configured:
         return run_dir / Path(configured).name
-    named = sorted(run_dir.glob("*_resume_*.pdf"))
+    named = sorted(
+        [*run_dir.glob("victor_jimenez_*.pdf"), *run_dir.glob("*_resume_*.pdf")]
+    )
     if named:
         return named[0]
     return run_dir / "resume.pdf"
@@ -1509,11 +1667,11 @@ def workshop_artifact_url(run_id: str, revision_id: str, filename: str) -> str:
 
 def _download_filename(value: Any) -> str:
     """Return a safe, human-readable filename for inline PDF previews."""
-    name = Path(str(value or "company_resume_ai.pdf")).name
+    name = Path(str(value or "victor_jimenez_company.pdf")).name
     safe = re.sub(r"[^A-Za-z0-9._-]+", "_", name).strip("._")
     if safe == "resume.pdf":
-        return "company_resume_ai.pdf"
-    return safe or "company_resume_ai.pdf"
+        return "victor_jimenez_company.pdf"
+    return safe or "victor_jimenez_company.pdf"
 
 
 def _resume_tokens(value: str) -> set:
@@ -3884,8 +4042,11 @@ def _library_dir(root: Optional[Path], source: str, entry_id: str) -> Optional[P
 
 
 def logical_pdf_filename(job: Dict[str, Any], physical: Path) -> str:
-    """Give legacy ``resume.pdf`` runs the same identifiable public name."""
-    if physical.name == "resume.pdf":
+    """Give legacy run PDFs the current owner/company-facing public name."""
+    if (
+        physical.name == "resume.pdf"
+        or re.fullmatch(r"[a-z0-9_]+_resume_(?:ai|unchained)\.pdf", physical.name, re.I)
+    ):
         return resume_pdf_filename(job)
     return physical.name
 
@@ -3897,12 +4058,21 @@ def artifact_target(directory: Path, filename: str) -> Optional[Path]:
         return None
     if target.is_file():
         return target
-    if target.suffix == ".pdf" and target.name.endswith("_resume_ai.pdf"):
-        legacy = directory / "resume.pdf"
+    job = read_json(directory / "job.json", {}) or {}
+    if not isinstance(job, dict):
+        job = {}
+    if target.suffix == ".pdf" and (
+        target.name == resume_pdf_filename(job)
+        or target.name.startswith("victor_jimenez_")
+    ):
+        legacy = run_pdf_path(directory)
         if legacy.is_file():
             return legacy
-    if target.suffix == ".png" and target.name.endswith("_resume_ai-preview.png"):
-        legacy = directory / "resume-preview.png"
+    if target.suffix == ".png" and (
+        target.name == Path(resume_pdf_filename(job)).stem + "-preview.png"
+        or target.name.startswith("victor_jimenez_")
+    ):
+        legacy = run_preview_path(directory)
         if legacy.is_file():
             return legacy
     return None
@@ -4084,6 +4254,328 @@ def resume_library(root: Optional[Path] = None, query: str = "", job_id: str = "
     return filtered[:max(1, min(int(limit or 200), 500))]
 
 
+OFFLINE_TITLE_STOPWORDS = frozenset({
+    "a", "an", "and", "associate", "early", "engineer", "engineering",
+    "for", "graduate", "i", "ii", "iii", "intern", "junior", "new",
+    "of", "role", "senior", "the", "with",
+})
+
+
+def _resume_bank_text(directory: Path) -> str:
+    """Read searchable resume text without changing the private artifact."""
+    text_path = directory / "resume.txt"
+    if text_path.is_file():
+        try:
+            return clean_text(text_path.read_text(errors="replace"))
+        except OSError:
+            pass
+    tex_path = directory / "resume.tex"
+    if tex_path.is_file():
+        try:
+            return clean_text(_latex_plain(tex_path.read_text(errors="replace")))
+        except OSError:
+            pass
+    pdf = run_pdf_path(directory)
+    pdftotext = shutil.which("pdftotext")
+    if pdftotext and pdf.is_file():
+        try:
+            return clean_text(subprocess.check_output(
+                [pdftotext, str(pdf), "-"], timeout=20, text=True,
+                stderr=subprocess.DEVNULL,
+            ))
+        except (OSError, subprocess.SubprocessError):
+            pass
+    return ""
+
+
+def _resume_bank_candidate(
+    root: Optional[Path], entry: Dict[str, Any],
+) -> Optional[Dict[str, Any]]:
+    """Normalize one reusable bank PDF and reject failed/base outcomes."""
+    if (
+        entry.get("source") != "run"
+        or entry.get("status") not in CURATED_RESUME_STATUSES
+        or not entry.get("has_pdf")
+        or str(entry.get("winner_version") or "").lower() == "base"
+    ):
+        return None
+    directory = _library_dir(root, "run", str(entry.get("entry_id") or ""))
+    if directory is None or not directory.is_dir():
+        return None
+    pdf = run_pdf_path(directory)
+    if not pdf.is_file():
+        return None
+    status = read_json(directory / "status.json", {}) or {}
+    report = read_json(directory / "report.json", {}) or {}
+    job = read_json(directory / "job.json", {}) or {}
+    context = read_json(directory / "job_context.json", {}) or {}
+    if not isinstance(status, dict) or not isinstance(report, dict):
+        return None
+    if not isinstance(job, dict):
+        job = {}
+    if not isinstance(context, dict):
+        context = {}
+    approval = str(
+        status.get("approval_state") or report.get("approval_state") or "awaiting_review"
+    ).lower()
+    winner_artifact = report.get("winner_artifact")
+    if not isinstance(winner_artifact, dict):
+        winner_artifact = {}
+    winner = str(
+        report.get("winner_version")
+        or winner_artifact.get("winner_version")
+        or entry.get("winner_version")
+        or "legacy_unverified"
+    ).lower()
+    safe_for_application = approval == "approved" and winner == "tailored"
+    posting_text = str(context.get("posting_text") or job.get("description") or "").strip()
+    value = {
+        "run_id": str(entry.get("run_id") or entry.get("entry_id") or ""),
+        "company": str(job.get("company") or (entry.get("job") or {}).get("company") or ""),
+        "title": str(job.get("title") or (entry.get("job") or {}).get("title") or ""),
+        "sector": str(job.get("sector") or (entry.get("job") or {}).get("sector") or ""),
+        "status": str(entry.get("status") or ""),
+        "approval_state": approval,
+        "winner_version": winner,
+        "safe_for_application": safe_for_application,
+        "needs_owner_review": not safe_for_application,
+        "created_at": str(entry.get("created_at") or ""),
+        "updated_at": str(entry.get("updated_at") or entry.get("created_at") or ""),
+        "pdf_filename": logical_pdf_filename(job, pdf),
+        "pdf_path": str(pdf.resolve()),
+        "pdf_sha256": _sha256_file(pdf),
+        "posting_available": bool(posting_text),
+        "objective": entry.get("objective") if isinstance(entry.get("objective"), dict) else {},
+        "_job": job,
+        "_posting_text": posting_text,
+    }
+    return value
+
+
+def resume_bank(
+    root: Optional[Path] = None, query: str = "", approved_only: bool = False,
+    limit: int = 500,
+) -> Dict[str, Any]:
+    """Return unique reusable PDFs from the private run history."""
+    candidates = []
+    for entry in resume_library(root, query=query, limit=500):
+        candidate = _resume_bank_candidate(root, entry)
+        if candidate is None or (approved_only and not candidate["safe_for_application"]):
+            continue
+        candidates.append(candidate)
+    candidates.sort(key=lambda item: (
+        bool(item["safe_for_application"]),
+        item.get("winner_version") == "tailored",
+        item.get("updated_at") or "",
+        item.get("run_id") or "",
+    ), reverse=True)
+    unique: List[Dict[str, Any]] = []
+    by_digest: Dict[str, Dict[str, Any]] = {}
+    for candidate in candidates:
+        digest = str(candidate.get("pdf_sha256") or "")
+        existing = by_digest.get(digest)
+        if existing is not None:
+            existing["duplicate_run_ids"].append(candidate["run_id"])
+            continue
+        public = {key: value for key, value in candidate.items() if not key.startswith("_")}
+        public["duplicate_run_ids"] = []
+        by_digest[digest] = public
+        unique.append(public)
+    bounded = unique[:max(1, min(int(limit or 500), 500))]
+    return {
+        "bank_root": str(studio_root(root) / "runs"),
+        "unique_resumes": len(unique),
+        "approved_resumes": sum(bool(item["safe_for_application"]) for item in unique),
+        "review_required_resumes": sum(bool(item["needs_owner_review"]) for item in unique),
+        "entries": bounded,
+    }
+
+
+def _offline_title_tokens(value: Any) -> set:
+    return {
+        token for token in re.findall(r"[a-z0-9+#.]+", str(value or "").lower())
+        if len(token) > 1 and token not in OFFLINE_TITLE_STOPWORDS
+    }
+
+
+def _offline_role_bucket(job: Dict[str, Any], posting_text: str) -> str:
+    from radar.score import role_bucket
+
+    return str(role_bucket(str(job.get("title") or ""), posting_text) or "general")
+
+
+def _offline_match_score(
+    target_job: Dict[str, Any], target_text: str, candidate: Dict[str, Any],
+) -> Dict[str, Any]:
+    source_job = candidate.get("_job") if isinstance(candidate.get("_job"), dict) else {}
+    source_text = str(candidate.get("_posting_text") or "")
+    resume_text = str(candidate.get("_resume_text") or "")
+    target_track = role_track_profile(target_job, target_text)
+    source_track = role_track_profile(source_job, source_text)
+    target_primary = str(target_track.get("primary_track") or "general_software")
+    source_primary = str(source_track.get("primary_track") or "general_software")
+    target_secondary = set(target_track.get("secondary_tracks") or [])
+    source_secondary = set(source_track.get("secondary_tracks") or [])
+    reasons: List[str] = []
+    breakdown: Dict[str, float] = {}
+
+    if target_primary == source_primary:
+        breakdown["role_track"] = 34.0 if target_primary != "general_software" else 18.0
+        reasons.append("same %s role track" % target_track.get("primary_label", target_primary))
+    elif source_primary in target_secondary or target_primary in source_secondary:
+        breakdown["role_track"] = 21.0
+        reasons.append("strong adjacent role-track match")
+    elif target_secondary.intersection(source_secondary):
+        breakdown["role_track"] = 10.0
+        reasons.append("shares a secondary role track")
+    else:
+        breakdown["role_track"] = 0.0
+
+    target_bucket = _offline_role_bucket(target_job, target_text)
+    source_bucket = _offline_role_bucket(source_job, source_text)
+    if target_bucket == source_bucket:
+        breakdown["role_bucket"] = 14.0
+        reasons.append("same %s role family" % target_bucket.replace("_", " "))
+    elif {target_bucket, source_bucket} <= {"ai_ml", "data_science", "data_eng"}:
+        breakdown["role_bucket"] = 8.0
+        reasons.append("adjacent AI/data role family")
+    elif "general" in {target_bucket, source_bucket}:
+        breakdown["role_bucket"] = 3.0
+    else:
+        breakdown["role_bucket"] = 0.0
+
+    target_terms = [term for term in TARGET_KEYWORD_TERMS if _keyword_present(term, target_text)]
+    covered_terms = [term for term in target_terms if _keyword_present(term, resume_text)]
+    breakdown["keyword_coverage"] = round(
+        28.0 * len(covered_terms) / max(1, len(target_terms)), 2
+    ) if target_terms else 0.0
+    if covered_terms:
+        reasons.append("covers %d/%d detected target terms" % (len(covered_terms), len(target_terms)))
+
+    target_title = _offline_title_tokens(target_job.get("title"))
+    source_title = _offline_title_tokens(source_job.get("title"))
+    overlap = target_title.intersection(source_title)
+    breakdown["title_overlap"] = round(
+        14.0 * len(overlap) / max(1, len(target_title.union(source_title))), 2
+    ) if target_title and source_title else 0.0
+    if overlap:
+        reasons.append("title overlap: %s" % ", ".join(sorted(overlap)[:4]))
+
+    target_sector = str(target_job.get("sector") or "").strip().lower()
+    source_sector = str(source_job.get("sector") or "").strip().lower()
+    breakdown["sector"] = 4.0 if target_sector and target_sector == source_sector else 0.0
+    if breakdown["sector"]:
+        reasons.append("same sector")
+
+    quality = 0.0
+    if candidate.get("safe_for_application"):
+        quality += 8.0
+        reasons.append("owner-approved tailored winner")
+    if candidate.get("winner_version") == "tailored":
+        quality += 4.0
+    objective = candidate.get("objective") if isinstance(candidate.get("objective"), dict) else {}
+    if objective.get("rankable") and objective.get("score") is not None:
+        quality += min(3.0, max(0.0, float(objective.get("score") or 0) / 34.0))
+    breakdown["artifact_quality"] = round(quality, 2)
+
+    return {
+        "score": round(sum(breakdown.values()), 2),
+        "breakdown": breakdown,
+        "reasons": reasons[:6],
+        "target_track": target_primary,
+        "source_track": source_primary,
+        "target_bucket": target_bucket,
+        "source_bucket": source_bucket,
+        "detected_target_terms": target_terms[:40],
+        "covered_target_terms": covered_terms[:40],
+    }
+
+
+def offline_resume_matches(
+    job: Dict[str, Any], root: Optional[Path] = None, *, approved_only: bool = False,
+    limit: int = 5,
+) -> Dict[str, Any]:
+    """Rank existing private PDFs for a target role without calling Codex."""
+    target_job = dict(job or {})
+    target_text = clean_text(str(target_job.get("description") or ""))
+    ranked = []
+    for entry in resume_library(root, limit=500):
+        candidate = _resume_bank_candidate(root, entry)
+        if candidate is None or (approved_only and not candidate["safe_for_application"]):
+            continue
+        directory = _library_dir(root, "run", str(candidate.get("run_id") or ""))
+        candidate["_resume_text"] = _resume_bank_text(directory) if directory is not None else ""
+        fit = _offline_match_score(target_job, target_text, candidate)
+        ranked.append({**candidate, **fit})
+    ranked.sort(key=lambda item: (
+        float(item.get("score") or 0),
+        bool(item.get("safe_for_application")),
+        item.get("winner_version") == "tailored",
+        item.get("updated_at") or "",
+    ), reverse=True)
+    unique = []
+    seen = set()
+    for candidate in ranked:
+        digest = str(candidate.get("pdf_sha256") or "")
+        if digest in seen:
+            continue
+        seen.add(digest)
+        unique.append({key: value for key, value in candidate.items() if not key.startswith("_")})
+    bounded = unique[:max(1, min(int(limit or 5), 20))]
+    return {
+        "offline": True,
+        "provider_calls": 0,
+        "selection_kind": "existing_pdf_unchanged",
+        "approved_only": approved_only,
+        "target": job_summary(target_job),
+        "match_count": len(unique),
+        "matches": bounded,
+        "selected": bounded[0] if bounded else None,
+        "note": "This ranks and reuses an existing PDF; it does not rewrite resume content.",
+    }
+
+
+def offline_tailor_resume(
+    job: Dict[str, Any], root: Optional[Path] = None, *, approved_only: bool = True,
+    limit: int = 5, copy_pdf: bool = True,
+) -> Dict[str, Any]:
+    """Select the best existing role match and optionally make a target-named copy."""
+    result = offline_resume_matches(job, root, approved_only=approved_only, limit=limit)
+    selected = result.get("selected")
+    if not isinstance(selected, dict):
+        return {**result, "output_path": "", "copied": False}
+    output_path = ""
+    if copy_pdf:
+        source = Path(str(selected.get("pdf_path") or ""))
+        if source.is_file():
+            destination = offline_resume_root(root)
+            destination.mkdir(parents=True, exist_ok=True)
+            target = destination / resume_pdf_filename(job)
+            shutil.copy2(source, target)
+            output_path = str(target.resolve())
+            index_path = destination / OFFLINE_RESUME_INDEX
+            index = read_json(index_path, {}) or {}
+            selections = index.get("selections") if isinstance(index.get("selections"), dict) else {}
+            selections[target.name] = {
+                "target_company": str(job.get("company") or ""),
+                "target_title": str(job.get("title") or ""),
+                "source_run_id": selected.get("run_id"),
+                "source_company": selected.get("company"),
+                "source_title": selected.get("title"),
+                "score": selected.get("score"),
+                "approval_state": selected.get("approval_state"),
+                "needs_owner_review": selected.get("needs_owner_review"),
+                "selected_at": now_iso(),
+                "content_changed": False,
+            }
+            write_json(index_path, {
+                "generated_at": now_iso(),
+                "selection_kind": "existing_pdf_unchanged",
+                "selections": selections,
+            })
+    return {**result, "output_path": output_path, "copied": bool(output_path)}
+
+
 def application_resume_status(
     job: Dict[str, Any], root: Optional[Path] = None, queue_id: str = "",
     allow_fallback: bool = False,
@@ -4167,38 +4659,23 @@ def application_resume_status(
 
 
 def application_fallback_resume(job: Dict[str, Any], root: Optional[Path] = None) -> Dict[str, Any]:
-    """Choose an owner-authorized reference resume before the canonical base."""
-    company = str((job or {}).get("company") or "").lower()
-    target = " ".join(str((job or {}).get(key) or "") for key in ("company", "title", "sector", "description")).lower()
-    if "merck" in company or re.search(r"\b(pharma|biotech|healthcare|clinical|drug|medical)\b", target):
-        profile = "merck"
-    elif "nvidia" in company or re.search(r"\b(ai|machine learning|deep learning|llm|model|data scien)\w*\b", target):
-        profile = "nvidia"
-    elif "google" in company or re.search(r"\b(software|data|engineer|developer|cloud|technical)\w*\b", target):
-        profile = "google"
-    else:
-        profile = ""
-    references = [
-        item for item in resume_library(root, limit=500)
-        if item.get("source") == "run"
-        and item.get("has_pdf")
-        and item.get("status") in {"complete", "completed", "awaiting_review"}
-        and item.get("winner_version") == "tailored"
-        and profile in str((item.get("job") or {}).get("company") or "").strip().lower()
-    ] if profile else []
-    if references:
-        selected = sorted(references, key=lambda item: (
-            bool((item.get("objective") or {}).get("rankable")),
-            float((item.get("objective") or {}).get("score") or -1),
-            item.get("updated_at") or "",
-        ), reverse=True)[0]
-        label = str((selected.get("job") or {}).get("company") or profile.title())
+    """Choose the best approved offline role match before the canonical base."""
+    selection = offline_resume_matches(job, root, approved_only=True, limit=1)
+    selected = selection.get("selected")
+    if isinstance(selected, dict):
+        label = str(selected.get("company") or "approved")
         return {
             "status": "fallback", "source": "reference", "mode": "approved_reference",
-            "run_id": selected.get("run_id") or selected.get("entry_id") or "",
-            "pdf_filename": selected.get("pdf_filename") or "",
-            "fallback_profile": profile, "file_ready": True,
-            "message": "Use the owner-approved %s reference resume for this role." % label,
+            "run_id": selected.get("run_id") or "",
+            # The bytes come from the approved source run, but the upload name
+            # identifies Victor and the company receiving this application.
+            "pdf_filename": resume_pdf_filename(job),
+            "source_pdf_filename": selected.get("pdf_filename") or "",
+            "fallback_profile": str(selected.get("source_track") or "offline_match"),
+            "offline_match_score": selected.get("score"),
+            "offline_match_reasons": selected.get("reasons") or [],
+            "file_ready": True,
+            "message": "Use the owner-approved %s resume selected by the offline role matcher." % label,
             "needs_owner_review": False,
         }
     canonical = cv_root(root) / CANONICAL_PDF
@@ -4220,7 +4697,19 @@ def application_resume_file(
     if status.get("source") in {"tailored", "reference"}:
         directory = _library_dir(root, "run", str(status.get("run_id") or ""))
         if directory is not None:
-            target = artifact_target(directory, str(status.get("pdf_filename") or ""))
+            source_name = (
+                status.get("source_pdf_filename")
+                if status.get("source") == "reference"
+                else status.get("pdf_filename")
+            )
+            target = artifact_target(directory, str(source_name or ""))
+            if status.get("source") == "reference" and (target is None or not target.is_file()):
+                # Older approved bank entries may not have persisted their
+                # public filename. The run's actual PDF remains authoritative
+                # for bytes; ``pdf_filename`` above remains the safe upload
+                # name presented to the employer.
+                candidate = run_pdf_path(directory)
+                target = candidate if candidate.is_file() else None
     elif status.get("source") == "immutable":
         candidate = (cv_root(root) / CANONICAL_PDF).resolve()
         if candidate.is_file():
@@ -11769,6 +12258,10 @@ def approve_run(root: Optional[Path], run_id: str) -> Dict[str, Any]:
         "report": report,
     })
     write_json(run_dir / "status.json", current)
+    try:
+        export_local_tailored_resumes(root or repo_root())
+    except (OSError, ValueError):
+        pass
     return current
 
 
@@ -13849,37 +14342,70 @@ class RunManager:
             raise RuntimeError("Resume Studio is shutting down; retry after it restarts.")
         mode = normalize_tailor_mode(mode)
         queue_id = str(queue_id or "").strip()[:80]
-        run_id = uuid.uuid4().hex[:12]
-        run_dir = studio_root(self.root) / "runs" / run_id
-        run_dir.mkdir(parents=True, exist_ok=True)
-        pdf_filename = resume_pdf_filename(job, mode)
-        status = {
-            "run_id": run_id,
-            "mode": mode,
-            "status": "queued",
-            "step": "queued",
-            "message": "Queued",
-            "created_at": now_iso(),
-            "updated_at": now_iso(),
-            "job": job_summary(job),
-            "pdf_filename": pdf_filename,
-            "preview_filename": Path(pdf_filename).stem + "-preview.png",
-            "run_dir": str(run_dir),
-            "engine_runtime": identity,
-            "recovery_count": 0,
-        }
-        if queue_id:
-            status["queue_id"] = queue_id
-        if isinstance(control_profile, dict):
-            status["comparison_control_profile"] = comparison_control_summary(control_profile)
-        # Keep the historical posting record attached to the run even if the
-        # radar later removes or updates the live job.  This is private ignored
-        # state, not a second source of truth for the public radar database.
-        job_snapshot = copy.deepcopy(job)
-        if isinstance(control_profile, dict):
-            job_snapshot["_resume_studio_control_profile"] = copy.deepcopy(control_profile)
-        write_json(run_dir / "job.json", job_snapshot)
-        write_json(run_dir / "status.json", status)
+        runs_root = studio_root(self.root) / "runs"
+        job_id = str((job or {}).get("id") or "")
+        with self.lock:
+            existing: List[Dict[str, Any]] = []
+            if runs_root.is_dir():
+                for candidate in runs_root.iterdir():
+                    if not candidate.is_dir() or not re.fullmatch(r"[a-f0-9]{12}", candidate.name):
+                        continue
+                    candidate_status = read_json(candidate / "status.json", {}) or {}
+                    if not isinstance(candidate_status, dict):
+                        continue
+                    same_queue = bool(queue_id and str(candidate_status.get("queue_id") or "") == queue_id)
+                    same_active_job = bool(
+                        not queue_id
+                        and candidate_status.get("status") in {"queued", "running"}
+                        and str((candidate_status.get("job") or {}).get("id") or "") == job_id
+                        and normalize_tailor_mode(str(candidate_status.get("mode") or "")) == mode
+                    )
+                    if same_queue or same_active_job:
+                        existing.append(candidate_status)
+            if existing:
+                selected = sorted(
+                    existing,
+                    key=lambda value: (
+                        value.get("status") in {"complete", "completed", "awaiting_review"},
+                        value.get("status") in {"running", "queued"},
+                        str(value.get("updated_at") or value.get("created_at") or ""),
+                        str(value.get("run_id") or ""),
+                    ),
+                    reverse=True,
+                )[0]
+                return {**selected, "duplicate": True, "message": selected.get("message") or "Already queued"}
+
+            run_id = uuid.uuid4().hex[:12]
+            run_dir = runs_root / run_id
+            run_dir.mkdir(parents=True, exist_ok=True)
+            pdf_filename = resume_pdf_filename(job, mode)
+            status = {
+                "run_id": run_id,
+                "mode": mode,
+                "status": "queued",
+                "step": "queued",
+                "message": "Queued",
+                "created_at": now_iso(),
+                "updated_at": now_iso(),
+                "job": job_summary(job),
+                "pdf_filename": pdf_filename,
+                "preview_filename": Path(pdf_filename).stem + "-preview.png",
+                "run_dir": str(run_dir),
+                "engine_runtime": identity,
+                "recovery_count": 0,
+            }
+            if queue_id:
+                status["queue_id"] = queue_id
+            if isinstance(control_profile, dict):
+                status["comparison_control_profile"] = comparison_control_summary(control_profile)
+            # Keep the historical posting record attached to the run even if the
+            # radar later removes or updates the live job.  This is private ignored
+            # state, not a second source of truth for the public radar database.
+            job_snapshot = copy.deepcopy(job)
+            if isinstance(control_profile, dict):
+                job_snapshot["_resume_studio_control_profile"] = copy.deepcopy(control_profile)
+            write_json(run_dir / "job.json", job_snapshot)
+            write_json(run_dir / "status.json", status)
         worker_job = copy.deepcopy(job_snapshot)
         worker_job["_resume_studio_run_id"] = run_id
         worker_job["_resume_studio_queue_id"] = queue_id
@@ -13913,6 +14439,7 @@ class RunManager:
             self._last_recovery = summary
             return summary
         terminal_queue_ids = set()
+        active_queue_groups: Dict[str, List[Tuple[Path, Dict[str, Any]]]] = {}
         for candidate in runs.iterdir():
             if not candidate.is_dir() or not re.fullmatch(r"[a-f0-9]{12}", candidate.name):
                 continue
@@ -13923,6 +14450,24 @@ class RunManager:
                 and str(candidate_status.get("queue_id") or "")
             ):
                 terminal_queue_ids.add(str(candidate_status.get("queue_id")))
+            if (
+                isinstance(candidate_status, dict)
+                and candidate_status.get("status") in {"queued", "running"}
+                and str(candidate_status.get("queue_id") or "")
+            ):
+                active_queue_groups.setdefault(str(candidate_status.get("queue_id")), []).append((candidate, candidate_status))
+        active_queue_winners: Dict[str, str] = {}
+        for queue_key, candidates in active_queue_groups.items():
+            winner_dir, _ = sorted(
+                candidates,
+                key=lambda item: (
+                    item[1].get("status") == "running",
+                    str(item[1].get("updated_at") or item[1].get("created_at") or ""),
+                    item[0].name,
+                ),
+                reverse=True,
+            )[0]
+            active_queue_winners[queue_key] = winner_dir.name
         for run_dir in sorted(runs.iterdir(), key=lambda item: item.name):
             if not run_dir.is_dir() or not re.fullmatch(r"[a-f0-9]{12}", run_dir.name):
                 continue
@@ -13944,6 +14489,14 @@ class RunManager:
                 self.update(
                     run_id, run_dir, "failed", "superseded",
                     "A terminal run already exists for this application queue item; duplicate recovery was skipped.",
+                    error_code="duplicate_application_run",
+                )
+                summary["skipped_duplicate"] += 1
+                continue
+            if queue_id and active_queue_winners.get(queue_id) not in {None, run_id}:
+                self.update(
+                    run_id, run_dir, "failed", "superseded",
+                    "A newer active run already owns this application queue item; duplicate recovery was skipped.",
                     error_code="duplicate_application_run",
                 )
                 summary["skipped_duplicate"] += 1
@@ -14021,6 +14574,13 @@ class RunManager:
         value.update({"run_id": run_id, "status": status, "step": step, "message": message, "updated_at": now_iso()})
         value.update(extra)
         write_json(path, value)
+        if status in CURATED_RESUME_STATUSES and run_pdf_path(run_dir).is_file():
+            # Keep the Finder-friendly export current without making a failed
+            # convenience copy capable of changing the durable run result.
+            try:
+                export_local_tailored_resumes(self.root)
+            except (OSError, ValueError):
+                pass
 
     def _worker(self, run_id: str, run_dir: Path, job: Dict[str, Any], mode: str) -> None:
         started_clock = time.time()
@@ -14256,8 +14816,8 @@ UI_HTML = UI_HTML.replace(
     '<details class="utility-details" open><summary>Safety and usage</summary><div id="protectionStrip" class="protection-strip"><strong>Canonical resumes locked</strong><span>Studio creates private copies only; protected CV/immutable/ artifacts are never overwritten.</span><span class="meta">Owner edits require: .venv/bin/python scripts/resume_lock.py unlock</span></div><div id="usageStrip" class="usage-strip"><strong>Usage</strong><span class="meta">Loading observed local Codex usage…</span></div></details>',
 )
 UI_HTML = UI_HTML.replace("CV/resume.tex locked", "CV/immutable/VictorJimenezResume.tex locked")
-UI_HTML = UI_HTML.replace("||'resume.pdf',previewName", "||'company_resume_ai.pdf',previewName")
-UI_HTML = UI_HTML.replace("||report.pdf_filename||'resume.pdf'", "||report.pdf_filename||'company_resume_ai.pdf'")
+UI_HTML = UI_HTML.replace("||'resume.pdf',previewName", "||'victor_jimenez_company.pdf',previewName")
+UI_HTML = UI_HTML.replace("||report.pdf_filename||'resume.pdf'", "||report.pdf_filename||'victor_jimenez_company.pdf'")
 UI_HTML = UI_HTML.replace('<option value="unrestricted">Unrestricted AI</option>', '<option value="unrestricted">Take-the-wheel</option>')
 UI_HTML = UI_HTML.replace('unrestricted drafts are intentionally more original', 'Take-the-wheel drafts are intentionally more original')
 UI_HTML = UI_HTML.replace(
@@ -14847,7 +15407,7 @@ class StudioHandler(BaseHTTPRequestHandler):
             "/api/workshop/edit", "/api/workshop/ai", "/api/workshop/revert",
             "/api/application/session", "/api/application/resume", "/api/application/resume-file", "/api/application/form", "/api/application/review",
             "/api/application/answer", "/api/application/essay", "/api/application/mapping", "/api/application/event",
-            "/api/application/confirm", "/api/application/verify", "/api/application/issue",
+            "/api/application/confirm", "/api/application/verify", "/api/application/issue", "/api/application/tracker-sync",
         }:
             return self.send_json({"error": "not found"}, HTTPStatus.NOT_FOUND)
         try:
@@ -14855,6 +15415,8 @@ class StudioHandler(BaseHTTPRequestHandler):
             if length > 100_000:
                 raise ValueError("request too large")
             body = json.loads(self.rfile.read(length) or b"{}")
+            if parsed.path == "/api/application/tracker-sync":
+                return self.send_json(request_tracker_sync(repo_root()))
             if parsed.path == "/api/application/resume":
                 job_id = str(body.get("job_id") or "")
                 job = current_scored_jobs(repo_root()).get(job_id)

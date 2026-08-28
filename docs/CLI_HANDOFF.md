@@ -33,6 +33,58 @@ Before changing the radar, read these in order:
   `docs/feed.xml`, or `docs/internships/`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
+### Resume Studio local access (implemented 2026-08-27)
+
+- Generated resume filenames now use `victor_jimenez_<company>.pdf` for every
+  tailoring mode. The internal mode is not exposed in the filename; legacy run
+  PDFs continue to work through a compatibility alias.
+- The local engine keeps its auditable run history under
+  `CV/.resume_studio/runs/`, while the newest usable primary PDF per company
+  from the last 14 days is copied to the visible `CV/tailored/` folder.
+  Failed runs and diagnostic `tailored_candidate.pdf` files are excluded.
+  `CV/tailored/index.json` records each source run and whether owner review is
+  still required.
+- Refresh the folder manually with
+  `.venv/bin/python -m radar.cli resume-studio export`; use
+  `--all-history` to include the newest usable run for every company. Open the
+  folder with `open CV/tailored`. The full walkthrough is
+  [`RESUME_CLI.md`](RESUME_CLI.md).
+- The CLI now exposes `resume-studio bank`, `offline-tailor`, `approve`, and
+  `usage`. The bank excludes failed/base-winning runs and deduplicates identical
+  PDFs. Offline tailoring ranks existing artifacts with deterministic role,
+  title, keyword, sector, and approval signals, makes no provider call, and
+  copies the unchanged selection below `CV/tailored/offline/` using the target
+  company filename. The safe default requires an explicitly approved tailored
+  winner; `--include-review` is an owner-inspection escape hatch.
+- Application fallback now uses the same role matcher and requires real
+  approval metadata. It no longer labels hard-coded NVIDIA/Google/Merck history
+  as owner-approved. Historical resumes are not automatically inserted into
+  Codex prompts: one explicitly promoted role-family control may remain a
+  comparison reference, but the immutable resume/evidence graph stays the
+  authoring source of truth.
+- Validation for this change: 561 tests pass, Python compileall succeeds, and
+  `webapp/index.html` remains byte-for-byte equal to `docs/platform/index.html`.
+
+### Notion batch tailoring and platform editing (implemented 2026-08-27)
+
+- The owner-only Resume Studio workspace now exposes **Tailor all To tailor**.
+  It reads every current, non-terminal role whose latest repository-synced
+  tracker stage is `to_tailor` (with tolerant `tailor`/`tailoring` aliases),
+  preselects the full set, asks for explicit confirmation, and queues one
+  private draft per role. It never marks a role Applied or submits an
+  application. The cloud queue is bounded at 500 items; cloud submissions are
+  serialized to avoid Drive JSON read/modify/write races, while direct local
+  engine submissions use a small worker pool.
+- **Edit resume** in Resume bank opens the existing protected local Workshop
+  through the platform. Manual line edits render a new private revision without
+  Codex, AI suggestions remain optional, and the original PDF/canonical source
+  is unchanged. Saved entries without a content plan are labeled `no editable
+  source` instead of being edited unsafely.
+- The button uses the latest synced `state/applied.json` mirror; it does not
+  make a live Notion API call from Vercel. If the count is stale, run the
+  existing Notion tracker sync/backfill in an environment with `NOTION_TOKEN`,
+  then refresh Resume Studio. Do not hand-edit generated state.
+
 ## Current operational facts (verified 2026-08-19)
 
 ### Current change (verified 2026-08-24)
@@ -1356,13 +1408,14 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   never infer confirmation from generation or application-stage changes. The
   UI should make this nearly seamless while keeping the action owner-controlled
   and auditable.
-- **Resume Studio unchained generation is separate from the moderate baseline:**
+- **Resume Studio generation remains separate from the moderate baseline:**
   `generation` performs a posting requirement-to-evidence audit before drafting,
   searches claim-authorized Markdown records, and may synthesize grounded bullets
   or Skills lines. It labels adjacent support, records honest gaps, and blocks
   unsupported posting terms from the rendered resume. Existing `unrestricted`
-  behavior is preserved and displayed as Take-the-wheel (moderate); generated
-  files use the distinct `<company>_resume_unchained.pdf` pattern.
+  behavior is preserved and displayed as Take-the-wheel (moderate). Older runs
+  may still contain their historical internal filename, but current output uses
+  the owner/company format documented above.
 - **Durable candidate-line memory (DECISION #110):** strong or reusable lines
   from private tailoring runs must be promoted into the relevant Markdown
   dossier/iteration log with source support and an `approved`, `bench`, or

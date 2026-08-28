@@ -3183,3 +3183,58 @@ structure within 45 seconds, records the tab as blocked, and requires one
 explicit retry before scanning again. Owner Autopilot controls also serialize
 pair, sync, and restart actions, show their busy state, and combine pairing
 renewal with queue recovery in one explicit **pair & sync Mac** action.
+
+## 197. Resume outputs use owner/company names and a curated local folder (2026-08-27)
+
+Victor needs generated resumes to be recognizable in an application file picker
+and easy to find after a batch run. Every new primary PDF therefore uses the
+stable `victor_jimenez_<company>.pdf` convention regardless of tailoring mode;
+the internal generation lane must not leak into the filename. Legacy run
+directories remain intact for audit and recovery, but a local export keeps one
+newest usable primary PDF per company in `CV/tailored/`, with an index recording
+the source run and review status. Failed attempts and diagnostic candidate PDFs
+are not exported. The export defaults to the recent window and supports an
+explicit all-history mode, so cleanup does not silently destroy private run
+history.
+
+## 198. Resume Bank reuse is deterministic, approval-gated, and prompt-bounded (2026-08-27)
+
+An existing good resume should remain useful when provider quota is exhausted,
+but a prior posting's objective score is not transferable evidence that it is
+best for a new role. Resume Bank therefore hashes and deduplicates reusable
+local PDFs, excludes failed and canonical-base-winning runs, and assigns a new
+target-specific offline fit score from role track, role family, title overlap,
+detected target-term coverage, sector, and artifact approval. The offline
+tailor selects an existing PDF without rewriting it or calling a provider and
+stores a target-company-named copy plus a provenance receipt under
+`CV/tailored/offline/`.
+
+Automatic application fallback may reuse only an explicitly owner-approved
+tailored winner. Review-pending and legacy-unverified artifacts remain visible
+through an explicit inspection flag but cannot silently become application
+fallbacks. The old company-name heuristic that treated NVIDIA, Google, or Merck
+runs as implicitly approved is removed. Historical resumes are not bulk-added
+to Codex prompts: doing so would increase latency/tokens and risk propagating
+stale wording. The immutable resume and authorized evidence graph remain the
+authoring source of truth, while one explicitly promoted approved role-family
+artifact may continue to serve only as a bounded comparison control.
+
+## 199. Notion To-tailor batches use the synced tracker and the existing protected Workshop (2026-08-27)
+
+The owner-only platform now has a **Tailor all To tailor** action for the
+Notion workflow. It operates on the latest repository-synced tracker state,
+includes every current non-terminal `to_tailor` role, preselects the complete
+set, and requires an explicit confirmation because the resulting private runs
+can consume meaningful Codex allowance. Queueing creates durable private
+drafts only; it does not infer an application, mark a role Applied, or submit
+anything. The cloud queue is capped at 500 items and cloud writes are
+serialized so concurrent browser requests cannot lose Drive JSON entries.
+
+The platform's resume editor is the existing local Workshop opened through the
+Resume Bank's **Edit resume** button. Manual line edits are provider-free and
+render a new private revision; AI suggestions are optional and remain subject
+to source/evidence gates. The original PDF, immutable canonical resume, and
+source graph remain unchanged. Saved artifacts without a content plan are
+explicitly non-editable rather than routed through an unsafe PDF-to-source
+conversion. Vercel does not query Notion live; stale tracker state requires the
+existing sync/backfill path with `NOTION_TOKEN`.

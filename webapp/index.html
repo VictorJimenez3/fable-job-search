@@ -1504,7 +1504,7 @@ async function doWrite(action, job) {   // best available write path
                    return false; }
   return issueCmd(action === "track" ? "save" : action === "untrack" ? "untrack" : "applied", job);
 }
-async function actTrack(j, quiet=false) {
+async function actTrack(j, quiet=false, autoQueue=true) {
   if (!j) return false;
   const existing = appliedById()[j.id];
   if (existing) {
@@ -1514,6 +1514,10 @@ async function actTrack(j, quiet=false) {
   try { if (await doWrite("track", j)) {
     S.applied.push({id:j.id, company:j.company, title:j.title, url:j.url, stage:"saved", via:"platform"});
     S.web.maybe = S.web.maybe.filter(x=>x!==j.id); saveWeb();
+    if (autoQueue && S.auth?.owner) {
+      try { await queueAutopilotJobs([j]); }
+      catch(error) { if(!quiet)toast(`Choice saved; the paired Mac will import it automatically. ${error.message.slice(0,60)}`); }
+    }
     if (!quiet) toast(trackerBackend() === "google"
       ? "Saved to To apply + your Google Sheets mirror"
       : "Saved to To apply → Notion syncs in ~1 min"); render(); return true; } }
@@ -1563,7 +1567,7 @@ async function startApply(j) {
   }, 900);
   const lane = laneOf(j.id, appliedById());
   if (!lane && canWrite()) {
-    actTrack(j, true).then(ok=>toast(ok
+    actTrack(j, true, false).then(ok=>toast(ok
       ? "Application Agent started · saved to To apply"
       : "Application started · saving failed, so use Save when you return"));
   } else {
@@ -1605,6 +1609,52 @@ async function applicationCloudPost(action, payload={}) {
   if (!response.ok) throw new Error(data.error || `Application Agent returned ${response.status}`);
   return data;
 }
+function applicationChoiceTime(entry) {
+  for (const key of ["tailored_at","stage_changed_at"]) {
+    const raw=Number(entry?.[key]||0);
+    if (raw>0) return raw>1e12?raw:raw*1000;
+  }
+  return 0;
+}
+function applicationQueueMatchesJob(item,job) {
+  if (item?.job?.id && item.job.id===job?.id) return true;
+  try {
+    const normalize=value=>{const url=new URL(value);url.hash="";for(const key of [...url.searchParams.keys()])if(/^(?:utm_.+|embed|source|ref|referrer)$/i.test(key))url.searchParams.delete(key);url.pathname=url.pathname.replace(/\/$/,"")||"/";return url.href;};
+    return normalize(item?.job?.url||"")===normalize(applicationAgentURL(job));
+  } catch { return false; }
+}
+function applicationQueueCoversChoice(job,entry,items=S.applicationAgent.items||[]) {
+  const matches=items.filter(item=>applicationQueueMatchesJob(item,job));
+  if (!matches.length) return false;
+  if (matches.some(item=>APPLICATION_ACTIVE_STATES.has(item.state))) return true;
+  const decisionAt=applicationChoiceTime(entry);
+  if (!decisionAt) return true;
+  return matches.some(item=>(Date.parse(item.created_at||"")||0)>=decisionAt);
+}
+function mergeApplicationQueueResults(result) {
+  const current=new Map((S.applicationAgent.items||[]).map(item=>[item.queue_id,item]));
+  for (const row of result?.items||[]) if(row?.item?.queue_id) current.set(row.item.queue_id,row.item);
+  S.applicationAgent.items=[...current.values()].sort((a,b)=>(Date.parse(b.updated_at||b.created_at||"")||0)-(Date.parse(a.updated_at||a.created_at||"")||0));
+  return result;
+}
+async function queueAutopilotJobs(jobs) {
+  const snapshots=[...new Map((jobs||[]).filter(Boolean).map(job=>[job.id,applicationAgentJob(job)])).values()];
+  if (!snapshots.length) return {items:[],queued:0,duplicates:0};
+  return mergeApplicationQueueResults(await applicationCloudPost("queue_many",{jobs:snapshots}));
+}
+let applicationChoiceReconcilePromise=null;
+async function reconcileAutopilotChoices() {
+  if (applicationChoiceReconcilePromise || !S.auth?.owner || S.applicationAgent.status!=="online") return applicationChoiceReconcilePromise;
+  const byId=appliedById();
+  const jobs=Object.values(S.jobs||{}).filter(job=>{
+    const entry=byId[job.id],stage=String(entry?.stage||entry?.status||"").toLowerCase().replace(/[\s-]+/g,"_");
+    return ["saved","to_tailor"].includes(stage)&&!applicationInactive(entry)&&!isTerminalPosting(job)&&!applicationQueueCoversChoice(job,entry);
+  }).slice(0,80);
+  if (!jobs.length) return null;
+  applicationChoiceReconcilePromise=queueAutopilotJobs(jobs);
+  try { return await applicationChoiceReconcilePromise; }
+  finally { applicationChoiceReconcilePromise=null; }
+}
 function applicationLocalRequest(action, payload={}) {
   return bridgeRequest(`application_${action}`, payload);
 }
@@ -1627,6 +1677,7 @@ async function loadApplicationAgent(renderNow=true) {
     } else {
       S.applicationAgent = {...S.applicationAgent, status:"online", error:"",
         storage:queue.storage||context.storage||issues.storage||"drive", items, context:nextContext, issues:nextIssues};
+      await reconcileAutopilotChoices();
     }
     if (canWrite()) {
       for (const item of S.applicationAgent.items||[]) {
@@ -1760,13 +1811,11 @@ async function queueApplicationBatch() {
   if (!jobs.length) { toast("Select at least one saved role"); return; }
   S.applicationAgent.queueing=true; rApplicationAgent();
   try {
-    for (const job of jobs) {
-      await applicationCloudPost("queue", {job:applicationAgentJob(job)});
-      if (!laneOf(job.id, appliedById())) await actTrack(job, true);
-    }
+    const result=await queueAutopilotJobs(jobs);
+    for (const job of jobs) if (!laneOf(job.id, appliedById())) await actTrack(job, true, false);
     S.applicationAgent.selected=[];
     await loadApplicationAgent(false); rApplicationAgent();
-    toast(`${jobs.length} application${jobs.length===1?"":"s"} queued for the paired Mac`);
+    toast(`${result.queued||0} queued for the paired Mac${result.duplicates?` · ${result.duplicates} already active`:""}`);
   } catch (error) { toast(error.message.slice(0,150)); }
   finally { S.applicationAgent.queueing=false; if(S.tab==="agent")rApplicationAgent(); }
 }
@@ -2319,11 +2368,14 @@ async function setPipelineStage(id, stage) {
     } else {
       S.web.maybe = S.web.maybe.filter(value => value !== id);
       const entry = S.applied.find(value => value.id === id);
-      if (entry) entry.stage = stage;
-      else S.applied.push({id, company:job.company, title:job.title, url:job.url, stage, via:"platform"});
+      if (entry) { entry.stage = stage; if(payload.tailored_at)entry.tailored_at=payload.tailored_at; }
+      else S.applied.push({id, company:job.company, title:job.title, url:job.url, stage, tailored_at:payload.tailored_at, via:"platform"});
     }
     saveWeb();
-    toast(`Stage changed to ${stage === "oa" ? "online assessment" : stage}`);
+    if (stage==="to_tailor") {
+      try { const queued=await queueAutopilotJobs([job]); toast(queued.duplicates?"Already active in Autopilot":"Added to Autopilot · resume preparation starts automatically"); }
+      catch(error) { toast(`Choice saved; the paired Mac will pick it up automatically. ${error.message.slice(0,70)}`); }
+    } else toast(`Stage changed to ${stage === "oa" ? "online assessment" : stage}`);
     render();
   } catch (error) { toast("Stage update failed: " + error.message.slice(0, 90)); }
 }
@@ -3542,8 +3594,13 @@ async function syncCloudResumeBank() {
   rTesting();
 }
 const RESUME_BATCH_LIMIT = 12;
+const RESUME_NOTION_BATCH_LIMIT = 500;
 function resumeBatchState() {
-  return S.testing.batch || (S.testing.batch = {mode:"unrestricted",selected:[],runs:[],state:"idle",error:""});
+  return S.testing.batch || (S.testing.batch = {mode:"unrestricted",scope:"today",selected:[],runs:[],state:"idle",error:""});
+}
+function resumeBatchLimit(scope=null) {
+  const selectedScope = scope || resumeBatchState().scope || "today";
+  return selectedScope === "notion_to_tailor" ? RESUME_NOTION_BATCH_LIMIT : RESUME_BATCH_LIMIT;
 }
 function localDayStartSeconds() {
   const today = new Date();
@@ -3566,6 +3623,28 @@ function resumeBatchCandidates() {
     .filter(Boolean)
     .sort((a,b) => (b.score || 0) - (a.score || 0) || String(a.company).localeCompare(String(b.company)));
 }
+function resumeNotionTailorCandidates() {
+  const seen = new Set();
+  return S.applied
+    .filter(entry => !applicationInactive(entry))
+    .map(entry => {
+      const stages = [entry.stage, entry.status, entry.tailor, entry.tailoring]
+        .map(value => String(value || "").trim().toLowerCase().replace(/[\s-]+/g, "_"));
+      const job = jobById(entry.id) || entry;
+      if (!job || !entry.id || seen.has(entry.id) || isTerminalPosting(job) ||
+          stages.some(stage => ["closed", "not_pursuing", "applied"].includes(stage)) ||
+          !stages.some(stage => ["to_tailor", "tailor", "tailoring"].includes(stage))) return null;
+      seen.add(entry.id);
+      return {...job, _resumeStage:"to_tailor", _notionTailor:true};
+    })
+    .filter(Boolean)
+    .sort((a,b) => (b.score || 0) - (a.score || 0) || String(a.company).localeCompare(String(b.company)));
+}
+function resumeBatchCandidatesFor(scope=null) {
+  return (scope || resumeBatchState().scope || "today") === "notion_to_tailor"
+    ? resumeNotionTailorCandidates()
+    : resumeBatchCandidates();
+}
 function resumeBatchModeOptions(mode) {
   return [["generation","Unchained generation · AI takes the lead"],["unrestricted","Take-the-wheel (moderate)"],["ai","AI tailor"],["used","Used bullets"]]
     .map(([value,label]) => `<option value="${value}" ${mode===value?"selected":""}>${label}</option>`).join("");
@@ -3579,30 +3658,33 @@ function resumeBatchStatusLabel(run) {
 }
 function renderResumeBatchView() {
   const batch = resumeBatchState();
-  const candidates = resumeBatchCandidates();
+  const scope = batch.scope || "today";
+  const notionScope = scope === "notion_to_tailor";
+  const candidates = resumeBatchCandidatesFor(scope);
+  const limit = resumeBatchLimit(scope);
   const candidateIds = new Set(candidates.map(job => job.id));
-  batch.selected = (batch.selected || []).filter(id => candidateIds.has(id)).slice(0, RESUME_BATCH_LIMIT);
+  batch.selected = (batch.selected || []).filter(id => candidateIds.has(id)).slice(0, limit);
   const selected = new Set(batch.selected);
   const engineOnline = S.testing.engine === "online";
   const cloudReady = cloudQueueOnline();
-  const canQueue = engineOnline || cloudReady;
+  const canQueue = notionScope ? Boolean(S.auth?.owner) : engineOnline || cloudReady;
   const queueing = batch.state === "queueing";
   const active = (batch.runs || []).filter(run => ["queued", "running"].includes(run.status)).length;
-  const stateText = batch.state === "complete" ? "All selected drafts finished." :
+  const stateText = batch.state === "complete" ? (notionScope?"Every choice is now owned by Autopilot.":"All selected drafts finished.") :
     batch.state === "partial" ? "The batch finished with one or more failed drafts." :
     active ? `${active} draft${active === 1 ? "" : "s"} still running.` : "";
   return `<section class="testing-hero">
     <div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">private drafts · no applications sent</span></div><div class="acts"><button class="act" onclick="showResumeTailoring()">single posting</button><button class="act" onclick="showResumeBank()">Resume bank</button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button></div></div>
-    <h2>Tailor today’s saved roles</h2>
-    <p class="sub">A focused queue for the mass-apply rhythm: roles you added to the active pipeline today are listed together, each with its own posting snapshot and durable Resume Studio run. Select a few, choose one mode, and review the finished drafts in Resume Bank before you apply.</p>
-    <div class="note"><strong>Safe by design.</strong> This only creates private resume drafts. Queueing moves selected roles into the Pipeline’s <strong>To tailor</strong> lane; it never marks them Applied, submits an application, or publishes your CV. The private Mac engine processes at most two runs at once; the rest wait in its durable queue.</div>
+    <h2>${notionScope ? "Autopilot every Notion ‘To tailor’ choice" : "Tailor today’s saved roles"}</h2>
+    <p class="sub">${notionScope ? "A role reaches this list only after you chose it in Notion. One action hands every choice to Autopilot; it prepares or selects the resume, fills the form, preserves progress, and asks only for a real decision or final Submit confirmation." : "A focused queue for the mass-apply rhythm: roles you added to the active pipeline today are listed together, each with its own posting snapshot and durable Resume Studio run. Select a few, choose one mode, and review the finished drafts in Resume Bank before you apply."}</p>
+    <div class="note"><strong>${notionScope?"One choice, one workflow.":"Safe by design."}</strong> ${notionScope?"Notion → Resume Studio → Application Autopilot is one idempotent handoff. Repeated clicks or restarts reuse the same work instead of opening duplicate tabs or generating duplicate resumes.":"This only creates private resume drafts. Queueing moves selected roles into the Pipeline’s To tailor lane; it never marks them Applied, submits an application, or publishes your CV. The private Mac engine processes at most two runs at once; the rest wait in its durable queue."}</div>
   </section>
   <div class="lane">
-    <div class="bar" style="justify-content:space-between"><div><h3>Added today <span class="sub">${candidates.length} role${candidates.length===1?"":"s"}</span></h3><p class="sub" style="margin:0">Up to ${RESUME_BATCH_LIMIT} drafts per batch · local calendar day · current non-terminal postings only.</p></div><div class="acts"><button class="act" onclick="selectAllResumeBatch()" ${candidates.length?"":"disabled"}>select up to ${RESUME_BATCH_LIMIT}</button><button class="act" onclick="clearResumeBatch()" ${selected.size?"":"disabled"}>clear</button></div></div>
-    ${candidates.length ? `<div class="bar" style="margin:.7rem 0"><label class="sub">draft mode <select id="resumeBatchMode" onchange="resumeBatchState().mode=this.value;rTesting()">${resumeBatchModeOptions(batch.mode)}</select></label><button class="act primary" onclick="queueResumeBatch()" ${!canQueue || !selected.size || queueing?"disabled":""}>${queueing?"Queueing…":`queue ${selected.size} draft${selected.size===1?"":"s"}`}</button><span class="sub">${engineOnline?`${selected.size} selected · Mac worker ready`:cloudReady?`${selected.size} selected · saved privately for the Mac worker`:`connect Google to enable the private queue`}</span></div>
-      ${studioModeGuideHTML(true)}
-      <div class="studio-jobs">${candidates.map(job => `<label class="studio-job" style="cursor:pointer"><input type="checkbox" style="margin-right:.55rem" ${selected.has(job.id)?"checked":""} onchange='toggleResumeBatchSelection(${JSON.stringify(job.id)},this.checked)'><span><strong>${esc(job.company)}</strong><small>${esc(job.title)} · Radar ${job.score??"–"} · added ${new Date(job._resumeAddedAt*1000).toLocaleTimeString([], {hour:"numeric",minute:"2-digit"})} · ${esc(job._resumeStage)}</small></span></label>`).join("")}</div>`
-      : `<div class="studio-empty"><h3>Nothing added today yet</h3><p>Add roles from Jobs with <strong>save to apply</strong>; they will appear here automatically. Existing active roles can still be tailored one at a time from their row or drawer.</p><button class="act primary" onclick="S.tab='jobs';render()">open Jobs</button></div>`}
+    <div class="bar" style="justify-content:space-between"><div><h3>${notionScope ? "Notion ‘To tailor’ roles" : "Added today"} <span class="sub">${candidates.length} role${candidates.length===1?"":"s"}</span></h3><p class="sub" style="margin:0">${notionScope ? `Up to ${limit} drafts · latest synced Notion state · current non-terminal postings only.` : `Up to ${limit} drafts per batch · local calendar day · current non-terminal postings only.`}</p></div><div class="acts"><button class="act" onclick="selectAllResumeBatch()" ${candidates.length?"":"disabled"}>select up to ${limit}</button><button class="act" onclick="clearResumeBatch()" ${selected.size?"":"disabled"}>clear</button></div></div>
+    ${candidates.length ? `<div class="bar" style="margin:.7rem 0">${notionScope?"":`<label class="sub">draft mode <select id="resumeBatchMode" onchange="resumeBatchState().mode=this.value;rTesting()">${resumeBatchModeOptions(batch.mode)}</select></label>`}<button class="act primary" onclick="queueResumeBatch()" ${!canQueue || !selected.size || queueing?"disabled":""}>${queueing?"Queueing…":notionScope?`start ${selected.size} application${selected.size===1?"":"s"}`:`queue ${selected.size} draft${selected.size===1?"":"s"}`}</button><span class="sub">${notionScope?`${selected.size} chosen · duplicates are reused`:engineOnline?`${selected.size} selected · Mac worker ready`:cloudReady?`${selected.size} selected · saved privately for the Mac worker`:`connect Google to enable the private queue`}</span></div>
+      ${notionScope?"":studioModeGuideHTML(true)}
+      <div class="studio-jobs">${candidates.map(job => `<label class="studio-job" style="cursor:pointer"><input type="checkbox" style="margin-right:.55rem" ${selected.has(job.id)?"checked":""} onchange='toggleResumeBatchSelection(${JSON.stringify(job.id)},this.checked)'><span><strong>${esc(job.company)}</strong><small>${esc(job.title)} · Radar ${job.score??"–"} · ${notionScope?"chosen in Notion":`added ${new Date(job._resumeAddedAt*1000).toLocaleTimeString([], {hour:"numeric",minute:"2-digit"})}`} · ${esc(job._resumeStage)}</small></span></label>`).join("")}</div>`
+      : `<div class="studio-empty"><h3>${notionScope ? "No synced Notion roles are marked To tailor" : "Nothing added today yet"}</h3><p>${notionScope ? "Nothing needs a handoff. The paired extension checks the synced tracker automatically, so a future To tailor choice will enter Autopilot without a second manual queue step." : "Add roles from Jobs with <strong>save to apply</strong>; they will appear here automatically. Existing active roles can still be tailored one at a time from their row or drawer."}</p><button class="act primary" onclick="${notionScope ? "S.tab='agent';render()" : "S.tab='jobs';render()"}">${notionScope ? "open Autopilot" : "open Jobs"}</button></div>`}
   </div>
   ${(batch.runs||[]).length ? `<div class="lane"><div class="bar" style="justify-content:space-between"><h3>Batch status</h3><span class="sub">${esc(stateText)}</span></div>${batch.error?`<div class="note bad">${esc(batch.error)}</div>`:""}<div class="resume-objective-grid">${batch.runs.map(run => `<div class="resume-objective-rank"><span><strong>${esc(run.company||"Role")}</strong><br><span class="sub">${esc(run.title||"")} · ${esc(run.message||"")}</span></span><span>${studioBadge(resumeBatchStatusLabel(run),resumeBatchStatusKind(run.status))}${run.run_id?` <button class="act" onclick='loadResumeRun(${JSON.stringify(run.run_id)})'>inspect</button>`:""}</span></div>`).join("")}</div></div>` : ""}`;
 }
@@ -3611,7 +3693,18 @@ function showResumeTailoring() { S.testing.bankView=false; S.testing.contextView
 function showResumeBatch() {
   const candidates = resumeBatchCandidates();
   const batch = resumeBatchState();
+  batch.scope = "today";
   batch.selected = candidates.slice(0, RESUME_BATCH_LIMIT).map(job => job.id);
+  batch.runs = [];
+  batch.state = "idle";
+  batch.error = "";
+  S.testing.bankView=false; S.testing.contextView=false; S.testing.batchView=true; rTesting();
+}
+function showResumeNotionBatch() {
+  const candidates = resumeNotionTailorCandidates();
+  const batch = resumeBatchState();
+  batch.scope = "notion_to_tailor";
+  batch.selected = candidates.slice(0, RESUME_NOTION_BATCH_LIMIT).map(job => job.id);
   batch.runs = [];
   batch.state = "idle";
   batch.error = "";
@@ -3620,16 +3713,18 @@ function showResumeBatch() {
 function showResumeContext() { S.testing.bankView=false; S.testing.contextView=true; S.testing.batchView=false; rTesting(); }
 function toggleResumeBatchSelection(id, checked) {
   const batch = resumeBatchState(), selected = new Set(batch.selected || []);
+  const limit = resumeBatchLimit(batch.scope);
   if (checked) {
-    if (selected.size >= RESUME_BATCH_LIMIT && !selected.has(id)) {
-      toast(`A batch is limited to ${RESUME_BATCH_LIMIT} drafts`); rTesting(); return;
+    if (selected.size >= limit && !selected.has(id)) {
+      toast(`A batch is limited to ${limit} drafts`); rTesting(); return;
     }
     selected.add(id);
   } else selected.delete(id);
   batch.selected = [...selected]; rTesting();
 }
 function selectAllResumeBatch() {
-  resumeBatchState().selected = resumeBatchCandidates().slice(0, RESUME_BATCH_LIMIT).map(job => job.id); rTesting();
+  const batch = resumeBatchState(), limit = resumeBatchLimit(batch.scope);
+  batch.selected = resumeBatchCandidatesFor(batch.scope).slice(0, limit).map(job => job.id); rTesting();
 }
 function clearResumeBatch() { resumeBatchState().selected = []; rTesting(); }
 function finishResumeBatchIfDone() {
@@ -3638,6 +3733,9 @@ function finishResumeBatchIfDone() {
   batch.state = runs.some(run => run.status === "failed") ? "partial" : "complete";
 }
 async function markResumeBatchTailored(job) {
+  const existing = S.applied.find(item => item.id === job.id);
+  const existingStage = String(existing?.stage || existing?.status || "").trim().toLowerCase().replace(/[\s-]+/g, "_");
+  if (existingStage === "to_tailor") return true;
   const tailoredAt = Math.floor(Date.now() / 1000);
   const payload = {stage:"to_tailor", tailored_at:tailoredAt};
   if (S.auth && S.userTracker) await trackerAction("stage", job, payload);
@@ -3656,38 +3754,59 @@ async function markResumeBatchTailored(job) {
 }
 async function queueResumeBatch() {
   const batch = resumeBatchState();
+  const notionScope = batch.scope === "notion_to_tailor";
   const engineOnline = S.testing.engine === "online";
   const cloudReady = cloudQueueOnline();
+  const limit = resumeBatchLimit(batch.scope);
+  const byId = new Map(resumeBatchCandidatesFor(batch.scope).map(job => [job.id, job]));
+  const jobs = [...new Set(batch.selected || [])].map(id => byId.get(id)).filter(Boolean).slice(0, limit);
+  if (!jobs.length) { toast(`Select at least one role to ${notionScope?"apply to":"tailor"}`); return; }
+  if (notionScope) {
+    batch.state="queueing"; batch.error="";
+    batch.runs=jobs.map(job=>({job_id:job.id,company:job.company,title:job.title,status:"queueing",message:"handing the choice to Autopilot"})); rTesting();
+    try {
+      const result=await queueAutopilotJobs(jobs),byJob=new Map((result.items||[]).map(row=>[row.job_id,row]));
+      for(const row of batch.runs){const queued=byJob.get(row.job_id);Object.assign(row,{queue_id:queued?.item?.queue_id||"",status:queued?.item?.state||"queued",message:queued?.duplicate?"already active · reused existing workflow":"Autopilot owns resume preparation and form progress"});}
+      batch.state="complete"; await loadApplicationAgent(false);
+      toast(`${result.queued||0} new Autopilot workflow${result.queued===1?"":"s"}${result.duplicates?` · ${result.duplicates} reused`:""}`);
+    } catch(error) {
+      batch.state="partial"; batch.error=error.message;
+      batch.runs.forEach(row=>{if(row.status==="queueing"){row.status="failed";row.message=error.message;}});
+    }
+    rTesting(); return;
+  }
   if (!engineOnline && !cloudReady) { toast("Connect Google or start the private Resume Studio engine before queueing a batch"); return; }
-  const byId = new Map(resumeBatchCandidates().map(job => [job.id, job]));
-  const jobs = [...new Set(batch.selected || [])].map(id => byId.get(id)).filter(Boolean).slice(0, RESUME_BATCH_LIMIT);
-  if (!jobs.length) { toast("Select at least one role to tailor"); return; }
   batch.state = "queueing"; batch.error = "";
   batch.runs = jobs.map(job => ({job_id:job.id,company:job.company,title:job.title,status:"queueing",message:"sending to the private engine"}));
   rTesting();
-  await Promise.all(jobs.map(async job => {
-    const row = batch.runs.find(run => run.job_id === job.id);
-    try {
-      if (!engineOnline) {
-        const queued = await queueCloudResumeItem(job, batch.mode);
-        Object.assign(row, {queue_id:queued.queue_id,status:queued.state||"queued",message:queued.message||"saved in the private cloud queue"});
-      } else {
-        const status = await studioRequest("/api/run", {method:"POST",body:JSON.stringify({job_id:job.id,mode:batch.mode,control_profile:queueControlReference(job)})});
-        Object.assign(row, {run_id:status.run_id,status:status.status||"queued",message:status.message||"waiting for a private worker"});
-      }
+  let nextJob = 0;
+  const worker = async () => {
+    while (nextJob < jobs.length) {
+      const job = jobs[nextJob++], row = batch.runs.find(run => run.job_id === job.id);
       try {
-        await markResumeBatchTailored(job);
-        row.stage = "to_tailor";
-      } catch (stageError) {
-        row.stage_error = stageError.message;
-        row.message = `${row.message}; pipeline stage sync failed`;
+        if (!engineOnline) {
+          const queued = await queueCloudResumeItem(job, batch.mode);
+          Object.assign(row, {queue_id:queued.queue_id,status:queued.state||"queued",message:queued.message||"saved in the private cloud queue"});
+        } else {
+          const status = await studioRequest("/api/run", {method:"POST",body:JSON.stringify({job_id:job.id,mode:batch.mode,control_profile:queueControlReference(job)})});
+          Object.assign(row, {run_id:status.run_id,status:status.status||"queued",message:status.message||"waiting for a private worker"});
+        }
+        try {
+          await markResumeBatchTailored(job);
+          row.stage = "to_tailor";
+        } catch (stageError) {
+          row.stage_error = stageError.message;
+          row.message = `${row.message}; pipeline stage sync failed`;
+        }
+        if (row.run_id) pollResumeBatchRun(row.run_id);
+      } catch (error) {
+        Object.assign(row, {status:"failed",message:error.message});
       }
-      if (row.run_id) pollResumeBatchRun(row.run_id);
-    } catch (error) {
-      Object.assign(row, {status:"failed",message:error.message});
+      rTesting();
     }
-    rTesting();
-  }));
+  };
+  const workerCount = engineOnline ? Math.min(4, jobs.length) : 1;
+  await Promise.all(Array.from({length:workerCount}, () => worker()));
   batch.state = "monitoring";
   finishResumeBatchIfDone();
   rTesting();
@@ -3924,7 +4043,8 @@ function resumeBankVersionHTML(entry, ranking=null) {
   const job=entry.job||{}, preview=cloudBankArtifactUrl(entry,"preview"), pdf=cloudBankArtifactUrl(entry,"pdf");
   const report=cloudBankArtifactUrl(entry,"report"), posting=cloudBankArtifactUrl(entry,"posting");
   const workshop=entry.run_id && entry.has_workshop
-    ? `<button class="act" ${S.testing.engine==="online"?"":"disabled title=\"Start the private engine to open Workshop\""} onclick='openResumeWorkshop("${esc(entry.run_id)}")'>Workshop</button>` : "";
+    ? `<button class="act" ${S.testing.engine==="online"?"":"disabled title=\"Start the private engine to edit this resume\""} onclick='openResumeWorkshop("${esc(entry.run_id)}")'>Edit resume</button>`
+    : entry.run_id ? `<span class="sub" title="This saved item has no editable content plan">no editable source</span>` : "";
   const inspect=entry.run_id && entry.storage!=="cloud" ? `<button class="act" onclick='loadResumeRun("${esc(entry.run_id)}")'>inspect</button>` : "";
   const statusKind=entry.status==="complete"||entry.status==="awaiting_review"?"good":entry.status==="failed"?"bad":"unknown";
   const rankBadge=ranking?.assessment?.rankable&&Number.isFinite(Number(ranking.assessment.score))?studioBadge(`#${ranking.rank} · ${ranking.assessment.score}/100`,ranking.rank===1?"good":""):studioBadge("not ranked","warn");
@@ -3951,7 +4071,7 @@ function renderResumeBankView() {
     S.testing.cloudBank.status==="unavailable"?`cloud bank unavailable · ${S.testing.cloudBank.error}`:"checking cloud bank…";
   const cloudSetup=S.testing.cloudBank.needsGoogle?`<button class="act" onclick="openTutorial('accounts')">connect Google for private bank</button>`:"";
   const sync=S.testing.sync.state==="running"?`syncing ${S.testing.sync.done}/${S.testing.sync.total} entries…`:S.testing.sync.state==="complete"?"last sync complete":S.testing.sync.state==="failed"?`sync stopped · ${S.testing.sync.error}`:"";
-  return `<section class="testing-hero"><div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">${esc(cloudState)}</span></div><div class="acts"><button class="act" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBatch()">Tailor today <span class="chip">${resumeBatchCandidates().length}</span></button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><button class="act primary" onclick="loadCloudResumeBank()">refresh bank</button>${cloudSetup}</div></div><h2>Resume bank</h2><p class="sub">One card per job. Click it to compare every saved version, audit, posting snapshot, and PDF. The private <strong>Objective ranking</strong> marks the strongest saved version for that posting using transparent match, evidence-safety, layout, and portfolio signals. It is a decision aid, not a hiring prediction or automatic submission. Every local run and legacy experiment remains available under all history; the default view starts with the Google-era Studio overhaul. New matching, generation, and Workshop edits still use the private Mac engine.</p>${sync?`<p class="note" role="status">${esc(sync)}</p>`:""}</section>
+  return `<section class="testing-hero"><div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">${esc(cloudState)}</span></div><div class="acts"><button class="act" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBatch()">Tailor today <span class="chip">${resumeBatchCandidates().length}</span></button><button class="act" onclick="showResumeNotionBatch()">Autopilot To tailor <span class="chip">${resumeNotionTailorCandidates().length}</span></button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><button class="act primary" onclick="loadCloudResumeBank()">refresh bank</button>${cloudSetup}</div></div><h2>Resume bank</h2><p class="sub">One card per job. Click it to compare every saved version, audit, posting snapshot, and PDF. The private <strong>Objective ranking</strong> marks the strongest saved version for that posting using transparent match, evidence-safety, layout, and portfolio signals. It is a decision aid, not a hiring prediction or automatic submission. Every local run and legacy experiment remains available under all history; the default view starts with the Google-era Studio overhaul. New matching, generation, and Workshop edits still use the private Mac engine. Select <strong>Edit resume</strong> on a saved version to open the protected Workshop from this page, change lines, and render a new private PDF; the original PDF stays untouched. Manual edits are local and do not require Codex, while AI suggestions may use Codex.</p>${sync?`<p class="note" role="status">${esc(sync)}</p>`:""}</section>
   <div class="bar"><input id="resumeBankQ" type="search" placeholder="filter company or role…" value="${esc(S.testing.bankQuery||"")}"><select id="resumeBankEra" aria-label="Filter Resume Bank era"><option value="current" ${era==="current"?"selected":""}>Google onward</option><option value="all" ${era==="all"?"selected":""}>all history</option></select><select id="resumeBankMode" aria-label="Filter Resume Bank mode"><option value="all">all modes</option><option value="used" ${mode==="used"?"selected":""}>Used bullets</option><option value="ai" ${mode==="ai"?"selected":""}>AI tailor</option><option value="unrestricted" ${mode==="unrestricted"?"selected":""}>Take-the-wheel</option><option value="generation" ${mode==="generation"?"selected":""}>Unchained generation</option></select><select id="resumeBankStatus" aria-label="Filter Resume Bank status"><option value="all">all statuses</option>${[...new Set(resumeBankEntries().map(e=>e.status).filter(Boolean))].sort().map(value=>`<option value="${esc(value)}" ${status===value?"selected":""}>${esc(value)}</option>`).join("")}</select><button class="act" onclick="syncCloudResumeBank()" ${S.testing.engine==="online"?"":"disabled"}>sync local bank · ${era==="current"?"Google-onward":"all"} ↗</button></div>
   <p class="sub">${groups.length} jobs · ${entries.length} versions</p><section class="resume-bank-grid">${groups.length?groups.map(resumeBankGroupHTML).join(""):"<div class=\"lane\"><p class=\"sub\">No bank entries match this filter. Start the private engine to load the local bank, or connect Google and sync it.</p></div>"}</section>`;
 }
@@ -4207,7 +4327,7 @@ function rTesting() {
     <span class="chip good">owner only · @${esc(S.auth.login)}</span>
     <h2>Resume Studio</h2>
     <p class="sub">Choose a production posting, tailor it here, and keep the private evidence graph and generated artifacts behind the owner boundary. The website owns the workflow; the Mac engine is the private generation layer.</p>
-    <div class="bar" style="margin:.65rem 0 0"><button class="act primary" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBatch()">Tailor today <span class="chip">${resumeBatchCandidates().length}</span></button><button class="act" onclick="showResumeBank()">Resume bank <span class="chip">${resumeBankGroups(resumeBankEntries().filter(resumeBankCurrentEra)).length} jobs</span></button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><span class="sub">${S.testing.cloudBank.status==="online"?"private cloud bank connected":"private cloud bank checking"} · ${S.testing.cloudQueue.status==="online"?`${cloudQueuePendingCount()} private queue item${cloudQueuePendingCount()===1?"":"s"}`:"private queue checking"}</span></div>
+    <div class="bar" style="margin:.65rem 0 0"><button class="act primary" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBatch()">Tailor today <span class="chip">${resumeBatchCandidates().length}</span></button><button class="act" onclick="showResumeNotionBatch()">Autopilot To tailor <span class="chip">${resumeNotionTailorCandidates().length}</span></button><button class="act" onclick="showResumeBank()">Resume bank <span class="chip">${resumeBankGroups(resumeBankEntries().filter(resumeBankCurrentEra)).length} jobs</span></button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><span class="sub">${S.testing.cloudBank.status==="online"?"private cloud bank connected":"private cloud bank checking"} · ${S.testing.cloudQueue.status==="online"?`${cloudQueuePendingCount()} private queue item${cloudQueuePendingCount()===1?"":"s"}`:"private queue checking"}</span></div>
     <div id="studioEngineNotice" class="note" style="margin:.65rem 0 0">Checking the private engine…</div>
     ${cloudQueueSummaryHTML()}
   </section>

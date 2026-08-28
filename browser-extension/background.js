@@ -86,6 +86,63 @@ function applicationIdentity(value) {
   return id ? `id:${id}` : "";
 }
 
+function trackerChoiceTime(entry) {
+  for (const key of ["choice_at", "tailored_at", "stage_changed_at"]) {
+    const raw = Number(entry?.[key] || 0);
+    if (raw > 0) return raw > 1e12 ? raw : raw * 1000;
+  }
+  return 0;
+}
+
+function queueItemCoversTrackerChoice(entry, items) {
+  const identity = applicationIdentity(entry);
+  const matches = (Array.isArray(items) ? items : []).filter(item =>
+    item?.job?.id === entry?.id || identity && applicationIdentity(item) === identity);
+  if (!matches.length) return false;
+  if (matches.some(item => !TERMINAL_QUEUE_STATES.has(item.state))) return true;
+  const decisionAt = trackerChoiceTime(entry);
+  if (!decisionAt) return true;
+  return matches.some(item => (Date.parse(item.created_at || "") || 0) >= decisionAt);
+}
+
+function trackerChoiceJob(entry) {
+  const url = safeURL(entry?.url);
+  if (!entry?.id || !entry?.company || !entry?.title || !url) return null;
+  return {
+    id: String(entry.id), company: String(entry.company), title: String(entry.title), url,
+    locations: Array.isArray(entry.locations) ? entry.locations.slice(0, 12).map(String) : [],
+    score: Number(entry.score) || 0, posted_at: entry.posted_at ?? null,
+    posting_status: String(entry.posting_status || ""), description: String(entry.description || "").slice(0, 20_000),
+  };
+}
+
+async function importTrackerChoices(items = []) {
+  const settings = await config();
+  const configured = await fetch(`${settings.cloudUrl}/api/config`, {cache: "no-store"});
+  if (!configured.ok) throw new Error(`Tracker configuration returned ${configured.status}`);
+  const metadata = await configured.json();
+  const repo = String(metadata.repo || "VictorJimenez3/fable-job-search");
+  const branch = String(metadata.branch || "claude/newgrad-job-search-system-9gbj9k");
+  if (!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repo) || !/^[A-Za-z0-9_./-]+$/.test(branch)) {
+    throw new Error("Tracker configuration is invalid");
+  }
+  const response = await fetch(`https://raw.githubusercontent.com/${repo}/${branch}/state/autopilot_choices.json`, {cache: "no-store"});
+  if (!response.ok) throw new Error(`Tracker choices returned ${response.status}`);
+  const applied = await response.json();
+  if (!Array.isArray(applied)) throw new Error("Tracker choices are not a list");
+  const jobs = applied
+    .filter(entry => ["saved", "to_tailor"].includes(String(entry?.stage || entry?.status || "").toLowerCase().replace(/[\s-]+/g, "_")))
+    .filter(entry => !queueItemCoversTrackerChoice(entry, items))
+    .map(trackerChoiceJob).filter(Boolean).slice(0, 80);
+  if (!jobs.length) return {items, queued: 0, duplicates: 0};
+  const result = await cloud("/api/application-agent", {
+    method: "POST", body: JSON.stringify({action: "queue_many", jobs}),
+  });
+  const merged = new Map((Array.isArray(items) ? items : []).map(item => [item.queue_id, item]));
+  for (const row of result.items || []) if (row?.item?.queue_id) merged.set(row.item.queue_id, row.item);
+  return {items: [...merged.values()], queued: result.queued || 0, duplicates: result.duplicates || 0};
+}
+
 async function config() {
   const stored = await chrome.storage.local.get({cloudUrl: DEFAULT_CLOUD_URL, agentToken: "", autoContinue: true, maxConcurrentApplications: 3});
   return {...stored, cloudUrl: String(stored.cloudUrl || DEFAULT_CLOUD_URL).replace(/\/$/, "")};
@@ -503,6 +560,19 @@ async function syncCloudQueueImpl() {
     console.warn("Job Radar queue", error);
     return {ok: false, error: noteQuota(error)};
   }
+  let importedChoices = 0;
+  try {
+    try {
+      await local("/api/application/tracker-sync", {method: "POST", body: "{}"});
+    } catch (error) {
+      console.warn("Job Radar tracker sync nudge", error);
+    }
+    const imported = await importTrackerChoices(data.items || []);
+    data = {...data, items: imported.items};
+    importedChoices = imported.queued || 0;
+  } catch (error) {
+    console.warn("Job Radar tracker choice import", error);
+  }
   let recoveryError = "";
   let recoveredCount = 0;
   try {
@@ -591,6 +661,7 @@ async function syncCloudQueueImpl() {
   }
   for (const tabId of tabs.keys()) await syncSession(tabId);
   return {ok: !syncError, error: syncError, recovered: recoveredCount,
+    imported: importedChoices,
     queued: items.filter(item => item.state === "queued").length,
     active: items.filter(item => BATCH_RUNNING_STATES.has(item.state)).length};
 }

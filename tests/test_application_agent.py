@@ -1,3 +1,4 @@
+import copy
 import json
 import datetime as dt
 from pathlib import Path
@@ -13,6 +14,7 @@ from radar.application_agent import (
     list_issues,
     plan_form,
     provider_for_url,
+    public_sessions,
     record_event,
     save_answer,
     verify_submission_page,
@@ -106,6 +108,26 @@ def test_repeated_queue_attachment_reuses_one_durable_session(tmp_path: Path):
 
     assert second["session_id"] == first["session_id"]
     assert second["queue_id"] == "queue-1"
+
+
+def test_loading_old_store_collapses_active_duplicate_queue_sessions(tmp_path: Path):
+    first = create_session(tmp_path, job(), mode="batch", queue_id="queue-1")
+    path = tmp_path / "CV" / ".resume_studio" / "application_agent.json"
+    store = json.loads(path.read_text())
+    duplicate = copy.deepcopy(store["sessions"][first["session_id"]])
+    duplicate["session_id"] = "duplicate-session"
+    duplicate["state"] = "queued"
+    duplicate["updated_at"] = "2026-08-20T00:00:00Z"
+    store["sessions"][duplicate["session_id"]] = duplicate
+    store["sessions"][first["session_id"]]["state"] = "filling"
+    store["sessions"][first["session_id"]]["updated_at"] = "2026-08-21T00:00:00Z"
+    path.write_text(json.dumps(store))
+
+    rows = {row["session_id"]: row for row in public_sessions(tmp_path)}
+
+    assert rows[first["session_id"]]["state"] == "filling"
+    assert rows["duplicate-session"]["state"] == "cancelled"
+    assert rows["duplicate-session"]["superseded_by"] == first["session_id"]
 
 
 def test_country_word_does_not_hide_work_authorization_choice(tmp_path: Path):

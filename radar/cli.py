@@ -7,6 +7,7 @@ import os
 import sys
 from collections.abc import Callable
 from pathlib import Path
+from typing import Optional
 
 import typer
 
@@ -224,6 +225,166 @@ def studio_serve(host: str = "127.0.0.1", port: int = 4317) -> None:
     from scripts.resume_studio import main as studio_main
 
     raise typer.Exit(studio_main(["--host", host, "--port", str(port)]))
+
+
+@studio_app.command("export")
+def studio_export(
+    since_days: int = typer.Option(
+        14, "--since-days", min=0, max=3650,
+        help="Keep the newest PDF per company from this many recent days.",
+    ),
+    all_history: bool = typer.Option(
+        False, "--all-history",
+        help="Include the newest usable run for every company in the private history.",
+    ),
+    json_output: bool = typer.Option(False, "--json"),
+) -> None:
+    from scripts.resume_studio import export_local_tailored_resumes
+
+    value = export_local_tailored_resumes(
+        since_days=None if all_history else since_days,
+    )
+    if json_output:
+        typer.echo(json.dumps(value, default=str, sort_keys=True))
+    else:
+        typer.echo(f"Exported {value['count']} resume(s) to {value['folder']}")
+
+
+@studio_app.command("bank")
+def studio_bank(
+    query: str = typer.Option("", "--query", "-q", help="Filter by company, title, or sector."),
+    approved_only: bool = typer.Option(
+        False, "--approved-only", help="Show only explicitly approved tailored winners.",
+    ),
+    limit: int = typer.Option(25, min=1, max=500),
+    json_output: bool = typer.Option(False, "--json"),
+) -> None:
+    """List unique reusable PDFs in the local Resume Bank."""
+    from scripts.resume_studio import resume_bank
+
+    value = resume_bank(query=query, approved_only=approved_only, limit=limit)
+    if json_output:
+        typer.echo(json.dumps(value, default=str, sort_keys=True))
+        return
+    typer.echo(
+        "Resume Bank: %d unique PDF(s), %d approved, %d need review"
+        % (
+            value["unique_resumes"], value["approved_resumes"],
+            value["review_required_resumes"],
+        )
+    )
+    for entry in value["entries"]:
+        state = "APPROVED" if entry["safe_for_application"] else "REVIEW"
+        typer.echo(
+            "%s  %s  %s — %s\n  %s"
+            % (
+                state, entry["run_id"], entry["company"] or "Unknown company",
+                entry["title"] or "Unknown role", entry["pdf_filename"],
+            )
+        )
+
+
+@studio_app.command("offline-tailor")
+def studio_offline_tailor(
+    job_id: str = typer.Option("", "--job-id", help="Use a role from local state/jobs.json."),
+    company: str = typer.Option("", "--company", help="Target company for an ad-hoc role."),
+    title: str = typer.Option("", "--title", help="Target job title for an ad-hoc role."),
+    description_file: Optional[Path] = typer.Option(
+        None, "--description-file", exists=True, dir_okay=False, readable=True,
+        help="Optional plain-text job description used for better matching.",
+    ),
+    include_review: bool = typer.Option(
+        False, "--include-review",
+        help="Allow review-pending/legacy PDFs; inspect before applying.",
+    ),
+    copy_pdf: bool = typer.Option(
+        True, "--copy/--no-copy", help="Copy the winner into CV/tailored/offline/.",
+    ),
+    top: int = typer.Option(5, "--top", min=1, max=20),
+    json_output: bool = typer.Option(False, "--json"),
+) -> None:
+    """Select the best existing resume for a role without calling Codex."""
+    from scripts.resume_studio import load_jobs, offline_tailor_resume
+
+    job = {}
+    if job_id:
+        job = dict(load_jobs().get(job_id) or {})
+        if not job:
+            raise typer.BadParameter("unknown job id", param_hint="--job-id")
+    if company:
+        job["company"] = company
+    if title:
+        job["title"] = title
+    if description_file is not None:
+        job["description"] = description_file.read_text(errors="replace")
+    if not str(job.get("company") or "").strip() or not str(job.get("title") or "").strip():
+        raise typer.BadParameter(
+            "provide --job-id, or provide both --company and --title",
+        )
+    value = offline_tailor_resume(
+        job, approved_only=not include_review, limit=top, copy_pdf=copy_pdf,
+    )
+    if json_output:
+        typer.echo(json.dumps(value, default=str, sort_keys=True))
+    elif value.get("selected"):
+        selected = value["selected"]
+        typer.echo(
+            "Offline match: %.2f  %s — %s\nSource run: %s (%s)\nOutput: %s\nCodex calls: 0"
+            % (
+                float(selected.get("score") or 0), selected.get("company") or "Unknown company",
+                selected.get("title") or "Unknown role", selected.get("run_id") or "",
+                selected.get("pdf_filename") or "resume PDF",
+                value.get("output_path") or "not copied (--no-copy)",
+            )
+        )
+        for reason in selected.get("reasons") or []:
+            typer.echo("  - %s" % reason)
+        if selected.get("needs_owner_review"):
+            typer.echo("WARNING: this source is not approved; review it before applying.", err=True)
+    else:
+        typer.echo(
+            "No approved reusable resume is available. Run `resume-studio bank`, approve a ready run, "
+            "or repeat with --include-review for an inspection-only match.",
+            err=True,
+        )
+        raise typer.Exit(2)
+
+
+@studio_app.command("approve")
+def studio_approve(
+    run_id: str = typer.Argument(..., help="12-character Resume Studio run ID."),
+    json_output: bool = typer.Option(False, "--json"),
+) -> None:
+    """Approve a ready PDF after personally reviewing its gate report."""
+    from scripts.resume_studio import approve_run
+
+    try:
+        value = approve_run(None, run_id)
+    except ValueError as exc:
+        raise typer.BadParameter(str(exc), param_hint="run_id") from exc
+    if json_output:
+        typer.echo(json.dumps(value, default=str, sort_keys=True))
+    else:
+        typer.echo("Approved %s: %s" % (run_id, value.get("pdf_filename") or "resume PDF"))
+
+
+@studio_app.command("usage")
+def studio_usage(json_output: bool = typer.Option(False, "--json")) -> None:
+    """Show observed local provider usage (offline commands always use zero)."""
+    from scripts.resume_studio import studio_usage as usage_summary
+
+    value = usage_summary()
+    if json_output:
+        typer.echo(json.dumps(value, default=str, sort_keys=True))
+    else:
+        typer.echo(
+            "Since %s: %d Codex call(s), %d observed token(s).\n%s\n"
+            "Bank, export, approve, and offline-tailor do not call Codex."
+            % (
+                value["week_start"], value["codex_calls"], value["codex_tokens"],
+                value["note"],
+            )
+        )
 
 
 @app.command("doctor")

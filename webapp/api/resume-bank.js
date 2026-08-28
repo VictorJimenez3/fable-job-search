@@ -25,7 +25,7 @@ const CONTROL_FILENAME = "resume-studio-control-profiles.json";
 const CONTROL_ROLE_FAMILIES = new Set([
   "general_swe_cloud", "healthcare_scientific_ai", "ml_research", "data_analytics", "other",
 ]);
-const MAX_QUEUE_ITEMS = 100;
+const MAX_QUEUE_ITEMS = 500;
 const QUEUE_MODES = new Set(["used", "ai", "unrestricted", "generation"]);
 const QUEUE_STATES = new Set(["queued", "dispatching", "running", "awaiting_review", "complete", "failed", "cancelled"]);
 

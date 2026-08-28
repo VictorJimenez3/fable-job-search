@@ -211,10 +211,42 @@ def test_context_candidates_turn_neighboring_evidence_into_questions_not_claims(
 
 
 def test_generated_resume_filename_is_company_identifiable():
-    assert rs.resume_pdf_filename({"company": "Johnson & Johnson"}) == "johnson_johnson_resume_ai.pdf"
-    assert rs.resume_pdf_filename({"company": "NVIDIA"}) == "nvidia_resume_ai.pdf"
-    assert rs.resume_pdf_filename({}) == "company_resume_ai.pdf"
-    assert rs.resume_pdf_filename({"company": "Merck"}, "generation") == "merck_resume_unchained.pdf"
+    assert rs.resume_pdf_filename({"company": "Johnson & Johnson"}) == "victor_jimenez_johnson_johnson.pdf"
+    assert rs.resume_pdf_filename({"company": "NVIDIA"}) == "victor_jimenez_nvidia.pdf"
+    assert rs.resume_pdf_filename({}) == "victor_jimenez_company.pdf"
+    assert rs.resume_pdf_filename({"company": "Merck"}, "generation") == "victor_jimenez_merck.pdf"
+
+
+def test_local_tailored_export_keeps_newest_primary_pdf_per_company(tmp_path):
+    runs = tmp_path / "CV" / ".resume_studio" / "runs"
+    older = runs / "111111111111"
+    newer = runs / "222222222222"
+    for directory, created_at, text in (
+        (older, "2026-08-23T12:00:00+00:00", "older"),
+        (newer, "2026-08-24T12:00:00+00:00", "newer"),
+    ):
+        directory.mkdir(parents=True)
+        (directory / "job.json").write_text(json.dumps({"company": "Acme Labs", "title": "Engineer"}))
+        (directory / "status.json").write_text(json.dumps({
+            "status": "awaiting_review", "mode": "generation", "created_at": created_at,
+        }))
+        (directory / "victor_jimenez_acme_labs.pdf").write_text(text)
+
+    result = rs.export_local_tailored_resumes(tmp_path, since_days=None)
+    target = tmp_path / "CV" / "tailored" / "victor_jimenez_acme_labs.pdf"
+    assert result["count"] == 1
+    assert target.read_text() == "newer"
+    assert result["resumes"][0]["review_required"] is True
+
+
+def test_legacy_pdf_alias_uses_new_owner_company_filename(tmp_path):
+    run = tmp_path / "CV" / ".resume_studio" / "runs" / "111111111111"
+    run.mkdir(parents=True)
+    (run / "job.json").write_text(json.dumps({"company": "Mayo Clinic"}))
+    (run / "status.json").write_text(json.dumps({"pdf_filename": "mayo_clinic_resume_unchained.pdf"}))
+    (run / "mayo_clinic_resume_unchained.pdf").write_bytes(b"pdf")
+    assert rs.logical_pdf_filename({"company": "Mayo Clinic"}, run / "mayo_clinic_resume_unchained.pdf") == "victor_jimenez_mayo_clinic.pdf"
+    assert rs.artifact_target(run, "victor_jimenez_mayo_clinic.pdf") == run / "mayo_clinic_resume_unchained.pdf"
 
 
 def test_generation_mode_is_separate_from_the_saved_moderate_mode():
@@ -240,8 +272,8 @@ def test_future_one_page_prefix_suppresses_footer_number_without_mutating_templa
 
 
 def test_pdf_preview_download_name_is_safe_and_company_identifiable():
-    assert rs._download_filename("mayo_clinic_rochester_resume_ai.pdf") == "mayo_clinic_rochester_resume_ai.pdf"
-    assert rs._download_filename("../../resume.pdf") == "company_resume_ai.pdf"
+    assert rs._download_filename("victor_jimenez_mayo_clinic_rochester.pdf") == "victor_jimenez_mayo_clinic_rochester.pdf"
+    assert rs._download_filename("../../resume.pdf") == "victor_jimenez_company.pdf"
     assert rs._download_filename("Mayo Clinic resume.pdf") == "Mayo_Clinic_resume.pdf"
 
 
@@ -410,7 +442,7 @@ def test_resume_studio_exposes_a_canonical_lock_and_private_render_boundary(tmp_
     assert "Canonical resumes locked" in rs.UI_HTML
     assert "CV/immutable/VictorJimenezResume.tex locked" in rs.UI_HTML
     assert "resume_lock.py unlock" in rs.UI_HTML
-    assert "company_resume_ai.pdf" in rs.UI_HTML
+    assert "victor_jimenez_company.pdf" in rs.UI_HTML
     assert "Take-the-wheel" in rs.UI_HTML
     assert "How the modes differ" in rs.UI_HTML
     assert "Raw review data" in rs.UI_HTML
@@ -456,7 +488,7 @@ def test_resume_studio_exposes_a_canonical_lock_and_private_render_boundary(tmp_
     assert "Canonical resumes locked" in rs.UI_HTML
     assert "CV/immutable/VictorJimenezResume.tex locked" in rs.UI_HTML
     assert "resume_lock.py unlock" in rs.UI_HTML
-    assert "company_resume_ai.pdf" in rs.UI_HTML
+    assert "victor_jimenez_company.pdf" in rs.UI_HTML
     assert "Take-the-wheel (moderate)" in rs.UI_HTML
     assert "Unchained generation" in rs.UI_HTML
     assert "Raw review data" in rs.UI_HTML
@@ -522,7 +554,7 @@ def test_resume_library_keeps_runs_and_legacy_experiments_with_posting_snapshots
     entries = rs.resume_library(tmp_path)
     assert {entry["source"] for entry in entries} == {"run", "experiment"}
     saved = next(entry for entry in entries if entry["source"] == "run")
-    assert saved["pdf_filename"] == "example_co_resume_ai.pdf"
+    assert saved["pdf_filename"] == "victor_jimenez_example_co.pdf"
     assert saved["has_posting_snapshot"] is True
     assert saved["objective"]["version"] == "objective-resume-v1"
     assert saved["objective"]["rankable"] is False
@@ -593,9 +625,53 @@ def test_run_manager_snapshots_job_and_assigns_named_pdf(tmp_path):
     job = {"id": "job-3", "company": "Acme Labs", "title": "ML Engineer"}
     status = manager.start(job, "dream", queue_id="queue-123")
     run_dir = tmp_path / "CV" / ".resume_studio" / "runs" / status["run_id"]
-    assert status["pdf_filename"] == "acme_labs_resume_ai.pdf"
+    assert status["pdf_filename"] == "victor_jimenez_acme_labs.pdf"
     assert status["queue_id"] == "queue-123"
     assert json.loads((run_dir / "job.json").read_text())["company"] == "Acme Labs"
+
+
+def test_run_manager_reuses_one_run_for_repeated_queue_click(tmp_path):
+    class NoopExecutor:
+        def submit(self, *args, **kwargs):
+            return None
+
+        def shutdown(self, *args, **kwargs):
+            return None
+
+    manager = rs.RunManager(tmp_path)
+    manager.executor.shutdown(wait=False)
+    manager.executor = NoopExecutor()
+    job = {"id": "job-3", "company": "Acme Labs", "title": "ML Engineer"}
+
+    first = manager.start(job, "ai", queue_id="application-queue-123")
+    second = manager.start(job, "ai", queue_id="application-queue-123")
+
+    assert second["run_id"] == first["run_id"]
+    assert second["duplicate"] is True
+    assert len(list((tmp_path / "CV" / ".resume_studio" / "runs").iterdir())) == 1
+    manager.shutdown(wait=False)
+
+
+def test_tracker_sync_nudge_is_rate_limited_and_uses_existing_workflow(tmp_path, monkeypatch):
+    calls = []
+
+    class Result:
+        returncode = 0
+        stdout = ""
+        stderr = ""
+
+    monkeypatch.setattr(rs.shutil, "which", lambda name: "/usr/local/bin/gh")
+    monkeypatch.setattr(rs.subprocess, "run", lambda args, **kwargs: calls.append((args, kwargs)) or Result())
+    monkeypatch.setattr(rs, "_TRACKER_SYNC_LAST_REQUEST", 0.0)
+
+    first = rs.request_tracker_sync(tmp_path)
+    second = rs.request_tracker_sync(tmp_path)
+
+    assert first["triggered"] is True
+    assert second["triggered"] is False
+    assert len(calls) == 1
+    assert calls[0][0][-3:] == ["workflow", "run", "tracker-sync.yml"]
+    assert calls[0][1]["cwd"] == str(tmp_path.resolve())
 
 
 def test_resume_library_preserves_queue_status_and_exposes_staleness(tmp_path):
@@ -618,6 +694,100 @@ def test_resume_library_preserves_queue_status_and_exposes_staleness(tmp_path):
     assert entry["status"] != "interrupted"
     assert entry["stale"] is True
     assert "recoverable" in entry["stale_reason"]
+
+
+def _write_bank_run(
+    root, run_id, *, company, title, posting, resume_text,
+    status="awaiting_review", approval="awaiting_review", winner="tailored",
+    pdf_bytes=None,
+):
+    run_dir = root / "CV" / ".resume_studio" / "runs" / run_id
+    run_dir.mkdir(parents=True)
+    job = {"id": "job-" + run_id, "company": company, "title": title}
+    rs.write_json(run_dir / "job.json", job)
+    rs.write_json(run_dir / "job_context.json", {"posting_text": posting})
+    rs.write_json(run_dir / "status.json", {
+        "run_id": run_id, "status": status, "approval_state": approval,
+        "created_at": "2026-08-20T12:00:00+00:00",
+    })
+    rs.write_json(run_dir / "report.json", {
+        "winner_version": winner, "approval_state": approval,
+        "job": rs.job_summary(job),
+    })
+    (run_dir / "resume.txt").write_text(resume_text)
+    (run_dir / "resume.pdf").write_bytes(
+        pdf_bytes if pdf_bytes is not None else (b"%PDF-1.4\n" + run_id.encode())
+    )
+    return run_dir
+
+
+def test_resume_bank_deduplicates_pdfs_and_excludes_base_winners(tmp_path):
+    duplicate = b"%PDF-1.4\nsame artifact\n"
+    _write_bank_run(
+        tmp_path, "111111111111", company="Acme", title="ML Engineer",
+        posting="Machine learning with Python", resume_text="Python PyTorch",
+        approval="approved", status="complete", pdf_bytes=duplicate,
+    )
+    _write_bank_run(
+        tmp_path, "222222222222", company="Acme", title="ML Engineer",
+        posting="Machine learning with Python", resume_text="Python PyTorch",
+        approval="approved", status="complete", pdf_bytes=duplicate,
+    )
+    _write_bank_run(
+        tmp_path, "333333333333", company="Base Co", title="Engineer",
+        posting="Software", resume_text="Software", winner="base",
+    )
+
+    bank = rs.resume_bank(tmp_path)
+
+    assert bank["unique_resumes"] == 1
+    assert bank["approved_resumes"] == 1
+    assert len(bank["entries"][0]["duplicate_run_ids"]) == 1
+    assert bank["entries"][0]["safe_for_application"] is True
+
+
+def test_offline_resume_match_prefers_role_fit_and_uses_no_provider(tmp_path):
+    _write_bank_run(
+        tmp_path, "111111111111", company="ML Source", title="Machine Learning Engineer",
+        posting="Build machine learning models with Python and PyTorch.",
+        resume_text="Built machine learning models with Python and PyTorch.",
+    )
+    _write_bank_run(
+        tmp_path, "222222222222", company="Web Source", title="Frontend Software Engineer",
+        posting="Build React web applications with TypeScript.",
+        resume_text="Built React web applications with TypeScript.",
+        approval="approved", status="complete",
+    )
+    target = {
+        "company": "Target Co", "title": "Machine Learning Engineer",
+        "description": "Develop machine learning systems using Python and PyTorch.",
+    }
+
+    result = rs.offline_resume_matches(target, tmp_path, limit=2)
+
+    assert result["provider_calls"] == 0
+    assert result["selection_kind"] == "existing_pdf_unchanged"
+    assert result["selected"]["company"] == "ML Source"
+    assert result["selected"]["needs_owner_review"] is True
+    assert result["selected"]["score"] > result["matches"][1]["score"]
+
+
+def test_offline_tailor_approved_filter_and_target_company_copy(tmp_path):
+    _write_bank_run(
+        tmp_path, "111111111111", company="Source Co", title="Backend Engineer",
+        posting="Backend API services with Python.", resume_text="Python FastAPI REST API",
+    )
+    target = {"company": "Target & Sons", "title": "Backend Engineer"}
+
+    blocked = rs.offline_tailor_resume(target, tmp_path, approved_only=True)
+    copied = rs.offline_tailor_resume(target, tmp_path, approved_only=False)
+
+    assert blocked["selected"] is None
+    assert copied["copied"] is True
+    assert copied["output_path"].endswith("CV/tailored/offline/victor_jimenez_target_sons.pdf")
+    assert Path(copied["output_path"]).read_bytes().startswith(b"%PDF")
+    index = json.loads((tmp_path / "CV" / "tailored" / "offline" / "index.json").read_text())
+    assert index["selections"]["victor_jimenez_target_sons.pdf"]["content_changed"] is False
 
 
 def test_run_manager_recovers_queued_and_running_snapshots(tmp_path):
@@ -3791,14 +3961,14 @@ def test_application_resume_status_does_not_regenerate_terminal_base_winner(monk
 
 
 def test_application_resume_status_uses_owner_authorized_reference(monkeypatch):
-    entries = [{
-        "source": "run", "entry_id": "abc123def456", "run_id": "abc123def456",
-        "status": "complete", "has_pdf": True, "winner_version": "tailored",
-        "pdf_filename": "nvidia_resume_ai.pdf", "updated_at": "2026-08-24T12:00:00Z",
-        "objective": {"rankable": True, "score": 82},
-        "job": {"company": "NVIDIA", "title": "AI Engineer"},
-    }]
-    monkeypatch.setattr(rs, "resume_library", lambda *args, **kwargs: entries if not kwargs.get("job_id") else [])
+    monkeypatch.setattr(rs, "resume_library", lambda *args, **kwargs: [])
+    monkeypatch.setattr(rs, "offline_resume_matches", lambda *args, **kwargs: {
+        "selected": {
+            "run_id": "abc123def456", "company": "NVIDIA",
+            "pdf_filename": "victor_jimenez_nvidia.pdf", "source_track": "ml_research",
+            "score": 82, "reasons": ["same ML / research role track"],
+        },
+    })
 
     result = rs.application_resume_status(
         {"id": "job-new", "company": "Notion", "title": "Machine Learning Engineer"},
@@ -3806,8 +3976,49 @@ def test_application_resume_status_uses_owner_authorized_reference(monkeypatch):
     )
 
     assert result["source"] == "reference"
-    assert result["fallback_profile"] == "nvidia"
-    assert result["pdf_filename"] == "nvidia_resume_ai.pdf"
+    assert result["fallback_profile"] == "ml_research"
+    assert result["pdf_filename"] == "victor_jimenez_notion.pdf"
+    assert result["source_pdf_filename"] == "victor_jimenez_nvidia.pdf"
+
+
+def test_application_resume_file_reads_reference_bytes_but_keeps_target_upload_name(tmp_path, monkeypatch):
+    run_id = "abc123def456"
+    run_dir = tmp_path / "CV" / ".resume_studio" / "runs" / run_id
+    run_dir.mkdir(parents=True)
+    source = run_dir / "victor_jimenez_nvidia.pdf"
+    source.write_bytes(b"%PDF-1.4\napproved reference\n")
+    monkeypatch.setattr(rs, "resume_library", lambda *args, **kwargs: [])
+    monkeypatch.setattr(rs, "offline_resume_matches", lambda *args, **kwargs: {
+        "selected": {
+            "run_id": run_id, "company": "NVIDIA",
+            "pdf_filename": source.name, "source_track": "ml_research",
+            "score": 82, "reasons": ["same ML / research role track"],
+        },
+    })
+
+    status, target = rs.application_resume_file(
+        {"id": "job-new", "company": "Notion", "title": "Machine Learning Engineer"},
+        tmp_path,
+    )
+
+    assert target == source
+    assert target.read_bytes().startswith(b"%PDF")
+    assert status["pdf_filename"] == "victor_jimenez_notion.pdf"
+    assert status["file_ready"] is True
+
+
+def test_application_fallback_requires_explicit_approval(tmp_path):
+    _write_bank_run(
+        tmp_path, "111111111111", company="NVIDIA", title="AI Engineer",
+        posting="Machine learning with Python", resume_text="Python machine learning",
+        approval="awaiting_review", status="awaiting_review",
+    )
+
+    result = rs.application_fallback_resume(
+        {"company": "Target", "title": "Machine Learning Engineer"}, tmp_path,
+    )
+
+    assert result["source"] == "immutable"
 
 
 def test_application_resume_file_returns_selected_local_pdf(tmp_path, monkeypatch):
@@ -3817,7 +4028,7 @@ def test_application_resume_file_returns_selected_local_pdf(tmp_path, monkeypatc
     pdf.write_bytes(b"%PDF-1.4\nlocal-only\n")
     monkeypatch.setattr(rs, "application_resume_status", lambda *args, **kwargs: {
         "status": "ready", "source": "tailored", "run_id": "abc123def456",
-        "pdf_filename": "acme_resume_ai.pdf", "file_ready": True,
+        "pdf_filename": "victor_jimenez_acme.pdf", "file_ready": True,
     })
 
     status, selected = rs.application_resume_file({"id": "job-1"}, tmp_path)

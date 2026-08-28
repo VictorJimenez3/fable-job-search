@@ -43,6 +43,7 @@ SESSION_STATES = {
     "cancelled",
 }
 TERMINAL_STATES = {"submitted", "failed", "skipped", "cancelled"}
+ACTIVE_STATES = SESSION_STATES - TERMINAL_STATES
 
 ATS_HOST_PATTERNS = {
     "workday": (r"workday", r"myworkdayjobs\.com", r"myworkdaysite\.com"),
@@ -392,6 +393,64 @@ def _default_store() -> Dict[str, Any]:
     }
 
 
+def _session_survival_rank(session: Dict[str, Any]) -> Tuple[int, int, float, str]:
+    state_priority = {
+        "submitting": 9,
+        "awaiting_confirmation": 8,
+        "filling": 7,
+        "opening": 6,
+        "blocked": 5,
+        "queued": 4,
+        "submitted": 3,
+        "failed": 2,
+        "skipped": 1,
+        "cancelled": 0,
+    }
+    return (
+        int(bool(session.get("confirmation") or session.get("review"))),
+        state_priority.get(clean_text(session.get("state"), 40), -1),
+        timestamp(session.get("updated_at")) or timestamp(session.get("created_at")) or 0,
+        clean_text(session.get("session_id"), 100),
+    )
+
+
+def _collapse_active_session_duplicates(store: Dict[str, Any]) -> int:
+    """Keep one active durable session for each cloud queue item.
+
+    Older extension versions could recover the same queue row into many local
+    sessions. They are retained as cancelled audit history, while the most
+    advanced session keeps the live page/review state.
+    """
+    sessions = store.get("sessions") if isinstance(store.get("sessions"), dict) else {}
+    groups: Dict[str, List[Dict[str, Any]]] = {}
+    for session in sessions.values():
+        if not isinstance(session, dict) or session.get("state") not in ACTIVE_STATES:
+            continue
+        queue_id = clean_text(session.get("queue_id"), 100)
+        if queue_id:
+            groups.setdefault(queue_id, []).append(session)
+    changed = 0
+    updated_at = utc_now()
+    for group in groups.values():
+        if len(group) < 2:
+            continue
+        winner = sorted(group, key=_session_survival_rank, reverse=True)[0]
+        for duplicate in group:
+            if duplicate is winner:
+                continue
+            duplicate.update({
+                "state": "cancelled",
+                "review": None,
+                "confirmation": None,
+                "last_error": "",
+                "last_message": f"Superseded by durable session {winner.get('session_id')} for the same queue item.",
+                "superseded_by": clean_text(winner.get("session_id"), 100),
+                "updated_at": updated_at,
+            })
+            changed += 1
+    return changed
+
+
 def load_store(root: Path) -> Dict[str, Any]:
     path = store_path(root)
     try:
@@ -437,6 +496,8 @@ def load_store(root: Path) -> Dict[str, Any]:
         base["sessions"] = {}
     if not isinstance(base.get("issues"), list):
         base["issues"] = []
+    if _collapse_active_session_duplicates(base):
+        write_store(root, base)
     return base
 
 
@@ -775,16 +836,9 @@ def create_session(root: Path, job: Dict[str, Any], mode: str = "per_role", queu
             session for session in store.get("sessions", {}).values()
             if isinstance(session, dict)
             and clean_text(session.get("queue_id"), 100) == clean_queue_id
-            and (
-                clean_text((session.get("job") or {}).get("id"), 160) == clean_job_id
-                or safe_url((session.get("job") or {}).get("url")) == clean_job_url
-            )
         ]
         if matching:
-            matching.sort(
-                key=lambda session: timestamp(session.get("updated_at")) or timestamp(session.get("created_at")) or 0,
-                reverse=True,
-            )
+            matching.sort(key=_session_survival_rank, reverse=True)
             session = matching[0]
             # A worker restart or repeated queue click must reattach to the
             # same durable session. Creating another session for one queue ID

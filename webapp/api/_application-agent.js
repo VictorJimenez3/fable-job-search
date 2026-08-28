@@ -497,6 +497,12 @@ function publicReview(value) {
   const review = {...value};
   review.fields = Array.isArray(review.fields) ? review.fields.slice(0, 250).map(field => ({
     field_id: clean(field?.field_id, 160), label: clean(field?.label, 500),
+    question: clean(field?.question, 1200), group_question: clean(field?.group_question, 500),
+    group_key: clean(field?.group_key, 500), option_label: clean(field?.option_label, 500),
+    grouped: Boolean(field?.grouped),
+    field_ids: Array.isArray(field?.field_ids) ? field.field_ids.map(item => clean(item, 160)).filter(Boolean).slice(0, 80) : [],
+    selected_field_ids: Array.isArray(field?.selected_field_ids) ? field.selected_field_ids.map(item => clean(item, 160)).filter(Boolean).slice(0, 80) : [],
+    option_labels: Array.isArray(field?.option_labels) ? field.option_labels.map(item => clean(item, 500)).filter(Boolean).slice(0, 80) : [],
     category: clean(field?.category, 80), type: clean(field?.type, 32),
     required: Boolean(field?.required), sensitive: Boolean(field?.sensitive),
     value: clean(field?.value, 20000), answer_id: clean(field?.answer_id, 100),
@@ -637,6 +643,48 @@ async function updateQueue(access, payload) {
   const queue = queueDocument(current.value);
   const now = new Date().toISOString();
   let item = null;
+  if (payload.action === "queue_many") {
+    const jobs = (Array.isArray(payload.jobs) ? payload.jobs : [])
+      .slice(0, 80).map(safeJob).filter(Boolean);
+    if (!jobs.length) throw new Error("at least one valid job snapshot required");
+    const collapsed = collapseActiveQueueDuplicates(queue.items);
+    const results = [];
+    let changed = collapsed.changed;
+    for (const job of jobs) {
+      if (["expired", "filled"].includes(job.posting_status)) {
+        results.push({job_id: job.id, error: "posting is no longer open"});
+        continue;
+      }
+      const existing = queue.items.find(candidate => ACTIVE_QUEUE_STATES.has(candidate.state)
+        && (candidate.job?.id === job.id || queueJobIdentity(candidate) === queueJobIdentity(job)));
+      if (existing) {
+        results.push({job_id: job.id, item: publicQueueItem(existing), duplicate: true});
+        continue;
+      }
+      const queued = publicQueueItem({
+        queue_id: crypto.randomBytes(14).toString("hex"), state: "queued", session_id: "",
+        message: "Waiting for the paired Mac browser", error: "", created_at: now,
+        updated_at: now, job, blockers: [], review: null, confirmation: null,
+      });
+      queue.items.unshift(queued);
+      results.push({job_id: job.id, item: queued, duplicate: false});
+      changed = true;
+    }
+    queue.items = queue.items.slice(0, MAX_QUEUE);
+    if (changed) {
+      const written = await writeAppDocument(current, "queue", {items: queue.items});
+      const byId = new Map(queueDocument(written.value).items.map(value => [value.queue_id, value]));
+      for (const result of results) {
+        if (result.item && byId.has(result.item.queue_id)) result.item = byId.get(result.item.queue_id);
+      }
+    }
+    return {
+      items: results,
+      queued: results.filter(result => result.item && !result.duplicate).length,
+      duplicates: results.filter(result => result.duplicate).length,
+      collapsed: collapsed.cancelled,
+    };
+  }
   if (payload.action === "queue") {
     const job = safeJob(payload.job);
     if (!job) throw new Error("valid job snapshot required");
@@ -873,10 +921,12 @@ async function readView(access, view, sessionId = "") {
   }
   const result = await appDocument(access, "queue");
   const queue = queueDocument(result.value);
+  const collapsed = collapseActiveQueueDuplicates(queue.items);
+  if (collapsed.changed) await writeAppDocument(result, "queue", {items: queue.items});
   if (view === "session") {
-    return {version: VERSION, connected: true, storage: result.storage, session: queue.items.find(item => item.session_id === clean(sessionId, 100)) || null};
+    return {version: VERSION, connected: true, storage: result.storage, collapsed: collapsed.cancelled.length, session: queue.items.find(item => item.session_id === clean(sessionId, 100)) || null};
   }
-  return {version: VERSION, connected: true, storage: result.storage, items: queue.items.map(publicQueueItem)};
+  return {version: VERSION, connected: true, storage: result.storage, collapsed: collapsed.cancelled.length, items: queue.items.map(publicQueueItem)};
 }
 
 module.exports = async (req, res) => {
@@ -905,8 +955,8 @@ module.exports = async (req, res) => {
       await writeAppDocument(current, "pairing", {tokens});
       res.status(200).json({ok: true}); return;
     }
-    if (action === "queue" || action === "queue_update") {
-      res.status(200).json({ok: true, ...(await updateQueue(access, {...payload, action: action === "queue" ? "queue" : "queue_update"}))}); return;
+    if (action === "queue" || action === "queue_many" || action === "queue_update") {
+      res.status(200).json({ok: true, ...(await updateQueue(access, {...payload, action}))}); return;
     }
     if (action === "recover") { res.status(200).json({ok: true, ...(await recoverQueue(access, payload))}); return; }
     if (action === "confirm") {

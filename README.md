@@ -19,7 +19,8 @@ and notification setting.
 **[→ Alert issues](../../issues?q=is%3Aissue+label%3Aradar-alerts)** ·
 **[→ Roadmap](ROADMAP.md)** ·
 **[→ RSS feed](docs/feed.xml)** ·
-**[→ Cross-CLI handoff notes](docs/CLI_HANDOFF.md)**
+**[→ Cross-CLI handoff notes](docs/CLI_HANDOFF.md)** ·
+**[→ Resume Studio CLI guide](docs/RESUME_CLI.md)**
 
 The friendly Vercel URL is the canonical production door. Production deploys
 run from `claude/newgrad-job-search-system-9gbj9k` and promote the newest build
@@ -630,6 +631,16 @@ Resume Studio is the private Victor-first application harness. It reads the
 radar's local job snapshot plus the ignored `CV/` directory and writes all
 prompts, drafts, PDFs, and review reports under `CV/.resume_studio/`.
 
+Its local CLI also provides a quota-free Resume Bank path. `resume-studio bank`
+lists unique reusable PDFs, while `resume-studio offline-tailor` deterministically
+ranks existing PDFs by role track, role family, title overlap, target-term
+coverage, sector, and artifact approval. It copies the selected PDF unchanged
+to `CV/tailored/offline/victor_jimenez_<target-company>.pdf`; it does not invoke
+Codex or pretend to have rewritten the document. By default only explicitly
+approved tailored winners are eligible. `--include-review` exposes historical
+or review-pending matches for inspection, never as silent automatic choices.
+The exact copy/paste commands are in [the Resume Studio CLI guide](docs/RESUME_CLI.md).
+
 The production platform now exposes the same workflow as one owner-only
 **Resume Studio** workspace. From any Jobs row or role drawer, choose
 **tailor** to open the posting in that workspace; the cloud page keeps the
@@ -689,6 +700,17 @@ Start it from the repository:
 ```bash
 .venv/bin/python scripts/resume_studio.py
 ```
+
+For an offline existing-resume match instead of a new generated draft:
+
+```bash
+.venv/bin/python -m radar.cli resume-studio bank
+.venv/bin/python -m radar.cli resume-studio offline-tailor \
+  --company "Acme" --title "Machine Learning Engineer"
+```
+
+These commands still work when Codex's five-hour or weekly usage window is
+exhausted. New resume writing/revisions still require provider availability.
 
 For the production button to work without starting it manually after every
 login, install the owner Mac service once:
@@ -766,9 +788,12 @@ it to compare every saved version. **Google onward** is the default current
 quality era, while **all history** reveals legacy experiments. Each new run
 keeps a private snapshot of the selected posting,
 remains visible after switching to another role, and names its PDF with the
-company (for example, `mayo_clinic_resume_ai.pdf`). Preview responses also send
-that filename to the browser/Preview app, so downloads do not fall back to
-`resume.pdf`. Project metadata uses `|` as its compact separator. TICC is
+owner and company (for example, `victor_jimenez_mayo_clinic.pdf`). Preview
+responses also send that filename to the browser/Preview app, so downloads do
+not fall back to `resume.pdf`. Recent primary PDFs are copied to the local
+`CV/tailored/` folder, one newest usable file per company; `CV/.resume_studio/`
+still retains the private run history and diagnostics. Project metadata uses
+`|` as its compact separator. TICC is
 permanently excluded from every generated or workshop-edited resume, while
 the local source files remain untouched. Open a saved posting snapshot from
 its card when the source text was captured. Failed and in-progress runs remain
@@ -841,6 +866,15 @@ creates drafts in Resume Bank. Successful queueing moves each role from **To
 apply** into the **To tailor** pipeline lane. It never marks a role Applied or
 submits an application. Individual roles can be removed from the batch before
 queueing.
+
+For the Notion workflow, **Tailor all To tailor** finds every current,
+non-terminal role whose latest synced tracker stage is `To tailor`. It
+preselects the full set, asks for one explicit confirmation because a large
+batch can consume substantial Codex allowance, and queues one private draft per
+role. It never submits applications or changes a role to Applied. The platform
+uses the repository's latest Notion sync, so run the existing Notion
+tracker-sync/backfill first if the count is stale. The private cloud queue
+retains up to 500 items and serializes cloud writes safely.
 
 For Victor's Notion tracker, add a `To tailor` option to the Stage status
 column if it is not already present. Notion's API cannot create status options;
@@ -1063,12 +1097,14 @@ reason recorded in `winner_artifact`). A compiling tailored PDF is therefore
 never silently presented as the best version when the control comparison is
 negative or incomplete.
 
-Open **Workshop** on a completed run to edit education, skills, experience,
+Select **Edit resume** on a saved version in Resume bank to open the protected
+Workshop directly from the platform. It edits education, skills, experience,
 projects, and leadership lines without touching the original PDF. Saving a
-line creates a unique rendered revision; the AI writing partner returns
-source-grounded candidates for approval, and revision history can revert to an
-earlier draft. The current Mac exposes one approved lane: the Codex CLI pinned
-to `gpt-5.6-luna`. The critic panel uses four role-labeled Codex calls; it is
+line creates a unique rendered revision; manual edits are local and do not use
+Codex, while the AI writing partner returns source-grounded candidates for
+approval. Revision history can revert to an earlier draft. The current Mac
+exposes one approved lane: the Codex CLI pinned to `gpt-5.6-luna`. The critic
+panel uses four role-labeled Codex calls; it is
 deliberately not described as an independent vendor review.
 
 Reviewer output is normalized before rendering: repeated selections for one

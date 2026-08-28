@@ -47,6 +47,80 @@ TRACKER_STAGE_ORDER = {
     "not_pursuing": 9,
 }
 
+AUTOPILOT_CHOICE_STAGES = {"saved", "to_tailor"}
+AUTOPILOT_TERMINAL_POSTING_STATES = {"expired", "filled", "closed"}
+
+
+def autopilot_choices(applied: list, jobs: dict) -> list:
+    """Build a compact, deduplicated execution feed from owner choices.
+
+    ``saved`` is displayed as "To apply" in Job Radar, so it is already the
+    owner's apply decision. The feed intentionally excludes Maybe and every
+    terminal tracker/posting state. It carries enough posting text for Resume
+    Studio without making the extension download the 90+ MB jobs database.
+    """
+    candidates = []
+    for entry in applied:
+        if not isinstance(entry, dict):
+            continue
+        stage = str(entry.get("stage") or entry.get("status") or "").strip().lower().replace("-", "_").replace(" ", "_")
+        if stage not in AUTOPILOT_CHOICE_STAGES:
+            continue
+        if entry.get("tracker_removed_at") or entry.get("notion_deleted_at") or entry.get("notion_archived"):
+            continue
+        job = jobs.get(str(entry.get("id") or ""))
+        if not isinstance(job, dict):
+            continue
+        posting_status = str(job.get("posting_status") or "").strip().lower()
+        if posting_status in AUTOPILOT_TERMINAL_POSTING_STATES:
+            continue
+        urls = [job.get("url"), entry.get("url"), *(job.get("alternate_urls") or [])]
+        urls = [str(value) for value in urls if str(value or "").startswith(("https://", "http://"))]
+        if not urls:
+            continue
+        def url_priority(value: str) -> tuple:
+            host = value.lower()
+            aggregator = any(name in host for name in ("jobright.ai", "simplify.jobs", "linkedin.com", "indeed.com"))
+            direct = any(name in host for name in (
+                "ashbyhq.com", "greenhouse.io", "greenhouse.com", "lever.co",
+                "smartrecruiters.com", "myworkdayjobs.com", "myworkdaysite.com",
+                "jobs.apple.com", "amazon.jobs",
+            ))
+            return (2 if direct else 0 if aggregator else 1, -len(value))
+        url = sorted(set(urls), key=url_priority, reverse=True)[0]
+        choice_at = int(entry.get("tailored_at") or entry.get("stage_changed_at") or entry.get("applied_at") or 0)
+        candidates.append({
+            "id": str(job.get("id") or entry.get("id") or ""),
+            "company": str(job.get("company") or entry.get("company") or "")[:240],
+            "title": str(job.get("title") or entry.get("title") or "")[:360],
+            "url": url[:2500],
+            "locations": list(job.get("locations") or entry.get("locations") or [])[:12],
+            "description": str(job.get("description") or "")[:20000],
+            "score": job.get("score") or entry.get("score") or 0,
+            "posted_at": job.get("posted_at"),
+            "posting_status": posting_status,
+            "posting_family_id": str(job.get("posting_family_id") or ""),
+            "stage": stage,
+            "choice_at": choice_at,
+            "tailored_at": int(entry.get("tailored_at") or 0),
+            "stage_changed_at": int(entry.get("stage_changed_at") or 0),
+        })
+    winners = {}
+    for item in candidates:
+        identity = item.get("posting_family_id") or canonical_url(item.get("url")) or item.get("id")
+        current = winners.get(identity)
+        rank = (item.get("stage") == "to_tailor", int(item.get("choice_at") or 0), float(item.get("score") or 0))
+        current_rank = (
+            current.get("stage") == "to_tailor", int(current.get("choice_at") or 0), float(current.get("score") or 0)
+        ) if current else None
+        if current is None or rank > current_rank:
+            winners[identity] = item
+    return sorted(
+        winners.values(),
+        key=lambda item: (int(item.get("choice_at") or 0), float(item.get("score") or 0), item.get("company") or ""),
+        reverse=True,
+    )
+
 
 def _stage_rank(stage: str | None) -> int:
     return TRACKER_STAGE_ORDER.get(str(stage or "applied").lower(), 1)

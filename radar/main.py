@@ -783,6 +783,7 @@ def notion_backfill() -> int:
     n = sync_applied(applied)
     archived = archive_terminal_pages(applied, jobs)
     state.save("applied.json", applied)
+    state.save("autopilot_choices.json", applied_mod.autopilot_choices(applied, jobs))
     print(f"notion-backfill: pulled {pulled} stage change(s), pushed {n}, "
           f"archived {archived} terminal page(s)")
     return 0
@@ -802,6 +803,7 @@ def tracker_sync() -> int:
     pushed = sync_applied(applied)
     archived = archive_terminal_pages(applied, jobs)
     state.save("applied.json", applied)
+    state.save("autopilot_choices.json", applied_mod.autopilot_choices(applied, jobs))
     print(
         f"tracker-sync: pulled {pulled} stage change(s), pushed {pushed}, "
         f"archived {archived} terminal/duplicate page(s)"
