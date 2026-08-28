@@ -150,6 +150,8 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "jr_extension_reload_pending" in frontend and "reconnectApplicationAgentAfterReload" in frontend
     assert "queueing…" in frontend
     assert "queueActionId" in frontend
+    assert "expandedQueueId" in frontend and "toggleApplicationAgentDetails" in frontend
+    assert 'aria-expanded="${expanded}"' in frontend
     assert "!isTerminalPosting(job)" in frontend
     assert "/api/application-agent" in routing and "application_agent=1" in routing
     assert "compactApplicationReviewFields" in frontend
