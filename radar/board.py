@@ -13,12 +13,12 @@ from __future__ import annotations
 
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import requests
 
-from .alerts import API, LABEL, _headers, format_line, lane_label
 from . import lifecycle, state
+from .alerts import API, LABEL, _headers, format_line, lane_label
 from .config import env, github_owner, github_repo, profile, profile_id
 
 MASTER_TITLE = "📌 Job Radar — master board (every open role, one place)"
@@ -101,7 +101,7 @@ def update_master_board(jobs_state: dict, applied: list) -> str | None:
             line = line.replace("- [ ]", "- [x]", 1)
         lines.append(line)
     pages = _paginate(lines)
-    stamp = datetime.now(timezone.utc).strftime("%a %b %d, %H:%M UTC")
+    stamp = datetime.now(UTC).strftime("%a %b %d, %H:%M UTC")
     body = MASTER_HEADER.format(count=len(lines), stamp=stamp) + "\n" + pages[0]
 
     r = requests.get(f"{API}/repos/{repo}/issues",
@@ -175,7 +175,7 @@ def post_daily_best(jobs_state: dict, top_n: int = 10) -> str | None:
         return None
     repo = github_repo()
     now = int(time.time())
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
     title = f"🏆 Best of {today}"
 
     rows = [r for r in jobs_state.values()
@@ -264,7 +264,7 @@ def post_email_batch(alert_history: list[dict], limit: int | None = None) -> str
         return None
     rows = pending[:limit]
     repo = github_repo()
-    stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    stamp = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
     title_prefix = "Internship" if profile_id() == "internship" else "Job Radar"
     title = f"📬 {title_prefix} batch — {stamp} ({len(rows)} roles)"
     from .culture import load as culture_load

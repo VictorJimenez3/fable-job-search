@@ -9,13 +9,13 @@ from __future__ import annotations
 
 import time
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import requests
 
 from . import lifecycle, state
-from .llm import complete as llm_complete
 from .config import env, github_owner, github_repo
+from .llm import complete as llm_complete
 
 API = "https://api.github.com"
 WEEK = 7 * 86400
@@ -54,13 +54,13 @@ def build_memo() -> str:
 
     apply_rate = f"{len(week_applied)}/{len(week_alerts)}" if week_alerts else "0/0"
     lines = [
-        f"_Week of {datetime.now(timezone.utc).strftime('%b %d, %Y')}_",
+        f"_Week of {datetime.now(UTC).strftime('%b %d, %Y')}_",
         "",
         "## 📊 Pipeline",
         f"- **{len(week_alerts)} alerts** fired · **{len(week_applied)} applications** sent "
         f"(alert→apply: {apply_rate})",
         f"- {len(fresh)} eligible roles posted in the last 7 days across the market",
-        f"- Sector heat this week: " + ", ".join(f"{s} {n}" for s, n in sector_heat.most_common(5)),
+        "- Sector heat this week: " + ", ".join(f"{s} {n}" for s, n in sector_heat.most_common(5)),
     ]
     if runs:
         ok_runs = sum(1 for r in runs if now - r["ts"] <= WEEK)
@@ -96,7 +96,7 @@ def build_memo() -> str:
     if stale:
         lines += ["", "## ⏰ Follow up (applied 5–21 days ago, no marked response)"]
         lines += [f"- **{a['company']}** — {a['title'][:70]} "
-                  f"(applied {datetime.fromtimestamp(a['applied_at'], timezone.utc).strftime('%b %d')})"
+                  f"(applied {datetime.fromtimestamp(a['applied_at'], UTC).strftime('%b %d')})"
                   for a in stale[:10]]
     if ht_hiring:
         lines += ["", "## 🏥 Healthtech hiring right now",
@@ -131,7 +131,7 @@ def post_memo() -> str | None:
     if not token:
         print(memo)
         return None
-    title = f"🧭 Weekly strategy — {datetime.now(timezone.utc).strftime('%b %d, %Y')}"
+    title = f"🧭 Weekly strategy — {datetime.now(UTC).strftime('%b %d, %Y')}"
     r = requests.post(f"{API}/repos/{github_repo()}/issues", headers=_headers(), timeout=20,
                       json={"title": title, "body": memo, "labels": ["radar-strategy"],
                             "assignees": [github_owner()]})

@@ -3259,3 +3259,46 @@ production Sheet backend remains the current `vmj@njit.edu` path. The runtime
 regression test now exercises two queue-scoped written contexts, a reusable
 global answer, and their distinct cloud IDs; the full repository suite remains
 green.
+
+## 201. Persist job snapshots sparsely and stop before GitHub's blob limit (2026-08-28)
+
+The production crawl reached GitHub's 100 MiB per-file limit even though the
+snapshot was already serialized as compact JSON. The failure happened after a
+successful discovery pass, and the generic push-race retry rebuilt the same
+oversized file until the workflow timed out. This made the committed datastore
+unavailable for new discoveries without any scoring or crawler bug.
+
+Generated job records now omit only reconstructible defaults (empty optional
+text/collections, false flags whose readers already default false, the normal
+open lifecycle value, and the default new-grad profile). When
+`score_dimensions_raw` exactly equals the displayed dimensions, only the
+displayed copy is stored; a disabled score section still persists the distinct
+raw values. Loading remains backward-compatible and no job, score reason,
+posting evidence, lifecycle event, or nondefault value is removed.
+
+`state.save` also refuses to replace a generated jobs snapshot above 95 MiB,
+leaving a safety margin below GitHub's hard 100 MiB blob boundary and
+preserving the prior file on failure. The limit can be lowered for tests or an
+emergency diagnostic with `RADAR_MAX_JOB_SNAPSHOT_BYTES`; raising it above the
+repository host's limit is not a production recovery strategy. Continued
+growth beyond this margin requires an explicit state shard or the verified
+Postgres cutover rather than another serialization shortcut.
+
+## 202. Gate releases on tests and recover cancelled automation (2026-08-28)
+
+The production Vercel workflow previously deployed on a source push in
+parallel with the test workflow. A real run promoted a platform commit while
+the repository-wide tests for that same commit were failing. The deploy now
+starts from a successful `tests` workflow run (manual dispatch remains
+available only on the production branch), checks out the tested SHA, and
+verifies an exact build-SHA marker in the friendly alias response. A static
+feature-string check is not sufficient evidence that the intended build is
+live.
+
+The radar has also exceeded its crawl timeout repeatedly. Workflow recovery
+now treats cancelled/timed-out runs as actionable, reruns the complete run
+when no failed jobs exist, and escalates after one retry. Failure issues use
+paginated repository queries, so the 100-issue API page cannot create duplicate
+repair issues in this repository's large public issue backlog. Frequent
+generated-state writers re-run their idempotent operation from a fresh remote
+snapshot after a push race instead of rebasing generated JSON.

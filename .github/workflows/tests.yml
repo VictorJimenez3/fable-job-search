@@ -31,6 +31,11 @@ jobs:
       - run: uv run pytest tests/ -q
       - run: uv run python -m compileall -q radar tests migrations
       - run: uv run ruff check radar/db radar/cli.py radar/http.py radar/gmail_api.py radar/worker.py tests/test_http_security.py tests/test_vnext_foundation.py tests/test_gmail_api.py tests/test_worker.py
+      - name: Lint the complete radar package
+        # The package is the production crawler/API surface. E501 remains a
+        # documented backlog in legacy scripts; correctness lint is enforced
+        # everywhere the deployed service runs.
+        run: uv run ruff check radar --select E4,E7,E9,F,I,B --ignore E501
       - name: Verify stored score coverage
         run: uv run python -m radar.main score-health
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6

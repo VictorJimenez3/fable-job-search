@@ -12,9 +12,40 @@ runs.json      [{ts, new_jobs, alerts, sources: {...}}]  — last 200 run summar
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 from .config import STATE_DIR, profile_id
+
+# GitHub rejects blobs larger than 100 MiB. Leave enough room for a crawl to
+# report and recover before a generated commit reaches that hard boundary.
+DEFAULT_MAX_JOB_SNAPSHOT_BYTES = 95 * 1024 * 1024
+
+# These fields have the same defaults at every read boundary. Persisting them
+# on tens of thousands of historical rows adds megabytes without preserving
+# information. Keep this list deliberately narrow and compatibility-tested.
+_JOB_DEFAULTS = {
+    "description": "",
+    "llm_note": "",
+    "salary": "",
+    "remote": False,
+    "alert_ok": False,
+    "explicit_new_grad": False,
+    "early_career_possible": False,
+    "ranking_adjustment": 0,
+    "source_url": "",
+    "posting_status": "open",
+    "profile": "new_grad",
+}
+_JOB_EMPTY_FIELDS = {
+    "alternate_urls",
+    "source_url_variants",
+    "source_board_variants",
+    "locations",
+    "link_resolution",
+    "posting_identity",
+    "posting_family_id",
+}
 
 
 def _prefix(namespace: str | None = None) -> str:
@@ -35,6 +66,43 @@ def load(name: str, default, namespace: str | None = None):
         return json.load(f)
 
 
+def _compact_job_record(record: object) -> object:
+    """Return a sparse, lossless-on-read copy of one generated job record."""
+    if not isinstance(record, dict):
+        return record
+    # Only fully scored crawler output is guaranteed to have every omitted
+    # default reconstructible. Keep hand-authored/legacy rows byte-for-byte
+    # compatible with callers that still inspect optional keys directly.
+    if not record.get("score_version") or record.get("manual_added"):
+        return record
+    compact = dict(record)
+    if compact.get("score_dimensions_raw") == compact.get("score_dimensions"):
+        compact.pop("score_dimensions_raw", None)
+    for key, default in _JOB_DEFAULTS.items():
+        if compact.get(key) == default:
+            compact.pop(key, None)
+    for key in _JOB_EMPTY_FIELDS:
+        if compact.get(key) in (None, "", [], {}):
+            compact.pop(key, None)
+    return compact
+
+
+def _prepared(name: str, obj: object) -> object:
+    if name != "jobs.json" or not isinstance(obj, dict):
+        return obj
+    return {key: _compact_job_record(value) for key, value in obj.items()}
+
+
+def _max_job_snapshot_bytes() -> int:
+    value = os.getenv("RADAR_MAX_JOB_SNAPSHOT_BYTES", "").strip()
+    if not value:
+        return DEFAULT_MAX_JOB_SNAPSHOT_BYTES
+    try:
+        return max(1, int(value))
+    except ValueError as exc:
+        raise ValueError("RADAR_MAX_JOB_SNAPSHOT_BYTES must be an integer") from exc
+
+
 def save(name: str, obj, namespace: str | None = None) -> None:
     STATE_DIR.mkdir(parents=True, exist_ok=True)
     p = _path(name, namespace)
@@ -43,9 +111,16 @@ def save(name: str, obj, namespace: str | None = None) -> None:
         # The jobs snapshot is a committed production artifact. Compact JSON
         # keeps a full score rebuild below GitHub's 100 MB blob limit while
         # remaining ordinary JSON for the web app and Mac companion.
-        json.dump(obj, f, sort_keys=True, ensure_ascii=False,
+        json.dump(_prepared(name, obj), f, sort_keys=True, ensure_ascii=False,
                   separators=(",", ":"))
         f.write("\n")
+    if name == "jobs.json" and tmp.stat().st_size > _max_job_snapshot_bytes():
+        size = tmp.stat().st_size
+        tmp.unlink()
+        raise ValueError(
+            f"generated job snapshot is {size:,} bytes; limit is "
+            f"{_max_job_snapshot_bytes():,}. Compact or shard state before publishing"
+        )
     tmp.replace(p)
 
 

@@ -7,7 +7,6 @@ import os
 import sys
 from collections.abc import Callable
 from pathlib import Path
-from typing import Optional
 
 import typer
 
@@ -267,20 +266,14 @@ def studio_bank(
         typer.echo(json.dumps(value, default=str, sort_keys=True))
         return
     typer.echo(
-        "Resume Bank: %d unique PDF(s), %d approved, %d need review"
-        % (
-            value["unique_resumes"], value["approved_resumes"],
-            value["review_required_resumes"],
-        )
+        f"Resume Bank: {value['unique_resumes']} unique PDF(s), "
+        f"{value['approved_resumes']} approved, {value['review_required_resumes']} need review"
     )
     for entry in value["entries"]:
         state = "APPROVED" if entry["safe_for_application"] else "REVIEW"
         typer.echo(
-            "%s  %s  %s — %s\n  %s"
-            % (
-                state, entry["run_id"], entry["company"] or "Unknown company",
-                entry["title"] or "Unknown role", entry["pdf_filename"],
-            )
+            f"{state}  {entry['run_id']}  {entry['company'] or 'Unknown company'} — "
+            f"{entry['title'] or 'Unknown role'}\n  {entry['pdf_filename']}"
         )
 
 
@@ -289,7 +282,7 @@ def studio_offline_tailor(
     job_id: str = typer.Option("", "--job-id", help="Use a role from local state/jobs.json."),
     company: str = typer.Option("", "--company", help="Target company for an ad-hoc role."),
     title: str = typer.Option("", "--title", help="Target job title for an ad-hoc role."),
-    description_file: Optional[Path] = typer.Option(
+    description_file: Path | None = typer.Option(  # noqa: B008 — Typer requires declaration-time metadata
         None, "--description-file", exists=True, dir_okay=False, readable=True,
         help="Optional plain-text job description used for better matching.",
     ),
@@ -329,16 +322,13 @@ def studio_offline_tailor(
     elif value.get("selected"):
         selected = value["selected"]
         typer.echo(
-            "Offline match: %.2f  %s — %s\nSource run: %s (%s)\nOutput: %s\nCodex calls: 0"
-            % (
-                float(selected.get("score") or 0), selected.get("company") or "Unknown company",
-                selected.get("title") or "Unknown role", selected.get("run_id") or "",
-                selected.get("pdf_filename") or "resume PDF",
-                value.get("output_path") or "not copied (--no-copy)",
-            )
+            f"Offline match: {float(selected.get('score') or 0):.2f}  "
+            f"{selected.get('company') or 'Unknown company'} — {selected.get('title') or 'Unknown role'}\n"
+            f"Source run: {selected.get('run_id') or ''} ({selected.get('pdf_filename') or 'resume PDF'})\n"
+            f"Output: {value.get('output_path') or 'not copied (--no-copy)'}\nCodex calls: 0"
         )
         for reason in selected.get("reasons") or []:
-            typer.echo("  - %s" % reason)
+            typer.echo(f"  - {reason}")
         if selected.get("needs_owner_review"):
             typer.echo("WARNING: this source is not approved; review it before applying.", err=True)
     else:
@@ -365,7 +355,7 @@ def studio_approve(
     if json_output:
         typer.echo(json.dumps(value, default=str, sort_keys=True))
     else:
-        typer.echo("Approved %s: %s" % (run_id, value.get("pdf_filename") or "resume PDF"))
+        typer.echo(f"Approved {run_id}: {value.get('pdf_filename') or 'resume PDF'}")
 
 
 @studio_app.command("usage")
@@ -378,12 +368,9 @@ def studio_usage(json_output: bool = typer.Option(False, "--json")) -> None:
         typer.echo(json.dumps(value, default=str, sort_keys=True))
     else:
         typer.echo(
-            "Since %s: %d Codex call(s), %d observed token(s).\n%s\n"
+            f"Since {value['week_start']}: {value['codex_calls']} Codex call(s), "
+            f"{value['codex_tokens']} observed token(s).\n{value['note']}\n"
             "Bank, export, approve, and offline-tailor do not call Codex."
-            % (
-                value["week_start"], value["codex_calls"], value["codex_tokens"],
-                value["note"],
-            )
         )
 
 

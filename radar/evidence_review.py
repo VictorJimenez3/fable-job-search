@@ -12,8 +12,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
-from typing import Any, Dict
-
+from typing import Any
 
 REVIEW_VERSION = "evidence-review-v4"
 REVIEW_FILENAME = "evidence_review.json"
@@ -29,17 +28,17 @@ def review_path(studio_dir: Path) -> Path:
     return studio_dir / REVIEW_FILENAME
 
 
-def _write_reviews(studio_dir: Path, payload: Dict[str, Any]) -> None:
+def _write_reviews(studio_dir: Path, payload: dict[str, Any]) -> None:
     studio_dir.mkdir(parents=True, exist_ok=True)
     target = review_path(studio_dir)
     temporary = target.with_name(".%s.%s.tmp" % (target.name, hashlib.sha256(
-        dt.datetime.now(dt.timezone.utc).isoformat().encode()
+        dt.datetime.now(dt.UTC).isoformat().encode()
     ).hexdigest()[:10]))
     temporary.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
     temporary.replace(target)
 
 
-def load_reviews(studio_dir: Path) -> Dict[str, Any]:
+def load_reviews(studio_dir: Path) -> dict[str, Any]:
     """Load review overrides, tolerating an absent or malformed private file."""
     try:
         payload = json.loads(review_path(studio_dir).read_text())
@@ -70,11 +69,11 @@ def question_id(term: str) -> str:
     return "capability:%s:%s" % ((normalized or "unknown")[:48], digest)
 
 
-def upsert_questions(studio_dir: Path, gaps: list[Dict[str, Any]]) -> Dict[str, Any]:
+def upsert_questions(studio_dir: Path, gaps: list[dict[str, Any]]) -> dict[str, Any]:
     """Record posting-raised capability questions without repeating a topic."""
     payload = load_reviews(studio_dir)
     questions = payload.setdefault("questions", {})
-    now = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    now = dt.datetime.now(dt.UTC).isoformat(timespec="seconds")
     changed = False
     for gap in gaps:
         term = str(gap.get("term") or "").strip().lower()
@@ -120,7 +119,7 @@ def answer_question(
     response: str,
     answer: str = "",
     where_when: str = "",
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Save Victor's durable answer; only a concrete `used` answer authorizes claims."""
     payload = load_reviews(studio_dir)
     questions = payload.setdefault("questions", {})
@@ -136,7 +135,7 @@ def answer_question(
         raise ValueError("context answer is too long")
     if response == "used" and (len(answer) < 20 or len(where_when) < 3):
         raise ValueError("used answers need what you did plus where and when")
-    now = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    now = dt.datetime.now(dt.UTC).isoformat(timespec="seconds")
     item.update({
         "response": response,
         "answer": answer,
@@ -156,7 +155,7 @@ def add_question_hint(
     label: str,
     note: str = "",
     source_url: str = "",
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Attach an owner-supplied place to investigate without authorizing a claim."""
     payload = load_reviews(studio_dir)
     questions = payload.setdefault("questions", {})
@@ -178,7 +177,7 @@ def add_question_hint(
         (str(existing.get("label") or "").lower(), str(existing.get("source_url") or "").lower()) == fingerprint
         for existing in hints if isinstance(existing, dict)
     ):
-        now = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+        now = dt.datetime.now(dt.UTC).isoformat(timespec="seconds")
         hints.append({
             "id": "hint:" + hashlib.sha256((str(item_id) + "\n" + label + "\n" + source_url).encode()).hexdigest()[:12],
             "label": label,
@@ -195,7 +194,7 @@ def add_question_hint(
     return payload
 
 
-def dismiss_question_hint(studio_dir: Path, item_id: str, label: str) -> Dict[str, Any]:
+def dismiss_question_hint(studio_dir: Path, item_id: str, label: str) -> dict[str, Any]:
     """Remember that a capability was not used in one suggested place."""
     payload = load_reviews(studio_dir)
     item = payload.setdefault("questions", {}).get(str(item_id or ""))
@@ -208,12 +207,12 @@ def dismiss_question_hint(studio_dir: Path, item_id: str, label: str) -> Dict[st
     if label.lower() not in {str(value).lower() for value in dismissed}:
         dismissed.append(label)
         item["dismissed_hints"] = dismissed[-30:]
-        payload["updated_at"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+        payload["updated_at"] = dt.datetime.now(dt.UTC).isoformat(timespec="seconds")
         _write_reviews(studio_dir, payload)
     return payload
 
 
-def owner_answer_nodes(reviews: Dict[str, Any]) -> list[Dict[str, Any]]:
+def owner_answer_nodes(reviews: dict[str, Any]) -> list[dict[str, Any]]:
     """Project confirmed owner Q&A into the evidence graph with explicit provenance."""
     nodes = []
     for item in (reviews.get("questions") or {}).values():
@@ -241,7 +240,7 @@ def owner_answer_nodes(reviews: Dict[str, Any]) -> list[Dict[str, Any]]:
     return nodes
 
 
-def _normalized_review(value: Any) -> Dict[str, Any]:
+def _normalized_review(value: Any) -> dict[str, Any]:
     if not isinstance(value, dict):
         return {}
     status = str(value.get("status") or "unreviewed").lower().strip()
@@ -258,7 +257,7 @@ def _normalized_review(value: Any) -> Dict[str, Any]:
     return review
 
 
-def apply_reviews(graph: Dict[str, Any], reviews: Dict[str, Any]) -> Dict[str, Any]:
+def apply_reviews(graph: dict[str, Any], reviews: dict[str, Any]) -> dict[str, Any]:
     """Annotate graph nodes and enforce rejected/superseded claims.
 
     Public sources remain corroboration by default. A user may explicitly
@@ -289,7 +288,7 @@ def apply_reviews(graph: Dict[str, Any], reviews: Dict[str, Any]) -> Dict[str, A
     return graph
 
 
-def review_summary(graph: Dict[str, Any]) -> Dict[str, Any]:
+def review_summary(graph: dict[str, Any]) -> dict[str, Any]:
     counts = {status: 0 for status in REVIEW_STATUSES}
     blocked = 0
     usable = 0

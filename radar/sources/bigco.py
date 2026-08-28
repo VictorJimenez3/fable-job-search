@@ -141,9 +141,9 @@ def fetch_microsoft(entry: dict) -> list[Job]:
                 company="Microsoft", title=j.get("title", ""),
                 url=f"https://jobs.careers.microsoft.com/global/en/job/{jid}",
                 source="microsoft", ats="microsoft",
-                locations=[l for l in locs if l],
+                locations=[location for location in locs if location],
                 posted_at=ts,
-                remote=any("remote" in str(l).lower() for l in locs),
+                remote=any("remote" in str(location).lower() for location in locs),
             ))
     return out
 
@@ -176,7 +176,7 @@ def fetch_apple(entry: dict) -> list[Job]:
             if not jid or jid in seen:
                 continue
             seen.add(jid)
-            locs = [l.get("name", "") for l in (j.get("locations") or [])]
+            locs = [location.get("name", "") for location in (j.get("locations") or [])]
             posted = j.get("postingDate")
             ts = None
             if posted:
@@ -189,7 +189,7 @@ def fetch_apple(entry: dict) -> list[Job]:
                 company="Apple", title=j.get("postingTitle", ""),
                 url=f"https://jobs.apple.com/en-us/details/{jid}/{slug}",
                 source="apple", ats="apple",
-                locations=[l for l in locs if l],
+                locations=[location for location in locs if location],
                 posted_at=ts,
                 remote=bool(j.get("homeOffice")),
             ))
@@ -224,14 +224,14 @@ def fetch_google(entry: dict) -> list[Job]:
             if not jid or jid in seen:
                 continue
             seen.add(jid)
-            locs = [l.get("display", "") for l in (j.get("locations") or [])]
+            locs = [location.get("display", "") for location in (j.get("locations") or [])]
             out.append(Job(
                 company="Google", title=j.get("title", ""),
                 url=j.get("apply_url") or f"https://careers.google.com/jobs/results/{jid.split('/')[-1]}",
                 source="google", ats="google",
-                locations=[l for l in locs if l],
+                locations=[location for location in locs if location],
                 posted_at=None,
-                remote=any("remote" in l.lower() for l in locs),
+                remote=any("remote" in location.lower() for location in locs),
             ))
     return out
 

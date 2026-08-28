@@ -19,3 +19,14 @@ def test_workflow_recovery_retries_once_and_gives_codex_handoff():
     assert "run_attempt > 1" in workflow
     assert "Tell Codex: fix workflow run" in workflow
     assert "actions: write" in workflow
+    assert "cancelled" in workflow
+    assert "github.paginate" in workflow
+    assert 'actions/runs/{run_id}/rerun"' in workflow
+
+
+def test_vercel_deploy_waits_for_green_tests_and_verifies_the_exact_build():
+    workflow = (ROOT / ".github/workflows/vercel-production.yml").read_text()
+    assert "workflow_run:" in workflow
+    assert "github.event.workflow_run.conclusion == 'success'" in workflow
+    assert "github.event.workflow_run.head_sha" in workflow
+    assert "job-radar-build" in workflow

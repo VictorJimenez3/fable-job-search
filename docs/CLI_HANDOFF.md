@@ -35,6 +35,32 @@ Before changing the radar, read these in order:
 
 ### Current change (2026-08-28)
 
+- **Release and automation recovery hardened:** Vercel production deployment
+  now follows a successful `tests` workflow, checks out that exact tested SHA,
+  injects an immutable build marker, and verifies the friendly alias serves the
+  same marker. The old independent push trigger could deploy while tests for
+  the same commit failed. `workflow-recovery` now retries cancelled/timed-out
+  runs once, reruns a complete cancelled run, paginates open repair-issue
+  lookup, and escalates after the retry. Web actions and tracker sync retry
+  from a fresh remote snapshot and re-run their idempotent operation instead
+  of rebasing generated JSON. This is DECISION #202.
+- **Production snapshot capacity repaired:** the 2026-08-28 14:28 UTC crawl
+  completed discovery but GitHub rejected its 100.95 MB `state/jobs.json`, and
+  its generic retry timed out rebuilding the same oversized blob. Generated
+  job persistence now removes only reconstructible defaults and a duplicate
+  `score_dimensions_raw` copy when it exactly equals `score_dimensions`.
+  Nondefault values, disabled-dimension raw values, jobs, reasons, evidence,
+  and lifecycle history remain intact. Writes preserve the previous snapshot
+  and fail at 95 MiB so the workflow reports capacity before GitHub rejects a
+  commit. This is DECISION #201; further growth requires sharding or the
+  verified Postgres cutover, not a larger production limit.
+- **Repository quality pass completed:** the production `radar/` package now
+  uses one consistent Python 3.12 typing/timezone style, has correctness lint
+  across the complete package, and removes concrete dead imports, ambiguous
+  variables, unsafe exception handling, and duplicate entity tokens. The
+  repository navigation now has a single Start here section, and the verified
+  local contract is 579 tests, compileall, package lint, and the canonical
+  frontend mirror check.
 - **Application Agent storage fallback fixed:** the Postgres application-state
   path now writes only its sanitized database payload. It no longer calls the
   Drive Markdown mirror without a Drive folder, which was the source of the
@@ -52,7 +78,7 @@ Before changing the radar, read these in order:
   canonical `webapp/index.html` after the Autopilot UI changes. The required
   byte-for-byte invariant now passes.
 - **Validation:** targeted application/cloud/essay/extension coverage is green
-  (46 tests). The full suite is green after the mirror repair (574 tests); the
+  (46 tests). The full suite is green after the mirror repair (579 tests); the
   pre-repair run had only the expected mirror mismatch.
 
 ### Resume Studio local access (implemented 2026-08-27)

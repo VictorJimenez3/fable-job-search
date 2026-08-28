@@ -29,18 +29,16 @@ from __future__ import annotations
 
 import re
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import requests
 
 from . import state
 from .config import env, profile
-
+from .score import role_bucket
 
 TRACKER_CLOSED_RETENTION_DAYS = 2
 TRACKER_NOT_PURSUING_RETENTION_DAYS = 2
-
-from .score import role_bucket
 
 PAGES_API = "https://api.notion.com/v1/pages"
 SEARCH_API = "https://api.notion.com/v1/search"
@@ -143,7 +141,7 @@ def build_payload(entry: dict, schema: dict) -> dict:
     if props.get("Position") == "multi_select":
         payload_props["Position"] = {"multi_select": _position_options(entry["title"])}
     if props.get("Apply date") == "date" and entry.get("stage", "applied") == "applied":
-        payload_props["Apply date"] = {"date": {"start": datetime.now(timezone.utc).strftime("%Y-%m-%d")}}
+        payload_props["Apply date"] = {"date": {"start": datetime.now(UTC).strftime("%Y-%m-%d")}}
     if props.get("Text") == "rich_text":
         lane = entry.get("profile") or "new_grad"
         payload_props["Text"] = {"rich_text": [{"text": {"content":
@@ -170,14 +168,14 @@ def verify_connection() -> None:
         schema = resolve_database(token)
     except RuntimeError as e:
         print(f"FAIL: {e}")
-        raise SystemExit(1)
+        raise SystemExit(1) from None
     except requests.HTTPError as e:
         if e.response is not None and e.response.status_code == 401:
             print("FAIL: token is invalid or was revoked. Fix: generate a new secret at "
                   "notion.so/my-integrations and update the NOTION_TOKEN repo secret.")
         else:
             print(f"FAIL: unexpected error resolving database: {e}")
-        raise SystemExit(1)
+        raise SystemExit(1) from None
 
     props = schema["properties"]
     has_stage = props.get("Stage") == "status" or props.get("Status") == "status"
@@ -194,7 +192,8 @@ def verify_connection() -> None:
                         if n in props]
     optional_missing = [n for n in ("Position", "Apply date", "Text", "Job URL", "Location")
                         if n not in props]
-    print(f"    will populate: Company, Stage" + (f", {', '.join(optional_present)}" if optional_present else ""))
+    suffix = f", {', '.join(optional_present)}" if optional_present else ""
+    print(f"    will populate: Company, Stage{suffix}")
     if optional_missing:
         print(f"    skipping (not in this database): {', '.join(optional_missing)}")
     print("Applied-logging is armed.")
@@ -498,12 +497,12 @@ def _sync_applied_notion(applied: list) -> int:
                   f"{entry.get('company')}")
             continue
         props: dict = {stage_prop: {"status": {"name": name}}}
-        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        today = datetime.now(UTC).strftime("%Y-%m-%d")
         if target == "applied" and schema["properties"].get("Apply date") == "date":
             props["Apply date"] = {"date": {"start": today}}
         if target in _RESPONSE_STAGES and schema["properties"].get("Response date") == "date":
             resp = entry.get("responded_at")
-            when = (datetime.fromtimestamp(resp, timezone.utc).strftime("%Y-%m-%d")
+            when = (datetime.fromtimestamp(resp, UTC).strftime("%Y-%m-%d")
                     if resp else today)
             props["Response date"] = {"date": {"start": when}}
         try:

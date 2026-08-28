@@ -3,11 +3,11 @@
 from __future__ import annotations
 
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from xml.sax.saxutils import escape
 
-from .config import DOCS_DIR, github_repo, profile, profile_id
 from . import lifecycle
+from .config import DOCS_DIR, github_repo, profile, profile_id
 from .provenance import alternate_link_label, source_links
 
 
@@ -43,7 +43,7 @@ def render_dashboard(jobs: dict, registry: dict, runs: list) -> str:
 
     active = sum(1 for e in registry.values() if e["status"] == "active")
     last = runs[-1] if runs else {}
-    ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    ts = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
 
     lines = [
         f"# 🎯 Job Radar — {'internship' if profile_id() == 'internship' else 'new-grad'} dashboard",
@@ -89,7 +89,7 @@ def render_rss(alert_history: list, jobs: dict | None = None) -> str:
             continue
         if jobs is None and lifecycle.is_terminal(a):
             continue
-        pub = datetime.fromtimestamp(a.get("alerted_at", 0), timezone.utc).strftime("%a, %d %b %Y %H:%M:%S GMT")
+        pub = datetime.fromtimestamp(a.get("alerted_at", 0), UTC).strftime("%a, %d %b %Y %H:%M:%S GMT")
         title = "[{}] {} — {}".format(a["score"], a["company"], a["title"])
         loc = (a.get("locations") or ["?"])[0]
         desc = "{} · {} · via {}".format(a.get("sector") or "tech", loc, a["source"])
