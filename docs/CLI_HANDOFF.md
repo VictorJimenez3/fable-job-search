@@ -54,6 +54,13 @@ Before changing the radar, read these in order:
   and fail at 95 MiB so the workflow reports capacity before GitHub rejects a
   commit. This is DECISION #201; further growth requires sharding or the
   verified Postgres cutover, not a larger production limit.
+- **Repository quality pass completed:** the production `radar/` package now
+  uses one consistent Python 3.12 typing/timezone style, has correctness lint
+  across the complete package, and removes concrete dead imports, ambiguous
+  variables, unsafe exception handling, and duplicate entity tokens. The
+  repository navigation now has a single Start here section, and the verified
+  local contract is 579 tests, compileall, package lint, and the canonical
+  frontend mirror check.
 - **Application Agent storage fallback fixed:** the Postgres application-state
   path now writes only its sanitized database payload. It no longer calls the
   Drive Markdown mirror without a Drive folder, which was the source of the
@@ -71,7 +78,7 @@ Before changing the radar, read these in order:
   canonical `webapp/index.html` after the Autopilot UI changes. The required
   byte-for-byte invariant now passes.
 - **Validation:** targeted application/cloud/essay/extension coverage is green
-  (46 tests). The full suite is green after the mirror repair (574 tests); the
+  (46 tests). The full suite is green after the mirror repair (579 tests); the
   pre-repair run had only the expected mirror mismatch.
 
 ### Resume Studio local access (implemented 2026-08-27)
