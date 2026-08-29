@@ -663,13 +663,17 @@ The exact copy/paste commands are in [the Resume Studio CLI guide](docs/RESUME_C
 The production platform now exposes the same workflow as one owner-only
 **Resume Studio** workspace. From any Jobs row or role drawer, choose
 **tailor** to open the posting in that workspace; the cloud page keeps the
-posting selection, private-engine connection, queue, run status, and resume
-bank together. It calls the Mac engine over a loopback-only bridge when the
-Mac is awake, and falls back to Radar/title matching plus posting and apply
-links when it is not. The bridge accepts browser requests only from the two
-production Vercel doors and the Pages mirror. The source CV, evidence graph,
-provider sessions, and generation/workshop execution remain under the ignored
-local `CV/.resume_studio/` boundary. When Victor chooses **sync local bank**,
+  posting selection, private-engine connection, queue, run status, and resume
+  bank together. Start the Mac Resume Studio service first, then open the
+  cloud page: it first tries the exact-origin loopback API automatically, so
+  the engine can be ready before the cloud workspace loads. If a browser blocks
+  private-network access, the visible **connect Mac engine** button opens the
+  existing nonce-verified bridge as a user gesture. If the Mac is not awake,
+  the page falls back to Radar/title matching plus posting and apply links. The
+  local service remains loopback-only and accepts browser requests only from
+  the allowlisted production/Pages origins. The source CV, evidence graph,
+  provider sessions, and generation/workshop execution remain under the ignored
+  local `CV/.resume_studio/` boundary. When Victor chooses **sync local bank**,
 the owner-only cloud API copies bank metadata plus generated PDFs, previews,
 reports, and posting snapshots into an app-created private Google Drive folder;
 the cloud UI never publishes a public artifact URL or pretends an offline run
@@ -679,7 +683,8 @@ history** keeps older experiments available, and sync follows the selected
 scope.
 
 The workspace has two safe operating modes. If the Mac engine is awake, a
-tailoring request runs immediately through the loopback bridge. If it is
+tailoring request runs immediately through the direct loopback connection (or
+its popup bridge fallback). If it is
 asleep, single tailoring and **Tailor today** batches can still be saved to
 the owner-only private cloud queue; the next open production Studio tab with
 the Mac companion connected dispatches up to two items and mirrors their
@@ -886,7 +891,7 @@ apply** into the **To tailor** pipeline lane. It never marks a role Applied or
 submits an application. Individual roles can be removed from the batch before
 queueing.
 
-For the Notion workflow, **Tailor all To tailor** finds every current,
+For the Notion workflow, **Autopilot To tailor** finds every current,
 non-terminal role whose latest synced tracker stage is `To tailor`. It
 preselects the full set, asks for one explicit confirmation because a large
 batch can consume substantial Codex allowance, and queues one private draft per

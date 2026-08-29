@@ -33,6 +33,23 @@ Before changing the radar, read these in order:
   `docs/feed.xml`, or `docs/internships/`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
+### Cloud-first Resume Studio connection (implemented 2026-08-29)
+
+- The production Resume Studio page now follows the intended engine-first
+  flow: start the Mac service, then open the cloud workspace. It tries the
+  exact-origin loopback API automatically for health, bank, matching, queue,
+  context, and run-status requests, so the cloud page no longer depends on a
+  popup being permitted during page load.
+- The existing nonce-verified popup bridge remains the fallback when a browser
+  blocks private-network loopback access. The offline notice now exposes a
+  user-gesture **connect Mac engine** button, which lets that fallback open
+  reliably. The local service still binds to loopback and sends CORS headers
+  only to the explicit production/Pages allowlist; CV files and generated
+  artifacts remain on the Mac.
+- The frontend mirror must still be copied after any canonical HTML change.
+  Validate the direct path with the health request and preflight checks, then
+  run the full repository suite before publishing the production branch.
+
 ### Current change (2026-08-28)
 
 - **Release and automation recovery hardened:** Vercel production deployment

@@ -15165,7 +15165,7 @@ UI_HTML = UI_HTML.replace(
 class StudioHandler(BaseHTTPRequestHandler):
     manager: RunManager = RunManager()
     # The cloud Job Radar page is only a control plane. The engine remains
-    # bound to loopback; its same-origin bridge page mediates cloud requests.
+    # bound to loopback; cloud requests are limited to this exact allowlist.
     DEFAULT_BRIDGE_ORIGINS = {
         "https://job-radar-newgrad.vercel.app",
         "https://job-radar-vmj-8946s-projects.vercel.app",
@@ -15183,18 +15183,49 @@ class StudioHandler(BaseHTTPRequestHandler):
         }
         return configured or cls.DEFAULT_BRIDGE_ORIGINS
 
+    @classmethod
+    def cors_paths(cls, path: str) -> bool:
+        """Return whether *path* is a private API route safe for cloud CORS."""
+        parsed_path = urlparse(path).path
+        return parsed_path.startswith("/api/application/") or parsed_path in {
+            "/api/health", "/api/library", "/api/match", "/api/context",
+            "/api/context/job", "/api/context/answer", "/api/context/hint",
+            "/api/context/hint/dismiss", "/api/run", "/api/run/approve",
+            "/api/workshop", "/api/workshop/edit", "/api/workshop/ai",
+            "/api/workshop/revert",
+        }
+
+    @classmethod
+    def cors_headers_for(cls, origin: str, path: str) -> Dict[str, str]:
+        """Build exact-origin CORS headers without exposing files or artifacts."""
+        normalized = str(origin or "").strip().rstrip("/")
+        if not cls.cors_paths(path):
+            return {}
+        if normalized.startswith("chrome-extension://"):
+            allowed = normalized
+            private_network = False
+        elif normalized in cls.bridge_origins():
+            allowed = normalized
+            private_network = True
+        else:
+            return {}
+        headers = {
+            "Access-Control-Allow-Origin": allowed,
+            "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Vary": "Origin",
+        }
+        if private_network:
+            headers["Access-Control-Allow-Private-Network"] = "true"
+        return headers
+
     def end_headers(self) -> None:
         self.send_header("Cache-Control", "no-store, private")
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("X-Frame-Options", "DENY")
         self.send_header("Referrer-Policy", "no-referrer")
-        origin = str(self.headers.get("Origin") or "")
-        cors_paths = self.path.startswith("/api/application/") or urlparse(self.path).path in {"/api/run", "/api/library"}
-        if cors_paths and origin.startswith("chrome-extension://"):
-            self.send_header("Access-Control-Allow-Origin", origin)
-            self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-            self.send_header("Access-Control-Allow-Headers", "Content-Type")
-            self.send_header("Vary", "Origin")
+        for name, value in self.cors_headers_for(self.headers.get("Origin", ""), self.path).items():
+            self.send_header(name, value)
         super().end_headers()
 
     def valid_host(self) -> bool:
@@ -15213,16 +15244,10 @@ class StudioHandler(BaseHTTPRequestHandler):
     def do_OPTIONS(self) -> None:
         if self.reject_bad_host():
             return
-        if self.path.startswith("/api/application/") or urlparse(self.path).path in {"/api/run", "/api/library"}:
-            origin = str(self.headers.get("Origin") or "")
-            if origin.startswith("chrome-extension://"):
-                self.send_response(HTTPStatus.NO_CONTENT)
-                self.send_header("Access-Control-Allow-Origin", origin)
-                self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-                self.send_header("Access-Control-Allow-Headers", "Content-Type")
-                self.send_header("Vary", "Origin")
-                self.end_headers()
-                return
+        if self.cors_headers_for(self.headers.get("Origin", ""), self.path):
+            self.send_response(HTTPStatus.NO_CONTENT)
+            self.end_headers()
+            return
         self.send_json({"error": "cross-origin access is disabled"}, HTTPStatus.METHOD_NOT_ALLOWED)
 
     def log_message(self, format: str, *args) -> None:  # keep terminal output useful

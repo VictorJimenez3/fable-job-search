@@ -453,6 +453,23 @@ def test_resume_studio_ui_consumes_production_job_fragment_privately():
     assert "https://job-radar-newgrad.vercel.app" in rs.UI_HTML
 
 
+def test_resume_studio_cloud_cors_is_exact_origin_and_private_network_scoped():
+    production = "https://job-radar-newgrad.vercel.app"
+    headers = rs.StudioHandler.cors_headers_for(production, "/api/health")
+
+    assert headers["Access-Control-Allow-Origin"] == production
+    assert headers["Access-Control-Allow-Private-Network"] == "true"
+    assert rs.StudioHandler.cors_headers_for(
+        "https://not-the-radar.example", "/api/health",
+    ) == {}
+    assert rs.StudioHandler.cors_headers_for(
+        production, "/runs/abcdef123456/resume.pdf",
+    ) == {}
+    assert rs.StudioHandler.cors_headers_for(
+        "chrome-extension://owned-extension", "/api/application/health",
+    )["Access-Control-Allow-Origin"] == "chrome-extension://owned-extension"
+
+
 def test_resume_studio_exposes_a_canonical_lock_and_private_render_boundary(tmp_path):
     lock = rs.canonical_resume_lock(tmp_path)
     assert lock["locked"] is True

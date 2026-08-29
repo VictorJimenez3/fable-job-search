@@ -3302,3 +3302,21 @@ paginated repository queries, so the 100-issue API page cannot create duplicate
 repair issues in this repository's large public issue backlog. Frequent
 generated-state writers re-run their idempotent operation from a fresh remote
 snapshot after a push race instead of rebasing generated JSON.
+
+## 203. Cloud Resume Studio connects to an already-running Mac engine (2026-08-29)
+
+The production Resume Studio page now attempts the private engine's exact-origin
+loopback API when the page loads. This matches the intended operating order:
+start the launchd-backed Mac service first, then use the cloud page as the
+control surface. The local service remains bound to loopback and allows CORS
+only for the explicit production/Pages origins, including the private-network
+preflight required by modern browsers. It exposes only the bounded Resume
+Studio/application API routes to those origins; CV files and generated
+artifacts remain local.
+
+The existing nonce-verified popup bridge remains a fallback for browsers that
+block direct loopback access. The cloud UI exposes a user-gesture **connect Mac
+engine** action so that fallback is reliable without opening a popup during
+automatic page initialization. Direct access is preferred because it works
+when the engine is already running and does not require the cloud page to
+create a second window.

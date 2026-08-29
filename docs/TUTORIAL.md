@@ -235,11 +235,12 @@ fixture and regression test.
 Resume Studio has one user-facing cloud control plane. In production, sign in
 as `@VictorJimenez3`, choose a role, then use **Tailor**, the drawer's
 **Resume** tab, or the owner-only **Resume Studio** tab. The cloud workspace
-keeps the posting, match, queue, run status, and resume bank together. It opens
-a small loopback bridge to the Mac engine only when private matching or
-generation is requested. The source CV/evidence graph and provider execution
-remain local, while the owner can sync generated bank artifacts into a private
-Google Drive folder for cloud viewing.
+keeps the posting, match, queue, run status, and resume bank together. Start
+the Mac service first; the cloud workspace automatically tries the exact
+loopback API when it loads. If the browser blocks private-network access, click
+**connect Mac engine** once to open the nonce-verified bridge. The source
+CV/evidence graph and provider execution remain local, while the owner can sync
+generated bank artifacts into a private Google Drive folder for cloud viewing.
 
 From the repository on the Mac, start:
 
@@ -292,7 +293,7 @@ Pipeline's **To tailor** lane, does not change them to Applied, and never
 submits an application. If you use Victor's Notion tracker, add a `To tailor`
 status option manually; Notion's API cannot create status options.
 
-Use **Tailor all To tailor** when you want the Notion queue processed as a
+Use **Autopilot To tailor** when you want the Notion queue processed as a
 batch. It uses every current, non-terminal role whose latest synced tracker
 stage is `To tailor`, preselects the full set, and asks you to confirm before
 queueing because a large batch can use substantial Codex allowance. It creates
