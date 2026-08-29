@@ -33,6 +33,21 @@ Before changing the radar, read these in order:
   `docs/feed.xml`, or `docs/internships/`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
+### Current change (verified 2026-08-29)
+
+- **GitHub Pages retired:** the repository's legacy Pages setting was disabled
+  after removing the `docs/platform/index.html` mirror and `docs/.nojekyll`.
+  `GET https://victorjimenez3.github.io/fable-job-search/platform/` now returns
+  HTTP 404, and the Pages API returns 404. The automatic Pages run triggered by
+  the teardown push failed at deployment because Pages was already disabled;
+  this is expected and is not an application-test failure.
+- **Vercel remains the production door:** commit `e63dd724` is live at
+  `https://job-radar-newgrad.vercel.app/`; the gated test run
+  `33276780846` and Vercel deployment run `33276822082` both passed, and the
+  friendly alias verification returned HTTP 200.
+- **Validation:** local Python tests (586), compileall, frontend typecheck,
+  Vitest, ESLint, and the production frontend build all passed before publish.
+
 ### Cloud-first Resume Studio connection (implemented 2026-08-29)
 
 - The production Resume Studio page now follows the intended engine-first
