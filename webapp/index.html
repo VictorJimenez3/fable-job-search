@@ -2677,7 +2677,7 @@ const jobById = id => S.jobs[id] || S.applied.find(a=>a.id===id);
 const RESUME_STUDIO_LOCAL_ORIGIN = "http://127.0.0.1:4317";
 // Owner-defined quality-era boundary: the first Google run after the Studio overhaul.
 const RESUME_BANK_CURRENT_ERA_START = "2026-08-08T19:03:28Z";
-let resumeBridgeWindow = null, resumeBridgeReady = null, resumeBridgeSequence = 0, resumeBridgeNonce = "";
+let resumeBridgeWindow = null, resumeBridgeReady = null, resumeBridgeSequence = 0, resumeBridgeNonce = "", resumeBridgePrimed = false;
 const resumeBridgePending = new Map();
 window.addEventListener("message", event => {
   const data = event.data || {};
@@ -2713,12 +2713,33 @@ window.addEventListener("message", event => {
   if (data.ok) pending.resolve(data.data);
   else pending.reject(new Error(data.error || "Private Resume Studio request failed"));
 });
+function primeResumeBridge() {
+  if (resumeBridgeWindow && !resumeBridgeWindow.closed) return true;
+  const popup = window.open("", "resume-studio-engine", "popup,width=440,height=220");
+  if (!popup) return false;
+  resumeBridgeWindow = popup;
+  resumeBridgePrimed = true;
+  return true;
+}
+function discardResumeBridgePrime() {
+  if (!resumeBridgePrimed) return;
+  if (resumeBridgeWindow && !resumeBridgeWindow.closed) resumeBridgeWindow.close();
+  resumeBridgeWindow = null;
+  resumeBridgePrimed = false;
+}
 function ensureResumeBridge() {
   if (resumeBridgeReady) return resumeBridgeReady.promise;
-  if (resumeBridgeWindow && !resumeBridgeWindow.closed) return Promise.resolve(resumeBridgeWindow);
-  const popup = window.open(`${RESUME_STUDIO_LOCAL_ORIGIN}/?bridge=1&origin=${encodeURIComponent(location.origin)}`, "resume-studio-engine", "popup,width=440,height=220");
+  const bridgeURL = `${RESUME_STUDIO_LOCAL_ORIGIN}/?bridge=1&origin=${encodeURIComponent(location.origin)}`;
+  let popup = resumeBridgeWindow && !resumeBridgeWindow.closed && resumeBridgePrimed ? resumeBridgeWindow : null;
+  if (resumeBridgeWindow && !resumeBridgeWindow.closed && !resumeBridgePrimed) return Promise.resolve(resumeBridgeWindow);
+  if (popup) {
+    // The window was opened during a user gesture; navigating it later still
+    // works even when the direct loopback request failed asynchronously.
+    popup.location.href = bridgeURL;
+  } else popup = window.open(bridgeURL, "resume-studio-engine", "popup,width=440,height=220");
   if (!popup) return Promise.reject(new Error("The private engine window was blocked. Allow pop-ups for the Radar to connect Resume Studio."));
   resumeBridgeWindow = popup;
+  resumeBridgePrimed = false;
   let resolveReady, rejectReady;
   const promise = new Promise((resolve,reject)=>{resolveReady=resolve;rejectReady=reject;});
   resumeBridgeReady = {promise, resolve:resolveReady, reject:rejectReady};
@@ -3363,34 +3384,53 @@ function testingRoleHTML(row) {
     </div></article>`;
 }
 function studioPath(path) { return RESUME_STUDIO_LOCAL_ORIGIN + path; }
+async function directStudioRequest(path, init) {
+  const response = await fetch(studioPath(path), init);
+  let data = {};
+  try { data = await response.json(); } catch (_) { data = {}; }
+  if (!response.ok) {
+    const error = new Error(data.error || `Private Resume Studio returned ${response.status}`);
+    error.httpStatus = response.status;
+    throw error;
+  }
+  return data;
+}
 async function studioRequest(path, options={}) {
   const method = String(options.method||"GET").toUpperCase();
-  const body = options.body ? JSON.parse(options.body) : {};
+  const body = options.body ? (typeof options.body === "string" ? JSON.parse(options.body) : options.body) : {};
   const requestBody = {...body};
   if (requestBody.job_id && !requestBody.job_snapshot) {
     const selected = jobById(requestBody.job_id);
     if (selected) requestBody.job_snapshot = resumeStudioSnapshot(selected);
   }
-  if (location.protocol === "https:" || !["localhost","127.0.0.1"].includes(location.hostname)) {
-    if (path === "/api/health") return bridgeRequest("health");
-    if (path.startsWith("/api/library")) return bridgeRequest("library", {limit:Number(new URLSearchParams(path.split("?")[1]||"").get("limit")||100)});
-    if (path === "/api/match") return bridgeRequest("match", requestBody);
-    if (path === "/api/context" && method === "GET") return bridgeRequest("context");
-    if (path === "/api/context/job" && method === "POST") return bridgeRequest("context_job", requestBody);
-    if (path === "/api/context/answer" && method === "POST") return bridgeRequest("context_answer", requestBody);
-    if (path === "/api/context/hint" && method === "POST") return bridgeRequest("context_hint", requestBody);
-    if (path === "/api/context/hint/dismiss" && method === "POST") return bridgeRequest("context_hint_dismiss", requestBody);
-    if (path === "/api/run/approve" && method === "POST") return bridgeRequest("approve", requestBody);
-    if (path === "/api/run" && method === "POST") return bridgeRequest("queue", requestBody);
-    if (path === "/api/run" && method === "GET") return bridgeRequest("status", {id:new URLSearchParams(path.split("?")[1]||"").get("id")||""});
-  }
-  const init = {...options, mode:"cors", cache:"no-store", headers:{"content-type":"application/json", ...(options.headers||{})}};
+  const init = {...options, mode:"cors", cache:"no-store", headers:{...(options.headers||{})}};
   if (options.body) init.body = JSON.stringify(requestBody);
-  const response = await fetch(studioPath(path), init);
-  let data = {};
-  try { data = await response.json(); } catch (_) { data = {}; }
-  if (!response.ok) throw new Error(data.error || `Private Resume Studio returned ${response.status}`);
-  return data;
+  if (options.body && !init.headers["content-type"] && !init.headers["Content-Type"]) init.headers["content-type"] = "application/json";
+  const cloudPage = location.protocol === "https:" || !["localhost","127.0.0.1"].includes(location.hostname);
+  if (!cloudPage) return directStudioRequest(path, init);
+  let bridgeAction = "", bridgePayload = requestBody;
+  if (path === "/api/health") bridgeAction = "health";
+  else if (path.startsWith("/api/library")) { bridgeAction = "library"; bridgePayload = {limit:Number(new URLSearchParams(path.split("?")[1]||"").get("limit")||100)}; }
+  else if (path === "/api/match") bridgeAction = "match";
+  else if (path === "/api/context" && method === "GET") bridgeAction = "context";
+  else if (path === "/api/context/job" && method === "POST") bridgeAction = "context_job";
+  else if (path === "/api/context/answer" && method === "POST") bridgeAction = "context_answer";
+  else if (path === "/api/context/hint" && method === "POST") bridgeAction = "context_hint";
+  else if (path === "/api/context/hint/dismiss" && method === "POST") bridgeAction = "context_hint_dismiss";
+  else if (path === "/api/run/approve" && method === "POST") bridgeAction = "approve";
+  else if (path === "/api/run" && method === "POST") bridgeAction = "queue";
+  else if (path === "/api/run" && method === "GET") { bridgeAction = "status"; bridgePayload = {id:new URLSearchParams(path.split("?")[1]||"").get("id")||""}; }
+  try {
+    // The normal path is direct loopback access: start the Mac engine first,
+    // then open the cloud workspace and let it discover the ready service.
+    return await directStudioRequest(path, init);
+  } catch (directError) {
+    // Preserve useful API errors. Only a blocked/unreachable loopback request
+    // should fall back to the user-gesture-enabled popup bridge.
+    if (directError?.httpStatus || !bridgeAction) throw directError;
+    try { return await bridgeRequest(bridgeAction, bridgePayload); }
+    catch (bridgeError) { throw new Error(`Mac engine connection failed: ${directError.message||"direct access unavailable"}; popup fallback failed: ${bridgeError.message||"no response"}`); }
+  }
 }
 function resumeBankKey(entry) { return `${entry?.source||""}:${entry?.entry_id||entry?.run_id||""}`; }
 function resumeBankEntries() {
@@ -4291,13 +4331,16 @@ async function loadResumeEngine() {
     S.testing.engineError = "Start the private Resume Studio service on the Mac to enable evidence-grounded matching and PDF generation.";
     await loadCloudResumeQueue(false);
   }
+  if (S.testing.engine === "online") discardResumeBridgePrime();
   renderStudioWorkspace();
   const notice = $("#studioEngineNotice");
-  if (notice) notice.innerHTML = S.testing.engine === "online"
-    ? `<strong>Private engine connected.</strong> Full source-level matching, generation, workshop edits, and PDFs are available through this page.`
-    : `<strong>Cloud mode is still usable.</strong> ${esc(S.testing.engineError)} ${cloudQueueOnline()?"Drafts can be saved privately and will dispatch when the Mac worker reconnects.":"Connect Google to enable the private queue."} <button class="act" onclick="retryResumeEngine()">retry connection</button>`;
+  if (notice) notice.innerHTML = resumeEngineNoticeHTML();
 }
-function retryResumeEngine() { S.testing.engine="checking"; S.testing.engineError=""; rTesting(); }
+function resumeEngineNoticeHTML() {
+  if (S.testing.engine === "online") return `<strong>Private engine connected.</strong> Full source-level matching, generation, workshop edits, and PDFs are available through this page.`;
+  return `<strong>Cloud mode is still usable.</strong> ${esc(S.testing.engineError||"Start the private Resume Studio service on the Mac; this page will connect to it automatically.")} ${cloudQueueOnline()?"Drafts can be saved privately and will dispatch when the Mac worker reconnects.":"Connect Google to enable the private queue."} <button class="act" onclick="retryResumeEngine()">connect Mac engine</button>`;
+}
+function retryResumeEngine() { S.testing.engine="checking"; S.testing.engineError=""; primeResumeBridge(); rTesting(); }
 async function refreshResumeLibrary(render=true) {
   if (S.testing.engine !== "online" && render) return;
   try {
@@ -4384,7 +4427,7 @@ function rTesting() {
   $("#main").innerHTML = `<section class="testing-hero">
     <span class="chip good">owner only · @${esc(S.auth.login)}</span>
     <h2>Resume Studio</h2>
-    <p class="sub">Choose a production posting, tailor it here, and keep the private evidence graph and generated artifacts behind the owner boundary. The website owns the workflow; the Mac engine is the private generation layer.</p>
+    <p class="sub">Choose a production posting, tailor it here, and keep the private evidence graph and generated artifacts behind the owner boundary. Start the Mac engine first; this cloud workspace connects to it automatically.</p>
     <div class="bar" style="margin:.65rem 0 0"><button class="act primary" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBatch()">Tailor today <span class="chip">${resumeBatchCandidates().length}</span></button><button class="act" onclick="showResumeNotionBatch()">Autopilot To tailor <span class="chip">${resumeNotionTailorCandidates().length}</span></button><button class="act" onclick="showResumeBank()">Resume bank <span class="chip">${resumeBankGroups(resumeBankEntries().filter(resumeBankCurrentEra)).length} jobs</span></button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><span class="sub">${S.testing.cloudBank.status==="online"?"private cloud bank connected":"private cloud bank checking"} · ${S.testing.cloudQueue.status==="online"?`${cloudQueuePendingCount()} private queue item${cloudQueuePendingCount()===1?"":"s"}`:"private queue checking"}</span></div>
     <div id="studioEngineNotice" class="note" style="margin:.65rem 0 0">Checking the private engine…</div>
     ${cloudQueueSummaryHTML()}
@@ -4397,7 +4440,7 @@ function rTesting() {
   $("#testingSort").onchange=()=>{S.testing.sort=$("#testingSort").value;rTesting();};
   renderStudioWorkspace();
   if (S.testing.engine === "checking") loadResumeEngine();
-  else { renderStudioWorkspace(); const notice=$("#studioEngineNotice"); if(notice)notice.innerHTML=S.testing.engine==="online"?`<strong>Private engine connected.</strong> Full source-level matching and PDF generation are available.`:`<strong>Cloud mode is still usable.</strong> ${esc(S.testing.engineError||"Start the private engine on the Mac to generate a draft.")} ${cloudQueueOnline()?"Drafts can be saved privately and will dispatch when the Mac worker reconnects.":"Connect Google to enable the private queue."} <button class="act" onclick="retryResumeEngine()">retry connection</button>`; }
+  else { renderStudioWorkspace(); const notice=$("#studioEngineNotice"); if(notice)notice.innerHTML=resumeEngineNoticeHTML(); }
   if (S.testing.cloudBank.status==="checking") loadCloudResumeBank(false).then(()=>{if(S.tab==="testing"&&!S.testing.bankView)rTesting();});
   if (S.testing.cloudQueue.status==="checking") loadCloudResumeQueue(false).then(()=>{if(S.tab==="testing"&&!S.testing.bankView)rTesting();});
 }
