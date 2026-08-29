@@ -20,8 +20,8 @@ Do not create a competing handoff document. Update the existing owner named in
 
 - Generated files are `state/*.json`, `docs/DASHBOARD.md`, `docs/CULTURE.md`,
   and `docs/feed.xml`. Do not hand-edit them except for a documented repair.
-- `webapp/index.html` is canonical and `docs/platform/index.html` must remain a
-  byte-for-byte copy after frontend changes.
+- `webapp/index.html` is the canonical frontend and Vercel is the supported
+  production web door; do not restore the retired GitHub Pages mirror.
 - Scoring and demotions stay auditable through reason strings. AI may enrich or
   adjust results; it must degrade gracefully and must not become required for
   the deterministic crawler.
@@ -37,7 +37,8 @@ Use the repository virtual environment on this Mac:
 ```bash
 .venv/bin/python -m pytest tests/ -q
 .venv/bin/python -m compileall -q radar tests
-cmp webapp/index.html docs/platform/index.html
+test ! -e docs/platform/index.html
+test ! -e docs/.nojekyll
 ```
 
 Production uses Python 3.12; the checked-in Mac virtual environment currently

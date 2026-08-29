@@ -3351,3 +3351,19 @@ locations. United States expands into states; non-US locations are selectable
 by country; and the drawer shows all locations on multi-location postings.
 This avoids changing crawler queries or location ingestion while making the
 owner's filter choices auditable.
+
+## 205. Retire the duplicate GitHub Pages surface (2026-08-29)
+
+The repository's legacy branch-backed GitHub Pages site is retired. Vercel is
+the supported production platform because it serves the canonical `webapp/`
+frontend together with the OAuth/API backend; the Pages copy was a stale,
+static duplicate that required a second public door and a byte-for-byte mirror
+maintenance rule. The repository Pages setting is disabled, the `docs/`
+static mirror and `.nojekyll` marker are removed, and the extension/Resume
+Studio origin allowlists no longer trust `victorjimenez3.github.io`.
+
+This supersedes DECISIONS #27's two-door arrangement for Victor's repository.
+The tokenless fallback remains as a defensive behavior when a non-production
+static host lacks the Vercel backend, but this repository no longer publishes
+or documents a GitHub Pages deployment. Existing Vercel aliases, repository
+state, Actions crawls, and issue-based workflows are unchanged.

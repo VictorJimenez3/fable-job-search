@@ -19,8 +19,9 @@ handles time-sensitive enrichment nightly. The repo itself is the database.
 
 ## 🖥️ The Platform (start here)
 
-**https://victorjimenez3.github.io/fable-job-search/platform/** — the whole
-system as a website, refreshed automatically by every crawl:
+**https://job-radar-newgrad.vercel.app/** — the supported production website.
+The former GitHub Pages publication and static mirror have been retired; use
+the Vercel door for the current platform and its signed-in workflows.
 
 The production Vercel door also exposes the staged **vNext** workspace at
 [`/vnext/`](https://job-radar-newgrad.vercel.app/vnext/). It is the faster,
@@ -150,9 +151,10 @@ stay signed in together; OAuth may briefly use the original callback host, but
 the account center returns you to the URL you started from. Google consent includes least-privilege Drive file
 access and creates your personal workbook with separate Applications,
 Internships, and Preferences tabs; if you started with GitHub, use **Connect Google + create my
-Sheet** from the same signed-in session. There is no password login. On the
-Pages mirror, actions use owner-reviewed prefilled GitHub issues and the site
-never asks the browser to store a repository token.
+Sheet** from the same signed-in session. There is no password login. The
+supported Vercel door handles the current signed-in workflow and never asks the
+browser to store a repository token. There is no GitHub Pages deployment for
+this repository.
 The private Google-backed tracker is one workbook per connected Google account;
 the Sheet is never sent to the browser wholesale. GitHub checkboxes keep working
 exactly as before; Vercel writes to the connected user’s Sheet.

@@ -165,8 +165,9 @@ Today the multi-user answer is fork-per-person (DECISIONS #25,
 docs/FORKING.md): perfect isolation, ~10 min of setup. The long-term
 direction is **"log in with GitHub, then seamless"** for anyone:
 
-- **Phase 1 (now):** fork + enable Actions/Pages + paste `NOTION_TOKEN`.
-  Works, documented, zero shared infrastructure.
+- **Phase 1 (now):** fork + enable Actions + paste `NOTION_TOKEN`; deploy the
+  website to Vercel when a web UI is needed. Works, documented, zero shared
+  infrastructure.
 - **Phase 2:** a setup wizard *inside the platform* — signed-in non-owners
   see a "Get your own radar" flow that forks via API, enables workflows,
   and walks through the Notion integration. Same architecture, less friction.

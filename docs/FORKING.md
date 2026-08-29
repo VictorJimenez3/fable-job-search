@@ -10,8 +10,8 @@ and zero Notion access with the original.
 
 ## 1. Fork (2 min)
 
-1. Fork this repo on GitHub (keep it **public** — that's what makes Pages and
-   raw-state reads free).
+1. Fork this repo on GitHub (keep it **public** — that keeps raw-state reads
+   free and lets Actions run without a private-hosting setup).
 2. In your fork: *Actions* tab → enable workflows. The `radar` crawl starts
    running every ~30 min; the first run bootstraps your own `state/`.
 
@@ -40,11 +40,9 @@ profile.yaml to one that exists in your database.
 
 ## 4. Website (2 min)
 
-Fork → *Settings → Pages* → Deploy from branch → your default branch,
-`/docs` folder. Your platform appears at
-`https://<you>.github.io/<repo>/platform/` and **self-configures from the
-URL** — no code edits needed. Writes work tokenlessly (buttons open a
-prefilled issue; the radar obeys you, the fork owner).
+GitHub Pages is no longer a supported deployment for this project. Deploy the
+`webapp/` directory to your own Vercel project and use the environment settings
+in the next section; the Vercel backend provides the current signed-in flow.
 
 ## 5. Optional: signed-in one-click writes (Vercel, ~10 min)
 

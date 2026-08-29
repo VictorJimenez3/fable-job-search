@@ -10,8 +10,6 @@ and notification setting.
 (easy public shortcut; existing Vercel URL remains active and sign-in stays in sync) ·
 **[→ 🧪 ChemE internship board](https://job-radar-cheme.vercel.app)**
 (independent jobs and pipeline; same Notion Applications database) ·
-**[→ Pages mirror](https://victorjimenez3.github.io/fable-job-search/platform/)**
-(same app, zero backend — writes via prefilled issues; what forks get for free) ·
 **[→ User guide / tutorial](docs/TUTORIAL.md)** ·
 **[→ Live dashboard](docs/DASHBOARD.md)** ·
 **[→ Culture Compass](docs/CULTURE.md)** ·
@@ -29,7 +27,7 @@ and notification setting.
 | Understand the system | [`CLAUDE.md`](CLAUDE.md) → [`README.md`](README.md) → [`DECISIONS.md`](DECISIONS.md) |
 | Use the owner workflow | [`TUTORIAL.md`](docs/TUTORIAL.md) and [`RESUME_CLI.md`](docs/RESUME_CLI.md) |
 | Operate or repair automation | [`CLI_HANDOFF.md`](docs/CLI_HANDOFF.md), then the relevant `.github/workflows/` file |
-| Run checks locally | `.venv/bin/python -m pytest tests/ -q` · `.venv/bin/python -m compileall -q radar tests` · `cmp webapp/index.html docs/platform/index.html` |
+| Run checks locally | `.venv/bin/python -m pytest tests/ -q` · `.venv/bin/python -m compileall -q radar tests` · `test ! -e docs/platform/index.html` · `test ! -e docs/.nojekyll` |
 | Publish a validated change | Push a feature branch and open a PR into `claude/newgrad-job-search-system-9gbj9k`; production deploys follow a green `tests` run |
 
 Generated state and dashboard files are outputs, not hand-edit surfaces. Change
@@ -680,7 +678,7 @@ The production platform now exposes the same workflow as one owner-only
   existing nonce-verified bridge as a user gesture. If the Mac is not awake,
   the page falls back to Radar/title matching plus posting and apply links. The
   local service remains loopback-only and accepts browser requests only from
-  the allowlisted production/Pages origins. The source CV, evidence graph,
+  the allowlisted production Vercel origins. The source CV, evidence graph,
   provider sessions, and generation/workshop execution remain under the ignored
   local `CV/.resume_studio/` boundary. When Victor chooses **sync local bank**,
 the owner-only cloud API copies bank metadata plus generated PDFs, previews,

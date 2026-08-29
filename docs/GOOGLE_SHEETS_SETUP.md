@@ -7,8 +7,8 @@ user's refresh grant and Sheet ID stay inside the encrypted, HttpOnly Vercel
 session cookie; frontend JavaScript cannot read them. The private
 owner-controlled **Accounts** tab is an optional durable identity-linking layer,
 not a prerequisite for creating or using a personal tracker. GitHub-only users
-can connect Google later; GitHub Pages cannot provide this private multi-user
-mode.
+can connect Google later; a static deployment without the Vercel backend cannot
+provide this private multi-user mode.
 
 ## What the adapter does
 

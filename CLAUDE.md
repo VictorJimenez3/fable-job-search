@@ -29,7 +29,7 @@ are. Match the change to the doc that owns it:
 Topic-specific runbooks that already exist — extend these, don't fork them:
 `docs/AI_SETUP.md` (LLM enablement), `docs/FORKING.md`, `docs/SHPE.md`,
 `docs/CULTURE.md`. `docs/DASHBOARD.md`, `docs/feed.xml`,
-`docs/internships/`, `docs/platform/`, and `state/*.json` are **generated** —
+`docs/internships/` and `state/*.json` are **generated** —
 never hand-edit except a documented repair.
 
 ## House rules (from DECISIONS — violate none)
@@ -40,8 +40,8 @@ never hand-edit except a documented repair.
   crawl and all deterministic analysis (gates, scoring, posting scraping in
   `radar/posting.py`) run with zero keys. AI is optional (`docs/AI_SETUP.md`).
 - Never scrape LinkedIn — construct search URLs only (#16).
-- `docs/platform/index.html` must stay a byte copy of `webapp/index.html`
-  (`cp webapp/index.html docs/platform/index.html` after any webapp edit).
+- Vercel is the supported production platform door; the retired GitHub Pages
+  mirror and its static copy must not be restored.
 - Marquee list is duplicated in `profile.yaml` and `webapp` `S.marquee` —
   keep both in sync.
 
@@ -70,4 +70,4 @@ GitHub/Vercel access controls remain the enforcement mechanism.
 - `radar/quality.py` — LLM verdicts + SPA-host fetch + pasted-JD grading
 - `radar/llm.py` — provider abstraction (Anthropic / OpenAI-compatible)
 - `radar/sources/` — aggregators + ATS fetchers
-- `webapp/index.html` — the platform (mirror: `docs/platform/index.html`)
+- `webapp/index.html` — the canonical platform frontend served by Vercel

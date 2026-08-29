@@ -4,10 +4,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
 
-def test_platform_mirror_matches_canonical_frontend():
-    canonical = (ROOT / "webapp" / "index.html").read_bytes()
-    mirror = (ROOT / "docs" / "platform" / "index.html").read_bytes()
-    assert mirror == canonical
+def test_retired_github_pages_artifacts_stay_absent():
+    assert not (ROOT / "docs" / "platform" / "index.html").exists()
+    assert not (ROOT / "docs" / ".nojekyll").exists()
 
 
 def test_platform_defaults_to_a_fresh_entry_compatible_action_queue():
@@ -236,8 +235,6 @@ def test_platform_exposes_owner_taste_and_community_moderation_paths():
 def test_platform_pm_family_matches_backend_product_management_titles():
     html = (ROOT / "webapp" / "index.html").read_text()
     assert r"product\s+(?:manager|owner|management)" in html
-    assert (ROOT / "webapp" / "index.html").read_bytes() == \
-        (ROOT / "docs" / "platform" / "index.html").read_bytes()
 
 
 def test_platform_explains_each_score_dimension_without_hiding_the_ledger():

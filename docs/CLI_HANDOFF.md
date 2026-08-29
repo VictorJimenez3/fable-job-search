@@ -44,11 +44,12 @@ Before changing the radar, read these in order:
   blocks private-network loopback access. The offline notice now exposes a
   user-gesture **connect Mac engine** button, which lets that fallback open
   reliably. The local service still binds to loopback and sends CORS headers
-  only to the explicit production/Pages allowlist; CV files and generated
+  only to the explicit production Vercel allowlist; CV files and generated
   artifacts remain on the Mac.
-- The frontend mirror must still be copied after any canonical HTML change.
-  Validate the direct path with the health request and preflight checks, then
-  run the full repository suite before publishing the production branch.
+- `webapp/index.html` is deployed directly by Vercel; there is no checked-in
+  static mirror to copy. Validate the direct path with the health request and
+  preflight checks, then run the full repository suite before publishing the
+  production branch.
 
 ### Current change (2026-08-28)
 
@@ -77,7 +78,7 @@ Before changing the radar, read these in order:
   variables, unsafe exception handling, and duplicate entity tokens. The
   repository navigation now has a single Start here section, and the verified
   local contract is 579 tests, compileall, package lint, and the canonical
-  frontend mirror check.
+  Vercel frontend check.
 - **Application Agent storage fallback fixed:** the Postgres application-state
   path now writes only its sanitized database payload. It no longer calls the
   Drive Markdown mirror without a Drive folder, which was the source of the
@@ -91,12 +92,8 @@ Before changing the radar, read these in order:
   and cannot be pasted directly into a new employer's essay. Queue-scoped cloud
   answers include their queue IDs, so tracker repairs cannot leak writing
   between roles.
-- **Frontend mirror repaired:** `docs/platform/index.html` was copied from
-  canonical `webapp/index.html` after the Autopilot UI changes. The required
-  byte-for-byte invariant now passes.
 - **Validation:** targeted application/cloud/essay/extension coverage is green
-  (46 tests). The full suite is green after the mirror repair (579 tests); the
-  pre-repair run had only the expected mirror mismatch.
+  (46 tests). The full suite is green (579 tests).
 
 ### Resume Studio local access (implemented 2026-08-27)
 
@@ -127,8 +124,7 @@ Before changing the radar, read these in order:
   Codex prompts: one explicitly promoted role-family control may remain a
   comparison reference, but the immutable resume/evidence graph stays the
   authoring source of truth.
-- Validation for this change: 561 tests pass, Python compileall succeeds, and
-  `webapp/index.html` remains byte-for-byte equal to `docs/platform/index.html`.
+- Validation for this change: 561 tests pass and Python compileall succeeds.
 
 ### Notion batch tailoring and platform editing (implemented 2026-08-27)
 
@@ -993,8 +989,7 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   that makes Google technical new-grad roles `100`, with `pm` explicitly
   excluded. The reason is printed in `score_reasons`; rules version is now 12.
 - **Frontend:** the Jobs role-field toggles include `Product / project
-  management`; `docs/platform/index.html` remains a byte-for-byte copy of
-  `webapp/index.html`.
+  management`; Vercel serves the canonical `webapp/index.html` directly.
 - **Score transparency:** each score dimension now shows its points, what it
   measures, and one compact plain-English why; the exact rule ledger remains
   available below it. The deterministic scorer now also adds bounded learned
@@ -1082,17 +1077,15 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   (every open alert-worthy role, rewritten each crawl), 🏆 daily best-of issue,
   docs/DASHBOARD.md, RSS, and the platform website. Twice-daily reconcile sweep
   guarantees no checked box is ever lost.
-- **The platform has two permanent doors** (DECISIONS #27): Vercel
+- **The platform has two Vercel doors**: Vercel
   (`job-radar-newgrad.vercel.app` — the memorable public shortcut; the
   existing `job-radar-vmj-8946s-projects.vercel.app` URL remains active for
   GitHub OAuth and old bookmarks, with instant writes). Both Vercel doors now
   exchange a short-lived encrypted session handoff in a cleared redirect
   fragment, so an existing old-host login is recognized on the shortcut even
-  when cross-host cookies are blocked, and sign-out clears both hosts. GitHub
-  Pages
-  (victorjimenez3.github.io/fable-job-search/platform/ — tokenless, what
-  forks get). `webapp/index.html` is canonical; `docs/platform/index.html`
-  is a byte copy. Jobs tab shows posting age and sorts by best-match or
+  when cross-host cookies are blocked, and sign-out clears both hosts.
+  `webapp/index.html` is canonical and served directly by Vercel. Jobs tab
+  shows posting age and sorts by best-match or
   newest-first; Best Match can be limited to a selectable hour/day/week/month
   lookback window.
   Forks with an additional Vercel alias should list its hostname in the
@@ -1250,7 +1243,7 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   and the warmups synthesize concurrently. The workflow receives hosted-provider
   secrets only in GitHub Actions. The UI is asynchronous (normally 1–3 minutes
   for the first result, then warmed drawers) and is not available to visitors,
-  Pages/PAT write paths, or non-owner OAuth sessions.
+  tokenless/PAT write paths, or non-owner OAuth sessions.
 - **Tracker selection/readback (DECISIONS #40, #92):** Notion now pulls manual
   stage changes by owned page ID. `TRACKER_BACKEND=google_sheets` remains the
   server-side Sheets adapter, while the Vercel owner UI explicitly defaults to
@@ -1272,8 +1265,8 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   HttpOnly session carries their own grant and Sheet ID; Drive marker/title
   discovery reconnects the same workbook after reauthentication.
   `/api/tracker` reads only the current user's workbook. `GOOGLE_ACCOUNT_SHEET_TAB` remains
-  `Accounts`; `GOOGLE_PERSONAL_SHEET_TAB` defaults to `Applications`. Pages and
-  tokenless issue mode remain owner-only. The OAuth grant is Drive-only, not
+  `Accounts`; `GOOGLE_PERSONAL_SHEET_TAB` defaults to `Applications`. Tokenless
+  issue mode remains owner-only. The OAuth grant is Drive-only, not
   Gmail.
 - **Multi-user = fork-per-person** (DECISIONS #25, docs/FORKING.md). Owner
   gates exist in three layers: workflow condition, Python handler, Vercel
@@ -1545,10 +1538,11 @@ At the end of any material change, state:
 Preserve unrelated working-tree changes. Do not assume a secret exists merely
 because the code references it.
 
-## Platform frontend/back end (added 2026-07-11)
+## Platform frontend/back end (Vercel)
 
-- `webapp/index.html` is the canonical platform page; `docs/platform/index.html`
-  must stay a byte-for-byte copy (`cp webapp/index.html docs/platform/index.html`)
-  — Pages serves the copy, Vercel serves webapp/ plus its `api/` functions.
+- `webapp/index.html` is the canonical platform page and is served directly by
+  Vercel alongside its `api/` functions. The former GitHub Pages publication,
+  `.nojekyll` marker, and static mirror are retired.
 - Never put credentials in the frontend or repo. Auth = GitHub OAuth via the
-  Vercel backend (owner-only), or the tokenless prefilled-issue flow on Pages.
+  Vercel backend (owner-only); a missing backend degrades to read-only/static
+  behavior.

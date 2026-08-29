@@ -13,8 +13,7 @@
   const uploadedFiles = new Map();
   const LOOP_SCAN_LIMIT = 4;
   const LOOP_SCAN_WINDOW_MS = 45_000;
-  const isRadar = location.hostname === "job-radar-newgrad.vercel.app" ||
-    location.hostname === "victorjimenez3.github.io" && location.pathname.startsWith("/fable-job-search/");
+  const isRadar = location.hostname === "job-radar-newgrad.vercel.app";
 
   function text(value, limit = 500) { return String(value || "").replace(/\s+/g, " ").trim().slice(0, limit); }
   function wait(milliseconds) { return new Promise(resolve => setTimeout(resolve, milliseconds)); }

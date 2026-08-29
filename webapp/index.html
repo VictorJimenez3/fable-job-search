@@ -477,8 +477,7 @@
 <script>
 "use strict";
 // ---- fork-portable config ------------------------------------------------
-// Forks: the app self-configures. On <you>.github.io/<repo>/ the repo is
-// derived from the URL; a Vercel backend supplies /api/config. Only edit ME
+// A Vercel backend supplies /api/config for self-hosted forks. Only edit ME
 // (used to fill outreach templates) and, if self-hosting on Vercel, the env
 // vars documented in docs/FORKING.md.
 const ME = { name: "Victor", school: "NJIT", grad: "CS '27" };
@@ -828,17 +827,15 @@ async function boot() {
   await applySessionHandoff(takeSessionHandoffTicket());
   try {
     // Backend detection: on Vercel /api/me exists (401 = present, not signed
-    // in). On GitHub Pages it 404s and the app falls back to tokenless mode.
+    // in). On a static/no-backend host it 404s and the app falls back to
+    // tokenless mode.
     const r = await fetch("/api/me");
     S.backend = r.status !== 404;
     if (r.ok) S.auth = await r.json();
     else if (r.status >= 500) recordBootError("/api/me", new Error(`${r.status} session request failed`));
   } catch (error) { S.backend = false; recordBootError("/api/me", error); }
-  // fork-portable repo resolution (see docs/FORKING.md)
+  // Vercel fork configuration (see docs/FORKING.md)
   try {
-    const ghHost = location.hostname.match(/^([a-z0-9-]+)\.github\.io$/i);
-    const seg = location.pathname.split("/").filter(Boolean)[0];
-    if (ghHost && seg) REPO = `${ghHost[1]}/${seg}`;
     if (S.backend) {
       const configResponse = await fetch("/api/config");
       if (!configResponse.ok) throw new Error(`${configResponse.status} config request failed`);
@@ -4637,14 +4634,9 @@ function rSet() {
       <p class="sub" style="max-width:44rem">This is a static page on a <b>public</b> repo, so it
       holds no secrets — anything embedded here would belong to the whole internet. On the
       Vercel platform, each user who connects Google gets a separate Sheet in that Google Drive;
-      the backend returns only that user’s rows. On GitHub Pages, the board remains read-only and
-      notes stay only in that browser. The owner-only repository workflow remains separate from
-      personal tracking.</p></div>
-    <div class="sect"><h4>GitHub Pages mode</h4>
-      <p class="sub" style="max-width:44rem">The static mirror never accepts or stores a GitHub
-      token. It remains read-only and uses prefilled, owner-checked GitHub issues for save,
-      applied, feedback, and stale-report requests. Use the signed-in Vercel platform for
-      private one-click writes and cross-device state.</p></div>`;
+      the backend returns only that user’s rows. Without the Vercel backend, the board remains
+      read-only and notes stay only in that browser. The owner-only repository workflow remains
+      separate from personal tracking.</p></div>`;
 }
 
 window.S = S; window.render = render; window.openWS = openWS; window.closeWS = closeWS;
