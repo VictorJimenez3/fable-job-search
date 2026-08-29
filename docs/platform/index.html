@@ -495,7 +495,7 @@ const LANE_CONFIG = {
     companies:"state/intern_companies.json", runs:"state/intern_runs.json", web:"state/intern_web_state.json"},
 };
 const DEFAULT_FILTER = {q:"", min:45, sector:"", role:"", sectors:[], roles:[], sponsorship:"", sponsorHistory:"",
-  excludedRoles:[], experience:"entryfit", career:"", cohort:"", alert:false, lane:"", sort:"best", bestWindow:"2592000", showExcluded:false, review:false};
+  excludedRoles:[], experience:"entryfit", career:"", cohort:"", startup:"", location:"", alert:false, lane:"", sort:"best", bestWindow:"2592000", showExcluded:false, review:false};
 const ACTIVE_QUEUE_WINDOW = 30 * 86400;
 function storedFilter(lane="new_grad") {
   try {
@@ -720,13 +720,7 @@ function openResumeStudio(j) {
   if (!j || !ownerResumeStudio()) { toast("Resume Studio is private to @VictorJimenez3"); return; }
   openExternal(resumeStudioUrl(j));
   const lane = laneOf(j.id, appliedById());
-  if (!lane && canWrite()) {
-    actTrack(j, true).then(ok => toast(ok
-      ? "Saved to To apply · opened private Resume Studio"
-      : "Resume Studio opened · saving failed, so use Save when you return"));
-  } else {
-    toast(lane ? "Opened private Resume Studio · role already saved" : "Opened private Resume Studio");
-  }
+  toast(lane ? "Opened private Resume Studio · role already saved" : "Opened private Resume Studio · use Save when ready");
 }
 function recordBootError(path, error, critical=false) {
   const message = error instanceof Error ? error.message : String(error || "unknown error");
@@ -931,8 +925,9 @@ function issueCmd(cmd, job) {
   toast("Hit 'Create' on GitHub — it processes & auto-closes in ~1 min");
   return false;
 }
-function issueFeedback(job, vote, reason) {
-  const body = `radar-profile: ${S.lane}\nfeedback ${job.id} ${vote} ${reason}`;
+function issueFeedback(job, vote, reason, description="") {
+  const note = String(description || "").replace(/[\r\n]+/g, " ").trim().slice(0, 600);
+  const body = `radar-profile: ${S.lane}\nfeedback ${job.id} ${vote} ${reason}${note ? `\nfeedback-description: ${note}` : ""}`;
   const u = `https://github.com/${REPO}/issues/new?title=${
     encodeURIComponent(`radar: feedback ${job.company}`)}&body=${encodeURIComponent(body)}`;
   openExternal(u);
@@ -981,11 +976,146 @@ function lifecycleWhen(j) {
 function lifecycleDate(value) {
   return value ? new Date(Number(value) * 1000).toLocaleDateString() : "unknown date";
 }
+const US_STATES = [
+  ["Alabama","AL"],["Alaska","AK"],["Arizona","AZ"],["Arkansas","AR"],
+  ["California","CA"],["Colorado","CO"],["Connecticut","CT"],["Delaware","DE"],
+  ["District of Columbia","DC"],["Florida","FL"],["Georgia","GA"],["Hawaii","HI"],
+  ["Idaho","ID"],["Illinois","IL"],["Indiana","IN"],["Iowa","IA"],
+  ["Kansas","KS"],["Kentucky","KY"],["Louisiana","LA"],["Maine","ME"],
+  ["Maryland","MD"],["Massachusetts","MA"],["Michigan","MI"],["Minnesota","MN"],
+  ["Mississippi","MS"],["Missouri","MO"],["Montana","MT"],["Nebraska","NE"],
+  ["Nevada","NV"],["New Hampshire","NH"],["New Jersey","NJ"],["New Mexico","NM"],
+  ["New York","NY"],["North Carolina","NC"],["North Dakota","ND"],["Ohio","OH"],
+  ["Oklahoma","OK"],["Oregon","OR"],["Pennsylvania","PA"],["Rhode Island","RI"],
+  ["South Carolina","SC"],["South Dakota","SD"],["Tennessee","TN"],["Texas","TX"],
+  ["Utah","UT"],["Vermont","VT"],["Virginia","VA"],["Washington","WA"],
+  ["West Virginia","WV"],["Wisconsin","WI"],["Wyoming","WY"],
+];
+const US_STATE_BY_CODE = Object.fromEntries(US_STATES.map(([name, code]) => [code, name]));
+const US_STATE_BY_NAME = Object.fromEntries(US_STATES.map(([name, code]) => [norm(name), code]));
+const COUNTRY_ALIASES = [
+  ["United States", /\b(?:united states|u\.s\.a?\.?|usa|us)\b/i],
+  ["Canada", /\b(?:canada|canadian|toronto|vancouver|montreal|ottawa|calgary)\b/i],
+  ["United Kingdom", /\b(?:united kingdom|uk|u\.k\.?|england|scotland|wales|london|manchester)\b/i],
+  ["Ireland", /\b(?:ireland|dublin)\b/i],
+  ["Germany", /\b(?:germany|berlin|munich)\b/i],
+  ["France", /\b(?:france|paris)\b/i],
+  ["Netherlands", /\b(?:netherlands|amsterdam)\b/i],
+  ["Switzerland", /\b(?:switzerland|zurich)\b/i],
+  ["Spain", /\b(?:spain|madrid|barcelona)\b/i],
+  ["Italy", /\b(?:italy|rome|milan)\b/i],
+  ["India", /\b(?:india|indian|bangalore|bengaluru|hyderabad|pune|mumbai|delhi)\b/i],
+  ["Singapore", /\bsingapore\b/i],
+  ["Australia", /\b(?:australia|sydney|melbourne)\b/i],
+  ["Japan", /\b(?:japan|tokyo)\b/i],
+  ["China", /\b(?:china|beijing|shanghai|shenzhen)\b/i],
+  ["Mexico", /\b(?:mexico|mexico city)\b/i],
+  ["Brazil", /\b(?:brazil|sao paulo|são paulo)\b/i],
+  ["Israel", /\b(?:israel|tel aviv)\b/i],
+];
+function locationParts(value) {
+  const raw = String(value || "").trim();
+  if (!raw) return {raw:"", country:"Unknown", countryKey:"unknown", state:"", stateName:"", isUS:false};
+  const upper = raw.toUpperCase();
+  const stateCode = upper.match(/(?:^|[\s,/-])([A-Z]{2})(?:$|[\s,/-])/)?.[1];
+  const fullState = Object.keys(US_STATE_BY_NAME).find(name => new RegExp(`\\b${name.replaceAll(" ", "\\s+")}\\b`, "i").test(raw));
+  const explicitUS = /\b(?:united states|u\.s\.a?\.?|usa)\b/i.test(raw);
+  if (explicitUS || US_STATE_BY_CODE[stateCode] || fullState) {
+    const code = US_STATE_BY_CODE[stateCode] ? stateCode : fullState ? US_STATE_BY_NAME[fullState] : "";
+    return {raw, country:"United States", countryKey:"United States", state:code,
+      stateName:US_STATE_BY_CODE[code] || "", isUS:true};
+  }
+  const alias = COUNTRY_ALIASES.find(([, pattern]) => pattern.test(raw));
+  if (alias) return {raw, country:alias[0], countryKey:alias[0], state:"", stateName:"", isUS:false};
+  const segments = raw.split(",").map(item => item.trim()).filter(Boolean);
+  const tail = segments.length > 1 ? segments[segments.length - 1] : "";
+  if (tail && !/^(remote|hybrid|onsite|on-site|worldwide|global)$/i.test(tail)) {
+    return {raw, country:tail, countryKey:tail, state:"", stateName:"", isUS:false};
+  }
+  return {raw, country:"Unknown", countryKey:"unknown", state:"", stateName:"", isUS:false};
+}
+function jobLocations(job) {
+  return (Array.isArray(job?.locations) ? job.locations : []).map(locationParts);
+}
+function locationMatchesJob(job, selection) {
+  if (!selection) return true;
+  return jobLocations(job).some(part => selection.startsWith("state:")
+    ? part.isUS && part.state === selection.slice(6)
+    : part.countryKey === selection.slice(8));
+}
+function locationGroups() {
+  const states = new Map(), countries = new Map();
+  Object.values(S.jobs).forEach(job => jobLocations(job).forEach(part => {
+    if (part.isUS && part.state) states.set(part.state, (states.get(part.state)||0)+1);
+    else countries.set(part.countryKey, (countries.get(part.countryKey)||0)+1);
+  }));
+  return {states:[...states.entries()].sort((a,b)=>US_STATE_BY_CODE[a[0]].localeCompare(US_STATE_BY_CODE[b[0]])),
+    countries:[...countries.entries()].filter(([key])=>key !== "United States").sort((a,b)=>a[0].localeCompare(b[0]))};
+}
+function locationFilterLabel() {
+  if (!S.filter.location) return "any location";
+  if (S.filter.location.startsWith("state:")) return US_STATE_BY_CODE[S.filter.location.slice(6)] || "selected state";
+  return S.filter.location.slice(8);
+}
 function locationLabel(job) {
   const locations = Array.isArray(job?.locations) ? job.locations.filter(Boolean) : [];
   if (!locations.length) return "location unknown";
   if (locations.length === 1) return locations[0];
   return `${locations[0]} + ${locations.length - 1} other location${locations.length === 2 ? "" : "s"}`;
+}
+function locationDetailsHTML(job) {
+  const locations = Array.isArray(job?.locations) ? job.locations.filter(Boolean) : [];
+  return `<div class="sub"><b>All posting locations:</b> ${locations.length ? locations.map(item => esc(item)).join(" · ") : "location unknown"}</div>`;
+}
+function startupStageKey(stage) {
+  const value = String(stage || "").toLowerCase();
+  if (value.includes("late")) return "late";
+  if (value.includes("early")) return "early";
+  if (value.includes("not classified") || value.includes("not a startup")) return "not_startup";
+  return "unknown";
+}
+function startupStageInfo(job) {
+  let stage = job?.startup_stage || "";
+  let evidence = job?.startup_stage_evidence || {};
+  let score = Number(job?.startup_score || 0);
+  let reason = job?.startup_stage_reason || "";
+  if (!stage || stage === "unknown") {
+    const claim = S.research[norm(job?.company)]?.size_stage;
+    if (claim?.value && claim.value !== "Not confirmed" && claim.source_ids?.length) {
+      stage = /public(?:ly)? traded|public company|large[- ]cap|mature|enterprise|government|university|nonprofit|non-profit|not a startup|established/i.test(claim.value)
+        ? "not classified as startup"
+        : /late[- ]stage|growth[- ]stage|scale[- ]up|pre[- ]ipo|unicorn|series\s*[d-z]/i.test(claim.value)
+          ? "late-stage startup"
+          : /early[- ]stage|pre[- ]seed|seed(?:-stage)?|series\s*[a-c]|stealth|startup/i.test(claim.value)
+            ? "early-stage startup" : "unknown";
+      evidence = {value:claim.value, confidence:claim.confidence || "unknown", source_ids:claim.source_ids};
+      score = stage === "unknown" ? 0 : ["high","medium"].includes(String(claim.confidence||"").toLowerCase()) ? 12 : 6;
+    }
+  }
+  const key = startupStageKey(stage);
+  return {stage, key, score, evidence, reason:reason || (key === "unknown" ? "startup stage unavailable (no cited company-stage evidence)" : "")};
+}
+function startupStageLabel(key) {
+  return ({early:"early-stage startup", late:"late-stage startup", not_startup:"not classified as startup", unknown:"stage unavailable"})[key] || "stage unavailable";
+}
+function startupStageBadge(job) {
+  const info = startupStageInfo(job);
+  const label = startupStageLabel(info.key);
+  const title = info.evidence?.value ? `${info.evidence.value} · ${info.evidence.confidence || "unknown"} confidence` : info.reason;
+  return `<span class="chip ${info.key === "unknown" ? "unknown" : info.key === "not_startup" ? "" : "marquee"}" title="${esc(title)}">${esc(label)}${info.score ? ` · +${info.score}` : ""}</span>`;
+}
+function startupStageCard(job) {
+  const info = startupStageInfo(job);
+  const evidence = info.evidence || {};
+  if (info.key === "unknown") return `<div class="note"><b>Startup stage:</b> unavailable. This signal stays neutral until cited company-stage evidence is available.</div>`;
+  return `<div class="note"><b>${esc(startupStageLabel(info.key))}</b> · separate ranking signal ${info.score ? `+${info.score}` : "0"}<br>
+    <span class="sub">Evidence: ${esc(evidence.value || "not stated")} · ${esc(evidence.confidence || "unknown")} confidence · source IDs: ${esc((evidence.source_ids || []).join(", ") || "none")}. This does not change hard eligibility gates.</span></div>`;
+}
+function careerPriority(job) {
+  const stored = Number(job?.career_priority);
+  if (Number.isFinite(stored) && stored > 0) return Math.min(2, stored);
+  if (job?.explicit_new_grad || /new-grad|new grad|early-career evidence|technical (?:leadership|rotational) program/i.test((job?.score_reasons||[]).join(" "))) return 2;
+  return job?.early_career_possible ? 1 : 0;
 }
 function postingVariantBadge(job) {
   const count = Number(job?.posting_identity?.variant_count || 0);
@@ -1194,6 +1324,8 @@ function jobList() {
   if (f.excludedRoles?.length) rows = rows.filter(j=>!f.excludedRoles.includes(roleFamily(j)));
   if (f.sponsorship) rows = rows.filter(j=>sponsorStatus(j)===f.sponsorship);
   if (f.sponsorHistory) rows = rows.filter(j=>sponsorHistoryStatus(j)===f.sponsorHistory);
+  if (f.startup) rows = rows.filter(j=>startupStageInfo(j).key===f.startup);
+  if (f.location) rows = rows.filter(j=>locationMatchesJob(j, f.location));
   if (f.experience === "entryfit") rows = rows.filter(j=>experienceStatus(j)!=="experienced");
   else if (f.experience) rows = rows.filter(j=>experienceStatus(j)===f.experience);
   if (f.career === "newgrad") rows = rows.filter(j=>j.explicit_new_grad);
@@ -1202,9 +1334,11 @@ function jobList() {
   if (q) rows = rows.filter(j=>norm(j.company+" "+j.title).includes(q));
   if (f.lane) rows = rows.filter(j=>laneOf(j.id,byId)===f.lane);
   if (f.sort === "new")
-    rows.sort((a,b)=>(isExcluded(a.id)?1:0)-(isExcluded(b.id)?1:0) || postedTs(b)-postedTs(a) || (b.score||0)-(a.score||0));
+    rows.sort((a,b)=>(isExcluded(a.id)?1:0)-(isExcluded(b.id)?1:0) || postedTs(b)-postedTs(a) || careerPriority(b)-careerPriority(a) || (b.score||0)-(a.score||0));
+  else if (f.sort === "startup")
+    rows.sort((a,b)=>(isExcluded(a.id)?1:0)-(isExcluded(b.id)?1:0) || (startupStageInfo(b).score||0)-(startupStageInfo(a).score||0) || careerPriority(b)-careerPriority(a) || (b.score||0)-(a.score||0) || postedTs(b)-postedTs(a));
   else
-    rows.sort((a,b)=>(isExcluded(a.id)?1:0)-(isExcluded(b.id)?1:0) || (b.score||0)-(a.score||0) || postedTs(b)-postedTs(a));
+    rows.sort((a,b)=>(isExcluded(a.id)?1:0)-(isExcluded(b.id)?1:0) || careerPriority(b)-careerPriority(a) || (b.score||0)-(a.score||0) || postedTs(b)-postedTs(a));
   return rows;
 }
 function postedTs(j){ return j.posted_at || j.first_seen || 0; }
@@ -1311,26 +1445,30 @@ function tasteFeedbackCard(job) {
     `<option value="${k}" ${prior?.vote===fallback && prior?.reason===k?"selected": ""}>${l}</option>`).join("")}</select>`;
   return `<div class="sect"><h4>Ranking feedback</h4>
     <p class="sub">Use this when the score feels wrong. Saved roles already teach the model; this adds one explicit, capped signal for the next rescore.</p>
+    <label class="sub" for="tasteDescription-${job.id}">Why? <span>(optional, preserved in the feedback audit)</span></label>
+    <textarea id="tasteDescription-${job.id}" maxlength="600" placeholder="optional context for this rating">${esc(prior?.description||"")}</textarea>
     <div class="bar">${optionsHTML(upOptions, `tasteUpReason-${job.id}`, "up")}
-      <button class="act primary" onclick='sendTasteFeedback(jobById("${job.id}"),"up","tasteUpReason-${job.id}")'>more like this</button></div>
+      <button class="act primary" onclick='sendTasteFeedback(jobById("${job.id}"),"up","tasteUpReason-${job.id}","tasteDescription-${job.id}")'>more like this</button></div>
     <div class="bar">${optionsHTML(downOptions, `tasteDownReason-${job.id}`, "down")}
-      <button class="act" onclick='sendTasteFeedback(jobById("${job.id}"),"down","tasteDownReason-${job.id}")'>less like this</button></div>
-    ${prior?`<p class="sub">Last recorded: <b>${prior.vote==="up"?"more like this":"less like this"}</b> · ${esc(prior.reason)}</p>`:""}
+      <button class="act" onclick='sendTasteFeedback(jobById("${job.id}"),"down","tasteDownReason-${job.id}","tasteDescription-${job.id}")'>less like this</button></div>
+    ${prior?`<p class="sub">Last recorded: <b>${prior.vote==="up"?"more like this":"less like this"}</b> · ${esc(prior.reason)}${prior.description?` · ${esc(prior.description)}`:""}</p>`:""}
     <p class="sub">Only @${esc("VictorJimenez3")} can write this feedback. ${S.backend?"It is stored as structured state":"GitHub will open an owner-authenticated issue"} and rendered in <span class="mono">docs/FEEDBACK.md</span>.</p></div>`;
 }
-async function sendTasteFeedback(job, vote, selectorId) {
+async function sendTasteFeedback(job, vote, selectorId, descriptionId) {
   if (!job) return;
   const selected = $(`#${selectorId || `taste${vote === "up" ? "Up" : "Down"}Reason-${job.id}`}`)?.value;
   const allowed = vote === "up" ? new Set(["company","role","both"])
     : new Set(["company","role","eligibility","location","other"]);
   const reason = allowed.has(selected) ? selected : (vote === "up" ? "both" : "other");
+  const description = String($(`#${descriptionId || `tasteDescription-${job.id}`}`)?.value || "")
+    .replace(/[\r\n]+/g, " ").trim().slice(0, 600);
   try {
-    if (S.auth?.owner) await apiAction("feedback", job, {vote, reason});
-    else if (!S.backend) { issueFeedback(job, vote, reason); return; }
+    if (S.auth?.owner) await apiAction("feedback", job, {vote, reason, description});
+    else if (!S.backend) { issueFeedback(job, vote, reason, description); return; }
     else { toast("Sign in as the repository owner to send ranking feedback"); return; }
     S.feedback = S.feedback || {};
     S.feedback.taste_events = S.feedback.taste_events || [];
-    S.feedback.taste_events.push({job_id:job.id, company:job.company, title:job.title, vote, reason});
+    S.feedback.taste_events.push({job_id:job.id, company:job.company, title:job.title, vote, reason, description});
     toast("Feedback queued · rankings update on the next rescore");
     openWS(job.id);
   } catch (error) { toast("Feedback failed: " + error.message.slice(0,90)); }
@@ -1566,15 +1704,9 @@ async function startApply(j) {
     if (!agentStarted) openExternal(j.url);
   }, 900);
   const lane = laneOf(j.id, appliedById());
-  if (!lane && canWrite()) {
-    actTrack(j, true, false).then(ok=>toast(ok
-      ? "Application Agent started · saved to To apply"
-      : "Application started · saving failed, so use Save when you return"));
-  } else {
-    toast(lane === "applied" ? "Application Agent started · already marked applied"
-      : lane === "saved" ? "Application Agent started · already in To apply"
-      : "Application Agent started · save it when you want it in your pipeline");
-  }
+  toast(lane === "applied" ? "Application Agent started · already marked applied"
+    : lane === "saved" ? "Application Agent started · already in To apply"
+    : "Application Agent started · role not added to To apply; use Save when you choose");
 }
 
 /* ---------- owner Application Agent ----------------------------------- */
@@ -2161,7 +2293,7 @@ function tutorialContent(tab) {
     <div class="tut-steps"><div class="tut-step"><span><b>Filter the board.</b> Search by company, role family, sector, sponsorship, experience, or score. Open a role for evidence and rationale.</span></div>
       <div class="tut-step"><span><b>Use Maybe for uncertainty.</b> It keeps a role visible without spending a pipeline slot.</span></div>
       <div class="tut-step"><span><b>Save to To apply.</b> This is the shortlist. After OAuth login, the mark follows your account across devices.</span></div>
-      <div class="tut-step"><span><b>Click Apply.</b> The employer page opens in a new tab and the radar saves the role first when your tracker is available.</span></div>
+      <div class="tut-step"><span><b>Click Apply.</b> The employer page or paired Application Agent opens. Applying does not add the role to To apply; use Save when you choose.</span></div>
       <div class="tut-step"><span><b>Mark the real stage.</b> Applied means you actually submitted. Later OA, Interview, Rejected, and Closed stages stay visible in Pipeline.</span></div></div>
     <div class="tut-note">The ordinary Apply button still opens the official link. Owner Autopilot can fill approved fields and click Submit only after you confirm its full, page-bound review card; unknown answers, essays, and attestations remain paused for you.</div>`;
   if (tab === "accounts") return accountTutorialHTML();
@@ -2251,12 +2383,13 @@ function rowHTML(j, byId) {
     <div class="body">
       <span class="co">${esc(j.company)}</span> —
       <button class="jobtitle" onclick='openWS("${j.id}")'>${esc(j.title)}</button>
-      <div class="sub">${ago(postedTs(j))?`<b title="${j.posted_at?"posted":"first seen"} ${new Date(postedTs(j)*1000).toLocaleDateString()}">${ago(postedTs(j))}</b> · `:""}${esc(locationLabel(j))}${j.salary?" · "+esc(j.salary):""}
+      <div class="sub">${ago(postedTs(j))?`<b title="${j.posted_at?"posted":"first seen"} ${new Date(postedTs(j)*1000).toLocaleDateString()}">${ago(postedTs(j))}</b> · `:""}<span title="${esc((j.locations||[]).join(" · "))}">${esc(locationLabel(j))}</span>${j.salary?" · "+esc(j.salary):""}
         · ${esc(j.sector||"tech")}${c?` · ${esc(c.industry)} (${esc(c.prestige)})`:""}
         ${j.llm_note?` · <i>${esc(j.llm_note)}</i>`:""}</div>
       <div class="facts">${eligibilityBadges(j)}</div>
     </div>
-    ${j.explicit_new_grad?'<span class="chip applied">new grad</span>':""}
+    ${j.explicit_new_grad?'<span class="chip applied">new grad</span>':careerPriority(j)===1?'<span class="chip unknown">early-career possible</span>':""}
+    ${startupStageBadge(j)}
     ${postingVariantBadge(j)}
     ${mq?'<span class="chip marquee">marquee</span>':""}
     ${excluded?'<span class="chip excluded">excluded</span>':lane?`<span class="chip ${lane}">${esc(pipelineStageLabel(lane))}</span>`:""}
@@ -2278,6 +2411,7 @@ function rJobs() {
     return;
   }
   const sectors = [...new Set(Object.values(S.jobs).map(j=>j.sector).filter(Boolean))].sort();
+  const locations = locationGroups();
   const excludedCount = Object.values(S.jobs).filter(j=>isExcluded(j.id)).length;
   // toolbar renders once; typing re-renders only #jobsList so the input keeps focus
   $("#main").innerHTML = `${laneSettingsHTML()}${trackerPanelHTML()}
@@ -2323,6 +2457,26 @@ function rJobs() {
         <option value="newgrad" ${S.filter.career==="newgrad"?"selected":""}>verified new grad</option>
         <option value="possible" ${S.filter.career==="possible"?"selected":""}>early-career possible</option>
       </select>
+      <select aria-label="Startup stage" onchange="setFilter('startup',this.value)">
+        <option value="" ${!S.filter.startup?"selected":""}>any company stage</option>
+        <option value="early" ${S.filter.startup==="early"?"selected":""}>early-stage startups</option>
+        <option value="late" ${S.filter.startup==="late"?"selected":""}>late-stage startups</option>
+        <option value="not_startup" ${S.filter.startup==="not_startup"?"selected":""}>not classified as startup</option>
+        <option value="unknown" ${S.filter.startup==="unknown"?"selected":""}>startup stage unavailable</option>
+      </select>
+      <details class="location-menu" ${S.filter.location?"open":""}>
+        <summary>Location · ${esc(locationFilterLabel())}</summary>
+        <div class="bar location-options">
+          <button class="toggle ${!S.filter.location?"on":""}" onclick="setFilter('location','')">any location</button>
+          <details ${S.filter.location?.startsWith("state:")?"open":""}>
+            <summary>United States · ${locations.states.reduce((sum,[,count])=>sum+count,0)} roles</summary>
+            <div class="togglebar">${locations.states.map(([code,count])=>
+              `<button class="toggle ${S.filter.location===`state:${code}`?"on":""}" onclick="setFilter('location','state:${code}')">${esc(US_STATE_BY_CODE[code])} · ${count}</button>`).join("") || '<span class="sub">No state-level locations in the current board.</span>'}</div>
+          </details>
+          <div class="togglebar"><span class="label">Other countries</span>${locations.countries.map(([country,count])=>
+            `<button class="toggle ${S.filter.location===`country:${country}`?"on":""}" data-location="country:${esc(country)}" onclick="setFilter('location',this.dataset.location)">${esc(country)} · ${count}</button>`).join("") || '<span class="sub">No country-level locations in the current board.</span>'}</div>
+        </div>
+      </details>
       ${S.lane === "internship" ? `<select aria-label="Internship cohort match" onchange="setFilter('cohort',this.value)">
         <option value="">any cohort fit</option>
         <option value="match" ${S.filter.cohort==="match"?"selected":""}>matches your graduation date</option>
@@ -2346,7 +2500,8 @@ function rJobs() {
         <option value="rejected" ${S.filter.lane==="rejected"?"selected":""}>rejected</option>
         <option value="closed" ${S.filter.lane==="closed"?"selected":""}>closed</option></select>
       <select onchange="setFilter('sort',this.value)" title="sort order">
-        <option value="best" ${S.filter.sort!=="new"?"selected":""}>best match</option>
+        <option value="best" ${S.filter.sort!=="new"&&S.filter.sort!=="startup"?"selected":""}>best match · new-grad first</option>
+        <option value="startup" ${S.filter.sort==="startup"?"selected":""}>startup priority</option>
         <option value="new" ${S.filter.sort==="new"?"selected":""}>newest first</option></select>
       <select aria-label="Best match time window" title="Best match lookback" ${S.filter.sort!=="best"?"disabled":""}
         onchange="setFilter('bestWindow',this.value)">
@@ -2766,11 +2921,7 @@ function openResumeStudio(j) {
   S.testing.activeRunId = "";
   S.tab = "testing";
   const lane = laneOf(j.id, appliedById());
-  if (!lane && canWrite()) {
-    actTrack(j, true).then(ok => toast(ok
-      ? "Saved to To apply · opened Resume Studio"
-      : "Resume Studio opened · saving failed, so use Save when you return"));
-  }
+  if (!lane) toast("Resume Studio ready · use Save to To apply when you choose");
   render();
 }
 let wsId = null;  // switching jobs resets the drawer to decision-first role fit
@@ -2796,6 +2947,8 @@ function openWS(id) {
       <b>Quick decision</b>
       <div class="sub">${esc(locationLabel(j))}${j.salary?" · "+esc(j.salary):""}
         · score ${j.score??"?"}${j.score_raw!==undefined?` (raw utility ${j.score_raw})`:""} · scoring v${j.score_version||j.rules_v||"?"} · ${ago(postedTs(j))||"date unknown"} old</div>
+      ${locationDetailsHTML(j)}
+      <div class="facts">${startupStageBadge(j)} ${careerPriority(j)===2?'<span class="chip applied">explicit new-grad priority</span>':careerPriority(j)===1?'<span class="chip unknown">early-career priority</span>':""}</div>
       <div class="facts">${eligibilityBadges(j)}</div>
      <div class="acts" style="margin-top:0.65rem">
         ${a?stageControl(id,a.stage||"saved"):""}
@@ -3092,6 +3245,7 @@ function wsFit(j, w, c, id) {
   const finalWhy = scoreFinalWhy(j);
   return `
     <div class="sect"><h4>Posting facts (scraped, no AI needed)</h4>${postingCard(j)}</div>
+    <div class="sect"><h4>Company stage signal</h4>${startupStageCard(j)}</div>
     <div class="sect"><h4>Company sponsorship history · official DOL context</h4>${sponsorshipHistoryCard(j)}</div>
     <div class="sect"><h4>Why it scored ${j.score??"?"}</h4>
       ${dimensions.length?`<p class="score-summary">${esc(scoreSummary(j, Object.fromEntries(dimensions)))}</p><div class="score-dimensions">${dimensionRows}</div>

@@ -12,6 +12,7 @@
     applied <url or id>   log a confirmed application immediately
     skip <company or id>  negative feedback (downranks similar roles)
     feedback <id> <up|down> <reason>  structured owner taste feedback
+    feedback-description: optional owner context for the preceding feedback
     untrack <id or url>   remove from the in-house pipeline and archive Notion
     track <ats> <token> [Company Name]   manually add a company to the registry
 """
@@ -35,6 +36,7 @@ CMD_SKIP = re.compile(r"^skip\s+(.+?)\s*$", re.I | re.M)
 CMD_FEEDBACK = re.compile(
     r"^feedback\s+([a-f0-9]{16})\s+(up|down)\s+"
     r"(company|role|both|eligibility|location|other)\s*$", re.I | re.M)
+CMD_FEEDBACK_DESCRIPTION = re.compile(r"^feedback-description:\s*(.*?)\s*$", re.I | re.M)
 CMD_UNTRACK = re.compile(r"^untrack\s+(\S+)", re.I | re.M)
 CMD_TRACK = re.compile(r"^track\s+(\w+)\s+(\S+)(?:\s+(.+))?", re.I | re.M)
 CMD_CULTURE = re.compile(r"^culture\s+(.+?)\s*$", re.I | re.M)
@@ -411,9 +413,10 @@ def handle_event(event_path: str) -> None:
                 fb["negative_companies"].append(comp)
                 changed += 1
         from . import taste
+        feedback_description = next((m.group(1).strip() for m in CMD_FEEDBACK_DESCRIPTION.finditer(body)), "")
         for m in CMD_FEEDBACK.finditer(body):
             job = jobs.get(m.group(1))
-            if job and taste.record_feedback(fb, job, m.group(2), m.group(3)):
+            if job and taste.record_feedback(fb, job, m.group(2), m.group(3), feedback_description):
                 changed += 1
                 taste_changed = True
         for m in CMD_UNTRACK.finditer(body):

@@ -3320,3 +3320,34 @@ engine** action so that fallback is reliable without opening a popup during
 automatic page initialization. Direct access is preferred because it works
 when the engine is already running and does not require the cloud page to
 create a second window.
+
+## 204. Keep action intent explicit and split career/startup context (2026-08-29)
+
+Feedback keeps its fixed category as the bounded scoring input and may now
+carry up to 600 characters of owner-written context. The description is stored
+with the event and rendered in the generated feedback report, while exact
+re-submissions remain idempotent. This preserves an auditable explanation
+without turning free text into executable scoring instructions.
+
+Career stage is an ordering tier separate from hard gates: explicit new-grad
+roles and technical programs come first, then early-career-compatible roles,
+then other retained roles. The tier is persisted with a reason and is applied
+consistently to the active dashboard, issue board, daily best, email batch, and
+platform list; it cannot make an ineligible or off-field posting alertable.
+
+Startup stage is a separate, cited company-context signal. Only a
+`size_stage` claim with source IDs is classified; early-stage and late-stage
+startups receive a bounded signal, while non-startups and unavailable/ambiguous
+claims stay neutral. The platform exposes this evidence, confidence, source
+IDs, filter, and startup-priority sort independently from the general score.
+
+Browsing is not consent to track: opening details, Resume Studio, or the
+external application/Agent flow no longer adds a role to Notion or the local
+application pipeline. The owner must use the explicit Save/To apply action;
+marking a confirmed submission Applied remains an explicit action as well.
+
+The Jobs location control is presentation-only over the existing captured
+locations. United States expands into states; non-US locations are selectable
+by country; and the drawer shows all locations on multi-location postings.
+This avoids changing crawler queries or location ingestion while making the
+owner's filter choices auditable.

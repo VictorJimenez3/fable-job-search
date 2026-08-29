@@ -6,6 +6,7 @@ from radar.score import (RULES_VERSION, apply_company_concentration,
                          build_preference_profile, calibrate_score,
                          company_momentum_signal, early_career_possible, gates,
                          preference_signal, role_bucket, regate, score,
+                         startup_stage_signal, career_priority,
                          update_feedback_from_applied)
 from radar.sector import infer
 
@@ -119,6 +120,29 @@ def test_early_career_possible_is_visible_but_never_new_grad_evidence():
     assert early_career_possible(fanatics, {"years_min": 1}) is False
     assert early_career_possible(mk("Senior AI Engineer", source="greenhouse"), {}) is False
     assert early_career_possible(mk("AI Engineer", source="simplify"), {}) is False
+
+
+def test_career_priority_is_an_auditable_ordering_tier():
+    assert career_priority({"career_priority": 2, "score": 50}) == 2
+    assert career_priority({"early_career_possible": True, "score": 99}) == 1
+    assert career_priority({"score_reasons": ["technical leadership/rotational program +10"]}) == 2
+
+
+def test_startup_stage_signal_is_cited_and_neutral_when_unavailable(monkeypatch):
+    import radar.score as score_module
+    monkeypatch.setattr(score_module, "_company_record", lambda company: {
+        "size_stage": {"value": "Late-stage startup, Series E", "confidence": "high",
+                        "source_ids": ["src-1"]},
+    })
+    stage, points, evidence, reason = startup_stage_signal("Acme")
+    assert stage == "late-stage startup"
+    assert points == 12
+    assert evidence["source_ids"] == ["src-1"]
+    assert "src-1" in reason
+
+    monkeypatch.setattr(score_module, "_company_record", lambda company: {})
+    assert startup_stage_signal("Unknown") == (
+        "unknown", 0, {}, "startup stage unavailable (no cited company-stage evidence)")
 
 
 def test_trusted_new_grad_board_source_supplies_missing_title_signal():

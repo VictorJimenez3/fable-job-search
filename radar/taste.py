@@ -54,10 +54,12 @@ def _explicit_token_delta(feedback: dict, title: str, delta: int) -> list[str]:
     return changed
 
 
-def record_feedback(feedback: dict, job: dict, vote: str, reason: str) -> bool:
+def record_feedback(feedback: dict, job: dict, vote: str, reason: str,
+                    description: str = "") -> bool:
     """Apply one owner feedback event; duplicate submissions are idempotent."""
     vote = str(vote or "").lower().strip()
     reason = str(reason or "").lower().strip()
+    description = str(description or "").strip()[:600]
     if vote not in REASONS or reason not in REASONS[vote]:
         return False
     job_id = str(job.get("id") or "").strip()
@@ -65,7 +67,8 @@ def record_feedback(feedback: dict, job: dict, vote: str, reason: str) -> bool:
         return False
     events = feedback.setdefault("taste_events", [])
     if any(e.get("job_id") == job_id and e.get("vote") == vote
-           and e.get("reason") == reason for e in events):
+           and e.get("reason") == reason
+           and str(e.get("description") or "") == description for e in events):
         return False
 
     company = norm(job.get("company", ""))
@@ -99,6 +102,7 @@ def record_feedback(feedback: dict, job: dict, vote: str, reason: str) -> bool:
         "title": str(job.get("title", ""))[:240],
         "vote": vote,
         "reason": reason,
+        "description": description,
         "effects": effects,
         "created_at": int(time.time()),
     })
@@ -156,8 +160,8 @@ def render_report(feedback: dict) -> str:
     lines.extend(["", "## Recent explicit feedback", ""])
     if events:
         lines.extend([
-            "| vote | role | reason | effect |",
-            "| --- | --- | --- | --- |",
+            "| vote | role | reason | description | effect |",
+            "| --- | --- | --- | --- | --- |",
         ])
         for event in events:
             vote = "more like this" if event.get("vote") == "up" else "less like this"
@@ -165,7 +169,7 @@ def render_report(feedback: dict) -> str:
             effect = "; ".join(event.get("effects") or []) or "logged only"
             lines.append(
                 f"| {vote} | {_md(event.get('company'))} — {_md(event.get('title'))} | "
-                f"{_md(reason)} | {_md(effect)} |"
+                f"{_md(reason)} | {_md(event.get('description')) or '—'} | {_md(effect)} |"
             )
     else:
         lines.append("No explicit feedback yet. The saved-role sample is still active.")

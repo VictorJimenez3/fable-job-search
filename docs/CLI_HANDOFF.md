@@ -1510,6 +1510,17 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   explicit caveats. Posting-level visa wording remains primary and this signal
   does not affect score. GitHub Actions refreshes it weekly. The source is the
   [DOL OFLC performance-data page](https://www.dol.gov/agencies/eta/foreign-labor/performance).
+- **2026-08-29 roadmap follow-through:** descriptive feedback now preserves
+  optional owner context in the structured event and generated audit; explicit
+  new-grad/program roles sort ahead of early-career-compatible roles in the
+  dashboard, issue delivery, and email queue; cited company-stage evidence has
+  a separate neutral-when-unavailable startup signal/filter; and opening
+  details, Resume Studio, or Apply no longer adds a role to To apply. Tracking
+  requires the explicit Save/To apply action.
+- **Hierarchical location selector shipped:** the classic Jobs view now expands
+  United States into selectable states, keeps non-US locations at country level,
+  and retains every captured location in the role drawer. It is presentation
+  and filtering only; scraper queries and stored location values are unchanged.
 - **Radar score v8 is shipped (DECISIONS #70-71):** records retain uncapped raw
   utility, calibrated base, dimension values, reasons, and final score. Goal
   companies can reach 100, but posting wording separates nearby roles; cited
@@ -1521,10 +1532,6 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   Application Agent boundary (DECISION #178); it remains deliberately
   unavailable to other users and never bypasses attestations. Email-based
   applied detection is also parked until the multi-user privacy model exists.
-  **Next UI TODO:** add a hierarchical location selector: expand United States
-  into selectable states, but keep non-US locations at country level only. This
-  must consume the current location fields without changing the scraper,
-  source queries, or posting ingestion contract.
 
 ## Safe handoff practice
 

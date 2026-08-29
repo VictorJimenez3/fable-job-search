@@ -9,6 +9,7 @@ from xml.sax.saxutils import escape
 from . import lifecycle
 from .config import DOCS_DIR, github_repo, profile, profile_id
 from .provenance import alternate_link_label, source_links
+from .score import career_priority
 
 
 def _age(posted_at, now) -> str:
@@ -38,7 +39,7 @@ def render_dashboard(jobs: dict, registry: dict, runs: list) -> str:
     # roles remain available for audit/context, but raw score alone must not
     # let an off-field or experienced role outrank a qualified new-grad role.
     rows.sort(key=lambda j: (0 if j.get("alert_ok") else 1,
-                             -j["score"], -(j.get("posted_at") or 0)))
+                             -career_priority(j), -j["score"], -(j.get("posted_at") or 0)))
     rows = rows[:150]
 
     active = sum(1 for e in registry.values() if e["status"] == "active")
@@ -55,8 +56,8 @@ def render_dashboard(jobs: dict, registry: dict, runs: list) -> str:
         "Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) "
         "after applying — it logs to Notion automatically.",
         "",
-        "| Score | Age | Company | Role | Location | Sector | Sponsor history | Src |",
-        "|---|---|---|---|---|---|---|---|",
+        "| Score | Age | Company | Role | Location | Sector | Startup stage | Sponsor history | Src |",
+        "|---|---|---|---|---|---|---|---|---|",
     ]
     for j in rows:
         loc = (j.get("locations") or [""])[0][:40]
@@ -71,10 +72,11 @@ def render_dashboard(jobs: dict, registry: dict, runs: list) -> str:
         ]
         if fallbacks:
             source_link += "<br>" + " · ".join(fallbacks)
+        startup = j.get("startup_stage") or "unavailable"
         lines.append(
             f"| {j['score']} {_fire(j['score'])} | {_age(j.get('posted_at'), now)} "
             f"| {j['company'][:38]} | [{j['title'][:70]}]({j['url']}) "
-            f"| {loc} | {j.get('sector') or '—'} "
+            f"| {loc} | {j.get('sector') or '—'} | {startup} "
             f"| {(j.get('sponsorship_history') or {}).get('status') or '—'} | {source_link} |")
     lines += ["", f"_{len(rows)} roles shown (score ≥ {p['thresholds']['dashboard']}, posted ≤30d)._"]
     return "\n".join(lines) + "\n"

@@ -26,6 +26,17 @@ def test_negative_feedback_only_changes_the_selected_signal():
     assert feedback["negative_companies"] == ["acme"]
 
 
+def test_feedback_description_is_optional_auditable_and_part_of_idempotency():
+    feedback = {"company_boosts": {}, "token_boosts": {}, "negative_companies": []}
+    assert record_feedback(feedback, job(), "up", "company", "Strong mission fit") is True
+    assert record_feedback(feedback, job(), "up", "company", "Strong mission fit") is False
+    assert record_feedback(feedback, job(), "up", "company", "Different reason") is True
+    assert feedback["taste_events"][0]["description"] == "Strong mission fit"
+    report = render_taste_report(feedback)
+    assert "description" in report
+    assert "Strong mission fit" in report
+
+
 def test_community_reports_count_distinct_github_users():
     reports = {}
     for user in ["alice", "bob", "carol"]:

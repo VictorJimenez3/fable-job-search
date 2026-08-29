@@ -33,6 +33,13 @@ def test_open_rows_filters_and_sorts():
     assert [r["id"] for r in rows] == [JOB["id"]]
 
 
+def test_open_rows_prioritizes_explicit_new_grad_tier_before_raw_score():
+    explicit = {**JOB, "id": "a" * 16, "score": 71, "career_priority": 2}
+    high_score = {**JOB, "id": "e" * 16, "score": 99, "career_priority": 0}
+    rows = _open_rows({j["id"]: j for j in (high_score, explicit)}, NOW)
+    assert [r["id"] for r in rows] == [explicit["id"], high_score["id"]]
+
+
 def test_paginate_respects_page_limit():
     lines = [f"- [ ] job {i} " + "x" * 200 for i in range(100)]
     pages = _paginate(lines, limit=2000)
@@ -108,6 +115,19 @@ def test_web_action_track_records_saved(tmp_state, tmp_path, monkeypatch):
     assert web_action() == 0
     assert len(state.applied()) == 1
     assert state.applied()[0]["stage"] == "applied"
+
+
+def test_web_action_feedback_preserves_description(tmp_state, tmp_path, monkeypatch):
+    from radar.main import web_action
+    state.save("jobs.json", {JOB["id"]: JOB})
+    ev = tmp_path / "dispatch.json"
+    ev.write_text(json.dumps({"client_payload": {
+        "action": "feedback", "id": JOB["id"], "vote": "down", "reason": "role",
+        "description": "The role is more senior than the title suggests.",
+    }}))
+    monkeypatch.setenv("GITHUB_EVENT_PATH", str(ev))
+    assert web_action() == 0
+    assert state.feedback()["taste_events"][0]["description"].startswith("The role")
 
 
 def test_web_action_moves_a_role_to_tailor_lane(tmp_state, tmp_path, monkeypatch):
@@ -236,6 +256,18 @@ def test_opened_issue_save_command_tracks_job(tmp_state, tmp_path, monkeypatch):
     assert len(state.applied()) == 1
     assert state.applied()[0]["stage"] == "saved"
     assert state.applied()[0]["via"] == "issue-command"
+
+
+def test_issue_feedback_preserves_optional_description(tmp_state, tmp_path, monkeypatch):
+    state.save("jobs.json", {JOB["id"]: JOB})
+    event = {"sender": {"login": "VictorJimenez3"}, "action": "created",
+             "issue": {"number": 11, "labels": [{"name": "radar-alerts"}]},
+             "comment": {"body": f"feedback {JOB['id']} down role\n"
+                                  "feedback-description: title says engineer, but work is not technical"}}
+    ev = tmp_path / "event.json"
+    ev.write_text(json.dumps(event))
+    handle_event(str(ev))
+    assert state.feedback()["taste_events"][0]["description"].startswith("title says")
 
 
 def test_untrack_removes_in_house_entry_and_tombstones_it(tmp_state, tmp_path, monkeypatch):

@@ -343,7 +343,11 @@ def test_owner_only_resume_studio_is_integrated_with_job_selection():
     assert "function openResumeStudio" in html
     assert "resumeStudioSnapshot" in html
     assert "privateWeb.jd || j.description" in html
-    assert 'actTrack(j, true).then' in html
+    assert 'actTrack(j, true).then' not in html
+    assert 'feedback-description' in html
+    assert "startupStageInfo" in html
+    assert 'state:${code}' in html
+    assert 'role not added to To apply' in html
     assert '["testing","Resume Studio"]' in html
     assert '[["resume","Resume"]]' in html
     assert "save + open Resume Studio" in html

@@ -88,6 +88,14 @@ choose an explicit experience or lookback filter when researching the full
 board. Definitively expired or filled postings leave active Jobs and stay in
 History with their evidence and close reason.
 
+The Jobs controls also offer an explainable startup-stage signal and a
+hierarchical location selector: United States expands into states, while
+non-US locations stay selectable by country. Explicit new-grad roles and
+technical programs sort ahead of merely compatible early-career roles. Startup
+stage is based only on cited company research; missing or ambiguous evidence is
+shown as unavailable and contributes zero. A role with multiple captured
+locations keeps every location visible in its detail drawer.
+
 The ChemE internship board is intentionally separate from this new-grad
 AI/SWE/DS board. It reads the `claude/cheme-intern-radar` branch and keeps its
 own generated state and GitHub board labels, while both profiles use the one
@@ -298,10 +306,11 @@ explains the learned contributions and offers **Similar jobs to inspect** as a
 discovery aid.
 
 When a score feels wrong, the role drawer has fixed-category **more like this**
-and **less like this** feedback. Owner feedback is idempotent, capped, and
-stored in `state/feedback.json`; the generated `docs/FEEDBACK.md` makes the
-learned company/title signals and recent events auditable. Eligibility and
-location feedback is logged without overriding deterministic eligibility gates.
+and **less like this** feedback plus optional descriptive context. Owner
+feedback is idempotent, capped, and stored in `state/feedback.json`; the
+generated `docs/FEEDBACK.md` makes the learned company/title signals,
+description, and recent events auditable. Eligibility and location feedback is
+logged without overriding deterministic eligibility gates.
 The repository is public, so this is an audit trail rather than a private
 journal. No email is sent by this feature.
 

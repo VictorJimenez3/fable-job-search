@@ -15,7 +15,7 @@ module.exports = async (req, res) => {
     res.status(403).json({ error: `read-only view: this radar belongs to ${OWNER} — fork the repo to run your own (docs/FORKING.md)` });
     return;
   }
-  const { action, id, ids, url, company, title, location, vote, reason, stage,
+  const { action, id, ids, url, company, title, location, vote, reason, description, stage,
     tailored_at, preferences, profile, key, enabled } = req.body || {};
   const manual = action === "manual-add";
   const research = action === "research-company";
@@ -52,7 +52,7 @@ module.exports = async (req, res) => {
     body: JSON.stringify({
       event_type: "radar-web",
       client_payload: { action, id, ids: researchIds, url, company, title, location,
-        vote, reason, stage, tailored_at, preferences, profile: lane, key, enabled },
+        vote, reason, description, stage, tailored_at, preferences, profile: lane, key, enabled },
     }),
   });
   if (r.status === 204) res.status(202).json({ ok: true });

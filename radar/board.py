@@ -20,6 +20,7 @@ import requests
 from . import lifecycle, state
 from .alerts import API, LABEL, _headers, format_line, lane_label
 from .config import env, github_owner, github_repo, profile, profile_id
+from .score import career_priority
 
 MASTER_TITLE = "📌 Job Radar — master board (every open role, one place)"
 MASTER_LABEL = "radar-master"
@@ -59,7 +60,8 @@ def _open_rows(jobs_state: dict, now: int, max_age_days: int = 30) -> list[dict]
             if not lifecycle.is_terminal(r)
             and r.get("alert_ok") and r.get("score", 0) >= thr
             and now - r.get("first_seen", now) <= max_age_days * 86400]
-    rows.sort(key=lambda r: -r.get("score", 0))
+    rows.sort(key=lambda r: (-career_priority(r), -r.get("score", 0),
+                             -(r.get("posted_at") or r.get("first_seen") or 0)))
     return rows
 
 
@@ -181,7 +183,8 @@ def post_daily_best(jobs_state: dict, top_n: int = 10) -> str | None:
     rows = [r for r in jobs_state.values()
             if not lifecycle.is_terminal(r)
             and r.get("alert_ok") and now - r.get("first_seen", 0) <= 86400]
-    rows.sort(key=lambda r: -r.get("score", 0))
+    rows.sort(key=lambda r: (-career_priority(r), -r.get("score", 0),
+                             -(r.get("posted_at") or r.get("first_seen") or 0)))
     rows = rows[:top_n]
     if not rows:
         print("daily-best: no new alert-worthy roles in the last 24h")
@@ -227,7 +230,8 @@ def email_batch_rows(alert_history: list[dict], sent_ids: set[str], now: int,
         if jobs_state is None and lifecycle.is_terminal(a):
             continue
         rows.append(a)
-    rows.sort(key=lambda a: (-a.get("score", 0), -a.get("alerted_at", 0)))
+    rows.sort(key=lambda a: (-career_priority(a), -a.get("score", 0),
+                             -a.get("alerted_at", 0)))
     return rows[:limit]
 
 

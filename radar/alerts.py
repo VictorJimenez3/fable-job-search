@@ -67,6 +67,25 @@ def format_line(j: dict, culture_map: dict | None = None) -> str:
             found += f" · [{alternate_link_label(url)}]({url})"
     ptags = summary_tags(j.get("posting"))
     ptags = f" · {ptags}" if ptags else ""
+    try:
+        career_tier = int(j.get("career_priority") or 0)
+    except (TypeError, ValueError):
+        career_tier = 0
+    career = ""
+    if career_tier >= 2:
+        career = " · **career:** explicit new-grad priority"
+    elif career_tier == 1:
+        career = " · **career:** early-career compatible"
+    startup = ""
+    if j.get("startup_stage") and j.get("startup_stage") != "unknown":
+        evidence = j.get("startup_stage_evidence") or {}
+        sources = ", ".join(str(x) for x in evidence.get("source_ids") or []) or "none"
+        try:
+            startup_points = int(j.get("startup_score") or 0)
+        except (TypeError, ValueError):
+            startup_points = 0
+        startup = (f" · **startup:** {j['startup_stage']} (+{startup_points}; "
+                   f"{evidence.get('confidence', 'unknown')} confidence; source IDs: {sources})")
     cohort = ""
     if profile_id() == "internship":
         eligibility = j.get("internship_eligibility") or {}
@@ -77,7 +96,7 @@ def format_line(j: dict, culture_map: dict | None = None) -> str:
         cohort_text = ", ".join(x for x in (classes, grad) if x) or "eligibility not stated"
         cohort = f" · **cohort:** {cohort_text}"
     return (f"- [ ] {fire}**{j['company']}** — [{j['title'][:80]}]({j['url']}) · "
-            f"{loc}{salary} · `{j['score']}`{ptags}{cohort} · **{industry}** — {what}{snapshot_text}{ctag}{found}{note} "
+            f"{loc}{salary} · `{j['score']}`{career}{startup}{ptags}{cohort} · **{industry}** — {what}{snapshot_text}{ctag}{found}{note} "
             f"<!--radar:{j['id']}-->")
 
 

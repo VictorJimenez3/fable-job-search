@@ -88,6 +88,15 @@ class Job:
     # dedupe pass. It is optional so old/simple source records stay compact.
     posting_family_id: str = ""
     posting_identity: dict = field(default_factory=dict)
+    # Company-stage context is an independent, evidence-backed preference
+    # signal. It is intentionally not folded into the general Radar score.
+    startup_stage: str = "unknown"
+    startup_score: int = 0
+    startup_stage_evidence: dict = field(default_factory=dict)
+    startup_stage_reason: str = ""
+    # Explicit new-grad roles/programs outrank plausible first-role postings
+    # in list/delivery ordering, while hard eligibility gates remain separate.
+    career_priority: int = 0
 
     @property
     def id(self) -> str:
@@ -110,6 +119,16 @@ class Job:
                     "posting_family_id", "posting_identity"):
             if not d.get(key):
                 d.pop(key, None)
+        if d.get("startup_stage") == "unknown":
+            d.pop("startup_stage", None)
+        if not d.get("startup_score"):
+            d.pop("startup_score", None)
+        if not d.get("startup_stage_evidence"):
+            d.pop("startup_stage_evidence", None)
+        if not d.get("startup_stage_reason"):
+            d.pop("startup_stage_reason", None)
+        if not d.get("career_priority"):
+            d.pop("career_priority", None)
         for key in ("posting_status_changed_at", "posting_status_reason", "closed_at",
                     "last_closed_at", "last_seen_at", "lifecycle_checked_at",
                     "lifecycle_events"):

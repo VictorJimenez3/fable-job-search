@@ -78,6 +78,58 @@ none block anything currently running.
    internship list requires positive title or posting evidence; uncertain,
    source-only, and senior-style outliers remain behind a review toggle.
 
+## New TODO requests — 2026-08-28
+
+1. **Descriptive rating feedback — ✅ SHIPPED 2026-08-29.** Extend the existing feedback feature so
+   that when Victor suggests a rating change, he can add a free-text
+   description explaining why. Preserve the description with the feedback
+   record and show it in the auditable feedback/reason history; it should be
+   optional and must not replace the existing fixed feedback categories.
+
+2. **Prioritize the highest-value new-grad opportunities — ✅ SHIPPED 2026-08-29.** Rework the
+   programming/ranking policy so explicit new-grad programs and new-grad
+   roles are ordered above everything else. Next should be roles that appear
+   compatible with a new graduate, including postings with no stated years or
+   other early-career-compatible wording. Keep required experience and other
+   eligibility facts auditable, and do not let this preference bypass hard
+   field-fit or eligibility gates.
+
+3. **Startup-stage filter and ranking — ✅ SHIPPED 2026-08-29.** Add a filter that lets Victor
+   prioritize startup opportunities, including a meaningful stage grouping
+   such as late-stage startups. Give startup roles a distinct, explainable
+   ranking signal or score so startup priority can be evaluated separately
+   from the general company/radar score. Company-stage evidence should be
+   labeled with its source and remain neutral when unavailable.
+
+4. **Stop automatic Notion additions from browsing — ✅ SHIPPED 2026-08-29.** Opening a job's details
+   or external application link should not automatically add the role to
+   Notion or move it into an application stage. Victor often checks eligibility
+   before deciding whether to track a role, so adding it to Notion must require
+   an explicit owner action such as **To apply** or **Add to Notion**.
+
+5. **Resolve Codex issues caused by the restored five-hour window.** After the
+   five-hour Codex usage window returns, identify and fix any resulting issues
+   with task continuity, rate limits, scheduling, handoffs, or usage visibility.
+   Preserve durable work and avoid assuming that a restored window alone means
+   interrupted or queued work has recovered correctly.
+
+## Victor + chat TODOs
+
+These are work items for Victor to handle through a focused chat, separate from
+feature requests to implement in the application.
+
+1. **Rework tailoring substance.** Review every iteration of the tailoring
+   workflow, including its strengths and flaws, and improve the substance of
+   what it produces. The review should cover the actual content and reasoning
+   across iterations—not just formatting, polish, or whether the workflow
+   completes successfully.
+
+2. **Rework the scoring system entirely.** Use a focused chat to reassess the
+   scoring model from first principles, including its goals, dimensions,
+   weights, gates, ranking behavior, and explanations. Review what is working,
+   what is producing misleading priorities, and what should be removed or
+   replaced before defining a new auditable scoring approach.
+
 ## Deliberately deferred by Victor
 
 1. **Scoring/state maintenance hardening — ✅ foundation shipped.** CI now
@@ -98,7 +150,7 @@ none block anything currently running.
    be meaningfully tailored to the selected CV, then offer a local, review-only
    tailored draft. Personal CV content stays local and never enters public
    state.
-4. **Hierarchical location selector — TODO.** Add a Jobs-view location control
+4. **Hierarchical location selector — ✅ SHIPPED 2026-08-29.** Add a Jobs-view location control
    where **United States** can be expanded into selectable states, while every
    non-US country is selectable at the country level without requiring a
    state/province choice. This is a presentation/filtering feature over the

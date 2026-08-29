@@ -46,9 +46,9 @@ migration for compatibility.
   context only; the posting's own visa wording remains primary and no-history
   does not mean a company will not sponsor. The
   **apply ↗** button starts the owner Application Agent when the Chrome
-  extension is paired; otherwise it opens the employer posting normally. When
-  you are signed in it also saves a new role to **To apply** without claiming
-  that it was submitted.
+  extension is paired; otherwise it opens the employer posting normally. It
+  never adds a role to **To apply** implicitly; use the explicit **Save** action
+  when you want it tracked.
   You can also click a Jobs row once to save it (green), then click that saved
   row again to exclude it (red). Turn on **show excluded** to restore a red row;
   this is a reversible view preference, not a score or notification change.
@@ -92,8 +92,9 @@ migration for compatibility.
   role-prep checklist.
 - **My job preferences** (owner only): a readable view of the saved/applied-role sample,
   explainable learned contributions inside the Radar score, similar roles to
-  inspect, and explicit ranking feedback. The sample changes only the bounded
-  personal-signal dimension; it never overrides eligibility gates.
+  inspect, and explicit ranking feedback. Optional feedback descriptions are
+  preserved in the audit alongside the fixed category. The sample changes only
+  the bounded personal-signal dimension; it never overrides eligibility gates.
 - **AI**: per-run budget, task mix, provider/model health, grounded-research
   coverage, scout status, and registry stats.
 

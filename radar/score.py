@@ -525,6 +525,74 @@ def company_momentum_signal(company: str) -> tuple[int, list[str]]:
     return max(-3, min(points, 8)), reasons
 
 
+_STARTUP_LATE_RE = re.compile(
+    r"\b(late[- ]stage|growth[- ]stage|scale[- ]up|scaleup|pre[- ]ipo|unicorn|"
+    r"series\s*[d-z]|post[- ]ipo growth)\b", re.I)
+_STARTUP_EARLY_RE = re.compile(
+    r"\b(early[- ]stage|pre[- ]seed|seed(?:-stage)?|series\s*[a-c]|"
+    r"stealth(?:-mode)?|venture[- ]backed startup|startup|start[- ]up)\b", re.I)
+_NON_STARTUP_RE = re.compile(
+    r"\b(public(?:ly)? traded|public company|large[- ]cap|mature|enterprise|"
+    r"government|university|nonprofit|non-profit|not a startup|established)\b", re.I)
+
+
+def startup_stage_signal(company: str) -> tuple[str, int, dict, str]:
+    """Classify startup stage from cited company research, independently.
+
+    The signal is deliberately separate from the Radar score. A cited
+    estimate can help the owner filter or sort startup roles, but it never
+    changes eligibility and is labeled with its confidence and source IDs.
+    Missing, uncited, or ambiguous evidence is neutral.
+    """
+    record = _company_record(company)
+    claim = record.get("size_stage") if isinstance(record, dict) else None
+    if not isinstance(claim, dict):
+        return "unknown", 0, {}, "startup stage unavailable (no cited company-stage evidence)"
+    value = str(claim.get("value") or "").strip()
+    source_ids = [str(value) for value in claim.get("source_ids") or [] if str(value)]
+    confidence = str(claim.get("confidence") or "unknown").lower()
+    if not value or value.lower() in {"unknown", "not confirmed", "not stated", "not available"} or not source_ids:
+        return "unknown", 0, {}, "startup stage unavailable (no cited company-stage evidence)"
+    evidence = {"value": value[:500], "confidence": confidence, "source_ids": source_ids[:3]}
+    if _NON_STARTUP_RE.search(value):
+        label, points = "not classified as startup", 0
+    elif _STARTUP_LATE_RE.search(value):
+        label = "late-stage startup"
+        points = 12 if confidence in {"high", "medium"} else 6
+    elif _STARTUP_EARLY_RE.search(value):
+        label = "early-stage startup"
+        points = 12 if confidence in {"high", "medium"} else 6
+    else:
+        return "unknown", 0, {}, "startup stage unavailable (company evidence is ambiguous)"
+    reason = (f"{label} priority +{points} ({confidence} evidence; "
+              f"source IDs: {', '.join(source_ids[:3])})")
+    return label, points, evidence, reason
+
+
+def career_priority(job: Job | dict) -> int:
+    """Return the auditable ordering tier for career-stage prioritization."""
+    if isinstance(job, dict):
+        stored = job.get("career_priority")
+        if stored is not None:
+            try:
+                return max(0, min(2, int(stored)))
+            except (TypeError, ValueError):
+                pass
+        reasons = [str(reason) for reason in job.get("score_reasons") or []]
+        if job.get("explicit_new_grad") or any(
+                "verified new-grad/early-career evidence" in reason
+                or "technical leadership/rotational program" in reason
+                for reason in reasons):
+            return 2
+        if job.get("early_career_possible") or any(
+                reason.startswith("early-career possible") for reason in reasons):
+            return 1
+        return 0
+    if getattr(job, "career_priority", 0):
+        return max(0, min(2, int(job.career_priority)))
+    return 0
+
+
 # Tokens the taste model must never learn or reward: employment-shape noise,
 # leaked location words, and off-field families (boosting "business" or
 # "marketing" floods the board with roles outside Victor's field). Filtered
@@ -1254,6 +1322,16 @@ def score(job: Job, feedback: dict, now: int | None = None,
         dimensions["personal_signal"] += 2
         reasons.append("SHPE 2026 exhibitor +2")
 
+    if new_grad or program:
+        career_tier = 2
+        reasons.append("career priority: explicit new-grad or technical program")
+    elif early_career_possible(job):
+        career_tier = 1
+        reasons.append("career priority: early-career compatible")
+    else:
+        career_tier = 0
+    startup_stage, startup_points, startup_evidence, startup_reason = startup_stage_signal(job.company)
+
     # Keep the unweighted contributions for audit/debugging, then apply the
     # owner's optional section switches. The stored score_dimensions remain
     # the actual points used in raw utility, so the equation is inspectable.
@@ -1319,6 +1397,11 @@ def score(job: Job, feedback: dict, now: int | None = None,
     job.score_dimensions = dimensions
     job.score_dimensions_raw = raw_dimensions
     job.score = display
+    job.career_priority = career_tier
+    job.startup_stage = startup_stage
+    job.startup_score = startup_points
+    job.startup_stage_evidence = startup_evidence
+    job.startup_stage_reason = startup_reason if startup_stage != "unknown" else ""
     reasons.append(f"raw utility {raw_utility:g}; calibration v{RULES_VERSION} -> {display}/100")
     job.score_reasons = reasons
 

@@ -24,6 +24,7 @@ from .score import (
     RULES_VERSION,
     apply_company_concentration,
     build_preference_profile,
+    career_priority,
     early_career_possible,
     explicit_new_grad,
     gates,
@@ -613,7 +614,7 @@ def crawl() -> int:
     thr = p["thresholds"]
     band = p["llm"]["rerank_band"]
     borderline = sorted((j for j in new_jobs if j.alert_ok and j.score >= thr["alert"] - band),
-                        key=lambda j: -j.score)
+                        key=lambda j: (-career_priority(j), -j.score))
     rerank(borderline)
 
     # ---- decide alerts ----
@@ -622,7 +623,7 @@ def crawl() -> int:
                   if j.alert_ok and j.score >= thr["alert"]
                   and not lifecycle.is_terminal(j)
                   and (j.posted_at is None or now - j.posted_at <= max_age)]
-    candidates.sort(key=lambda j: -j.score)
+    candidates.sort(key=lambda j: (-career_priority(j), -j.score))
     max_alerts = int(env("RADAR_MAX_ALERTS", "25"))
     alerts = candidates[:max_alerts]
 
@@ -652,6 +653,8 @@ def crawl() -> int:
         rec["rules_v"] = RULES_VERSION
         rec["explicit_new_grad"] = explicit_new_grad(j.title) or source_new_grad(j)
         rec["early_career_possible"] = early_career_possible(j, rec.get("posting"))
+        if rec["early_career_possible"] and not rec.get("career_priority"):
+            rec["career_priority"] = 1
         jobs_state[j.id] = rec
         if canonical_url(j.url):
             existing_url_ids[canonical_url(j.url)] = j.id
@@ -1013,6 +1016,19 @@ def enrich() -> int:
         rec["score_dimensions_raw"] = j.score_dimensions_raw
         rec["score_version"] = RULES_VERSION
         rec["score_reasons"] = j.score_reasons
+        if j.startup_stage == "unknown":
+            for key in ("startup_stage", "startup_score", "startup_stage_evidence",
+                        "startup_stage_reason"):
+                rec.pop(key, None)
+        else:
+            rec["startup_stage"] = j.startup_stage
+            rec["startup_score"] = j.startup_score
+            rec["startup_stage_evidence"] = j.startup_stage_evidence
+            rec["startup_stage_reason"] = j.startup_stage_reason
+        if j.career_priority:
+            rec["career_priority"] = j.career_priority
+        else:
+            rec.pop("career_priority", None)
         sponsorship.annotate_record(rec, sponsorship_db)
         if j.score != old:
             rec["score"] = j.score
@@ -1277,6 +1293,19 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int,
         rec["score_dimensions"] = job.score_dimensions
         rec["score_dimensions_raw"] = job.score_dimensions_raw
         rec["score_reasons"] = job.score_reasons
+        if job.startup_stage == "unknown":
+            for key in ("startup_stage", "startup_score", "startup_stage_evidence",
+                        "startup_stage_reason"):
+                rec.pop(key, None)
+        else:
+            rec["startup_stage"] = job.startup_stage
+            rec["startup_score"] = job.startup_score
+            rec["startup_stage_evidence"] = job.startup_stage_evidence
+            rec["startup_stage_reason"] = job.startup_stage_reason
+        if job.career_priority:
+            rec["career_priority"] = job.career_priority
+        else:
+            rec.pop("career_priority", None)
         rec["alert_ok"] = bool(keep and alert_eligible)
         rec["explicit_new_grad"] = explicit_new_grad(job.title) or source_new_grad(job)
         rec["rules_v"] = RULES_VERSION
@@ -1288,6 +1317,8 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int,
         lifecycle.normalize_record(rec, now)
         sponsorship.annotate_record(rec, sponsorship_db)
         rec["early_career_possible"] = early_career_possible(job, rec.get("posting"))
+        if rec["early_career_possible"] and not rec.get("career_priority"):
+            rec["career_priority"] = 1
         if rec["early_career_possible"]:
             rec["score_reasons"].append(
                 "early-career possible: no stated experience floor (not new-grad verified)")
@@ -1438,7 +1469,8 @@ def web_action() -> int:
         if job is None:
             print(f"web-action: feedback job {payload.get('id')!r} not found")
             return 0
-        changed = taste.record_feedback(fb, job, payload.get("vote"), payload.get("reason"))
+        changed = taste.record_feedback(
+            fb, job, payload.get("vote"), payload.get("reason"), payload.get("description"))
         if changed:
             state.save("feedback.json", fb)
             report_path = taste.write_report(fb)
