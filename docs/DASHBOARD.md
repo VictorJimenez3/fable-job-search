@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-08-29 16:29 UTC** · companies polled directly: **1974** (registry 2232) · jobs tracked: **51682** · new this run: **19** · alerts this run: **4**_
+_Last run: **2026-08-29 16:43 UTC** · companies polled directly: **1974** (registry 2232) · jobs tracked: **51691** · new this run: **9** · alerts this run: **2**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -27,7 +27,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 85 🔥 | 14d | Apple | [Applied Data Solutions Program - Software Engineering - Full-Time Oppo](https://jobs.apple.com/en-us/details/200677717) | Austin, TX | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 85 🔥 | 16d | Apple | [Software Engineer - Applied Machine Learning - IS&T](https://jobs.apple.com/en-us/details/200677645) | Austin, TX | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 85 🔥 | 18d | TikTok | [Software Engineer Graduate - Recommendation - TikTok AI Search & Visua](https://lifeattiktok.com/search/7672517471946000645) | San Jose, CA | big_tech | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) · [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 84 ⭐ | 15h | TikTok | [Machine Learning Engineer Graduate - E-Commerce Knowledge Graph](https://lifeattiktok.com/search/7679156878833682693) | San Jose, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 84 ⭐ | 16h | TikTok | [Machine Learning Engineer Graduate - E-Commerce Knowledge Graph](https://lifeattiktok.com/search/7679156878833682693) | San Jose, CA | big_tech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 84 ⭐ | 1d | Iambic Therapeutics | [Machine Learning Scientist - Large Multimodal Models - Post-Training](https://jobs.ashbyhq.com/iambic-therapeutics/50be2fab-54c1-4310-8cec-3fe6123b8a8f/application?embed=true) | Boston, MA | healthtech | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 84 ⭐ | 2d | NVIDIA AI | [Compiler Engineer, Backend- New College Grad 2026](https://jobright.ai/jobs/info/6a9128f60bd89e205d24d112?utm_campaign=Software%20Engineering&utm_source=1103) | Santa Clara, CA, United States | big_tech | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 84 ⭐ | 2d | Johnson & Johnson | [Software Engineer, Infrastructure](https://jobright.ai/jobs/info/6a9087382e254e06fb9f16ad?utm_campaign=Software%20Engineering&utm_source=1103) | Santa Clara, CA, United States | healthtech | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
