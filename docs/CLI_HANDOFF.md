@@ -1595,3 +1595,5 @@ because the code references it.
 - After deployment, dispatch one score-maintenance run if the next schedule has
   not compacted the existing snapshot, then confirm the next radar run is green.
   No new secret is required.
+- Delivery formatting now caches the company research file once per process;
+  this keeps large master-board renders within the workflow timeout.

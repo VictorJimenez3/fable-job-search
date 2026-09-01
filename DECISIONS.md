@@ -3406,3 +3406,12 @@ place. Web actions stage optional feedback mirrors only when present, and ChemE
 workflows assign the repository owner because `ak2943` is not assignable while
 the intended mention remains in the issue body. No credentials or crawler
 semantics change.
+
+## 208. Cache research during multi-row issue delivery (2026-09-01)
+
+Master-board and batch issue rendering can format thousands of rows in one
+process. Company context is shared evidence, not row-specific state, so load
+`company_research.json` once per delivery render and pass the records through
+the formatter. This preserves citation hydration while avoiding repeated large
+JSON reads that could consume the workflow timeout. The cache remains scoped to
+the process and does not change crawler or scoring behavior.
