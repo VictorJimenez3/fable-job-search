@@ -3408,6 +3408,19 @@
   "status": "active",
   "token": "babelstreet"
  },
+ "greenhouse:baltimoreorioles": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1788223023,
+  "last_ok": 1788223023,
+  "name": "Major League Baseball",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "baltimoreorioles"
+ },
  "greenhouse:bevicareers": {
   "ats": "greenhouse",
   "extra": {},
@@ -4700,6 +4713,19 @@
   "sector": "",
   "status": "active",
   "token": "horizonsurgicalsystems"
+ },
+ "greenhouse:hpiq": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1788223023,
+  "last_ok": 1788223029,
+  "name": "HP IQ",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "hpiq"
  },
  "greenhouse:huggingface": {
   "ats": "greenhouse",
@@ -7678,6 +7704,20 @@
   "status": "invalid",
   "token": "careers-qinetiqus"
  },
+ "icims:careers-resonetics": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1788223023,
+  "invalidated_at": 1788223027,
+  "last_ok": 0,
+  "name": "Resonetics",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "careers-resonetics"
+ },
  "icims:careers-riversideresearch": {
   "ats": "icims",
   "extra": {},
@@ -7971,6 +8011,20 @@
   "sector": "",
   "status": "invalid",
   "token": "careers-transcat"
+ },
+ "icims:careers-upbring": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1788223023,
+  "invalidated_at": 1788223024,
+  "last_ok": 0,
+  "name": "Upbring",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "careers-upbring"
  },
  "icims:careers-urbanscience": {
   "ats": "icims",
@@ -11996,7 +12050,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788209396,
+  "last_ok": 1788223043,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12294,7 +12348,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1788209385,
+  "last_ok": 1788223033,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12423,7 +12477,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788209398,
+  "last_ok": 1788223048,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14107,13 +14161,29 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1788209385,
+  "last_ok": 1788223033,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
   "sector": "energy",
   "status": "active",
   "token": "chevron"
+ },
+ "workday:cibc:campus": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "campus"
+  },
+  "failures": 0,
+  "first_seen": 1788223023,
+  "last_ok": 1788223026,
+  "name": "CIBC",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "cibc"
  },
  "workday:cibc:search": {
   "ats": "workday",
@@ -14939,7 +15009,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788209396,
+  "last_ok": 1788223042,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14962,6 +15032,22 @@
   "sector": "",
   "status": "active",
   "token": "dowjones"
+ },
+ "workday:draftkings:Campus_Career_Portal": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "Campus_Career_Portal"
+  },
+  "failures": 0,
+  "first_seen": 1788223023,
+  "last_ok": 1788223023,
+  "name": "DraftKings",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "draftkings"
  },
  "workday:draftkings:Employee_Referral_Portal": {
   "ats": "workday",
@@ -15048,7 +15134,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788209387,
+  "last_ok": 1788223035,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -15783,7 +15869,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788209391,
+  "last_ok": 1788223040,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16352,6 +16438,22 @@
   "status": "active",
   "token": "icf"
  },
+ "workday:igsenergy:IGS": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "IGS"
+  },
+  "failures": 0,
+  "first_seen": 1788223023,
+  "last_ok": 1788223028,
+  "name": "IGS Energy",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "igsenergy"
+ },
  "workday:iheartmedia:External_iHM": {
   "ats": "workday",
   "extra": {
@@ -16413,6 +16515,22 @@
   "sector": "",
   "status": "active",
   "token": "insperity"
+ },
+ "workday:intactfc:intactfc": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "intactfc"
+  },
+  "failures": 0,
+  "first_seen": 1788223023,
+  "last_ok": 1788223027,
+  "name": "Intact",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "intactfc"
  },
  "workday:integritymarketing:Integrity": {
   "ats": "workday",
@@ -17517,7 +17635,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788209388,
+  "last_ok": 1788223036,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -18011,6 +18129,38 @@
   "status": "active",
   "token": "nidec"
  },
+ "workday:nike:nke": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "nke"
+  },
+  "failures": 0,
+  "first_seen": 1788223023,
+  "last_ok": 1788223026,
+  "name": "Nike",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "nike"
+ },
+ "workday:nisource:NiSource": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "NiSource"
+  },
+  "failures": 0,
+  "first_seen": 1788223023,
+  "last_ok": 1788223024,
+  "name": "NiSource",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "nisource"
+ },
  "workday:northeastern:careers": {
   "ats": "workday",
   "extra": {
@@ -18291,6 +18441,22 @@
   "sector": "",
   "status": "active",
   "token": "oneok"
+ },
+ "workday:oshkoshcorporation:Oshkosh": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "Oshkosh"
+  },
+  "failures": 0,
+  "first_seen": 1788223023,
+  "last_ok": 1788223025,
+  "name": "Oshkosh",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "oshkoshcorporation"
  },
  "workday:osu:OSUCareers": {
   "ats": "workday",
@@ -18727,6 +18893,22 @@
   "failures": 0,
   "first_seen": 1787096104,
   "last_ok": 1787096106,
+  "name": "PricewaterhouseCoopers (PwC)",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "pwc"
+ },
+ "workday:pwc:US_Entry_Level_Careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "US_Entry_Level_Careers"
+  },
+  "failures": 0,
+  "first_seen": 1788223023,
+  "last_ok": 1788223029,
   "name": "PricewaterhouseCoopers (PwC)",
   "origin": "harvest:simplify",
   "probe_attempts": 1,
@@ -19567,7 +19749,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788209387,
+  "last_ok": 1788223035,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
