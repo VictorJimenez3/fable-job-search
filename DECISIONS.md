@@ -3394,3 +3394,15 @@ existing nonce-verified popup bridge, while offline cloud Resume Studio keeps
 the synced Resume Bank PDFs and disables project editing/compilation. Project
 source, filenames, manifests, histories, and local absolute paths are never
 sent to Vercel or Google Drive.
+
+## 207. Keep scheduled delivery below generated-state limits (2026-09-01)
+
+The recurring radar, score-maintenance, and sponsorship-refresh jobs can rescore
+the full historical board. Startup-stage evidence is a cited projection of the
+company research cache, so `jobs.json` now persists only the compact stage and
+score fields; the frontend and other delivery surfaces hydrate the citation from
+`company_research.json`. The existing fail-closed snapshot-size guard remains in
+place. Web actions stage optional feedback mirrors only when present, and ChemE
+workflows assign the repository owner because `ak2943` is not assignable while
+the intended mention remains in the issue body. No credentials or crawler
+semantics change.

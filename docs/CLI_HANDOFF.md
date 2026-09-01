@@ -1581,3 +1581,17 @@ because the code references it.
 - Never put credentials in the frontend or repo. Auth = GitHub OAuth via the
   Vercel backend (owner-only); a missing backend degrades to read-only/static
   behavior.
+
+### Workflow recovery (2026-09-01)
+
+- Scheduled radar, score maintenance, and sponsorship refresh now use sparse job
+  persistence for duplicated company-stage evidence, keeping the generated
+  snapshot below GitHub's 100 MiB blob limit while retaining the auditable stage
+  and score projection.
+- Web actions stage optional feedback mirrors only when those files exist on the
+  selected lane. ChemE workflows assign the repository owner for native GitHub
+  notifications because `ak2943` is not assignable in this repository; the
+  intended recipient remains mentioned in the issue body.
+- After deployment, dispatch one score-maintenance run if the next schedule has
+  not compacted the existing snapshot, then confirm the next radar run is green.
+  No new secret is required.

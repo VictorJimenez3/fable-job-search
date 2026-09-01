@@ -47,6 +47,17 @@ _JOB_EMPTY_FIELDS = {
     "posting_family_id",
 }
 
+# Startup-stage evidence is a projection of the company-level research cache,
+# which is loaded separately by the frontend.  Keeping the same long cited
+# claim and explanation on every historical posting caused rescoring to add
+# several megabytes without adding new evidence.  Persist the small stage and
+# score fields; the UI and issue-delivery surfaces hydrate the cited claim
+# from company_research.json.
+_JOB_DERIVED_FIELDS = {
+    "startup_stage_evidence",
+    "startup_stage_reason",
+}
+
 
 def _prefix(namespace: str | None = None) -> str:
     """Keep the legacy new-grad filenames, prefixing only new lanes."""
@@ -84,6 +95,8 @@ def _compact_job_record(record: object) -> object:
     for key in _JOB_EMPTY_FIELDS:
         if compact.get(key) in (None, "", [], {}):
             compact.pop(key, None)
+    for key in _JOB_DERIVED_FIELDS:
+        compact.pop(key, None)
     return compact
 
 

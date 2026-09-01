@@ -27,5 +27,8 @@ jobs:
       - name: Post the ChemE daily best-of issue
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RADAR_ALERT_ASSIGNEE: ak2943
+          # ak2943 is not assignable in this repository; use the owner for
+          # native GitHub email delivery while the body still mentions ChemE's
+          # intended board recipient.
+          RADAR_ALERT_ASSIGNEE: ${{ github.repository_owner }}
         run: python -m radar.main daily-best

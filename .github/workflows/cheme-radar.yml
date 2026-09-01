@@ -35,7 +35,10 @@ jobs:
       - name: Crawl, score, and update the ChemE board
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RADAR_ALERT_ASSIGNEE: ak2943
+          # ak2943 is not assignable in this repository.  Keep the mention in
+          # the ChemE issue body, but assign GitHub notifications to the owner
+          # so issue creation cannot fail with a 422 validation error.
+          RADAR_ALERT_ASSIGNEE: ${{ github.repository_owner }}
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python -m radar.main crawl

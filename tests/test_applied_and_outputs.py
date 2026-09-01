@@ -6,6 +6,7 @@ import pytest
 
 from radar import notion_sync as ns
 from radar import state
+from radar import alerts
 from radar.alerts import format_line
 from radar.applied import handle_event
 from radar.main import promote_shortlist_applications
@@ -32,6 +33,21 @@ def test_format_line_roundtrips_job_id():
     assert "<!--radar:" + JOB["id"] + "-->" in line
     assert line.startswith("- [ ]")
     assert "🔥" in line  # score 88
+
+
+def test_format_line_hydrates_compacted_startup_evidence(tmp_state, monkeypatch):
+    state.save("company_research.json", {
+        "acme": {"size_stage": {"value": "Series D company",
+                                  "confidence": "high", "source_ids": ["src-1"]}}
+    })
+    monkeypatch.setattr(alerts, "_RESEARCH_CACHE", None)
+    job = {**JOB, "company": "Acme", "startup_stage": "late-stage startup",
+           "startup_score": 12}
+
+    line = format_line(job)
+
+    assert "high confidence" in line
+    assert "source IDs: src-1" in line
 
 
 def test_checkbox_event_tracks_job_as_saved(tmp_state, tmp_path, monkeypatch):
