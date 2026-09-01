@@ -39,7 +39,16 @@ jobs:
             git fetch origin "$RADAR_BRANCH"
             git reset --hard "origin/$RADAR_BRANCH"
             python -m radar.main web-action
-            git add state docs/FEEDBACK.md docs/internships/FEEDBACK.md
+            git add state
+            # The ChemE checkout and older new-grad snapshots do not always
+            # have both feedback mirrors.  Stage each generated companion only
+            # when that branch actually owns it; a missing optional path must
+            # not turn a successful web action into an exit-128 failure.
+            for feedback_path in docs/FEEDBACK.md docs/internships/FEEDBACK.md; do
+              if [[ -e "$feedback_path" ]]; then
+                git add "$feedback_path"
+              fi
+            done
             if git diff --cached --quiet; then
               echo "no changes"; exit 0
             fi

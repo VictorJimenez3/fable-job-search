@@ -1077,17 +1077,23 @@ function startupStageInfo(job) {
   let evidence = job?.startup_stage_evidence || {};
   let score = Number(job?.startup_score || 0);
   let reason = job?.startup_stage_reason || "";
-  if (!stage || stage === "unknown") {
-    const claim = S.research[norm(job?.company)]?.size_stage;
-    if (claim?.value && claim.value !== "Not confirmed" && claim.source_ids?.length) {
-      stage = /public(?:ly)? traded|public company|large[- ]cap|mature|enterprise|government|university|nonprofit|non-profit|not a startup|established/i.test(claim.value)
-        ? "not classified as startup"
-        : /late[- ]stage|growth[- ]stage|scale[- ]up|pre[- ]ipo|unicorn|series\s*[d-z]/i.test(claim.value)
-          ? "late-stage startup"
-          : /early[- ]stage|pre[- ]seed|seed(?:-stage)?|series\s*[a-c]|stealth|startup/i.test(claim.value)
-            ? "early-stage startup" : "unknown";
+  // The committed job snapshot keeps only the small stage/score projection;
+  // hydrate the cited claim from the separately loaded company research cache
+  // so rescoring does not duplicate long evidence on every historical row.
+  const claim = S.research[norm(job?.company)]?.size_stage;
+  if (claim?.value && claim.value !== "Not confirmed" && claim.source_ids?.length) {
+    const derivedStage = /public(?:ly)? traded|public company|large[- ]cap|mature|enterprise|government|university|nonprofit|non-profit|not a startup|established/i.test(claim.value)
+      ? "not classified as startup"
+      : /late[- ]stage|growth[- ]stage|scale[- ]up|pre[- ]ipo|unicorn|series\s*[d-z]/i.test(claim.value)
+        ? "late-stage startup"
+        : /early[- ]stage|pre[- ]seed|seed(?:-stage)?|series\s*[a-c]|stealth|startup/i.test(claim.value)
+          ? "early-stage startup" : "unknown";
+    if (!stage || stage === "unknown") stage = derivedStage;
+    if (!evidence?.value || !evidence?.source_ids?.length) {
       evidence = {value:claim.value, confidence:claim.confidence || "unknown", source_ids:claim.source_ids};
-      score = stage === "unknown" ? 0 : ["high","medium"].includes(String(claim.confidence||"").toLowerCase()) ? 12 : 6;
+    }
+    if (!score && derivedStage !== "unknown") {
+      score = ["high","medium"].includes(String(claim.confidence||"").toLowerCase()) ? 12 : 6;
     }
   }
   const key = startupStageKey(stage);

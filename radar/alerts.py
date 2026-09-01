@@ -14,11 +14,13 @@ import requests
 
 from . import lifecycle
 from .config import env, github_repo, profile_id
+from .models import norm
 
 API = "https://api.github.com"
 LABEL = "radar-alerts"
 BODY_LIMIT = 60000
 REQUEST_TIMEOUT = (5, 20)
+_RESEARCH_CACHE: dict | None = None
 
 
 def _headers() -> dict:
@@ -29,6 +31,25 @@ def _headers() -> dict:
 
 def lane_label() -> str:
     return "radar-internships" if profile_id() == "internship" else "radar-new-grad"
+
+
+def _startup_evidence(job: dict) -> dict:
+    """Hydrate compacted job rows from the cited company research cache."""
+    evidence = job.get("startup_stage_evidence") or {}
+    if evidence.get("value") and evidence.get("source_ids"):
+        return evidence
+    global _RESEARCH_CACHE
+    if _RESEARCH_CACHE is None:
+        try:
+            from . import company_research
+            _RESEARCH_CACHE = company_research.load()
+        except Exception:
+            _RESEARCH_CACHE = {}
+    claim = (_RESEARCH_CACHE.get(norm(job.get("company", ""))) or {}).get("size_stage")
+    if not isinstance(claim, dict) or not claim.get("value") or not claim.get("source_ids"):
+        return evidence
+    return {"value": claim["value"], "confidence": claim.get("confidence", "unknown"),
+            "source_ids": claim["source_ids"]}
 
 
 def _alert_title(job: dict) -> str:
@@ -78,7 +99,7 @@ def format_line(j: dict, culture_map: dict | None = None) -> str:
         career = " · **career:** early-career compatible"
     startup = ""
     if j.get("startup_stage") and j.get("startup_stage") != "unknown":
-        evidence = j.get("startup_stage_evidence") or {}
+        evidence = _startup_evidence(j)
         sources = ", ".join(str(x) for x in evidence.get("source_ids") or []) or "none"
         try:
             startup_points = int(j.get("startup_score") or 0)

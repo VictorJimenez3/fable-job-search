@@ -65,6 +65,32 @@ def test_jobs_save_keeps_nondefault_and_disabled_dimension_values(tmp_path, monk
     assert record["score_dimensions_raw"] == {"role_fit": 20}
 
 
+def test_jobs_save_deduplicates_company_stage_evidence(tmp_path, monkeypatch):
+    monkeypatch.setattr(state, "STATE_DIR", tmp_path)
+    state.save(
+        "jobs.json",
+        {
+            "job-1": {
+                "score_version": 13,
+                "startup_stage": "late-stage startup",
+                "startup_score": 12,
+                "startup_stage_evidence": {
+                    "value": "Series D company",
+                    "confidence": "high",
+                    "source_ids": ["src-1"],
+                },
+                "startup_stage_reason": "late-stage startup priority +12",
+            }
+        },
+    )
+
+    record = json.loads((tmp_path / "jobs.json").read_text())["job-1"]
+    assert record["startup_stage"] == "late-stage startup"
+    assert record["startup_score"] == 12
+    assert "startup_stage_evidence" not in record
+    assert "startup_stage_reason" not in record
+
+
 def test_jobs_save_preserves_previous_snapshot_when_size_guard_fails(tmp_path, monkeypatch):
     monkeypatch.setattr(state, "STATE_DIR", tmp_path)
     target = tmp_path / "jobs.json"
