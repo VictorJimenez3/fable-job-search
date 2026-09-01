@@ -33,11 +33,8 @@ def lane_label() -> str:
     return "radar-internships" if profile_id() == "internship" else "radar-new-grad"
 
 
-def _startup_evidence(job: dict) -> dict:
-    """Hydrate compacted job rows from the cited company research cache."""
-    evidence = job.get("startup_stage_evidence") or {}
-    if evidence.get("value") and evidence.get("source_ids"):
-        return evidence
+def _research_records() -> dict:
+    """Load the shared company cache once for a multi-row delivery render."""
     global _RESEARCH_CACHE
     if _RESEARCH_CACHE is None:
         try:
@@ -45,7 +42,15 @@ def _startup_evidence(job: dict) -> dict:
             _RESEARCH_CACHE = company_research.load()
         except Exception:
             _RESEARCH_CACHE = {}
-    claim = (_RESEARCH_CACHE.get(norm(job.get("company", ""))) or {}).get("size_stage")
+    return _RESEARCH_CACHE
+
+
+def _startup_evidence(job: dict) -> dict:
+    """Hydrate compacted job rows from the cited company research cache."""
+    evidence = job.get("startup_stage_evidence") or {}
+    if evidence.get("value") and evidence.get("source_ids"):
+        return evidence
+    claim = (_research_records().get(norm(job.get("company", ""))) or {}).get("size_stage")
     if not isinstance(claim, dict) or not claim.get("value") or not claim.get("source_ids"):
         return evidence
     return {"value": claim["value"], "confidence": claim.get("confidence", "unknown"),
@@ -70,9 +75,12 @@ def format_line(j: dict, culture_map: dict | None = None) -> str:
         ctag = f" {t}" if t else ""
     from .company_info import context
     from .posting import summary_tags
-    industry, what = context(j["company"], j.get("sector") or "", culture_map)
+    research_records = _research_records()
+    industry, what = context(j["company"], j.get("sector") or "", culture_map,
+                              research_records)
     from .company_info import snapshot
-    snapshot_text = snapshot(j["company"], j.get("sector") or "", culture_map)
+    snapshot_text = snapshot(j["company"], j.get("sector") or "", culture_map,
+                             research_records)
     snapshot_text = f" · _{snapshot_text}_" if snapshot_text else ""
     from .provenance import alternate_link_label, source_links
     provenance = source_links(j)
