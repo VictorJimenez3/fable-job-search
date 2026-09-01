@@ -68,6 +68,18 @@ If you do not want a login service, run it only when needed:
 Leave that terminal open while Resume Studio is working. Stop it with
 `Ctrl-C`.
 
+## Private Projects workspace
+
+The browser service's **Projects** view is the local Overleaf-style editor. It
+discovers protected and tailored references without moving them, and creates
+new editable projects below `CV/.resume_studio/projects/`. Clone a reference
+before editing; only managed private projects accept raw source changes. The
+editor supports `.tex`, `.bib`, `.sty`, `.cls`, `.md`, and `.txt` plus PNG,
+JPEG, and PDF assets, with bounded file/project sizes. Saves are SHA-checked,
+and every save, build, delete, and restore is retained in append-only history.
+Compile from the view with **Recompile**. The output is a local
+`workspace_draft` and is never an approved/application artifact automatically.
+
 ## Everyday workflow
 
 1. Open <http://127.0.0.1:4317/>.

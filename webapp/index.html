@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E🎯%3C/text%3E%3C/svg%3E">
 <title>Job Radar — Platform</title>
+<script src="/resume_workspace.js" defer></script>
 <style>
   :root {
     --paper:#FAFBF9; --ink:#1C2430; --muted:#5A6B7A; --accent:#2E7D5B;
@@ -3583,6 +3584,30 @@ async function studioRequest(path, options={}) {
     catch (bridgeError) { throw new Error(`Mac engine connection failed: ${directError.message||"direct access unavailable"}; popup fallback failed: ${bridgeError.message||"no response"}`); }
   }
 }
+let resumeProjectCapability = "";
+async function resumeProjectBridgeRequest(action, payload={}) {
+  if (action !== "project_capability" && !resumeProjectCapability) {
+    const granted = await bridgeRequest("project_capability", {});
+    resumeProjectCapability = String(granted.capability || "");
+  }
+  return bridgeRequest(action, {...payload, capability: resumeProjectCapability});
+}
+function cloudResumeProjectTransport() {
+  const artifactUrls = new Map();
+  return {
+    async list() { return resumeProjectBridgeRequest("projects"); },
+    listFiles(id) { return resumeProjectBridgeRequest("project_read", {project_id:id, path:""}); },
+    read(id, path) { return resumeProjectBridgeRequest("project_read", {project_id:id, path}); },
+    history(id) { return resumeProjectBridgeRequest("project_history", {project_id:id}); },
+    build(id, buildId) { return resumeProjectBridgeRequest("project_build", {project_id:id, build_id:buildId}); },
+    artifactUrl(id, path) { const key = `${id}:${path}`; return artifactUrls.get(key) || ""; },
+    async prepareArtifact(id, path) { const key = `${id}:${path}`; if (!artifactUrls.has(key)) { const result = await resumeProjectBridgeRequest("project_artifact", {project_id:id, path}); artifactUrls.set(key, result.data_url || ""); } return artifactUrls.get(key) || ""; },
+    async mutate(payload) { return resumeProjectBridgeRequest("project_mutate", payload); },
+    async action(payload) { return resumeProjectBridgeRequest("project_action", payload); },
+    async compile(id) { return resumeProjectBridgeRequest("project_compile", {project_id:id}); },
+    async restore(payload) { return resumeProjectBridgeRequest("project_restore", payload); },
+  };
+}
 function resumeBankKey(entry) { return `${entry?.source||""}:${entry?.entry_id||entry?.run_id||""}`; }
 function resumeBankEntries() {
   const merged = new Map();
@@ -3937,8 +3962,10 @@ function renderResumeBatchView() {
   </div>
   ${(batch.runs||[]).length ? `<div class="lane"><div class="bar" style="justify-content:space-between"><h3>Batch status</h3><span class="sub">${esc(stateText)}</span></div>${batch.error?`<div class="note bad">${esc(batch.error)}</div>`:""}<div class="resume-objective-grid">${batch.runs.map(run => `<div class="resume-objective-rank"><span><strong>${esc(run.company||"Role")}</strong><br><span class="sub">${esc(run.title||"")} · ${esc(run.message||"")}</span></span><span>${studioBadge(resumeBatchStatusLabel(run),resumeBatchStatusKind(run.status))}${run.run_id?` <button class="act" onclick='loadResumeRun(${JSON.stringify(run.run_id)})'>inspect</button>`:""}</span></div>`).join("")}</div></div>` : ""}`;
 }
-function showResumeBank() { S.testing.bankView=true; S.testing.contextView=false; S.testing.batchView=false; rTesting(); }
-function showResumeTailoring() { S.testing.bankView=false; S.testing.contextView=false; S.testing.batchView=false; rTesting(); }
+let resumeProjectWorkspaceInstance = null;
+function showResumeProjects() { S.testing.projectsView=true; S.testing.bankView=false; S.testing.contextView=false; S.testing.batchView=false; rTesting(); }
+function showResumeBank() { S.testing.projectsView=false; S.testing.bankView=true; S.testing.contextView=false; S.testing.batchView=false; rTesting(); }
+function showResumeTailoring() { S.testing.projectsView=false; S.testing.bankView=false; S.testing.contextView=false; S.testing.batchView=false; rTesting(); }
 function showResumeBatch() {
   const candidates = resumeBatchCandidates();
   const batch = resumeBatchState();
@@ -3959,7 +3986,7 @@ function showResumeNotionBatch() {
   batch.error = "";
   S.testing.bankView=false; S.testing.contextView=false; S.testing.batchView=true; rTesting();
 }
-function showResumeContext() { S.testing.bankView=false; S.testing.contextView=true; S.testing.batchView=false; rTesting(); }
+function showResumeContext() { S.testing.projectsView=false; S.testing.bankView=false; S.testing.contextView=true; S.testing.batchView=false; rTesting(); }
 function toggleResumeBatchSelection(id, checked) {
   const batch = resumeBatchState(), selected = new Set(batch.selected || []);
   const limit = resumeBatchLimit(batch.scope);
@@ -4297,7 +4324,21 @@ function resumeBankVersionHTML(entry, ranking=null) {
   const inspect=entry.run_id && entry.storage!=="cloud" ? `<button class="act" onclick='loadResumeRun("${esc(entry.run_id)}")'>inspect</button>` : "";
   const statusKind=entry.status==="complete"||entry.status==="awaiting_review"?"good":entry.status==="failed"?"bad":"unknown";
   const rankBadge=ranking?.assessment?.rankable&&Number.isFinite(Number(ranking.assessment.score))?studioBadge(`#${ranking.rank} · ${ranking.assessment.score}/100`,ranking.rank===1?"good":""):studioBadge("not ranked","warn");
-  return `<div class="resume-bank-version-wrap"><div class="resume-bank-version"><div><strong>${esc(studioModeLabel(entry.mode))} ${rankBadge}</strong><p class="sub">${esc(entry.created_at||"date unavailable")} · ${entry.storage==="cloud"?"cloud":"local"} ${studioBadge(entry.status||"saved",statusKind)}</p></div><div class="acts resume-bank-actions">${pdf?`<a class="act" href="${pdf}" target="_blank" rel="noopener">PDF ↗</a>`:""}${preview?`<a class="act" href="${preview}" target="_blank" rel="noopener">clean preview ↗</a>`:""}${report?`<a class="act" href="${report}" target="_blank" rel="noopener">audit ↗</a>`:""}${posting?`<a class="act" href="${posting}" target="_blank" rel="noopener">posting ↗</a>`:""}${inspect}${workshop}</div></div>${tailoringAuditHTML(entry.tailoring_audit)}${keywordAuditHTML(entry)}</div>`;
+  const snapshot=entry.resume_snapshot;
+  const confirm=`${entry.storage==="cloud"&&entry.status==="complete"&&entry.approval_state==="approved"&&entry.has_pdf&&!snapshot?`<button class="act" onclick='confirmResumeUsed(${JSON.stringify(entry).replaceAll("'","&#39;")})'>confirm used PDF</button>`:snapshot?studioBadge(snapshot.status||"snapshot",snapshot.status==="attached"?"good":"warn"):""}`;
+  return `<div class="resume-bank-version-wrap"><div class="resume-bank-version"><div><strong>${esc(studioModeLabel(entry.mode))} ${rankBadge}</strong><p class="sub">${esc(entry.created_at||"date unavailable")} · ${entry.storage==="cloud"?"cloud":"local"} ${studioBadge(entry.status||"saved",statusKind)}</p></div><div class="acts resume-bank-actions">${pdf?`<a class="act" href="${pdf}" target="_blank" rel="noopener">PDF ↗</a>`:""}${preview?`<a class="act" href="${preview}" target="_blank" rel="noopener">clean preview ↗</a>`:""}${report?`<a class="act" href="${report}" target="_blank" rel="noopener">audit ↗</a>`:""}${posting?`<a class="act" href="${posting}" target="_blank" rel="noopener">posting ↗</a>`:""}${confirm}${inspect}${workshop}</div></div>${tailoringAuditHTML(entry.tailoring_audit)}${keywordAuditHTML(entry)}</div>`;
+}
+
+async function confirmResumeUsed(entry) {
+  if (!entry || entry.storage !== "cloud") return;
+  const applicationId=prompt("Enter the tracked application ID this exact PDF was used for:");
+  if (!applicationId) return;
+  if (!confirm("Confirm that this exact owner-approved PDF was actually submitted for that application?")) return;
+  try {
+    await cloudResumeControlPost("resume_confirm", {source:entry.source, entry_id:entry.entry_id, run_id:entry.run_id,
+      pdf_filename:entry.pdf_filename, application_id:applicationId, owner_confirmed:true});
+    await loadCloudResumeBank(false); rTesting(); toast("Resume-use receipt queued for Notion attachment");
+  } catch(error) { toast(error.message.slice(0,180)); }
 }
 function resumeBankGroupHTML(group) {
   const latest=group.versions[0], job=latest.job||{}, ranked=objectiveRankings(group), winner=ranked.find(item=>item.assessment.rankable&&Number.isFinite(Number(item.assessment.score))), primary=winner?.entry||latest, preview=cloudBankArtifactUrl(primary,"preview");
@@ -4550,6 +4591,12 @@ function openResumeWorkshop(id) {
 }
 function rTesting() {
   if (!S.auth?.owner) { S.tab="jobs"; rJobs(); return; }
+  if (S.testing.projectsView) {
+    $("#main").innerHTML = `<section class="testing-hero"><div class="bar" style="justify-content:space-between"><div><span class="chip good">owner-only private projects</span><span class="chip">source stays on the Mac</span></div><div class="acts"><button class="act" onclick="showResumeTailoring()">Back to tailoring</button><button class="act" onclick="showResumeBank()">Resume bank</button></div></div><h2>Overleaf-style Resume Studio</h2><p class="sub">Canonical resumes, evidence, and tailored runs are reference-only. Clone a source into a private project before editing. Workspace PDFs are labeled <strong>workspace_draft</strong> and never enter approval or applications automatically.</p><div id="resumeProjectsWorkspace"></div></section>`;
+    const host = $("#resumeProjectsWorkspace");
+    if (host && window.ResumeProjectWorkspace) { if (resumeProjectWorkspaceInstance) resumeProjectWorkspaceInstance.destroy(); resumeProjectWorkspaceInstance = window.ResumeProjectWorkspace.mount(host, {transport: cloudResumeProjectTransport(), openWorkshop: openResumeWorkshop}); }
+    return;
+  }
   if (S.testing.contextView) {
     $("#main").innerHTML=renderResumeContextView();
     const contextQ=$("#contextQ"); if(contextQ)contextQ.oninput=()=>{S.testing.contextQuery=contextQ.value;clearTimeout(window.contextSearchTimer);window.contextSearchTimer=setTimeout(rTesting,180);};
@@ -4579,7 +4626,7 @@ function rTesting() {
     <span class="chip good">owner only · @${esc(S.auth.login)}</span>
     <h2>Resume Studio</h2>
     <p class="sub">Choose a production posting, tailor it here, and keep the private evidence graph and generated artifacts behind the owner boundary. Start the Mac engine first; this cloud workspace connects to it automatically.</p>
-    <div class="bar" style="margin:.65rem 0 0"><button class="act primary" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBatch()">Tailor today <span class="chip">${resumeBatchCandidates().length}</span></button><button class="act" onclick="showResumeNotionBatch()">Autopilot To tailor <span class="chip">${resumeNotionTailorCandidates().length}</span></button><button class="act" onclick="showResumeBank()">Resume bank <span class="chip">${resumeBankGroups(resumeBankEntries().filter(resumeBankCurrentEra)).length} jobs</span></button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><span class="sub">${S.testing.cloudBank.status==="online"?"private cloud bank connected":"private cloud bank checking"} · ${S.testing.cloudQueue.status==="online"?`${cloudQueuePendingCount()} private queue item${cloudQueuePendingCount()===1?"":"s"}`:"private queue checking"}</span></div>
+    <div class="bar" style="margin:.65rem 0 0"><button class="act primary" onclick="showResumeTailoring()">New tailoring</button><button class="act" onclick="showResumeBatch()">Tailor today <span class="chip">${resumeBatchCandidates().length}</span></button><button class="act" onclick="showResumeNotionBatch()">Autopilot To tailor <span class="chip">${resumeNotionTailorCandidates().length}</span></button><button class="act" onclick="showResumeBank()">Resume bank <span class="chip">${resumeBankGroups(resumeBankEntries().filter(resumeBankCurrentEra)).length} jobs</span></button><button class="act" onclick="showResumeProjects()">Projects</button><button class="act" onclick="showResumeContext()">Context &amp; Q&amp;A</button><span class="sub">${S.testing.cloudBank.status==="online"?"private cloud bank connected":"private cloud bank checking"} · ${S.testing.cloudQueue.status==="online"?`${cloudQueuePendingCount()} private queue item${cloudQueuePendingCount()===1?"":"s"}`:"private queue checking"}</span></div>
     <div id="studioEngineNotice" class="note" style="margin:.65rem 0 0">Checking the private engine…</div>
     ${cloudQueueSummaryHTML()}
   </section>

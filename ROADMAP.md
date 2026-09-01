@@ -130,6 +130,13 @@ feature requests to implement in the application.
    what is producing misleading priorities, and what should be removed or
    replaced before defining a new auditable scoring approach.
 
+3. **Overleaf-style Resume Studio workspace — ✅ SHIPPED (DECISION #206).**
+   Resume Studio now exposes a dependency-free project tree, source editor,
+   autosave/conflict handling, local Tectonic previews, and append-only history
+   in both local and owner production surfaces. Existing CV paths remain
+   untouched; only private managed projects are editable and workspace PDFs
+   remain `workspace_draft` artifacts outside Resume Bank and application flows.
+
 ## Deliberately deferred by Victor
 
 1. **Scoring/state maintenance hardening — ✅ foundation shipped.** CI now
