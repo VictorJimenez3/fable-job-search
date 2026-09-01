@@ -41,6 +41,7 @@ import json
 import os
 import re
 import shutil
+import secrets
 import signal
 import subprocess
 import sys
@@ -88,6 +89,7 @@ from radar.application_agent import (
     verify_submission_page as verify_application_submission_page,
 )
 from scripts import resume_evaluator
+from scripts import resume_projects
 
 
 ENGINE_SOURCE_PATH = Path(__file__).resolve()
@@ -14719,7 +14721,7 @@ UI_HTML = r"""<!doctype html>
 .hero{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:22px}.eyebrow{color:var(--accent);font-size:11px;letter-spacing:.12em;font-weight:700}.hero h1{margin-top:4px}.hero-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.hero-actions button{margin:0}.hero-actions button.active{background:var(--accent);border-color:var(--accent);color:#08111d}.radar-link{display:inline-flex;align-items:center;min-height:36px;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:#1F2A33;text-decoration:none;font:13px/1.4 ui-monospace,"SF Mono",Menlo,Consolas,monospace}.grid{grid-template-columns:360px minmax(0,1fr)}.panel{box-shadow:0 12px 35px rgba(0,0,0,.14)}.panel-top,.workspace-heading,.section-title,.library-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.count{color:var(--muted);font-size:12px;padding-top:4px}.hint{color:var(--muted);margin-top:-5px}.notice{background:#10243a;border:1px solid #1f4f7a;border-radius:7px;padding:10px 12px;margin:0 0 14px;color:#c7e5ff}.action-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}.action-card{background:#0d1117;border:1px solid var(--line);border-radius:8px;padding:12px}.action-card h3{font-size:14px;margin:0 0 4px}.action-card p{color:var(--muted);font-size:12px;min-height:36px;margin:0 0 8px}.action-card button{margin:0;width:100%}.section-title{margin-top:20px}.section-title h3{margin:0;font-size:15px}.empty{padding:38px 12px;text-align:center;color:var(--muted)}.library-view{margin-top:18px}.library-toolbar{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:8px;margin:14px 0}.library-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}.resume-card{background:#0d1117;border:1px solid var(--line);border-radius:9px;padding:12px;min-width:0}.resume-card:hover{border-color:#4b6e91}.card-top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.card-top strong{display:block}.card-top small{display:block;color:var(--muted);margin-top:3px}.thumb{display:block;width:100%;height:230px;object-fit:contain;object-position:top center;background:#fff;border:1px solid var(--line);margin:10px 0;border-radius:5px}.thumb-placeholder{height:70px;display:flex;align-items:center;justify-content:center;border:1px dashed var(--line);border-radius:5px;margin:10px 0;color:var(--muted)}.card-meta{color:var(--muted);font-size:12px;line-height:1.55}.card-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.card-actions a,.card-actions button{font-size:12px;margin:0;padding:6px 8px}.card-actions button{background:#21262d;border:1px solid var(--line);color:var(--text);border-radius:6px;cursor:pointer}.posting-snapshot{margin-top:10px}.posting-snapshot pre{max-height:230px;margin:6px 0}.legacy{color:var(--warn)}.hidden{display:none!important}.workshop-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:14px}.workshop-lines{max-height:calc(100vh - 220px);overflow:auto;padding-right:3px}.workshop-entry{border-top:1px solid var(--line);padding:12px 0}.workshop-entry:first-child{border-top:0;padding-top:0}.workshop-entry h4{margin:0 0 8px;font-size:14px}.workshop-line{background:#0d1117;border:1px solid var(--line);border-radius:8px;padding:10px;margin:8px 0}.workshop-line:focus-within{border-color:var(--accent)}.line-meta{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:11px;margin-bottom:6px}.line-text{width:100%;min-height:58px;resize:vertical;line-height:1.4;background:#111827;border:1px solid #263241;border-radius:5px;color:var(--text);padding:8px}.line-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}.line-actions button{font-size:12px;margin:0;padding:6px 8px}.source-note{color:var(--muted);font-size:11px;margin:7px 0 0}.workshop-side{position:sticky;top:16px;align-self:start}.workshop-preview{width:100%;max-height:560px;object-fit:contain;object-position:top;background:#fff;border:1px solid var(--line);border-radius:5px}.chat-box textarea{width:100%;min-height:82px;resize:vertical;background:#0d1117;border:1px solid var(--line);border-radius:6px;color:var(--text);padding:9px}.chat-row{display:flex;gap:8px;margin-top:8px}.chat-row select{flex:0 0 120px}.chat-row button{margin:0;flex:1}.ai-reply{background:#10243a;border:1px solid #1f4f7a;border-radius:7px;padding:10px;margin-top:10px;white-space:pre-wrap}.suggestion{border:1px solid var(--line);border-radius:7px;padding:9px;margin:8px 0}.suggestion .text{font-size:13px}.history-list{max-height:180px;overflow:auto}.history-row{display:flex;justify-content:space-between;gap:8px;align-items:center;border-top:1px solid var(--line);padding:7px 0;font-size:12px}.history-row button{font-size:11px;margin:0;padding:4px 7px;background:#21262d;border-color:var(--line)}@media(max-width:850px){.hero{display:block}.hero-actions{margin-top:12px}.action-grid{grid-template-columns:1fr}.library-toolbar{grid-template-columns:1fr}.workshop-layout{grid-template-columns:1fr}.workshop-side{position:static}}
  .usage-strip{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 18px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#111827}.usage-strip strong{color:var(--text)}.queue-strip{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px;padding:10px 12px;border:1px solid #3b2e13;border-radius:8px;background:#1b1710}.queue-strip button{margin:0}.mode-tag{color:var(--accent);font-weight:600}.rationale{border-left:3px solid var(--accent);padding:10px 12px;background:#10243a;border-radius:6px;margin:10px 0}.rationale p{margin:5px 0}.rationale ul{margin:6px 0 0 18px;padding:0}.report-details{margin-top:10px}.report-details summary{cursor:pointer;color:var(--accent)}.workshop-preview-frame{width:100%;height:560px;border:1px solid var(--line);border-radius:5px;background:#fff}.preview-fallback{padding:12px;background:#111827;border-radius:6px}.action-card.featured{border-color:var(--accent);box-shadow:0 0 0 1px rgba(88,166,255,.12)}.action-card .micro{min-height:0;margin:4px 0 8px;font-size:11px;color:#b5c7d8}.button-row{display:flex;gap:8px;flex-wrap:wrap}.button-row button{margin:0}.report-meter{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0}.report-meter div{padding:8px;background:#0d1117;border:1px solid var(--line);border-radius:6px}.report-meter strong{display:block;font-size:17px}@media(max-width:850px){.report-meter{grid-template-columns:1fr}}
 </style></head><body><main>
-<header class="hero"><div><div class="eyebrow">JOB RADAR · PRIVATE RESUME WORKSPACE</div><h1>Resume Studio</h1><p class="sub">Find → save → tailor → apply. Private CV evidence and generated PDFs stay on this Mac.</p></div><div class="hero-actions"><a class="radar-link" href="https://job-radar-newgrad.vercel.app">← Job Radar</a><button id="tailorTab" class="active">New tailoring</button><button id="libraryTab" class="secondary">Resume bank <span id="libraryCount">0</span></button></div></header>
+<header class="hero"><div><div class="eyebrow">JOB RADAR · PRIVATE RESUME WORKSPACE</div><h1>Resume Studio</h1><p class="sub">Find → save → tailor → apply. Private CV evidence and generated PDFs stay on this Mac.</p></div><div class="hero-actions"><a class="radar-link" href="https://job-radar-newgrad.vercel.app">← Job Radar</a><button id="tailorTab" class="active">New tailoring</button><button id="libraryTab" class="secondary">Resume bank <span id="libraryCount">0</span></button><button id="projectsTab" class="secondary">Projects</button></div></header>
 <div id="usageStrip" class="usage-strip"><strong>Usage</strong><span class="meta">Loading observed local Codex usage…</span></div>
 <div id="queueStrip" class="queue-strip hidden"><span><strong>Tailor queue</strong> <span id="queueSummary" class="meta"></span></span><button id="queueOpen" class="secondary">Open bank</button></div>
 <div id="tailorView" class="grid"><section class="panel"><div class="panel-top"><h2>Postings</h2><span id="jobCount" class="count"></span></div><p class="hint">Choose a role. Saved resumes stay in the bank when you switch.</p><input id="search" placeholder="Search company, title, sector…" autocomplete="off"><div class="toolbar"><select id="sort" aria-label="Sort roles"><option value="best">Best Radar score</option><option value="newest">Newest</option><option value="resume_match">Resume Match</option></select><button id="refreshEvidence" class="secondary" title="Refresh GitHub and Devpost evidence">Refresh evidence</button></div><div id="jobs" class="jobs">Loading roles…</div></section>
@@ -14815,7 +14817,8 @@ const resumeStudioBridgeNonce=(()=>{const bytes=new Uint8Array(32);crypto.getRan
 function validBridgeEvent(event,message){return Boolean(resumeStudioBridgeMode&&resumeStudioBridgeOrigin&&event.source===window.opener&&event.origin===resumeStudioBridgeOrigin&&message&&message.bridge_nonce===resumeStudioBridgeNonce&&/^cloud-[0-9]{10,}-[0-9]+$/.test(String(message.request_id||'')));}
 function bridgeReply(event,requestId,data,error=''){if(!validBridgeEvent(event,{bridge_nonce:resumeStudioBridgeNonce,request_id:requestId}))return;event.source.postMessage({type:'resume-studio:response',request_id:requestId,bridge_nonce:resumeStudioBridgeNonce,ok:!error,data,error},resumeStudioBridgeOrigin);}
 async function bridgeFetch(path,init={}){const response=await fetch(path,init);let data={};try{data=await response.json();}catch(_){data={};}if(!response.ok)throw new Error(data.error||`engine returned ${response.status}`);return data;}
-async function handleResumeStudioBridge(event){const message=event.data||{};if(message.type!=='resume-studio:request'||!validBridgeEvent(event,message))return;const action=message.action,payload=message.payload&&typeof message.payload==='object'&&!Array.isArray(message.payload)?message.payload:{};try{let data;if(action==='health')data=await bridgeFetch('/api/health');else if(action==='library')data=await bridgeFetch('/api/library?limit='+encodeURIComponent(payload.limit||100));else if(action==='match')data=await bridgeFetch('/api/match',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot})});else if(action==='context')data=await bridgeFetch('/api/context');else if(action==='context_job')data=await bridgeFetch('/api/context/job',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot})});else if(action==='context_answer')data=await bridgeFetch('/api/context/answer',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='context_hint')data=await bridgeFetch('/api/context/hint',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='context_hint_dismiss')data=await bridgeFetch('/api/context/hint/dismiss',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='queue')data=await bridgeFetch('/api/run',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,mode:payload.mode,queue_id:payload.queue_id,job_snapshot:payload.job_snapshot})});else if(action==='status')data=await bridgeFetch('/api/run?id='+encodeURIComponent(payload.id||''));else throw new Error('unsupported bridge request');bridgeReply(event,message.request_id,data);if(action==='queue'&&data.run_id)bridgePollRun(event,data.run_id);}catch(error){bridgeReply(event,message.request_id,{},error.message||String(error));}}
+function projectBridgeInit(payload,init={}){return {...init,headers:{...(init.headers||{}),'X-Resume-Project-Capability':String(payload?.capability||'')}};}
+async function handleResumeStudioBridge(event){const message=event.data||{};if(message.type!=='resume-studio:request'||!validBridgeEvent(event,message))return;const action=message.action,payload=message.payload&&typeof message.payload==='object'&&!Array.isArray(message.payload)?message.payload:{};try{let data;if(action==='health')data=await bridgeFetch('/api/health');else if(action==='project_capability')data=await bridgeFetch('/api/project/capability');else if(action==='projects')data=await bridgeFetch('/api/projects',projectBridgeInit(payload));else if(action==='project_read')data=await bridgeFetch('/api/project?id='+encodeURIComponent(payload.project_id||'')+'&path='+encodeURIComponent(payload.path||''),projectBridgeInit(payload));else if(action==='project_history')data=await bridgeFetch('/api/project/history?id='+encodeURIComponent(payload.project_id||''),projectBridgeInit(payload));else if(action==='project_build')data=await bridgeFetch('/api/project/build?id='+encodeURIComponent(payload.project_id||'')+'&build_id='+encodeURIComponent(payload.build_id||''),projectBridgeInit(payload));else if(action==='project_artifact'){const response=await fetch('/api/project/artifact?id='+encodeURIComponent(payload.project_id||'')+'&path='+encodeURIComponent(payload.path||''),projectBridgeInit(payload));if(!response.ok)throw new Error('artifact unavailable');const blob=await response.blob();const reader=new FileReader();data=await new Promise((resolve,reject)=>{reader.onload=()=>resolve({data_url:reader.result});reader.onerror=reject;reader.readAsDataURL(blob);});}else if(action==='project_mutate')data=await bridgeFetch('/api/project/file',{method:'POST',headers:{'content-type':'application/json','X-Resume-Project-Capability':String(payload.capability||'')},body:JSON.stringify(payload)});else if(action==='project_action')data=await bridgeFetch('/api/project',{method:'POST',headers:{'content-type':'application/json','X-Resume-Project-Capability':String(payload.capability||'')},body:JSON.stringify(payload)});else if(action==='project_compile')data=await bridgeFetch('/api/project/compile',{method:'POST',headers:{'content-type':'application/json','X-Resume-Project-Capability':String(payload.capability||'')},body:JSON.stringify(payload)});else if(action==='project_restore')data=await bridgeFetch('/api/project/revert',{method:'POST',headers:{'content-type':'application/json','X-Resume-Project-Capability':String(payload.capability||'')},body:JSON.stringify(payload)});else if(action==='library')data=await bridgeFetch('/api/library?limit='+encodeURIComponent(payload.limit||100));else if(action==='match')data=await bridgeFetch('/api/match',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot})});else if(action==='context')data=await bridgeFetch('/api/context');else if(action==='context_job')data=await bridgeFetch('/api/context/job',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot})});else if(action==='context_answer')data=await bridgeFetch('/api/context/answer',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='context_hint')data=await bridgeFetch('/api/context/hint',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='context_hint_dismiss')data=await bridgeFetch('/api/context/hint/dismiss',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(payload)});else if(action==='queue')data=await bridgeFetch('/api/run',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({job_id:payload.job_id,mode:payload.mode,queue_id:payload.queue_id,job_snapshot:payload.job_snapshot})});else if(action==='status')data=await bridgeFetch('/api/run?id='+encodeURIComponent(payload.id||''));else throw new Error('unsupported bridge request');bridgeReply(event,message.request_id,data);if(action==='queue'&&data.run_id)bridgePollRun(event,data.run_id);}catch(error){bridgeReply(event,message.request_id,{},error.message||String(error));}}
 async function bridgePollRun(event,runId){for(let i=0;i<1200;i+=1){await new Promise(resolve=>setTimeout(resolve,1500));try{const data=await bridgeFetch('/api/run?id='+encodeURIComponent(runId));if(event.source===window.opener&&event.origin===resumeStudioBridgeOrigin)event.source.postMessage({type:'resume-studio:run',run_id:runId,bridge_nonce:resumeStudioBridgeNonce,data},resumeStudioBridgeOrigin);if(['complete','awaiting_review','failed'].includes(data.status))return;}catch(error){if(event.source===window.opener)event.source.postMessage({type:'resume-studio:run',run_id:runId,bridge_nonce:resumeStudioBridgeNonce,data:{status:'failed',message:error.message}},resumeStudioBridgeOrigin);return;}}}
 window.addEventListener('message',handleResumeStudioBridge);
 if(resumeStudioBridgeMode){document.title='Resume Studio engine';document.body.innerHTML='<main style="max-width:420px;margin:0 auto;padding:28px;font:15px/1.45 -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;background:#131A21;color:#D9E2E8;min-height:100vh"><h1 style="font-size:20px">Resume Studio engine</h1><p id="bridgeState">Connecting to the cloud workspace…</p><p style="color:#8FA1AE;font-size:13px">Keep this small private-engine window open while the cloud Resume Studio queues or reviews a draft. Your CV and generated files remain on this Mac.</p></main>';if(window.opener&&resumeStudioBridgeOrigin)window.opener.postMessage({type:'resume-studio:ready',bridge_nonce:resumeStudioBridgeNonce},resumeStudioBridgeOrigin);}
@@ -14827,6 +14830,50 @@ UI_HTML = UI_HTML.replace(
     '<details class="utility-details" open><summary>Safety and usage</summary><div id="protectionStrip" class="protection-strip"><strong>Canonical resumes locked</strong><span>Studio creates private copies only; protected CV/immutable/ artifacts are never overwritten.</span><span class="meta">Owner edits require: .venv/bin/python scripts/resume_lock.py unlock</span></div><div id="usageStrip" class="usage-strip"><strong>Usage</strong><span class="meta">Loading observed local Codex usage…</span></div></details>',
 )
 UI_HTML = UI_HTML.replace("CV/resume.tex locked", "CV/immutable/VictorJimenezResume.tex locked")
+
+# Keep the localhost engine visually aligned with the owner-only production
+# Resume Studio surface. The local page still owns the engine and data, but
+# uses the same card, chip, and action language as the cloud control plane so
+# switching between the two surfaces does not feel like changing products.
+UI_HTML = UI_HTML.replace(
+    '</style></head><body><main>',
+    '''<style>
+.testing-hero.hero{display:flex;flex-wrap:wrap;align-items:flex-start;gap:12px;margin-bottom:18px;padding:15px 16px;background:var(--panel);border:1px solid var(--accent);border-radius:10px;box-shadow:0 12px 35px rgba(0,0,0,.14)}
+.testing-hero.hero .studio-topline{display:flex;flex:1 1 100%;align-items:center;justify-content:space-between;gap:10px;min-width:0;padding-bottom:2px}
+.testing-hero.hero .studio-topline>div{display:flex;flex-wrap:wrap;gap:6px;min-width:0}
+.testing-hero.hero .studio-hero-copy{min-width:0;flex:1 1 520px}
+.testing-hero.hero .studio-hero-copy .sub{margin-bottom:0}
+.testing-hero.hero .hero-actions{flex:0 0 auto;max-width:100%}
+.chip{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 7px;color:var(--muted);font:12px/1.4 ui-monospace,"SF Mono",Menlo,Consolas,monospace;white-space:nowrap}
+.chip.good{color:var(--good);border-color:var(--good)}
+.chip.bad{color:var(--bad);border-color:var(--bad)}
+.chip.unknown{border-style:dashed}
+.studio-workflow-note{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:0 0 14px;padding:10px 12px;background:#10243a;border:1px solid #1f4f7a;border-radius:7px;color:#c7e5ff}
+.studio-workflow-note .meta{color:#9fc4df}
+@media(max-width:850px){.testing-hero.hero .studio-topline{align-items:flex-start;flex-direction:column}.testing-hero.hero .hero-actions{width:100%}.studio-workflow-note{align-items:flex-start;flex-direction:column}}
+</style></head><body><main>''',
+    1,
+)
+UI_HTML = UI_HTML.replace(
+    '<header class="hero"><div><div class="eyebrow">JOB RADAR · PRIVATE RESUME WORKSPACE</div>',
+    '<header class="hero testing-hero"><div class="studio-topline"><div><span class="chip good">owner only · @VictorJimenez3</span><span class="chip">source stays on the Mac</span></div><span id="engineChip" class="chip unknown">checking Mac engine…</span></div><div class="studio-hero-copy"><div class="eyebrow">JOB RADAR · PRIVATE RESUME WORKSPACE</div>',
+    1,
+)
+UI_HTML = UI_HTML.replace(
+    '<div id="usageStrip" class="usage-strip"><strong>Usage</strong>',
+    '<div class="studio-workflow-note"><strong>Private engine workflow</strong><span class="meta">Choose a posting, queue a draft, inspect the diff in Workshop, then keep the resulting PDF in the private bank.</span></div><div id="usageStrip" class="usage-strip"><strong>Usage</strong>',
+    1,
+)
+UI_HTML = UI_HTML.replace(
+    "async function loadUsage(){try{const r=await fetch('/api/usage');",
+    "async function loadEngineStatus(){const chip=$('engineChip');if(!chip)return;try{const r=await fetch('/api/health');const data=await r.json();if(!r.ok)throw new Error(data.error||'health check failed');const ready=Boolean(data.ready)&&!data.restart_required;chip.className='chip '+(ready?'good':'bad');chip.textContent=ready?'Mac engine ready':'restart required';}catch(error){chip.className='chip bad';chip.textContent='Mac engine offline';}}\nasync function loadUsage(){try{const r=await fetch('/api/usage');",
+    1,
+)
+UI_HTML = UI_HTML.replace(
+    'Promise.all([loadJobs(),loadLibrary(),loadUsage(),loadProtection(),loadEvidenceReview()])',
+    'Promise.all([loadJobs(),loadLibrary(),loadEngineStatus(),loadUsage(),loadProtection(),loadEvidenceReview()])',
+    1,
+)
 UI_HTML = UI_HTML.replace("||'resume.pdf',previewName", "||'victor_jimenez_company.pdf',previewName")
 UI_HTML = UI_HTML.replace("||report.pdf_filename||'resume.pdf'", "||report.pdf_filename||'victor_jimenez_company.pdf'")
 UI_HTML = UI_HTML.replace('<option value="unrestricted">Unrestricted AI</option>', '<option value="unrestricted">Take-the-wheel</option>')
@@ -15162,8 +15209,40 @@ UI_HTML = UI_HTML.replace(
     "body:JSON.stringify({job_id:payload.job_id,job_snapshot:payload.job_snapshot||null})",
 )
 
+UI_HTML = UI_HTML.replace(
+    '<section id="libraryView" class="panel library-view hidden">',
+    '<section id="projectsView" class="panel library-view hidden"><div class="library-head"><div><div class="eyebrow">PRIVATE PROJECTS</div><h2>Overleaf-style workspace</h2><p class="sub">Edit only private projects. Canonical resumes and tailored runs stay read-only; workspace PDFs are drafts until reviewed.</p></div><button id="projectsBack" class="secondary">Back to tailoring</button></div><div id="resumeProjectsWorkspace"></div></section><section id="libraryView" class="panel library-view hidden">',
+    1,
+)
+UI_HTML = UI_HTML.replace(
+    '</head>',
+    '<script src="/resume_workspace.js"></script></head>',
+    1,
+)
+UI_HTML = UI_HTML.replace(
+    '</script></main>',
+    r'''let resumeWorkspaceInstance=null;
+function showResumeProjects(){
+  ['tailorView','libraryView','workshopView'].forEach(id=>$(id)?.classList.add('hidden'));
+  $('projectsView')?.classList.remove('hidden');
+  $('tailorTab')?.classList.remove('active'); $('libraryTab')?.classList.remove('active'); $('projectsTab')?.classList.add('active');
+  const host=$('resumeProjectsWorkspace');
+  if(host&&window.ResumeProjectWorkspace&&!resumeWorkspaceInstance)resumeWorkspaceInstance=window.ResumeProjectWorkspace.mount(host,{transport:null});
+}
+const resumeStudioShowView=showView;
+showView=function(view){$('projectsView')?.classList.add('hidden');$('projectsTab')?.classList.remove('active');return resumeStudioShowView(view);};
+document.addEventListener('DOMContentLoaded',()=>{$('projectsTab')?.addEventListener('click',showResumeProjects);$('projectsBack')?.addEventListener('click',()=>showView('tailor'));});</script></main>''',
+    1,
+)
+
 class StudioHandler(BaseHTTPRequestHandler):
     manager: RunManager = RunManager()
+    # Project capabilities are intentionally ephemeral and process-local.  A
+    # cloud page can operate the private workspace only through the nonce-
+    # verified popup bridge; Vercel and Drive never receive this token.
+    project_capabilities: Dict[str, float] = {}
+    project_capability_lock = threading.Lock()
+    PROJECT_CAPABILITY_TTL = 15 * 60
     # The cloud Job Radar page is only a control plane. The engine remains
     # bound to loopback; cloud requests are limited to this exact allowlist.
     DEFAULT_BRIDGE_ORIGINS = {
@@ -15193,6 +15272,42 @@ class StudioHandler(BaseHTTPRequestHandler):
             "/api/workshop", "/api/workshop/edit", "/api/workshop/ai",
             "/api/workshop/revert",
         }
+
+    @classmethod
+    def issue_project_capability(cls) -> Dict[str, Any]:
+        token = secrets.token_urlsafe(32)
+        expires = time.time() + cls.PROJECT_CAPABILITY_TTL
+        with cls.project_capability_lock:
+            now = time.time()
+            cls.project_capabilities = {
+                key: value for key, value in cls.project_capabilities.items()
+                if value > now
+            }
+            cls.project_capabilities[token] = expires
+        return {"capability": token, "expires_at": dt.datetime.fromtimestamp(expires, dt.timezone.utc).isoformat().replace("+00:00", "Z")}
+
+    @classmethod
+    def valid_project_capability(cls, token: str) -> bool:
+        if not token:
+            return False
+        with cls.project_capability_lock:
+            expires = cls.project_capabilities.get(token, 0)
+            if expires <= time.time():
+                cls.project_capabilities.pop(token, None)
+                return False
+            return True
+
+    def project_guard(self, parsed_path: str) -> bool:
+        """Require a short-lived capability for all project data routes."""
+        if parsed_path == "/api/project/capability":
+            return True
+        if parsed_path == "/api/projects" or parsed_path.startswith("/api/project/") or parsed_path == "/api/project":
+            query_capability = parse_qs(urlparse(self.path).query).get("capability", [""])[0] if parsed_path == "/api/project/artifact" else ""
+            token = self.headers.get("X-Resume-Project-Capability", "") or query_capability
+            if not self.valid_project_capability(token):
+                self.send_json({"error": "project capability required"}, HTTPStatus.FORBIDDEN)
+                return False
+        return True
 
     @classmethod
     def cors_headers_for(cls, origin: str, path: str) -> Dict[str, str]:
@@ -15283,8 +15398,59 @@ class StudioHandler(BaseHTTPRequestHandler):
             self.send_response(HTTPStatus.NO_CONTENT)
             self.end_headers()
             return
+        if parsed.path == "/resume_workspace.js":
+            asset = repo_root() / "webapp" / "resume_workspace.js"
+            if not asset.is_file():
+                return self.send_json({"error": "workspace asset not found"}, HTTPStatus.NOT_FOUND)
+            return self.send_bytes(asset.read_bytes(), "text/javascript; charset=utf-8")
+        if not self.project_guard(parsed.path):
+            return
         if parsed.path == "/":
             return self.send_bytes(UI_HTML.encode("utf-8"), "text/html; charset=utf-8")
+        if parsed.path == "/api/project/capability":
+            return self.send_json(self.issue_project_capability())
+        if parsed.path == "/api/projects":
+            try:
+                return self.send_json(resume_projects.list_projects(cv_root(repo_root())))
+            except (OSError, ValueError, RuntimeError) as exc:
+                return self.send_json({"error": str(exc)}, HTTPStatus.BAD_REQUEST)
+        if parsed.path == "/api/project":
+            params = parse_qs(parsed.query)
+            project_id = params.get("id", [""])[0]
+            rel = params.get("path", [""])[0]
+            try:
+                if rel:
+                    return self.send_json(resume_projects.read_file(cv_root(repo_root()), project_id, rel))
+                return self.send_json(resume_projects.list_project_files(cv_root(repo_root()), project_id))
+            except resume_projects.ProjectNotFound as exc:
+                return self.send_json({"error": str(exc)}, HTTPStatus.NOT_FOUND)
+            except (resume_projects.ProjectError, OSError) as exc:
+                return self.send_json({"error": str(exc)}, HTTPStatus.BAD_REQUEST)
+        if parsed.path == "/api/project/history":
+            params = parse_qs(parsed.query)
+            try:
+                return self.send_json(resume_projects.history(cv_root(repo_root()), params.get("id", [""])[0]))
+            except resume_projects.ProjectNotFound as exc:
+                return self.send_json({"error": str(exc)}, HTTPStatus.NOT_FOUND)
+            except (resume_projects.ProjectError, OSError) as exc:
+                return self.send_json({"error": str(exc)}, HTTPStatus.BAD_REQUEST)
+        if parsed.path == "/api/project/build":
+            params = parse_qs(parsed.query)
+            try:
+                return self.send_json(resume_projects.build_status(cv_root(repo_root()), params.get("id", [""])[0], params.get("build_id", [""])[0]))
+            except resume_projects.ProjectNotFound as exc:
+                return self.send_json({"error": str(exc)}, HTTPStatus.NOT_FOUND)
+            except (resume_projects.ProjectError, OSError) as exc:
+                return self.send_json({"error": str(exc)}, HTTPStatus.BAD_REQUEST)
+        if parsed.path == "/api/project/artifact":
+            params = parse_qs(parsed.query)
+            try:
+                target, content_type = resume_projects.artifact(cv_root(repo_root()), params.get("id", [""])[0], params.get("path", [""])[0])
+                return self.send_bytes(target.read_bytes(), content_type, download_name=target.name if target.suffix.lower() == ".pdf" else "")
+            except resume_projects.ProjectNotFound as exc:
+                return self.send_json({"error": str(exc)}, HTTPStatus.NOT_FOUND)
+            except (resume_projects.ProjectError, OSError) as exc:
+                return self.send_json({"error": str(exc)}, HTTPStatus.BAD_REQUEST)
         if parsed.path == "/api/health":
             graph = evidence_graph(repo_root())
             runtime = engine_runtime_identity(self.manager.workers)
@@ -15436,6 +15602,8 @@ class StudioHandler(BaseHTTPRequestHandler):
         if self.reject_bad_host():
             return
         parsed = urlparse(self.path)
+        if not self.project_guard(parsed.path):
+            return
         if parsed.path not in {
             "/api/run", "/api/run/approve", "/api/match", "/api/evidence/refresh", "/api/evidence/review",
             "/api/context/job", "/api/context/answer", "/api/context/hint", "/api/context/hint/dismiss",
@@ -15443,13 +15611,36 @@ class StudioHandler(BaseHTTPRequestHandler):
             "/api/application/session", "/api/application/resume", "/api/application/resume-file", "/api/application/form", "/api/application/review",
             "/api/application/answer", "/api/application/essay", "/api/application/mapping", "/api/application/event",
             "/api/application/confirm", "/api/application/verify", "/api/application/issue", "/api/application/tracker-sync",
+            "/api/project", "/api/project/file", "/api/project/compile", "/api/project/revert",
         }:
             return self.send_json({"error": "not found"}, HTTPStatus.NOT_FOUND)
         try:
             length = int(self.headers.get("Content-Length", "0"))
-            if length > 100_000:
+            if length > (14_000_000 if parsed.path == "/api/project/file" else 100_000):
                 raise ValueError("request too large")
             body = json.loads(self.rfile.read(length) or b"{}")
+            if parsed.path == "/api/project":
+                action = str(body.get("action") or "")
+                if action == "create":
+                    return self.send_json(resume_projects.create_project(
+                        cv_root(repo_root()), str(body.get("name") or ""), template=str(body.get("template") or "blank")), HTTPStatus.CREATED)
+                if action == "archive":
+                    return self.send_json(resume_projects.archive_project(
+                        cv_root(repo_root()), str(body.get("project_id") or ""), bool(body.get("archived", True))))
+                return self.send_json({"error": "unsupported project action"}, HTTPStatus.BAD_REQUEST)
+            if parsed.path == "/api/project/file":
+                action = str(body.get("action") or "")
+                project_id = str(body.get("project_id") or "")
+                if action == "save":
+                    return self.send_json(resume_projects.save_file(
+                        cv_root(repo_root()), project_id, str(body.get("path") or ""), str(body.get("content") or ""), str(body.get("expected_sha256") or "")))
+                return self.send_json(resume_projects.mutate_file(
+                    cv_root(repo_root()), project_id, action,
+                    path=body.get("path"), new_path=body.get("new_path"), content=body.get("content"), data=body.get("data")))
+            if parsed.path == "/api/project/compile":
+                return self.send_json(resume_projects.compile_project(cv_root(repo_root()), str(body.get("project_id") or "")), HTTPStatus.ACCEPTED)
+            if parsed.path == "/api/project/revert":
+                return self.send_json(resume_projects.restore(cv_root(repo_root()), str(body.get("project_id") or ""), str(body.get("revision_id") or "")))
             if parsed.path == "/api/application/tracker-sync":
                 return self.send_json(request_tracker_sync(repo_root()))
             if parsed.path == "/api/application/resume":
@@ -15647,6 +15838,8 @@ class StudioHandler(BaseHTTPRequestHandler):
             return self.send_json(status, HTTPStatus.ACCEPTED)
         except ResumeStudioRuntimeStale as exc:
             return self.send_json({"error": str(exc), "restart_required": True}, HTTPStatus.CONFLICT)
+        except resume_projects.ProjectError as exc:
+            return self.send_json({"error": str(exc)}, getattr(exc, "status_code", HTTPStatus.BAD_REQUEST))
         except (ValueError, RuntimeError, json.JSONDecodeError) as exc:
             return self.send_json({"error": str(exc)}, HTTPStatus.BAD_REQUEST)
 

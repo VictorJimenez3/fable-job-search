@@ -3367,3 +3367,30 @@ The tokenless fallback remains as a defensive behavior when a non-production
 static host lacks the Vercel backend, but this repository no longer publishes
 or documents a GitHub Pages deployment. Existing Vercel aliases, repository
 state, Actions crawls, and issue-based workflows are unchanged.
+
+## 206. Resume Studio adds a local-only Overleaf-style project workspace (2026-09-01)
+
+Resume Studio now has one dependency-free workspace component shared by the
+localhost service and the owner production page. The service performs a
+non-destructive logical migration: protected canonical/master/history/TLDP and
+tailored-run entries are read-only views over the existing CV tree, while new
+private projects live only under `CV/.resume_studio/projects/<id>/` with
+`project.json`, `source/`, `assets/`, `generated/`, and append-only `history/`.
+Raw editing is restricted to active managed projects. File validation rejects
+traversal, symlinks, executables, unsupported extensions, and the bounded file,
+text, count, and project-size limits. Saves carry the previously read SHA-256
+and return a conflict instead of overwriting an external change.
+
+Compilation stages an immutable snapshot and invokes installed Tectonic with
+`--untrusted`, a sanitized environment, bounded timeout/output, and private
+artifacts. Every distinct save/build and every restore is retained; restoring
+creates a new revision and never deletes newer work. Workspace PDFs are marked
+`workspace_draft` and cannot flow into Resume Bank, approval, Autopilot, or
+application fallback automatically.
+
+Project APIs require a short-lived in-memory capability and are deliberately
+excluded from ordinary cross-origin CORS. The production page uses the
+existing nonce-verified popup bridge, while offline cloud Resume Studio keeps
+the synced Resume Bank PDFs and disables project editing/compilation. Project
+source, filenames, manifests, histories, and local absolute paths are never
+sent to Vercel or Google Drive.

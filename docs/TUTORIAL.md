@@ -245,6 +245,20 @@ loopback API when it loads. If the browser blocks private-network access, click
 CV/evidence graph and provider execution remain local, while the owner can sync
 generated bank artifacts into a private Google Drive folder for cloud viewing.
 
+### Projects and source editing
+
+Open **Projects** inside Resume Studio to see the logical project tree. The
+canonical, master, historical, TLDP, and tailored-run entries are read-only;
+choose **Clone to private project** to create an editable copy under
+`CV/.resume_studio/projects/<project-id>/`. Private projects use `source/`,
+`assets/`, `generated/`, and append-only `history/` folders. Text changes
+autosave after one second (or with Cmd/Ctrl-S) and refuse to overwrite a file
+whose SHA-256 changed elsewhere. **Recompile** runs local Tectonic and labels
+the resulting PDF `workspace_draft`. These drafts are for review only and do
+not enter Resume Bank, approval, Autopilot, or application fallback. When the
+Mac is offline, the cloud workspace is disabled while already-synced bank PDFs
+remain available.
+
 From the repository on the Mac, start:
 
 ```bash

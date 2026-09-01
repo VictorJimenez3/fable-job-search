@@ -66,6 +66,26 @@ Before changing the radar, read these in order:
   preflight checks, then run the full repository suite before publishing the
   production branch.
 
+### Overleaf-style private Projects workspace (implemented 2026-09-01)
+
+- Resume Studio now exposes a shared dependency-free Projects UI in localhost
+  and the owner production page. It lists logical canonical/master/TLDP/
+  historical/tailored references as read-only and keeps editable projects
+  below `CV/.resume_studio/projects/<id>/`.
+- Managed files use `source/`, `assets/`, `generated/`, and append-only
+  `history/` directories. Autosave is SHA-256 optimistic-concurrency checked;
+  stale writes return `409`. File validation rejects traversal, symlinks,
+  unsupported/executable extensions, and the documented size/count limits.
+- Local compilation stages an immutable snapshot and runs installed Tectonic
+  with `--untrusted`, a sanitized environment, bounded timeout, and capped
+  diagnostics. PDFs are labeled `workspace_draft`; they are excluded from
+  Resume Bank, approval, Autopilot, and application fallback.
+- Project routes require a short-lived process-local capability. They are not
+  ordinary cross-origin CORS routes; the production page reaches them only via
+  the existing nonce-verified popup bridge. Project source, filenames,
+  manifests, histories, and absolute local paths are never sent to Vercel or
+  Google Drive. If the Mac is offline, cloud Resume Bank remains read-only.
+
 ### Current change (2026-08-28)
 
 - **Release and automation recovery hardened:** Vercel production deployment

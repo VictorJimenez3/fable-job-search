@@ -717,6 +717,17 @@ custom place or GitHub URL, use its tailored question as an answer prompt, and
 still must confirm his personal work before it becomes evidence. **Not in this
 place** suppresses one bad lead without falsely closing the capability gap.
 
+Resume Studio also includes **Projects**, an Overleaf-style local workspace for
+private source editing. Canonical, master, historical, TLDP, and tailored-run
+projects are visible as read-only references; use **Clone to private project**
+before editing. Managed projects live under `CV/.resume_studio/projects/` with
+`source/`, `assets/`, `generated/`, and append-only `history/` directories.
+Autosave uses SHA-256 optimistic concurrency, and **Recompile** runs installed
+Tectonic with a bounded untrusted build. Preview PDFs are labeled
+`workspace_draft`; they never enter Resume Bank, approval, Autopilot, or
+application fallback automatically. If the Mac is offline, the cloud page
+continues to show synced Resume Bank PDFs but disables the project workspace.
+
 The canonical `CV/immutable/VictorJimenezResume.tex`,
 `CV/immutable/VictorJimenezResume.pdf`, and the historical
 `CV/immutable/og_resume.*` and `CV/immutable/tldp_resume.*` pairs are locked
