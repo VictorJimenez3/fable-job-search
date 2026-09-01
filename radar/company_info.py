@@ -42,13 +42,15 @@ SECTOR_LABELS = {
 }
 
 
-def context(company: str, sector: str = "", dossiers: dict | None = None) -> tuple[str, str]:
+def context(company: str, sector: str = "", dossiers: dict | None = None,
+            research_records: dict | None = None) -> tuple[str, str]:
     """Return ``(industry, what_the_company_does)`` without an ``other`` bucket."""
     key = norm(company)
     if key in KNOWN:
         return KNOWN[key]
 
-    research = research_for(company)
+    research = (research_for(company) if research_records is None
+                else research_for(company, research_records))
     if research and research.get("status") == "ready":
         summary = claim_text(research, "summary")
         if summary != "Not confirmed":
@@ -71,9 +73,11 @@ def context(company: str, sector: str = "", dossiers: dict | None = None) -> tup
     return SECTOR_LABELS.get(sector, "general technology"), "industry context not yet profiled"
 
 
-def snapshot(company: str, sector: str = "", dossiers: dict | None = None) -> str:
+def snapshot(company: str, sector: str = "", dossiers: dict | None = None,
+             research_records: dict | None = None) -> str:
     """Compact, honest employer context for alert rows and daily-best issues."""
-    research = research_for(company)
+    research = (research_for(company) if research_records is None
+                else research_for(company, research_records))
     culture = dossier_for(company, dossiers)
     parts = []
     if research and research.get("status") == "ready":
