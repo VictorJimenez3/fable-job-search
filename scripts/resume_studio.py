@@ -14586,7 +14586,7 @@ def run_tailoring(
             winner.get("base_control_tex") or None,
             "audit_repair.json" if audit_repair_records else None,
             "final_geometry_recovery.json" if final_geometry_recovery.get("attempted") else None,
-            "gap_analysis.json" if generation else None,
+            "gap_analysis.json" if gap_records else None,
             "candidate_plan.json", "content_plan.json", "layout_packing.json", "critique.json", "revision_log.json",
             "space_expansion.json" if space_expansion_records else None,
             "post_line_density.json" if enhance else None,
