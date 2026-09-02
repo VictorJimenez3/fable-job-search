@@ -290,15 +290,41 @@ async function ensureResumeForApplication(tabId, row) {
   finally { row.resumePromise = null; }
 }
 
+async function reportResumePreparationFailure(tabId, row, error) {
+  const message = String(error?.message || error || "Resume Studio could not prepare a PDF").slice(0, 800);
+  const failed = tabs.get(tabId) || row;
+  if (failed) failed.resumeError = message;
+  const queueId = failed?.queueId || row?.queueId;
+  if (queueId) {
+    try { await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+      action: "queue_update", queue_id: queueId, state: "blocked",
+      message: "Application paused because Resume Studio could not prepare the selected PDF.", error: message,
+    })}); } catch (_) {}
+  }
+  try {
+    await send(tabId, {type: "JOB_RADAR_AGENT_STATUS", title: "Resume Studio needs attention", message});
+  } catch (_) {}
+}
+
 async function ensureApplicationSession(tabId, row) {
-  if (row?.sessionId && row?.resumeFile) return row;
+  if (row?.sessionId) {
+    if (!row.resumeFile && !row.resumePromise && !row.resumeError) {
+      void ensureResumeForApplication(tabId, row).catch(error => reportResumePreparationFailure(tabId, row, error));
+    }
+    return row;
+  }
   if (row?.sessionPromise) return row.sessionPromise;
   row.sessionPromise = (async () => {
-    await send(tabId, {type: "JOB_RADAR_AGENT_STATUS", title: "Agent preparing this role", message: "Resume Studio is checking for a tailored resume before the form is filled. Submit remains untouched."});
-    await ensureResumeForApplication(tabId, row);
+    await send(tabId, {type: "JOB_RADAR_AGENT_STATUS", title: "Simplify Copilot gets first pass", message: "Job Radar is handing this employer page to Simplify first, then it will finish missing fields and role-specific writing. Resume Studio is preparing the best PDF in parallel."});
     const current = tabs.get(tabId);
-    if (!current) throw new Error("The paired application tab detached while Resume Studio was working");
+    if (!current) throw new Error("The paired application tab detached before the agent could start");
+    // Create the lightweight local session immediately. This lets the
+    // installed Simplify Copilot extension work while Resume Studio prepares
+    // the exact PDF; the Job Radar finisher adds the file when it is ready.
     if (!current.sessionId) await createSession(tabId, current.job, current.mode, current.queueId);
+    const attached = tabs.get(tabId);
+    if (!attached) throw new Error("The paired application tab detached before Resume Studio could start");
+    void ensureResumeForApplication(tabId, attached).catch(error => reportResumePreparationFailure(tabId, attached, error));
     return tabs.get(tabId);
   })();
   try { return await row.sessionPromise; }
@@ -796,6 +822,7 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
     if (message?.type === "JOB_RADAR_FORM" && tabId) {
       const row = tabs.get(tabId);
       if (!row?.sessionId) return {error: "Start this application from Job Radar first."};
+      const resumePending = Boolean(row.resumePromise && !row.resumeFile);
       // Keep the employer page's real file values. Pretending every file input
       // already contains the resume makes the later upload selector return an
       // empty list and can also mistake a cover-letter control for Resume.
@@ -859,6 +886,17 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
           plan.optional_review = (plan.optional_review || []).filter(item => item.category !== "resume_file");
           if (plan.state === "blocked" && !(plan.blockers || []).length) plan.state = "filling";
         }
+      }
+      if (resumePending && !row.resumeError) {
+        // Simplify may already have moved the page through several steps
+        // while Resume Studio was working. Keep the finisher active, but do
+        // not create a review or advance to Submit until the selected PDF is
+        // available and has been validated by the ATS.
+        plan.blockers = (plan.blockers || []).filter(blocker => blocker.category !== "resume_file");
+        plan.optional_review = (plan.optional_review || []).filter(item => item.category !== "resume_file");
+        plan.resume_pending = true;
+        plan.state = "filling";
+        plan.message = "Simplify finished its first pass; waiting for Resume Studio to supply the selected PDF before continuing.";
       }
       row.state = plan.state;
       if (row.queueId) void syncSession(tabId);

@@ -3435,3 +3435,22 @@ generic project when they provide equal-or-better role proof; domain matching
 must never force irrelevant wording or invent healthcare outcomes. The private
 run persists `tailoring_brief`, the normalized `generation_strategy`, and the
 company-context safety receipt so the decision is reviewable.
+
+## 211. Retire the Simplify clone and use a Simplify-first finisher (2026-09-02)
+
+Simplify Copilot already owns the fast, broad autofill surface, and its
+official help documents expose a browser-panel action rather than a public CLI
+or trigger API. The production Job Radar surface therefore no longer presents
+itself as a competing Simplify clone. The owner queue opens the official
+employer application, starts Copilot's visible `Autofill This Page` action when
+the panel is reachable, and otherwise waits briefly before continuing without
+clicking an unrelated control.
+
+The local Job Radar extension remains valuable as a bounded finisher: it
+starts a lightweight session immediately, prepares the exact Resume Studio PDF
+in parallel, fills only fields Copilot left blank, writes role-specific
+responses through the installed writing skill, and preserves queue state for
+phone review. A reusable source preference selects the employer career site or
+company website option for “how did you hear about this opportunity?” groups;
+it cannot select LinkedIn merely because it is a short sibling option. Submit
+and genuinely unknown facts remain explicit owner decisions.

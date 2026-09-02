@@ -33,6 +33,26 @@ Before changing the radar, read these in order:
   `docs/feed.xml`, or `docs/internships/`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
+### Simplify-first application finisher (implemented 2026-09-02)
+
+- The production owner surface is now an **Application queue**, not a second
+  Simplify-style autofill UI. Each queued employer page is handed to the
+  installed Simplify Copilot first. The Job Radar extension starts that
+  supported `Autofill This Page` action when the panel is exposed, waits for
+  its short settling window, then fills only what remains and writes the
+  session-specific response through `warm-scholarship-essay`.
+- There is no supported Simplify CLI/public trigger API. If the browser hides
+  Copilot in an isolated panel, the finisher proceeds conservatively rather
+  than clicking an unrelated employer control. Resume Studio now starts in
+  parallel with the lightweight application session, so tailoring no longer
+  blocks Simplify's first pass; the selected PDF is uploaded only after the
+  ATS requests it and validates it.
+- The deterministic application context seeds a reusable career-site source
+  preference. It selects the employer website/career-page option when a form
+  asks how the opportunity was found and never substitutes LinkedIn. Queue
+  state and blockers remain durable in the existing private Sheet/database
+  control plane.
+
 ### Current change (verified 2026-08-29)
 
 - **GitHub Pages retired:** the repository's legacy Pages setting was disabled

@@ -10,9 +10,14 @@
   let scanAgain = false;
   let loopPaused = false;
   let structuralScans = [];
+  let simplifyHandoff = "pending";
+  let simplifyStartedAt = 0;
+  const pageLoadedAt = Date.now();
   const uploadedFiles = new Map();
   const LOOP_SCAN_LIMIT = 4;
   const LOOP_SCAN_WINDOW_MS = 45_000;
+  const SIMPLIFY_DISCOVERY_WINDOW_MS = 3_500;
+  const SIMPLIFY_SETTLE_MS = 2_000;
   const isRadar = location.hostname === "job-radar-newgrad.vercel.app";
 
   function text(value, limit = 500) { return String(value || "").replace(/\s+/g, " ").trim().slice(0, limit); }
@@ -55,6 +60,58 @@
     if (!(element instanceof HTMLElement)) return false;
     const style = getComputedStyle(element);
     return style.display !== "none" && style.visibility !== "hidden" && element.getClientRects().length > 0;
+  }
+
+  function simplifyRelated(element) {
+    let current = element;
+    for (let depth = 0; current && depth < 8; depth += 1, current = current.parentElement) {
+      const identity = [current.id, current.className, current.getAttribute?.("aria-label"), current.getAttribute?.("data-testid")]
+        .filter(Boolean).join(" ").toLowerCase();
+      if (/\b(simplify|copilot)\b/.test(identity)) return true;
+    }
+    return false;
+  }
+
+  function simplifyAutofillButton() {
+    // Simplify injects its Copilot panel into the employer page. When the
+    // panel is exposed in the page DOM, start its supported Autofill action
+    // once. This is intentionally best-effort: a browser may isolate the
+    // panel in a closed shadow root, in which case the finisher proceeds after
+    // the short discovery window instead of fighting the third-party UI.
+    const candidates = [...document.querySelectorAll("button, [role='button'], input[type='button'], input[type='submit']")];
+    return candidates.find(element => visible(element)
+      && /autofill(?: this page)?/i.test(text(element.textContent || element.value || element.getAttribute("aria-label"), 180))
+      && simplifyRelated(element)) || null;
+  }
+
+  function simplifyIsBusy() {
+    const nodes = [...document.querySelectorAll("[id*='simplify' i], [class*='simplify' i], [id*='copilot' i], [class*='copilot' i]")];
+    return nodes.some(node => visible(node) && /\b(?:autofill(?:ing)?|processing|loading|working)\b/i.test(text(node.textContent, 500)));
+  }
+
+  async function handoffToSimplify() {
+    if (simplifyHandoff === "started") {
+      if (Date.now() - simplifyStartedAt < SIMPLIFY_SETTLE_MS || simplifyIsBusy()) return true;
+      return false;
+    }
+    if (simplifyHandoff === "unavailable") return false;
+    const button = simplifyAutofillButton();
+    if (button) {
+      simplifyHandoff = "started";
+      simplifyStartedAt = Date.now();
+      button.click();
+      await say({type: "JOB_RADAR_EVENT", state: "filling", message: "Simplify Copilot started its supported Autofill pass; Job Radar will finish only fields it leaves behind."});
+      showBanner("Simplify Copilot filling first", "The official Simplify pass is running. Job Radar will wait for it, then fill missing approved fields, write role-specific responses, and handle the selected resume.", "info");
+      return true;
+    }
+    if (Date.now() - pageLoadedAt < SIMPLIFY_DISCOVERY_WINDOW_MS) {
+      showBanner("Waiting for Simplify Copilot", "Job Radar is giving the official Simplify extension a moment to load before it finishes the remaining fields.", "info");
+      scheduleScan(500);
+      return true;
+    }
+    simplifyHandoff = "unavailable";
+    await say({type: "JOB_RADAR_EVENT", state: "filling", message: "Simplify Copilot was not exposed on this page; Job Radar is finishing the remaining fields."});
+    return false;
   }
 
   function labelFor(element) {
@@ -482,6 +539,7 @@
       }
     }
     if (!sessionId) return;
+    if (await handoffToSimplify()) return;
     const shape = JSON.stringify(snapshot.fields.map(field => [field.field_id, field.label, field.group_question, field.type, field.required, field.value, field.options]));
     if (shape === lastFingerprint) return;
     lastFingerprint = shape;
@@ -547,6 +605,12 @@
       showBanner("Agent continuing after the form changed", `${deferredFills.length} field${deferredFills.length === 1 ? "" : "s"} moved while the page was updating. Rescanning the live form now.`, "info");
       lastFingerprint = "";
       scheduleScan(650);
+      return;
+    }
+    if (plan.resume_pending) {
+      showBanner("Simplify finished · resume still preparing", text(plan.message || "Resume Studio is preparing the selected PDF. The form will continue automatically when it is ready.", 700), "info");
+      lastFingerprint = "";
+      scheduleScan(1200);
       return;
     }
     if (appliedFills) {

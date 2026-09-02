@@ -177,18 +177,25 @@ uses its own jobs, scoring profile, pipeline state, and labeled GitHub issues.
 It shares this repository's Notion integration, so tracked ChemE roles enter
 the same Applications database instead of creating a second Notion system.
 
-## Private Application Autopilot
+## Private application queue and Simplify handoff
 
-The owner-only **Autopilot** tab is the phone/control surface for the paired
-Mac Chrome extension. It supports one-role launch from a Jobs card and a
-sequential batch queue. The first adapters are Workday, Greenhouse, Lever,
+The owner-only **Application queue** tab is the phone/control surface for the
+paired Mac Chrome extension. It supports one-role launch from a Jobs card and
+a sequential batch queue. The official Simplify Copilot gets the first pass;
+the Job Radar finisher then handles the selected PDF, missing approved fields,
+and role-specific writing. The first adapters are Workday, Greenhouse, Lever,
 Ashby, and SmartRecruiters; other pages use a conservative generic fallback.
+
+There is no supported Simplify CLI or public trigger API. When the Copilot
+panel exposes **Autofill This Page**, the finisher starts that action once. If
+the browser isolates the panel, it waits briefly and continues without
+fighting Simplify. Queue state remains durable and visible from the phone.
 
 Set it up once:
 
 1. Load the unpacked `browser-extension/` once after enabling Developer mode at
    `chrome://extensions`.
-2. Sign in as `@VictorJimenez3`, open **Autopilot**, and choose **pair & sync
+2. Sign in as `@VictorJimenez3`, open **Application queue**, and choose **pair & sync
    Mac**. The owner page sends the one-time token directly to the installed
    extension and recovers the local queue; the popup is only a fallback.
 3. Keep the private Resume Studio service running at
@@ -199,7 +206,7 @@ restart, click **reload extension** there; the popup-only command acknowledges
 the request, reloads the extension, and lets the fresh worker immediately
 recreate its alarm and sync the queue. It is intentionally not tied to sync
 errors, so a pairing or quota problem remains visible instead of causing a
-reload loop. The Autopilot page also has **sync Mac**, **restart extension**, and
+reload loop. The Application queue page also has **sync Mac**, **restart extension**, and
 **pair & sync Mac** controls. They disable and show progress while an action is
 running, use the installed content script, and are limited to the production
 owner page, so Chrome's extension manager is not part of the normal workflow.
@@ -213,11 +220,12 @@ remain compatibility mirrors/fallbacks. This means a full Google storage
 account does not stop queueing. Use the Radar UI to edit answers; database,
 Sheet, and Markdown payloads are storage mirrors, not the authoritative editor.
 
-Before opening a form, the extension checks Resume Studio for a safe tailored
-PDF for that exact posting. If none exists, it starts the existing AI tailor
-run and waits. A rejected or not-yet-approved tailor falls back to the
-immutable canonical resume, then the paired local agent uploads that exact PDF
-to the employer form and waits for the ATS to validate it. All other approved
+Before opening a form, the extension starts a lightweight session and hands
+the page to Simplify while Resume Studio checks for a safe tailored PDF for
+that exact posting. If none exists, it starts the existing AI tailor run in
+parallel. A rejected or not-yet-approved tailor falls back to the immutable
+canonical resume, then the paired local agent uploads that exact PDF to the
+employer form and waits for the ATS to validate it. All other approved
 repetitive fields and ordinary **Next** pages can continue until a real answer,
 attestation, sensitive field, or final confirmation needs you.
 

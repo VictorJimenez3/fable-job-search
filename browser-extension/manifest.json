@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Job Radar Application Agent",
-  "description": "Owner-controlled autofill for Job Radar applications.",
+  "name": "Job Radar Application Finisher",
+  "description": "Finishes employer applications after Simplify Copilot's autofill pass.",
   "version": "0.3.2",
   "permissions": ["alarms", "storage", "tabs"],
   "host_permissions": [
@@ -18,7 +18,7 @@
     "https://*.myworkdaysite.com/*",
     "<all_urls>"
   ],
-  "action": {"default_title": "Job Radar Agent", "default_popup": "popup.html"},
+  "action": {"default_title": "Job Radar Finisher", "default_popup": "popup.html"},
   "background": {"service_worker": "background.js", "type": "module"},
   "content_scripts": [{
     "matches": ["http://*/*", "https://*/*"],

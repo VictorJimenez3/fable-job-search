@@ -36,19 +36,24 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "application_essay_answer" in service and "warm-scholarship-essay" in service
     assert '"content_scripts"' in extension and '"<all_urls>"' in extension
     assert '"version": "0.3.2"' in extension
+    assert "Job Radar Application Finisher" in extension
     for provider in ("workday", "greenhouse", "lever", "ashby", "smartrecruiters"):
         assert provider in adapters
     assert "JOB_RADAR_SUBMISSION_APPROVED" in (ROOT / "browser-extension" / "content.js").read_text()
     assert "ensureResumeForApplication" in (ROOT / "browser-extension" / "background.js").read_text()
     assert "ensureApplicationSession" in (ROOT / "browser-extension" / "background.js").read_text()
+    assert "Simplify Copilot gets first pass" in (ROOT / "browser-extension" / "background.js").read_text()
+    assert "resume_pending" in (ROOT / "browser-extension" / "background.js").read_text()
     assert "JOB_RADAR_RESUME_STATUS" in (ROOT / "browser-extension" / "content.js").read_text()
+    assert "handoffToSimplify" in (ROOT / "browser-extension" / "content.js").read_text()
+    assert "Simplify Copilot started its supported Autofill pass" in (ROOT / "browser-extension" / "content.js").read_text()
     assert "Google Sheets is rate-limited" in (ROOT / "browser-extension" / "background.js").read_text()
     assert 'action: "answers"' in (ROOT / "browser-extension" / "background.js").read_text()
     background = (ROOT / "browser-extension" / "background.js").read_text()
     content = (ROOT / "browser-extension" / "content.js").read_text()
     assert "localFile" in background and "maxConcurrentApplications" in background
-    assert "row?.sessionId && row?.resumeFile" in background
-    assert "!row.sessionId || !row.resumeFile" in background
+    assert "if (row?.sessionId)" in background
+    assert "!row.resumeFile && !row.resumePromise" in background
     assert "new DataTransfer()" in content and "new File(" in content
     assert "resumeFieldsNeedingUpload" in background
     assert 'from "./application-fields.mjs"' in background
@@ -149,6 +154,8 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert 'command==="sync_queue"?30000' in frontend
     assert "retireTerminalApplicationQueueItems" in frontend
     assert "extension v${esc(data.extensionVersion)}" in frontend
+    assert "Application queue · Simplify handoff" in frontend
+    assert "career-site source" in frontend
     assert "jr_extension_reload_pending" in frontend and "reconnectApplicationAgentAfterReload" in frontend
     assert "queueing…" in frontend
     assert "queueActionId" in frontend

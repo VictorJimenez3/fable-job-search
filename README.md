@@ -510,14 +510,23 @@ Mac (`brew install gh && gh auth login`). Logs: `~/.jobradar/logs/enrich.log`.
 The companion releases the model from memory after every request; confirm with
 `ollama ps` (it should show no loaded model between enrichment cycles).
 
-## Owner-only Application Autopilot
+## Owner-only application queue and Simplify handoff
 
-The owner-only **Autopilot** tab and the companion Chrome extension turn the
-Radar's official apply link into a supervised, reusable form workflow. The
-extension covers Workday, Greenhouse, Lever, Ashby, and SmartRecruiters first,
-with a generic DOM fallback for other ATS pages. It extracts visible form
-structure only, asks the local deterministic agent for decisions, fills
-approved repetitive fields, and advances ordinary multi-page **Next** steps.
+The owner-only **Application queue** tab and companion Chrome extension hand
+each official employer application to Simplify Copilot first. Job Radar no
+longer duplicates Simplify's autofill UI. Its local finisher waits for that
+first pass, then supplies the selected Resume Studio PDF, fills only approved
+fields Simplify left blank, writes role-specific responses, and advances
+ordinary multi-page **Next** steps. It covers Workday, Greenhouse, Lever,
+Ashby, and SmartRecruiters first, with a generic DOM fallback for other ATS
+pages.
+
+There is no supported Simplify CLI or public trigger API. When the Copilot
+panel exposes its **Autofill This Page** control, the Job Radar finisher starts
+that supported action automatically. If the panel is isolated by the browser,
+the finisher waits briefly and then proceeds without fighting it. The queue
+still records every stage, so a role can continue in the background while
+another one needs you.
 
 It pauses instead of guessing when a required answer is missing, a written
 response cannot be grounded in Victor's private evidence, a sensitive field
@@ -544,7 +553,7 @@ private evidence, pausing only when a truthful answer needs a missing fact.
 The workflow supports both one-role launch from a Jobs card and a bounded batch
 of up to three application tabs from the phone. Blocked roles park without
 losing their tab or answers while open slots continue. Answers and field mappings are durable context: the
-owner can add them in the Autopilot tab, from the extension popup, or while
+owner can add them in the Application queue tab, from the extension popup, or while
 answering a blocker. Local JSON remains the machine source of truth under
 `CV/.resume_studio/application_agent.json`. The owner-only cloud control plane
 currently uses the connected user's private Google Sheet's **Application Agent**
@@ -571,6 +580,8 @@ question and are not reused as generic claims. Role-specific essays and cover
 letters are always generated through the installed `warm-scholarship-essay`
 skill for the exact employer prompt; owner-provided context is supplied as
 evidence, not pasted as a stale answer. A
+career-source question is answered with the employer's career site or company
+website option when that option is present, never a social-network option.
 preferred choice can have an explicit fallback that is used only when the
 preferred option is absent from a question group. This removes repetitive
 blank-field work without inventing claims. LaTeX comments and template
@@ -589,16 +600,17 @@ without opening duplicates or preventing later queued roles from continuing.
 Queue tab startup is verified as well: the extension explicitly navigates a
 new tab,
 waits for a real web URL, repairs tracked blank tabs, and requeues a role when
-Chrome cannot open it. While Resume Studio is preparing a role, the employer
-page shows a live “Agent preparing this role” banner so a long tailoring wait
-is distinguishable from a broken or unpaired tab. Roles already marked expired
+Chrome cannot open it. While Simplify and Resume Studio are preparing a role,
+the employer page shows a live “Simplify Copilot filling first” or “resume still
+preparing” banner so external autofill and tailoring waits are distinguishable
+from a broken or unpaired tab. Roles already marked expired
 or filled cannot be newly queued; a legacy queue item that opens an explicit
 “job not found,” “job has closed,” or equivalent closed page fails visibly
 before any form field is filled. Workday's “page you are looking for doesn't
 exist” tombstone is handled the same way.
 The unavailable-page check runs again on later DOM mutations, so an ATS that
 renders its tombstone after initial page load still stops before a form plan.
-Expired/filled saved roles are omitted from Autopilot's candidate picker; they
+Expired/filled saved roles are omitted from the Application queue's candidate picker; they
 remain visible in History but cannot be selected into a new application batch.
 The availability check runs before Resume Studio work begins. Queue controls
 show an in-progress state to prevent duplicate clicks, and opening/filling rows
@@ -609,7 +621,7 @@ opening the popup after a restart. If the worker needs a controlled restart,
 the extension popup's **reload extension** button sends a popup-only request,
 acknowledges it, and then calls Chrome's extension reload API. The fresh worker
 starts its normal alarm and queue sync; sync or quota errors never trigger an
-automatic reload loop. The owner-only Autopilot page also exposes **sync Mac**,
+automatic reload loop. The owner-only Application queue page also exposes **sync Mac**,
 **restart extension**, and **pair & sync Mac** controls. Those
 commands travel through the installed content script and are accepted only
 from the production Job Radar origins; they do not require access to Chrome's
@@ -635,7 +647,7 @@ To connect the Mac once:
 
 1. In Chrome, load the unpacked `browser-extension/` directory at
    `chrome://extensions` with Developer mode enabled.
-2. Sign in as `VictorJimenez3`, open **Autopilot**, and choose **pair & sync
+2. Sign in as `VictorJimenez3`, open **Application queue**, and choose **pair & sync
    Mac**. The owner page sends the one-time token directly to the installed
    extension and immediately recovers the local queue. The popup remains a
    fallback for the first installation only.

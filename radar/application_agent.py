@@ -193,6 +193,15 @@ def infer_category(field: dict[str, Any]) -> str:
         if re.search(r"\b(transcript|portfolio|work sample|writing sample|supporting|attachment|certificate|photo|headshot)\b", label):
             return "supporting_file"
         return "resume_file"
+    # Source-of-opportunity questions are a deterministic owner preference.
+    # Keep them out of the generic attestation/essay buckets so a career-site
+    # answer can be reused across ATSes without selecting LinkedIn or another
+    # unrelated short option.
+    if re.search(
+        r"\b(?:how did you hear|how did you find|where did you hear|source of (?:this|the) (?:job|opportunity)|source for this opportunity)\b",
+        label,
+    ):
+        return "source"
     # A choice control is an owner decision, not a reusable text field. ATS
     # pages often label options "LinkedIn", "Website", or with a city; using
     # those option labels as profile categories produces a false fill.
@@ -411,6 +420,39 @@ def _canonical_resume_answers(root: Path) -> dict[str, dict[str, Any]]:
     return answers
 
 
+def _owner_preference_answers() -> dict[str, dict[str, Any]]:
+    """Return deterministic owner preferences that are not resume facts."""
+    question = "How did you hear about this opportunity?"
+    variants = [
+        question,
+        "How did you find this opportunity?",
+        "Where did you hear about this opportunity?",
+        "Career site",
+        "Company career site",
+        "Company website",
+        "Employer website",
+        "Employer's website",
+        "Career page",
+        "Company careers page",
+        "Website",
+    ]
+    return {
+        "owner-source-career-site": {
+            "answer_id": "owner-source-career-site",
+            "question": question,
+            "normalized_question": normalize_question(question),
+            "variants": variants,
+            "category": "source",
+            "value": "Career site",
+            "reusable": True,
+            "sensitive": False,
+            "evidence_ids": [],
+            "source": "owner-preference",
+            "updated_at": utc_now(),
+        },
+    }
+
+
 def _default_store() -> dict[str, Any]:
     return {
         "version": APPLICATION_AGENT_VERSION,
@@ -507,7 +549,7 @@ def load_store(root: Path) -> dict[str, Any]:
         base["context"]["answers"] = {}
     if not isinstance(base["context"].get("mappings"), dict):
         base["context"]["mappings"] = {}
-    defaults = _canonical_resume_answers(root)
+    defaults = {**_canonical_resume_answers(root), **_owner_preference_answers()}
     if defaults:
         answers = base["context"]["answers"]
         changed: dict[str, dict[str, Any]] = {}
@@ -614,13 +656,31 @@ def _answer_matches_field(answer: dict[str, Any], field: dict[str, Any], normali
         # Matching that question alone would approve both Yes and No.  Each
         # rendered option must match the approved answer's actual value/label.
         selected_label = option_label or field.get("label")
-        return normalize_question(selected_label) in variants
+        normalized_selected = normalize_question(selected_label)
+        if normalized_selected in variants:
+            return True
+        # Employer forms commonly personalize the option (for example
+        # "Acme careers page" or "Notion Website").  The owner preference is
+        # still constrained to a website/career-site label and can never match
+        # a social network or referral source.
+        if answer.get("category") == "source":
+            return bool(re.search(
+                r"\b(?:career|careers|employer|company)\b.*\b(?:site|website|page)\b|\b(?:site|website|page)\b.*\b(?:career|careers|employer|company)\b|^website$|^company website$|^employer website$",
+                normalized_selected,
+            ))
+        return False
     field_questions = [
         normalized,
         normalize_question(field.get("group_question")),
         normalize_question(field.get("question")),
         normalize_question(field.get("label")),
     ]
+    if answer.get("category") == "source" and any(
+        re.search(r"\b(?:how did you hear|how did you find|where did you hear)\b", question)
+        for question in field_questions
+        if question
+    ):
+        return True
     if any(question and question in variants for question in field_questions):
         return True
     options = field.get("options") or []

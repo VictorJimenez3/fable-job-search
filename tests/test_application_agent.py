@@ -41,6 +41,7 @@ def test_top_five_provider_and_sensitive_categories_are_deterministic():
     assert infer_category({"label": "Tell us why you want this role", "type": "textarea"}) == "essay"
     assert infer_category({"label": "I certify that the information is accurate", "type": "checkbox"}) == "attestation"
     assert infer_category({"label": "LinkedIn", "type": "checkbox"}) == "attestation"
+    assert infer_category({"label": "Company website", "group_question": "How did you hear about this opportunity?", "type": "checkbox"}) == "source"
     assert infer_category({"label": "Yes", "group_question": "Are you legally authorized to work in the US?", "type": "button"}) == "work_authorization"
     assert infer_category({"label": "Yes", "group_question": "Are you legally authorized to work in that country?", "type": "button"}) == "work_authorization"
     assert infer_category({"label": "He/Him", "group_question": "Pronouns", "type": "button"}) == "gender"
@@ -244,6 +245,21 @@ def test_approved_choice_answers_fill_attestations_and_optional_demographics(tmp
     assert result["state"] == "filling"
     assert {item["category"] for item in result["fills"]} == {"gender", "disability", "work_authorization"}
     assert not result["blockers"]
+
+
+def test_owner_career_site_preference_selects_the_company_site_option(tmp_path: Path):
+    session = create_session(tmp_path, job())
+    result = plan_form(
+        tmp_path,
+        session["session_id"],
+        job()["url"],
+        [
+            {"field_id": "linkedin", "label": "LinkedIn", "group_question": "How did you hear about this opportunity?", "type": "checkbox", "required": False, "group_options": ["LinkedIn", "Company website"]},
+            {"field_id": "website", "label": "Company website", "group_question": "How did you hear about this opportunity?", "type": "checkbox", "required": False, "group_options": ["LinkedIn", "Company website"]},
+        ],
+    )
+    assert [(item["field_id"], item["value"]) for item in result["fills"]] == [("website", "Company website")]
+    assert result["blockers"] == []
 
 
 def test_category_specific_answers_fill_repeated_yes_groups_and_text_fields(tmp_path: Path):

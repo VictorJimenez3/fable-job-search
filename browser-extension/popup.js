@@ -5,7 +5,7 @@ const version = document.querySelector("#version");
 if (version) version.textContent = `v${chrome.runtime.getManifest().version}`;
 function esc(value) { return String(value || "").replace(/[&<>\"]/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[char])); }
 function formatSession(session) {
-  if (!session) return `<div class="card muted">Open an application from Job Radar to attach the agent.</div>`;
+  if (!session) return `<div class="card muted">Queue a role from Job Radar. Simplify Copilot gets the first pass, then this finisher attaches automatically.</div>`;
   const blockerItems = session.blockers || [];
   const fields = (session.review?.fields || []).map(field => `<div><strong>${esc(field.label)}</strong><br><span class="muted">${esc(field.category)}${field.sensitive ? " · sensitive" : ""}</span><pre>${esc(field.value || "(empty / owner must review)")}</pre></div>`).join("");
   const review = session.review ? `<h2>Final review</h2><div class="card">${fields || "No proposed fields"}<button id="confirm" class="primary">confirm and allow Submit</button></div>` : "";
@@ -22,7 +22,7 @@ async function render() {
   document.querySelector("#agentToken").value = settings.agentToken || "";
   const data = await send("JOB_RADAR_GET_ACTIVE");
   document.querySelector("#session").innerHTML = formatSession(data?.session);
-  document.querySelector("#status").textContent = data?.session ? "Local agent connected" : "Waiting for an application tab";
+  document.querySelector("#status").textContent = data?.session ? "Finisher connected · Simplify first" : "Waiting for a queued application";
   const confirm = document.querySelector("#confirm");
   if (confirm) confirm.onclick = async () => {
     confirm.disabled = true;
