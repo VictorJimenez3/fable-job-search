@@ -66,6 +66,19 @@ Before changing the radar, read these in order:
   preflight checks, then run the full repository suite before publishing the
   production branch.
 
+### Role-first, company-aware tailoring (implemented 2026-09-02)
+
+- Every enhanced lane now runs one bounded requirement-to-evidence planner
+  before authoring. It records essential capabilities, exact ATS terms, ideal
+  evidence/project surfaces, provider-supported opportunities, and honest gaps
+  in the private `tailoring_brief`/`generation_strategy` receipts.
+- The planner reads the source-labeled company dossier only as portfolio
+  routing context. For medical, healthcare, pharma, biotech, or biomedical
+  employers, verified medical assignments can outrank a generic project when
+  role proof is at least as strong; company prose never becomes candidate
+  evidence. The cloud Resume Bank displays the sanitized brief after the Mac
+  engine syncs the run.
+
 ### Overleaf-style private Projects workspace (implemented 2026-09-01)
 
 - Resume Studio now exposes a shared dependency-free Projects UI in localhost
