@@ -66,6 +66,7 @@ if str(SCRIPT_REPO_ROOT) not in sys.path:
 from radar.resume_match import (MATCH_VERSION, build_evidence_graph,
                                 evidence_context, job_match_hash,
                                 posting_eligibility_blocks, score_resume_match)
+from radar.company_research import dossier_for
 from radar.evidence_review import (BLOCKING_STATUSES, REVIEW_STATUSES,
                                    add_question_hint as save_context_hint,
                                    answer_question as save_context_answer,
@@ -94,7 +95,7 @@ from scripts import resume_projects
 
 ENGINE_SOURCE_PATH = Path(__file__).resolve()
 ENGINE_EVALUATOR_SOURCE_PATH = Path(resume_evaluator.__file__).resolve()
-ENGINE_RUNTIME_VERSION = "resume-studio-runtime-v3"
+ENGINE_RUNTIME_VERSION = "resume-studio-runtime-v4"
 
 
 def _sha256_file(path: Path) -> str:
@@ -218,6 +219,7 @@ def timestamp_age_seconds(value: Any) -> Optional[float]:
 RUBRIC_VERSION = "resume-deterministic-gates-v1"
 OBJECTIVE_RESUME_RUBRIC_VERSION = "objective-resume-v1"
 JOB_INTELLIGENCE_VERSION = "job-intelligence-v2"
+TAILORING_BRIEF_VERSION = "tailoring-brief-v1"
 TAILORING_AUDIT_VERSION = "tailoring-audit-v2"
 COMPARISON_CONTROL_VERSION = "comparison-control-v1"
 IMMUTABLE_COMPARISON_CONTROL_ID = "immutable-default"
@@ -2799,6 +2801,56 @@ ROLE_FLOOR_TERMS = {
 }
 ROLE_EVIDENCE_FLOOR_VERSION = "role-evidence-floor-v1"
 
+# Company research is a routing signal, not a second source of resume facts.
+# These small domain families make the strategy auditable and keep a medical
+# employer from being treated as interchangeable with a generic software
+# company when the same posting could be supported by different projects.
+COMPANY_DOMAIN_PATTERNS = {
+    "healthcare": (
+        "health", "healthcare", "medical", "medicine", "clinical", "patient",
+        "pharma", "pharmaceutical", "biotech", "biomedical", "drug safety",
+        "life sciences", "medtech", "healthtech", "health tech", "genetic", "genomics", "diagnostic",
+    ),
+    "financial_services": (
+        "financial", "finance", "bank", "banking", "insurance", "payments",
+        "investing", "investment", "trading", "fintech", "credit",
+    ),
+    "education": (
+        "education", "learning", "university", "college", "student", "school",
+    ),
+    "developer_platform": (
+        "developer", "software platform", "cloud platform", "infrastructure",
+        "api platform", "devtools", "developer tools",
+    ),
+    "consumer": (
+        "consumer", "social", "marketplace", "retail", "e commerce", "e-commerce",
+    ),
+}
+
+COMPANY_DOMAIN_PROJECT_TERMS = {
+    "healthcare": (
+        "health", "medical", "clinical", "patient", "drug", "safety", "biomedical",
+        "pharma", "genetic", "genomics", "wearable", "posture", "cognitive", "sensor",
+    ),
+    "financial_services": (
+        "finance", "financial", "trading", "stock", "portfolio", "payment", "risk",
+    ),
+    "education": (
+        "education", "student", "learning", "course", "school", "university",
+    ),
+    "developer_platform": (
+        "api", "backend", "cloud", "platform", "developer", "infrastructure", "service",
+    ),
+    "consumer": (
+        "user", "consumer", "mobile", "web", "marketplace", "recommendation",
+    ),
+}
+
+COMPANY_CONTEXT_FIELDS = (
+    "industry", "summary", "products", "customers", "mission", "technical_work",
+    "why_it_matters", "interview_focus",
+)
+
 
 def _role_signal_present(text: str, signal: str) -> bool:
     """Match a role signal as a phrase/word, not a substring of another word."""
@@ -2891,6 +2943,7 @@ def build_job_intelligence(
     match: Optional[Dict[str, Any]] = None,
     target_keywords: Optional[Dict[str, Any]] = None,
     generation_strategy: Optional[Dict[str, Any]] = None,
+    tailoring_brief: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     """Build a compact, source-grounded requirement model for one posting.
 
@@ -2901,6 +2954,7 @@ def build_job_intelligence(
     text = clean_text(str(posting_text or ""))
     target_keywords = target_keywords if isinstance(target_keywords, dict) else {}
     generation_strategy = generation_strategy if isinstance(generation_strategy, dict) else {}
+    tailoring_brief = tailoring_brief if isinstance(tailoring_brief, dict) else {}
     requirements: List[Dict[str, Any]] = []
     seen_keys = set()
 
@@ -3030,6 +3084,8 @@ def build_job_intelligence(
         "role_focus": role_focus,
         "requirements": requirements[:80],
         "hard_blockers": eligibility_blocks,
+        "tailoring_brief": copy.deepcopy(tailoring_brief),
+        "company_context": copy.deepcopy(tailoring_brief.get("company_context") or {}),
         "fit": {
             "band": fit_band,
             "score": match_score if isinstance(match_score, (int, float)) else None,
@@ -4053,6 +4109,69 @@ def logical_pdf_filename(job: Dict[str, Any], physical: Path) -> str:
     return physical.name
 
 
+def public_tailoring_brief(value: Any) -> Dict[str, Any]:
+    """Expose the role-planning receipt without leaking company prose/evidence."""
+    brief = value if isinstance(value, dict) else {}
+    if not brief or not any(
+        key in brief for key in ("essential_capabilities", "ats_terms", "ideal_project_surfaces", "provider_strategy")
+    ):
+        return {}
+    company = brief.get("company_context") if isinstance(brief.get("company_context"), dict) else {}
+    essential = []
+    for item in brief.get("essential_capabilities") or []:
+        if not isinstance(item, dict) or not str(item.get("term") or "").strip():
+            continue
+        essential.append({
+            "term": str(item.get("term") or "")[:160],
+            "importance": str(item.get("importance") or "mentioned")[:32],
+            "supported": bool(item.get("supported")),
+        })
+    ats_terms = []
+    for item in brief.get("ats_terms") or []:
+        if not isinstance(item, dict) or not str(item.get("term") or "").strip():
+            continue
+        ats_terms.append({
+            "term": str(item.get("term") or "")[:160],
+            "importance": str(item.get("importance") or "mentioned")[:32],
+            "supported": bool(item.get("supported")),
+            "support_kind": str(item.get("support_kind") or "none")[:32],
+        })
+    surfaces = []
+    for item in brief.get("ideal_project_surfaces") or []:
+        if not isinstance(item, dict) or not str(item.get("entry_id") or "").strip():
+            continue
+        surfaces.append({
+            "entry_id": str(item.get("entry_id") or "")[:180],
+            "kind": "project",
+            "label": str(item.get("label") or "")[:180],
+            "score": item.get("score"),
+            "role_signals": [str(v)[:80] for v in (item.get("role_signals") or [])[:8]],
+            "domain_signals": [str(v)[:80] for v in (item.get("domain_signals") or [])[:8]],
+        })
+    provider = brief.get("provider_strategy") if isinstance(brief.get("provider_strategy"), dict) else {}
+    try:
+        requirement_count = max(0, int(provider.get("requirement_count") or 0))
+    except (TypeError, ValueError):
+        requirement_count = 0
+    return {
+        "version": str(brief.get("version") or TAILORING_BRIEF_VERSION)[:80],
+        "primary_role_track": str(brief.get("primary_role_track") or "general_software")[:80],
+        "company_domain": str(brief.get("company_domain") or company.get("company_domain") or "technology")[:80],
+        "domain_priorities": [str(v)[:80] for v in (brief.get("domain_priorities") or company.get("domain_priorities") or [])[:4]],
+        "dossier_available": bool(company.get("dossier_available")),
+        "essential_capabilities": essential[:20],
+        "ats_terms": ats_terms[:32],
+        "honest_gaps": [str(v)[:160] for v in (brief.get("honest_gaps") or [])[:24]],
+        "ideal_project_surfaces": surfaces[:8],
+        "provider_strategy": {
+            "portfolio_strategy": str(provider.get("portfolio_strategy") or "")[:1200],
+            "must_cover_terms": [str(v)[:160] for v in (provider.get("must_cover_terms") or [])[:32]],
+            "honest_gaps": [str(v)[:160] for v in (provider.get("honest_gaps") or [])[:24]],
+            "requirement_count": requirement_count,
+        },
+    }
+
+
 def artifact_target(directory: Path, filename: str) -> Optional[Path]:
     """Resolve a public artifact name, including the legacy PDF alias."""
     target = (directory / Path(filename).name).resolve()
@@ -4096,6 +4215,9 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
     context = read_json(directory / "job_context.json", {}) or {}
     if not isinstance(context, dict):
         context = {}
+    tailoring_brief = public_tailoring_brief(
+        report.get("tailoring_brief") or context.get("tailoring_brief")
+    )
     mode = str(status.get("mode") or report.get("mode") or "unknown")
     mode = {"strict": "used", "source-only": "used", "dream": "ai", "enhanced": "ai"}.get(mode, mode)
     public_pdf_name = logical_pdf_filename(job, pdf)
@@ -4211,6 +4333,7 @@ def _library_entry(root: Optional[Path], source: str, entry_id: str, directory: 
         "validation_warnings": report.get("validation_warnings") or [],
         "objective": objective,
         "tailoring_audit": tailoring_audit_summary(audit),
+        "tailoring_brief": tailoring_brief,
         "keyword_audit": keyword_audit,
         "artifacts": artifacts,
         "urls": {
@@ -5868,9 +5991,207 @@ def sealed_evaluator_packet(
     )
 
 
-def job_context(job: Dict[str, Any]) -> Dict[str, Any]:
+def _company_claim(record: Dict[str, Any], field: str) -> Dict[str, Any]:
+    """Return one bounded, source-labeled company claim for prompt routing."""
+    raw = record.get(field)
+    if isinstance(raw, dict):
+        value = str(raw.get("value") or "Not confirmed").strip()
+        confidence = str(raw.get("confidence") or "unknown").strip().lower()
+        source_ids = [str(item) for item in raw.get("source_ids") or [] if str(item)]
+    else:
+        value = str(raw or "Not confirmed").strip()
+        confidence = "unknown"
+        source_ids = []
+    return {
+        "value": value[:700] or "Not confirmed",
+        "confidence": confidence if confidence in {"high", "medium", "low", "estimated", "unknown"} else "unknown",
+        "source_ids": list(dict.fromkeys(source_ids))[:5],
+    }
+
+
+def _company_domain_scores(text: str) -> Dict[str, int]:
+    lowered = clean_text(text).lower()
+    scores: Dict[str, int] = {}
+    for domain, terms in COMPANY_DOMAIN_PATTERNS.items():
+        hits = sum(1 for term in terms if _role_signal_present(lowered, term))
+        if hits:
+            scores[domain] = hits
+    return scores
+
+
+def company_tailoring_context(job: Dict[str, Any], root: Optional[Path] = None) -> Dict[str, Any]:
+    """Build a safe company/domain routing receipt from committed research.
+
+    Company dossiers contain estimates and model-synthesized prose.  The
+    tailor may use them to choose which authorized work to foreground, but the
+    returned contract makes the provenance and confidence visible and tells
+    downstream writers that these are not candidate accomplishments.
+    """
+    company = clean_text(str(job.get("company") or ""))
+    sector = clean_text(str(job.get("sector") or ""))
+    base = (root or repo_root()).resolve()
+    records = read_json(base / "state" / "company_research.json", {}) or {}
+    record = dossier_for(company, records) if company and isinstance(records, dict) else None
+    dossier_text_parts = [company, sector]
+    claims: Dict[str, Dict[str, Any]] = {}
+    if isinstance(record, dict):
+        for field in COMPANY_CONTEXT_FIELDS:
+            claim = _company_claim(record, field)
+            claims[field] = claim
+            dossier_text_parts.append(claim["value"])
+    domain_scores = _company_domain_scores(" ".join(dossier_text_parts))
+    ranked_domains = sorted(domain_scores, key=lambda item: (-domain_scores[item], item))
+    primary_domain = ranked_domains[0] if ranked_domains else "technology"
+    if primary_domain == "healthcare":
+        domain_rule = (
+            "When role fit is comparable, prefer verified healthcare/medical evidence (for example drug-safety, "
+            "clinical, biomedical, privacy, wearable, or patient-facing work) over a generic project. The domain "
+            "is a portfolio-routing preference, not permission to claim healthcare outcomes that are not sourced."
+        )
+    elif ranked_domains:
+        domain_rule = (
+            "Use the company domain to break portfolio ties only after the posting's primary role requirements, "
+            "evidence strength, and distinctiveness are satisfied. Do not force a domain keyword into an unrelated "
+            "bullet."
+        )
+    else:
+        domain_rule = (
+            "No reliable company domain signal was found. Use the posting and authorized evidence as the primary "
+            "routing inputs; do not infer a sector-specific story."
+        )
+    return {
+        "version": TAILORING_BRIEF_VERSION,
+        "company": company,
+        "sector_hint": sector,
+        "dossier_available": bool(record),
+        "dossier_status": str((record or {}).get("status") or "not_found"),
+        "company_domain": primary_domain,
+        "domain_scores": domain_scores,
+        "domain_priorities": ranked_domains[:3],
+        "domain_rule": domain_rule,
+        "claims": claims,
+        "source_ids": list(dict.fromkeys(
+            source_id
+            for claim in claims.values()
+            for source_id in claim.get("source_ids") or []
+        ))[:16],
+        "safety": (
+            "Company claims are routing context only. Never copy them into the resume, and never present an "
+            "estimated or uncited dossier value as Victor's experience."
+        ),
+    }
+
+
+def _project_surface_reason(
+    entry: Dict[str, Any], primary_track: str, domain: str,
+    target_terms: Iterable[str],
+) -> Tuple[float, List[str], List[str]]:
+    """Rank an authorized entry as an ideal project/evidence surface."""
+    text = " ".join(
+        [str(entry.get("heading") or ""), str(entry.get("company") or ""), str(entry.get("role") or "")]
+        + [str(item.get("text") or "") for item in entry.get("bullets") or []]
+    ).lower()
+    role_terms = ROLE_FLOOR_TERMS.get(primary_track, ())
+    role_hits = [term for term in role_terms if _role_signal_present(text, term)]
+    domain_terms = COMPANY_DOMAIN_PROJECT_TERMS.get(domain, ())
+    domain_hits = [term for term in domain_terms if _role_signal_present(text, term)]
+    target_hits = [term for term in target_terms if _role_signal_present(text, str(term).lower())]
+    score = len(role_hits) * 5.0 + len(domain_hits) * 7.0 + len(target_hits) * 3.0
+    if entry.get("kind") == "experience":
+        score += 1.0
+    return score, list(dict.fromkeys(role_hits + target_hits))[:8], list(dict.fromkeys(domain_hits))[:8]
+
+
+def build_tailoring_brief(
+    job: Dict[str, Any], posting_text: str, company_context: Dict[str, Any],
+    target_keywords: Dict[str, Any], catalog: Dict[str, Any],
+    graph: Optional[Dict[str, Any]] = None,
+) -> Dict[str, Any]:
+    """Create the explicit role → ATS → evidence → portfolio decision receipt."""
+    text = clean_text(str(posting_text or ""))
+    role_focus = role_track_profile(job, text)
+    primary_track = str(role_focus.get("primary_track") or "general_software")
+    terms = [
+        item for item in target_keywords.get("terms") or []
+        if isinstance(item, dict) and str(item.get("term") or "").strip()
+    ]
+    essential = [
+        {
+            "term": str(item.get("term") or ""),
+            "importance": str(item.get("importance") or "mentioned"),
+            "supported": bool(item.get("supported")),
+            "source_ids": list(item.get("source_ids") or [])[:6],
+        }
+        for item in terms
+        if str(item.get("importance") or "").lower() in {"required", "responsibility"}
+    ][:20]
+    ats_terms = [
+        {
+            "term": str(item.get("term") or ""),
+            "importance": str(item.get("importance") or "mentioned"),
+            "supported": bool(item.get("supported")),
+            "support_kind": str(item.get("support_kind") or "none"),
+            "source_ids": list(item.get("source_ids") or [])[:6],
+        }
+        for item in terms
+    ][:32]
+    domain = str(company_context.get("company_domain") or "technology")
+    target_terms = [str(item.get("term") or "") for item in terms]
+    surfaces = []
+    for entry in (catalog.get("entries") or {}).values():
+        if not isinstance(entry, dict) or entry.get("kind") not in {"project", "experience", "leadership"}:
+            continue
+        score, role_hits, domain_hits = _project_surface_reason(
+            entry, primary_track, domain, target_terms,
+        )
+        if score <= 0:
+            continue
+        label = str(entry.get("heading") or entry.get("company") or entry.get("id") or "")
+        surfaces.append({
+            "entry_id": str(entry.get("id") or ""),
+            "kind": str(entry.get("kind") or ""),
+            "label": label[:180],
+            "score": round(score, 2),
+            "role_signals": role_hits,
+            "domain_signals": domain_hits,
+            "why": (
+                "Adds %s evidence%s. Verify the cited bullets before selecting or rewriting."
+                % (
+                    ", ".join(role_hits[:4]) or "role-relevant",
+                    " plus " + ", ".join(domain_hits[:3]) + " domain context" if domain_hits else "",
+                )
+            ),
+        })
+    surfaces.sort(key=lambda item: (-item["score"], item["label"].lower()))
+    unsupported = [
+        str(item.get("term") or "")
+        for item in terms if not item.get("supported")
+    ]
+    return {
+        "version": TAILORING_BRIEF_VERSION,
+        "role_focus": role_focus,
+        "primary_role_track": primary_track,
+        "essential_capabilities": essential,
+        "ats_terms": ats_terms,
+        "honest_gaps": list(dict.fromkeys(unsupported))[:24],
+        "company_context": copy.deepcopy(company_context),
+        "company_domain": domain,
+        "domain_priorities": list(company_context.get("domain_priorities") or [])[:3],
+        "ideal_project_surfaces": [item for item in surfaces if item["kind"] == "project"][:8],
+        "ideal_evidence_surfaces": surfaces[:12],
+        "selection_rule": (
+            "First identify what success requires in this role; then cover exact posting language where authorized; "
+            "then compare the current portfolio with these evidence surfaces. Swap or rewrite only when the new line "
+            "adds a distinct, defensible interview thread and the decision ledger records the tradeoff."
+        ),
+        "evidence_graph_available": bool((graph or {}).get("nodes")),
+    }
+
+
+def job_context(job: Dict[str, Any], root: Optional[Path] = None) -> Dict[str, Any]:
     context = dict(job)
     context["posting_text"] = fetch_job_description(job)
+    context["company_context"] = company_tailoring_context(job, root or repo_root())
     context["local_sources"] = [
         "CV/cv_full.tex",
         "CV/immutable/tldp_resume.tex",
@@ -6089,11 +6410,14 @@ def resume_methodology_context(root: Optional[Path] = None) -> str:
 def gap_analysis_prompt(
     context: Dict[str, Any], catalog: Dict[str, Any], graph: Dict[str, Any],
 ) -> str:
-    """Ask for the human-style requirement/evidence pass used by generation mode."""
+    """Ask for the human-style role → evidence pass used by enhanced modes."""
     focused_context = {
         "company": context.get("company"),
         "title": context.get("title"),
+        "sector": context.get("sector"),
         "posting_text": context.get("posting_text"),
+        "company_context": context.get("company_context") or {},
+        "tailoring_brief": context.get("tailoring_brief") or {},
         "role_focus": role_track_profile(
             context, str(context.get("posting_text") or "")
         ),
@@ -6101,7 +6425,8 @@ def gap_analysis_prompt(
     return (
         "Return the requested JSON strategy now; do not narrate progress, promise future work, or "
         "treat these instructions as job requirements. You are the requirement-to-evidence planner "
-        "for Victor Jimenez's private resume studio. "
+        "for Victor Jimenez's private resume studio, and this pass runs for ordinary enhanced tailoring "
+        "as well as the unchained generation lane. "
         "Read the complete posting, then account for every material qualification, responsibility, "
         "named technology, workflow, domain signal, and collaboration expectation. For each one, "
         "decide whether the authorized evidence is direct, adjacent-but-defensible, or unsupported. "
@@ -6115,6 +6440,12 @@ def gap_analysis_prompt(
         "Use the supplied role_focus as a routing aid: identify the primary role track first, then "
         "rank supported evidence for that track above adjacent requirements. If the posting is genuinely "
         "broad or ambiguous, say so in the strategy instead of trying to satisfy every subrole equally. "
+        "Use company_context only to prioritize a domain-relevant portfolio when it strengthens the role case: "
+        "for a medical, healthcare, pharma, biotech, or biomedical company, explicitly compare verified medical "
+        "assignments against generic projects and prefer the medical evidence when it adds equal-or-better role "
+        "proof. Company research is routing context, not a source for Victor's accomplishments; never turn it "
+        "into a resume claim. Use tailoring_brief.ideal_project_surfaces as hypotheses to verify against the "
+        "catalog, not as automatic selections. "
         "Every requirements[].exact_terms value must come verbatim from the supplied Exact ATS "
         "inventory. Do not create requirements about output format, chronology, evidence review, "
         "or the analysis process. Include a term in must_cover_terms only when direct or adjacent "
@@ -6389,6 +6720,19 @@ Victor-specific guardrails:
   artifact; put unsupported requirements in the gap list rather than inventing
   them. Skills may carry a supported term, but the strongest terms should also
   appear in meaningful experience/project lines when evidence allows.
+- Begin with the role-and-company tailoring brief: identify the essential
+  capabilities needed to succeed and pass the posting, separate exact ATS
+  wording from broader skills, and compare the current portfolio with the
+  ideal evidence surfaces before editing bullets. Company domain is a tie-break
+  and prioritization input, not a replacement for role fit. For a medical,
+  healthcare, pharma, biotech, or biomedical employer, prefer verified medical
+  assignments when they provide equal-or-better technical proof; do not force
+  healthcare language into unrelated work.
+- Company research is routing context only. It may contain estimates or
+  synthesized employer prose and is never evidence for Victor's resume. Do
+  not copy company products, customers, mission, or metrics into a candidate
+  bullet. Record meaningful portfolio swaps, rewrites, and omissions in the
+  decision ledger, including the important signal lost.
 - CV/immutable/VictorJimenezResume.tex is authoritative for the immutable contact, education, skills,
   employer-heading metadata, and dates that the renderer copies. Treat older
   conflicting metadata in cv_full.tex or target-specific resumes as stale;
@@ -6522,7 +6866,7 @@ Victor-specific guardrails:
     # Omitting the duplicate copy from the broad context block materially
     # reduces Unchained author latency after a successful gap-analysis pass.
     prompt_context = copy.deepcopy(context)
-    if generation:
+    if enhance:
         prompt_context.pop("generation_strategy", None)
     context_text = json.dumps(prompt_context, indent=2, ensure_ascii=False)
     catalog_text = json.dumps(catalog_for_prompt(catalog), indent=2, ensure_ascii=False)
@@ -6589,12 +6933,16 @@ Victor-specific guardrails:
         + control_text[:12000]
         + "\n\nTarget-ranked evidence graph nodes (authority and claim_allowed are binding):\n"
         + graph_text[:MAX_GRAPH_PROMPT_CHARS]
+        + "\n\nCompany/domain routing context (not resume evidence; use only for portfolio prioritization):\n"
+        + json.dumps(context.get("company_context") or {}, indent=2, ensure_ascii=False)[:9000]
+        + "\n\nRole-and-company tailoring brief (requirements first, then evidence surfaces):\n"
+        + json.dumps(context.get("tailoring_brief") or {}, indent=2, ensure_ascii=False)[:14000]
         + "\n\nExact ATS keyword strategy:\n"
         + json.dumps(context.get("target_keywords") or {}, indent=2, ensure_ascii=False)
         + "\n\nHuman skim budget (binding editorial constraint):\n"
         + json.dumps(HUMAN_PORTFOLIO_CAPS, indent=2, ensure_ascii=False)
-        + (("\n\nBinding requirement-to-evidence strategy (act on its supported opportunities):\n"
-            + generation_text[:18000]) if generation else "")
+        + (("\n\nBinding requirement-to-evidence strategy (act on supported opportunities; leave unsupported gaps honest):\n"
+            + generation_text[:18000]) if enhance and generation_strategy else "")
         + (("\n\nShort supported-skills checklist (binding in generation mode):\n"
             "For each listed requirement, either surface the exact supported terms in a meaningful cited body line "
             "or use one existing Skills rewrite with the listed evidence_ids. Do not omit a direct supported item "
@@ -12331,7 +12679,14 @@ def run_tailoring(
     context["resume_match"] = match
     context["target_keywords"] = target_keyword_strategy(
         context, catalog, repo_root(), graph=graph,
-        comprehensive=generation,
+        # Enhanced and unchained lanes may surface buried, reviewed Markdown
+        # evidence. Source-only mode remains limited to the rendered CV.
+        comprehensive=enhance,
+    )
+    context["tailoring_brief"] = build_tailoring_brief(
+        job, str(context.get("posting_text") or ""),
+        context.get("company_context") or {}, context.get("target_keywords") or {},
+        catalog, graph=graph,
     )
     context["provider_policy"] = {
         "allowed_lanes": [name for name, path in provider_commands().items() if path],
@@ -12358,8 +12713,8 @@ def run_tailoring(
     if not available:
         raise RuntimeError("Codex CLI is not installed; Resume Studio requires the Codex Luna lane")
     gap_records: List[Dict[str, Any]] = []
-    if generation:
-        update("gap_analysis", "Mapping every posting requirement to authorized resume and Markdown evidence")
+    if enhance and context["target_keywords"].get("posting_available"):
+        update("gap_analysis", "Mapping role essentials, ATS terms, company domain, and authorized evidence")
         gap_provider = "codex" if "codex" in available else available[0]
         gap_record = run_provider(
             gap_provider,
@@ -12398,11 +12753,34 @@ def run_tailoring(
         context["target_keywords"] = apply_gap_support_to_keywords(
             context["target_keywords"], context["generation_strategy"],
         )
+        context["tailoring_brief"]["provider_strategy"] = {
+            "portfolio_strategy": str(context["generation_strategy"].get("portfolio_strategy") or "")[:1200],
+            "must_cover_terms": list(context["generation_strategy"].get("must_cover_terms") or [])[:32],
+            "honest_gaps": list(context["generation_strategy"].get("honest_gaps") or [])[:24],
+            "requirement_count": len(context["generation_strategy"].get("requirements") or []),
+        }
+    elif enhance:
+        context["generation_strategy"] = {
+            "version": "gap-analysis-fallback-v1",
+            "status": "unavailable",
+            "portfolio_strategy": (
+                "No full posting text was captured; use the deterministic role/company brief and do not infer "
+                "requirements from a title or search snippet."
+            ),
+            "requirements": [],
+            "must_cover_terms": [],
+            "honest_gaps": [],
+        }
+        context["tailoring_brief"]["provider_strategy"] = {
+            "portfolio_strategy": context["generation_strategy"]["portfolio_strategy"],
+            "must_cover_terms": [], "honest_gaps": [], "requirement_count": 0,
+        }
     else:
         context["generation_strategy"] = {}
     context["job_intelligence"] = build_job_intelligence(
         job, str(context.get("posting_text") or ""), match,
         context.get("target_keywords"), context.get("generation_strategy"),
+        context.get("tailoring_brief"),
     )
     context["posting_snapshot_hash"] = context["job_intelligence"].get("posting_snapshot_hash", "")
     write_json(run_dir / "comparison_control.json", comparison_control_summary(comparison_control))
@@ -12419,6 +12797,7 @@ def run_tailoring(
         "job": job_summary(job),
         "posting_text_available": bool(context.get("posting_text")),
         "target_keywords": context.get("target_keywords"),
+        "tailoring_brief": context.get("tailoring_brief"),
         "generation_strategy": context.get("generation_strategy"),
         "provider_policy": context["provider_policy"],
         "quality_profile": quality_profile,
@@ -12566,6 +12945,7 @@ def run_tailoring(
         "front_matter_rewrites": candidate_plan.get("front_matter_rewrites", []),
         "job": job_summary(job),
         "target_keywords": context.get("target_keywords"),
+        "tailoring_brief": context.get("tailoring_brief"),
         "generation_strategy": context.get("generation_strategy"),
         "provider_policy": context["provider_policy"],
         "quality_profile": quality_profile,
@@ -14108,6 +14488,8 @@ def run_tailoring(
         "front_matter_policy": synthesis_data.get("front_matter_policy", {"coursework": "keep", "awards": "keep"}),
         "front_matter_rewrites": synthesis_data.get("front_matter_rewrites", []),
         "generation_strategy": context.get("generation_strategy", {}),
+        "company_context": context.get("company_context", {}),
+        "tailoring_brief": context.get("tailoring_brief", {}),
         "job_intelligence": context.get("job_intelligence", {}),
         "posting_snapshot_hash": context.get("posting_snapshot_hash", ""),
         "queue_id": queue_id,

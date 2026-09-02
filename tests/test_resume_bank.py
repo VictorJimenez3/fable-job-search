@@ -51,6 +51,8 @@ def test_resume_bank_frontend_keeps_local_engine_as_sync_source():
     assert "action==='approve'" in studio
     assert "function studioRequirementMapHTML" in html
     assert "Posting → evidence map" in html
+    assert "function tailoringBriefHTML" in html
+    assert "Role + company tailoring plan" in html
     assert "keywordAuditFromReport" in html
     assert "keywordMap?keywordAuditHTML(auditEntry)" in html
 
@@ -80,6 +82,8 @@ def test_resume_bank_exposes_visual_keyword_audit_and_context_followup():
     assert "/api/context/hint" in html
     assert "not in this place" in html
     assert "entry.keyword_audit" in api
+    assert "tailoringBriefSummary" in api
+    assert "entry.tailoring_brief" in api
     assert "keyword_audit:entry.keyword_audit||cloud.keyword_audit" in html
 
 

@@ -162,6 +162,39 @@ function auditSummary(value) {
   };
 }
 
+function tailoringBriefSummary(value) {
+  const brief = value && typeof value === "object" ? value : {};
+  const company = brief.company_context && typeof brief.company_context === "object" ? brief.company_context : {};
+  const list = (items, mapper, limit) => Array.isArray(items)
+    ? items.map(mapper).filter(Boolean).slice(0, limit) : [];
+  return {
+    version: clean(brief.version, 80),
+    primary_role_track: clean(brief.primary_role_track, 80) || "general_software",
+    company_domain: clean(brief.company_domain || company.company_domain, 80) || "technology",
+    domain_priorities: list(brief.domain_priorities || company.domain_priorities, item => clean(item, 80), 4),
+    dossier_available: brief.dossier_available === true || company.dossier_available === true,
+    essential_capabilities: list(brief.essential_capabilities, item => item && typeof item === "object" && clean(item.term, 160) ? {
+      term: clean(item.term, 160), importance: clean(item.importance, 32), supported: item.supported === true,
+    } : null, 20),
+    ats_terms: list(brief.ats_terms, item => item && typeof item === "object" && clean(item.term, 160) ? {
+      term: clean(item.term, 160), importance: clean(item.importance, 32), supported: item.supported === true,
+      support_kind: clean(item.support_kind, 32),
+    } : null, 32),
+    honest_gaps: list(brief.honest_gaps, item => clean(item, 160), 24),
+    ideal_project_surfaces: list(brief.ideal_project_surfaces, item => item && typeof item === "object" && clean(item.entry_id, 180) ? {
+      entry_id: clean(item.entry_id, 180), label: clean(item.label, 180), score: Number(item.score || 0),
+      role_signals: list(item.role_signals, signal => clean(signal, 80), 8),
+      domain_signals: list(item.domain_signals, signal => clean(signal, 80), 8),
+    } : null, 8),
+    provider_strategy: brief.provider_strategy && typeof brief.provider_strategy === "object" ? {
+      portfolio_strategy: clean(brief.provider_strategy.portfolio_strategy, 1200),
+      must_cover_terms: list(brief.provider_strategy.must_cover_terms, item => clean(item, 160), 32),
+      honest_gaps: list(brief.provider_strategy.honest_gaps, item => clean(item, 160), 24),
+      requirement_count: Number(brief.provider_strategy.requirement_count || 0),
+    } : {portfolio_strategy: "", must_cover_terms: [], honest_gaps: [], requirement_count: 0},
+  };
+}
+
 async function bankIndex(token, folder) {
   const files = await listFiles(token,
     `'${folder.id}' in parents and trashed = false and name = '${INDEX_FILENAME}' and ` +
@@ -292,6 +325,8 @@ function normalizedEntry(value) {
     } : null,
     tailoring_audit: entry.tailoring_audit && typeof entry.tailoring_audit === "object"
       ? auditSummary(entry.tailoring_audit) : auditSummary(null),
+    tailoring_brief: entry.tailoring_brief && typeof entry.tailoring_brief === "object"
+      ? tailoringBriefSummary(entry.tailoring_brief) : tailoringBriefSummary(null),
     keyword_audit: entry.keyword_audit && typeof entry.keyword_audit === "object" ? {
       posting_available: Boolean(entry.keyword_audit.posting_available),
       detected_count: Number(entry.keyword_audit.detected_count || 0),

@@ -4230,6 +4230,7 @@ function studioResultHTML(status) {
     <p class="sub">${esc(reviewText)} ${report.resume_match?`Resume Match ${esc(report.resume_match.score)}/100.`:""}</p>
     ${Object.keys(gates).length?`<div class="facts">${Object.entries(gates).map(([name,gate])=>studioBadge(`${name}: ${gate.status}`,gate.status==="pass"?"good":gate.status==="fail"?"bad":"warn")).join("")}</div>`:""}
     ${studioRequirementMapHTML(report.resume_match||{})}
+    ${tailoringBriefHTML(report.tailoring_brief||report.job_intelligence?.tailoring_brief)}
     ${tailoringAuditHTML(report.tailoring_audit_summary||report.tailoring_audit)}
     ${keywordMap?keywordAuditHTML(auditEntry):""}
     <div class="studio-links">${pdf}${preview}${reportLink}<button class="act" onclick='openResumeWorkshop("${esc(status.run_id)}")'>workshop ↗</button></div></div>`;
@@ -4253,6 +4254,13 @@ function studioLibraryHTML() {
     const open=entry.run_id&&entry.storage!=="cloud"?`<button class="act" onclick='loadResumeRun("${esc(entry.run_id)}")'>inspect</button>`:"";
     return `<div class="studio-run"><div><strong>${esc(job.company||"Unknown company")}</strong><div class="sub">${esc(job.title||"Untitled role")} · ${esc(studioModeLabel(entry.mode))} · ${esc(entry.status||"saved")}${entry.storage==="cloud"?" · cloud":" · local"}</div></div><div class="acts">${pdf}${preview}${open}</div></div>`;
   }).join("");
+}
+function tailoringBriefHTML(value) {
+  const brief=value&&typeof value==="object"?value:null;
+  if(!brief||(!brief.primary_role_track&&!(brief.essential_capabilities||[]).length&&!(brief.ideal_project_surfaces||[]).length))return "";
+  const essential=(brief.essential_capabilities||[]).slice(0,10), ats=(brief.ats_terms||[]).slice(0,14), projects=(brief.ideal_project_surfaces||[]).slice(0,5), gaps=(brief.honest_gaps||[]).slice(0,8);
+  const chips=(items,cls="")=>items.map(item=>`<span class="chip ${cls}">${esc(typeof item==="string"?item:item.term||"")}</span>`).join(" ");
+  return `<details class="keyword-audit tailoring-brief"><summary><strong>Role + company tailoring plan</strong> ${studioBadge(brief.primary_role_track||"general software","good")} ${brief.company_domain?studioBadge(brief.company_domain,"warn"):""}</summary><div class="keyword-audit-body"><p class="sub">This receipt is the planner's routing contract—not a hiring prediction and not evidence for candidate claims. ${brief.dossier_available?"Company research was available for domain prioritization.":"No company dossier was available; posting and authorized evidence led."}</p>${essential.length?`<p><strong>Essential capabilities</strong></p><div class="chips">${chips(essential)}</div>`:""}${ats.length?`<p><strong>Exact ATS terms</strong></p><div class="chips">${chips(ats)}</div>`:""}${projects.length?`<p><strong>Ideal evidence/project surfaces to compare</strong></p><ul class="resume-objective-list">${projects.map(item=>`<li>${esc(item.label||item.entry_id)}${(item.domain_signals||[]).length?` · domain: ${esc(item.domain_signals.join(", "))}`:""}</li>`).join("")}</ul>`:""}${gaps.length?`<p class="sub"><strong>Honest gaps:</strong> ${esc(gaps.join(", "))}</p>`:""}${brief.provider_strategy?.portfolio_strategy?`<p class="sub"><strong>Planner decision:</strong> ${esc(brief.provider_strategy.portfolio_strategy)}</p>`:""}</div></details>`;
 }
 async function reviewKeywordInContext(term) {
   S.testing.contextQuery=String(term||"");
@@ -4332,7 +4340,7 @@ function resumeBankVersionHTML(entry, ranking=null) {
   const rankBadge=ranking?.assessment?.rankable&&Number.isFinite(Number(ranking.assessment.score))?studioBadge(`#${ranking.rank} · ${ranking.assessment.score}/100`,ranking.rank===1?"good":""):studioBadge("not ranked","warn");
   const snapshot=entry.resume_snapshot;
   const confirm=`${entry.storage==="cloud"&&entry.status==="complete"&&entry.approval_state==="approved"&&entry.has_pdf&&!snapshot?`<button class="act" onclick='confirmResumeUsed(${JSON.stringify(entry).replaceAll("'","&#39;")})'>confirm used PDF</button>`:snapshot?studioBadge(snapshot.status||"snapshot",snapshot.status==="attached"?"good":"warn"):""}`;
-  return `<div class="resume-bank-version-wrap"><div class="resume-bank-version"><div><strong>${esc(studioModeLabel(entry.mode))} ${rankBadge}</strong><p class="sub">${esc(entry.created_at||"date unavailable")} · ${entry.storage==="cloud"?"cloud":"local"} ${studioBadge(entry.status||"saved",statusKind)}</p></div><div class="acts resume-bank-actions">${pdf?`<a class="act" href="${pdf}" target="_blank" rel="noopener">PDF ↗</a>`:""}${preview?`<a class="act" href="${preview}" target="_blank" rel="noopener">clean preview ↗</a>`:""}${report?`<a class="act" href="${report}" target="_blank" rel="noopener">audit ↗</a>`:""}${posting?`<a class="act" href="${posting}" target="_blank" rel="noopener">posting ↗</a>`:""}${confirm}${inspect}${workshop}</div></div>${tailoringAuditHTML(entry.tailoring_audit)}${keywordAuditHTML(entry)}</div>`;
+  return `<div class="resume-bank-version-wrap"><div class="resume-bank-version"><div><strong>${esc(studioModeLabel(entry.mode))} ${rankBadge}</strong><p class="sub">${esc(entry.created_at||"date unavailable")} · ${entry.storage==="cloud"?"cloud":"local"} ${studioBadge(entry.status||"saved",statusKind)}</p></div><div class="acts resume-bank-actions">${pdf?`<a class="act" href="${pdf}" target="_blank" rel="noopener">PDF ↗</a>`:""}${preview?`<a class="act" href="${preview}" target="_blank" rel="noopener">clean preview ↗</a>`:""}${report?`<a class="act" href="${report}" target="_blank" rel="noopener">audit ↗</a>`:""}${posting?`<a class="act" href="${posting}" target="_blank" rel="noopener">posting ↗</a>`:""}${confirm}${inspect}${workshop}</div></div>${tailoringBriefHTML(entry.tailoring_brief)}${tailoringAuditHTML(entry.tailoring_audit)}${keywordAuditHTML(entry)}</div>`;
 }
 
 async function confirmResumeUsed(entry) {

@@ -575,6 +575,12 @@ def test_resume_library_keeps_runs_and_legacy_experiments_with_posting_snapshots
     rs.write_json(run / "job_context.json", {"posting_text": "Required: Python and SQL."})
     rs.write_json(run / "report.json", {
         "mode": "enhanced", "job": rs.job_summary(job), "review": {"craft_score": 88},
+        "tailoring_brief": {
+            "version": "tailoring-brief-v1", "primary_role_track": "data_platform",
+            "company_domain": "healthcare", "dossier_available": True,
+            "essential_capabilities": [{"term": "SQL", "importance": "required", "supported": True}],
+            "ideal_project_surfaces": [{"entry_id": "project:clinical", "label": "Clinical data", "domain_signals": ["clinical"]}],
+        },
         "content_changes": {"keyword_coverage": {
             "posting_available": True, "detected_count": 2, "supported_count": 1,
             "covered_count": 1, "supported_exact_coverage_percent": 100,
@@ -607,6 +613,8 @@ def test_resume_library_keeps_runs_and_legacy_experiments_with_posting_snapshots
     assert saved["keyword_audit"]["supported_coverage_percent"] == 100
     assert saved["keyword_audit"]["terms"][1]["status"] == "unsupported"
     assert saved["keyword_audit"]["overlay"]["boxes"][0]["text"] == "Built Python services"
+    assert saved["tailoring_brief"]["company_domain"] == "healthcare"
+    assert saved["tailoring_brief"]["ideal_project_surfaces"][0]["label"] == "Clinical data"
     snapshot = rs.posting_snapshot(tmp_path, "run", "0123456789ab")
     assert snapshot["posting_text"] == "Required: Python and SQL."
 
@@ -2697,6 +2705,85 @@ def test_generation_keyword_strategy_searches_authorized_markdown_and_ignores_de
     assert terms["version control"]["supported"] is True
     assert terms["agile"]["supported"] is False
     assert terms["aws"]["supported"] is False
+
+
+def test_company_tailoring_context_is_source_labeled_and_domain_aware(tmp_path):
+    state = tmp_path / "state"
+    state.mkdir()
+    (state / "company_research.json").write_text(json.dumps({
+        "acme health": {
+            "name": "Acme Health",
+            "status": "ready",
+            "industry": {"value": "Clinical software and medical devices", "confidence": "high", "source_ids": ["src-1"]},
+            "summary": {"value": "Builds software for clinical teams.", "confidence": "high", "source_ids": ["src-1"]},
+            "products": {"value": "Patient monitoring tools.", "confidence": "medium", "source_ids": ["src-2"]},
+            "mission": {"value": "Improve patient care.", "confidence": "medium", "source_ids": ["src-2"]},
+            "sources": [{"id": "src-1"}, {"id": "src-2"}],
+        },
+    }))
+    context = rs.company_tailoring_context(
+        {"company": "Acme Health", "sector": "healthtech"}, tmp_path,
+    )
+    assert context["dossier_available"] is True
+    assert context["company_domain"] == "healthcare"
+    assert context["claims"]["industry"]["source_ids"] == ["src-1"]
+    assert "routing context only" in context["safety"]
+
+
+def test_company_tailoring_context_degrades_to_explicit_sector_hint(tmp_path):
+    (tmp_path / "state").mkdir()
+    (tmp_path / "state" / "company_research.json").write_text("{}")
+    context = rs.company_tailoring_context(
+        {"company": "Unknown Co", "sector": "healthtech"}, tmp_path,
+    )
+    assert context["dossier_available"] is False
+    assert context["company_domain"] == "healthcare"
+    assert "No reliable company domain signal" not in context["domain_rule"]
+
+
+def test_tailoring_brief_surfaces_role_and_company_relevant_projects():
+    catalog = _fixture_catalog()
+    catalog["entries"]["project:item0"]["heading"] = "\\textbf{Clinical Posture Tool} | \\emph{Python, Flask}"
+    catalog["entries"]["project:item0"]["bullets"][0]["text"] = "\\textbf{Built a clinical patient workflow}"
+    context = {
+        "company_domain": "healthcare",
+        "domain_priorities": ["healthcare"],
+        "company": "Acme Health",
+    }
+    brief = rs.build_tailoring_brief(
+        {"company": "Acme Health", "title": "Software Engineer"},
+        "Build a web application and support clinical teams. " * 12,
+        context,
+        {"terms": [{"term": "Python", "importance": "required", "supported": True, "source_ids": ["project:item0:b1"]}]},
+        catalog,
+    )
+    assert brief["primary_role_track"] == "product_software"
+    assert brief["ideal_project_surfaces"][0]["entry_id"] == "project:item0"
+    assert "clinical" in brief["ideal_project_surfaces"][0]["domain_signals"]
+
+
+def test_enhanced_prompt_exposes_company_and_role_brief_strategy():
+    context = {
+        "company": "Acme Health",
+        "company_context": {
+            "company_domain": "healthcare",
+            "domain_rule": "Prefer verified medical assignments when role fit is comparable.",
+        },
+        "tailoring_brief": {
+            "primary_role_track": "backend_infrastructure",
+            "essential_capabilities": [{"term": "APIs", "importance": "required"}],
+            "ideal_project_surfaces": [{"label": "Clinical API", "kind": "project"}],
+        },
+        "generation_strategy": {
+            "portfolio_strategy": "Use the clinical API evidence.",
+            "requirements": [],
+        },
+    }
+    prompt = rs.base_prompt(context, "editor", _fixture_catalog(), True)
+    assert "Company/domain routing context" in prompt
+    assert "Role-and-company tailoring brief" in prompt
+    assert "clinical API evidence" in prompt
+    assert "Binding requirement-to-evidence strategy" in prompt
 
 
 def test_denial_detector_rejects_postfix_unsupported_language():

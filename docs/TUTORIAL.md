@@ -382,13 +382,19 @@ independent review remain visible as hard constraints.
 - **Take-the-wheel (moderate)** — the preserved adaptive mode. It can make a substantial portfolio
   change, surface deeper unused evidence, or write a new role-specific line
   when the expected hiring-value gain is real.
-- **AI tailor** — the same evidence graph and review process with a higher bar
-  for replacing an already-strong line; useful when you want adaptive tailoring
-  with less creative variance.
+- **AI tailor** — runs the same role-and-company requirement pass as the other
+  enhanced lanes, with a higher bar for replacing an already-strong line. It
+  identifies essential capabilities, exact ATS terms, ideal evidence surfaces,
+  and honest gaps before choosing a conservative portfolio.
 - **Used bullets** — selects target-relevant approved source IDs and wording
   without creative rewriting; use it as the clean comparison baseline.
 
-Unchained is not an unguarded writer: all modes share source authority,
+All enhanced modes now begin with the same role-first, company-aware planning
+receipt. For a medical, healthcare, pharma, biotech, or biomedical employer,
+the receipt explicitly compares verified medical assignments with generic
+projects and lets those assignments win only when they also support the role.
+Company research is routing context—not evidence for Victor's accomplishments—
+and unsupported requirements remain visible gaps. Unchained is not an unguarded writer: all modes share source authority,
 factual and qualifier checks, chronological job order, one-page compilation,
 one-line geometry, and owner approval. The normal screen puts Take-the-wheel
 alongside the separate unchained option; the mode guide explains the

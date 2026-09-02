@@ -98,6 +98,15 @@ Compile from the view with **Recompile**. The output is a local
    Recent primary PDFs are named like `victor_jimenez_nvidia.pdf` and
    `victor_jimenez_johnson_johnson.pdf`.
 
+AI tailor and Take-the-wheel both start with the role-and-company brief now;
+Unchained adds the deepest Markdown evidence pass. The report's
+`tailoring_brief` lists essential capabilities, exact ATS terms, ideal
+evidence/project surfaces, company-domain priorities, and honest gaps.
+`generation_strategy` is the normalized requirement → evidence map. For a
+medical or healthcare employer, inspect the brief to see which verified
+medical assignments were compared with generic projects. Company dossier
+text is routing context only and cannot become a resume accomplishment.
+
 ## Refresh the easy-to-find folder
 
 The service refreshes `CV/tailored/` after a usable run finishes. To refresh it

@@ -825,6 +825,17 @@ roomy lines from near-wraps; a bullet with less than 12pt of right-edge safety
 is treated as a near-wrap and rejected, even if the PDF extractor technically
 reports one line.
 
+Every enhanced lane now performs the same role-first planning pass before
+authoring: it separates essential capabilities from exact ATS terms, compares
+those requirements with authorized evidence and ideal project surfaces, and
+keeps unsupported requirements as honest gaps. The pass also reads the bounded
+company dossier as routing context. For medical, healthcare, pharma, biotech,
+or biomedical employers it can prioritize verified medical assignments over a
+generic project when the technical role fit is at least as strong. Company
+research never authorizes a claim about Victor and estimated employer details
+never become résumé copy. The auditable receipts are `tailoring_brief` and
+`generation_strategy` in the private run report.
+
 Use **Resume bank** in the Studio header to browse one card per job and expand
 it to compare every saved version. **Google onward** is the default current
 quality era, while **all history** reveals legacy experiments. Each new run
