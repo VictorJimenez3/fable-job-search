@@ -3415,3 +3415,23 @@ process. Company context is shared evidence, not row-specific state, so load
 the formatter. This preserves citation hydration while avoiding repeated large
 JSON reads that could consume the workflow timeout. The cache remains scoped to
 the process and does not change crawler or scoring behavior.
+
+## 210. Restore role-first, company-aware tailoring for every enhanced run (2026-09-02)
+
+The original Resume Tailoring Playbook's process is the product contract: read
+the posting, identify the capabilities required to succeed, separate exact ATS
+terms from broader responsibilities, compare those requirements with Victor's
+authorized work, and then make meaningful portfolio, bullet, or Skills changes
+with an explicit tradeoff. This requirement-to-evidence pass must not be
+reserved for Unchained generation; AI tailor and Take-the-wheel now run the
+same bounded planner before authoring. They may remain conservative about
+rewriting, but a shallow keyword overlay is not an acceptable substitute.
+
+The planner also receives a source-labeled company dossier and a deterministic
+set of ideal evidence/project surfaces. Company context is routing only and
+cannot authorize candidate claims. When the employer is medical, healthcare,
+pharma, biotech, or biomedical, verified medical assignments should beat a
+generic project when they provide equal-or-better role proof; domain matching
+must never force irrelevant wording or invent healthcare outcomes. The private
+run persists `tailoring_brief`, the normalized `generation_strategy`, and the
+company-context safety receipt so the decision is reviewable.
