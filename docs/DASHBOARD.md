@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-09-02 16:38 UTC** · companies polled directly: **2004** (registry 2264) · jobs tracked: **53422** · new this run: **88** · alerts this run: **3**_
+_Last run: **2026-09-02 16:45 UTC** · companies polled directly: **2004** (registry 2264) · jobs tracked: **53414** · new this run: **88** · alerts this run: **3**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -19,7 +19,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 87 🔥 | 1d | Qualcomm | [GPU Research Engineer - GPU ASICS Engineering](https://qualcomm.eightfold.ai/careers/job/446720354978) | San Diego, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 87 🔥 | 6d | Amazon | [Software Development Engineer - Reporting Data Platform](https://www.amazon.jobs/jobs/10519658/apply) | Seattle, WA | big_tech | unavailable | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 87 🔥 | 14d | Amazon | [Front-End Engineer - Amazon Connect - AWS](https://www.amazon.jobs/jobs/10508283/apply) | Seattle, WA | big_tech | unavailable | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs)<br>[www.amazon.jobs fallback](https://www.amazon.jobs/jobs/10510073/apply) |
-| 86 🔥 | 17h | Apple | [Cellular Layer-1 Control Software Development Engineer - Wireless Tech](https://jobs.apple.com/en-us/details/200681316) | Sunnyvale, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 86 🔥 | 18h | Apple | [Cellular Layer-1 Control Software Development Engineer - Wireless Tech](https://jobs.apple.com/en-us/details/200681316) | Sunnyvale, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 86 🔥 | 2d | Amazon | [Robotics - Embedded Software Development Engineer](https://jobright.ai/jobs/info/6a95fbc4cabc9f6703e1b604?utm_campaign=Software%20Engineering&utm_source=1103) | North Reading, MA, United States | big_tech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 86 🔥 | 13d | Amazon | [Front End Engineer - AWS Agentic AI Automated Reasoning - AR](https://www.amazon.jobs/jobs/10515062/apply) | Seattle, WA | big_tech | unavailable | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 86 🔥 | 14d | ByteDance | [Machine Learning Engineer Graduate - E-Commerce Risk Control](https://jobs.bytedance.com/en/position/7675477660855781637/detail) | San Jose, CA | big_tech | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
