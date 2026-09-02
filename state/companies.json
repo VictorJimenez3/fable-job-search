@@ -7172,7 +7172,7 @@
   "last_ok": 0,
   "name": "Atlassian",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "careers-americas"
@@ -7998,7 +7998,7 @@
   "last_ok": 0,
   "name": "Southern Star Central Gas Pipeline",
   "origin": "harvest:simplify",
-  "probe_attempts": 1,
+  "probe_attempts": 2,
   "sector": "",
   "status": "invalid",
   "token": "careers-sscgp"
@@ -12277,7 +12277,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788305653,
+  "last_ok": 1788312296,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12607,7 +12607,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1788305637,
+  "last_ok": 1788312286,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12736,7 +12736,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788305652,
+  "last_ok": 1788312301,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -12792,6 +12792,22 @@
   "sector": "",
   "status": "active",
   "token": "american"
+ },
+ "workday:ameriprise:Ameriprise": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "Ameriprise"
+  },
+  "failures": 0,
+  "first_seen": 1788312278,
+  "last_ok": 1788312280,
+  "name": "Ameriprise Financial",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "ameriprise"
  },
  "workday:amgen:Careers": {
   "ats": "workday",
@@ -14420,7 +14436,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1788305636,
+  "last_ok": 1788312285,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -15316,7 +15332,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788305645,
+  "last_ok": 1788312292,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -15441,7 +15457,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788305638,
+  "last_ok": 1788312287,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16192,7 +16208,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788305644,
+  "last_ok": 1788312292,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16839,6 +16855,22 @@
   "sector": "",
   "status": "active",
   "token": "ing"
+ },
+ "workday:ingredion:IngredionCareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "IngredionCareers"
+  },
+  "failures": 0,
+  "first_seen": 1788312278,
+  "last_ok": 1788312279,
+  "name": "Ingredion",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "ingredion"
  },
  "workday:insperity:NSP": {
   "ats": "workday",
@@ -17974,7 +18006,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788305640,
+  "last_ok": 1788312288,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -18531,6 +18563,22 @@
   "sector": "",
   "status": "active",
   "token": "nisource"
+ },
+ "workday:njm:njm": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "njm"
+  },
+  "failures": 0,
+  "first_seen": 1788312278,
+  "last_ok": 1788312279,
+  "name": "NJM Insurance Group",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "njm"
  },
  "workday:northeastern:careers": {
   "ats": "workday",
@@ -20152,7 +20200,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788305644,
+  "last_ok": 1788312293,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
