@@ -56,6 +56,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     background = (ROOT / "browser-extension" / "background.js").read_text()
     content = (ROOT / "browser-extension" / "content.js").read_text()
     assert "localFile" in background and "maxConcurrentApplications" in background
+    assert "canaryConfirmed" in background
     assert "if (row?.sessionId)" in background
     assert "!row.resumeFile && !row.resumePromise" in background
     assert "new DataTransfer()" in content and "new File(" in content
@@ -150,6 +151,7 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "_collapse_active_session_duplicates" in local
     assert "application_identity" in local
     frontend = (ROOT / "webapp" / "index.html").read_text()
+    assert "canary slot" in frontend and "Canary mode" in frontend
     assert "controlApplicationAgentExtension" in frontend
     assert "probeApplicationAgentExtension" in frontend
     assert "Mac ready · paused" in frontend
