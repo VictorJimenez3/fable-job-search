@@ -114,7 +114,7 @@ async function requestExtensionStatus(sender, message = {}) {
     return {ok: false, error: "Only the Job Radar popup or owner Job Radar page can read extension status."};
   }
   const settings = await config();
-  const stored = await chrome.storage.local.get({automationEnabled: false});
+  const stored = await chrome.storage.local.get({automationEnabled: false, canaryConfirmed: false});
   let localReady = false;
   let localError = "";
   let localAnswerCount = 0;
@@ -140,6 +140,8 @@ async function requestExtensionStatus(sender, message = {}) {
     nativeBridgeReady: Boolean(nativePort),
     nativeBridgeError,
     simplifyTrigger: nativePort ? "keyboard_command" : "unavailable",
+    canaryConfirmed: Boolean(stored.canaryConfirmed),
+    maxConcurrentApplications: Boolean(stored.canaryConfirmed) ? 3 : 1,
     workerHeartbeat: new Date().toISOString(),
   };
 }
@@ -867,7 +869,12 @@ async function syncCloudQueueImpl() {
     await send(tabId, {type: "JOB_RADAR_RESCAN"});
   }
   const settings = await config();
-  const maxConcurrent = Math.max(1, Math.min(5, Number(settings.maxConcurrentApplications) || 3));
+  const canary = await chrome.storage.local.get({canaryConfirmed: false});
+  // A real employer receipt is the rollout gate. Until the first verified
+  // canary succeeds, keep all queue dispatch at one slot even if a stale
+  // setting asks for more; this makes the first production run observable.
+  const configuredMax = Math.max(1, Math.min(3, Number(settings.maxConcurrentApplications) || 3));
+  const maxConcurrent = canary.canaryConfirmed ? configuredMax : 1;
   const runningQueueIds = new Set([
     ...items.filter(item => BATCH_RUNNING_STATES.has(item.state)).map(item => item.queue_id),
     ...[...tabs.values()].filter(row => row.queueId && BATCH_RUNNING_STATES.has(row.state || "opening")).map(row => row.queueId),
@@ -1099,6 +1106,9 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
         session_id: row.sessionId, state: message.state, message: message.message, error: message.error,
       })});
       row.state = result.state || message.state;
+      if (message.state === "submitted" && /receipt/i.test(String(message.message || ""))) {
+        await chrome.storage.local.set({canaryConfirmed: true, canaryConfirmedAt: new Date().toISOString()});
+      }
       if (row.queueId) void syncSession(tabId);
       return result;
     }
