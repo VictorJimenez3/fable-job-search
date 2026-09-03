@@ -14,6 +14,13 @@ const DRIVE_FILES_API = "https://www.googleapis.com/drive/v3/files";
 const DRIVE_UPLOAD_API = "https://www.googleapis.com/upload/drive/v3/files";
 const SHEETS_API = "https://sheets.googleapis.com/v4/spreadsheets";
 const VERSION = "application-agent-v1";
+const RESUME_STRATEGIES = new Set(["mass_apply", "tailor"]);
+const SUBMISSION_POLICIES = new Set(["auto", "review_first"]);
+const APPLICATION_PHASES = new Set([
+  "queued", "waiting_for_mac", "opening", "simplify_filling", "resume_preparing",
+  "finishing", "writing", "validating", "needs_input", "submitting", "submitted",
+  "submission_uncertain", "failed", "stopped",
+]);
 const FOLDER_PROPERTY = "jobRadarApplicationAgent";
 const APPLICATION_SHEET = "Application Agent";
 const APPLICATION_SHEET_HEADERS = ["Record Type", "Record ID", "Payload JSON"];
@@ -35,8 +42,34 @@ const SHEET_CACHE_TTL_MS = 15 * 1000;
 const sheetReadyCache = new Map();
 const sheetStoreCache = new Map();
 const SENSITIVE_CATEGORIES = new Set(["work_authorization", "sponsorship", "disability", "veteran_status", "gender", "race_ethnicity", "demographic", "salary", "address", "phone"]);
-const ACTIVE_QUEUE_STATES = new Set(["queued", "opening", "filling", "blocked", "awaiting_confirmation", "submitting"]);
-const QUEUE_STATES = new Set([...ACTIVE_QUEUE_STATES, "submitted", "failed", "skipped", "cancelled"]);
+const ACTIVE_QUEUE_STATES = new Set(["queued", "waiting_for_mac", "opening", "filling", "blocked", "awaiting_confirmation", "submitting"]);
+const QUEUE_STATES = new Set([...ACTIVE_QUEUE_STATES, "submitted", "submission_uncertain", "failed", "skipped", "cancelled"]);
+const QUEUE_TRANSITIONS = {
+  queued: new Set(["waiting_for_mac", "opening", "skipped", "failed"]),
+  waiting_for_mac: new Set(["queued", "opening", "skipped", "failed"]),
+  opening: new Set(["queued", "filling", "blocked", "failed", "skipped"]),
+  filling: new Set(["queued", "blocked", "awaiting_confirmation", "submitting", "failed", "skipped"]),
+  blocked: new Set(["queued", "failed", "skipped"]),
+  awaiting_confirmation: new Set(["queued", "submitting", "failed", "skipped"]),
+  submitting: new Set(["submitted", "submission_uncertain", "failed", "skipped"]),
+  failed: new Set(["queued", "failed", "skipped"]),
+  submitted: new Set([]), submission_uncertain: new Set([]), skipped: new Set([]), cancelled: new Set([]),
+};
+
+function resumeStrategy(value) {
+  const candidate = clean(value, 40).toLowerCase();
+  return RESUME_STRATEGIES.has(candidate) ? candidate : "mass_apply";
+}
+
+function submissionPolicy(value) {
+  const candidate = clean(value, 40).toLowerCase();
+  return SUBMISSION_POLICIES.has(candidate) ? candidate : "auto";
+}
+
+function phase(value, fallback = "queued") {
+  const candidate = clean(value, 50).toLowerCase();
+  return APPLICATION_PHASES.has(candidate) ? candidate : fallback;
+}
 
 function clean(value, max = 500) {
   return String(value ?? "").replace(/\x00/g, "").trim().slice(0, max);
@@ -249,6 +282,58 @@ async function writeDatabaseStore(store) {
   return next;
 }
 
+async function readDatabaseQueue() {
+  await privateDb.ensureApplicationSchema();
+  const result = await privateDb.database().query(
+    "select payload from application_runs where owner_key = $1 order by updated_at desc limit $2",
+    [DATABASE_STATE_KEY, MAX_QUEUE],
+  );
+  const worker = await privateDb.database().query(
+    "select payload from application_workers where owner_key = $1 limit 1",
+    [DATABASE_STATE_KEY],
+  );
+  const items = result.rows.map(row => row.payload).filter(item => item && typeof item === "object");
+  return {version: VERSION, updated_at: new Date().toISOString(), items, worker: worker.rows[0]?.payload || null};
+}
+
+async function writeDatabaseQueue(value) {
+  await privateDb.ensureApplicationSchema();
+  const items = Array.isArray(value?.items) ? value.items.slice(0, MAX_QUEUE) : [];
+  const client = privateDb.database();
+  for (const item of items) {
+    if (!item?.queue_id) continue;
+    const payload = publicQueueItem(item);
+    await client.query(`
+      insert into application_runs (queue_id, owner_key, payload, state, revision, lease_owner, lease_expires_at, updated_at, created_at)
+      values ($1, $2, $3::jsonb, $4, $5, $6, $7, now(), coalesce($8::timestamptz, now()))
+      on conflict (queue_id) do update set payload = excluded.payload, state = excluded.state,
+        revision = excluded.revision, lease_owner = excluded.lease_owner, lease_expires_at = excluded.lease_expires_at,
+        updated_at = now()
+    `, [item.queue_id, DATABASE_STATE_KEY, JSON.stringify(payload), payload.state, Number(payload.revision || 0), payload.worker_id || null, payload.lease_expires_at || null, payload.created_at || null]);
+  }
+  return {version: VERSION, updated_at: new Date().toISOString(), items, worker: value?.worker || null};
+}
+
+async function writeDatabaseWorker(worker) {
+  await privateDb.ensureApplicationSchema();
+  const value = worker && typeof worker === "object" ? worker : {};
+  await privateDb.database().query(`
+    insert into application_workers (owner_key, payload, last_seen_at) values ($1, $2::jsonb, now())
+    on conflict (owner_key) do update set payload = excluded.payload, last_seen_at = now()
+  `, [DATABASE_STATE_KEY, JSON.stringify(value)]);
+  return value;
+}
+
+async function appendApplicationEvent(queueId, type, payload, revision, eventId = "") {
+  if (!databaseConfigured() || !queueId) return;
+  await privateDb.ensureApplicationSchema();
+  const id = clean(eventId, 160) || crypto.randomUUID();
+  await privateDb.database().query(`
+    insert into application_run_events (owner_key, queue_id, event_id, revision, type, payload)
+    values ($1, $2, $3, $4, $5, $6::jsonb) on conflict (event_id) do nothing
+  `, [DATABASE_STATE_KEY, queueId, id, Number(revision || 0), clean(type, 80) || "update", JSON.stringify(payload || {})]);
+}
+
 async function readLegacyStore(access) {
   const candidates = [];
   for (const personal of [access.current?.pt || null, null]) {
@@ -338,6 +423,15 @@ async function writeSheetStore(token, spreadsheet, store) {
 
 async function appDocument(access, kind) {
   if (access.storage === "database") {
+    if (kind === "queue") {
+      let queue = await readDatabaseQueue();
+      if (!queue.items.length && !access.databaseLegacyChecked) {
+        access.databaseLegacyChecked = true;
+        const legacy = await readDatabaseStore();
+        if (legacy.queue?.items?.length) queue = await writeDatabaseQueue({items: legacy.queue.items, worker: legacy.queue.worker});
+      }
+      return {storage: "database", store: {...emptySheetStore(), queue}, value: queue};
+    }
     let store = await readDatabaseStore();
     if (!access.databaseLegacyChecked && !storeHasData(store)) {
       access.databaseLegacyChecked = true;
@@ -359,6 +453,14 @@ async function appDocument(access, kind) {
 
 async function writeAppDocument(state, kind, value) {
   if (state.storage === "database") {
+    if (kind === "queue") {
+      const next = await writeDatabaseQueue({
+        ...(value || {}),
+        worker: value?.worker || state.value?.worker || state.store?.queue?.worker || null,
+      });
+      state.value = next;
+      return {file: null, value: next};
+    }
     state.store[kind] = value;
     const written = await writeDatabaseStore(state.store);
     state.store = written;
@@ -519,6 +621,29 @@ function publicQueueItem(item) {
   const resume = value.resume && typeof value.resume === "object" ? value.resume : null;
   return {
     queue_id: clean(value.queue_id, 100), state: QUEUE_STATES.has(value.state) ? value.state : "queued",
+    phase: phase(value.phase, value.state === "blocked" ? "needs_input" : value.state === "filling" ? "finishing" : value.state || "queued"),
+    phase_updated_at: clean(value.phase_updated_at || value.updated_at, 80),
+    last_heartbeat_at: clean(value.last_heartbeat_at || value.updated_at, 80),
+    attempt: Number.isFinite(Number(value.attempt)) ? Number(value.attempt) : 0,
+    revision: Number.isFinite(Number(value.revision)) ? Number(value.revision) : 0,
+    attempt_id: clean(value.attempt_id, 120), worker_id: clean(value.worker_id, 160),
+    lease_expires_at: clean(value.lease_expires_at, 80),
+    resume_strategy: resumeStrategy(value.resume_strategy),
+    submission_policy: submissionPolicy(value.submission_policy),
+    worker: value.worker && typeof value.worker === "object" ? {
+      state: clean(value.worker.state, 30), last_seen_at: clean(value.worker.last_seen_at, 80),
+      version: clean(value.worker.version, 60), active_slots: Number(value.worker.active_slots) || 0,
+    } : null,
+    simplify: value.simplify && typeof value.simplify === "object" ? {
+      status: clean(value.simplify.status, 40), trigger_method: clean(value.simplify.trigger_method, 40),
+      trigger_id: clean(value.simplify.trigger_id, 120), started_at: clean(value.simplify.started_at, 80),
+      stable_at: clean(value.simplify.stable_at, 80), progress_detected: Boolean(value.simplify.progress_detected),
+      error: clean(value.simplify.error, 500),
+    } : {status: "pending", trigger_method: "keyboard_command"},
+    submission: value.submission && typeof value.submission === "object" ? {
+      status: clean(value.submission.status, 40), receipt: clean(value.submission.receipt, 160),
+      submitted_at: clean(value.submission.submitted_at, 80),
+    } : {status: "pending", receipt: ""},
     session_id: clean(value.session_id, 100), message: clean(value.message, 800), error: clean(value.error, 800),
     created_at: clean(value.created_at, 80), updated_at: clean(value.updated_at, 80),
     retry_requested_at: clean(value.retry_requested_at, 80),
@@ -529,6 +654,7 @@ function publicQueueItem(item) {
       approval_state: clean(resume.approval_state, 40), winner_version: clean(resume.winner_version, 40),
       pdf_filename: clean(resume.pdf_filename, 180), message: clean(resume.message, 500),
       fallback_profile: clean(resume.fallback_profile, 40), file_ready: Boolean(resume.file_ready),
+      asset_id: clean(resume.asset_id, 100), sha256: clean(resume.sha256, 100),
       needs_owner_review: Boolean(resume.needs_owner_review),
     } : null,
     review: publicReview(value.review), confirmation: value.confirmation ? {
@@ -543,7 +669,12 @@ function publicQueueItem(item) {
 
 function queueDocument(value) {
   const items = Array.isArray(value?.items) ? value.items.map(publicQueueItem).filter(item => item.queue_id && item.job) : [];
-  return {version: VERSION, updated_at: clean(value?.updated_at, 80), items};
+  const worker = value?.worker && typeof value.worker === "object" ? {
+    state: clean(value.worker.state, 30), worker_id: clean(value.worker.worker_id, 160),
+    version: clean(value.worker.version, 60), last_seen_at: clean(value.worker.last_seen_at, 80),
+    active_slots: Number(value.worker.active_slots) || 0, native_bridge: Boolean(value.worker.native_bridge),
+  } : null;
+  return {version: VERSION, updated_at: clean(value?.updated_at, 80), items, worker};
 }
 
 function contextDocument(value) {
@@ -644,7 +775,7 @@ async function updateQueue(access, payload) {
   const queue = queueDocument(current.value);
   const now = new Date().toISOString();
   let item = null;
-  if (payload.action === "queue_many") {
+    if (payload.action === "queue_many") {
     const jobs = (Array.isArray(payload.jobs) ? payload.jobs : [])
       .slice(0, 80).map(safeJob).filter(Boolean);
     if (!jobs.length) throw new Error("at least one valid job snapshot required");
@@ -652,6 +783,10 @@ async function updateQueue(access, payload) {
     const results = [];
     let changed = collapsed.changed;
     for (const job of jobs) {
+      const requestedStrategy = payload.resume_strategies && typeof payload.resume_strategies === "object"
+        ? payload.resume_strategies[job.id] : payload.resume_strategy;
+      const requestedSubmission = payload.submission_policies && typeof payload.submission_policies === "object"
+        ? payload.submission_policies[job.id] : payload.submission_policy;
       if (["expired", "filled"].includes(job.posting_status)) {
         results.push({job_id: job.id, error: "posting is no longer open"});
         continue;
@@ -663,7 +798,9 @@ async function updateQueue(access, payload) {
         continue;
       }
       const queued = publicQueueItem({
-        queue_id: crypto.randomBytes(14).toString("hex"), state: "queued", session_id: "",
+        queue_id: crypto.randomBytes(14).toString("hex"), state: "queued", phase: "queued", session_id: "",
+        resume_strategy: resumeStrategy(requestedStrategy), submission_policy: submissionPolicy(requestedSubmission),
+        revision: 0, attempt: 0, simplify: {status: "pending", trigger_method: "keyboard_command"}, submission: {status: "pending", receipt: ""},
         message: "Waiting for the paired Mac browser", error: "", created_at: now,
         updated_at: now, job, blockers: [], review: null, confirmation: null,
       });
@@ -699,14 +836,24 @@ async function updateQueue(access, payload) {
       if (collapsed.changed) await writeAppDocument(current, "queue", {items: queue.items});
       return {item: publicQueueItem(item), duplicate: true};
     }
-    item = publicQueueItem({queue_id: crypto.randomBytes(14).toString("hex"), state: "queued", session_id: "", message: "Waiting for the paired Mac browser", error: "", created_at: now, updated_at: now, job, blockers: [], review: null, confirmation: null});
+    item = publicQueueItem({queue_id: crypto.randomBytes(14).toString("hex"), state: "queued", phase: "queued", session_id: "", message: "Waiting for the paired Mac browser", error: "", created_at: now, updated_at: now, job, blockers: [], review: null, confirmation: null, resume_strategy: resumeStrategy(payload.resume_strategy), submission_policy: submissionPolicy(payload.submission_policy), revision: 0, attempt: 0, simplify: {status: "pending", trigger_method: "keyboard_command"}, submission: {status: "pending", receipt: ""}});
     queue.items = [item, ...queue.items].slice(0, MAX_QUEUE);
   } else {
     const queueId = clean(payload.queue_id, 100);
     item = queue.items.find(candidate => candidate.queue_id === queueId);
     if (!item) throw new Error("application queue item not found");
     if (payload.state && !QUEUE_STATES.has(payload.state)) throw new Error("invalid application queue state");
+    if (payload.phase && !APPLICATION_PHASES.has(payload.phase)) throw new Error("invalid application queue phase");
+    if (payload.state && payload.state !== item.state && !QUEUE_TRANSITIONS[item.state]?.has(payload.state)) {
+      throw Object.assign(new Error(`invalid application queue transition: ${item.state} → ${payload.state}`), {statusCode: 409});
+    }
+    if (payload.expected_revision !== undefined && Number(payload.expected_revision) !== Number(item.revision || 0)) {
+      throw Object.assign(new Error("application queue changed; refresh and retry"), {statusCode: 409});
+    }
+    if (payload.resume_strategy && item.state === "queued") item.resume_strategy = resumeStrategy(payload.resume_strategy);
+    if (payload.submission_policy && item.state === "queued") item.submission_policy = submissionPolicy(payload.submission_policy);
     if (payload.state) item.state = payload.state;
+    if (payload.phase) item.phase = phase(payload.phase, item.phase);
     if (payload.session_id !== undefined) item.session_id = clean(payload.session_id, 100);
     if (payload.message !== undefined) item.message = clean(payload.message, 800);
     if (payload.error !== undefined) item.error = clean(payload.error, 800);
@@ -715,14 +862,48 @@ async function updateQueue(access, payload) {
     if (Array.isArray(payload.blockers)) item.blockers = payload.blockers.slice(0, 80);
     if (payload.review !== undefined) item.review = publicReview(payload.review);
     if (payload.confirmation !== undefined) item.confirmation = payload.confirmation;
+    if (payload.attempt !== undefined) item.attempt = Math.max(0, Number(payload.attempt) || 0);
+    if (payload.attempt_id !== undefined) item.attempt_id = clean(payload.attempt_id, 120);
+    if (payload.worker_id !== undefined) item.worker_id = clean(payload.worker_id, 160);
+    if (payload.lease_expires_at !== undefined) item.lease_expires_at = clean(payload.lease_expires_at, 80);
+    if (payload.last_heartbeat_at !== undefined) item.last_heartbeat_at = clean(payload.last_heartbeat_at, 80);
+    if (payload.worker !== undefined) item.worker = payload.worker;
+    if (payload.simplify !== undefined) item.simplify = payload.simplify;
+    if (payload.submission !== undefined) item.submission = payload.submission;
     if (payload.state && ["submitted", "failed", "skipped", "cancelled"].includes(payload.state)) {
       item.review = null;
       item.confirmation = null;
     }
+    item.revision = Number(item.revision || 0) + 1;
+    item.phase_updated_at = payload.phase ? now : item.phase_updated_at || now;
     item.updated_at = now;
   }
   const written = await writeAppDocument(current, "queue", {items: queue.items});
+  if (payload.action === "queue_update" && item?.queue_id) {
+    await appendApplicationEvent(item.queue_id, "queue_update", payload, item.revision, payload.event_id);
+  }
   return {item: publicQueueItem(written.value.items.find(candidate => candidate.queue_id === item.queue_id) || item), duplicate: false};
+}
+
+async function workerHeartbeat(access, payload) {
+  if (!access.agent) throw Object.assign(new Error("paired Mac access required"), {statusCode: 403});
+  const now = new Date().toISOString();
+  const worker = {
+    state: "online", worker_id: clean(payload.worker_id, 160), version: clean(payload.version, 60),
+    last_seen_at: now, active_slots: Math.max(0, Math.min(5, Number(payload.active_slots) || 0)),
+    native_bridge: Boolean(payload.native_bridge),
+  };
+  if (access.storage === "database") await writeDatabaseWorker(worker);
+  const current = await appDocument(access, "queue");
+  const queue = queueDocument(current.value);
+  queue.worker = worker;
+  for (const item of queue.items) {
+    if (item.state === "queued") continue;
+    item.last_heartbeat_at = now;
+    item.worker = worker;
+  }
+  await writeAppDocument(current, "queue", queue);
+  return {ok: true, worker};
 }
 
 async function recoverQueue(access, payload) {
@@ -751,6 +932,19 @@ async function recoverQueue(access, payload) {
       queue_id: queueId,
       session_id: candidate.session_id,
       state,
+      phase: phase(candidate.phase, state),
+      revision: Number(candidate.revision) || 0,
+      resume_strategy: resumeStrategy(candidate.resume_strategy),
+      submission_policy: submissionPolicy(candidate.submission_policy),
+      phase_updated_at: candidate.phase_updated_at,
+      last_heartbeat_at: candidate.last_heartbeat_at,
+      attempt: Number(candidate.attempt) || 0,
+      attempt_id: candidate.attempt_id,
+      worker_id: candidate.worker_id,
+      lease_expires_at: candidate.lease_expires_at,
+      worker: candidate.worker,
+      simplify: candidate.simplify,
+      submission: candidate.submission,
       message: candidate.message || "Recovered from the paired Mac",
       error: candidate.error,
       created_at: candidate.created_at,
@@ -935,7 +1129,7 @@ async function readView(access, view, sessionId = "") {
   if (view === "session") {
     return {version: VERSION, connected: true, storage: result.storage, collapsed: collapsed.cancelled.length, session: queue.items.find(item => item.session_id === clean(sessionId, 100)) || null};
   }
-  return {version: VERSION, connected: true, storage: result.storage, collapsed: collapsed.cancelled.length, items: queue.items.map(publicQueueItem)};
+  return {version: VERSION, connected: true, storage: result.storage, collapsed: collapsed.cancelled.length, worker: queue.worker || null, items: queue.items.map(publicQueueItem)};
 }
 
 module.exports = async (req, res) => {
@@ -967,6 +1161,7 @@ module.exports = async (req, res) => {
     if (action === "queue" || action === "queue_many" || action === "queue_update") {
       res.status(200).json({ok: true, ...(await updateQueue(access, {...payload, action}))}); return;
     }
+    if (action === "worker_heartbeat") { res.status(200).json(await workerHeartbeat(access, payload)); return; }
     if (action === "recover") { res.status(200).json({ok: true, ...(await recoverQueue(access, payload))}); return; }
     if (action === "confirm") {
       if (agentAccess) throw Object.assign(new Error("owner session required to confirm an application"), {statusCode: 403});

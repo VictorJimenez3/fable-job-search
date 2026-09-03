@@ -33,20 +33,27 @@ Before changing the radar, read these in order:
   `docs/feed.xml`, or `docs/internships/`) except for a deliberate repair with
   its reason documented in the commit/message. Crawls generate them.
 
-### Simplify-first application finisher (implemented 2026-09-02)
+### Hybrid Simplify + Job Radar Autopilot (implemented 2026-09-02)
 
-- The production owner surface is now an **Application queue**, not a second
+- The production owner surface is an **Application queue**, not a second
   Simplify-style autofill UI. Each queued employer page is handed to the
-  installed Simplify Copilot first. The Job Radar extension starts that
-  supported `Autofill This Page` action when the panel is exposed, waits for
-  its short settling window, then fills only what remains and writes the
-  session-specific response through `warm-scholarship-essay`.
-- There is no supported Simplify CLI/public trigger API. If the browser hides
-  Copilot in an isolated panel, the finisher proceeds conservatively rather
-  than clicking an unrelated employer control. Resume Studio now starts in
-  parallel with the lightweight application session, so tailoring no longer
-  blocks Simplify's first pass; the selected PDF is uploaded only after the
-  ATS requests it and validates it.
+  installed Simplify Copilot first through its `Alt+Shift+F` command. The
+  restricted `browser-extension/native_host.py` focuses the exact tab, sends
+  only that allowlisted shortcut, and holds a `caffeinate` assertion while the
+  Mac is plugged in and automation is enabled.
+- The finisher waits for a 2.5-second quiet window (20-second maximum), then
+  reconciles only fields Simplify left behind. Resume Studio starts in parallel
+  with the lightweight application session. New roles use the byte-verified
+  mass-apply PDF; **Tailor resume** is opt-in and falls back automatically.
+- Queueing defaults to automatic exact-once Submit. **Review first** creates a
+  durable page-bound review; an expired display card is revalidated rather than
+  forcing the owner to reopen the employer page. An unproven result becomes
+  `submission_uncertain` and is never retried.
+- Up to three roles can run concurrently, with one global Simplify trigger lock.
+  Postgres, when `DATABASE_URL` is present, stores one application run per row,
+  append-only events, revisions, leases, and worker heartbeat. Sheet/Drive is
+  only a compatibility fallback. The phone polls every 4 seconds while visible
+  and every 30 seconds while hidden.
 - The deterministic application context seeds a reusable career-site source
   preference. It selects the employer website/career-page option when a form
   asks how the opportunity was found and never substitutes LinkedIn. Queue

@@ -30,6 +30,16 @@ else
 fi
 echo "repo: $RADAR_DIR"
 
+# 1b. restricted Chrome native host (optional until the unpacked extension is
+# loaded). This is what lets the extension invoke Simplify's Alt+Shift+F
+# shortcut and keep a plugged-in Mac awake without exposing arbitrary shell
+# commands to Chrome.
+if [ -n "${JOBRADAR_EXTENSION_ID:-}" ]; then
+  "$RADAR_DIR/scripts/mac-companion/install-native-host.sh" "$JOBRADAR_EXTENSION_ID" "$RADAR_DIR"
+else
+  echo "native host: skipped (set JOBRADAR_EXTENSION_ID after loading the extension)"
+fi
+
 # 2. push access check (companion commits enriched state back)
 if ! git -C "$RADAR_DIR" push -q --dry-run origin "$BRANCH" 2>/dev/null; then
   echo "⚠️  git push isn't authorized from this machine yet."

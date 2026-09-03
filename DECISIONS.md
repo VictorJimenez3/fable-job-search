@@ -3454,3 +3454,22 @@ phone review. A reusable source preference selects the employer career site or
 company website option for “how did you hear about this opportunity?” groups;
 it cannot select LinkedIn merely because it is a short sibling option. Submit
 and genuinely unknown facts remain explicit owner decisions.
+
+## 212. Hybrid Simplify + Job Radar Autopilot (2026-09-02)
+
+Queueing now authorizes one exact-once automatic submission by default; an
+owner can select **Review first** for a durable page-bound review. Simplify is
+the fast first pass, invoked through its installed `Alt+Shift+F` command from a
+restricted native-messaging host. Job Radar owns deterministic reconciliation,
+resume validation, role-scoped writing, provider-specific final-control
+validation, and the phone-visible receipt. Up to three application tabs may run
+concurrently, while a global shortcut lock prevents focus races.
+
+The attached mass-apply PDF is the default byte-verified asset
+`mass_apply_2026_09_02`; tailoring is an explicit per-role opt-in and always
+falls back to that asset. Resume bytes stay on the Mac. When configured,
+managed Postgres stores one sanitized application row per queue item and
+append-only events with monotonic revisions, leases, and worker heartbeats;
+Google Sheet/Drive remains a compatibility fallback rather than live queue
+state. This removes Drive quota from the critical path while preserving the
+existing private storage recovery path.

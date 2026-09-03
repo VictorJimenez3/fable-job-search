@@ -12,12 +12,17 @@
   let structuralScans = [];
   let simplifyHandoff = "pending";
   let simplifyStartedAt = 0;
+  let simplifyLastActivityAt = Date.now();
+  let simplifyBaselineSignature = "";
+  let simplifyTriggerRequested = false;
+  let submissionAttempted = false;
   const pageLoadedAt = Date.now();
   const uploadedFiles = new Map();
   const LOOP_SCAN_LIMIT = 4;
   const LOOP_SCAN_WINDOW_MS = 45_000;
-  const SIMPLIFY_DISCOVERY_WINDOW_MS = 3_500;
-  const SIMPLIFY_SETTLE_MS = 2_000;
+  const SIMPLIFY_DISCOVERY_WINDOW_MS = 900;
+  const SIMPLIFY_SETTLE_MS = 2_500;
+  const SIMPLIFY_MAX_WAIT_MS = 20_000;
   const isRadar = location.hostname === "job-radar-newgrad.vercel.app";
 
   function text(value, limit = 500) { return String(value || "").replace(/\s+/g, " ").trim().slice(0, limit); }
@@ -62,56 +67,57 @@
     return style.display !== "none" && style.visibility !== "hidden" && element.getClientRects().length > 0;
   }
 
-  function simplifyRelated(element) {
-    let current = element;
-    for (let depth = 0; current && depth < 8; depth += 1, current = current.parentElement) {
-      const identity = [current.id, current.className, current.getAttribute?.("aria-label"), current.getAttribute?.("data-testid")]
-        .filter(Boolean).join(" ").toLowerCase();
-      if (/\b(simplify|copilot)\b/.test(identity)) return true;
-    }
-    return false;
-  }
-
-  function simplifyAutofillButton() {
-    // Simplify injects its Copilot panel into the employer page. When the
-    // panel is exposed in the page DOM, start its supported Autofill action
-    // once. This is intentionally best-effort: a browser may isolate the
-    // panel in a closed shadow root, in which case the finisher proceeds after
-    // the short discovery window instead of fighting the third-party UI.
-    const candidates = [...document.querySelectorAll("button, [role='button'], input[type='button'], input[type='submit']")];
-    return candidates.find(element => visible(element)
-      && /autofill(?: this page)?/i.test(text(element.textContent || element.value || element.getAttribute("aria-label"), 180))
-      && simplifyRelated(element)) || null;
-  }
-
   function simplifyIsBusy() {
     const nodes = [...document.querySelectorAll("[id*='simplify' i], [class*='simplify' i], [id*='copilot' i], [class*='copilot' i]")];
     return nodes.some(node => visible(node) && /\b(?:autofill(?:ing)?|processing|loading|working)\b/i.test(text(node.textContent, 500)));
   }
 
+  function simplifyFormSignature() {
+    return [...document.querySelectorAll("input, textarea, select, [contenteditable='true']")]
+      .filter(visible).map(element => [element.name || element.id || element.type, currentValue(element, element.type || element.tagName)]).slice(0, 400);
+  }
+
   async function handoffToSimplify() {
+    const now = Date.now();
+    const signature = JSON.stringify(simplifyFormSignature());
+    if (!simplifyBaselineSignature) simplifyBaselineSignature = signature;
+    if (signature !== simplifyBaselineSignature) {
+      simplifyBaselineSignature = signature;
+      simplifyLastActivityAt = now;
+    }
     if (simplifyHandoff === "started") {
-      if (Date.now() - simplifyStartedAt < SIMPLIFY_SETTLE_MS || simplifyIsBusy()) return true;
+      const quiet = now - simplifyLastActivityAt >= SIMPLIFY_SETTLE_MS;
+      if (now - simplifyStartedAt < SIMPLIFY_MAX_WAIT_MS && (!quiet || simplifyIsBusy())) {
+        showBanner("Simplify Copilot filling first", "The official Simplify pass is running. Job Radar will finish the remaining fields after the page is quiet.", "info");
+        scheduleScan(500);
+        return true;
+      }
+      simplifyHandoff = "settled";
+      await say({type: "JOB_RADAR_EVENT", state: "finishing", message: "Simplify settled; Job Radar is reconciling remaining fields."});
       return false;
     }
     if (simplifyHandoff === "unavailable") return false;
-    const button = simplifyAutofillButton();
-    if (button) {
+    if (simplifyHandoff === "settled") return false;
+    if (now - pageLoadedAt < SIMPLIFY_DISCOVERY_WINDOW_MS) {
+      showBanner("Waiting for Simplify Copilot", "Job Radar is giving the official Simplify extension a moment to start before it finishes the remaining fields.", "info");
+      scheduleScan(350);
+      return true;
+    }
+    if (!simplifyTriggerRequested) {
+      simplifyTriggerRequested = true;
       simplifyHandoff = "started";
-      simplifyStartedAt = Date.now();
-      button.click();
-      await say({type: "JOB_RADAR_EVENT", state: "filling", message: "Simplify Copilot started its supported Autofill pass; Job Radar will finish only fields it leaves behind."});
+      simplifyStartedAt = now;
+      const result = await say({type: "JOB_RADAR_SIMPLIFY_REQUEST", pageUrl: location.href});
+      if (!result?.triggered) {
+        simplifyHandoff = "unavailable";
+        await say({type: "JOB_RADAR_EVENT", state: "finishing", message: result?.error || "Simplify Copilot was unavailable; Job Radar is finishing safely."});
+        return false;
+      }
+      await say({type: "JOB_RADAR_EVENT", state: "simplify_filling", message: "Simplify Copilot started its supported Autofill pass through the keyboard command; Job Radar will finish only fields it leaves behind."});
       showBanner("Simplify Copilot filling first", "The official Simplify pass is running. Job Radar will wait for it, then fill missing approved fields, write role-specific responses, and handle the selected resume.", "info");
       return true;
     }
-    if (Date.now() - pageLoadedAt < SIMPLIFY_DISCOVERY_WINDOW_MS) {
-      showBanner("Waiting for Simplify Copilot", "Job Radar is giving the official Simplify extension a moment to load before it finishes the remaining fields.", "info");
-      scheduleScan(500);
-      return true;
-    }
-    simplifyHandoff = "unavailable";
-    await say({type: "JOB_RADAR_EVENT", state: "filling", message: "Simplify Copilot was not exposed on this page; Job Radar is finishing the remaining fields."});
-    return false;
+    return true;
   }
 
   function labelFor(element) {
@@ -269,7 +275,9 @@
     buttons.forEach((element, index) => {
       const label = text(element.textContent || element.value || element.getAttribute("aria-label"), 300);
       if (!label || !ats.isSubmitLabel(label) && !ats.isNextLabel(label)) return;
-      fields.push({field_id: `button-${index}-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`, label, question: label,
+      const fieldId = `button-${index}-${label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+      element.setAttribute("data-job-radar-field", fieldId);
+      fields.push({field_id: fieldId, label, question: label,
         type: "button", required: false, is_submit: ats.isSubmitLabel(label),
         is_next: ats.isNextLabel(label), options: []});
     });
@@ -280,6 +288,38 @@
     const exact = document.querySelector(`[data-job-radar-field="${CSS.escape(fieldId)}"]`);
     if (exact) return exact;
     return [...document.querySelectorAll("input,textarea,select,button,[role='button'],[role='option'],[contenteditable='true']")].find(element => element.id === fieldId || element.name === fieldId) || null;
+  }
+
+  async function submitFinalControl(fields) {
+    if (submissionAttempted) return;
+    const final = (fields || []).find(field => field?.is_submit);
+    const submit = final ? findField(final.field_id) : null;
+    if (!final || !submit || !visible(submit)) {
+      await say({type: "JOB_RADAR_EVENT", state: "needs_input", message: "The exact employer Submit control is not visible; the application is paused safely."});
+      showBanner("Submission paused", "The matching application page has no visible final Submit control. Nothing was clicked.", "warn", '<button data-action="retry">rescan</button>');
+      return;
+    }
+    const verified = await say({type: "JOB_RADAR_VERIFY_SUBMISSION", pageUrl: location.href, fields: extract().fields});
+    if (!verified || verified.error) {
+      await say({type: "JOB_RADAR_EVENT", state: "needs_input", message: verified?.error || "The application page changed before Submit."});
+      showBanner("Submission paused · page changed", text(verified?.error || "The approved page no longer matches.", 500), "warn", '<button data-action="retry">rescan</button>');
+      return;
+    }
+    submissionAttempted = true;
+    await say({type: "JOB_RADAR_EVENT", state: "submitting", message: "The exact employer Submit control passed validation; clicking once."});
+    submit.click();
+    await wait(1400);
+    const body = text(document.body?.innerText || "", 6000);
+    const success = /application (?:submitted|received)|thank you for applying|successfully submitted|we received your application|confirmation number/i.test(body)
+      || !submit.isConnected || !extract().final;
+    if (success) {
+      const receipt = `jobradar-${sessionId}-${Date.now()}`;
+      await say({type: "JOB_RADAR_EVENT", state: "submitted", message: `Application submitted once · receipt ${receipt}`});
+      showBanner("Application submitted", "The employer page confirmed the final action. The receipt is saved in Job Radar.", "info");
+    } else {
+      await say({type: "JOB_RADAR_EVENT", state: "submission_uncertain", message: "Submit was clicked once, but the employer did not expose a confirmation page. It will not be retried automatically."});
+      showBanner("Submission uncertain", "The final control was clicked once, but the employer did not show a confirmation. Job Radar will not click again automatically.", "warn");
+    }
   }
 
   function unavailablePostingReason(snapshot) {
@@ -626,6 +666,10 @@
       showBanner("Action needed · not a system error", `<div style="margin-bottom:6px">The agent filled what was already approved, then stopped safely for owner-only information.</div><ul style="margin:5px 0 0 18px;padding:0">${items}</ul>`, "warn", '<button data-action="popup">open answer panel</button><button data-action="retry">retry after answering</button>');
       return;
     }
+    if (plan.state === "submitting" && !plan.review) {
+      await submitFinalControl(snapshot.fields);
+      return;
+    }
     if (plan.review) {
       const sensitive = (plan.review.fields || []).filter(field => field.sensitive).length;
       showBanner("Agent ready · review before submitting", `${plan.fills?.length || 0} fields filled${sensitive ? ` · ${sensitive} sensitive field${sensitive === 1 ? "" : "s"} shown in review` : ""}. The Submit button remains untouched.`, "info", '<button data-action="popup">open full review</button><button data-action="hide">dismiss</button>');
@@ -664,20 +708,7 @@
     }
     if (message?.type !== "JOB_RADAR_SUBMISSION_APPROVED") return;
     void (async () => {
-      const snapshot = extract();
-      const verified = await say({type: "JOB_RADAR_VERIFY_SUBMISSION", pageUrl: location.href, fields: snapshot.fields});
-      if (!verified || verified.error) {
-        showBanner("Submission paused · page changed", text(verified?.error || "The approved page no longer matches.", 500), "warn", '<button data-action="retry">re-scan</button>');
-        return;
-      }
-      const submit = [...document.querySelectorAll("button,[role='button'],input[type='submit']")].find(element => visible(element) && /apply|submit|finish|complete/i.test(text(element.textContent || element.value || element.getAttribute("aria-label"))));
-      if (!submit) {
-        showBanner("Submission paused", "The matching page has no visible Submit control.", "warn");
-        return;
-      }
-      await say({type: "JOB_RADAR_EVENT", state: "submitting", message: "Owner-confirmed Submit clicked"});
-      submit.click();
-      setTimeout(() => void say({type: "JOB_RADAR_EVENT", state: "submitted", message: "The owner-confirmed Submit control was clicked"}), 1200);
+      await submitFinalControl(extract().fields);
     })();
   });
   const observer = new MutationObserver(() => scheduleScan(500));

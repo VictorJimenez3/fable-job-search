@@ -35,7 +35,11 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "application_resume_file" in service and "/api/application/resume-file" in service
     assert "application_essay_answer" in service and "warm-scholarship-essay" in service
     assert '"content_scripts"' in extension and '"<all_urls>"' in extension
-    assert '"version": "0.3.2"' in extension
+    assert '"version": "0.4.0"' in extension
+    assert '"nativeMessaging"' in extension
+    assert 'application_runs' in api and 'application_run_events' in api
+    assert 'submission_uncertain' in api
+    assert 'worker_heartbeat' in api
     assert "Job Radar Application Finisher" in extension
     for provider in ("workday", "greenhouse", "lever", "ashby", "smartrecruiters"):
         assert provider in adapters
@@ -170,3 +174,20 @@ def test_application_agent_keeps_owner_cloud_and_local_boundaries():
     assert "Private Google Sheet connected." in frontend
     assert 'category:"essay_context"' in frontend and "queue_ids:[queueId]" in frontend
     assert "Drive file storage is full" not in frontend
+
+
+def test_hybrid_browser_fixture_matrix_is_present():
+    fixtures = ROOT / "tests" / "browser-fixtures"
+    assert (fixtures / "README.md").exists()
+    for name, provider in (("ashby.html", "ashby"), ("greenhouse.html", "greenhouse"),
+                           ("lever.html", "lever"), ("workday.html", "workday"),
+                           ("multipage-and-loops.html", "quora")):
+        page = (fixtures / name).read_text()
+        assert 'data-job-radar-fixture' in page
+        assert f'data-provider="{provider}"' in page
+        assert 'type="file"' in page
+        assert 'data-is-submit="true"' in page or 'data-is-next="true"' in page
+    multipage = (fixtures / "multipage-and-loops.html").read_text()
+    assert 'id="page-two" hidden' in multipage
+    assert 'name="office"' in multipage
+    assert 'id="validation" hidden' in multipage

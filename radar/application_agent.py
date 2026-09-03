@@ -26,6 +26,13 @@ from typing import Any
 from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
 APPLICATION_AGENT_VERSION = "application-agent-v1"
+RESUME_STRATEGIES = {"mass_apply", "tailor"}
+SUBMISSION_POLICIES = {"auto", "review_first"}
+APPLICATION_PHASES = {
+    "queued", "waiting_for_mac", "opening", "filling", "simplify_filling", "resume_preparing",
+    "finishing", "writing", "validating", "needs_input", "submitting", "submitted",
+    "submission_uncertain", "failed", "stopped",
+}
 APPLICATION_AGENT_DIRNAME = ".resume_studio"
 APPLICATION_AGENT_FILENAME = "application_agent.json"
 APPLICATION_AGENT_MARKDOWN = "application_context.md"
@@ -38,11 +45,12 @@ SESSION_STATES = {
     "awaiting_confirmation",
     "submitting",
     "submitted",
+    "submission_uncertain",
     "failed",
     "skipped",
     "cancelled",
 }
-TERMINAL_STATES = {"submitted", "failed", "skipped", "cancelled"}
+TERMINAL_STATES = {"submitted", "submission_uncertain", "failed", "skipped", "cancelled"}
 ACTIVE_STATES = SESSION_STATES - TERMINAL_STATES
 
 ATS_HOST_PATTERNS = {
@@ -472,6 +480,7 @@ def _session_survival_rank(session: dict[str, Any]) -> tuple[int, int, float, st
         "blocked": 5,
         "queued": 4,
         "submitted": 3,
+        "submission_uncertain": 2,
         "failed": 2,
         "skipped": 1,
         "cancelled": 0,
@@ -901,7 +910,10 @@ def _approved_fill_value(field: dict[str, Any], answer: dict[str, Any]) -> str:
     return clean_text(answer.get("value"), VALUE_LIMIT)
 
 
-def _new_session(job: dict[str, Any], mode: str = "per_role", queue_id: str = "") -> dict[str, Any]:
+def _new_session(
+    job: dict[str, Any], mode: str = "per_role", queue_id: str = "",
+    resume_strategy: str = "mass_apply", submission_policy: str = "auto",
+) -> dict[str, Any]:
     clean_job = {
         "id": clean_text(job.get("id"), 160),
         "company": clean_text(job.get("company"), 240),
@@ -914,6 +926,14 @@ def _new_session(job: dict[str, Any], mode: str = "per_role", queue_id: str = ""
         "session_id": uuid.uuid4().hex,
         "queue_id": clean_text(queue_id, 100),
         "mode": mode if mode in {"per_role", "batch"} else "per_role",
+        "resume_strategy": resume_strategy if resume_strategy in RESUME_STRATEGIES else "mass_apply",
+        "submission_policy": submission_policy if submission_policy in SUBMISSION_POLICIES else "auto",
+        "phase": "queued",
+        "phase_updated_at": utc_now(),
+        "last_heartbeat_at": utc_now(),
+        "attempt": 0,
+        "simplify": {"status": "pending", "trigger_method": "keyboard_command"},
+        "submission": {"status": "pending", "receipt": ""},
         "state": "queued",
         "created_at": utc_now(),
         "updated_at": utc_now(),
@@ -931,7 +951,10 @@ def _new_session(job: dict[str, Any], mode: str = "per_role", queue_id: str = ""
     }
 
 
-def create_session(root: Path, job: dict[str, Any], mode: str = "per_role", queue_id: str = "") -> dict[str, Any]:
+def create_session(
+    root: Path, job: dict[str, Any], mode: str = "per_role", queue_id: str = "",
+    resume_strategy: str = "mass_apply", submission_policy: str = "review_first",
+) -> dict[str, Any]:
     store = load_store(root)
     clean_queue_id = clean_text(queue_id, 100)
     clean_job_identity = application_identity(job)
@@ -948,7 +971,10 @@ def create_session(root: Path, job: dict[str, Any], mode: str = "per_role", queu
             # same durable session. Creating another session for one queue ID
             # loses generated writing, review state, and page progress.
             session["mode"] = mode if mode in {"per_role", "batch"} else session.get("mode", "per_role")
-            session["job"] = _new_session(job, mode=mode, queue_id=clean_queue_id)["job"]
+            if session.get("state") in {"queued", "opening"}:
+                session["resume_strategy"] = resume_strategy if resume_strategy in RESUME_STRATEGIES else session.get("resume_strategy", "mass_apply")
+                session["submission_policy"] = submission_policy if submission_policy in SUBMISSION_POLICIES else session.get("submission_policy", "auto")
+            session["job"] = _new_session(job, mode=mode, queue_id=clean_queue_id, resume_strategy=session.get("resume_strategy", resume_strategy), submission_policy=session.get("submission_policy", submission_policy))["job"]
             session["url"] = session["job"]["url"]
             session["provider"] = provider_for_url(session["url"])
             if session.get("state") in TERMINAL_STATES:
@@ -979,7 +1005,10 @@ def create_session(root: Path, job: dict[str, Any], mode: str = "per_role", queu
             session = matching[0]
             session["queue_id"] = clean_queue_id or clean_text(session.get("queue_id"), 100)
             session["mode"] = mode if mode in {"per_role", "batch"} else session.get("mode", "per_role")
-            session["job"] = _new_session(job, mode=mode, queue_id=session["queue_id"])["job"]
+            if session.get("state") in {"queued", "opening"}:
+                session["resume_strategy"] = resume_strategy if resume_strategy in RESUME_STRATEGIES else session.get("resume_strategy", "mass_apply")
+                session["submission_policy"] = submission_policy if submission_policy in SUBMISSION_POLICIES else session.get("submission_policy", "auto")
+            session["job"] = _new_session(job, mode=mode, queue_id=session["queue_id"], resume_strategy=session.get("resume_strategy", resume_strategy), submission_policy=session.get("submission_policy", submission_policy))["job"]
             session["url"] = session["job"]["url"]
             session["provider"] = provider_for_url(session["url"])
             session["last_message"] = "Reattached the current queue item to the existing employer application session."
@@ -992,7 +1021,7 @@ def create_session(root: Path, job: dict[str, Any], mode: str = "per_role", queu
                 })
             _save_session(root, store, session)
             return public_session(session)
-    session = _new_session(job, mode=mode, queue_id=queue_id)
+    session = _new_session(job, mode=mode, queue_id=queue_id, resume_strategy=resume_strategy, submission_policy=submission_policy)
     store["sessions"][session["session_id"]] = session
     store["sessions"] = dict(list(store["sessions"].items())[-MAX_SESSIONS:])
     write_store(root, store)
@@ -1203,7 +1232,13 @@ def plan_form(root: Path, session_id: str, page_url: str, fields: Iterable[dict[
     # browser applies this pass, rescans, and receives a page-bound review only
     # after the employer DOM reports the approved values back.
     if final and not blockers and not fills:
-        _prepare_review(session)
+        if session.get("submission_policy") == "auto":
+            session["state"] = "submitting"
+            session["phase"] = "submitting"
+            session["phase_updated_at"] = utc_now()
+            session["submission"] = {"status": "approved", "receipt": "", "page_fingerprint": fingerprint}
+        else:
+            _prepare_review(session)
     _save_session(root, store, session)
     return {
         "version": APPLICATION_AGENT_VERSION,
@@ -1378,6 +1413,9 @@ def save_mapping(root: Path, field_key: str, answer_id: str) -> dict[str, Any]:
 
 def record_event(root: Path, session_id: str, state: str, message: str = "", error: str = "") -> dict[str, Any]:
     state = clean_text(state, 40).lower()
+    phase = state if state in APPLICATION_PHASES else ""
+    coarse = {"waiting_for_mac": "queued", "simplify_filling": "filling", "resume_preparing": "opening", "finishing": "filling", "writing": "filling", "validating": "filling", "needs_input": "blocked", "stopped": "skipped"}.get(state, state)
+    state = coarse
     if state not in SESSION_STATES:
         raise ValueError("invalid application session state")
     store = load_store(root)
@@ -1385,6 +1423,10 @@ def record_event(root: Path, session_id: str, state: str, message: str = "", err
     if not isinstance(session, dict):
         raise ValueError("application session not found")
     session["state"] = state
+    if phase:
+        session["phase"] = phase
+        session["phase_updated_at"] = utc_now()
+    session["last_heartbeat_at"] = utc_now()
     session["last_message"] = clean_text(message, 1000)
     session["last_error"] = clean_text(error or (message if state == "failed" else ""), 1000)
     if state == "filling":
@@ -1394,6 +1436,7 @@ def record_event(root: Path, session_id: str, state: str, message: str = "", err
         session["confirmation"] = None
         if state == "submitted":
             session["submitted_at"] = utc_now()
+            session.setdefault("submission", {})["status"] = "submitted"
         session["review"] = None
     _save_session(root, store, session)
     return public_session(session)
@@ -1457,7 +1500,7 @@ def verify_submission_page(root: Path, session_id: str, page_url: str, fields: I
     if not session or session.get("state") != "submitting":
         raise ValueError("this application is not approved for submission")
     confirmation = session.get("confirmation") or {}
-    expected = clean_text(confirmation.get("page_fingerprint"), 80)
+    expected = clean_text(confirmation.get("page_fingerprint") or (session.get("submission") or {}).get("page_fingerprint"), 80)
     live_fields = [field for field in fields if isinstance(field, dict)]
     actual = form_fingerprint(page_url, live_fields)
     if not expected or expected != actual:
@@ -1485,9 +1528,10 @@ def verify_submission_page(root: Path, session_id: str, page_url: str, fields: I
     for key, value in expected_values.items():
         if key and live_values.get(key) != value:
             raise ValueError("application field values changed after confirmation")
-    expiry = timestamp(confirmation.get("expires_at"))
-    if expiry is None or expiry < dt.datetime.now(dt.UTC).timestamp():
-        raise ValueError("submission confirmation expired")
+    if session.get("submission_policy") != "auto":
+        expiry = timestamp(confirmation.get("expires_at"))
+        if expiry is None or expiry < dt.datetime.now(dt.UTC).timestamp():
+            raise ValueError("submission confirmation expired")
     return {"ok": True, "session_id": session["session_id"], "page_fingerprint": actual}
 
 
@@ -1534,6 +1578,14 @@ def public_session(session: dict[str, Any]) -> dict[str, Any]:
     value.pop("review_fields", None)
     # The review card is explicitly owner-facing and short-lived. It is
     # included here so the cloud mirror can show the exact proposed values.
+    value.setdefault("resume_strategy", "mass_apply")
+    value.setdefault("submission_policy", "auto")
+    value.setdefault("phase", value.get("state") or "queued")
+    value.setdefault("phase_updated_at", value.get("updated_at") or "")
+    value.setdefault("last_heartbeat_at", value.get("updated_at") or "")
+    value.setdefault("attempt", 0)
+    value.setdefault("simplify", {"status": "pending", "trigger_method": "keyboard_command"})
+    value.setdefault("submission", {"status": "pending", "receipt": ""})
     return value
 
 

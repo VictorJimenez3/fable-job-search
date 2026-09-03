@@ -1,0 +1,17 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Ashby fixture</title>
+<main data-provider="ashby" data-job-radar-fixture>
+  <h1>Ashby Software Engineer</h1>
+  <form>
+    <label>Full name <input name="full_name" required></label>
+    <label>Email <input name="email" type="email" required></label>
+    <label>Resume <input name="resume_file" type="file" accept=".pdf" required></label>
+    <fieldset data-job-radar-field="pronouns"><legend>Pronouns</legend>
+      <label><input type="checkbox" name="pronouns" value="He/Him">He/Him</label>
+      <label><input type="checkbox" name="pronouns" value="She/Her">She/Her</label>
+    </fieldset>
+    <label>Why this role? <textarea name="why_role" required></textarea></label>
+    <button type="submit" data-job-radar-field="submit" data-is-submit="true">Submit application</button>
+  </form>
+</main>
