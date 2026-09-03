@@ -1,0 +1,14 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Workday fixture</title>
+<main data-provider="workday" data-job-radar-fixture>
+  <h1>Workday Analyst</h1>
+  <form id="workday-form">
+    <label>Legal name <input name="legal_name" required></label>
+    <label>Work authorization
+      <select name="work_authorization" required><option value="">Select</option><option>Yes</option><option>No</option></select>
+    </label>
+    <label>Resume <input name="resume_file" type="file" accept=".pdf" required></label>
+    <button type="button" data-job-radar-field="next" data-is-next="true">Next</button>
+  </form>
+</main>

@@ -555,22 +555,17 @@ parallel and kept the base when none produced a material positive win.
 ## Content
 - **Auto cover-letter skeletons** for S-tier roles only, same review-file
   flow as CV tailoring above.
-- **Local application-answer vault + supervised autofill — ✅ SHIPPED 2026-08-23
-  (DECISION #178).** The owner-only Application Agent stores reusable,
-  sensitivity-labeled answers and field mappings under the ignored Mac
-  `CV/.resume_studio/` boundary, mirrors them to private Drive JSON/Markdown,
-  and exposes a phone-visible sequential queue. Workday, Greenhouse, Lever,
-  Ashby, and SmartRecruiters receive named adapter hints with a generic
-  fallback. Approved values fill automatically; missing answers, essays,
-  unknown sensitive fields, file uploads, attestations, and adapter failures
-  remain visible blockers.
-- **Owner-confirmed application submission — ✅ SHIPPED 2026-08-23
-  (DECISION #178).** The extension can click a matching final Submit control
-  only after a full page-bound review card is confirmed locally or from the
-  owner phone. Confirmations are single-use and expire after 15 minutes. A
-  changed page fails closed; the issue ledger records a sanitized observation.
-  Multi-user storage, unattended submission, attestation bypass, and recruiter
-  messaging remain deliberately out of scope.
+- **Hybrid Simplify + Job Radar Autopilot — ✅ SHIPPED 2026-09-02
+  (DECISION #212).** Simplify owns the fast first pass through its supported
+  shortcut; the paired Mac finisher owns deterministic reconciliation, the
+  byte-verified mass-apply resume (with opt-in tailoring fallback), role-scoped
+  writing, exact provider-specific submission validation, and phone receipts.
+  Up to three tabs run concurrently with a serialized Simplify trigger. Queueing
+  authorizes one exact-once Submit by default, while **Review first** creates a
+  durable page-bound review. Managed Postgres stores per-run state, events,
+  revisions, leases, and worker heartbeats; Sheet/Drive remains a compatibility
+  fallback. Missing facts, unusual legal disclosures, CAPTCHA/MFA, and
+  submission uncertainty remain visible owner blockers.
 
 ## Ops
 - **Company-research backlog throughput — ✅ checkpointing + retry visibility shipped.** The

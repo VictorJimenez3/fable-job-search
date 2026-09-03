@@ -1,0 +1,32 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Multipage and validation fixture</title>
+<main data-provider="quora" data-job-radar-fixture>
+  <section id="page-one">
+    <h1>Page one</h1>
+    <label>Full name <input name="full_name" required></label>
+    <label>Resume <input name="resume_file" type="file" accept=".pdf" required></label>
+    <fieldset><legend>Can you work from the office?</legend>
+      <label><input type="radio" name="office" value="yes">Yes</label>
+      <label><input type="radio" name="office" value="no">No</label>
+    </fieldset>
+    <button type="button" data-job-radar-field="next" data-is-next="true">Next</button>
+  </section>
+  <section id="page-two" hidden>
+    <h1>Page two</h1>
+    <label>Open response <textarea name="open_response" required></textarea></label>
+    <p id="validation" hidden>Required fields remain.</p>
+    <button type="submit" data-job-radar-field="submit" data-is-submit="true">Submit application</button>
+  </section>
+  <script>
+    const form = document.querySelector('main');
+    form.querySelector('[data-is-next]').addEventListener('click', () => {
+      if (!form.querySelector('[name="resume_file"]').files.length || !form.querySelector('[name="office"]:checked')) {
+        document.querySelector('#validation').hidden = false;
+        return;
+      }
+      document.querySelector('#page-one').hidden = true;
+      document.querySelector('#page-two').hidden = false;
+    });
+  </script>
+</main>

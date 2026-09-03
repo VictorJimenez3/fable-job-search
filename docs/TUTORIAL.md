@@ -181,20 +181,25 @@ the same Applications database instead of creating a second Notion system.
 
 The owner-only **Application queue** tab is the phone/control surface for the
 paired Mac Chrome extension. It supports one-role launch from a Jobs card and
-a sequential batch queue. The official Simplify Copilot gets the first pass;
-the Job Radar finisher then handles the selected PDF, missing approved fields,
-and role-specific writing. The first adapters are Workday, Greenhouse, Lever,
-Ashby, and SmartRecruiters; other pages use a conservative generic fallback.
+a batch queue with up to three active employer tabs. The official Simplify
+Copilot gets the first pass; the Job Radar finisher then handles the selected
+PDF, missing approved fields, role-specific writing, validation, and one final
+Submit. The first adapters are Workday, Greenhouse, Lever, Ashby, and
+SmartRecruiters; other pages use a conservative generic fallback.
 
-There is no supported Simplify CLI or public trigger API. When the Copilot
-panel exposes **Autofill This Page**, the finisher starts that action once. If
-the browser isolates the panel, it waits briefly and continues without
-fighting Simplify. Queue state remains durable and visible from the phone.
+There is no supported Simplify CLI or public trigger API. The extension focuses
+the exact queued tab and invokes Simplify's `Alt+Shift+F` command through the
+restricted native host. If Simplify is unavailable, the queue records that
+fact and continues safely. Queue state, phase, heartbeat, resume choice, and
+submission receipt remain durable and visible from the phone.
 
 Set it up once:
 
 1. Load the unpacked `browser-extension/` once after enabling Developer mode at
-   `chrome://extensions`.
+   `chrome://extensions`, then install the restricted native host with
+   `scripts/mac-companion/install-native-host.sh <extension-id>`. macOS may ask
+   for Accessibility permission the first time the host sends Simplify's
+   shortcut.
 2. Sign in as `@VictorJimenez3`, open **Application queue**, and choose **pair & sync
    Mac**. The owner page sends the one-time token directly to the installed
    extension and recovers the local queue; the popup is only a fallback.
@@ -221,23 +226,23 @@ account does not stop queueing. Use the Radar UI to edit answers; database,
 Sheet, and Markdown payloads are storage mirrors, not the authoritative editor.
 
 Before opening a form, the extension starts a lightweight session and hands
-the page to Simplify while Resume Studio checks for a safe tailored PDF for
-that exact posting. If none exists, it starts the existing AI tailor run in
-parallel. A rejected or not-yet-approved tailor falls back to the immutable
-canonical resume, then the paired local agent uploads that exact PDF to the
-employer form and waits for the ATS to validate it. All other approved
-repetitive fields and ordinary **Next** pages can continue until a real answer,
-attestation, sensitive field, or final confirmation needs you.
+the page to Simplify while Resume Studio prepares the resume in parallel. New
+roles use the imported mass-apply PDF by default. Select **Tailor resume**
+before the Mac claims a role to run Resume Studio; failed or unsafe tailoring
+falls back to the byte-verified mass PDF. The paired agent uploads exactly one
+validated resume control, never a cover-letter control, and waits for ATS
+acceptance before moving on. All other approved repetitive fields and ordinary
+**Next** pages continue automatically until a real owner-only decision is
+needed.
 
-Approved answers—including approved sensitive answers—may be reused, but the
-full proposed values appear on the final review card. This includes repeated
-work schedule, LLM-experience, location, education, and other owner-confirmed
-questions. A concise written answer may also be saved for an exact recurring
-prompt, while employer-specific answers remain non-reusable. The agent stops
-for a new essay, unknown required/sensitive field, attestation,
-selector failure, or changed page. Phone confirmation is a single-use, 15-minute
-approval tied to the review hash and page fingerprint. A blocked role stays in
-the queue while later roles can continue. Repeated adapter problems go into
+Approved answers—including approved sensitive answers—may be reused. Written
+responses are generated per role with `warm-scholarship-essay` and are never
+copied into another employer's prompt. Queueing authorizes one automatic final
+Submit after validation. Select **Review first** for a durable phone review;
+the Mac revalidates the saved fingerprint even if the display card is old. A
+blocked role stays in the queue while later roles can continue. If a Submit
+click cannot be proven, the state becomes `submission_uncertain` and is never
+retried automatically. Repeated adapter problems go into
 the private issue ledger; ask Codex to repair them so each fix includes a
 fixture and regression test.
 

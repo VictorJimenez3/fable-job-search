@@ -683,6 +683,10 @@ MAX_PROMPT_CHARS = 42000
 RUN_TIMEOUT_SECONDS = 12 * 60
 CANONICAL_TEMPLATE = "immutable/VictorJimenezResume.tex"
 CANONICAL_PDF = "immutable/VictorJimenezResume.pdf"
+MASS_APPLY_RESUME_ID = "mass_apply_2026_09_02"
+MASS_APPLY_RESUME_FILENAME = "victor_jimenez_mass_apply.pdf"
+MASS_APPLY_RESUME_SHA256 = "20e7d7f615065836b7b279b62eecebeac85251710b0819a34434ac33f394614e"
+MASS_APPLY_RESUME_SOURCE = "victor_jimenez_resume.pdf"
 CANONICAL_PAGE_FOOTER = r"\fancyfoot[C]{\footnotesize\thepage}"
 GENERATED_ONE_PAGE_FOOTER = r"\fancyfoot[C]{}"
 CANONICAL_RESUME_FILES = (
@@ -905,6 +909,43 @@ def cv_root(root: Optional[Path] = None) -> Path:
 
 def studio_root(root: Optional[Path] = None) -> Path:
     return cv_root(root) / ".resume_studio"
+
+
+def mass_apply_resume_path(root: Optional[Path] = None) -> Path:
+    """Return the private, deterministic mass-apply PDF location."""
+    return studio_root(root) / "defaults" / MASS_APPLY_RESUME_FILENAME
+
+
+def ensure_mass_apply_resume(root: Optional[Path] = None) -> Dict[str, Any]:
+    """Import the owner-provided mass resume once, without putting it in Git/Drive.
+
+    The source can be supplied with ``RADAR_MASS_APPLY_RESUME``; the owner's
+    Downloads copy is the local default.  Importing is intentionally lazy so
+    production/cloud processes never need the PDF bytes.
+    """
+    target = mass_apply_resume_path(root)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    source_value = os.environ.get("RADAR_MASS_APPLY_RESUME", "~/Downloads/victor_jimenez_resume.pdf")
+    source = Path(source_value).expanduser()
+    if not target.is_file() and source.is_file():
+        digest = _sha256_file(source)
+        if digest == MASS_APPLY_RESUME_SHA256:
+            shutil.copy2(source, target)
+    ready = target.is_file() and _sha256_file(target) == MASS_APPLY_RESUME_SHA256
+    manifest = {
+        "asset_id": MASS_APPLY_RESUME_ID,
+        "filename": MASS_APPLY_RESUME_FILENAME,
+        "source": MASS_APPLY_RESUME_SOURCE,
+        "sha256": MASS_APPLY_RESUME_SHA256,
+        "size": target.stat().st_size if ready else 0,
+        "ready": ready,
+        "path": str(target) if ready else "",
+    }
+    try:
+        (target.parent / "manifest.json").write_text(json.dumps({k: v for k, v in manifest.items() if k != "path"}, indent=2) + "\n")
+    except OSError:
+        pass
+    return manifest
 
 
 TAILORED_RESUME_DIRNAME = "tailored"
@@ -4703,7 +4744,7 @@ def offline_tailor_resume(
 
 def application_resume_status(
     job: Dict[str, Any], root: Optional[Path] = None, queue_id: str = "",
-    allow_fallback: bool = False,
+    allow_fallback: bool = False, resume_strategy: Optional[str] = None,
 ) -> Dict[str, Any]:
     """Resolve the Resume Studio artifact an application session may use.
 
@@ -4715,6 +4756,27 @@ def application_resume_status(
     from the loopback-only service and places it in the employer file control;
     only the filename and progress metadata are mirrored to the cloud queue.
     """
+    # Direct library callers retain the historical tailored/reference
+    # resolution. The HTTP application routes always pass an explicit
+    # ``mass_apply`` or ``tailor`` strategy, so new queue work is deterministic.
+    strategy = str(resume_strategy or "").strip().lower()
+    if strategy in {"mass", "mass-apply", "mass_apply", "default"}:
+        manifest = ensure_mass_apply_resume(root)
+        if manifest["ready"]:
+            return {
+                "status": "ready", "source": "mass_apply", "mode": "mass_apply",
+                "asset_id": MASS_APPLY_RESUME_ID, "pdf_filename": MASS_APPLY_RESUME_FILENAME,
+                "sha256": MASS_APPLY_RESUME_SHA256, "file_ready": True,
+                "message": "Using the owner-selected mass-apply resume.",
+                "needs_owner_review": False,
+            }
+        return {
+            "status": "missing", "source": "mass_apply", "mode": "mass_apply",
+            "asset_id": MASS_APPLY_RESUME_ID, "pdf_filename": MASS_APPLY_RESUME_FILENAME,
+            "sha256": MASS_APPLY_RESUME_SHA256, "file_ready": False,
+            "message": "The configured mass-apply resume is missing or failed its integrity check.",
+            "needs_owner_review": True,
+        }
     job_id = str((job or {}).get("id") or "")
     entries = resume_library(root, job_id=job_id, limit=100) if job_id else []
     active_queue = "application-%s" % str(queue_id or "").strip()[:80] if queue_id else ""
@@ -4764,7 +4826,7 @@ def application_resume_status(
         selected = sorted(terminal_for_queue, key=lambda item: (
             item.get("updated_at") or "", item.get("entry_id") or "",
         ), reverse=True)[0]
-        fallback = application_fallback_resume(job, root)
+        fallback = application_fallback_resume(job, root, prefer_mass=(strategy == "tailor"))
         result = {
             **fallback,
             "tailor_run_id": selected.get("run_id") or selected.get("entry_id") or "",
@@ -4776,15 +4838,25 @@ def application_resume_status(
             result["run_id"] = selected.get("run_id") or selected.get("entry_id") or ""
         return result
     if allow_fallback:
-        return application_fallback_resume(job, root)
+        return application_fallback_resume(job, root, prefer_mass=(strategy == "tailor"))
     return {
         "status": "missing", "source": "resume_studio", "recommended_mode": "ai",
         "message": "No safe tailored Resume Studio winner exists for this role yet.",
     }
 
 
-def application_fallback_resume(job: Dict[str, Any], root: Optional[Path] = None) -> Dict[str, Any]:
+def application_fallback_resume(job: Dict[str, Any], root: Optional[Path] = None, prefer_mass: bool = False) -> Dict[str, Any]:
     """Choose the best approved offline role match before the canonical base."""
+    if prefer_mass:
+        manifest = ensure_mass_apply_resume(root)
+        if manifest["ready"]:
+            return {
+                "status": "fallback", "source": "mass_apply", "mode": "mass_apply",
+                "asset_id": MASS_APPLY_RESUME_ID, "pdf_filename": MASS_APPLY_RESUME_FILENAME,
+                "sha256": MASS_APPLY_RESUME_SHA256, "file_ready": True,
+                "message": "Tailoring was unavailable; using the owner-selected mass-apply resume.",
+                "needs_owner_review": False,
+            }
     selection = offline_resume_matches(job, root, approved_only=True, limit=1)
     selected = selection.get("selected")
     if isinstance(selected, dict):
@@ -4814,12 +4886,14 @@ def application_fallback_resume(job: Dict[str, Any], root: Optional[Path] = None
 
 
 def application_resume_file(
-    job: Dict[str, Any], root: Optional[Path] = None, queue_id: str = "",
+    job: Dict[str, Any], root: Optional[Path] = None, queue_id: str = "", resume_strategy: Optional[str] = None,
 ) -> Tuple[Dict[str, Any], Optional[Path]]:
     """Resolve the exact local PDF selected for an application form."""
-    status = application_resume_status(job, root, queue_id=queue_id, allow_fallback=True)
+    status = application_resume_status(job, root, queue_id=queue_id, allow_fallback=True, resume_strategy=resume_strategy)
     target: Optional[Path] = None
-    if status.get("source") in {"tailored", "reference"}:
+    if status.get("source") == "mass_apply":
+        target = mass_apply_resume_path(root).resolve()
+    elif status.get("source") in {"tailored", "reference"}:
         directory = _library_dir(root, "run", str(status.get("run_id") or ""))
         if directory is not None:
             source_name = (
@@ -16037,6 +16111,7 @@ class StudioHandler(BaseHTTPRequestHandler):
                 return self.send_json(application_resume_status(
                     job, repo_root(), queue_id=str(body.get("queue_id") or ""),
                     allow_fallback=bool(body.get("allow_fallback")),
+                    resume_strategy=str(body.get("resume_strategy") or "mass_apply"),
                 ))
             if parsed.path == "/api/application/resume-file":
                 job_id = str(body.get("job_id") or "")
@@ -16047,7 +16122,10 @@ class StudioHandler(BaseHTTPRequestHandler):
                         job = imported
                 if not job:
                     return self.send_json({"error": "job not found"}, HTTPStatus.NOT_FOUND)
-                status, target = application_resume_file(job, repo_root(), str(body.get("queue_id") or ""))
+                status, target = application_resume_file(
+                    job, repo_root(), str(body.get("queue_id") or ""),
+                    resume_strategy=str(body.get("resume_strategy") or "mass_apply"),
+                )
                 if target is None:
                     return self.send_json({"error": status.get("message") or "resume PDF unavailable"}, HTTPStatus.NOT_FOUND)
                 return self.send_bytes(target.read_bytes(), "application/pdf", download_name=str(status.get("pdf_filename") or target.name))
@@ -16057,6 +16135,8 @@ class StudioHandler(BaseHTTPRequestHandler):
                     repo_root(), job,
                     mode=str(body.get("mode") or "per_role"),
                     queue_id=str(body.get("queue_id") or ""),
+                    resume_strategy=str(body.get("resume_strategy") or "mass_apply"),
+                    submission_policy=str(body.get("submission_policy") or "auto"),
                 ), HTTPStatus.CREATED)
             if parsed.path == "/api/application/form":
                 return self.send_json(plan_application_form(

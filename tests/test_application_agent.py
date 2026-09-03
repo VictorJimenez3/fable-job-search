@@ -20,6 +20,7 @@ from radar.application_agent import (
     save_answer,
     verify_submission_page,
 )
+from scripts import resume_studio
 
 
 def job():
@@ -29,6 +30,21 @@ def job():
         "title": "Software Engineer",
         "url": "https://boards.greenhouse.io/example/jobs/1",
     }
+
+
+def test_mass_apply_asset_is_byte_identical_and_stable(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
+    source = Path("/Users/victor/Downloads/victor_jimenez_resume.pdf")
+    if not source.is_file():
+        pytest.skip("attached mass-apply PDF is not present on this machine")
+    monkeypatch.setenv("CV_ROOT", str(tmp_path / "CV"))
+    monkeypatch.setenv("RADAR_MASS_APPLY_RESUME", str(source))
+    target = tmp_path / "CV" / ".resume_studio" / "defaults" / resume_studio.MASS_APPLY_RESUME_FILENAME
+    first = resume_studio.ensure_mass_apply_resume(tmp_path)
+    second = resume_studio.ensure_mass_apply_resume(tmp_path)
+    assert first["asset_id"] == "mass_apply_2026_09_02"
+    assert first["sha256"] == "20e7d7f615065836b7b279b62eecebeac85251710b0819a34434ac33f394614e"
+    assert target.read_bytes() == source.read_bytes()
+    assert second["filename"] == first["filename"]
 
 
 def test_top_five_provider_and_sensitive_categories_are_deterministic():
@@ -102,6 +118,19 @@ def test_non_error_application_progress_message_is_persisted(tmp_path: Path):
     stored = get_session(tmp_path, session["session_id"])
     assert stored["last_message"] == "Resume uploaded; waiting for employer validation."
     assert stored["last_error"] == ""
+
+
+def test_submission_uncertain_is_terminal_and_never_retried_as_success(tmp_path: Path):
+    session = create_session(tmp_path, job(), mode="batch")
+    result = record_event(
+        tmp_path,
+        session["session_id"],
+        "submission_uncertain",
+        message="Submit was clicked once, but the employer confirmation was not observable.",
+    )
+    assert result["state"] == "submission_uncertain"
+    assert result["phase"] == "submission_uncertain"
+    assert result["review"] is None
 
 
 def test_repeated_queue_attachment_reuses_one_durable_session(tmp_path: Path):

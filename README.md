@@ -521,34 +521,32 @@ ordinary multi-page **Next** steps. It covers Workday, Greenhouse, Lever,
 Ashby, and SmartRecruiters first, with a generic DOM fallback for other ATS
 pages.
 
-There is no supported Simplify CLI or public trigger API. When the Copilot
-panel exposes its **Autofill This Page** control, the Job Radar finisher starts
-that supported action automatically. If the panel is isolated by the browser,
-the finisher waits briefly and then proceeds without fighting it. The queue
-still records every stage, so a role can continue in the background while
-another one needs you.
+There is no supported Simplify CLI or public trigger API. The paired extension
+uses Simplify's installed `Alt+Shift+F` command through a restricted macOS
+native-messaging host, after focusing the exact queued tab. If Simplify is
+signed out, unavailable, or slow, the queue records that visibly and Job Radar
+continues with its own safe reconciliation pass. A global trigger lock prevents
+two tabs from racing the keyboard shortcut.
 
 It pauses instead of guessing when a required answer is missing, a written
 response cannot be grounded in Victor's private evidence, a sensitive field
 has no approved match, or the page no longer matches the approved fingerprint.
 Owner-approved choice answers can be reused for radio, checkbox, select, and
 ATS button controls; optional demographic fields do not interrupt the queue
-when no approved answer exists. Every proposed value is shown again in the
-final review card. **Submit is never clicked until Victor confirms that card.**
-A confirmation from the phone is
-single-use, expires after 15 minutes, and is rejected if the Mac is no longer
-on the same page.
+when no approved answer exists. Queueing a role authorizes one automatic final
+Submit after required-field validation, employer identity, and the exact
+provider-specific control are verified. Turn on **Review first** for a durable
+phone review instead. If the employer result cannot be proven, the state is
+`submission_uncertain` and no automatic retry occurs.
 
-Before the extension creates an application session, it checks the local
-Resume Studio library for a safe tailored PDF for that exact posting. If none
-exists, it starts the existing AI tailor run and waits for its terminal result.
-If the run does not publish a safe tailored winner, it selects an
-owner-authorized Google, NVIDIA, or Merck reference by role fit, then the
-immutable canonical resume as the final fallback. The PDF bytes stay on the
-Mac and move directly from the loopback Resume Studio service into the
-employer's file control; Drive stores only queue metadata. New essays and
-personal responses use Victor's installed `warm-scholarship-essay` skill and
-private evidence, pausing only when a truthful answer needs a missing fact.
+Every new queue item starts with the exact private mass-apply PDF imported from
+`victor_jimenez_resume.pdf` (asset `mass_apply_2026_09_02`). Turn on **Tailor
+resume** before the Mac claims a role to run Resume Studio; a timeout, failed
+run, or unsafe winner falls back automatically to that same mass PDF. The PDF
+bytes stay on the Mac and move directly from the loopback Resume Studio service
+into the employer's file control; cloud state stores only asset ID, filename,
+hash, strategy, and status. New essays and personal responses use Victor's
+installed `warm-scholarship-essay` skill and private evidence.
 
 The workflow supports both one-role launch from a Jobs card and a bounded batch
 of up to three application tabs from the phone. Blocked roles park without
@@ -556,17 +554,13 @@ losing their tab or answers while open slots continue. Answers and field mapping
 owner can add them in the Application queue tab, from the extension popup, or while
 answering a blocker. Local JSON remains the machine source of truth under
 `CV/.resume_studio/application_agent.json`. The owner-only cloud control plane
-currently uses the connected user's private Google Sheet's **Application Agent**
-tab for queue/context state; production is intentionally using Victor's
-editable `vmj@njit.edu` workbook rather than the quota-locked legacy owner
-mirror. The legacy app-created Drive JSON/Markdown path remains a compatibility
-fallback, while the staged Postgres adapter is dormant until `DATABASE_URL` is
-configured. When Postgres is enabled, application state is stored as one
-sanitized database payload and does not attempt a Drive Markdown write. Resume
-Studio Markdown and generated files remain local unless the
-owner explicitly syncs the Resume Bank. The app UI is authoritative; Sheet,
-database, and Markdown payloads are storage/export mirrors, not arbitrary edit
-interfaces.
+uses managed Postgres when `DATABASE_URL` is configured: one sanitized row per
+application run plus append-only events, revisions, leases, and worker
+heartbeats. The existing private Google Sheet and Drive JSON/Markdown paths
+remain compatibility fallbacks, so a Drive quota issue does not prevent
+queueing. Resume Studio Markdown and generated files remain local. The app UI
+is authoritative; Sheet, database, and Markdown payloads are storage/export
+mirrors, not arbitrary edit interfaces.
 
 On first use, the local agent seeds only deterministic profile fields already
 present in the canonical local resume—name, contact details, school, and public

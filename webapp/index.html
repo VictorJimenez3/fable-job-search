@@ -371,7 +371,7 @@
   .agent-card h3, .agent-card h4 { margin:0 0 .35rem; }
   .agent-queue-row { display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:.8rem; align-items:start; border-top:1px solid var(--line); padding:.85rem 0; }
   .agent-queue-row > div { min-width:0; }
-  .agent-progress { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:.3rem; margin:.65rem 0 .25rem; }
+  .agent-progress { display:grid; grid-template-columns:repeat(5,minmax(70px,1fr)); gap:.3rem; margin:.65rem 0 .25rem; overflow-x:auto; }
   .agent-progress span { min-width:0; padding:.28rem .35rem; border:1px solid var(--line); border-radius:5px; color:var(--muted); font-size:.63rem; text-align:center; overflow-wrap:anywhere; }
   .agent-progress span.done { border-color:var(--accent); color:var(--accent-ink); background:color-mix(in srgb,var(--accent) 10%,transparent); }
   .agent-progress span.current { border-color:var(--amber); color:var(--ink); background:color-mix(in srgb,var(--amber) 12%,transparent); }
@@ -392,6 +392,8 @@
   .agent-blocker-title { display:flex; align-items:flex-start; justify-content:space-between; gap:.65rem; flex-wrap:wrap; }
   .agent-blocker-reason { margin:.35rem 0 0; color:var(--muted); line-height:1.45; }
   .agent-blocker textarea { display:block; width:100%; min-height:5.5rem; box-sizing:border-box; margin:.6rem 0 .45rem; resize:vertical; }
+  .agent-options { margin-top:.45rem; gap:.7rem; flex-wrap:wrap; }
+  .agent-options label { display:inline-flex; align-items:center; gap:.25rem; white-space:nowrap; font-size:.78rem; }
   .agent-token { word-break:break-all; background:var(--code); border:1px dashed var(--amber); padding:.45rem; border-radius:5px; font:.72rem ui-monospace,Menlo,monospace; }
   .agent-issue { border-top:1px solid var(--line); padding:.45rem 0; font-size:.72rem; }
   .agent-issue:first-child { border-top:0; }
@@ -542,7 +544,7 @@ const S = {           // app state
     bankQuery:"", bankMode:"all", bankStatus:"all", bankEra:"current", context:null, contextQuery:"", contextError:"", contextScanError:"",
     sync:{state:"idle",done:0,total:0,error:""}, activeRunId:"", runStatus:null,
     batchView:false, batch:{mode:"unrestricted",selected:[],runs:[],state:"idle",error:""}},
-  applicationAgent:{status:"checking",items:[],context:null,issues:[],sessions:[],error:"",pairingToken:"",selected:[],queueing:false,queueActionId:"",expandedQueueId:"",extensionAction:"",extensionVersion:"",extensionConnected:false,extensionConfigured:false,extensionProbeStarted:false,automationEnabled:false,localReady:false,localAnswerCount:0,extensionStatusError:"",pairingNeedsRepair:false},
+  applicationAgent:{status:"checking",items:[],context:null,issues:[],sessions:[],error:"",pairingToken:"",selected:[],queueing:false,queueActionId:"",expandedQueueId:"",extensionAction:"",extensionVersion:"",extensionConnected:false,extensionConfigured:false,extensionProbeStarted:false,automationEnabled:false,localReady:false,localAnswerCount:0,extensionStatusError:"",pairingNeedsRepair:false,jobOptions:{}},
   boot:{phase:"starting", jobsReady:false, inFlight:false, errors:[]},
   marquee:new Set(["meta","apple","amazon","netflix","google","microsoft","nvidia",
     "anthropic","openai","deepmind","genentech","moderna","regeneron",
@@ -1688,7 +1690,8 @@ async function startApply(j) {
   let queueId = "";
   if (S.auth?.owner) {
     try {
-      const queued = await applicationCloudPost("queue", {job: applicationAgentJob(j)});
+      const options = applicationJobOptions(j);
+      const queued = await applicationCloudPost("queue", {job: applicationAgentJob(j), resume_strategy: options.tailor ? "tailor" : "mass_apply", submission_policy: options.review ? "review_first" : "auto"});
       queueId = queued.item?.queue_id || "";
     } catch (error) {
       toast(`Application queue unavailable · starting local agent (${error.message.slice(0,80)})`);
@@ -1702,7 +1705,8 @@ async function startApply(j) {
     toast("Application queue opened the posting · Simplify gets first pass");
   };
   window.addEventListener("message", started);
-  window.postMessage({type:"job-radar:start-application", job:resumeStudioSnapshot(j), mode:"per_role", queueId}, "*");
+  const options = applicationJobOptions(j);
+  window.postMessage({type:"job-radar:start-application", job:resumeStudioSnapshot(j), mode:"per_role", queueId, resumeStrategy: options.tailor ? "tailor" : "mass_apply", submissionPolicy: options.review ? "review_first" : "auto"}, "*");
   setTimeout(() => {
     window.removeEventListener("message", started);
     if (!agentStarted) openExternal(j.url);
@@ -1730,6 +1734,20 @@ function applicationAgentJob(j) {
   return {id:j?.id, company:j?.company, title:j?.title, url:applicationAgentURL(j),
     locations:Array.isArray(j?.locations)?j.locations.slice(0,12):[], score:j?.score, posted_at:j?.posted_at??null,
     posting_status:j?.posting_status||"", description:String(j?.description||"").slice(0,20000)};
+}
+function applicationJobOptions(job) {
+  const id=job?.id||"";
+  const current=S.applicationAgent.jobOptions?.[id];
+  if (current) return current;
+  // A To tailor tracker stage is an explicit owner choice; every other new
+  // queue entry starts with the exact mass-apply PDF and auto-submit policy.
+  const stage=String(appliedById()[id]?.stage||"").toLowerCase();
+  return {tailor:stage==="to_tailor",review:false};
+}
+function setApplicationJobOption(id,key,value) {
+  const previous=applicationJobOptions({id});
+  S.applicationAgent.jobOptions={...(S.applicationAgent.jobOptions||{}),[id]:{...previous,[key]:Boolean(value)}};
+  rApplicationAgent();
 }
 async function applicationCloudGet(view="queue", params={}) {
   const query = new URLSearchParams({view, ...params});
@@ -1776,9 +1794,26 @@ function mergeApplicationQueueResults(result) {
 async function queueAutopilotJobs(jobs) {
   const snapshots=[...new Map((jobs||[]).filter(Boolean).map(job=>[job.id,applicationAgentJob(job)])).values()];
   if (!snapshots.length) return {items:[],queued:0,duplicates:0};
-  return mergeApplicationQueueResults(await applicationCloudPost("queue_many",{jobs:snapshots}));
+  const resume_strategies={}, submission_policies={};
+  for (const job of jobs) { const options=applicationJobOptions(job); resume_strategies[job.id]=options.tailor?"tailor":"mass_apply"; submission_policies[job.id]=options.review?"review_first":"auto"; }
+  return mergeApplicationQueueResults(await applicationCloudPost("queue_many",{jobs:snapshots,resume_strategies,submission_policies}));
 }
 let applicationChoiceReconcilePromise=null;
+let applicationAgentPollTimer=0;
+let applicationAgentPollInFlight=false;
+function scheduleApplicationAgentPoll() {
+  clearTimeout(applicationAgentPollTimer);
+  if (!S.auth?.owner) return;
+  const delay=document.hidden?30000:4000;
+  applicationAgentPollTimer=setTimeout(async()=>{
+    if (!applicationAgentPollInFlight) {
+      applicationAgentPollInFlight=true;
+      try { await loadApplicationAgent(S.tab==="agent"); } finally { applicationAgentPollInFlight=false; }
+    }
+    scheduleApplicationAgentPoll();
+  },delay);
+}
+document.addEventListener("visibilitychange",()=>{scheduleApplicationAgentPoll();if(!document.hidden&&S.auth?.owner)void loadApplicationAgent(false);});
 async function reconcileAutopilotChoices() {
   if (applicationChoiceReconcilePromise || !S.auth?.owner || S.applicationAgent.status!=="online") return applicationChoiceReconcilePromise;
   const byId=appliedById();
@@ -1812,7 +1847,7 @@ async function loadApplicationAgent(renderNow=true) {
         error:"Private storage returned an empty record set. Existing queue state is preserved on this page while the paired Mac attempts recovery."};
     } else {
       S.applicationAgent = {...S.applicationAgent, status:"online", error:"",
-        storage:queue.storage||context.storage||issues.storage||"drive", items, context:nextContext, issues:nextIssues};
+        storage:queue.storage||context.storage||issues.storage||"drive", items, worker:queue.worker||null, context:nextContext, issues:nextIssues};
       await reconcileAutopilotChoices();
     }
     if (canWrite()) {
@@ -1830,28 +1865,29 @@ async function loadApplicationAgent(renderNow=true) {
       items:[], context:null, issues:[]};
   }
   if (renderNow && S.tab === "agent") rApplicationAgent();
+  scheduleApplicationAgentPoll();
   return S.applicationAgent.items;
 }
 function applicationAgentStatusLabel(state) {
-  return ({queued:"queued",opening:"opening",filling:"filling",blocked:"needs your answer",
-    awaiting_confirmation:"ready for confirmation",submitting:"submitting",submitted:"submitted",
-    failed:"failed",skipped:"skipped",cancelled:"cancelled"})[state] || state || "queued";
+  return ({queued:"queued",waiting_for_mac:"waiting for Mac",opening:"opening",simplify_filling:"Simplify filling",resume_preparing:"preparing resume",finishing:"finishing",writing:"writing answer",validating:"validating",needs_input:"needs your answer",filling:"finishing",blocked:"needs your answer",awaiting_confirmation:"ready for confirmation",submitting:"submitting",submitted:"submitted",submission_uncertain:"submission uncertain",failed:"failed",stopped:"stopped",skipped:"skipped",cancelled:"cancelled"})[state] || state || "queued";
 }
 function applicationAgentStatusKind(state) {
-  return ["submitted"].includes(state) ? "good" : ["blocked","awaiting_confirmation","failed"].includes(state) ? "warn" : "";
+  return ["submitted"].includes(state) ? "good" : ["blocked","awaiting_confirmation","needs_input","submission_uncertain","failed","stopped"].includes(state) ? "warn" : "";
 }
 function applicationAgentProgressHTML(item) {
-  const stages=["queued","resume","form","input","submit"];
-  const labels=["Queued","Resume","Form","Answers","Submit"];
-  const index=({queued:0,opening:1,filling:2,blocked:3,awaiting_confirmation:4,submitting:4,submitted:5,failed:3,skipped:0,cancelled:0})[item.state]??0;
-  return `<div class="agent-progress" aria-label="Application progress">${labels.map((label,i)=>`<span class="${i<index?"done":i===Math.min(index,4)?"current":""}">${label}</span>`).join("")}</div>`;
+  const stages=["queued","opening","simplify_filling","resume_preparing","finishing","writing","validating","needs_input","submitting","submitted"];
+  const labels=["Queued","Open","Simplify","Resume","Finish","Write","Validate","Input","Submit","Done"];
+  const current=item.phase||({queued:"queued",opening:"opening",filling:"finishing",blocked:"needs_input",awaiting_confirmation:"needs_input",submitting:"submitting",submitted:"submitted",failed:"needs_input"}[item.state]||"queued");
+  const index=Math.max(0,stages.indexOf(current));
+  return `<div class="agent-progress" aria-label="Application progress">${labels.map((label,i)=>`<span class="${i<index?"done":i===index?"current":""}">${label}</span>`).join("")}</div><span class="sub">${esc(current.replaceAll("_"," "))}${item.last_heartbeat_at?` · heartbeat ${esc(item.last_heartbeat_at)}`:""}</span>`;
 }
 function applicationAgentResumeHTML(item) {
   const resume=item?.resume;
-  if (!resume) return '<p class="agent-resume sub">Resume: waiting for Resume Studio</p>';
+  const strategy=item?.resume_strategy||"mass_apply";
+  if (!resume) return `<p class="agent-resume sub"><strong>Resume:</strong> ${strategy==="tailor"?"tailored resume preparing":"mass-apply PDF waiting for Mac"}</p>`;
   const source=resume.source==="tailored"?"tailored for this role":resume.source==="reference"?`${resume.fallback_profile||"approved"} fallback`:"base fallback";
   const readiness=resume.file_ready?"ready to upload":resume.pdf_filename?"selected on Mac; awaiting agent refresh":"preparing local PDF";
-  return `<p class="agent-resume sub"><strong>Resume:</strong> ${esc(resume.pdf_filename||"preparing PDF")} · ${esc(source)} · ${readiness}</p>`;
+  return `<p class="agent-resume sub"><strong>Resume:</strong> ${esc(resume.pdf_filename||"preparing PDF")} · ${esc(strategy)} · ${esc(source)} · ${readiness}</p>`;
 }
 function applicationAgentReviewGroupKey(field) {
   const type=String(field?.type||"").toLowerCase();
@@ -1936,7 +1972,7 @@ function applicationAgentQueueHTML(items) {
   const automatic=visible.find(item=>["blocked","awaiting_confirmation","failed"].includes(item.state));
   const requested=S.applicationAgent.expandedQueueId;
   const expandedId=requested==="__none__"?"":visible.some(item=>item.queue_id===requested)?requested:(automatic?.queue_id||"");
-  return visible.map(item=>{const expanded=item.queue_id===expandedId, stopping=S.applicationAgent.queueActionId===item.queue_id, canStop=["queued","opening","filling","blocked","awaiting_confirmation"].includes(item.state), detailCount=(item.blockers||[]).length+(item.review?.fields||[]).length;return `<div class="agent-queue-row"><span class="chip ${applicationAgentStatusKind(item.state)}">${esc(applicationAgentStatusLabel(item.state))}</span><div><strong>${esc(item.job?.company||"Role")}</strong><br><span class="sub">${esc(item.job?.title||"")} · ${esc(item.provider||item.review?.provider||"")} · ${esc(item.message||"")}</span>${applicationAgentProgressHTML(item)}${applicationAgentResumeHTML(item)}${item.error?`<p class="sub" style="color:var(--danger)">${esc(item.error)}</p>`:""}${expanded?`${applicationAgentBlockersHTML(item)}${applicationAgentReviewHTML(item)}`:""}</div><div class="acts">${detailCount?`<button class="act" aria-expanded="${expanded}" onclick='toggleApplicationAgentDetails(${JSON.stringify(item.queue_id)},${expanded})'>${expanded?"hide details":`details · ${detailCount}`}</button>`:""}<a class="act" href="${esc(item.review?.url||item.job?.url||"#")}" target="_blank" rel="noreferrer">open</a>${["blocked","failed"].includes(item.state)?`<button class="act" onclick='continueApplicationAgent(${JSON.stringify(item.queue_id)})'>${item.state==="failed"?"retry":"I answered it · continue"}</button>`:""}${["queued","blocked","awaiting_confirmation","failed"].includes(item.state)?`<button class="act" onclick='refreshApplicationAgent()'>refresh</button>`:""}${canStop?`<button class="act" ${stopping?"disabled":""} onclick='skipApplicationAgent(${JSON.stringify(item.queue_id)})'>${stopping?"stopping…":["opening","filling"].includes(item.state)?"stop":"skip"}</button>`:""}</div></div>`}).join("");
+  return visible.map(item=>{const expanded=item.queue_id===expandedId, stopping=S.applicationAgent.queueActionId===item.queue_id, canStop=["queued","opening","filling","blocked","awaiting_confirmation","submitting"].includes(item.state), detailCount=(item.blockers||[]).length+(item.review?.fields||[]).length, queued=item.state==="queued", options=applicationJobOptions(item.job||{});return `<div class="agent-queue-row"><span class="chip ${applicationAgentStatusKind(item.state)}">${esc(applicationAgentStatusLabel(item.phase||item.state))}</span><div><strong>${esc(item.job?.company||"Role")}</strong><br><span class="sub">${esc(item.job?.title||"")} · ${esc(item.message||"")}</span>${applicationAgentProgressHTML(item)}${applicationAgentResumeHTML(item)}${queued?`<div class="acts agent-options" aria-label="Application options"><label><input type="checkbox" ${options.tailor?"checked":""} onchange='setApplicationJobOption(${JSON.stringify(item.job?.id||"")},"tailor",this.checked)'> Tailor resume</label><label><input type="checkbox" ${options.review?"checked":""} onchange='setApplicationJobOption(${JSON.stringify(item.job?.id||"")},"review",this.checked)'> Review first</label></div>`:""}${item.error?`<p class="sub" style="color:var(--danger)">${esc(item.error)}</p>`:""}${expanded?`${applicationAgentBlockersHTML(item)}${applicationAgentReviewHTML(item)}`:""}</div><div class="acts">${detailCount?`<button class="act" aria-expanded="${expanded}" onclick='toggleApplicationAgentDetails(${JSON.stringify(item.queue_id)},${expanded})'>${expanded?"hide details":`details · ${detailCount}`}</button>`:""}<a class="act" href="${esc(item.job?.url||"#")}" target="_blank" rel="noreferrer">open</a>${["blocked","failed"].includes(item.state)?`<button class="act" onclick='continueApplicationAgent(${JSON.stringify(item.queue_id)})'>${item.state==="failed"?"retry":"I answered it · continue"}</button>`:""}${["queued","blocked","awaiting_confirmation","failed"].includes(item.state)?`<button class="act" onclick='refreshApplicationAgent()'>refresh</button>`:""}${canStop?`<button class="act" ${stopping?"disabled":""} onclick='skipApplicationAgent(${JSON.stringify(item.queue_id)})'>${stopping?"stopping…":["opening","filling"].includes(item.state)?"stop":"skip"}</button>`:""}</div></div>`}).join("");
 }
 function toggleApplicationAgentDetails(queueId,currentlyExpanded=false) {
   S.applicationAgent.expandedQueueId=currentlyExpanded?"__none__":queueId;
@@ -1965,9 +2001,11 @@ async function queueApplicationBatch() {
 }
 async function confirmApplicationAgent(queueId) {
   const item=(S.applicationAgent.items||[]).find(row=>row.queue_id===queueId);
-  if (!item?.review) return;
+  if (!item?.review || S.applicationAgent.queueActionId) return;
+  S.applicationAgent.queueActionId=queueId; rApplicationAgent();
   try { await applicationCloudPost("confirm", {queue_id:queueId, review_hash:item.review.review_hash, nonce:item.review.nonce, page_fingerprint:item.review.page_fingerprint}); await loadApplicationAgent(false); rApplicationAgent(); toast("Confirmed · the Mac is revalidating this exact page before Submit"); }
   catch(error) { toast(error.message.slice(0,150)); }
+  finally { S.applicationAgent.queueActionId=""; if(S.tab==="agent")rApplicationAgent(); }
 }
 async function answerApplicationAgent(queueId,index,question,category) {
   const field=document.querySelector(`[data-agent-answer="${CSS.escape(`${queueId}-${index}`)}"]`), value=field?.value.trim();
@@ -2150,6 +2188,7 @@ async function refreshApplicationAgent() { await loadApplicationAgent(false); S.
 function rApplicationAgent() {
   if (!S.auth) { rJobs(); return; }
   if (!S.auth.owner) { S.tab="jobs"; rJobs(); return; }
+  scheduleApplicationAgentPoll();
   if (S.applicationAgent.status === "checking") { loadApplicationAgent(false).then(()=>{if(S.tab==="agent")rApplicationAgent();}); return; }
   reconnectApplicationAgentAfterReload();
   const data=S.applicationAgent, items=data.items||[], candidates=applicationAgentCandidates(), selected=new Set(data.selected||[]), queueing=Boolean(data.queueing), extensionAction=data.extensionAction||"";
@@ -2158,15 +2197,15 @@ function rApplicationAgent() {
   const contextAnswers=data.context?.answers||[];
   const approvedAnswerCount=Math.max(contextAnswers.length,Number(data.localAnswerCount)||0);
   const token=data.pairingToken;
-  const candidateHTML=candidates.length?`<div class="bar"><button class="act" onclick='S.applicationAgent.selected=${JSON.stringify(candidates.map(job=>job.id))};rApplicationAgent()' ${queueing?"disabled":""}>select all</button><button class="act" onclick='S.applicationAgent.selected=[];rApplicationAgent()' ${queueing?"disabled":""}>clear</button><button class="act primary" aria-busy="${queueing}" onclick="queueApplicationBatch()" ${!selected.size||queueing?"disabled":""}>${queueing?"queueing…":`queue ${selected.size||0} role${selected.size===1?"":"s"}`}</button></div><div>${candidates.map(job=>`<label class="agent-card" style="display:flex;gap:.5rem;align-items:flex-start;margin:.35rem 0"><input type="checkbox" ${selected.has(job.id)?"checked":""} ${queueing?"disabled":""} onchange='const next=new Set(S.applicationAgent.selected||[]);this.checked?next.add(${JSON.stringify(job.id)}):next.delete(${JSON.stringify(job.id)});S.applicationAgent.selected=[...next];rApplicationAgent()'><span><strong>${esc(job.company)}</strong><br><span class="sub">${esc(job.title)} · ${esc((appliedById()[job.id]||{}).stage||"saved")}</span></span></label>`).join("")}</div>`:'<p class="sub">Save a role from Jobs first.</p>';
+  const candidateHTML=candidates.length?`<div class="bar"><button class="act" onclick='S.applicationAgent.selected=${JSON.stringify(candidates.map(job=>job.id))};rApplicationAgent()' ${queueing?"disabled":""}>select all</button><button class="act" onclick='S.applicationAgent.selected=[];rApplicationAgent()' ${queueing?"disabled":""}>clear</button><button class="act primary" aria-busy="${queueing}" onclick="queueApplicationBatch()" ${!selected.size||queueing?"disabled":""}>${queueing?"queueing…":`queue ${selected.size||0} role${selected.size===1?"":"s"}`}</button></div><div>${candidates.map(job=>{const o=applicationJobOptions(job);return `<div class="agent-card" style="display:flex;gap:.6rem;align-items:flex-start;margin:.35rem 0;flex-wrap:wrap"><label style="display:flex;gap:.5rem;align-items:flex-start;flex:1"><input type="checkbox" ${selected.has(job.id)?"checked":""} ${queueing?"disabled":""} onchange='const next=new Set(S.applicationAgent.selected||[]);this.checked?next.add(${JSON.stringify(job.id)}):next.delete(${JSON.stringify(job.id)});S.applicationAgent.selected=[...next];rApplicationAgent()'><span><strong>${esc(job.company)}</strong><br><span class="sub">${esc(job.title)} · ${esc((appliedById()[job.id]||{}).stage||"saved")}</span></span></label><span class="acts"><label><input type="checkbox" ${o.tailor?"checked":""} ${queueing?"disabled":""} onchange='setApplicationJobOption(${JSON.stringify(job.id)},"tailor",this.checked)'> tailor</label><label><input type="checkbox" ${o.review?"checked":""} ${queueing?"disabled":""} onchange='setApplicationJobOption(${JSON.stringify(job.id)},"review",this.checked)'> review first</label></span></div>`}).join("")}</div>`:'<p class="sub">Save a role from Jobs first.</p>';
   const queueingNote=queueing?'<div class="note" role="status"><strong>Queueing selected roles…</strong> Keep this tab open until the queue count updates.</div>':"";
   const issueHTML=(data.issues||[]).slice(0,12).map(issue=>`<div class="agent-issue"><strong>${esc(issue.type||"issue")}</strong> · ${esc(issue.provider||"")}<br>${esc(issue.message||"")}<br><span class="sub">${esc(issue.fingerprint||"")} · ${esc(issue.created_at||"")}</span></div>`).join("")||'<p class="sub">No issues recorded.</p>';
-  const storageNote=data.storage==="sheet"?'<div class="note"><strong>Private Google Sheet connected.</strong> Queue and answers are stored in the Application Agent tab. Resume PDFs stay on the Mac.</div>':'';
+  const storageNote=data.storage==="database"?'<div class="note"><strong>Private managed queue connected.</strong> Application runs and append-only events use Postgres; resume PDFs stay on the Mac and never use Drive.</div>':data.storage==="sheet"?'<div class="note"><strong>Private Google Sheet connected.</strong> Queue and answers are stored in the Application Agent tab. Resume PDFs stay on the Mac.</div>':'';
   const pairingRepairNote=data.pairingNeedsRepair?'<div class="note" role="status"><strong>Mac pairing expired.</strong> Use repair &amp; sync once. The page sends the new token directly to the extension and immediately recovers the local queue.</div>':'';
   const busy=Boolean(extensionAction), syncLabel=extensionAction==="sync_queue"?"syncing…":"sync Mac", restartLabel=extensionAction==="reload_extension"?"restarting…":"restart extension", pairLabel=extensionAction==="pairing"?"pairing…":data.pairingNeedsRepair?"repair & sync Mac":"pair & sync Mac";
   const macState=data.extensionConnected?(data.localReady?(data.automationEnabled?"Mac running":"Mac ready · paused"):"extension connected · worker offline"):"extension not detected";
   const macKind=data.extensionConnected&&data.localReady?"good":"warn";
-  $("main").innerHTML=`<section class="testing-hero"><div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">${queueSummary} active</span><span class="chip">${approvedAnswerCount} approved answers</span><span class="chip ${macKind}">${esc(macState)}</span>${data.extensionVersion?`<span class="chip">extension v${esc(data.extensionVersion)}</span>`:""}</div><div class="acts"><button class="act" onclick="refreshApplicationAgent()">refresh</button><button class="act" aria-busy="${extensionAction==="sync_queue"}" ${busy?"disabled":""} onclick="controlApplicationAgentExtension('sync_queue')">${syncLabel}</button><button class="act" aria-busy="${extensionAction==="reload_extension"}" ${busy?"disabled":""} onclick="controlApplicationAgentExtension('reload_extension')">${restartLabel}</button><button class="act primary" aria-busy="${extensionAction==="pairing"}" ${busy?"disabled":""} onclick="pairApplicationMac()">${pairLabel}</button></div></div><h2>Application queue · Simplify handoff</h2><p class="sub">The official Simplify Copilot gets the first autofill pass on the employer page. This local finisher waits for it, then uploads the selected Resume Studio PDF, fills only what Simplify left blank, writes role-specific responses with warm-scholarship-essay, and preserves the live queue state. It pauses only for a truthful missing fact and before final Submit.</p>${storageNote}${pairingRepairNote}${data.extensionStatusError&&data.extensionConnected?`<div class="note"><strong>Mac worker needs attention.</strong> ${esc(data.extensionStatusError)}</div>`:""}${data.error?`<div class="note"><strong>Private application storage needs attention.</strong> ${esc(data.error)}</div>`:""}${token?`<div class="note"><strong>Copy this Mac pairing token now.</strong><div class="agent-token">${esc(token)}</div><p class="sub">It is shown once. <button class="act" ${busy?"disabled":""} onclick="sendApplicationPairingToExtension()">send pairing to extension</button> You can also use the extension controls above to sync or restart it without opening Chrome's extension manager.</p></div>`:""}</section><div class="agent-grid"><section class="lane"><div class="bar" style="justify-content:space-between"><h3>Application queue</h3><span class="sub">${items.length} stored</span></div><div class="note">The paired Mac opens up to 3 employer tabs at once. Simplify gets the first pass; a role that needs you parks without losing its page or answers, while open slots continue other roles. Resume PDFs remain local and do not use Drive storage.</div>${applicationAgentQueueHTML(items)}</section><section class="lane"><h3>Queue saved roles from your phone</h3><p class="sub">Select roles already in To apply / To tailor. The paired Mac opens them later and reports live progress here.</p>${queueingNote}${candidateHTML}<h3 style="margin-top:1rem">Add a reusable fact to the private bank</h3><p class="sub">Written responses are generated per role with the writing skill. The career-site source is selected automatically when the employer offers it; only genuinely missing facts appear here.</p><input id="agentContextQuestion" placeholder="Question or field label"><select id="agentContextCategory"><option value="other">other</option><option value="source">career-site source</option><option value="work_authorization">work authorization</option><option value="sponsorship">sponsorship</option><option value="education">education</option><option value="portfolio_link">portfolio link</option></select><textarea id="agentContextAnswer" rows="4" placeholder="Your approved factual answer"></textarea><button class="act primary" onclick="saveApplicationContext()">save fact</button><h3 style="margin-top:1rem">Issue ledger</h3><p class="sub">Sanitized adapter notes are kept private. Ask Codex to repair an issue; it will add a fixture and adapter test before changing behavior.</p>${issueHTML}</section></div>`;
+  $("main").innerHTML=`<section class="testing-hero"><div class="bar" style="justify-content:space-between;margin:0"><div><span class="chip good">owner only · @${esc(S.auth.login)}</span><span class="chip">${queueSummary} active</span><span class="chip">${approvedAnswerCount} approved answers</span><span class="chip ${macKind}">${esc(macState)}</span>${data.worker?.last_seen_at?`<span class="chip">heartbeat ${esc(data.worker.last_seen_at)}</span>`:""}${data.extensionVersion?`<span class="chip">extension v${esc(data.extensionVersion)}</span>`:""}</div><div class="acts"><button class="act" onclick="refreshApplicationAgent()">refresh</button><button class="act" aria-busy="${extensionAction==="sync_queue"}" ${busy?"disabled":""} onclick="controlApplicationAgentExtension('sync_queue')">${syncLabel}</button><button class="act" aria-busy="${extensionAction==="reload_extension"}" ${busy?"disabled":""} onclick="controlApplicationAgentExtension('reload_extension')">${restartLabel}</button><button class="act primary" aria-busy="${extensionAction==="pairing"}" ${busy?"disabled":""} onclick="pairApplicationMac()">${pairLabel}</button></div></div><h2>Application queue · Simplify handoff</h2><p class="sub">The official Simplify Copilot gets the first autofill pass on the employer page. The local finisher then validates fields, writes role-specific responses with warm-scholarship-essay, uploads the selected local PDF, and submits once when the page is verified. Review first is available per role; only truly missing facts, unusual legal disclosures, CAPTCHA/MFA, or uncertain submission results interrupt you.</p>${storageNote}${pairingRepairNote}${data.extensionStatusError&&data.extensionConnected?`<div class="note"><strong>Mac worker needs attention.</strong> ${esc(data.extensionStatusError)}</div>`:""}${data.error?`<div class="note"><strong>Private application storage needs attention.</strong> ${esc(data.error)}</div>`:""}${token?`<div class="note"><strong>Copy this Mac pairing token now.</strong><div class="agent-token">${esc(token)}</div><p class="sub">It is shown once. <button class="act" ${busy?"disabled":""} onclick="sendApplicationPairingToExtension()">send pairing to extension</button> You can also use the extension controls above to sync or restart it without opening Chrome's extension manager.</p></div>`:""}</section><div class="agent-grid"><section class="lane"><div class="bar" style="justify-content:space-between"><h3>Application queue</h3><span class="sub">${items.length} stored</span></div><div class="note">The paired Mac opens up to 3 employer tabs at once. Simplify gets the first pass; a role that needs you parks without losing its page or answers, while open slots continue other roles. Resume PDFs remain local and do not use Drive storage.</div>${applicationAgentQueueHTML(items)}</section><section class="lane"><h3>Queue saved roles from your phone</h3><p class="sub">Select roles already in To apply / To tailor. Tailor resume and Review first are off by default unless selected on a role. The paired Mac opens them later and reports live progress here.</p>${queueingNote}${candidateHTML}<h3 style="margin-top:1rem">Add a reusable fact to the private bank</h3><p class="sub">Written responses are generated per role with the writing skill. The career-site source is selected automatically when the employer offers it; only genuinely missing facts appear here.</p><input id="agentContextQuestion" placeholder="Question or field label"><select id="agentContextCategory"><option value="other">other</option><option value="source">career-site source</option><option value="work_authorization">work authorization</option><option value="sponsorship">sponsorship</option><option value="education">education</option><option value="portfolio_link">portfolio link</option></select><textarea id="agentContextAnswer" rows="4" placeholder="Your approved factual answer"></textarea><button class="act primary" onclick="saveApplicationContext()">save fact</button><h3 style="margin-top:1rem">Issue ledger</h3><p class="sub">Sanitized adapter notes are kept private. Ask Codex to repair an issue; it will add a fixture and adapter test before changing behavior.</p>${issueHTML}</section></div>`;
 }
 
 /* ---------- tutorial + account workspace ------------------------------ */

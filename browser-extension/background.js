@@ -3,12 +3,63 @@ const LOCAL_ORIGIN = "http://127.0.0.1:4317";
 const DEFAULT_CLOUD_URL = "https://job-radar-newgrad.vercel.app";
 const BATCH_RUNNING_STATES = new Set(["opening", "filling", "submitting"]);
 const RESUME_TERMINAL_STATES = new Set(["complete", "awaiting_review", "failed"]);
-const TERMINAL_QUEUE_STATES = new Set(["submitted", "failed", "skipped", "cancelled"]);
+const TERMINAL_QUEUE_STATES = new Set(["submitted", "submission_uncertain", "failed", "skipped", "cancelled"]);
 const RADAR_PAGE_ORIGINS = new Set(["https://job-radar-newgrad.vercel.app"]);
+const NATIVE_HOST_NAME = "com.jobradar.application_agent";
 const tabs = new Map();
 let syncPromise = null;
 let syncBlockedUntil = 0;
 let reloadScheduled = false;
+let nativePort = null;
+let nativeConnectPromise = null;
+let nativeBridgeError = "";
+let nativeTickBusy = false;
+
+function nativeConnect() {
+  if (nativePort) return Promise.resolve(nativePort);
+  if (nativeConnectPromise) return nativeConnectPromise;
+  nativeConnectPromise = (async () => {
+    try {
+      const port = chrome.runtime.connectNative(NATIVE_HOST_NAME);
+      nativePort = port;
+      nativeBridgeError = "";
+      port.onMessage.addListener(message => {
+        if (message?.type === "heartbeat" && !nativeTickBusy) {
+          nativeTickBusy = true;
+          void syncCloudQueueIfEnabled().finally(() => { nativeTickBusy = false; });
+        }
+      });
+      port.onDisconnect.addListener(() => {
+        nativePort = null;
+        nativeBridgeError = chrome.runtime.lastError?.message || "Native Mac companion disconnected";
+        void wait(1000).then(() => nativeConnect().catch(() => null));
+      });
+      port.postMessage({action: "health"});
+      return port;
+    } catch (error) {
+      nativePort = null;
+      nativeBridgeError = String(error?.message || error || "Native Mac companion is not installed").slice(0, 240);
+      throw error;
+    } finally { nativeConnectPromise = null; }
+  })();
+  return nativeConnectPromise;
+}
+
+async function nativeRequest(message) {
+  const port = await nativeConnect();
+  return new Promise((resolve, reject) => {
+    const requestId = `native-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+    let timer = setTimeout(() => { port.onMessage.removeListener(receive); reject(new Error("Native Mac companion timed out")); }, 8_000);
+    function receive(response) {
+      if (response?.request_id !== requestId) return;
+      clearTimeout(timer); port.onMessage.removeListener(receive);
+      if (response.ok === false) reject(new Error(response.error || "Native Mac companion rejected the request"));
+      else resolve(response);
+    }
+    port.onMessage.addListener(receive);
+    port.postMessage({...message, request_id: requestId});
+  });
+}
 
 function extensionPopupSender(sender) {
   const popupURL = chrome.runtime.getURL("popup.html");
@@ -52,6 +103,8 @@ async function requestQueueSync(sender, message = {}) {
   // Queue sync is the one control that activates employer-page automation.
   // A reload or read-only health probe must never start filling applications.
   await chrome.storage.local.set({automationEnabled: true});
+  await nativeConnect().catch(() => null);
+  await nativeRequest({action: "power_hold"}).catch(() => null);
   const result = await syncCloudQueue();
   return {...result, automationEnabled: true, extensionVersion: chrome.runtime.getManifest().version};
 }
@@ -84,6 +137,10 @@ async function requestExtensionStatus(sender, message = {}) {
     localReady,
     localAnswerCount,
     localError,
+    nativeBridgeReady: Boolean(nativePort),
+    nativeBridgeError,
+    simplifyTrigger: nativePort ? "keyboard_command" : "unavailable",
+    workerHeartbeat: new Date().toISOString(),
   };
 }
 
@@ -178,7 +235,11 @@ async function importTrackerChoices(items = []) {
 }
 
 async function config() {
-  const stored = await chrome.storage.local.get({cloudUrl: DEFAULT_CLOUD_URL, agentToken: "", autoContinue: true, maxConcurrentApplications: 3});
+  const stored = await chrome.storage.local.get({cloudUrl: DEFAULT_CLOUD_URL, agentToken: "", autoContinue: true, maxConcurrentApplications: 3, workerId: ""});
+  if (!stored.workerId) {
+    stored.workerId = `mac-${crypto.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`}`;
+    await chrome.storage.local.set({workerId: stored.workerId});
+  }
   return {...stored, cloudUrl: String(stored.cloudUrl || DEFAULT_CLOUD_URL).replace(/\/$/, "")};
 }
 
@@ -221,12 +282,13 @@ async function cloud(path, init = {}) {
   return body;
 }
 
-async function createSession(tabId, job, mode = "per_role", queueId = "") {
+async function createSession(tabId, job, mode = "per_role", queueId = "", resumeStrategy = "mass_apply", submissionPolicy = "auto") {
   const session = await local("/api/application/session", {
-    method: "POST", body: JSON.stringify({job, mode, queue_id: queueId}),
+    method: "POST", body: JSON.stringify({job, mode, queue_id: queueId, resume_strategy: resumeStrategy, submission_policy: submissionPolicy}),
   });
   tabs.set(tabId, {...tabs.get(tabId), job, mode, queueId, sessionId: session.session_id,
-    state: session.state, essayAttempts: new Set()});
+    resumeStrategy: session.resume_strategy || resumeStrategy, submissionPolicy: session.submission_policy || submissionPolicy,
+    state: session.state, phase: session.phase || "queued", essayAttempts: new Set(), generatedValues: new Map(), manuallyEditedFields: new Set()});
   return session;
 }
 
@@ -240,13 +302,20 @@ async function ensureResumeForApplication(tabId, row) {
   if (row.resumePromise) return row.resumePromise;
   row.resumePromise = (async () => {
     const queueId = row.queueId || "";
+    const strategy = row.resumeStrategy === "tailor" ? "tailor" : "mass_apply";
+    if (queueId) await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+      action: "queue_update", queue_id: queueId,
+      phase: strategy === "tailor" ? "resume_preparing" : "finishing",
+      resume_strategy: strategy,
+      message: strategy === "tailor" ? "Tailoring the selected resume locally." : "Using the owner-selected mass-apply resume.",
+    })}).catch(() => {});
     const resumeRequest = {method: "POST", body: JSON.stringify({
-      job_id: row.job.id, job: row.job, queue_id: queueId,
+      job_id: row.job.id, job: row.job, queue_id: queueId, resume_strategy: strategy,
     })};
     let status = await local("/api/application/resume", resumeRequest);
-    if (status.status === "missing") {
+    if (status.status === "missing" && strategy === "tailor") {
       if (queueId) await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
-        action: "queue_update", queue_id: queueId, state: "opening",
+        action: "queue_update", queue_id: queueId, phase: "resume_preparing", state: "opening",
         message: "Resume Studio is tailoring this role before form filling.",
       })});
       status = await local("/api/run", {method: "POST", body: JSON.stringify({
@@ -265,7 +334,7 @@ async function ensureResumeForApplication(tabId, row) {
       if (!RESUME_TERMINAL_STATES.has(status.status)) throw new Error("Resume Studio is still working; retry this role after it finishes");
       if (status.status === "failed") throw new Error(status.message || "Resume Studio could not produce a draft");
       status = await local("/api/application/resume", {method: "POST", body: JSON.stringify({
-        job_id: row.job.id, job: row.job, queue_id: queueId, allow_fallback: true,
+        job_id: row.job.id, job: row.job, queue_id: queueId, allow_fallback: true, resume_strategy: strategy,
       })});
     }
     if (!["ready", "fallback"].includes(status.status)) throw new Error(status.message || "Resume Studio did not produce a usable resume result");
@@ -274,12 +343,12 @@ async function ensureResumeForApplication(tabId, row) {
       name: status.pdf_filename,
       type: "application/pdf",
       base64: await localFile("/api/application/resume-file", {method: "POST", body: JSON.stringify({
-        job_id: row.job.id, job: row.job, queue_id: queueId,
+        job_id: row.job.id, job: row.job, queue_id: queueId, resume_strategy: strategy,
       })}),
     };
     row.resumeInfo = status;
     if (queueId) await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
-      action: "queue_update", queue_id: queueId, state: "opening",
+      action: "queue_update", queue_id: queueId, state: "opening", phase: "finishing",
       resume: status,
       message: status.message || "Resume Studio finished the application resume check.",
     })});
@@ -321,7 +390,7 @@ async function ensureApplicationSession(tabId, row) {
     // Create the lightweight local session immediately. This lets the
     // installed Simplify Copilot extension work while Resume Studio prepares
     // the exact PDF; the Job Radar finisher adds the file when it is ready.
-    if (!current.sessionId) await createSession(tabId, current.job, current.mode, current.queueId);
+    if (!current.sessionId) await createSession(tabId, current.job, current.mode, current.queueId, current.resumeStrategy, current.submissionPolicy);
     const attached = tabs.get(tabId);
     if (!attached) throw new Error("The paired application tab detached before Resume Studio could start");
     void ensureResumeForApplication(tabId, attached).catch(error => reportResumePreparationFailure(tabId, attached, error));
@@ -338,6 +407,73 @@ async function send(tabId, message) {
   try { return await chrome.tabs.sendMessage(tabId, message); } catch (_) { return null; }
 }
 
+function likelyRoleWritingField(field) {
+  if (!field || !["textarea", "text"].includes(String(field.type || "").toLowerCase())) return false;
+  const label = `${field.label || ""} ${field.question || ""} ${field.placeholder || ""}`.toLowerCase();
+  if (/cover letter|resume|phone|email|address|city|state|zip|website|linkedin|github|salary|compensation/.test(label)) return false;
+  return /why|describe|tell us|explain|essay|interest|motivat|experience with|additional information|anything else|project|impact|goals|strengths|fit/.test(label)
+    || Number(field.maxlength || 0) >= 300;
+}
+
+async function generateRoleWriting(row, fields) {
+  row.essayAttempts = row.essayAttempts || new Set();
+  row.generatedValues = row.generatedValues || new Map();
+  row.manuallyEditedFields = row.manuallyEditedFields || new Set();
+  let generated = false;
+  for (const field of fields.filter(likelyRoleWritingField)) {
+    const currentValue = String(field.value || "").trim();
+    const previous = row.generatedValues.get(field.field_id);
+    if (previous && currentValue && currentValue !== previous) row.manuallyEditedFields.add(field.field_id);
+    if (row.manuallyEditedFields.has(field.field_id)) continue;
+    const key = `${row.sessionId}:${field.field_id}:${field.label}`;
+    if (row.essayAttempts.has(key)) continue;
+    row.essayAttempts.add(key);
+    const limitText = `${field.label || ""} ${field.placeholder || ""}`;
+    const characterLimit = Number(String(limitText.match(/([\d,]+)\s*(?:character|char)s?/i)?.[1] || "").replace(/,/g, "")) || Number(field.maxlength) || 0;
+    const wordLimit = Number(String(limitText.match(/([\d,]+)\s*words?/i)?.[1] || "").replace(/,/g, "")) || 0;
+    try {
+      if (row.queueId) await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({action: "queue_update", queue_id: row.queueId, phase: "writing", message: "Writing a grounded response for this employer question."})});
+      const generatedResult = await local("/api/application/essay", {method: "POST", body: JSON.stringify({
+        session_id: row.sessionId, job: row.job, question: field.label || field.question,
+        category: "essay", character_limit: characterLimit, word_limit: wordLimit,
+      })});
+      const answer = String(generatedResult?.answer?.value || generatedResult?.answer?.answer || "").trim();
+      if (answer) { row.generatedValues.set(field.field_id, answer); generated = true; }
+    } catch (error) {
+      console.warn("Job Radar role writing", error);
+    }
+  }
+  return generated;
+}
+
+let simplifyTriggerLock = Promise.resolve();
+function withSimplifyTriggerLock(task) {
+  const next = simplifyTriggerLock.then(task, task);
+  simplifyTriggerLock = next.catch(() => {});
+  return next;
+}
+
+async function triggerSimplifyForTab(tabId, row) {
+  return withSimplifyTriggerLock(async () => {
+    const tab = await chrome.tabs.get(tabId);
+    const current = safeURL(tab?.url);
+    const expected = safeURL(row?.job?.url);
+    if (!current || !expected || applicationIdentity({url: current}) !== applicationIdentity({url: expected})) {
+      throw new Error("The queued tab is no longer the expected employer application.");
+    }
+    await chrome.tabs.update(tabId, {active: true});
+    if (tab.windowId !== undefined) await chrome.windows.update(tab.windowId, {focused: true});
+    const response = await nativeRequest({action: "trigger_simplify", tab_url: current, expected_url: expected});
+    const triggerId = response.trigger_id || `simplify-${Date.now()}`;
+    if (row.queueId) await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+      action: "queue_update", queue_id: row.queueId, phase: "simplify_filling",
+      simplify: {status: "starting", trigger_method: "keyboard_command", trigger_id: triggerId, started_at: new Date().toISOString(), progress_detected: false},
+      message: "Simplify autofill started; waiting for its fields to settle.",
+    })}).catch(() => {});
+    return {triggered: true, triggerId};
+  });
+}
+
 async function navigateQueuedTab(tabId, url, active = true) {
   const target = safeURL(url);
   if (!target) throw new Error("A safe application URL is required");
@@ -351,7 +487,7 @@ async function navigateQueuedTab(tabId, url, active = true) {
   throw new Error("Chrome did not navigate the paired tab to the queued application URL");
 }
 
-async function startJob(job, mode = "per_role", queueId = "") {
+async function startJob(job, mode = "per_role", queueId = "", resumeStrategy = "mass_apply", submissionPolicy = "auto") {
   const url = safeURL(job?.url);
   if (!url || !job?.id || !job?.company || !job?.title) throw new Error("A complete safe job snapshot is required");
   const active = mode !== "batch";
@@ -359,15 +495,15 @@ async function startJob(job, mode = "per_role", queueId = "") {
     .filter(candidate => !tabs.has(candidate.id) && applicationIdentity(candidate) === applicationIdentity(job))
     .sort((left, right) => Number(right.lastAccessed || 0) - Number(left.lastAccessed || 0))[0];
   if (existing) {
-    tabs.set(existing.id, {job, mode, queueId, sessionId: "", createdAt: Date.now(), state: "opening"});
+    tabs.set(existing.id, {job, mode, queueId, resumeStrategy, submissionPolicy, sessionId: "", createdAt: Date.now(), state: "opening", phase: "opening", generatedValues: new Map(), manuallyEditedFields: new Set()});
     if (active) await chrome.tabs.update(existing.id, {active: true});
     await send(existing.id, {type: "JOB_RADAR_RESCAN"});
     return {tab_id: existing.id, url: existing.url || url, reused: true};
   }
   const tab = await chrome.tabs.create({active});
   try {
+    tabs.set(tab.id, {job, mode, queueId, resumeStrategy, submissionPolicy, sessionId: "", createdAt: Date.now(), state: "opening", phase: "opening", generatedValues: new Map(), manuallyEditedFields: new Set()});
     const opened = await navigateQueuedTab(tab.id, url, active);
-    tabs.set(tab.id, {job, mode, queueId, sessionId: "", createdAt: Date.now()});
     return {tab_id: tab.id, url: opened.url || url};
   } catch (error) {
     try { await chrome.tabs.remove(tab.id); } catch (_) {}
@@ -434,7 +570,10 @@ async function recoverOrphanedQueue(items) {
           if (session?.session_id === item.session_id) sessionId = item.session_id;
         } catch (_) {}
       }
-      tabs.set(existing.id, {job: item.job, mode: "batch", queueId: item.queue_id, sessionId, createdAt: Date.now()});
+      tabs.set(existing.id, {job: item.job, mode: "batch", queueId: item.queue_id,
+        resumeStrategy: item.resume_strategy || "mass_apply", submissionPolicy: item.submission_policy || "auto",
+        sessionId, createdAt: Date.now(), state: item.state, phase: item.phase || item.state,
+        generatedValues: new Map(), manuallyEditedFields: new Set()});
       claimedTabIds.add(existing.id);
       await send(existing.id, {type: "JOB_RADAR_RESCAN"});
       continue;
@@ -469,11 +608,16 @@ async function syncSession(tabId) {
   try {
     const session = await local(`/api/application/session?session_id=${encodeURIComponent(row.sessionId)}`);
     row.state = session.state;
+    row.phase = session.phase || row.phase || "queued";
+    const syncEventId = `${row.sessionId}:${session.revision || session.updated_at || session.state}`;
     await cloud("/api/application-agent", {
       method: "POST",
       body: JSON.stringify({action: "queue_update", queue_id: row.queueId, session_id: row.sessionId,
-        state: session.state, blockers: session.blockers || [], review: session.review || null,
-        message: session.last_message || session.last_error || session.state, error: session.last_error || ""}),
+        state: session.state, phase: row.phase, blockers: session.blockers || [], review: session.review || null,
+        submission: session.submission || null, attempt: session.attempt || 0, attempt_id: session.attempt_id || row.attemptId || "",
+        last_heartbeat_at: session.last_heartbeat_at || new Date().toISOString(),
+        message: session.last_message || session.last_error || session.state, error: session.last_error || "",
+        event_id: syncEventId}),
     });
     const item = (await cloud("/api/application-agent?view=queue")).items?.find(value => value.queue_id === row.queueId);
     if (item?.confirmation && session.state === "awaiting_confirmation") {
@@ -614,6 +758,15 @@ function localAnswerShouldSync(answer, cloudAnswer) {
 }
 
 async function syncCloudQueueImpl() {
+  const workerSettings = await config();
+  try {
+    await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+      action: "worker_heartbeat", worker_id: workerSettings.workerId,
+      version: chrome.runtime.getManifest().version,
+      active_slots: [...tabs.values()].filter(row => row.queueId && BATCH_RUNNING_STATES.has(row.state || "opening")).length,
+      native_bridge: Boolean(nativePort),
+    })});
+  } catch (error) { console.warn("Job Radar worker heartbeat", error); }
   let data;
   try { data = await cloud("/api/application-agent?view=queue"); }
   catch (error) {
@@ -724,10 +877,12 @@ async function syncCloudQueueImpl() {
     if (slots <= 0) break;
     if (item.state === "queued" && ![...tabs.values()].some(row => row.queueId === item.queue_id)) {
       try {
-        const started = await startJob(item.job, "batch", item.queue_id);
+        const started = await startJob(item.job, "batch", item.queue_id, item.resume_strategy || "mass_apply", item.submission_policy || "auto");
         slots -= 1;
         await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
-          action: "queue_update", queue_id: item.queue_id, state: "opening", message: "Opening on the paired Mac",
+          action: "queue_update", queue_id: item.queue_id, state: "opening", phase: "opening", attempt: Number(item.attempt || 0) + 1,
+          attempt_id: `${item.queue_id}-${Date.now()}`, worker_id: (await config()).workerId,
+          message: "Opening on the paired Mac",
         })});
         console.info("Job Radar opened queued application", started.tab_id);
       } catch (error) { console.warn("Job Radar could not open queue item", error); }
@@ -755,11 +910,12 @@ async function syncCloudQueueIfEnabled() {
   if (!stored.automationEnabled) {
     return {ok: true, paused: true, queued: 0, active: 0};
   }
+  await nativeConnect().catch(() => null);
   return syncCloudQueue();
 }
 
 function scheduleQueueSync() {
-  chrome.alarms.create("job-radar-application-sync", {periodInMinutes: 1});
+  chrome.alarms.create("job-radar-application-sync", {periodInMinutes: 0.5});
   void syncCloudQueueIfEnabled();
 }
 chrome.runtime.onInstalled.addListener(scheduleQueueSync);
@@ -773,7 +929,7 @@ scheduleQueueSync();
 chrome.runtime.onMessage.addListener((message, sender, respond) => {
   const tabId = sender.tab?.id;
   (async () => {
-    if (message?.type === "JOB_RADAR_START") return startJob(message.job, message.mode, message.queueId);
+    if (message?.type === "JOB_RADAR_START") return startJob(message.job, message.mode, message.queueId, message.resumeStrategy || "mass_apply", message.submissionPolicy || "auto");
     if (message?.type === "JOB_RADAR_CONTENT_READY" && tabId) {
       let row = tabs.get(tabId);
       if (row && message.pageBoundary) {
@@ -827,9 +983,15 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
       // already contains the resume makes the later upload selector return an
       // empty list and can also mistake a cover-letter control for Resume.
       const fields = (message.fields || []).map(field => ({...field}));
+      const roleWritingGenerated = await generateRoleWriting(row, fields);
       let plan = await local("/api/application/form", {method: "POST", body: JSON.stringify({
         session_id: row.sessionId, page_url: message.pageUrl, fields, final: Boolean(message.final),
       })});
+      if (roleWritingGenerated) {
+        plan = await local("/api/application/form", {method: "POST", body: JSON.stringify({
+          session_id: row.sessionId, page_url: message.pageUrl, fields, final: Boolean(message.final),
+        })});
+      }
       const writtenBlockers = (plan.blockers || []).filter(blocker => ["essay", "cover_letter"].includes(blocker.category));
       row.essayAttempts = row.essayAttempts || new Set();
       let generatedAnswer = false;
@@ -838,6 +1000,7 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
         if (row.essayAttempts.has(attemptKey)) continue;
         row.essayAttempts.add(attemptKey);
         const sourceField = fields.find(field => field.field_id === blocker.field_id) || {};
+        if (row.generatedValues?.has(sourceField.field_id) || row.manuallyEditedFields?.has(sourceField.field_id)) continue;
         const limitText = `${sourceField.label || ""} ${sourceField.placeholder || ""}`;
         const limitMatch = limitText.match(/([\d,]+)\s*(?:character|char)s?/i);
         const characterLimit = Number(String(limitMatch?.[1] || "").replace(/,/g, "")) || Number(sourceField.maxlength) || 0;
@@ -901,6 +1064,22 @@ chrome.runtime.onMessage.addListener((message, sender, respond) => {
       row.state = plan.state;
       if (row.queueId) void syncSession(tabId);
       return plan;
+    }
+    if (message?.type === "JOB_RADAR_SIMPLIFY_REQUEST" && tabId) {
+      const row = tabs.get(tabId);
+      if (!row?.sessionId) return {triggered: false, error: "The application session is not ready yet."};
+      try {
+        const result = await triggerSimplifyForTab(tabId, row);
+        row.state = "filling"; row.phase = "simplify_filling";
+        return {triggered: true, trigger_id: result.triggerId};
+      } catch (error) {
+        const messageText = String(error?.message || error || "Simplify Copilot could not be triggered").slice(0, 500);
+        if (row.queueId) await cloud("/api/application-agent", {method: "POST", body: JSON.stringify({
+          action: "queue_update", queue_id: row.queueId, phase: "finishing", message: "Simplify was unavailable; Job Radar is finishing the form.", error: messageText,
+          simplify: {status: "unavailable", trigger_method: "keyboard_command", error: messageText},
+        })}).catch(() => {});
+        return {triggered: false, error: messageText};
+      }
     }
     if (message?.type === "JOB_RADAR_PAGE_BLOCKED" && tabId) {
       const row = tabs.get(tabId);
