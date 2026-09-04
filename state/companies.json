@@ -1347,6 +1347,23 @@
   "status": "active",
   "token": "clera"
  },
+ "ashby:clickhouse": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1788515396,
+  "last_ok": 1788515405,
+  "name": "ClickHouse",
+  "origin": "harvest:zapply_pm",
+  "pm_interest": true,
+  "pm_sources": [
+   "zapply_pm"
+  ],
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "clickhouse"
+ },
  "ashby:clickup": {
   "ats": "ashby",
   "extra": {},
@@ -5742,6 +5759,19 @@
   "sector": "",
   "status": "active",
   "token": "atomicmachines"
+ },
+ "greenhouse:attotude": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1788515396,
+  "last_ok": 1788515759,
+  "name": "AttoTude",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "attotude"
  },
  "greenhouse:audaxgroup": {
   "ats": "greenhouse",
@@ -13700,6 +13730,19 @@
   "sector": "healthtech",
   "status": "invalid",
   "token": "color"
+ },
+ "lever:commerce-undergraduate": {
+  "ats": "lever",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1788515396,
+  "last_ok": 1788515758,
+  "name": "Commerce Undergraduate Society",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "commerce-undergraduate"
  },
  "lever:commercearchitects": {
   "ats": "lever",
@@ -24852,6 +24895,26 @@
   "status": "active",
   "token": "enbridge"
  },
+ "workday:encore:confidential": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "confidential"
+  },
+  "failures": 0,
+  "first_seen": 1788515396,
+  "last_ok": 1788515410,
+  "name": "Encore Capital Group",
+  "origin": "harvest:simplify",
+  "pm_interest": true,
+  "pm_sources": [
+   "simplify"
+  ],
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "encore"
+ },
  "workday:enovis:enovis": {
   "ats": "workday",
   "extra": {
@@ -26479,6 +26542,22 @@
   "sector": "",
   "status": "active",
   "token": "hkex"
+ },
+ "workday:hl:Campus": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "Campus"
+  },
+  "failures": 0,
+  "first_seen": 1788515396,
+  "last_ok": 1788515773,
+  "name": "Houlihan Lokey",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "hl"
  },
  "workday:hntb:hntb_careers": {
   "ats": "workday",
