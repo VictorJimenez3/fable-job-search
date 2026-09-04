@@ -91,6 +91,13 @@ def test_jobs_save_deduplicates_company_stage_evidence(tmp_path, monkeypatch):
     assert "startup_stage_reason" not in record
 
 
+def test_jobs_save_compacts_repeated_sponsorship_coverage(tmp_path, monkeypatch):
+    monkeypatch.setattr(state, "STATE_DIR", tmp_path)
+    state.save("jobs.json", {"job-1": {"score_version": 13, "sponsorship_history": {"status": "likely", "coverage_quarters": ["2025-Q4"], "certified_cases": 3, "latest_decision_date": "2025-12-01"}}})
+    record = json.loads((tmp_path / "jobs.json").read_text())["job-1"]
+    assert record["sponsorship_history"] == {"status": "likely", "certified_cases": 3, "latest_decision_date": "2025-12-01"}
+
+
 def test_jobs_save_preserves_previous_snapshot_when_size_guard_fails(tmp_path, monkeypatch):
     monkeypatch.setattr(state, "STATE_DIR", tmp_path)
     target = tmp_path / "jobs.json"
