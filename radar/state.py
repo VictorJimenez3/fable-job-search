@@ -59,6 +59,15 @@ _JOB_DERIVED_FIELDS = {
 }
 
 
+def _compact_sponsorship_history(value: object) -> object:
+    """Keep per-job DOL context small; coverage is shared by sponsorship.json."""
+    if not isinstance(value, dict):
+        return value
+    compact = dict(value)
+    compact.pop("coverage_quarters", None)
+    return compact
+
+
 def _prefix(namespace: str | None = None) -> str:
     """Keep the legacy new-grad filenames, prefixing only new lanes."""
     mode = namespace or profile_id()
@@ -97,6 +106,9 @@ def _compact_job_record(record: object) -> object:
             compact.pop(key, None)
     for key in _JOB_DERIVED_FIELDS:
         compact.pop(key, None)
+    if "sponsorship_history" in compact:
+        compact["sponsorship_history"] = _compact_sponsorship_history(
+            compact["sponsorship_history"])
     return compact
 
 
