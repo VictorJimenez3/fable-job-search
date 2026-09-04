@@ -3267,7 +3267,7 @@ function scoreFinalWhy(j) {
 }
 function sponsorshipHistoryCard(j) {
   const h = j.sponsorship_history || {status:"unavailable"};
-  const coverage = (h.coverage_quarters || []).join(", ") || "not refreshed";
+  const coverage = (h.coverage_quarters || []).join(", ") || "the covered DOL quarters";
   const source = h.source_url || "https://www.dol.gov/agencies/eta/foreign-labor/performance";
   if (h.status === "likely") {
     const cases = (Number(h.certified_cases)||0) + (Number(h.certified_withdrawn_cases)||0);
