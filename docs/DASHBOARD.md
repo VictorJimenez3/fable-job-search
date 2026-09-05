@@ -1,12 +1,12 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-09-05 11:24 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **150 shown / 11601 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-09-05 12:05 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **150 shown / 11601 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
-| 100 🔥 | 11h | Applied Materials | [Summer 2027 Industrial Engineering Intern- Bachelor's (Santa Clara, CA](https://amat.wd1.myworkdayjobs.com/en-US/External/job/Santa-ClaraCA/Summer-2027-Industrial-Engineering-Intern--Bachelor-s--Santa-Clara--CA-_R2626710) | Santa Clara,CA | semiconductors | workday |
+| 100 🔥 | 12h | Applied Materials | [Summer 2027 Industrial Engineering Intern- Bachelor's (Santa Clara, CA](https://amat.wd1.myworkdayjobs.com/en-US/External/job/Santa-ClaraCA/Summer-2027-Industrial-Engineering-Intern--Bachelor-s--Santa-Clara--CA-_R2626710) | Santa Clara,CA | semiconductors | workday |
 | 95 🔥 | 4d | Micron | [Intern - RDA/Metrology-Process Shift Engineer, TD](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---RDA-Metrology-Process-Shift-Engineer--TD_JR109078) | Boise, ID - Main Site | semiconductors | workday |
 | 93 🔥 | 8d | GlobalFoundries | [Advanced Manufacturing Process Engineering Intern, Sophomore (Summer 2](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/Advanced-Manufacturing-Process-Engineering-Intern--Sophomore--Summer-2027-_JR-2604639) | USA - Vermont - Essex Junction | semiconductors | workday |
 | 93 🔥 | 8d | GlobalFoundries | [Job Posting Title Advanced Manufacturing Process Engineering Intern, S](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Vermont---Essex-Junction/Job-Posting-Title-Advanced-Manufacturing-Process-Engineering-Intern--Sophomore--Summer-2027-_JR-2604664) | USA - Vermont - Essex Junction | semiconductors | workday |
@@ -30,7 +30,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 90 🔥 | 18d | Johnson & Johnson | [Materials Engineer Co-op](https://jj.wd5.myworkdayjobs.com/JJ/job/Jacksonville-Florida-United-States-of-America/Materials-Engineering-Co-op_R-094380) | Jacksonville, FL | pharma_biotech | simplify |
 | 88 🔥 | 13h | Hunt Oil Company | [Reservoir Engineer Intern](https://fa-eqcd-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1058) | Dallas, TX | energy | simplify |
 | 88 🔥 | 12d | Micron | [Intern - TD Site Industrial Engineer](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---TD-Site-Industrial-Engineer_JR108729) | Boise, ID - Main Site | semiconductors | workday |
-| 87 🔥 | 11h | Applied Materials | [Summer 2027 Mechanical Engineer Intern- Bachelor's (Austin, TX)](https://amat.wd1.myworkdayjobs.com/en-US/External/job/AustinTX/Summer-2027-Mechanical-Engineer-Intern--Bachelor-s--Austin--TX-_R2628093) | Austin,TX | semiconductors | workday |
+| 87 🔥 | 12h | Applied Materials | [Summer 2027 Mechanical Engineer Intern- Bachelor's (Austin, TX)](https://amat.wd1.myworkdayjobs.com/en-US/External/job/AustinTX/Summer-2027-Mechanical-Engineer-Intern--Bachelor-s--Austin--TX-_R2628093) | Austin,TX | semiconductors | workday |
 | 86 🔥 | 1d | Ecolab | [Research and Development Intern](https://ecolab.wd1.myworkdayjobs.com/ecolab_external/job/USA---Minnesota---Eagan/Research-and-Development-Intern_R00304540) | Naperville, IL | chemicals_materials | simplify |
 | 86 🔥 | 2d | Ecolab | [Research and Development Intern](https://ecolab.wd1.myworkdayjobs.com/en-US/Ecolab_External/job/USA---Minnesota---Eagan/Research-and-Development-Engineering-Intern_R00303255) | USA - Minnesota - Eagan | chemicals_materials | workday |
 | 86 🔥 | 11d | Micron | [Intern - EDE Thin Films Equipment Engineering](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---EDE-Thin-Films-Equipment-Engineering_JR108977) | Boise, ID - Main Site | semiconductors | workday |
@@ -77,12 +77,12 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 76 ⭐ | 10h | Solidigm | [Hardware & Product Development Engineering Intern](https://jobs.smartrecruiters.com/Solidigm/744000147613839) | Rancho Cordova, CA | other | simplify |
 | 76 ⭐ | 13h | CDM Smith | [Electrical Engineer Intern - Summer 2027](https://careers.cdmsmith.com/jobs/4398?icims=1) | Latham, NY | other | simplify |
 | 76 ⭐ | 13h | Texas Instruments | [Systems Engineering Intern](https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25017705) | Dallas, TX | other | simplify |
-| 76 ⭐ | 13h | RoviSys | [Engineering Co-op - Summer 2027](https://careers-rovisys.icims.com/jobs/2128/job?mobile=true&needsRedirect=false) | Holly Springs, NC | other | simplify |
-| 76 ⭐ | 13h | RoviSys | [Engineering Co-op - Summer 2027](https://careers-rovisys.icims.com/jobs/2131/job?mobile=true&needsRedirect=false) | Houston, TX | other | simplify |
-| 76 ⭐ | 13h | RoviSys | [Engineering Co-op - Summer 2027](https://careers-rovisys.icims.com/jobs/2137/job?mobile=true&needsRedirect=false) | Aurora, OH | other | simplify |
-| 76 ⭐ | 13h | RoviSys | [Engineering Co-op](https://careers-rovisys.icims.com/jobs/2143/job?mobile=true&needsRedirect=false) | Portage, MI | other | simplify |
-| 76 ⭐ | 13h | RoviSys | [Engineering Co-op](https://careers-rovisys.icims.com/jobs/2144/job?mobile=true&needsRedirect=false) | Charlotte, NC | other | simplify |
-| 76 ⭐ | 13h | Garmin | [Aircraft Performance Engineer Intern](https://careers.garmin.com/jobs/19837?icims=1) | Olathe, KS | other | simplify |
+| 76 ⭐ | 14h | RoviSys | [Engineering Co-op - Summer 2027](https://careers-rovisys.icims.com/jobs/2128/job?mobile=true&needsRedirect=false) | Holly Springs, NC | other | simplify |
+| 76 ⭐ | 14h | RoviSys | [Engineering Co-op - Summer 2027](https://careers-rovisys.icims.com/jobs/2131/job?mobile=true&needsRedirect=false) | Houston, TX | other | simplify |
+| 76 ⭐ | 14h | RoviSys | [Engineering Co-op - Summer 2027](https://careers-rovisys.icims.com/jobs/2137/job?mobile=true&needsRedirect=false) | Aurora, OH | other | simplify |
+| 76 ⭐ | 14h | RoviSys | [Engineering Co-op](https://careers-rovisys.icims.com/jobs/2143/job?mobile=true&needsRedirect=false) | Portage, MI | other | simplify |
+| 76 ⭐ | 14h | RoviSys | [Engineering Co-op](https://careers-rovisys.icims.com/jobs/2144/job?mobile=true&needsRedirect=false) | Charlotte, NC | other | simplify |
+| 76 ⭐ | 14h | Garmin | [Aircraft Performance Engineer Intern](https://careers.garmin.com/jobs/19837?icims=1) | Olathe, KS | other | simplify |
 | 76 ⭐ | 12d | BP | [Corporate Asset Development Engineer Intern](https://bpinternational.wd3.myworkdayjobs.com/bpPrivateExternalCareersSite/job/United-States-of-America---Colorado---Denver/Corporate-Asset-Development-Engineer-Intern_RQ115146) | Denver, CO | energy | simplify |
 | 76 ⭐ | 12d | BP | [Reservoir Engineer Intern](https://bpinternational.wd3.myworkdayjobs.com/bpPrivateExternalCareersSite/job/United-States-of-America---Colorado---Denver/Reservoir-Engineer-Intern--bpx-energy-_RQ115142) | Denver, CO | energy | simplify |
 | 76 ⭐ | 14d | Solid Power | [Product Engineer Intern](https://job-boards.greenhouse.io/solidpower/jobs/6150710004) | Thornton, CO | energy | simplify |
