@@ -1,6 +1,6 @@
 # 🎯 Job Radar — internship dashboard
 
-_Last run: **2026-09-06 18:22 UTC** · companies polled directly: **1067** (registry 1209) · jobs tracked: **19039** · new this run: **1** · alerts this run: **0**_
+_Last run: **2026-09-06 18:34 UTC** · companies polled directly: **1067** (registry 1209) · jobs tracked: **19039** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -39,7 +39,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 81 ⭐ | 18d | xAI | [Data Center Operations Technician (MMR/MDF & Fiber Infrastructure) ](https://job-boards.greenhouse.io/xai/jobs/5215585007) |  Southaven, MS; Memphis, Tennessee | ai_lab | unavailable | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/xai) |
 | 81 ⭐ | 18d | xAI | [Data Center Operations Technician (MMR/MDF & Fiber Infrastructure) ](https://job-boards.greenhouse.io/xai/jobs/5215585007) | Memphis, Tennessee; Southaven, Mississip | ai_lab | unavailable | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/xai) |
 | 81 ⭐ | 18d | xAI | [Data Center Operations Technician, MMR/MDF & Fiber Infrastructure - Me](https://job-boards.greenhouse.io/xai/jobs/5215585007) |  Southaven, MS; Memphis, TN | ai_lab | unavailable | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/xai) |
-| 81 ⭐ | 24d | Snowflake | [Software Engineer](https://jobs.ashbyhq.com/snowflake/74466b25-9cc8-4e9b-b60b-234c539c455c) | US-CA-Menlo Park | big_tech | unavailable | — | [posting](https://jobs.ashbyhq.com/snowflake/74466b25-9cc8-4e9b-b60b-234c539c455c) |
+| 81 ⭐ | 25d | Snowflake | [Software Engineer](https://jobs.ashbyhq.com/snowflake/74466b25-9cc8-4e9b-b60b-234c539c455c) | US-CA-Menlo Park | big_tech | unavailable | — | [posting](https://jobs.ashbyhq.com/snowflake/74466b25-9cc8-4e9b-b60b-234c539c455c) |
 | 80 ⭐ | 9d | OpenAI | [Applied AI Architect, Edu](https://jobs.ashbyhq.com/openai/376a6ab7-7209-4aef-bbdd-f3e40a048714) | Singapore | ai_lab | unavailable | — | [posting](https://jobs.ashbyhq.com/openai/376a6ab7-7209-4aef-bbdd-f3e40a048714) |
 | 80 ⭐ | 10d | Databricks | [Solutions Architect - Communications, Media, Entertainment and Games ](https://databricks.com/company/careers/open-positions/job?gh_jid=8756214002) | San Francisco, California | ai_lab | unavailable | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/databricks) |
 | 80 ⭐ | 10d | Databricks | [Solutions Architect - Communications, Media, Entertainment and Games ](https://databricks.com/company/careers/open-positions/job?gh_jid=8756213002) | San Diego, California | ai_lab | unavailable | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/databricks) |
