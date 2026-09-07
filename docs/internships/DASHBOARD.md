@@ -1,6 +1,6 @@
 # 🎯 Job Radar — internship dashboard
 
-_Last run: **2026-09-06 23:59 UTC** · companies polled directly: **1066** (registry 1209) · jobs tracked: **19043** · new this run: **3** · alerts this run: **0**_
+_Last run: **2026-09-07 00:10 UTC** · companies polled directly: **1066** (registry 1209) · jobs tracked: **19043** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -141,9 +141,9 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 67  | 3d | Tesla | [Embedded Software Engineer Intern - Steering - Chassis Systems](https://www.tesla.com/careers/search/job/282248) | Palo Alto, CA | big_tech | unavailable | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 67  | 3d | Tesla | [Software Engineer Intern - AI Tooling](https://www.tesla.com/careers/search/job/282291) | Palo Alto, CA | big_tech | unavailable | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 67  | 3d | Tesla | [Software Engineer Intern - Finance Programs](https://www.tesla.com/careers/search/job/282303) | Palo Alto, CA | big_tech | unavailable | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
-| 67  | 4d | Microsoft | [Data Science Intern](https://apply.careers.microsoft.com/careers/job/1970393556982897) | Redmond, WA | big_tech | unavailable | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
-| 67  | 4d | Tesla | [Machine Learning Engineer Intern - Charging Data Modeling](https://www.tesla.com/careers/search/job/281940) | Palo Alto, CA | big_tech | unavailable | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
-| 67  | 4d | Tesla | [Vehicle Software Engineer Intern - Diagnostic User Interface](https://www.tesla.com/careers/search/job/281921) | Palo Alto, CA | big_tech | unavailable | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
+| 67  | 5d | Microsoft | [Data Science Intern](https://apply.careers.microsoft.com/careers/job/1970393556982897) | Redmond, WA | big_tech | unavailable | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
+| 67  | 5d | Tesla | [Machine Learning Engineer Intern - Charging Data Modeling](https://www.tesla.com/careers/search/job/281940) | Palo Alto, CA | big_tech | unavailable | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
+| 67  | 5d | Tesla | [Vehicle Software Engineer Intern - Diagnostic User Interface](https://www.tesla.com/careers/search/job/281921) | Palo Alto, CA | big_tech | unavailable | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 67  | 5d | Microsoft | [Data Scientist Intern](https://apply.careers.microsoft.com/careers/job/1970393556982928) | Redmond, WA | big_tech | unavailable | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 67  | 5d | Microsoft | [Software Engineer Intern - AI and ML](https://apply.careers.microsoft.com/careers/job/1970393556972698) | Boston, MA | big_tech | unavailable | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
 | 67  | 5d | Microsoft | [Software Engineer Intern - AI and ML Projects](https://apply.careers.microsoft.com/careers/job/1970393556972687) | Mountain View, CA | big_tech | unavailable | — | [Simplify internship board](https://github.com/SimplifyJobs/Summer2027-Internships) |
