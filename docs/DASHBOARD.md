@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-09-09 16:43 UTC** · companies polled directly: **2142** (registry 2428) · jobs tracked: **57318** · new this run: **26** · alerts this run: **10**_
+_Last run: **2026-09-09 17:28 UTC** · companies polled directly: **2142** (registry 2428) · jobs tracked: **57318** · new this run: **26** · alerts this run: **10**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -19,7 +19,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 88 🔥 | 5d | Amazon | [Software Development Engineer, Amazon Dedicated Cloud, Early Career - ](https://www.amazon.jobs/en/jobs/10529546/software-development-engineer-amazon-dedicated-cloud-early-career-2026) | Seattle, Washington, USA | big_tech | unavailable | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs)<br>[www.amazon.jobs fallback](https://www.amazon.jobs/jobs/10529546/apply) |
 | 88 🔥 | 21d | Merck | [Manufacturing Leadership Development Program - Associate Specialist, E](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---Pennsylvania---West-Point/Manufacturing-Leadership-Development-Program---Associate-Specialist--Engineering_R412407-1/apply) | West Point, Pennsylvania, United States  | healthtech | unavailable | no-history | [posting](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---Pennsylvania---West-Point/Manufacturing-Leadership-Development-Program---Associate-Specialist--Engineering_R412407-1/apply) |
 | 87 🔥 | 6d | Amazon | [Applied Scientist - Global Risk Intelligence and Prevention - Seller A](https://amazon.jobs/en/jobs/10528088/applied-scientist-global-risk-intelligence-and-prevention-seller-abuse-prevention) | Seattle, WA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 87 🔥 | 7d | Amazon | [Front End Engineer - IAM Console Team](https://www.amazon.jobs/jobs/10524274/apply) | Seattle, WA | big_tech | unavailable | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
+| 87 🔥 | 8d | Amazon | [Front End Engineer - IAM Console Team](https://www.amazon.jobs/jobs/10524274/apply) | Seattle, WA | big_tech | unavailable | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 87 🔥 | 21d | Amazon | [Front-End Engineer - Amazon Connect - AWS](https://www.amazon.jobs/jobs/10508283/apply) | Seattle, WA | big_tech | unavailable | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs)<br>[www.amazon.jobs fallback](https://www.amazon.jobs/jobs/10510073/apply) |
 | 86 🔥 | 13d | Amazon | [Software Development Engineer - Reporting Data Platform](https://www.amazon.jobs/jobs/10519658/apply) | Seattle, WA | big_tech | unavailable | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 86 🔥 | 20d | Amazon | [Front End Engineer - AWS Agentic AI Automated Reasoning - AR](https://www.amazon.jobs/jobs/10515062/apply) | Seattle, WA | big_tech | unavailable | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
