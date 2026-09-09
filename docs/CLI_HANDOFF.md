@@ -1,5 +1,17 @@
 # CLI handoff notes
 
+## Current change (2026-09-09)
+
+- **Alert delivery recovery:** the scheduled radar crawl had been failing
+  before publishing new alert history because the compacted `state/jobs.json`
+  exceeded the 95 MiB safety guard (101.6 MB in the runner). The email-batch
+  workflow therefore had no new rows to deliver even though its own job was
+  green. Job persistence now omits only reconstructible zero score dimensions,
+  duplicate primary-source provenance, and zero DOL counters; score reasons,
+  nonzero dimensions, lifecycle state, and nonzero sponsorship facts remain
+  auditable. The next production crawl must be confirmed green before treating
+  GitHub notification delivery as repaired.
+
 This repository is maintained through Codex and repository automation. Keep
 the repository—not a chat transcript—as the shared source of truth.
 
