@@ -4916,6 +4916,19 @@
   "status": "active",
   "token": "galaxydigitalservices"
  },
+ "greenhouse:gallup": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1788928953,
+  "last_ok": 1788928955,
+  "name": "Gallup",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "gallup"
+ },
  "greenhouse:gardacp": {
   "ats": "greenhouse",
   "extra": {},
@@ -7705,7 +7718,7 @@
   "last_ok": 0,
   "name": "Steel Dynamics",
   "origin": "harvest:simplify",
-  "probe_attempts": 1,
+  "probe_attempts": 2,
   "sector": "",
   "status": "invalid",
   "token": "careers-aluminumdynamics"
@@ -7863,6 +7876,20 @@
   "sector": "",
   "status": "invalid",
   "token": "careers-campus-globalcareers-atlassian"
+ },
+ "icims:careers-canada-secure": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1788928953,
+  "invalidated_at": 1788928954,
+  "last_ok": 0,
+  "name": "SECURE",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "careers-canada-secure"
  },
  "icims:careers-cfins": {
   "ats": "icims",
@@ -8923,7 +8950,7 @@
   "last_ok": 0,
   "name": "Utah State University",
   "origin": "harvest:simplify",
-  "probe_attempts": 1,
+  "probe_attempts": 2,
   "sector": "",
   "status": "invalid",
   "token": "careers-usu"
@@ -13254,7 +13281,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788912841,
+  "last_ok": 1788928971,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13600,7 +13627,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1788912831,
+  "last_ok": 1788928961,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13745,7 +13772,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788912843,
+  "last_ok": 1788928977,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14636,6 +14663,22 @@
   "status": "active",
   "token": "bestbuycanada"
  },
+ "workday:bird:BirdConstructionCareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "BirdConstructionCareers"
+  },
+  "failures": 0,
+  "first_seen": 1788928953,
+  "last_ok": 1788928955,
+  "name": "Bird Construction",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "bird"
+ },
  "workday:blackrock:BlackRock_Early_Careers_Program": {
   "ats": "workday",
   "extra": {
@@ -15308,6 +15351,22 @@
   "status": "active",
   "token": "cat"
  },
+ "workday:cboe:External_Career_CBOE": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "External_Career_CBOE"
+  },
+  "failures": 0,
+  "first_seen": 1788928953,
+  "last_ok": 1788928954,
+  "name": "Cboe",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "cboe"
+ },
  "workday:cc:ChanelCareers": {
   "ats": "workday",
   "extra": {
@@ -15525,7 +15584,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1788912830,
+  "last_ok": 1788928959,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16549,7 +16608,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788912839,
+  "last_ok": 1788928970,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16690,7 +16749,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788912832,
+  "last_ok": 1788928962,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -17505,7 +17564,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788912836,
+  "last_ok": 1788928967,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -19415,7 +19474,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788912836,
+  "last_ok": 1788928963,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -21705,7 +21764,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1788912837,
+  "last_ok": 1788928967,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
