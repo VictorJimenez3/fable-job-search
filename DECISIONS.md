@@ -3473,3 +3473,13 @@ append-only events with monotonic revisions, leases, and worker heartbeats;
 Google Sheet/Drive remains a compatibility fallback rather than live queue
 state. This removes Drive quota from the critical path while preserving the
 existing private storage recovery path.
+## 217. Keep alert-producing crawls below the GitHub snapshot limit (2026-09-09)
+
+The scheduled crawl was repeatedly failing at the 95 MiB safety guard after
+rescoring the growing job registry, so the separate email-batch workflow could
+only report “no unsent alerts.” The JSON writer now removes only values that
+are reconstructible defaults: zero score dimensions, duplicate/primary source
+provenance, and zero DOL withdrawal counters. Human-readable score reasons,
+all nonzero score dimensions, lifecycle evidence, and nonzero sponsorship facts
+remain in the row. This restores crawl publication without raising the hard
+GitHub blob boundary or introducing a second datastore format.

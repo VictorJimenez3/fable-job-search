@@ -98,6 +98,48 @@ def test_jobs_save_compacts_repeated_sponsorship_coverage(tmp_path, monkeypatch)
     assert record["sponsorship_history"] == {"status": "likely", "certified_cases": 3, "latest_decision_date": "2025-12-01"}
 
 
+def test_jobs_save_compacts_reconstructible_metadata_without_dropping_evidence(tmp_path, monkeypatch):
+    monkeypatch.setattr(state, "STATE_DIR", tmp_path)
+    state.save("jobs.json", {"job-1": {
+        "score_version": 13,
+        "source": "simplify",
+        "source_board": "simplify:new-grad",
+        "source_variants": ["simplify", "jobright", "jobright"],
+        "source_board_variants": ["simplify:new-grad", "jobright:software", "jobright:software"],
+        "source_url": "https://example.test/feed",
+        "source_url_variants": ["https://example.test/feed", "https://example.test/other"],
+        "score_dimensions": {"base": 5, "role_fit": 20, "eligibility": 0, "mission": 0},
+        "score_reasons": ["base utility +5", "role:swe +20"],
+        "sponsorship_history": {
+            "status": "likely", "certified_cases": 3,
+            "certified_withdrawn_cases": 0, "certified_workers": 3,
+            "certified_withdrawn_workers": 0,
+        },
+    }})
+
+    record = json.loads((tmp_path / "jobs.json").read_text())["job-1"]
+    assert record["score_dimensions"] == {"base": 5, "role_fit": 20}
+    assert record["score_reasons"] == ["base utility +5", "role:swe +20"]
+    assert record["source_variants"] == ["jobright"]
+    assert record["source_board_variants"] == ["jobright:software"]
+    assert record["source_url_variants"] == ["https://example.test/other"]
+    assert record["sponsorship_history"] == {
+        "status": "likely", "certified_cases": 3, "certified_workers": 3,
+    }
+
+    state.save("jobs.json", {"job-2": {
+        "score_version": 13,
+        "sponsorship_history": {
+            "status": "likely", "certified_cases": 3,
+            "certified_withdrawn_cases": 1, "certified_workers": 3,
+            "certified_withdrawn_workers": 2,
+        },
+    }})
+    retained = json.loads((tmp_path / "jobs.json").read_text())["job-2"]
+    assert retained["sponsorship_history"]["certified_withdrawn_cases"] == 1
+    assert retained["sponsorship_history"]["certified_withdrawn_workers"] == 2
+
+
 def test_jobs_save_preserves_previous_snapshot_when_size_guard_fails(tmp_path, monkeypatch):
     monkeypatch.setattr(state, "STATE_DIR", tmp_path)
     target = tmp_path / "jobs.json"

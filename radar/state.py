@@ -65,7 +65,31 @@ def _compact_sponsorship_history(value: object) -> object:
         return value
     compact = dict(value)
     compact.pop("coverage_quarters", None)
+    # Missing counters are interpreted as zero by every consumer.  Do not
+    # persist those repeated defaults on tens of thousands of rows.
+    for key in ("certified_withdrawn_cases", "certified_withdrawn_workers"):
+        if compact.get(key) == 0:
+            compact.pop(key, None)
     return compact
+
+
+def _compact_provenance_list(value: object, primary: object) -> object:
+    """Dedupe provenance while keeping the primary value as the source of truth."""
+    if not isinstance(value, list):
+        return value
+    result: list[object] = []
+    for item in value:
+        if not item or item == primary or item in result:
+            continue
+        result.append(item)
+    return result
+
+
+def _compact_score_dimensions(value: object) -> object:
+    """Persist only non-zero dimensions; absent dimensions mean no signal."""
+    if not isinstance(value, dict):
+        return value
+    return {key: amount for key, amount in value.items() if amount != 0}
 
 
 def _prefix(namespace: str | None = None) -> str:
@@ -104,6 +128,15 @@ def _compact_job_record(record: object) -> object:
     for key in _JOB_EMPTY_FIELDS:
         if compact.get(key) in (None, "", [], {}):
             compact.pop(key, None)
+    compact["score_dimensions"] = _compact_score_dimensions(
+        compact.get("score_dimensions", {}))
+    for key, primary_key in (("source_variants", "source"),
+                             ("source_board_variants", "source_board"),
+                             ("source_url_variants", "source_url")):
+        if key in compact:
+            compact[key] = _compact_provenance_list(compact[key], compact.get(primary_key))
+            if not compact[key]:
+                compact.pop(key, None)
     for key in _JOB_DERIVED_FIELDS:
         compact.pop(key, None)
     if "sponsorship_history" in compact:

@@ -1251,10 +1251,13 @@ setting. Edit and push — next run picks it up. Seed companies:
 - **State** (`state/*.json`) is committed back by CI after each run: seen jobs,
   the company registry, learned taste, applied log, run stats, company research,
   AI usage, and provider benchmark results. Job snapshots use a sparse,
-  backward-compatible JSON representation and fail before replacement at
-  95 MiB, leaving headroom below GitHub's 100 MiB blob limit. If that guard
-  trips, shard the datastore or complete the verified Postgres cutover; do not
-  raise the production limit past the repository host's boundary.
+  backward-compatible JSON representation: zero score dimensions and repeated
+  primary-source provenance are omitted (absence means no signal/already
+  represented), while nonzero dimensions, score reasons, and nonzero DOL facts
+  remain intact. Writes fail before replacement at 95 MiB, leaving headroom
+  below GitHub's 100 MiB blob limit. If that guard trips again, shard the
+  datastore or complete the verified Postgres cutover; do not raise the
+  production limit past the repository host's boundary.
 - **Score maintenance** runs every six hours and verifies that every stored job
   carries the current score/rules version before publishing a repaired snapshot.
 - GitHub cron is best-effort: `*/30` in practice fires every 30–60 min.
