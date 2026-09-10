@@ -1075,8 +1075,9 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
 - **Google preference:** `profile.yaml` contains a data-driven score override
   that makes Google technical new-grad roles `100`, with `pm` explicitly
   excluded. The reason is printed in `score_reasons`; rules version is now 12.
-- **Frontend:** the Jobs role-field toggles include `Product / project
-  management`; Vercel serves the canonical `webapp/index.html` directly.
+- **Frontend:** the Jobs role-field toggles include `Hardware / computer
+  engineering` (between Analytics / BI and Product / project management);
+  Vercel serves the canonical `webapp/index.html` directly.
 - **Score transparency:** each score dimension now shows its points, what it
   measures, and one compact plain-English why; the exact rule ledger remains
   available below it. The deterministic scorer now also adds bounded learned

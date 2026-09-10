@@ -39,7 +39,7 @@ goal/recommended ordering). The classic `score` remains available during
 migration for compatibility.
 
 - **Jobs**: every role the radar has ever seen, with persistent dropdowns for
-  role family—including the low-priority **Product / project management**
+  role family—including **Hardware / computer engineering** and the low-priority **Product / project management**
   lane—posting sponsorship, official DOL sponsor history, experience,
   sector, and pipeline status. Each row shows visa/years badges—including the
   important difference between "not stated" and "not analyzed"—plus historical

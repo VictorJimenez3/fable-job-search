@@ -1161,7 +1161,8 @@ function pipelineStageLabel(stage) {
 const ROLE_LABELS = {
   ai_ml:"AI / machine learning", swe:"Software engineering",
   data_science:"Data science", data_eng:"Data engineering",
-  analytics:"Analytics / BI", pm:"Product / project management",
+  analytics:"Analytics / BI", hardware:"Hardware / computer engineering",
+  pm:"Product / project management",
   other:"Adjacent / unclassified",
 };
 const PM_TITLE = /\b(?:apm|associate\s+product\s+manager|technical\s+product\s+manager|product\s+(?:manager|owner|management)|project\s+manager|business(?:\s+systems)?\s+analyst|(?:ux\s*\/\s*ui|ux|ui|user\s+experience|user\s+interface)\s+(?:researcher|research)|solutions?\s+architect(?:ure)?)\b/i;
@@ -1171,6 +1172,7 @@ function roleFamily(j) {
   const t = norm(j.title);
   if (PM_TITLE.test(t)) return "pm";
   if (OFF_FIELD_TITLE.test(t)) return "other";
+  if (/\b(hardware|computer engineering|electrical engineering|electronics engineering|asic|fpga|vlsi|silicon design|chip design)\b/.test(t)) return "hardware";
   if (/\b(machine learning|ml engineer|ml|artificial intelligence|ai engineer|ai|applied scientist|research engineer|research scientist|deep learning|llm|gen ai|generative ai|nlp|computer vision|perception)\b/.test(t)) return "ai_ml";
   if (/\b(data engineer|data platform|data infrastructure|etl|analytics engineer)\b/.test(t)) return "data_eng";
   if (/\b(data scientist|decision scientist|statistic|quantitative)\b/.test(t)) return "data_science";
