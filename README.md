@@ -49,7 +49,8 @@ no current capability is removed. vNext displays an objective evidence score,
 eligibility, and Victor's goal/recommended priority as separate signals instead
 of hiding personal priority inside one number.
 
-The platform is now decision-first: filter by role family, sponsorship,
+The platform is now decision-first: filter by role family (including the
+Hardware / computer engineering lane), sponsorship,
 required experience, and minimum degree; see honest eligibility facts before opening a posting;
 then use one primary apply link with explicit To apply/To tailor/Applied tracking. A
 required master's or PhD is shown directly on the role, receives a substantial

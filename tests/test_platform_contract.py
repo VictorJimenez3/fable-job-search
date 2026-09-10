@@ -266,6 +266,17 @@ def test_platform_role_field_buttons_cycle_to_red_exclusion_without_disappearing
     assert "f.excludedRoles.includes(roleFamily(j))" in html
 
 
+def test_platform_exposes_hardware_computer_engineering_role_filter_after_analytics():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    analytics = 'analytics:"Analytics / BI"'
+    hardware = 'hardware:"Hardware / computer engineering"'
+    pm = 'pm:"Product / project management"'
+    other = 'other:"Adjacent / unclassified"'
+    assert hardware in html
+    assert html.index(analytics) < html.index(hardware) < html.index(pm) < html.index(other)
+    assert r"\b(hardware|computer engineering|electrical engineering|electronics engineering|asic|fpga|vlsi|silicon design|chip design)\b" in html
+
+
 def test_platform_resume_studio_is_one_cloud_workspace_with_private_engine_fallback():
     html = (ROOT / "webapp" / "index.html").read_text()
     studio = (ROOT / "scripts" / "resume_studio.py").read_text()
