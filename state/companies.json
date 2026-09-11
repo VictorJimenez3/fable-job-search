@@ -3889,6 +3889,19 @@
   "status": "active",
   "token": "babelstreet"
  },
+ "greenhouse:baidu": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1789169501,
+  "last_ok": 1789169503,
+  "name": "Baidu USA",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "baidu"
+ },
  "greenhouse:baltimoreorioles": {
   "ats": "greenhouse",
   "extra": {},
@@ -7585,6 +7598,22 @@
   "status": "active",
   "token": "vardaspace"
  },
+ "greenhouse:veeamsoftware": {
+  "ats": "greenhouse",
+  "extra": {
+   "eu": true
+  },
+  "failures": 0,
+  "first_seen": 1789169501,
+  "invalidated_at": 1789169505,
+  "last_ok": 0,
+  "name": "Veeam Software",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "veeamsoftware"
+ },
  "greenhouse:vegaamericas": {
   "ats": "greenhouse",
   "extra": {},
@@ -8251,6 +8280,20 @@
   "sector": "",
   "status": "invalid",
   "token": "careers-exponent"
+ },
+ "icims:careers-external-careers-friedkin": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1789169501,
+  "invalidated_at": 1789169501,
+  "last_ok": 0,
+  "name": "The Friedkin Group",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "careers-external-careers-friedkin"
  },
  "icims:careers-federatedinsurance": {
   "ats": "icims",
@@ -10815,6 +10858,19 @@
   "status": "active",
   "token": "wyetechllc"
  },
+ "lever:xcimer": {
+  "ats": "lever",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1789169501,
+  "last_ok": 1789169507,
+  "name": "Xcimer Energy",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "xcimer"
+ },
  "lever:xsolla": {
   "ats": "lever",
   "extra": {},
@@ -12761,6 +12817,19 @@
   "status": "active",
   "token": "FannieMae1SB"
  },
+ "smartrecruiters:FortuneBrands": {
+  "ats": "smartrecruiters",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1789169501,
+  "last_ok": 1789169504,
+  "name": "Fortune Brands",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "FortuneBrands"
+ },
  "smartrecruiters:GDMSI": {
   "ats": "smartrecruiters",
   "extra": {},
@@ -13639,7 +13708,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789161516,
+  "last_ok": 1789169521,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -13850,6 +13919,22 @@
   "status": "active",
   "token": "aep"
  },
+ "workday:aes:AES_US": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "AES_US"
+  },
+  "failures": 0,
+  "first_seen": 1789169501,
+  "last_ok": 1789169502,
+  "name": "AES",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "aes"
+ },
  "workday:ag:Airbus": {
   "ats": "workday",
   "extra": {
@@ -14001,7 +14086,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1789161506,
+  "last_ok": 1789169511,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14024,6 +14109,22 @@
   "sector": "",
   "status": "active",
   "token": "albemarle"
+ },
+ "workday:alcoa:Careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "Careers"
+  },
+  "failures": 0,
+  "first_seen": 1789169501,
+  "last_ok": 1789169506,
+  "name": "Alcoa",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "alcoa"
  },
  "workday:alkami:alkami": {
   "ats": "workday",
@@ -14162,7 +14263,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789161519,
+  "last_ok": 1789169524,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16022,7 +16123,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1789161505,
+  "last_ok": 1789169510,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16473,6 +16574,22 @@
   "sector": "",
   "status": "active",
   "token": "conagrabrands"
+ },
+ "workday:conehealth:cone_health-careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd12",
+   "site": "cone_health-careers"
+  },
+  "failures": 0,
+  "first_seen": 1789169501,
+  "last_ok": 1789169502,
+  "name": "Cone Health",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "conehealth"
  },
  "workday:copart:copart": {
   "ats": "workday",
@@ -16993,6 +17110,22 @@
   "status": "active",
   "token": "dimensional"
  },
+ "workday:directsupply:direct-supply-careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd501",
+   "site": "direct-supply-careers"
+  },
+  "failures": 0,
+  "first_seen": 1789169501,
+  "last_ok": 1789169506,
+  "name": "Direct Supply",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "directsupply"
+ },
  "workday:directv:careers": {
   "ats": "workday",
   "extra": {
@@ -17062,7 +17195,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789161514,
+  "last_ok": 1789169519,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -17203,7 +17336,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789161506,
+  "last_ok": 1789169511,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -17729,6 +17862,22 @@
   "status": "active",
   "token": "fmr"
  },
+ "workday:fmr:targeted": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "targeted"
+  },
+  "failures": 0,
+  "first_seen": 1789169501,
+  "last_ok": 1789169503,
+  "name": "Fidelity Investments",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "fmr"
+ },
  "workday:fnbcorp:FNBCORP": {
   "ats": "workday",
   "extra": {
@@ -18066,7 +18215,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789161511,
+  "last_ok": 1789169516,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -20088,7 +20237,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789161507,
+  "last_ok": 1789169514,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -22426,7 +22575,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789161512,
+  "last_ok": 1789169518,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
