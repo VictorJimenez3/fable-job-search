@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-09-12 15:33 UTC** · companies polled directly: **2186** (registry 2478) · jobs tracked: **60366** · new this run: **29** · alerts this run: **12**_
+_Last run: **2026-09-12 15:37 UTC** · companies polled directly: **2186** (registry 2478) · jobs tracked: **60366** · new this run: **29** · alerts this run: **12**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -61,8 +61,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 83 ⭐ | 28d | Microsoft | [Software Engineer - PRISMA Research Fabric](https://apply.careers.microsoft.com/careers/job/1970393556937438) | Redmond, WA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 83 ⭐ | 29d | Microsoft | [Software Development Engineer - Azure PostgreSQL](https://apply.careers.microsoft.com/careers/job/1970393556959253) | United States | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 82 ⭐ | 15h | Deepgram | [People AI & Automation Engineer](https://jobs.ashbyhq.com/deepgram/bf8ea79f-f380-467e-8349-ea1ea8281316/application?embed=true) | California | ai_lab | unavailable | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 82 ⭐ | 15h | SpaceX | [New Graduate Engineer, Security Software (Starshield) ](https://boards.greenhouse.io/spacex/jobs/8802897002?gh_jid=8802897002) | Washington, DC | big_tech | unavailable | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
-| 82 ⭐ | 15h | SpaceX | [New Graduate Engineer, Security Software (Starshield) ](https://boards.greenhouse.io/spacex/jobs/8802882002?gh_jid=8802882002) | Hawthorne, CA | big_tech | unavailable | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
+| 82 ⭐ | 16h | SpaceX | [New Graduate Engineer, Security Software (Starshield) ](https://boards.greenhouse.io/spacex/jobs/8802897002?gh_jid=8802897002) | Washington, DC | big_tech | unavailable | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
+| 82 ⭐ | 16h | SpaceX | [New Graduate Engineer, Security Software (Starshield) ](https://boards.greenhouse.io/spacex/jobs/8802882002?gh_jid=8802882002) | Hawthorne, CA | big_tech | unavailable | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/spacex) |
 | 82 ⭐ | 1d | IPRS Health | [Data Analyst](https://jobright.ai/jobs/info/6aa40334f3aa936e2cdaf4c9?utm_campaign=Data%20Analysis&utm_source=1103) | Suffolk, United Kingdom | healthtech | unavailable | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 82 ⭐ | 3d | General Motors | [Machine Learning Systems Engineer - Data Labeling Engineering](https://generalmotors.wd5.myworkdayjobs.com/en-CA/Careers_GM/job/Sunnyvale-California-United-States-of-America/ML-Systems-Engineer--Data-Labeling-Engineering---Early-Career_JR-202619939) | Sunnyvale, CA | other | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 82 ⭐ | 22d | ByteDance | [Software Engineer Graduate - AML-Engine-Forge Platform](https://jobs.bytedance.com/en/position/7673306902554102069/detail) | San Jose, CA | big_tech | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
