@@ -8218,7 +8218,7 @@
   "last_ok": 0,
   "name": "Cooper University Health Care",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "careers-cooperhealth"
@@ -11759,6 +11759,22 @@
   "status": "active",
   "token": "eppr"
  },
+ "oracle_orc:etyy:CX_1": {
+  "ats": "oracle_orc",
+  "extra": {
+   "host": "etyy.fa.ap2.oraclecloud.com",
+   "site": "CX_1"
+  },
+  "failures": 0,
+  "first_seen": 1789211724,
+  "last_ok": 1789211726,
+  "name": "Kulicke & Soffa",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "etyy"
+ },
  "oracle_orc:ewvl:CX_1": {
   "ats": "oracle_orc",
   "extra": {
@@ -13746,9 +13762,9 @@
    "host": "wd1",
    "site": "Search"
   },
-  "failures": 1,
+  "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789176818,
+  "last_ok": 1789211741,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14123,10 +14139,10 @@
    "host": "wd5",
    "site": "External"
   },
-  "failures": 1,
+  "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1789176808,
+  "last_ok": 1789211730,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14301,9 +14317,9 @@
    "host": "wd1",
    "site": "External"
   },
-  "failures": 1,
+  "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789176820,
+  "last_ok": 1789211744,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16176,10 +16192,10 @@
    "host": "wd5",
    "site": "jobs"
   },
-  "failures": 1,
+  "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1789176808,
+  "last_ok": 1789211729,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -17249,9 +17265,9 @@
    "host": "wd1",
    "site": "ExternalCareers"
   },
-  "failures": 1,
+  "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789176816,
+  "last_ok": 1789211740,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -17390,9 +17406,9 @@
    "host": "wd1",
    "site": "Ecolab_External"
   },
-  "failures": 1,
+  "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789176808,
+  "last_ok": 1789211732,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -18285,9 +18301,9 @@
    "host": "wd1",
    "site": "External"
   },
-  "failures": 1,
+  "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789176814,
+  "last_ok": 1789211736,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -20307,9 +20323,9 @@
    "host": "wd1",
    "site": "External"
   },
-  "failures": 1,
+  "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789176809,
+  "last_ok": 1789211734,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -22645,9 +22661,9 @@
    "host": "wd3",
    "site": "ShellCareers"
   },
-  "failures": 1,
+  "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789176814,
+  "last_ok": 1789211738,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
