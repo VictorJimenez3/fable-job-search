@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-09-13 10:55 UTC** · companies polled directly: **2187** (registry 2479) · jobs tracked: **60416** · new this run: **38** · alerts this run: **24**_
+_Last run: **2026-09-13 11:08 UTC** · companies polled directly: **2187** (registry 2480) · jobs tracked: **60450** · new this run: **34** · alerts this run: **11**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -135,6 +135,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 79 ⭐ | 29d | SpaceX | [Software Engineer New Grad - Software](https://boards.greenhouse.io/spacex/jobs/8696058002) | Redmond, WA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 79 ⭐ | 29d | Notion | [Software Engineer, New Grad (Dec 2026)](https://jobs.ashbyhq.com/notion/e32799d2-8ef8-4803-8189-c72514afa816) | San Francisco, California | big_tech | unavailable | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad)<br>[Jobright fallback](https://jobright.ai/jobs/info/6a7f6a48927c79391ad08c3d?utm_campaign=Software%20Engineering&utm_source=1103) |
 | 78 ⭐ | 1d | Ascension | [Clinical AI Data Scientist](https://jobs.ascension.org/us/en/job/458539) | Remote in USA | other | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 78 ⭐ | 2d | PayPal | [Software Engineer](https://jobright.ai/jobs/info/6aa48855422289703bd66f2a?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA, United States | big_tech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad)<br>[Jobright fallback](https://jobright.ai/jobs/info/6aa4be1842411952ff9a55a8?utm_campaign=Software%20Engineering&utm_source=1103) |
 | 78 ⭐ | 4d | Cigna Group | [Technology Development Program Associate - Artificial Intelligence Tra](https://cigna.wd5.myworkdayjobs.com/cignacareers/job/Bloomfield-CT/Technology-Development-Program--TECDP----Artificial-Intelligence-Track---Start-Date--July-12--2027_26010465) | Austin, TX | other | not classified as startup | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 78 ⭐ | 4d | SpaceX | [Software Engineer New Grad - Software - Starship](https://boards.greenhouse.io/spacex/jobs/8743362002) | Hawthorne, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 78 ⭐ | 7d | TikTok | [Software Engineer, TikTok LIVE](https://jobright.ai/jobs/info/6a37a113ce501060b5cf8a08?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA, United States | big_tech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
@@ -155,6 +156,5 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 78 ⭐ | 25d | TikTok | [Data Analyst Graduate](https://lifeattiktok.com/search/7675510156642142469) | Fontana, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 78 ⭐ | 29d | SpaceX | [Software Security New Grad - Starlink](https://boards.greenhouse.io/spacex/jobs/8696143002) | Redmond, WA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 78 ⭐ | ? | Applied Materials | [AI/Machine Learning New College Grad (Bachelors - Santa Clara, CA)](https://amat.wd1.myworkdayjobs.com/External/job/Santa-ClaraCA/AI-Machine-Learning-New-College-Grad--Bachelors---Santa-Clara--CA-_R2627059) | Santa Clara,CA | other | unavailable | likely | [Zapply new-grad data science / ML board](https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027)<br>[zapply.jobs fallback](https://zapply.jobs/l/d/workday-amat-external-R2627059?s=gh-new-grad-data-science-jobs-2027) |
-| 77 ⭐ | 2d | Welocalize | [Physical AI Data Quality Analyst](https://welocalize.wd1.myworkdayjobs.com/welocalize/job/CA-Client-Field-Office-San-Fran-Bay-Area/Physical-AI-Data-Quality-Analyst_R0007931) | SF | other | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
