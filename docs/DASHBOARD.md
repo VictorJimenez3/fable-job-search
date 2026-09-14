@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-09-14 11:43 UTC** · companies polled directly: **2187** (registry 2480) · jobs tracked: **60572** · new this run: **71** · alerts this run: **11**_
+_Last run: **2026-09-14 12:48 UTC** · companies polled directly: **2187** (registry 2480) · jobs tracked: **60572** · new this run: **71** · alerts this run: **11**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -154,7 +154,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 77 ⭐ | 5d | Anysphere (Cursor) | [Software Engineer, New Grad 2027](https://jobs.ashbyhq.com/cursor/d0e5b41d-84ab-4887-bd3a-55589b11dd7b) | San Francisco | ai_lab | unavailable | no-history | [posting](https://jobs.ashbyhq.com/cursor/d0e5b41d-84ab-4887-bd3a-55589b11dd7b) |
 | 77 ⭐ | 6d | Nexthop.ai | [Software Engineer New Grad - Hardware Diagnostics](https://nexthopai.bamboohr.com/careers/107/) | Santa Clara, CA | ai_lab | unavailable | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 77 ⭐ | 6d | Extropic | [Machine Learning Resident](https://jobs.ashbyhq.com/extropic/f9d4811c-3a4c-4a6a-a739-8719ff9c6bab/application?embed=true) | Boston, MA | other | unavailable | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 77 ⭐ | 6d | UNFI | [Data Science Analyst, CPG and Retail - Remote](https://jobright.ai/jobs/info/6aa018c15b2d5633ef3bc65b?utm_campaign=Data%20Analysis&utm_source=1103) | Providence, RI, United States | other | unavailable | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 77 ⭐ | 6d | IBM | [Entry Level Software Developer](https://jobright.ai/jobs/info/6aa05a635b2d5633ef3be15e?utm_campaign=Software%20Engineering&utm_source=1103) | Poughkeepsie, NY, United States | big_tech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad)<br>[Jobright fallback](https://jobright.ai/jobs/info/6aa059ec500b01124c77873e?utm_campaign=Software%20Engineering&utm_source=1103) |
+| 77 ⭐ | 6d | UNFI | [Data Science Analyst, CPG and Retail - Remote](https://jobright.ai/jobs/info/6aa018c15b2d5633ef3bc65b?utm_campaign=Data%20Analysis&utm_source=1103) | Providence, RI, United States | other | unavailable | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
