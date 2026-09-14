@@ -4828,6 +4828,19 @@
   "status": "active",
   "token": "excelsportsmanagement"
  },
+ "greenhouse:exoduspoint": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1789413645,
+  "last_ok": 1789413658,
+  "name": "ExodusPoint",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "exoduspoint"
+ },
  "greenhouse:faradayfuture": {
   "ats": "greenhouse",
   "extra": {},
@@ -9425,6 +9438,20 @@
   "status": "invalid",
   "token": "external-canoncareers"
  },
+ "icims:externalhourly-highgate": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1789413645,
+  "invalidated_at": 1789413657,
+  "last_ok": 0,
+  "name": "Highgate",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "externalhourly-highgate"
+ },
  "icims:gsk-us-earlytalent": {
   "ats": "icims",
   "extra": {},
@@ -9438,6 +9465,20 @@
   "sector": "",
   "status": "invalid",
   "token": "gsk-us-earlytalent"
+ },
+ "icims:homeoffice-na-urbn": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1789413645,
+  "invalidated_at": 1789413647,
+  "last_ok": 0,
+  "name": "URBN",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "homeoffice-na-urbn"
  },
  "icims:jobs-bylight": {
   "ats": "icims",
@@ -10563,6 +10604,19 @@
   "status": "active",
   "token": "redsox"
  },
+ "lever:reply": {
+  "ats": "lever",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1789413645,
+  "last_ok": 1789413652,
+  "name": "Reply",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "reply"
+ },
  "lever:revenueanalytics": {
   "ats": "lever",
   "extra": {},
@@ -10610,6 +10664,19 @@
   "sector": "",
   "status": "active",
   "token": "salvohealth"
+ },
+ "lever:sep": {
+  "ats": "lever",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1789413645,
+  "last_ok": 1789413648,
+  "name": "SEP",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "sep"
  },
  "lever:shieldai": {
   "ats": "lever",
@@ -13803,7 +13870,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789394483,
+  "last_ok": 1789413673,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14172,6 +14239,22 @@
   "status": "active",
   "token": "airproducts"
  },
+ "workday:aksteel:careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "careers"
+  },
+  "failures": 0,
+  "first_seen": 1789413645,
+  "last_ok": 1789413649,
+  "name": "Cleveland-Cliffs",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "aksteel"
+ },
  "workday:albemarle:External": {
   "ats": "workday",
   "extra": {
@@ -14181,7 +14264,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1789394471,
+  "last_ok": 1789413662,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14358,7 +14441,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789394493,
+  "last_ok": 1789413677,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14965,6 +15048,22 @@
   "sector": "",
   "status": "active",
   "token": "avisbudget"
+ },
+ "workday:awepeople:Grad_Careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "Grad_Careers"
+  },
+  "failures": 0,
+  "first_seen": 1789413645,
+  "last_ok": 1789413650,
+  "name": "AWE",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "awepeople"
  },
  "workday:axiscapital:axiscareers": {
   "ats": "workday",
@@ -16234,7 +16333,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1789394469,
+  "last_ok": 1789413662,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16797,6 +16896,22 @@
   "status": "active",
   "token": "costar"
  },
+ "workday:costar:Costar_Campus": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "Costar_Campus"
+  },
+  "failures": 0,
+  "first_seen": 1789413645,
+  "last_ok": 1789413649,
+  "name": "CoStar Group",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "costar"
+ },
  "workday:countryfinancial:COUNTRYCorporateInternships": {
   "ats": "workday",
   "extra": {
@@ -17306,13 +17421,29 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789394485,
+  "last_ok": 1789413673,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
   "sector": "chemicals_materials",
   "status": "active",
   "token": "dow"
+ },
+ "workday:dowjones:Dow_Jones_Career": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "Dow_Jones_Career"
+  },
+  "failures": 0,
+  "first_seen": 1789413645,
+  "last_ok": 1789413658,
+  "name": "Dow Jones",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "dowjones"
  },
  "workday:dowjones:New_York_Post_Careers": {
   "ats": "workday",
@@ -17447,7 +17578,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789394472,
+  "last_ok": 1789413663,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -17894,6 +18025,22 @@
   "sector": "",
   "status": "active",
   "token": "firstam"
+ },
+ "workday:firstnational:fnbocareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd12",
+   "site": "fnbocareers"
+  },
+  "failures": 0,
+  "first_seen": 1789413645,
+  "last_ok": 1789413650,
+  "name": "FNBO",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "firstnational"
  },
  "workday:fis:searchjobs": {
   "ats": "workday",
@@ -18342,7 +18489,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789394477,
+  "last_ok": 1789413668,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -18421,6 +18568,22 @@
   "first_seen": 1785537688,
   "last_ok": 1785537689,
   "name": "Genworth Financial",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "gnw"
+ },
+ "workday:gnw:enact_mi": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "enact_mi"
+  },
+  "failures": 0,
+  "first_seen": 1789413645,
+  "last_ok": 1789413652,
+  "name": "Enact Mortgage Insurance",
   "origin": "harvest:simplify",
   "probe_attempts": 1,
   "sector": "",
@@ -19836,6 +19999,38 @@
   "status": "active",
   "token": "lplfinancial"
  },
+ "workday:lseg:Careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "Careers"
+  },
+  "failures": 0,
+  "first_seen": 1789413645,
+  "last_ok": 1789413646,
+  "name": "LSEG",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "lseg"
+ },
+ "workday:lseg:Graduate_Careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "Graduate_Careers"
+  },
+  "failures": 0,
+  "first_seen": 1789413645,
+  "last_ok": 1789413647,
+  "name": "LSEG",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "lseg"
+ },
  "workday:lsu:LSU": {
   "ats": "workday",
   "extra": {
@@ -20380,7 +20575,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789394474,
+  "last_ok": 1789413664,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -20842,6 +21037,22 @@
   "sector": "",
   "status": "active",
   "token": "ncr"
+ },
+ "workday:ncratleos:ext_intern": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "ext_intern"
+  },
+  "failures": 0,
+  "first_seen": 1789413645,
+  "last_ok": 1789413657,
+  "name": "NCR Atleos",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "ncratleos"
  },
  "workday:nebraskablue:BCBSNE": {
   "ats": "workday",
@@ -22718,7 +22929,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789394478,
+  "last_ok": 1789413669,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
