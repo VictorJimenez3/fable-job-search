@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-09-15 21:00 UTC** · companies polled directly: **2194** (registry 2493) · jobs tracked: **61831** · new this run: **175** · alerts this run: **16**_
+_Last run: **2026-09-15 21:23 UTC** · companies polled directly: **2194** (registry 2493) · jobs tracked: **61831** · new this run: **175** · alerts this run: **16**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -23,7 +23,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 87 🔥 | 27d | Amazon | [Front-End Engineer - Amazon Connect - AWS](https://www.amazon.jobs/jobs/10508283/apply) | Seattle, WA | big_tech | unavailable | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs)<br>[www.amazon.jobs fallback](https://www.amazon.jobs/jobs/10510073/apply) |
 | 87 🔥 | 27d | Merck | [Manufacturing Leadership Development Program - Associate Specialist, E](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---Pennsylvania---West-Point/Manufacturing-Leadership-Development-Program---Associate-Specialist--Engineering_R412407-1/apply) | West Point, Pennsylvania, United States  | healthtech | unavailable | no-history | [posting](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---Pennsylvania---West-Point/Manufacturing-Leadership-Development-Program---Associate-Specialist--Engineering_R412407-1/apply) |
 | 86 🔥 | 19h | OpenAI | [Software Engineer - Applied Emerging Talent](https://jobs.ashbyhq.com/openai/55150071-fce8-48f5-aea4-14ed78b83511/application?embed=true) | SF | ai_lab | unavailable | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 86 🔥 | 19h | Apple | [Hardware Systems Engineer - Board Design](https://jobs.apple.com/en-us/details/200683615) | Cupertino, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 86 🔥 | 20h | Apple | [Hardware Systems Engineer - Board Design](https://jobs.apple.com/en-us/details/200683615) | Cupertino, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 86 🔥 | 4d | Amazon | [Software Privacy Engineer, Trust Platform & Automation, Devices & Serv](https://jobright.ai/jobs/info/6aa53440930bff471a29dadd?utm_campaign=Software%20Engineering&utm_source=1103) | Bellevue, WA, United States | big_tech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 86 🔥 | 5d | Apple | [Software Engineer - Apple Ads](https://jobs.apple.com/en-us/details/200682706) | Austin, TX | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 86 🔥 | 6d | Apple | [Software Engineer, Apple Ads](https://jobright.ai/jobs/info/6aa1de090ffb3d4fea6b788f?utm_campaign=Software%20Engineering&utm_source=1103) | Cupertino, CA, United States | big_tech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
