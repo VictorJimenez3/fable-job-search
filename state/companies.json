@@ -7203,6 +7203,19 @@
   "status": "active",
   "token": "rocketlab"
  },
+ "greenhouse:rothesaygraduates": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1789658308,
+  "last_ok": 1789658310,
+  "name": "Rothesay",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "rothesaygraduates"
+ },
  "greenhouse:runwayml": {
   "ats": "greenhouse",
   "extra": {},
@@ -14400,7 +14413,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789640758,
+  "last_ok": 1789658325,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14794,7 +14807,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1789640748,
+  "last_ok": 1789658315,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14971,7 +14984,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789640761,
+  "last_ok": 1789658329,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -15643,6 +15656,22 @@
   "status": "active",
   "token": "awepeople"
  },
+ "workday:axcelis:axcelis": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "axcelis"
+  },
+  "failures": 0,
+  "first_seen": 1789658308,
+  "last_ok": 1789658310,
+  "name": "Axcelis Technologies",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "axcelis"
+ },
  "workday:axiscapital:axiscareers": {
   "ats": "workday",
   "extra": {
@@ -15911,6 +15940,22 @@
   "sector": "",
   "status": "active",
   "token": "bcbsla"
+ },
+ "workday:bci:BCI_Careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd10",
+   "site": "BCI_Careers"
+  },
+  "failures": 0,
+  "first_seen": 1789658308,
+  "last_ok": 1789658308,
+  "name": "British Columbia Investment",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "bci"
  },
  "workday:bcidaho:BCI": {
   "ats": "workday",
@@ -16975,7 +17020,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1789640747,
+  "last_ok": 1789658314,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -17235,6 +17280,22 @@
   "sector": "",
   "status": "active",
   "token": "clr"
+ },
+ "workday:cmcmarkets:CMC_Markets_Careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "CMC_Markets_Careers"
+  },
+  "failures": 0,
+  "first_seen": 1789658308,
+  "last_ok": 1789658309,
+  "name": "CMC Markets",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "cmcmarkets"
  },
  "workday:cmu:cmu": {
   "ats": "workday",
@@ -18063,7 +18124,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789640757,
+  "last_ok": 1789658331,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -18236,7 +18297,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789640749,
+  "last_ok": 1789658315,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -19195,7 +19256,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789640754,
+  "last_ok": 1789658327,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -20156,6 +20217,22 @@
   "failures": 0,
   "first_seen": 1788541681,
   "last_ok": 1788541683,
+  "name": "Invesco",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "invesco"
+ },
+ "workday:invesco:IVZearlycareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "IVZearlycareers"
+  },
+  "failures": 0,
+  "first_seen": 1789658308,
+  "last_ok": 1789658310,
   "name": "Invesco",
   "origin": "harvest:simplify",
   "probe_attempts": 1,
@@ -21361,7 +21438,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789640751,
+  "last_ok": 1789658317,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -23795,7 +23872,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789640755,
+  "last_ok": 1789658321,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
