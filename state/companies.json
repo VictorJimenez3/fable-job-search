@@ -8472,6 +8472,20 @@
   "status": "invalid",
   "token": "careers-appliedsystems"
  },
+ "icims:careers-berkley": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1789690736,
+  "invalidated_at": 1789690736,
+  "last_ok": 0,
+  "name": "W.R. Berkley",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "careers-berkley"
+ },
  "icims:careers-berrydunn": {
   "ats": "icims",
   "extra": {},
@@ -14413,7 +14427,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789683197,
+  "last_ok": 1789690754,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14807,7 +14821,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1789683186,
+  "last_ok": 1789690745,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -14984,7 +14998,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789683199,
+  "last_ok": 1789690756,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -17020,7 +17034,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1789683185,
+  "last_ok": 1789690743,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -17043,6 +17057,22 @@
   "sector": "",
   "status": "active",
   "token": "chrobinson"
+ },
+ "workday:churchdwight:chdcareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "chdcareers"
+  },
+  "failures": 0,
+  "first_seen": 1789690736,
+  "last_ok": 1789690738,
+  "name": "Church & Dwight",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "churchdwight"
  },
  "workday:cibc:campus": {
   "ats": "workday",
@@ -18124,7 +18154,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789683195,
+  "last_ok": 1789690754,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -18297,7 +18327,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789683187,
+  "last_ok": 1789690744,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -19256,7 +19286,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789683192,
+  "last_ok": 1789690749,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -21438,7 +21468,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789683188,
+  "last_ok": 1789690745,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -22091,6 +22121,22 @@
   "sector": "",
   "status": "active",
   "token": "njm"
+ },
+ "workday:nordsonhcm:nordsoncareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd501",
+   "site": "nordsoncareers"
+  },
+  "failures": 0,
+  "first_seen": 1789690736,
+  "last_ok": 1789690739,
+  "name": "Nordson",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "nordsonhcm"
  },
  "workday:northeastern:careers": {
   "ats": "workday",
@@ -23379,6 +23425,22 @@
   "status": "active",
   "token": "richemont"
  },
+ "workday:rjet:External_Career_Site": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd108",
+   "site": "External_Career_Site"
+  },
+  "failures": 0,
+  "first_seen": 1789690736,
+  "last_ok": 1789690737,
+  "name": "Republic Airways",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "rjet"
+ },
  "workday:roberthalf:ProtivitiNA": {
   "ats": "workday",
   "extra": {
@@ -23872,7 +23934,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1789683193,
+  "last_ok": 1789690749,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
@@ -24632,6 +24694,22 @@
   "status": "active",
   "token": "theirc"
  },
+ "workday:theocc:careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "careers"
+  },
+  "failures": 0,
+  "first_seen": 1789690736,
+  "last_ok": 1789690737,
+  "name": "OCC",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "theocc"
+ },
  "workday:thermofisher:ThermoFisherCareers": {
   "ats": "workday",
   "extra": {
@@ -24757,6 +24835,22 @@
   "sector": "",
   "status": "active",
   "token": "tmx"
+ },
+ "workday:toppan:TOPPAN-Packaging": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd108",
+   "site": "TOPPAN-Packaging"
+  },
+  "failures": 0,
+  "first_seen": 1789690736,
+  "last_ok": 1789690736,
+  "name": "TOPPAN Packaging Americas",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "toppan"
  },
  "workday:toyota:tmna": {
   "ats": "workday",
@@ -25609,6 +25703,22 @@
   "sector": "",
   "status": "active",
   "token": "warnerbros"
+ },
+ "workday:wattswater:Intern-External": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "Intern-External"
+  },
+  "failures": 0,
+  "first_seen": 1789690736,
+  "last_ok": 1789690738,
+  "name": "Watts Water",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "wattswater"
  },
  "workday:waystar:Waystar": {
   "ats": "workday",
