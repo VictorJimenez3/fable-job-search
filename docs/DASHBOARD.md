@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-09-19 07:23 UTC** · companies polled directly: **2157** (registry 2508) · jobs tracked: **62652** · new this run: **121** · alerts this run: **21**_
+_Last run: **2026-09-19 11:17 UTC** · companies polled directly: **2157** (registry 2508) · jobs tracked: **62652** · new this run: **121** · alerts this run: **21**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -50,7 +50,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 83 ⭐ | 28d | Tesla | [AI Safety Operator](https://www.tesla.com/careers/search/job/266088) | Jacksonville, FL | big_tech | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 82 ⭐ | 9d | Tesla | [Data Statistician](https://www.tesla.com/careers/search/job/282286) | Fremont, CA | big_tech | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 82 ⭐ | 10d | General Motors | [Machine Learning Systems Engineer - Data Labeling Engineering](https://generalmotors.wd5.myworkdayjobs.com/en-CA/Careers_GM/job/Sunnyvale-California-United-States-of-America/ML-Systems-Engineer--Data-Labeling-Engineering---Early-Career_JR-202619939) | Sunnyvale, CA | other | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 82 ⭐ | 28d | ByteDance | [Software Engineer Graduate - AML-Engine-Forge Platform](https://jobs.bytedance.com/en/position/7673306902554102069/detail) | San Jose, CA | big_tech | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 82 ⭐ | 29d | ByteDance | [Software Engineer Graduate - AML-Engine-Forge Platform](https://jobs.bytedance.com/en/position/7673306902554102069/detail) | San Jose, CA | big_tech | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 3d | Johns Hopkins Applied Physics Laborato | [AI Researcher - Artificial Intelligence and Complex Systems](https://careers.jhuapl.edu/jobs/60075?icims=1) | Laurel, MD | other | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 4d | UW School of Medicine and Public Healt | [Data Scientist -Wisconsin Reading Center](https://jobright.ai/jobs/info/6aa9bb0710b1cd4f416075ee?utm_campaign=Data%20Analysis&utm_source=1103) | Madison, WI, United States | healthtech | unavailable | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 81 ⭐ | 8d | IPRS Health | [Data Analyst](https://jobright.ai/jobs/info/6aa40334f3aa936e2cdaf4c9?utm_campaign=Data%20Analysis&utm_source=1103) | Suffolk, United Kingdom | healthtech | unavailable | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
