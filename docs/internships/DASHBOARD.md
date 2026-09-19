@@ -1,6 +1,6 @@
 # 🎯 Job Radar — internship dashboard
 
-_Last run: **2026-09-19 07:24 UTC** · companies polled directly: **1314** (registry 1479) · jobs tracked: **23502** · new this run: **77** · alerts this run: **1**_
+_Last run: **2026-09-19 07:36 UTC** · companies polled directly: **1314** (registry 1479) · jobs tracked: **23502** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
