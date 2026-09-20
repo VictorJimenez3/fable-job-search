@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import json
 import os
+import tempfile
 from pathlib import Path
 
 from .config import STATE_DIR, profile_id
@@ -102,12 +103,34 @@ def _path(name: str, namespace: str | None = None, *, shared: bool = False) -> P
     return STATE_DIR / (name if shared else f"{_prefix(namespace)}{name}")
 
 
-def load(name: str, default, namespace: str | None = None):
-    p = _path(name, namespace)
+def _history_name(name: str) -> str | None:
+    """Return the optional terminal-record shard for a job snapshot."""
+    if name == "jobs.json":
+        return "jobs_history.json"
+    if name == "intern_jobs.json":
+        return "intern_jobs_history.json"
+    return None
+
+
+def _load_path(p: Path, default):
     if not p.exists():
         return default
     with open(p) as f:
         return json.load(f)
+
+
+def load(name: str, default, namespace: str | None = None):
+    """Load a state file, merging the optional job-history shard on read."""
+    value = _load_path(_path(name, namespace), default)
+    history_name = _history_name(name)
+    if not history_name or not isinstance(value, dict):
+        return value
+    history = _load_path(_path(history_name, namespace), {})
+    if not isinstance(history, dict) or not history:
+        return value
+    merged = dict(value)
+    merged.update(history)
+    return merged
 
 
 def _compact_job_record(record: object) -> object:
@@ -145,10 +168,40 @@ def _compact_job_record(record: object) -> object:
     return compact
 
 
+def _is_terminal_job(record: object) -> bool:
+    if not isinstance(record, dict):
+        return False
+    status = str(record.get("posting_status", "")).strip().lower()
+    return status in {"expired", "filled", "archived"} or bool(record.get("closed_at"))
+
+
 def _prepared(name: str, obj: object) -> object:
-    if name != "jobs.json" or not isinstance(obj, dict):
+    if name not in {"jobs.json", "intern_jobs.json"} or not isinstance(obj, dict):
         return obj
-    return {key: _compact_job_record(value) for key, value in obj.items()}
+    prepared = {}
+    for key, value in obj.items():
+        compact = _compact_job_record(value)
+        # Closed postings are retained in the primary snapshot for lifecycle
+        # and score summary fields, while their verbose reasons live in the
+        # history shard. Manual/legacy rows are not rewritten.
+        if (_is_terminal_job(value) and isinstance(value, dict)
+                and value.get("score_version") and not value.get("manual_added")
+                and isinstance(compact, dict)):
+            compact = dict(compact)
+            compact.pop("score_reasons", None)
+        prepared[key] = compact
+    return prepared
+
+
+def _prepared_history(obj: object) -> dict:
+    """Build the full-score ledger for terminal generated job records."""
+    if not isinstance(obj, dict):
+        return {}
+    return {
+        key: _compact_job_record(value)
+        for key, value in obj.items()
+        if _is_terminal_job(value)
+    }
 
 
 def _max_job_snapshot_bytes() -> int:
@@ -161,25 +214,55 @@ def _max_job_snapshot_bytes() -> int:
         raise ValueError("RADAR_MAX_JOB_SNAPSHOT_BYTES must be an integer") from exc
 
 
+def _stage_json(path: Path, name: str, obj: object) -> Path:
+    """Serialize one file beside its destination and return the temp path."""
+    fd, tmp_name = tempfile.mkstemp(
+        prefix=f".{path.name}.", suffix=".tmp", dir=path.parent)
+    os.close(fd)
+    tmp = Path(tmp_name)
+    try:
+        with open(tmp, "w") as f:
+            json.dump(obj, f, sort_keys=True, ensure_ascii=False,
+                      separators=(",", ":"))
+            f.write("\n")
+        if name in {"jobs.json", "intern_jobs.json"} and tmp.stat().st_size > _max_job_snapshot_bytes():
+            size = tmp.stat().st_size
+            raise ValueError(
+                f"generated job snapshot is {size:,} bytes; limit is "
+                f"{_max_job_snapshot_bytes():,}. Compact or shard state before publishing"
+            )
+    except Exception:
+        tmp.unlink(missing_ok=True)
+        raise
+    return tmp
+
+
+def _write_many(entries: list[tuple[Path, str, object]]) -> None:
+    """Stage all files before replacing any destination."""
+    staged: list[tuple[Path, Path]] = []
+    try:
+        for path, name, obj in entries:
+            staged.append((_stage_json(path, name, obj), path))
+        for tmp, path in staged:
+            tmp.replace(path)
+    except Exception:
+        for tmp, _ in staged:
+            tmp.unlink(missing_ok=True)
+        raise
+
+
 def save(name: str, obj, namespace: str | None = None) -> None:
     STATE_DIR.mkdir(parents=True, exist_ok=True)
-    p = _path(name, namespace)
-    tmp = p.with_suffix(".tmp")
-    with open(tmp, "w") as f:
-        # The jobs snapshot is a committed production artifact. Compact JSON
-        # keeps a full score rebuild below GitHub's 100 MB blob limit while
-        # remaining ordinary JSON for the web app and Mac companion.
-        json.dump(_prepared(name, obj), f, sort_keys=True, ensure_ascii=False,
-                  separators=(",", ":"))
-        f.write("\n")
-    if name == "jobs.json" and tmp.stat().st_size > _max_job_snapshot_bytes():
-        size = tmp.stat().st_size
-        tmp.unlink()
-        raise ValueError(
-            f"generated job snapshot is {size:,} bytes; limit is "
-            f"{_max_job_snapshot_bytes():,}. Compact or shard state before publishing"
-        )
-    tmp.replace(p)
+    entries = [(_path(name, namespace), name, _prepared(name, obj))]
+    history_name = _history_name(name)
+    if history_name:
+        history_path = _path(history_name, namespace)
+        history = _prepared_history(obj)
+        # Clear a stale shard when a later snapshot has no terminal rows, but
+        # avoid creating an empty generated file on a fresh crawl.
+        if history or history_path.exists():
+            entries.append((history_path, history_name, history))
+    _write_many(entries)
 
 
 def load_shared(name: str, default):

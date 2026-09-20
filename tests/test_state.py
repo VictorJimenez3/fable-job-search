@@ -153,6 +153,41 @@ def test_jobs_save_preserves_previous_snapshot_when_size_guard_fails(tmp_path, m
     assert not (tmp_path / "jobs.tmp").exists()
 
 
+def test_terminal_job_reasons_are_sharded_and_restored(tmp_path, monkeypatch):
+    monkeypatch.setattr(state, "STATE_DIR", tmp_path)
+    row = {
+        "id": "job-1",
+        "score_version": 13,
+        "posting_status": "expired",
+        "score": 72,
+        "score_reasons": ["role fit +20", "startup +12"],
+    }
+
+    state.save("jobs.json", {"job-1": row})
+
+    primary = json.loads((tmp_path / "jobs.json").read_text())
+    history = json.loads((tmp_path / "jobs_history.json").read_text())
+    assert "score_reasons" not in primary["job-1"]
+    assert history["job-1"]["score_reasons"] == row["score_reasons"]
+    assert state.load("jobs.json", {})["job-1"]["score_reasons"] == row["score_reasons"]
+
+
+def test_open_job_reasons_stay_in_primary_snapshot(tmp_path, monkeypatch):
+    monkeypatch.setattr(state, "STATE_DIR", tmp_path)
+    row = {
+        "id": "job-1",
+        "score_version": 13,
+        "posting_status": "open",
+        "score_reasons": ["role fit +20"],
+    }
+
+    state.save("jobs.json", {"job-1": row})
+
+    primary = json.loads((tmp_path / "jobs.json").read_text())
+    assert primary["job-1"]["score_reasons"] == row["score_reasons"]
+    assert not (tmp_path / "jobs_history.json").exists()
+
+
 def test_non_job_state_is_not_compacted(tmp_path, monkeypatch):
     monkeypatch.setattr(state, "STATE_DIR", tmp_path)
     value = {"remote": False, "items": []}

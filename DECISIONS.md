@@ -3483,3 +3483,15 @@ provenance, and zero DOL withdrawal counters. Human-readable score reasons,
 all nonzero score dimensions, lifecycle evidence, and nonzero sponsorship facts
 remain in the row. This restores crawl publication without raising the hard
 GitHub blob boundary or introducing a second datastore format.
+
+## 218. Shard terminal posting ledgers to keep crawls publishable (2026-09-20)
+
+The job registry continued to grow until even the compacted snapshot crossed
+the GitHub blob safety guard after a successful crawl. Keep every posting in
+`state/jobs.json` for lifecycle and current-score lookups, but remove verbose
+`score_reasons` only for scored terminal postings from that primary artifact.
+Write those complete terminal records to the generated
+`state/jobs_history.json` shard in the same save operation. The state loader
+merges the shard on read, preserving the existing audit and alert behavior for
+Python callers while the web-facing primary JSON remains below the publishing
+limit. Manual and open postings retain their reasons in the primary file.
