@@ -1,5 +1,17 @@
 # CLI handoff notes
 
+## Current change (2026-09-20)
+
+- **Snapshot sharding recovery:** the crawler was fetching and scoring normally,
+  then failing because the generated `state/jobs.json` crossed the GitHub blob
+  limit. Terminal postings now keep their lifecycle and score summary in the
+  primary snapshot while their full score-reason ledger is written to the
+  generated `state/jobs_history.json` shard. `radar.state.load("jobs.json", {})`
+  merges that shard back in for the dashboard, alerting, and audit paths, so no
+  score evidence is lost. The measured primary snapshot is about 91.4 MB on
+  the current production registry. After publishing, dispatch the radar crawl
+  and alert batch to recover missed notifications.
+
 ## Current change (2026-09-09)
 
 - **Alert delivery recovery:** the scheduled radar crawl had been failing
