@@ -1,5 +1,17 @@
 # CLI handoff notes
 
+## Current change (2026-09-26)
+
+- **Jobs filter repair:** the retired startup-priority sort is gone; startup
+  stage remains a neutral filter and row signal. Best Match now normalizes
+  numeric, millisecond, and ISO timestamps, uses the newer of `posted_at` and
+  `first_seen` for its lookback and freshness tie-break, and keeps only
+  explicitly pipeline-tracked or Maybe roles outside the selected window.
+  Opening a role or adding private notes no longer makes it bypass the filter.
+- **Validation:** the platform contract tests cover the removed sort and the
+  corrected filter/sort data flow. Run the full repository suite before the
+  production handoff.
+
 ## Current change (2026-09-20)
 
 - **Snapshot sharding recovery:** the crawler was fetching and scoring normally,

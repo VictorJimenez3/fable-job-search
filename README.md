@@ -78,8 +78,13 @@ posting's own visa wording or adds ranking points. Refresh it locally with
 `.venv/bin/python -m radar.main sponsorship-refresh`; the scheduled workflow
 does this weekly from the [official DOL OFLC data page](https://www.dol.gov/agencies/eta/foreign-labor/performance).
 
-The Jobs sort menu also includes a Best Match lookback: all time, the last hour,
-6 hours, 24 hours, 3 or 7 days, 2 weeks, or 1, 3, 6, or 12 months.
+The Jobs sort menu offers **Best Match** and **Newest posting**; startup stage is
+an optional filter and row signal, not a priority sort. Best Match has a
+lookback selector: all time, the last hour, 6 hours, 24 hours, 3 or 7 days, 2
+weeks, or 1, 3, 6, or 12 months. The window uses the newer of the source
+posting date and the radar's first discovery time. Only roles explicitly in
+the pipeline or Maybe list bypass the time window, so opening a drawer or
+adding private notes does not change the result.
 For the new-grad lane, the default Jobs view is a **Fresh action queue**: it
 starts with entry-compatible or unclear experience and postings from the last
 month. Tracked or Maybe roles remain available even when older or experienced;

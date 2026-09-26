@@ -18,6 +18,26 @@ def test_platform_defaults_to_a_fresh_entry_compatible_action_queue():
     assert "posting-specific verdicts preserved" in (ROOT / "radar" / "score.py").read_text()
 
 
+def test_best_match_filters_only_keep_pipeline_roles_and_sort_normalized_freshness():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    start = html.index("function jobList()")
+    end = html.index("/* ---------- learned ranking signals", start)
+    job_list = html[start:end]
+    assert "function timestampSeconds(value)" in html
+    assert "function postedTs(j){ return timestampSeconds(j?.posted_at || j?.first_seen || 0); }" in html
+    assert "const bestWindowSeconds = Number(f.bestWindow);" in job_list
+    assert "isActionedJob(j.id, byId)" in job_list
+    assert "bestMatchTimestamp(b)-bestMatchTimestamp(a)" in job_list
+    assert "S.web.jobs[j.id]" not in job_list
+
+
+def test_startup_priority_sort_is_removed_but_stage_badges_remain_available():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    assert 'option value="startup"' not in html
+    assert "startupStageInfo" in html
+    assert 'else if (f.sort === "startup")' not in html
+
+
 def test_platform_exposes_owner_batch_resume_tailoring_for_today():
     html = (ROOT / "webapp" / "index.html").read_text()
     assert "Tailor today" in html

@@ -3495,3 +3495,16 @@ Write those complete terminal records to the generated
 merges the shard on read, preserving the existing audit and alert behavior for
 Python callers while the web-facing primary JSON remains below the publishing
 limit. Manual and open postings retain their reasons in the primary file.
+
+## 219. Keep Best Match time windows tied to discovery and explicit action (2026-09-26)
+
+The classic Jobs board has two ordering modes: Best Match and Newest posting.
+Startup stage remains an explainable filter and row signal, but it is not a
+ranking mode. Best Match lookbacks use the newer of the source-reported
+`posted_at` and the radar's `first_seen`, then use that same normalized
+freshness value as the final tie-break after career priority and score. A role
+can bypass the lookback only when it is explicitly in the pipeline or Maybe
+list. The prior implementation treated any private `web_state.jobs` notes row
+as tracked; opening a drawer creates that row, so viewed stale roles leaked
+into every short window. Removing that coupling keeps browsing and filtering
+independent while preserving deliberate owner action.

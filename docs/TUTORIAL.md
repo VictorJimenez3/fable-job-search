@@ -476,7 +476,9 @@ coverage, gaps, evidence confidence, and private source-backed score.
 
 On the Jobs tab, Best Match also has a lookback selector for hours, days, weeks,
 or months. It limits which recent postings are ranked while preserving the same
-match scoring.
+match scoring. The window uses the newer of the source posting date and the
+radar's first discovery time. Only roles in the pipeline or Maybe list bypass
+the window; opening a drawer or saving private notes does not.
 The default new-grad Jobs queue uses the last month plus entry-compatible or
 unclear experience; older/experienced tracked roles remain available through
 explicit filter choices.

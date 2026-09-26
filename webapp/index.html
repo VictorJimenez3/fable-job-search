@@ -520,6 +520,15 @@ function storedFilter(lane="new_grad") {
       f._queueFilterVersion = 1;
       localStorage.setItem(key, JSON.stringify(f));
     }
+    // Startup stage is a filter and row signal, not a ranking mode. Migrate
+    // the retired sort choice to the existing Best Match view once, while
+    // preserving an owner's explicit newest/Best Match selection.
+    if (f._sortFilterVersion !== 1) {
+      if (!f.sort || f.sort === "startup") f.sort = "best";
+      f._sortFilterVersion = 1;
+      localStorage.setItem(key, JSON.stringify(f));
+    }
+    if (f.sort !== "new" && f.sort !== "best") f.sort = "best";
     if (!Array.isArray(f.roles)) f.roles = f.role ? [f.role] : [];
     if (!Array.isArray(f.excludedRoles)) f.excludedRoles = [];
     if (!Array.isArray(f.sectors)) f.sectors = f.sector ? [f.sector] : [];
@@ -1308,21 +1317,25 @@ function isOpenRelevant(j) {
   return !(j.score_reasons||[]).some(reason =>
     hardReject.test(String(reason).replace(/^re-gate v\d+:\s*/i,"")));
 }
+function isActionedJob(id, byId) {
+  return Boolean(byId[id] || S.web.maybe.includes(id));
+}
 function jobList() {
   const byId = appliedById(); const f = S.filter; const q = norm(f.q);
   let rows = Object.values(S.jobs).filter(isOpenRelevant);
   const inactiveIds = new Set(S.applied.filter(applicationInactive).map(a=>a.id));
   rows = rows.filter(j=>!inactiveIds.has(j.id));
-  if (f.sort === "best" && f.bestWindow && f.bestWindow !== "all") {
-    const cutoff = Date.now() / 1000 - Number(f.bestWindow);
+  const bestWindowSeconds = Number(f.bestWindow);
+  if (f.sort === "best" && f.bestWindow && f.bestWindow !== "all" &&
+      Number.isFinite(bestWindowSeconds) && bestWindowSeconds > 0) {
+    const cutoff = Date.now() / 1000 - bestWindowSeconds;
     // A role already in the owner's pipeline remains actionable even when
     // its original posting date is older than the discovery window.
-    rows = rows.filter(j => byId[j.id] || S.web.maybe.includes(j.id) || S.web.jobs[j.id]
-      || postedTs(j) > cutoff);
+    rows = rows.filter(j => isActionedJob(j.id, byId) || bestMatchTimestamp(j) > cutoff);
   }
   if (!f.showExcluded) rows = rows.filter(j=>!isExcluded(j.id));
   if (S.lane === "internship" && !f.review) rows = rows.filter(j=>["title","body"].includes((j.internship_eligibility||{}).internship_signal));
-  rows = rows.filter(j=>byId[j.id] || S.web.maybe.includes(j.id) || S.web.jobs[j.id]
+  rows = rows.filter(j=>isActionedJob(j.id, byId)
     || !postedTs(j) || Date.now()/1000-postedTs(j) <= 365*86400);
   if (f.alert) rows = rows.filter(j=>j.alert_ok);
   rows = rows.filter(j=>(j.score||0) >= f.min);
@@ -1342,14 +1355,26 @@ function jobList() {
   if (q) rows = rows.filter(j=>norm(j.company+" "+j.title).includes(q));
   if (f.lane) rows = rows.filter(j=>laneOf(j.id,byId)===f.lane);
   if (f.sort === "new")
-    rows.sort((a,b)=>(isExcluded(a.id)?1:0)-(isExcluded(b.id)?1:0) || postedTs(b)-postedTs(a) || careerPriority(b)-careerPriority(a) || (b.score||0)-(a.score||0));
-  else if (f.sort === "startup")
-    rows.sort((a,b)=>(isExcluded(a.id)?1:0)-(isExcluded(b.id)?1:0) || (startupStageInfo(b).score||0)-(startupStageInfo(a).score||0) || careerPriority(b)-careerPriority(a) || (b.score||0)-(a.score||0) || postedTs(b)-postedTs(a));
+    rows.sort((a,b)=>(isExcluded(a.id)?1:0)-(isExcluded(b.id)?1:0) || postedTs(b)-postedTs(a) || careerPriority(b)-careerPriority(a) || (b.score||0)-(a.score||0) || String(a.id||"").localeCompare(String(b.id||"")));
   else
-    rows.sort((a,b)=>(isExcluded(a.id)?1:0)-(isExcluded(b.id)?1:0) || careerPriority(b)-careerPriority(a) || (b.score||0)-(a.score||0) || postedTs(b)-postedTs(a));
+    rows.sort((a,b)=>(isExcluded(a.id)?1:0)-(isExcluded(b.id)?1:0) || careerPriority(b)-careerPriority(a) || (b.score||0)-(a.score||0) || bestMatchTimestamp(b)-bestMatchTimestamp(a) || String(a.id||"").localeCompare(String(b.id||"")));
   return rows;
 }
-function postedTs(j){ return j.posted_at || j.first_seen || 0; }
+function timestampSeconds(value) {
+  if (typeof value === "number" && Number.isFinite(value)) return value > 1e12 ? value / 1000 : value;
+  const text = String(value || "").trim();
+  if (!text) return 0;
+  const numeric = Number(text);
+  if (Number.isFinite(numeric)) return numeric > 1e12 ? numeric / 1000 : numeric;
+  const parsed = Date.parse(text);
+  return Number.isFinite(parsed) ? parsed / 1000 : 0;
+}
+function bestMatchTimestamp(job) {
+  const posted = timestampSeconds(job?.posted_at);
+  const firstSeen = timestampSeconds(job?.first_seen);
+  return Math.max(posted, firstSeen);
+}
+function postedTs(j){ return timestampSeconds(j?.posted_at || j?.first_seen || 0); }
 function ago(ts){
   if (!ts) return "";
   const d = (Date.now()/1000 - ts) / 86400;
@@ -2550,8 +2575,7 @@ function rJobs() {
         <option value="rejected" ${S.filter.lane==="rejected"?"selected":""}>rejected</option>
         <option value="closed" ${S.filter.lane==="closed"?"selected":""}>closed</option></select>
       <select onchange="setFilter('sort',this.value)" title="sort order">
-        <option value="best" ${S.filter.sort!=="new"&&S.filter.sort!=="startup"?"selected":""}>best match · new-grad first</option>
-        <option value="startup" ${S.filter.sort==="startup"?"selected":""}>startup priority</option>
+        <option value="best" ${S.filter.sort!=="new"?"selected":""}>best match · new-grad first</option>
         <option value="new" ${S.filter.sort==="new"?"selected":""}>newest first</option></select>
       <select aria-label="Best match time window" title="Best match lookback" ${S.filter.sort!=="best"?"disabled":""}
         onchange="setFilter('bestWindow',this.value)">
