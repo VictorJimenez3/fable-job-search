@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-09-26 05:04 UTC** · companies polled directly: **2198** (registry 2562) · jobs tracked: **67448** · new this run: **72** · alerts this run: **14**_
+_Last run: **2026-09-26 05:16 UTC** · companies polled directly: **2198** (registry 2562) · jobs tracked: **67435** · new this run: **72** · alerts this run: **14**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -38,7 +38,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 85 🔥 | 1d | Atlassian | [Machine Learning Engineer](https://globalcareers-atlassian.icims.com/jobs/25999/machine-learning-engineer%2c-2027-graduate-u.s./job) | Seattle, WA | big_tech | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 85 🔥 | 11d | OpenAI | [Software Engineer - Applied Emerging Talent](https://jobs.ashbyhq.com/openai/55150071-fce8-48f5-aea4-14ed78b83511/application?embed=true) | SF | ai_lab | unavailable | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 85 🔥 | 15d | Amazon | [Software Privacy Engineer, Trust Platform & Automation, Devices & Serv](https://jobright.ai/jobs/info/6aa53440930bff471a29dadd?utm_campaign=Software%20Engineering&utm_source=1103) | Bellevue, WA, United States | big_tech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 84 ⭐ | 6h | Quora | [Software Engineer New Grad, Machine Learning Platform - Quora (Remote)](https://jobs.ashbyhq.com/quora/cf34f80e-fe5c-454d-bc9a-4c59993ffda0) | Remote - Multiple Locations | other | not classified as startup | likely | [posting](https://jobs.ashbyhq.com/quora/cf34f80e-fe5c-454d-bc9a-4c59993ffda0) |
+| 84 ⭐ | 7h | Quora | [Software Engineer New Grad, Machine Learning Platform - Quora (Remote)](https://jobs.ashbyhq.com/quora/cf34f80e-fe5c-454d-bc9a-4c59993ffda0) | Remote - Multiple Locations | other | not classified as startup | likely | [posting](https://jobs.ashbyhq.com/quora/cf34f80e-fe5c-454d-bc9a-4c59993ffda0) |
 | 84 ⭐ | 2d | CVS Health | [Software Development Engineer](https://jobright.ai/jobs/info/6ab6b380634ec6aa7c0d40cb?utm_campaign=Software%20Engineering&utm_source=1103) | Wisconsin, United States | healthtech | not classified as startup | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) · [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions)<br>[Workday fallback](https://cvshealth.wd1.myworkdayjobs.com/CVS_Health_Careers/job/WI---Work-from-home/Software-Development-Engineer_R1024749-1) |
 | 84 ⭐ | 7d | TikTok | [Machine Learning Engineer Graduate - E-Commerce Recommendation Video](https://lifeattiktok.com/search/7686999927260105013) | San Jose, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 84 ⭐ | 11d | Apple | [Hardware Systems Engineer - Board Design](https://jobs.apple.com/en-us/details/200683615) | Cupertino, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
