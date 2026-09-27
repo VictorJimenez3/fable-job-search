@@ -14,6 +14,10 @@
   ISO, and future-dated fixtures. Full repository suite: 606 passed, 3 skipped;
   the static frontend build passed. A pass over the current production snapshot
   found every default-filter 24-hour result within the displayed time window.
+- **Release gate repair:** the first production push exposed a new high-severity
+  `js-yaml` audit finding in the frontend's locked development dependencies.
+  The lockfile now pins patched `js-yaml` 4.3.2. The CI-equivalent frontend
+  typecheck, Vitest, lint, build, and `npm audit --audit-level=high` pass locally.
 
 ## Current change (2026-09-26)
 
