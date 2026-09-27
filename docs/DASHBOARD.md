@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-09-27 10:40 UTC** · companies polled directly: **2199** (registry 2563) · jobs tracked: **67546** · new this run: **35** · alerts this run: **7**_
+_Last run: **2026-09-27 12:04 UTC** · companies polled directly: **2199** (registry 2563) · jobs tracked: **67546** · new this run: **35** · alerts this run: **7**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
