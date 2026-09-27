@@ -1,5 +1,20 @@
 # CLI handoff notes
 
+## Current change (2026-09-27)
+
+- **Best Match time filter:** the classic Jobs board now uses the source
+  `posted_at` timestamp for its lookback, row age, and freshness tie-break,
+  falling back to `first_seen` only when no valid source date exists. The
+  selected lookback is strict for saved and Maybe roles too; they remain in
+  Pipeline when older. Future-dated postings are excluded from past windows,
+  and all time no longer has an implicit one-year cap. This corrects the
+  mismatch that admitted older postings discovered during a recent crawl.
+- **Validation:** `tests/test_best_match_time_filter.py` runs the actual
+  classic Jobs JavaScript with recent, old, saved, missing-date, millisecond,
+  ISO, and future-dated fixtures. Full repository suite: 606 passed, 3 skipped;
+  the static frontend build passed. A pass over the current production snapshot
+  found every default-filter 24-hour result within the displayed time window.
+
 ## Current change (2026-09-26)
 
 - **Jobs filter repair:** the retired startup-priority sort is gone; startup

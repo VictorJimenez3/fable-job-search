@@ -81,15 +81,16 @@ does this weekly from the [official DOL OFLC data page](https://www.dol.gov/agen
 The Jobs sort menu offers **Best Match** and **Newest posting**; startup stage is
 an optional filter and row signal, not a priority sort. Best Match has a
 lookback selector: all time, the last hour, 6 hours, 24 hours, 3 or 7 days, 2
-weeks, or 1, 3, 6, or 12 months. The window uses the newer of the source
-posting date and the radar's first discovery time. Only roles explicitly in
-the pipeline or Maybe list bypass the time window, so opening a drawer or
-adding private notes does not change the result.
+weeks, or 1, 3, 6, or 12 months. It filters by the source posting date shown
+on each row, falling back to the radar's first discovery time when the source
+date is missing. The selected window is strict, including for saved and Maybe
+roles; older tracked roles remain in Pipeline. All time includes every open
+posting that passes the other Jobs filters.
 For the new-grad lane, the default Jobs view is a **Fresh action queue**: it
 starts with entry-compatible or unclear experience and postings from the last
-month. Tracked or Maybe roles remain available even when older or experienced;
-choose an explicit experience or lookback filter when researching the full
-board. Definitively expired or filled postings leave active Jobs and stay in
+month. Older tracked and Maybe roles remain in Pipeline; choose an explicit
+experience filter or all time when researching the wider Jobs board.
+Definitively expired or filled postings leave active Jobs and stay in
 History with their evidence and close reason.
 
 The Jobs controls also offer an explainable startup-stage signal and a

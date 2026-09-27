@@ -3508,3 +3508,16 @@ list. The prior implementation treated any private `web_state.jobs` notes row
 as tracked; opening a drawer creates that row, so viewed stale roles leaked
 into every short window. Removing that coupling keeps browsing and filtering
 independent while preserving deliberate owner action.
+
+## 220. Make Best Match lookbacks strict posting-age filters (2026-09-27)
+
+The 2026-09-26 discovery-based lookback admitted roles whose displayed
+posting dates were outside the selected window: in the current snapshot, 36
+of 42 score-45+ roles admitted to a 24-hour window had older posting dates.
+Use the normalized source `posted_at` as the Jobs lookback, visible age, and
+freshness tie-break; use `first_seen` only when the source date is absent or
+invalid. Exclude future dates from past windows. A selected window applies to
+saved and Maybe roles as well, since Pipeline is their persistent home. The
+all-time option must mean all open roles that satisfy the other Jobs filters,
+without a hidden one-year cutoff. This favors an understandable, reproducible
+posting-age filter over newly discovered copies of older listings.

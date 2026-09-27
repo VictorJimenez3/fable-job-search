@@ -1328,15 +1328,15 @@ function jobList() {
   const bestWindowSeconds = Number(f.bestWindow);
   if (f.sort === "best" && f.bestWindow && f.bestWindow !== "all" &&
       Number.isFinite(bestWindowSeconds) && bestWindowSeconds > 0) {
-    const cutoff = Date.now() / 1000 - bestWindowSeconds;
-    // A role already in the owner's pipeline remains actionable even when
-    // its original posting date is older than the discovery window.
-    rows = rows.filter(j => isActionedJob(j.id, byId) || bestMatchTimestamp(j) > cutoff);
+    const now = Date.now() / 1000;
+    const cutoff = now - bestWindowSeconds;
+    rows = rows.filter(j => {
+      const timestamp = postedTs(j);
+      return timestamp >= cutoff && timestamp <= now;
+    });
   }
   if (!f.showExcluded) rows = rows.filter(j=>!isExcluded(j.id));
   if (S.lane === "internship" && !f.review) rows = rows.filter(j=>["title","body"].includes((j.internship_eligibility||{}).internship_signal));
-  rows = rows.filter(j=>isActionedJob(j.id, byId)
-    || !postedTs(j) || Date.now()/1000-postedTs(j) <= 365*86400);
   if (f.alert) rows = rows.filter(j=>j.alert_ok);
   rows = rows.filter(j=>(j.score||0) >= f.min);
   if (f.sectors?.length) rows = rows.filter(j=>f.sectors.includes(j.sector));
@@ -1357,7 +1357,7 @@ function jobList() {
   if (f.sort === "new")
     rows.sort((a,b)=>(isExcluded(a.id)?1:0)-(isExcluded(b.id)?1:0) || postedTs(b)-postedTs(a) || careerPriority(b)-careerPriority(a) || (b.score||0)-(a.score||0) || String(a.id||"").localeCompare(String(b.id||"")));
   else
-    rows.sort((a,b)=>(isExcluded(a.id)?1:0)-(isExcluded(b.id)?1:0) || careerPriority(b)-careerPriority(a) || (b.score||0)-(a.score||0) || bestMatchTimestamp(b)-bestMatchTimestamp(a) || String(a.id||"").localeCompare(String(b.id||"")));
+    rows.sort((a,b)=>(isExcluded(a.id)?1:0)-(isExcluded(b.id)?1:0) || careerPriority(b)-careerPriority(a) || (b.score||0)-(a.score||0) || postedTs(b)-postedTs(a) || String(a.id||"").localeCompare(String(b.id||"")));
   return rows;
 }
 function timestampSeconds(value) {
@@ -1369,15 +1369,15 @@ function timestampSeconds(value) {
   const parsed = Date.parse(text);
   return Number.isFinite(parsed) ? parsed / 1000 : 0;
 }
-function bestMatchTimestamp(job) {
-  const posted = timestampSeconds(job?.posted_at);
-  const firstSeen = timestampSeconds(job?.first_seen);
-  return Math.max(posted, firstSeen);
+function postedTs(j){
+  const posted = timestampSeconds(j?.posted_at);
+  return posted > 0 ? posted : timestampSeconds(j?.first_seen);
 }
-function postedTs(j){ return timestampSeconds(j?.posted_at || j?.first_seen || 0); }
 function ago(ts){
   if (!ts) return "";
   const d = (Date.now()/1000 - ts) / 86400;
+  if (d < 0) return "future";
+  if (d < 1/24) return "<1h";
   if (d < 1)  return Math.max(1, Math.round(d*24)) + "h";
   if (d < 60) return Math.round(d) + "d";
   return Math.round(d/30) + "mo";
@@ -2451,6 +2451,9 @@ function rowHTML(j, byId) {
       : `${j.company} — ${j.title}. Click to save to To apply.`;
   const mq = S.marquee.has(norm(j.company));
   const c = S.culture[norm(j.company)];
+  const posted = timestampSeconds(j.posted_at) > 0;
+  const timestamp = postedTs(j);
+  const dateKind = posted ? "posted" : "first seen";
   return `<div class="job ${rowState}" tabindex="0" aria-label="${esc(rowLabel)}"
       onclick='cycleJobSelection(event,S.jobs["${j.id}"])'
       onkeydown='cycleJobSelectionKey(event,S.jobs["${j.id}"])'>
@@ -2458,7 +2461,7 @@ function rowHTML(j, byId) {
     <div class="body">
       <span class="co">${esc(j.company)}</span> —
       <button class="jobtitle" onclick='openWS("${j.id}")'>${esc(j.title)}</button>
-      <div class="sub">${ago(postedTs(j))?`<b title="${j.posted_at?"posted":"first seen"} ${new Date(postedTs(j)*1000).toLocaleDateString()}">${ago(postedTs(j))}</b> · `:""}<span title="${esc((j.locations||[]).join(" · "))}">${esc(locationLabel(j))}</span>${j.salary?" · "+esc(j.salary):""}
+      <div class="sub">${timestamp?`<b title="${dateKind} ${new Date(timestamp*1000).toLocaleString()}">${dateKind} ${ago(timestamp)}</b> · `:""}<span title="${esc((j.locations||[]).join(" · "))}">${esc(locationLabel(j))}</span>${j.salary?" · "+esc(j.salary):""}
         · ${esc(j.sector||"tech")}${c?` · ${esc(c.industry)} (${esc(c.prestige)})`:""}
         ${j.llm_note?` · <i>${esc(j.llm_note)}</i>`:""}</div>
       <div class="facts">${eligibilityBadges(j)}</div>
@@ -2593,7 +2596,7 @@ function rJobs() {
       <button class="act" onclick="clearFilters()">reset filters</button>
     </div>
     </div>
-   ${S.lane === "new_grad" ? `<div class="note"><b>Fresh action queue.</b> New-grad Jobs starts with entry-compatible or unclear experience and roles posted within the last month. Experienced or older open roles stay reviewable: choose their explicit filters or <em>all time</em> when you want the wider research board. Expired and filled postings are removed from active Jobs and retained in History.</div>` : ""}
+   ${S.lane === "new_grad" ? `<div class="note"><b>Fresh action queue.</b> New-grad Jobs starts with entry-compatible or unclear experience and roles posted within the last month. The time window uses the displayed posting age; when a posting date is unavailable, it uses when Radar first found the role. Older saved roles remain in Pipeline. Choose <em>all time</em> or a different experience filter for the wider research board. Expired and filled postings are removed from active Jobs and retained in History.</div>` : ""}
    ${excludedCount?`<div class="note"><span class="chip excluded">${excludedCount} excluded</span> Hidden from the normal Jobs list; turn on “show excluded” to restore one.</div>`:""}
    ${liSavedSearches()}
     ${!S.backend && !canWrite()?`<div class="note">No token needed: <b>track / applied</b> open a one-click
