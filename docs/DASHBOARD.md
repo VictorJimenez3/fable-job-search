@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-09-27 09:40 UTC** · companies polled directly: **2199** (registry 2563) · jobs tracked: **67546** · new this run: **35** · alerts this run: **7**_
+_Last run: **2026-09-27 10:40 UTC** · companies polled directly: **2199** (registry 2563) · jobs tracked: **67546** · new this run: **35** · alerts this run: **7**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -40,8 +40,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 85 🔥 | 3d | Amazon | [Application Builder, Mobile Applications](https://jobright.ai/jobs/info/6ab6104cd85922de20ce43e1?utm_campaign=Software%20Engineering&utm_source=1103) | North Reading, MA, United States | big_tech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 85 🔥 | 12d | OpenAI | [Software Engineer - Applied Emerging Talent](https://jobs.ashbyhq.com/openai/55150071-fce8-48f5-aea4-14ed78b83511/application?embed=true) | SF | ai_lab | unavailable | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 85 🔥 | 16d | Amazon | [Software Privacy Engineer, Trust Platform & Automation, Devices & Serv](https://jobright.ai/jobs/info/6aa53440930bff471a29dadd?utm_campaign=Software%20Engineering&utm_source=1103) | Bellevue, WA, United States | big_tech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 84 ⭐ | 1d | Neuralink | [Software Engineer, BCI Applications](https://jobright.ai/jobs/info/6a2213097c30cc2cc516d39a?utm_campaign=Software%20Engineering&utm_source=1103) | Austin - ATX1 | healthtech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 84 ⭐ | 1d | Neuralink | [Software Engineer, BCI Applications](https://jobright.ai/jobs/info/6a1538b3128680351d96002d?utm_campaign=Software%20Engineering&utm_source=1103) | South San Francisco, California, United  | healthtech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
+| 84 ⭐ | 1d | Neuralink | [Software Engineer, BCI Applications](https://jobright.ai/jobs/info/6a2213097c30cc2cc516d39a?utm_campaign=Software%20Engineering&utm_source=1103) | Austin - ATX1 | healthtech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 84 ⭐ | 8d | TikTok | [Machine Learning Engineer Graduate - E-Commerce Recommendation Video](https://lifeattiktok.com/search/7686999927260105013) | San Jose, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 84 ⭐ | 12d | Apple | [Hardware Systems Engineer - Board Design](https://jobs.apple.com/en-us/details/200683615) | Cupertino, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 84 ⭐ | 18d | Amazon Web Services (AWS) | [SDE, MLA hardware/software co-design, Annapurna Labs Machine Learning ](https://jobright.ai/jobs/info/6a99313e8974952dfc949c40?utm_campaign=Software%20Engineering&utm_source=1103) | Austin, TX, United States | big_tech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
