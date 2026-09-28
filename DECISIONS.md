@@ -3521,3 +3521,14 @@ saved and Maybe roles as well, since Pipeline is their persistent home. The
 all-time option must mean all open roles that satisfy the other Jobs filters,
 without a hidden one-year cutoff. This favors an understandable, reproducible
 posting-age filter over newly discovered copies of older listings.
+
+## 221. Keep the classic Jobs board responsive as the registry grows (2026-09-28)
+
+Keep search, sort, Best Match time, and result count visible while placing
+less-used filters in a collapsible section with individually removable active
+chips. Cache parsed role, location, posting-age, and other stable job facts per
+lane snapshot; read mutable tracker and company-research state at filter time.
+Filter the cached entries in one pass, debounce text search, and render 50 rows
+per page. Load the selected lane first and fetch the other lane only when
+opened. This keeps filtering quick without making the index stale when private
+tracker or research context changes.

@@ -4,7 +4,7 @@ from unittest.mock import patch
 
 import pytest
 
-from radar import state
+from radar import state, taste
 from radar.applied import handle_event
 from radar.board import _open_rows, _paginate, email_batch_rows
 from radar.alerts import format_line, post_alerts
@@ -22,6 +22,7 @@ JOB = {"id": "b" * 16, "company": "Anthropic", "title": "Research Engineer",
 @pytest.fixture
 def tmp_state(tmp_path, monkeypatch):
     monkeypatch.setattr(state, "STATE_DIR", tmp_path)
+    monkeypatch.setattr(taste, "DOCS_DIR", tmp_path / "docs")
     return tmp_path
 
 

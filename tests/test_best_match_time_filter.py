@@ -21,6 +21,7 @@ const context = {
   window: {addEventListener() {}},
   document: {querySelector: () => ({addEventListener() {}}), addEventListener() {}},
   localStorage: {getItem: () => null, setItem() {}, removeItem() {}},
+  clearTimeout() {},
   Date: class extends Date { static now() { return now * 1000; } },
   URL, console,
 };

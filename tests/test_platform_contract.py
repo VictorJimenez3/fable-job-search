@@ -13,8 +13,8 @@ def test_platform_defaults_to_a_fresh_entry_compatible_action_queue():
     html = (ROOT / "webapp" / "index.html").read_text()
     assert 'experience:"entryfit"' in html
     assert 'bestWindow:"2592000"' in html
-    assert "Fresh action queue." in html
-    assert "Expired and filled postings are removed from active Jobs" in html
+    assert "Fresh action queue:" in html
+    assert "Expired and filled postings stay in History." in html
     assert "posting-specific verdicts preserved" in (ROOT / "radar" / "score.py").read_text()
 
 
@@ -27,9 +27,8 @@ def test_best_match_filters_by_the_displayed_posting_age():
     assert "const posted = timestampSeconds(j?.posted_at);" in html
     assert "return posted > 0 ? posted : timestampSeconds(j?.first_seen);" in html
     assert "const bestWindowSeconds = Number(f.bestWindow);" in job_list
-    assert "const timestamp = postedTs(j);" in job_list
-    assert "return timestamp >= cutoff && timestamp <= now;" in job_list
-    assert "postedTs(b)-postedTs(a)" in job_list
+    assert "entry.postedAt < cutoff || entry.postedAt > now" in job_list
+    assert "b.posted-a.posted" in job_list
     assert "bestMatchTimestamp" not in job_list
     assert "S.web.jobs[j.id]" not in job_list
 
@@ -286,7 +285,7 @@ def test_platform_role_field_buttons_cycle_to_red_exclusion_without_disappearing
     assert 'class="toggle ${state}"' in html
     assert "button.toggle.excluded" in html
     assert "twice turns red and excludes" in html
-    assert "f.excludedRoles.includes(roleFamily(j))" in html
+    assert "f.excludedRoles?.includes(role)" in html
 
 
 def test_platform_exposes_hardware_computer_engineering_role_filter_after_analytics():
@@ -358,7 +357,7 @@ def test_platform_boots_progressively_and_keeps_owner_diagnostics_in_app():
     assert 'allowMissing && r.status === 404' in html
     assert 'path === "state/reports.json"' in html
     assert "Promise.allSettled" in html
-    assert 'loadState("state/jobs.json", {}, {critical:true})' in html
+    assert "ensureLaneJobs(S.lane, true)" in html
     assert "retry failed loads" in html
     assert "ownerDevMode" in html
     assert 'victorjimenez3' in html
