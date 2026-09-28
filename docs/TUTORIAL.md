@@ -57,7 +57,9 @@ migration for compatibility.
   unclear experience and postings from the last month. Tracked roles stay
   reviewable even when they are older or experienced; use the explicit filters
   for the full research board. Expired and filled roles are kept in **History**
-  instead of active Jobs.
+  instead of active Jobs. Search, sort, time window, and the result count stay
+  visible; open **More filters** for the other controls. Remove one filter by
+  selecting its active chip. Jobs shows 50 results per page with Previous/Next.
 - **Progressive loading**: the shell and Jobs board appear first, then optional
   repository panels load independently. If a state source fails, the rest of
   the site remains usable. Only the signed-in `VictorJimenez3` owner sees the
@@ -483,7 +485,8 @@ remain in Pipeline; choose all time to see all open roles that match the other
 Jobs filters.
 The default new-grad Jobs queue uses the last month plus entry-compatible or
 unclear experience; older/experienced tracked roles remain available through
-explicit filter choices.
+explicit filter choices. Active filter chips clear one choice at a time, and
+50 matching roles are shown per page so the list stays quick to browse.
 
 The generator does not force every role to use the same evidence. It creates a
 strongest-first adaptive pool, preserves reverse chronology, and packs only

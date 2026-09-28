@@ -1,5 +1,25 @@
 # CLI handoff notes
 
+## Current change (2026-09-28)
+
+- **Classic Jobs UI performance:** keep search, sort, Best Match time, and
+  result count in a compact primary toolbar; place advanced filters under
+  **More filters** and show individually removable active chips. Search is
+  debounced, filter changes update the list without rebuilding the page, and
+  each page renders at most 50 roles with Previous/Next navigation. The current
+  lane loads first and the other Jobs lane loads only when selected.
+- **Filter cost:** cache stable role, location, posting-age, and eligibility
+  fields per lane data snapshot; keep tracker and company-research checks live.
+  With the 67,636-role production snapshot, warmed filter/sort p95 ranged from
+  8.7 ms (24-hour window) to 21.9 ms (default 30-day window) in local Node
+  measurements; this excludes browser DOM painting and is not a mobile score.
+- **Validation:** `tests/test_jobs_filter_ui.py` covers bounded pages, filter
+  chips, location matching, lane-load coalescing, and filter updates that avoid
+  a full page render. The existing time-filter regression continues to test
+  strict posting-age boundaries. Browser smoke check confirmed 24 results in
+  the 24-hour view, all within the displayed window, and that advanced controls
+  remain open and retain focus during filter changes.
+
 ## Current change (2026-09-27)
 
 - **Best Match time filter:** the classic Jobs board now uses the source

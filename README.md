@@ -90,6 +90,13 @@ For the new-grad lane, the default Jobs view is a **Fresh action queue**: it
 starts with entry-compatible or unclear experience and postings from the last
 month. Older tracked and Maybe roles remain in Pipeline; choose an explicit
 experience filter or all time when researching the wider Jobs board.
+
+Search, sort, the Best Match time window, and the result count stay at the top
+of Jobs. Less-used controls live under **More filters**; each active filter can
+be cleared from its chip. Search waits for typing to pause, and results are
+shown 50 at a time with Previous/Next controls. New-grad and internship data
+loads when its lane is selected.
+
 Definitively expired or filled postings leave active Jobs and stay in
 History with their evidence and close reason.
 

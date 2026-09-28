@@ -239,6 +239,10 @@ are quietly saved to **To apply**; marking Applied stays explicit. Rules v3
 also makes field eligibility title-led, demoting roughly 650 current false
 positive alerts found through description boilerplate.
 
+The classic Jobs board received a responsive filter and browsing pass on
+2026-09-28 (DECISIONS #221): primary controls stay visible, advanced filters
+collapse, active choices can be cleared individually, and results are paged.
+
 ## Canonical posting families + batch tailoring — ✅ SHIPPED 2026-08-19 (DECISION #141)
 
 Exact posting URLs remain the strongest identity boundary, with a conservative
