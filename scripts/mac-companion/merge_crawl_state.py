@@ -20,11 +20,13 @@ def load(path: str, default):
 
 
 ours_jobs = load(os.environ["MERGE_CRAWL_JOBS"], {})
+ours_history = load(os.environ["MERGE_CRAWL_JOBS_HISTORY"], {}) if os.environ.get("MERGE_CRAWL_JOBS_HISTORY") else {}
 ours_companies = load(os.environ["MERGE_CRAWL_COMPANIES"], {})
 ours_alerts = load(os.environ["MERGE_CRAWL_ALERT_HISTORY"], [])
 ours_runs = load(os.environ["MERGE_CRAWL_RUNS"], [])
 
 jobs = load("state/jobs.json", {})
+history = load("state/jobs_history.json", {})
 companies = load("state/companies.json", {})
 alerts = load("state/alert_history.json", [])
 runs = load("state/runs.json", [])
@@ -35,6 +37,8 @@ added_jobs = 0
 for jid, record in ours_jobs.items():
     if jid not in jobs:
         jobs[jid] = record
+        if jid in ours_history:
+            history[jid] = ours_history[jid]
         added_jobs += 1
 
 # Registry tokens are likewise additive; never overwrite a concurrently
@@ -69,6 +73,10 @@ for name, value in (("jobs.json", jobs), ("companies.json", companies),
                     ("alert_history.json", alerts), ("runs.json", runs)):
     with open(f"state/{name}", "w") as handle:
         json.dump(value, handle, indent=1, sort_keys=True, ensure_ascii=False)
+        handle.write("\n")
+if history:
+    with open("state/jobs_history.json", "w") as handle:
+        json.dump(history, handle, indent=1, sort_keys=True, ensure_ascii=False)
         handle.write("\n")
 
 print(f"merge_crawl_state: added {added_jobs} discovery job(s), "

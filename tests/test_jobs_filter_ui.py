@@ -139,3 +139,42 @@ Promise.all([
         ["node", "-e", script], cwd=ROOT, capture_output=True, text=True
     )
     assert completed.returncode == 0, completed.stdout + completed.stderr
+
+
+def test_closed_posting_detail_loads_existing_history_shard_once():
+    script = r"""
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const vm = require('node:vm');
+const html = fs.readFileSync('webapp/index.html', 'utf8');
+const match = html.match(/<script>\s*"use strict";([\s\S]*?)<\/script>/);
+const source = match[0].replace(/^<script>/, '').replace(/<\/script>$/, '').replace(/boot\(\);\s*$/, '');
+const calls = [];
+const context = {
+  window:{addEventListener() {}},
+  document:{querySelector:() => ({addEventListener() {}}), querySelectorAll:() => [], addEventListener() {}},
+  localStorage:{getItem:() => null, setItem() {}, removeItem() {}},
+  clearTimeout() {}, Date, URL, console,
+  fetch:async url => { calls.push(url); return {ok:true, status:200, json:async () => ({
+    closed:{id:'closed', company:'Acme', title:'Engineer', posting_status:'expired',
+      score_reasons:['role fit +20'], lifecycle_events:[{status:'expired', at:300}]}
+  })}; },
+};
+vm.createContext(context);
+vm.runInContext(source, context);
+vm.runInContext(`S.jobs = {closed:{id:'closed', company:'Acme', title:'Engineer', posting_status:'expired'}};
+  S.lanes.new_grad.jobs = S.jobs;`, context);
+Promise.all([
+  vm.runInContext("ensureHistoryJobs('new_grad')", context),
+  vm.runInContext("ensureHistoryJobs('new_grad')", context),
+]).then(() => {
+  assert.equal(calls.length, 1);
+  assert.match(calls[0], /state\/jobs_history\.json$/);
+  assert.equal(vm.runInContext("S.jobs.closed.score_reasons[0]", context), 'role fit +20');
+  assert.equal(vm.runInContext("S.jobs.closed.lifecycle_events.length", context), 1);
+}).catch(error => { console.error(error); process.exitCode = 1; });
+"""
+    completed = subprocess.run(
+        ["node", "-e", script], cwd=ROOT, capture_output=True, text=True
+    )
+    assert completed.returncode == 0, completed.stdout + completed.stderr

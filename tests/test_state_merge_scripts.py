@@ -50,3 +50,40 @@ def test_crawl_merge_keeps_new_discoveries_and_upstream_updates(tmp_path):
     assert {row["id"] for row in json.loads((state_dir / "alert_history.json").read_text())} == {
         "known", "discovery"
     }
+
+
+def test_crawl_merge_keeps_full_history_for_new_closed_discoveries(tmp_path):
+    state_dir = tmp_path / "state"
+    state_dir.mkdir()
+    (state_dir / "jobs.json").write_text(json.dumps({
+        "known": {"id": "known", "posting_status": "expired", "score": 90}
+    }))
+    (state_dir / "jobs_history.json").write_text(json.dumps({
+        "known": {"id": "known", "posting_status": "expired", "score_reasons": ["upstream"]}
+    }))
+    for name, value in (("companies", {}), ("alert_history", []), ("runs", [])):
+        (state_dir / f"{name}.json").write_text(json.dumps(value))
+    snapshots = {
+        "jobs": {"known": {"id": "known", "score": 10},
+                 "new_closed": {"id": "new_closed", "posting_status": "expired", "score": 60}},
+        "history": {"new_closed": {"id": "new_closed", "posting_status": "expired",
+                                   "score": 60, "score_reasons": ["new discovery"]}},
+        "companies": {}, "alerts": [], "runs": [],
+    }
+    paths = {}
+    for name, value in snapshots.items():
+        path = tmp_path / f"{name}.json"
+        path.write_text(json.dumps(value))
+        paths[name] = path
+    env = os.environ | {
+        "MERGE_CRAWL_JOBS": str(paths["jobs"]),
+        "MERGE_CRAWL_JOBS_HISTORY": str(paths["history"]),
+        "MERGE_CRAWL_COMPANIES": str(paths["companies"]),
+        "MERGE_CRAWL_ALERT_HISTORY": str(paths["alerts"]),
+        "MERGE_CRAWL_RUNS": str(paths["runs"]),
+    }
+    subprocess.run([sys.executable, str(ROOT / "scripts/mac-companion/merge_crawl_state.py")],
+                   cwd=tmp_path, env=env, check=True)
+    history = json.loads((state_dir / "jobs_history.json").read_text())
+    assert history["known"]["score_reasons"] == ["upstream"]
+    assert history["new_closed"]["score_reasons"] == ["new discovery"]

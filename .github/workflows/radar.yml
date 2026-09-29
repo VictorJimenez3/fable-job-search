@@ -99,6 +99,7 @@ jobs:
             echo "crawl: upstream moved; reconciling completed discoveries"
             checkpoint_dir="$(mktemp -d)"
             git show HEAD:state/jobs.json > "$checkpoint_dir/jobs.json"
+            git show HEAD:state/jobs_history.json > "$checkpoint_dir/jobs_history.json" || printf '{}' > "$checkpoint_dir/jobs_history.json"
             git show HEAD:state/companies.json > "$checkpoint_dir/companies.json"
             git show HEAD:state/alert_history.json > "$checkpoint_dir/alerts.json"
             git show HEAD:state/runs.json > "$checkpoint_dir/runs.json"
@@ -113,6 +114,7 @@ jobs:
             MERGE_AI_USAGE="$checkpoint_dir/usage.json" \
               python scripts/mac-companion/merge_state.py
             MERGE_CRAWL_JOBS="$checkpoint_dir/jobs.json" \
+            MERGE_CRAWL_JOBS_HISTORY="$checkpoint_dir/jobs_history.json" \
             MERGE_CRAWL_COMPANIES="$checkpoint_dir/companies.json" \
             MERGE_CRAWL_ALERT_HISTORY="$checkpoint_dir/alerts.json" \
             MERGE_CRAWL_RUNS="$checkpoint_dir/runs.json" \

@@ -172,6 +172,51 @@ def test_terminal_job_reasons_are_sharded_and_restored(tmp_path, monkeypatch):
     assert state.load("jobs.json", {})["job-1"]["score_reasons"] == row["score_reasons"]
 
 
+def test_terminal_job_detail_is_sharded_but_history_summary_stays_visible(tmp_path, monkeypatch):
+    monkeypatch.setattr(state, "STATE_DIR", tmp_path)
+    row = {
+        "id": "job-1", "company": "Acme", "title": "Engineer",
+        "url": "https://example.test/job", "score_version": 13, "score": 72,
+        "posting_status": "expired", "posting_status_reason": "source closed",
+        "manual_archived": True, "archive_reason": "owner archived",
+        "first_seen": 100, "last_seen_at": 200, "closed_at": 300,
+        "locations": ["New York, NY"],
+        "score_reasons": ["role fit +20"],
+        "score_dimensions": {"role_fit": 20},
+        "lifecycle_events": [{"status": "expired", "at": 300, "reason": "source closed"}],
+        "posting": {"years_min": 0},
+        "sponsorship_history": {"status": "likely", "certified_cases": 3},
+        "link_resolution": {"checked_at": 250, "candidate": "https://example.test/job"},
+    }
+    state.save("jobs.json", {"job-1": row})
+
+    primary = json.loads((tmp_path / "jobs.json").read_text())["job-1"]
+    history = json.loads((tmp_path / "jobs_history.json").read_text())["job-1"]
+    for key in ("id", "company", "title", "url", "score", "posting_status",
+                "posting_status_reason", "manual_archived", "archive_reason",
+                "first_seen", "last_seen_at", "closed_at", "locations"):
+        assert primary[key] == row[key]
+    for key in ("score_reasons", "score_dimensions", "lifecycle_events",
+                "posting", "sponsorship_history", "link_resolution"):
+        assert key not in primary
+        assert history[key] == row[key]
+        assert state.load("jobs.json", {})["job-1"][key] == row[key]
+
+
+def test_stale_history_does_not_reclose_reopened_or_purged_postings(tmp_path, monkeypatch):
+    monkeypatch.setattr(state, "STATE_DIR", tmp_path)
+    (tmp_path / "jobs.json").write_text(json.dumps({
+        "reopened": {"id": "reopened", "posting_status": "open", "score": 80}
+    }))
+    (tmp_path / "jobs_history.json").write_text(json.dumps({
+        "reopened": {"id": "reopened", "posting_status": "expired", "score": 20},
+        "purged": {"id": "purged", "posting_status": "expired", "score": 30},
+    }))
+    assert state.load("jobs.json", {}) == {
+        "reopened": {"id": "reopened", "posting_status": "open", "score": 80}
+    }
+
+
 def test_open_job_reasons_stay_in_primary_snapshot(tmp_path, monkeypatch):
     monkeypatch.setattr(state, "STATE_DIR", tmp_path)
     row = {

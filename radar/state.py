@@ -59,6 +59,20 @@ _JOB_DERIVED_FIELDS = {
     "startup_stage_reason",
 }
 
+# The full terminal record already lives in jobs_history.json. Keep just the
+# fields needed to list and search closed postings in the primary web snapshot;
+# detail and audit fields are restored from the history shard on demand.
+_JOB_TERMINAL_SUMMARY_FIELDS = {
+    "id", "company", "title", "url", "locations", "salary", "remote",
+    "sector", "source", "source_board", "ats", "first_seen", "last_seen_at",
+    "posted_at", "posting_status", "posting_status_reason",
+    "posting_status_changed_at", "closed_at", "last_closed_at",
+    "manual_archived", "archived_at", "archived_by", "archive_reason", "score",
+    "score_version", "rules_v", "evidence_score", "eligibility",
+    "priority_tier", "career_priority", "explicit_new_grad",
+    "early_career_possible", "startup_stage", "startup_score", "alert_ok",
+}
+
 
 def _compact_sponsorship_history(value: object) -> object:
     """Keep per-job DOL context small; coverage is shared by sponsorship.json."""
@@ -129,7 +143,14 @@ def load(name: str, default, namespace: str | None = None):
     if not isinstance(history, dict) or not history:
         return value
     merged = dict(value)
-    merged.update(history)
+    for key, full in history.items():
+        summary = value.get(key)
+        if not _is_terminal_job(summary) or not isinstance(full, dict):
+            continue
+        if (summary.get("posting_status") != full.get("posting_status")
+                or summary.get("posting_status_changed_at") != full.get("posting_status_changed_at")):
+            continue
+        merged[key] = {**full, **summary}
     return merged
 
 
@@ -181,14 +202,14 @@ def _prepared(name: str, obj: object) -> object:
     prepared = {}
     for key, value in obj.items():
         compact = _compact_job_record(value)
-        # Closed postings are retained in the primary snapshot for lifecycle
-        # and score summary fields, while their verbose reasons live in the
-        # history shard. Manual/legacy rows are not rewritten.
+        # Closed postings retain a web-facing summary in the primary snapshot.
+        # Their complete compacted records live in the history shard, which
+        # load() overlays for Python callers. Manual/legacy rows are untouched.
         if (_is_terminal_job(value) and isinstance(value, dict)
                 and value.get("score_version") and not value.get("manual_added")
                 and isinstance(compact, dict)):
-            compact = dict(compact)
-            compact.pop("score_reasons", None)
+            compact = {field: item for field, item in compact.items()
+                       if field in _JOB_TERMINAL_SUMMARY_FIELDS}
         prepared[key] = compact
     return prepared
 
