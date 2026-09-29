@@ -3532,3 +3532,16 @@ Filter the cached entries in one pass, debounce text search, and render 50 rows
 per page. Load the selected lane first and fetch the other lane only when
 opened. This keeps filtering quick without making the index stale when private
 tracker or research context changes.
+
+## 222. Keep terminal summaries in the primary snapshot (2026-09-29)
+
+The scheduled radar repeatedly completed discovery and scoring but could not
+publish when `state/jobs.json` exceeded its 95 MiB safety guard. The existing
+`jobs_history.json` already retains complete terminal posting records, so
+keep only listing, lifecycle, and score summary fields for scored terminal
+postings in the primary snapshot. Python overlays matching history records on
+read; the classic History tab and closed-posting drawer load full records on
+demand, as does the legacy job-detail API. Open and manual rows stay in the
+primary snapshot. A crawl that loses a push race checkpoints and reconciles
+the history shard alongside new discoveries, preserving their audit records.
+Do not raise the GitHub blob limit to accommodate future growth.

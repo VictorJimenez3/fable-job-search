@@ -54,7 +54,23 @@ async function legacyRecord(profile, identifier) {
     legacyCache.set(profile, {at: Date.now(), records});
   }
   const legacyId = identifier.startsWith("legacy_") ? identifier.slice(7) : identifier;
-  const found = records[legacyId] || Object.entries(records).find(([, job]) => job.public_id === identifier)?.[1];
+  let found = records[legacyId] || Object.entries(records).find(([, job]) => job.public_id === identifier)?.[1];
+  if (found && (["expired", "filled", "archived"].includes(found.posting_status) || found.closed_at)) {
+    let archived = legacyCache.get(profile)?.history;
+    if (!archived) {
+      const historyName = profile === "internship" ? "intern_jobs_history.json" : "jobs_history.json";
+      const response = await fetch(`https://raw.githubusercontent.com/${REPO}/${BRANCH}/state/${historyName}`);
+      if (response.ok) archived = await response.json();
+      else if (response.status === 404) archived = {};
+      else throw new Error(`legacy history returned ${response.status}`);
+      legacyCache.get(profile).history = archived;
+    }
+    const full = archived[legacyId];
+    if (full && full.posting_status === found.posting_status &&
+        full.posting_status_changed_at === found.posting_status_changed_at) {
+      found = {...full, ...found};
+    }
+  }
   return found ? publicLegacy(legacyId, found, profile) : null;
 }
 

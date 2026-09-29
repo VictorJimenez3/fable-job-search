@@ -101,3 +101,42 @@ def test_cursor_api_filters_action_queue_and_blocks_unsafe_urls():
         """
     )
     subprocess.run(["node", "-e", script], cwd=ROOT, check=True, capture_output=True, text=True)
+
+
+@pytest.mark.skipif(not shutil.which("node"), reason="Node is required for Vercel API runtime checks")
+def test_legacy_closed_job_detail_reads_full_history_record():
+    script = textwrap.dedent(
+        """
+        const assert = require('node:assert/strict');
+        delete process.env.DATABASE_URL;
+        process.env.RADAR_REPO = 'owner/repo';
+        process.env.RADAR_BRANCH = 'main';
+        const Module = require('module');
+        const originalLoad = Module._load;
+        Module._load = function(request, parent, isMain) {
+          if (request === '@neondatabase/serverless') throw new Error('Neon must be lazy');
+          return originalLoad.call(this, request, parent, isMain);
+        };
+        const detail = require('./webapp/api/v1/_job-detail');
+        const calls = [];
+        global.fetch = async url => {
+          calls.push(url);
+          return {ok:true, json:async () => url.endsWith('/jobs_history.json')
+            ? {closed:{score_reasons:['role fit +20'], posting:{years_min:0},
+              posting_status:'expired', company:'Acme', title:'Engineer'}}
+            : {closed:{posting_status:'expired', company:'Acme', title:'Engineer'}}};
+        };
+        const req = {method:'GET', query:{profile:'new_grad', id:'closed'}};
+        const res = {statusCode:0, body:null, setHeader() {},
+          status(code){this.statusCode=code;return this;},
+          json(value){this.body=value;return this;}, end() {}};
+        detail(req,res).then(() => {
+          assert.equal(res.statusCode, 200);
+          assert.deepEqual(res.body.data.score_reasons, ['role fit +20']);
+          assert.equal(res.body.data.posting_facts.years_min, 0);
+          assert.equal(calls.length, 2);
+        }).catch(error => {console.error(error);process.exitCode=1;});
+        """
+    )
+    completed = subprocess.run(["node", "-e", script], cwd=ROOT, capture_output=True, text=True)
+    assert completed.returncode == 0, completed.stdout + completed.stderr

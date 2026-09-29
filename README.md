@@ -357,8 +357,11 @@ expired source gaps become **expired**. Terminal postings leave active Jobs,
 dashboard, RSS, master-board, and alert delivery, but are retained in the
 platform's **History** tab with `closed_at`, `last_seen_at`, lifecycle events,
 and the exact reason ledger. Application-history cards also show how long the
-posting was up in days, months, or years instead of a lifecycle date. State
-retention is two years by default
+posting was up in days, months, or years instead of a lifecycle date. The
+platform keeps a compact closed-posting summary in the primary snapshot and
+loads the full history record when History or a closed-posting detail is opened.
+The audit record is retained in `state/jobs_history.json`. Retention is two
+years by default
 (`RADAR_HISTORY_DAYS`, minimum one year), so the record can support future
 seasonal posting-timeline analysis. `RADAR_LIFECYCLE_ACTIVE_DAYS` defaults to
 45 and `RADAR_LIFECYCLE_UNSEEN_GRACE_DAYS` to 14; a transient fetch failure
@@ -1268,7 +1271,9 @@ setting. Edit and push — next run picks it up. Seed companies:
   backward-compatible JSON representation: zero score dimensions and repeated
   primary-source provenance are omitted (absence means no signal/already
   represented), while nonzero dimensions, score reasons, and nonzero DOL facts
-  remain intact. Writes fail before replacement at 95 MiB, leaving headroom
+  remain intact in the primary snapshot for open roles. Complete terminal
+  records live in `state/jobs_history.json`; their compact summaries remain in
+  `state/jobs.json`. Writes fail before replacement at 95 MiB, leaving headroom
   below GitHub's 100 MiB blob limit. If that guard trips again, shard the
   datastore or complete the verified Postgres cutover; do not raise the
   production limit past the repository host's boundary.

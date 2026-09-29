@@ -510,9 +510,9 @@ let RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
 const API = "https://api.github.com";
 
 const LANE_CONFIG = {
-  new_grad:{label:"New-grad", jobs:"state/jobs.json", applied:"state/applied.json", feedback:"state/feedback.json",
+  new_grad:{label:"New-grad", jobs:"state/jobs.json", history:"state/jobs_history.json", applied:"state/applied.json", feedback:"state/feedback.json",
     companies:"state/companies.json", runs:"state/runs.json", web:"state/web_state.json"},
-  internship:{label:"Internships", jobs:"state/intern_jobs.json", applied:"state/intern_applied.json", feedback:"state/intern_feedback.json",
+  internship:{label:"Internships", jobs:"state/intern_jobs.json", history:"state/intern_jobs_history.json", applied:"state/intern_applied.json", feedback:"state/intern_feedback.json",
     companies:"state/intern_companies.json", runs:"state/intern_runs.json", web:"state/intern_web_state.json"},
 };
 const DEFAULT_FILTER = {q:"", min:45, sector:"", role:"", sectors:[], roles:[], sponsorship:"", sponsorHistory:"",
@@ -562,8 +562,8 @@ const S = {           // app state
   jobs:{}, applied:[], feedback:{}, reports:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, scorePreferences:{},
   registryByCompany:{}, runs:[], scout:{}, web:null,
   lane:"new_grad", lanes:{
-    new_grad:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, jobsPromise:null, expectedGraduation:"", lifecycleNotice:null},
-    internship:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, jobsPromise:null, expectedGraduation:"", lifecycleNotice:null},
+    new_grad:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, jobsPromise:null, historyReady:false, historyPromise:null, expectedGraduation:"", lifecycleNotice:null},
+    internship:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, jobsPromise:null, historyReady:false, historyPromise:null, expectedGraduation:"", lifecycleNotice:null},
   }, notifications:{new_grad_email:true, internship_email:false},
   auth:null, backend:false, authHost:"", userTracker:false, trackerConfigured:false, trackerMeta:null,
   authProviders:{github:false,google:false},
@@ -827,6 +827,28 @@ async function ensureLaneJobs(mode=S.lane, critical=false) {
     return result;
   }).finally(() => { target.jobsPromise = null; });
   return target.jobsPromise;
+}
+async function ensureHistoryJobs(mode=S.lane) {
+  const target = laneState(mode);
+  if (target.historyReady) return {value:target.jobs, ok:true};
+  if (target.historyPromise) return target.historyPromise;
+  target.historyPromise = loadState(LANE_CONFIG[mode].history, {}, {allowMissing:true}).then(result => {
+    if (result.ok) {
+      const merged = {...target.jobs};
+      for (const [id, full] of Object.entries(result.value || {})) {
+        const summary = merged[id];
+        if (isTerminalPosting(summary) && full && typeof full === "object" &&
+            summary.posting_status === full.posting_status &&
+            summary.posting_status_changed_at === full.posting_status_changed_at) {
+          merged[id] = {...full, ...summary};
+        }
+      }
+      setLaneValue(mode, "jobs", merged);
+      target.historyReady = true;
+    }
+    return result;
+  }).finally(() => { target.historyPromise = null; });
+  return target.historyPromise;
 }
 let backgroundRenderQueued = false;
 function scheduleBackgroundRefresh() {
@@ -2605,6 +2627,12 @@ function renderLaneSwitch() {
     `<button class="${S.lane===key?'on':''}" aria-pressed="${S.lane===key}" onclick="activateLane('${key}')">${lane.label}</button>`).join("");
 }
 function render() {
+  if (S.tab === "history" && laneState().ready && !laneState().historyReady && !laneState().historyPromise) {
+    const mode = S.lane;
+    ensureHistoryJobs(mode).then(result => {
+      if (result.ok && S.lane === mode && S.tab === "history") render();
+    });
+  }
   renderBootNotice();
   renderLaneSwitch();
   const tabs = S.auth?.owner ? [...TABS.slice(0,-1), ["taste","My job preferences"], ["testing","Resume Studio"], ["agent","Application queue"], TABS.at(-1)] : TABS;
@@ -3290,9 +3318,16 @@ function openResumeStudio(j) {
   render();
 }
 let wsId = null;  // switching jobs resets the drawer to decision-first role fit
-function openWS(id) {
+function openWS(id, historyResolved=false) {
   const j = jobById(id);
   if (!j) return;
+  if (isTerminalPosting(j) && !laneState().historyReady && !historyResolved) {
+    const mode = S.lane;
+    ensureHistoryJobs(mode).then(() => {
+      if (S.lane === mode) openWS(id, true);
+    });
+    return;
+  }
   const w = S.web.jobs[id] = S.web.jobs[id] || {notes:"", links:[], contacts:[], jd:""};
   if (w.jd === undefined) w.jd = "";  // records saved before the JD box existed
   if (wsId !== id) { S.wsTab = "fit"; wsId = id; }

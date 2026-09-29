@@ -70,7 +70,8 @@ migration for compatibility.
   moves successful drafts into To tailor; it never marks them Applied.
 - **History**: expired and filled postings are removed from active Jobs and
   alert surfaces but remain here with their last source sighting, close reason,
-  and lifecycle events. Application-history cards also show how long the
+  and lifecycle events. Opening History or a closed posting loads its full
+  archived detail on demand. Application-history cards also show how long the
   posting was up (in days, months, or years) instead of a lifecycle date. This
   retained dataset supports future posting-timeline analysis; it is not a
   second active application board. The scheduled radar first checks a bounded

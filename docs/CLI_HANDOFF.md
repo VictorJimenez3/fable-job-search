@@ -1,5 +1,24 @@
 # CLI handoff notes
 
+## Current change (2026-09-29)
+
+- **Radar crawl capacity recovery:** scheduled `radar` attempts failed after
+  scoring because the generated primary job snapshot reached 100,780,613 bytes
+  against the 99,614,720-byte guard. Complete closed records were already in
+  `state/jobs_history.json`; primary persistence now keeps only their listing,
+  lifecycle, and score summary. The classic History tab, closed-job drawer,
+  and legacy job-detail API hydrate the full archived record on demand. The
+  Python loader restores full matching terminal records and ignores stale
+  history for reopened or purged jobs. Crawl push-race reconciliation now
+  checkpoints the history shard too (DECISION #222).
+- **Measured capacity:** rewriting the 67,636-job production snapshot in a
+  temporary directory reduced `jobs.json` from 99,507,024 to 90,635,804
+  bytes, leaving 8,978,916 bytes beneath the guard. The history shard stayed
+  29,281,622 bytes and the loader retained all 694,358 score reasons.
+- **Recovery after deployment:** dispatch `radar`, confirm both the crawl and
+  idempotent delivery jobs finish, then check the next scheduled run. No new
+  secret is required.
+
 ## Current change (2026-09-28)
 
 - **Classic Jobs UI performance:** keep search, sort, Best Match time, and
