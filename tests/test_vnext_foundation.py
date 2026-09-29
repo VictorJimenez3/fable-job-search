@@ -122,7 +122,8 @@ def test_legacy_closed_job_detail_reads_full_history_record():
         global.fetch = async url => {
           calls.push(url);
           return {ok:true, json:async () => url.endsWith('/jobs_history.json')
-            ? {closed:{score_reasons:['role fit +20'], posting:{years_min:0}, posting_status:'expired', company:'Acme', title:'Engineer'}}
+            ? {closed:{score_reasons:['role fit +20'], posting:{years_min:0},
+              posting_status:'expired', company:'Acme', title:'Engineer'}}
             : {closed:{posting_status:'expired', company:'Acme', title:'Engineer'}}};
         };
         const req = {method:'GET', query:{profile:'new_grad', id:'closed'}};
