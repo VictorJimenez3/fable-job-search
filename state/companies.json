@@ -1833,6 +1833,19 @@
   "status": "active",
   "token": "handshake"
  },
+ "ashby:harvey": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1790988250,
+  "last_ok": 1790988261,
+  "name": "Harvey",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "harvey"
+ },
  "ashby:hawkeyeinnovations": {
   "ats": "ashby",
   "extra": {},
@@ -4084,6 +4097,19 @@
   "status": "active",
   "token": "aevexaerospace"
  },
+ "greenhouse:affirm": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1790988250,
+  "last_ok": 1790988259,
+  "name": "Affirm",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "affirm"
+ },
  "greenhouse:aidoc": {
   "ats": "greenhouse",
   "extra": {},
@@ -4283,6 +4309,19 @@
   "sector": "",
   "status": "active",
   "token": "apptronik"
+ },
+ "greenhouse:arcboatcompany": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1790988250,
+  "last_ok": 1790988260,
+  "name": "Arc",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "arcboatcompany"
  },
  "greenhouse:arevonenergyimpltest": {
   "ats": "greenhouse",
@@ -15469,7 +15508,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1790975947,
+  "last_ok": 1790988277,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -15879,7 +15918,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1790975936,
+  "last_ok": 1790988266,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16056,7 +16095,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1790975950,
+  "last_ok": 1790988280,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -18236,7 +18275,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1790975935,
+  "last_ok": 1790988264,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -19402,7 +19441,7 @@
    "host": "wd1",
    "site": "ExternalCareers"
   },
-  "failures": 0,
+  "failures": 1,
   "first_seen": 1784354642,
   "last_ok": 1790975947,
   "name": "Dow",
@@ -19577,7 +19616,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1790975938,
+  "last_ok": 1790988266,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -19615,6 +19654,22 @@
   "sector": "",
   "status": "active",
   "token": "edwards"
+ },
+ "workday:elevancehealth:ELV-ET": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "ELV-ET"
+  },
+  "failures": 0,
+  "first_seen": 1790988250,
+  "last_ok": 1790988260,
+  "name": "Elevance Health",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "elevancehealth"
  },
  "workday:elkay:Elkay_External": {
   "ats": "workday",
@@ -20600,7 +20655,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1790975943,
+  "last_ok": 1790988271,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -21096,6 +21151,22 @@
   "sector": "",
   "status": "active",
   "token": "hkex"
+ },
+ "workday:hl:Campus": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "Campus"
+  },
+  "failures": 0,
+  "first_seen": 1790988250,
+  "last_ok": 1790988260,
+  "name": "Houlihan Lokey",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "hl"
  },
  "workday:hmhw:hmh_careers": {
   "ats": "workday",
@@ -22942,7 +23013,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1790975938,
+  "last_ok": 1790988267,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -25552,7 +25623,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1790975943,
+  "last_ok": 1790988272,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
@@ -25795,6 +25866,22 @@
   "status": "active",
   "token": "soti"
  },
+ "workday:spartannash:SpartanNash_Careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "SpartanNash_Careers"
+  },
+  "failures": 0,
+  "first_seen": 1790988250,
+  "last_ok": 1790988261,
+  "name": "SpartanNash",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "spartannash"
+ },
  "workday:spe:SonyPicturesEntertainment": {
   "ats": "workday",
   "extra": {
@@ -25918,6 +26005,22 @@
   "sector": "",
   "status": "active",
   "token": "statestreet"
+ },
+ "workday:sterlingmets:Mets": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "Mets"
+  },
+  "failures": 0,
+  "first_seen": 1790988250,
+  "last_ok": 1790988260,
+  "name": "New York Mets",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "sterlingmets"
  },
  "workday:stryker:StrykerCareers": {
   "ats": "workday",
