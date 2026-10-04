@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-10-04 03:02 UTC** · companies polled directly: **2228** (registry 2597) · jobs tracked: **70690** · new this run: **16** · alerts this run: **9**_
+_Last run: **2026-10-04 05:55 UTC** · companies polled directly: **2228** (registry 2597) · jobs tracked: **70690** · new this run: **16** · alerts this run: **9**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -52,8 +52,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 84 ⭐ | 15d | TikTok | [Machine Learning Engineer Graduate - E-Commerce Recommendation Video](https://lifeattiktok.com/search/7686999927260105013) | San Jose, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 84 ⭐ | 19d | Apple | [Hardware Systems Engineer - Board Design](https://jobs.apple.com/en-us/details/200683615) | Cupertino, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 84 ⭐ | 25d | Amazon Web Services (AWS) | [SDE, MLA hardware/software co-design, Annapurna Labs Machine Learning ](https://jobright.ai/jobs/info/6a99313e8974952dfc949c40?utm_campaign=Software%20Engineering&utm_source=1103) | Austin, TX, United States | big_tech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 83 ⭐ | 7d | Neuralink | [Software Engineer, BCI Applications](https://jobright.ai/jobs/info/6a0f453b619335383fb2a762?utm_campaign=Software%20Engineering&utm_source=1103) | South San Francisco, CA | healthtech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 83 ⭐ | 7d | Neuralink | [Software Engineer, BCI Applications](https://jobright.ai/jobs/info/6a0f44fd80bf0430c76322b7?utm_campaign=Software%20Engineering&utm_source=1103) | San Francisco, CA | healthtech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
+| 83 ⭐ | 7d | Neuralink | [Software Engineer, BCI Applications](https://jobright.ai/jobs/info/6a0f453b619335383fb2a762?utm_campaign=Software%20Engineering&utm_source=1103) | South San Francisco, CA | healthtech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 83 ⭐ | 8d | Quora | [Software Engineer New Grad, Machine Learning Platform - Quora (Remote)](https://jobs.ashbyhq.com/quora/cf34f80e-fe5c-454d-bc9a-4c59993ffda0) | Remote - Multiple Locations | other | not classified as startup | likely | [posting](https://jobs.ashbyhq.com/quora/cf34f80e-fe5c-454d-bc9a-4c59993ffda0) |
 | 83 ⭐ | 11d | Microsoft | [Software Engineer - Cleared](https://apply.careers.microsoft.com/careers/job/1970393556982911) | Reston, VA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 83 ⭐ | 12d | Microsoft | [Software Engineer - CTJ - TS (Cleared)](https://jobright.ai/jobs/info/6ab3199678c69ff506c4258b?utm_campaign=Software%20Engineering&utm_source=1103) | Reston, VA, United States | big_tech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
