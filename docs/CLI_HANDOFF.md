@@ -1,5 +1,41 @@
 # CLI handoff notes
 
+## Local change (2026-10-05; not published)
+
+- **Ranking v15 / DECISION #223:** one source-linked company-reputation band
+  replaces stacked marquee, goal, scale/pace, culture-fit, and conference
+  points. Google no longer receives an automatic 100. Healthcare is +6 and
+  fintech/financial-services -5 raw utility; company and team quality remain
+  separate from those preferences. The researched employer bands and source
+  links live in `profile.yaml`.
+- **Team evidence:** compact responsibility excerpts in
+  `posting.ranking_evidence` survive crawl, rebuild, enrichment, and Studio
+  projection. The existing posting eligibility analysis still runs. Old rows
+  without evidence are neutral until a normal exact-URL sighting/fetch adds it;
+  no bulk scraping or full-description persistence was introduced.
+- **Inflation safeguards:** title/team evidence caps at +10, reputation at +16,
+  positive personal signals at +5, and mission at +6. Pay uses its lower bound.
+  Same-title team requisitions retain distinct evidence; repeated diversity
+  passes do not repeatedly subtract sibling deductions. Best Match already
+  defaults on in production; explicit Newest selections remain respected.
+- **Publication:** implemented locally on `devin/company-team-ranking` in
+  `/tmp/fable-ranking-20261005`, updated to production `1cd31e115` before
+  handoff (only automation state advanced). The original
+  workspace's unrelated uncommitted changes are untouched. No production push,
+  deployment, generated-state write, or external tracker operation is authorized
+  by this change. After publication is explicitly approved, let the regular
+  crawl rebuild state under v15 and verify `score-health`. The manual `rescore`
+  command can also archive terminal Notion pages; do not use it as a read-only
+  preview. No new secret or service is required.
+- **Validation:** full Python suite 634 passed / 3 skipped; compileall, scoped
+  Ruff, frontend typecheck, Vitest, ESLint, and static build pass. A read-only
+  71,457-record projection using production's compact serializer measured
+  95,091,961 bytes against the unchanged 99,614,720-byte guard (4,522,759 bytes
+  headroom), with no generated-state writes. The score drawer was checked with
+  mocked jobs at desktop/mobile sizes; this is not a deployed API/end-to-end
+  check. Static-file smoke testing has the existing no-backend CORS/resource
+  errors; score rendering and the changed explanations were verified separately.
+
 ## Current change (2026-09-29)
 
 - **Radar crawl capacity recovery:** scheduled `radar` attempts failed after

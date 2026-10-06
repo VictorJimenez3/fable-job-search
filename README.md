@@ -108,6 +108,38 @@ stage is based only on cited company research; missing or ambiguous evidence is
 shown as unavailable and contributes zero. A role with multiple captured
 locations keeps every location visible in its detail drawer.
 
+### Company and team ranking
+
+The new-grad board uses rules **v15**: one engineering-reputation prior, then
+posting-specific work evidence. Company size is not prestige. The reviewed
+bands in `profile.yaml` recognize specialist employers such as Databricks,
+Figma, Datadog, and Stripe alongside big tech. The bands are transparent ranking
+policy, not a universal league table; their research links are saved alongside
+them. Cited company research can fill gaps, while missing evidence is neutral.
+Company reputation contributes at most **16 raw utility points**, without
+stacking marquee, favorite, culture-fit, size, or conference bonuses.
+
+Actual team responsibilities can add up to eight utility points for technical
+depth, production ownership, and mentorship; title alignment and team evidence
+share a ten-point cap. Company marketing, qualification wish lists, benefits,
+and negated responsibilities are not work evidence. Compact responsibility
+excerpts survive rescoring; old postings without excerpts remain unverified
+until a fresh exact-URL sighting or posting fetch supplies them. Distinct team
+requisitions keep their own scores even when their titles match.
+
+Healthcare receives a **+6** mission preference and fintech/financial-services
+work a **-5** preference, separately from engineering reputation. A documented
+healthcare team inside a general tech employer can receive the healthcare
+preference. Other sector preferences are smaller; positive learned feedback is
+capped at five points and cannot relearn a disliked sector as a sector bonus.
+Published pay uses the lower bound, not the advertised maximum; unsupported
+currencies and upper-bound-only claims do not earn guessed pay points.
+These are utility points before the fixed 0–100 calibration, not percentages or
+predicted offer quality. Google and NVIDIA remain goal labels, not score
+exceptions. Eligibility gates and the separate neutral internship rubric stay
+unchanged. Best Match remains the default; an explicitly saved Newest sort is
+preserved. The Fit drawer explains the evidence and every adjustment.
+
 The ChemE internship board is intentionally separate from this new-grad
 AI/SWE/DS board. It reads the `claude/cheme-intern-radar` branch and keeps its
 own generated state and GitHub board labels, while both profiles use the one

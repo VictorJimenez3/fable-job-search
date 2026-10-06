@@ -109,6 +109,11 @@ class Job:
     def to_record(self) -> dict:
         d = asdict(self)
         d["id"] = self.id
+        if self.description and self.profile != "internship":
+            from .score import posting_rank_evidence
+            evidence = posting_rank_evidence(self.description)
+            if evidence:
+                d["posting"]["ranking_evidence"] = evidence
         d["description"] = ""  # never persist descriptions; keeps state small
         if not d["posting"]:
             del d["posting"]   # only persist the key when analysis exists

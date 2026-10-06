@@ -3502,7 +3502,7 @@ function scoreDimensionWhy(j, name, value) {
   if (name === "role_fit") {
     if (j.profile === "internship") return positive ? "All target technical internship families start equally; no personal role preference is used." : "No flat technical-internship baseline recorded.";
     if (/^pm$/i.test(roleBucket)) return positive ? "PM-family lane: base role weight is 0; shown points come from extra wording signals." : "PM-family research lane; its configured role weight stays at 0.";
-    const wording = reasons.filter(reason => /wording$|technical leadership program/.test(reason))
+    const wording = reasons.filter(reason => /wording|technical leadership program|^team /.test(reason))
       .map(scoreReasonWithoutPoints).slice(0, 2);
     if (roleBucket && wording.length) return `Matched ${scorePrettyName(roleBucket)} work; ${wording.join(" and ")}.`;
     if (roleBucket && positive) return `Matched ${scorePrettyName(roleBucket)} target work.`;
@@ -3525,9 +3525,11 @@ function scoreDimensionWhy(j, name, value) {
   if (name === "mission") {
     const sector = reasons.find(reason => /^sector:/.test(reason));
     const program = reasons.some(reason => reason.startsWith("target healthcare program company"));
-    const sectorName = sector ? scorePrettyName(sector.replace(/^sector:/, "").replace(/\s+\+?\d+.*$/, "")) : "";
-    if (sectorName && program) return `${sectorName} priority plus a target program signal.`;
-    if (sectorName) return `${sectorName} is a priority sector; points taper across roles.`;
+    const sectorName = sector ? scorePrettyName(sector.replace(/^sector:/, "").replace(/\s+[+-]?\d+.*$/, "")) : "";
+    const scope = sector?.includes("posting/team evidence") ? "this team's work" : "the employer's sector";
+    if (sectorName && points < 0) return `${sectorName} is less preferred for you; a bounded deduction based on ${scope}, not a judgment of engineering prestige.`;
+    if (sectorName && program) return `${sectorName} and program preference share one capped mission bonus.`;
+    if (sectorName) return `${sectorName} adds a bounded personal preference for ${scope}; it does not establish company or team quality.`;
     if (program) return "Target healthcare program company matched.";
     return "No priority-sector or program-mission signal.";
   }
@@ -3543,6 +3545,8 @@ function scoreDimensionWhy(j, name, value) {
       if (reasons.some(reason => reason.startsWith("cited employer/work evidence"))) return "Cited employer/work evidence added a bounded signal; unknown employers are not penalized.";
       return "No cited employer/work signal was available; prestige is shown separately.";
     }
+    if (reasons.some(reason => /^(company reputation:|cited company reputation)/.test(reason))) return "One sourced engineering-reputation band; size, favorites, pay, and company-wide culture do not stack here. Team quality is assessed separately from posting evidence.";
+    if (reasons.some(reason => reason.startsWith("company reputation unavailable"))) return "Reputation is unverified, not bad. No points are guessed from company size or missing research.";
     const signals = [];
     if (reasons.some(reason => reason.startsWith("company tier:"))) signals.push("marquee tier");
     if (reasons.some(reason => reason.startsWith("explicit goal company"))) signals.push("goal-company preference");
@@ -3556,8 +3560,10 @@ function scoreDimensionWhy(j, name, value) {
       const pay = reasons.find(reason => reason.startsWith("compensation ceiling"));
       return pay ? "Published pay is compared on a common annualized scale; hourly rates are normalized." : "No published pay was available, so this dimension contributes zero rather than guessing.";
     }
-    const pay = reasons.find(reason => reason.startsWith("compensation ceiling"));
-    return pay ? "Published high-end pay cleared the bonus threshold." : "No pay bonus: salary is missing or below the threshold.";
+    const pay = reasons.find(reason => reason.startsWith("compensation lower bound"));
+    if (pay) return "The published pay lower bound cleared the threshold; this is conservative evidence, not an expected offer. Hourly rates are annualized.";
+    if (reasons.some(reason => reason.startsWith("compensation ceiling"))) return "Legacy high-end pay signal; current ranking uses the published lower bound.";
+    return "No pay bonus: a usable lower bound is missing, unsupported, or below the threshold.";
   }
   if (name === "work_quality") {
     const work = reasons.filter(reason => /^(?:mentorship|hands-on|production|technical depth|return-offer)/.test(reason));
@@ -3612,7 +3618,7 @@ function scoreFinalWhy(j) {
     return target ? `Configured preference override set this role to ${target}.` : "Configured preference override set the final score for this company and role type.";
   }
   if (reasons.some(reason => reason.startsWith("technical program display floor"))) return "Technical-program floor lifted the calibrated score to the alert threshold.";
-  if (reasons.some(reason => reason.startsWith("duplicate role variant:"))) return "Duplicate posting: same company and title, so location/requisition variants stay tied.";
+  if (reasons.some(reason => reason.startsWith("duplicate role variant:"))) return "Verified posting variants share a URL or posting-family identity; distinct team requisitions retain their own scores.";
   if (reasons.some(reason => reason.startsWith("similar role sibling:"))) return "Similar-role adjustment separated this posting from a stronger sibling with a related title.";
   if (reasons.some(reason => reason.startsWith("company concentration:"))) return "Company-diversity adjustment nudged this role down after comparing several roles from the same employer.";
   return "";

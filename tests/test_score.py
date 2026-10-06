@@ -278,14 +278,14 @@ def test_standalone_pm_does_not_capture_maintenance_or_shift_titles():
         assert role_bucket(title) != "pm", title
 
 
-def test_google_new_grad_favorite_is_100_but_pm_stays_low():
+def test_google_favorite_is_a_label_not_a_perfect_score():
     technical = mk("Software Engineer, New Grad", company="Google")
     score(technical, FB, NOW)
-    assert technical.score == 100
-    assert technical.evidence_score < technical.score
+    assert 70 <= technical.score < 90
+    assert technical.evidence_score == technical.score
     assert technical.eligibility == "eligible"
     assert technical.priority_tier == "goal"
-    assert any("Google new-grad -> 100" in reason for reason in technical.score_reasons)
+    assert any("label (no score bonus)" in reason for reason in technical.score_reasons)
 
     pm = mk("Product Manager, New Grad", company="Google", source="simplify")
     score(pm, FB, NOW)
@@ -293,7 +293,7 @@ def test_google_new_grad_favorite_is_100_but_pm_stays_low():
     assert any("role:pm +0" in reason for reason in pm.score_reasons)
 
 
-def test_google_override_survives_company_concentration():
+def test_google_roles_keep_team_level_spread_and_diversity_adjustments():
     jobs = [
         mk("Deep Learning Engineer, New Grad", company="Google"),
         mk("Machine Learning Engineer, New Grad", company="Google"),
@@ -302,8 +302,10 @@ def test_google_override_survives_company_concentration():
     for job in jobs:
         score(job, FB, NOW)
     apply_company_concentration(jobs)
-    assert all(job.score == 100 for job in jobs)
-    assert all(job.ranking_adjustment == 0 for job in jobs)
+    assert jobs[0].score > jobs[1].score > jobs[2].score
+    assert all(job.score < 90 for job in jobs)
+    assert jobs[0].ranking_adjustment == 0
+    assert jobs[2].ranking_adjustment < 0
 
 
 def test_gates_ai_customer_roles_are_dashboard_only():
@@ -410,7 +412,8 @@ def test_score_prefers_healthtech_ai_over_generic_swe():
     generic.posted_at = NOW - 6 * 86400
     score(generic, FB, NOW)
 
-    assert ai_health.score >= generic.score + 15
+    assert ai_health.score >= generic.score + 8
+    assert ai_health.score_dimensions["mission"] <= 6
     assert any("healthtech" in r for r in ai_health.score_reasons)
 
 
@@ -440,13 +443,13 @@ def test_v8_role_wording_separates_same_goal_company(monkeypatch):
     score(frontier, fb, NOW)
     score(hardware, fb, NOW)
     assert frontier.score > hardware.score
-    assert frontier.score >= 95
-    assert 90 <= hardware.score < frontier.score
+    assert 85 <= frontier.score < 95
+    assert 75 <= hardware.score < frontier.score
     assert frontier.score_raw > hardware.score_raw
     assert frontier.score_dimensions["compensation"] > hardware.score_dimensions["compensation"]
 
 
-def test_objective_pace_measure_is_scored_only_when_cited(monkeypatch):
+def test_company_wide_pace_is_context_not_a_team_quality_bonus(monkeypatch):
     from radar import score as score_module
     monkeypatch.setattr(score_module, "_COMPANY_RESEARCH_CACHE", {
         "fastco": {
@@ -460,7 +463,7 @@ def test_objective_pace_measure_is_scored_only_when_cited(monkeypatch):
     })
     fast_points, fast_reasons = company_momentum_signal("FastCo")
     unknown_points, unknown_reasons = company_momentum_signal("UnknownCo")
-    assert fast_points >= 3 and any("pace measure 5/5" in r for r in fast_reasons)
+    assert fast_points == 0 and not any("pace measure" in r for r in fast_reasons)
     assert unknown_points == 0 and not any("pace measure" in r for r in unknown_reasons)
 
 
@@ -472,7 +475,7 @@ def test_v8_superpower_can_beat_sector_without_named_exception():
     score(high_pay, FB, NOW)
     assert health.score < 90
     assert high_pay.score > health.score
-    assert any("compensation ceiling" in reason for reason in high_pay.score_reasons)
+    assert any("compensation lower bound" in reason for reason in high_pay.score_reasons)
 
 
 def test_v8_persists_auditable_dimensions_and_raw_utility():
@@ -676,3 +679,234 @@ def test_score_health_requires_current_version_and_reasons(tmp_path, monkeypatch
     })
     assert main.score_health_cmd() == 1
     assert "1 record(s)" in capsys.readouterr().out
+
+
+def test_specialist_employers_receive_reputation_without_research_or_size(monkeypatch):
+    from radar import score as scoring
+    monkeypatch.setattr(scoring, "_COMPANY_RESEARCH_CACHE", {})
+    for company in ["Databricks", "Figma", "Datadog", "Stripe", "Jane Street"]:
+        points, reasons = company_momentum_signal(company)
+        assert 12 <= points <= 16, company
+        assert any("reputation" in reason for reason in reasons)
+    assert company_momentum_signal("Unresearched Startup")[0] == 0
+    assert company_momentum_signal("Figma LLC")[0] == company_momentum_signal("Figma")[0]
+    assert company_momentum_signal("Figma Staffing Partners")[0] == 0
+
+
+def test_company_size_pace_and_generic_research_do_not_manufacture_reputation(monkeypatch):
+    from radar import score as scoring
+    monkeypatch.setattr(scoring, "_COMPANY_RESEARCH_CACHE", {
+        "acme": {
+            "size_stage": {"value": "Global public company", "confidence": "high", "source_ids": ["a"]},
+            "technical_work": {"value": "Frontier AI research", "confidence": "high", "source_ids": ["a"]},
+            "pace_score": {"value": "5", "confidence": "high", "source_ids": ["a"]},
+            "sources": [{"id": "a", "url": "https://example.com/company"}],
+        },
+    })
+    assert company_momentum_signal("Acme")[0] == 0
+
+
+def test_reputation_fallback_requires_resolvable_sources_and_never_stacks(monkeypatch):
+    from radar import score as scoring
+    record = {"ai_ds_prestige_tier": {
+        "value": "Top-tier technical employer", "confidence": "high", "source_ids": ["a"]}}
+    monkeypatch.setattr(scoring, "_COMPANY_RESEARCH_CACHE", {"acme": record, "figma": record})
+    assert company_momentum_signal("Acme")[0] == 0
+    figma_before = company_momentum_signal("Figma")[0]
+    record["sources"] = [{"id": "a", "url": "https://example.com/engineering"}]
+    assert 0 < company_momentum_signal("Acme")[0] <= 12
+    assert company_momentum_signal("Figma")[0] == figma_before
+
+
+def test_sector_preference_is_bounded_separate_from_reputation():
+    jobs = [mk("Software Engineer, New Grad", company="Unknown", sector=sector)
+            for sector in ["healthtech", "other", "fintech"]]
+    for job in jobs:
+        score(job, FB, NOW)
+    health, neutral, finance = jobs
+    assert health.score > neutral.score > finance.score
+    assert 0 < health.score_dimensions["mission"] <= 6
+    assert -6 <= finance.score_dimensions["mission"] < 0
+    assert health.score_dimensions["company_quality"] == finance.score_dimensions["company_quality"] == 0
+    assert any("sector:fintech -" in reason for reason in finance.score_reasons)
+
+
+def test_fintech_does_not_hide_behind_big_tech_or_legal_names():
+    assert infer("Acme Corp", {"acme corp": "healthtech"}) == "healthtech"
+    for company in ["Stripe", "Stripe, Inc.", "Block", "Square", "PayPal", "Ramp", "Plaid", "Jane Street"]:
+        assert infer(company, {}) == "fintech", company
+    job = mk("Software Engineer, New Grad", company="Stripe", sector="big_tech")
+    score(job, FB, NOW)
+    assert job.sector == "fintech"
+    assert job.score_dimensions["mission"] < 0
+    assert job.score_dimensions["company_quality"] >= 12
+
+
+def test_marketing_and_benefits_do_not_add_role_or_health_points():
+    plain = mk("Software Engineer, New Grad", company="Unknown")
+    marketing = mk("Software Engineer, New Grad", company="Unknown", desc=(
+        "About us: We use deep learning, artificial intelligence, data science and cloud infrastructure. "
+        "We serve healthcare customers. Benefits include medical, dental and vision insurance."))
+    score(plain, FB, NOW)
+    score(marketing, FB, NOW)
+    assert marketing.score_dimensions == plain.score_dimensions
+    assert marketing.score == plain.score
+
+
+def test_team_responsibilities_and_mission_survive_serialization():
+    from radar import posting
+    text = ("Responsibilities:\nYou will build distributed systems for clinical patient monitoring.\n"
+            "You will own production services end-to-end.\n"
+            "You will receive mentorship through paired programming and code reviews.\n"
+            "Benefits include medical and dental insurance.")
+    strong = mk("Software Engineer, New Grad", company="Microsoft", sector="big_tech", desc=text)
+    plain = mk("Software Engineer, New Grad", company="Microsoft", sector="big_tech")
+    score(strong, FB, NOW)
+    score(plain, FB, NOW)
+    assert strong.score_dimensions["role_fit"] > plain.score_dimensions["role_fit"]
+    assert strong.score_dimensions["mission"] > plain.score_dimensions["mission"]
+    assert strong.score < 90
+    strong.posting = posting.analyze(text)
+    rec = strong.to_record()
+    assert rec["description"] == ""
+    assert rec["posting"].get("ranking_evidence")
+    restored = mk(strong.title, company=strong.company, sector=strong.sector, posting=rec["posting"])
+    score(restored, FB, NOW)
+    assert restored.score_dimensions == strong.score_dimensions
+    assert restored.score == strong.score
+
+
+def test_duplicate_titles_cannot_transfer_team_or_pay_evidence():
+    strong = mk("Software Engineer, New Grad", company="Figma", salary="$200k", desc=(
+        "You will build distributed systems. You will own production services end-to-end."))
+    weak = mk("Software Engineer, New Grad", company="Figma")
+    strong.url, weak.url = "https://example.com/strong", "https://example.com/weak"
+    score(strong, FB, NOW)
+    score(weak, FB, NOW)
+    expected = weak.score
+    apply_company_concentration([strong, weak])
+    assert strong.score > weak.score
+    assert weak.score == expected
+    records = {"a": strong.to_record(), "b": weak.to_record()}
+    apply_company_concentration(records)
+    assert records["b"]["score"] == expected
+
+
+def test_compensation_uses_lower_bound_and_ignores_non_salary_numbers():
+    from radar.score import compensation_signal
+    assert compensation_signal("$120,000 - $300,000")[0] == compensation_signal("$120,000")[0]
+    assert compensation_signal("up to $300,000")[0] == 0
+    assert compensation_signal("$60 - $150/hr")[0] == compensation_signal("$124,800/year")[0]
+    assert compensation_signal("INR 2,000,000 - 3,000,000")[0] == 0
+    assert compensation_signal("$100k base + $50k bonus + $500k equity")[0] == 0
+    assert compensation_signal("$190k-$220k + 401(k)")[0] > 0
+
+
+def test_positive_history_and_company_signals_have_shared_caps():
+    job = mk("Machine Learning Engineer, New Grad", company="NVIDIA")
+    fb = {"company_boosts": {"nvidia": 80}, "token_boosts": {"machine": 50}, "negative_companies": []}
+    score(job, fb, NOW)
+    assert job.score_dimensions["company_quality"] <= 16
+    assert job.score_dimensions["personal_signal"] <= 5
+    assert job.score < 90
+    assert not any("explicit goal company +" in reason for reason in job.score_reasons)
+
+
+def test_rebuild_retains_team_evidence_and_corrects_stale_sector(tmp_path, monkeypatch):
+    from radar import culture, posting, state
+    monkeypatch.setattr(state, "STATE_DIR", tmp_path)
+    monkeypatch.setattr(culture, "write_outputs", lambda: None)
+    text = ("You will build distributed systems for payment processing. "
+            "You will own production services end-to-end. "
+            "You will receive mentorship through code reviews. "
+            "This is a new graduate role in New York with no experience required.")
+    job = mk("Software Engineer, New Grad", company="Stripe", sector="big_tech", desc=text)
+    score(job, FB, NOW)
+    job.posting = posting.analyze(text)
+    records = {"a": job.to_record()}
+    records["a"]["sector"] = "big_tech"
+    main._rebuild_scores(records, FB, NOW)
+    assert records["a"]["sector"] == "fintech"
+    assert records["a"]["score_dimensions"]["role_fit"] == job.score_dimensions["role_fit"]
+    assert records["a"]["score_dimensions"]["mission"] < 0
+
+
+def test_short_role_evidence_survives_roundtrip_without_bypassing_posting_analysis():
+    job = mk("Software Engineer, New Grad", company="Figma", desc=(
+        "Responsibilities:\nBuild distributed systems.\nReceive mentorship through paired programming."))
+    score(job, FB, NOW)
+    rec = job.to_record()
+    assert rec.get("posting", {}).get("ranking_evidence")
+    restored = mk(job.title, company=job.company, posting=rec["posting"])
+    score(restored, FB, NOW)
+    assert restored.score_dimensions == job.score_dimensions
+
+
+def test_negated_or_required_team_keywords_do_not_score_as_responsibilities():
+    from radar.score import wording_signal
+    baseline = wording_signal("Software Engineer, New Grad")[0]
+    for text in ["You will not build distributed systems.",
+                 "You won't own production systems.",
+                 "Your role does not involve machine learning.",
+                 "Required experience with distributed systems and healthcare.",
+                 "Qualifications:\nExperience building clinical data pipelines."]:
+        assert wording_signal("Software Engineer, New Grad", text)[0] == baseline, text
+
+
+def test_explicit_fintech_dislike_is_not_learned_back_as_a_sector_bonus():
+    profile = build_preference_profile([
+        {"company": "Other Finance", "title": "Software Engineer", "sector": "fintech", "stage": "saved"}
+        for _ in range(20)
+    ])
+    job = mk("Software Engineer, New Grad", company="Unknown", sector="fintech")
+    points, reasons = preference_signal(job, profile)
+    assert not any("learned sector preference: fintech" in reason for reason in reasons)
+    assert points <= 3
+
+
+def test_same_family_preserves_conflicting_team_evidence():
+    strong = mk("Software Engineer, New Grad", company="Figma", salary="$220k")
+    weak = mk("Software Engineer, New Grad", company="Figma")
+    strong.posting_family_id = weak.posting_family_id = "old-family"
+    score(strong, FB, NOW)
+    score(weak, FB, NOW)
+    expected = weak.score
+    apply_company_concentration([strong, weak])
+    assert weak.score == expected
+
+
+def test_stored_sibling_diversity_is_idempotent():
+    jobs = [mk(title, company="Figma", salary=salary) for title, salary in [
+        ("Software Engineer, Distributed Systems Inference, New Grad", "$240k"),
+        ("Software Engineer, Distributed Systems Inference Platform, New Grad", "$170k"),
+        ("Software Engineer, New Grad", ""),
+    ]]
+    for job in jobs:
+        score(job, FB, NOW)
+    records = {str(i): job.to_record() for i, job in enumerate(jobs)}
+    apply_company_concentration(records)
+    scores = [rec["score"] for rec in records.values()]
+    apply_company_concentration(records)
+    assert [rec["score"] for rec in records.values()] == scores
+
+
+def test_exact_url_sighting_backfills_team_evidence_without_overwriting_gates():
+    job = mk("Software Engineer, New Grad", desc="You will build distributed systems.")
+    target = {"url": job.url, "posting": {"years_min": 3, "sponsorship": "no"}}
+    main._merge_record_sighting(target, job.to_record())
+    assert target["posting"]["years_min"] == 3
+    assert target["posting"]["ranking_evidence"]["technical_depth"]
+    unrelated = {"url": "https://example.com/another-role"}
+    main._merge_record_sighting(unrelated, job.to_record())
+    assert not unrelated.get("posting", {}).get("ranking_evidence")
+
+
+def test_optional_reputation_research_fails_closed_on_malformed_sources(monkeypatch):
+    from radar import score as scoring
+    for sources, ids in [(None, ["a"]), ("a", ["a"]), ([{"id": "a", "url": "https://example.com"}], "a"),
+                         ([{"id": ["a"], "url": "https://example.com"}], ["a"])]:
+        monkeypatch.setattr(scoring, "_COMPANY_RESEARCH_CACHE", {"acme": {
+            "sources": sources,
+            "ai_ds_prestige_tier": {"value": "Top-tier", "confidence": "high", "source_ids": ids},
+        }})
+        assert company_momentum_signal("Acme")[0] == 0

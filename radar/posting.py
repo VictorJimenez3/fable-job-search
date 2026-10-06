@@ -118,7 +118,11 @@ def analyze(text: str) -> dict:
     when the text is too short to trust (SPA shells, error pages)."""
     if len(text or "") < 200:
         return {}
+    from .score import posting_rank_evidence
     out: dict = {}
+    evidence = posting_rank_evidence(text)
+    if evidence:
+        out["ranking_evidence"] = evidence
     m = SPONSOR_NO_RE.search(text)
     if m:
         out["sponsorship"] = "no"

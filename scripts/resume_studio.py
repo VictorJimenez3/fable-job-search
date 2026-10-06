@@ -1116,10 +1116,12 @@ def current_scored_jobs(root: Optional[Path] = None) -> Dict[str, Dict[str, Any]
             locations=rec.get("locations", []), salary=rec.get("salary", ""),
             remote=bool(rec.get("remote")), posted_at=rec.get("posted_at"),
             ats=rec.get("ats", ""), sector=rec.get("sector", ""),
+            posting=rec.get("posting") or {},
         )
         keep, alert_eligible, gate_reasons = gates(job)
         score(job, feedback, now)
         rec.update({
+            "sector": job.sector,
             "score": job.score,
             "score_raw": job.score_raw,
             "score_calibrated": job.score_calibrated,
