@@ -18,13 +18,15 @@
   Same-title team requisitions retain distinct evidence; repeated diversity
   passes do not repeatedly subtract sibling deductions. Best Match already
   defaults on in production; explicit Newest selections remain respected.
-- **Publication:** Victor explicitly authorized this production release after
-  local review. `devin/company-team-ranking-release` starts from production
-  `c4774693d` and carries the validated implementation plus a separately
-  generated v15 score snapshot. Publish through the existing tests-gated
-  Vercel workflow to `job-radar-newgrad.vercel.app`; confirm the live build marker
-  and stored scoring version before claiming completion. The original
-  workspace's unrelated uncommitted changes remain untouched.
+- **Publication (verified):** Victor authorized the release and dependency
+  update. [PR #5014](https://github.com/VictorJimenez3/fable-job-search/pull/5014)
+  merged as `133851bd06eb22e9504932f82fac98e6145f4835`. Production
+  [tests 37502617681](https://github.com/VictorJimenez3/fable-job-search/actions/runs/37502617681)
+  and [Vercel deployment 37502731407](https://github.com/VictorJimenez3/fable-job-search/actions/runs/37502731407)
+  passed. `https://job-radar-newgrad.vercel.app/` serves that exact build marker;
+  the live browser loads 71,827 jobs, uses v15 for all active roles, and defaults
+  to Best Match. The original workspace's unrelated uncommitted changes remain
+  untouched.
 - **State migration:** the supported `radar.main rescore` command regenerates
   both job shards and dashboard/feed outputs. For this release it runs with
   `NOTION_TOKEN` explicitly empty, so it cannot archive external tracker pages.
@@ -36,14 +38,15 @@
   Vitest to pinned 4.1.11 and compatible brace-expansion/source-map-js patches
   after the online audit exposed high/critical issues in the prior development
   dependency graph. Keep the existing CI audit gate unchanged.
-- **Validation:** full Python suite 634 passed / 3 skipped; compileall, scoped
-  Ruff, frontend typecheck, Vitest, ESLint, and static build pass. A read-only
-  71,457-record projection using production's compact serializer measured
-  95,091,961 bytes against the unchanged 99,614,720-byte guard (4,522,759 bytes
-  headroom), with no generated-state writes. The score drawer was checked with
-  mocked jobs at desktop/mobile sizes; this is not a deployed API/end-to-end
-  check. Static-file smoke testing has the existing no-backend CORS/resource
-  errors; score rendering and the changed explanations were verified separately.
+- **Validation:** full Python suite 634 passed / 3 skipped; compileall, package
+  correctness lint, frontend typecheck, Vitest, ESLint, static build, and online
+  npm audit pass (zero vulnerabilities). The published primary snapshot is
+  95,633,644 bytes against the unchanged 99,614,720-byte guard. Job IDs and
+  lifecycle statuses are unchanged. Desktop/mobile drawer smoke checks passed;
+  live production checks confirmed Whoop's +6 healthcare preference and Two
+  Sigma's separate -5 fintech preference alongside +16 reputation. Anonymous
+  session 401s and the optional missing notification-preferences file remain
+  expected, non-blocking responses; no authenticated tracker writes were tested.
 
 ## Current change (2026-09-29)
 
