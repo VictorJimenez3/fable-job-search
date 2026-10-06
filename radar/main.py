@@ -196,6 +196,11 @@ def _merge_record_sighting(target: dict, sighting: dict) -> bool:
             target[key] = sighting[key]
             changed = True
     target_url = canonical_url(target.get("url"))
+    evidence = (sighting.get("posting") or {}).get("ranking_evidence")
+    if (target_url and target_url == canonical_url(sighting.get("url")) and evidence
+            and not (target.get("posting") or {}).get("ranking_evidence")):
+        target.setdefault("posting", {})["ranking_evidence"] = evidence
+        changed = True
     alternate_urls = target.setdefault("alternate_urls", [])
     for url in [sighting.get("url"), *sighting.get("alternate_urls", [])]:
         if url and canonical_url(url) != target_url:
@@ -1004,9 +1009,10 @@ def enrich() -> int:
                 source=rec["source"], locations=rec.get("locations", []),
                 posted_at=rec.get("posted_at"), salary=rec.get("salary", ""),
                 remote=rec.get("remote", False), ats=rec.get("ats", ""),
-                sector=rec.get("sector", ""))
+                sector=rec.get("sector", ""), posting=rec.get("posting") or {})
         old = rec.get("score", 0)
         score(j, fb, now, preference_profile, score_preferences)
+        rec["sector"] = j.sector
         rec["score_raw"] = j.score_raw
         rec["score_calibrated"] = j.score_calibrated
         rec["evidence_score"] = j.evidence_score
@@ -1280,9 +1286,11 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int,
                   url=rec.get("url", ""), source=rec.get("source", ""),
                   locations=rec.get("locations", []), salary=rec.get("salary", ""),
                   remote=bool(rec.get("remote")), posted_at=rec.get("posted_at"),
-                  ats=rec.get("ats", ""), sector=rec.get("sector", ""))
+                  ats=rec.get("ats", ""), sector=rec.get("sector", ""),
+                  posting=rec.get("posting") or {})
         keep, alert_eligible, gate_reasons = gates(job)
         score(job, fb, now, preference_profile, score_preferences)
+        rec["sector"] = job.sector
         job.score_reasons += gate_reasons
         rec["score"] = job.score
         rec["score_raw"] = job.score_raw

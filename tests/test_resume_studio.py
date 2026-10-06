@@ -3782,6 +3782,25 @@ def test_current_scored_jobs_uses_persisted_projection_when_current(tmp_path, mo
     assert jobs["job-1"]["score"] == 91
 
 
+def test_studio_stale_projection_retains_team_evidence(tmp_path):
+    from radar.models import Job
+    from radar.score import RULES_VERSION, score
+    job = Job(company="Stripe", title="Software Engineer, New Grad", source="simplify",
+              url="https://example.com/role", sector="big_tech", description=(
+                  "You will build distributed systems for payment processing. "
+                  "You will own production services end-to-end."))
+    score(job, {}, 1)
+    record = job.to_record()
+    record.update(score_version=RULES_VERSION - 1, rules_v=RULES_VERSION - 1, sector="big_tech")
+    state = tmp_path / "state"
+    state.mkdir()
+    (state / "jobs.json").write_text(json.dumps({"role": record}))
+    projected = rs.current_scored_jobs(tmp_path)["role"]
+    assert projected["score_dimensions"]["role_fit"] == job.score_dimensions["role_fit"]
+    assert projected["sector"] == "fintech"
+    assert projected["score"] == job.score
+
+
 def test_fetch_job_description_uses_spa_reader(monkeypatch):
     from radar import quality
 

@@ -201,6 +201,21 @@ def test_scrape_pass_revisits_pre_research_priority_job_once(monkeypatch):
     assert fetched == []
 
 
+def test_scoring_team_evidence_does_not_skip_inline_eligibility_analysis(monkeypatch):
+    from radar.score import score
+    monkeypatch.setattr("radar.company_research.load", lambda: {})
+    monkeypatch.setattr("radar.company_research.save", lambda records: None)
+    job = _job(description=(
+        "You will build distributed systems and own production services. "
+        "Requires 3+ years of experience. No sponsorship is available." + PAD))
+    score(job, {"company_boosts": {}, "token_boosts": {}, "negative_companies": []}, NOW)
+    stats = posting.scrape_pass([job], {}, {}, NOW, budget=0)
+    assert stats["inline"] == 1
+    assert job.posting["years_min"] == 3
+    assert job.posting["ranking_evidence"]
+    assert job.alert_ok is False
+
+
 def test_summary_tags():
     assert posting.summary_tags(None) == ""
     assert posting.summary_tags({"sponsorship": "no", "years_min": 2}) == \

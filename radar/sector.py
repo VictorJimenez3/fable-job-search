@@ -1,7 +1,22 @@
 """Sector inference: seed registry first, then lexicon over the company name."""
 from __future__ import annotations
 
+import re
+
 from .models import norm
+
+FINTECH = {
+    "stripe", "block", "square", "paypal", "intuit", "plaid", "ramp", "brex",
+    "affirm", "robinhood", "coinbase", "chime", "sofi", "adyen", "klarna",
+    "wise", "revolut", "marqeta", "braintree", "mastercard", "visa",
+    "jane street", "hudson river trading", "hrt", "two sigma", "citadel",
+    "citadel securities", "optiver", "imc", "imc trading", "jump trading",
+    "capital one", "goldman sachs", "jpmorgan chase", "jpmorgan", "bny",
+}
+
+
+def company_key(company: str) -> str:
+    return re.sub(r"(?:\s+(?:incorporated|inc|llc|ltd|limited|corporation|corp|plc))+$", "", norm(company))
 
 BIG_TECH = {
     "google", "alphabet", "meta", "apple", "amazon", "aws", "microsoft", "netflix",
@@ -43,11 +58,13 @@ _ORDER = ["healthtech", "sports", "video_games", "edtech", "fintech", "ai_lab"]
 
 
 def infer(company: str, seed_sectors: dict[str, str]) -> str:
-    n = norm(company)
+    n = company_key(company)
     if not n:
         return "other"
-    if n in seed_sectors:
-        return seed_sectors[n]
+    if n in FINTECH:
+        return "fintech"
+    if n in seed_sectors or norm(company) in seed_sectors:
+        return seed_sectors[n] if n in seed_sectors else seed_sectors[norm(company)]
     compact = n.replace(" ", "")
     for bt in BIG_TECH:
         if n == bt or n.startswith(bt + " ") or compact == bt:

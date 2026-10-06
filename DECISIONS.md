@@ -3545,3 +3545,66 @@ demand, as does the legacy job-detail API. Open and manual rows stay in the
 primary snapshot. A crawl that loses a push race checkpoints and reconciles
 the history shard alongside new discoveries, preserving their audit records.
 Do not raise the GitHub blob limit to accommodate future growth.
+
+## 223. Rank engineering reputation and evidenced teams without stacked prestige (2026-10-05)
+
+Victor requested conventional company recognition beyond employer size, a
+healthcare preference, a fintech downweight, and less inflated, team-dependent
+scores. Rules v15 replace marquee + goal + culture fit + company momentum with
+one bounded reputation prior. Reviewed policy bands contribute 10/12/16 raw
+utility points; source-grounded research can supply 8/12 for other employers
+only when the referenced source IDs resolve. Unknown is neutral, not low
+quality. Company scale, company-wide pace and technical marketing, SHPE
+attendance, and the composite culture-fit score remain context, not extra
+prestige points. Favorite labels no longer override scores, including Google's
+historical automatic 100. Internship scoring stays independent.
+
+Research basis: [The Pragmatic Engineer's engineering talent-market analysis](https://blog.pragmaticengineer.com/software-engineering-salaries-in-the-netherlands-and-europe/),
+[Levels.fyi's 2025 compensation report](https://www.levels.fyi/2025/),
+[Figma's LiveGraph engineering account](https://www.figma.com/blog/livegraph-real-time-data-at-scale/),
+[NVIDIA's systems-engineering rotation](https://jobs.nvidia.com/careers/job/893397529283),
+and [Intuitive's multiport engineering teams](https://careers.intuitive.com/en/career-opportunities/engineering/multiport-engineering/).
+These support technical work and talent-market standing, not objective numeric
+prestige ratings; the chosen bands are explicitly our policy. Pay is
+corroboration, not a second employer-pay bonus.
+
+Team responsibility evidence contributes technical depth +3, ownership +3,
+and mentorship +2; title alignment and those signals together cap at +10.
+Short matching responsibility excerpts are retained under
+`posting.ranking_evidence`, without persisting the full job description or
+making an LLM mandatory. Benefits, company boilerplate, qualifications, and
+negated duties cannot substitute for team evidence. Existing roles can gain
+missing excerpts from exact-URL sightings or the normal bounded posting fetch;
+absence stays neutral and does not trigger an unbounded backfill. Crawl,
+rescore, enrichment, and the local Studio projection consume the same evidence.
+Posting experience, education, and sponsorship checks retain their authority.
+
+Healthcare +6 and fintech/financial-services -5 are separate mission
+preferences. A specific team domain takes precedence over a broad employer
+sector; conflicting team domains fall back to the employer sector. Explicit
+fintech aliases are classified before the broad big-tech bucket, including on
+stored-job rebuilds. Mission caps at +6, positive personal signals at +5, and
+learned sector preferences cannot reverse an explicit negative sector weight.
+Salary ranking uses the published lower bound, annualizing hourly/monthly pay
+without guessing currency conversion or upper-bound-only offers. Calibration
+stays fixed, not percentile-based, and eligibility gates remain unchanged.
+
+Same titles are not evidence of the same team: tying variants now requires a
+shared posting URL/family and matching dimension evidence. Repeated diversity
+passes must be idempotent; a stored sibling deduction is applied only once.
+Best Match was already the production default and remains so, while saved
+Newest choices survive. The drawer explains signed preferences, conservative
+pay, and the distinction between company recognition and verified team work.
+
+## 224. Patch test dependencies rather than bypass the production audit gate (2026-10-06)
+
+The ranking release's online npm audit found newly published high/critical
+advisories in the existing frontend development dependency graph. Victor
+explicitly approved the prerequisite dependency update and production release.
+Vitest is pinned to 4.1.11 (released August 18), which supports the existing
+Node 24/Vite 7 setup and removes the vulnerable Tinypool path. Compatible
+brace-expansion and source-map-js patches are locked through npm. The
+source-map-js 1.2.2 security fix was released September 30; it is used despite
+being just under seven days old because it is the available patch for the
+release-blocking advisory. No audit severity threshold, security policy,
+workflow gate, or application runtime dependency was relaxed to publish.

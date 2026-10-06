@@ -16,7 +16,8 @@ candidate:
     Graduating senior targeting full-time new-grad roles in AI/ML engineering,
     software engineering, and data science. Strongest interest in healthcare /
     health tech, big tech, sports, videogames, and education; genuinely open to
-    AI-native companies, edtech, fintech, and startups. Has interned/applied across big tech and
+    AI-native companies, edtech, and startups. Fintech is less preferred, not
+    excluded; strong engineering teams can still be worthwhile. Has interned/applied across big tech and
     financial services (Amazon, NVIDIA, Microsoft, Google, Capital One, BNY,
     Mastercard, Adobe, Pinterest, OpenAI, Commure, IXL). Values working on
     products with real-world impact and modern ML stacks.
@@ -45,27 +46,60 @@ roles:
 
 # Explicit favorites are data, not company-name branches in radar/score.py.
 # PM-family roles are excluded so the friend-facing lane stays low.
-score_overrides:
-  - company: Google
-    when: new_grad
-    score: 100
-    exclude_buckets: [pm]
+score_overrides: []
+
+company_reputation:
+  reviewed_at: "2026-10-05"
+  interpretation: >
+    Broad engineering-career reputation bands, not a universal employer league
+    table or a prediction of team quality. Sources support technical work and
+    talent-market standing; the bands are ranking policy, not published ratings.
+    Compensation is corroboration, not a second company pay bonus.
+  sources:
+    market: https://blog.pragmaticengineer.com/software-engineering-salaries-in-the-netherlands-and-europe/
+    pay_report: https://www.levels.fyi/2025/
+    figma_engineering: https://www.figma.com/blog/livegraph-real-time-data-at-scale/
+    nvidia_engineering: https://jobs.nvidia.com/careers/job/893397529283
+    intuitive_engineering: https://careers.intuitive.com/en/career-opportunities/engineering/multiport-engineering/
+  bands:
+    elite:
+      points: 16
+      sources: [market, pay_report, nvidia_engineering]
+      companies: [Google, Meta, NVIDIA, Netflix, OpenAI, Anthropic, Databricks, Jane Street, Hudson River Trading, Two Sigma]
+    strong:
+      points: 12
+      sources: [market, pay_report, figma_engineering]
+      companies: [Apple, Microsoft, Amazon, Figma, Datadog, Snowflake, Stripe, Plaid, Ramp, Roblox, Airbnb, Uber, ByteDance, Snap, Notion, Waymo, Optiver, IMC, Jump Trading, Citadel, GitHub, GitLab, Elastic, Redis]
+    specialist:
+      points: 10
+      sources: [intuitive_engineering]
+      companies: [Intuitive Surgical]
+  aliases:
+    Alphabet: Google
+    Google DeepMind: Google
+    DeepMind: Google
+    Facebook: Meta
+    Amazon Web Services: Amazon
+    AWS: Amazon
+    HRT: Hudson River Trading
+    Intuitive: Intuitive Surgical
+    Citadel Securities: Citadel
 
 sectors:
-  healthtech: 16
-  sports: 12
-  video_games: 12
-  ai_lab: 11
-  big_tech: 10
-  edtech: 8
-  fintech: 5
+  healthtech: 6
+  sports: 3
+  video_games: 3
+  ai_lab: 0
+  big_tech: 0
+  edtech: 2
+  fintech: -5
   other: 0
 
 bonuses:
   explicit_new_grad_title: 45  # new-grad evidence is the dominant ranking dimension
   leadership_program: 8         # technical graduate/rotational programs get a secondary lift
   target_program_company: 4    # researched healthcare program employers
-  marquee_company: 8            # prestige matters after new-grad + role fit
+  marquee_company: 0            # prestige matters after new-grad + role fit
   fresh_24h: 6
   fresh_72h: 3
   fresh_7d: 1
@@ -78,10 +112,11 @@ bonuses:
 # cited momentum, and role fit determine whether a role reaches 100.
 goal_companies:
   - NVIDIA
+  - Google
 
 scoring_v8:
   eligible_utility: 38
-  goal_company_utility: 10
+  goal_company_utility: 0
 
 # v9 distinguishes an explicit new-grad signal from a plausible first-role
 # posting. The latter remains dashboard-only but gets a modest utility lift.

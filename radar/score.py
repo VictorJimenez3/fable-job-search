@@ -16,7 +16,7 @@ from .models import Job, norm
 
 # Bumped whenever gate rules or the deterministic ranking equation changes;
 # stored jobs are rebuilt from source evidence under the new version.
-RULES_VERSION = 13
+RULES_VERSION = 15
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|head of|sr\.?|vp|chief|"
@@ -490,39 +490,39 @@ def _supported_number(record: dict, name: str, low: float, high: float) -> float
 
 
 def company_momentum_signal(company: str) -> tuple[int, list[str]]:
-    """Score cited company context; pace requires the objective 1–5 measure."""
-    record = _company_record(company)
+    """Return one reputation prior, never stacked with size, pace, or pay."""
+    from .sector import company_key
+    policy = profile().get("company_reputation", {})
+    key = company_key(company)
+    aliases = {company_key(alias): company_key(name)
+               for alias, name in policy.get("aliases", {}).items()}
+    key = aliases.get(key, key)
+    for band, entry in policy.get("bands", {}).items():
+        sources = [sid for sid in entry.get("sources", []) if policy.get("sources", {}).get(sid)]
+        if sources and key in {company_key(name) for name in entry.get("companies", [])}:
+            points = max(0, min(16, int(entry.get("points", 0))))
+            return points, [f"company reputation: {band} +{points} (reviewed {policy.get('reviewed_at')}; "
+                            f"sources: {', '.join(sources)})"]
+    record = _company_record(key)
+    claim = record.get("ai_ds_prestige_tier") or {}
+    sources = record.get("sources")
+    if not isinstance(claim, dict) or not isinstance(sources, list) or not isinstance(claim.get("source_ids"), list):
+        return 0, ["company reputation unavailable +0"]
+    source_ids = {s["id"] for s in sources if isinstance(s, dict) and isinstance(s.get("id"), str)
+                  and str(s.get("url", "")).startswith(("https://", "http://"))}
+    citations = sorted({sid for sid in claim["source_ids"] if isinstance(sid, str)} & source_ids)[:3]
+    if not citations:
+        return 0, ["company reputation unavailable +0"]
     prestige = _supported_field(record, "ai_ds_prestige_tier")
-    scale = _supported_field(record, "size_stage")
-    technical = _supported_field(record, "technical_work")
-    points = 0
-    reasons: list[str] = []
-    if re.search(r"\b(top[- ]tier|tier\s*1|world[- ]class|global(?:ly)?\s+(?:recognized|leading)|industry leader)", prestige, re.I):
-        points += 4
-        reasons.append("cited AI/technical prestige +4")
+    if re.search(r"\b(?:not|unknown|unconfirmed|limited|no evidence)\b", prestige, re.I):
+        return 0, ["company reputation unavailable (neutral; inconclusive evidence)"]
+    if re.search(r"\b(top[- ]tier|tier\s*1|world[- ]class|industry leader)\b", prestige, re.I):
+        points = 12
     elif re.search(r"\b(strong|leading|recognized|highly regarded)\b", prestige, re.I):
-        points += 2
-        reasons.append("cited technical reputation +2")
-    pace_score = _supported_number(record, "pace_score", 1, 5)
-    if pace_score is not None:
-        pace_points = {1: -2, 2: -1, 3: 0, 4: 2, 5: 3}[round(pace_score)]
-        band = {
-            1: "deliberate", 2: "measured", 3: "mixed/moderate",
-            4: "fast", 5: "very fast",
-        }[round(pace_score)]
-        if pace_points:
-            points += pace_points
-        reasons.append(
-            f"cited pace measure {round(pace_score)}/5 ({band}) "
-            f"{'+' if pace_points > 0 else ''}{pace_points}"
-        )
-    if re.search(r"\b(frontier|cutting[- ]edge|large[- ]scale|distributed training|core AI|AI/ML infrastructure|research)\b", technical, re.I):
-        points += 2
-        reasons.append("cited technical intensity +2")
-    if re.search(r"\b(global|public company|fortune\s*\d+|over\s+[\d,]+\s+employees)\b", scale, re.I):
-        points += 1
-        reasons.append("cited operating scale +1")
-    return max(-3, min(points, 8)), reasons
+        points = 8
+    else:
+        return 0, ["company reputation unavailable (neutral; unclassified evidence)"]
+    return points, [f"cited company reputation +{points} (sources: {', '.join(citations)}; team unverified)"]
 
 
 _STARTUP_LATE_RE = re.compile(
@@ -797,7 +797,8 @@ def preference_signal(job: Job, preference_profile: dict | None) -> tuple[int, l
         for name in _PREFERENCE_SECTORS
     )
     sector = norm(job.sector or "")
-    if sector in _PREFERENCE_SECTORS and recognized_total and configured_sector_total:
+    if (sector in _PREFERENCE_SECTORS and recognized_total and configured_sector_total
+            and configured_sectors.get(sector.replace(" ", "_"), 0) >= 0):
         observed = float(sectors.get(sector, 0) or 0) / recognized_total
         expected = max(0.0, float(configured_sectors.get(sector.replace(" ", "_"), 0) or 0)) / configured_sector_total
         sector_points = max(0, min(3, round((observed - expected) * 10)))
@@ -863,41 +864,88 @@ def _salary_max(salary: str) -> int | None:
 
 
 def compensation_signal(salary: str) -> tuple[int, str]:
-    maximum = _salary_max(salary)
-    if maximum is None or maximum < 120_000:
+    if not salary or re.search(r"\b(?:up to|at most|INR|EUR|GBP|CAD|AUD|JPY|CNY)\b|[£€₹]|[CA]\$", salary, re.I):
         return 0, ""
-    if maximum >= 250_000:
-        points = 15
-    elif maximum >= 220_000:
-        points = 13
-    elif maximum >= 190_000:
-        points = 10
-    elif maximum >= 165_000:
-        points = 7
-    elif maximum >= 145_000:
-        points = 4
-    else:
-        points = 2
-    return points, f"compensation ceiling ${maximum:,} +{points}"
+    salary = re.split(r"\s+(?:\+|plus)\s+", salary, maxsplit=1, flags=re.I)[0]
+    salary = re.sub(r"\b401\s*\(?k\)?", "", salary, flags=re.I)
+    salary = re.sub(r"\b(\d{2,3})\s*[-–]\s*\$?(\d{2,3})k\b", r"\1k-\2k", salary, flags=re.I)
+    hourly = bool(re.search(r"/\s*(?:hr|hour)|\b(?:hourly|per hour)\b", salary, re.I))
+    monthly = bool(re.search(r"/\s*month|\b(?:monthly|per month)\b", salary, re.I))
+    values = [float(number.replace(",", "")) * (1000 if suffix else 1)
+              for number, suffix in _MONEY_RE.findall(salary)]
+    values = [value for value in values if (5 <= value <= 1000 if hourly else value >= 1000)]
+    if not values:
+        return 0, ""
+    floor = round(min(values) * (2080 if hourly else 12 if monthly else 1))
+    if floor < 120_000:
+        return 0, ""
+    points = next(points for threshold, points in
+                  [(250_000, 15), (220_000, 13), (190_000, 10), (165_000, 7), (145_000, 4), (120_000, 2)]
+                  if floor >= threshold)
+    return points, f"compensation lower bound ${floor:,} +{points} (not an offer estimate)"
+
+
+_TEAM_PATTERNS = {
+    "technical_depth": r"\b(distributed systems?|machine learning|deep learning|model (?:training|inference)|"
+                       r"compilers?|real[- ]time (?:systems?|software)|data pipelines?|robotics|computer vision)\b",
+    "ownership": r"\bown(?:ership)?\b.{0,90}\b(production|end[- ]to[- ]end|services?|systems?|features?)\b",
+    "mentorship": r"\b(mentorship|mentoring|paired? programming|structured (?:training|rotations?))\b",
+    "healthtech": r"\b(health(?:care| AI)|clinical|patients?|drug discovery|biomedical|medical|surgical)\b",
+    "fintech": r"\b(fintech|payment processing|trading systems?|financial (?:transactions?|markets?)|banking)\b",
+}
+_ROLE_SCOPE_RE = re.compile(
+    r"\b(you (?:will|would)|you'll|your (?:role|team|work)|(?:our|the) (?:[\w-]+ ){0,5}team)\b|"
+    r"^(?:design|build|develop|implement|maintain|operate|own|ship|collaborate)\b", re.I)
+_NON_ROLE_RE = re.compile(
+    r"\b(benefits?|insurance|equal opportunity|about (?:us|the company)|we (?:offer|provide)|"
+    r"required|requirements?|qualifications?|experience (?:with|in)|familiarity|preferred|"
+    r"not (?:required|responsible|expected)|will not|does not|won't|don't|"
+    r"no (?:direct )?(?:mentorship|ownership))\b", re.I)
+
+
+def posting_rank_evidence(text: str) -> dict[str, str]:
+    evidence: dict[str, str] = {}
+    in_role = False
+    for sentence in re.split(r"[\n•]+|(?<=[.!?])\s+", (text or "")[:12000].replace("’", "'")):
+        sentence = re.sub(r"\s+", " ", sentence).strip(" -\t")
+        if re.match(r"(?:responsibilities|what you'll do|what you will do|your impact)\b", sentence, re.I):
+            in_role = True
+            sentence = re.sub(r"^[^:]+:\s*", "", sentence)
+        if _NON_ROLE_RE.search(sentence):
+            in_role = False
+            continue
+        if not (in_role or _ROLE_SCOPE_RE.search(sentence)):
+            continue
+        excerpt = sentence[:200]
+        for key, pattern in _TEAM_PATTERNS.items():
+            if key not in evidence and re.search(pattern, excerpt, re.I):
+                evidence[key] = excerpt
+    return evidence
 
 
 def wording_signal(title: str, description: str = "") -> tuple[int, list[str]]:
     """Posting-specific alignment so one employer's roles do not tie."""
-    text = f"{title}\n{description[:2500]}"
     patterns = [
         (r"\b(deep learning|generative AI|large language model|LLMs?)\b", 4, "frontier AI wording"),
         (r"\b(machine learning|artificial intelligence|computer vision|NLP)\b", 3, "AI/ML wording"),
         (r"\b(data science|applied scientist|research engineer)\b", 3, "data/research wording"),
         (r"\b(cloud|distributed systems?|platform|backend|infrastructure)\b", 2, "systems/cloud wording"),
-        (r"\b(healthcare|clinical|patient|drug|biomedical|medical)\b", 2, "health mission wording"),
         (r"\b(quality assurance|manual test|test engineer)\b", -3, "lower-priority QA wording"),
     ]
-    points = 0
-    reasons = []
-    for pattern, value, label in patterns:
-        if re.search(pattern, text, re.I):
+    positive = [(value, label) for pattern, value, label in patterns
+                if value > 0 and re.search(pattern, title, re.I)]
+    points, label = max(positive, default=(0, ""))
+    reasons = [f"{label} +{points}"] if points else []
+    if re.search(patterns[-1][0], title, re.I):
+        points -= 3
+        reasons.append("lower-priority QA wording -3")
+    evidence = posting_rank_evidence(description)
+    for key, value in [("technical_depth", 3), ("ownership", 3), ("mentorship", 2)]:
+        if key in evidence:
             points += value
-            reasons.append(f"{label} {'+' if value > 0 else ''}{value}")
+            reasons.append(f"team {key.replace('_', ' ')} +{value}: {evidence[key]}")
+    if points > 10:
+        reasons.append(f"role evidence overlap cap {10 - points}")
     return max(-4, min(points, 10)), reasons
 
 
@@ -939,7 +987,7 @@ def apply_company_concentration(jobs) -> int:
     change is recorded.
     """
     groups: dict[str, list] = {}
-    exact_groups: dict[tuple[str, str], list] = {}
+    exact_groups: dict[tuple[str, str, str], list] = {}
     values = jobs.values() if isinstance(jobs, dict) else jobs
     materialized = list(values)
     for job in materialized:
@@ -976,18 +1024,24 @@ def apply_company_concentration(jobs) -> int:
                     "duplicate role variant:",
                 ))
             ]
-        company = norm(getattr(job, "company", "") or job.get("company", "")) if isinstance(job, dict) else norm(job.company)
+        company = norm(job.get("company", "") if isinstance(job, dict) else job.company)
         title = str(job.get("title", "") if isinstance(job, dict) else job.title)
         groups.setdefault(company, []).append(job)
-        exact_groups.setdefault((company, norm(title)), []).append(job)
+        identity = (job.get("posting_family_id") or job.get("url", "")) if isinstance(job, dict) else (
+            job.posting_family_id or job.url)
+        exact_groups.setdefault((company, norm(title), identity), []).append(job)
 
     changed = 0
     exact_duplicate_jobs: set[int] = set()
     # A same-title posting at another location/requisition is not a weaker
     # sibling. Tie its displayed score to the strongest variant, but keep each
     # posting so the owner can choose the location that works.
-    for (company, title), duplicate_group in exact_groups.items():
-        if not company or not title or len(duplicate_group) < 2:
+    for (company, title, identity), duplicate_group in exact_groups.items():
+        if not company or not title or not identity or len(duplicate_group) < 2:
+            continue
+        dimensions = [item.get("score_dimensions", {}) if isinstance(item, dict) else item.score_dimensions
+                      for item in duplicate_group]
+        if any(value != dimensions[0] for value in dimensions[1:]):
             continue
         best_score = max(
             int(item.get("score", 0) if isinstance(item, dict) else item.score_calibrated)
@@ -1004,7 +1058,8 @@ def apply_company_concentration(jobs) -> int:
             f"duplicate role variant: {len(duplicate_group)} {company_name} postings share this title; "
             f"strongest displayed score {best_score}/100 across {max(1, len(locations))} location set(s)"
             + ("; posting-specific verdicts preserved" if any(
-                isinstance(item, dict) and int(item.get("score", 0) or 0) < int(item.get("score_calibrated", item.get("score", 0)) or 0)
+                isinstance(item, dict) and int(item.get("score", 0) or 0)
+                < int(item.get("score_calibrated", item.get("score", 0)) or 0)
                 for item in duplicate_group
             ) else "")
         )
@@ -1042,7 +1097,8 @@ def apply_company_concentration(jobs) -> int:
             current_bucket = role_bucket(current_title)
             if not current_bucket:
                 continue
-            current_reasons = current.get("score_reasons", []) if isinstance(current, dict) else current.score_reasons
+            current_reasons = (current.get("score_reasons", []) if isinstance(current, dict)
+                               else current.score_reasons)
             if any(str(reason).startswith("configured score override:") for reason in current_reasons):
                 continue
             current_raw = float(current.get("score_raw", 0) if isinstance(current, dict) else current.score_raw)
@@ -1053,7 +1109,8 @@ def apply_company_concentration(jobs) -> int:
                 candidate_title = str(candidate.get("title", "") if isinstance(candidate, dict) else candidate.title)
                 if role_bucket(candidate_title) != current_bucket:
                     continue
-                candidate_raw = float(candidate.get("score_raw", 0) if isinstance(candidate, dict) else candidate.score_raw)
+                candidate_raw = float(candidate.get("score_raw", 0) if isinstance(candidate, dict)
+                                      else candidate.score_raw)
                 if candidate_raw <= current_raw:
                     continue
                 similarity = _title_similarity(current_title, candidate_title)
@@ -1135,7 +1192,7 @@ def apply_company_concentration(jobs) -> int:
                 reason = None
             if isinstance(job, dict):
                 job["ranking_adjustment"] = -penalty
-                job["score"] = max(0, int(job.get("score", 0) or 0) - penalty)
+                job["score"] = max(0, int(job.get("score", 0) or 0) - broad_penalty)
                 reasons = job.setdefault("score_reasons", [])
             else:
                 job.ranking_adjustment = -penalty
@@ -1165,18 +1222,32 @@ def score(job: Job, feedback: dict, now: int | None = None,
     }
     reasons = ["base utility +5"]
 
-    bucket = role_bucket(job.title, job.description) or "swe"
+    from .sector import FINTECH, company_key, infer
+    if company_key(job.company) in FINTECH or not job.sector:
+        job.sector = infer(job.company, {})
+    if job.description:
+        evidence = posting_rank_evidence(job.description)
+    else:
+        stored = job.posting.get("ranking_evidence", {})
+        excerpts = (dict.fromkeys(value for value in stored.values() if isinstance(value, str))
+                    if isinstance(stored, dict) else {})
+        evidence = posting_rank_evidence("Responsibilities:\n" + "\n".join(excerpts))
+    role_text = job.description or "Responsibilities:\n" + "\n".join(dict.fromkeys(evidence.values()))
+    bucket = role_bucket(job.title) or "swe"
     role_pts = p["roles"].get(bucket, 10)
-    wording_pts, wording_reasons = wording_signal(job.title, job.description)
+    wording_pts, wording_reasons = wording_signal(job.title, role_text)
     dimensions["role_fit"] = role_pts + wording_pts
     reasons.append(f"role:{bucket} +{role_pts}")
     reasons.extend(wording_reasons)
 
-    configured_sector = p["sectors"].get(job.sector or "other", 0)
-    sector_pts = round(configured_sector * 0.7)
+    team_sectors = [sector for sector in ("healthtech", "fintech")
+                    if sector in evidence or re.search(_TEAM_PATTERNS[sector], job.title, re.I)]
+    sector = team_sectors[0] if len(team_sectors) == 1 else job.sector or "other"
+    sector_pts = max(-6, min(6, int(p["sectors"].get(sector, 0))))
     if sector_pts:
         dimensions["mission"] += sector_pts
-        reasons.append(f"sector:{job.sector} +{sector_pts} (diminishing return)")
+        scope = "posting/team evidence" if len(team_sectors) == 1 else "company sector"
+        reasons.append(f"sector:{sector} {sector_pts:+d} ({scope}; preference, not prestige)")
 
     b = p["bonuses"]
     program = leadership_program_signal(job.company, job.title, job.description)
@@ -1217,19 +1288,12 @@ def score(job: Job, feedback: dict, now: int | None = None,
             dimensions["mission"] += target_pts
             reasons.append(f"target healthcare program company +{target_pts}")
 
-    if is_marquee(job.company):
-        marquee_pts = b.get("marquee_company", 0)
-        dimensions["company_quality"] += marquee_pts
-        reasons.append(f"company tier: marquee +{marquee_pts}")
-
     goal_companies = {norm(name) for name in p.get("goal_companies", [])}
     if norm(job.company) in goal_companies:
-        goal_pts = int(p.get("scoring_v8", {}).get("goal_company_utility", 10))
-        dimensions["company_quality"] += goal_pts
-        reasons.append(f"explicit goal company +{goal_pts}")
+        reasons.append("goal company label (no score bonus)")
 
     momentum_pts, momentum_reasons = company_momentum_signal(job.company)
-    dimensions["company_quality"] += momentum_pts
+    dimensions["company_quality"] = momentum_pts
     reasons.extend(momentum_reasons)
 
     pay_pts, pay_reason = compensation_signal(job.salary)
@@ -1311,16 +1375,13 @@ def score(job: Job, feedback: dict, now: int | None = None,
         dimensions["personal_signal"] -= 10
         reasons.append("previously skipped -10")
 
-    d = _culture_dossier(job.company)
-    if d and d.get("source") == "seed" and d.get("fit") is not None:
-        cf = round((d["fit"] - 50) / 50 * 6)
-        if cf:
-            dimensions["company_quality"] += cf
-            reasons.append(f"culture fit {d['fit']}/100 {'+' if cf > 0 else ''}{cf}")
-
     if norm(job.company) in _shpe_companies():
-        dimensions["personal_signal"] += 2
-        reasons.append("SHPE 2026 exhibitor +2")
+        reasons.append("SHPE 2026 exhibitor (context only; no prestige bonus)")
+
+    for name, cap in (("personal_signal", 5), ("mission", 6)):
+        if dimensions[name] > cap:
+            reasons.append(f"{name} overlap cap {cap - dimensions[name]:+d} (maximum +{cap})")
+            dimensions[name] = cap
 
     if new_grad or program:
         career_tier = 2
@@ -1378,11 +1439,7 @@ def score(job: Job, feedback: dict, now: int | None = None,
                 and new_grad
                 and not midlevel
                 and bucket not in set(override.get("exclude_buckets", []))):
-            target = int(override.get("score", display))
-            if target != display:
-                reasons.append(
-                    f"configured score override: {job.company} new-grad -> {target}")
-            display = target
+            reasons.append(f"configured favorite: {job.company} (label only; no score override)")
             priority_tier = "goal"
             break
 

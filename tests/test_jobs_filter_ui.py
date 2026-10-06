@@ -34,6 +34,13 @@ const context = {
 };
 vm.createContext(context);
 vm.runInContext(source, context);
+assert.equal(vm.runInContext('S.filter.sort', context), 'best');
+assert.match(vm.runInContext(`scoreDimensionWhy({score_reasons:['sector:fintech -5 (company sector)']}, 'mission', -5)`, context), /less preferred/i);
+assert.match(vm.runInContext(`scoreDimensionWhy({score_reasons:['company reputation: strong +12']}, 'company_quality', 12)`, context), /reputation/i);
+assert.match(vm.runInContext(`scoreDimensionWhy({score_reasons:['compensation lower bound $190,000 +10']}, 'compensation', 10)`, context), /lower bound/i);
+assert.match(vm.runInContext(`scoreDimensionWhy({score_reasons:['role:swe +20', 'team ownership +3: You will own production services.']}, 'role_fit', 23)`, context), /team ownership/i);
+storage.set('jr_filters', JSON.stringify({sort:'new', _sortFilterVersion:1}));
+assert.equal(vm.runInContext('storedFilter().sort', context), 'new');
 context.fixtureJobs = Array.from({length:123}, (_, index) => ({
   id:`job-${index}`, company:`Company ${index}`, title:'Software Engineer', score:70,
   sector:index % 2 ? 'ai_lab' : 'big_tech', posted_at:Date.now()/1000-3600,

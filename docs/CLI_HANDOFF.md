@@ -1,5 +1,50 @@
 # CLI handoff notes
 
+## Ranking release (2026-10-06; DECISION #223)
+
+- **Ranking v15 / DECISION #223:** one source-linked company-reputation band
+  replaces stacked marquee, goal, scale/pace, culture-fit, and conference
+  points. Google no longer receives an automatic 100. Healthcare is +6 and
+  fintech/financial-services -5 raw utility; company and team quality remain
+  separate from those preferences. The researched employer bands and source
+  links live in `profile.yaml`.
+- **Team evidence:** compact responsibility excerpts in
+  `posting.ranking_evidence` survive crawl, rebuild, enrichment, and Studio
+  projection. The existing posting eligibility analysis still runs. Old rows
+  without evidence are neutral until a normal exact-URL sighting/fetch adds it;
+  no bulk scraping or full-description persistence was introduced.
+- **Inflation safeguards:** title/team evidence caps at +10, reputation at +16,
+  positive personal signals at +5, and mission at +6. Pay uses its lower bound.
+  Same-title team requisitions retain distinct evidence; repeated diversity
+  passes do not repeatedly subtract sibling deductions. Best Match already
+  defaults on in production; explicit Newest selections remain respected.
+- **Publication:** Victor explicitly authorized this production release after
+  local review. `devin/company-team-ranking-release` starts from production
+  `c4774693d` and carries the validated implementation plus a separately
+  generated v15 score snapshot. Publish through the existing tests-gated
+  Vercel workflow to `job-radar-newgrad.vercel.app`; confirm the live build marker
+  and stored scoring version before claiming completion. The original
+  workspace's unrelated uncommitted changes remain untouched.
+- **State migration:** the supported `radar.main rescore` command regenerates
+  both job shards and dashboard/feed outputs. For this release it runs with
+  `NOTION_TOKEN` explicitly empty, so it cannot archive external tracker pages.
+  `score-health` must pass before pushing. The normal unqualified `rescore`
+  command can archive terminal Notion pages and is not a read-only preview.
+  No new secret or service is required. The release rebuild preserved all
+  71,827 job IDs and archived zero Notion pages; `score-health` passed v15.
+- **Dependency prerequisite / DECISION #224:** Victor approved upgrading
+  Vitest to pinned 4.1.11 and compatible brace-expansion/source-map-js patches
+  after the online audit exposed high/critical issues in the prior development
+  dependency graph. Keep the existing CI audit gate unchanged.
+- **Validation:** full Python suite 634 passed / 3 skipped; compileall, scoped
+  Ruff, frontend typecheck, Vitest, ESLint, and static build pass. A read-only
+  71,457-record projection using production's compact serializer measured
+  95,091,961 bytes against the unchanged 99,614,720-byte guard (4,522,759 bytes
+  headroom), with no generated-state writes. The score drawer was checked with
+  mocked jobs at desktop/mobile sizes; this is not a deployed API/end-to-end
+  check. Static-file smoke testing has the existing no-backend CORS/resource
+  errors; score rendering and the changed explanations were verified separately.
+
 ## Current change (2026-09-29)
 
 - **Radar crawl capacity recovery:** scheduled `radar` attempts failed after

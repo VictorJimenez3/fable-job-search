@@ -561,9 +561,16 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
   leadership programs are a dedicated exception. Eligible roles then use an
   auditable point rubric prioritizing AI/ML and data science above SWE/systems;
   PM-family rows have role weight `0`, remain dashboard-only, and never enter
-  alert email/RSS delivery. Google technical new-grad roles have an explicit
-  profile-driven `100` favorite override with a printed reason. Every score has
-  printed reasons. This runs in the cloud with zero API keys.
+  alert email/RSS delivery. Rules v15 use one sourced company-reputation band,
+  not company size or a stack of favorite/culture/conference bonuses. Google
+  and NVIDIA can remain favorites without automatically earning perfect scores.
+  Actual team responsibilities add bounded technical-depth, ownership, and
+  mentorship evidence; marketing and benefits do not. Healthcare adds a small
+  preference and fintech subtracts one, independently of company prestige.
+  Pay uses the published lower bound rather than its maximum. Open **Fit** to
+  see these separate reasons. Missing team evidence means unverified, not a bad
+  team. Best Match is the default; choose Newest when discovery time matters.
+  Every score has printed reasons. This runs in the cloud with zero API keys.
 - **Your MacBook is the bulk AI worker for radar enrichment.** A background job (launchd, every 2 hours
   while the laptop is awake) pulls the latest state, runs **qwen3:30b through
   Ollama locally** (free, private, ~19 GB on disk), and pushes back:
