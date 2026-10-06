@@ -6701,6 +6701,19 @@
   "status": "active",
   "token": "jobsatphamily"
  },
+ "greenhouse:judihealth": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1791295840,
+  "last_ok": 1791295840,
+  "name": "Judi Health",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "judihealth"
+ },
  "greenhouse:jumio": {
   "ats": "greenhouse",
   "extra": {},
@@ -8276,6 +8289,19 @@
   "status": "active",
   "token": "solidpower"
  },
+ "greenhouse:solutions": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1791295840,
+  "last_ok": 1791295840,
+  "name": "Cadence Solutions",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "solutions"
+ },
  "greenhouse:sonobello": {
   "ats": "greenhouse",
   "extra": {},
@@ -8337,6 +8363,19 @@
   "sector": "healthtech",
   "status": "invalid",
   "token": "springhealth"
+ },
+ "greenhouse:stackadapt-confidential": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1791295840,
+  "last_ok": 1791295840,
+  "name": "StackAdapt",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "stackadapt-confidential"
  },
  "greenhouse:stemhealthcare": {
   "ats": "greenhouse",
@@ -9216,7 +9255,7 @@
   "last_ok": 0,
   "name": "Liberty Mutual",
   "origin": "harvest:simplify",
-  "probe_attempts": 1,
+  "probe_attempts": 2,
   "sector": "",
   "status": "invalid",
   "token": "campus-libertymutual"
@@ -10728,7 +10767,7 @@
   "last_ok": 0,
   "name": "IDEMIA",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "careers-uscareers-idemia"
@@ -10980,7 +11019,7 @@
   "last_ok": 0,
   "name": "American Enterprise Institute",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "internships-aei"
@@ -15716,7 +15755,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1791269512,
+  "last_ok": 1791295864,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16126,7 +16165,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1791269504,
+  "last_ok": 1791295853,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16303,7 +16342,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1791269516,
+  "last_ok": 1791295864,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16718,6 +16757,22 @@
   "sector": "",
   "status": "active",
   "token": "assetmark"
+ },
+ "workday:associatedbank:external_careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "external_careers"
+  },
+  "failures": 0,
+  "first_seen": 1791295840,
+  "last_ok": 1791295843,
+  "name": "Associated Bank",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "associatedbank"
  },
  "workday:assurant:Assurant_Careers": {
   "ats": "workday",
@@ -18515,7 +18570,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1791269501,
+  "last_ok": 1791295848,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -19683,7 +19738,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1791269510,
+  "last_ok": 1791295873,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -19856,7 +19911,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1791269506,
+  "last_ok": 1791295854,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -20911,7 +20966,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1791269508,
+  "last_ok": 1791295862,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -21575,6 +21630,22 @@
   "last_ok": 1784346712,
   "name": "Hewlett Packard Enterprise",
   "origin": "harvest:simplify",
+  "sector": "",
+  "status": "active",
+  "token": "hpe"
+ },
+ "workday:hpe:jobsathpe": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "jobsathpe"
+  },
+  "failures": 0,
+  "first_seen": 1791295840,
+  "last_ok": 1791295841,
+  "name": "Hewlett Packard Enterprise",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
   "sector": "",
   "status": "active",
   "token": "hpe"
@@ -23269,7 +23340,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1791269508,
+  "last_ok": 1791295853,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -24430,6 +24501,23 @@
   "sector": "",
   "status": "invalid",
   "token": "osv-enterprise"
+ },
+ "workday:osv-rubicon:MagniteCareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "MagniteCareers"
+  },
+  "failures": 0,
+  "first_seen": 1791295840,
+  "invalidated_at": 1791295841,
+  "last_ok": 0,
+  "name": "Magnite",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "osv-rubicon"
  },
  "workday:otppb:OntarioTeachers_Careers": {
   "ats": "workday",
@@ -25911,7 +25999,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1791269509,
+  "last_ok": 1791295858,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
