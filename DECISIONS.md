@@ -3595,3 +3595,16 @@ passes must be idempotent; a stored sibling deduction is applied only once.
 Best Match was already the production default and remains so, while saved
 Newest choices survive. The drawer explains signed preferences, conservative
 pay, and the distinction between company recognition and verified team work.
+
+## 224. Patch test dependencies rather than bypass the production audit gate (2026-10-06)
+
+The ranking release's online npm audit found newly published high/critical
+advisories in the existing frontend development dependency graph. Victor
+explicitly approved the prerequisite dependency update and production release.
+Vitest is pinned to 4.1.11 (released August 18), which supports the existing
+Node 24/Vite 7 setup and removes the vulnerable Tinypool path. Compatible
+brace-expansion and source-map-js patches are locked through npm. The
+source-map-js 1.2.2 security fix was released September 30; it is used despite
+being just under seven days old because it is the available patch for the
+release-blocking advisory. No audit severity threshold, security policy,
+workflow gate, or application runtime dependency was relaxed to publish.

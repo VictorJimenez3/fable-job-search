@@ -1,6 +1,6 @@
 # CLI handoff notes
 
-## Local change (2026-10-05; not published)
+## Ranking release (2026-10-06; DECISION #223)
 
 - **Ranking v15 / DECISION #223:** one source-linked company-reputation band
   replaces stacked marquee, goal, scale/pace, culture-fit, and conference
@@ -18,15 +18,24 @@
   Same-title team requisitions retain distinct evidence; repeated diversity
   passes do not repeatedly subtract sibling deductions. Best Match already
   defaults on in production; explicit Newest selections remain respected.
-- **Publication:** implemented locally on `devin/company-team-ranking` in
-  `/tmp/fable-ranking-20261005`, updated to production `1cd31e115` before
-  handoff (only automation state advanced). The original
-  workspace's unrelated uncommitted changes are untouched. No production push,
-  deployment, generated-state write, or external tracker operation is authorized
-  by this change. After publication is explicitly approved, let the regular
-  crawl rebuild state under v15 and verify `score-health`. The manual `rescore`
-  command can also archive terminal Notion pages; do not use it as a read-only
-  preview. No new secret or service is required.
+- **Publication:** Victor explicitly authorized this production release after
+  local review. `devin/company-team-ranking-release` starts from production
+  `c4774693d` and carries the validated implementation plus a separately
+  generated v15 score snapshot. Publish through the existing tests-gated
+  Vercel workflow to `job-radar-newgrad.vercel.app`; confirm the live build marker
+  and stored scoring version before claiming completion. The original
+  workspace's unrelated uncommitted changes remain untouched.
+- **State migration:** the supported `radar.main rescore` command regenerates
+  both job shards and dashboard/feed outputs. For this release it runs with
+  `NOTION_TOKEN` explicitly empty, so it cannot archive external tracker pages.
+  `score-health` must pass before pushing. The normal unqualified `rescore`
+  command can archive terminal Notion pages and is not a read-only preview.
+  No new secret or service is required. The release rebuild preserved all
+  71,827 job IDs and archived zero Notion pages; `score-health` passed v15.
+- **Dependency prerequisite / DECISION #224:** Victor approved upgrading
+  Vitest to pinned 4.1.11 and compatible brace-expansion/source-map-js patches
+  after the online audit exposed high/critical issues in the prior development
+  dependency graph. Keep the existing CI audit gate unchanged.
 - **Validation:** full Python suite 634 passed / 3 skipped; compileall, scoped
   Ruff, frontend typecheck, Vitest, ESLint, and static build pass. A read-only
   71,457-record projection using production's compact serializer measured
