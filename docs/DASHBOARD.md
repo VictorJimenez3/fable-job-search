@@ -1,20 +1,20 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-10-07 02:25 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **150 shown / 12072 stored** · new this run: **2** · alerts this run: **1**_
+_Last run: **2026-10-07 09:16 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **150 shown / 12074 stored** · new this run: **2** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
 | Score | Age | Company | Role | Location | Sector | Src |
 |---|---|---|---|---|---|---|
-| 100 🔥 | 4h | Tesla | [Process Engineer Intern - Dielectric Deposition](https://www.tesla.com/careers/search/job/285641) | Austin, TX | consumer_manufacturing | simplify |
+| 100 🔥 | 11h | Tesla | [Process Engineer Intern - Dielectric Deposition](https://www.tesla.com/careers/search/job/285641) | Austin, TX | consumer_manufacturing | simplify |
 | 100 🔥 | 1d | Micron | [Intern - CMOS Process Integration](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Intern---CMOS-Process-Integration_JR114110) | Boise, ID - ID1 | semiconductors | workday |
 | 100 🔥 | 1d | Micron | [Intern - Process Integration Engineer](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Intern---Process-Integration-Engineer_JR114192) | Boise, ID - ID1 | semiconductors | workday |
 | 97 🔥 | 26d | Gilead Sciences | [Kite Development Intern - Tech Ops - Process Development](https://gilead.wd1.myworkdayjobs.com/gileadcareers/job/United-States---California---Santa-Monica/Intern---Kite-Development---Tech-Ops--Process-Development-_R0054669-1) | Santa Monica, CA | pharma_biotech | simplify |
 | 97 🔥 | 29d | Kite Pharma | [Kite Development Intern - Tech Ops - Process Development](https://gilead.wd1.myworkdayjobs.com/kitepharmacareers/job/United-States---California---Santa-Monica/Intern---Kite-Development---Tech-Ops--Process-Development-_R0054669) | Santa Monica, CA | pharma_biotech | simplify |
-| 94 🔥 | 4h | Dell Technologies | [Supplier Process Engineer Co-op](https://iawmqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/careers/job/298595) | Texas | other | simplify |
+| 94 🔥 | 10h | Dell Technologies | [Supplier Process Engineer Co-op](https://iawmqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/careers/job/298595) | Texas | other | simplify |
 | 94 🔥 | 6d | ZOLL Medical | [Operations Engineering Co-op](https://zoll.wd5.myworkdayjobs.com/en-US/ZOLLMedicalCorp/job/Pittsburgh-PA/Operations-Engineering-Co-Op---Spring-Summer_R20411) | Pittsburgh, PA | pharma_biotech | simplify |
-| 93 🔥 | 14d | Micron | [Intern - ATE Process Engineer ID1](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Intern---ATE-Process-Engineer-ID1_JR113040) | Boise, ID - ID1 | semiconductors | workday |
-| 93 🔥 | 18d | Micron | [Intern – Process Engineer ID1](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Engineer-ID1_JR109507) | Boise, ID - Main Site | semiconductors | workday |
+| 93 🔥 | 15d | Micron | [Intern - ATE Process Engineer ID1](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Intern---ATE-Process-Engineer-ID1_JR113040) | Boise, ID - ID1 | semiconductors | workday |
+| 93 🔥 | 19d | Micron | [Intern – Process Engineer ID1](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Process-Engineer-ID1_JR109507) | Boise, ID - Main Site | semiconductors | workday |
 | 93 🔥 | 19d | Micron | [INTERN- ID1 Process Engineer](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/INTERN--ID1-Process-Engineer_JR111233) | Boise, ID - ID1 | semiconductors | workday |
 | 93 🔥 | 25d | Micron | [Intern- Technician, Process](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Intern--Technician--Process_JR112005) | Boise, ID - ID1 | semiconductors | workday |
 | 91 🔥 | 1d | GE Healthcare | [Electrical Engineering Technician Co-op](https://gehc.wd5.myworkdayjobs.com/GEHC_ExternalSite/job/Waukesha/Electrical-Engineering-Technician-Co-op_R4046982-1) | Waukesha, WI | pharma_biotech | simplify |
@@ -27,11 +27,11 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 87 🔥 | 1d | KLA | [Electrical Design Engineer Intern](https://kla.wd1.myworkdayjobs.com/UR/job/Ann-Arbor-MI/Electrical-Design-Engineering-Intern_2641708) | Ann Arbor, MI | semiconductors | simplify |
 | 85 🔥 | 1d | Tesla | [Systems Integration Engineering Intern - Thermal Systems](https://www.tesla.com/careers/search/job/285779) | Palo Alto, CA | consumer_manufacturing | simplify |
 | 84 ⭐ | 8d | GlobalFoundries | [Environmental Engineering Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Environmental-Engineering-Intern--Summer-2027-_JR-2604239) | USA - New York - Malta | semiconductors | workday |
-| 83 ⭐ | <1h | Figure | [Validation Engineer Intern](https://job-boards.greenhouse.io/figureai/jobs/4606072006) | San Jose, CA | other | simplify |
-| 83 ⭐ | 4h | Renesas Electronics | [Post Silicon Validation Intern](https://jobs.smartrecruiters.com/RenesasElectronics/744000153840059) | Duluth, GA | other | simplify |
-| 83 ⭐ | 20h | Astera Labs | [System Validation Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4724488005) | San Jose, CA | other | simplify |
-| 83 ⭐ | 20h | Astera Labs | [Hardware Electrical Validation Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4740145005) | San Jose, CA | other | simplify |
-| 83 ⭐ | 20h | Astera Labs | [Electrical Validation Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4724534005) | San Jose, CA | other | simplify |
+| 83 ⭐ | 7h | Figure | [Validation Engineer Intern](https://job-boards.greenhouse.io/figureai/jobs/4606072006) | San Jose, CA | other | simplify |
+| 83 ⭐ | 11h | Renesas Electronics | [Post Silicon Validation Intern](https://jobs.smartrecruiters.com/RenesasElectronics/744000153840059) | Duluth, GA | other | simplify |
+| 83 ⭐ | 1d | Astera Labs | [System Validation Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4724488005) | San Jose, CA | other | simplify |
+| 83 ⭐ | 1d | Astera Labs | [Hardware Electrical Validation Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4740145005) | San Jose, CA | other | simplify |
+| 83 ⭐ | 1d | Astera Labs | [Electrical Validation Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4724534005) | San Jose, CA | other | simplify |
 | 83 ⭐ | 1d | Cirrus Logic | [Validation Engineer Intern](https://jobs.eu.lever.co/cirrus/89813bb2-94fb-42f6-aec2-03154cfde027/apply) | Austin, TX | other | simplify |
 | 82 ⭐ | 22d | Micron Technology | [ASIC Validation Intern](https://micron.wd1.myworkdayjobs.com/External/job/Minneapolis-MN/Intern---ASIC-Validation_JR111823) | Minneapolis, MN | semiconductors | simplify |
 | 82 ⭐ | 27d | Pilot Company | [Process Automation Intern - Process Automation](https://jobs.smartrecruiters.com/PilotCompany/744000148576544) | Knoxville, TN | other | simplify |
@@ -40,7 +40,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 81 ⭐ | 3d | Micron Technology | [Memory Design Engineer Intern - HBM](https://micron.wd1.myworkdayjobs.com/External/job/Richardson-TX/Intern---Memory-Design-Engineer--HBM_JR112528) | Richardson, TX | semiconductors | simplify |
 | 81 ⭐ | 3d | Micron Technology | [HBM Memory Design Engineer Intern - HBM](https://micron.wd1.myworkdayjobs.com/External/job/Richardson-TX/Intern---Design-Engineer--HBM_JR111821) | Richardson, TX | semiconductors | simplify |
 | 81 ⭐ | 5d | Elevance Health | [Engineering Intern](https://elevancehealth.wd1.myworkdayjobs.com/ELV-ET/job/GA-ATLANTA-740-W-PEACHTREE-ST-NW/Engineering-Undergraduate-Intern---Summer-2027_JR209081) | Indianapolis, IN | pharma_biotech | simplify |
-| 80 ⭐ | 21d | 3M | [Internship – 2027 Undergraduate 3M SIBG Undergraduate Marketing Intern](https://3m.wd1.myworkdayjobs.com/en-US/Search/job/US-Minnesota-Maplewood/Internship---2027-Undergraduate-3M-SIBG-Undergraduate-Marketing-Intern---Safety---Industrial-Business-Group--SIBG-_R01171042) | 2 Locations | chemicals_materials | workday |
+| 80 ⭐ | 22d | 3M | [Internship – 2027 Undergraduate 3M SIBG Undergraduate Marketing Intern](https://3m.wd1.myworkdayjobs.com/en-US/Search/job/US-Minnesota-Maplewood/Internship---2027-Undergraduate-3M-SIBG-Undergraduate-Marketing-Intern---Safety---Industrial-Business-Group--SIBG-_R01171042) | 2 Locations | chemicals_materials | workday |
 | 80 ⭐ | 26d | Dow | [Campus internship 2026-2027 - Industrial Innovation Internship (R&D)](https://dow.wd1.myworkdayjobs.com/en-US/ExternalCareers/job/Tarragona-ESP/Campus-internship-2026-2027---Industrial-Innovation-Internship--R-D-_R2068436) | 2 Locations | chemicals_materials | workday |
 | 80 ⭐ | 28d | Covestro | [Digital R&D Intern](https://covestro.wd3.myworkdayjobs.com/cov_external/job/Pittsburgh-PA/Digital-R-D-Intern_JR-2026-02006) | Pittsburgh, PA | chemicals_materials | simplify |
 | 79 ⭐ | 13d | Johnson & Johnson | [Electrical Engineer Co-op - Beatbox](https://jj.wd5.myworkdayjobs.com/JJ/job/Danvers-Massachusetts-United-States-of-America/Beatbox-Electrical-Engineering-Co-op_R-101679) | Danvers, MA | pharma_biotech | simplify |
@@ -66,24 +66,24 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 77 ⭐ | 23d | Genworth Financial | [Process Improvement Analyst Intern](https://gnw.wd1.myworkdayjobs.com/GNW/job/Raleigh-North-Carolina/Process-Improvement-Analyst-Intern_REQ-260360-1) | Raleigh, NC | other | simplify |
 | 77 ⭐ | 23d | Enact Mortgage Insurance | [Process Improvement Analyst Intern](https://gnw.wd1.myworkdayjobs.com/enact_mi/job/Raleigh-North-Carolina/Process-Improvement-Analyst-Intern_REQ-260360) | Raleigh, NC | other | simplify |
 | 77 ⭐ | 28d | Spirit AeroSystems | [Data Analytics Intern - Production & Industrial Engineering - Paid](https://careers.spiritaero.com/jobs/17503?icims=1) | Wichita, KS | other | simplify |
-| 76 ⭐ | 1h | North Atlantic Industries | [Electrical Engineer Qualification Test Intern](https://recruiting.paylocity.com/Recruiting/Jobs/Details/4566437) | Bohemia, NY | other | simplify |
-| 76 ⭐ | 4h | Keysight Technologies | [R&D Hardware Engineering Intern](https://jobs.keysight.com/jobs/54771?icims=1) | Sacramento, CA | other | simplify |
-| 76 ⭐ | 11h | Space Dynamics Laboratory | [Electro-Optical Engineer Intern](https://spacedynamicslaboratory.applytojob.com/apply/E1nubjCRhW/ElectroOptical-Engineer-Intern) | North Logan, UT | other | simplify |
-| 76 ⭐ | 12h | IDEMIA | [Engineering Intern](https://uscareers-idemia.icims.com/jobs/8647/job?mobile=true&needsRedirect=false) | Reston, VA | other | simplify |
-| 76 ⭐ | 20h | Astera Labs | [Packaging Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4728619005) | San Jose, CA | other | simplify |
-| 76 ⭐ | 20h | Astera Labs | [Product Applications Engineer Intern - Signal and Connectivity](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4721817005) | San Jose, CA | other | simplify |
-| 76 ⭐ | 20h | Astera Labs | [Physical Design Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4729022005) | San Jose, CA | other | simplify |
-| 76 ⭐ | 20h | Astera Labs | [Hardware Test/Mechanical Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4724114005) | San Jose, CA | other | simplify |
-| 76 ⭐ | 20h | Astera Labs | [Hardware Lab Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4729020005) | San Jose, CA | other | simplify |
-| 76 ⭐ | 20h | Astera Labs | [Product Engineering Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4731410005) | San Jose, CA | other | simplify |
-| 76 ⭐ | 20h | Astera Labs | [Design-for-Test Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4728387005) | Toronto, ON, Canada | other | simplify |
-| 76 ⭐ | 20h | Astera Labs | [Emulation Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4731394005) | San Jose, CA | other | simplify |
-| 76 ⭐ | 20h | Astera Labs | [Design Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4727655005) | San Jose, CA | other | simplify |
-| 76 ⭐ | 20h | Astera Labs | [Design Verification Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4722012005) | San Jose, CA | other | simplify |
-| 76 ⭐ | 20h | Astera Labs | [Design Architecture Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4731413005) | San Jose, CA | other | simplify |
-| 76 ⭐ | 20h | Astera Labs | [ATE Engineer Intern - Engineering Ops Technology Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4731409005) | San Jose, CA | other | simplify |
-| 76 ⭐ | 20h | Astera Labs | [Advanced Design Verification Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4731412005) | San Jose, CA | other | simplify |
-| 76 ⭐ | 20h | Legrand | [Electrical Engineer Co-op](https://iadugs.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/1345) | Middletown, PA | other | simplify |
+| 76 ⭐ | 7h | North Atlantic Industries | [Electrical Engineer Qualification Test Intern](https://recruiting.paylocity.com/Recruiting/Jobs/Details/4566437) | Bohemia, NY | other | simplify |
+| 76 ⭐ | 11h | Keysight Technologies | [R&D Hardware Engineering Intern](https://jobs.keysight.com/jobs/54771?icims=1) | Sacramento, CA | other | simplify |
+| 76 ⭐ | 18h | Space Dynamics Laboratory | [Electro-Optical Engineer Intern](https://spacedynamicslaboratory.applytojob.com/apply/E1nubjCRhW/ElectroOptical-Engineer-Intern) | North Logan, UT | other | simplify |
+| 76 ⭐ | 18h | IDEMIA | [Engineering Intern](https://uscareers-idemia.icims.com/jobs/8647/job?mobile=true&needsRedirect=false) | Reston, VA | other | simplify |
+| 76 ⭐ | 1d | Astera Labs | [Packaging Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4728619005) | San Jose, CA | other | simplify |
+| 76 ⭐ | 1d | Astera Labs | [Product Applications Engineer Intern - Signal and Connectivity](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4721817005) | San Jose, CA | other | simplify |
+| 76 ⭐ | 1d | Astera Labs | [Physical Design Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4729022005) | San Jose, CA | other | simplify |
+| 76 ⭐ | 1d | Astera Labs | [Hardware Test/Mechanical Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4724114005) | San Jose, CA | other | simplify |
+| 76 ⭐ | 1d | Astera Labs | [Hardware Lab Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4729020005) | San Jose, CA | other | simplify |
+| 76 ⭐ | 1d | Astera Labs | [Product Engineering Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4731410005) | San Jose, CA | other | simplify |
+| 76 ⭐ | 1d | Astera Labs | [Design-for-Test Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4728387005) | Toronto, ON, Canada | other | simplify |
+| 76 ⭐ | 1d | Astera Labs | [Emulation Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4731394005) | San Jose, CA | other | simplify |
+| 76 ⭐ | 1d | Astera Labs | [Design Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4727655005) | San Jose, CA | other | simplify |
+| 76 ⭐ | 1d | Astera Labs | [Design Verification Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4722012005) | San Jose, CA | other | simplify |
+| 76 ⭐ | 1d | Astera Labs | [Design Architecture Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4731413005) | San Jose, CA | other | simplify |
+| 76 ⭐ | 1d | Astera Labs | [ATE Engineer Intern - Engineering Ops Technology Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4731409005) | San Jose, CA | other | simplify |
+| 76 ⭐ | 1d | Astera Labs | [Advanced Design Verification Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4731412005) | San Jose, CA | other | simplify |
+| 76 ⭐ | 1d | Legrand | [Electrical Engineer Co-op](https://iadugs.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/1345) | Middletown, PA | other | simplify |
 | 76 ⭐ | 1d | Moog | [Electrical Engineer Intern](https://moog.wd5.myworkdayjobs.com/moog_external_career_site/job/Torrance-CA/Intern--Electrical-Engineering_R-26-19827) | Torrance, CA | other | simplify |
 | 76 ⭐ | 1d | The Toro Company | [Electronics Technician Intern](https://ttc.wd1.myworkdayjobs.com/Toro_External_Careers/job/Bloomington-MN/Electronics-Technician-Intern---The-Toro-Company_JR17552) | Bloomington, MN | other | simplify |
 | 76 ⭐ | 1d | BorgWarner | [Electrical Design Engineer Intern](https://borgwarner.wd5.myworkdayjobs.com/BorgWarner_Careers/job/Kokomo-Technical-Center---Indiana---USA/Electrical-Design-Engineer-Intern_R2026-3965) | Kokomo, IN | other | simplify |
@@ -97,13 +97,13 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 76 ⭐ | 1d | Meta | [Electrical Engineer Intern](https://www.metacareers.com/jobs/1105729655266553) | NYC | other | simplify |
 | 76 ⭐ | 1d | Cirrus Logic | [Analog Design Engineer Intern](https://jobs.eu.lever.co/cirrus/df033a94-155f-427f-a178-88bd18c3d5ec/apply) | Austin, TX | other | simplify |
 | 76 ⭐ | 1d | Rheem | [Electronics Hardware Systems Engineer Co-op](https://hdde.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/4432) | Indianapolis, IN | other | simplify |
-| 76 ⭐ | 22d | Base Power | [Supply Chain Tooling Engineer Intern](https://jobs.ashbyhq.com/base-power/7fce3b16-c132-453b-a836-a3bcbd21abd2/application?embed=true) | Austin, TX | energy | simplify |
-| 76 ⭐ | 24d | Energy Transfer Partners | [Engineering Intern](https://energytransfer.taleo.net/careersection/etp_ext/jobdetail.ftl?job=2610003366) | Dallas, TX | energy | simplify |
+| 76 ⭐ | 23d | Base Power | [Supply Chain Tooling Engineer Intern](https://jobs.ashbyhq.com/base-power/7fce3b16-c132-453b-a836-a3bcbd21abd2/application?embed=true) | Austin, TX | energy | simplify |
+| 76 ⭐ | 25d | Energy Transfer Partners | [Engineering Intern](https://energytransfer.taleo.net/careersection/etp_ext/jobdetail.ftl?job=2610003366) | Dallas, TX | energy | simplify |
 | 76 ⭐ | 26d | Dominion Energy | [Associate Engineer Intern - Derms](https://careers.dominionenergy.com/job/RICHMOND-Intern-Associate-Engineer-(DERMS)-VA-23219/1428534500/?ats=successfactors) | Richmond, VA | energy | simplify |
 | 76 ⭐ | 26d | Dominion Energy | [Associate Engineer Intern - Grid Resiliency](https://careers.dominionenergy.com/job/RICHMOND-Intern-Associate-Engineer-(Grid-Resiliency)-VA-23219/1428554800/?ats=successfactors) | Richmond, VA | energy | simplify |
 | 76 ⭐ | 28d | Dominion Energy | [Electrical Engineer Intern - Operations Analytics](https://careers.dominionenergy.com/job/GLEN-ALLEN-Intern-ET-Operations-Analytics-VA-23060/1427633000/?ats=successfactors) | Glen Allen, VA | energy | simplify |
 | 75 ⭐ | 5d | General Motors | [Systems/Calibration Engineer Intern - ADAS Drive](https://generalmotors.wd5.myworkdayjobs.com/en-CA/Careers_GM/job/Milford-Michigan-United-States-of-America/XMLNAME-2027-Summer-Intern---Systems-Calibration-Engineer--ADAS-Drive_JR-202621623) | Milford, MI | consumer_manufacturing | simplify |
-| 75 ⭐ | 7d | GlobalFoundries | [Field Application Engineering Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Texas---Austin/Field-Application-Engineering-Intern--Summer-2027-_JR-2604220) | 3 Locations | semiconductors | workday |
+| 75 ⭐ | 8d | GlobalFoundries | [Field Application Engineering Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Texas---Austin/Field-Application-Engineering-Intern--Summer-2027-_JR-2604220) | 3 Locations | semiconductors | workday |
 | 75 ⭐ | 8d | GlobalFoundries | [Silicon Photonics Reliability Engineering Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Silicon-Photonics-Reliability-Engineering-Intern--Summer-2027-_JR-2604258) | USA - New York - Malta | semiconductors | workday |
 | 75 ⭐ | 8d | GlobalFoundries | [Technology Architecture Engineering Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Technology-Architecture-Engineering-Intern--Summer-2027-_JR-2604362) | USA - New York - Malta | semiconductors | workday |
 | 75 ⭐ | 8d | GlobalFoundries | [CMOS FEOL Reliability Engineering Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/CMOS-FEOL-Reliability-Engineering-Intern--Summer-2027-_JR-2604360) | USA - New York - Malta | semiconductors | workday |
@@ -142,7 +142,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 73  | 16d | General Motors | [Embedded and Systems Engineering Intern - Digital Product](https://generalmotors.wd5.myworkdayjobs.com/en-CA/Careers_GM/job/Warren-Michigan-United-States-of-America/XMLNAME-2027-Summer-Intern---Digital-Product--Embedded-and-Systems-Engineering_JR-202620513) | Austin, TX | consumer_manufacturing | simplify |
 | 73  | 18d | Tesla | [Systems Integration Engineer Intern - Body Controls](https://www.tesla.com/careers/search/job/283990) | Palo Alto, CA | consumer_manufacturing | simplify |
 | 73  | 18d | Tesla | [Reliability Electronics Design Engineer Intern - Energy Engineering](https://www.tesla.com/careers/search/job/284126) | Palo Alto, CA | consumer_manufacturing | simplify |
-| 73  | 18d | Tesla | [Internship - Electrical Engineer - Power Electronics - Optimus - Winte](https://www.tesla.com/careers/search/job/284009) | Palo Alto, CA | consumer_manufacturing | simplify |
+| 73  | 19d | Tesla | [Internship - Electrical Engineer - Power Electronics - Optimus - Winte](https://www.tesla.com/careers/search/job/284009) | Palo Alto, CA | consumer_manufacturing | simplify |
 | 73  | 21d | Gordon Food Service | [Data Science Engineer Intern](https://gfs.wd5.myworkdayjobs.com/usjobs-gen-gfs/job/Atlanta-Georgia/Data-Science-Engineer-Internship_R-57243-1) | Atlanta, GA | consumer_manufacturing | simplify |
 | 73  | 22d | Tesla | [Product Engineer Intern - Applications Engineering](https://www.tesla.com/careers/search/job/283298) | Fremont, CA | consumer_manufacturing | simplify |
 | 73  | 22d | Tesla | [System Integration and Test Automation Engineer Intern - Energy Engine](https://www.tesla.com/careers/search/job/283396) | Palo Alto, CA | consumer_manufacturing | simplify |
