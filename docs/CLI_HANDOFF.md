@@ -2,6 +2,10 @@
 
 ## Internship lane update (2026-10-08; DECISION #225)
 
+- **Email scope follow-up (DECISION #226):** separate internship email batches
+  now include only roles with explicit Spring/Winter 2027 evidence. Summer and
+  unknown-term roles remain searchable but are not emailed.
+
 - Spring/Winter 2027 and Summer 2027 now have separate Jobs filters. The
   parser preserves a source-provided start term when the posting title omits
   it.
@@ -14,8 +18,10 @@
   defense penalty plus a final score cap of 12. Defense records remain stored
   with the exact reason in the score ledger.
 - Internship batches remain separate from new-grad mail and now default on
-  when there is no saved owner preference. The Settings toggle still controls
-  delivery. No Gmail permission or new secret is required.
+  when there is no saved owner preference. They include only explicit
+  Spring/Winter 2027 roles; Summer and unknown-term roles remain searchable
+  but are not emailed. The Settings toggle still controls delivery. No Gmail
+  permission or new secret is required.
 - Local Python tests, compile checks, retired-artifact checks, diff checks, and
   the browser term-filter smoke check pass. The change is not published yet.
   After merge, confirm the internship rescore workflow is green before relying
