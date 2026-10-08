@@ -11,6 +11,7 @@ mail credentials.
 """
 from __future__ import annotations
 
+import re
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import UTC, datetime
@@ -28,6 +29,20 @@ DAILY_LABEL = "radar-daily"
 BATCH_LABEL = "radar-email-batch"
 PAGE_LIMIT = 55000  # per body/comment, under GitHub's 65536 cap
 REQUEST_TIMEOUT = (5, 20)
+SPRING_WINTER_2027 = re.compile(r"\b(?:spring|winter)\s*2027\b", re.I)
+
+
+def _spring_winter_2027_internship(record: dict) -> bool:
+    """Return true only when a role has explicit Spring/Winter 2027 evidence."""
+    evidence = record.get("internship_eligibility") or {}
+    term_start = evidence.get("term_start") or record.get("term_start")
+    if isinstance(term_start, str) and term_start.startswith("2027-01"):
+        return True
+    source_term = evidence.get("source_term") or record.get("source_term")
+    if isinstance(source_term, str) and SPRING_WINTER_2027.search(source_term):
+        return True
+    title = record.get("title") or ""
+    return bool(SPRING_WINTER_2027.search(title))
 
 
 def master_label() -> str:
@@ -228,6 +243,8 @@ def email_batch_rows(alert_history: list[dict], sent_ids: set[str], now: int,
         if jobs_state is not None and (current is None or lifecycle.is_terminal(current)):
             continue
         if jobs_state is None and lifecycle.is_terminal(a):
+            continue
+        if profile_id() == "internship" and not _spring_winter_2027_internship(current or a):
             continue
         rows.append(a)
     rows.sort(key=lambda a: (-career_priority(a), -a.get("score", 0),

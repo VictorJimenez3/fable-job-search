@@ -381,7 +381,8 @@ def test_internship_email_defaults_on_and_uses_separate_surface(tmp_path, monkey
     monkeypatch.setenv("GITHUB_TOKEN", "token")
     history = [{"id": "i" * 16, "company": "Acme", "title": "SWE Intern",
                 "url": "https://acme.test/5", "score": 95,
-                "alerted_at": int(time.time()) - 3600, "locations": ["Remote"]}]
+                "alerted_at": int(time.time()) - 3600, "locations": ["Remote"],
+                "internship_eligibility": {"term_start": "2027-01-01"}}]
     response = type("Response", (), {
         "raise_for_status": lambda self: None,
         "json": lambda self: {"html_url": "https://github.test/internships"},
@@ -407,3 +408,26 @@ def test_internship_email_defaults_on_and_uses_separate_surface(tmp_path, monkey
     monkeypatch.setattr("radar.board.requests.post", lambda *args, **kwargs:
                         pytest.fail("an explicit off preference must suppress internship email"))
     assert board.email_enabled() is False
+
+
+def test_internship_email_batch_only_includes_spring_winter_2027(tmp_path, monkeypatch):
+    from radar import board
+
+    monkeypatch.setattr(state, "STATE_DIR", tmp_path)
+    monkeypatch.setenv("RADAR_PROFILE", "internship")
+    monkeypatch.setenv("RADAR_EMAIL_BATCH_MIN", "1")
+    monkeypatch.setenv("RADAR_EMAIL_BATCH_MAX_WAIT_HOURS", "0")
+    now = int(time.time())
+    history = [
+        {"id": "spring", "company": "Spring Co", "title": "SWE Intern",
+         "score": 95, "alerted_at": now - 3600,
+         "internship_eligibility": {"term_start": "2027-01-01"}},
+        {"id": "summer", "company": "Summer Co", "title": "Summer 2027 SWE Intern",
+         "score": 99, "alerted_at": now - 1800,
+         "internship_eligibility": {"term_start": "2027-06-01"}},
+        {"id": "unknown", "company": "Unknown Co", "title": "SWE Intern",
+         "score": 98, "alerted_at": now - 900,
+         "internship_eligibility": {"term_start": None}},
+    ]
+    rows = board.email_batch_rows(history, set(), now, jobs_state=None)
+    assert [row["id"] for row in rows] == ["spring"]

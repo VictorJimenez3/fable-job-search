@@ -3631,3 +3631,11 @@ the scheduled rescore path rebuilds existing rows under the new rubric.
 Internship notification email remains a separate batch, with the existing
 owner toggle preserved. Missing preferences now default to enabled so the
 separate four-hour batch can deliver without combining it with new-grad mail.
+## DECISION #226 — Internship email batches are Spring/Winter 2027 only (2026-10-08)
+
+Victor wants internship email notifications limited to Spring/Winter 2027
+co-ops and internships. The internship batch selector therefore requires
+explicit January 2027 term evidence from the parsed eligibility, source term,
+or title. Summer 2027 and unknown-term roles remain available in the Jobs UI
+but are excluded from internship email batches.
+
