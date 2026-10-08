@@ -23,7 +23,7 @@ jobs:
           ref: ${{ github.event.repository.default_branch }}
       - name: Set up frozen Radar environment
         uses: ./.github/actions/setup-radar
-      - name: Send opt-in internship batch
+      - name: Send separate internship batch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RADAR_PROFILE: internship

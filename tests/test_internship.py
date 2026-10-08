@@ -149,7 +149,7 @@ def test_internship_score_has_auditable_reasons(monkeypatch):
     assert "personal_signal" not in posting.score_dimensions
 
 
-def test_internship_score_is_neutral_across_role_sector_and_remote_preferences(monkeypatch):
+def test_internship_score_has_small_healthcare_preference_and_ignores_role_remote(monkeypatch):
     monkeypatch.setenv("RADAR_PROFILE", "internship")
     from radar import config
     monkeypatch.setattr(config, "_profile_cache", {})
@@ -162,10 +162,12 @@ def test_internship_score_is_neutral_across_role_sector_and_remote_preferences(m
     annotate(swe)
     score(ai, int(time.time()))
     score(swe, int(time.time()))
-    assert ai.score == swe.score
-    assert ai.score_dimensions == swe.score_dimensions
-    assert all("sector" not in reason.lower() for reason in ai.score_reasons)
-    assert all("preference" not in reason.lower() for reason in ai.score_reasons)
+    assert ai.score == swe.score + 4
+    assert ai.score_dimensions["sector_preference"] == 4
+    assert swe.score_dimensions["sector_preference"] == 0
+    assert ai.score_dimensions["role_fit"] == swe.score_dimensions["role_fit"]
+    assert any(reason == "healthcare preference +4" for reason in ai.score_reasons)
+    assert not any("remote" in reason.lower() for reason in ai.score_reasons)
 
 
 def test_internship_score_rewards_pay_prestige_and_work_without_personal_signals(monkeypatch):
@@ -221,13 +223,11 @@ def test_internship_score_uses_full_opportunity_scale(monkeypatch):
     for posting in (google, exceptional):
         annotate(posting)
         score(posting, now)
-    assert google.score >= 90
-    assert google.score_dimensions["prestige"] == 32
-    assert google.score_dimensions["company_quality"] == 0
-    assert google.score_dimensions["compensation"] == 25
-    assert exceptional.score == 100
-    assert exceptional.score_raw > exceptional.score
-    assert any("score cap applied" in reason for reason in exceptional.score_reasons)
+    assert google.score >= 80
+    assert google.score_dimensions["prestige"] == 65
+    assert google.score_dimensions["compensation"] == 8
+    assert exceptional.score > google.score
+    assert exceptional.score <= 100
 
 
 def test_internship_prestige_is_separate_from_personal_company_preferences(monkeypatch):
@@ -240,11 +240,31 @@ def test_internship_prestige_is_separate_from_personal_company_preferences(monke
     for posting in (google, unknown):
         annotate(posting)
         score(posting, now)
-    assert google.score_dimensions["prestige"] == 32
+    assert google.score_dimensions["prestige"] == 65
     assert unknown.score_dimensions["prestige"] == 0
     assert google.score > unknown.score
     assert not any(token in " ".join(google.score_reasons).lower()
                    for token in ("victor", "saved/applied", "personal_signal"))
+
+
+def test_internship_prestige_and_defense_policy(monkeypatch):
+    monkeypatch.setenv("RADAR_PROFILE", "internship")
+    from radar import config
+    monkeypatch.setattr(config, "_profile_cache", {})
+    now = int(time.time())
+    pinterest = job(company="Pinterest", description="Current undergraduates may apply.")
+    healthcare = job(company="Eli Lilly", description="Current undergraduates may apply.")
+    bank = job(company="Citigroup", description="Current undergraduates may apply.")
+    defense = job(company="Anduril", description="Current undergraduates may apply.")
+    for posting in (pinterest, healthcare, bank, defense):
+        annotate(posting)
+        score(posting, now)
+    assert pinterest.score_dimensions["prestige"] == 65
+    assert healthcare.score_dimensions["sector_preference"] == 4
+    assert bank.score_dimensions["sector_preference"] == -4
+    assert defense.score <= 12
+    assert defense.score_dimensions["defense_penalty"] == -70
+    assert any("automatic low-priority penalty -70" in reason for reason in defense.score_reasons)
 
 
 def test_internship_annotation_preserves_cohort_and_work_evidence_on_rescore(monkeypatch):
@@ -298,6 +318,33 @@ def test_curated_internship_source_parsers_are_lane_tagged():
     assert dreamwork_jobs[0].source == "dreamwork_internship"
 
 
+def test_new_offcycle_sources_keep_direct_links_and_source_terms():
+    applyguy = {"jobs": [{
+        "active": True, "company": "Acme", "title": "Software Engineering Intern",
+        "locations": ["New York, NY"], "season": "Winter 2027",
+        "postedAt": "2026-10-07T00:00:00Z",
+        "listingUrl": "https://acme.test/careers/1", "url": "https://applyguy.test/1",
+    }]}
+    with patch.object(aggregators, "get_json", return_value=applyguy):
+        applyguy_jobs = aggregators.fetch_applyguy_internship()
+    assert len(applyguy_jobs) == 1
+    assert applyguy_jobs[0].url == "https://acme.test/careers/1"
+    assert applyguy_jobs[0].alternate_urls == ["https://applyguy.test/1"]
+    assert applyguy_jobs[0].internship_eligibility["source_term"] == "Winter 2027"
+
+    offcycle = (
+        "| Acme | Software Engineer Co-op | Remote | Spring 2027 | BS | "
+        "[Apply](https://acme.test/careers/2) | Oct 8 |\n"
+    )
+    with patch.object(aggregators, "get_text", return_value=offcycle):
+        offcycle_jobs = aggregators.fetch_aprameyak_offcycle()
+    assert len(offcycle_jobs) == 1
+    assert offcycle_jobs[0].url == "https://acme.test/careers/2"
+    assert offcycle_jobs[0].internship_eligibility["source_term"] == "Spring 2027"
+    annotate(offcycle_jobs[0])
+    assert offcycle_jobs[0].internship_eligibility["term_start"] == "2027-01-01"
+
+
 def test_direct_ats_internship_metadata_is_preserved(monkeypatch):
     monkeypatch.setenv("RADAR_PROFILE", "internship")
     lever_payload = [{
@@ -326,7 +373,7 @@ def test_state_namespace_isolated_by_lane(tmp_path, monkeypatch):
     assert (tmp_path / "intern_jobs.json").read_text()
 
 
-def test_internship_email_is_opt_in_and_uses_separate_surface(tmp_path, monkeypatch):
+def test_internship_email_defaults_on_and_uses_separate_surface(tmp_path, monkeypatch):
     from radar import board
 
     monkeypatch.setattr(state, "STATE_DIR", tmp_path)
@@ -335,21 +382,28 @@ def test_internship_email_is_opt_in_and_uses_separate_surface(tmp_path, monkeypa
     history = [{"id": "i" * 16, "company": "Acme", "title": "SWE Intern",
                 "url": "https://acme.test/5", "score": 95,
                 "alerted_at": int(time.time()) - 3600, "locations": ["Remote"]}]
-    monkeypatch.setattr("radar.board.requests.post", lambda *args, **kwargs:
-                        pytest.fail("internship email must be opt-in"))
-    assert board.post_email_batch(history) is None
-
-    state.save_shared("notification_preferences.json", {
-        "new_grad_email": True, "internship_email": True,
-    })
     response = type("Response", (), {
         "raise_for_status": lambda self: None,
         "json": lambda self: {"html_url": "https://github.test/internships"},
     })()
-    monkeypatch.setattr("radar.board.requests.post", lambda *args, **kwargs: response)
     monkeypatch.setenv("RADAR_EMAIL_BATCH_MIN", "1")
     monkeypatch.setenv("RADAR_EMAIL_BATCH_MAX_WAIT_HOURS", "0")
+    sent = {}
+    def capture_post(*args, **kwargs):
+        sent.update(kwargs.get("json") or {})
+        return response
+    monkeypatch.setattr("radar.board.requests.post", capture_post)
+    assert board.email_enabled() is True
     url = board.post_email_batch(history)
     assert url == "https://github.test/internships"
+    assert "Internship batch" in sent["title"]
+    assert "new internship roles" in sent["body"]
     payload = state.load("notification_state.json", {})
     assert payload["email_batch_sent_ids"] == ["i" * 16]
+
+    state.save_shared("notification_preferences.json", {
+        "new_grad_email": True, "internship_email": False,
+    })
+    monkeypatch.setattr("radar.board.requests.post", lambda *args, **kwargs:
+                        pytest.fail("an explicit off preference must suppress internship email"))
+    assert board.email_enabled() is False

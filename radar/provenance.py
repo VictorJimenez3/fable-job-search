@@ -15,6 +15,8 @@ SOURCE_INFO = {
     "speedyapply_internship": ("SpeedyApply internship board", "https://github.com/speedyapply/2027-SWE-College-Jobs"),
     "zapply_internship": ("Zapply internship board", "https://github.com/zapplyjobs/Internships-2027"),
     "dreamwork_internship": ("Dreamwork tech internship board", "https://github.com/dreamworkhq/Tech-Internships-2027"),
+    "applyguy_internship": ("ApplyGuy 2027 internships", "https://github.com/ApplyGuy/2027-Internships"),
+    "aprameyak_offcycle": ("Aprameyak 2027 off-cycle jobs", "https://github.com/aprameyak/2027-tech-jobs/blob/main/OFFCYCLE.md"),
     "hn": ("Hacker News Who Is Hiring", "https://news.ycombinator.com/item?id=40789211"),
 }
 

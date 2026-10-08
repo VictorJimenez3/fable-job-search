@@ -1,5 +1,26 @@
 # CLI handoff notes
 
+## Internship lane update (2026-10-08; DECISION #225)
+
+- Spring/Winter 2027 and Summer 2027 now have separate Jobs filters. The
+  parser preserves a source-provided start term when the posting title omits
+  it.
+- ApplyGuy's structured 2027 internship feed and Aprameyak's direct-link
+  off-cycle table join Simplify, SpeedyApply, Zapply, and Dreamwork. Their
+  canonical employer links feed the existing ATS token harvest. Public
+  `@zero2sudo` research informed discovery but is not a runtime connector.
+- Internship rules v7 put employer prestige first (including Pinterest in the
+  top tier), give healthcare +4 and fintech/banks -4, and apply a -70 raw
+  defense penalty plus a final score cap of 12. Defense records remain stored
+  with the exact reason in the score ledger.
+- Internship batches remain separate from new-grad mail and now default on
+  when there is no saved owner preference. The Settings toggle still controls
+  delivery. No Gmail permission or new secret is required.
+- Local Python tests, compile checks, retired-artifact checks, diff checks, and
+  the browser term-filter smoke check pass. The change is not published yet.
+  After merge, confirm the internship rescore workflow is green before relying
+  on the separate internship email batch.
+
 ## Ranking release (2026-10-06; DECISION #223)
 
 - **Ranking v15 / DECISION #223:** one source-linked company-reputation band
@@ -1178,22 +1199,21 @@ cd webapp && npm ci && npm run typecheck && npm test -- --run && npm run lint &&
   same PM-family query fan-out; Amazon drops its technical category restriction
   only for those PM queries. This preserves recall where PM evidence is
   strongest without pushing the full crawl past its time budget.
-- **Technical internship lane (DECISION #104):** the main platform now has a
+- **Technical internship lane (DECISION #104; updated by DECISION #225):** the main platform now has a
   visible New-grad / Internships switch. Internship state is namespaced as
   `state/intern_*.json`; the lane reads curated Simplify, SpeedyApply, Zapply,
-  and Dreamwork GitHub feeds plus internship-specific ATS searches. Its
+  Dreamwork, ApplyGuy, and Aprameyak off-cycle GitHub feeds plus
+  internship-specific ATS searches. Its
   two-hour crawl, alert delivery, master board, checkbox reconcile, and
   `docs/internships/` outputs are separate and lower-budget so new-grad
   compute remains first. A viewer's expected graduation month is stored only
   in the private Google Preferences tab/local browser and drives deterministic
   freshman/sophomore/junior/senior matching. Internship email batches default
-  off; new-grad batches default on; both are owner toggles and neither uses
-  Gmail scope. Internship rules v6 uses a neutral friend-facing 0–100 rubric: role
-  families are flat, while prestige/crackedness, normalized pay, cited employer
-  evidence, work quality, student evidence, and freshness contribute. Victor's
-  new-grad preferences, feedback, remote setting, and personal-signal sample
-  are excluded. Unknown pay, employers, and work evidence are zero signals,
-  not penalties. The crawl workflow rebuilds every stored internship score and
+  on when no owner preference is saved, remain separately labeled, and can be
+  turned off in Settings; neither lane uses Gmail scope. Internship rules v7
+  use a prestige-led 0–100 rubric with smaller pay, work, eligibility, and
+  freshness dimensions, healthcare +4, fintech/banks -4, and an auditable
+  defense penalty/cap. The crawl workflow rebuilds every stored internship score and
   runs `score-health` before delivery so the separate `intern_*` snapshot cannot
   publish stale score versions. Explicit full-time-only wording without
   internship/student evidence is review-only, capped below the board threshold,

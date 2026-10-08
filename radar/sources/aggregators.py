@@ -1,11 +1,12 @@
-"""GitHub-hosted new-grad aggregators. These are the breadth layer: community/
-company-maintained lists refreshed hourly-to-daily, all fetchable as raw files.
+"""GitHub-hosted job aggregators. These are the breadth layer: community- or
+company-maintained lists refreshed hourly-to-daily, fetchable as raw files.
 """
 from __future__ import annotations
 
 import re
 import time
 from datetime import UTC, datetime
+from html import unescape
 
 from ..http import get_json, get_text
 from ..models import Job
@@ -28,6 +29,8 @@ SIMPLIFY_INTERNSHIP_URL = "https://raw.githubusercontent.com/SimplifyJobs/Summer
 SPEEDY_INTERNSHIP_URL = "https://raw.githubusercontent.com/speedyapply/2027-SWE-College-Jobs/main/README.md"
 ZAPPLY_INTERNSHIP_URL = "https://raw.githubusercontent.com/zapplyjobs/Internships-2027/main/README.md"
 DREAMWORK_INTERNSHIP_URL = "https://raw.githubusercontent.com/dreamworkhq/Tech-Internships-2027/main/data/listings.json"
+APPLYGUY_INTERNSHIP_URL = "https://raw.githubusercontent.com/ApplyGuy/2027-Internships/main/data/internships.json"
+APRAMAYAK_OFFCYCLE_URL = "https://raw.githubusercontent.com/aprameyak/2027-tech-jobs/main/OFFCYCLE.md"
 
 # Aggregator ``active`` is the source's current availability signal. Its
 # posted/updated timestamp is often stale (especially for evergreen new-grad
@@ -314,5 +317,99 @@ def fetch_dreamwork_internship() -> list[Job]:
             posted_at=_iso_epoch(row.get("postedAt") or row.get("firstIndexedAt")),
             salary=salary, remote="remote" in str(row.get("remoteType") or "").lower(),
             profile="internship",
+        ))
+    return out
+
+
+def fetch_applyguy_internship() -> list[Job]:
+    """Read ApplyGuy's structured, continuously refreshed internship list."""
+    payload = get_json(APPLYGUY_INTERNSHIP_URL)
+    rows = payload if isinstance(payload, list) else payload.get("jobs", [])
+    out = []
+    for row in rows:
+        if not row.get("active", True):
+            continue
+        company = str(row.get("company") or row.get("companyName") or "").strip()
+        title = str(row.get("title") or "").strip()
+        listing = str(row.get("listingUrl") or row.get("listing_url") or "").strip()
+        alternate = str(row.get("url") or row.get("applyUrl") or "").strip()
+        url = listing or alternate
+        if not company or not title or not url.startswith(("https://", "http://")):
+            continue
+
+        posted = _iso_epoch(row.get("posted") or row.get("postedAt") or row.get("posted_at"))
+        if posted and time.time() - posted > MAX_AGE_S:
+            continue
+        raw_locations = row.get("locations") or row.get("location") or []
+        locations = ([str(value).strip() for value in raw_locations if str(value).strip()]
+                     if isinstance(raw_locations, list)
+                     else [str(raw_locations).strip()] if str(raw_locations).strip() else [])
+        salary = str(row.get("salary") or row.get("compensation") or "").strip()
+        if not salary and (row.get("salaryMin") or row.get("salaryMax")):
+            salary = f"${row.get('salaryMin', '?')}–${row.get('salaryMax', '?')}"
+        season = str(row.get("season") or row.get("term") or "").strip()
+        out.append(Job(
+            company=company, title=title, url=url, source="applyguy_internship",
+            source_url=info("applyguy_internship")[1], locations=locations,
+            posted_at=posted,
+            salary=salary,
+            remote=bool(row.get("remote")) or "remote" in " ".join(locations).lower(),
+            profile="internship",
+            internship_eligibility={"source_signal": True, "source_term": season},
+            alternate_urls=[alternate] if alternate and alternate != url else [],
+        ))
+    return out
+
+
+def _markdown_cell_text(value: str) -> str:
+    value = unescape(value or "").strip()
+    value = re.sub(r"!?\[([^\]]*)\]\([^)]*\)", r"\1", value)
+    value = re.sub(r"<[^>]+>", " ", value)
+    value = re.sub(r"[*`_]+", "", value)
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def fetch_aprameyak_offcycle() -> list[Job]:
+    """Parse direct application links in the community off-cycle job table."""
+    md = get_text(APRAMAYAK_OFFCYCLE_URL)
+    out, previous_company = [], ""
+    for line in md.splitlines():
+        if not line.lstrip().startswith("|"):
+            continue
+        cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+        if len(cells) < 6 or all(re.fullmatch(r"[:\-\s]+", cell or "-") for cell in cells):
+            continue
+        company = _markdown_cell_text(cells[0])
+        title = _markdown_cell_text(cells[1])
+        location = _markdown_cell_text(cells[2])
+        season = _markdown_cell_text(cells[3])
+        if company in _CONTINUATION_GLYPHS:
+            company = previous_company
+        if company:
+            previous_company = company
+        if not company or not title:
+            continue
+
+        application_cell = cells[5]
+        links = re.findall(r"\[[^\]]*\]\((https?://[^)]+)\)", application_cell)
+        if not links:
+            links = re.findall(r'<a[^>]+href=["\'](https?://[^"\']+)', application_cell, re.I)
+        if not links:
+            links = re.findall(r"https?://[^\s|)>]+", application_cell)
+        url = next((link.rstrip(".,") for link in links
+                    if link.startswith(("https://", "http://"))), "")
+        if not url:
+            continue
+        date_text = cells[6] if len(cells) > 6 else ""
+        date_match = re.search(r"([A-Z][a-z]{2}\s+\d{1,2})", date_text)
+        posted = _md_date_to_epoch(date_match.group(1)) if date_match else None
+        if posted and time.time() - posted > MAX_AGE_S:
+            continue
+        locations = [location] if location and location.lower() not in {"n/a", "unknown", "-"} else []
+        out.append(Job(
+            company=company, title=title, url=url, source="aprameyak_offcycle",
+            source_url=info("aprameyak_offcycle")[1], locations=locations,
+            posted_at=posted, remote="remote" in location.lower(), profile="internship",
+            internship_eligibility={"source_signal": True, "source_term": season},
         ))
     return out

@@ -3608,3 +3608,26 @@ source-map-js 1.2.2 security fix was released September 30; it is used despite
 being just under seven days old because it is the available patch for the
 release-blocking advisory. No audit severity threshold, security policy,
 workflow gate, or application runtime dependency was relaxed to publish.
+
+## 225. Make internship ranking prestige-led and prepare the 2027 co-op lane (2026-10-08)
+
+Spring and Winter 2027 roles need to be easy to separate from Summer 2027, so
+the internship Jobs filter exposes those two start windows. Structured source
+terms are retained when the title does not name the season. Broader public
+coverage adds ApplyGuy's structured internship board and Aprameyak's off-cycle
+table alongside the existing feeds; their direct application links also seed
+the existing ATS company discovery loop. Public `@zero2sudo` posts were used
+as research leads for co-op and employer discovery, not as a crawler or
+credential-dependent runtime source.
+
+Victor asked for the internship ranking to reflect employer prestige first.
+Prestige tiers now dominate the smaller pay, work, student-eligibility, and
+freshness dimensions; Pinterest sits in the top recognition tier. Healthcare
+receives +4 and fintech/banks -4. Defense employers and clearly defense-focused
+postings receive a -70 raw penalty and final score cap of 12. They remain
+stored and auditable for review. The internship rules stamp advances to v7 so
+the scheduled rescore path rebuilds existing rows under the new rubric.
+
+Internship notification email remains a separate batch, with the existing
+owner toggle preserved. Missing preferences now default to enabled so the
+separate four-hour batch can deliver without combining it with new-grad mail.

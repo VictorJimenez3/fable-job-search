@@ -147,32 +147,34 @@ repository-level `NOTION_TOKEN` and therefore the same Notion Applications
 database.
 
 The main platform's **New-grad / Internships** switch is a second, isolated
-technical lane for friends. Internship postings come from curated public
-GitHub boards (Simplify, SpeedyApply, Zapply, and Dreamwork) plus internship
-searches on the existing ATS registry. A viewer can set an expected graduation
-month in Settings; the lane derives freshman/sophomore/junior/senior fit from
-the posting's internship start term and keeps unclear eligibility visible as
-unknown instead of silently rejecting it. The default internship list uses
-positive title or posting-body evidence (intern, co-op, seasonal terms, or
-student/graduation language); uncertain source-only rows remain behind a
-review toggle. New-grad and internship Jobs,
+technical lane. Internship postings come from curated public GitHub boards
+(Simplify, SpeedyApply, Zapply, Dreamwork, [ApplyGuy](https://github.com/ApplyGuy/2027-Internships),
+and [Aprameyak's off-cycle board](https://github.com/aprameyak/2027-tech-jobs/blob/main/OFFCYCLE.md))
+plus internship searches on the existing ATS registry. Community
+account research, including public posts from `@zero2sudo`, also helps locate
+additional employer and co-op sources; account feeds are discovery leads, not
+runtime dependencies. Every source listing URL is mined for ATS board tokens,
+so new companies expand direct monitoring automatically.
+
+In the internship Jobs filters, select **Spring / Winter 2027** or **Summer
+2027** to keep January-start co-ops separate from summer roles. A viewer can
+set an expected graduation month in Settings; the lane derives freshman,
+sophomore, junior, or senior fit from the posting's internship start term and
+keeps unclear eligibility visible as unknown instead of silently rejecting it.
+The default internship list uses positive title or posting-body evidence
+(intern, co-op, seasonal terms, or student/graduation language); uncertain
+source-only rows remain behind a review toggle. New-grad and internship Jobs,
 Pipeline, web state, alert history, and GitHub surfaces never share a list.
 
-Internships use a separate neutral, friend-facing 0–100 score. It starts
-technical role families evenly and compares public opportunity evidence:
-normalized pay,
-recognized or cited employer signal, mentorship and structured learning,
-hands-on ownership, technical depth, production/user impact, return-offer
-path, student evidence, and freshness. It does not use Victor's saved roles,
-sectors, remote preference, feedback, applied history, or new-grad weights;
-unknown employers and missing pay/work evidence receive zero for that signal,
-not a penalty. The drawer shows the dimensions and exact reasons behind each
-score.
-
-Prestige is an explicit general-opportunity dimension in this lane: Google,
-NVIDIA, Microsoft, OpenAI, Anthropic, and comparable big-tech or AI-lab
-employers intentionally occupy the top end of the friend-facing chart. This
-is a broad "crackedness" signal, not Victor's personal company preference.
+Internships use a 0–100 ranking led by employer prestige. Recognized employers
+such as Pinterest, Google, NVIDIA, Microsoft, OpenAI, and Anthropic receive a
+large reputation signal; published pay, employer evidence, mentorship,
+ownership, technical depth, user impact, student eligibility, and freshness
+make smaller adjustments. Healthcare employers receive +4, while fintech and
+banks receive -4. Defense employers and clearly defense-focused postings get a
+large auditable deduction and a final score cap of 12, which places them at the
+bottom while keeping them in the board data. The drawer shows the dimensions
+and exact reasons behind each score.
 
 The lane is conservative about employment type. Explicit full-time-only
 wording with no internship, student, or graduation evidence is marked
@@ -181,10 +183,11 @@ normal internship board threshold. Senior/staff-style titles and rows without
 positive internship evidence stay available through the review toggle because
 missing an oddly labeled internship is worse than reviewing an outlier.
 
-Internship email batches are **off by default**. The owner can opt into them
-from Settings; the same preference controls new-grad batches (new-grad starts
-enabled). This is GitHub notification delivery, not inbox access: Google OAuth
-does not request Gmail scope and the platform never reads internship emails.
+Internship email batches are **on by default** and are delivered separately
+from new-grad batches with their own subject and content. The owner can turn
+them off in Settings. GitHub notification delivery runs every four hours; it
+does not read an inbox. Google OAuth does not request Gmail scope and the
+platform never reads internship emails.
 
 The shortcut and the original Vercel URL are two doors to the same platform.
 OAuth still uses the original callback host for provider compatibility, then a
@@ -324,10 +327,9 @@ and its ranking remain the priority whenever compute is constrained.
    Notion/Sheets stage edits and local changes converge without waiting for an
    issue event. The twice-daily checkbox sweep remains as a second safety net.
 
-   Internship notification batches are disabled unless the owner explicitly
-   enables **internship batches** in Settings. New-grad batches have their own
-   toggle and default to enabled. Neither toggle grants Gmail access or
-   changes the posting crawler.
+   Internship notification batches run separately from new-grad batches and
+   default to enabled. The owner can turn either batch off in Settings.
+   Neither toggle grants Gmail access or changes the posting crawler.
 3. For a job found outside the radar, use **Pipeline → Add a role you found
    yourself** to save its company, title, live link, and optional location to
    the in-house **To apply** lane and Notion. From there, move it to **To
