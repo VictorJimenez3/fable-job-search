@@ -71,10 +71,11 @@ none block anything currently running.
    Internship sources, ATS queries, scoring/gates, graduation-aware
    freshman/sophomore/junior/senior matching, state, dashboards, GitHub
    surfaces, and Google tracker tabs are separate. New-grad remains the
-   priority compute path; internship email batches are opt-in. Its v6 score is
-   a neutral friend-facing 0–100 opportunity rubric with flat role-family weights,
-   explicit prestige/crackedness, normalized pay, employer/work evidence, student evidence, and freshness;
-   Victor's new-grad preferences never rank friends' internships. The clean
+   priority compute path; internship email batches are separate and default on.
+   Rules v7 provides a prestige-led 0–100 ranking, separate Spring/Winter 2027
+   and Summer 2027 filters, additional ApplyGuy and Aprameyak sources, modest
+   healthcare/finance preferences, and a bottom score cap for defense work.
+   The clean
    internship list requires positive title or posting evidence; uncertain,
    source-only, and senior-style outliers remain behind a review toggle.
 

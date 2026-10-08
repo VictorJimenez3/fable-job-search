@@ -54,6 +54,8 @@ AGG_SOURCES_INTERNSHIP = {
     "speedyapply_internship": aggregators.fetch_speedyapply_internship,
     "zapply_internship": aggregators.fetch_zapply_internship,
     "dreamwork_internship": aggregators.fetch_dreamwork_internship,
+    "applyguy_internship": aggregators.fetch_applyguy_internship,
+    "aprameyak_offcycle": aggregators.fetch_aprameyak_offcycle,
 }
 
 PM_BACKFILL_ATS = {"workday", "phenom"}
@@ -1455,7 +1457,7 @@ def web_action() -> int:
             print("web-action: invalid notification preference")
             return 1
         preferences = state.load_shared("notification_preferences.json", {
-            "new_grad_email": True, "internship_email": False,
+            "new_grad_email": True, "internship_email": True,
         })
         preferences[key] = payload["enabled"]
         preferences["updated_at"] = int(time.time())

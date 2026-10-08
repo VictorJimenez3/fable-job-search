@@ -169,12 +169,12 @@ def test_platform_exposes_isolated_internship_lane_and_graduation_preferences():
     assert "internship_email" in html + (ROOT / "radar/board.py").read_text()
 
 
-def test_internship_scoring_is_neutral_and_has_coverage_checks():
+def test_internship_scoring_is_prestige_led_and_has_coverage_checks():
     html = (ROOT / "webapp" / "index.html").read_text()
     scorer = (ROOT / "radar" / "internship.py").read_text()
     profile = (ROOT / "profiles" / "internship.yaml").read_text()
     workflow = (ROOT / ".github" / "workflows" / "internship-radar.yml").read_text()
-    assert "RULES_VERSION = 6" in scorer
+    assert "RULES_VERSION = 7" in scorer
     assert "INTERNSHIP_TITLE_RE" in scorer
     assert '"internship_signal"' in scorer
     assert "flat across role families" in scorer
@@ -184,6 +184,7 @@ def test_internship_scoring_is_neutral_and_has_coverage_checks():
     assert "curated internship source" not in scorer
     assert "internship_scoring:" in profile
     assert "prestige_tiers:" in profile
+    assert "Pinterest" in profile
     assert "work_quality_cap:" in profile
     assert "compensation_points:" in profile
     assert "prestige_points:" in profile
@@ -191,7 +192,13 @@ def test_internship_scoring_is_neutral_and_has_coverage_checks():
     assert "rescore_only" in workflow
     assert "Rescore stored internship state only" in workflow
     assert "score-health" in workflow
-    assert "neutral friend-facing rubric" in html
+    assert 'name === "sector_preference"' in html
+    assert 'name === "defense_penalty"' in html
+    assert "Prestige-led internship ranking" in html
+    assert 'internship_email:true' in html
+    assert "Internship term" in html
+    assert "Spring / Winter 2027" in html
+    assert "Summer 2027" in html
     assert "work_quality" in html
     assert "Prestige / crackedness" in html
     assert 'name === "prestige"' in html

@@ -115,26 +115,23 @@ internship lane uses that date together with an internship's start term to
 label likely freshman, sophomore, junior, or senior fit. A posting with no
 clear class-year or graduation evidence remains visible as **unknown/open**;
 it is not silently filtered out. The cohort dropdown in Jobs lets you filter
-match, mismatch, open, or unknown roles.
+match, mismatch, open, or unknown roles. The **Internship term** filter also
+separates **Spring / Winter 2027** from **Summer 2027**, using the source term
+when a posting title does not say when the role starts.
 
 If Google is connected, the private workbook has separate **Applications**
 and **Internships** tabs plus **Preferences**. Switching lanes changes which
 tab is read and written. The app requests Drive file access only; it does not
 request Gmail scope or read internship email.
 
-Internship scores are intentionally neutral 0–100 scores for friends rather
-than personalized to Victor. Technical role families start evenly; the rubric then
-uses normalized published pay, recognized or cited employer signal,
-mentorship, ownership, technical depth, production/user impact, return-offer
-evidence, student eligibility, and freshness. Saved roles, sectors, remote
-preference, feedback, applied history, and new-grad role weights are ignored in
-this lane. Missing pay, work evidence, or employer recognition contributes zero
-instead of a penalty, and **Why it scored** exposes the exact reasons.
-
-Prestige is its own general-opportunity dimension: Google, NVIDIA, Microsoft,
-OpenAI, Anthropic, and comparable big-tech or AI-lab employers receive a
-strong top-end signal. It measures broad technical "crackedness," not Victor's
-saved company preferences.
+Internship scores use a 0–100 ranking led by employer prestige. Pinterest,
+Google, NVIDIA, Microsoft, OpenAI, Anthropic, and comparable employers receive
+the strongest reputation signal. Pay, employer research, mentorship, ownership,
+technical depth, user impact, student eligibility, and freshness make smaller
+adjustments. Healthcare receives +4; fintech and banks receive -4. Defense
+employers and clearly defense-focused postings receive a large auditable
+deduction and a final score cap of 12. **Why it scored** shows the exact
+reasons behind each score.
 
 Full-time protection is deliberately one-sided: clear full-time-only wording
 without internship or student evidence becomes review-only and cannot alert,
@@ -143,10 +140,10 @@ lost. The normal internship list is cleaned to positive title/body evidence;
 source-only, unknown, and senior-style outliers stay available through the
 **include review-only / no-title rows** filter.
 
-Internship email batches are off by default. The owner can enable
-**internship batches** in Settings; **new-grad batches** have a separate
-toggle and default to on. GitHub issue/board surfaces remain available without
-email delivery.
+Internship batches are separate from new-grad batches and default to on. The
+owner can turn either batch off in **Settings**. GitHub notifications deliver
+the batch; the platform does not read your inbox, and Google OAuth does not
+request Gmail scope.
 
 Reading needs nothing. On Vercel, use **Tutorial → Accounts & login** to sign
 in with GitHub or Google. The memorable shortcut and the original Vercel URL

@@ -39,7 +39,7 @@ def batch_label() -> str:
 
 
 def email_enabled() -> bool:
-    defaults = {"new_grad_email": True, "internship_email": False}
+    defaults = {"new_grad_email": True, "internship_email": True}
     preferences = state.load_shared("notification_preferences.json", defaults)
     key = "internship_email" if profile_id() == "internship" else "new_grad_email"
     return bool(preferences.get(key, defaults[key]))
@@ -269,10 +269,12 @@ def post_email_batch(alert_history: list[dict], limit: int | None = None) -> str
     rows = pending[:limit]
     repo = github_repo()
     stamp = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
-    title_prefix = "Internship" if profile_id() == "internship" else "Job Radar"
+    internship_lane = profile_id() == "internship"
+    title_prefix = "Internship" if internship_lane else "Job Radar"
     title = f"📬 {title_prefix} batch — {stamp} ({len(rows)} roles)"
     from .culture import load as culture_load
-    body = (f"The radar found **{len(rows)}** new roles since the last batch. "
+    role_label = "internship roles" if internship_lane else "roles"
+    body = (f"The radar found **{len(rows)}** new {role_label} since the last batch. "
             "They are ordered by score, then recency. Check a box to track one.\n\n"
             + "\n".join(format_line(row, culture_load()) for row in rows) + "\n")
     response = requests.post(f"{API}/repos/{repo}/issues", headers=_headers(), timeout=20,

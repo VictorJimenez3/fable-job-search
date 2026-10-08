@@ -1,6 +1,6 @@
-# Friend-facing technical internship lane. This is intentionally separate
-# from Victor's new-grad candidate profile; a viewer's graduation date is a
-# private matching preference, not shared crawler state.
+# Technical internship lane with Victor's requested prestige-led ranking.
+# It remains separate from new-grad state; graduation dates are private
+# matching preferences, not shared crawler state.
 lane: internship
 
 candidate:
@@ -9,38 +9,31 @@ candidate:
   needs_sponsorship: false
 
 internship_scoring:
-  # This is a friend-facing opportunity rubric, not Victor's candidate
-  # profile. Every technical role family starts equally; differences come
-  # from public opportunity evidence, not saved/applied preferences.
-  # The display is a real 0–100 opportunity scale, not a low additive
-  # confidence score. Missing evidence still contributes zero.
-  base: 5
-  flat_technical_role: 15
-  explicit_eligibility: 18
-  open_eligibility: 14
-  # Cited employer/work research stays separate from broad prestige.
-  employer_signal_cap: 8
-  work_quality_cap: 20
+  # Prestige is the leading ranking signal. Smaller public-evidence signals
+  # still help distinguish roles at employers with similar reputations.
+  base: 3
+  flat_technical_role: 3
+  explicit_eligibility: 4
+  open_eligibility: 2
+  employer_signal_cap: 2
+  work_quality_cap: 6
   compensation_points:
-    120000: 25
-    100000: 21
-    80000: 17
-    60000: 12
-    40000: 7
-    0: 3
-  fresh_24h: 3
-  fresh_72h: 2
-  fresh_7d: 1
+    120000: 8
+    100000: 7
+    80000: 6
+    60000: 4
+    40000: 2
+    0: 1
+  fresh_24h: 1
+  fresh_72h: 1
+  fresh_7d: 0
   # Keep explicit full-time outliers discoverable, but below the normal board
   # threshold and out of alerts unless positive internship evidence appears.
   full_time_review_cap: 34
   prestige_points:
-    1: 32
-    2: 21
-    3: 10
-  # Broad recognition tiers are intentionally separate from the owner's
-  # marquee list. Unknown employers receive no penalty; cited research can
-  # add a small, auditable employer/work signal when available.
+    1: 65
+    2: 46
+    3: 38
   prestige_tiers:
     1:
       - Google
@@ -69,6 +62,7 @@ internship_scoring:
       - Airbnb
       - Jane Street
       - Citadel
+      - Pinterest
     2:
       - Adobe
       - Salesforce
@@ -81,11 +75,21 @@ internship_scoring:
       - IBM
       - Bloomberg
       - LinkedIn
+      - Figma
+      - Datadog
+      - Cloudflare
+      - Shopify
+      - GitHub
+      - GitLab
+      - Spotify
+      - MongoDB
+      - Twilio
+      - Ramp
+      - Plaid
       - ByteDance
       - TikTok
       - Roblox
       - DoorDash
-      - Pinterest
       - Reddit
       - Atlassian
       - Coinbase
@@ -121,6 +125,81 @@ internship_scoring:
       - Coursera
       - Khan Academy
       - IXL Learning
+    3:
+      - Elastic
+      - Redis
+      - HashiCorp
+      - Confluent
+      - Vercel
+      - Asana
+      - Brex
+      - Chime
+      - Robinhood
+      - SoFi
+  # Victor asked for healthcare to receive a small lift and fintech/banks a
+  # slight drag. Prestige remains the much larger signal in every tier.
+  sector_adjustments:
+    healthcare: 4
+    fintech_and_banks: -4
+    healthcare_companies:
+      - Johnson & Johnson
+      - CVS Health
+      - Northwell Health
+      - CareFirst BlueCross BlueShield
+      - Eli Lilly
+      - Pfizer
+      - Merck
+      - Genentech
+      - Regeneron
+      - Moderna
+      - Medtronic
+      - Intuitive Surgical
+      - Stryker
+    financial_companies:
+      - Bank of America
+      - Wells Fargo
+      - Citigroup
+      - Citi
+      - Fidelity Investments
+      - BNY
+  # Keep defense work visible with a reasoned bottom score, including roles at
+  # known defense contractors and postings explicitly about military work.
+  defense_penalty: 70
+  defense_score_cap: 12
+  defense_companies:
+    - Anduril
+    - Lockheed Martin
+    - Northrop Grumman
+    - General Dynamics
+    - RTX
+    - Raytheon
+    - L3Harris
+    - BAE Systems
+    - Leidos
+    - Booz Allen Hamilton
+    - CACI
+    - ManTech
+    - SAIC
+    - Shield AI
+    - Palantir
+    - AeroVironment
+    - Kratos Defense
+    - Huntington Ingalls
+    - Sierra Nevada Corporation
+    - Amentum
+    - Peraton
+    - Parsons
+    - KBR
+    - Elbit Systems
+    - Thales
+    - Boeing Defense, Space & Security
+  defense_role_terms:
+    - defense
+    - military
+    - national security
+    - classified
+    - weapons
+    - munitions
 
 thresholds:
   alert: 60
@@ -148,6 +227,8 @@ aggregator_sources:
   - speedyapply_internship
   - zapply_internship
   - dreamwork_internship
+  - applyguy_internship
+  - aprameyak_offcycle
 
 notion:
   stage_applied: Applied

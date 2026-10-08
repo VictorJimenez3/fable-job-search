@@ -12,8 +12,9 @@ from datetime import date, datetime
 from .config import profile
 from .models import Job
 from .score import FOREIGN_HINTS, company_momentum_signal, role_bucket
+from .sector import infer as infer_sector
 
-RULES_VERSION = 6
+RULES_VERSION = 7
 
 INTERNSHIP_RE = re.compile(r"\b(intern(ship)?|co-?op|undergraduate|student worker|summer analyst)\b", re.I)
 INTERNSHIP_TITLE_RE = re.compile(
@@ -29,8 +30,11 @@ EXPERIENCED_TITLE_RE = re.compile(
 )
 INTERNSHIP_SOURCE_NAMES = {
     "simplify_internship", "speedyapply_internship", "zapply_internship", "dreamwork_internship",
+    "applyguy_internship", "aprameyak_offcycle",
 }
 FULL_TIME_RE = re.compile(r"\bfull[- ]time\b|\bpermanent\s+(?:employee|role|position)\b|\bregular\s+employee\b", re.I)
+DEFENSE_ROLE_RE = re.compile(
+    r"\b(?:defen[cs]e|military|national security|classified|weapons?|munitions?|battlefield|clearance)\b", re.I)
 STUDENT_RE = re.compile(r"\b(current|rising|enrolled|undergraduate|college|university)\s+students?\b", re.I)
 CLASS_RE = re.compile(
     r"\b(?P<rising>rising\s+)?(?P<class>freshman|freshmen|first[- ]year|"
@@ -146,6 +150,45 @@ def _prestige_signal(company: str) -> tuple[int, list[str]]:
             break
 
     return max(0, points), reasons
+
+
+def _sector_preference_signal(job: Job) -> tuple[int, list[str]]:
+    """Apply the owner's small healthcare and finance preferences."""
+    cfg = _scoring_config().get("sector_adjustments", {}) or {}
+    sector = infer_sector(job.company, {})
+    if sector == "other" and job.sector and job.sector != "other":
+        sector = job.sector
+
+    healthcare_companies = cfg.get("healthcare_companies", []) or []
+    finance_companies = cfg.get("financial_companies", []) or []
+    if sector in {"healthtech", "healthcare"} or any(
+            _matches_company(job.company, name) for name in healthcare_companies):
+        points = int(cfg.get("healthcare", 4))
+        return points, [f"healthcare preference {points:+d}"] if points else []
+    if sector in {"fintech", "financial_services", "financial services"} or any(
+            _matches_company(job.company, name) for name in finance_companies):
+        points = int(cfg.get("fintech_and_banks", -4))
+        return points, [f"fintech/bank preference {points:+d}"] if points else []
+    return 0, []
+
+
+def _defense_signal(job: Job) -> tuple[bool, str]:
+    """Identify defense employers and clearly defense-focused postings."""
+    cfg = _scoring_config()
+    companies = cfg.get("defense_companies", []) or []
+    matched = next((str(name) for name in companies
+                    if _matches_company(job.company, str(name))), "")
+    if matched:
+        return True, f"defense employer: {matched}"
+    text = f"{job.title}\n{job.description or ''}"
+    role_terms = cfg.get("defense_role_terms", []) or []
+    for term in role_terms:
+        if re.search(rf"\b{re.escape(str(term))}\b", text, re.I):
+            return True, f"defense-focused posting: {term}"
+    if DEFENSE_ROLE_RE.search(text):
+        match = DEFENSE_ROLE_RE.search(text)
+        return True, f"defense-focused posting: {match.group(0)}"
+    return False, ""
 
 
 def _employer_signal(company: str) -> tuple[int, list[str]]:
@@ -278,6 +321,11 @@ def analyze(job: Job | dict, description: str | None = None) -> dict:
         job.description if isinstance(job, Job) else job.get("description", ""))
     text = f"{title}\n{desc or ''}"
     term_start = _term_start(text)
+    source_evidence = (job.internship_eligibility if isinstance(job, Job)
+                       else job.get("internship_eligibility", {})) or {}
+    source_term = source_evidence.get("source_term")
+    if not term_start and source_term:
+        term_start = _term_start(str(source_term))
     full_time_only = bool(FULL_TIME_RE.search(text)
                           and not _has_student_or_internship_evidence(text))
 
@@ -325,6 +373,7 @@ def analyze(job: Job | dict, description: str | None = None) -> dict:
         "graduation_start": grad_start,
         "graduation_end": grad_end,
         "term_start": term_start.isoformat() if term_start else None,
+        "source_term": source_term,
         "employment_signal": "full_time_only" if full_time_only else (
             "internship_or_student" if _has_student_or_internship_evidence(text)
             else "unknown"),
@@ -399,17 +448,19 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
 
 def score(job: Job, now: int) -> None:
     cfg = _scoring_config()
-    flat_role = int(cfg.get("flat_technical_role", 10))
-    base = int(cfg.get("base", 17))
+    flat_role = int(cfg.get("flat_technical_role", 4))
+    base = int(cfg.get("base", 4))
     dimensions = {
         "base": base,
         "role_fit": flat_role,
         "eligibility": 0,
         "prestige": 0,
+        "sector_preference": 0,
         "company_quality": 0,
         "compensation": 0,
         "work_quality": 0,
         "timing_access": 0,
+        "defense_penalty": 0,
     }
     reasons = [
         f"base internship utility +{base}",
@@ -423,6 +474,16 @@ def score(job: Job, now: int) -> None:
     prestige_points, prestige_reasons = _prestige_signal(job.company)
     dimensions["prestige"] = prestige_points
     reasons.extend(prestige_reasons)
+
+    sector_points, sector_reasons = _sector_preference_signal(job)
+    dimensions["sector_preference"] = sector_points
+    reasons.extend(sector_reasons or ["sector preference neutral +0"])
+
+    defense, defense_reason = _defense_signal(job)
+    if defense:
+        penalty = abs(int(cfg.get("defense_penalty", 70)))
+        dimensions["defense_penalty"] = -penalty
+        reasons.append(f"{defense_reason}; automatic low-priority penalty -{penalty}")
 
     employer_points, employer_reasons = _employer_signal(job.company)
     dimensions["company_quality"] = employer_points
@@ -455,6 +516,11 @@ def score(job: Job, now: int) -> None:
         if value > review_cap:
             reasons.append(f"full-time review cap applied -{value - review_cap:g}")
             value = review_cap
+    if defense:
+        defense_cap = max(0, int(cfg.get("defense_score_cap", 12)))
+        if value > defense_cap:
+            reasons.append(f"defense score cap applied -{value - defense_cap:g}")
+            value = defense_cap
     job.score_raw = raw_value
     job.score_calibrated = max(0, min(100, round(value)))
     job.score = job.score_calibrated

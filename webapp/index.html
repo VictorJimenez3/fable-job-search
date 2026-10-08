@@ -516,7 +516,7 @@ const LANE_CONFIG = {
     companies:"state/intern_companies.json", runs:"state/intern_runs.json", web:"state/intern_web_state.json"},
 };
 const DEFAULT_FILTER = {q:"", min:45, sector:"", role:"", sectors:[], roles:[], sponsorship:"", sponsorHistory:"",
-  excludedRoles:[], experience:"entryfit", career:"", cohort:"", startup:"", location:"", alert:false, lane:"", sort:"best", bestWindow:"2592000", showExcluded:false, review:false};
+  excludedRoles:[], experience:"entryfit", career:"", cohort:"", term:"", startup:"", location:"", alert:false, lane:"", sort:"best", bestWindow:"2592000", showExcluded:false, review:false};
 const ACTIVE_QUEUE_WINDOW = 30 * 86400;
 const JOBS_PAGE_SIZE = 50;
 const JOB_INDEX_CACHE = new WeakMap();
@@ -564,7 +564,7 @@ const S = {           // app state
   lane:"new_grad", lanes:{
     new_grad:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, jobsPromise:null, historyReady:false, historyPromise:null, expectedGraduation:"", lifecycleNotice:null},
     internship:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, jobsPromise:null, historyReady:false, historyPromise:null, expectedGraduation:"", lifecycleNotice:null},
-  }, notifications:{new_grad_email:true, internship_email:false},
+  }, notifications:{new_grad_email:true, internship_email:true},
   auth:null, backend:false, authHost:"", userTracker:false, trackerConfigured:false, trackerMeta:null,
   authProviders:{github:false,google:false},
   tab:"jobs", filter:{...DEFAULT_FILTER, ...storedFilter()}, shown:250, jobsPage:1, jobsMoreOpen:false,
@@ -979,11 +979,11 @@ async function boot() {
     ["internship", "companies", "state/intern_companies.json", {}, ownerView],
     ["internship", "runs", "state/intern_runs.json", [], ownerView],
     ["internship", "web", "state/intern_web_state.json", null, ownerView],
-    ["shared", "notifications", "state/notification_preferences.json", {new_grad_email:true, internship_email:false}, true],
+    ["shared", "notifications", "state/notification_preferences.json", {new_grad_email:true, internship_email:true}, true],
   ].filter(([, , , , enabled]) => enabled);
   const optionalLoads = optional.map(async ([mode, key, path, fallback]) => {
     const result = await loadState(path, fallback, {allowMissing: path === "state/reports.json" || path.includes("intern_") || path.includes("notification_preferences")});
-    if (mode === "shared") S.notifications = result.value;
+    if (mode === "shared") S.notifications = {new_grad_email:true, internship_email:true, ...(result.value||{})};
     else if (key === "web") normalizeLaneWeb(mode, result.value);
     else setLaneValue(mode, key, result.value);
     if (key === "companies" && mode === S.lane) rebuildCompanyRegistry();
@@ -1409,6 +1409,7 @@ function filterChipEntries() {
   if (f.startup) add("startup", f.startup, "Company stage: " + startupStageLabel(f.startup));
   if (f.location) add("location", f.location, "Location: " + locationFilterLabel());
   if (f.cohort) add("cohort", f.cohort, "Cohort: " + f.cohort);
+  if (f.term) add("term", f.term, "Term: " + ({"2027-01":"Spring/Winter 2027", "2027-06":"Summer 2027"}[f.term] || f.term));
   if (f.lane) add("lane", f.lane, "Pipeline: " + pipelineStageLabel(f.lane));
   if (f.alert) add("alert", "true", "Alert-worthy only");
   if (f.review) add("review", "true", "Include review-only roles");
@@ -1514,7 +1515,7 @@ function clearFilterChip(button) {
   }
   const clearValue = ({
     q:"", min:DEFAULT_FILTER.min, sort:"best", bestWindow:"all", sponsorship:"",
-    sponsorHistory:"", experience:"", career:"", startup:"", location:"", cohort:"",
+    sponsorHistory:"", experience:"", career:"", startup:"", location:"", cohort:"", term:"",
     lane:"", alert:false, review:false, showExcluded:false,
   })[key];
   if (clearValue === undefined) return;
@@ -1546,6 +1547,7 @@ function jobList() {
     if (hasTimeWindow && (entry.postedAt < cutoff || entry.postedAt > now)) continue;
     if (excluded && !f.showExcluded) continue;
     if (S.lane === "internship" && !f.review && !["title","body"].includes((j.internship_eligibility||{}).internship_signal)) continue;
+    if (S.lane === "internship" && f.term && !String((j.internship_eligibility||{}).term_start||"").startsWith(f.term)) continue;
     if (f.alert && !entry.alertOk) continue;
     if (entry.score < f.min) continue;
     if (f.sectors?.length && !f.sectors.includes(entry.sector)) continue;
@@ -2536,7 +2538,7 @@ function laneSettingsHTML() {
 function notificationSettingsHTML() {
   if (!S.auth?.owner) return "";
   return `<section class="lane" style="margin-top:.8rem"><h3>Board email preferences</h3>
-    <p class="sub">These are shared GitHub alert-batch controls, not private Gmail mail. Internship email stays off until you explicitly opt in.</p>
+    <p class="sub">These are separate GitHub alert batches, not private Gmail mail. Internship batches are on by default and can be turned off here.</p>
     <div class="bar"><label class="sub"><input type="checkbox" ${S.notifications.new_grad_email?"checked":""} onchange="setEmailPreference('new_grad_email',this.checked)"> new-grad batches</label>
       <label class="sub"><input type="checkbox" ${S.notifications.internship_email?"checked":""} onchange="setEmailPreference('internship_email',this.checked)"> internship batches</label></div></section>`;
 }
@@ -2705,7 +2707,7 @@ function hasAdvancedJobFilters() {
   const f = S.filter;
   return Boolean(f.sectors?.length || f.roles?.length || f.excludedRoles?.length ||
     f.sponsorship || f.sponsorHistory || (f.experience && f.experience !== DEFAULT_FILTER.experience) ||
-    f.career || f.cohort || f.startup || f.location || f.alert || f.lane || f.showExcluded || f.review ||
+    f.career || f.cohort || f.term || f.startup || f.location || f.alert || f.lane || f.showExcluded || f.review ||
     Number(f.min) !== Number(DEFAULT_FILTER.min));
 }
 function organizeJobsFilters() {
@@ -2853,6 +2855,10 @@ function rJobs() {
         <option value="mismatch" ${S.filter.cohort==="mismatch"?"selected":""}>outside your graduation date</option>
         <option value="open" ${S.filter.cohort==="open"?"selected":""}>open to enrolled students</option>
         <option value="unknown" ${S.filter.cohort==="unknown"?"selected":""}>eligibility unknown</option></select>` : ""}
+      ${S.lane === "internship" ? `<select aria-label="Internship term" onchange="setFilter('term',this.value)">
+        <option value="" ${!S.filter.term?"selected":""}>any internship term</option>
+        <option value="2027-01" ${S.filter.term==="2027-01"?"selected":""}>Spring / Winter 2027</option>
+        <option value="2027-06" ${S.filter.term==="2027-06"?"selected":""}>Summer 2027</option></select>` : ""}
       <label class="sub" title="Off by default: show all matching roles, including strong dashboard-only matches"><input type="checkbox" ${S.filter.alert?"checked":""}
         onchange="setFilter('alert',this.checked)"> alert-worthy only</label>
       ${S.lane === "internship" ? `<label class="sub" title="The clean list requires a positive internship title or posting signal. Include review-only and uncertain rows when auditing the source feed."><input type="checkbox" ${S.filter.review?"checked":""}
@@ -3428,7 +3434,7 @@ function wsCompany(j, w, c, id) {
 
 function scoreReasonLabel(reason) {
   const text = String(reason||"");
-  const labels = [["base internship utility","baseline"],["base utility","baseline"],["technical internship role","flat technical role"],["role:","role fit"],["sector:","sector fit"],["new-grad/early-career priority","verified early-career"],["early-career possible","plausible first-role"],["new-grad evidence absent","early-career evidence"],["mid-level title penalty","mid-level demotion"],["company tier","company quality"],["prestige tier","prestige / crackedness"],["recognized employer","employer signal"],["cited employer/work evidence","cited employer evidence"],["full-time-only signal","full-time review"],["full-time review cap applied","full-time review"],["internship signal review","internship evidence review"],["experienced or doctoral internship title","experienced title review"],["explicit goal company","goal-company preference"],["duplicate role variant","duplicate posting"],["similar role sibling","similar-role adjustment"],["company concentration","company diversity"],["learned from","learned preferences"],["learned role preference","learned role preference"],["learned sector preference","learned sector preference"],["learned company preference","learned company preference"],["learned title signals","learned title language"],["explicit company feedback","explicit feedback"],["explicit title feedback","explicit feedback"],["graduation eligibility","student eligibility"],["student eligibility","student eligibility"],["compensation ceiling","compensation"],["compensation","compensation"],["work-quality","work quality"],["work evidence","work quality"],["internship score cap applied","score cap"],["posted","freshness"],["remote","remote access"],["culture fit","culture evidence"],["SHPE","community signal"],["sponsor history:","DOL sponsor context"],["raw utility","calibration"]];
+  const labels = [["base internship utility","baseline"],["base utility","baseline"],["technical internship role","flat technical role"],["role:","role fit"],["healthcare preference","healthcare preference"],["fintech/bank preference","fintech / bank preference"],["defense employer","defense penalty"],["defense-focused posting","defense penalty"],["defense score cap applied","defense score cap"],["sector preference","sector preference"],["sector:","sector fit"],["new-grad/early-career priority","verified early-career"],["early-career possible","plausible first-role"],["new-grad evidence absent","early-career evidence"],["mid-level title penalty","mid-level demotion"],["company tier","company quality"],["prestige tier","prestige / crackedness"],["recognized employer","employer signal"],["cited employer/work evidence","cited employer evidence"],["full-time-only signal","full-time review"],["full-time review cap applied","full-time review"],["internship signal review","internship evidence review"],["experienced or doctoral internship title","experienced title review"],["explicit goal company","goal-company preference"],["duplicate role variant","duplicate posting"],["similar role sibling","similar-role adjustment"],["company concentration","company diversity"],["learned from","learned preferences"],["learned role preference","learned role preference"],["learned sector preference","learned sector preference"],["learned company preference","learned company preference"],["learned title signals","learned title language"],["explicit company feedback","explicit feedback"],["explicit title feedback","explicit feedback"],["graduation eligibility","student eligibility"],["student eligibility","student eligibility"],["compensation ceiling","compensation"],["compensation","compensation"],["work-quality","work quality"],["work evidence","work quality"],["internship score cap applied","score cap"],["posted","freshness"],["remote","remote access"],["culture fit","culture evidence"],["SHPE","community signal"],["sponsor history:","DOL sponsor context"],["raw utility","calibration"]];
   const found = labels.find(([prefix]) => text.startsWith(prefix));
   return found ? found[1] : "other signal";
 }
@@ -3443,7 +3449,7 @@ function scorePreferenceLabel(name) {
 }
 async function saveScorePreferences() {
   if (S.lane === "internship") {
-    toast("Internship scores use the neutral friend-facing rubric.");
+    toast("Internship scores use the prestige-led owner rubric.");
     return;
   }
   if (!S.auth?.owner) return;
@@ -3471,7 +3477,9 @@ const SCORE_DIMENSION_META = {
   role_fit: {label:"Role fit", what:"New-grad role alignment; internship families use one flat technical-role baseline.", configurable:true},
   eligibility: {label:"Early-career evidence", what:"Proof that this is a realistic new-grad or first-role path.", locked:true},
   mission: {label:"Sector / mission", what:"Priority sectors and program mission signals.", configurable:true},
-  prestige: {label:"Prestige / crackedness", what:"Broad technical-employer recognition for elite tech companies and AI labs; separate from Victor's preferences.", configurable:false},
+  prestige: {label:"Prestige / crackedness", what:"Broad technical-employer recognition for elite tech companies and AI labs; the leading internship signal.", configurable:false},
+  sector_preference: {label:"Sector preference", what:"Small healthcare lift and slight fintech / bank deduction requested by the owner.", configurable:false},
+  defense_penalty: {label:"Defense penalty", what:"Defense employers and defense-focused postings receive an intentionally very low final score.", configurable:false},
   company_quality: {label:"Cited employer signal", what:"Bounded cited employer/work evidence; internships do not use personal company preferences.", configurable:false},
   compensation: {label:"Compensation", what:"Published pay signals, including annualized hourly internship rates; capped.", configurable:true},
   personal_signal: {label:"Your signals", what:"Saved, applied, skipped, feedback, or community history.", configurable:true},
@@ -3533,9 +3541,18 @@ function scoreDimensionWhy(j, name, value) {
     if (program) return "Target healthcare program company matched.";
     return "No priority-sector or program-mission signal.";
   }
+  if (name === "sector_preference") {
+    if (reasons.some(reason => reason.startsWith("healthcare preference"))) return "Healthcare employers receive a small preference lift.";
+    if (reasons.some(reason => reason.startsWith("fintech/bank preference"))) return "Fintech and bank employers receive a slight preference deduction.";
+    return "No healthcare, fintech, or bank adjustment applied.";
+  }
+  if (name === "defense_penalty") {
+    const reason = reasons.find(reason => reason.startsWith("defense employer:") || reason.startsWith("defense-focused posting:"));
+    return reason ? "Defense work is intentionally pushed to the bottom of the ranking by the owner's stated preference." : "No defense classification applied.";
+  }
   if (name === "prestige") {
     if (j.profile === "internship") {
-      if (reasons.some(reason => reason.startsWith("prestige tier"))) return "Broad friend-facing prestige/crackedness tier for a highly recognized technical employer or AI lab.";
+      if (reasons.some(reason => reason.startsWith("prestige tier"))) return "Broad prestige/crackedness tier for a highly recognized technical employer or AI lab.";
       return "No broad prestige tier was available; unknown employers are not penalized.";
     }
     return positive ? "Broad employer recognition added points." : "No prestige signal was recorded.";
@@ -3596,10 +3613,11 @@ function scoreSummary(j, dimensions) {
   const reasons = scoreReasonTexts(j);
   if (j.profile === "internship") {
     const score = Number(j.score);
+    if (reasons.some(reason => reason.startsWith("defense employer:") || reason.startsWith("defense-focused posting:"))) return "Defense is intentionally assigned bottom priority by the owner preference, while staying in the board for review.";
     if ((j.internship_eligibility||{}).employment_signal === "full_time_only") return "Review only: explicit full-time wording was detected without internship or student evidence. It stays visible so an incorrectly labeled opportunity is not lost, but it cannot alert.";
-    if (score >= 80) return "Strong neutral opportunity: prestige, pay, work quality, and/or student evidence stack up.";
+    if (score >= 80) return "Strong opportunity: employer prestige leads, with smaller pay, work, eligibility, and sector adjustments.";
     if (Number(dimensions.eligibility) <= 0) return "Visible for research, but student or graduation evidence is still unclear.";
-    return "Neutral internship rubric: prestige/crackedness, pay, work quality, student evidence, and freshness; no saved preferences.";
+    return "Prestige-led internship ranking: smaller pay, work, eligibility, freshness, and sector preferences adjust the employer tier.";
   }
   if (reasons.some(reason => /^role:pm\b/i.test(reason))) return "PM-family research lane: role weight is 0; other signals are shown for comparison.";
   if (reasons.some(reason => reason.startsWith("mid-level title penalty"))) return "Research-only: this level-II/L4-style role is kept visible but scored below true new-grad targets.";
