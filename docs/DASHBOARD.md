@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-10-11 19:35 UTC** · companies polled directly: **2287** (registry 2663) · jobs tracked: **74314** · new this run: **15** · alerts this run: **9**_
+_Last run: **2026-10-11 22:01 UTC** · companies polled directly: **2287** (registry 2663) · jobs tracked: **74314** · new this run: **15** · alerts this run: **9**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -107,7 +107,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 76 ⭐ | 22d | TikTok | [Machine Learning Engineer Graduate - E-Commerce Recommendation Video](https://lifeattiktok.com/search/7686999927260105013) | San Jose, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 76 ⭐ | 23d | Together AI | [Software Engineer, New Grad (2027)](https://job-boards.greenhouse.io/togetherai/jobs/5211582007) | San Francisco | ai_lab | unavailable | no-history | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/togetherai) · [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) · [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad)<br>[Jobright fallback](https://jobright.ai/jobs/info/6aad6a9c2e757fcb5c8b834c?utm_campaign=Software%20Engineering&utm_source=1103) |
 | 76 ⭐ | 24d | Tower Research Capital | [Data Analyst - Data](https://www.tower-research.com/open-positions/?gh_jid=8167234) | NYC | fintech | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 75 ⭐ | 19h | Torentify | [Data Analyst (WFH)](https://jobright.ai/jobs/info/6acb88393c831dc4086bd3ec?utm_campaign=Data%20Analysis&utm_source=1103) | United States | other | unavailable | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
+| 75 ⭐ | 22h | Torentify | [Data Analyst (WFH)](https://jobright.ai/jobs/info/6acb88393c831dc4086bd3ec?utm_campaign=Data%20Analysis&utm_source=1103) | United States | other | unavailable | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 75 ⭐ | 1d | Vigil Labs | [Founding Software Engineer](https://simplify.jobs/p/bdc069d8-947d-4e4c-8a1c-78356f9b366f) | Palo Alto, CA | other | unavailable | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 75 ⭐ | 1d | Intezra, Inc. | [Infrastructure Engineer](https://jobright.ai/jobs/info/6acb972bd113c967e3c78e1e?utm_campaign=Software%20Engineering&utm_source=1103) | Columbia, MD, United States | other | unavailable | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 75 ⭐ | 1d | RWS | [General AI Data Annotator](https://jobs.lever.co/rws/e390deb8-86d1-44f6-891e-40a3f046b3b5/apply) | Dallas, TX | other | unavailable | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
