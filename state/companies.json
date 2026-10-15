@@ -9377,6 +9377,19 @@
   "status": "invalid",
   "token": "whoop"
  },
+ "greenhouse:wikimedia": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792104013,
+  "last_ok": 1792104015,
+  "name": "Wikimedia Foundation",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "wikimedia"
+ },
  "greenhouse:woolpert": {
   "ats": "greenhouse",
   "extra": {},
@@ -11845,6 +11858,19 @@
   "sector": "healthtech",
   "status": "invalid",
   "token": "cedar"
+ },
+ "lever:cfsenergy": {
+  "ats": "lever",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792104013,
+  "last_ok": 1792104014,
+  "name": "Commonwealth Fusion Systems",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "cfsenergy"
  },
  "lever:cimgroup": {
   "ats": "lever",
@@ -16296,7 +16322,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792092214,
+  "last_ok": 1792104032,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16706,7 +16732,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1792092202,
+  "last_ok": 1792104022,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16931,7 +16957,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792092215,
+  "last_ok": 1792104036,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -17221,6 +17247,22 @@
   "sector": "",
   "status": "active",
   "token": "archwellessentials"
+ },
+ "workday:ardian:ArdianCareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd103",
+   "site": "ArdianCareers"
+  },
+  "failures": 0,
+  "first_seen": 1792104013,
+  "last_ok": 1792104014,
+  "name": "Ardian",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "ardian"
  },
  "workday:argonne:Argonne_Careers": {
   "ats": "workday",
@@ -19223,7 +19265,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1792092199,
+  "last_ok": 1792104019,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -20407,7 +20449,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792092213,
+  "last_ok": 1792104033,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -20580,7 +20622,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792092203,
+  "last_ok": 1792104022,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -21683,7 +21725,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792092209,
+  "last_ok": 1792104032,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -23892,6 +23934,22 @@
   "status": "active",
   "token": "mcgill"
  },
+ "workday:mckesson:CoverMyMeds_External_Careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "CoverMyMeds_External_Careers"
+  },
+  "failures": 0,
+  "first_seen": 1792104013,
+  "last_ok": 1792104015,
+  "name": "CoverMyMeds",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "mckesson"
+ },
  "workday:mckesson:External_Careers": {
   "ats": "workday",
   "extra": {
@@ -24121,7 +24179,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792092204,
+  "last_ok": 1792104024,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -26956,7 +27014,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792092208,
+  "last_ok": 1792104028,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
