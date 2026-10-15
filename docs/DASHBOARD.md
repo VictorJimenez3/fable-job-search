@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-10-15 04:47 UTC** · companies polled directly: **2310** (registry 2686) · jobs tracked: **75800** · new this run: **186** · alerts this run: **13**_
+_Last run: **2026-10-15 06:07 UTC** · companies polled directly: **2310** (registry 2686) · jobs tracked: **75800** · new this run: **186** · alerts this run: **13**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -153,7 +153,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 74  | 28d | Cala Health | [Software Test Engineer](https://jobright.ai/jobs/info/6aac53fe636cddf7396f395a?utm_campaign=Software%20Engineering&utm_source=1103) | United States | healthtech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 74  | ? | General Motors | [Entry-Level – AI/Machine Learning Researcher](https://zapply.jobs/l/d/workday-generalmotors-careers-gm-JR-202621753?s=gh-new-grad-data-science-jobs-2027) | Mountain View, California,... | other | not classified as startup | likely | [Zapply new-grad data science / ML board](https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027) |
 | 74  | ? | General Motors | [Entry-Level – AI and Machine Learning for Automation Researcher](https://zapply.jobs/l/d/workday-generalmotors-careers-gm-JR-202621769?s=gh-new-grad-data-science-jobs-2027) | Warren, Michigan, United States... | other | not classified as startup | likely | [Zapply new-grad data science / ML board](https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027) |
-| 73  | 14h | Check | [Software Engineer](https://jobs.ashbyhq.com/check-technologies/1647b178-a07b-4e62-b2e1-122e6fdbd134/application?embed=true) | SF | other | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 73  | 15h | Check | [Software Engineer](https://jobs.ashbyhq.com/check-technologies/1647b178-a07b-4e62-b2e1-122e6fdbd134/application?embed=true) | SF | other | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 73  | 1d | CWILL | [AI SEO R&D Trainee - Multiple Teams](https://apply.workable.com/cwill-us/j/82C35F8307/apply) | Cary, NC | other | late-stage startup | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 73  | 1d | CWILL | [AI Chat R&D Trainee - Multiple Teams](https://apply.workable.com/cwill-us/j/116215D01E/apply) | Cary, NC | other | late-stage startup | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 
