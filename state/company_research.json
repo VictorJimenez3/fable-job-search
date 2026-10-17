@@ -649,7 +649,7 @@
  },
  "globalfoundries": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "business_model": {
    "confidence": "high",
    "source_ids": [
@@ -666,7 +666,7 @@
    ],
    "value": "Customers around the world."
   },
-  "error": "",
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "13736c5a2b97d4b5",
   "generated_at": 1786780941,
   "generator": {
@@ -683,7 +683,7 @@
    ],
    "value": "Ask for details on day-to-day mentorship accessibility, specific safety protocols and culture, exposure to labs and scale-up processes, work-life balance expectations, and clarify work authorization and relocation policies."
   },
-  "last_attempt_at": 1786780941,
+  "last_attempt_at": 1792237573,
   "last_evidence_at": 1792186992,
   "locations": {
    "confidence": "high",
@@ -832,7 +832,10 @@
  },
  "john deere": {
   "aliases": [],
+  "attempts": 1,
+  "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "d7279f8f874f215b",
+  "last_attempt_at": 1792237573,
   "last_evidence_at": 1792194793,
   "name": "John Deere",
   "schema_v": 1,
@@ -1548,10 +1551,10 @@
  },
  "onsemi": {
   "aliases": [],
-  "attempts": 4,
+  "attempts": 5,
   "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "c782af6d2ebb8359",
-  "last_attempt_at": 1792154700,
+  "last_attempt_at": 1792237573,
   "last_evidence_at": 1790381375,
   "name": "onsemi",
   "schema_v": 1,
