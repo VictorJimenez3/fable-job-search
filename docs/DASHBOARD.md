@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-10-18 06:36 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **150 shown / 12178 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-10-18 11:43 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **150 shown / 12179 stored** · new this run: **1** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -11,7 +11,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 93 🔥 | 8d | Applied Materials | [2027 Summer Intern - Process Engineer - BS/MS Degree (Santa Clara, CA)](https://amat.wd1.myworkdayjobs.com/en-US/External/job/Santa-ClaraCA/XMLNAME-2027-Summer-Intern---Process-Engineer---BS-MS-Degree--Santa-Clara--CA-_R2629424) | Santa Clara,CA | semiconductors | workday |
 | 93 🔥 | 12d | Micron | [Intern - CMOS Process Integration](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Intern---CMOS-Process-Integration_JR114110) | Boise, ID - ID1 | semiconductors | workday |
 | 93 🔥 | 12d | Micron | [Intern - Process Integration Engineer](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Intern---Process-Integration-Engineer_JR114192) | Boise, ID - ID1 | semiconductors | workday |
-| 93 🔥 | 25d | Micron | [Intern - ATE Process Engineer ID1](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Intern---ATE-Process-Engineer-ID1_JR113040) | Boise, ID - ID1 | semiconductors | workday |
+| 93 🔥 | 26d | Micron | [Intern - ATE Process Engineer ID1](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Intern---ATE-Process-Engineer-ID1_JR113040) | Boise, ID - ID1 | semiconductors | workday |
 | 92 🔥 | 17d | ZOLL Medical | [Operations Engineering Co-op](https://zoll.wd5.myworkdayjobs.com/en-US/ZOLLMedicalCorp/job/Pittsburgh-PA/Operations-Engineering-Co-Op---Spring-Summer_R20411) | Pittsburgh, PA | pharma_biotech | simplify |
 | 91 🔥 | 11d | Tesla | [Process Engineer Intern - Dielectric Deposition](https://www.tesla.com/careers/search/job/285641) | Austin, TX | consumer_manufacturing | simplify |
 | 89 🔥 | 15d | Scout Clean Energy | [Operations Engineering Intern](https://apply.workable.com/scout-clean-energy/j/7BF0CEDF9F/apply) | Boulder, CO | energy | simplify |
@@ -19,6 +19,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 88 🔥 | 24d | Micron | [Intern - ID1 Manufacturing Engineer](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---ID1/Intern---ID1-Manufacturing-Engineer_JR113287) | Boise, ID - ID1 | semiconductors | workday |
 | 88 🔥 | 26d | Micron | [Intern - Probe Manufacturing Engineering (Probe AME)](https://micron.wd1.myworkdayjobs.com/en-US/External/job/Boise-ID---Main-Site/Intern---Probe-Manufacturing-Engineering--Probe-AME-_JR112368) | Boise, ID - Main Site | semiconductors | workday |
 | 86 🔥 | 16d | Charter Manufacturing | [Smart Manufacturing Engineer Intern](https://chartermfg.wd5.myworkdayjobs.com/Charter_Careers/job/Charter-Steel---Saukville-WI/Smart-Manufacturing-Engineer-Intern--Summer-2027-_R08133) | Mequon, WI | consumer_manufacturing | simplify |
+| 85 🔥 | 2h | Tesla | [Advanced Automation Engineer Intern - Cell Engineering - Winter/Spring](https://www.tesla.com/careers/search/job/286986) | Fremont, CA | consumer_manufacturing | simplify |
 | 84 ⭐ | 19d | GlobalFoundries | [Environmental Engineering Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Environmental-Engineering-Intern--Summer-2027-_JR-2604239) | USA - New York - Malta | semiconductors | workday |
 | 83 ⭐ | 4d | NJ Department of Environmental Protect | [Watershed & Land Management Intern](https://njdepartmentofenvironmentalprotection.applytojob.com/apply/vPwbyhmsxt/Watershed-Land-Management-Intern-WLM20265i) | Trenton, NJ | environmental | simplify |
 | 82 ⭐ | 5d | 3M | [Internship - 2027 Undergraduate 3M Brand Design Intern - Safety & Indu](https://3m.wd1.myworkdayjobs.com/en-US/Search/job/US-Minnesota-Maplewood/Internship---2027-Undergraduate-3M-Brand-Design-Intern---Safety---Industrial-Business-Group--SIBG-_R01172458) | 2 Locations | chemicals_materials | workday |
@@ -155,6 +156,5 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 10d | Meta | [Manufacturing Test Engineer Intern](https://www.metacareers.com/jobs/1866862250969693) | Sunnyvale, CA | other | simplify |
 | 64  | 10d | Amazon | [Business Intelligence Engineer Intern](https://amazon.jobs/en/jobs/10553765/business-intelligence-engineer-internship-2027-us) | Seattle, WA | other | simplify |
 | 64  | 10d | Hewlett Packard Enterprise | [ASIC Verification/Design Engineering Intern](https://hpe.wd5.myworkdayjobs.com/jobsathpe/job/Roseville-California-United-States-of-America/ASIC-Verification-Design-Engineering-Intern_1214211) | Roseville, CA | other | simplify |
-| 64  | 10d | RTX | [Systems Engineer Intern](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-MA-MARLBOROUGH-MA2--1001-Boston-Post-Rd--BLDG-2/Systems-Engineering-Intern--Summer-2027-_01881158) | Marlborough, MA | other | simplify |
 
 _150 roles shown (score ≥ 42, posted ≤30d)._
