@@ -35,6 +35,14 @@
   rebuilt the 1,251-role / 14-page master board. Both application steps passed,
   but cleanup hit the old 25-minute job limit. The crawl job now allows 35
   minutes for discovery, push-race reconciliation, delivery, and cleanup.
+- **End-to-end recovery verified:** [PR #5640](https://github.com/VictorJimenez3/fable-job-search/pull/5640)
+  published the time budget as `6bbc4cb03f65655efc147f2567fca5ec21965dd4`.
+  Fresh [radar run 39470004778](https://github.com/VictorJimenez3/fable-job-search/actions/runs/39470004778)
+  passed both jobs and all delivery/cleanup steps. It discovered another 50
+  jobs and 16 alerts, publishing `55b03944b2f0dcde2052211a9b985a4901986d96`.
+  The final primary snapshot is 95,331,940 bytes, below the unchanged
+  99,614,720-byte guard. The obsolete retry was cancelled after the budget
+  change; its repair issue #5641 is closed. No new secret is required.
 
 ## Internship lane update (2026-10-08; DECISION #225)
 
