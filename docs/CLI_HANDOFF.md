@@ -1,5 +1,21 @@
 # CLI handoff notes
 
+## Radar workflow capacity recovery (2026-10-20; DECISION #227)
+
+- Failure email traced to `radar` run `39455043288`, attempt 2. Five recent
+  crawls failed after successful discovery/scoring because `jobs.json` exceeded
+  its unchanged 99,614,720-byte guard; automatic retries cannot fix this.
+- Terminal summaries now retain only history-list/lifecycle fields and the
+  score-version stamp. Ranking and source metadata remain in the
+  existing full history shard and hydrate through the current Python, classic
+  UI, and legacy API readers. Open/manual rows and scoring reasons are preserved.
+- Temporary-directory replay of all 77,157 production records reduced the
+  primary snapshot from 98,410,720 to 93,037,262 bytes (6,577,458 bytes below
+  the guard). No generated files were hand-edited and no secret is required.
+- Regression tests cover size-limited writes and repeat round trips for both
+  lanes, plus existing History/API and push-race merge checks. After publishing,
+  dispatch a fresh `radar` run and verify crawl publication and delivery complete.
+
 ## Internship lane update (2026-10-08; DECISION #225)
 
 - **Email scope follow-up (DECISION #226):** separate internship email batches
