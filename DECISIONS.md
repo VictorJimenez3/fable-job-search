@@ -3639,3 +3639,28 @@ explicit January 2027 term evidence from the parsed eligibility, source term,
 or title. Summer 2027 and unknown-term roles remain available in the Jobs UI
 but are excluded from internship email batches.
 
+## 227. Keep terminal summaries limited to history-list requirements (2026-10-20)
+
+The scheduled radar and its automatic retry repeatedly completed discovery and
+scoring but failed to save a 100,124,777-byte primary snapshot against the
+99,614,720-byte guard. Terminal summaries still duplicated ranking and source
+metadata already stored in full in `jobs_history.json`. Keep only
+the listing identity/link, displayed score, lifecycle dates/reason, owner archive
+metadata, and score-version stamp in the primary terminal summary. Python reads,
+the classic History tab/drawer, and the legacy detail API restore the full
+matching history record through their existing hydration paths. Open and manual
+records retain their existing format; all scoring reasons remain auditable.
+
+Resume Studio and the legacy database importer now use the same path-based
+history-aware reader instead of reading primary JSON directly. This preserves
+terminal source-derived public IDs, posting facts, and scoring metadata during
+imports and prevents needless Studio rescoring. Studio's score-projection cache
+also includes the history shard timestamp so updated archived facts become
+visible without restarting the local service.
+
+On the 77,157-record production snapshot, a temporary-directory save reduced the
+primary file from 98,410,720 to 93,037,262 bytes, providing 6,577,458 bytes of
+headroom. The complete load/save/load round trip preserves every job record and
+score reason. Keep the 95 MiB guard and existing production datastore; future
+growth still requires sharding or the separately verified database cutover.
+

@@ -1306,8 +1306,10 @@ setting. Edit and push — next run picks it up. Seed companies:
   primary-source provenance are omitted (absence means no signal/already
   represented), while nonzero dimensions, score reasons, and nonzero DOL facts
   remain intact in the primary snapshot for open roles. Complete terminal
-  records live in `state/jobs_history.json`; their compact summaries remain in
-  `state/jobs.json`. Writes fail before replacement at 95 MiB, leaving headroom
+  records live in `state/jobs_history.json`; their listing/lifecycle summaries
+  remain in `state/jobs.json`. Terminal ranking and source metadata
+  hydrate from history instead of being duplicated in the primary file.
+  Writes fail before replacement at 95 MiB, leaving headroom
   below GitHub's 100 MiB blob limit. If that guard trips again, shard the
   datastore or complete the verified Postgres cutover; do not raise the
   production limit past the repository host's boundary.

@@ -238,3 +238,67 @@ def test_non_job_state_is_not_compacted(tmp_path, monkeypatch):
     value = {"remote": False, "items": []}
     state.save("web_state.json", value)
     assert state.load("web_state.json", {}) == value
+
+
+@pytest.mark.parametrize("namespace,prefix", [("new_grad", ""), ("internship", "intern_")])
+def test_terminal_ranking_metadata_does_not_exhaust_primary_snapshot(tmp_path, monkeypatch, namespace, prefix):
+    monkeypatch.setattr(state, "STATE_DIR", tmp_path)
+    monkeypatch.setenv("RADAR_MAX_JOB_SNAPSHOT_BYTES", "600")
+    row = {
+        "id": "closed", "company": "Acme", "title": "Software Engineer",
+        "url": "https://example.test/job", "score": 72, "score_version": 15,
+        "posting_status": "expired", "posting_status_reason": "source closed",
+        "posting_status_changed_at": 300, "closed_at": 300,
+        "first_seen": 100, "last_seen_at": 200,
+        "locations": ["New York, NY", "San Francisco, CA"],
+        "sector": "healthtech", "source": "greenhouse",
+        "source_board": "ats:greenhouse:acme", "ats": "greenhouse",
+        "posted_at": 100, "remote": True,
+        "rules_v": 15, "evidence_score": 74, "eligibility": "eligible",
+        "priority_tier": "recommended", "career_priority": 3,
+        "explicit_new_grad": True, "startup_stage": "late-stage startup",
+        "startup_score": 12, "score_dimensions": {"role_fit": 20},
+        "score_reasons": ["role:swe +20", "healthcare preference +6"],
+    }
+
+    state.save("jobs.json", {"closed": row}, namespace=namespace)
+
+    primary_path = tmp_path / f"{prefix}jobs.json"
+    primary = json.loads(primary_path.read_text())["closed"]
+    assert primary_path.stat().st_size <= 600
+    for key in ("id", "company", "title", "url", "score", "score_version",
+                "posting_status", "posting_status_reason", "posting_status_changed_at",
+                "closed_at", "first_seen", "last_seen_at", "locations", "posted_at"):
+        assert primary[key] == row[key]
+    for key in ("source_board", "eligibility", "evidence_score",
+                "startup_stage", "score_reasons"):
+        assert key not in primary
+    assert state.load("jobs.json", {}, namespace=namespace) == {"closed": row}
+    # A normal later writer must preserve the same complete record and format.
+    state.save("jobs.json", state.load("jobs.json", {}, namespace=namespace), namespace=namespace)
+    assert json.loads(primary_path.read_text())["closed"] == primary
+    assert state.load("jobs.json", {}, namespace=namespace) == {"closed": row}
+
+
+@pytest.mark.parametrize("filename", ["jobs.json", "intern_jobs.json"])
+def test_path_based_job_reader_hydrates_only_matching_terminal_history(tmp_path, filename):
+    primary = {
+        "closed": {"posting_status": "expired", "posting_status_changed_at": 300, "score": 70},
+        "reopened": {"posting_status": "open", "score": 80},
+        "changed": {"posting_status": "expired", "posting_status_changed_at": 500},
+    }
+    full = {"posting_status": "expired", "posting_status_changed_at": 300,
+            "sector": "healthtech", "source": "greenhouse", "score": 60,
+            "score_reasons": ["role:swe +20"]}
+    (tmp_path / filename).write_text(json.dumps(primary))
+    history_name = filename.replace("jobs.json", "jobs_history.json")
+    (tmp_path / history_name).write_text(json.dumps({
+        "closed": full, "reopened": full, "changed": full, "purged": full,
+    }))
+
+    restored = state.load_job_snapshot(tmp_path / filename, {})
+
+    assert restored["closed"] == {**full, **primary["closed"]}
+    assert restored["reopened"] == primary["reopened"]
+    assert restored["changed"] == primary["changed"]
+    assert "purged" not in restored

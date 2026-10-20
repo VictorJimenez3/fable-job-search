@@ -60,17 +60,16 @@ _JOB_DERIVED_FIELDS = {
 }
 
 # The full terminal record already lives in jobs_history.json. Keep just the
-# fields needed to list and search closed postings in the primary web snapshot;
-# detail and audit fields are restored from the history shard on demand.
+# fields needed to list and search closed postings in the primary web snapshot.
+# Ranking and source metadata belong only in the full history record;
+# duplicating them on every terminal summary exhausted the primary size limit.
+# Keep score_version so saving a summary again remains compact and idempotent.
 _JOB_TERMINAL_SUMMARY_FIELDS = {
-    "id", "company", "title", "url", "locations", "salary", "remote",
-    "sector", "source", "source_board", "ats", "first_seen", "last_seen_at",
+    "id", "company", "title", "url", "locations", "first_seen", "last_seen_at",
     "posted_at", "posting_status", "posting_status_reason",
     "posting_status_changed_at", "closed_at", "last_closed_at",
     "manual_archived", "archived_at", "archived_by", "archive_reason", "score",
-    "score_version", "rules_v", "evidence_score", "eligibility",
-    "priority_tier", "career_priority", "explicit_new_grad",
-    "early_career_possible", "startup_stage", "startup_score", "alert_ok",
+    "score_version",
 }
 
 
@@ -135,11 +134,20 @@ def _load_path(p: Path, default):
 
 def load(name: str, default, namespace: str | None = None):
     """Load a state file, merging the optional job-history shard on read."""
-    value = _load_path(_path(name, namespace), default)
-    history_name = _history_name(name)
+    return load_job_snapshot(_path(name, namespace), default)
+
+
+def load_job_snapshot(path: Path, default):
+    """Read a snapshot at an explicit path, restoring matching terminal records.
+
+    Importers and local tools can read another checkout without changing the
+    process-wide STATE_DIR or accidentally bypassing history hydration.
+    """
+    value = _load_path(path, default)
+    history_name = _history_name(path.name)
     if not history_name or not isinstance(value, dict):
         return value
-    history = _load_path(_path(history_name, namespace), {})
+    history = _load_path(path.with_name(history_name), {})
     if not isinstance(history, dict) or not history:
         return value
     merged = dict(value)
