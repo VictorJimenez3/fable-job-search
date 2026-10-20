@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-10-20 17:51 UTC** · companies polled directly: **2310** (registry 2673) · jobs tracked: **77954** · new this run: **815** · alerts this run: **25**_
+_Last run: **2026-10-20 17:56 UTC** · companies polled directly: **2310** (registry 2673) · jobs tracked: **77954** · new this run: **815** · alerts this run: **25**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -153,7 +153,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 74  | 21d | Renaissance Learning | [Data Analyst I](https://jobright.ai/jobs/info/6abc71d4bf15c0ae50138e0d?utm_campaign=Data%20Analysis&utm_source=1103) | United States | edtech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 74  | 21d | New York State Office of Mental Health | [Data Analyst 1](https://jobright.ai/jobs/info/6abc18d6d6acfd3dd29fbe9b?utm_campaign=Data%20Analysis&utm_source=1103) | Albany, NY, United States | healthtech | not classified as startup | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad)<br>[Jobright fallback](https://jobright.ai/jobs/info/6abd07f7064da25272dfb0e7?utm_campaign=Data%20Analysis&utm_source=1103) |
 | 74  | 26d | CACI | [Software Engineer Early Career - Cloud](https://caci.wd1.myworkdayjobs.com/external/job/Hanover-MD-US/Software-Engineer---Early-Career---Cloud_330679) | Remote in USA | other | not classified as startup | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
-| 74  | 26d | Scale AI | [Software Engineer, Public Sector - New Grad](https://job-boards.greenhouse.io/scaleai/jobs/4736426005) | San Francisco, CA | ai_lab | not classified as startup | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/scaleai) · [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 74  | 27d | Scale AI | [Software Engineer, Public Sector - New Grad](https://job-boards.greenhouse.io/scaleai/jobs/4736426005) | San Francisco, CA | ai_lab | not classified as startup | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/scaleai) · [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 74  | ? | General Motors | [Entry-Level – AI/Machine Learning Researcher](https://zapply.jobs/l/d/workday-generalmotors-careers-gm-JR-202621753?s=gh-new-grad-data-science-jobs-2027) | Mountain View, California,... | other | not classified as startup | likely | [Zapply new-grad data science / ML board](https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027) |
 | 74  | ? | General Motors | [Entry-Level – AI and Machine Learning for Automation Researcher](https://zapply.jobs/l/d/workday-generalmotors-careers-gm-JR-202621769?s=gh-new-grad-data-science-jobs-2027) | Warren, Michigan, United States... | other | not classified as startup | likely | [Zapply new-grad data science / ML board](https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027) |
 
