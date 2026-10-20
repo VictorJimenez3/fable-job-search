@@ -20,6 +20,21 @@
   and diff checks passed. Regression coverage includes size-limited writes, both
   lanes, Studio/import hydration, cache refresh, and push-race merges. After publishing,
   dispatch a fresh `radar` run and verify crawl publication and delivery complete.
+- **Publication verified:** [PR #5616](https://github.com/VictorJimenez3/fable-job-search/pull/5616)
+  merged as `336de843cacc95db517fe6edc56813d1315e0f1a`.
+  Production [tests 39465883715](https://github.com/VictorJimenez3/fable-job-search/actions/runs/39465883715)
+  and [Vercel deployment 39466022067](https://github.com/VictorJimenez3/fable-job-search/actions/runs/39466022067)
+  passed; the friendly URL serves that build marker. A live expired Point72
+  posting detail returned HTTP 200 with all 11 archived score reasons and
+  posting facts. The recovery link-repair job published a 93,035,167-byte
+  primary snapshot before the full crawl began.
+- **Full crawl publication verified:** recovery run `39465883567`, attempt 1,
+  discovered 815 jobs and 25 alerts, reconciled a concurrent upstream commit,
+  and published `10366b0ca702f9d1d7573ec6f0309e8228c4da30`. The resulting
+  primary snapshot is 95,253,034 bytes. Delivery checked 359 recent alerts and
+  rebuilt the 1,251-role / 14-page master board. Both application steps passed,
+  but cleanup hit the old 25-minute job limit. The crawl job now allows 35
+  minutes for discovery, push-race reconciliation, delivery, and cleanup.
 
 ## Internship lane update (2026-10-08; DECISION #225)
 

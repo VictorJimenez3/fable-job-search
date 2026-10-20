@@ -58,7 +58,9 @@ jobs:
     needs: repair-links
     if: ${{ always() && needs.repair-links.result != 'cancelled' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    # A measured recovery took 19 min crawling + 5 min reconciling a push
+    # race, then delivery/cleanup. Leave room for the complete publish path.
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
         with:
