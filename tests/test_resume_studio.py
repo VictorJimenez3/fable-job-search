@@ -3782,6 +3782,90 @@ def test_current_scored_jobs_uses_persisted_projection_when_current(tmp_path, mo
     assert jobs["job-1"]["score"] == 91
 
 
+def test_current_scored_jobs_hydrates_terminal_history_before_persisted_score_fast_path(
+    tmp_path, monkeypatch
+):
+    """A thin terminal row must retain its full score ledger in Studio."""
+    from radar.score import RULES_VERSION
+
+    state = tmp_path / "state"
+    state.mkdir()
+    (state / "jobs.json").write_text(json.dumps({
+        "closed-1": {
+            "id": "closed-1", "company": "Acme", "title": "Software Engineer",
+            "url": "https://example.test/jobs/closed-1", "posting_status": "expired",
+            "posting_status_changed_at": 300, "score": 91,
+            "score_version": RULES_VERSION, "rules_v": RULES_VERSION,
+        },
+    }))
+    (state / "jobs_history.json").write_text(json.dumps({
+        "closed-1": {
+            "id": "closed-1", "company": "Acme", "title": "Software Engineer",
+            "url": "https://example.test/jobs/closed-1", "posting_status": "expired",
+            "posting_status_changed_at": 300, "score": 91,
+            "score_version": RULES_VERSION, "rules_v": RULES_VERSION,
+            "source": "greenhouse", "sector": "healthtech",
+            "score_reasons": ["role:swe +20", "healthcare preference +6"],
+            "score_dimensions": {"role_fit": 20, "mission": 6},
+        },
+    }))
+    monkeypatch.setattr(
+        rs.copy, "deepcopy",
+        lambda value: (_ for _ in ()).throw(AssertionError("cold projection rebuilt")),
+    )
+
+    jobs = rs.current_scored_jobs(tmp_path)
+
+    assert jobs["closed-1"]["source"] == "greenhouse"
+    assert jobs["closed-1"]["sector"] == "healthtech"
+    assert jobs["closed-1"]["score_reasons"] == [
+        "role:swe +20", "healthcare preference +6"
+    ]
+    assert jobs["closed-1"]["score"] == 91
+
+
+def test_current_scored_jobs_cache_invalidates_when_terminal_history_changes(tmp_path):
+    """Updating only the history shard must refresh the hydrated projection."""
+    from radar.score import RULES_VERSION
+
+    state = tmp_path / "state"
+    state.mkdir()
+    (state / "jobs.json").write_text(json.dumps({
+        "closed-1": {
+            "id": "closed-1", "company": "Acme", "title": "Software Engineer",
+            "url": "https://example.test/jobs/closed-1", "posting_status": "expired",
+            "posting_status_changed_at": 300, "score": 91,
+            "score_version": RULES_VERSION, "rules_v": RULES_VERSION,
+        },
+    }))
+    history = state / "jobs_history.json"
+    history.write_text(json.dumps({
+        "closed-1": {
+            "posting_status": "expired", "posting_status_changed_at": 300,
+            "score_version": RULES_VERSION, "rules_v": RULES_VERSION,
+            "score_reasons": ["first ledger"],
+        },
+    }))
+
+    first = rs.current_scored_jobs(tmp_path)
+    history.write_text(json.dumps({
+        "closed-1": {
+            "posting_status": "expired", "posting_status_changed_at": 300,
+            "score_version": RULES_VERSION, "rules_v": RULES_VERSION,
+            "score_reasons": ["updated ledger"], "source": "greenhouse",
+        },
+    }))
+    # Ensure filesystems with coarse mtime resolution still expose the update.
+    stat = history.stat()
+    os.utime(history, ns=(stat.st_atime_ns, stat.st_mtime_ns + 1_000_000))
+
+    second = rs.current_scored_jobs(tmp_path)
+
+    assert first["closed-1"]["score_reasons"] == ["first ledger"]
+    assert second["closed-1"]["score_reasons"] == ["updated ledger"]
+    assert second["closed-1"]["source"] == "greenhouse"
+
+
 def test_studio_stale_projection_retains_team_evidence(tmp_path):
     from radar.models import Job
     from radar.score import RULES_VERSION, score

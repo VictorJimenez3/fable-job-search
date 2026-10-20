@@ -66,6 +66,7 @@ if str(SCRIPT_REPO_ROOT) not in sys.path:
 from radar.resume_match import (MATCH_VERSION, build_evidence_graph,
                                 evidence_context, job_match_hash,
                                 posting_eligibility_blocks, score_resume_match)
+from radar import state as radar_state
 from radar.company_research import dossier_for
 from radar.evidence_review import (BLOCKING_STATUSES, REVIEW_STATUSES,
                                    add_question_hint as save_context_hint,
@@ -1051,7 +1052,13 @@ def read_json(path: Path, default: Any = None) -> Any:
 
 def load_jobs(root: Optional[Path] = None) -> Dict[str, Dict[str, Any]]:
     path = (root or repo_root()) / "state" / "jobs.json"
-    value = read_json(path, {})
+    # Keep the Studio's historical tolerant read boundary while using the
+    # shared loader's terminal-history hydration.  A malformed optional
+    # history shard should not make a local Resume Studio launch unusable.
+    try:
+        value = radar_state.load_job_snapshot(path, {})
+    except (OSError, ValueError, TypeError):
+        value = read_json(path, {})
     return value if isinstance(value, dict) else {}
 
 
@@ -1064,13 +1071,17 @@ def current_scored_jobs(root: Optional[Path] = None) -> Dict[str, Dict[str, Any]
     """
     base = (root or repo_root()).resolve()
     jobs_path = base / "state" / "jobs.json"
+    history_path = base / "state" / "jobs_history.json"
     feedback_path = base / "state" / "feedback.json"
     culture_path = base / "state" / "culture.json"
     company_research_path = base / "state" / "company_research.json"
     profile_path = base / "profile.yaml"
     signature = tuple(
         path.stat().st_mtime_ns if path.exists() else 0
-        for path in (jobs_path, feedback_path, culture_path, company_research_path, profile_path)
+        for path in (
+            jobs_path, history_path, feedback_path, culture_path,
+            company_research_path, profile_path,
+        )
     )
     key = str(base)
     cached = _CURRENT_SCORE_CACHE.get(key)

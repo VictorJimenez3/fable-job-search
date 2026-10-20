@@ -278,3 +278,27 @@ def test_terminal_ranking_metadata_does_not_exhaust_primary_snapshot(tmp_path, m
     state.save("jobs.json", state.load("jobs.json", {}, namespace=namespace), namespace=namespace)
     assert json.loads(primary_path.read_text())["closed"] == primary
     assert state.load("jobs.json", {}, namespace=namespace) == {"closed": row}
+
+
+@pytest.mark.parametrize("filename", ["jobs.json", "intern_jobs.json"])
+def test_path_based_job_reader_hydrates_only_matching_terminal_history(tmp_path, filename):
+    primary = {
+        "closed": {"posting_status": "expired", "posting_status_changed_at": 300, "score": 70},
+        "reopened": {"posting_status": "open", "score": 80},
+        "changed": {"posting_status": "expired", "posting_status_changed_at": 500},
+    }
+    full = {"posting_status": "expired", "posting_status_changed_at": 300,
+            "sector": "healthtech", "source": "greenhouse", "score": 60,
+            "score_reasons": ["role:swe +20"]}
+    (tmp_path / filename).write_text(json.dumps(primary))
+    history_name = filename.replace("jobs.json", "jobs_history.json")
+    (tmp_path / history_name).write_text(json.dumps({
+        "closed": full, "reopened": full, "changed": full, "purged": full,
+    }))
+
+    restored = state.load_job_snapshot(tmp_path / filename, {})
+
+    assert restored["closed"] == {**full, **primary["closed"]}
+    assert restored["reopened"] == primary["reopened"]
+    assert restored["changed"] == primary["changed"]
+    assert "purged" not in restored

@@ -13,6 +13,7 @@ from typing import Any
 from sqlalchemy import func, select
 
 from radar.config import ROOT
+from radar.state import load_job_snapshot
 
 from .repository import RadarRepository, repository
 from .schema import application_events, applications, postings
@@ -48,7 +49,7 @@ def import_legacy(root: Path = ROOT, repo: RadarRepository | None = None) -> dic
     for profile_id, (jobs_name, applications_name) in profiles_to_files.items():
         repo.ensure_profile(profile_id, profile_id.replace("_", " ").title(), {})
         jobs_path = root / "state" / jobs_name
-        records = json.loads(jobs_path.read_text()) if jobs_path.exists() else {}
+        records = load_job_snapshot(jobs_path, {}) if jobs_path.exists() else {}
         for legacy_id, value in records.items():
             try:
                 seen = _at(value.get("last_seen_at") or value.get("posted_at"), now)

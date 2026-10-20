@@ -134,11 +134,20 @@ def _load_path(p: Path, default):
 
 def load(name: str, default, namespace: str | None = None):
     """Load a state file, merging the optional job-history shard on read."""
-    value = _load_path(_path(name, namespace), default)
-    history_name = _history_name(name)
+    return load_job_snapshot(_path(name, namespace), default)
+
+
+def load_job_snapshot(path: Path, default):
+    """Read a snapshot at an explicit path, restoring matching terminal records.
+
+    Importers and local tools can read another checkout without changing the
+    process-wide STATE_DIR or accidentally bypassing history hydration.
+    """
+    value = _load_path(path, default)
+    history_name = _history_name(path.name)
     if not history_name or not isinstance(value, dict):
         return value
-    history = _load_path(_path(history_name, namespace), {})
+    history = _load_path(path.with_name(history_name), {})
     if not isinstance(history, dict) or not history:
         return value
     merged = dict(value)
