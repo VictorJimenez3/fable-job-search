@@ -2754,6 +2754,19 @@
   "status": "active",
   "token": "ntt-data-aivista"
  },
+ "ashby:nubank": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792456842,
+  "last_ok": 1792456845,
+  "name": "Nubank",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "nubank"
+ },
  "ashby:observable-space": {
   "ats": "ashby",
   "extra": {},
@@ -2959,6 +2972,19 @@
   "sector": "",
   "status": "active",
   "token": "pariveda"
+ },
+ "ashby:patreon": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792456842,
+  "last_ok": 1792456844,
+  "name": "Patreon",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "patreon"
  },
  "ashby:pebl": {
   "ats": "ashby",
@@ -4939,6 +4965,19 @@
   "status": "active",
   "token": "brave"
  },
+ "greenhouse:braze": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792456842,
+  "last_ok": 1792456843,
+  "name": "Braze",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "braze"
+ },
  "greenhouse:brevium": {
   "ats": "greenhouse",
   "extra": {},
@@ -6810,6 +6849,19 @@
   "status": "invalid",
   "token": "innovaccer"
  },
+ "greenhouse:insomniac": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792456842,
+  "last_ok": 1792456844,
+  "name": "Insomniac Games",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "insomniac"
+ },
  "greenhouse:instalilyai": {
   "ats": "greenhouse",
   "extra": {},
@@ -7139,6 +7191,19 @@
   "sector": "",
   "status": "active",
   "token": "latitude"
+ },
+ "greenhouse:legendcareers": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792456842,
+  "last_ok": 1792456843,
+  "name": "Legend Biotech",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "legendcareers"
  },
  "greenhouse:leolabsinc": {
   "ats": "greenhouse",
@@ -15662,7 +15727,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792446293,
+  "last_ok": 1792456861,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16055,7 +16120,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1792446270,
+  "last_ok": 1792456850,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16296,7 +16361,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792446286,
+  "last_ok": 1792456870,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -18009,6 +18074,22 @@
   "status": "active",
   "token": "byu"
  },
+ "workday:caa:Careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "Careers"
+  },
+  "failures": 0,
+  "first_seen": 1792456842,
+  "last_ok": 1792456844,
+  "name": "Creative Artists Agency",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "caa"
+ },
  "workday:cadence:External_Careers": {
   "ats": "workday",
   "extra": {
@@ -18586,7 +18667,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1792446269,
+  "last_ok": 1792456848,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -18973,6 +19054,22 @@
   "sector": "",
   "status": "active",
   "token": "cnoinc"
+ },
+ "workday:cognex:External_Career_Site": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "External_Career_Site"
+  },
+  "failures": 0,
+  "first_seen": 1792456842,
+  "last_ok": 1792456843,
+  "name": "Cognex",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "cognex"
  },
  "workday:cohesity:Cohesity_Careers": {
   "ats": "workday",
@@ -19770,7 +19867,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792446281,
+  "last_ok": 1792456860,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -19943,7 +20040,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792446272,
+  "last_ok": 1792456851,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -21046,7 +21143,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792446277,
+  "last_ok": 1792456856,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -23548,7 +23645,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792446273,
+  "last_ok": 1792456852,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -25900,6 +25997,22 @@
   "status": "active",
   "token": "rogersbh"
  },
+ "workday:roguefitness:RogueFitness_External_Careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "RogueFitness_External_Careers"
+  },
+  "failures": 0,
+  "first_seen": 1792456842,
+  "last_ok": 1792456844,
+  "name": "Rogue Fitness",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "roguefitness"
+ },
  "workday:rollsroyce:Intern_Graduate": {
   "ats": "workday",
   "extra": {
@@ -26331,7 +26444,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792446277,
+  "last_ok": 1792456857,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
