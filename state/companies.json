@@ -1081,6 +1081,19 @@
   "status": "active",
   "token": "clera"
  },
+ "ashby:clickhouse": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792562449,
+  "last_ok": 1792562450,
+  "name": "ClickHouse",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "clickhouse"
+ },
  "ashby:cohere": {
   "ats": "ashby",
   "extra": {},
@@ -6437,6 +6450,19 @@
   "sector": "",
   "status": "active",
   "token": "glossgenius"
+ },
+ "greenhouse:gofundme": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792562449,
+  "last_ok": 1792562451,
+  "name": "GoFundMe",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "gofundme"
  },
  "greenhouse:goldenpetbrands": {
   "ats": "greenhouse",
@@ -14446,6 +14472,22 @@
   "status": "active",
   "token": "iawmqy"
  },
+ "oracle_orc:iaziqy:CX_1": {
+  "ats": "oracle_orc",
+  "extra": {
+   "host": "iaziqy.fa.ocs.oraclecloud.com",
+   "site": "CX_1"
+  },
+  "failures": 0,
+  "first_seen": 1792562449,
+  "last_ok": 1792562451,
+  "name": "Uber",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "iaziqy"
+ },
  "oracle_orc:ibqbjb:Honeywell": {
   "ats": "oracle_orc",
   "extra": {
@@ -15844,7 +15886,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792544280,
+  "last_ok": 1792562467,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16237,7 +16279,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1792544268,
+  "last_ok": 1792562457,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16494,7 +16536,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792544281,
+  "last_ok": 1792562470,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -18800,7 +18842,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1792544266,
+  "last_ok": 1792562455,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -20000,7 +20042,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792544277,
+  "last_ok": 1792562466,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -20173,7 +20215,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792544270,
+  "last_ok": 1792562456,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -21276,7 +21318,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792544275,
+  "last_ok": 1792562468,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -23794,7 +23836,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792544272,
+  "last_ok": 1792562458,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -25645,6 +25687,22 @@
   "status": "active",
   "token": "rakuten"
  },
+ "workday:rakuten:RakutenAmericas": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "RakutenAmericas"
+  },
+  "failures": 0,
+  "first_seen": 1792562449,
+  "last_ok": 1792562450,
+  "name": "Rakuten International",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "rakuten"
+ },
  "workday:rangersmlb:Rangers": {
   "ats": "workday",
   "extra": {
@@ -26593,7 +26651,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792544274,
+  "last_ok": 1792562462,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
