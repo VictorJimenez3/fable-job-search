@@ -4124,6 +4124,19 @@
   "status": "active",
   "token": "varick-agents"
  },
+ "ashby:veeda-ai": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792714217,
+  "last_ok": 1792714217,
+  "name": "Veeda AI",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "veeda-ai"
+ },
  "ashby:veeda-labs": {
   "ats": "ashby",
   "extra": {},
@@ -6592,6 +6605,19 @@
   "status": "active",
   "token": "graphcore"
  },
+ "greenhouse:grassrootsanalytics": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792714217,
+  "last_ok": 1792714218,
+  "name": "Grassroots Analytics",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "grassrootsanalytics"
+ },
  "greenhouse:gravitonresearchcapital": {
   "ats": "greenhouse",
   "extra": {},
@@ -7147,6 +7173,19 @@
   "status": "active",
   "token": "ionq"
  },
+ "greenhouse:ivalua": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792714217,
+  "last_ok": 1792714218,
+  "name": "Ivalua",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "ivalua"
+ },
  "greenhouse:janestreet": {
   "ats": "greenhouse",
   "extra": {},
@@ -7476,6 +7515,22 @@
   "sector": "healthtech",
   "status": "invalid",
   "token": "lyrahealth"
+ },
+ "greenhouse:mangroup": {
+  "ats": "greenhouse",
+  "extra": {
+   "eu": true
+  },
+  "failures": 0,
+  "first_seen": 1792714217,
+  "invalidated_at": 1792714219,
+  "last_ok": 0,
+  "name": "Man Group",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "mangroup"
  },
  "greenhouse:mavenclinic": {
   "ats": "greenhouse",
@@ -7881,6 +7936,19 @@
   "sector": "healthtech",
   "status": "active",
   "token": "omadahealth"
+ },
+ "greenhouse:opensesame": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792714217,
+  "last_ok": 1792714217,
+  "name": "OpenSesame",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "opensesame"
  },
  "greenhouse:optiverprivate": {
   "ats": "greenhouse",
@@ -16045,7 +16113,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792704841,
+  "last_ok": 1792714236,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16438,7 +16506,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1792704832,
+  "last_ok": 1792714225,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16695,7 +16763,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792704844,
+  "last_ok": 1792714237,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -19001,7 +19069,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1792704830,
+  "last_ok": 1792714223,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -20201,7 +20269,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792704840,
+  "last_ok": 1792714234,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -20374,7 +20442,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792704831,
+  "last_ok": 1792714227,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -21493,7 +21561,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792704837,
+  "last_ok": 1792714232,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -24011,7 +24079,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792704832,
+  "last_ok": 1792714228,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -26842,7 +26910,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792704838,
+  "last_ok": 1792714231,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
