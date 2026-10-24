@@ -2408,6 +2408,19 @@
   "status": "active",
   "token": "levels"
  },
+ "ashby:linkup": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792800086,
+  "last_ok": 1792800098,
+  "name": "Linkup",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "linkup"
+ },
  "ashby:loveholidays": {
   "ats": "ashby",
   "extra": {},
@@ -4071,6 +4084,19 @@
   "sector": "",
   "status": "active",
   "token": "tracebit"
+ },
+ "ashby:tracelabs": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792800086,
+  "last_ok": 1792800098,
+  "name": "Trace Labs",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "tracelabs"
  },
  "ashby:tryroam": {
   "ats": "ashby",
@@ -11405,6 +11431,19 @@
   "status": "active",
   "token": "bhvr"
  },
+ "lever:bosonai": {
+  "ats": "lever",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792800086,
+  "last_ok": 1792800096,
+  "name": "Boson Ai",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "bosonai"
+ },
  "lever:brooksrunning": {
   "ats": "lever",
   "extra": {},
@@ -12180,6 +12219,19 @@
   "status": "active",
   "token": "moo"
  },
+ "lever:multiplylabs": {
+  "ats": "lever",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792800086,
+  "last_ok": 1792800098,
+  "name": "Multiply Labs",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "multiplylabs"
+ },
  "lever:neighbor": {
   "ats": "lever",
   "extra": {},
@@ -12752,6 +12804,19 @@
   "sector": "",
   "status": "active",
   "token": "trio"
+ },
+ "lever:upscale-ai": {
+  "ats": "lever",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792800086,
+  "last_ok": 1792800095,
+  "name": "Upscale AI",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "upscale-ai"
  },
  "lever:veeva": {
   "ats": "lever",
@@ -14981,6 +15046,19 @@
   "status": "active",
   "token": "AxleInformaticsLLC"
  },
+ "smartrecruiters:Bertelsmann-Jobs": {
+  "ats": "smartrecruiters",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1792800086,
+  "last_ok": 1792800098,
+  "name": "Bertelsmann",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "Bertelsmann-Jobs"
+ },
  "smartrecruiters:BoschGroup": {
   "ats": "smartrecruiters",
   "extra": {},
@@ -16126,7 +16204,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792791695,
+  "last_ok": 1792800116,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16519,7 +16597,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1792791685,
+  "last_ok": 1792800104,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16542,6 +16620,22 @@
   "sector": "",
   "status": "active",
   "token": "albemarle"
+ },
+ "workday:albertamotorassociation:ama": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "ama"
+  },
+  "failures": 0,
+  "first_seen": 1792800086,
+  "last_ok": 1792800087,
+  "name": "AMA",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "albertamotorassociation"
  },
  "workday:alcoa:Careers": {
   "ats": "workday",
@@ -16776,7 +16870,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792791698,
+  "last_ok": 1792800118,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -19082,7 +19176,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1792791682,
+  "last_ok": 1792800102,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -20282,7 +20376,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792791693,
+  "last_ok": 1792800115,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -20455,7 +20549,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792791687,
+  "last_ok": 1792800105,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -21574,7 +21668,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792791690,
+  "last_ok": 1792800110,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -24092,7 +24186,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792791687,
+  "last_ok": 1792800110,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -26923,7 +27017,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1792791690,
+  "last_ok": 1792800110,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
