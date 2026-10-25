@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-10-25 05:19 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **150 shown / 12270 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-10-25 10:09 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **150 shown / 12270 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -55,7 +55,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 76 ⭐ | 8d | Energy Transfer Partners | [Engineering Intern](https://energytransfer.taleo.net/careersection/etp_ext/jobdetail.ftl?job=2610003882) | Houston, TX | energy | simplify |
 | 76 ⭐ | 23d | Hitachi Energy | [Component Engineering Co-op](https://hitachi.wd1.myworkdayjobs.com/hitachi/job/Pittsburgh-Pennsylvania-United-States/Co-op---Component-Engineering_R0140272) | Pittsburgh, PA | energy | simplify |
 | 76 ⭐ | 24d | Base Power | [Electrical Engineering Intern](https://jobs.ashbyhq.com/base-power/7284737d-7e04-43e0-af1f-858103f64e97/application?embed=true) | Austin, TX | energy | simplify |
-| 75 ⭐ | 6d | Tesla | [Advanced Automation Engineer Intern - Cell Engineering - Winter/Spring](https://www.tesla.com/careers/search/job/286986) | Fremont, CA | consumer_manufacturing | simplify |
+| 75 ⭐ | 7d | Tesla | [Advanced Automation Engineer Intern - Cell Engineering - Winter/Spring](https://www.tesla.com/careers/search/job/286986) | Fremont, CA | consumer_manufacturing | simplify |
 | 75 ⭐ | 13d | Micron Technology | [SSD Hardware Engineering Intern](https://micron.wd1.myworkdayjobs.com/External/job/Longmont-MAX--Office-CO/Intern---SSD-Hardware-Engineering_JR114232) | Longmont, CO | semiconductors | simplify |
 | 75 ⭐ | 13d | KLA | [Algorithm Engineer Intern - GPU/CUDA](https://kla.wd1.myworkdayjobs.com/UR/job/Milpitas-CA/Algorithm-Engineering-Intern--GPU-CUDA-_2642044-2) | Milpitas, CA | semiconductors | simplify |
 | 75 ⭐ | 15d | Applied Materials | [2027 Summer Intern - Electrical Engineer - BS/MS Degree, (Santa Clara)](https://amat.wd1.myworkdayjobs.com/en-US/External/job/Santa-ClaraCA/XMLNAME-2027-Summer-Intern---Electrical-Engineer---BS-MS-Degree---Santa-Clara-_R2629428) | Santa Clara,CA | semiconductors | workday |
@@ -75,7 +75,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 75 ⭐ | 25d | KLA | [Optical Engineer Intern](https://kla.wd1.myworkdayjobs.com/search/job/Milpitas-CA/Optical-Engineer-Intern_2641712-1) | Milpitas, CA | semiconductors | simplify |
 | 75 ⭐ | 25d | KLA | [Product Development Engineer Intern](https://kla.wd1.myworkdayjobs.com/search/job/Milpitas-CA/Product-Development-Engineer-Intern_2641521-1) | Milpitas, CA | semiconductors | simplify |
 | 75 ⭐ | 25d | KLA | [Algorithm Engineering Intern](https://kla.wd1.myworkdayjobs.com/annarbor/job/Ann-Arbor-MI/Algorithm-Engineering-Intern_2641516) | Ann Arbor, MI | semiconductors | simplify |
-| 75 ⭐ | 25d | GlobalFoundries | [Field Application Engineering Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Texas---Austin/Field-Application-Engineering-Intern--Summer-2027-_JR-2604220) | 3 Locations | semiconductors | workday |
+| 75 ⭐ | 26d | GlobalFoundries | [Field Application Engineering Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---Texas---Austin/Field-Application-Engineering-Intern--Summer-2027-_JR-2604220) | 3 Locations | semiconductors | workday |
 | 75 ⭐ | 26d | GlobalFoundries | [Silicon Photonics Reliability Engineering Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Silicon-Photonics-Reliability-Engineering-Intern--Summer-2027-_JR-2604258) | USA - New York - Malta | semiconductors | workday |
 | 75 ⭐ | 26d | GlobalFoundries | [Technology Architecture Engineering Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/Technology-Architecture-Engineering-Intern--Summer-2027-_JR-2604362) | USA - New York - Malta | semiconductors | workday |
 | 75 ⭐ | 26d | GlobalFoundries | [CMOS FEOL Reliability Engineering Intern (Summer 2027)](https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/USA---New-York---Malta/CMOS-FEOL-Reliability-Engineering-Intern--Summer-2027-_JR-2604360) | USA - New York - Malta | semiconductors | workday |
@@ -98,9 +98,9 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 71  | 9d | General Dynamics Information Technolog | [Quality Assurance Associate Intern](https://gdit.wd5.myworkdayjobs.com/gdit_earlytalent/job/USA-VA-Falls-Church/Summer-2027-Quality-Assurance-Associate--Intern_RQ230538) | Falls Church, VA | other | simplify |
 | 71  | 18d | Figure | [Validation Engineer Intern](https://job-boards.greenhouse.io/figureai/jobs/4606072006) | San Jose, CA | other | simplify |
 | 71  | 18d | Renesas Electronics | [Post Silicon Validation Intern](https://jobs.smartrecruiters.com/RenesasElectronics/744000153840059) | Duluth, GA | other | simplify |
-| 71  | 18d | Astera Labs | [System Validation Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4724488005) | San Jose, CA | other | simplify |
-| 71  | 18d | Astera Labs | [Hardware Electrical Validation Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4740145005) | San Jose, CA | other | simplify |
-| 71  | 18d | Astera Labs | [Electrical Validation Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4724534005) | San Jose, CA | other | simplify |
+| 71  | 19d | Astera Labs | [System Validation Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4724488005) | San Jose, CA | other | simplify |
+| 71  | 19d | Astera Labs | [Hardware Electrical Validation Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4740145005) | San Jose, CA | other | simplify |
+| 71  | 19d | Astera Labs | [Electrical Validation Engineer Intern](https://job-boards.greenhouse.io/asteraearlycareer2027/jobs/4724534005) | San Jose, CA | other | simplify |
 | 71  | 19d | Cirrus Logic | [Validation Engineer Intern](https://jobs.eu.lever.co/cirrus/89813bb2-94fb-42f6-aec2-03154cfde027/apply) | Austin, TX | other | simplify |
 | 71  | 26d | Marvell | [AMS Validation Intern](https://marvell.wd1.myworkdayjobs.com/MarvellCareers/job/Santa-Clara-CA/AMS-Validation-Intern_2603863-1) | Santa Clara, CA | other | simplify |
 | 71  | 29d | Charles Schwab | [Model Risk Governance & Validation Intern](https://career-schwab.icims.com/jobs/126262/job?mobile=true&needsRedirect=false) | Southlake, TX | other | simplify |
