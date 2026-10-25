@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-10-25 12:47 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **150 shown / 12270 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-10-25 14:22 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **150 shown / 12270 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -129,7 +129,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 66  | 4d | Humble Robotics | [Electrical Engineer Intern](https://jobs.lever.co/humble-robotics/b9822bf4-c77c-42ea-a19f-1280ec3ab763/apply) | SF | other | simplify |
 | 66  | 4d | Keysight Technologies | [Hardware Engineering Intern](https://jobs.keysight.com/jobs/55112?icims=1) | Santa Rosa, CA | other | simplify |
 | 66  | 4d | Metamorphic | [Engineering Intern](https://jobs.ashbyhq.com/metamorphic/cf518648-4e65-4f7d-aa05-f01066d8bd8a/application?embed=true) | Palo Alto, CA | other | simplify |
-| 66  | 4d | Textron | [Industrial Software Engineer Intern](https://textron.taleo.net/careersection/textron/jobdetail.ftl?job=345735) | Williamsport, PA | other | simplify |
+| 66  | 5d | Textron | [Industrial Software Engineer Intern](https://textron.taleo.net/careersection/textron/jobdetail.ftl?job=345735) | Williamsport, PA | other | simplify |
 | 66  | 5d | Rockwell Automation | [Hardware Development Engineer Intern](https://rockwellautomation.wd1.myworkdayjobs.com/External-Rockwell-Automation-Early-Careers/job/Mayfield-Heights-Ohio-United-States/Intern--Hardware-Development-Engineer--May---Aug-2027-_R26-6892-2) | Mayfield Heights, OH | other | simplify |
 | 66  | 5d | Verizon Communications | [Call Routing Optimization Engineer Intern](https://verizon.wd12.myworkdayjobs.com/verizon-careers/job/Basking-Ridge-New-Jersey/Verizon-Consumer-Group--Call-Routing-Optimization-Engineering-Summer-2027-Internship_R-1102398) | Basking Ridge, Bernards, NJ | other | simplify |
 | 66  | 5d | CACI | [Electrical Test Engineer Intern](https://caci.wd1.myworkdayjobs.com/external/job/Danbury-CT-US/Electrical-Test-Engineering-Intern---Summer-2027_333809) | Danbury, CT | other | simplify |
@@ -142,7 +142,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 66  | 5d | Ursa Major | [Avionics Electrical Engineer Intern](https://ursamajor.com/careers/?gh_jid=4745125005) | Berthoud, CO | other | simplify |
 | 66  | 5d | Westinghouse Electric Company | [Product Engineer Intern](https://careers.westinghousenuclear.com/job/Cranberry-Township-Summer-Intern-Product-Engineer-NC/1441276000/?ats=successfactors) | Cranberry Township, PA | other | simplify |
 | 66  | 5d | L3Harris Technologies | [Systems Engineering Co-op](https://jobs.l3harris.com/job/Clifton-Systems-Engineering-Spring-Co-Op-NJ-07014/1441503600/?ats=successfactors) | Clifton, NJ | other | simplify |
-| 66  | 5d | Johns Hopkins Applied Physics Laborato | [Electrical and Computer Engineer Intern](https://careers.jhuapl.edu/jobs/60390?icims=1) | Laurel, MD | other | simplify |
+| 66  | 6d | Johns Hopkins Applied Physics Laborato | [Electrical and Computer Engineer Intern](https://careers.jhuapl.edu/jobs/60390?icims=1) | Laurel, MD | other | simplify |
 | 66  | 6d | Draper | [Optoelectronics Electrical Engineer Co-op](https://draper.wd5.myworkdayjobs.com/Draper_Careers/job/Cambridge-MA/Optoelectronics-Electrical-Engineering-Co-Op_JR003044-1) | Cambridge, MA | other | simplify |
 | 66  | 6d | Badger Meter | [Systems Integration Engineer Intern](https://badgermeter.wd5.myworkdayjobs.com/US_CareerSite/job/US---WI---Milwaukee-HQ/Systems-Integration---Engineering-Intern_4641) | Milwaukee, WI | other | simplify |
 | 66  | 6d | Carrier Global | [Test Engineer Intern](https://carrier.wd5.myworkdayjobs.com/jobs/job/CAI19-UTEC-Huntington-111-East-Wayne-Street-Fort-Wayne-IN-46802-USA/Test-Engineering-Intern---Summer_30220233) | Fort Wayne, IN | other | simplify |
