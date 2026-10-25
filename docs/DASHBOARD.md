@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-10-25 14:22 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **150 shown / 12270 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-10-25 17:52 UTC** · companies polled directly: **9** (ChemE registry 9) · jobs tracked: **150 shown / 12270 stored** · new this run: **0** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -56,8 +56,8 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 75 ⭐ | 13d | KLA | [Algorithm Engineer Intern - GPU/CUDA](https://kla.wd1.myworkdayjobs.com/UR/job/Milpitas-CA/Algorithm-Engineering-Intern--GPU-CUDA-_2642044-2) | Milpitas, CA | semiconductors | simplify |
 | 75 ⭐ | 15d | Applied Materials | [2027 Summer Intern - Electrical Engineer - BS/MS Degree, (Santa Clara)](https://amat.wd1.myworkdayjobs.com/en-US/External/job/Santa-ClaraCA/XMLNAME-2027-Summer-Intern---Electrical-Engineer---BS-MS-Degree---Santa-Clara-_R2629428) | Santa Clara,CA | semiconductors | workday |
 | 75 ⭐ | 15d | Applied Materials | [2027 Summer Intern - Mechanical Engineer - BS/MS Degree, (Santa Clara)](https://amat.wd1.myworkdayjobs.com/en-US/External/job/Santa-ClaraCA/XMLNAME-2027-Summer-Intern---Mechanical-Engineer---BS-MS-Degree---Santa-Clara-_R2629426) | Santa Clara,CA | semiconductors | workday |
-| 75 ⭐ | 15d | Applied Materials | [2027 Summer Electrical Engineer  Intern (Controls/PCB) - BS or MS (Glo](https://amat.wd1.myworkdayjobs.com/en-US/External/job/GloucesterMA/XMLNAME-2027-Summer-Electrical-Engineer--Intern--Controls-PCB----BS-or-MS--Gloucester--MA-_R2630658) | Gloucester,MA | semiconductors | workday |
-| 75 ⭐ | 15d | Applied Materials | [2027 Summer Mechanical Engineer Intern - BS or MS (Gloucester, MA)](https://amat.wd1.myworkdayjobs.com/en-US/External/job/GloucesterMA/XMLNAME-2027-Summer-Mechanical-Engineer-Intern---BS-or-MS--Gloucester--MA-_R2630657) | Gloucester,MA | semiconductors | workday |
+| 75 ⭐ | 16d | Applied Materials | [2027 Summer Electrical Engineer  Intern (Controls/PCB) - BS or MS (Glo](https://amat.wd1.myworkdayjobs.com/en-US/External/job/GloucesterMA/XMLNAME-2027-Summer-Electrical-Engineer--Intern--Controls-PCB----BS-or-MS--Gloucester--MA-_R2630658) | Gloucester,MA | semiconductors | workday |
+| 75 ⭐ | 16d | Applied Materials | [2027 Summer Mechanical Engineer Intern - BS or MS (Gloucester, MA)](https://amat.wd1.myworkdayjobs.com/en-US/External/job/GloucesterMA/XMLNAME-2027-Summer-Mechanical-Engineer-Intern---BS-or-MS--Gloucester--MA-_R2630657) | Gloucester,MA | semiconductors | workday |
 | 75 ⭐ | 16d | Applied Materials | [Electrical Engineer Intern](https://amat.wd1.myworkdayjobs.com/External/job/Santa-ClaraCA/XMLNAME-2027-Summer-Intern---Electrical-Engineer---BS-MS-Degree---Santa-Clara-_R2629428) | Santa Clara, CA | semiconductors | simplify |
 | 75 ⭐ | 16d | Applied Materials | [Electrical Engineer Intern - Controls/PCB](https://amat.wd1.myworkdayjobs.com/External/job/GloucesterMA/XMLNAME-2027-Summer-Electrical-Engineer--Intern--Controls-PCB----BS-or-MS--Gloucester--MA-_R2630658) | Gloucester, MA | semiconductors | simplify |
 | 75 ⭐ | 18d | KLA | [Applications Development Engineer Intern](https://kla.wd1.myworkdayjobs.com/search/job/Milpitas-CA/Applications-Development-Engineering-Intern---BBP_2641507-1) | Milpitas, CA | semiconductors | simplify |
@@ -104,7 +104,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 71  | 29d | onsemi | [Validation Engineer Intern](https://hctz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/2506611) | Nampa, ID | other | simplify |
 | 70  | 1d | ID.me | [Analytics Engineer Intern](https://job-boards.greenhouse.io/idmeuniversityrecruiting/jobs/8041991003) | Mountain View, CA | other | simplify |
 | 70  | 1d | Renesas Electronics | [Product Engineer Intern](https://jobs.smartrecruiters.com/RenesasElectronics/744000157550697) | Morrisville, NC | other | simplify |
-| 70  | 1d | Keysight Technologies | [R&D Hardware Engineering Intern](https://jobs.keysight.com/jobs/55239?icims=1) | Santa Rosa, CA | other | simplify |
+| 70  | 2d | Keysight Technologies | [R&D Hardware Engineering Intern](https://jobs.keysight.com/jobs/55239?icims=1) | Santa Rosa, CA | other | simplify |
 | 70  | 2d | Amazon | [ASIC Engineer Intern](https://amazon.jobs/en/jobs/10517535/asic-engineer-intern-annapurna-labs-2027) | Seattle, WA | other | simplify |
 | 70  | 2d | Amazon | [Cloud Hardware Development Engineer Intern](https://amazon.jobs/en/jobs/10517649/cloud-hardware-development-engineer-intern-annapurna-labs-2027) | Austin, TX | other | simplify |
 | 70  | 2d | Amazon | [Systems Development Engineer Intern](https://amazon.jobs/en/jobs/10573984/systems-development-engineer-intern-us-2027) | Bellevue, WA | other | simplify |
