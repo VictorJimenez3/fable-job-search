@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-10-26 15:14 UTC** · companies polled directly: **2369** (registry 2735) · jobs tracked: **80607** · new this run: **45** · alerts this run: **14**_
+_Last run: **2026-10-26 15:21 UTC** · companies polled directly: **2369** (registry 2735) · jobs tracked: **80592** · new this run: **45** · alerts this run: **14**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -154,7 +154,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 75 ⭐ | 24d | Canon Healthcare USA, Inc. | [Embedded Software Engineer](https://jobright.ai/jobs/info/6abfdd784ac55253f5d66142?utm_campaign=Software%20Engineering&utm_source=1103) | Vernon Hills, IL, United States | healthtech | unavailable | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 75 ⭐ | 27d | New York State Office of Mental Health | [Data Analyst 1](https://jobright.ai/jobs/info/6abc18d6d6acfd3dd29fbe9b?utm_campaign=Data%20Analysis&utm_source=1103) | Albany, NY, United States | healthtech | not classified as startup | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad)<br>[Jobright fallback](https://jobright.ai/jobs/info/6abd07f7064da25272dfb0e7?utm_campaign=Data%20Analysis&utm_source=1103) |
 | 75 ⭐ | 27d | Amazon | [Software Development Engineer, FinTech/Customer Service Tech](https://jobright.ai/jobs/info/6abc1b807119e56191ceb5e0?utm_campaign=Software%20Engineering&utm_source=1103) | Newark, NJ, United States | big_tech | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) · [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs)<br>[www.amazon.jobs fallback](https://www.amazon.jobs/jobs/10564323/apply) |
-| 74  | 1d | Cisco | [Data Analyst I (Full Time) - United States](https://jobright.ai/jobs/info/6ac694d8064da25272e1b423?utm_campaign=Data%20Analysis&utm_source=1103) | San Jose, CA, United States | other | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 74  | 2d | Citi | [New Grad 2027: Software Developer, Application Development](https://go.vansh.nyc/Br) | Jacksonville, FL | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 74  | 2d | Intel | [Software Engineer, CAD/EDA Tools (Master's)](https://intel.wd1.myworkdayjobs.com/en-US/external/job/US-Oregon-Hillsboro/CAD-EDA-Tools-Software-Engineer_JR0288234-1) | Hillsboro, OR | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026)<br>[go.vansh.nyc fallback](https://go.vansh.nyc/Bx) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
