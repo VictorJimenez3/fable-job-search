@@ -50,6 +50,19 @@
   "status": "active",
   "token": "1x"
  },
+ "ashby:42dot": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1793144744,
+  "last_ok": 1793144746,
+  "name": "42dot",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "42dot"
+ },
  "ashby:Abound": {
   "ats": "ashby",
   "extra": {},
@@ -6606,6 +6619,22 @@
   "sector": "",
   "status": "active",
   "token": "gleanwork"
+ },
+ "greenhouse:glencoreuk": {
+  "ats": "greenhouse",
+  "extra": {
+   "eu": true
+  },
+  "failures": 0,
+  "first_seen": 1793144744,
+  "invalidated_at": 1793144748,
+  "last_ok": 0,
+  "name": "Glencore",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "glencoreuk"
  },
  "greenhouse:glossgenius": {
   "ats": "greenhouse",
@@ -16123,6 +16152,19 @@
   "status": "active",
   "token": "VeoliaEnvironnementSA"
  },
+ "smartrecruiters:Videotron": {
+  "ats": "smartrecruiters",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1793144744,
+  "last_ok": 1793144745,
+  "name": "Videotron",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "Videotron"
+ },
  "smartrecruiters:VusionGroupSA": {
   "ats": "smartrecruiters",
   "extra": {},
@@ -16282,13 +16324,29 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793131513,
+  "last_ok": 1793144766,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
   "sector": "chemicals_materials",
   "status": "active",
   "token": "3m"
+ },
+ "workday:aaaie:CSAACareers2": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "CSAACareers2"
+  },
+  "failures": 0,
+  "first_seen": 1793144744,
+  "last_ok": 1793144745,
+  "name": "CSAA Insurance Group",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "aaaie"
  },
  "workday:aba:aba": {
   "ats": "workday",
@@ -16675,7 +16733,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1793131495,
+  "last_ok": 1793144753,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -16948,7 +17006,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793131513,
+  "last_ok": 1793144766,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -17316,6 +17374,22 @@
   "sector": "",
   "status": "active",
   "token": "arlo"
+ },
+ "workday:arrowstreetcapital:Campus_Careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "Campus_Careers"
+  },
+  "failures": 0,
+  "first_seen": 1793144744,
+  "last_ok": 1793144746,
+  "name": "Arrowstreet Capital",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "arrowstreetcapital"
  },
  "workday:asmglobal:careers": {
   "ats": "workday",
@@ -19270,7 +19344,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1793131494,
+  "last_ok": 1793144752,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -20258,6 +20332,22 @@
   "status": "active",
   "token": "daveandbusters"
  },
+ "workday:davidyurman:DavidYurmanCareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "DavidYurmanCareers"
+  },
+  "failures": 0,
+  "first_seen": 1793144744,
+  "last_ok": 1793144746,
+  "name": "David Yurman",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "davidyurman"
+ },
  "workday:davita:DKC_External": {
   "ats": "workday",
   "extra": {
@@ -20470,7 +20560,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793131508,
+  "last_ok": 1793144764,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -20643,7 +20733,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793131498,
+  "last_ok": 1793144755,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -21762,7 +21852,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793131505,
+  "last_ok": 1793144762,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -24296,7 +24386,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793131499,
+  "last_ok": 1793144756,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -27059,6 +27149,22 @@
   "status": "active",
   "token": "sec"
  },
+ "workday:sedgwick:Sedgwick": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "Sedgwick"
+  },
+  "failures": 0,
+  "first_seen": 1793144744,
+  "last_ok": 1793144744,
+  "name": "Sedgwick Claims Management Services",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "sedgwick"
+ },
  "workday:selinc:SEL": {
   "ats": "workday",
   "extra": {
@@ -27159,7 +27265,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793131503,
+  "last_ok": 1793144759,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
