@@ -1939,6 +1939,19 @@
   "status": "active",
   "token": "genesis-molecular-ai"
  },
+ "ashby:geniusai": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1793316932,
+  "last_ok": 1793316939,
+  "name": "Genius AI",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "geniusai"
+ },
  "ashby:genmd": {
   "ats": "ashby",
   "extra": {},
@@ -4604,6 +4617,19 @@
   "status": "active",
   "token": "webfx"
  },
+ "ashby:westmag": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1793316932,
+  "last_ok": 1793316937,
+  "name": "Western Magnetics",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "westmag"
+ },
  "ashby:windborne-systems": {
   "ats": "ashby",
   "extra": {},
@@ -7141,6 +7167,19 @@
   "status": "active",
   "token": "harbingermotors"
  },
+ "greenhouse:hasbro": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1793316932,
+  "last_ok": 1793316939,
+  "name": "Hasbro",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "hasbro"
+ },
  "greenhouse:haven": {
   "ats": "greenhouse",
   "extra": {},
@@ -8332,7 +8371,7 @@
   "last_ok": 0,
   "name": "Netcraft",
   "origin": "harvest:simplify",
-  "probe_attempts": 1,
+  "probe_attempts": 2,
   "sector": "",
   "status": "invalid",
   "token": "netcraft"
@@ -8591,6 +8630,19 @@
   "sector": "healthtech",
   "status": "active",
   "token": "pathai"
+ },
+ "greenhouse:pathrobotics": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1793316932,
+  "last_ok": 1793316937,
+  "name": "Path Robotics",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "pathrobotics"
  },
  "greenhouse:patterndata": {
   "ats": "greenhouse",
@@ -9580,7 +9632,7 @@
   "last_ok": 0,
   "name": "Sparx Learning",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "sparxlearning"
@@ -12739,6 +12791,19 @@
   "sector": "healthtech",
   "status": "active",
   "token": "leantaas"
+ },
+ "lever:loftorbital": {
+  "ats": "lever",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1793316932,
+  "last_ok": 1793316936,
+  "name": "Loft Orbital",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "loftorbital"
  },
  "lever:lumotive": {
   "ats": "lever",
@@ -16931,7 +16996,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793302839,
+  "last_ok": 1793316958,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -17340,7 +17405,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1793302827,
+  "last_ok": 1793316949,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -17613,7 +17678,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793302840,
+  "last_ok": 1793316962,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -19639,6 +19704,22 @@
   "status": "active",
   "token": "cardinalhealth"
  },
+ "workday:caresource:caresource": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "caresource"
+  },
+  "failures": 0,
+  "first_seen": 1793316932,
+  "last_ok": 1793316939,
+  "name": "CareSource",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "caresource"
+ },
  "workday:cat:CaterpillarCareers": {
   "ats": "workday",
   "extra": {
@@ -19951,7 +20032,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1793302826,
+  "last_ok": 1793316947,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -21167,7 +21248,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793302836,
+  "last_ok": 1793316958,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -21340,7 +21421,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793302831,
+  "last_ok": 1793316953,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -21727,6 +21808,22 @@
   "sector": "",
   "status": "active",
   "token": "expedia"
+ },
+ "workday:faithtechnologies:fti": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "fti"
+  },
+  "failures": 0,
+  "first_seen": 1793316932,
+  "last_ok": 1793316939,
+  "name": "Faith Technologies",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "faithtechnologies"
  },
  "workday:fanniemae:FannieMaeCareers": {
   "ats": "workday",
@@ -22475,7 +22572,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793302832,
+  "last_ok": 1793316954,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -25009,7 +25106,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793302828,
+  "last_ok": 1793316954,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -27737,7 +27834,7 @@
   "last_ok": 0,
   "name": "Sallie Mae",
   "origin": "harvest:simplify",
-  "probe_attempts": 1,
+  "probe_attempts": 2,
   "sector": "",
   "status": "invalid",
   "token": "sallie-mae"
@@ -27921,7 +28018,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793302831,
+  "last_ok": 1793316955,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
@@ -29725,6 +29822,22 @@
   "sector": "",
   "status": "active",
   "token": "valeo"
+ },
+ "workday:valeris:Valeris": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd108",
+   "site": "Valeris"
+  },
+  "failures": 0,
+  "first_seen": 1793316932,
+  "last_ok": 1793316937,
+  "name": "Valeris",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "valeris"
  },
  "workday:valmont:ValmontCareers": {
   "ats": "workday",
