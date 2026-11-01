@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-01 18:58 UTC** · companies polled directly: **2463** (registry 2836) · jobs tracked: **84035** · new this run: **48** · alerts this run: **19**_
+_Last run: **2026-11-01 19:19 UTC** · companies polled directly: **2463** (registry 2836) · jobs tracked: **84035** · new this run: **48** · alerts this run: **19**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -39,7 +39,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 82 ⭐ | 12d | NVIDIA | [Software Engineer New Grad - Agent Performance Modeling](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Software-Engineer--Agent-Performance-Modeling---New-College-Grad-2026_JR2028350) | Santa Clara, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 82 ⭐ | 18d | NVIDIA | [New Grad 2027: SoC Software Engineer](https://go.vansh.nyc/Df) | Santa Clara, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 82 ⭐ | 19d | NVIDIA | [SoC Software Engineer](https://go.vansh.nyc/Dr) | Santa Clara, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
-| 82 ⭐ | 23d | Amazon | [Systems Development Engineer - Leo Avionics Test Software](https://www.amazon.jobs/jobs/10574134/apply) | Redmond, WA | big_tech | unavailable | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
+| 82 ⭐ | 24d | Amazon | [Systems Development Engineer - Leo Avionics Test Software](https://www.amazon.jobs/jobs/10574134/apply) | Redmond, WA | big_tech | unavailable | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) |
 | 82 ⭐ | 27d | Google DeepMind | [Software Engineer, Gemini Everywhere, DeepMind](https://jobright.ai/jobs/info/6ac37c5bd9621c5b2839cb5b?utm_campaign=Software%20Engineering&utm_source=1103) | Mountain View, CA, United States | ai_lab | not classified as startup | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 81 ⭐ | 1d | Bristol Myers Squibb | [Associate Engineer - Analytical AI Engineering](https://bristolmyerssquibb.wd5.myworkdayjobs.com/bms/job/Princeton---NJ---US/Associate-Engineer--Analytical-AI-Engineering_R1608005) | Princeton, NJ | healthtech | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 81 ⭐ | 3d | Amazon | [Software Developer Engineer - Product Knowledge Store](https://amazon.jobs/en/jobs/10590471/software-dev-engineer-product-knowledge-store) | Seattle, WA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
