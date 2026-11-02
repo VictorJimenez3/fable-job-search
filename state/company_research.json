@@ -583,10 +583,10 @@
  },
  "general motors": {
   "aliases": [],
-  "attempts": 32,
+  "attempts": 33,
   "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "977edb4b04719895",
-  "last_attempt_at": 1793543530,
+  "last_attempt_at": 1793640463,
   "last_evidence_at": 1793407576,
   "name": "General Motors",
   "schema_v": 1,
@@ -918,13 +918,56 @@
  },
  "keysight technologies": {
   "aliases": [],
-  "attempts": 2,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 3,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "a8e3739d1b5d1f47",
-  "last_attempt_at": 1793543530,
+  "generated_at": 1793640463,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1793640463,
   "last_evidence_at": 1793407576,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Keysight Technologies",
+  "products": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1798824463,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "c332101e5cadaf3f",
@@ -937,7 +980,32 @@
     "url": "https://jobs.keysight.com/jobs/54736?icims=1"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "medium",
+   "source_ids": [
+    "7790e19a7d"
+   ],
+   "value": "Keysight Technologies is a technology company hiring interns, with online careers portal and job postings dating back to 2000."
+  },
+  "synthesized_evidence_sha": "a8e3739d1b5d1f47",
+  "technical_work": {
+   "confidence": "medium",
+   "source_ids": [
+    "7790e19a7d"
+   ],
+   "value": "Offers Quality Engineer Intern role, indicating technical engineering internship opportunities."
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "kite pharma": {
   "aliases": [],
@@ -2151,10 +2219,10 @@
  },
  "schneider electric": {
   "aliases": [],
-  "attempts": 1,
+  "attempts": 2,
   "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "7d843714b9c4e938",
-  "last_attempt_at": 1793543530,
+  "last_attempt_at": 1793640463,
   "last_evidence_at": 1793451885,
   "name": "Schneider Electric",
   "schema_v": 1,
