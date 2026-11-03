@@ -17,6 +17,17 @@ def test_canonical_url_removes_tracking_but_keeps_job_parameters():
     ) == "https://example.com/role?gh_jid=123"
 
 
+def test_canonical_url_rejects_malformed_authority_without_raising():
+    assert canonical_url("https://[broken.example/jobs/123") == ""
+    assert canonical_url("https://example.test:not-a-port/jobs/123") == ""
+    assert canonical_url("ftp://example.test/jobs/123") == ""
+    assert canonical_url("https:///jobs/123") == ""
+    # A hostname does not need a public suffix for tests, local feeds, or
+    # development mirrors to retain its stable posting identity.
+    assert canonical_url("https://jobs/123") == "https://jobs/123"
+    assert canonical_url("https://localhost:8443/jobs/123") == "https://localhost:8443/jobs/123"
+
+
 def test_provider_application_variants_share_posting_key_without_merging_ids():
     lever = "https://jobs.lever.co/acme/role-123"
     ashby = "https://jobs.ashbyhq.com/acme/role-123"

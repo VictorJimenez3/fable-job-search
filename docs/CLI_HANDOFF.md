@@ -5,8 +5,8 @@
 Victor authorized implementation and publication of validated repository fixes,
 prioritizing failed runs, duplicate prevention, evidence-based new-grad fit,
 faster discovery, and useful notifications. Resume tailoring is out of scope.
-The original dirty checkout is preserved; work is isolated on
-`codex/radar-overhaul-20261103`.
+The original dirty checkout is preserved; implementation and release work used
+isolated `codex/radar-*` branches.
 
 Implementation plan (existing Python/Actions/JSON/Vercel architecture):
 
@@ -28,7 +28,7 @@ Implementation plan (existing Python/Actions/JSON/Vercel architecture):
 - [x] Add bounded public curated/feed discovery with original-source attribution,
   official job URLs, honest dates, and source failure isolation. Zero2Sudo's
   available public collection is stale; do not claim live Instagram access.
-- [ ] Run regression/full tests, production-sized state replay, web build and
+- [x] Run regression/full tests, production-sized state replay, web build and
   live detail/browser checks; update owning docs; rebase to current production,
   publish through green CI, then verify a real crawl and production build SHA.
 
@@ -48,7 +48,7 @@ new-grad detail shard is 535,463 bytes; both lanes pass score-health. Compact
 hard-gate summaries preserve list filtering before drawer hydration, and
 terminal rows retain four recent lifecycle events in the list.
 
-Validation: Python 3.12 full suite 753 passed / 3 skipped; compile, full package
+Initial validation: Python 3.12 full suite 753 passed / 3 skipped; compile, full package
 correctness lint, targeted CI lint, shell syntax, and retired-file checks pass.
 The migration used the supported readers/writers, duplicate repair, and rescore
 commands with external integration tokens unset; zero Notion pages changed.
@@ -81,7 +81,51 @@ The follow-up also applies canonical identity to internship sightings, connects
 Zero2Sudo's internship leads with a source-only guard, and ensures internship,
 score-maintenance, and sponsorship writers stage detail shards with the index.
 Internship push races retain a lane-specific checkpoint and rerun rescoring
-without repeating external discovery. Follow-up publication remains pending.
+without repeating external discovery.
+
+Final hardening is published in
+[PR #6590](https://github.com/VictorJimenez3/fable-job-search/pull/6590), merged as
+`85cb4e535afee094602774800d233b2d14f8a562`. Its separate generated-state
+commit is `eb090f183ca1331c1d814af37413b55efe40fd5c`. The live new-grad primary
+is 76,563,974 bytes (23,050,746 bytes below the unchanged guard), and the
+pre-crawl internship primary is 35,806,020 bytes. The final local Python suite
+passed 764 tests / 3 skipped; production
+[tests 41721105254](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41721105254)
+passed 763 tests / 4 skipped plus frontend typecheck/test/lint/build and the
+high-severity audit. Runtime parity checks on 39,935 new-grad and 10,849
+internship records found zero mismatches in list filtering, sponsorship and
+experience badges, application URLs, or API ranking fields after compaction.
+[Vercel deployment 41721345581](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41721345581)
+passed, and the friendly URL serves build `85cb4e535`. A fresh browser loaded
+all 91,972 records with no boot errors, no horizontal overflow, and fonts
+loaded. The actual job drawer hydrated successfully; live NVIDIA open and Exa
+expired API fixtures returned HTTP 200 with 20 and 15 score reasons. The Mac
+companion clone is on the final code, and its idle Resume Studio was restarted
+and reports ready with no restart required.
+
+The separate full internship crawl also passed end to end:
+[run 41721118189](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41721118189)
+published `82d0f7789` after finding 2,614 new records, ignoring 1,767 duplicate
+sightings, gating out 29,030 listings, and selecting 35 alert candidates.
+It polled 250 ATS companies (246 healthy, four isolated failures), read four
+Zero2Sudo leads, expired 13 postings, and rescored all 34,912 records; 865
+passed current alert gates. Score-health and delivery passed. Delivery
+recovered 199 durable markers and updated a 304-role board across three pages.
+The full crawl step ran; the rescore-only alternative was skipped.
+
+The final identity audit found no duplicate nonempty primary posting keys in
+either lane. Every referenced shard record hydrated with its signature intact.
+Five old malformed Vansh Workable URLs were found; four were already expired,
+and one Trexquant role still passed alerts. DECISION #231 adds a deterministic
+URL gate in both lanes, preserving invalid-link records for review without
+guessing a replacement URL. The published repair is tracked below.
+
+Recovered failure tickets were closed only after a successful replacement run:
+main radar #6497, internship #6564, enrichment #2523, sponsorship #3092, score
+maintenance #2333, default-branch tests #2840, and six old ChemE digest tickets.
+Old applied-sync tickets remain untouched because its latest observed run was
+skipped, which is not proof that their underlying failure recovered.
+
 The source-only Zero2Sudo adapter reads its public Notion collection (four live
 smoke-test leads); authenticated Instagram scraping is not configured. Headcount
 and YubHub public feeds are enabled. LinkedIn remains public search discovery and

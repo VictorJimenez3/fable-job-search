@@ -3766,3 +3766,15 @@ shards, reducing a lossless 91,972-record replay from 95,211,647 to 76,563,974
 bytes. API evidence scores, eligibility, priority, direct-apply alternatives,
 posting filter hints, hard-gate summaries, and terminal history previews stay
 in the primary. This preserves pre-drawer behavior while increasing capacity.
+
+## 231. Keep malformed application links out of alerts (2026-11-03)
+
+The final production audit found five historical Vansh records with malformed
+Workable URLs; one early-career Trexquant role still passed the alert gate.
+Both job lanes now require a usable HTTP(S) primary URL before alerting. An
+invalid link retains the record for review with an explicit reason; it does
+not trigger a guessed employer URL, a fabricated closure, or a silent deletion.
+URL syntax validation is deterministic and does not make network access a
+requirement for scoring. This is separate from career-stage eligibility: an
+explicit new-grad title can establish career-stage evidence, while source-only
+curator records remain review-only under the existing provenance rule.

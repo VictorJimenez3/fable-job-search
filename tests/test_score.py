@@ -1,13 +1,23 @@
 import time
 
-from radar.models import Job
 from radar import main
-from radar.score import (RULES_VERSION, apply_company_concentration,
-                         build_preference_profile, calibrate_score,
-                         company_momentum_signal, early_career_possible, gates,
-                         preference_signal, role_bucket, regate, score,
-                         startup_stage_signal, career_priority,
-                         update_feedback_from_applied)
+from radar.models import Job
+from radar.score import (
+    RULES_VERSION,
+    apply_company_concentration,
+    build_preference_profile,
+    calibrate_score,
+    career_priority,
+    company_momentum_signal,
+    early_career_possible,
+    gates,
+    preference_signal,
+    regate,
+    role_bucket,
+    score,
+    startup_stage_signal,
+    update_feedback_from_applied,
+)
 from radar.sector import infer
 
 NOW = int(time.time())
@@ -36,6 +46,29 @@ def test_gates_reject_non_us():
 def test_gates_accept_new_grad_us():
     keep, alert_ok, _ = gates(mk("Software Engineer, New Grad", locations=["Remote"]))
     assert keep and alert_ok
+
+
+def test_malformed_primary_url_stays_visible_but_never_alertable():
+    malformed = mk("Software Engineer, New Grad")
+    malformed.url = "https:/.workable.com/trexquant/j/A634E0E3F4"
+    keep, alert_ok, reasons = gates(malformed)
+    assert keep is True and alert_ok is False
+    assert "invalid posting URL (dashboard/review only)" in reasons
+
+    valid = mk("Software Engineer, New Grad")
+    valid.url = "https://localhost/jobs/123"
+    keep, alert_ok, _ = gates(valid)
+    assert keep is True and alert_ok is True
+
+    senior = mk("Senior Software Engineer, New Grad")
+    senior.url = malformed.url
+    assert gates(senior)[0:2] == (False, False)
+    assert senior.eligibility_evidence.get("status")
+
+    foreign = mk("Software Engineer, New Grad", locations=["London, United Kingdom"])
+    foreign.url = malformed.url
+    assert gates(foreign)[0:2] == (False, False)
+    assert foreign.eligibility_evidence.get("status")
 
 
 def test_current_role_order_puts_general_swe_above_data_engineering():

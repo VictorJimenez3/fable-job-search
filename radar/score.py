@@ -11,6 +11,7 @@ import time
 
 from .config import profile
 from .eligibility import TRUSTED_NEW_GRAD_SOURCES, compact_evidence, experience_evidence, new_grad_evidence
+from .identity import canonical_url
 from .models import Job, norm
 
 # ---------- hard gates ----------
@@ -259,6 +260,7 @@ def _eligibility_evidence(job: Job) -> dict:
 
 def gates(job: Job) -> tuple[bool, bool, list[str]]:
     """Returns (keep_at_all, alert_eligible, reasons)."""
+    invalid_url = not canonical_url(job.url)
     t = job.title
     text = f"{t}\n{job.description[:1500]}"
     bucket = role_bucket(t)
@@ -289,9 +291,15 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
     # entry-level and experience gates; role-family eligibility is title-led.
     if bucket is None and not program:
         if OFF_FIELD_RE.search(t):
-            return True, False, ["off-field title (dashboard only)"]
+            reasons = ["off-field title (dashboard only)"]
+            if invalid_url:
+                reasons.append("invalid posting URL (dashboard/review only)")
+            return True, False, reasons
         if re.search(r"\banalyst\b", t, re.I):
-            return True, False, ["generic analyst title (dashboard only)"]
+            reasons = ["generic analyst title (dashboard only)"]
+            if invalid_url:
+                reasons.append("invalid posting URL (dashboard/review only)")
+            return True, False, reasons
         return False, False, ["not an AI/SWE/DS role"]
 
     reasons = []
@@ -337,6 +345,9 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
     if bucket == "pm":
         alert_eligible = False
         reasons.append("PM-family role (dashboard only)")
+    if invalid_url:
+        alert_eligible = False
+        reasons.append("invalid posting URL (dashboard/review only)")
     return True, alert_eligible, reasons
 
 

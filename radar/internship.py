@@ -10,6 +10,7 @@ import re
 from datetime import date, datetime
 
 from .config import profile
+from .identity import canonical_url
 from .models import Job
 from .score import FOREIGN_HINTS, company_momentum_signal, role_bucket
 from .sector import infer as infer_sector
@@ -420,6 +421,7 @@ def match(eligibility: dict, expected_graduation: str | date | None) -> str:
 
 def gates(job: Job) -> tuple[bool, bool, list[str]]:
     reasons: list[str] = []
+    invalid_url = not canonical_url(job.url)
     if not job.profile:
         job.profile = "internship"
     if job.remote:
@@ -432,10 +434,16 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
     if not bucket:
         return False, False, ["not a target technical internship role"]
     if (job.internship_eligibility or {}).get("employment_signal") == "full_time_only":
-        return True, False, ["explicit full-time-only signal: review only"]
+        reasons = ["explicit full-time-only signal: review only"]
+        if invalid_url:
+            reasons.append("invalid posting URL (dashboard/review only)")
+        return True, False, reasons
     signal = (job.internship_eligibility or {}).get("internship_signal", "unknown")
     if signal in {"unknown", "source_only"}:
-        return True, False, ["internship signal review: no positive title or posting evidence"]
+        reasons = ["internship signal review: no positive title or posting evidence"]
+        if invalid_url:
+            reasons.append("invalid posting URL (dashboard/review only)")
+        return True, False, reasons
     if signal == "title":
         reasons.append("internship title evidence")
     else:
@@ -444,6 +452,8 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
         reasons.append("graduation/class-year eligibility evidence")
     elif job.internship_eligibility.get("status") == "unknown":
         reasons.append("internship eligibility not stated")
+    if invalid_url:
+        return True, False, reasons + ["invalid posting URL (dashboard/review only)"]
     return True, True, reasons
 
 
