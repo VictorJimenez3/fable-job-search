@@ -34,13 +34,13 @@ without changing the Resume Studio tailoring contract:
    LinkedIn search uses the dynamic candidate graduation year (currently 2027).
 5. **Migration and verification boundary.** Advancing the main snapshot from
    v15 to v16 requires a generated-state rescore as a separate migration commit;
-   generated files are not hand-edited. The staging rescore covered 84,550
-   records and found 1,015 alert-eligible rows; its final size check remains a
-   release gate after verbose eligibility evidence is sharded. The frontend
+   generated files are not hand-edited. The generated migration retains 81,961
+   new-grad records after consolidating 2,589 duplicates; 907 meet alert rules.
+   The primary is 83,166,228 bytes and both lanes pass score-health. The frontend
    dependency patch (Better Auth 1.7.7, Vite 7.3.7, Zod 4.6.6, Vitest 4.1.12)
-   leaves zero high or critical audit findings. A prior validation baseline is
-   645 passed and 3 skipped; this roadmap entry does not claim publication, live
-   counts, or final production verification. Resume tailoring is unchanged
+   leaves zero high or critical audit findings. The full Python suite passes
+   753 tests with 3 skips; production CI and the first live crawl remain the
+   final publication checks. Resume tailoring is unchanged
    except for the shared snapshot-reader/cache correctness needed to read
    compacted state.
 

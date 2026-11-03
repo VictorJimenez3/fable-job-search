@@ -10,7 +10,7 @@ The original dirty checkout is preserved; work is isolated on
 
 Implementation plan (existing Python/Actions/JSON/Vercel architecture):
 
-- [ ] Replace repeated snapshot compaction patches with bounded detail shards;
+- [x] Replace repeated snapshot compaction patches with bounded detail shards;
   preserve full audit records through Python, web/API, and companion merges.
   Reproduce the failed 99,614,720-byte guard; verify lossless round trips and
   actual production-snapshot headroom before publication.
@@ -39,7 +39,20 @@ advisories remain. Desktop (1440px) and mobile (390px) checks loaded the actual
 84,550-record production snapshot and verified drawer detail loading without
 horizontal overflow. No resume-tailoring behavior was changed.
 
-Publication is pending final storage replay, migration, CI, and a real crawl.
+The generated migration is complete on the release branch: 2,589 duplicate
+new-grad records and 4,136 duplicate internship records consolidated, with 183
+and 127 references remapped. The new-grad snapshot now contains 81,961 records,
+907 alert-eligible, at 83,166,228 bytes (16,448,492 below the unchanged guard).
+The internship snapshot has 32,298 records at 39,644,806 bytes. The largest
+new-grad detail shard is 535,463 bytes; both lanes pass score-health. Compact
+hard-gate summaries preserve list filtering before drawer hydration, and
+terminal rows retain four recent lifecycle events in the list.
+
+Validation: Python 3.12 full suite 753 passed / 3 skipped; compile, full package
+correctness lint, targeted CI lint, shell syntax, and retired-file checks pass.
+The migration used the supported readers/writers, duplicate repair, and rescore
+commands with external integration tokens unset; zero Notion pages changed.
+Production CI, publication, and a real crawl remain pending.
 The source-only Zero2Sudo adapter reads its public Notion collection (four live
 smoke-test leads); authenticated Instagram scraping is not configured. Headcount
 and YubHub public feeds are enabled. LinkedIn remains public search discovery and

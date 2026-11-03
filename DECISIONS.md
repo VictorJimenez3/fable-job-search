@@ -3676,12 +3676,16 @@ verifies only the one shard needed. This is a bounded-file boundary, not a
 claim that the repository can grow without limit or that a future database
 cutover is unnecessary.
 
-An initial v16 rescore covered the current 84,550-record snapshot and found
-1,015 alert-eligible rows before the final generated-state migration. That
-first pass measured a 96,208,026-byte primary after scoring; verbose
-eligibility evidence is now being moved into the signed detail shards before
-the migration is published. These are staging measurements, not a
-live-publication or final-count claim.
+The generated migration consolidated 2,589 duplicate new-grad records and
+4,136 duplicate internship records, preserving aliases and owner references.
+Rescoring the 81,961 surviving new-grad records produced 907 alert-eligible
+rows and an 83,166,228-byte primary, with 16,448,492 bytes below the unchanged
+95 MiB guard. Its largest shard is 535,463 bytes. The internship lane retains
+32,298 records in a 39,644,806-byte primary. Both lanes pass score-health.
+Compact gate summaries preserve list exclusions before details load; terminal
+summaries retain four recent lifecycle events and the shard keeps the full
+ledger. These are verified release-branch measurements; publication and the
+first live crawl are recorded in the existing CLI handoff.
 
 Posting identity is now provider-aware and retains provider URLs, source
 variants, aliases, and lifecycle provenance. Distinct real requisitions remain
