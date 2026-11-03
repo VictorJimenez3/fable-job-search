@@ -3824,3 +3824,22 @@ usable employer text arrives. Spring/Winter 2027 email scope remains unchanged,
 including postings that also offer another term. Crawl push recovery retains
 newer board polling telemetry without replacing production board identity.
 Validation and exact publication evidence are recorded in `docs/CLI_HANDOFF.md`.
+
+## 233. Promote existing internship leads only after authoritative verification (2026-11-03)
+
+An internship lead that was saved from a source-only feed before employer
+evidence arrived must become eligible for the normal alert history after a
+fresh employer-page check proves the position and its current gates. Alert
+history is an event log, not a sent-receipt ledger: leaving the lead out of
+history forever would lose the notification event even though the posting has
+now become actionable.
+
+Promotion therefore requires authoritative employer evidence plus the current
+internship eligibility, location, URL, lifecycle, score, and term gates. The
+promotion path uses the canonical stored identity and excludes prior alert
+events and already-eligible roles. Delivery retains its separate alias and
+durable-receipt checks. It preserves the posting's original age, lifecycle
+events, score, the shared 35-candidate crawl cap, and Spring/Winter 2027
+internship email scope. A lead that lacks current evidence or is too old
+cannot create an alert event. Exact validation and publication evidence are
+recorded in `docs/CLI_HANDOFF.md`.
