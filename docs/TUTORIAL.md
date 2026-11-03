@@ -154,6 +154,9 @@ Data by [Headcount Labs](https://headcountlabs.com), licensed under the
 [Open Database License 1.0](https://opendatacommons.org/licenses/odbl/1-0/); that
 license excludes employer-authored description text. Bounded concurrent checks cover new leads and
 previously unverified roles without repeatedly fetching the same failed page.
+Saved leads can enter the alert queue when fresh employer evidence confirms
+their eligibility; they do not have to be newly discovered that day. The same
+freshness, email-scope, and duplicate-delivery checks apply.
 
 The crawler uses provider-aware posting identities and conservative aliases.
 Distinct real requisitions remain separate when a title/company match is

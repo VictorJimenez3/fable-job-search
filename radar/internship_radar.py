@@ -405,6 +405,9 @@ def _internship_evidence_pass(new_jobs: list[Job], jobs_state: dict,
                     "closed" if alive is False else "unreadable" if alive is True else "unavailable"
                 )
         if isinstance(value, dict) and alive is True and usable_posting:
+            # Direct employer evidence refreshes liveness even when this row
+            # has fallen out of its curator's bounded discovery feed.
+            lifecycle.touch(value, now, "employer page")
             value.update({
                 "internship_eligibility": record.internship_eligibility,
                 "score": record.score,
@@ -514,6 +517,17 @@ def crawl() -> int:
     jobs_state, repaired = _repair_duplicate_job_state(jobs_state, applied)
     if repaired:
         state.save("jobs.json", jobs_state)
+    threshold = int(profile().get("thresholds", {}).get("alert", 60))
+    previous_alert_ready_ids = {
+        str(jid) for jid, row in jobs_state.items()
+        if row.get("alert_ok") and row.get("score", 0) >= threshold
+        and not lifecycle.is_terminal(row) and not row.get("manual_archived")
+    }
+    prior_alert_history = state.load("alert_history.json", [])
+    prior_alert_ids = {
+        str(row.get("id")) for row in prior_alert_history
+        if isinstance(row, dict) and row.get("id")
+    }
     agg_jobs, agg_stats, healthy_aggregator_boards = _fetch_aggregators(disabled)
     harvested = discovery.harvest(registry, agg_jobs,
                                   max_new=int(env("RADAR_INTERNSHIP_MAX_HARVEST", "100")))
@@ -535,6 +549,7 @@ def crawl() -> int:
     new_jobs: list[Job] = []
     applied = state.applied()
     manual_upgrades: dict[str, dict] = {}
+    authoritative_existing_ids: set[str] = set()
     dropped = 0
     seen: set[str] = set()
     existing_posting_ids = _existing_posting_ids(jobs_state)
@@ -562,6 +577,7 @@ def crawl() -> int:
                 and _has_independent_employer_evidence(job)
             )
             if authoritative:
+                authoritative_existing_ids.add(str(jid))
                 sighting["_fresh_employer_evidence"] = True
             _merge_record_sighting(existing, sighting)
             if authoritative:
@@ -627,13 +643,7 @@ def crawl() -> int:
               f"inline {inline_stats.get('inline', 0)}")
 
     max_age = int(profile().get("thresholds", {}).get("max_posting_age_days", 30)) * 86400
-    threshold = int(profile().get("thresholds", {}).get("alert", 60))
-    alerts = [job for job in new_jobs if job.alert_ok and not lifecycle.is_terminal(job) and
-              job.score >= threshold and
-              (job.posted_at is None or now - job.posted_at <= max_age)]
-    alerts.sort(key=lambda job: -job.score)
-    alerts = alerts[:int(env("RADAR_INTERNSHIP_MAX_ALERTS", "35"))]
-
+    new_job_ids = {str(job._radar_id or _job_identity(job)) for job in new_jobs}
     for job in new_jobs:
         record = job.to_record()
         record["id"] = job._radar_id or _job_identity(job)
@@ -648,6 +658,14 @@ def crawl() -> int:
         record["profile"] = "internship"
         jobs_state[record["id"]] = record
 
+    promoted_existing_ids = set(authoritative_existing_ids)
+    for jid, row in jobs_state.items():
+        resolution = row.get("link_resolution") or {}
+        if (resolution.get("status") == "resolved"
+                and resolution.get("method") == "internship_employer_fetch"
+                and int(resolution.get("checked_at") or 0) == now):
+            promoted_existing_ids.add(str(jid))
+
     lifecycle_stats = lifecycle.reconcile(
         jobs_state, now, seen,
         healthy_source_boards=healthy_aggregator_boards | healthy_ats_boards,
@@ -655,20 +673,56 @@ def crawl() -> int:
     if lifecycle_stats["expired"] or lifecycle_stats["reopened"]:
         print(f"internship lifecycle: {lifecycle_stats['expired']} auto-expired, "
               f"{lifecycle_stats['reopened']} reopened from current source")
+    def alertable(row: dict) -> bool:
+        return bool(
+            row.get("alert_ok") and row.get("score", 0) >= threshold
+            and not lifecycle.is_terminal(row)
+            and not row.get("manual_archived")
+            and (row.get("posted_at") is None
+                 or now - row.get("posted_at", now) <= max_age)
+        )
+
+    for jid in sorted(new_job_ids | promoted_existing_ids):
+        row = jobs_state.get(jid)
+        if not row or not alertable(row) or jid in previous_alert_ready_ids or jid in prior_alert_ids:
+            continue
+        # Persist before applying the crawl cap: an eligible promotion must
+        # not be lost merely because a higher-scoring batch filled this run.
+        row.setdefault("internship_alert_pending_at", now)
+
+    alert_rows: list[dict] = []
+    for jid, row in jobs_state.items():
+        pending_at = int(row.get("internship_alert_pending_at") or 0)
+        if not pending_at:
+            continue
+        if (jid in prior_alert_ids or not alertable(row)
+                or not 0 <= now - pending_at <= max_age):
+            row.pop("internship_alert_pending_at", None)
+            continue
+        candidate = dict(row)
+        candidate.pop("internship_alert_pending_at", None)
+        candidate["id"] = jid
+        candidate["alerted_at"] = now
+        alert_rows.append(candidate)
+    alert_rows.sort(key=lambda row: (-int(row.get("score", 0)),
+                                    -(int(row.get("posted_at") or row.get("first_seen") or 0)),
+                                    str(row.get("id", ""))))
+    alert_rows = alert_rows[:int(env("RADAR_INTERNSHIP_MAX_ALERTS", "35"))]
+    for row in alert_rows:
+        jobs_state[row["id"]].pop("internship_alert_pending_at", None)
+    alerts = alert_rows
     cutoff = lifecycle.history_cutoff(now)
     jobs_state = {key: value for key, value in jobs_state.items()
                   if value.get("first_seen", now) >= cutoff}
-    alert_history = state.load("alert_history.json", [])
-    for job in alerts:
-        record = job.to_record()
-        record["id"] = job._radar_id or _job_identity(job)
-        record["alerted_at"] = now
-        alert_history.append(record)
+    alert_history = prior_alert_history
+    alert_history.extend(alert_rows)
     alert_history = alert_history[-800:]
     runs = state.load("runs.json", [])
     runs.append({"ts": now, "took_s": round(time.time() - t0, 1),
                  "new_jobs": len(new_jobs), "dropped_by_gates": dropped,
                  "alerts": len(alerts), "aggregators": agg_stats, "ats": ats_stats,
+                 "pending_alerts": sum(bool(row.get("internship_alert_pending_at"))
+                                       for row in jobs_state.values()),
                  "employer_evidence": pstats,
                  "registry_size": len(registry), "profile": "internship"})
     runs = runs[-300:]

@@ -1,6 +1,6 @@
 # CLI handoff notes
 
-## Internship quality follow-up (2026-11-03; in progress)
+## Internship quality follow-up (2026-11-03; release complete, alert-promotion hotfix pending)
 
 Victor explicitly requested a deeper internship pass after the reliability
 release. Work is isolated on `codex/internship-quality-20261103`; the original
@@ -18,7 +18,7 @@ Implementation and verification plan:
 - [x] Add current/upcoming, all-active, and review scopes, dynamic term choices,
   visible provenance, and recoverable lane-load errors to the existing board.
 - [x] Preserve newer ATS polling telemetry during checkpoint push recovery.
-- [ ] Run targeted regressions, full tests, a production-sized internship
+- [x] Run targeted regressions, full tests, a production-sized internship
   rescore, and desktop/mobile checks. Rebase, publish through green CI, verify
   the production build and a real internship crawl, and record exact evidence.
 
@@ -46,9 +46,47 @@ Real browser checks at 1440px and 390px passed: dynamic terms, detail shards,
 private cohort controls, no horizontal overflow, loaded system fonts, and a
 simulated 503 followed by successful Retry with filters retained. The optional
 graduation explanation is compact and expandable. The design detector reports
-only the pre-existing side-accent border pattern. Publication and live crawl
-verification remain pending below; no generated replay files are in the feature
-commit, and no Notion pages or notifications were changed by local validation.
+only the pre-existing side-accent border pattern. No generated replay files
+were in the feature commit, and no Notion pages or notifications were changed
+by local validation.
+
+Release and live verification are complete. [PR #6629](https://github.com/VictorJimenez3/fable-job-search/pull/6629)
+merged as `a60ca6030aa7214a5d1ee5558ae1edd0525ef360`.
+Production [tests 41733093505](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41733093505),
+[Vercel deployment 41733340815](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41733340815),
+and the internship [rescore 41733092834](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41733092834)
+passed. The real [full crawl 41733188272](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41733188272)
+also passed and published generated commit `5163d16` after safely merging
+concurrent `68f97c5` state. It found 116 new postings, suppressed 2,059
+duplicate sightings, gated 30,696 rows, and produced 4 alerts. Of 250 ATS
+boards, 240 were healthy and 10 were isolated failures. Employer validation
+completed 40 checks (17 confirmed, 23 errors, 0 deferred, and 31 inline
+checks). The resulting snapshot has 36,861 stored records and 619
+alert-eligible rows; score-health passed. Headcount contributed 160 rows from
+each internship list and Zero2Sudo contributed 4 review leads.
+The published primary is 44,936,854 bytes. A canonical identity audit found
+36,861 non-empty keys, all unique.
+
+The production browser served exact build `a60ca6030aa7214a5d1ee5558ae1edd0525ef360`.
+It loaded the 36,745-record pre-crawl snapshot with 1,086 clean rows, passed
+desktop/mobile overflow checks, loaded a detail drawer, and clicked through to
+SpaceX's official ATS without submitting an application. The Mac companion
+fast-forwarded to `a60ca6030aa7214a5d1ee5558ae1edd0525ef360`; its service was
+ready and required no restart. Local Python verification remains **811 passed /
+3 skipped**, with the earlier rescore figures retained as historical staging
+measurements.
+
+Pending publication: the alert-promotion hotfix is validated on
+`codex/internship-alert-promotions-20261103` (**822 passed / 3 skipped**,
+compile and correctness lint pass). It promotes
+an existing source-only internship lead into alert history only after fresh
+employer proof and current gates pass, excludes prior alert events, retains
+delivery receipt checks, and preserves age, lifecycle, score, the 35-role cap, and the
+Spring/Winter 2027 email scope. Overflow candidates persist in
+`internship_alert_pending_at` and are rechecked on later crawls; `pending_alerts`
+in the run record reports the remaining queue. Successful employer checks
+refresh liveness while preserving posting dates. Record its exact production commit and CI
+evidence after publication.
 
 ## Reliability and discovery overhaul (2026-11-03; DECISION #228)
 

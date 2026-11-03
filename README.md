@@ -214,6 +214,11 @@ board; a foreign-country remote label does not establish US eligibility.
 A legacy parser verdict alone is not evidence.
 Employer-page checks cover both new leads and the existing review backlog,
 with a bounded concurrent budget and a delay before retrying failed pages.
+When fresh employer evidence makes a saved lead eligible, it enters the alert
+queue alongside new discoveries. Existing alert events and delivery receipts
+prevent repeat notifications for the same role. If a crawl fills its alert
+limit, remaining eligible leads stay queued for the next crawl and are checked
+again before alerting.
 
 Internship email batches are **on by default** and are delivered separately
 from new-grad batches with their own subject and content. The owner can turn
