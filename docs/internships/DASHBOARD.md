@@ -1,6 +1,6 @@
 # 🎯 Job Radar — internship dashboard
 
-_Last run: **2026-11-03 21:32 UTC** · companies polled directly: **1933** (registry 2131) · jobs tracked: **34912** · new this run: **2614** · alerts this run: **35**_
+_Last run: **2026-11-03 21:39 UTC** · companies polled directly: **1933** (registry 2131) · jobs tracked: **34912** · new this run: **2614** · alerts this run: **35**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -35,7 +35,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 81 ⭐ | 13d | Databricks | [Solutions Architect - Consumer Packaged Goods (CPG)](https://databricks.com/company/careers/open-positions/job?gh_jid=8780675002) | Connecticut; Delaware; Florida; Maryland | ai_lab | unavailable | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/databricks) |
 | 81 ⭐ | 13d | xAI | [Security Engineer - GRC Sales](https://job-boards.greenhouse.io/xai/jobs/5205879007) |  Palo Alto, CA; New York, NY; Washington | ai_lab | unavailable | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/xai) |
 | 81 ⭐ | 13d | Uber | [2027 Software Engineering Intern, US](https://www.dreamworkhq.com/job/56c033ab-7ccc-452a-a365-22fb69ae8148?utm_source=github&utm_campaign=gh-tech-internships) | San Francisco, California + 2 locations | other | unavailable | — | [Dreamwork tech internship board](https://github.com/dreamworkhq/Tech-Internships-2027) |
-| 81 ⭐ | 14d | Databricks | [Solutions Architect - Adtech](https://databricks.com/company/careers/open-positions/job?gh_jid=8893716002) | United States | ai_lab | unavailable | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/databricks) |
+| 81 ⭐ | 15d | Databricks | [Solutions Architect - Adtech](https://databricks.com/company/careers/open-positions/job?gh_jid=8893716002) | United States | ai_lab | unavailable | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/databricks) |
 | 81 ⭐ | 15d | OpenAI | [Mechanical Engineer, PCBA Test Infrastructure, Robotics](https://jobs.ashbyhq.com/openai/88e65467-7e19-4164-a1de-1d49d3f2dd52) | San Francisco | ai_lab | unavailable | — | [posting](https://jobs.ashbyhq.com/openai/88e65467-7e19-4164-a1de-1d49d3f2dd52) |
 | 81 ⭐ | 15d | Databricks | [Solutions Architect- Public Sector (Federal Healthcare)](https://databricks.com/company/careers/open-positions/job?gh_jid=8893782002) | Maryland; Virginia; Washington, D.C. | ai_lab | unavailable | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/databricks) |
 | 81 ⭐ | 15d | Databricks | [Solutions Architect - Telco](https://databricks.com/company/careers/open-positions/job?gh_jid=8880391002) | United States | ai_lab | unavailable | — | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/databricks) |
