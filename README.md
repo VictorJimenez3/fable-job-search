@@ -141,11 +141,14 @@ exceptions. Eligibility gates and the separate neutral internship rubric stay
 unchanged. Best Match remains the default; an explicitly saved Newest sort is
 preserved. The Fit drawer explains the evidence and every adjustment.
 
-Rules v16 separates required experience from preferred experience and requires
-employer-backed posting evidence for an alert. A lead that is only a source
-listing, social/community note, or otherwise lacks an employer description is
-kept for review/cohort research but cannot alert; missing evidence is not
-silently treated as proof. Deterministic identity repair preserves distinct
+Rules v16 separates required experience from preferred experience. Explicit
+new-grad title wording or supported employer-description evidence can establish
+career-stage fit; incompatible cohorts and required experience still constrain
+alerts. Source-only social/community leads and generic technical titles without
+an employer description stay available for review, without alerting. Both job
+lanes also require a usable HTTP(S) application URL before alerting; malformed
+links retain an audit reason instead of a guessed replacement. Deterministic
+identity repair preserves distinct
 real requisitions and provider identities when a same-label match is
 ambiguous. No fuzzy system can promise zero duplicates, so uncertain roles
 remain separate rather than losing coverage.

@@ -104,6 +104,25 @@ def test_internship_gates_keep_target_roles_but_separate_alert_evidence():
     assert gates(job(locations=["London, United Kingdom"]))[0] is False
 
 
+def test_malformed_internship_url_stays_visible_but_never_alertable():
+    malformed = job(title="Software Engineering Intern")
+    malformed.url = "https:/.workable.com/trexquant/j/A634E0E3F4"
+    annotate(malformed)
+    keep, alert_ok, reasons = gates(malformed)
+    assert keep is True and alert_ok is False
+    assert "invalid posting URL (dashboard/review only)" in reasons
+
+    valid = job(title="Software Engineering Intern")
+    valid.url = "https://jobs/123"
+    annotate(valid)
+    assert gates(valid)[0:2] == (True, True)
+
+    experienced = job(title="Senior Software Engineering Intern")
+    experienced.url = malformed.url
+    annotate(experienced)
+    assert gates(experienced)[0:2] == (False, False)
+
+
 def test_source_only_internship_lead_stays_review_only_even_with_intern_title():
     posting = job(
         title="Software Engineering Intern",

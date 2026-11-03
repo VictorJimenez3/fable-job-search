@@ -28,8 +28,18 @@ def canonical_url(url: str | None) -> str:
     raw = (url or "").strip()
     if not raw:
         return ""
-    parsed = urlsplit(raw)
-    if parsed.scheme.lower() not in {"http", "https"} or not parsed.netloc:
+    try:
+        parsed = urlsplit(raw)
+        # urlsplit defers malformed bracket and port validation until these
+        # properties are accessed.  Identity normalization must never raise
+        # on untrusted feed data.
+        host = parsed.hostname
+        _ = parsed.port
+    except ValueError:
+        return ""
+    if (parsed.scheme.lower() not in {"http", "https"} or not parsed.netloc
+            or not host or host.startswith(".")
+            or any(char.isspace() or char in "/\\?#" for char in host)):
         return ""
 
     query = []
