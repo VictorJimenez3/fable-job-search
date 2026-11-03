@@ -1,4 +1,5 @@
 import datetime as dt
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -3864,6 +3865,45 @@ def test_current_scored_jobs_cache_invalidates_when_terminal_history_changes(tmp
     assert first["closed-1"]["score_reasons"] == ["first ledger"]
     assert second["closed-1"]["score_reasons"] == ["updated ledger"]
     assert second["closed-1"]["source"] == "greenhouse"
+
+
+def test_current_scored_jobs_cache_invalidates_when_detail_shard_changes(tmp_path):
+    """A changed shard cannot leave Studio serving a cached old ledger."""
+    from radar.score import RULES_VERSION
+
+    state = tmp_path / "state"
+    details = state / "jobs_details"
+    details.mkdir(parents=True)
+    job_id = "open-1"
+    detail = {"score_reasons": ["first ledger"]}
+    payload = json.dumps(detail, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+    signature = hashlib.sha256(payload.encode()).hexdigest()
+    shard_name = f"jobs_details/{hashlib.sha256(job_id.encode()).hexdigest()[:2]}.json"
+    (state / "jobs.json").write_text(json.dumps({job_id: {
+        "id": job_id, "company": "Acme", "title": "Software Engineer",
+        "posting_status": "open", "score": 91,
+        "score_version": RULES_VERSION, "rules_v": RULES_VERSION,
+        "detail_ref": {"version": 1, "shard": shard_name, "key": job_id,
+                        "sha256": signature},
+    }}))
+    shard = state / shard_name
+    shard.write_text(json.dumps({
+        "schema_version": 1, "records": {job_id: detail},
+        "signatures": {job_id: signature},
+    }))
+
+    first = rs.current_scored_jobs(tmp_path)
+    shard.write_text(json.dumps({
+        "schema_version": 1, "records": {job_id: {"score_reasons": ["changed ledger"]}},
+        "signatures": {job_id: signature},
+    }))
+    stat = shard.stat()
+    os.utime(shard, ns=(stat.st_atime_ns, stat.st_mtime_ns + 1_000_000))
+
+    second = rs.current_scored_jobs(tmp_path)
+
+    assert first[job_id]["score_reasons"] == ["first ledger"]
+    assert "score_reasons" not in second[job_id]
 
 
 def test_studio_stale_projection_retains_team_evidence(tmp_path):

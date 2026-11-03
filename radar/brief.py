@@ -17,7 +17,7 @@ def rerank(jobs: list) -> None:
         return
     p = profile()
     batch = jobs[:30]
-    rows = [{"id": j.id, "company": j.company, "title": j.title,
+    rows = [{"id": getattr(j, "_radar_id", j.id), "company": j.company, "title": j.title,
              "location": j.primary_location, "sector": j.sector,
              "desc": j.description[:400]} for j in batch]
     prompt = (
@@ -38,7 +38,7 @@ def rerank(jobs: list) -> None:
         print(f"brief: could not parse LLM response: {e}")
         return
     for j in batch:
-        r = results.get(j.id)
+        r = results.get(getattr(j, "_radar_id", j.id))
         if not r:
             continue
         try:

@@ -1,13 +1,12 @@
 import json
 import time
-from unittest.mock import patch
 
 import pytest
 
 from radar import state, taste
-from radar.applied import handle_event
-from radar.board import _open_rows, _paginate, email_batch_rows
 from radar.alerts import format_line, post_alerts
+from radar.applied import handle_event
+from radar.board import _open_rows, _paginate, _remember_batch_receipts, email_batch_rows
 
 NOW = int(time.time())
 
@@ -23,6 +22,7 @@ JOB = {"id": "b" * 16, "company": "Anthropic", "title": "Research Engineer",
 def tmp_state(tmp_path, monkeypatch):
     monkeypatch.setattr(state, "STATE_DIR", tmp_path)
     monkeypatch.setattr(taste, "DOCS_DIR", tmp_path / "docs")
+    monkeypatch.setattr("radar.board._existing_marker_ids", lambda *args, **kwargs: set())
     return tmp_path
 
 
@@ -62,6 +62,63 @@ def test_email_batch_prioritizes_score_then_recency():
     assert [r["id"] for r in rows] == ["new-high", "old-high", "new-low"]
 
 
+def test_email_batch_uses_current_score_and_verdict(tmp_state):
+    history = [{**JOB, "id": "stale", "score": 99, "alert_ok": True,
+                "alerted_at": NOW - 60}]
+    current = {**JOB, "id": "stale", "score": 40, "alert_ok": False,
+               "posting_status": "open"}
+    assert email_batch_rows(history, set(), NOW, jobs_state={"stale": current}) == []
+
+
+def test_email_batch_collapses_repeated_history_aliases():
+    older = {**JOB, "id": "alias", "score": 70, "alerted_at": NOW - 120}
+    newer = {**JOB, "id": "alias", "score": 71, "alerted_at": NOW - 60}
+    rows = email_batch_rows([older, newer], set(), NOW, limit=10)
+    assert [row["id"] for row in rows] == ["alias"]
+    assert rows[0]["alerted_at"] == newer["alerted_at"]
+
+
+def test_email_batch_dedupes_provider_url_variants_but_not_requisitions():
+    history = [
+        {**JOB, "id": "detail", "url": "https://jobs.lever.co/acme/role-1",
+         "alerted_at": NOW - 120},
+        {**JOB, "id": "apply", "url": "https://jobs.lever.co/acme/role-1/application",
+         "alerted_at": NOW - 60},
+        {**JOB, "id": "other", "url": "https://jobs.lever.co/acme/role-2",
+         "alerted_at": NOW - 30},
+    ]
+    rows = email_batch_rows(history, set(), NOW, limit=10)
+    assert {row["id"] for row in rows} == {"apply", "other"}
+
+
+def test_email_batch_old_alias_receipt_skips_current_id(tmp_state):
+    state.save("job_aliases.json", {"old-id": "new-id"})
+    history = [{**JOB, "id": "new-id", "alerted_at": NOW - 60}]
+    assert email_batch_rows(history, {"old-id"}, NOW, jobs_state=None) == []
+
+
+def test_email_batch_treats_empty_jobs_snapshot_as_authoritative(tmp_state, monkeypatch):
+    from radar.board import post_email_batch
+
+    monkeypatch.setenv("GITHUB_TOKEN", "token")
+    monkeypatch.setenv("RADAR_EMAIL_BATCH_MIN", "1")
+    monkeypatch.setenv("RADAR_EMAIL_BATCH_MAX_WAIT_HOURS", "0")
+    state.save("jobs.json", {})
+    monkeypatch.setattr("radar.board.requests.post", lambda *args, **kwargs:
+                        pytest.fail("stale history must not be sent"))
+
+    assert post_email_batch([{**JOB, "alerted_at": NOW - 13 * 3600}]) is None
+
+
+def test_email_batch_receipts_trim_oldest_deterministically():
+    history = [{"id": f"id-{index}", "alerted_at": NOW - (1000 - index)}
+               for index in range(1001)]
+    notification = {}
+    _remember_batch_receipts(notification, history,
+                             {row["id"] for row in history}, [])
+    assert notification["email_batch_sent_ids"] == [f"id-{index}" for index in range(1, 1001)]
+
+
 def test_email_batch_holds_one_normal_role_until_minimum_or_timeout(tmp_state, monkeypatch):
     from radar.board import post_email_batch
     monkeypatch.setenv("GITHUB_TOKEN", "token")
@@ -82,6 +139,37 @@ def test_email_batch_sends_one_after_max_wait(tmp_state, monkeypatch):
                                       "json": lambda self: {"html_url": "https://github.test/1"}})()
     monkeypatch.setattr("radar.board.requests.post", lambda *a, **k: response)
     assert post_email_batch([{**JOB, "alerted_at": NOW - 13 * 3600}]) == "https://github.test/1"
+
+
+def test_email_batch_marker_prevents_duplicate_after_receipt_save_crash(tmp_state, monkeypatch):
+    from radar.board import post_email_batch
+
+    monkeypatch.setenv("GITHUB_TOKEN", "token")
+    monkeypatch.setenv("RADAR_EMAIL_BATCH_MIN", "1")
+    monkeypatch.setenv("RADAR_EMAIL_BATCH_MAX_WAIT_HOURS", "0")
+    response = type("Response", (), {
+        "raise_for_status": lambda self: None,
+        "json": lambda self: {"html_url": "https://github.test/crash-safe"},
+    })()
+    markers = set()
+    posts = []
+
+    def marker_lookup(*args, **kwargs):
+        return set(markers)
+
+    def post(*args, **kwargs):
+        posts.append(kwargs["json"])
+        markers.add(JOB["id"])
+        return response
+
+    monkeypatch.setattr("radar.board._existing_marker_ids", marker_lookup)
+    monkeypatch.setattr("radar.board.requests.post", post)
+    monkeypatch.setattr(state, "save", lambda *args, **kwargs: (_ for _ in ()).throw(RuntimeError("crash")))
+
+    with pytest.raises(RuntimeError, match="crash"):
+        post_email_batch([{**JOB, "alerted_at": NOW - 13 * 3600}])
+    assert post_email_batch([{**JOB, "alerted_at": NOW - 13 * 3600}]) is None
+    assert len(posts) == 1
 
 
 def test_checkbox_in_board_page_comment_tracks_job(tmp_state, tmp_path, monkeypatch):
@@ -313,7 +401,8 @@ def test_alerts_create_one_silent_issue_per_missing_job(monkeypatch):
     monkeypatch.setattr("radar.alerts.requests.get", lambda *args, **kwargs: ExistingResponse())
     monkeypatch.setattr("radar.alerts.requests.post", fake_post)
     jobs = [{**JOB, "id": "1" * 16, "company": "PlayStation"},
-            {**JOB, "id": "2" * 16, "company": "Fanatics"}]
+            {**JOB, "id": "2" * 16, "company": "Fanatics",
+             "url": "https://boards.greenhouse.io/fanatics/jobs/10"}]
     post_alerts(jobs)
     assert len(calls) == 2
     assert all(c[1]["assignees"] == [] for c in calls)

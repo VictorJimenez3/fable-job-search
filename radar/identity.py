@@ -8,6 +8,7 @@ tracking parameters.
 """
 from __future__ import annotations
 
+import re
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 _TRACKING_KEYS = {
@@ -41,3 +42,48 @@ def canonical_url(url: str | None) -> str:
     path = parsed.path.rstrip("/") or "/"
     return urlunsplit((parsed.scheme.lower(), parsed.netloc.lower(), path,
                        urlencode(query, doseq=True), ""))
+
+
+def posting_key(url: str | None) -> str:
+    """Return a provider-aware posting identity while retaining safe URLs.
+
+    ATS detail pages commonly expose the same requisition at an application
+    suffix, a locale/title/location route, or an alternate Greenhouse host.
+    Those routes are one posting even though their canonical URLs differ.  We
+    normalize only provider-issued requisition identifiers; unknown hosts keep
+    their full canonical URL so a URL variant cannot silently become a fuzzy
+    title match.
+    """
+    normalized = canonical_url(url)
+    if not normalized:
+        return ""
+    parts = urlsplit(normalized)
+    host = parts.hostname or ""
+    path = parts.path
+
+    if host in {"boards.greenhouse.io", "job-boards.greenhouse.io"}:
+        match = re.fullmatch(r"/([^/]+)/jobs/(\d+)(?:/application)?", path, re.I)
+        if match:
+            return f"greenhouse:{match[1].lower()}:{match[2]}"
+
+    # Lever and Ashby use a board/tenant plus a posting token.  Current feeds
+    # usually expose UUIDs, but older and private boards also use slugs; the
+    # application suffix is the only route component we intentionally drop.
+    if host in {"jobs.ashbyhq.com", "jobs.lever.co", "jobs.eu.lever.co"}:
+        match = re.fullmatch(r"/([^/]+)/([^/]+)(?:/(?:application|apply))?", path, re.I)
+        if match:
+            return f"{host}:{match[1].lower()}:{match[2].lower()}"
+
+    if host.endswith(".myworkdayjobs.com"):
+        # Workday changes locale, site path, location, title, and /apply route
+        # between feeds while retaining the tenant-scoped requisition suffix.
+        match = re.fullmatch(
+            r"/(?:[A-Za-z]{2}[-_][A-Za-z]{2}/)?([^/]+)/job/[^/]+/([^/]+?)(?:/apply)?",
+            path, re.I,
+        )
+        if match:
+            requisition = re.search(r"_([A-Za-z]*-?\d[\w-]*)$", match[2])
+            if requisition:
+                return f"workday:{host}:{match[1].lower()}:{requisition[1].lower()}"
+
+    return normalized

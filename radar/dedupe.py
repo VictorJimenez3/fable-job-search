@@ -11,7 +11,8 @@ same-title collision by itself is never enough.
 """
 from __future__ import annotations
 
-from .identity import canonical_url
+from . import lifecycle
+from .identity import canonical_url, posting_key
 from .link_resolver import is_aggregator_url
 from .models import norm
 
@@ -39,7 +40,11 @@ _LOCATION_ALIASES = {
 
 
 def _record_url(record: dict) -> str:
-    return canonical_url(record.get("url"))
+    resolution = record.get("link_resolution") or {}
+    resolved = resolution.get("resolved_url") if resolution.get("status") == "resolved" else ""
+    if resolved and not is_aggregator_url(resolved):
+        return posting_key(resolved)
+    return posting_key(record.get("url"))
 
 
 def _record_source_url(record: dict) -> str:
@@ -148,9 +153,6 @@ def _location_tokens(record: dict) -> set[str]:
 
 
 def _is_aggregator_record(record: dict) -> bool:
-    source = str(record.get("source") or "").casefold()
-    if source not in _AGGREGATOR_SOURCES:
-        return False
     # A record found in Simplify/Vansh/etc. may already be an official employer
     # URL.  The URL, not the discovery label, decides whether it is still an
     # aggregator-only identity.  This is important for Google: Simplify can
@@ -190,6 +192,11 @@ def _merge_record(winner: dict, loser: dict, reason: str = "") -> dict:
     _append_unique(source_urls, list(loser.get("source_url_variants") or []))
     merged["source_url_variants"] = [u for u in source_urls if u]
 
+    source_boards = list(merged.get("source_board_variants") or [])
+    _append_unique(source_boards, [winner.get("source_board"), loser.get("source_board")])
+    _append_unique(source_boards, list(loser.get("source_board_variants") or []))
+    merged["source_board_variants"] = [board for board in source_boards if board]
+
     alternate_urls = list(merged.get("alternate_urls") or [])
     winner_url = canonical_url(winner.get("url"))
     for url in [loser.get("url"), *(loser.get("alternate_urls") or [])]:
@@ -206,26 +213,126 @@ def _merge_record(winner: dict, loser: dict, reason: str = "") -> dict:
         values = [v for v in (merged.get(field), loser.get(field)) if v]
         if values:
             merged[field] = min(values)
-    for field in ("last_seen_at", "last_closed_at", "closed_at"):
+    for field in ("last_seen_at",):
         values = [v for v in (merged.get(field), loser.get(field)) if v]
         if values:
             merged[field] = max(values)
 
+    # Lifecycle state is evidence, not an ordinary winner field. Prefer the
+    # freshest verified employer status, while retaining every closure event
+    # from the losing source for auditability. ``last_verified_open_at`` was
+    # added after the first lifecycle schema, so use ``get`` for old rows.
+    def lifecycle_authority_key(record: dict) -> tuple:
+        terminal = lifecycle.is_terminal(record)
+        quality = record.get("quality") or {}
+        direct = not is_aggregator_url(record.get("url"))
+        if terminal:
+            quality_closed = quality.get("live") is False
+            if quality_closed:
+                checked = (record.get("lifecycle_checked_at") or
+                           quality.get("checked_at") or 0)
+            elif direct:
+                checked = (record.get("lifecycle_checked_at") or
+                           record.get("closed_at") or
+                           record.get("posting_status_changed_at") or 0)
+            else:
+                # A feed/aggregator closure is useful history, but it is not
+                # proof that the employer's still-live application is closed.
+                checked = 0
+            # Explicit quality liveness is strong negative evidence. A bare
+            # status copied from an aggregator is weaker and must not defeat a
+            # direct official row merely because it has ``closed_at``.
+            evidenced = quality_closed
+        else:
+            checked = (record.get("last_verified_open_at") or
+                       (quality.get("checked_at") if quality.get("live") is True else 0)
+                       or 0)
+            evidenced = bool(record.get("last_verified_open_at") or quality.get("live") is True)
+        return (
+            bool(record.get("manual_archived")),
+            evidenced,
+            int(checked),
+            direct,
+            terminal,
+        )
+
+    authority = max((winner, loser), key=lifecycle_authority_key)
+    lifecycle_fields = tuple(dict.fromkeys(
+        (*lifecycle.LIFECYCLE_FIELDS, "last_verified_open_at")))
+    for field in lifecycle_fields:
+        if field in {"lifecycle_events", "last_seen_at"}:
+            continue
+        if field in authority:
+            merged[field] = authority[field]
+        else:
+            merged.pop(field, None)
+    merged["posting_status"] = lifecycle.status_of(authority)
+    if authority.get("quality"):
+        merged["quality"] = dict(authority["quality"])
+    else:
+        merged.pop("quality", None)
+    if lifecycle.is_terminal(merged):
+        merged["alert_ok"] = False
+
+    # A resolved aggregator row is useful provenance, not an application
+    # target. Promote the verified employer URL while retaining the original
+    # source link as an alternate.
+    if is_aggregator_url(merged.get("url")):
+        official = next((record for record in (winner, loser)
+                         if _is_direct_record(record)), None)
+        resolution = merged.get("link_resolution") or {}
+        direct_url = official.get("url") if official else resolution.get("resolved_url")
+        if direct_url and not is_aggregator_url(direct_url):
+            _append_unique(merged["alternate_urls"], [merged["url"]])
+            merged["url"] = direct_url
+            if official:
+                merged["ats"] = official.get("ats", "")
+    if (not is_aggregator_url(merged.get("url"))
+            and (merged.get("link_resolution") or {}).get("status") == "closed"):
+        merged["link_resolution"] = {
+            **merged["link_resolution"], "status": "resolved",
+            "source_status": "closed", "resolved_url": merged["url"],
+        }
+
     if (loser.get("score") or 0) > (merged.get("score") or 0):
         merged["score"] = loser["score"]
-    if loser.get("alert_ok"):
-        merged["alert_ok"] = True
+    # Eligibility is a negative-safe verdict, not additive provenance. Keep
+    # the winner's explicit suppression instead of allowing an older/open
+    # duplicate to re-enable delivery; only backfill when the winner omitted
+    # the field entirely.
+    if "alert_ok" in winner:
+        merged["alert_ok"] = bool(winner.get("alert_ok"))
+    elif "alert_ok" in loser:
+        merged["alert_ok"] = bool(loser.get("alert_ok"))
 
     if isinstance(loser.get("posting"), dict):
         posting = dict(loser["posting"])
         posting.update(merged.get("posting") or {})
         merged["posting"] = posting
-    if isinstance(loser.get("lifecycle_events"), list):
-        events = list(merged.get("lifecycle_events") or [])
-        for event in loser["lifecycle_events"]:
+    events = []
+    for record in (winner, loser):
+        source_url = record.get("url", "")
+        for event in record.get("lifecycle_events") or []:
+            event = {**event, "source_url": event.get("source_url") or source_url}
             if event not in events:
                 events.append(event)
-        merged["lifecycle_events"] = events
+        closed = int(record.get("closed_at") or record.get("posting_status_changed_at")
+                     or (record.get("quality") or {}).get("checked_at") or 0)
+        status = lifecycle.status_of(record)
+        if lifecycle.is_terminal(record) and not any(
+                event.get("status") == status and event.get("at") == closed
+                and event.get("source_url") == source_url for event in events):
+            events.append({"status": status, "at": closed, "source_url": source_url,
+                           "reason": record.get("posting_status_reason")
+                           or (record.get("quality") or {}).get("reason")
+                           or "recorded closure from merged source"})
+    if events:
+        merged["lifecycle_events"] = sorted(events, key=lambda event: int(event.get("at") or 0))
+
+    # A fresh open sighting can contribute evidence, but never re-enable
+    # delivery after the merged record has authoritative terminal evidence.
+    if lifecycle.is_terminal(merged):
+        merged["alert_ok"] = False
 
     winner_identity = merged.get("posting_identity") or {}
     loser_identity = loser.get("posting_identity") or {}
@@ -244,7 +351,7 @@ def _merge_record(winner: dict, loser: dict, reason: str = "") -> dict:
 
 
 def collapse_jobs(jobs: dict) -> tuple[dict, dict, int]:
-    """Collapse exact canonical-URL duplicates.
+    """Collapse exact posting-identity duplicates.
 
     Returns ``(collapsed_jobs, aliases, merged_count)`` where aliases maps an
     old job ID to the surviving ID. Records without a URL are left untouched.
@@ -266,7 +373,7 @@ def collapse_jobs(jobs: dict) -> tuple[dict, dict, int]:
         for key, record in members:
             if key == winner_key:
                 continue
-            merged = _merge_record(merged, record, "same canonical posting URL")
+            merged = _merge_record(merged, record, "same canonical posting identity")
             aliases[key] = winner_key
             collapsed.pop(key, None)
             merged_count += 1
@@ -310,7 +417,8 @@ def collapse_cross_source_jobs(jobs: dict) -> tuple[dict, dict, int]:
         matching = [
             (candidate_id, direct, _posting_variant_reason(aggregator, direct))
             for candidate_id, direct in candidates
-            if _posting_variant_reason(aggregator, direct)
+            if (_posting_variant_reason(aggregator, direct)
+                    and _record_url(aggregator) == _record_url(direct))
         ]
         winner_id, direct, reason = matching[0] if len(matching) == 1 else (None, None, "")
         if not winner_id or winner_id not in collapsed:
@@ -351,6 +459,10 @@ def collapse_location_variants(jobs: dict) -> tuple[dict, dict, int]:
     for members in groups.values():
         if len(members) < 2:
             continue
+        # Same-board/title/day is not enough to prove that separate provider
+        # URLs are one requisition. Require a verified common destination.
+        if len({_record_url(record) for _, record in members}) != 1:
+            continue
         posted_days = {
             int(record["posted_at"]) // 86400
             for _, record in members if record.get("posted_at")
@@ -380,35 +492,72 @@ def collapse_location_variants(jobs: dict) -> tuple[dict, dict, int]:
     return collapsed, aliases, merged_count
 
 
-def resolve_alias(job_id: str, aliases: dict[str, str]) -> str:
+def resolve_alias(job_id: str, aliases: dict[str, str],
+                  existing: dict | None = None) -> str:
     """Follow a persisted alias chain safely."""
     current = str(job_id)
     visited = set()
-    while current in aliases and current not in visited:
+    while (current in aliases and current not in visited
+           and current not in (existing or {})):
         visited.add(current)
         current = str(aliases[current])
     return current
 
 
-def remap_entry_ids(entries: list[dict], aliases: dict[str, str]) -> int:
+def remap_entry_ids(entries: list[dict], aliases: dict[str, str],
+                    jobs: dict | None = None) -> int:
     changed = 0
     for entry in entries:
         old = str(entry.get("id", ""))
-        new = resolve_alias(old, aliases)
+        new = resolve_alias(old, aliases, existing=jobs)
         if old and new != old:
             entry["id"] = new
             entry["job_id_alias"] = old
             changed += 1
+        record = (jobs or {}).get(new, {})
+        official = record.get("url")
+        known = [official, *(record.get("alternate_urls") or []),
+                 (record.get("link_resolution") or {}).get("original_url")]
+        entry_url = entry.get("url")
+        entry_key = posting_key(entry_url)
+        known_keys = {posting_key(url) for url in known if url}
+        # An alias changes the durable ID, but it must not overwrite an owner
+        # URL that does not belong to the surviving posting. Only promote to a
+        # verified official URL when the old URL is empty or known provenance.
+        # A remapped entry whose old URL is an explicitly supported
+        # aggregator link is also safe to promote: the alias is precisely the
+        # durable evidence that this discovery URL belonged to the posting.
+        # Keep arbitrary owner-entered URLs untouched even when their ID was
+        # later aliased.
+        verified = (not entry_url or entry_key in known_keys or
+                    (new != old and is_aggregator_url(entry_url)))
+        if (verified and canonical_url(official)
+                and not is_aggregator_url(official)
+                and canonical_url(official) != canonical_url(entry_url)):
+            if entry_url:
+                links = list(entry.get("alternate_urls") or [])
+                _append_unique(links, [entry_url])
+                entry["alternate_urls"] = links
+            entry["url"] = official
+            changed += 1
     return changed
 
 
-def remap_web_jobs(web: dict, aliases: dict[str, str]) -> int:
+def remap_web_jobs(web: dict, aliases: dict[str, str],
+                   existing: dict | None = None) -> int:
     """Move private workspace keys while preserving user notes and links."""
     jobs = web.get("jobs") or {}
+    # The web map still contains alias keys until this function moves them;
+    # only surviving keys should stop traversal. Callers with a durable jobs
+    # map can pass it explicitly to apply the same rule across namespaces.
+    stop_at = (existing if existing is not None else
+               {key: value for key, value in jobs.items() if key not in aliases})
     remapped: dict[str, dict] = {}
     changed = 0
-    for old, value in jobs.items():
-        new = resolve_alias(str(old), aliases)
+    for old, value in sorted(jobs.items(),
+                             key=lambda pair: resolve_alias(
+                                 str(pair[0]), aliases, existing=stop_at) != pair[0]):
+        new = resolve_alias(str(old), aliases, existing=stop_at)
         if new != old:
             changed += 1
         current = remapped.setdefault(new, {})
@@ -416,6 +565,24 @@ def remap_web_jobs(web: dict, aliases: dict[str, str]) -> int:
             for key, item in value.items():
                 if key not in current or current[key] in (None, "", [], {}):
                     current[key] = item
+                elif isinstance(item, list) and isinstance(current[key], list):
+                    current[key] = list(current[key])
+                    _append_unique(current[key], item)
+                elif key == "notes" and item != current[key] and item:
+                    current[key] = f"{current[key]}\n\n[Notes from merged job {old}]\n{item}"
+                elif item != current[key]:
+                    current.setdefault("merged_job_variants", []).append({
+                        "id": old, "field": key, "value": item,
+                    })
     if changed:
         web["jobs"] = remapped
+    for field in ("maybe", "excluded"):
+        original = web.get(field) or []
+        remapped_ids = list(dict.fromkeys(
+            resolve_alias(str(value), aliases, existing=stop_at)
+            for value in original
+        ))
+        if original != remapped_ids:
+            web[field] = remapped_ids
+            changed += 1
     return changed

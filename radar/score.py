@@ -10,13 +10,14 @@ import re
 import time
 
 from .config import profile
+from .eligibility import TRUSTED_NEW_GRAD_SOURCES, compact_evidence, experience_evidence, new_grad_evidence
 from .models import Job, norm
 
 # ---------- hard gates ----------
 
 # Bumped whenever gate rules or the deterministic ranking equation changes;
 # stored jobs are rebuilt from source evidence under the new version.
-RULES_VERSION = 15
+RULES_VERSION = 16
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|head of|sr\.?|vp|chief|"
@@ -49,7 +50,7 @@ OFF_FIELD_RE = re.compile(
     r"chief\s+of\s+staff|executive\s+assistant|administrative|"
     r"workplace|facilities)\b", re.I)
 INTERN_RE = re.compile(r"\b(intern(ship)?|co-?op|apprentice|fellowship|part[- ]?time|contract(or)?)\b", re.I)
-PHD_RE = re.compile(r"\bph\.?d\b|postdoc", re.I)
+PHD_RE = re.compile(r"\bph\.?d(?:s)?\b|postdoc|doctor(?:ate|al)\b", re.I)
 CLEARANCE_RE = re.compile(r"\b(security clearance|ts/sci|polygraph|top secret)\b", re.I)
 YEARS_RE = re.compile(r"(?:minimum|at least|requires?)\s+(\d+)\+?\s+years", re.I)
 
@@ -76,8 +77,6 @@ STRONG_NEW_GRAD_RE = re.compile(
     r"entry[- ]level|college\s+grad|20(?:25|26|27)\s+grad|class\s+of\s+20(?:25|26|27)|"
     r"graduate\s+(?:software|engineer|program|scheme)|rotational\s+program|"
     r"graduate\s+program|emerging\s+talent|future\s+talent)\b", re.I)
-TRUSTED_NEW_GRAD_SOURCES = {"simplify", "vansh", "jobright", "jobright_pm", "speedyapply"}
-
 ROLE_BUCKETS: dict[str, re.Pattern] = {
     "ai_ml": re.compile(
         r"machine learning|ml engineer|\bml\b|\bai\b|artificial intelligence|applied scientist|"
@@ -153,15 +152,7 @@ def location_ok(job: Job) -> bool:
 
 def _required_years(text: str) -> int | None:
     """Return the required experience floor when the JD states one."""
-    m = REQUIRED_YEARS_RE.search(text or "")
-    if not m:
-        return None
-    value = m.group("floor") or m.group("plus") or m.group("range") or m.group("plain")
-    if value is None:
-        return None
-    if value.isdigit():
-        return int(value)
-    return _WORD_YEARS.get(value.lower())
+    return experience_evidence(text).get("required_floor")
 
 
 def leadership_program_signal(company: str, title: str, description: str = "") -> bool:
@@ -189,18 +180,81 @@ def leadership_program_signal(company: str, title: str, description: str = "") -
 
 def new_grad_signal(title: str, description: str = "") -> bool:
     """Require explicit early-career evidence instead of source/company guesses."""
-    text = f"{title}\n{description[:1800]}"
-    return bool(STRONG_NEW_GRAD_RE.search(text) or ENTRY_YEARS_RE.search(text))
+    return new_grad_evidence(title, description).get("status") == "verified"
 
 
 def source_new_grad(job: Job) -> bool:
     """Treat dedicated new-grad aggregators as strong provenance evidence."""
-    # The broad Zapply board is noisy globally, but this pipeline only admits
-    # its PM-family rows. The dedicated Jobright PM board is a new-grad board;
-    # both sources give PM rows provisional visibility evidence while the PM
-    # gate below still makes them dashboard-only and never alertable.
+    # Provenance remains useful for ordering and review, but source-only
+    # evidence is not sufficient for an automatic alert.
     return (job.source.lower() in TRUSTED_NEW_GRAD_SOURCES
             or (job.source.lower() in {"zapply_pm"} and role_bucket(job.title) == "pm"))
+
+
+def _eligibility_evidence(job: Job) -> dict:
+    """Return deterministic evidence, reusing compact persisted facts."""
+    source_only = (
+        isinstance(job.link_resolution, dict)
+        and job.link_resolution.get("status") == "source_only"
+    )
+    if job.description:
+        evidence = new_grad_evidence(
+            job.title, job.description, source=job.source,
+            source_board=job.source_board,
+            source_only=source_only,
+        )
+    elif job.eligibility_evidence:
+        evidence = dict(job.eligibility_evidence)
+    else:
+        evidence = new_grad_evidence(
+            job.title, source=job.source, source_board=job.source_board,
+            source_only=source_only,
+        )
+    if source_only and evidence.get("source") != "source-only":
+        # A stale persisted verified flag must not survive a later source-only
+        # resolution result. Recompute the bounded provenance fact from the
+        # current row and force it back to review.
+        evidence = new_grad_evidence(
+            job.title, job.description, source=job.source,
+            source_board=job.source_board, source_only=True,
+        )
+    # A technical row with no employer description is not evidence of
+    # eligibility, but it remains worth human review for recall. Persist the
+    # uncertainty explicitly instead of leaving it indistinguishable from a
+    # fully analyzed, non-eligible posting.
+    if (not job.description and evidence.get("status") == "absent"
+            and role_bucket(job.title) is not None):
+        evidence.update({
+            "status": "review",
+            "source": "missing-description",
+            "reason": "technical role has no employer posting description to verify eligibility",
+        })
+    experience = experience_evidence(job.description)
+    if not job.description and job.posting:
+        experience = {
+            "required_floor": job.posting.get("years_min"),
+            "preferred_floor": job.posting.get("years_preferred_min"),
+            "conflict": bool(job.posting.get("experience_conflict")),
+            "alternative": bool(job.posting.get("experience_alternative")),
+            "note": job.posting.get("years_note", "no experience floor stated"),
+        }
+    elif not job.description and job.eligibility_evidence:
+        experience = {
+            "required_floor": job.eligibility_evidence.get("required_floor"),
+            "preferred_floor": job.eligibility_evidence.get("preferred_floor"),
+            "conflict": bool(job.eligibility_evidence.get("experience_conflict")),
+            "alternative": bool(job.eligibility_evidence.get("experience_alternative")),
+            "note": job.eligibility_evidence.get(
+                "experience_note", "no experience floor stated"),
+        }
+    evidence.update({
+        "required_floor": experience.get("required_floor"),
+        "preferred_floor": experience.get("preferred_floor"),
+        "experience_conflict": bool(experience.get("conflict")),
+        "experience_alternative": bool(experience.get("alternative")),
+        "experience_note": experience.get("note", "no experience floor stated"),
+    })
+    return evidence
 
 
 def gates(job: Job) -> tuple[bool, bool, list[str]]:
@@ -209,7 +263,9 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
     text = f"{t}\n{job.description[:1500]}"
     bucket = role_bucket(t)
     program = leadership_program_signal(job.company, t, job.description)
-    new_grad = new_grad_signal(t, job.description) or source_new_grad(job)
+    evidence = _eligibility_evidence(job)
+    job.eligibility_evidence = compact_evidence(evidence)
+    new_grad = evidence.get("status") == "verified"
     if INTERN_RE.search(t):
         return False, False, ["intern/co-op/contract"]
     if SENIOR_RE.search(t):
@@ -224,9 +280,9 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
         return False, False, ["requires clearance"]
     if not location_ok(job):
         return False, False, ["non-US location"]
-    years = _required_years(job.description)
-    if years is not None and years >= 1:
-        return False, False, [f"requires {years}+ years (not new-grad)" ]
+    years = evidence.get("required_floor")
+    experience_conflict = bool(evidence.get("experience_conflict"))
+    experience_alternative = bool(evidence.get("experience_alternative"))
     # A description mentioning software/AI must not turn an obviously
     # non-technical title into a target role (e.g. Safety Editor at OpenAI or
     # a Biology Research Associate at Anthropic). Descriptions still inform
@@ -242,10 +298,30 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
     alert_eligible = new_grad or program
     if new_grad:
         reasons.append("verified new-grad/early-career evidence")
+    elif evidence.get("status") == "review":
+        source = evidence.get("source", "unclear")
+        detail = evidence.get("reason")
+        reasons.append(
+            f"{source} evidence (review only)"
+            + (f": {detail}" if detail else "")
+        )
     if program:
         reasons.append("technical leadership/rotational program")
     if not alert_eligible:
         reasons.append("not verified new-grad/early-career (dashboard only)")
+    if experience_conflict:
+        alert_eligible = False
+        reasons.append("conflicting required experience floors (review only)")
+    elif experience_alternative:
+        alert_eligible = False
+        reasons.append("conditional degree/experience paths (review only)")
+    elif years is not None and years >= 1:
+        alert_eligible = False
+        reasons.append(f"requires {years}+ years (review only; not new-grad)")
+    if evidence.get("preferred_floor") is not None:
+        reasons.append(
+            f"preferred experience {evidence['preferred_floor']}+ yrs; no required floor"
+        )
     # Demotions outrank every auto-alert path above, marquee included:
     # dashboard-only, never deleted.
     if OFF_FIELD_RE.search(t):
@@ -264,9 +340,12 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
     return True, alert_eligible, reasons
 
 
-def explicit_new_grad(title: str) -> bool:
+def explicit_new_grad(title: str, description: str = "",
+                      evidence: dict | None = None) -> bool:
     """True when the title carries new-grad or technical-program evidence."""
-    return new_grad_signal(title)
+    if evidence is not None:
+        return evidence.get("status") == "verified"
+    return new_grad_signal(title, description)
 
 
 def early_career_possible(job: Job, posting: dict | None = None) -> bool:
@@ -281,16 +360,22 @@ def early_career_possible(job: Job, posting: dict | None = None) -> bool:
     title = job.title or ""
     if role_bucket(title) == "pm":
         return False
-    if (new_grad_signal(title, job.description) or source_new_grad(job)
-            or leadership_program_signal(job.company, title, job.description)):
+    evidence = _eligibility_evidence(job)
+    if evidence.get("status") == "verified":
+        return False
+    if evidence.get("source") == "source-only":
+        return False
+    if leadership_program_signal(job.company, title, job.description):
         return False
     if (INTERN_RE.search(title) or SENIOR_RE.search(title) or PHD_RE.search(title)
             or CLEARANCE_RE.search(f"{title}\n{job.description[:1500]}")
             or MIDLEVEL_RE.search(title) or OFF_FIELD_RE.search(title)
             or role_bucket(title) is None or not location_ok(job)):
         return False
-    stated_years = _required_years(job.description)
+    stated_years = evidence.get("required_floor")
     if stated_years is not None and stated_years >= 1:
+        return False
+    if evidence.get("experience_conflict") or evidence.get("experience_alternative"):
         return False
     if isinstance(posting, dict) and posting.get("years_min") not in (None, 0):
         return False
@@ -1251,7 +1336,15 @@ def score(job: Job, feedback: dict, now: int | None = None,
 
     b = p["bonuses"]
     program = leadership_program_signal(job.company, job.title, job.description)
-    new_grad = new_grad_signal(job.title, job.description) or source_new_grad(job)
+    eligibility_evidence = _eligibility_evidence(job)
+    job.eligibility_evidence = compact_evidence(eligibility_evidence)
+    new_grad = eligibility_evidence.get("status") == "verified"
+    experience_floor = eligibility_evidence.get("required_floor")
+    experience_conflict = bool(eligibility_evidence.get("experience_conflict"))
+    experience_alternative = bool(eligibility_evidence.get("experience_alternative"))
+    experience_review = experience_conflict or experience_alternative or (
+        experience_floor is not None and experience_floor >= 1
+    )
     midlevel = bool(MIDLEVEL_RE.search(job.title))
     if midlevel:
         # Keep the posting for research, but make the dashboard score reflect
@@ -1266,16 +1359,20 @@ def score(job: Job, feedback: dict, now: int | None = None,
     elif new_grad or program:
         eligibility_pts = int(p.get("scoring_v8", {}).get("eligible_utility", 30))
         dimensions["eligibility"] = eligibility_pts
-        evidence = ("trusted new-grad board" if source_new_grad(job)
-                    and not new_grad_signal(job.title, job.description)
-                    else "new-grad/early-career")
-        reasons.append(f"{evidence} priority +{eligibility_pts} (eligibility)")
-    elif early_career_possible(job):
+        reasons.append(
+            f"new-grad/early-career priority +{eligibility_pts} (eligibility)")
+        if experience_conflict:
+            reasons.append("conflicting required experience floors (review only)")
+        elif experience_alternative:
+            reasons.append("conditional degree/experience paths (review only)")
+        elif experience_floor is not None and experience_floor >= 1:
+            reasons.append(
+                f"requires {experience_floor}+ years (review only; not new-grad)")
+    elif eligibility_evidence.get("status") == "review" or early_career_possible(job):
         eligibility_pts = int(p.get("scoring_v9", {}).get("early_career_possible_utility", 8))
         dimensions["eligibility"] = eligibility_pts
         reasons.append(
-            f"early-career possible +{eligibility_pts} (no experience floor; not new-grad verified)"
-        )
+            f"early-career possible +{eligibility_pts} (no experience floor; review only)")
     else:
         reasons.append("new-grad evidence absent (below eligible roles)")
 
@@ -1383,7 +1480,7 @@ def score(job: Job, feedback: dict, now: int | None = None,
             reasons.append(f"{name} overlap cap {cap - dimensions[name]:+d} (maximum +{cap})")
             dimensions[name] = cap
 
-    if new_grad or program:
+    if (new_grad or program) and not experience_review:
         career_tier = 2
         reasons.append("career priority: explicit new-grad or technical program")
     elif early_career_possible(job):
@@ -1423,9 +1520,9 @@ def score(job: Job, feedback: dict, now: int | None = None,
     evidence_score = display
     if midlevel:
         eligibility = "excluded"
-    elif new_grad or program:
+    elif (new_grad or program) and not experience_review:
         eligibility = "eligible"
-    elif early_career_possible(job):
+    elif eligibility_evidence.get("status") == "review" or early_career_possible(job):
         eligibility = "review"
     else:
         eligibility = "excluded"
@@ -1454,6 +1551,7 @@ def score(job: Job, feedback: dict, now: int | None = None,
     job.score_dimensions = dimensions
     job.score_dimensions_raw = raw_dimensions
     job.score = display
+    job.eligibility_evidence = compact_evidence(eligibility_evidence)
     job.career_priority = career_tier
     job.startup_stage = startup_stage
     job.startup_score = startup_points
@@ -1499,12 +1597,18 @@ def regate(jobs_state: dict) -> int:
             continue
         job = Job(company=rec.get("company", ""), title=rec.get("title", ""),
                   url=rec.get("url", ""), source=rec.get("source", ""),
+                  source_url=rec.get("source_url", ""),
+                  source_board=rec.get("source_board", ""),
+                  link_resolution=rec.get("link_resolution") or {},
                   locations=rec.get("locations", []), salary=rec.get("salary", ""),
                   remote=bool(rec.get("remote")), sector=rec.get("sector", ""))
+        job.posting = rec.get("posting") or {}
+        job.eligibility_evidence = rec.get("eligibility_evidence") or {}
         keep, alert_eligible, reasons = gates(job)
         new_alert = keep and alert_eligible
-        rec["explicit_new_grad"] = (explicit_new_grad(job.title)
-                                     or source_new_grad(job))
+        rec["eligibility_evidence"] = job.eligibility_evidence
+        rec["explicit_new_grad"] = explicit_new_grad(
+            job.title, evidence=job.eligibility_evidence)
         rec["rules_v"] = RULES_VERSION
         if bool(rec.get("alert_ok")) != new_alert:
             rec["alert_ok"] = new_alert

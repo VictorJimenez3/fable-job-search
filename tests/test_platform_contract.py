@@ -138,6 +138,18 @@ def test_platform_exposes_terminal_posting_history_and_private_status_sync():
     assert "RADAR_HISTORY_DAYS" in lifecycle
 
 
+def test_platform_loads_job_detail_shards_only_when_opening_a_drawer():
+    html = (ROOT / "webapp" / "index.html").read_text()
+    api = (ROOT / "webapp" / "api" / "v1" / "_job-detail.js").read_text()
+    assert "detail_ref" in html and "JOB_DETAIL_SCHEMA_VERSION = 1" in html
+    assert "ensureJobDetail" in html and "fetchRawJobDetail" in html
+    assert "score evidence could not be verified" in html.lower()
+    assert "retryJobDetail" in html
+    assert "intern_jobs_details" in api and "jobs_details" in api
+    assert "schema_version" in api and "signatures" in api
+    assert "job_detail_unavailable" in api
+
+
 def test_application_history_shows_posting_duration_instead_of_a_date():
     html = (ROOT / "webapp" / "index.html").read_text()
     assert "function postingDurationLabel(job)" in html

@@ -4,6 +4,10 @@ from __future__ import annotations
 from urllib.parse import urlsplit
 
 SOURCE_INFO = {
+    "headcount_engineering": ("Headcount Labs engineering jobs", "https://github.com/HeadcountLabs/entry-level-jobs"),
+    "headcount_data_ai": ("Headcount Labs data / AI jobs", "https://github.com/HeadcountLabs/entry-level-jobs"),
+    "yubhub_graduate_engineering": ("Data by YubHub — graduate engineering", "https://yubhub.co/free-job-feeds/"),
+    "zero2sudo_notion": ("Zero2Sudo public curated links — review leads", "https://zero2sudo.notion.site/SWE-Intern-Learning-Journal-by-zero2sudo-4b5bf5492a86418c8dc701bad692df99"),
     "simplify": ("SimplifyJobs New-Grad-Positions", "https://github.com/SimplifyJobs/New-Grad-Positions"),
     "vansh": ("Vansh New-Grad-2026", "https://github.com/vanshb03/New-Grad-2026"),
     "jobright": ("Jobright new-grad GitHub board", "https://github.com/jobright-ai/2026-Software-Engineer-New-Grad"),

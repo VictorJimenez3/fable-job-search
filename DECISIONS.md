@@ -3664,3 +3664,73 @@ headroom. The complete load/save/load round trip preserves every job record and
 score reason. Keep the 95 MiB guard and existing production datastore; future
 growth still requires sharding or the separately verified database cutover.
 
+## 228. Bound job details, preserve real requisitions, and make discovery evidence-aware (2026-11-03)
+
+The reliability and discovery overhaul keeps the repository datastore and
+classic UI, but moves verbose job detail behind deterministic provider-aware
+references. Each lane uses 256 SHA-256 hash-prefix shards under
+`jobs_details/` or `intern_jobs_details/`; pointers carry a schema version,
+key, shard path, and canonical record signature. The primary snapshot stays
+lightweight, each shard has an 8 MiB guard, and the existing drawer fetches and
+verifies only the one shard needed. This is a bounded-file boundary, not a
+claim that the repository can grow without limit or that a future database
+cutover is unnecessary.
+
+An initial v16 rescore covered the current 84,550-record snapshot and found
+1,015 alert-eligible rows before the final generated-state migration. That
+first pass measured a 96,208,026-byte primary after scoring; verbose
+eligibility evidence is now being moved into the signed detail shards before
+the migration is published. These are staging measurements, not a
+live-publication or final-count claim.
+
+Posting identity is now provider-aware and retains provider URLs, source
+variants, aliases, and lifecycle provenance. Distinct real requisitions remain
+distinct when same-label or fuzzy matches have different provider identities or
+ambiguous destinations. Exact, verified families may still consolidate their
+locations and alternate links, but the P0 boundary is explicit: no fuzzy
+algorithm promises a 100% duplicate-free registry, and an ambiguous different
+real requisition must not be merged merely to improve the count.
+
+Main new-grad Rules v16 separates required experience floors from preferred
+experience and requires employer-backed evidence for an alert. Source-only
+leads, cohort/community listings, and description-free technical rows remain
+review/cohort material until employer evidence is available; they do not become
+alerts by title or source reputation alone. Internship eligibility and its
+separate lane remain isolated. Existing score and demotion reasons stay
+auditable, and optional AI remains additive rather than a crawler dependency.
+
+Registry rotation orders by the oldest polling attempt, including failed
+attempts, so a stale company cannot be starved by successful recent polls.
+Alert and batch delivery resolves aliases, uses current state and latest
+evidence, recovers durable crash markers, and keeps new-grad and internship
+lanes separate. Batch workflows check hourly (the internship schedule is
+offset), while the delivery policy is unchanged: minimum three roles, maximum
+wait twelve hours, or urgent score 92. A delivery error remains visible rather
+than silently becoming a successful run.
+
+Bounded public discovery adds Headcount's engineering and data/AI sections and
+YubHub graduate engineering, each capped at 100 rows; YubHub rows retain the
+attribution **Data by YubHub** ([yubhub.co](https://yubhub.co)). An anonymous
+public zero2sudo Notion feed is enabled for review-only, source-only leads and
+capped at 25 rows. Instagram login is inaccessible, so there is no automatic
+Instagram scraping; LinkedIn remains unscraped and optional public search
+queries now use the dynamic candidate graduation year (currently 2027).
+
+Resume tailoring is not re-scoped. Only the shared snapshot reader and cache
+were corrected so Resume Studio can read compacted/history-backed records
+without stale projections. Advancing generated main snapshots from v15 to v16
+requires a separate generated-state rescore/migration commit. The code is ready
+for that operation, but publication and live verification remain pending; do
+not describe this decision as final production validation. A prior validation
+baseline is 645 passed and 3 skipped.
+
+## 229. Patch the frontend dependency advisories before publication (2026-11-03)
+
+The release updates Better Auth from 1.6.29 to 1.7.7, Vite from 7.3.6 to
+7.3.7, Zod from 4.4.3 to 4.6.6, and Vitest (including its packages) from
+4.1.11 to 4.1.12. The normal install, typecheck, test, lint, build, and npm
+audit checks pass with zero high or critical findings. Twelve moderate
+findings remain in the ESLint/minimatch development chain; resolving those
+requires a separate dependency compatibility decision, so no audit threshold
+was weakened for this release.
+

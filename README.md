@@ -110,7 +110,8 @@ locations keeps every location visible in its detail drawer.
 
 ### Company and team ranking
 
-The new-grad board uses rules **v15**: one engineering-reputation prior, then
+The new-grad implementation uses rules **v16**: one engineering-reputation
+prior, then
 posting-specific work evidence. Company size is not prestige. The reviewed
 bands in `profile.yaml` recognize specialist employers such as Databricks,
 Figma, Datadog, and Stripe alongside big tech. The bands are transparent ranking
@@ -140,6 +141,15 @@ exceptions. Eligibility gates and the separate neutral internship rubric stay
 unchanged. Best Match remains the default; an explicitly saved Newest sort is
 preserved. The Fit drawer explains the evidence and every adjustment.
 
+Rules v16 separates required experience from preferred experience and requires
+employer-backed posting evidence for an alert. A lead that is only a source
+listing, social/community note, or otherwise lacks an employer description is
+kept for review/cohort research but cannot alert; missing evidence is not
+silently treated as proof. Deterministic identity repair preserves distinct
+real requisitions and provider identities when a same-label match is
+ambiguous. No fuzzy system can promise zero duplicates, so uncertain roles
+remain separate rather than losing coverage.
+
 The ChemE internship board is intentionally separate from this new-grad
 AI/SWE/DS board. It reads the `claude/cheme-intern-radar` branch and keeps its
 own generated state and GitHub board labels, while both profiles use the one
@@ -150,10 +160,14 @@ The main platform's **New-grad / Internships** switch is a second, isolated
 technical lane. Internship postings come from curated public GitHub boards
 (Simplify, SpeedyApply, Zapply, Dreamwork, [ApplyGuy](https://github.com/ApplyGuy/2027-Internships),
 and [Aprameyak's off-cycle board](https://github.com/aprameyak/2027-tech-jobs/blob/main/OFFCYCLE.md))
-plus internship searches on the existing ATS registry. Community
-account research, including public posts from `@zero2sudo`, also helps locate
-additional employer and co-op sources; account feeds are discovery leads, not
-runtime dependencies. Every source listing URL is mined for ATS board tokens,
+plus internship searches on the existing ATS registry. New-grad discovery also
+includes the public Headcount engineering and data/AI sections (up to 100 rows
+each) and YubHub's graduate-engineering feed (up to 100 rows, attributed to
+[Data by YubHub](https://yubhub.co)). The anonymous public
+[zero2sudo Notion list](https://zero2sudo.notion.site/) is enabled as a
+review-only, source-only lead feed (up to 25 rows); it is never employer
+evidence. Instagram login is inaccessible, and the radar does not automatically
+scrape Instagram or LinkedIn. Every source listing URL is mined for ATS board tokens,
 so new companies expand direct monitoring automatically.
 
 In the internship Jobs filters, select **Spring / Winter 2027** or **Summer
@@ -185,7 +199,9 @@ missing an oddly labeled internship is worse than reviewing an outlier.
 
 Internship email batches are **on by default** and are delivered separately
 from new-grad batches with their own subject and content. The owner can turn
-them off in Settings. GitHub notification delivery runs every four hours; it
+them off in Settings. Batch checks run hourly (with the internship check on a
+separate offset), but the policy is unchanged: wait for at least three roles,
+wait no longer than 12 hours, or send immediately at score 92. GitHub delivery
 does not read an inbox. Google OAuth does not request Gmail scope and the
 platform never reads internship emails.
 
@@ -259,9 +275,9 @@ every ~30 min (GitHub Actions cron)
         changed pages refresh each crawl; checkboxes work there too)
       · 🏆 "Best of <date>" issue each evening — the daily top-10, emailed to
         you via GitHub's own notification
-      · 📬 alert batches every 4h — normally waits for 3 roles, or 12h for a
-        smaller batch; urgent scores can still send immediately; this is the
-        only normal alert email surface
+      · 📬 alert batches are checked hourly — normally waits for 3 roles, or
+        12h for a smaller batch; score 92+ can still send immediately; this is
+        the only normal alert email surface
       · docs/DASHBOARD.md — everything decent, sorted
       · docs/feed.xml — RSS for instant notifications in any feed reader
 ```
@@ -270,7 +286,7 @@ The internship lane runs independently every two hours on its own
 `internship-radar.yml` workflow, with a smaller deterministic ATS budget so it
 cannot starve the new-grad crawl. It writes `state/intern_*.json` and
 `docs/internships/`; its alert issues, master board, checkbox reconcile, and
-opt-in email batch use internship-specific labels. The normal new-grad crawl
+separate email batch use internship-specific labels. The normal new-grad crawl
 and its ranking remain the priority whenever compute is constrained.
 
 ### Tracking and applied logging
@@ -286,8 +302,9 @@ and its ranking remain the priority whenever compute is constrained.
    the repository owner's Notion pipeline.
    (`stage_saved` in profile.yaml, default "Not started") and improves future
    ranking.
-   The crawler and tracker use the canonical posting URL as the strongest
-   duplicate boundary, then run a conservative posting-family repair for
+   The crawler and tracker use a provider-aware posting identity (with the
+   canonical URL retained as provenance) as the strongest duplicate boundary,
+   then run a conservative posting-family repair for
    providers that mint a different URL per location. A family needs the same
    employer and work-oriented title core, a hiring-program marker when titles
    differ, and either a compatible official/aggregator location match or the
@@ -304,10 +321,11 @@ and its ranking remain the priority whenever compute is constrained.
    matches with one compatible direct ATS row are merged; ambiguous same-title
    roles remain separate so coverage is not lost. Alerts and the generated
    dashboard list the discovery source(s) and fallback links.
-   A separate pre-crawl repair job checks up to 800 still-open aggregator rows
-   in parallel (16 bounded workers) and publishes closed-page verdicts before
-   the expensive discovery crawl starts. This keeps stale Jobright pages
-   moving into History even when a full crawl reaches its execution limit.
+   A separate pre-crawl repair job checks a bounded batch (100 in production)
+   of still-open aggregator rows in parallel (16 bounded workers) and
+   publishes closed-page verdicts before the expensive discovery crawl starts.
+   This keeps stale Jobright pages moving into History even when a full crawl
+   reaches its execution limit.
 2. **When you apply, the inbox becomes the source of truth.** When the optional
    email secrets are configured, the watcher reads application-lifecycle
    emails every 30 minutes and drives the tracker **Stage** for you:
@@ -1272,6 +1290,9 @@ Optional upgrades:
   → create engine searching `linkedin.com/posts`, then get an API key at
   [developers.google.com/custom-search](https://developers.google.com/custom-search/v1/introduction))
   → Monday memos gain a "Heard on LinkedIn" section of public hiring posts.
+  Queries use the candidate's configured graduation year (currently 2027) and
+  open public search results only; LinkedIn is never scraped or required for
+  the runtime crawl.
 - **Watch the repo** (Watch → All activity) and install the GitHub mobile app
   for instant pushes; issues are also assigned to you, which notifies by default.
 - Subscribe to `docs/feed.xml` in a feed reader (raw URL above) for sub-minute alerts.
@@ -1305,22 +1326,33 @@ setting. Edit and push — next run picks it up. Seed companies:
   backward-compatible JSON representation: zero score dimensions and repeated
   primary-source provenance are omitted (absence means no signal/already
   represented), while nonzero dimensions, score reasons, and nonzero DOL facts
-  remain intact in the primary snapshot for open roles. Complete terminal
-  records live in `state/jobs_history.json`; their listing/lifecycle summaries
-  remain in `state/jobs.json`. Terminal ranking and source metadata
-  hydrate from history instead of being duplicated in the primary file.
-  Writes fail before replacement at 95 MiB, leaving headroom
-  below GitHub's 100 MiB blob limit. If that guard trips again, shard the
-  datastore or complete the verified Postgres cutover; do not raise the
-  production limit past the repository host's boundary.
+  remain intact in the primary snapshot for open roles. Legacy complete
+  terminal records remain in `state/jobs_history.json`; new compacted terminal
+  and open-role detail hydrates from the versioned detail shards, while the
+  listing/lifecycle summary stays in `state/jobs.json`. The history file
+  remains the compatibility fallback for records that predate detail shards.
+  Writes fail before replacement at 95 MiB, leaving headroom below GitHub's
+  100 MiB blob limit. Verbose open and terminal detail now lives in
+  deterministic `jobs_details/` and `intern_jobs_details/` hash-prefix shards:
+  256 buckets per lane, versioned records, and checksum-verified pointers.
+  Each shard has an 8 MiB guard, and the classic role drawer fetches only the
+  one shard it needs, preserving the existing UI. This bounds a single writer
+  and read, not the total repository forever; further growth still needs an
+  explicit datastore/sharding boundary or the verified Postgres cutover.
 - **Score maintenance** runs every six hours and verifies that every stored job
   carries the current score/rules version before publishing a repaired snapshot.
+  The generated snapshot migration from v15 to v16 is a separate rescore
+  operation; do not hand-edit generated state.
 - GitHub cron is best-effort: `*/30` in practice fires every 30–60 min.
 - Production Vercel deploys are triggered by a green `tests` workflow for the
   exact commit, then verify that the friendly alias serves that build's SHA.
   A manual deploy is accepted only from the production branch. Cancelled or
   timed-out automation is retried once by `workflow-recovery` and then gets an
   actionable repair issue.
+- The current frontend release pins patched Better Auth 1.7.7, Vite 7.3.7,
+  Zod 4.6.6, and Vitest 4.1.12. The release audit has zero high or critical
+  findings; remaining moderate findings are confined to the development
+  ESLint/minimatch chain and do not change the production audit gate.
 - Scheduled workflows pause after 60 days without repo activity; any commit
   (including CI's own) resets the clock, so this is only relevant if the radar
   is disabled. GitHub also emails you before pausing.

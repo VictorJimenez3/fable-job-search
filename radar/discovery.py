@@ -206,9 +206,13 @@ def hygiene(registry: dict, now: int | None = None) -> dict:
 
 
 def record_result(entry: dict, success: bool, deactivate_after: int = 5) -> None:
+    # This is deliberately separate from ``last_ok``.  A failed poll still
+    # consumed its bounded crawl slot and must not remain at the head of every
+    # subsequent rotation while its retry/dead lifecycle runs.
+    entry["last_polled_at"] = int(time.time())
     if success:
         entry["failures"] = 0
-        entry["last_ok"] = int(time.time())
+        entry["last_ok"] = entry["last_polled_at"]
     else:
         entry["failures"] = entry.get("failures", 0) + 1
         if entry["failures"] >= deactivate_after:

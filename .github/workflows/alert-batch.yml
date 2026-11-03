@@ -2,7 +2,7 @@ name: alert email batches
 
 on:
   schedule:
-    - cron: "0 */4 * * *"   # six opportunities per day; empty batches send nothing
+    - cron: "0 * * * *"     # hourly check; min/wait/urgent policy keeps it quiet when empty
   workflow_dispatch: {}
 
 permissions:

@@ -72,6 +72,14 @@ for i in 1 2 3; do
   log "push rejected (upstream moved) — re-merging caches onto fresh upstream"
   TMPD="$(mktemp -d)"
   cp state/jobs.json "$TMPD/jobs.json"
+  # Job records point at sibling detail shards. Preserve every lane's shard
+  # directory before resetting to origin; merge_state.py hydrates the copied
+  # snapshot and state.save() recreates a consistent primary + shard revision.
+  for details_dir in jobs_details intern_jobs_details; do
+    if [ -d "state/$details_dir" ]; then
+      cp -R "state/$details_dir" "$TMPD/$details_dir"
+    fi
+  done
   cp state/culture.json "$TMPD/culture.json"
   RESEARCH_CACHE=""; AI_USAGE_CACHE=""
   if [ -f state/company_research.json ]; then

@@ -129,17 +129,17 @@ def test_garbage_llm_output_never_crashes(monkeypatch):
     assert rec["quality"]["new_grad"] == "unclear"
 
 
-def test_one_to_two_years_suppresses_alert(monkeypatch):
-    # New-grad-first policy treats any positive required experience floor as
-    # dashboard-only, including an LLM-confirmed 1-2 year requirement.
+def test_preferred_experience_does_not_suppress_alert(monkeypatch):
+    # Preferred experience is not a required floor. The deterministic posting
+    # facts and the optional verdict must preserve that distinction.
     monkeypatch.setattr(quality.http, "get",
                         lambda *a, **k: FakeResp(200, _posting("1-2 years of experience preferred.")))
     monkeypatch.setattr(quality.llm, "complete", lambda *a, **k:
-                        '{"years_required": 1, "new_grad": "no", "role_family": "swe", "reason": "1+ yrs"}')
+                        '{"years_required": 1, "new_grad": "yes", "role_family": "swe", "reason": "preferred only"}')
     rec = _rec()
     assert quality.verify(rec)
-    assert rec["alert_ok"] is False
-    assert rec["score"] == 80 - (35 + 1 * 4)
+    assert rec["alert_ok"] is True
+    assert rec["score"] == 80
 
 
 def test_verify_pasted_grades_and_is_idempotent(monkeypatch):

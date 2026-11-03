@@ -44,6 +44,33 @@ def test_analyze_years_shapes():
     assert "years_min" not in a
 
 
+def test_analyze_separates_required_and_preferred_experience():
+    a = posting.analyze(
+        "0-2 years experience required. 3+ years of experience is preferred." + PAD
+    )
+    assert a["years_min"] == 0
+    assert a["years_preferred_min"] == 3
+    assert a["years_note"].startswith("requires 0+")
+
+
+def test_analyze_preferred_only_experience_does_not_create_required_floor():
+    a = posting.analyze(
+        "One year of experience preferred; no experience required." + PAD
+    )
+    assert "years_min" not in a
+    assert a["years_preferred_min"] == 1
+
+
+def test_analyze_marks_degree_experience_alternatives_for_review():
+    a = posting.analyze(
+        "Bachelor's degree and 2+ years OR Master's degree and 0 years experience."
+        + PAD
+    )
+    assert a["experience_alternative"] is True
+    assert "years_min" not in a
+    assert "alternative" in a["years_note"]
+
+
 def test_analyze_intern_counts_and_short_text():
     a = posting.analyze("2+ years of experience, including internships and co-ops." + PAD)
     assert a.get("intern_counts") is True

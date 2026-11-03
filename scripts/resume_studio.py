@@ -1062,6 +1062,46 @@ def load_jobs(root: Optional[Path] = None) -> Dict[str, Dict[str, Any]]:
     return value if isinstance(value, dict) else {}
 
 
+def _snapshot_revision_signature(path: Path) -> Tuple[Any, ...]:
+    """Return a cheap revision signature for a primary snapshot and shards.
+
+    A compact ``jobs.json`` row is only a pointer.  Resume Studio must notice
+    a detail shard replacement even when the primary index file did not move;
+    otherwise an in-process cache can serve an old score ledger indefinitely.
+    ``mtime_ns`` and size avoid hashing hundreds of megabytes on every request,
+    while the relative filename catches newly added or removed buckets.
+    """
+    signature: List[Any] = []
+    try:
+        stat = path.stat()
+        signature.append((path.name, stat.st_mtime_ns, stat.st_size))
+    except OSError:
+        signature.append((path.name, 0, 0))
+    details_name = "intern_jobs_details" if path.name == "intern_jobs.json" else "jobs_details"
+    details_dir = path.parent / details_name
+    try:
+        shards = sorted(details_dir.glob("*.json"), key=lambda item: item.name)
+    except OSError:
+        shards = []
+    for shard in shards:
+        try:
+            stat = shard.stat()
+            signature.append((f"{details_name}/{shard.name}", stat.st_mtime_ns, stat.st_size))
+        except OSError:
+            # A concurrent cleanup should invalidate the previous signature;
+            # the next call will re-read the now-current shard set.
+            signature.append((f"{details_name}/{shard.name}", 0, 0))
+    return tuple(signature)
+
+
+def _file_revision_signature(path: Path) -> Tuple[Any, ...]:
+    try:
+        stat = path.stat()
+        return (path.name, stat.st_mtime_ns, stat.st_size)
+    except OSError:
+        return (path.name, 0, 0)
+
+
 def current_scored_jobs(root: Optional[Path] = None) -> Dict[str, Dict[str, Any]]:
     """Read-only v8 score projection for the local Studio.
 
@@ -1076,12 +1116,12 @@ def current_scored_jobs(root: Optional[Path] = None) -> Dict[str, Dict[str, Any]
     culture_path = base / "state" / "culture.json"
     company_research_path = base / "state" / "company_research.json"
     profile_path = base / "profile.yaml"
-    signature = tuple(
-        path.stat().st_mtime_ns if path.exists() else 0
-        for path in (
-            jobs_path, history_path, feedback_path, culture_path,
+    signature = (
+        _snapshot_revision_signature(jobs_path),
+        *(_file_revision_signature(path) for path in (
+            history_path, feedback_path, culture_path,
             company_research_path, profile_path,
-        )
+        )),
     )
     key = str(base)
     cached = _CURRENT_SCORE_CACHE.get(key)

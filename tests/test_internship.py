@@ -379,6 +379,7 @@ def test_internship_email_defaults_on_and_uses_separate_surface(tmp_path, monkey
     monkeypatch.setattr(state, "STATE_DIR", tmp_path)
     monkeypatch.setenv("RADAR_PROFILE", "internship")
     monkeypatch.setenv("GITHUB_TOKEN", "token")
+    monkeypatch.setattr("radar.board._existing_marker_ids", lambda *args, **kwargs: set())
     history = [{"id": "i" * 16, "company": "Acme", "title": "SWE Intern",
                 "url": "https://acme.test/5", "score": 95,
                 "alerted_at": int(time.time()) - 3600, "locations": ["Remote"],

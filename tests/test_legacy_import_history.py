@@ -101,7 +101,7 @@ def test_import_legacy_hydrates_history_for_both_job_lanes(
     # A stale terminal history row must not overwrite a posting that has since reopened.
     history_name = jobs_name.replace("jobs.json", "jobs_history.json")
     history_path = state_dir / history_name
-    history = json.loads(history_path.read_text())
+    history = json.loads(history_path.read_text()) if history_path.exists() else {}
     history[reopened_id] = _record(
         profile=profile_id, legacy_id=reopened_id, status="expired", score=5,
         source="legacy-source", sector="stale-sector", ats="legacy-ats",

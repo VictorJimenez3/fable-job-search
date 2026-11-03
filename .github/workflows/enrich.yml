@@ -77,6 +77,14 @@ jobs:
             echo "enrich: upstream moved; merging additive AI caches"
             checkpoint_dir="$(mktemp -d)"
             cp state/jobs.json "$checkpoint_dir/jobs.json"
+            # A compact job row is only valid with every referenced detail
+            # shard. Keep both lanes intact across the reset before the
+            # shard-aware merge script hydrates and re-saves the snapshot.
+            for details_dir in jobs_details intern_jobs_details; do
+              if [ -d "state/$details_dir" ]; then
+                cp -R "state/$details_dir" "$checkpoint_dir/$details_dir"
+              fi
+            done
             cp state/culture.json "$checkpoint_dir/culture.json"
             cp state/company_research.json "$checkpoint_dir/research.json" 2>/dev/null || printf '{}' > "$checkpoint_dir/research.json"
             cp state/ai_usage.json "$checkpoint_dir/usage.json" 2>/dev/null || printf '{}' > "$checkpoint_dir/usage.json"

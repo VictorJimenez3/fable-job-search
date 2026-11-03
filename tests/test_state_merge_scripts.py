@@ -1,11 +1,22 @@
+import hashlib
 import json
 import os
 import subprocess
 import sys
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parent.parent
+
+
+def _detail_pointer(lane: str, job_id: str, detail: dict) -> dict:
+    payload = json.dumps(detail, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+    digest = hashlib.sha256(payload.encode()).hexdigest()
+    return {
+        "version": 1,
+        "shard": f"{lane}/{hashlib.sha256(job_id.encode()).hexdigest()[:2]}.json",
+        "key": job_id,
+        "sha256": digest,
+    }
 
 
 def test_crawl_merge_keeps_new_discoveries_and_upstream_updates(tmp_path):
@@ -87,3 +98,117 @@ def test_crawl_merge_keeps_full_history_for_new_closed_discoveries(tmp_path):
     history = json.loads((state_dir / "jobs_history.json").read_text())
     assert history["known"]["score_reasons"] == ["upstream"]
     assert history["new_closed"]["score_reasons"] == ["new discovery"]
+
+
+def test_crawl_merge_hydrates_and_republishes_referenced_detail_shards(tmp_path):
+    state_dir = tmp_path / "state"
+    state_dir.mkdir()
+    for name, value in (("companies.json", {}), ("alert_history.json", []), ("runs.json", [])):
+        (state_dir / name).write_text(json.dumps(value))
+
+    upstream_detail = {"score_reasons": ["upstream truth"]}
+    upstream_ref = _detail_pointer("jobs_details", "known", upstream_detail)
+    (state_dir / "jobs.json").write_text(json.dumps({
+        "known": {"id": "known", "score_version": 15, "score": 90,
+                  "posting_status": "open", "detail_ref": upstream_ref},
+    }))
+    upstream_shard = state_dir / upstream_ref["shard"]
+    upstream_shard.parent.mkdir(parents=True)
+    upstream_shard.write_text(json.dumps({
+        "schema_version": 1, "records": {"known": upstream_detail},
+        "signatures": {"known": upstream_ref["sha256"]},
+    }))
+
+    checkpoint = tmp_path / "checkpoint"
+    checkpoint.mkdir()
+    discovery_detail = {"score_reasons": ["new discovery"]}
+    discovery_ref = _detail_pointer("jobs_details", "discovery", discovery_detail)
+    (checkpoint / "jobs.json").write_text(json.dumps({
+        "known": {"id": "known", "score_version": 15, "score": 50,
+                  "posting_status": "open", "detail_ref": upstream_ref},
+        "discovery": {"id": "discovery", "score_version": 15, "score": 80,
+                      "posting_status": "open", "detail_ref": discovery_ref},
+    }))
+    checkpoint_shard = checkpoint / discovery_ref["shard"]
+    checkpoint_shard.parent.mkdir(parents=True)
+    checkpoint_shard.write_text(json.dumps({
+        "schema_version": 1, "records": {"discovery": discovery_detail},
+        "signatures": {"discovery": discovery_ref["sha256"]},
+    }))
+
+    paths = {}
+    for name, value in (("companies", {}), ("alerts", []), ("runs", [])):
+        path = tmp_path / f"{name}.json"
+        path.write_text(json.dumps(value))
+        paths[name] = path
+    env = os.environ | {
+        "MERGE_CRAWL_JOBS": str(checkpoint / "jobs.json"),
+        "MERGE_CRAWL_COMPANIES": str(paths["companies"]),
+        "MERGE_CRAWL_ALERT_HISTORY": str(paths["alerts"]),
+        "MERGE_CRAWL_RUNS": str(paths["runs"]),
+    }
+    subprocess.run([sys.executable, str(ROOT / "scripts/mac-companion/merge_crawl_state.py")],
+                   cwd=tmp_path, env=env, check=True)
+
+    merged = json.loads((state_dir / "jobs.json").read_text())
+    assert merged["known"]["score"] == 90
+    assert "detail_ref" in merged["discovery"]
+    shard = json.loads((state_dir / merged["discovery"]["detail_ref"]["shard"]).read_text())
+    assert shard["records"]["discovery"] == discovery_detail
+
+
+def test_enrich_merge_keeps_upstream_truth_and_adds_hydrated_quality_cache(tmp_path):
+    state_dir = tmp_path / "state"
+    state_dir.mkdir()
+    culture = tmp_path / "culture.json"
+    culture.write_text("{}")
+    state_culture = state_dir / "culture.json"
+    state_culture.write_text("{}")
+    for name, value in (("company_research.json", {}), ("ai_usage.json", {})):
+        (state_dir / name).write_text(json.dumps(value))
+
+    upstream_detail = {"score_reasons": ["current reasons"]}
+    upstream_ref = _detail_pointer("jobs_details", "known", upstream_detail)
+    (state_dir / "jobs.json").write_text(json.dumps({
+        "known": {"id": "known", "score_version": 15, "score": 90,
+                  "posting_status": "open", "detail_ref": upstream_ref,
+                  "quality": {"reason": "upstream"}},
+    }))
+    upstream_shard = state_dir / upstream_ref["shard"]
+    upstream_shard.parent.mkdir(parents=True)
+    upstream_shard.write_text(json.dumps({
+        "schema_version": 1, "records": {"known": upstream_detail},
+        "signatures": {"known": upstream_ref["sha256"]},
+    }))
+
+    checkpoint = tmp_path / "checkpoint"
+    checkpoint.mkdir()
+    ours_detail = {"score_reasons": ["new job reasons"]}
+    ours_ref = _detail_pointer("jobs_details", "new", ours_detail)
+    (checkpoint / "jobs.json").write_text(json.dumps({
+        "known": {"id": "known", "score_version": 15, "score": 50,
+                  "posting_status": "open", "detail_ref": upstream_ref,
+                  "quality": {"reason": "ours should not replace upstream"}},
+        "new": {"id": "new", "score_version": 15, "score": 70,
+                "posting_status": "open", "detail_ref": ours_ref,
+                "quality": {"reason": "ours cache"}},
+    }))
+    ours_shard = checkpoint / ours_ref["shard"]
+    ours_shard.parent.mkdir(parents=True)
+    ours_shard.write_text(json.dumps({
+        "schema_version": 1, "records": {"new": ours_detail},
+        "signatures": {"new": ours_ref["sha256"]},
+    }))
+
+    env = os.environ | {
+        "MERGE_JOBS": str(checkpoint / "jobs.json"),
+        "MERGE_CULTURE": str(culture),
+    }
+    subprocess.run([sys.executable, str(ROOT / "scripts/mac-companion/merge_state.py")],
+                   cwd=tmp_path, env=env, check=True)
+
+    merged = json.loads((state_dir / "jobs.json").read_text())
+    assert merged["known"]["quality"] == {"reason": "upstream"}
+    assert merged["new"]["quality"] == {"reason": "ours cache"}
+    new_detail = json.loads((state_dir / merged["new"]["detail_ref"]["shard"]).read_text())
+    assert new_detail["records"]["new"] == ours_detail

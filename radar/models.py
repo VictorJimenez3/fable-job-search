@@ -72,6 +72,9 @@ class Job:
     alert_ok: bool = False           # passed gates AND new-grad-eligible
     llm_note: str = ""
     posting: dict = field(default_factory=dict)  # scraped-text analysis (radar/posting.py)
+    # Compact deterministic eligibility facts survive description scrubbing so
+    # full-board rescoring does not silently erase posting evidence.
+    eligibility_evidence: dict = field(default_factory=dict)
     profile: str = "new_grad"
     internship_eligibility: dict = field(default_factory=dict)
     # Posting lifecycle is separate from application stage. Terminal records
@@ -117,6 +120,8 @@ class Job:
         d["description"] = ""  # never persist descriptions; keeps state small
         if not d["posting"]:
             del d["posting"]   # only persist the key when analysis exists
+        if not d["eligibility_evidence"]:
+            del d["eligibility_evidence"]
         if not d["internship_eligibility"]:
             del d["internship_eligibility"]
         for key in ("source_board", "source_board_variants", "source_variants",

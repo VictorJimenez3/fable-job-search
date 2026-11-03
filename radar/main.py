@@ -8,6 +8,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -17,7 +18,7 @@ from . import discovery, lifecycle, link_resolver, sponsorship, state
 from .brief import rerank
 from .config import env, profile, profile_id, seeds
 from .digest import write_outputs
-from .identity import canonical_url
+from .identity import canonical_url, posting_key
 from .internship import RULES_VERSION as INTERNSHIP_RULES_VERSION
 from .models import Job, norm
 from .score import (
@@ -32,10 +33,9 @@ from .score import (
     normalize_score_preferences,
     regate,
     score,
-    source_new_grad,
 )
 from .sector import infer
-from .sources import aggregators, hn
+from .sources import aggregators, hn, public_feeds
 from .sources.ats import FETCHERS, PM_SEARCH_QUERIES
 
 AGG_SOURCES = {
@@ -47,6 +47,7 @@ AGG_SOURCES = {
     "zapply": aggregators.fetch_zapply,
     "zapply_pm": aggregators.fetch_zapply_pm,
     "hn": hn.fetch_hn,
+    **public_feeds.PUBLIC_FETCHERS,
 }
 
 AGG_SOURCES_INTERNSHIP = {
@@ -59,6 +60,63 @@ AGG_SOURCES_INTERNSHIP = {
 }
 
 PM_BACKFILL_ATS = {"workday", "phenom"}
+
+
+def _posting_identity(url: str | None) -> str:
+    """Return the strongest safe identity available for a posting URL."""
+    return posting_key(url) or canonical_url(url)
+
+
+def _job_identity(job: Job) -> str:
+    """Use a collision-safe ingestion ID without changing ``Job.id``."""
+    return str(getattr(job, "_radar_id", "") or job.id)
+
+
+def _disambiguated_job_identity(job: Job) -> str:
+    """Assign a deterministic URL suffix for a role-label collision.
+
+    The legacy company/title/location ID remains the first posting's identity;
+    only a distinct URL that collides with that label gets a new key. This
+    keeps old stored IDs and references stable while making new requisitions
+    distinct at ingestion.
+    """
+    identity = _posting_identity(job.url)
+    if not identity:
+        return job.id
+    digest = hashlib.sha1(identity.encode(), usedforsecurity=False).hexdigest()[:12]
+    value = f"{job.id}-{digest}"
+    job._radar_id = value
+    return value
+
+
+def _existing_posting_ids(jobs_state: dict) -> dict[str, str]:
+    """Index current and preserved URL variants without rewriting IDs."""
+    result: dict[str, str] = {}
+    for job_id, record in jobs_state.items():
+        urls = [record.get("url"), *(record.get("alternate_urls") or [])]
+        resolution = record.get("link_resolution") or {}
+        urls.extend((resolution.get("resolved_url"), resolution.get("original_url")))
+        for url in urls:
+            identity = _posting_identity(url)
+            if identity:
+                result.setdefault(identity, str(job_id))
+    return result
+
+
+def _state_job_identity(job: Job, jobs_state: dict,
+                        existing_posting_ids: dict[str, str]) -> str:
+    """Resolve a fresh sighting to existing URL identity or a safe new key."""
+    identity = _posting_identity(job.url)
+    existing_id = existing_posting_ids.get(identity) if identity else None
+    if existing_id:
+        job._radar_id = existing_id
+        return existing_id
+    candidate = _job_identity(job)
+    current = jobs_state.get(candidate)
+    current_identity = _posting_identity((current or {}).get("url"))
+    if identity and current_identity and identity != current_identity:
+        return _disambiguated_job_identity(job)
+    return candidate
 
 
 def _discovered_job_priority(job: Job) -> tuple:
@@ -85,6 +143,100 @@ def _append_unique(values: list, items: list) -> bool:
     return changed
 
 
+def _source_only_provenance(sighting: Job | dict) -> dict | None:
+    """Extract curator-only metadata without treating it as job evidence."""
+    resolution = sighting.get("link_resolution") if isinstance(sighting, dict) else sighting.link_resolution
+    if not isinstance(resolution, dict) or resolution.get("status") != "source_only":
+        return None
+    get = sighting.get if isinstance(sighting, dict) else lambda key, default=None: getattr(sighting, key, default)
+    payload = {
+        "source": get("source", "") or "",
+        "source_url": get("source_url", "") or "",
+        "source_board": get("source_board", "") or "",
+    }
+    for key in ("source_note", "reason"):
+        if resolution.get(key):
+            payload[key] = resolution[key]
+    return {key: value for key, value in payload.items() if value}
+
+
+def _has_independent_employer_evidence(record: Job | dict | None) -> bool:
+    """Return whether a row has evidence beyond a curator/source-only lead.
+
+    A direct URL or ATS label alone is not enough: source-only feeds often
+    carry a guessed application URL.  A resolved link, a freshly fetched
+    employer description, or persisted facts extracted from such a posting
+    are the bounded facts that may clear a source-only marker.
+    """
+    if record is None:
+        return False
+    get = record.get if isinstance(record, dict) else lambda key, default=None: getattr(record, key, default)
+    resolution = get("link_resolution", {}) or {}
+    if isinstance(resolution, dict) and resolution.get("status") == "resolved":
+        return True
+    if isinstance(resolution, dict) and resolution.get("status") == "source_only":
+        return False
+    if str(get("description", "") or "").strip():
+        return True
+    posting = get("posting", {}) or {}
+    if not isinstance(posting, dict):
+        return False
+    # These fields are emitted by the posting scraper and are not present in
+    # a bare public/curator lead.  Require a direct/official-ish row as well
+    # so an aggregator's own ranking excerpt cannot promote itself.
+    source = str(get("source", "") or "").casefold()
+    ats = str(get("ats", "") or "").casefold()
+    url = str(get("url", "") or "")
+    aggregator = link_resolver.is_aggregator_url(url)
+    scraped_keys = {
+        "ranking_evidence", "years_min", "years_preferred_min",
+        "experience_conflict", "experience_alternative", "years_note",
+    }
+    return bool((ats or not aggregator) and source not in {
+        "zero2sudo_notion", "zero2sudo", "linkedin_posts",
+    } and any(posting.get(key) not in (None, "", {}, []) for key in scraped_keys))
+
+
+def _keep_source_only_provenance(current: Job | dict | None,
+                                 sighting: Job | dict) -> dict:
+    """Keep source-only notes while leaving lifecycle/eligibility status intact."""
+    payload = _source_only_provenance(sighting)
+    if isinstance(current, Job):
+        current_resolution = current.link_resolution
+        evidence_record = current
+    elif isinstance(current, dict) and any(
+            key in current for key in ("url", "description", "posting", "ats")):
+        # A full state record lets us distinguish an unverified row from one
+        # whose resolution field was simply omitted by the compact serializer.
+        current_resolution = current.get("link_resolution") or {}
+        evidence_record = current
+    else:
+        current_resolution = current
+        evidence_record = current
+    result = dict(current_resolution or {})
+    if payload is None:
+        return result
+    previous = result.get("source_only_provenance")
+    provenance = list(previous) if isinstance(previous, list) else []
+    if payload not in provenance:
+        provenance.append(payload)
+    result["source_only_provenance"] = provenance
+    # Do not let a source-only lead become an apparently verified posting just
+    # because the target had no link_resolution field yet.  Conversely, keep
+    # an independently fetched employer posting's existing status intact.
+    if not _has_independent_employer_evidence(evidence_record):
+        if not result.get("status"):
+            result["status"] = "source_only"
+        source_resolution = (
+            sighting.get("link_resolution") if isinstance(sighting, dict)
+            else sighting.link_resolution
+        ) or {}
+        for key in ("reason", "source_note"):
+            if source_resolution.get(key) and not result.get(key):
+                result[key] = source_resolution[key]
+    return result
+
+
 def _merge_job_sighting(winner: Job, sighting: Job) -> None:
     """Keep every feed/source link when one posting wins a feed dedupe."""
     _append_unique(winner.locations, sighting.locations)
@@ -99,7 +251,10 @@ def _merge_job_sighting(winner: Job, sighting: Job) -> None:
     for url in [sighting.url, *sighting.alternate_urls]:
         if url and canonical_url(url) != winner_url:
             _append_unique(winner.alternate_urls, [url])
-    if sighting.link_resolution:
+    if (sighting.link_resolution or {}).get("status") == "source_only":
+        winner.link_resolution = _keep_source_only_provenance(
+            winner, sighting)
+    elif sighting.link_resolution:
         # A closed aggregator copy is definitive for that aggregator URL, but
         # an official ATS variant gets its own liveness check. Do not carry a
         # stale Jobright banner onto a stronger direct posting winner.
@@ -141,15 +296,20 @@ def _collapse_discovered_variant_jobs(discovered: list[Job]) -> tuple[list[Job],
         return discovered, 0
     from .dedupe import collapse_cross_source_jobs, collapse_location_variants, resolve_alias
 
-    by_id = {job.id: job for job in discovered}
-    records = {job.id: job.to_record() for job in discovered}
+    by_id = {_job_identity(job): job for job in discovered}
+    records = {}
+    for job in discovered:
+        key = _job_identity(job)
+        record = job.to_record()
+        record["id"] = key
+        records[key] = record
     records, aliases, first_merged = collapse_cross_source_jobs(records)
     records, more_aliases, second_merged = collapse_location_variants(records)
     aliases.update(more_aliases)
     if not aliases:
         return discovered, 0
     for old in list(aliases):
-        aliases[old] = resolve_alias(aliases[old], aliases)
+        aliases[old] = resolve_alias(aliases[old], aliases, existing=records)
     for old, new in aliases.items():
         loser = by_id.get(old)
         winner = by_id.get(new)
@@ -198,16 +358,69 @@ def _merge_record_sighting(target: dict, sighting: dict) -> bool:
             target[key] = sighting[key]
             changed = True
     target_url = canonical_url(target.get("url"))
+    target_identity = _posting_identity(target.get("url"))
+    resolution = sighting.get("link_resolution") or {}
     evidence = (sighting.get("posting") or {}).get("ranking_evidence")
-    if (target_url and target_url == canonical_url(sighting.get("url")) and evidence
+    if (target_identity and target_identity == _posting_identity(sighting.get("url")) and evidence
             and not (target.get("posting") or {}).get("ranking_evidence")):
         target.setdefault("posting", {})["ranking_evidence"] = evidence
         changed = True
+    # ``to_record`` deliberately scrubs the description, so the crawl loop
+    # marks a sighting whose employer text was just evaluated.  Copy the full
+    # compact evidence object, including negative/contradictory experience
+    # floors; retaining only a positive new-grad flag would resurrect stale
+    # eligibility on the next state-wide re-gate.
+    fresh_evidence = sighting.get("eligibility_evidence")
+    fresh_employer_evidence = bool(sighting.get("_fresh_employer_evidence"))
+    if (fresh_employer_evidence
+            and (sighting.get("link_resolution") or {}).get("status") != "source_only"
+            and isinstance(fresh_evidence, dict) and fresh_evidence):
+        if target.get("eligibility_evidence") != fresh_evidence:
+            target["eligibility_evidence"] = dict(fresh_evidence)
+            changed = True
+        explicit = (bool(sighting["explicit_new_grad"])
+                    if "explicit_new_grad" in sighting
+                    else fresh_evidence.get("status") == "verified")
+        if target.get("explicit_new_grad") != explicit:
+            target["explicit_new_grad"] = explicit
+            changed = True
+    current_resolution = target.get("link_resolution") or {}
+    source_only_current = current_resolution.get("status") == "source_only"
+    authoritative_fresh = bool(
+        fresh_employer_evidence
+        and resolution.get("status") != "source_only"
+    )
+    if source_only_current and authoritative_fresh:
+        # A direct ATS sighting has now supplied the independent employer
+        # facts.  Keep the curator trail, but do not let its old status gate
+        # the verified record forever.
+        retained = {
+            key: value for key, value in current_resolution.items()
+            if key not in {"status", "reason", "source_note"}
+        }
+        if "source_only_provenance" not in retained:
+            prior = _source_only_provenance(target)
+            if prior:
+                retained["source_only_provenance"] = [prior]
+        if retained != current_resolution:
+            target["link_resolution"] = retained
+            changed = True
+        current_resolution = retained
+        source_only_current = False
     alternate_urls = target.setdefault("alternate_urls", [])
     for url in [sighting.get("url"), *sighting.get("alternate_urls", [])]:
         if url and canonical_url(url) != target_url:
             changed |= _append_unique(alternate_urls, [url])
-    resolution = sighting.get("link_resolution") or {}
+    if resolution.get("status") == "source_only":
+        preserved = _keep_source_only_provenance(target, sighting)
+        if preserved != (target.get("link_resolution") or {}):
+            target["link_resolution"] = preserved
+            changed = True
+        return changed
+    if source_only_current:
+        # A direct URL label without current employer facts must not clear the
+        # source-only gate.  Provenance and aliases above are still retained.
+        return changed
     closed_aggregator = (
         resolution.get("status") == "closed" and
         link_resolver.is_aggregator_url(target.get("url")) is False
@@ -215,20 +428,24 @@ def _merge_record_sighting(target: dict, sighting: dict) -> bool:
     if (resolution and not closed_aggregator and
             (not target.get("link_resolution") or
              target.get("link_resolution", {}).get("status") != "resolved")):
-        target["link_resolution"] = resolution
+        replacement_resolution = dict(resolution)
+        prior_provenance = current_resolution.get("source_only_provenance")
+        if prior_provenance and "source_only_provenance" not in replacement_resolution:
+            replacement_resolution["source_only_provenance"] = prior_provenance
+        target["link_resolution"] = replacement_resolution
         changed = True
     return changed
 
 
 def _unique_discovered_jobs(discovered: list[Job]) -> tuple[list[Job], int]:
-    """Keep one best-provenance candidate per stable role identity per run."""
+    """Deduplicate posting identities while preserving distinct requisitions."""
     selected: dict[str, Job] = {}
     passthrough: list[Job] = []
     dropped = 0
     for job in discovered:
         _append_unique(job.source_variants, [job.source])
         _append_unique(job.source_url_variants, [job.source_url])
-        key = canonical_url(job.url)
+        key = _posting_identity(job.url)
         if not key:
             passthrough.append(job)
             continue
@@ -242,29 +459,31 @@ def _unique_discovered_jobs(discovered: list[Job]) -> tuple[list[Job], int]:
         else:
             _merge_job_sighting(previous, job)
             dropped += 1
-    # ``Job.id`` is intentionally company/title/location based, so two feeds
-    # can still collide after their URLs differ. Keep the best primary link
-    # under that stable identity and retain the other URL as provenance rather
-    # than letting the crawl's later ID guard discard it silently.
-    by_role: dict[str, Job] = {}
+    # ``Job.id`` is intentionally company/title/location based. Multiple real
+    # requisitions can therefore share it; retain the best candidate under the
+    # legacy key and assign deterministic URL-derived keys to the rest. The
+    # URL identity, not input order, chooses which posting keeps the old key.
+    role_groups: dict[str, list[Job]] = {}
     role_passthrough: list[Job] = []
     for job in list(selected.values()) + passthrough:
-        role_key = job.id if canonical_url(job.url) else ""
-        if not role_key:
-            role_passthrough.append(job)
-            continue
-        previous = by_role.get(role_key)
-        if previous is None:
-            by_role[role_key] = job
-        elif _discovered_job_priority(job) > _discovered_job_priority(previous):
-            _merge_job_sighting(job, previous)
-            by_role[role_key] = job
-            dropped += 1
+        role_key = job.id if _posting_identity(job.url) else ""
+        if role_key:
+            role_groups.setdefault(role_key, []).append(job)
         else:
-            _merge_job_sighting(previous, job)
-            dropped += 1
+            role_passthrough.append(job)
+    by_role: list[Job] = []
+    for candidates in role_groups.values():
+        ordered = sorted(
+            candidates,
+            key=lambda job: (_discovered_job_priority(job), _posting_identity(job.url)),
+            reverse=True,
+        )
+        by_role.append(ordered[0])
+        for job in ordered[1:]:
+            _disambiguated_job_identity(job)
+            by_role.append(job)
     variant_jobs, variant_dropped = _collapse_discovered_variant_jobs(
-        list(by_role.values()) + role_passthrough)
+        by_role + role_passthrough)
     return variant_jobs, dropped + variant_dropped
 
 
@@ -274,11 +493,13 @@ def _resolve_discovered_links(discovered: list[Job], jobs_state: dict, now: int)
     if env("RADAR_DISABLE_LINK_RESOLUTION", "").lower() in {"1", "true", "yes"}:
         return discovered, stats
     limit = max(0, int(env("RADAR_LINK_RESOLVE_LIMIT", "25")))
+    existing_posting_ids = _existing_posting_ids(jobs_state)
     candidates = []
     for job in discovered:
         if not link_resolver.is_aggregator_url(job.url):
             continue
-        existing = jobs_state.get(job.id)
+        existing_id = existing_posting_ids.get(_posting_identity(job.url))
+        existing = jobs_state.get(existing_id or _job_identity(job))
         # A direct primary URL already stored for this stable role identity is
         # stronger than a fresh aggregator sighting; only merge its provenance.
         if existing and not link_resolver.is_aggregator_url(existing.get("url")):
@@ -325,16 +546,16 @@ def _repair_duplicate_job_state(jobs_state: dict, applied: list) -> tuple[dict, 
     if not aliases:
         return jobs_state, False
 
-    applied_changed = remap_entry_ids(applied, aliases)
+    applied_changed = remap_entry_ids(applied, aliases, jobs_state)
     tracker_merged = applied_mod.deduplicate_entries(applied)
     shortlist = state.shortlist()
-    shortlist_changed = remap_entry_ids(shortlist, aliases)
+    shortlist_changed = remap_entry_ids(shortlist, aliases, jobs_state)
     # A shortlist can contain two feed variants of one URL even when the
     # durable applied list does not. Keep the first owner selection.
     seen_shortlist = set()
     compact_shortlist = []
     for entry in shortlist:
-        key = canonical_url(entry.get("url")) or f"id:{entry.get('id', '')}"
+        key = _posting_identity(entry.get("url")) or f"id:{entry.get('id', '')}"
         if key in seen_shortlist:
             shortlist_changed += 1
             continue
@@ -343,18 +564,19 @@ def _repair_duplicate_job_state(jobs_state: dict, applied: list) -> tuple[dict, 
     shortlist[:] = compact_shortlist
 
     history = state.load("alert_history.json", [])
-    history_changed = remap_entry_ids(history, aliases)
+    history_changed = remap_entry_ids(history, aliases, jobs_state)
     untracked = {
-        resolve_alias(str(job_id), aliases)
+        resolve_alias(str(job_id), aliases, existing=jobs_state)
         for job_id in state.load("untracked.json", [])
     }
     web = state.load("web_state.json", {})
-    web_changed = remap_web_jobs(web, aliases)
+    web_changed = remap_web_jobs(web, aliases, existing=jobs_state)
 
     prior_aliases = state.load("job_aliases.json", {})
     prior_aliases.update(aliases)
     for old in list(prior_aliases):
-        prior_aliases[old] = resolve_alias(prior_aliases[old], prior_aliases)
+        prior_aliases[old] = resolve_alias(
+            prior_aliases[old], prior_aliases, existing=jobs_state)
 
     state.save("job_aliases.json", prior_aliases)
     state.save("applied.json", applied)
@@ -394,14 +616,61 @@ def _fetch_aggregators(disabled: set[str]) -> tuple[list[Job], dict, set[str]]:
     return jobs, stats, healthy_boards
 
 
+def _company_poll_at(entry: dict) -> int:
+    """Return the scheduler cursor, with a legacy-state fallback."""
+    return int(entry.get("last_polled_at") or entry.get("last_ok") or
+               entry.get("first_seen") or 0)
+
+
 def _select_companies(registry: dict, cap: int) -> list[dict]:
-    active = [e for e in registry.values() if e["status"] == "active"]
+    """Choose a bounded, fair slice of active direct boards.
+
+    ``last_ok`` is a liveness timestamp, not a scheduling cursor.  Sorting by
+    it descending made the same successful boards win every crawl, leaving
+    the tail of a registry unpolled forever.  A board is therefore marked
+    with ``last_polled_at`` by :func:`discovery.record_result`; boards that
+    have missed a rotation window are considered first by oldest poll time,
+    while the existing PM/seed/sector ordering prioritizes fresh slots.
+
+    The overdue lane is what gives this function a bounded fairness guarantee:
+    after a board misses ``RADAR_COMPANY_ROTATION_SECONDS`` it can no longer
+    be displaced indefinitely by a recently successful priority board.  The
+    timestamp fallback keeps old registries compatible without a migration.
+    """
+    cap = max(0, int(cap))
+    if not cap:
+        return []
+    try:
+        rotation_seconds = max(1, int(env("RADAR_COMPANY_ROTATION_SECONDS", "7200")))
+    except (TypeError, ValueError):
+        rotation_seconds = 7200
+
+    # Keep the registry key alongside each entry so equal timestamps still
+    # produce a stable, deterministic rotation rather than depending on JSON
+    # insertion order.
+    active = [(str(key), entry) for key, entry in registry.items()
+              if entry.get("status") == "active"]
     sector_rank = {"healthtech": 0, "ai_lab": 1, "big_tech": 2, "edtech": 3, "fintech": 4}
-    active.sort(key=lambda e: (0 if e.get("pm_interest") else 1,
-                               0 if e["origin"] == "seed" else 1,
-                               sector_rank.get(e.get("sector", ""), 5),
-                               -e.get("last_ok", 0)))
-    return active[:cap]
+    now = int(time.time())
+
+    def rank(item: tuple[str, dict]) -> tuple:
+        registry_key, entry = item
+        polled = _company_poll_at(entry)
+        overdue = now - polled >= rotation_seconds
+        if overdue:
+            # Once overdue, age is the only scheduling priority.  Putting PM
+            # or seed preference before age here recreates the original
+            # starvation bug when every board is overdue at crawl start.
+            return (0, polled, registry_key)
+        return (1,
+                0 if entry.get("pm_interest") else 1,
+                0 if entry.get("origin") == "seed" else 1,
+                sector_rank.get(entry.get("sector", ""), 5),
+                polled,
+                registry_key)
+
+    active.sort(key=rank)
+    return [entry for _, entry in active[:cap]]
 
 
 def _pm_backfill_ids(entries: list[dict], cap: int) -> set[int]:
@@ -415,6 +684,14 @@ def _fetch_ats(registry: dict, disabled: set[str]) -> tuple[list[Job], dict, set
         return [], {"ats": "disabled"}, set()
     cap = int(env("RADAR_MAX_COMPANIES", "800"))
     entries = _select_companies(registry, cap)
+    selection_now = int(time.time())
+    selected_poll_times = [_company_poll_at(entry) for entry in entries]
+    active_unpolled = sum(
+        1 for entry in registry.values()
+        if entry.get("status") == "active" and not (
+            entry.get("last_polled_at") or entry.get("last_ok")
+        )
+    )
     wd_queries = list(dict.fromkeys(
         profile().get("workday_queries") or []
     ))
@@ -452,7 +729,14 @@ def _fetch_ats(registry: dict, disabled: set[str]) -> tuple[list[Job], dict, set
             except Exception:
                 discovery.record_result(entry, False)
                 fail += 1
-    return jobs, {"companies_polled": len(entries), "ok": ok, "failed": fail}, healthy_boards
+    return jobs, {
+        "companies_polled": len(entries), "ok": ok, "failed": fail,
+        "selected_oldest_age_s": (
+            max(0, selection_now - min(selected_poll_times))
+            if selected_poll_times else 0
+        ),
+        "active_unpolled": active_unpolled,
+    }, healthy_boards
 
 
 def scrub_glyph_companies(jobs_state: dict) -> int:
@@ -530,16 +814,42 @@ def crawl() -> int:
     discovered, resolved_feed_duplicates = _unique_discovered_jobs(discovered)
     if resolved_feed_duplicates:
         print(f"hygiene: ignored {resolved_feed_duplicates} duplicate sighting(s) after link resolution")
-    existing_url_ids = {
-        canonical_url(record.get("url")): jid
-        for jid, record in jobs_state.items()
-        if canonical_url(record.get("url"))
-    }
+    existing_url_ids = _existing_posting_ids(jobs_state)
     seen_this_run: set[str] = set()
+
+    def _prepared_existing_sighting(job: Job) -> tuple[dict, bool, bool, bool, list[str]]:
+        """Evaluate fresh employer text before serializing an existing row.
+
+        State records intentionally omit descriptions.  Running the
+        deterministic gate first ensures that a newly fetched ATS posting can
+        replace missing/stale evidence even when this sighting is not itself a
+        new alert candidate.  The marker is ephemeral and never persisted;
+        it only authorizes ``_merge_record_sighting`` to replace compact
+        eligibility facts.
+        """
+        source_only = (job.link_resolution or {}).get("status") == "source_only"
+        fresh_employer = bool(
+            not source_only and (
+                bool(job.description) or
+                (bool(job.posting) and _has_independent_employer_evidence(job))
+            )
+        )
+        keep = True
+        alert_eligible = False
+        reasons: list[str] = []
+        if fresh_employer:
+            if not job.sector:
+                job.sector = infer(job.company, seed_sectors)
+            keep, alert_eligible, reasons = gates(job)
+        sighting = job.to_record()
+        if fresh_employer:
+            sighting["_fresh_employer_evidence"] = True
+        return sighting, fresh_employer, keep, alert_eligible, reasons
+
     for j in discovered:
         if not j.company or not j.title or not j.url:
             continue
-        jid = j.id
+        jid = _state_job_identity(j, jobs_state, existing_url_ids)
         link_result = j.link_resolution or {}
         if link_result.get("status") == "closed":
             # Do this before ``touch``: touch deliberately reopens any
@@ -547,17 +857,23 @@ def crawl() -> int:
             # is the stronger, same-run liveness verdict.
             existing = jobs_state.get(jid)
             if existing is not None:
-                existing["link_resolution"] = dict(link_result)
-                lifecycle.mark_terminal(
-                    existing,
-                    link_result.get("posting_status") or lifecycle.EXPIRED,
-                    now,
-                    link_result.get("reason") or "Jobright page says the posting is closed",
-                )
+                if (link_resolver.is_aggregator_url(j.url) and
+                        not link_resolver.is_aggregator_url(existing.get("url"))):
+                    # A closed fallback page is provenance, not employer
+                    # liveness. Keep it as an alternate URL without closing
+                    # an official record that may still be accepting apps.
+                    _merge_record_sighting(existing, _prepared_existing_sighting(j)[0])
+                else:
+                    existing["link_resolution"] = dict(link_result)
+                    lifecycle.mark_terminal(
+                        existing,
+                        link_result.get("posting_status") or lifecycle.EXPIRED,
+                        now,
+                        link_result.get("reason") or "Jobright page says the posting is closed",
+                    )
                 seen_this_run.add(jid)
             continue
-        canonical = canonical_url(j.url)
-        existing_url_id = existing_url_ids.get(canonical) if canonical else None
+        existing_url_id = existing_url_ids.get(_posting_identity(j.url))
         if existing_url_id and existing_url_id != jid:
             # The durable state already has this URL under a title/location
             # variant. Keep that identity instead of reintroducing a duplicate
@@ -565,7 +881,7 @@ def crawl() -> int:
             # the surviving record.
             existing = jobs_state[existing_url_id]
             lifecycle.touch(existing, now, j.source or "monitored source")
-            _merge_record_sighting(existing, j.to_record())
+            _merge_record_sighting(existing, _prepared_existing_sighting(j)[0])
             seen_this_run.add(existing_url_id)
             continue
         existing = jobs_state.get(jid)
@@ -574,26 +890,38 @@ def crawl() -> int:
             # crawl loop. Keep a defensive state merge for edge cases without
             # replacing an already-scored in-memory job with a raw sighting.
             if existing is not None:
-                _merge_record_sighting(existing, j.to_record())
+                _merge_record_sighting(existing, _prepared_existing_sighting(j)[0])
             continue
         seen_this_run.add(jid)
         if existing is not None:
             # A feed sighting can reopen an automatically closed record. The
             # liveness fetch below still has authority to close it again.
             lifecycle.touch(existing, now, j.source or "monitored source")
+        prepared_keep = True
+        prepared_alert_eligible = False
+        prepared_reasons: list[str] = []
+        prepared = False
         if existing is not None and existing.get("source") != "manual":
-            sighting = j.to_record()
+            sighting, prepared, prepared_keep, prepared_alert_eligible, prepared_reasons = (
+                _prepared_existing_sighting(j)
+            )
             _merge_record_sighting(existing, sighting)
             resolved_upgrade = (
                 bool(j.link_resolution.get("status") == "resolved") and
-                canonical_url(j.url) != canonical_url(existing.get("url")) and
-                not link_resolver.is_aggregator_url(j.url)
+                not link_resolver.is_aggregator_url(j.url) and
+                (link_resolver.is_aggregator_url(existing.get("url")) or
+                 _posting_identity(j.url) != _posting_identity(existing.get("url")))
             )
             if not resolved_upgrade:
                 continue
-        if not j.sector:
-            j.sector = infer(j.company, seed_sectors)  # before gates: priority-sector path
-        keep, alert_eligible, reasons = gates(j)
+        if prepared:
+            keep, alert_eligible, reasons = (
+                prepared_keep, prepared_alert_eligible, prepared_reasons
+            )
+        else:
+            if not j.sector:
+                j.sector = infer(j.company, seed_sectors)  # before gates: priority-sector path
+            keep, alert_eligible, reasons = gates(j)
         if not keep:
             dropped += 1
             continue
@@ -636,9 +964,11 @@ def crawl() -> int:
 
     # ---- persist ----
     for j in new_jobs:
+        jid = _job_identity(j)
         rec = j.to_record()
-        old_record = jobs_state.get(j.id)
-        old_manual = manual_upgrades.get(j.id)
+        rec["id"] = jid
+        old_record = jobs_state.get(jid)
+        old_manual = manual_upgrades.get(jid)
         rec["first_seen"] = (
             (old_manual or old_record or {}).get("first_seen", now)
         )
@@ -658,13 +988,16 @@ def crawl() -> int:
             rec["archived_by"] = old_record.get("archived_by", "owner")
             rec["archive_reason"] = old_record.get("archive_reason", "owner archived")
         rec["rules_v"] = RULES_VERSION
-        rec["explicit_new_grad"] = explicit_new_grad(j.title) or source_new_grad(j)
+        rec["eligibility_evidence"] = j.eligibility_evidence
+        rec["explicit_new_grad"] = explicit_new_grad(j.title, evidence=j.eligibility_evidence)
         rec["early_career_possible"] = early_career_possible(j, rec.get("posting"))
         if rec["early_career_possible"] and not rec.get("career_priority"):
             rec["career_priority"] = 1
-        jobs_state[j.id] = rec
-        if canonical_url(j.url):
-            existing_url_ids[canonical_url(j.url)] = j.id
+        jobs_state[jid] = rec
+        for url in [j.url, *rec.get("alternate_urls", [])]:
+            identity = _posting_identity(url)
+            if identity:
+                existing_url_ids[identity] = jid
     lifecycle_stats = lifecycle.reconcile(
         jobs_state, now, seen_this_run,
         healthy_source_boards=healthy_aggregator_boards | healthy_ats_boards,
@@ -684,9 +1017,13 @@ def crawl() -> int:
           f"{current_alerts} currently alert-eligible")
 
     from . import company_research
+    research_records = []
+    for j in new_jobs:
+        record = j.to_record()
+        record["id"] = _job_identity(j)
+        research_records.append(record)
     researched_companies = company_research.prepare_for_jobs(
-        [j.to_record() for j in new_jobs],
-        limit=int(env("RADAR_CRAWL_WEB_RESEARCH_LIMIT", "6")))
+        research_records, limit=int(env("RADAR_CRAWL_WEB_RESEARCH_LIMIT", "6")))
     if researched_companies:
         print(f"company research: captured external sources for {researched_companies} new companies")
     from . import llm
@@ -700,6 +1037,7 @@ def crawl() -> int:
     alert_history = state.load("alert_history.json", [])
     for j in alerts:
         rec = j.to_record()
+        rec["id"] = _job_identity(j)
         rec["alerted_at"] = now
         alert_history.append(rec)
     alert_history = alert_history[-500:]
@@ -748,21 +1086,42 @@ def deliver_alerts() -> str | None:
     now = int(time.time())
     history = state.load("alert_history.json", [])
     jobs = state.jobs()
-    recent = [rec for rec in history
-              if rec.get("alerted_at", 0) >= now - 14 * 86400
-              and jobs.get(rec.get("id")) is not None
-              and not lifecycle.is_terminal(jobs[rec.get("id")])]
+    aliases = state.load("job_aliases.json", {})
+    from .dedupe import resolve_alias
+    threshold = profile()["thresholds"]["alert"]
+    recent = []
+    for history_record in history:
+        alerted_at = int(history_record.get("alerted_at", 0) or 0)
+        if alerted_at < now - 14 * 86400:
+            continue
+        job_id = resolve_alias(
+            str(history_record.get("id") or ""), aliases, existing=jobs)
+        current = jobs.get(job_id)
+        if (current is None or lifecycle.is_terminal(current) or
+                not current.get("alert_ok") or
+                int(current.get("score") or 0) < threshold):
+            continue
+        hydrated = dict(current)
+        hydrated["id"] = job_id
+        hydrated["alerted_at"] = alerted_at
+        recent.append(hydrated)
+    errors = []
     url = None
     try:
         from .alerts import post_alerts
-        url = post_alerts(recent)
+        url = post_alerts(recent, jobs_state=jobs)
     except Exception as e:
         print(f"alerts: failed to post issue: {e}")
+        errors.append(("alerts", e))
     try:
         from .board import update_master_board
         update_master_board(jobs, state.applied())
     except Exception as e:
         print(f"board: failed to update master board: {e}")
+        errors.append(("board", e))
+    if errors:
+        details = "; ".join(f"{name}: {error}" for name, error in errors)
+        raise RuntimeError(f"delivery failed ({details})")
     print(f"delivery: checked {len(recent)} recent alert(s)" + (f" → {url}" if url else ""))
     return url
 
@@ -1011,7 +1370,10 @@ def enrich() -> int:
                 source=rec["source"], locations=rec.get("locations", []),
                 posted_at=rec.get("posted_at"), salary=rec.get("salary", ""),
                 remote=rec.get("remote", False), ats=rec.get("ats", ""),
-                sector=rec.get("sector", ""), posting=rec.get("posting") or {})
+                sector=rec.get("sector", ""), posting=rec.get("posting") or {},
+                source_board=rec.get("source_board", ""),
+                link_resolution=rec.get("link_resolution") or {},
+                eligibility_evidence=rec.get("eligibility_evidence") or {})
         old = rec.get("score", 0)
         score(j, fb, now, preference_profile, score_preferences)
         rec["sector"] = j.sector
@@ -1024,6 +1386,8 @@ def enrich() -> int:
         rec["score_dimensions_raw"] = j.score_dimensions_raw
         rec["score_version"] = RULES_VERSION
         rec["score_reasons"] = j.score_reasons
+        rec["eligibility_evidence"] = j.eligibility_evidence
+        rec["explicit_new_grad"] = explicit_new_grad(j.title, evidence=j.eligibility_evidence)
         if j.startup_stage == "unknown":
             for key in ("startup_stage", "startup_score", "startup_stage_evidence",
                         "startup_stage_reason"):
@@ -1289,7 +1653,10 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int,
                   locations=rec.get("locations", []), salary=rec.get("salary", ""),
                   remote=bool(rec.get("remote")), posted_at=rec.get("posted_at"),
                   ats=rec.get("ats", ""), sector=rec.get("sector", ""),
-                  posting=rec.get("posting") or {})
+                  posting=rec.get("posting") or {},
+                  source_board=rec.get("source_board", ""),
+                  link_resolution=rec.get("link_resolution") or {},
+                  eligibility_evidence=rec.get("eligibility_evidence") or {})
         keep, alert_eligible, gate_reasons = gates(job)
         score(job, fb, now, preference_profile, score_preferences)
         rec["sector"] = job.sector
@@ -1317,7 +1684,8 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int,
         else:
             rec.pop("career_priority", None)
         rec["alert_ok"] = bool(keep and alert_eligible)
-        rec["explicit_new_grad"] = explicit_new_grad(job.title) or source_new_grad(job)
+        rec["eligibility_evidence"] = job.eligibility_evidence
+        rec["explicit_new_grad"] = explicit_new_grad(job.title, evidence=job.eligibility_evidence)
         rec["rules_v"] = RULES_VERSION
         rec["score_version"] = RULES_VERSION
         if rec.get("quality"):
