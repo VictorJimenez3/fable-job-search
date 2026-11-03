@@ -15,6 +15,26 @@ sources:
     section: Data, AI and machine learning
     url: https://raw.githubusercontent.com/HeadcountLabs/entry-level-jobs/main/README.md
     max_jobs: 100
+  headcount_engineering_internships:
+    enabled: true
+    kind: headcount_markdown
+    source: headcount_engineering_internships
+    sections:
+      - Posted in the last 7 days
+      - Posted 8 to 30 days ago
+    url: https://raw.githubusercontent.com/HeadcountLabs/engineering-internships/main/README.md
+    attribution: Headcount Labs (ODbL 1.0 dataset; employer descriptions excluded)
+    max_jobs: 160
+  headcount_data_ai_internships:
+    enabled: true
+    kind: headcount_markdown
+    source: headcount_data_ai_internships
+    sections:
+      - Posted in the last 7 days
+      - Posted 8 to 30 days ago
+    url: https://raw.githubusercontent.com/HeadcountLabs/data-science-ai-internships/main/README.md
+    attribution: Headcount Labs (ODbL 1.0 dataset; employer descriptions excluded)
+    max_jobs: 160
   yubhub_graduate_engineering:
     enabled: true
     kind: yubhub_json

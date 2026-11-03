@@ -1,5 +1,5 @@
 from radar import main, state
-from radar.internship_radar import crawl
+from radar.internship_radar import _internship_evidence_pass, crawl
 from radar.models import Job
 
 
@@ -17,11 +17,35 @@ def _posting(*, url, description, source="lever", title="Software Engineering In
     )
 
 
+def test_internship_evidence_pass_confirms_source_only_leads_concurrently(monkeypatch):
+    monkeypatch.setenv("RADAR_INTERNSHIP_SCRAPE_LIMIT", "2")
+    monkeypatch.setenv("RADAR_INTERNSHIP_SCRAPE_WORKERS", "2")
+    job = _posting(
+        url="https://jobs.example.com/acme/intern",
+        description="",
+        source="headcount_engineering_internships",
+        title="Summer 2027 Software Engineering Intern",
+    )
+    job.description = ""
+    job.link_resolution = {"status": "source_only", "source_note": "Headcount"}
+    monkeypatch.setattr(
+        "radar.quality.fetch_posting",
+        lambda url: (True, "Responsibilities: build software. Qualifications: "
+                            "Software engineering intern. Current undergraduate students may apply. " * 4),
+    )
+    stats = _internship_evidence_pass([job], {}, 1_900_000_000, budget=2)
+    assert stats["confirmed"] == 1
+    assert job.link_resolution["status"] == "resolved"
+    assert job.link_resolution["source_only_provenance"]
+    assert job.description
+
+
 def test_internship_crawl_reconciles_variants_and_updates_existing_source_only(
     tmp_path, monkeypatch,
 ):
     monkeypatch.setenv("RADAR_PROFILE", "internship")
     monkeypatch.setenv("RADAR_DEFER_DELIVERY", "1")
+    monkeypatch.setenv("RADAR_INTERNSHIP_SCRAPE_DISABLE", "1")
     monkeypatch.setattr(state, "STATE_DIR", tmp_path / "state")
     monkeypatch.setattr("radar.internship_radar.write_outputs", lambda *args: None)
     monkeypatch.setattr("radar.discovery.seed_registry", lambda *args: None)
@@ -88,7 +112,7 @@ def test_internship_crawl_reconciles_variants_and_updates_existing_source_only(
     assert surviving["link_resolution"]["source_only_provenance"]
     assert not surviving.get("alert_ok", False)
     assert any("experienced or doctoral" in reason for reason in surviving["score_reasons"])
-    assert surviving["score_version"] == 7
+    assert surviving["score_version"] == 8
     assert surviving["score_dimensions"]
     assert sum("role-123" in row["url"] for row in rows.values()) == 1
     assert sum("role-456" in row["url"] for row in rows.values()) == 1

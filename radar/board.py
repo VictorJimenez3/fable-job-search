@@ -47,12 +47,26 @@ SPRING_WINTER_2027 = re.compile(r"\b(?:spring|winter)\s*2027\b", re.I)
 def _spring_winter_2027_internship(record: dict) -> bool:
     """Return true only when a role has explicit Spring/Winter 2027 evidence."""
     evidence = record.get("internship_eligibility") or {}
-    term_start = evidence.get("term_start") or record.get("term_start")
-    if isinstance(term_start, str) and term_start.startswith("2027-01"):
-        return True
-    source_term = evidence.get("source_term") or record.get("source_term")
-    if isinstance(source_term, str) and SPRING_WINTER_2027.search(source_term):
-        return True
+    options = evidence.get("term_options") or evidence.get("terms") or []
+    if isinstance(options, str):
+        options = [options]
+    values = list(options) if isinstance(options, (list, tuple, set)) else []
+    actual_start = evidence.get("term_start") or record.get("term_start")
+    if actual_start:
+        values.append(actual_start)
+    # Evidence v2 makes parsed employer terms authoritative. A stale curator
+    # source_term must not make a Summer-only role enter the Spring/Winter
+    # email batch after rescoring.
+    authoritative = evidence.get("evidence_version", 1) >= 2 and bool(values)
+    if not authoritative:
+        values.append(evidence.get("source_term") or record.get("source_term"))
+    for value in values:
+        if isinstance(value, str) and value.startswith("2027-01"):
+            return True
+    if authoritative:
+        return False
+        if isinstance(value, str) and SPRING_WINTER_2027.search(value):
+            return True
     title = record.get("title") or ""
     return bool(SPRING_WINTER_2027.search(title))
 

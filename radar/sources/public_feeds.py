@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import html
 import re
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
 from urllib.parse import urlsplit
 
 import yaml
@@ -36,6 +36,8 @@ _LINK_RE = re.compile(r"href=[\"'](https?://[^\"']+)[\"']", re.I)
 _TAG_RE = re.compile(r"<[^>]+>")
 _SPACE_RE = re.compile(r"\s+")
 _HEADING_RE = re.compile(r"^##\s+(.+?)\s*$")
+_UPDATED_RE = re.compile(
+    r"\bupdated\s+(?P<date>[A-Z][a-z]+\s+\d{1,2},\s+20\d{2})\b", re.I)
 _NOTION_SKIP_LABELS = {"event", "contest", "sign up form", "sign-up form"}
 _NOTION_HEADER_LABELS = {
     "job posting", "event", "contest", "sign up form", "sign-up form",
@@ -78,6 +80,44 @@ def _epoch(value: object) -> int | None:
         return int(parsed.timestamp())
     except (TypeError, ValueError, OverflowError):
         return None
+
+
+def _headcount_anchor(markdown: str) -> date | None:
+    match = _UPDATED_RE.search(markdown or "")
+    if not match:
+        return None
+    try:
+        return datetime.strptime(match.group("date"), "%B %d, %Y").date()
+    except ValueError:
+        try:
+            return datetime.strptime(match.group("date"), "%b %d, %Y").date()
+        except ValueError:
+            return None
+
+
+def _headcount_posted(value: object, anchor: date | None) -> int | None:
+    direct = _epoch(value)
+    if direct is not None:
+        return direct
+    text = _clean_text(value)
+    for fmt in ("%B %d, %Y", "%b %d, %Y"):
+        try:
+            return int(datetime.strptime(text, fmt).replace(tzinfo=UTC).timestamp())
+        except ValueError:
+            pass
+    if anchor is None:
+        return None
+    for fmt in ("%B %d", "%b %d"):
+        try:
+            parsed = datetime.strptime(text, fmt).date().replace(year=anchor.year)
+        except ValueError:
+            continue
+        # A January README can contain late-December postings from the prior
+        # year; otherwise the table's month/day is in the update year.
+        if parsed > anchor:
+            parsed = parsed.replace(year=anchor.year - 1)
+        return int(datetime.combine(parsed, datetime.min.time(), tzinfo=UTC).timestamp())
+    return None
 
 
 def _location_values(value: object) -> list[str]:
@@ -167,15 +207,17 @@ def parse_yubhub_payload(
     return _dedupe(out, max_jobs)
 
 
-def _markdown_section(markdown: str, section: str) -> list[str]:
+def _markdown_section(markdown: str, section: str | list[str] | tuple[str, ...]) -> list[str]:
     lines = markdown.splitlines()
-    wanted = section.casefold().strip()
+    wanted = {str(value).casefold().strip() for value in section} if isinstance(
+        section, (list, tuple, set)
+    ) else {str(section).casefold().strip()}
     active = False
     out: list[str] = []
     for line in lines:
         heading = _HEADING_RE.match(line.strip())
         if heading:
-            active = heading.group(1).casefold().strip() == wanted
+            active = heading.group(1).casefold().strip() in wanted
             continue
         if active:
             out.append(line)
@@ -189,7 +231,7 @@ def _markdown_cell(value: str) -> str:
 def parse_headcount_markdown(
     markdown: str,
     *,
-    section: str = "Software engineering",
+    section: str | list[str] = "Software engineering",
     source: str = "headcount_engineering",
     source_url: str = "",
     max_jobs: int = 100,
@@ -197,13 +239,18 @@ def parse_headcount_markdown(
     """Parse a generated Headcount Labs table, retaining only apply URLs."""
     if not isinstance(markdown, str) or not markdown.strip():
         raise ValueError("Headcount payload must be non-empty markdown")
+    wanted = {str(value).casefold().strip() for value in section} if isinstance(
+        section, (list, tuple, set)
+    ) else {str(section).casefold().strip()}
     if not any(
-        heading.group(1).casefold().strip() == section.casefold().strip()
+        heading.group(1).casefold().strip() in wanted
         for line in markdown.splitlines()
         if (heading := _HEADING_RE.match(line.strip()))
     ):
         raise ValueError(f"Headcount section missing: {section}")
     out: list[Job] = []
+    source_only = "internship" in str(source).casefold()
+    anchor = _headcount_anchor(markdown)
     for line in _markdown_section(markdown, section):
         if not line.lstrip().startswith("|"):
             continue
@@ -211,6 +258,7 @@ def parse_headcount_markdown(
         if len(cells) < 7 or all(set(_markdown_cell(cell)) <= {"-", ":", " "} for cell in cells):
             continue
         company, title, location, remote_text, salary = (_markdown_cell(cell) for cell in cells[:5])
+        posted_text = _markdown_cell(cells[5]) if len(cells) >= 6 else ""
         links = [_safe_public_http_url(url) for url in _LINK_RE.findall(line)]
         links = [url for url in links if url]
         apply_url = next((url for url in links if "headcountlabs.com/catalog/" not in url), "")
@@ -225,8 +273,17 @@ def parse_headcount_markdown(
             source_url=source_url,
             source_board=f"public:{source}",
             locations=locations,
+            posted_at=_headcount_posted(posted_text, anchor),
             salary=salary,
             remote="remote" in remote_text.casefold(),
+            link_resolution=(
+                {
+                    "status": "source_only",
+                    "reason": "public Headcount discovery; require employer posting confirmation",
+                    "source_note": "Headcount Labs public dataset; employer URL retained for verification",
+                }
+                if source_only else {}
+            ),
         ))
     return _dedupe(out, max_jobs)
 
@@ -324,17 +381,32 @@ def fetch_headcount_data_ai() -> list[Job]:
     return _fetch_headcount("headcount_data_ai")
 
 
+def fetch_headcount_engineering_internships() -> list[Job]:
+    """Fetch Headcount's public engineering-internship discovery list."""
+    return _fetch_headcount("headcount_engineering_internships")
+
+
+def fetch_headcount_data_ai_internships() -> list[Job]:
+    """Fetch Headcount's public data/AI internship discovery list."""
+    return _fetch_headcount("headcount_data_ai_internships")
+
+
 def _fetch_headcount(name: str) -> list[Job]:
     source = _source(name)
     if source.get("enabled") is False:
         return []
-    return parse_headcount_markdown(
+    jobs = parse_headcount_markdown(
         get_text(str(source.get("url", ""))),
-        section=str(source.get("section", "Software engineering")),
+        section=source.get("sections") or str(source.get("section", "Software engineering")),
         source=str(source.get("source", name)),
         source_url=str(source.get("url", "")),
         max_jobs=int(source.get("max_jobs", 100)),
     )
+    attribution = _clean_text(source.get("attribution"))
+    if attribution:
+        for job in jobs:
+            job.source_board = f"{job.source_board}; {attribution}"
+    return jobs
 
 
 def fetch_yubhub_graduate_engineering() -> list[Job]:
@@ -376,4 +448,9 @@ PUBLIC_FETCHERS = {
     "headcount_data_ai": fetch_headcount_data_ai,
     "yubhub_graduate_engineering": fetch_yubhub_graduate_engineering,
     "zero2sudo_notion": fetch_zero2sudo_notion,
+}
+
+PUBLIC_INTERNSHIP_FETCHERS = {
+    "headcount_engineering_internships": fetch_headcount_engineering_internships,
+    "headcount_data_ai_internships": fetch_headcount_data_ai_internships,
 }

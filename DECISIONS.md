@@ -3778,3 +3778,49 @@ URL syntax validation is deterministic and does not make network access a
 requirement for scoring. This is separate from career-stage eligibility: an
 explicit new-grad title can establish career-stage evidence, while source-only
 curator records remain review-only under the existing provenance rule.
+
+## 232. Make internship evidence position-specific and terms usable (2026-11-03)
+
+The internship follow-up addresses false positives reproduced in production
+rules: an ordinary software job mentioning senior colleagues, an electrician
+job under AI-company boilerplate, an expired Summer 2026 term, and a PhD-only
+internship could all qualify. Rules v8 requires evidence about this position
+and applies technical-role checks to the role rather than the company's field.
+Required graduate-only eligibility, past terms, source-only leads, and ambiguous
+records stay reviewable with reasons instead of becoming actionable alerts.
+Prestige remains the leading ranking signal for genuine eligible internships.
+The persisted eligibility label also respects the role and location gates, so
+an unsupported technical role or foreign-only opening cannot remain in the
+clean board merely because its title says intern. Remote within a named
+foreign country does not imply US eligibility; an explicit US option remains
+valid. Denmark/Aarhus and Serbia/Belgrade are added to the internship location
+hints after real top-ranked records exposed those missing cases.
+
+Versioned bounded eligibility evidence is re-evaluated during rescoring; a
+legacy parser verdict is not proof. Explicit internship titles and trustworthy
+source terms remain useful, while unavailable employer requirements remain
+unknown. Multiple offered terms are retained, including reversed year/season
+wording. Current/past status is calculated from the clock rather than stored
+as a fact that can become stale. Expected graduation remains private to the
+viewer and is never written into public crawler records.
+
+The board separates current/upcoming, all-active, and review scopes. Genuine
+internships with an unspecified term remain discoverable. Posting age still
+limits notifications but no longer silently removes active internships from
+the default browsing scope. Terms come from the data, and loading failures
+offer a visible retry instead of looking like an empty board.
+
+Headcount Labs' public engineering and data/AI internship lists add bounded
+discovery with direct employer links and explicit posting dates. These lists
+are discovery evidence; employer-page validation is required before their
+source-only leads can alert. Preserve Headcount Labs attribution and the
+ODbL 1.0 database license. Employer description text is not part of that
+license. YubHub internship feeds returned server errors during verification
+and are not enabled. Existing Instagram/LinkedIn access boundaries remain.
+
+Employer checks include a bounded review backlog with retries spaced apart;
+concurrent fetches do not mutate shared state. Reclassification happens after
+usable employer text arrives. Spring/Winter 2027 email scope remains unchanged,
+including postings that also offer another term. Crawl push recovery retains
+newer board polling telemetry without replacing production board identity.
+Validation and exact publication evidence are recorded in `docs/CLI_HANDOFF.md`.

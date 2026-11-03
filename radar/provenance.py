@@ -6,6 +6,8 @@ from urllib.parse import urlsplit
 SOURCE_INFO = {
     "headcount_engineering": ("Headcount Labs engineering jobs", "https://github.com/HeadcountLabs/entry-level-jobs"),
     "headcount_data_ai": ("Headcount Labs data / AI jobs", "https://github.com/HeadcountLabs/entry-level-jobs"),
+    "headcount_engineering_internships": ("Headcount Labs engineering internships", "https://github.com/HeadcountLabs/engineering-internships"),
+    "headcount_data_ai_internships": ("Headcount Labs data / AI internships", "https://github.com/HeadcountLabs/data-science-ai-internships"),
     "yubhub_graduate_engineering": ("Data by YubHub — graduate engineering", "https://yubhub.co/free-job-feeds/"),
     "zero2sudo_notion": ("Zero2Sudo public curated links — review leads", "https://zero2sudo.notion.site/SWE-Intern-Learning-Journal-by-zero2sudo-4b5bf5492a86418c8dc701bad692df99"),
     "simplify": ("SimplifyJobs New-Grad-Positions", "https://github.com/SimplifyJobs/New-Grad-Positions"),

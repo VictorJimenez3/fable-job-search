@@ -66,6 +66,262 @@ def test_unknown_or_open_eligibility_never_hides_a_role():
     assert match(eligibility, None) == "unknown"
 
 
+def test_internship_evidence_is_position_specific_and_term_aware():
+    ordinary = job(
+        title="Software Engineer",
+        description=("Full-time permanent role. Work closely with senior engineers "
+                     "on our production systems."),
+    )
+    annotate(ordinary)
+    assert ordinary.internship_eligibility["internship_signal"] == "unknown"
+    assert gates(ordinary)[0:2] == (True, False)
+
+    unrelated = job(
+        title="Medium Voltage Electrician",
+        description="Our AI company works with senior technicians on campus.",
+    )
+    annotate(unrelated)
+    assert gates(unrelated)[0:2] == (False, False)
+
+    past = job(title="Software Engineering Intern — Summer 2026",
+               description="Current undergraduate students welcome.")
+    annotate(past)
+    assert gates(past)[0:2] == (True, False)
+    assert any("past internship term" in reason for reason in gates(past)[2])
+
+    prior_experience = job(
+        title="Software Engineer",
+        description="We require 2 years of experience, including internship experience.",
+    )
+    annotate(prior_experience)
+    assert gates(prior_experience)[1] is False
+
+    company_program = job(
+        title="Software Engineer",
+        description="Our internship program welcomes students. This permanent position needs 4 years experience.",
+    )
+    annotate(company_program)
+    assert gates(company_program)[1] is False
+
+    service_audience = job(
+        title="Software Engineer",
+        description="We help current undergraduate students apply to colleges.",
+    )
+    annotate(service_audience)
+    assert gates(service_audience)[1] is False
+
+    recruiting = job(
+        title="Early Careers & Interns Specialist",
+        description="Looking for a dedicated Early Careers & Interns Specialist to help us build a recruiting program.",
+    )
+    annotate(recruiting)
+    assert recruiting.internship_eligibility["internship_signal"] == "unknown"
+    assert gates(recruiting)[0:2] == (False, False)
+
+
+def test_internship_degree_requirement_distinguishes_required_phd_from_preference():
+    required = job(
+        title="Software Engineering Intern — Summer 2027",
+        description="Must be enrolled in a PhD program in computer science.",
+    )
+    annotate(required)
+    assert required.internship_eligibility["degree_requirement"] == "graduate_only"
+    assert gates(required)[0:2] == (True, False)
+
+    preferred = job(
+        title="Software Engineering Intern — Summer 2027",
+        description="PhD preferred; current bachelor's students may apply.",
+    )
+    annotate(preferred)
+    assert preferred.internship_eligibility["degree_requirement"] == "undergraduate_compatible"
+    assert gates(preferred)[0:2] == (True, True)
+
+    graduate_only = job(
+        title="Software Engineering Intern — Summer 2027",
+        description="Graduate students only.",
+    )
+    annotate(graduate_only)
+    assert graduate_only.internship_eligibility["degree_requirement"] == "graduate_only"
+    assert gates(graduate_only)[0:2] == (True, False)
+
+
+def test_term_year_is_not_reused_as_graduation_year():
+    posting = job(
+        title="Software Engineering Intern — Summer 2027",
+        description="Applicants must be in the class of 2025.",
+    )
+    eligibility = analyze(posting)
+    assert eligibility["term_start"] == "2027-06-01"
+    assert eligibility["graduation_start"] == "2025-01-01"
+    assert eligibility["graduation_end"] == "2025-12-01"
+    assert match(eligibility, "2027-05") == "mismatch"
+
+
+def test_internship_term_options_accept_reversed_and_shared_season_copy():
+    shared = analyze(job(title="Spring/Summer 2027 Software Engineering Intern"))
+    assert shared["term_options"] == ["2027-01-01", "2027-06-01"]
+    reversed_order = analyze(job(title="2027 Summer Software Engineering Intern"))
+    assert reversed_order["term_start"] == "2027-06-01"
+
+
+def test_generic_intern_title_uses_technical_duty_fallback():
+    technical = job(title="Research Intern", description="Build machine learning models for ranking.")
+    annotate(technical)
+    assert gates(technical)[0:2] == (True, True)
+
+    off_field = job(
+        title="Research Intern",
+        description="About us: xAI builds artificial intelligence systems. Work with senior technicians.",
+    )
+    annotate(off_field)
+    assert gates(off_field)[0:2] == (False, False)
+    assert any("target technical" in reason for reason in gates(off_field)[2])
+
+
+def test_mixed_terms_match_any_term_for_cohort():
+    eligibility = analyze(job(
+        title="Spring/Summer 2027 Software Engineering Intern",
+        description="Open to rising juniors.",
+    ))
+    assert match(eligibility, "2028-05") == "match"
+    assert match(eligibility, "2027-05") == "mismatch"
+
+
+def test_legacy_body_signal_is_not_resurrected_without_posting_text():
+    rehydrated = job(title="Software Engineer")
+    rehydrated.internship_eligibility = {
+        "evidence_version": 1,
+        "status": "open",
+        "internship_signal": "body",
+        "employment_signal": "internship_or_student",
+        "evidence": ["Our internship program exists."],
+    }
+    annotate(rehydrated)
+    assert rehydrated.internship_eligibility["internship_signal"] == "unknown"
+    assert gates(rehydrated)[1] is False
+
+
+def test_v2_proof_snippets_replay_body_evidence_without_retaining_the_jd():
+    original = job(
+        title="Software Engineer",
+        description="Current undergraduate students may apply. Build production services.",
+    )
+    annotate(original)
+    rehydrated = job(title=original.title)
+    rehydrated.internship_eligibility = dict(original.internship_eligibility)
+    annotate(rehydrated)
+    assert rehydrated.internship_eligibility["evidence_version"] == 2
+    assert rehydrated.internship_eligibility["internship_signal"] == "body"
+    assert gates(rehydrated)[1] is True
+
+
+def test_v1_class_year_without_proof_is_not_trusted_on_rescore():
+    rehydrated = job(title="Software Engineer")
+    rehydrated.internship_eligibility = {
+        "evidence_version": 1,
+        "status": "explicit",
+        "class_years": ["senior"],
+        "internship_signal": "body",
+        "evidence": ["Work with senior engineers."],
+    }
+    annotate(rehydrated)
+    assert rehydrated.internship_eligibility["class_years"] == []
+    assert rehydrated.internship_eligibility["internship_signal"] == "unknown"
+
+
+def test_v1_proof_migrates_once_and_is_idempotent():
+    rehydrated = job(title="Software Engineer")
+    rehydrated.internship_eligibility = {
+        "evidence_version": 1,
+        "status": "open",
+        "internship_signal": "body",
+        "evidence": ["Current undergraduate students may apply."],
+    }
+    annotate(rehydrated)
+    first = dict(rehydrated.internship_eligibility)
+    annotate(rehydrated)
+    second = dict(rehydrated.internship_eligibility)
+    assert first == second
+    assert second["evidence_version"] == 2
+    assert second["internship_signal"] == "body"
+
+
+def test_enrichment_fetch_metadata_survives_annotation():
+    posting = job(title="Software Engineering Intern")
+    posting.internship_eligibility = {
+        "fetch_checked_at": 1_900_000_000,
+        "fetch_status": "readable",
+        "fetch_note": "employer page confirmed",
+    }
+    annotate(posting)
+    assert posting.internship_eligibility["fetch_checked_at"] == 1_900_000_000
+    assert posting.internship_eligibility["fetch_status"] == "readable"
+    assert posting.internship_eligibility["fetch_note"] == "employer page confirmed"
+
+
+def test_fresh_employer_requirements_replace_old_source_proof_on_rescore():
+    from radar.internship_radar import _job_from_record
+
+    posting = job(description="Requirements: Graduate students only. Must be enrolled in a PhD program.")
+    posting.internship_eligibility = {
+        "source_signal": True, "evidence_version": 2,
+        "evidence": ["Undergraduate students may apply.", "Open to rising juniors.",
+                     "Bachelor students are welcome.", "Students graduating in 2028 may apply."],
+    }
+    annotate(posting)
+    assert posting.internship_eligibility["degree_requirement"] == "graduate_only"
+    rehydrated = _job_from_record(posting.to_record())
+    annotate(rehydrated)
+    assert rehydrated.internship_eligibility["degree_requirement"] == "graduate_only"
+    assert not gates(rehydrated)[1]
+
+
+def test_hydrated_roundtrip_fixtures_keep_source_only_and_graduate_only_stable():
+    from radar.internship_radar import _job_from_record
+
+    fixtures = [
+        {
+            "id": "665dd4bdb10f2ce8", "title": "Junior .NET Developer - Fresh Graduates",
+            "source": "workday", "url": "https://jobs.example.test/1",
+            "internship_eligibility": {
+                "source_signal": True, "internship_signal": "source_only",
+                "status": "open", "evidence": ["Workday internship search: student"],
+            },
+        },
+        {
+            "id": "a49b183205542c61", "title": "Junior Java Developer (part-time student)",
+            "source": "workday", "url": "https://jobs.example.test/2",
+            "internship_eligibility": {
+                "source_signal": True, "internship_signal": "source_only",
+                "status": "open", "evidence": ["Workday internship search: student"],
+            },
+        },
+        {
+            "id": "d5f466bab5ae1acc", "title": "Quantitative Researcher",
+            "source": "greenhouse", "url": "https://jobs.example.test/3",
+            "internship_eligibility": {
+                "internship_signal": "body", "status": "explicit",
+                "class_years": ["senior"],
+                "evidence": [
+                    "Experience Required: Entry-level (PhD Program) or Experienced (Postdoc, Faculty, Scientific Lab) Education: PhD in Math, Science, Engineering"
+                ],
+            },
+        },
+    ]
+    for fixture in fixtures:
+        posting = _job_from_record(fixture)
+        annotate(posting)
+        first = dict(posting.internship_eligibility)
+        annotate(posting)
+        second = dict(posting.internship_eligibility)
+        assert first == second
+        if fixture["id"] != "d5f466bab5ae1acc":
+            assert second["internship_signal"] == "source_only"
+        else:
+            assert second["degree_requirement"] == "graduate_only"
+            assert second["internship_signal"] == "unknown"
+
+
 def test_internship_gates_keep_target_roles_but_separate_alert_evidence():
     explicit = job(description="Current undergraduate students graduating in 2028.")
     annotate(explicit)
@@ -528,3 +784,17 @@ def test_internship_email_batch_only_includes_spring_winter_2027(tmp_path, monke
     ]
     rows = board.email_batch_rows(history, set(), now, jobs_state=None)
     assert [row["id"] for row in rows] == ["spring"]
+
+
+def test_internship_email_v2_terms_override_stale_source_term():
+    from radar.board import _spring_winter_2027_internship
+
+    summer_only = {
+        "title": "Summer 2027 SWE Intern",
+        "internship_eligibility": {
+            "evidence_version": 2,
+            "term_options": ["2027-06-01"],
+            "source_term": "Spring 2027 / Summer 2027",
+        },
+    }
+    assert _spring_winter_2027_internship(summer_only) is False

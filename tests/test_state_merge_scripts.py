@@ -63,6 +63,204 @@ def test_crawl_merge_keeps_new_discoveries_and_upstream_updates(tmp_path):
     }
 
 
+def test_crawl_merge_does_not_apply_telemetry_from_changed_board_config(tmp_path):
+    """A checkpoint for a changed ATS board cannot overwrite production."""
+    state_dir = tmp_path / "state"
+    state_dir.mkdir()
+    (state_dir / "jobs.json").write_text("{}")
+    (state_dir / "companies.json").write_text(json.dumps({
+        "greenhouse:acme": {
+            "name": "Acme", "ats": "greenhouse", "token": "acme",
+            "extra": {"eu": False}, "status": "active",
+            "last_polled_at": 400, "last_ok": 400, "failures": 0,
+            "pm_interest": False, "first_seen": 100,
+        }
+    }))
+    for name, value in (("alert_history", []), ("runs", [])):
+        (state_dir / f"{name}.json").write_text(json.dumps(value))
+
+    checkpoint = tmp_path / "checkpoint"
+    checkpoint.mkdir()
+    (checkpoint / "jobs.json").write_text("{}")
+    (checkpoint / "companies.json").write_text(json.dumps({
+        "greenhouse:acme": {
+            # This poll completed after the production snapshot.  The changed
+            # token/host fields are deliberately untrusted checkpoint data.
+            "name": "Acme (stale)", "ats": "greenhouse", "token": "wrong",
+            "extra": {"eu": True}, "status": "dead",
+            "last_polled_at": 500, "last_ok": 400, "failures": 5,
+            "pm_interest": True, "pm_sources": ["simplify"], "first_seen": 50,
+        },
+        "greenhouse:newco": {
+            "name": "NewCo", "ats": "greenhouse", "token": "newco",
+            "status": "active", "first_seen": 600,
+        },
+    }))
+    for name, value in (("alerts", []), ("runs", [])):
+        (checkpoint / f"{name}.json").write_text(json.dumps(value))
+
+    env = os.environ | {
+        "MERGE_CRAWL_JOBS": str(checkpoint / "jobs.json"),
+        "MERGE_CRAWL_COMPANIES": str(checkpoint / "companies.json"),
+        "MERGE_CRAWL_ALERT_HISTORY": str(checkpoint / "alerts.json"),
+        "MERGE_CRAWL_RUNS": str(checkpoint / "runs.json"),
+    }
+    subprocess.run([sys.executable, str(ROOT / "scripts/mac-companion/merge_crawl_state.py")],
+                   cwd=tmp_path, env=env, check=True)
+
+    companies = json.loads((state_dir / "companies.json").read_text())
+    merged = companies["greenhouse:acme"]
+    assert merged["last_polled_at"] == 400
+    assert merged["failures"] == 0
+    assert merged["status"] == "active"
+    assert merged["last_ok"] == 400
+    assert merged["token"] == "acme"
+    assert merged["extra"] == {"eu": False}
+    assert merged["name"] == "Acme"
+    assert companies["greenhouse:newco"]["token"] == "newco"
+
+
+def test_crawl_merge_applies_newer_poll_only_for_same_board(tmp_path):
+    """A newer checkpoint poll is kept when canonical board identity matches."""
+    state_dir = tmp_path / "state"
+    state_dir.mkdir()
+    (state_dir / "jobs.json").write_text("{}")
+    base = {
+        "name": "Acme", "ats": "greenhouse", "token": "acme",
+        "extra": {"eu": False}, "status": "active",
+        "last_polled_at": 400, "last_ok": 400, "failures": 0,
+    }
+    (state_dir / "companies.json").write_text(json.dumps({"gh:acme": base}))
+    for name, value in (("alert_history", []), ("runs", [])):
+        (state_dir / f"{name}.json").write_text(json.dumps(value))
+    checkpoint = tmp_path / "checkpoint"
+    checkpoint.mkdir()
+    (checkpoint / "jobs.json").write_text("{}")
+    (checkpoint / "companies.json").write_text(json.dumps({
+        "gh:acme": {**base, "status": "dead", "last_polled_at": 500,
+                     "last_ok": 400, "failures": 5},
+    }))
+    for name, value in (("alerts", []), ("runs", [])):
+        (checkpoint / f"{name}.json").write_text(json.dumps(value))
+    env = os.environ | {
+        "MERGE_CRAWL_JOBS": str(checkpoint / "jobs.json"),
+        "MERGE_CRAWL_COMPANIES": str(checkpoint / "companies.json"),
+        "MERGE_CRAWL_ALERT_HISTORY": str(checkpoint / "alerts.json"),
+        "MERGE_CRAWL_RUNS": str(checkpoint / "runs.json"),
+    }
+    subprocess.run([sys.executable, str(ROOT / "scripts/mac-companion/merge_crawl_state.py")],
+                   cwd=tmp_path, env=env, check=True)
+    merged = json.loads((state_dir / "companies.json").read_text())["gh:acme"]
+    assert merged["last_polled_at"] == 500
+    assert merged["failures"] == 5
+    assert merged["status"] == "dead"
+
+
+def test_crawl_merge_keeps_newer_upstream_equal_and_missing_poll_states(tmp_path):
+    """Older, equal, and timestamp-free checkpoints never roll back state."""
+    state_dir = tmp_path / "state"
+    state_dir.mkdir()
+    (state_dir / "jobs.json").write_text("{}")
+    upstream = {
+        "name": "Acme", "ats": "greenhouse", "token": "acme", "extra": {},
+        "status": "active", "last_polled_at": 600, "last_ok": 600, "failures": 0,
+    }
+    (state_dir / "companies.json").write_text(json.dumps({"gh:acme": upstream}))
+    for name, value in (("alert_history", []), ("runs", [])):
+        (state_dir / f"{name}.json").write_text(json.dumps(value))
+    checkpoint = tmp_path / "checkpoint"
+    checkpoint.mkdir()
+    (checkpoint / "jobs.json").write_text("{}")
+    (checkpoint / "companies.json").write_text(json.dumps({
+        "gh:acme": {**upstream, "status": "dead", "last_polled_at": 500,
+                     "last_ok": 500, "failures": 5},
+    }))
+    for name, value in (("alerts", []), ("runs", [])):
+        (checkpoint / f"{name}.json").write_text(json.dumps(value))
+    env = os.environ | {
+        "MERGE_CRAWL_JOBS": str(checkpoint / "jobs.json"),
+        "MERGE_CRAWL_COMPANIES": str(checkpoint / "companies.json"),
+        "MERGE_CRAWL_ALERT_HISTORY": str(checkpoint / "alerts.json"),
+        "MERGE_CRAWL_RUNS": str(checkpoint / "runs.json"),
+    }
+    subprocess.run([sys.executable, str(ROOT / "scripts/mac-companion/merge_crawl_state.py")],
+                   cwd=tmp_path, env=env, check=True)
+    merged = json.loads((state_dir / "companies.json").read_text())["gh:acme"]
+    assert merged["last_polled_at"] == 600
+    assert merged["status"] == "active"
+
+    # Equal cursors retain the winning production group.
+    (checkpoint / "companies.json").write_text(json.dumps({
+        "gh:acme": {**upstream, "status": "dead", "failures": 5},
+    }))
+    subprocess.run([sys.executable, str(ROOT / "scripts/mac-companion/merge_crawl_state.py")],
+                   cwd=tmp_path, env=env, check=True)
+    merged = json.loads((state_dir / "companies.json").read_text())["gh:acme"]
+    assert merged["status"] == "active"
+
+    # A legacy checkpoint without a cursor is also treated as stale.
+    (checkpoint / "companies.json").write_text(json.dumps({
+        "gh:acme": {"name": "Acme", "ats": "greenhouse", "token": "acme",
+                     "extra": {}, "status": "dead", "failures": 5},
+    }))
+    subprocess.run([sys.executable, str(ROOT / "scripts/mac-companion/merge_crawl_state.py")],
+                   cwd=tmp_path, env=env, check=True)
+    merged = json.loads((state_dir / "companies.json").read_text())["gh:acme"]
+    assert merged["status"] == "active"
+
+
+def test_crawl_merge_preserves_newer_hygiene_state_and_clears_stale_probe_error(tmp_path):
+    """Administrative hygiene state wins over an older poll checkpoint."""
+    state_dir = tmp_path / "state"
+    state_dir.mkdir()
+    (state_dir / "jobs.json").write_text("{}")
+    upstream = {
+        "name": "Acme", "ats": "greenhouse", "token": "acme", "extra": {},
+        "status": "dup", "last_polled_at": 400, "last_ok": 400,
+        "failures": 0, "invalidated_at": 700,
+    }
+    (state_dir / "companies.json").write_text(json.dumps({"gh:acme": upstream}))
+    for name, value in (("alert_history", []), ("runs", [])):
+        (state_dir / f"{name}.json").write_text(json.dumps(value))
+    checkpoint = tmp_path / "checkpoint"
+    checkpoint.mkdir()
+    (checkpoint / "jobs.json").write_text("{}")
+    (checkpoint / "companies.json").write_text(json.dumps({
+        "gh:acme": {**upstream, "status": "active", "last_polled_at": 500,
+                     "last_ok": 500, "failures": 0, "invalidated_at": 600,
+                     "probe_error": "old WAF error"},
+    }))
+    for name, value in (("alerts", []), ("runs", [])):
+        (checkpoint / f"{name}.json").write_text(json.dumps(value))
+    env = os.environ | {
+        "MERGE_CRAWL_JOBS": str(checkpoint / "jobs.json"),
+        "MERGE_CRAWL_COMPANIES": str(checkpoint / "companies.json"),
+        "MERGE_CRAWL_ALERT_HISTORY": str(checkpoint / "alerts.json"),
+        "MERGE_CRAWL_RUNS": str(checkpoint / "runs.json"),
+    }
+    subprocess.run([sys.executable, str(ROOT / "scripts/mac-companion/merge_crawl_state.py")],
+                   cwd=tmp_path, env=env, check=True)
+    merged = json.loads((state_dir / "companies.json").read_text())["gh:acme"]
+    assert merged["status"] == "dup"
+    assert merged["invalidated_at"] == 700
+
+    # A later successful poll replaces an old diagnostic instead of carrying
+    # it forever when the checkpoint has no error field.
+    (state_dir / "companies.json").write_text(json.dumps({
+        "gh:acme": {**upstream, "status": "active", "probe_error": "old error",
+                     "last_polled_at": 400, "last_ok": 400, "invalidated_at": 0},
+    }))
+    (checkpoint / "companies.json").write_text(json.dumps({
+        "gh:acme": {**upstream, "status": "active", "last_polled_at": 800,
+                     "last_ok": 800, "failures": 0, "invalidated_at": 0},
+    }))
+    subprocess.run([sys.executable, str(ROOT / "scripts/mac-companion/merge_crawl_state.py")],
+                   cwd=tmp_path, env=env, check=True)
+    merged = json.loads((state_dir / "companies.json").read_text())["gh:acme"]
+    assert merged["status"] == "active"
+    assert "probe_error" not in merged
+
+
 def test_crawl_merge_keeps_full_history_for_new_closed_discoveries(tmp_path):
     state_dir = tmp_path / "state"
     state_dir.mkdir()

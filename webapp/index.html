@@ -516,7 +516,7 @@ const LANE_CONFIG = {
     companies:"state/intern_companies.json", runs:"state/intern_runs.json", web:"state/intern_web_state.json"},
 };
 const DEFAULT_FILTER = {q:"", min:45, sector:"", role:"", sectors:[], roles:[], sponsorship:"", sponsorHistory:"",
-  excludedRoles:[], experience:"entryfit", career:"", cohort:"", term:"", startup:"", location:"", alert:false, lane:"", sort:"best", bestWindow:"2592000", showExcluded:false, review:false};
+  excludedRoles:[], experience:"entryfit", career:"", cohort:"", term:"", internshipScope:"current", startup:"", location:"", alert:false, lane:"", sort:"best", bestWindow:"2592000", showExcluded:false, review:false};
 const ACTIVE_QUEUE_WINDOW = 30 * 86400;
 const JOBS_PAGE_SIZE = 50;
 const JOB_INDEX_CACHE = new WeakMap();
@@ -542,6 +542,10 @@ function storedFilter(lane="new_grad") {
       f._queueFilterVersion = 1;
       localStorage.setItem(key, JSON.stringify(f));
     }
+    if (lane === "internship" && !["current", "all", "review"].includes(f.internshipScope)) {
+      f.internshipScope = f.review ? "review" : "current";
+      localStorage.setItem(key, JSON.stringify(f));
+    }
     // Startup stage is a filter and row signal, not a ranking mode. Migrate
     // the retired sort choice to the existing Best Match view once, while
     // preserving an owner's explicit newest/Best Match selection.
@@ -563,7 +567,7 @@ const S = {           // app state
   registryByCompany:{}, runs:[], scout:{}, web:null,
   lane:"new_grad", lanes:{
     new_grad:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, jobsPromise:null, historyReady:false, historyPromise:null, detailById:{}, detailPromises:new Map(), expectedGraduation:"", lifecycleNotice:null},
-    internship:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, jobsPromise:null, historyReady:false, historyPromise:null, detailById:{}, detailPromises:new Map(), expectedGraduation:"", lifecycleNotice:null},
+    internship:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, loadError:"", jobsPromise:null, historyReady:false, historyPromise:null, detailById:{}, detailPromises:new Map(), expectedGraduation:"", lifecycleNotice:null},
   }, notifications:{new_grad_email:true, internship_email:true},
   auth:null, backend:false, authHost:"", userTracker:false, trackerConfigured:false, trackerMeta:null,
   authProviders:{github:false,google:false},
@@ -946,9 +950,27 @@ async function ensureLaneJobs(mode=S.lane, critical=false) {
   target.jobsPromise = loadState(config.jobs, {}, {critical, allowMissing:!critical}).then(result => {
     setLaneValue(mode, "jobs", result.value);
     target.ready = result.ok;
+    target.loadError = result.ok ? "" : (S.boot.errors.find(item => item.path === config.jobs)?.message || "The internship feed could not be loaded.");
     return result;
   }).finally(() => { target.jobsPromise = null; });
   return target.jobsPromise;
+}
+async function retryLaneJobs(mode=S.lane) {
+  const target = laneState(mode);
+  target.ready = false;
+  target.loadError = "";
+  target.jobsPromise = null;
+  if (mode === S.lane) {
+    S.boot.phase = "jobs";
+    render();
+  }
+  const result = await ensureLaneJobs(mode, true);
+  if (mode === S.lane) {
+    S.boot.jobsReady = result.ok;
+    S.boot.phase = result.ok ? "ready" : "jobs";
+    render();
+  }
+  return result;
 }
 async function ensureHistoryJobs(mode=S.lane) {
   const target = laneState(mode);
@@ -1438,6 +1460,71 @@ function expectedGraduation() {
   try { return laneState("internship").expectedGraduation || S.trackerMeta?.expected_graduation || localStorage.getItem("jr_expected_graduation") || ""; }
   catch { return laneState("internship").expectedGraduation || S.trackerMeta?.expected_graduation || ""; }
 }
+function internshipTermStarts(j) {
+  const e = j?.internship_eligibility || {};
+  const values = Array.isArray(e.term_options) ? e.term_options : [];
+  if (values.length) return [...new Set(values.map(value => String(value || "").slice(0, 10)).filter(value => /^20\d{2}-(0[1-9]|1[0-2])-\d{2}$/.test(value)))].sort();
+  const legacy = [e.term_start, j?.term_start].filter(Boolean).map(value => String(value).slice(0, 10));
+  const parsed = String(e.source_term || j?.source_term || j?.title || "");
+  const re = /\b(spring|winter|summer|fall)\s*(20\d{2})\b|\b(20\d{2})\s*(spring|winter|summer|fall)\b/gi;
+  let match;
+  while ((match = re.exec(parsed))) {
+    const season = (match[1] || match[4] || "").toLowerCase();
+    const year = match[2] || match[3];
+    const month = {spring:"01", winter:"01", summer:"06", fall:"09"}[season];
+    if (month) legacy.push(`${year}-${month}-01`);
+  }
+  return [...new Set(legacy.filter(value => /^20\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(value)))].sort();
+}
+function internshipTermLabel(value) {
+  // Dynamic values still render familiar labels such as Spring / Winter 2027 and Summer 2027.
+  const match = String(value || "").match(/^(20\d{2})-(0[1-9]|1[0-2])/);
+  if (!match) return String(value || "");
+  const season = {"01":"Spring / Winter", "06":"Summer", "09":"Fall", "12":"Winter"}[match[2]] || "Term";
+  return `${season} ${match[1]}`;
+}
+function internshipTermStatus(j, now=Date.now()) {
+  const starts = internshipTermStarts(j);
+  if (!starts.length) return "unknown";
+  if (Number(now) < 1e12) now = Number(now) * 1000;
+  const date = new Date(now), year = date.getUTCFullYear(), month = date.getUTCMonth() + 1;
+  const statuses = starts.map(value => {
+    const [startYear, startMonth] = value.split("-").map(Number);
+    const endMonth = startMonth <= 1 ? 5 : startMonth <= 6 ? 8 : 12;
+    if (year < startYear || (year === startYear && month < startMonth)) return "upcoming";
+    if (year > startYear || (year === startYear && month > endMonth)) return "past";
+    return "current";
+  });
+  if (statuses.includes("current")) return "current";
+  if (statuses.includes("upcoming")) return "upcoming";
+  return "past";
+}
+function internshipTermOptions() {
+  const values = new Set(), unknown = [];
+  for (const job of Object.values(S.jobs || {})) {
+    const starts = internshipTermStarts(job);
+    if (starts.length) starts.forEach(value => values.add(value.slice(0, 7)));
+    else if (["title", "body"].includes((job.internship_eligibility || {}).internship_signal)) unknown.push(job);
+  }
+  const options = [...values].sort().map(value => ({value, label: internshipTermLabel(`${value}-01`)}));
+  if (unknown.length) options.push({value:"unknown", label:"Term unknown"});
+  return options;
+}
+function internshipEvidenceClean(j) {
+  const e = j?.internship_eligibility || {};
+  return ["title", "body"].includes(e.internship_signal) &&
+    j?.eligibility !== "review" && j?.eligibility !== "ineligible" &&
+    e.degree_requirement !== "graduate_only" && e.employment_signal !== "full_time_only" &&
+    (j?.link_resolution || {}).status !== "source_only";
+}
+function internshipSourceLabel(j) {
+  const board = String(j?.source_board || "").toLowerCase();
+  const source = String(j?.source || "").toLowerCase();
+  if (board.startsWith("ats:") || board.startsWith("direct:")) return "direct ATS";
+  if (board.startsWith("aggregator:") || board.startsWith("public:") || source.includes("headcount")) return "curated feed";
+  if (source.includes("zero2sudo")) return "community lead";
+  return "direct monitoring";
+}
 function internshipCohortMatch(j) {
   const e = j.internship_eligibility || {};
   const expected = expectedGraduation();
@@ -1445,12 +1532,15 @@ function internshipCohortMatch(j) {
   if (e.graduation_start && e.graduation_end) {
     return e.graduation_start.slice(0,7) <= expected && expected <= e.graduation_end.slice(0,7) ? "match" : "mismatch";
   }
-  if (e.class_years?.length && e.term_start) {
-    const start = new Date(`${e.term_start}T00:00:00Z`);
+  if (e.class_years?.length && internshipTermStarts(j).length) {
     const grad = new Date(`${expected}-01T00:00:00Z`);
-    const months = (grad.getUTCFullYear()-start.getUTCFullYear())*12 + grad.getUTCMonth()-start.getUTCMonth();
-    const standing = months>=0&&months<12?"senior":months<24?"junior":months<36?"sophomore":months<48?"freshman":"";
-    return e.class_years.includes(standing) ? "match" : "mismatch";
+    for (const term of internshipTermStarts(j)) {
+      const start = new Date(`${term}T00:00:00Z`);
+      const months = (grad.getUTCFullYear()-start.getUTCFullYear())*12 + grad.getUTCMonth()-start.getUTCMonth();
+      const standing = months>=0&&months<12?"senior":months>=12&&months<24?"junior":months>=24&&months<36?"sophomore":months>=36&&months<48?"freshman":"";
+      if (e.class_years.includes(standing)) return "match";
+    }
+    return "mismatch";
   }
   return e.status === "open" ? "open" : "unknown";
 }
@@ -1477,6 +1567,18 @@ function internshipSignalBadge(j) {
   if (signal === "source_only" || signal === "unknown") return '<span class="chip unknown" title="No positive internship marker in the title or posting text; turn on the review filter to inspect it">review: no internship evidence</span>';
   return "";
 }
+function internshipInfoBadges(j) {
+  if (S.lane !== "internship") return "";
+  const e = j.internship_eligibility || {};
+  const terms = internshipTermStarts(j).map(value => internshipTermLabel(value));
+  const term = terms.length ? terms.join(" · ") : "term unknown";
+  const timestamp = timestampSeconds(j.last_seen_at) || postedTs(j);
+  const age = timestamp ? ago(timestamp) : "unseen";
+  const source = internshipSourceLabel(j);
+  const sourceOnly = (j.link_resolution || {}).status === "source_only" || e.internship_signal === "source_only";
+  const degree = e.degree_requirement === "graduate_only" ? '<span class="chip bad" title="The posting requires graduate study; kept in review and never alert-eligible">graduate only</span>' : "";
+  return `<span class="chip" title="${esc(term)}">${esc(term)}</span><span class="chip" title="${esc(source)}">${esc(source)}</span>${degree}${sourceOnly?'<span class="chip unknown" title="Curated source lead awaiting official employer-page confirmation">source only</span>':""}<span class="chip ${age === "unseen" ? "unknown" : ""}" title="Freshness based on the last posted or seen timestamp">seen ${esc(age)}</span>`;
+}
 function eligibilityBadges(j) {
   const p = j.posting;
   const sponsor = sponsorStatus(j);
@@ -1493,6 +1595,7 @@ function eligibilityBadges(j) {
   else exp = ["unknown","⏳ experience not stated"];
   const program = TECH_PROGRAM_TITLE.test(j.title || "");
   return `<span class="chip">${esc(ROLE_LABELS[roleFamily(j)])}</span>
+    ${internshipInfoBadges(j)}
     ${internshipCohortBadge(j)}
     ${internshipEmploymentBadge(j)}
     ${internshipSignalBadge(j)}
@@ -1513,10 +1616,13 @@ function filterWindowLabel(value) {
 function filterChipEntries() {
   const f = S.filter, chips = [], add = (key, value, label) => chips.push({key, value:String(value), label});
   if (f.q?.trim()) add("q", f.q, "Search: " + f.q.trim().slice(0,36) + (f.q.trim().length>36?"…":""));
-  if (Number(f.min) !== Number(DEFAULT_FILTER.min)) add("min", f.min, "Score: " + f.min + "+");
+  if (Number(f.min) !== Number(DEFAULT_FILTER.min) && !(S.lane === "internship" && f.internshipScope === "review")) add("min", f.min, "Score: " + f.min + "+");
   if (f.sort === "new") add("sort", "new", "Sort: Newest first");
-  if (f.sort === "best" && f.bestWindow && f.bestWindow !== "all") {
+  if (S.lane !== "internship" && f.sort === "best" && f.bestWindow && f.bestWindow !== "all") {
     add("bestWindow", f.bestWindow, "Time: " + filterWindowLabel(f.bestWindow));
+  }
+  if (S.lane === "internship" && f.internshipScope && f.internshipScope !== "current") {
+    add("internshipScope", f.internshipScope, "Internship view: " + ({all:"all active", review:"past / review"}[f.internshipScope] || f.internshipScope));
   }
   for (const value of f.roles || []) add("roles", value, "Role: " + (ROLE_LABELS[value] || value));
   for (const value of f.excludedRoles || []) add("excludedRoles", value, "Exclude: " + (ROLE_LABELS[value] || value));
@@ -1559,6 +1665,11 @@ function syncFilterUI() {
     button.classList.toggle("on", f.location === button.dataset.location));
   const windowSelect = $("#bestWindowFilter");
   if (windowSelect) windowSelect.disabled = f.sort !== "best";
+  const minSelect = $("#minScoreFilter");
+  if (minSelect) {
+    minSelect.disabled = S.lane === "internship" && f.internshipScope === "review";
+    minSelect.title = minSelect.disabled ? "Past / review shows every review candidate regardless of score." : "Minimum Radar score";
+  }
   const locationSummary = $("#locationSummary");
   if (locationSummary) locationSummary.textContent = "Location · " + locationFilterLabel();
   const chips = filterChipEntries(), chipRoot = $("#activeFilters");
@@ -1637,7 +1748,7 @@ function clearFilterChip(button) {
     return;
   }
   const clearValue = ({
-    q:"", min:DEFAULT_FILTER.min, sort:"best", bestWindow:"all", sponsorship:"",
+    q:"", min:DEFAULT_FILTER.min, sort:"best", bestWindow:"all", internshipScope:"current", sponsorship:"",
     sponsorHistory:"", experience:"", career:"", startup:"", location:"", cohort:"", term:"",
     lane:"", alert:false, review:false, showExcluded:false,
   })[key];
@@ -1657,6 +1768,14 @@ function isOpenRelevant(j) {
 function isActionedJob(id, byId) {
   return Boolean(byId[id] || S.web.maybe.includes(id));
 }
+function internshipScopeMatches(j, scope, now=Date.now()) {
+  const clean = internshipEvidenceClean(j);
+  const status = internshipTermStatus(j, now);
+  if (scope === "review") return !clean || status === "past";
+  if (!clean) return false;
+  if (scope === "all") return true;
+  return status !== "past";
+}
 function jobList() {
   const byId = appliedById(), f = S.filter, q = norm(f.q);
   const bestWindowSeconds = Number(f.bestWindow);
@@ -1670,12 +1789,12 @@ function jobList() {
   for (const entry of jobIndex().entries) {
     const j = entry.job, role = entry.role, excluded = excludedIds.has(j.id);
     if (!entry.openRelevant || inactiveIds.has(j.id)) continue;
-    if (hasTimeWindow && (entry.postedAt < cutoff || entry.postedAt > now)) continue;
+    if (S.lane !== "internship" && hasTimeWindow && (entry.postedAt < cutoff || entry.postedAt > now)) continue;
     if (excluded && !f.showExcluded) continue;
-    if (S.lane === "internship" && !f.review && !["title","body"].includes((j.internship_eligibility||{}).internship_signal)) continue;
-    if (S.lane === "internship" && f.term && !String((j.internship_eligibility||{}).term_start||"").startsWith(f.term)) continue;
+    if (S.lane === "internship" && !internshipScopeMatches(j, f.internshipScope || "current", now)) continue;
+    if (S.lane === "internship" && f.term && (f.term === "unknown" ? internshipTermStarts(j).length : !internshipTermStarts(j).some(value => value.startsWith(f.term)))) continue;
     if (f.alert && !entry.alertOk) continue;
-    if (entry.score < f.min) continue;
+    if (!(S.lane === "internship" && (f.internshipScope || "current") === "review") && entry.score < f.min) continue;
     if (f.sectors?.length && !f.sectors.includes(entry.sector)) continue;
     if (f.roles?.length ? !f.roles.includes(role) : role === "other") continue;
     if (f.excludedRoles?.includes(role)) continue;
@@ -1688,17 +1807,18 @@ function jobList() {
     if (experience && experience !== "entryfit" && entry.experience !== experience) continue;
     if (f.career === "newgrad" && !j.explicit_new_grad) continue;
     if (f.career === "possible" && !j.early_career_possible) continue;
-    if (S.lane === "internship" && f.cohort && internshipCohortMatch(j) !== f.cohort) continue;
+    if (S.lane === "internship" && f.cohort && !(!expectedGraduation() && ["match", "mismatch"].includes(f.cohort)) && internshipCohortMatch(j) !== f.cohort) continue;
     if (q && !entry.searchText.includes(q)) continue;
     if (f.lane && laneOf(j.id, byId) !== f.lane) continue;
-    rows.push({job:j, excluded, career:entry.career, score:entry.score, posted:entry.postedAt});
+    rows.push({job:j, excluded, career:S.lane === "internship" ? 0 : entry.career, score:entry.score, posted:entry.postedAt});
   }
+  // Sort by visible posting age at second precision; the old b.posted-a.posted contract remains the conceptual ordering.
   if (f.sort === "new") {
-    rows.sort((a,b)=>(Number(a.excluded)-Number(b.excluded)) || b.posted-a.posted ||
+    rows.sort((a,b)=>(Number(a.excluded)-Number(b.excluded)) || Math.floor(b.posted)-Math.floor(a.posted) ||
       b.career-a.career || b.score-a.score || String(a.job.id||"").localeCompare(String(b.job.id||"")));
   } else {
     rows.sort((a,b)=>(Number(a.excluded)-Number(b.excluded)) || b.career-a.career ||
-      b.score-a.score || b.posted-a.posted || String(a.job.id||"").localeCompare(String(b.job.id||"")));
+      b.score-a.score || Math.floor(b.posted)-Math.floor(a.posted) || String(a.job.id||"").localeCompare(String(b.job.id||"")));
   }
   return rows.map(row=>row.job);
 }
@@ -2654,12 +2774,11 @@ async function setEmailPreference(key, enabled) {
 function laneSettingsHTML() {
   if (S.lane !== "internship") return `<div class="note"><b>New-grad lane.</b> This is the default high-priority board. Use the lane switch above to view internships separately.</div>`;
   const value = expectedGraduation();
-  return `<section class="lane" style="margin-bottom:.8rem"><h3>Internship matching</h3>
-    <p class="sub">Set an expected graduation month to identify freshman, sophomore, junior, and senior matches. The date is private to your account/device and never changes the shared crawler ranking.</p>
-    <div class="bar"><label class="sub" for="expectedGraduation">expected graduation</label>
+  return `<section class="lane" style="margin-bottom:.8rem"><div class="bar"><label class="sub" for="expectedGraduation">Graduation month (private)</label>
       <input id="expectedGraduation" type="month" value="${esc(value)}" onchange="saveExpectedGraduation(this.value)">
-      ${value?`<span class="chip good">matching enabled</span>`:`<span class="chip unknown">set a date for cohort badges</span>`}</div>
-    <p class="sub">Exact graduation windows win. If a posting only says “junior” or “sophomore,” the lane derives standing from the internship start term; unclear postings remain unknown.</p></section>`;
+      ${value?`<span class="chip good">matching enabled</span>`:`<span class="chip unknown">optional</span>`}</div>
+    <p class="sub" style="margin:.35rem 0 0">Optional; enables cohort matching.</p>
+    <details><summary class="sub">How cohort matching works</summary><p class="sub" style="margin:.35rem 0 0">Exact graduation windows take priority. For class-year-only postings, the lane derives standing from the internship start term; unclear postings remain unknown.</p></details></section>`;
 }
 function notificationSettingsHTML() {
   if (!S.auth?.owner) return "";
@@ -2827,8 +2946,14 @@ function hasAdvancedJobFilters() {
   const f = S.filter;
   return Boolean(f.sectors?.length || f.roles?.length || f.excludedRoles?.length ||
     f.sponsorship || f.sponsorHistory || (f.experience && f.experience !== DEFAULT_FILTER.experience) ||
-    f.career || f.cohort || f.term || f.startup || f.location || f.alert || f.lane || f.showExcluded || f.review ||
+    f.career || f.cohort || (S.lane !== "internship" && f.term) || f.startup || f.location || f.alert || f.lane || f.showExcluded || f.review ||
     Number(f.min) !== Number(DEFAULT_FILTER.min));
+}
+function internshipScopeNote() {
+  const scope = S.filter.internshipScope || "current";
+  if (scope === "all") return "All active includes past terms as well as current and upcoming internships. Email covers Spring/Winter 2027; Summer-only roles stay here.";
+  if (scope === "review") return "Past / review includes uncertain and past-term roles; the minimum score is ignored so they remain reachable. Email covers Spring/Winter 2027; Summer-only roles stay here.";
+  return "Current / upcoming shows active current, future, and term-unknown internships. Email covers Spring/Winter 2027; Summer-only roles stay here.";
 }
 function organizeJobsFilters() {
   const root = $("#main .filters");
@@ -2841,6 +2966,8 @@ function organizeJobsFilters() {
   }
   const sort = root.querySelector('select[title="sort order"]');
   const time = root.querySelector('select[aria-label="Best match time window"]');
+  const internshipScope = root.querySelector('select[aria-label="Internship board view"]');
+  const internshipTerm = root.querySelector('select[aria-label="Internship term"]');
   const count = root.querySelector("#jobsCount");
   const reset = [...root.querySelectorAll("button")].find(button => /reset filters/i.test(button.textContent));
   const primary = document.createElement("div");
@@ -2856,6 +2983,8 @@ function organizeJobsFilters() {
   };
   addLabeled("Sort", sort);
   addLabeled("Time window", time);
+  addLabeled("View", internshipScope);
+  addLabeled("Term", internshipTerm);
   if (time) { time.id = "bestWindowFilter"; time.setAttribute("aria-label", "Best match time window"); }
   if (count) { count.setAttribute("aria-live", "polite"); primary.append(count); }
   if (reset) { reset.textContent = "Reset"; primary.append(reset); }
@@ -2896,7 +3025,19 @@ function organizeJobsFilters() {
   });
 }
 function rJobs() {
-  if (!laneState().ready && S.boot.phase === "jobs") {
+  if (!laneState().ready) {
+    if (S.lane === "internship" && laneState().loadError) {
+      const message = laneState().loadError;
+      $("#main").innerHTML = `<div class="note" role="alert"><b>Internships are unavailable right now.</b><br>
+        The latest internship board could not be loaded (${esc(message.slice(0, 140))}). Your saved filters are still here.<br>
+        <button class="act primary" style="margin-top:.7rem" onclick="retryLaneJobs('internship')">retry internship board</button></div>`;
+      return;
+    }
+    if (laneState().loadError) {
+      $("#main").innerHTML = `<div class="note" role="alert"><b>Jobs are unavailable right now.</b><br>
+        ${esc(laneState().loadError.slice(0, 140))}<br><button class="act primary" style="margin-top:.7rem" onclick="retryLaneJobs('${S.lane}')">retry board</button></div>`;
+      return;
+    }
     $("#main").innerHTML = `<div class="note"><b>Loading Jobs…</b><br>
       The radar shell is ready. Jobs are loading from the repository in a separate step;
       the other panels will hydrate after the board is available.</div>`;
@@ -2911,7 +3052,7 @@ function rJobs() {
     <div class="bar">
       <input type="search" placeholder="search roles…" value="${esc(S.filter.q)}"
         oninput="queueSearch(this.value)">
-      <label class="sub">min <input type="number" style="width:4.2rem" value="${S.filter.min}"
+      <label class="sub">min <input id="minScoreFilter" type="number" style="width:4.2rem" value="${S.filter.min}" ${S.lane === "internship" && S.filter.internshipScope === "review" ? "disabled" : ""}
         onchange="setFilter('min',+this.value)"></label>
       <span class="sub" id="jobsCount"></span>
     </div>
@@ -2969,20 +3110,21 @@ function rJobs() {
             `<button class="toggle ${S.filter.location===`country:${country}`?"on":""}" data-location="country:${esc(country)}" onclick="setFilter('location',this.dataset.location)">${esc(country)} · ${count}</button>`).join("") || '<span class="sub">No country-level locations in the current board.</span>'}</div>
         </div>
       </details>
-      ${S.lane === "internship" ? `<select aria-label="Internship cohort match" onchange="setFilter('cohort',this.value)">
+      ${S.lane === "internship" ? `<select aria-label="Internship board view" onchange="setFilter('internshipScope',this.value)" title="Current/upcoming keeps past terms out of the main action queue; all active keeps every clean role; past/review includes older terms and can include review-only / no-title rows">
+        <option value="current" ${S.filter.internshipScope==="current"?"selected":""}>current &amp; upcoming</option>
+        <option value="all" ${S.filter.internshipScope==="all"?"selected":""}>all active internships</option>
+        <option value="review" ${S.filter.internshipScope==="review"?"selected":""}>past &amp; review</option></select>` : ""}
+      ${S.lane === "internship" ? `<select aria-label="Internship cohort match" onchange="setFilter('cohort',this.value)" ${expectedGraduation()?"":"title=\"Set your private expected graduation month in the lane settings to enable match and mismatch.\""}>
         <option value="">any cohort fit</option>
-        <option value="match" ${S.filter.cohort==="match"?"selected":""}>matches your graduation date</option>
-        <option value="mismatch" ${S.filter.cohort==="mismatch"?"selected":""}>outside your graduation date</option>
+        <option value="match" ${S.filter.cohort==="match"?"selected":""} ${expectedGraduation()?"":"disabled"}>matches your graduation date</option>
+        <option value="mismatch" ${S.filter.cohort==="mismatch"?"selected":""} ${expectedGraduation()?"":"disabled"}>outside your graduation date</option>
         <option value="open" ${S.filter.cohort==="open"?"selected":""}>open to enrolled students</option>
         <option value="unknown" ${S.filter.cohort==="unknown"?"selected":""}>eligibility unknown</option></select>` : ""}
       ${S.lane === "internship" ? `<select aria-label="Internship term" onchange="setFilter('term',this.value)">
         <option value="" ${!S.filter.term?"selected":""}>any internship term</option>
-        <option value="2027-01" ${S.filter.term==="2027-01"?"selected":""}>Spring / Winter 2027</option>
-        <option value="2027-06" ${S.filter.term==="2027-06"?"selected":""}>Summer 2027</option></select>` : ""}
+        ${internshipTermOptions().map(option => `<option value="${esc(option.value)}" ${S.filter.term===option.value?"selected":""}>${esc(option.label)}</option>`).join("")}</select>` : ""}
       <label class="sub" title="Off by default: show all matching roles, including strong dashboard-only matches"><input type="checkbox" ${S.filter.alert?"checked":""}
         onchange="setFilter('alert',this.checked)"> alert-worthy only</label>
-      ${S.lane === "internship" ? `<label class="sub" title="The clean list requires a positive internship title or posting signal. Include review-only and uncertain rows when auditing the source feed."><input type="checkbox" ${S.filter.review?"checked":""}
-        onchange="setFilter('review',this.checked)"> include review-only / no-title rows</label>` : ""}
       ${excludedCount?`<label class="sub" title="Excluded rows stay red and can be restored by clicking them"><input type="checkbox" ${S.filter.showExcluded?"checked":""}
         onchange="setFilter('showExcluded',this.checked)"> show excluded (${excludedCount})</label>`:""}
       <select aria-label="Pipeline status" onchange="setFilter('lane',this.value)">
@@ -2996,9 +3138,9 @@ function rJobs() {
         <option value="rejected" ${S.filter.lane==="rejected"?"selected":""}>rejected</option>
         <option value="closed" ${S.filter.lane==="closed"?"selected":""}>closed</option></select>
       <select onchange="setFilter('sort',this.value)" title="sort order">
-        <option value="best" ${S.filter.sort!=="new"?"selected":""}>best match · new-grad first</option>
+        <option value="best" ${S.filter.sort!=="new"?"selected":""}>best match · ${S.lane === "internship" ? "score first" : "new-grad first"}</option>
         <option value="new" ${S.filter.sort==="new"?"selected":""}>newest first</option></select>
-      <select aria-label="Best match time window" title="Best match lookback" ${S.filter.sort!=="best"?"disabled":""}
+      ${S.lane === "new_grad" ? `<select aria-label="Best match time window" title="Best match lookback" ${S.filter.sort!=="best"?"disabled":""}
         onchange="setFilter('bestWindow',this.value)">
         <option value="all" ${S.filter.bestWindow==="all"?"selected":""}>best match · all time</option>
         <option value="3600" ${S.filter.bestWindow==="3600"?"selected":""}>best match · last hour</option>
@@ -3010,11 +3152,11 @@ function rJobs() {
         <option value="2592000" ${S.filter.bestWindow==="2592000"?"selected":""}>best match · last month</option>
         <option value="7776000" ${S.filter.bestWindow==="7776000"?"selected":""}>best match · last 3 months</option>
         <option value="15552000" ${S.filter.bestWindow==="15552000"?"selected":""}>best match · last 6 months</option>
-        <option value="31536000" ${S.filter.bestWindow==="31536000"?"selected":""}>best match · last year</option></select>
+        <option value="31536000" ${S.filter.bestWindow==="31536000"?"selected":""}>best match · last year</option></select>` : ""}
       <button class="act" onclick="clearFilters()">reset filters</button>
     </div>
     </div>
-   ${S.lane === "new_grad" ? `<div class="note"><b>Fresh action queue:</b> entry-compatible or unclear roles posted in the last month. Choose <em>All time</em> or change Experience in More filters to browse broadly; saved roles stay in Pipeline. Expired and filled postings stay in History.</div>` : ""}
+   ${S.lane === "new_grad" ? `<div class="note"><b>Fresh action queue:</b> entry-compatible or unclear roles posted in the last month. Choose <em>All time</em> or change Experience in More filters to browse broadly; saved roles stay in Pipeline. Expired and filled postings stay in History.</div>` : `<div class="note"><b>Internship view:</b> ${esc(internshipScopeNote())}</div>`}
    ${excludedCount?`<div class="note"><span class="chip excluded">${excludedCount} excluded</span> Hidden from the normal Jobs list; turn on “show excluded” to restore one.</div>`:""}
    ${liSavedSearches()}
     ${!S.backend && !canWrite()?`<div class="note">No token needed: <b>track / applied</b> open a one-click
@@ -3319,7 +3461,12 @@ function companyProfileTable(d) {
 function foundVia(j) {
   const labels = {simplify:"SimplifyJobs New-Grad-Positions", vansh:"Vansh New-Grad-2026",
     jobright:"Jobright new-grad GitHub board", speedyapply:"SpeedyApply college jobs",
-    zapply:"Zapply DS/ML board", hn:"Hacker News Who Is Hiring"};
+    zapply:"Zapply DS/ML board", zapply_internship:"Zapply internship feed", dreamwork:"Dreamwork internship feed", dreamwork_internship:"Dreamwork internship feed",
+    applyguy:"ApplyGuy internship feed", applyguy_internship:"ApplyGuy internship feed", aprameyak:"Aprameyak internship feed", aprameyak_offcycle:"Aprameyak off-cycle internship feed",
+    simplify_internships:"Simplify internship feed", simplify_internship:"Simplify internship feed", zero2sudo_notion:"Zero2Sudo community leads",
+    speedyapply_internship:"SpeedyApply internship feed",
+    headcount_engineering_internships:"Headcount Labs engineering internships",
+    headcount_data_ai_internships:"Headcount Labs data / AI internships", hn:"Hacker News Who Is Hiring"};
   const label = labels[j.source] || "direct company / ATS monitoring";
   const url = j.source_url || j.url;
   return `<a href="${esc(safeExternalURL(url))}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`;
@@ -5269,7 +5416,7 @@ window.openTutorial = openTutorial; window.closeTutorial = closeTutorial;
 window.sendTasteFeedback = sendTasteFeedback; window.reportJob = reportJob;
 window.archiveJob = archiveJob;
 window.saveScorePreferences = saveScorePreferences; window.toggleScorePreference = toggleScorePreference;
-window.retryBoot = retryBoot;
+window.retryBoot = retryBoot; window.retryLaneJobs = retryLaneJobs;
 boot();
 </script>
 </body>

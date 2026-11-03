@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from datetime import UTC, datetime
 from unittest.mock import patch
 
 import pytest
@@ -114,6 +115,85 @@ def test_headcount_parser_skips_linkedin_and_respects_bound():
 
     assert len(jobs) == 1
     assert jobs[0].url == "https://jobs.example/1"
+
+
+def test_headcount_internship_sections_keep_both_freshness_buckets_and_mark_source_only():
+    markdown = (
+        "## Posted in the last 7 days\n"
+        "| Company | Role | Location | Remote | Pay | Posted | Apply | Details |\n"
+        "| --- | --- | --- | --- | --- | --- | --- | --- |\n"
+        '| **A** | Summer 2027 Software Engineering Intern | Remote | Remote | — | Nov 2 | '
+        '<a href="https://jobs.example/1">Apply</a> | details |\n'
+        "## Posted 8 to 30 days ago\n"
+        "| Company | Role | Location | Remote | Pay | Posted | Apply | Details |\n"
+        "| --- | --- | --- | --- | --- | --- | --- | --- |\n"
+        '| **B** | Data Science Intern | Boston | — | — | Oct 20 | '
+        '<a href="https://jobs.example/2">Apply</a> | details |\n'
+    )
+    jobs = public_feeds.parse_headcount_markdown(
+        markdown,
+        section=["Posted in the last 7 days", "Posted 8 to 30 days ago"],
+        source="headcount_data_ai_internships",
+        max_jobs=10,
+    )
+    assert [job.company for job in jobs] == ["A", "B"]
+    assert all(job.link_resolution["status"] == "source_only" for job in jobs)
+
+
+def test_headcount_new_grad_feed_does_not_inherit_internship_review_marker():
+    markdown = (
+        "## Software engineering\n"
+        "| Company | Role | Location | Remote | Pay | Posted | Apply | Details |\n"
+        "| --- | --- | --- | --- | --- | --- | --- | --- |\n"
+        '| **A** | Software Engineer, New Grad | Remote | Remote | — | Nov 2 | '
+        '<a href="https://jobs.example/grad-1">Apply</a> | details |\n'
+    )
+    jobs = public_feeds.parse_headcount_markdown(markdown, source="headcount_engineering")
+    assert jobs and jobs[0].link_resolution == {}
+
+
+def test_headcount_posted_month_day_uses_explicit_readme_update_year():
+    markdown = (
+        "**updated November 3, 2026 at 4:33 AM EST**\n"
+        "## Posted in the last 7 days\n"
+        "| Company | Role | Location | Remote | Pay | Posted | Apply | Details |\n"
+        "| --- | --- | --- | --- | --- | --- | --- | --- |\n"
+        '| **A** | Summer 2027 Software Engineering Intern | Remote | — | — | Nov 2 | '
+        '<a href="https://jobs.example/1">Apply</a> | details |\n'
+    )
+    jobs = public_feeds.parse_headcount_markdown(
+        markdown, section="Posted in the last 7 days", source="headcount_data_ai_internships"
+    )
+    assert datetime.fromtimestamp(jobs[0].posted_at, tz=UTC).date().isoformat() == "2026-11-02"
+
+
+def test_headcount_full_posted_date_parses_without_update_anchor():
+    markdown = (
+        "## Posted in the last 7 days\n"
+        "| Company | Role | Location | Remote | Pay | Posted | Apply | Details |\n"
+        "| --- | --- | --- | --- | --- | --- | --- | --- |\n"
+        '| **A** | Software Engineering Intern | Remote | — | — | Nov 2, 2026 | '
+        '<a href="https://jobs.example/1">Apply</a> | details |\n'
+    )
+    jobs = public_feeds.parse_headcount_markdown(
+        markdown, section="Posted in the last 7 days", source="headcount_data_ai_internships"
+    )
+    assert datetime.fromtimestamp(jobs[0].posted_at, tz=UTC).date().isoformat() == "2026-11-02"
+
+
+def test_headcount_posted_december_rolls_back_when_readme_updates_in_january():
+    markdown = (
+        "**updated January 2, 2027 at 4:33 AM EST**\n"
+        "## Posted in the last 7 days\n"
+        "| Company | Role | Location | Remote | Pay | Posted | Apply | Details |\n"
+        "| --- | --- | --- | --- | --- | --- | --- | --- |\n"
+        '| **A** | Winter 2027 Engineering Intern | Remote | — | — | Dec 31 | '
+        '<a href="https://jobs.example/1">Apply</a> | details |\n'
+    )
+    jobs = public_feeds.parse_headcount_markdown(
+        markdown, section="Posted in the last 7 days", source="headcount_engineering_internships"
+    )
+    assert datetime.fromtimestamp(jobs[0].posted_at, tz=UTC).date().isoformat() == "2026-12-31"
 
 
 def test_zero2sudo_notion_parser_returns_source_only_leads_without_using_page_edit_time():

@@ -7,7 +7,8 @@ honest unknown instead of a hidden rejection or a new-grad false positive.
 from __future__ import annotations
 
 import re
-from datetime import date, datetime
+import time
+from datetime import UTC, date, datetime
 
 from .config import profile
 from .identity import canonical_url
@@ -15,13 +16,21 @@ from .models import Job
 from .score import FOREIGN_HINTS, company_momentum_signal, role_bucket
 from .sector import infer as infer_sector
 
-RULES_VERSION = 7
+RULES_VERSION = 8
+
+# These locations occur in the internship ATS feed but are absent from the
+# older shared location hints. Remote within a named foreign country is not
+# evidence that a US applicant can work there.
+INTERNSHIP_FOREIGN_HINTS = re.compile(
+    FOREIGN_HINTS.pattern + r"|\b(?:denmark|aarhus|serbia|belgrade|qatar|doha|"
+    r"saudi arabia|austria|belgium|luxembourg|italy|greece|hungary|czechia|czech republic|"
+    r"norway|finland|iceland|lithuania|latvia|croatia|slovakia|slovenia|bulgaria|"
+    r"new zealand|hong kong|indonesia|malaysia|thailand|egypt|morocco|turkey|türkiye)\b", re.I)
+EXPLICIT_US_LOCATION = re.compile(r"\b(?:united states|usa?|u\.s\.)\b", re.I)
 
 INTERNSHIP_RE = re.compile(r"\b(intern(ship)?|co-?op|undergraduate|student worker|summer analyst)\b", re.I)
 INTERNSHIP_TITLE_RE = re.compile(
-    r"\b(?:intern(?:ship)?|co[- ]?op|cooperative education|student worker|summer analyst)\b"
-    r"|\b(?:summer|fall|spring|winter)\b"
-    r"|\b20\d{2}\s+(?:summer|fall|spring|winter)\b",
+    r"\b(?:intern(?:ship)?|co[- ]?op|cooperative education|student worker|summer analyst)\b",
     re.I,
 )
 EXPERIENCED_TITLE_RE = re.compile(
@@ -35,6 +44,7 @@ INTERNSHIP_SOURCE_NAMES = {
     "zero2sudo_notion",
 }
 FULL_TIME_RE = re.compile(r"\bfull[- ]time\b|\bpermanent\s+(?:employee|role|position)\b|\bregular\s+employee\b", re.I)
+RETURN_OFFER_RE = re.compile(r"\b(?:return|full[- ]time|conversion)\s+(?:offer|offers|to\s+full[- ]time)\b", re.I)
 DEFENSE_ROLE_RE = re.compile(
     r"\b(?:defen[cs]e|military|national security|classified|weapons?|munitions?|battlefield|clearance)\b", re.I)
 STUDENT_RE = re.compile(r"\b(current|rising|enrolled|undergraduate|college|university)\s+students?\b", re.I)
@@ -42,7 +52,9 @@ CLASS_RE = re.compile(
     r"\b(?P<rising>rising\s+)?(?P<class>freshman|freshmen|first[- ]year|"
     r"sophomore|sophomores|second[- ]year|junior|juniors|third[- ]year|"
     r"senior|seniors|fourth[- ]year)\b", re.I)
-TERM_RE = re.compile(r"\b(?P<term>summer|fall|spring|winter)\s*(?P<year>20\d{2})\b", re.I)
+TERM_RE = re.compile(
+    r"\b(?:(?P<term>summer|fall|spring|winter)\s*(?P<year>20\d{2})|"
+    r"(?P<year_rev>20\d{2})\s*(?P<term_rev>summer|fall|spring|winter))\b", re.I)
 YEAR_RE = re.compile(r"\b20\d{2}\b")
 MONTH_YEAR_RE = re.compile(
     r"\b(?P<month>jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|"
@@ -80,6 +92,61 @@ _WORK_QUALITY_RULES = (
      3, "technical depth"),
     (re.compile(r"\b(?:return offer|full[- ]time offer|conversion to full[- ]time|convert to full[- ]time)\b", re.I),
      4, "return-offer path"),
+)
+STUDENT_CONTEXT_RE = re.compile(
+    r"\b(?:student(?:s)?|undergraduate(?:s)?|college students?|university students?|"
+    r"applicants?|candidates?|open to|eligible|enrolled|rising)\b",
+    re.I,
+)
+SHARED_TERM_RE = re.compile(
+    r"\b(?P<terms>(?:summer|fall|spring|winter)\s*[/,&]\s*"
+    r"(?:summer|fall|spring|winter))\s*(?P<year>20\d{2})\b", re.I)
+GRADUATE_TERM_RE = re.compile(r"\b(?:ph\.?d|doctoral|graduate|master(?:'s|s)?)\b", re.I)
+GRADUATE_REQUIRED_RE = re.compile(
+    r"\b(?:must|required|required to|only|minimum|currently)\b[^.\n]{0,90}"
+    r"\b(?:ph\.?d|doctoral|graduate student|graduate students|master(?:'s|s)? degree|m\.?s\.? degree)\b"
+    r"|\b(?:ph\.?d|doctoral|graduate student|graduate students|master(?:'s|s)? degree|m\.?s\.? degree)\b[^.\n]{0,90}"
+    r"\b(?:must|required|required to|only|minimum)\b"
+    r"|\bgraduate students?\s+only\b",
+    re.I,
+)
+GRADUATE_EDUCATION_RE = re.compile(
+    r"\b(?:education|degree|program)\s*:\s*[^.\n]{0,35}\b(?:ph\.?d|doctoral|m\.?s\.?|master(?:'s|s)?)\b"
+    r"|\b(?:ph\.?d|doctoral)\s+in\s+[a-z]",
+    re.I,
+)
+GRADUATE_PREFERRED_RE = re.compile(
+    r"\b(?:ph\.?d|doctoral|graduate students?|master(?:'s|s)?|m\.?s\.?)\b[^.\n]{0,45}\bpreferred\b",
+    re.I,
+)
+UNDERGRAD_RE = re.compile(
+    r"\b(?:undergraduate|bachelor(?:'s|s)?|b\.?s\.?|college student|current student|"
+    r"enrolled student|class of|rising (?:freshman|sophomore|junior|senior))\b",
+    re.I,
+)
+STUDENT_CANDIDATE_RE = re.compile(
+    r"\b(?:open to|eligible for|accepting|seeking|looking for)\b[^.\n]{0,80}"
+    r"\b(?:students?|undergraduates?|college|university|applicants?|candidates?)\b"
+    r"|\b(?:students?|undergraduates?|applicants?|candidates?)\b[^.\n]{0,80}"
+    r"\b(?:may|can|should|must|eligible|graduat(?:e|ing)|enrolled)\b"
+    r"|\b(?:students?|undergraduates?|applicants?|candidates?)\s+"
+    r"(?:may|can|should|must)\s+apply\b(?!\s+to\s+(?:college|university|school))",
+    re.I,
+)
+INTERNSHIP_CANDIDATE_RE = re.compile(
+    r"\b(?:interns?|co-ops?)\b[^.\n]{0,80}\b(?:will|work|build|join|receive|are|must|should|can|may|apply)\b"
+    r"|\b(?:as an? intern|intern(?:ship)? (?:role|position|opportunity)|co-op (?:role|position|opportunity))\b",
+    re.I,
+)
+TECHNICAL_DUTY_RE = re.compile(
+    r"\b(?:you|interns?|researchers?|candidates?|responsibilit(?:y|ies)|will|"
+    r"build|develop|design|implement|analy[sz]e|write|code|train|debug|test|model)\b",
+    re.I,
+)
+RECRUITING_ROLE_RE = re.compile(
+    r"\b(?:early[- ]?careers?|campus recruiting|talent acquisition|recruit(?:er|ing)|"
+    r"interns? specialist|careers? specialist|program coordinator)\b",
+    re.I,
 )
 
 
@@ -245,11 +312,62 @@ def _eligibility_signal(job: Job) -> tuple[int, list[str]]:
 
 
 def _term_start(text: str) -> date | None:
-    m = TERM_RE.search(text)
-    if not m:
-        return None
-    month = {"winter": 1, "spring": 1, "summer": 6, "fall": 9}[m.group("term").lower()]
-    return date(int(m.group("year")), month, 1)
+    options = _term_options(text)
+    return options[0] if options else None
+
+
+def _term_options(text: str) -> list[date]:
+    """Return distinct internship starts, accepting both ``Summer 2027`` and
+    ``2027 Summer`` forms.  Shared-year copy such as ``Spring/Summer 2027`` is
+    intentionally split into two starts by the adjacent matches."""
+    found: list[date] = []
+    for match in SHARED_TERM_RE.finditer(text or ""):
+        year = int(match.group("year"))
+        for term in re.split(r"\s*[/,&]\s*", match.group("terms")):
+            month = {"winter": 1, "spring": 1, "summer": 6, "fall": 9}[term.lower()]
+            found.append(date(year, month, 1))
+    for match in TERM_RE.finditer(text or ""):
+        term = (match.group("term") or match.group("term_rev") or "").lower()
+        year = match.group("year") or match.group("year_rev")
+        if not year:
+            continue
+        month = {"winter": 1, "spring": 1, "summer": 6, "fall": 9}[term]
+        found.append(date(int(year), month, 1))
+    return _dedupe_dates(found)
+
+
+def term_status(eligibility: dict, now: int | None = None) -> str:
+    """Classify one or more terms without persisting a clock-dependent value."""
+    options = eligibility.get("term_options") or []
+    if not options and eligibility.get("term_start"):
+        options = [eligibility["term_start"]]
+    starts: list[date] = []
+    for value in options:
+        try:
+            starts.append(date.fromisoformat(str(value)[:10]))
+        except (TypeError, ValueError):
+            continue
+    if not starts:
+        return "unknown"
+    current_day = datetime.fromtimestamp(now or time.time(), UTC).date()
+    current = False
+    upcoming = False
+    for start in starts:
+        if start.month in (1,):
+            end = date(start.year, 5, 31)
+        elif start.month == 6:
+            end = date(start.year, 8, 31)
+        else:
+            end = date(start.year, 12, 31)
+        if start <= current_day <= end:
+            current = True
+        elif current_day < start:
+            upcoming = True
+    if current:
+        return "current"
+    if upcoming:
+        return "upcoming"
+    return "past"
 
 
 def _dedupe_dates(values: list[date]) -> list[date]:
@@ -258,41 +376,31 @@ def _dedupe_dates(values: list[date]) -> list[date]:
 
 def _graduation_years(text: str, term_start: date | None) -> list[int]:
     """Keep years tied to graduation language, including ``class of`` years."""
-    nearby = []
-    for match in YEAR_RE.finditer(text):
-        window = text[max(0, match.start() - 80):match.end() + 80]
-        if GRAD_CONTEXT_RE.search(window):
-            # A posting title commonly says ``Summer 2027`` while the body
-            # says ``class of 2028``. The broad context window is useful for
-            # malformed copy, but it must not turn the term year into a
-            # graduation year unless graduation language is directly attached
-            # to that occurrence.
-            if (term_start and int(match.group(0)) == term_start.year
-                    and not GRAD_CONTEXT_RE.search(
-                        text[max(0, match.start() - 36):match.end() + 36])):
-                continue
-            nearby.append(int(match.group(0)))
-    if nearby:
-        return sorted(set(nearby))
-    # A fallback for a malformed sentence with global graduation language;
-    # do not let a bare internship start year masquerade as graduation.
-    return sorted(set(y for y in (int(value) for value in YEAR_RE.findall(text))
-                      if not term_start or y != term_start.year))
+    nearby: list[int] = []
+    # Keep the phrase boundary tight. A title's ``Summer 2027`` and a later
+    # ``class of 2025`` requirement must produce only 2025.
+    for sentence in re.split(r"(?<=[.!?])\s+|\n+", text or ""):
+        if not GRAD_CONTEXT_RE.search(sentence):
+            continue
+        for match in YEAR_RE.finditer(sentence):
+            local = sentence[max(0, match.start() - 42):match.end() + 42]
+            if GRAD_CONTEXT_RE.search(local):
+                year = int(match.group(0))
+                if not term_start or year != term_start.year or GRAD_CONTEXT_RE.search(local):
+                    nearby.append(year)
+    return sorted(set(nearby))
 
 
 def _graduation_month_years(text: str) -> list[date]:
-    dates = []
-    term_start = _term_start(text)
-    for match in MONTH_YEAR_RE.finditer(text):
-        window = text[max(0, match.start() - 80):match.end() + 80]
-        if GRAD_CONTEXT_RE.search(window):
-            direct_context = GRAD_CONTEXT_RE.search(
-                text[max(0, match.start() - 36):match.end() + 36])
-            if (not direct_context and term_start
-                    and int(match.group("year")) == term_start.year):
-                continue
-            dates.append(date(int(match.group("year")),
-                             _MONTHS[match.group("month").lower()], 1))
+    dates: list[date] = []
+    for sentence in re.split(r"(?<=[.!?])\s+|\n+", text or ""):
+        if not GRAD_CONTEXT_RE.search(sentence):
+            continue
+        for match in MONTH_YEAR_RE.finditer(sentence):
+            local = sentence[max(0, match.start() - 42):match.end() + 42]
+            if GRAD_CONTEXT_RE.search(local):
+                dates.append(date(int(match.group("year")),
+                                  _MONTHS[match.group("month").lower()], 1))
     return _dedupe_dates(dates)
 
 
@@ -311,10 +419,71 @@ def _evidence(text: str, patterns: list[re.Pattern]) -> list[str]:
 
 
 def _has_student_or_internship_evidence(text: str) -> bool:
-    """Use broad positive evidence so a full-time return offer is not misread."""
-    return bool(INTERNSHIP_RE.search(text) or STUDENT_RE.search(text)
-                or GRAD_CONTEXT_RE.search(text) or CLASS_RE.search(text)
-                or TERM_RE.search(text))
+    """Require position-specific evidence, rather than company boilerplate."""
+    title, _, body = (text or "").partition("\n")
+    if RECRUITING_ROLE_RE.search(text or ""):
+        return False
+    return _title_internship_signal(title) or _has_body_student_or_internship_evidence(body)
+
+
+def _has_body_student_or_internship_evidence(body: str) -> bool:
+    """Check description language without treating its first line as a title."""
+    if INTERNSHIP_CANDIDATE_RE.search(body or "") or STUDENT_CANDIDATE_RE.search(body or ""):
+        return True
+    for match in CLASS_RE.finditer(body or ""):
+        window = (body or "")[max(0, match.start() - 55):match.end() + 75]
+        if STUDENT_CONTEXT_RE.search(window):
+            return True
+    return False
+
+
+def _title_internship_signal(title: str) -> bool:
+    title = title or ""
+    if INTERNSHIP_TITLE_RE.search(title):
+        return True
+    # A seasonal year title is an ATS convention; a season in body boilerplate
+    # does not qualify an ordinary role.
+    return bool(_term_options(title) and role_bucket(title, ""))
+
+
+def _degree_requirement(text: str) -> str:
+    # A list such as "bachelor's, master's, or PhD" is inclusive; the
+    # appearance of PhD alone must not turn it into a graduate-only role.
+    inclusive_degree = re.search(
+        r"\b(?:bachelor(?:'s|s)?|b\.s\.?|undergraduate)\b[^.\n]{0,100}"
+        r"\b(?:master(?:'s|s)?|m\.s\.?|ph\.?d|doctoral)\b",
+        text or "", re.I,
+    )
+    if inclusive_degree:
+        return "undergraduate_compatible"
+    if (GRADUATE_REQUIRED_RE.search(text or "")
+            or (GRADUATE_EDUCATION_RE.search(text or "")
+                and not GRADUATE_PREFERRED_RE.search(text or ""))):
+        return "graduate_only"
+    if UNDERGRAD_RE.search(text or ""):
+        return "undergraduate_compatible"
+    if GRADUATE_PREFERRED_RE.search(text or ""):
+        return "undergraduate_compatible"
+    return "unknown"
+
+
+def _target_role_bucket(title: str, description: str = "") -> str | None:
+    """Use title fit first, then a bounded technical-duty fallback for generic
+    internship titles such as ``Research Intern``."""
+    direct = role_bucket(title, "")
+    if direct:
+        return direct
+    if not _title_internship_signal(title):
+        return None
+    for sentence in re.split(r"(?<=[.!?])\s+|\n+", description or ""):
+        sentence = sentence.strip()
+        if not sentence or re.match(r"^(?:about us|our company|we are|who we are)\b", sentence, re.I):
+            continue
+        if TECHNICAL_DUTY_RE.search(sentence):
+            bucket = role_bucket("", sentence)
+            if bucket:
+                return bucket
+    return None
 
 
 def analyze(job: Job | dict, description: str | None = None) -> dict:
@@ -322,13 +491,16 @@ def analyze(job: Job | dict, description: str | None = None) -> dict:
     desc = description if description is not None else (
         job.description if isinstance(job, Job) else job.get("description", ""))
     text = f"{title}\n{desc or ''}"
-    term_start = _term_start(text)
+    parsed_terms = _term_options(text)
     source_evidence = (job.internship_eligibility if isinstance(job, Job)
                        else job.get("internship_eligibility", {})) or {}
     source_term = source_evidence.get("source_term")
-    if not term_start and source_term:
-        term_start = _term_start(str(source_term))
+    source_terms = _term_options(str(source_term or ""))
+    # Employer text is authoritative; feed metadata only fills a missing term.
+    term_options = parsed_terms or source_terms
+    term_start = term_options[0] if term_options else None
     full_time_only = bool(FULL_TIME_RE.search(text)
+                          and not RETURN_OFFER_RE.search(text)
                           and not _has_student_or_internship_evidence(text))
 
     # Only years near graduation language count as explicit graduation
@@ -341,6 +513,9 @@ def analyze(job: Job | dict, description: str | None = None) -> dict:
 
     class_years: list[str] = []
     for match in CLASS_RE.finditer(text):
+        context = text[max(0, match.start() - 55):match.end() + 75]
+        if not STUDENT_CONTEXT_RE.search(context):
+            continue
         # ``first year`` and ``first-year`` are equivalent in real postings;
         # normalize the separator before looking up the auditable standing.
         raw_class = match.group("class").lower().replace(" ", "-")
@@ -358,11 +533,31 @@ def analyze(job: Job | dict, description: str | None = None) -> dict:
         grad_start = grad_end = None
 
     explicit = bool(grad_years or class_years)
-    open_student = bool(STUDENT_RE.search(text))
-    status = "explicit" if explicit else ("open" if open_student or INTERNSHIP_RE.search(text) else "unknown")
-    evidence = _evidence(text, [GRAD_CONTEXT_RE, CLASS_RE, TERM_RE, INTERNSHIP_RE])
-    title_signal = bool(INTERNSHIP_TITLE_RE.search(title))
-    body_signal = _has_student_or_internship_evidence(desc or "")
+    title_signal = _title_internship_signal(title)
+    body_signal = bool(
+        _has_body_student_or_internship_evidence(desc or "")
+        and not RECRUITING_ROLE_RE.search(text)
+    )
+    open_student = bool(body_signal)
+    status = "explicit" if explicit else ("open" if open_student or title_signal else "unknown")
+    evidence = _evidence(text, [
+        GRAD_CONTEXT_RE, GRADUATE_REQUIRED_RE, GRADUATE_EDUCATION_RE,
+        GRADUATE_PREFERRED_RE, CLASS_RE, TERM_RE, INTERNSHIP_RE,
+        STUDENT_CONTEXT_RE,
+    ])
+    degree_requirement = _degree_requirement(text)
+    # Degree-specific internship titles are requirements even when the body
+    # was not retained. Do not mistake a BS/MS alternative for graduate-only.
+    if (re.search(r"\b(?:MBA|MS|MSc|Master['’]?s)\b", title)
+            and not UNDERGRAD_RE.search(title)):
+        degree_requirement = "graduate_only"
+    signal_reason = (
+        "experienced title" if EXPERIENCED_TITLE_RE.search(title)
+        else "explicit internship/co-op title" if INTERNSHIP_TITLE_RE.search(title)
+        else "seasonal technical internship title" if title_signal
+        else "position-specific student/internship evidence" if body_signal
+        else "no position-specific internship evidence"
+    )
     internship_signal = (
         "experienced_title" if EXPERIENCED_TITLE_RE.search(title)
         else "title" if title_signal
@@ -375,11 +570,15 @@ def analyze(job: Job | dict, description: str | None = None) -> dict:
         "graduation_start": grad_start,
         "graduation_end": grad_end,
         "term_start": term_start.isoformat() if term_start else None,
+        "term_options": [value.isoformat() for value in term_options],
         "source_term": source_term,
         "employment_signal": "full_time_only" if full_time_only else (
             "internship_or_student" if _has_student_or_internship_evidence(text)
             else "unknown"),
         "internship_signal": internship_signal,
+        "signal_reason": signal_reason,
+        "degree_requirement": degree_requirement,
+        "evidence_version": 2,
         "evidence": evidence,
     }
 
@@ -408,29 +607,36 @@ def match(eligibility: dict, expected_graduation: str | date | None) -> str:
     end = eligibility.get("graduation_end")
     if start and end:
         return "match" if start[:7] <= expected.strftime("%Y-%m") <= end[:7] else "mismatch"
-    term = eligibility.get("term_start")
     classes = set(eligibility.get("class_years") or [])
-    if term and classes:
-        role_start = date.fromisoformat(term)
-        standing = _class_at_start(expected, role_start)
-        return "match" if standing in classes else "mismatch"
+    terms = eligibility.get("term_options") or ([eligibility.get("term_start")]
+                                                   if eligibility.get("term_start") else [])
+    if terms and classes:
+        standings = []
+        for term in terms:
+            try:
+                standings.append(_class_at_start(expected, date.fromisoformat(str(term)[:10])))
+            except (TypeError, ValueError):
+                continue
+        if standings:
+            return "match" if any(standing in classes for standing in standings) else "mismatch"
     if eligibility.get("status") == "open":
         return "open"
     return "unknown"
 
 
-def gates(job: Job) -> tuple[bool, bool, list[str]]:
+def gates(job: Job, now: int | None = None) -> tuple[bool, bool, list[str]]:
     reasons: list[str] = []
     invalid_url = not canonical_url(job.url)
     if not job.profile:
         job.profile = "internship"
-    if job.remote:
-        pass
-    elif job.locations and FOREIGN_HINTS.search(" | ".join(job.locations)):
+    locations = " | ".join(job.locations or [])
+    if INTERNSHIP_FOREIGN_HINTS.search(locations) and not EXPLICIT_US_LOCATION.search(locations):
         return False, False, ["non-US-only internship"]
     if EXPERIENCED_TITLE_RE.search(job.title):
         return False, False, ["experienced or doctoral internship title"]
-    bucket = role_bucket(job.title, job.description or "")
+    # Role fit is title-led.  Company boilerplate can mention AI, data, or
+    # software while the actual opening is an electrician or event role.
+    bucket = _target_role_bucket(job.title, job.description or "")
     if not bucket:
         return False, False, ["not a target technical internship role"]
     if (job.internship_eligibility or {}).get("employment_signal") == "full_time_only":
@@ -448,6 +654,12 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
         reasons.append("internship title evidence")
     else:
         reasons.append("internship/student posting evidence")
+    requirement = (job.internship_eligibility or {}).get("degree_requirement", "unknown")
+    if requirement == "graduate_only":
+        return True, False, reasons + ["graduate-only requirement: review only"]
+    current_term = term_status(job.internship_eligibility or {}, now)
+    if current_term == "past":
+        return True, False, reasons + ["past internship term: review only"]
     if job.internship_eligibility.get("status") == "explicit":
         reasons.append("graduation/class-year eligibility evidence")
     elif job.internship_eligibility.get("status") == "unknown":
@@ -527,6 +739,14 @@ def score(job: Job, now: int) -> None:
         if value > review_cap:
             reasons.append(f"full-time review cap applied -{value - review_cap:g}")
             value = review_cap
+    degree_requirement = (job.internship_eligibility or {}).get("degree_requirement", "unknown")
+    current_term = term_status(job.internship_eligibility or {}, now)
+    if degree_requirement == "graduate_only":
+        reasons.append("graduate-only requirement: review cap applied")
+        value = min(value, int(cfg.get("graduate_only_review_cap", 34)))
+    if current_term == "past":
+        reasons.append("past internship term: review cap applied")
+        value = min(value, int(cfg.get("past_term_review_cap", 34)))
     if defense:
         defense_cap = max(0, int(cfg.get("defense_score_cap", 12)))
         if value > defense_cap:
@@ -540,9 +760,11 @@ def score(job: Job, now: int) -> None:
     full_time_only = (
         (job.internship_eligibility or {}).get("employment_signal") == "full_time_only"
     )
+    keep, gate_alert, _ = gates(job, now)
     job.eligibility = (
         "eligible"
-        if signal in {"title", "body"} and not full_time_only
+        if keep and gate_alert and signal in {"title", "body"} and not full_time_only
+        and degree_requirement != "graduate_only" and current_term != "past"
         else "review"
     )
     job.priority_tier = "recommended" if job.evidence_score >= 60 else "explore"
@@ -556,17 +778,25 @@ def annotate(job: Job) -> dict:
     job.profile = "internship"
     source_evidence = dict(job.internship_eligibility or {})
     parsed = analyze(job)
-    # A rescore may rehydrate a record without its description. Preserve the
-    # last trusted eligibility parse instead of downgrading it to title-only
-    # evidence, while still refreshing it whenever fresh text is available.
+    # A rescore may rehydrate a record without its description. Replay only the
+    # bounded proof snippets written by evidence v2. Older snapshots have no
+    # trustworthy provenance for body-derived verdicts and must fall back to
+    # the current title/source facts instead of resurrecting stale signals.
     if not job.description:
-        for key in ("status", "class_years", "graduation_start", "graduation_end",
-                    "term_start", "employment_signal", "evidence"):
-            if key in source_evidence:
-                parsed[key] = source_evidence[key]
-        stored_signal = source_evidence.get("internship_signal")
-        if parsed.get("internship_signal") == "unknown" and stored_signal not in {None, "unknown"}:
-            parsed["internship_signal"] = stored_signal
+        proof = source_evidence.get("evidence") or []
+        if proof:
+            # Reparse v1 snippets on first migration too. The old verdict is
+            # never trusted; only the new position-specific parser result is
+            # carried forward into v2.
+            title_key = re.sub(r"\s+", " ", job.title or "").strip().casefold()
+            replay_lines = [
+                str(item) for item in proof
+                if re.sub(r"\s+", " ", str(item)).strip().casefold() != title_key
+            ]
+            replayed = analyze(job, description="\n".join(replay_lines))
+            parsed.update(replayed)
+        elif source_evidence.get("source_term"):
+            parsed["source_term"] = source_evidence["source_term"]
     # ATS adapters can know that a posting came from an internship-specific
     # commitment/search even when the title and description are terse. Keep
     # that provenance through the parser instead of trusting every posting in
@@ -574,8 +804,9 @@ def annotate(job: Job) -> dict:
     source_signal = bool(source_evidence.get("source_signal")) or job.source in INTERNSHIP_SOURCE_NAMES
     if source_signal:
         parsed["source_signal"] = True
-        parsed["evidence"] = list(dict.fromkeys(
-            (source_evidence.get("evidence") or []) + parsed.get("evidence", [])))[:4]
+        if not job.description and source_evidence.get("evidence_version", 1) >= 2:
+            parsed["evidence"] = list(dict.fromkeys(
+                (source_evidence.get("evidence") or []) + parsed.get("evidence", [])))[:4]
         if parsed["status"] == "unknown":
             parsed["status"] = "open"
         if parsed.get("internship_signal") == "unknown":
@@ -590,5 +821,14 @@ def annotate(job: Job) -> dict:
             parsed["status"] = "open"
     work_points, work_reasons = _work_quality_signal(job)
     parsed["work_quality"] = {"points": work_points, "reasons": work_reasons}
+    # Employer-page enrichment uses these fields to enforce retry cooldowns.
+    # Keep them through every annotate/rescore pass; dropping them causes the
+    # crawler to refetch the same source on every run.
+    for key in ("fetch_checked_at", "fetch_status", "fetch_note", "fetch_error"):
+        value = source_evidence.get(key)
+        if key == "fetch_checked_at" and isinstance(value, (int, float)):
+            parsed[key] = int(value)
+        elif key != "fetch_checked_at" and isinstance(value, str):
+            parsed[key] = value
     job.internship_eligibility = parsed
     return job.internship_eligibility
