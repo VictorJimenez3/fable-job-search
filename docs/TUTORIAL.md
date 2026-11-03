@@ -133,7 +133,8 @@ New-grad discovery combines direct ATS polling with bounded public feeds. The
 Headcount engineering and data/AI sections and YubHub's graduate-engineering
 feed contribute up to 100 rows each; YubHub rows retain the attribution **Data
 by YubHub** ([yubhub.co](https://yubhub.co)). The anonymous public
-zero2sudo Notion list contributes up to 25 **source-only** leads for review.
+zero2sudo Notion list contributes up to 25 **source-only** leads to both lanes
+for review; each lane keeps the appropriate roles.
 Those leads are intentionally not employer evidence: they need an employer
 posting, date, and liveness check before they can become alertable. Instagram
 login is unavailable, and the radar never automatically scrapes Instagram or

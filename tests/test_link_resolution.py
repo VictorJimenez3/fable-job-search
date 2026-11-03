@@ -436,6 +436,32 @@ def test_source_only_fresh_sighting_cannot_replace_verified_evidence():
     assert target["link_resolution"]["status"] == "resolved"
 
 
+def test_curator_sighting_does_not_demote_persisted_employer_evidence():
+    bare_sighting = Job(
+        company="Acme", title="Software Engineer Intern",
+        url="https://jobs.lever.co/acme/role-123", source="lever", ats="lever",
+        internship_eligibility={"internship_signal": "title"},
+    )
+    assert not radar_main._has_independent_employer_evidence(bare_sighting)
+    for evidence in (
+        {"eligibility_evidence": {"status": "verified", "source": "description"}},
+        {"internship_eligibility": {"internship_signal": "body", "status": "explicit"}},
+    ):
+        target = {
+            "id": "verified", "company": "Acme", "title": "Software Engineer",
+            "url": "https://jobs.lever.co/acme/role-123", "source": "lever",
+            "ats": "lever", **evidence,
+        }
+        lead = Job(
+            company="Acme", title="Software Engineer", url=target["url"],
+            source="zero2sudo_notion",
+            link_resolution={"status": "source_only", "source_note": "curator note"},
+        )
+        _merge_record_sighting(target, lead.to_record())
+        assert target["link_resolution"].get("status") != "source_only"
+        assert target["link_resolution"]["source_only_provenance"][0]["source_note"] == "curator note"
+
+
 def test_outputs_show_direct_and_fallback_links():
     job = {
         "id": "a" * 16, "company": "Acme", "title": "SWE", "url": "https://jobs.lever.co/acme/123",

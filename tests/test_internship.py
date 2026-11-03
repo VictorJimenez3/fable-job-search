@@ -104,6 +104,83 @@ def test_internship_gates_keep_target_roles_but_separate_alert_evidence():
     assert gates(job(locations=["London, United Kingdom"]))[0] is False
 
 
+def test_source_only_internship_lead_stays_review_only_even_with_intern_title():
+    posting = job(
+        title="Software Engineering Intern",
+        source="zero2sudo_notion",
+        link_resolution={"status": "source_only", "source_note": "curator note"},
+    )
+    annotate(posting)
+    keep, alert_ok, reasons = gates(posting)
+    assert keep and not alert_ok
+    assert posting.internship_eligibility["internship_signal"] == "source_only"
+    assert any("review" in reason for reason in reasons)
+
+
+def test_rehydrated_source_only_internship_preserves_resolution():
+    from radar.internship_radar import _job_from_record
+
+    posting = _job_from_record({
+        "company": "Acme",
+        "title": "Software Engineering Intern",
+        "url": "https://example.test/job/1",
+        "source": "zero2sudo_notion",
+        "profile": "internship",
+        "link_resolution": {"status": "source_only"},
+        "internship_eligibility": {"internship_signal": "source_only"},
+    })
+    annotate(posting)
+    assert posting.link_resolution["status"] == "source_only"
+    assert posting.internship_eligibility["internship_signal"] == "source_only"
+    assert gates(posting)[1] is False
+
+
+def test_internship_posting_identity_collapses_provider_application_suffix():
+    from radar.main import _existing_posting_ids, _state_job_identity
+
+    existing = {
+        "stable": {
+            "url": "https://jobs.lever.co/acme/role-123",
+            "company": "Acme",
+            "title": "Software Engineering Intern",
+        }
+    }
+    variant = Job(
+        company="Acme",
+        title="Software Engineering Intern",
+        url="https://jobs.lever.co/acme/role-123/apply",
+        locations=["New York, NY"],
+        source="zero2sudo_notion",
+        link_resolution={"status": "source_only"},
+    )
+    assert _state_job_identity(variant, existing, _existing_posting_ids(existing)) == "stable"
+
+
+def test_official_internship_sighting_wins_over_zero2sudo_variant():
+    from radar.internship_radar import _dedupe_internship_sightings
+    from radar.main import _merge_job_sighting
+
+    curated = Job(
+        company="Acme", title="Software Engineering Intern",
+        url="https://jobs.lever.co/acme/role-123/apply", locations=["New York, NY"],
+        source="zero2sudo_notion",
+        link_resolution={"status": "source_only", "source_note": "curator"},
+    )
+    official = Job(
+        company="Acme", title="Software Engineering Intern",
+        url="https://jobs.lever.co/acme/role-123", locations=["New York, NY"],
+        source="lever", ats="lever", description="Current undergraduate students may apply.",
+        link_resolution={"status": "resolved", "resolved_url": "https://jobs.lever.co/acme/role-123"},
+    )
+    for ordered in ([curated, official], [official, curated]):
+        rows, dropped = _dedupe_internship_sightings(ordered, _merge_job_sighting)
+        assert dropped == 1
+        assert rows[0].url == official.url
+        assert rows[0].description == official.description
+        assert rows[0].link_resolution["status"] == "resolved"
+        assert rows[0].link_resolution["source_only_provenance"]
+
+
 def test_explicit_full_time_outliers_are_review_only_but_not_deleted(monkeypatch):
     monkeypatch.setenv("RADAR_PROFILE", "internship")
     from radar import config

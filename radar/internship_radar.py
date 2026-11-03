@@ -11,6 +11,7 @@ import time
 from . import discovery, lifecycle, state
 from .config import env, profile, seeds
 from .digest import write_outputs
+from .identity import canonical_url, posting_key
 from .internship import RULES_VERSION, annotate, gates, score
 from .models import Job, norm
 
@@ -21,12 +22,81 @@ def _job_from_record(record: dict) -> Job:
         company=record.get("company", ""), title=record.get("title", ""),
         url=record.get("url", ""), source=record.get("source", ""),
         source_url=record.get("source_url", ""), locations=record.get("locations", []),
+        source_board=record.get("source_board", ""),
+        source_board_variants=record.get("source_board_variants", []) or [],
+        source_variants=record.get("source_variants", []) or [],
+        source_url_variants=record.get("source_url_variants", []) or [],
+        alternate_urls=record.get("alternate_urls", []) or [],
+        link_resolution=record.get("link_resolution", {}) or {},
         posted_at=record.get("posted_at"), description=record.get("description", ""),
         salary=record.get("salary", ""), remote=bool(record.get("remote")),
         ats=record.get("ats", ""), sector=record.get("sector", ""),
         profile="internship",
         internship_eligibility=record.get("internship_eligibility", {}) or {},
+        posting=record.get("posting", {}) or {},
     )
+
+
+def _source_only(job: Job) -> bool:
+    return (job.link_resolution or {}).get("status") == "source_only"
+
+
+def _internship_source_rank(job: Job) -> tuple:
+    """Prefer an employer/ATS sighting when a curated lead shares its URL."""
+    return (
+        0 if _source_only(job) else 1,
+        1 if job.description else 0,
+        1 if job.ats else 0,
+        1 if (job.link_resolution or {}).get("status") == "resolved" else 0,
+        len(job.description or ""),
+    )
+
+
+def _dedupe_internship_sightings(jobs: list[Job], merge_sighting) -> tuple[list[Job], int]:
+    """Collapse URL variants while keeping official evidence authoritative."""
+    selected: dict[str, Job] = {}
+    dropped = 0
+    for job in jobs:
+        key = posting_key(job.url) or canonical_url(job.url)
+        if not key:
+            continue
+        previous = selected.get(key)
+        if previous is None:
+            selected[key] = job
+            continue
+        if _internship_source_rank(job) > _internship_source_rank(previous):
+            winner, loser = job, previous
+        else:
+            winner, loser = previous, job
+        winner_resolution = dict(winner.link_resolution or {})
+        loser_resolution = dict(loser.link_resolution or {})
+        winner_description = winner.description
+        winner_ats = winner.ats
+        winner_eligibility = dict(winner.internship_eligibility or {})
+        merge_sighting(winner, loser)
+        if not _source_only(winner):
+            # A curator lead contributes provenance, never a weaker lifecycle
+            # or eligibility verdict over an official/ATS winner.
+            merged_provenance = list(
+                winner.link_resolution.get("source_only_provenance", [])
+                if isinstance(winner.link_resolution, dict) else []
+            )
+            if loser_resolution.get("status") == "source_only":
+                provenance = {
+                    key: value for key, value in loser_resolution.items()
+                    if key not in {"status", "source_only_provenance"}
+                }
+                if provenance and provenance not in merged_provenance:
+                    merged_provenance.append(provenance)
+            winner.link_resolution = winner_resolution
+            if merged_provenance:
+                winner.link_resolution["source_only_provenance"] = merged_provenance
+            winner.description = winner_description
+            winner.ats = winner_ats
+            winner.internship_eligibility = winner_eligibility
+        selected[key] = winner
+        dropped += 1
+    return list(selected.values()), dropped
 
 
 def rescore() -> int:
@@ -87,7 +157,18 @@ def regate() -> int:
 
 
 def crawl() -> int:
-    from .main import _fetch_aggregators, _fetch_ats, deliver_alerts
+    from .main import (
+        _existing_posting_ids,
+        _fetch_aggregators,
+        _fetch_ats,
+        _has_independent_employer_evidence,
+        _job_identity,
+        _merge_record_sighting,
+        _repair_duplicate_job_state,
+        _state_job_identity,
+        _unique_discovered_jobs,
+        deliver_alerts,
+    )
 
     t0 = time.time()
     now = int(t0)
@@ -95,12 +176,23 @@ def crawl() -> int:
     registry = state.companies()
     discovery.seed_registry(registry, seeds())
     jobs_state = state.jobs()
+    applied = state.applied()
+    jobs_state, repaired = _repair_duplicate_job_state(jobs_state, applied)
+    if repaired:
+        state.save("jobs.json", jobs_state)
     agg_jobs, agg_stats, healthy_aggregator_boards = _fetch_aggregators(disabled)
     harvested = discovery.harvest(registry, agg_jobs,
                                   max_new=int(env("RADAR_INTERNSHIP_MAX_HARVEST", "100")))
     activated, invalidated = discovery.probe_new(
         registry, budget=int(env("RADAR_INTERNSHIP_PROBE_BUDGET", "20")))
     ats_jobs, ats_stats, healthy_ats_boards = _fetch_ats(registry, disabled)
+    from .main import _merge_job_sighting
+    discovered, feed_duplicates = _dedupe_internship_sightings(
+        agg_jobs + ats_jobs, _merge_job_sighting)
+    discovered, generic_duplicates = _unique_discovered_jobs(discovered)
+    feed_duplicates += generic_duplicates
+    if feed_duplicates:
+        print(f"internship hygiene: ignored {feed_duplicates} duplicate sighting(s)")
     print(f"internship aggregators: {agg_stats}")
     print(f"internship discovery: harvested {harvested}, probed {activated} active / {invalidated} invalid")
     print(f"internship ats: {ats_stats}")
@@ -111,17 +203,58 @@ def crawl() -> int:
     manual_upgrades: dict[str, dict] = {}
     dropped = 0
     seen: set[str] = set()
-    for job in agg_jobs + ats_jobs:
+    existing_posting_ids = _existing_posting_ids(jobs_state)
+    for job in discovered:
         if not job.company or not job.title or not job.url:
             continue
         job.profile = "internship"
-        if job.id in seen:
+        jid = _state_job_identity(job, jobs_state, existing_posting_ids)
+        if jid in seen:
             continue
-        seen.add(job.id)
-        existing = jobs_state.get(job.id)
+        job._radar_id = jid
+        seen.add(jid)
+        existing = jobs_state.get(jid)
         if existing is not None:
             lifecycle.touch(existing, now, job.source or "monitored source")
         if existing is not None and existing.get("source") != "manual":
+            if not job.sector:
+                job.sector = seed_sectors.get(norm(job.company), "other")
+            annotate(job)
+            keep, alert_ok, reasons = gates(job)
+            job.alert_ok = alert_ok
+            sighting = job.to_record()
+            authoritative = (
+                (job.link_resolution or {}).get("status") != "source_only"
+                and _has_independent_employer_evidence(job)
+            )
+            if authoritative:
+                sighting["_fresh_employer_evidence"] = True
+            _merge_record_sighting(existing, sighting)
+            if authoritative:
+                score(job, now)
+                job.score_reasons += reasons
+                existing["internship_eligibility"] = dict(job.internship_eligibility)
+                existing.update({
+                    "profile": "internship",
+                    "score": job.score,
+                    "evidence_score": job.evidence_score,
+                    "eligibility": job.eligibility,
+                    "priority_tier": job.priority_tier,
+                    "score_raw": job.score_raw,
+                    "score_calibrated": job.score_calibrated,
+                    "score_dimensions": job.score_dimensions,
+                    "score_dimensions_raw": job.score_dimensions_raw,
+                    "score_reasons": job.score_reasons,
+                    "rules_v": RULES_VERSION,
+                    "score_version": RULES_VERSION,
+                    "alert_ok": bool(
+                        keep and job.alert_ok
+                        and not existing.get("manual_archived")
+                        and not lifecycle.is_terminal(existing)
+                    ),
+                })
+                if job.posting:
+                    existing["posting"] = dict(job.posting)
             continue
         if not job.sector:
             job.sector = seed_sectors.get(norm(job.company), "other")
@@ -135,7 +268,8 @@ def crawl() -> int:
         job.score_reasons += reasons
         lifecycle.touch(job, now, job.source or "monitored source")
         if existing is not None:
-            manual_upgrades[job.id] = existing
+            manual_upgrades[jid] = existing
+        job._radar_id = jid
         new_jobs.append(job)
 
     from .posting import scrape_pass
@@ -158,8 +292,9 @@ def crawl() -> int:
 
     for job in new_jobs:
         record = job.to_record()
-        old = manual_upgrades.get(job.id)
-        old_record = jobs_state.get(job.id)
+        record["id"] = job._radar_id or _job_identity(job)
+        old = manual_upgrades.get(record["id"])
+        old_record = jobs_state.get(record["id"])
         record["first_seen"] = old.get("first_seen", now) if old else now
         if old:
             record["manual_added"] = True
@@ -167,7 +302,7 @@ def crawl() -> int:
         record["rules_v"] = RULES_VERSION
         record["score_version"] = RULES_VERSION
         record["profile"] = "internship"
-        jobs_state[job.id] = record
+        jobs_state[record["id"]] = record
 
     lifecycle_stats = lifecycle.reconcile(
         jobs_state, now, seen,
@@ -182,6 +317,7 @@ def crawl() -> int:
     alert_history = state.load("alert_history.json", [])
     for job in alerts:
         record = job.to_record()
+        record["id"] = job._radar_id or _job_identity(job)
         record["alerted_at"] = now
         alert_history.append(record)
     alert_history = alert_history[-800:]

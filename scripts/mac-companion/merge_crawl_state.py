@@ -37,6 +37,13 @@ def _configure_state_dir() -> Path:
 STATE_DIR = _configure_state_dir()
 
 
+def _state_path(name: str) -> Path:
+    """Resolve the generated filename for the active lane."""
+    lane = os.environ.get("RADAR_PROFILE", "").strip().lower()
+    prefix = "intern_" if lane in {"internship", "intern"} else ""
+    return STATE_DIR / f"{prefix}{name}"
+
+
 def load(path: str | Path, default):
     try:
         with open(path) as handle:
@@ -91,7 +98,7 @@ def _load_snapshot(path: Path, legacy_history_path: Path | None = None) -> dict:
 
 def _merge_aliases(ours_path: str | None) -> tuple[dict, bool]:
     """Add aliases from the completed crawl without replacing upstream ones."""
-    upstream_path = STATE_DIR / "job_aliases.json"
+    upstream_path = _state_path("job_aliases.json")
     aliases = load(upstream_path, {})
     if not isinstance(aliases, dict):
         aliases = {}
@@ -114,11 +121,11 @@ ours_history = load(ours_history_path, {}) if ours_history_path else {}
 if not isinstance(ours_history, dict):
     ours_history = {}
 
-upstream_jobs_path = STATE_DIR / "jobs.json"
+upstream_jobs_path = _state_path("jobs.json")
 upstream_jobs = _load_snapshot(upstream_jobs_path)
 jobs = dict(upstream_jobs)
 
-upstream_history_path = STATE_DIR / "jobs_history.json"
+upstream_history_path = _state_path("jobs_history.json")
 history = load(upstream_history_path, {})
 if not isinstance(history, dict):
     history = {}
@@ -126,9 +133,9 @@ if not isinstance(history, dict):
 ours_companies = load(os.environ["MERGE_CRAWL_COMPANIES"], {})
 ours_alerts = load(os.environ["MERGE_CRAWL_ALERT_HISTORY"], [])
 ours_runs = load(os.environ["MERGE_CRAWL_RUNS"], [])
-companies = load(STATE_DIR / "companies.json", {})
-alerts = load(STATE_DIR / "alert_history.json", [])
-runs = load(STATE_DIR / "runs.json", [])
+companies = load(_state_path("companies.json"), {})
+alerts = load(_state_path("alert_history.json"), [])
+runs = load(_state_path("runs.json"), [])
 if not isinstance(ours_companies, dict):
     ours_companies = {}
 if not isinstance(companies, dict):

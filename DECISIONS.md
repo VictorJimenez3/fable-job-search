@@ -3738,3 +3738,31 @@ findings remain in the ESLint/minimatch development chain; resolving those
 requires a separate dependency compatibility decision, so no audit threshold
 was weakened for this release.
 
+
+## 230. Keep internship discovery on the same identity and source-only boundary (2026-11-03)
+
+The internship crawler must use the shared canonical posting identity and
+persistent alias repair, including provider URL variants and distinct real
+requisitions with identical labels. A migration alone is insufficient: a
+later internship sighting must resolve to its existing survivor and refresh
+provenance instead of recreating the removed row or alerting it again.
+
+Zero2Sudo's public collection contains internship and new-grad leads, so both
+lanes consume it and apply their own role gates. A source-only marker remains
+review-only through internship annotation, persistence, and rescoring until
+independent employer evidence clears it. Curator notes cannot override a
+verified ATS posting. Existing Spring/Winter 2027 email scope is unchanged.
+
+All snapshot writers must commit the primary index and referenced detail shards
+together. The internship workflow retains a lane-specific checkpoint on push
+races; the shared merge script reads only the selected lane, preserves upstream
+records, and adds completed discoveries before rescoring. Rescore-only retries
+recompute after resetting to current production. Score maintenance and DOL
+sponsorship publishing stage their detail directories as well.
+
+The first successful live crawl added 10,011 records and consumed most of the
+initial headroom. Additional drawer-only audit fields now move into existing
+shards, reducing a lossless 91,972-record replay from 95,211,647 to 76,563,974
+bytes. API evidence scores, eligibility, priority, direct-apply alternatives,
+posting filter hints, hard-gate summaries, and terminal history previews stay
+in the primary. This preserves pre-drawer behavior while increasing capacity.

@@ -57,6 +57,7 @@ AGG_SOURCES_INTERNSHIP = {
     "dreamwork_internship": aggregators.fetch_dreamwork_internship,
     "applyguy_internship": aggregators.fetch_applyguy_internship,
     "aprameyak_offcycle": aggregators.fetch_aprameyak_offcycle,
+    "zero2sudo_notion": public_feeds.fetch_zero2sudo_notion,
 }
 
 PM_BACKFILL_ATS = {"workday", "phenom"}
@@ -178,6 +179,20 @@ def _has_independent_employer_evidence(record: Job | dict | None) -> bool:
         return False
     if str(get("description", "") or "").strip():
         return True
+    # Descriptions are deliberately omitted from persisted records. Their
+    # evaluated evidence must still protect a previously verified posting
+    # when a later curator-only sighting contributes another source link.
+    if isinstance(record, dict):
+        evidence = get("eligibility_evidence", {}) or {}
+        if (isinstance(evidence, dict)
+                and evidence.get("source") in {
+                    "title", "description", "cohort-conflict", "contradictory-posting"}
+                and evidence.get("status") in {"verified", "review"}):
+            return True
+        internship = get("internship_eligibility", {}) or {}
+        if (isinstance(internship, dict)
+                and internship.get("internship_signal") in {"title", "body"}):
+            return True
     posting = get("posting", {}) or {}
     if not isinstance(posting, dict):
         return False

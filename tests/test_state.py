@@ -224,11 +224,7 @@ def test_open_eligibility_evidence_moves_to_detail_shard_and_hydrates(tmp_path, 
 
     primary = json.loads((tmp_path / "jobs.json").read_text())["job-1"]
     detail = json.loads((tmp_path / primary["detail_ref"]["shard"]).read_text())
-    assert primary["eligibility_evidence"] == {
-        "status": "verified",
-        "source": "description",
-        "required_floor": 0,
-    }
+    assert "eligibility_evidence" not in primary
     assert detail["records"]["job-1"]["eligibility_evidence"] == row["eligibility_evidence"]
     assert state.load("jobs.json", {})["job-1"]["eligibility_evidence"] == row["eligibility_evidence"]
 
@@ -304,6 +300,17 @@ def test_drawer_audit_fields_are_sharded_with_filter_hints_in_primary(tmp_path, 
         "source_board_variants": ["simplify:new-grad"],
         "source_url_variants": ["https://simplify.test/feed"],
         "lifecycle_events": [{"status": "open", "at": 10}],
+        "posting": {
+            "sponsorship": "yes", "years_min": 4, "intern_counts": True,
+            "sponsorship_note": "full detail stays in the drawer shard",
+        },
+        "lifecycle_checked_at": 123,
+        "posting_status_reason": "source rechecked",
+        "rules_v": 16,
+        "score_raw": 54.5,
+        "score_calibrated": 55,
+        "evidence_score": 55,
+        "ranking_adjustment": -2,
     }
 
     state.save("jobs.json", {"job-1": row})
@@ -313,11 +320,41 @@ def test_drawer_audit_fields_are_sharded_with_filter_hints_in_primary(tmp_path, 
     assert primary["sponsorship_history"] == {"status": "likely"}
     assert primary["link_resolution"] == {"status": "resolved"}
     assert primary["posting_identity"] == {"variant_count": 2}
+    assert primary["posting"] == {
+        "sponsorship": "yes", "years_min": 4, "intern_counts": True,
+    }
+    for key in ("lifecycle_checked_at", "posting_status_reason", "rules_v", "score_raw",
+                "score_calibrated", "ranking_adjustment"):
+        assert key not in primary
+    assert primary["evidence_score"] == 55
     assert "lifecycle_events" not in primary
     assert detail["sponsorship_history"]["certified_cases"] == 3
     assert detail["link_resolution"]["original_url"] == "https://aggregator.test/job"
     assert detail["posting_identity"]["family_id"] == "family-1"
+    assert detail["posting"] == row["posting"]
+    assert detail["lifecycle_checked_at"] == 123
+    assert detail["posting_status_reason"] == "source rechecked"
+    assert detail["rules_v"] == 16
+    assert state.load("jobs.json", {})["job-1"]["posting"] == row["posting"]
     assert state.load("jobs.json", {})["job-1"]["lifecycle_events"] == row["lifecycle_events"]
+
+
+def test_empty_posting_hint_stays_distinct_from_unread(tmp_path, monkeypatch):
+    monkeypatch.setattr(state, "STATE_DIR", tmp_path)
+    row = {
+        "id": "job-1", "company": "Acme", "title": "Engineer",
+        "score_version": 16, "posting_status": "open",
+        "score_reasons": ["role:swe +20"],
+        "posting": {"sponsorship_note": "requires drawer detail"},
+    }
+
+    state.save("jobs.json", {"job-1": row})
+
+    primary = json.loads((tmp_path / "jobs.json").read_text())["job-1"]
+    assert primary["posting"] == {}
+    detail = json.loads((tmp_path / primary["detail_ref"]["shard"]).read_text())
+    assert detail["records"]["job-1"]["posting"] == row["posting"]
+    assert state.load("jobs.json", {})["job-1"]["posting"] == row["posting"]
 
 
 def test_detail_shard_has_its_own_size_guard(tmp_path, monkeypatch):

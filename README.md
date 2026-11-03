@@ -165,8 +165,8 @@ includes the public Headcount engineering and data/AI sections (up to 100 rows
 each) and YubHub's graduate-engineering feed (up to 100 rows, attributed to
 [Data by YubHub](https://yubhub.co)). The anonymous public
 [zero2sudo Notion list](https://zero2sudo.notion.site/) is enabled as a
-review-only, source-only lead feed (up to 25 rows); it is never employer
-evidence. Instagram login is inaccessible, and the radar does not automatically
+review-only, source-only lead feed in both lanes (up to 25 rows); each lane
+applies its own role gates, and curator notes are never employer evidence. Instagram login is inaccessible, and the radar does not automatically
 scrape Instagram or LinkedIn. Every source listing URL is mined for ATS board tokens,
 so new companies expand direct monitoring automatically.
 
@@ -1325,12 +1325,12 @@ setting. Edit and push — next run picks it up. Seed companies:
   AI usage, and provider benchmark results. Job snapshots use a sparse,
   backward-compatible JSON representation: zero score dimensions and repeated
   primary-source provenance are omitted (absence means no signal/already
-  represented), while nonzero dimensions, score reasons, and nonzero DOL facts
-  remain intact in the primary snapshot for open roles. Legacy complete
-  terminal records remain in `state/jobs_history.json`; new compacted terminal
-  and open-role detail hydrates from the versioned detail shards, while the
-  listing/lifecycle summary stays in `state/jobs.json`. The history file
-  remains the compatibility fallback for records that predate detail shards.
+  represented). Full score ledgers, dimensions, eligibility evidence, posting
+  facts, and audit timestamps hydrate from versioned detail shards through
+  `state.load_job_snapshot`; the primary retains the fields needed for list
+  filtering, ordering, and actions. Legacy complete terminal records in
+  `state/jobs_history.json` remain readable as a compatibility fallback.
+  All snapshot writers stage the index, history, and detail directory together.
   Writes fail before replacement at 95 MiB, leaving headroom below GitHub's
   100 MiB blob limit. Verbose open and terminal detail now lives in
   deterministic `jobs_details/` and `intern_jobs_details/` hash-prefix shards:
@@ -1343,7 +1343,8 @@ setting. Edit and push — next run picks it up. Seed companies:
   carries the current score/rules version before publishing a repaired snapshot.
   The generated snapshot migration from v15 to v16 is a separate rescore
   operation; do not hand-edit generated state.
-- GitHub cron is best-effort: `*/30` in practice fires every 30–60 min.
+- GitHub cron requests a 30-minute cadence, but starts can be substantially
+  delayed. The run history shows actual discovery freshness.
 - Production Vercel deploys are triggered by a green `tests` workflow for the
   exact commit, then verify that the friendly alias serves that build's SHA.
   A manual deploy is accepted only from the production branch. Cancelled or

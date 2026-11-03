@@ -157,6 +157,63 @@ def test_crawl_merge_hydrates_and_republishes_referenced_detail_shards(tmp_path)
     assert shard["records"]["discovery"] == discovery_detail
 
 
+def test_crawl_merge_is_lane_scoped_for_internship_shards_and_history(tmp_path):
+    state_dir = tmp_path / "state"
+    state_dir.mkdir()
+    upstream_detail = {"score_reasons": ["upstream internship"]}
+    upstream_ref = _detail_pointer("intern_jobs_details", "known", upstream_detail)
+    (state_dir / "intern_jobs.json").write_text(json.dumps({
+        "known": {"id": "known", "score_version": 7, "score": 90,
+                  "posting_status": "open", "detail_ref": upstream_ref},
+    }))
+    (state_dir / "intern_jobs_history.json").write_text(json.dumps({}))
+    upstream_shard = state_dir / upstream_ref["shard"]
+    upstream_shard.parent.mkdir(parents=True)
+    upstream_shard.write_text(json.dumps({
+        "schema_version": 1, "records": {"known": upstream_detail},
+        "signatures": {"known": upstream_ref["sha256"]},
+    }))
+    for name, value in (("intern_companies", {}), ("intern_alert_history", []),
+                        ("intern_runs", []), ("intern_job_aliases", {})):
+        (state_dir / f"{name}.json").write_text(json.dumps(value))
+
+    checkpoint = tmp_path / "checkpoint"
+    checkpoint.mkdir()
+    new_detail = {"score_reasons": ["new internship"]}
+    new_ref = _detail_pointer("intern_jobs_details", "new", new_detail)
+    (checkpoint / "intern_jobs.json").write_text(json.dumps({
+        "new": {"id": "new", "score_version": 7, "score": 80,
+                "posting_status": "open", "detail_ref": new_ref},
+    }))
+    checkpoint_shard = checkpoint / new_ref["shard"]
+    checkpoint_shard.parent.mkdir(parents=True)
+    checkpoint_shard.write_text(json.dumps({
+        "schema_version": 1, "records": {"new": new_detail},
+        "signatures": {"new": new_ref["sha256"]},
+    }))
+    for name, value in (("companies", {}), ("alerts", []), ("runs", []), ("aliases", {})):
+        (checkpoint / f"intern_{name}.json").write_text(json.dumps(value))
+
+    env = os.environ | {
+        "RADAR_PROFILE": "internship",
+        "MERGE_CRAWL_JOBS": str(checkpoint / "intern_jobs.json"),
+        "MERGE_CRAWL_JOBS_HISTORY": str(checkpoint / "intern_jobs_history.json"),
+        "MERGE_CRAWL_COMPANIES": str(checkpoint / "intern_companies.json"),
+        "MERGE_CRAWL_ALERT_HISTORY": str(checkpoint / "intern_alerts.json"),
+        "MERGE_CRAWL_RUNS": str(checkpoint / "intern_runs.json"),
+        "MERGE_CRAWL_ALIASES": str(checkpoint / "intern_aliases.json"),
+    }
+    subprocess.run([sys.executable, str(ROOT / "scripts/mac-companion/merge_crawl_state.py")],
+                   cwd=tmp_path, env=env, check=True)
+
+    merged = json.loads((state_dir / "intern_jobs.json").read_text())
+    assert set(merged) == {"known", "new"}
+    shard = json.loads((state_dir / merged["new"]["detail_ref"]["shard"]).read_text())
+    assert shard["records"]["new"] == new_detail
+    assert not (state_dir / "jobs.json").exists()
+    assert not (state_dir / "jobs_details").exists()
+
+
 def test_enrich_merge_keeps_upstream_truth_and_adds_hydrated_quality_cache(tmp_path):
     state_dir = tmp_path / "state"
     state_dir.mkdir()
