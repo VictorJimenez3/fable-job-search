@@ -139,3 +139,69 @@ def test_mixed_new_and_promoted_roles_share_cap_and_dedupe(tmp_path, monkeypatch
     assert rows["nvidia-spring"]["alert_ok"] is True
     assert any(row.get("url", "").endswith("acme/careers/software-engineering-intern")
                and row.get("alert_ok") for row in rows.values())
+
+
+def test_forty_existing_promotions_drain_cap_without_repeating_events(tmp_path, monkeypatch):
+    _setup(tmp_path, monkeypatch)
+    rows = {}
+    for index in range(40):
+        row = _source_only_row()
+        row["id"] = f"promotion-{index}"
+        row["url"] = f"https://jobs.example.com/acme/careers/software-engineering-intern-{index}"
+        rows[row["id"]] = row
+    state.save("jobs.json", rows)
+    fetches = []
+    monkeypatch.setattr("radar.quality.fetch_posting",
+                        lambda url: (fetches.append(url) or (True, _employer_text())))
+
+    crawl()
+    assert len(state.load("alert_history.json", [])) == 35
+    assert len(fetches) == 40
+    assert sum(bool(row.get("internship_alert_pending_at")) for row in state.jobs().values()) == 5
+
+    from radar.internship_radar import rescore
+    rescore()
+    crawl()
+    assert len(state.load("alert_history.json", [])) == 40
+    assert len(fetches) == 40  # pending promotions drain without another fetch
+
+    crawl()
+    assert len(state.load("alert_history.json", [])) == 40
+
+
+def test_recent_posting_confirmation_reopens_stale_last_seen_record(tmp_path, monkeypatch):
+    _setup(tmp_path, monkeypatch)
+    row = _source_only_row()
+    row["source_board"] = "aggregator:feed"
+    row["first_seen"] = NOW - 60 * 86400
+    row["last_seen_at"] = NOW - 15 * 86400
+    row["lifecycle_checked_at"] = NOW - 15 * 86400
+    row["posted_at"] = None
+    monkeypatch.setattr(main, "_fetch_aggregators",
+                        lambda disabled: ([], {"feed": 1}, {"aggregator:feed"}))
+    state.save("jobs.json", {row["id"]: row})
+    monkeypatch.setattr("radar.quality.fetch_posting", lambda url: (True, _employer_text()))
+    crawl()
+    saved = state.jobs()[row["id"]]
+    assert saved.get("posting_status", "open") == "open"
+    assert saved["last_seen_at"] == NOW
+    assert len(state.load("alert_history.json", [])) == 1
+
+
+def test_old_posted_confirmation_stays_open_but_is_not_alertable(tmp_path, monkeypatch):
+    _setup(tmp_path, monkeypatch)
+    row = _source_only_row()
+    row["source_board"] = "aggregator:feed"
+    row["first_seen"] = NOW - 60 * 86400
+    row["last_seen_at"] = NOW - 15 * 86400
+    row["lifecycle_checked_at"] = NOW - 15 * 86400
+    row["posted_at"] = NOW - 60 * 86400
+    monkeypatch.setattr(main, "_fetch_aggregators",
+                        lambda disabled: ([], {"feed": 1}, {"aggregator:feed"}))
+    state.save("jobs.json", {row["id"]: row})
+    monkeypatch.setattr("radar.quality.fetch_posting", lambda url: (True, _employer_text()))
+    crawl()
+    saved = state.jobs()[row["id"]]
+    assert saved.get("posting_status", "open") == "open"
+    assert saved["last_seen_at"] == NOW
+    assert state.load("alert_history.json", []) == []

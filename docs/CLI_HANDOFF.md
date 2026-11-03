@@ -77,12 +77,15 @@ ready and required no restart. Local Python verification remains **811 passed /
 measurements.
 
 Pending publication: the alert-promotion hotfix is validated on
-`codex/internship-alert-promotions-20261103` (**819 passed / 3 skipped**,
+`codex/internship-alert-promotions-20261103` (**822 passed / 3 skipped**,
 compile and correctness lint pass). It promotes
 an existing source-only internship lead into alert history only after fresh
 employer proof and current gates pass, excludes prior alert events, retains
 delivery receipt checks, and preserves age, lifecycle, score, the 35-role cap, and the
-Spring/Winter 2027 email scope. Record its exact production commit and CI
+Spring/Winter 2027 email scope. Overflow candidates persist in
+`internship_alert_pending_at` and are rechecked on later crawls; `pending_alerts`
+in the run record reports the remaining queue. Successful employer checks
+refresh liveness while preserving posting dates. Record its exact production commit and CI
 evidence after publication.
 
 ## Reliability and discovery overhaul (2026-11-03; DECISION #228)

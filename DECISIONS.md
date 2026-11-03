@@ -3841,5 +3841,10 @@ events and already-eligible roles. Delivery retains its separate alias and
 durable-receipt checks. It preserves the posting's original age, lifecycle
 events, score, the shared 35-candidate crawl cap, and Spring/Winter 2027
 internship email scope. A lead that lacks current evidence or is too old
-cannot create an alert event. Exact validation and publication evidence are
+cannot create an alert event. Eligible candidates beyond the per-crawl cap
+retain an `internship_alert_pending_at` timestamp; later crawls recheck their
+current gates before emitting one event and clearing the marker. Pending proof
+also expires after the posting-age window. A successful employer-page check
+refreshes liveness without changing the original posting date, so a bounded
+curator feed cannot expire a directly verified live role. Exact validation and publication evidence are
 recorded in `docs/CLI_HANDOFF.md`.

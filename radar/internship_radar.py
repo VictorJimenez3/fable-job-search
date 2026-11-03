@@ -405,6 +405,9 @@ def _internship_evidence_pass(new_jobs: list[Job], jobs_state: dict,
                     "closed" if alive is False else "unreadable" if alive is True else "unavailable"
                 )
         if isinstance(value, dict) and alive is True and usable_posting:
+            # Direct employer evidence refreshes liveness even when this row
+            # has fallen out of its curator's bounded discovery feed.
+            lifecycle.touch(value, now, "employer page")
             value.update({
                 "internship_eligibility": record.internship_eligibility,
                 "score": record.score,
@@ -655,6 +658,14 @@ def crawl() -> int:
         record["profile"] = "internship"
         jobs_state[record["id"]] = record
 
+    promoted_existing_ids = set(authoritative_existing_ids)
+    for jid, row in jobs_state.items():
+        resolution = row.get("link_resolution") or {}
+        if (resolution.get("status") == "resolved"
+                and resolution.get("method") == "internship_employer_fetch"
+                and int(resolution.get("checked_at") or 0) == now):
+            promoted_existing_ids.add(str(jid))
+
     lifecycle_stats = lifecycle.reconcile(
         jobs_state, now, seen,
         healthy_source_boards=healthy_aggregator_boards | healthy_ats_boards,
@@ -662,15 +673,6 @@ def crawl() -> int:
     if lifecycle_stats["expired"] or lifecycle_stats["reopened"]:
         print(f"internship lifecycle: {lifecycle_stats['expired']} auto-expired, "
               f"{lifecycle_stats['reopened']} reopened from current source")
-    promoted_existing_ids = set(authoritative_existing_ids)
-    for jid, row in jobs_state.items():
-        resolution = row.get("link_resolution") or {}
-        evidence = row.get("internship_eligibility") or {}
-        checked = row.get("internship_fetch_checked_at") or evidence.get("fetch_checked_at")
-        if (resolution.get("method") == "internship_employer_fetch"
-                and int(checked or 0) == now):
-            promoted_existing_ids.add(str(jid))
-
     def alertable(row: dict) -> bool:
         return bool(
             row.get("alert_ok") and row.get("score", 0) >= threshold
@@ -680,12 +682,25 @@ def crawl() -> int:
                  or now - row.get("posted_at", now) <= max_age)
         )
 
-    alert_rows: list[dict] = []
     for jid in sorted(new_job_ids | promoted_existing_ids):
         row = jobs_state.get(jid)
         if not row or not alertable(row) or jid in previous_alert_ready_ids or jid in prior_alert_ids:
             continue
+        # Persist before applying the crawl cap: an eligible promotion must
+        # not be lost merely because a higher-scoring batch filled this run.
+        row.setdefault("internship_alert_pending_at", now)
+
+    alert_rows: list[dict] = []
+    for jid, row in jobs_state.items():
+        pending_at = int(row.get("internship_alert_pending_at") or 0)
+        if not pending_at:
+            continue
+        if (jid in prior_alert_ids or not alertable(row)
+                or not 0 <= now - pending_at <= max_age):
+            row.pop("internship_alert_pending_at", None)
+            continue
         candidate = dict(row)
+        candidate.pop("internship_alert_pending_at", None)
         candidate["id"] = jid
         candidate["alerted_at"] = now
         alert_rows.append(candidate)
@@ -693,6 +708,8 @@ def crawl() -> int:
                                     -(int(row.get("posted_at") or row.get("first_seen") or 0)),
                                     str(row.get("id", ""))))
     alert_rows = alert_rows[:int(env("RADAR_INTERNSHIP_MAX_ALERTS", "35"))]
+    for row in alert_rows:
+        jobs_state[row["id"]].pop("internship_alert_pending_at", None)
     alerts = alert_rows
     cutoff = lifecycle.history_cutoff(now)
     jobs_state = {key: value for key, value in jobs_state.items()
@@ -704,6 +721,8 @@ def crawl() -> int:
     runs.append({"ts": now, "took_s": round(time.time() - t0, 1),
                  "new_jobs": len(new_jobs), "dropped_by_gates": dropped,
                  "alerts": len(alerts), "aggregators": agg_stats, "ats": ats_stats,
+                 "pending_alerts": sum(bool(row.get("internship_alert_pending_at"))
+                                       for row in jobs_state.values()),
                  "employer_evidence": pstats,
                  "registry_size": len(registry), "profile": "internship"})
     runs = runs[-300:]
