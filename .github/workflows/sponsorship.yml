@@ -35,7 +35,9 @@ jobs:
               exit 1
             fi
             python -m radar.main sponsorship-refresh
-            git add state/sponsorship.json state/jobs.json docs/DASHBOARD.md docs/feed.xml
+            git add state/sponsorship.json state/jobs.json state/jobs_history.json
+            [ ! -d state/jobs_details ] || git add state/jobs_details
+            git add docs/DASHBOARD.md docs/feed.xml
             if git diff --cached --quiet; then
               echo "sponsorship: no generated changes"
               exit 0

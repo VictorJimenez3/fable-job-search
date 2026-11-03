@@ -34,15 +34,14 @@ _DETAIL_FIELDS = (
     "score_reasons", "eligibility_evidence", "score_dimensions", "score_dimensions_raw",
     "sponsorship_history", "link_resolution", "posting_identity",
     "lifecycle_events", "source_variants", "source_board_variants", "source_url_variants",
-)
-_PRIMARY_EVIDENCE_FIELDS = (
-    "status", "source", "reason", "required_floor", "cohort_conflict",
+    "posting", "lifecycle_checked_at", "posting_status_reason",
+    "ranking_adjustment", "score_raw", "score_calibrated", "rules_v",
 )
 _PRIMARY_DETAIL_HINTS = {
-    "eligibility_evidence": _PRIMARY_EVIDENCE_FIELDS,
     "sponsorship_history": ("status",),
     "link_resolution": ("status",),
     "posting_identity": ("variant_count",),
+    "posting": ("sponsorship", "years_min", "intern_counts"),
 }
 _HARD_GATE_REASON_RE = re.compile(
     r"^(?:intern/co-op/contract|senior\+ title|PhD-targeted title|"
@@ -454,7 +453,11 @@ def _prepared(name: str, obj: object, detail_refs: dict[str, dict] | None = None
             if isinstance(value, dict):
                 for field in _PRIMARY_DETAIL_HINTS:
                     if isinstance(value.get(field), dict):
-                        compact[field] = _primary_detail_hint(field, value[field])
+                        hint = _primary_detail_hint(field, value[field])
+                        if hint or field == "posting":
+                            compact[field] = hint
+                if _is_terminal_job(value) and "posting_status_reason" in value:
+                    compact["posting_status_reason"] = value["posting_status_reason"]
                 if "score_reasons" in value:
                     compact.pop("gating_summary", None)
                     hard_reasons = _hard_gate_reasons(value.get("score_reasons"))

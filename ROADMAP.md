@@ -5,12 +5,12 @@ none block anything currently running.
 
 ## 2026-11-03 reliability and discovery overhaul
 
-**✅ IMPLEMENTED IN CODE; ⏳ publication and live verification pending.** The
+**✅ CORE SHIPPED in PR #6566; final lane/publishing hardening pending.** The
 current implementation makes the requested reliability and coverage changes
 without changing the Resume Studio tailoring contract:
 
 1. **Bounded job detail state.** Open and terminal detail is stored behind
-   deterministic SHA-256 prefix references in 256 versioned, signed shards per
+   deterministic SHA-256 prefix references in 256 versioned, checksummed shards per
    lane (`jobs_details/` and `intern_jobs_details/`). The primary snapshot stays
    lightweight; the existing drawer fetches and verifies only one shard. This
    bounds individual files, not the repository forever, so a future datastore
@@ -39,8 +39,10 @@ without changing the Resume Studio tailoring contract:
    The primary is 83,166,228 bytes and both lanes pass score-health. The frontend
    dependency patch (Better Auth 1.7.7, Vite 7.3.7, Zod 4.6.6, Vitest 4.1.12)
    leaves zero high or critical audit findings. The full Python suite passes
-   753 tests with 3 skips; production CI and the first live crawl remain the
-   final publication checks. Resume tailoring is unchanged
+   753 tests with 3 skips on the initial release. Production CI, Vercel, and
+   the first crawl passed: 10,011 discoveries and 23 alert candidates. A further
+   capacity replay covers all 91,972 records at about 76.6 MB; final publishing
+   and internship-lane hardening are tracked in the CLI handoff. Resume tailoring is unchanged
    except for the shared snapshot-reader/cache correctness needed to read
    compacted state.
 

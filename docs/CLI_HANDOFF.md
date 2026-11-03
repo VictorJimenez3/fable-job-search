@@ -52,7 +52,36 @@ Validation: Python 3.12 full suite 753 passed / 3 skipped; compile, full package
 correctness lint, targeted CI lint, shell syntax, and retired-file checks pass.
 The migration used the supported readers/writers, duplicate repair, and rescore
 commands with external integration tokens unset; zero Notion pages changed.
-Production CI, publication, and a real crawl remain pending.
+Publication verified: [PR #6566](https://github.com/VictorJimenez3/fable-job-search/pull/6566)
+merged as `1ca85524f1d7ec2112d5922f09e6aed6ea27c7f1`. Production
+[tests 41715669696](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41715669696)
+and [Vercel deployment 41715915017](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41715915017)
+passed. The friendly URL serves that exact build marker. Live browser boot
+loaded all 81,961 records without application errors; open and expired API
+fixtures hydrated 20 and 12 score reasons respectively. The installed Mac
+companion clone was fast-forwarded, and its idle Resume Studio process restarted;
+`/api/health` reports ready with no restart required.
+
+Live crawler verification passed end to end:
+[run 41715716227](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41715716227)
+published `3727f046cf60af7c28ec185b0a0e8fa5e213fcfd`. It polled 800 ATS
+boards (780 healthy, 20 isolated failures), ignored 1,260 duplicate sightings,
+found 10,011 new records, gated out 68,153 unsuitable listings, and produced
+23 alert candidates in 954.6 seconds. All new public adapters responded:
+Headcount 21 engineering / 5 data-AI, YubHub 100, Zero2Sudo 4. Delivery checked
+122 recent jobs, recovered 781 durable markers, and updated the 526-role board
+across six pages. Seven deleted/inaccessible Notion page IDs returned nonfatal
+404s during cleanup; one terminal page was archived.
+
+The burst expanded the primary to 95,211,647 bytes, so the follow-up moves
+additional drawer-only audit fields into existing shards while preserving
+API/list/filter/apply fields. A lossless replay of all 91,972 records measures
+76,563,974 bytes, with a 646,245-byte largest shard and passing score-health.
+The follow-up also applies canonical identity to internship sightings, connects
+Zero2Sudo's internship leads with a source-only guard, and ensures internship,
+score-maintenance, and sponsorship writers stage detail shards with the index.
+Internship push races retain a lane-specific checkpoint and rerun rescoring
+without repeating external discovery. Follow-up publication remains pending.
 The source-only Zero2Sudo adapter reads its public Notion collection (four live
 smoke-test leads); authenticated Instagram scraping is not configured. Headcount
 and YubHub public feeds are enabled. LinkedIn remains public search discovery and

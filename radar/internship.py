@@ -31,6 +31,7 @@ EXPERIENCED_TITLE_RE = re.compile(
 INTERNSHIP_SOURCE_NAMES = {
     "simplify_internship", "speedyapply_internship", "zapply_internship", "dreamwork_internship",
     "applyguy_internship", "aprameyak_offcycle",
+    "zero2sudo_notion",
 }
 FULL_TIME_RE = re.compile(r"\bfull[- ]time\b|\bpermanent\s+(?:employee|role|position)\b|\bregular\s+employee\b", re.I)
 DEFENSE_ROLE_RE = re.compile(
@@ -569,6 +570,14 @@ def annotate(job: Job) -> dict:
             parsed["status"] = "open"
         if parsed.get("internship_signal") == "unknown":
             parsed["internship_signal"] = "source_only"
+    if (job.link_resolution or {}).get("status") == "source_only":
+        # Curated public leads can have an internship-looking title, but their
+        # title and curator notes are not employer evidence. Keep the row for
+        # review while preventing it from entering internship alerts.
+        parsed["source_signal"] = True
+        parsed["internship_signal"] = "source_only"
+        if parsed.get("status") == "unknown":
+            parsed["status"] = "open"
     work_points, work_reasons = _work_quality_signal(job)
     parsed["work_quality"] = {"points": work_points, "reasons": work_reasons}
     job.internship_eligibility = parsed

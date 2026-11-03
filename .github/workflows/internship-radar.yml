@@ -45,17 +45,48 @@ jobs:
         run: |
           git config user.name "job-radar[bot]"
           git config user.email "radar@users.noreply.github.com"
+          # Discovery is the expensive network phase. Run it once; retries
+          # publish the completed snapshot after each push race.
+          python -m radar.main crawl
           for i in 1 2 3 4; do
-            python -m radar.main crawl
             python -m radar.main rescore
-            git add state/intern_*.json docs/internships
+            # The primary row index points at sibling detail shards. Stage the
+            # complete lane atomically so a successful push can never publish
+            # pointers without their records (or leave history behind).
+            git add state/intern_*.json
+            [ ! -d state/intern_jobs_details ] || git add state/intern_jobs_details
+            git add docs/internships
             if git diff --cached --quiet; then
               echo "internship crawl: no generated-state changes"
               exit 0
             fi
             git commit -m "radar: internship crawl $(date -u +'%Y-%m-%d %H:%M')"
             if git push; then exit 0; fi
-            git pull --rebase --autostash || true
+            # Generated JSON is not safely text-rebasable. Preserve this
+            # completed cycle in a lane-specific checkpoint, reset to the
+            # latest production state, and merge only additive discoveries.
+            checkpoint_dir="$(mktemp -d)"
+            for state_file in intern_jobs.json intern_jobs_history.json intern_companies.json intern_alert_history.json intern_runs.json intern_job_aliases.json; do
+              git show HEAD:"state/$state_file" > "$checkpoint_dir/$state_file" || printf '{}' > "$checkpoint_dir/$state_file"
+            done
+            while IFS= read -r detail_path; do
+              [ -n "$detail_path" ] || continue
+              relative_path="${detail_path#state/}"
+              mkdir -p "$checkpoint_dir/${relative_path%/*}"
+              git show "HEAD:$detail_path" > "$checkpoint_dir/$relative_path"
+            done < <(git ls-tree -r --name-only HEAD -- state/intern_jobs_details)
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase --abort >/dev/null 2>&1 || true
+            git reset --hard "origin/${GITHUB_REF_NAME}"
+            RADAR_PROFILE=internship \
+              MERGE_CRAWL_JOBS="$checkpoint_dir/intern_jobs.json" \
+              MERGE_CRAWL_JOBS_HISTORY="$checkpoint_dir/intern_jobs_history.json" \
+              MERGE_CRAWL_COMPANIES="$checkpoint_dir/intern_companies.json" \
+              MERGE_CRAWL_ALERT_HISTORY="$checkpoint_dir/intern_alert_history.json" \
+              MERGE_CRAWL_RUNS="$checkpoint_dir/intern_runs.json" \
+              MERGE_CRAWL_ALIASES="$checkpoint_dir/intern_job_aliases.json" \
+              python scripts/mac-companion/merge_crawl_state.py
+            rm -rf "$checkpoint_dir"
             sleep $((i * 2))
           done
           exit 1
@@ -69,16 +100,22 @@ jobs:
         run: |
           git config user.name "job-radar[bot]"
           git config user.email "radar@users.noreply.github.com"
-          python -m radar.main rescore
-          git add state/intern_*.json docs/internships
-          if git diff --cached --quiet; then
-            echo "internship rescore: no generated-state changes"
-            exit 0
-          fi
-          git commit -m "radar: internship rescore $(date -u +'%Y-%m-%d %H:%M')"
           for i in 1 2 3; do
+            # Recompute after every reset so a failed push can never report
+            # success while silently discarding the rescore.
+            python -m radar.main rescore
+            git add state/intern_*.json
+            [ ! -d state/intern_jobs_details ] || git add state/intern_jobs_details
+            git add docs/internships
+            if git diff --cached --quiet; then
+              echo "internship rescore: no generated-state changes"
+              exit 0
+            fi
+            git commit -m "radar: internship rescore $(date -u +'%Y-%m-%d %H:%M')"
             if git push; then exit 0; fi
-            git pull --rebase --autostash || true
+            git fetch origin "${GITHUB_REF_NAME}"
+            git rebase --abort >/dev/null 2>&1 || true
+            git reset --hard "origin/${GITHUB_REF_NAME}"
             sleep $((i * 2))
           done
           exit 1

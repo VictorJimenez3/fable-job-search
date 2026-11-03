@@ -93,3 +93,36 @@ def test_vercel_deploy_waits_for_green_tests_and_verifies_the_exact_build():
     assert "github.event.workflow_run.conclusion == 'success'" in workflow
     assert "github.event.workflow_run.head_sha" in workflow
     assert "job-radar-build" in workflow
+
+
+def test_all_new_grad_state_writers_stage_detail_shards_with_the_index():
+    score = (ROOT / ".github/workflows/score-maintenance.yml").read_text()
+    sponsorship = (ROOT / ".github/workflows/sponsorship.yml").read_text()
+    assert "state/jobs_history.json" in score
+    assert "state/jobs_details" in score
+    assert "state/jobs_history.json" in sponsorship
+    assert "state/jobs_details" in sponsorship
+
+
+def test_internship_writer_stages_detail_shards_and_restarts_after_push_race():
+    workflow = (ROOT / ".github/workflows/internship-radar.yml").read_text()
+    assert workflow.count("state/intern_jobs_details") >= 2
+    assert "state/intern_*.json" in workflow
+    assert "MERGE_CRAWL_JOBS_HISTORY" in workflow
+    assert "RADAR_PROFILE=internship" in workflow
+    assert "git ls-tree -r --name-only HEAD -- state/intern_jobs_details" in workflow
+    assert 'git reset --hard "origin/${GITHUB_REF_NAME}"' in workflow
+    assert "git pull --rebase --autostash || true" not in workflow
+    crawl_index = workflow.index("python -m radar.main crawl")
+    crawl_loop = workflow.index("for i in 1 2 3 4; do")
+    assert crawl_index < crawl_loop
+    assert workflow.count("python -m radar.main crawl") == 1
+    rescore_step = workflow.index("Rescore stored internship state only")
+    rescore_loop = workflow.index("for i in 1 2 3; do", rescore_step)
+    assert workflow.index("python -m radar.main rescore", rescore_loop) > rescore_loop
+
+
+def test_crawl_merge_script_resolves_the_internship_state_namespace():
+    script = (ROOT / "scripts/mac-companion/merge_crawl_state.py").read_text()
+    assert '"intern_" if lane in {"internship", "intern"} else ""' in script
+    assert "_state_path(\"jobs.json\")" in script
