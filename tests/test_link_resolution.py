@@ -6,8 +6,9 @@ from radar import link_resolver
 from radar.alerts import format_line
 from radar.dedupe import collapse_cross_source_jobs
 from radar.digest import render_dashboard
-from radar.main import _merge_job_sighting, _unique_discovered_jobs
+from radar.main import _merge_job_sighting, _merge_record_sighting, _unique_discovered_jobs
 from radar.models import Job
+from radar.score import gates
 
 
 def _response(url, text="", status_code=200):
@@ -203,6 +204,7 @@ def test_cross_source_merge_requires_compatible_identity():
         "jobright-id": {
             "id": "jobright-id", "company": "Acme", "title": "Software Engineer",
             "url": aggregator_url, "source": "jobright", "locations": ["New York, NY"],
+            "link_resolution": {"status": "resolved", "resolved_url": direct_url},
         },
         "direct-id": {
             "id": "direct-id", "company": "Acme", "title": "Software Engineer",
@@ -245,6 +247,7 @@ def test_feed_dedupe_keeps_all_provenance_links():
     aggregator = Job(
         company="Acme", title="SWE", url="https://jobright.ai/jobs/info/abc",
         source="jobright", source_url="https://github.com/jobright-ai/board",
+        link_resolution={"status": "resolved", "resolved_url": "https://jobs.lever.co/acme/123"},
     )
     direct = Job(
         company="Acme", title="SWE", url="https://jobs.lever.co/acme/123",
@@ -258,6 +261,179 @@ def test_feed_dedupe_keeps_all_provenance_links():
     assert len(selected) == 1
     assert selected[0].url == direct.url
     assert aggregator.url in selected[0].alternate_urls
+
+
+def test_source_only_lead_does_not_contaminate_fresh_verified_ats_sighting():
+    direct = "https://boards.greenhouse.io/acme/jobs/123"
+    official = Job(
+        company="Acme", title="Software Engineer", url=direct,
+        source="greenhouse", ats="greenhouse",
+        description="This entry-level role welcomes recent graduates.",
+    )
+    lead = Job(
+        company="Acme", title="Software Engineer", url=direct,
+        source="zero2sudo_notion", source_url="https://notion.example/lead",
+        source_board="public:zero2sudo_notion:source_only",
+        link_resolution={
+            "status": "source_only", "reason": "curated social lead",
+            "source_note": "Apply by Nov 30, 2026.",
+        },
+    )
+
+    selected, dropped = _unique_discovered_jobs([lead, official])
+
+    assert dropped == 1 and len(selected) == 1
+    resolution = selected[0].link_resolution
+    assert resolution.get("status") != "source_only"
+    assert resolution["source_only_provenance"][0]["source_note"] == (
+        "Apply by Nov 30, 2026."
+    )
+    _, alert_ok, _ = gates(selected[0])
+    assert alert_ok is True
+
+
+def test_source_only_existing_sighting_preserves_direct_state_and_note():
+    direct = "https://boards.greenhouse.io/acme/jobs/123"
+    target = {
+        "id": "acme", "company": "Acme", "title": "Software Engineer",
+        "url": direct, "source": "greenhouse", "ats": "greenhouse",
+        "link_resolution": {"status": "resolved", "resolved_url": direct},
+    }
+    lead = Job(
+        company="Acme", title="Software Engineer", url=direct,
+        source="zero2sudo_notion", source_url="https://notion.example/lead",
+        source_board="public:zero2sudo_notion:source_only",
+        link_resolution={"status": "source_only", "source_note": "Curator note"},
+    )
+
+    _merge_record_sighting(target, lead.to_record())
+
+    assert target["link_resolution"]["status"] == "resolved"
+    assert target["link_resolution"]["source_only_provenance"][0]["source_note"] == (
+        "Curator note"
+    )
+
+
+def test_source_only_existing_unverified_target_keeps_top_level_status():
+    direct = "https://boards.greenhouse.io/acme/jobs/124"
+    target = {
+        "id": "acme-unverified", "company": "Acme", "title": "Software Engineer",
+        "url": direct, "source": "greenhouse", "ats": "greenhouse",
+    }
+    lead = Job(
+        company="Acme", title="Software Engineer", url=direct,
+        source="zero2sudo_notion", source_url="https://notion.example/lead",
+        source_board="public:zero2sudo_notion:source_only",
+        link_resolution={"status": "source_only", "source_note": "Curator note"},
+    )
+
+    _merge_record_sighting(target, lead.to_record())
+
+    assert target["link_resolution"]["status"] == "source_only"
+    assert target["link_resolution"]["source_note"] == "Curator note"
+
+
+def test_source_only_lead_does_not_mask_existing_posting_facts():
+    direct = "https://boards.greenhouse.io/acme/jobs/127"
+    target = {
+        "id": "acme-scraped", "company": "Acme", "title": "Software Engineer",
+        "url": direct, "source": "greenhouse", "ats": "greenhouse",
+        "posting": {"ranking_evidence": {"technical_depth": "build software"}},
+    }
+    lead = Job(
+        company="Acme", title="Software Engineer", url=direct,
+        source="zero2sudo_notion", source_url="https://notion.example/lead",
+        link_resolution={"status": "source_only", "source_note": "Curator note"},
+    )
+
+    _merge_record_sighting(target, lead.to_record())
+
+    assert target["link_resolution"].get("status") != "source_only"
+    assert target["link_resolution"]["source_only_provenance"]
+
+
+def test_fresh_direct_evidence_replaces_stale_eligibility_facts():
+    direct = "https://boards.greenhouse.io/acme/jobs/125"
+    target = {
+        "id": "acme-stale", "company": "Acme", "title": "Software Engineer",
+        "url": direct, "source": "greenhouse", "ats": "greenhouse",
+        "eligibility_evidence": {
+            "status": "review", "source": "missing-description",
+            "required_floor": None,
+        },
+        "explicit_new_grad": False,
+    }
+    official = Job(
+        company="Acme", title="Software Engineer", url=direct,
+        source="greenhouse", ats="greenhouse",
+        description=(
+            "New Grad Software Engineer. Required qualifications: 3+ years "
+            "of software engineering experience."
+        ),
+    )
+    _, alert_ok, _ = gates(official)
+    assert alert_ok is False
+    sighting = official.to_record()
+    sighting["_fresh_employer_evidence"] = True
+
+    changed = _merge_record_sighting(target, sighting)
+
+    assert changed is True
+    assert target["eligibility_evidence"]["required_floor"] == 3
+    assert target["eligibility_evidence"]["experience_note"]
+    assert target["explicit_new_grad"] is True
+
+
+def test_fresh_direct_evidence_clears_old_source_only_gate_but_keeps_provenance():
+    direct = "https://boards.greenhouse.io/acme/jobs/128"
+    target = {
+        "id": "acme-source-only", "company": "Acme", "title": "Software Engineer",
+        "url": direct, "source": "greenhouse", "ats": "greenhouse",
+        "link_resolution": {
+            "status": "source_only", "source_note": "Curator note",
+        },
+    }
+    official = Job(
+        company="Acme", title="Software Engineer", url=direct,
+        source="greenhouse", ats="greenhouse",
+        description="This entry-level role welcomes recent graduates.",
+    )
+    gates(official)
+    sighting = official.to_record()
+    sighting["_fresh_employer_evidence"] = True
+
+    _merge_record_sighting(target, sighting)
+
+    assert target["link_resolution"].get("status") != "source_only"
+    assert target["link_resolution"]["source_only_provenance"][0]["source_note"] == (
+        "Curator note"
+    )
+    assert target["eligibility_evidence"]["source"] == "description"
+
+
+def test_source_only_fresh_sighting_cannot_replace_verified_evidence():
+    direct = "https://boards.greenhouse.io/acme/jobs/126"
+    target = {
+        "id": "acme-verified", "company": "Acme", "title": "Software Engineer",
+        "url": direct, "source": "greenhouse", "ats": "greenhouse",
+        "link_resolution": {"status": "resolved", "resolved_url": direct},
+        "eligibility_evidence": {"status": "verified", "source": "description"},
+        "explicit_new_grad": True,
+    }
+    lead = Job(
+        company="Acme", title="Software Engineer", url=direct,
+        source="zero2sudo_notion", source_url="https://notion.example/lead",
+        link_resolution={"status": "source_only", "source_note": "Curator note"},
+        eligibility_evidence={"status": "review", "source": "source-only"},
+    )
+    sighting = lead.to_record()
+    sighting["_fresh_employer_evidence"] = True
+
+    _merge_record_sighting(target, sighting)
+
+    assert target["eligibility_evidence"]["status"] == "verified"
+    assert target["explicit_new_grad"] is True
+    assert target["link_resolution"]["status"] == "resolved"
 
 
 def test_outputs_show_direct_and_fallback_links():

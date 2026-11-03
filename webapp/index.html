@@ -562,8 +562,8 @@ const S = {           // app state
   jobs:{}, applied:[], feedback:{}, reports:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, scorePreferences:{},
   registryByCompany:{}, runs:[], scout:{}, web:null,
   lane:"new_grad", lanes:{
-    new_grad:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, jobsPromise:null, historyReady:false, historyPromise:null, expectedGraduation:"", lifecycleNotice:null},
-    internship:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, jobsPromise:null, historyReady:false, historyPromise:null, expectedGraduation:"", lifecycleNotice:null},
+    new_grad:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, jobsPromise:null, historyReady:false, historyPromise:null, detailById:{}, detailPromises:new Map(), expectedGraduation:"", lifecycleNotice:null},
+    internship:{jobs:{}, applied:[], feedback:{}, culture:{}, research:{}, aiUsage:{}, companies:{}, runs:[], scout:{}, web:null, ready:false, jobsPromise:null, historyReady:false, historyPromise:null, detailById:{}, detailPromises:new Map(), expectedGraduation:"", lifecycleNotice:null},
   }, notifications:{new_grad_email:true, internship_email:true},
   auth:null, backend:false, authHost:"", userTracker:false, trackerConfigured:false, trackerMeta:null,
   authProviders:{github:false,google:false},
@@ -815,6 +815,128 @@ async function loadState(path, fallback, {critical=false, allowMissing=false}={}
     return {value:fallback, ok:false};
   }
 }
+const JOB_DETAIL_SCHEMA_VERSION = 1;
+function detailDirectory(mode=S.lane) {
+  return mode === "internship" ? "intern_jobs_details" : "jobs_details";
+}
+function detailState(id, mode=S.lane) {
+  return laneState(mode).detailById?.[id] || null;
+}
+async function sha256TextHex(value) {
+  const subtle = globalThis.crypto?.subtle;
+  if (!subtle || typeof TextEncoder !== "function") throw new Error("secure detail verification is unavailable in this browser");
+  const bytes = new TextEncoder().encode(value);
+  const digest = await subtle.digest("SHA-256", bytes);
+  return [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, "0")).join("");
+}
+async function validateJobDetail(mode, id, job, shard) {
+  const ref = job?.detail_ref;
+  if (!ref || typeof ref !== "object") throw new Error("this posting has no detail pointer");
+  if (ref.version !== JOB_DETAIL_SCHEMA_VERSION) throw new Error("detail pointer uses an unsupported schema version");
+  if (ref.key !== id) throw new Error("detail pointer does not match this posting");
+  if (typeof ref.sha256 !== "string" || !/^[a-f0-9]{64}$/i.test(ref.sha256)) throw new Error("detail pointer has an invalid checksum");
+  const keyDigest = await sha256TextHex(String(id));
+  const expected = `${detailDirectory(mode)}/${keyDigest.slice(0, 2)}.json`;
+  if (ref.shard !== expected) throw new Error("detail pointer targets the wrong lane or shard");
+  if (!shard || shard.schema_version !== JOB_DETAIL_SCHEMA_VERSION ||
+      !shard.records || typeof shard.records !== "object" ||
+      !shard.signatures || typeof shard.signatures !== "object") throw new Error("detail shard has an unsupported shape");
+  const detail = shard.records[id];
+  if (!detail || typeof detail !== "object" || Array.isArray(detail)) throw new Error("detail shard has no matching record");
+  if (shard.signatures[id] !== ref.sha256) {
+    throw new Error("detail shard failed its revision signature");
+  }
+  return detail;
+}
+function detailFailureMessage(error) {
+  const message = String(error?.message || error || "detail unavailable").trim();
+  return message.length > 180 ? `${message.slice(0, 177)}…` : message;
+}
+async function fetchRawJobDetail(mode, id, job) {
+  const ref = job?.detail_ref;
+  if (!ref) return null;
+  // Verify the lane and deterministic shard path before this URL is ever
+  // requested, preventing a pointer from escaping its lane.
+  if (ref.version !== JOB_DETAIL_SCHEMA_VERSION || ref.key !== id ||
+      typeof ref.sha256 !== "string" || !/^[a-f0-9]{64}$/i.test(ref.sha256)) {
+    throw new Error(ref.version !== JOB_DETAIL_SCHEMA_VERSION
+      ? "detail pointer uses an unsupported schema version"
+      : ref.key !== id ? "detail pointer does not match this posting" : "detail pointer has an invalid checksum");
+  }
+  const keyDigest = await sha256TextHex(String(id));
+  if (
+      ref.shard !== `${detailDirectory(mode)}/${keyDigest.slice(0, 2)}.json`) {
+    throw new Error("detail pointer targets the wrong lane or shard");
+  }
+  const response = await fetch(`${RAW}state/${ref.shard}`, {cache:"no-cache"});
+  if (!response.ok) throw new Error(`detail shard returned ${response.status}`);
+  let shard;
+  try { shard = await response.json(); } catch { throw new Error("detail shard is not valid JSON"); }
+  return validateJobDetail(mode, id, job, shard);
+}
+async function ensureJobDetail(id, mode=S.lane) {
+  const target = laneState(mode);
+  target.detailById ||= {};
+  target.detailPromises ||= new Map();
+  const job = target.jobs?.[id];
+  if (!job) return {ok:false, error:"posting is no longer in this lane"};
+  const refSha256 = typeof job.detail_ref?.sha256 === "string" ? job.detail_ref.sha256 : "";
+  let current = target.detailById?.[id];
+  if (current && current.refSha256 !== refSha256) {
+    // A lane snapshot can refresh in place while the drawer stays open. A
+    // ready entry from the previous revision must not hydrate the new row.
+    delete target.detailById[id];
+    current = null;
+  }
+  if (current?.status === "ready") return current;
+  const activePromise = target.detailPromises?.get(id);
+  if (activePromise) {
+    if (activePromise.detailRefSha256 === refSha256) return activePromise;
+    target.detailPromises.delete(id);
+  }
+  const needsHistory = isTerminalPosting(job) && !job.detail_ref && !Array.isArray(job.score_reasons);
+  if (!job.detail_ref && !needsHistory) {
+    const ready = {status:"ready", source:"inline", value:job, refSha256};
+    target.detailById[id] = ready;
+    return ready;
+  }
+  target.detailById[id] = {status:"loading", error:"", refSha256};
+  const promise = (async () => {
+    try {
+      let value;
+      if (job.detail_ref) {
+        value = {...job, ...(await fetchRawJobDetail(mode, id, job))};
+      } else {
+        const history = await ensureHistoryJobs(mode);
+        if (!history.ok) throw new Error("legacy history could not be loaded");
+        value = laneState(mode).jobs?.[id];
+        if (!value || !Array.isArray(value.score_reasons)) throw new Error("legacy history has no full score ledger");
+      }
+      const merged = {...laneState(mode).jobs, [id]:value};
+      setLaneValue(mode, "jobs", merged);
+      const ready = {status:"ready", source:job.detail_ref ? "shard" : "history", value, refSha256};
+      target.detailById[id] = ready;
+      return ready;
+    } catch (error) {
+      const failed = {status:"error", error:detailFailureMessage(error), refSha256};
+      target.detailById[id] = failed;
+      return failed;
+    } finally {
+      if (target.detailPromises.get(id) === promise) target.detailPromises.delete(id);
+    }
+  })();
+  promise.detailRefSha256 = refSha256;
+  target.detailPromises.set(id, promise);
+  return promise;
+}
+function retryJobDetail(id) {
+  const mode = S.lane;
+  laneState(mode).detailById ||= {};
+  laneState(mode).detailPromises ||= new Map();
+  delete laneState(mode).detailById[id];
+  laneState(mode).detailPromises.delete(id);
+  openWS(id);
+}
 async function ensureLaneJobs(mode=S.lane, critical=false) {
   const config = LANE_CONFIG[mode];
   const target = laneState(mode);
@@ -945,9 +1067,7 @@ async function boot() {
         const refreshed = await fetch("/api/me", {cache:"no-store"});
         if (refreshed.ok) S.auth = await refreshed.json();
       }
-    } else if (ghHost && seg) {
-      const d = await (await fetch(`${API}/repos/${REPO}`)).json();
-      if (d.default_branch) BRANCH = d.default_branch;
+
     }
   } catch (error) { recordBootError("/api/config", error); }
   RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
@@ -1234,7 +1354,10 @@ function startupStageCard(job) {
 function careerPriority(job) {
   const stored = Number(job?.career_priority);
   if (Number.isFinite(stored) && stored > 0) return Math.min(2, stored);
-  if (job?.explicit_new_grad || /new-grad|new grad|early-career evidence|technical (?:leadership|rotational) program/i.test((job?.score_reasons||[]).join(" "))) return 2;
+  if (job?.explicit_new_grad) return 2;
+  // score_reasons moved to the on-demand detail shard; keep this legacy
+  // fallback for old snapshots that still carry the ledger in the index.
+  if (/new-grad|new grad|early-career evidence|technical (?:leadership|rotational) program/i.test((job?.score_reasons||[]).join(" "))) return 2;
   return job?.early_career_possible ? 1 : 0;
 }
 function postingVariantBadge(job) {
@@ -1525,7 +1648,10 @@ function isOpenRelevant(j) {
   if (isTerminalPosting(j)) return false;
   if (S.lane === "internship") return true;
   const hardReject = /^(intern\/co-op\/contract|senior\+ title|PhD-targeted title|requires clearance|non-US location|requires [1-9]\+ years(?: \(not new-grad\))?|not an AI\/SWE\/DS role)$/i;
-  return !(j.score_reasons||[]).some(reason =>
+  const reasons = Array.isArray(j.score_reasons) ? j.score_reasons : [];
+  const gating = j.gating_summary || j.eligibility_summary || j.eligibility_evidence || {};
+  const summaryReasons = Array.isArray(gating.reasons) ? gating.reasons : [gating.reason, gating.gate_reason].filter(Boolean);
+  return ![...reasons, ...summaryReasons].some(reason =>
     hardReject.test(String(reason).replace(/^re-gate v\d+:\s*/i,"")));
 }
 function isActionedJob(id, byId) {
@@ -2629,12 +2755,6 @@ function renderLaneSwitch() {
     `<button class="${S.lane===key?'on':''}" aria-pressed="${S.lane===key}" onclick="activateLane('${key}')">${lane.label}</button>`).join("");
 }
 function render() {
-  if (S.tab === "history" && laneState().ready && !laneState().historyReady && !laneState().historyPromise) {
-    const mode = S.lane;
-    ensureHistoryJobs(mode).then(result => {
-      if (result.ok && S.lane === mode && S.tab === "history") render();
-    });
-  }
   renderBootNotice();
   renderLaneSwitch();
   const tabs = S.auth?.owner ? [...TABS.slice(0,-1), ["taste","My job preferences"], ["testing","Resume Studio"], ["agent","Application queue"], TABS.at(-1)] : TABS;
@@ -3058,7 +3178,7 @@ function rHistory() {
   $("#main").innerHTML = `<section class="testing-hero"><span class="chip unknown">retained history · hidden from active Jobs</span>
     <h2>Application history</h2><p class="sub">Closed applications and roles removed from Notion stay here for your record, but no longer count toward active Pipeline or Jobs.</p>
     <div class="lanes">${applicationRowsHTML || '<section class="lane"><p class="sub">No closed or manually removed applications.</p></section>'}</div>
-    <h2>Posting history</h2><p class="sub">Expired and filled postings remain in repository state for timeline analysis and future seasonal prediction. They are not scored into active alerts, boards, dashboards, or feeds. Default retention is two years.</p>
+    <h2>Posting history</h2><p class="sub">Expired and filled postings remain in repository state for timeline analysis and future seasonal prediction. This list stays a compact summary; verified score evidence loads only when you open a role. They are not scored into active alerts, boards, dashboards, or feeds. Default retention is two years.</p>
     <div class="bar"><input type="search" placeholder="search history…" value="${esc(S.filter.q)}" oninput="setFilter('q',this.value,false)">
       <span class="chip">${counts.expired || 0} expired</span><span class="chip">${counts.filled || 0} filled</span><span class="sub">${rows.length} retained rows</span></div></section>
     <div class="lanes">${rowsHTML || '<section class="lane"><p class="sub">No expired or filled postings in this lane yet.</p></section>'}</div>
@@ -3325,15 +3445,22 @@ function openResumeStudio(j) {
 }
 let wsId = null;  // switching jobs resets the drawer to decision-first role fit
 function openWS(id, historyResolved=false) {
-  const j = jobById(id);
+  let j = jobById(id);
   if (!j) return;
-  if (isTerminalPosting(j) && !laneState().historyReady && !historyResolved) {
-    const mode = S.lane;
-    ensureHistoryJobs(mode).then(() => {
-      if (S.lane === mode) openWS(id, true);
+  const mode = S.lane;
+  const detail = detailState(id, mode);
+  const needsDetail = Boolean(j.detail_ref) ||
+    (isTerminalPosting(j) && !Array.isArray(j.score_reasons));
+  const detailRevisionChanged = Boolean(detail && j.detail_ref && detail.refSha256 !== j.detail_ref.sha256);
+  if (needsDetail && (!detail || detailRevisionChanged)) {
+    void ensureJobDetail(id, mode).then(() => {
+      if (S.lane === mode && wsId === id && $("#ws").classList.contains("open")) openWS(id, true);
     });
-    return;
   }
+  // Render the summary immediately. Detail shards are intentionally fetched
+  // after this first paint so History remains a compact index and the drawer
+  // can explain loading/failure without pretending the ledger is empty.
+  j = jobById(id) || j;
   const w = S.web.jobs[id] = S.web.jobs[id] || {notes:"", links:[], contacts:[], jd:""};
   if (w.jd === undefined) w.jd = "";  // records saved before the JD box existed
   if (wsId !== id) { S.wsTab = "fit"; wsId = id; }
@@ -3657,6 +3784,14 @@ function sponsorshipHistoryCard(j) {
     <br><a href="${esc(safeExternalURL(source))}" target="_blank" rel="noopener noreferrer">view official DOL source ↗</a></div>`;
   return `<div class="note"><b>DOL history unavailable.</b> Refresh the sponsorship database to add company context; the posting facts above remain authoritative.</div>`;
 }
+function detailLedgerStatus(id, j) {
+  const state = detailState(id);
+  const needsDetail = Boolean(j?.detail_ref) || (isTerminalPosting(j) && !Array.isArray(j?.score_reasons));
+  if (!needsDetail || state?.status === "ready") return "";
+  if (state?.status === "loading") return `<div class="note" role="status" aria-live="polite"><b>Loading score evidence…</b><br><span class="sub">Fetching the one matching detail shard; this drawer stays usable while it arrives.</span></div>`;
+  if (state?.status === "error") return `<div class="note" role="alert"><b>Score evidence could not be verified.</b><br><span class="sub">${esc(state.error || "The detail shard is unavailable.")} The summary above is still shown; no empty ledger is being inferred.</span><br><button class="act" style="margin-top:.45rem" onclick='retryJobDetail(${JSON.stringify(id)})'>retry evidence</button></div>`;
+  return `<div class="note" role="status"><b>Score evidence is available on demand.</b><br><span class="sub">Open this section to fetch the matching detail shard.</span></div>`;
+}
 function wsFit(j, w, c, id) {
   const dimensions = Object.entries(j.score_dimensions||{});
   const dimensionRows = dimensions.map(([name, value]) => {
@@ -3674,7 +3809,8 @@ function wsFit(j, w, c, id) {
     <div class="sect"><h4>Why it scored ${j.score??"?"}</h4>
       ${dimensions.length?`<p class="score-summary">${esc(scoreSummary(j, Object.fromEntries(dimensions)))}</p><div class="score-dimensions">${dimensionRows}</div>
       <p class="sub">Positive helps; zero means no signal; negative lowers. Uncapped utility ${esc(j.score_raw??'?')} → calibrated ${esc(j.score_calibrated??j.score??'?')} → final ${j.score??'?'} / 100. Resume Match is separate and uses your CV evidence graph.</p>${finalWhy?`<p class="score-final-note"><b>Final adjustment:</b> ${esc(finalWhy)}</p>`:""}`:""}
-      <details class="score-explanation" open><summary>Exact reason ledger</summary><div class="rating-reasons">${reasons||"<p class='sub'>No auditable reasons recorded.</p>"}</div></details>
+      ${detailLedgerStatus(id, j)}
+      <details class="score-explanation" open><summary>Exact reason ledger</summary><div class="rating-reasons">${reasons||((detailState(id)?.status === "error") ? "<p class='sub'>The verified ledger could not be loaded.</p>" : detailState(id)?.status === "loading" ? "<p class='sub'>Waiting for the verified ledger…</p>" : "<p class='sub'>No auditable reasons recorded.</p>")}</div></details>
       ${j.llm_note?`<p class="sub">🤖 angle: <i>${esc(j.llm_note)}</i></p>`:""}</div>
     ${tasteFeedbackCard(j)}
     ${moderationCard(j)}

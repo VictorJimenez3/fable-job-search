@@ -19,7 +19,19 @@ from datetime import UTC, datetime
 import requests
 
 from . import lifecycle, state
-from .alerts import API, LABEL, _headers, format_line, lane_label
+from .alerts import (
+    API,
+    LABEL,
+    _dedupe_alert_rows,
+    _existing_marker_ids,
+    _expand_marker_ids,
+    _headers,
+    _load_job_aliases,
+    _posting_marker,
+    _resolve_job_alias,
+    format_line,
+    lane_label,
+)
 from .config import env, github_owner, github_repo, profile, profile_id
 from .score import career_priority
 
@@ -233,23 +245,130 @@ def post_daily_best(jobs_state: dict, top_n: int = 10) -> str | None:
 
 def email_batch_rows(alert_history: list[dict], sent_ids: set[str], now: int,
                      limit: int = 15, jobs_state: dict | None = None) -> list[dict]:
-    """Choose unsent alerts: importance first, then freshness."""
-    rows = []
-    for a in alert_history:
-        if (a.get("id") in sent_ids
-                or not (0 < now - a.get("alerted_at", 0) <= 14 * 86400)):
+    """Choose unsent current alerts: importance first, then freshness.
+
+    ``alert_history`` is an event log and therefore deliberately keeps the
+    score/verdict from the crawl that emitted an alert.  The jobs snapshot is
+    the authority for what is still alertable; use the history row only for
+    the alert timestamp and the first-sighting fallback.  This prevents a
+    later rescore or lifecycle transition from leaking a stale role into an
+    email batch.  Duplicate history rows (including alias remaps) collapse to
+    their newest event before selection.
+    """
+    aliases = _load_job_aliases()
+    sent_ids = _expand_marker_ids(set(sent_ids), aliases)
+    latest: dict[str, dict] = {}
+    for index, record in enumerate(alert_history):
+        raw_id = str(record.get("id") or "")
+        if not raw_id:
             continue
-        current = (jobs_state or {}).get(a.get("id"))
+        job_id = _resolve_job_alias(raw_id, aliases)
+        normalized = {**record, "id": job_id, "_history_index": index}
+        previous = latest.get(job_id)
+        if previous is None or (
+                int(record.get("alerted_at", 0) or 0), index
+        ) >= (
+                int(previous.get("alerted_at", 0) or 0),
+                int(previous.get("_history_index", -1)),
+        ):
+            # Keep the index private to this selection pass so equal-timestamp
+            # duplicate records consistently prefer the later history entry.
+            latest[job_id] = normalized
+
+    rows = []
+    threshold = int(profile()["thresholds"]["alert"])
+    for history_row in latest.values():
+        job_id = str(history_row.get("id") or "")
+        if (job_id in sent_ids
+                or not (0 < now - history_row.get("alerted_at", 0) <= 14 * 86400)):
+            continue
+        current = (jobs_state or {}).get(job_id)
         if jobs_state is not None and (current is None or lifecycle.is_terminal(current)):
             continue
-        if jobs_state is None and lifecycle.is_terminal(a):
+        if jobs_state is None and lifecycle.is_terminal(history_row):
             continue
-        if profile_id() == "internship" and not _spring_winter_2027_internship(current or a):
+        if jobs_state is not None:
+            # Compact state omits false defaults, so an absent alert_ok is an
+            # explicit demotion rather than an unknown value.
+            if not current.get("alert_ok") or int(current.get("score", 0) or 0) < threshold:
+                continue
+            row = dict(current)
+            row["alerted_at"] = history_row.get("alerted_at", 0)
+        else:
+            # Fresh installs may have an alert history before a jobs snapshot
+            # exists. Preserve that compatibility while rejecting explicit
+            # stale verdicts and below-threshold records.
+            if history_row.get("alert_ok") is False:
+                continue
+            if "score" in history_row and int(history_row.get("score", 0) or 0) < threshold:
+                continue
+            row = dict(history_row)
+        if profile_id() == "internship" and not _spring_winter_2027_internship(row):
             continue
-        rows.append(a)
-    rows.sort(key=lambda a: (-career_priority(a), -a.get("score", 0),
-                             -a.get("alerted_at", 0)))
+        rows.append(row)
+    # A provider can expose one requisition at multiple application/detail
+    # URLs. Treat those as one delivery item while keeping distinct
+    # requisitions separate through the provider-aware posting key.
+    sent_postings = {
+        _posting_marker(row) for row in rows if row.get("id") in sent_ids
+    }
+    rows = _dedupe_alert_rows(rows)
+    rows = [row for row in rows
+            if row.get("id") not in sent_ids
+            and _posting_marker(row) not in sent_postings]
+    rows.sort(key=lambda row: (-career_priority(row), -row.get("score", 0),
+                               -row.get("alerted_at", 0)))
+    for row in rows:
+        row.pop("_history_index", None)
     return rows[:limit]
+
+
+def _batch_marker_labels() -> str:
+    """Labels that identify one lane's batch issues to GitHub."""
+    return ",".join((LABEL, lane_label(), batch_label()))
+
+
+def _remember_batch_receipts(notification: dict, alert_history: list[dict],
+                             sent_ids: set[str], delivered: list[dict]) -> None:
+    """Keep a deterministic, bounded local cache of recent batch receipts.
+
+    GitHub issue markers are the durable receipt.  The local list is only a
+    fast path, so discard IDs no longer present in the active history window
+    and order the remainder by the latest alert event rather than by the
+    nondeterministic iteration order of a set.
+    """
+    history_times: dict[str, int] = {}
+    for record in alert_history:
+        job_id = str(record.get("id") or "")
+        if not job_id:
+            continue
+        stamp = int(record.get("alerted_at", 0) or 0)
+        history_times[job_id] = max(history_times.get(job_id, stamp), stamp)
+    for row in delivered:
+        job_id = str(row.get("id") or "")
+        if job_id:
+            sent_ids.add(job_id)
+    recent = [job_id for job_id in sent_ids if job_id in history_times]
+    recent.sort(key=lambda job_id: (history_times[job_id], job_id))
+    notification["email_batch_sent_ids"] = recent[-1000:]
+
+
+def _jobs_snapshot() -> tuple[dict, bool]:
+    """Return jobs plus whether a persisted snapshot exists.
+
+    An empty JSON object is a valid authoritative snapshot; only a missing
+    snapshot may use alert history as the fresh-install fallback.
+    """
+    jobs = state.jobs()
+    path_fn = getattr(state, "_path", None)
+    if path_fn is None:
+        return jobs, bool(jobs)
+    try:
+        primary = path_fn("jobs.json")
+        history = path_fn("jobs_history.json")
+        return jobs, bool(primary.exists() or history.exists())
+    except (AttributeError, OSError):
+        return jobs, bool(jobs)
 
 
 def post_email_batch(alert_history: list[dict], limit: int | None = None) -> str | None:
@@ -264,13 +383,13 @@ def post_email_batch(alert_history: list[dict], limit: int | None = None) -> str
     now = int(time.time())
     limit = int(env("RADAR_EMAIL_BATCH_SIZE", "15")) if limit is None else limit
     notification = state.load("notification_state.json", {})
-    sent_ids = set(notification.get("email_batch_sent_ids", []))
-    jobs_state = state.jobs()
+    sent_ids = _expand_marker_ids(set(notification.get("email_batch_sent_ids", [])))
+    jobs_state, snapshot_exists = _jobs_snapshot()
     # A caller can supply a standalone alert history before the first jobs
     # snapshot exists (used by tests and by a fresh install). Once state has
     # rows, missing/terminal IDs are treated as no longer deliverable.
     pending = email_batch_rows(alert_history, sent_ids, now, 1000,
-                               jobs_state if jobs_state else None)
+                               jobs_state if snapshot_exists else None)
     if not pending:
         print("email-batch: no unsent alerts")
         return None
@@ -283,8 +402,34 @@ def post_email_batch(alert_history: list[dict], limit: int | None = None) -> str
         print(f"email-batch: holding {len(pending)} role(s); waiting for "
               f"{min_batch} roles or {max_wait_hours:g}h")
         return None
-    rows = pending[:limit]
     repo = github_repo()
+    # The issue body is the durable delivery receipt.  This closes the crash
+    # window between GitHub accepting the batch and the local JSON save, and
+    # also protects against a concurrent workflow starting from stale state.
+    marker_since = min(int(row.get("alerted_at", now) or now) for row in pending)
+    existing_ids = _existing_marker_ids(
+        repo, since=marker_since, labels=_batch_marker_labels())
+    if existing_ids:
+        recovered = [row for row in pending if row.get("id") in existing_ids]
+        if recovered:
+            _remember_batch_receipts(notification, alert_history, sent_ids, recovered)
+            try:
+                state.save("notification_state.json", notification)
+            except Exception as exc:
+                print(f"email-batch: could not cache recovered receipts: {exc}")
+        pending = [row for row in pending if row.get("id") not in existing_ids]
+    if not pending:
+        print("email-batch: all pending alerts already have durable batch markers")
+        return None
+    # A marker can remove enough rows to cross the normal batch threshold.
+    # Reapply the same policy to the rows that still need delivery.
+    oldest_age = now - min(row.get("alerted_at", now) for row in pending)
+    urgent = max(row.get("score", 0) for row in pending) >= urgent_score
+    if len(pending) < min_batch and not urgent and oldest_age < max_wait_hours * 3600:
+        print(f"email-batch: holding {len(pending)} role(s); waiting for "
+              f"{min_batch} roles or {max_wait_hours:g}h")
+        return None
+    rows = pending[:limit]
     stamp = datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
     internship_lane = profile_id() == "internship"
     title_prefix = "Internship" if internship_lane else "Job Radar"
@@ -299,8 +444,7 @@ def post_email_batch(alert_history: list[dict], limit: int | None = None) -> str
                                    "labels": [LABEL, lane_label(), batch_label()],
                                    "assignees": [github_owner()]})
     response.raise_for_status()
-    sent_ids.update(row["id"] for row in rows)
-    notification["email_batch_sent_ids"] = list(sent_ids)[-1000:]
+    _remember_batch_receipts(notification, alert_history, sent_ids, rows)
     notification["last_email_batch_at"] = now
     state.save("notification_state.json", notification)
     return response.json()["html_url"]

@@ -2,7 +2,7 @@ name: internship alert batches
 
 on:
   schedule:
-    - cron: "30 */4 * * *"
+    - cron: "30 * * * *"
   workflow_dispatch: {}
 
 permissions:

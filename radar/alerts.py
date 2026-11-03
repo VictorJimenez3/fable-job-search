@@ -12,8 +12,9 @@ from datetime import UTC, datetime
 
 import requests
 
-from . import lifecycle
-from .config import env, github_repo, profile_id
+from . import lifecycle, state
+from .config import env, github_repo, profile, profile_id
+from .identity import posting_key
 from .models import norm
 
 API = "https://api.github.com"
@@ -21,6 +22,39 @@ LABEL = "radar-alerts"
 BODY_LIMIT = 60000
 REQUEST_TIMEOUT = (5, 20)
 _RESEARCH_CACHE: dict | None = None
+
+
+def _load_job_aliases() -> dict[str, str]:
+    raw = state.load("job_aliases.json", {})
+    return ({str(key): str(value) for key, value in raw.items()}
+            if isinstance(raw, dict) else {})
+
+
+def _resolve_job_alias(job_id: str, aliases: dict[str, str] | None = None) -> str:
+    aliases = _load_job_aliases() if aliases is None else aliases
+    current = str(job_id)
+    visited: set[str] = set()
+    while current in aliases and current not in visited:
+        visited.add(current)
+        current = str(aliases[current])
+    return current
+
+
+def _expand_marker_ids(marker_ids: set[str], aliases: dict[str, str] | None = None) -> set[str]:
+    """Include both sides of persisted ID aliases in durable marker lookups."""
+    aliases = _load_job_aliases() if aliases is None else aliases
+    expanded = {str(marker) for marker in marker_ids if marker}
+    resolved = {_resolve_job_alias(marker, aliases) for marker in expanded}
+    expanded.update(resolved)
+    for alias in aliases:
+        if _resolve_job_alias(alias, aliases) in resolved:
+            expanded.add(str(alias))
+    return expanded
+
+
+def _posting_marker(job: dict) -> str:
+    key = posting_key(job.get("url"))
+    return f"posting:{key}" if key else f"id:{job.get('id', '')}"
 
 
 def _headers() -> dict:
@@ -148,16 +182,82 @@ def header() -> str:
     return HEADER
 
 
-def post_alerts(new_alerts: list[dict]) -> str | None:
+def _dedupe_alert_rows(rows: list[dict]) -> list[dict]:
+    """Dedupe by durable job ID and provider-aware posting identity."""
+    chosen: list[dict] = []
+    by_id: dict[str, int] = {}
+    by_posting: dict[str, int] = {}
+    positions: dict[int, tuple[int, int]] = {}
+    for position, row in enumerate(rows):
+        job_id = str(row.get("id") or "")
+        if not job_id:
+            continue
+        indexes = [index for index in (by_id.get(job_id), by_posting.get(_posting_marker(row)))
+                   if index is not None]
+        previous_index = indexes[0] if indexes else None
+        if previous_index is not None:
+            previous = chosen[previous_index]
+            previous_order = positions[previous_index]
+            current_order = (int(row.get("alerted_at", 0) or 0), position)
+            if current_order < previous_order:
+                continue
+            chosen[previous_index] = row
+            positions[previous_index] = current_order
+            old_id = str(previous.get("id") or "")
+            old_posting = _posting_marker(previous)
+            if by_id.get(old_id) == previous_index:
+                by_id.pop(old_id, None)
+            if by_posting.get(old_posting) == previous_index:
+                by_posting.pop(old_posting, None)
+            by_id[job_id] = previous_index
+            by_posting[_posting_marker(row)] = previous_index
+            continue
+        index = len(chosen)
+        chosen.append(row)
+        positions[index] = (int(row.get("alerted_at", 0) or 0), position)
+        by_id[job_id] = index
+        by_posting[_posting_marker(row)] = index
+    return chosen
+
+
+def _current_alert_rows(rows: list[dict], jobs_state: dict | None) -> list[dict]:
+    """Hydrate and revalidate rows when the caller supplies current state."""
+    if jobs_state is None:
+        return [row for row in rows if not lifecycle.is_terminal(row)]
+    aliases = _load_job_aliases()
+    threshold = int(profile()["thresholds"]["alert"])
+    current_rows: list[dict] = []
+    for history_row in rows:
+        job_id = str(history_row.get("id") or "")
+        current_id = _resolve_job_alias(job_id, aliases)
+        current = jobs_state.get(current_id) or jobs_state.get(job_id)
+        if (current is None or lifecycle.is_terminal(current)
+                or not current.get("alert_ok")
+                or int(current.get("score", 0) or 0) < threshold):
+            continue
+        row = dict(current)
+        row["alerted_at"] = history_row.get("alerted_at", 0)
+        current_rows.append(row)
+    return current_rows
+
+
+def post_alerts(new_alerts: list[dict], jobs_state: dict | None = None) -> str | None:
     """Create missing silent per-posting tracking issues.
 
     Delivery runs after the crawl state is committed.  A runner can be
     interrupted after GitHub accepts an issue but before it records anything
     locally, so the issue marker is the idempotency key rather than an
     in-memory "sent" flag.  Closed issues count too: intentionally closing a
-    tracking issue must not make a later delivery recreate it.
+    tracking issue must not make a later delivery recreate it.  When
+    ``jobs_state`` is supplied, it is authoritative for current score,
+    eligibility, and lifecycle; an empty mapping therefore suppresses all
+    history rows rather than falling back to stale alert records.
     """
-    new_alerts = [job for job in new_alerts if not lifecycle.is_terminal(job)]
+    # Alias repair can leave two history entries pointing at the same survivor.
+    # Collapse those in-memory before posting: the GitHub lookup is performed
+    # once per delivery call, so a duplicate input would otherwise create two
+    # issues before the newly-created marker can be observed.
+    new_alerts = _dedupe_alert_rows(_current_alert_rows(new_alerts, jobs_state))
     if not new_alerts:
         return None
     token = env("GITHUB_TOKEN")
@@ -187,6 +287,9 @@ def post_alerts(new_alerts: list[dict]) -> str | None:
                   "labels": [LABEL, lane_label()], "assignees": []})
         r.raise_for_status()
         last_url = r.json().get("html_url") or last_url
+        # Protect this call from repeated history aliases even if a caller
+        # bypasses the normalization above in a future delivery path.
+        existing_ids.add(job["id"])
     return last_url
 
 
@@ -197,9 +300,56 @@ def _existing_alert_ids(repo: str, *, since: int | None = None) -> set[str]:
     local cache.  That preserves idempotency if a runner dies after GitHub
     accepts an issue but before any generated state is written.
     """
+    issues = _marker_issues(repo, since=since, labels=LABEL)
+    current_lane = lane_label()
+    eligible: set[str] = set()
+    for issue in issues:
+        labels = {
+            str(label.get("name") or "") if isinstance(label, dict) else str(label)
+            for label in issue.get("labels", [])
+        }
+        body = issue.get("body") or ""
+        title = issue.get("title") or ""
+        if current_lane in labels:
+            eligible.add(body)
+            continue
+        # Older new-grad issues predate the lane label. They remain valid
+        # receipts, but an unlabelled internship issue must never suppress a
+        # new-grad delivery. Internship titles/bodies carried an explicit
+        # marker even before the lane label was added.
+        legacy_internship = (title.startswith("🎓 Internship")
+                             or "Internship roles appear" in body)
+        if (not labels.intersection({"radar-new-grad", "radar-internships"})
+                and ((current_lane == "radar-new-grad" and not legacy_internship)
+                     or (current_lane == "radar-internships" and legacy_internship))):
+            eligible.add(body)
     found: set[str] = set()
+    for body in eligible:
+        found.update(re.findall(r"<!--radar:([^>]+)-->", body))
+    return _expand_marker_ids(found)
+
+
+def _existing_marker_ids(repo: str, *, since: int | None = None,
+                         labels: str = LABEL) -> set[str]:
+    """Return radar markers from bounded GitHub issue history.
+
+    Issue bodies are the durable receipt for delivery.  ``labels`` lets the
+    batch lane query only its own issues, so a retry after a state-write crash
+    cannot create a second batch while the lookup remains bounded to the
+    active alert window.
+    """
+    found: set[str] = set()
+    for issue in _marker_issues(repo, since=since, labels=labels):
+        found.update(re.findall(r"<!--radar:([^>]+)-->", issue.get("body") or ""))
+    return _expand_marker_ids(found)
+
+
+def _marker_issues(repo: str, *, since: int | None = None,
+                   labels: str = LABEL) -> list[dict]:
+    """Fetch bounded issue records, retaining labels for legacy lane checks."""
+    found: list[dict] = []
     page = 1
-    params = {"labels": LABEL, "state": "all", "per_page": 100}
+    params = {"labels": labels, "state": "all", "per_page": 100}
     if since:
         # Give clock skew and a manually edited issue a small cushion.
         stamp = datetime.fromtimestamp(max(0, since - 300), UTC)
@@ -211,9 +361,7 @@ def _existing_alert_ids(repo: str, *, since: int | None = None) -> set[str]:
         )
         response.raise_for_status()
         issues = response.json()
-        for issue in issues:
-            body = issue.get("body") or ""
-            found.update(re.findall(r"<!--radar:([^>]+)-->", body))
+        found.extend(issue for issue in issues if isinstance(issue, dict))
         if len(issues) < 100:
             return found
         page += 1

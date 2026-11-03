@@ -1,0 +1,35 @@
+# Public, no-login feeds that may be added to the discovery lane.  These are
+# discovery sources, not replacements for the employer's own posting.
+sources:
+  headcount_engineering:
+    enabled: true
+    kind: headcount_markdown
+    source: headcount_engineering
+    section: Software engineering
+    url: https://raw.githubusercontent.com/HeadcountLabs/entry-level-jobs/main/README.md
+    max_jobs: 100
+  headcount_data_ai:
+    enabled: true
+    kind: headcount_markdown
+    source: headcount_data_ai
+    section: Data, AI and machine learning
+    url: https://raw.githubusercontent.com/HeadcountLabs/entry-level-jobs/main/README.md
+    max_jobs: 100
+  yubhub_graduate_engineering:
+    enabled: true
+    kind: yubhub_json
+    source: yubhub_graduate_engineering
+    url: https://feeds.yubhub.co/facet/graduate/engineering.json
+    attribution: Data by YubHub (https://yubhub.co)
+    max_jobs: 100
+  zero2sudo_notion:
+    # This page is a curated social lead list and was stale during verification
+    # (last edited 2026-02-06). It is enabled for bounded discovery, but every
+    # row is source-only/review-only until employer liveness/date evidence is
+    # attached; never alert directly from this source.
+    enabled: true
+    kind: zero2sudo_notion
+    source: zero2sudo_notion
+    url: https://zero2sudo.notion.site/api/v3/loadCachedPageChunkV2
+    page_id: 4b5bf549-2a86-418c-8dc7-01bad692df99
+    max_jobs: 25

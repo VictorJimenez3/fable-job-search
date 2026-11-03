@@ -13,24 +13,64 @@ Absent → returns [] and the memo section is omitted.
 from __future__ import annotations
 
 import time
+from datetime import UTC, datetime
+from urllib.parse import urlsplit
 
-from ..config import env
+from ..config import env, profile
 from ..http import get_json
 
 API = "https://www.googleapis.com/customsearch/v1"
 
-QUERIES = [
-    'site:linkedin.com/posts "new grad" (hiring OR "open role") 2026 (AI OR "machine learning" OR "software engineer" OR "data scien")',
-    'site:linkedin.com/posts "entry level" hiring ("health tech" OR healthcare) engineer',
-]
+def current_year() -> int:
+    return datetime.now(UTC).year
 
 
-def fetch_posts(max_per_query: int = 8) -> list[dict]:
+def candidate_grad_year() -> int:
+    """Return the candidate's configured graduation year for public queries."""
+    raw = env("RADAR_GRAD_YEAR", "")
+    if not raw:
+        try:
+            raw = profile().get("candidate", {}).get("grad_year", "")
+        except (AttributeError, OSError, TypeError):
+            raw = ""
+    try:
+        year = int(raw)
+    except (TypeError, ValueError):
+        year = current_year()
+    return year if 2000 <= year <= 2100 else current_year()
+
+
+def build_queries(grad_year: int | None = None) -> list[str]:
+    year = candidate_grad_year() if grad_year is None else int(grad_year)
+    return [
+        f'site:linkedin.com/posts "new grad" (hiring OR "open role") {year} '
+        '(AI OR "machine learning" OR "software engineer" OR "data scien")',
+        f'site:linkedin.com/posts "entry level" hiring {year} '
+        '("health tech" OR healthcare) engineer',
+    ]
+
+
+# Compatibility for callers that imported the old constant.  It is generated
+# from the profile instead of freezing an obsolete graduation year at import.
+QUERIES = build_queries()
+
+
+def _is_public_post_url(value: object) -> bool:
+    parsed = urlsplit(str(value or ""))
+    host = (parsed.hostname or "").lower().rstrip(".")
+    return (
+        parsed.scheme in {"http", "https"}
+        and (host == "linkedin.com" or host.endswith(".linkedin.com"))
+        and parsed.path.rstrip("/").startswith("/posts/")
+    )
+
+
+def fetch_posts(max_per_query: int = 8, queries: list[str] | None = None) -> list[dict]:
     key, cse = env("GOOGLE_CSE_KEY"), env("GOOGLE_CSE_ID")
     if not key or not cse:
         return []
     out, seen = [], set()
-    for q in QUERIES:
+    for q in (queries if queries is not None else build_queries()):
         try:
             data = get_json(API, params={"key": key, "cx": cse, "q": q,
                                          "num": max_per_query, "dateRestrict": "w2"})
@@ -39,7 +79,7 @@ def fetch_posts(max_per_query: int = 8) -> list[dict]:
             continue
         for item in data.get("items", []):
             url = item.get("link", "")
-            if not url or url in seen:
+            if not _is_public_post_url(url) or url in seen:
                 continue
             seen.add(url)
             out.append({"title": (item.get("title") or "")[:120],

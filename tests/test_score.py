@@ -104,12 +104,83 @@ def test_untracking_the_positive_sample_removes_its_learned_signal():
 
 def test_gates_direct_ats_needs_entry_signal():
     # direct ATS posting without any new-grad language: kept, but not alertable
-    keep, alert_ok, _ = gates(mk("Software Engineer", source="greenhouse"))
+    missing_desc = mk("Software Engineer", source="greenhouse")
+    keep, alert_ok, reasons = gates(missing_desc)
     assert keep is True and alert_ok is False
+    assert missing_desc.eligibility_evidence["source"] == "missing-description"
+    assert any("no employer posting description" in reason for reason in reasons)
     # ...unless the description signals entry level
     keep, alert_ok, _ = gates(mk("Software Engineer", source="greenhouse",
                                  desc="We welcome new grad applicants with 0-2 years experience."))
     assert keep and alert_ok
+
+
+def test_preferred_experience_does_not_block_explicit_new_grad():
+    keep, alert_ok, reasons = gates(mk(
+        "Software Engineer, New Grad", source="greenhouse",
+        desc="One year of experience preferred; no experience required."))
+    assert keep and alert_ok
+    assert any("preferred" in reason for reason in reasons)
+
+
+def test_required_positive_experience_stays_visible_for_review():
+    keep, alert_ok, reasons = gates(mk(
+        "Software Engineer, New Grad", source="greenhouse",
+        desc="Requires 1+ years of professional experience."))
+    assert keep is True and alert_ok is False
+    assert any("requires 1+ years" in reason for reason in reasons)
+
+
+def test_degree_experience_alternative_stays_visible_for_review():
+    keep, alert_ok, reasons = gates(mk(
+        "Software Engineer, New Grad", source="greenhouse",
+        desc=("Bachelor's degree and 2+ years OR Master's degree and "
+              "0 years experience.")))
+    assert keep is True and alert_ok is False
+    assert any("conditional degree/experience" in reason for reason in reasons)
+
+
+def test_source_only_new_grad_provenance_is_review_only():
+    keep, alert_ok, reasons = gates(mk("Software Engineer", source="simplify"))
+    assert keep is True and alert_ok is False
+    assert any("source-only" in reason for reason in reasons)
+
+
+def test_source_only_lead_title_is_review_only():
+    job = mk("Software Engineer, New Grad", source="public_feed",
+             link_resolution={"status": "source_only", "reason": "social lead"})
+    keep, alert_ok, reasons = gates(job)
+    assert keep is True and alert_ok is False
+    assert job.eligibility_evidence["source"] == "source-only"
+    assert any("source-only" in reason for reason in reasons)
+
+
+def test_source_only_resolution_overrides_stale_verified_evidence():
+    job = mk("Software Engineer, New Grad", source="public_feed",
+             link_resolution={"status": "source_only"},
+             eligibility_evidence={"status": "verified", "source": "title"})
+    keep, alert_ok, _ = gates(job)
+    assert keep is True and alert_ok is False
+    assert job.eligibility_evidence["source"] == "source-only"
+
+
+def test_mismatched_new_grad_cohort_is_review_only():
+    keep, alert_ok, reasons = gates(mk(
+        "Software Engineer, Class of 2025", source="greenhouse"))
+    assert keep is True and alert_ok is False
+    assert any("cohort" in reason for reason in reasons)
+
+
+def test_description_evidence_is_compactly_persisted():
+    job = mk("Software Engineer", source="greenhouse",
+             desc="This entry-level role welcomes recent graduates.")
+    keep, alert_ok, _ = gates(job)
+    assert keep and alert_ok
+    record = job.to_record()
+    evidence = record["eligibility_evidence"]
+    assert evidence["status"] == "verified"
+    assert evidence["source"] == "description"
+    assert record["description"] == ""
 
 
 def test_early_career_possible_is_visible_but_never_new_grad_evidence():
@@ -148,8 +219,8 @@ def test_startup_stage_signal_is_cited_and_neutral_when_unavailable(monkeypatch)
 def test_trusted_new_grad_board_source_supplies_missing_title_signal():
     job = mk("Software Engineer", source="simplify")
     keep, alert_ok, reasons = gates(job)
-    assert keep and alert_ok
-    assert any("verified new-grad" in r for r in reasons)
+    assert keep and not alert_ok
+    assert any("source-only" in r for r in reasons)
 
 
 def test_preferred_sports_and_video_game_companies_are_classified():
@@ -354,16 +425,17 @@ def test_pays_bank_parses_salary_shapes():
 
 
 def test_gates_reject_years_requirement():
-    keep, _, _ = gates(mk("Software Engineer", source="greenhouse",
-                          desc="Requires 5+ years of production experience."))
-    assert keep is False
+    keep, alert_ok, reasons = gates(mk("Software Engineer", source="greenhouse",
+                                       desc="Requires 5+ years of production experience."))
+    assert keep is True and alert_ok is False
+    assert any("requires 5+ years" in reason for reason in reasons)
 
 
 def test_gates_rejects_any_positive_required_experience_floor():
-    keep, _, reasons = gates(mk("Software Engineer, New Grad", source="greenhouse",
-                                desc="Requires 1+ years of professional experience."))
-    assert keep is False
-    assert "not new-grad" in reasons[0]
+    keep, alert_ok, reasons = gates(mk("Software Engineer, New Grad", source="greenhouse",
+                                       desc="Requires 1+ years of professional experience."))
+    assert keep is True and alert_ok is False
+    assert any("requires 1+ years" in reason for reason in reasons)
 
 
 def test_gates_keeps_zero_to_two_year_new_grad_role():

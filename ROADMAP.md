@@ -3,6 +3,47 @@
 The dream-system backlog. Each item is scoped enough to build on request;
 none block anything currently running.
 
+## 2026-11-03 reliability and discovery overhaul
+
+**✅ IMPLEMENTED IN CODE; ⏳ publication and live verification pending.** The
+current implementation makes the requested reliability and coverage changes
+without changing the Resume Studio tailoring contract:
+
+1. **Bounded job detail state.** Open and terminal detail is stored behind
+   deterministic SHA-256 prefix references in 256 versioned, signed shards per
+   lane (`jobs_details/` and `intern_jobs_details/`). The primary snapshot stays
+   lightweight; the existing drawer fetches and verifies only one shard. This
+   bounds individual files, not the repository forever, so a future datastore
+   boundary remains explicit.
+2. **Conservative identity and evidence.** Provider-aware posting identities
+   preserve distinct real requisitions and provider URLs when same-label fuzzy
+   matches are ambiguous. Rules v16 separates required from preferred
+   experience and keeps source-only/cohort leads review-only until employer
+   evidence is available. No fuzzy dedupe promise is treated as a 100% duplicate
+   guarantee.
+3. **Fairer discovery and delivery.** Registry rotation uses the oldest
+   polling attempt, and delivery is current-state, alias-, and crash-aware with
+   latest evidence. New-grad and internship delivery remain separate. Batch
+   checks are hourly while the existing policy remains minimum 3, maximum wait
+   12 hours, and urgent score 92.
+4. **Additional public discovery.** Headcount engineering and data/AI feeds and
+   YubHub graduate engineering (Data by YubHub, up to 100) are bounded sources.
+   The anonymous public zero2sudo Notion source is enabled only for review-only,
+   source-only leads (up to 25). Instagram login is unavailable; automatic
+   Instagram and LinkedIn scraping remain out of scope. Optional public
+   LinkedIn search uses the dynamic candidate graduation year (currently 2027).
+5. **Migration and verification boundary.** Advancing the main snapshot from
+   v15 to v16 requires a generated-state rescore as a separate migration commit;
+   generated files are not hand-edited. The generated migration retains 81,961
+   new-grad records after consolidating 2,589 duplicates; 907 meet alert rules.
+   The primary is 83,166,228 bytes and both lanes pass score-health. The frontend
+   dependency patch (Better Auth 1.7.7, Vite 7.3.7, Zod 4.6.6, Vitest 4.1.12)
+   leaves zero high or critical audit findings. The full Python suite passes
+   753 tests with 3 skips; production CI and the first live crawl remain the
+   final publication checks. Resume tailoring is unchanged
+   except for the shared snapshot-reader/cache correctness needed to read
+   compacted state.
+
 ## 2026-08-16 vNext implementation status
 
 1. **Normalized persistence and migration path — ✅ IMPLEMENTED, activation
@@ -143,7 +184,7 @@ feature requests to implement in the application.
 1. **Scoring/state maintenance hardening — ✅ foundation shipped.** CI now
    fails when any stored job lacks the current `score_version`, and a scheduled
    six-hour rescore rebuilds from a fresh upstream snapshot before publishing.
-   Rules v7 also classifies (but never alerts) no-experience-floor technical
+   Current new-grad Rules v16 also classifies (but never alerts) no-experience-floor technical
    roles as `early-career possible`. The remaining long-term improvement is a
    shared state transaction layer for all generated writers, but scoring now
    has an automated repair path.

@@ -1,5 +1,68 @@
 # CLI handoff notes
 
+## Reliability and discovery overhaul (2026-11-03; DECISION #228)
+
+Victor authorized implementation and publication of validated repository fixes,
+prioritizing failed runs, duplicate prevention, evidence-based new-grad fit,
+faster discovery, and useful notifications. Resume tailoring is out of scope.
+The original dirty checkout is preserved; work is isolated on
+`codex/radar-overhaul-20261103`.
+
+Implementation plan (existing Python/Actions/JSON/Vercel architecture):
+
+- [x] Replace repeated snapshot compaction patches with bounded detail shards;
+  preserve full audit records through Python, web/API, and companion merges.
+  Reproduce the failed 99,614,720-byte guard; verify lossless round trips and
+  actual production-snapshot headroom before publication.
+- [x] Normalize known ATS requisition identities and preserve transitive aliases,
+  provenance, owner tracking, and distinct real requisitions. Cover duplicate
+  input order, provider URL variants, and unrelated same-title requisitions.
+- [x] Share required/preferred experience interpretation; preserve compact
+  eligibility evidence across rescoring; make source-only and contradictory
+  records review-only with explicit reasons and candidate cohort checks.
+- [x] Rotate bounded direct-ATS polling by oldest attempt so seeds cannot starve
+  the registry. Verify multiple cycles even when every board is overdue.
+- [x] Revalidate notification candidates against current state, recover sent
+  job markers after crashes, and prevent duplicate rows/receipt loss. Keep
+  internship scope and owner delivery preferences intact.
+- [x] Add bounded public curated/feed discovery with original-source attribution,
+  official job URLs, honest dates, and source failure isolation. Zero2Sudo's
+  available public collection is stale; do not claim live Instagram access.
+- [ ] Run regression/full tests, production-sized state replay, web build and
+  live detail/browser checks; update owning docs; rebase to current production,
+  publish through green CI, then verify a real crawl and production build SHA.
+
+Current implementation also patches Better Auth, Vite, Zod, and Vitest to the
+fixed versions required by their security advisories. Frontend typecheck, test,
+lint, build, and the high-severity audit pass; 12 moderate development-tooling
+advisories remain. Desktop (1440px) and mobile (390px) checks loaded the actual
+84,550-record production snapshot and verified drawer detail loading without
+horizontal overflow. No resume-tailoring behavior was changed.
+
+The generated migration is complete on the release branch: 2,589 duplicate
+new-grad records and 4,136 duplicate internship records consolidated, with 183
+and 127 references remapped. The new-grad snapshot now contains 81,961 records,
+907 alert-eligible, at 83,166,228 bytes (16,448,492 below the unchanged guard).
+The internship snapshot has 32,298 records at 39,644,806 bytes. The largest
+new-grad detail shard is 535,463 bytes; both lanes pass score-health. Compact
+hard-gate summaries preserve list filtering before drawer hydration, and
+terminal rows retain four recent lifecycle events in the list.
+
+Validation: Python 3.12 full suite 753 passed / 3 skipped; compile, full package
+correctness lint, targeted CI lint, shell syntax, and retired-file checks pass.
+The migration used the supported readers/writers, duplicate repair, and rescore
+commands with external integration tokens unset; zero Notion pages changed.
+Production CI, publication, and a real crawl remain pending.
+The source-only Zero2Sudo adapter reads its public Notion collection (four live
+smoke-test leads); authenticated Instagram scraping is not configured. Headcount
+and YubHub public feeds are enabled. LinkedIn remains public search discovery and
+links, without scraping its pages. No new secret is required for these adapters.
+
+Baseline: 645 passed, 3 skipped on production code. Two current failed radar
+runs (41607505759 and 41681825444) exceeded the snapshot limit after successful
+scoring, preventing new alert state from publishing. No generated state or
+private CV material belongs in the feature implementation commit.
+
 ## Radar workflow capacity recovery (2026-10-20; DECISION #227)
 
 - Failure email traced to `radar` run `39455043288`, attempt 2. Five recent

@@ -1,0 +1,237 @@
+"""Runtime checks for lazy job-detail shard hydration in the classic UI/API."""
+
+import hashlib
+import json
+import shutil
+import subprocess
+from pathlib import Path
+
+import pytest
+
+
+ROOT = Path(__file__).resolve().parent.parent
+
+
+def python_detail_signature(value):
+    """Match radar.state's Python canonical JSON/signature contract."""
+    payload = json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+@pytest.mark.skipif(not shutil.which("node"), reason="Node is required for runtime checks")
+def test_classic_drawer_hydrates_one_open_and_terminal_shard_and_legacy_fallback():
+    terminal_signature = python_detail_signature({
+        "lifecycle_events": [{"at": 100, "status": "expired"}],
+        "posting": {"years_min": 0},
+        "score_dimensions": {"tiny": -1e-6},
+        "score_raw": 82.0,
+        "score_reasons": ["role:swe +20"],
+    })
+    script = r'''
+const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const vm = require("node:vm");
+const crypto = require("node:crypto");
+const {TextEncoder} = require("node:util");
+
+const html = fs.readFileSync("webapp/index.html", "utf8");
+const match = html.match(/<script>\s*"use strict";([\s\S]*?)<\/script>/);
+assert.ok(match, "classic Jobs script exists");
+const source = match[0].replace(/^<script>/, "").replace(/<\/script>$/, "").replace(/boot\(\);\s*$/, "");
+const canonical = value => {
+  if (value === null || typeof value !== "object") return JSON.stringify(value);
+  if (Array.isArray(value)) return `[${value.map(canonical).join(",")}]`;
+  return `{${Object.keys(value).sort().map(key => `${JSON.stringify(key)}:${canonical(value[key])}`).join(",")}}`;
+};
+const digest = value => crypto.createHash("sha256").update(value).digest("hex");
+const shardFor = (lane, id) => `${lane === "internship" ? "intern_jobs_details" : "jobs_details"}/${digest(id).slice(0, 2)}.json`;
+const elements = new Map();
+const element = () => ({innerHTML:"", textContent:"", hidden:false,
+  classList:{add(){},remove(){},contains(){return true},toggle(){}},
+  setAttribute(){}, addEventListener(){}});
+for (const id of ["#ws", "#wsp", "#main", "#bootNotice"]) elements.set(id, element());
+const storage = new Map();
+let calls = [];
+const context = {
+  window:{addEventListener(){}},
+  document:{querySelector:selector => elements.get(selector) || element(), querySelectorAll:() => [], addEventListener(){}},
+  localStorage:{getItem:key => storage.get(key) || null, setItem:(key, value) => storage.set(key, value), removeItem:key => storage.delete(key)},
+  clearTimeout, setTimeout, Date, URL, console, TextEncoder, crypto:crypto.webcrypto,
+  fetch:async url => { calls.push(url); throw new Error(`unexpected request: ${url}`); },
+};
+context.crypto = crypto.webcrypto;
+vm.createContext(context);
+vm.runInContext(source, context);
+
+const detailFor = (reasons, extras={}) => ({score_reasons:reasons, ...extras});
+const refFor = (lane, id, detail, signatureOverride="") => ({version:1, shard:shardFor(lane, id), key:id, sha256:signatureOverride || digest(canonical(detail))});
+const loadFixture = (lane, id, detail, status="open", signatureOverride="") => {
+  const ref = refFor(lane, id, detail, signatureOverride);
+  const row = {id, company:"Acme", title:"Software Engineer", score:75, posting_status:status, detail_ref:ref};
+  context.fetch = async url => {
+    calls.push(url);
+    assert.equal(url, `https://raw.githubusercontent.com/VictorJimenez3/fable-job-search/claude/newgrad-job-search-system-9gbj9k/state/${ref.shard}`);
+    return {ok:true, status:200, json:async() => ({schema_version:1, records:{[id]:detail}, signatures:{[id]:ref.sha256}})};
+  };
+  vm.runInContext(`S.lane=${JSON.stringify(lane)}; S.jobs={${JSON.stringify(id)}:${JSON.stringify(row)}}; S.lanes[${JSON.stringify(lane)}].jobs=S.jobs; S.web={maybe:[],excluded:[],jobs:{}};`, context);
+  return row;
+};
+
+(async () => {
+  let detail = detailFor(["role:swe +20", "healthcare preference +6"]);
+  loadFixture("new_grad", "open-1", detail);
+  calls = [];
+  const openResult = await vm.runInContext("ensureJobDetail('open-1')", context);
+  assert.equal(openResult.status, "ready");
+  assert.equal(openResult.source, "shard");
+  assert.deepEqual(vm.runInContext("S.jobs['open-1'].score_reasons", context), detail.score_reasons);
+  assert.equal(calls.length, 1, "opening an open posting reads one matching shard");
+  assert.match(calls[0], /state\/jobs_details\/[0-9a-f]{2}\.json$/);
+
+  detail = detailFor(["new revision +3"]);
+  loadFixture("new_grad", "open-1", detail);
+  calls = [];
+  const refreshedResult = await vm.runInContext("ensureJobDetail('open-1')", context);
+  assert.equal(refreshedResult.status, "ready");
+  assert.deepEqual(vm.runInContext("S.jobs['open-1'].score_reasons", context), ["new revision +3"]);
+  assert.equal(calls.length, 1, "a refreshed detail_ref checksum invalidates the ready cache");
+
+  // Generated by Python's json.dumps(sort_keys=True, separators=(",", ":"))
+  // for a real terminal detail payload. JS parses 82.0 as 82 and -1e-6 as
+  // -0.000001, so the browser must trust the shard signature map rather than
+  // reserializing numeric payloads itself.
+  detail = detailFor(["role:swe +20"], {score_raw:82.0, score_dimensions:{tiny:-1e-6}, posting:{years_min:0}, lifecycle_events:[{status:"expired", at:100}]});
+  loadFixture("new_grad", "closed-1", detail, "expired", "__TERMINAL_SIGNATURE__");
+  vm.runInContext("S.backend=true", context);
+  calls = [];
+  const terminalResult = await vm.runInContext("ensureJobDetail('closed-1')", context);
+  assert.equal(terminalResult.status, "ready");
+  assert.deepEqual(vm.runInContext("S.jobs['closed-1'].posting", context), {years_min:0});
+  assert.equal(calls.length, 1, "terminal detail does not download legacy history when a pointer exists");
+
+  const legacy = {id:"legacy-1", company:"Legacy", title:"Engineer", score:60, posting_status:"expired"};
+  vm.runInContext("S.backend=false; S.lane='new_grad'; S.jobs={'legacy-1':" + JSON.stringify(legacy) + "}; S.lanes.new_grad.jobs=S.jobs; S.lanes.new_grad.historyReady=false; S.lanes.new_grad.historyPromise=null; S.web={maybe:[],excluded:[],jobs:{}};", context);
+  calls = [];
+  context.fetch = async url => {
+    calls.push(url);
+    assert.match(url, /state\/jobs_history\.json$/);
+    return {ok:true, status:200, json:async() => ({"legacy-1":{...legacy, score_reasons:["legacy ledger +4"]}})};
+  };
+  const legacyResult = await vm.runInContext("ensureJobDetail('legacy-1')", context);
+  assert.equal(legacyResult.status, "ready");
+  assert.equal(legacyResult.source, "history");
+  assert.deepEqual(vm.runInContext("S.jobs['legacy-1'].score_reasons", context), ["legacy ledger +4"]);
+  assert.equal(calls.length, 1, "legacy history remains the fallback for old rows");
+})().catch(error => { console.error(error); process.exitCode = 1; });
+'''.replace("__TERMINAL_SIGNATURE__", terminal_signature)
+    result = subprocess.run(["node", "-e", script], cwd=ROOT, capture_output=True, text=True)
+    assert result.returncode == 0, result.stdout + result.stderr
+
+
+@pytest.mark.skipif(not shutil.which("node"), reason="Node is required for runtime checks")
+def test_classic_detail_rejects_wrong_pointer_and_surfaces_fetch_or_signature_failure():
+    script = r'''
+const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const vm = require("node:vm");
+const crypto = require("node:crypto");
+const {TextEncoder} = require("node:util");
+const html = fs.readFileSync("webapp/index.html", "utf8");
+const match = html.match(/<script>\s*"use strict";([\s\S]*?)<\/script>/);
+const source = match[0].replace(/^<script>/, "").replace(/<\/script>$/, "").replace(/boot\(\);\s*$/, "");
+const elements = new Map();
+const element = () => ({innerHTML:"", textContent:"", hidden:false, classList:{add(){},remove(){},contains(){return true},toggle(){}}, setAttribute(){}, addEventListener(){}});
+for (const id of ["#ws", "#wsp", "#main", "#bootNotice"]) elements.set(id, element());
+const context = {window:{addEventListener(){}}, document:{querySelector:s=>elements.get(s)||element(),querySelectorAll:()=>[],addEventListener(){}}, localStorage:{getItem:()=>null,setItem(){},removeItem(){}}, clearTimeout,setTimeout,Date,URL,console,TextEncoder,crypto:crypto.webcrypto,fetch:async()=>({ok:false,status:503,json:async()=>({})})};
+vm.createContext(context); vm.runInContext(source, context);
+const id = "bad-1";
+const bad = (ref, fetchBody=null) => {
+  vm.runInContext(`S.lane='new_grad'; S.jobs={${JSON.stringify(id)}:{id:${JSON.stringify(id)},company:'Acme',title:'Engineer',score:70,detail_ref:${JSON.stringify(ref)}}}; S.lanes.new_grad.jobs=S.jobs; S.web={maybe:[],excluded:[],jobs:{}};`, context);
+  if (fetchBody) context.fetch = async () => ({ok:true,status:200,json:async()=>fetchBody});
+  else context.fetch = async () => ({ok:false,status:503,json:async()=>({})});
+};
+(async () => {
+  const validDetail = {score_reasons:["role:swe +20"]};
+  const signature = crypto.createHash("sha256").update(JSON.stringify(validDetail)).digest("hex");
+  const validShard = `jobs_details/${crypto.createHash("sha256").update(id).digest("hex").slice(0,2)}.json`;
+  bad({version:1, shard:"intern_jobs_details/aa.json", key:id, sha256:signature}, {schema_version:1,records:{[id]:validDetail},signatures:{[id]:signature}});
+  let result = await vm.runInContext("ensureJobDetail('bad-1')", context);
+  assert.equal(result.status, "error");
+  assert.match(result.error, /wrong lane or shard/i);
+  assert.deepEqual(vm.runInContext("S.jobs['bad-1'].score_reasons", context), undefined, "mismatch never becomes an empty ledger");
+
+  bad({version:1, shard:validShard, key:"other-key", sha256:signature}, {schema_version:1,records:{[id]:validDetail},signatures:{[id]:signature}});
+  result = await vm.runInContext("ensureJobDetail('bad-1')", context);
+  assert.equal(result.status, "error");
+  assert.match(result.error, /wrong lane or shard|does not match/i);
+
+  bad({version:1, shard:validShard, key:id, sha256:"0".repeat(64)}, {schema_version:1,records:{[id]:validDetail},signatures:{[id]:signature}});
+  result = await vm.runInContext("ensureJobDetail('bad-1')", context);
+  assert.equal(result.status, "error");
+  assert.match(result.error, /revision signature/i);
+
+  bad({version:1, shard:validShard, key:id, sha256:signature});
+  result = await vm.runInContext("ensureJobDetail('bad-1')", context);
+  assert.equal(result.status, "error");
+  assert.match(result.error, /returned 503/i);
+  assert.match(vm.runInContext("detailLedgerStatus('bad-1', S.jobs['bad-1'])", context), /retry evidence/);
+})().catch(error => { console.error(error); process.exitCode = 1; });
+'''
+    result = subprocess.run(["node", "-e", script], cwd=ROOT, capture_output=True, text=True)
+    assert result.returncode == 0, result.stdout + result.stderr
+
+
+@pytest.mark.skipif(not shutil.which("node"), reason="Node is required for runtime checks")
+def test_v1_job_detail_hydrates_and_rejects_mixed_revision_shards():
+    terminal_signature = python_detail_signature({
+        "lifecycle_events": [{"at": 100, "status": "expired"}],
+        "posting": {"years_min": 0},
+        "score_dimensions": {"tiny": -1e-6},
+        "score_raw": 82.0,
+        "score_reasons": ["role:swe +20"],
+    })
+    script = r'''
+const assert = require("node:assert/strict");
+const crypto = require("node:crypto");
+delete process.env.DATABASE_URL;
+process.env.RADAR_REPO = "owner/repo";
+process.env.RADAR_BRANCH = "main";
+let detailRoute = require("./webapp/api/v1/_job-detail");
+const digest = value => crypto.createHash("sha256").update(value).digest("hex");
+const id = "api-1";
+// Python-generated terminal payload signature. The payload contains a float
+// and a negative exponent whose textual JSON form differs after JS parsing.
+const detail = {score_reasons:["role:swe +20"], posting:{years_min:0}, score_dimensions:{tiny:-1e-6}, score_raw:82.0, lifecycle_events:[{status:"expired", at:100}]};
+const signature = "__TERMINAL_SIGNATURE__";
+const shard = `jobs_details/${digest(id).slice(0,2)}.json`;
+const response = (status, body) => ({ok:status >= 200 && status < 300, status, json:async()=>body});
+const call = async (state, detailBody=response(200,{schema_version:1,records:{[id]:detail},signatures:{[id]:signature}})) => {
+  global.fetch = async url => url.endsWith("/jobs.json") ? response(200, state) : detailBody;
+  const req = {method:"GET", query:{profile:"new_grad", id}};
+  const res = {statusCode:0, body:null, setHeader(){}, status(code){this.statusCode=code;return this;}, json(body){this.body=body;return this;}, end(){}};
+  await detailRoute(req,res); return res;
+};
+(async () => {
+  let state = {[id]:{id,company:"Acme",title:"Engineer",score:70,detail_ref:{version:1,shard,key:id,sha256:signature}}};
+  let res = await call(state);
+  assert.equal(res.statusCode, 200);
+  assert.deepEqual(res.body.data.score_reasons, detail.score_reasons);
+  assert.deepEqual(res.body.data.posting_facts, detail.posting);
+
+  delete require.cache[require.resolve("./webapp/api/v1/_job-detail")];
+  detailRoute = require("./webapp/api/v1/_job-detail");
+  const mixedRevision = {...state[id], detail_ref:{version:1,shard,key:id,sha256:"0".repeat(64)}};
+  res = await call({[id]:mixedRevision}, response(200,{schema_version:1,records:{[id]:detail},signatures:{[id]:signature}}));
+  assert.equal(res.statusCode, 502);
+  assert.equal(res.body.code, "job_detail_unavailable");
+
+  delete require.cache[require.resolve("./webapp/api/v1/_job-detail")];
+  detailRoute = require("./webapp/api/v1/_job-detail");
+  const wrongPath = {...state[id], detail_ref:{version:1,shard:"intern_jobs_details/aa.json",key:id,sha256:signature}};
+  res = await call({[id]:wrongPath});
+  assert.equal(res.statusCode, 502);
+  assert.match(res.body.error, /wrong lane or shard/i);
+})().catch(error => { console.error(error); process.exitCode = 1; });
+'''.replace("__TERMINAL_SIGNATURE__", terminal_signature)
+    result = subprocess.run(["node", "-e", script], cwd=ROOT, capture_output=True, text=True)
+    assert result.returncode == 0, result.stdout + result.stderr

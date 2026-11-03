@@ -78,6 +78,9 @@ migration for compatibility.
   batch of still-open aggregator pages in parallel, so a Jobright page that
   visibly says “This job has closed.” is moved here even if the larger
   discovery crawl is slow.
+  Open-role ledgers are also loaded on demand: the drawer validates and fetches
+  only that posting's versioned detail shard, so a large registry does not
+  force the Jobs list to download every description.
 - **Per-job workspace** (click the title or details ▸), four tabs: **Fit &
   eligibility** opens first with role family, posting sponsorship, DOL sponsor
   history, required years, location, salary, posting age, score reasons, a short
@@ -124,6 +127,24 @@ and **Internships** tabs plus **Preferences**. Switching lanes changes which
 tab is read and written. The app requests Drive file access only; it does not
 request Gmail scope or read internship email.
 
+### Discovery sources and review-only leads
+
+New-grad discovery combines direct ATS polling with bounded public feeds. The
+Headcount engineering and data/AI sections and YubHub's graduate-engineering
+feed contribute up to 100 rows each; YubHub rows retain the attribution **Data
+by YubHub** ([yubhub.co](https://yubhub.co)). The anonymous public
+zero2sudo Notion list contributes up to 25 **source-only** leads for review.
+Those leads are intentionally not employer evidence: they need an employer
+posting, date, and liveness check before they can become alertable. Instagram
+login is unavailable, and the radar never automatically scrapes Instagram or
+LinkedIn. Optional public LinkedIn search links use the configured candidate
+graduation year (currently 2027), not a scraping dependency.
+
+The crawler uses provider-aware posting identities and conservative aliases.
+Distinct real requisitions remain separate when a title/company match is
+ambiguous, including same-label roles with different provider URLs. This
+avoids losing coverage, but fuzzy dedupe cannot guarantee zero duplicates.
+
 Internship scores use a 0–100 ranking led by employer prestige. Pinterest,
 Google, NVIDIA, Microsoft, OpenAI, Anthropic, and comparable employers receive
 the strongest reputation signal. Pay, employer research, mentorship, ownership,
@@ -141,9 +162,10 @@ source-only, unknown, and senior-style outliers stay available through the
 **include review-only / no-title rows** filter.
 
 Internship batches are separate from new-grad batches and default to on. The
-owner can turn either batch off in **Settings**. GitHub notifications deliver
-the batch; the platform does not read your inbox, and Google OAuth does not
-request Gmail scope.
+owner can turn either batch off in **Settings**. Batch checks run hourly (with
+the internship check on a separate offset), while delivery still waits for
+three roles, 12 hours, or score 92 for an urgent send. The platform does not
+read your inbox, and Google OAuth does not request Gmail scope.
 
 Reading needs nothing. On Vercel, use **Tutorial → Accounts & login** to sign
 in with GitHub or Google. The memorable shortcut and the original Vercel URL
@@ -558,7 +580,8 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
   leadership programs are a dedicated exception. Eligible roles then use an
   auditable point rubric prioritizing AI/ML and data science above SWE/systems;
   PM-family rows have role weight `0`, remain dashboard-only, and never enter
-  alert email/RSS delivery. Rules v15 use one sourced company-reputation band,
+  alert email/RSS delivery. The new-grad implementation's Rules v16 use one
+  sourced company-reputation band,
   not company size or a stack of favorite/culture/conference bonuses. Google
   and NVIDIA can remain favorites without automatically earning perfect scores.
   Actual team responsibilities add bounded technical-depth, ownership, and
@@ -567,7 +590,10 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
   Pay uses the published lower bound rather than its maximum. Open **Fit** to
   see these separate reasons. Missing team evidence means unverified, not a bad
   team. Best Match is the default; choose Newest when discovery time matters.
-  Every score has printed reasons. This runs in the cloud with zero API keys.
+  Required experience and preferred experience are separate evidence fields;
+  source-only or description-free leads remain review/cohort material and
+  cannot alert. Every score has printed reasons. This runs in the cloud with
+  zero API keys.
 - **Your MacBook is the bulk AI worker for radar enrichment.** A background job (launchd, every 2 hours
   while the laptop is awake) pulls the latest state, runs **qwen3:30b through
   Ollama locally** (free, private, ~19 GB on disk), and pushes back:

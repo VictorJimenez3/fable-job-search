@@ -25,6 +25,7 @@ import re
 import time
 
 from .config import env, profile
+from .eligibility import experience_evidence
 
 # ---------- sponsorship / work authorization ----------
 
@@ -134,12 +135,21 @@ def analyze(text: str) -> dict:
             out["sponsorship_note"] = re.sub(r"\s+", " ", m.group(0))[:80]
         else:
             out["sponsorship"] = "unknown"
-    for pat in YEARS_PATTERNS:
-        m = pat.search(text)
-        if m:
-            out["years_min"] = _num(m.group(1))
-            out["years_note"] = re.sub(r"\s+", " ", m.group(0))[:80]
-            break
+    experience = experience_evidence(text)
+    required_floor = experience.get("required_floor")
+    if (required_floor is not None
+            and (required_floor != 0 or experience.get("required_floor_explicit"))):
+        out["years_min"] = required_floor
+    if experience.get("preferred_floor") is not None:
+        out["years_preferred_min"] = experience["preferred_floor"]
+    if (required_floor is not None
+            or experience.get("preferred_floor") is not None
+            or experience.get("alternative")):
+        out["years_note"] = experience["note"][:180]
+    if experience.get("conflict"):
+        out["experience_conflict"] = True
+    if experience.get("alternative"):
+        out["experience_alternative"] = True
     if INTERN_COUNTS_RE.search(text):
         out["intern_counts"] = True
     education = _education_requirement(text)
@@ -182,6 +192,16 @@ def reapply(rec: dict) -> None:
         line = f"posting: wants {yrs}+ yrs (dashboard only) -{penalty}"
         if line not in reasons:
             rec["score"] = max(0, rec.get("score", 0) - penalty)
+            reasons.append(line)
+    if p.get("experience_conflict"):
+        rec["alert_ok"] = False
+        line = "posting: conflicting required experience floors (dashboard only)"
+        if line not in reasons:
+            reasons.append(line)
+    if p.get("experience_alternative"):
+        rec["alert_ok"] = False
+        line = "posting: conditional degree/experience paths need review (dashboard only)"
+        if line not in reasons:
             reasons.append(line)
     degree = p.get("education_required")
     if p.get("education_mismatch") and degree:

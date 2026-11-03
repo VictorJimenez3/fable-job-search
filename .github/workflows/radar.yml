@@ -29,8 +29,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          RADAR_LINK_RESOLVE_LIMIT: "800"
+          # Keep scheduled pre-crawl repair bounded; manual resolve-links can
+          # opt into a larger batch with RADAR_LINK_RESOLVE_LIMIT explicitly.
+          RADAR_LINK_RESOLVE_LIMIT: "100"
           RADAR_LINK_RESOLVE_WORKERS: "16"
+          RADAR_MAX_JOB_DETAIL_SHARD_BYTES: "8388608"
           RADAR_PROFILE: "new_grad"
         run: |
           git config user.name "job-radar[bot]"
@@ -75,8 +78,10 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           RADAR_DEFER_DELIVERY: "1"
+          RADAR_MAX_JOB_DETAIL_SHARD_BYTES: "8388608"
           RADAR_PROFILE: "new_grad"
         run: |
+          set -o pipefail
           git config user.name "job-radar[bot]"
           git config user.email "radar@users.noreply.github.com"
           commit_state() {
@@ -85,7 +90,18 @@ jobs:
             git commit -m "radar: crawl $(date -u +'%Y-%m-%d %H:%M')"
           }
           for i in 1 2 3 4; do
-            python -m radar.main crawl
+            crawl_log="$RUNNER_TEMP/radar-crawl-$i.log"
+            if ! python -m radar.main crawl 2>&1 | tee "$crawl_log"; then
+              if grep -Eqi 'RADAR_DETERMINISTIC_FAILURE=state_snapshot_size|generated job (snapshot|detail shard) is [0-9,]+ bytes; limit is [0-9,]+' "$crawl_log"; then
+                echo "RADAR_DETERMINISTIC_FAILURE=state_snapshot_size" >&2
+                echo "radar: deterministic state-size failure; automatic retry is not useful" >&2
+                {
+                  echo "### Deterministic state-size failure"
+                  echo "The crawl produced an oversized primary snapshot. Snapshot detail sharding must be repaired before retrying."
+                } >> "$GITHUB_STEP_SUMMARY"
+              fi
+              exit 1
+            fi
             if ! commit_state; then
               echo "crawl: no generated-state changes"
               exit 0
@@ -107,6 +123,15 @@ jobs:
             git show HEAD:state/runs.json > "$checkpoint_dir/runs.json"
             git show HEAD:state/company_research.json > "$checkpoint_dir/research.json" || printf '{}' > "$checkpoint_dir/research.json"
             git show HEAD:state/ai_usage.json > "$checkpoint_dir/usage.json" || printf '{}' > "$checkpoint_dir/usage.json"
+            git show HEAD:state/job_aliases.json > "$checkpoint_dir/aliases.json" || printf '{}' > "$checkpoint_dir/aliases.json"
+            for detail_dir in state/jobs_details state/intern_jobs_details; do
+              while IFS= read -r detail_path; do
+                [ -n "$detail_path" ] || continue
+                relative_path="${detail_path#state/}"
+                mkdir -p "$checkpoint_dir/${relative_path%/*}"
+                git show "HEAD:$detail_path" > "$checkpoint_dir/$relative_path"
+              done < <(git ls-tree -r --name-only HEAD -- "$detail_dir")
+            done
             printf '{}' > "$checkpoint_dir/empty.json"
             git fetch origin "${GITHUB_REF_NAME}"
             git reset --hard "origin/${GITHUB_REF_NAME}"
@@ -120,6 +145,7 @@ jobs:
             MERGE_CRAWL_COMPANIES="$checkpoint_dir/companies.json" \
             MERGE_CRAWL_ALERT_HISTORY="$checkpoint_dir/alerts.json" \
             MERGE_CRAWL_RUNS="$checkpoint_dir/runs.json" \
+            MERGE_CRAWL_ALIASES="$checkpoint_dir/aliases.json" \
               python scripts/mac-companion/merge_crawl_state.py
             rm -rf "$checkpoint_dir"
             python -m radar.main rescore

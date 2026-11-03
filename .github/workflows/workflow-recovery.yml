@@ -63,17 +63,57 @@ jobs:
               });
               return listed.find(issue => issue.title === title);
             }
-            async function upsertIssue() {
+            async function upsertIssue(issueBody = body) {
               const existing = await findIssue();
               if (existing) {
                 await github.rest.issues.update({
-                  owner, repo, issue_number: existing.number, body,
+                  owner, repo, issue_number: existing.number, body: issueBody,
                 });
               } else {
-                await github.rest.issues.create({owner, repo, title, body});
+                await github.rest.issues.create({owner, repo, title, body: issueBody});
               }
             }
+            async function failedJobLogs() {
+              const jobs = await github.paginate(github.rest.actions.listJobsForWorkflowRun, {
+                owner, repo, run_id: run.id, per_page: 100,
+              });
+              const failed = jobs.filter(job => ["failure", "timed_out"].includes(job.conclusion));
+              let logs = "";
+              for (const job of failed) {
+                try {
+                  const response = await github.rest.actions.downloadJobLogsForWorkflowRun({
+                    owner, repo, job_id: job.id,
+                  });
+                  logs += "\n" + (typeof response.data === "string"
+                    ? response.data : JSON.stringify(response.data));
+                } catch (error) {
+                  core.debug("Could not download logs for job " + job.id + ": " + error.message);
+                }
+              }
+              return logs;
+            }
+            function isDeterministicStateSizeFailure(logs) {
+              return /RADAR_DETERMINISTIC_FAILURE=state_snapshot_size/i.test(logs) ||
+                /generated job (?:snapshot|detail shard) is\s+[\d,]+ bytes; limit is\s+[\d,]+/i.test(logs);
+            }
             try {
+              const logs = await failedJobLogs();
+              if (isDeterministicStateSizeFailure(logs)) {
+                const deterministicBody = [
+                  "Automation failed with a deterministic generated-state size error; no automatic rerun was requested.",
+                  "",
+                  "Workflow: " + run.name,
+                  "Run: " + run.html_url,
+                  "Branch: " + (run.head_branch || "unknown"),
+                  "Commit: " + run.head_sha,
+                  "Attempt: " + run.run_attempt,
+                  "",
+                  "Tell Codex: repair the bounded state snapshot before rerunning " + run.html_url,
+                ].join("\n");
+                await upsertIssue(deterministicBody);
+                core.warning("Detected deterministic state-size failure; no automatic rerun requested");
+                return;
+              }
               const endpoint = run.conclusion === "cancelled" || run.conclusion === "timed_out"
                 ? "POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun"
                 : "POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun-failed-jobs";

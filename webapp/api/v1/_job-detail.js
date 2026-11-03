@@ -1,8 +1,74 @@
+const crypto = require("crypto");
 const {BRANCH, REPO, httpUrl, normalizeProfile} = require("../_lib");
 const {configured, database, publicCache, serverError} = require("./_db");
 
 const legacyCache = new Map();
 const LEGACY_TTL_MS = 60_000;
+const DETAIL_SCHEMA_VERSION = 1;
+
+function detailError(message, status = 502) {
+  const error = new Error(message);
+  error.detailStatus = status;
+  error.detailCode = "job_detail_unavailable";
+  return error;
+}
+
+function detailDirectory(profile) {
+  return profile === "internship" ? "intern_jobs_details" : "jobs_details";
+}
+
+function detailShardRef(profile, primaryKey, ref) {
+  if (!ref || typeof ref !== "object") return null;
+  if (ref.version !== DETAIL_SCHEMA_VERSION) {
+    throw detailError("job detail pointer uses an unsupported schema version");
+  }
+  if (ref.key !== primaryKey) {
+    throw detailError("job detail pointer does not match the requested posting");
+  }
+  if (typeof ref.sha256 !== "string" || !/^[a-f0-9]{64}$/i.test(ref.sha256)) {
+    throw detailError("job detail pointer has an invalid checksum");
+  }
+  const keyDigest = crypto.createHash("sha256").update(primaryKey, "utf8").digest("hex");
+  const expected = `${detailDirectory(profile)}/${keyDigest.slice(0, 2)}.json`;
+  if (ref.shard !== expected) {
+    throw detailError("job detail pointer targets the wrong lane or shard");
+  }
+  return ref;
+}
+
+async function hydrateDetail(profile, primaryKey, job) {
+  const ref = job?.detail_ref;
+  if (!ref) return job;
+  const validRef = detailShardRef(profile, primaryKey, ref);
+  const cached = legacyCache.get(profile)?.details?.[validRef.shard];
+  // A new primary snapshot can point at the same bucket with a new record
+  // revision. Keep the cache, but never reuse a bucket for a different ref
+  // checksum.
+  let shard = cached?.sha256 === validRef.sha256 ? cached.shard : null;
+  if (!shard) {
+    const response = await fetch(`https://raw.githubusercontent.com/${REPO}/${BRANCH}/state/${validRef.shard}`);
+    if (!response.ok) throw detailError(`job detail shard returned ${response.status}`);
+    try { shard = await response.json(); }
+    catch { throw detailError("job detail shard is not valid JSON"); }
+    const cache = legacyCache.get(profile) || {at: 0, records: {}};
+    cache.details = {...(cache.details || {}), [validRef.shard]: {sha256:validRef.sha256, shard}};
+    legacyCache.set(profile, cache);
+  }
+  if (!shard || shard.schema_version !== DETAIL_SCHEMA_VERSION ||
+      !shard.records || typeof shard.records !== "object" ||
+      !shard.signatures || typeof shard.signatures !== "object") {
+    throw detailError("job detail shard has an unsupported shape");
+  }
+  const detail = shard.records[validRef.key];
+  const signature = shard.signatures[validRef.key];
+  if (!detail || typeof detail !== "object" || Array.isArray(detail) ||
+      signature !== validRef.sha256) {
+    // Python is the producer of the canonical payload hash. Consumers use
+    // the signed map entry here instead of reserializing numeric fields in JS.
+    throw detailError("job detail shard failed its revision signature");
+  }
+  return {...job, ...detail};
+}
 
 function queryValue(req, name, fallback = "") {
   const value = req.query?.[name];
@@ -54,8 +120,19 @@ async function legacyRecord(profile, identifier) {
     legacyCache.set(profile, {at: Date.now(), records});
   }
   const legacyId = identifier.startsWith("legacy_") ? identifier.slice(7) : identifier;
-  let found = records[legacyId] || Object.entries(records).find(([, job]) => job.public_id === identifier)?.[1];
-  if (found && (["expired", "filled", "archived"].includes(found.posting_status) || found.closed_at)) {
+  let foundKey = records[legacyId] ? legacyId : "";
+  let found = records[legacyId];
+  if (!found) {
+    const entry = Object.entries(records).find(([, job]) => job.public_id === identifier);
+    foundKey = entry?.[0] || "";
+    found = entry?.[1];
+  }
+  if (found && found.detail_ref) {
+    // A detail pointer is authoritative for generated state.  Do not quietly
+    // turn a missing or mixed-revision shard into a misleading empty ledger.
+    found = await hydrateDetail(profile, foundKey, found);
+  }
+  if (found && !found.detail_ref && (["expired", "filled", "archived"].includes(found.posting_status) || found.closed_at)) {
     let archived = legacyCache.get(profile)?.history;
     if (!archived) {
       const historyName = profile === "internship" ? "intern_jobs_history.json" : "jobs_history.json";
@@ -121,6 +198,10 @@ module.exports = async (req, res) => {
     if (!data) { res.status(404).json({error: "posting not found"}); return; }
     res.status(200).json({data, source: configured() ? "postgres" : "legacy-fallback"});
   } catch (error) {
+    if (error?.detailCode === "job_detail_unavailable") {
+      res.status(error.detailStatus || 502).json({error: error.message, code: error.detailCode});
+      return;
+    }
     serverError(res, error);
   }
 };
