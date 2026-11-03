@@ -1,6 +1,6 @@
 # CLI handoff notes
 
-## Internship quality follow-up (2026-11-03; release complete, alert-promotion hotfix pending)
+## Internship quality follow-up (2026-11-03; complete and live)
 
 Victor explicitly requested a deeper internship pass after the reliability
 release. Work is isolated on `codex/internship-quality-20261103`; the original
@@ -76,17 +76,29 @@ ready and required no restart. Local Python verification remains **811 passed /
 3 skipped**, with the earlier rescore figures retained as historical staging
 measurements.
 
-Pending publication: the alert-promotion hotfix is validated on
-`codex/internship-alert-promotions-20261103` (**822 passed / 3 skipped**,
-compile and correctness lint pass). It promotes
+The alert-promotion follow-up is published in
+[PR #6639](https://github.com/VictorJimenez3/fable-job-search/pull/6639), merged
+as `81f52da8b7185a15a6fb228733ccfd5c9a62af19`. Local validation passed
+**822 tests / 3 skipped**, compile, and correctness lint. It promotes
 an existing source-only internship lead into alert history only after fresh
 employer proof and current gates pass, excludes prior alert events, retains
 delivery receipt checks, and preserves age, lifecycle, score, the 35-role cap, and the
 Spring/Winter 2027 email scope. Overflow candidates persist in
 `internship_alert_pending_at` and are rechecked on later crawls; `pending_alerts`
 in the run record reports the remaining queue. Successful employer checks
-refresh liveness while preserving posting dates. Record its exact production commit and CI
-evidence after publication.
+refresh liveness while preserving posting dates. Eleven focused regressions
+include 40 promotions draining as 35 then 5 after a rescore, no third-run
+repeats, source-gap liveness, and old-posting suppression. Independent review
+found no remaining P1/P2 issue.
+
+[Production tests 41737980136](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41737980136)
+and [Vercel deployment 41738187325](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41738187325)
+passed. The [public platform](https://job-radar-newgrad.vercel.app/) serves
+the exact `81f52da8b7185a15a6fb228733ccfd5c9a62af19` build marker. The installed
+Mac companion is also at that production code commit, clean, ready, idle,
+and requires no service restart. The actual full network crawl cited above ran
+on `a60ca603`; the small alert-queue follow-up was verified by its mocked
+end-to-end regressions and production CI, without repeating external discovery.
 
 ## Reliability and discovery overhaul (2026-11-03; DECISION #228)
 
