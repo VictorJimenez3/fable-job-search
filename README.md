@@ -163,7 +163,16 @@ The main platform's **New-grad / Internships** switch is a second, isolated
 technical lane. Internship postings come from curated public GitHub boards
 (Simplify, SpeedyApply, Zapply, Dreamwork, [ApplyGuy](https://github.com/ApplyGuy/2027-Internships),
 and [Aprameyak's off-cycle board](https://github.com/aprameyak/2027-tech-jobs/blob/main/OFFCYCLE.md))
-plus internship searches on the existing ATS registry. New-grad discovery also
+plus internship searches on the existing ATS registry. Two additional
+[Headcount Labs engineering](https://github.com/HeadcountLabs/engineering-internships)
+and [data/AI internship lists](https://github.com/HeadcountLabs/data-science-ai-internships)
+contribute up to 160 rows each, with explicit posting dates and direct employer
+links. These are review leads until usable employer-page evidence confirms them.
+Data by [Headcount Labs](https://headcountlabs.com), licensed under the
+[Open Database License 1.0](https://opendatacommons.org/licenses/odbl/1-0/); see the
+[engineering source license](https://github.com/HeadcountLabs/engineering-internships/blob/main/LICENSE)
+and [data/AI source license](https://github.com/HeadcountLabs/data-science-ai-internships/blob/main/LICENSE).
+Employer-authored description text is excluded from that license. New-grad discovery also
 includes the public Headcount engineering and data/AI sections (up to 100 rows
 each) and YubHub's graduate-engineering feed (up to 100 rows, attributed to
 [Data by YubHub](https://yubhub.co)). The anonymous public
@@ -173,15 +182,17 @@ applies its own role gates, and curator notes are never employer evidence. Insta
 scrape Instagram or LinkedIn. Every source listing URL is mined for ATS board tokens,
 so new companies expand direct monitoring automatically.
 
-In the internship Jobs filters, select **Spring / Winter 2027** or **Summer
-2027** to keep January-start co-ops separate from summer roles. A viewer can
-set an expected graduation month in Settings; the lane derives freshman,
-sophomore, junior, or senior fit from the posting's internship start term and
-keeps unclear eligibility visible as unknown instead of silently rejecting it.
-The default internship list uses positive title or posting-body evidence
-(intern, co-op, seasonal terms, or student/graduation language); uncertain
-source-only rows remain behind a review toggle. New-grad and internship Jobs,
-Pipeline, web state, alert history, and GitHub surfaces never share a list.
+The internship Jobs board offers **Current / upcoming**, **All active**, and
+**Review** scopes. The default includes genuine internships with an unspecified
+term, and does not hide active roles merely because discovery was more than
+30 days ago. Term choices come from the listings, including fall and unknown
+terms. Postings offering multiple terms can match any of their offered starts.
+A viewer can set an expected graduation month in Settings; cohort matching
+uses that private preference and the role's graduation or class-year evidence.
+Without a graduation preference, the board explains that cohort matching is
+unavailable. Feed failures show a retry action instead of an empty board.
+New-grad and internship Jobs, Pipeline, web state, alert history, and GitHub
+surfaces never share a list.
 
 Internships use a 0–100 ranking led by employer prestige. Recognized employers
 such as Pinterest, Google, NVIDIA, Microsoft, OpenAI, and Anthropic receive a
@@ -193,16 +204,22 @@ large auditable deduction and a final score cap of 12, which places them at the
 bottom while keeping them in the board data. The drawer shows the dimensions
 and exact reasons behind each score.
 
-The lane is conservative about employment type. Explicit full-time-only
-wording with no internship, student, or graduation evidence is marked
-**full-time wording · review only**, cannot alert, and is capped below the
-normal internship board threshold. Senior/staff-style titles and rows without
-positive internship evidence stay available through the review toggle because
-missing an oddly labeled internship is worse than reviewing an outlier.
+Internship evidence must describe the position: mentions of senior colleagues,
+prior internship experience, or an AI company's boilerplate do not qualify an
+ordinary full-time job. Past terms, required graduate-only degrees, source-only
+leads, and ambiguous records remain available in **Review** with explicit
+reasons and cannot alert. Genuine internship titles and trustworthy source
+terms survive rescoring. Role and US-location gates also affect the clean
+board; a foreign-country remote label does not establish US eligibility.
+A legacy parser verdict alone is not evidence.
+Employer-page checks cover both new leads and the existing review backlog,
+with a bounded concurrent budget and a delay before retrying failed pages.
 
 Internship email batches are **on by default** and are delivered separately
 from new-grad batches with their own subject and content. The owner can turn
-them off in Settings. Batch checks run hourly (with the internship check on a
+them off in Settings. Internship email remains limited to explicit **Spring /
+Winter 2027** roles; Summer-only roles are searchable on the board. Batch checks
+run hourly (with the internship check on a
 separate offset), but the policy is unchanged: wait for at least three roles,
 wait no longer than 12 hours, or send immediately at score 92. GitHub delivery
 does not read an inbox. Google OAuth does not request Gmail scope and the

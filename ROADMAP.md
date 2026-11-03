@@ -121,12 +121,16 @@ without changing the Resume Studio tailoring contract:
    freshman/sophomore/junior/senior matching, state, dashboards, GitHub
    surfaces, and Google tracker tabs are separate. New-grad remains the
    priority compute path; internship email batches are separate and default on.
-   Rules v7 provides a prestige-led 0–100 ranking, separate Spring/Winter 2027
-   and Summer 2027 filters, additional ApplyGuy and Aprameyak sources, modest
+   Rules v8 keeps the prestige-led 0–100 ranking, dynamic internship terms,
+   additional ApplyGuy, Aprameyak, and Headcount internship sources, modest
    healthcare/finance preferences, and a bottom score cap for defense work.
-   The clean
-   internship list requires positive title or posting evidence; uncertain,
-   source-only, and senior-style outliers remain behind a review toggle.
+   The DECISION #232 follow-up requires position-specific evidence, handles
+   past terms and required graduate-only degrees, and re-evaluates legacy
+   verdicts. Current/upcoming, all-active, and review scopes expose the right
+   term and provenance; active internships are no longer silently hidden by
+   the default 30-day discovery window. Bounded concurrent employer checks
+   work through new leads and the review backlog. Publication evidence is
+   tracked in `docs/CLI_HANDOFF.md`.
 
 ## New TODO requests — 2026-08-28
 

@@ -59,6 +59,93 @@ def _terminal(record: object) -> bool:
     return status in {"expired", "filled", "archived"} or bool(record.get("closed_at"))
 
 
+# Registry entries are updated in-place while a crawl is polling its bounded
+# slice of ATS boards.  A checkpoint can therefore contain newer scheduler
+# telemetry than the checkout that won the push race.  Keep this list narrow:
+# identity, credentials, and curation fields belong to the winning production
+# snapshot, while these fields describe one poll/probe lifecycle.
+_REGISTRY_POLL_FIELDS = {
+    "last_polled_at", "last_ok", "failures", "status", "probe_attempts",
+    "probe_error", "invalidated_at", "hygiene_retry_at",
+}
+
+
+def _int_value(record: dict, key: str) -> int:
+    value = record.get(key)
+    try:
+        return int(value or 0)
+    except (TypeError, ValueError):
+        return 0
+
+
+def _registry_poll_time(record: dict) -> int:
+    """Return the scheduler cursor for a registry entry.
+
+    ``last_polled_at`` is the authoritative cursor.  ``last_ok`` is retained
+    as a compatibility fallback for registries written before the cursor was
+    introduced.  Missing/invalid values intentionally sort before real polls.
+    """
+    return _int_value(record, "last_polled_at") or _int_value(record, "last_ok")
+
+
+def _registry_identity_matches(upstream: dict, checkpoint: dict) -> bool:
+    """Whether both rows describe the same canonical ATS board."""
+    for key in ("ats", "token"):
+        if upstream.get(key) != checkpoint.get(key):
+            return False
+    return (upstream.get("extra") or {}) == (checkpoint.get("extra") or {})
+
+
+def _merge_registry_record(upstream: dict, checkpoint: dict) -> dict:
+    """Merge one checkpoint registry entry onto the current production row.
+
+    Existing production identity/configuration remains authoritative.  When a
+    checkpoint has a strictly newer poll cursor, copy the complete telemetry
+    group so ``status``, failure count, and timestamps describe the same poll.
+    Historical success/probe timestamps are monotonic and are retained at
+    their maximum even when the newest poll failed.  Equal or missing cursors
+    keep production telemetry to avoid treating an old checkpoint as newer.
+    """
+    merged = dict(upstream)
+    upstream_time = _registry_poll_time(upstream)
+    checkpoint_time = _registry_poll_time(checkpoint)
+
+    same_identity = _registry_identity_matches(upstream, checkpoint)
+    if same_identity and checkpoint_time > upstream_time:
+        for key in _REGISTRY_POLL_FIELDS:
+            if key in checkpoint:
+                merged[key] = checkpoint[key]
+        # A successful probe is the authoritative replacement for an older
+        # probe failure.  Do not leave a stale diagnostic attached to an
+        # active row when the checkpoint omitted the old error field.
+        if (checkpoint.get("status") in {"active", "new"}
+                and _int_value(checkpoint, "last_ok") >= checkpoint_time):
+            merged.pop("probe_error", None)
+
+    # Hygiene operations are administrative state transitions, not poll
+    # results.  If production stamped one after the checkpoint's poll, keep
+    # its invalid/duplicate/new status and related lifecycle counters.
+    upstream_hygiene_time = max(
+        _int_value(upstream, "invalidated_at"),
+        _int_value(upstream, "hygiene_retry_at"),
+    )
+    if (same_identity and upstream_hygiene_time > checkpoint_time
+            and upstream.get("status") in {"dup", "invalid", "new"}):
+        for key in _REGISTRY_POLL_FIELDS:
+            if key in upstream:
+                merged[key] = upstream[key]
+    # A successful poll/probe cannot be made older by a failed or stale
+    # checkpoint.  Keep these historical markers monotonic regardless of which
+    # side supplied the newest cursor.
+    if same_identity:
+        for key in ("last_ok", "invalidated_at", "hygiene_retry_at"):
+            values = [_int_value(upstream, key), _int_value(checkpoint, key)]
+            if max(values):
+                merged[key] = max(values)
+
+    return merged
+
+
 def _load_snapshot(path: Path, legacy_history_path: Path | None = None) -> dict:
     """Load a snapshot and hydrate a legacy history file when supplied.
 
@@ -160,13 +247,17 @@ for jid, record in ours_jobs.items():
             history[jid] = ours_history[jid]
         added_jobs += 1
 
-# Registry tokens are likewise additive; never overwrite a concurrently
-# updated probe status or timestamps.
+# Registry tokens are likewise additive.  Existing entries need a field-aware
+# merge because a completed checkpoint may contain a newer poll than the
+# checkout that won the push race; identity and owner configuration remain
+# authoritative in that winning checkout.
 added_companies = 0
 for key, record in ours_companies.items():
     if key not in companies:
         companies[key] = record
         added_companies += 1
+    elif isinstance(companies.get(key), dict) and isinstance(record, dict):
+        companies[key] = _merge_registry_record(companies[key], record)
 
 # Alert history is durable delivery input. Dedupe by job ID and retain the
 # most recent record so post-commit idempotent delivery sees every new job.

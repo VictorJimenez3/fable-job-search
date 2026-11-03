@@ -58,6 +58,7 @@ AGG_SOURCES_INTERNSHIP = {
     "applyguy_internship": aggregators.fetch_applyguy_internship,
     "aprameyak_offcycle": aggregators.fetch_aprameyak_offcycle,
     "zero2sudo_notion": public_feeds.fetch_zero2sudo_notion,
+    **public_feeds.PUBLIC_INTERNSHIP_FETCHERS,
 }
 
 PM_BACKFILL_ATS = {"workday", "phenom"}
@@ -622,7 +623,14 @@ def _fetch_aggregators(disabled: set[str]) -> tuple[list[Job], dict, set[str]]:
                 got = fut.result()
                 board = f"aggregator:{name}"
                 for job in got:
+                    # Keep the canonical board token stable for lifecycle
+                    # reconciliation; adapter attribution belongs in variants.
+                    original_board = job.source_board
+                    variants = list(job.source_board_variants or [])
+                    if original_board and original_board != board and original_board not in variants:
+                        variants.append(original_board)
                     job.source_board = board
+                    job.source_board_variants = variants
                 jobs.extend(got)
                 stats[name] = len(got)
                 healthy_boards.add(board)

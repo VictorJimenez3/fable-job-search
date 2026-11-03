@@ -113,14 +113,20 @@ lane. Internship jobs, Pipeline entries, web notes, alert history, master
 boards, and generated dashboards use their own `intern_*` state and never
 appear in the active new-grad list.
 
-In **Settings**, enter an expected graduation month such as `May 2029`. The
-internship lane uses that date together with an internship's start term to
-label likely freshman, sophomore, junior, or senior fit. A posting with no
-clear class-year or graduation evidence remains visible as **unknown/open**;
-it is not silently filtered out. The cohort dropdown in Jobs lets you filter
-match, mismatch, open, or unknown roles. The **Internship term** filter also
-separates **Spring / Winter 2027** from **Summer 2027**, using the source term
-when a posting title does not say when the role starts.
+Start with **Current / upcoming** in the internship Jobs board. It includes
+active genuine internships whose term is current, future, or unspecified, even
+when they were discovered more than 30 days ago. Use **All active** to include
+older terms, or **Review** for source-only and uncertain listings. Other search
+and role filters still apply. The **Internship term** choices are generated
+from the data and include an unknown-term option; a multi-term role can match
+any offered term.
+
+In **Settings**, enter your expected graduation month. The board uses that
+private date with the role's graduation window or class standing at each start
+term to show match, mismatch, open, or unknown. It never guesses your graduation
+date. Without that preference, the cohort control explains what to set first.
+Provenance and last-seen badges help distinguish direct ATS sightings from
+curated leads. If a lane cannot load, use its visible **Retry** action.
 
 If Google is connected, the private workbook has separate **Applications**
 and **Internships** tabs plus **Preferences**. Switching lanes changes which
@@ -141,6 +147,14 @@ login is unavailable, and the radar never automatically scrapes Instagram or
 LinkedIn. Optional public LinkedIn search links use the configured candidate
 graduation year (currently 2027), not a scraping dependency.
 
+The internship lane also reads Headcount Labs' engineering and data/AI lists,
+up to 160 rows each. Their dates and direct employer links are preserved, but
+those rows stay review-only until an employer page supplies usable evidence.
+Data by [Headcount Labs](https://headcountlabs.com), licensed under the
+[Open Database License 1.0](https://opendatacommons.org/licenses/odbl/1-0/); that
+license excludes employer-authored description text. Bounded concurrent checks cover new leads and
+previously unverified roles without repeatedly fetching the same failed page.
+
 The crawler uses provider-aware posting identities and conservative aliases.
 Distinct real requisitions remain separate when a title/company match is
 ambiguous, including same-label roles with different provider URLs. This
@@ -155,15 +169,16 @@ employers and clearly defense-focused postings receive a large auditable
 deduction and a final score cap of 12. **Why it scored** shows the exact
 reasons behind each score.
 
-Full-time protection is deliberately one-sided: clear full-time-only wording
-without internship or student evidence becomes review-only and cannot alert,
-but remains in the data so an incorrectly labeled internship is not silently
-lost. The normal internship list is cleaned to positive title/body evidence;
-source-only, unknown, and senior-style outliers stay available through the
-**include review-only / no-title rows** filter.
+The lane requires evidence about the role itself. Senior colleagues, prior
+internship experience, and generic company copy cannot turn a full-time job
+into an internship. Past-term, required graduate-only, source-only, and ambiguous
+roles stay in **Review** with an explanation and do not alert. Prestige still
+leads the ranking among eligible internships.
 
 Internship batches are separate from new-grad batches and default to on. The
-owner can turn either batch off in **Settings**. Batch checks run hourly (with
+owner can turn either batch off in **Settings**. Internship email is limited to
+explicit **Spring / Winter 2027** roles; Summer-only roles remain on the board.
+Batch checks run hourly (with
 the internship check on a separate offset), while delivery still waits for
 three roles, 12 hours, or score 92 for an urgent send. The platform does not
 read your inbox, and Google OAuth does not request Gmail scope.

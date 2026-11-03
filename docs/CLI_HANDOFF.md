@@ -1,5 +1,55 @@
 # CLI handoff notes
 
+## Internship quality follow-up (2026-11-03; in progress)
+
+Victor explicitly requested a deeper internship pass after the reliability
+release. Work is isolated on `codex/internship-quality-20261103`; the original
+dirty checkout remains untouched. Preserve prestige-led internship ranking,
+private graduation preferences, and Spring/Winter 2027 email scope.
+
+Implementation and verification plan:
+
+- [x] Replace broad season/class-year matches with position-specific internship
+  evidence; distinguish required graduate degrees, past terms, and ambiguous
+  legacy records. Re-evaluate stored evidence with auditable review reasons.
+- [x] Add verified Headcount internship discovery and bounded employer-page
+  validation, including existing review leads. Preserve real posting dates and
+  source attribution; never turn a curator claim into employer confirmation.
+- [x] Add current/upcoming, all-active, and review scopes, dynamic term choices,
+  visible provenance, and recoverable lane-load errors to the existing board.
+- [x] Preserve newer ATS polling telemetry during checkpoint push recovery.
+- [ ] Run targeted regressions, full tests, a production-sized internship
+  rescore, and desktop/mobile checks. Rebase, publish through green CI, verify
+  the production build and a real internship crawl, and record exact evidence.
+
+Local verification is complete: Python 3.12 **811 passed / 3 skipped**;
+compile and package correctness lint pass. Frontend typecheck, test, lint, and
+production build pass. A 34,912-record isolated internship rescore passes
+score-health, keeps every record, and yields **zero eligibility-fact drift** on
+the next annotation pass. The primary index is 42,492,610 bytes. Alert-worthy
+records decrease from 865 to 611; 170 records have explicit graduate-only
+requirements and 39 have past terms. The clean board now leads with actual
+internship roles rather than ordinary full-time jobs from prestigious firms.
+
+Both live Headcount parsers return 160 unique source-only rows with posting
+dates preserved (320/320 dated). Employer checks default to 40 attempts, with
+a hard ceiling of 80, four workers (maximum eight), a 120-second scheduling
+phase limit, and a three-day retry cooldown. Knobs:
+`RADAR_INTERNSHIP_SCRAPE_LIMIT`, `RADAR_INTERNSHIP_SCRAPE_WORKERS`,
+`RADAR_INTERNSHIP_SCRAPE_DEADLINE` (1–120 seconds), and
+`RADAR_INTERNSHIP_SCRAPE_DISABLE`; the shared scrape-disable flag also applies.
+In-flight HTTP requests retain the shared client's bounded timeouts; deferred
+queued checks remain eligible for a later run. Per-run employer-check counts
+are persisted in `intern_runs.json` as `employer_evidence`.
+
+Real browser checks at 1440px and 390px passed: dynamic terms, detail shards,
+private cohort controls, no horizontal overflow, loaded system fonts, and a
+simulated 503 followed by successful Retry with filters retained. The optional
+graduation explanation is compact and expandable. The design detector reports
+only the pre-existing side-accent border pattern. Publication and live crawl
+verification remain pending below; no generated replay files are in the feature
+commit, and no Notion pages or notifications were changed by local validation.
+
 ## Reliability and discovery overhaul (2026-11-03; DECISION #228)
 
 Victor authorized implementation and publication of validated repository fixes,

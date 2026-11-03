@@ -186,7 +186,7 @@ def test_internship_scoring_is_prestige_led_and_has_coverage_checks():
     scorer = (ROOT / "radar" / "internship.py").read_text()
     profile = (ROOT / "profiles" / "internship.yaml").read_text()
     workflow = (ROOT / ".github" / "workflows" / "internship-radar.yml").read_text()
-    assert "RULES_VERSION = 7" in scorer
+    assert "RULES_VERSION = 8" in scorer
     assert "INTERNSHIP_TITLE_RE" in scorer
     assert '"internship_signal"' in scorer
     assert "flat across role families" in scorer
