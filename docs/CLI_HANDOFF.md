@@ -118,13 +118,41 @@ either lane. Every referenced shard record hydrated with its signature intact.
 Five old malformed Vansh Workable URLs were found; four were already expired,
 and one Trexquant role still passed alerts. DECISION #231 adds a deterministic
 URL gate in both lanes, preserving invalid-link records for review without
-guessing a replacement URL. The published repair is tracked below.
+guessing a replacement URL.
+
+That final guard is published in
+[PR #6625](https://github.com/VictorJimenez3/fable-job-search/pull/6625), merged as
+`2200b3526d2783a3633d6634a5f9c8ecde77c9ba`. Supported full rescores retained
+all 91,972 new-grad and 34,912 internship records, with 1,020 and 865 eligible
+for alerts respectively. All five malformed historical URLs are now
+non-alertable; internship contains none. Final primaries are 76,563,949 and
+39,091,821 bytes, and both lanes pass score-health, complete signature-checked
+detail hydration, and a zero-duplicate-primary-key audit. The local full suite
+passed 767 tests / 3 skipped; the
+[PR CI run 41724214101](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41724214101)
+passed 766 / 4 skipped plus frontend and lint/build/audit checks.
+[Production tests 41724506649](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41724506649)
+and [Vercel deployment 41724747981](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41724747981)
+passed. The friendly URL serves the exact `2200b3526` build. Both live lanes
+load their final record counts without boot errors or horizontal overflow.
+The Mac companion is updated to this code and its idle Resume Studio was
+restarted; health reports ready with no restart required.
 
 Recovered failure tickets were closed only after a successful replacement run:
 main radar #6497, internship #6564, enrichment #2523, sponsorship #3092, score
 maintenance #2333, default-branch tests #2840, and six old ChemE digest tickets.
-Old applied-sync tickets remain untouched because its latest observed run was
-skipped, which is not proof that their underlying failure recovered.
+The latest non-skipped applied-sync failure,
+[36966933508](https://github.com/VictorJimenez3/fable-job-search/actions/runs/36966933508),
+processed the owner action and synced it to Notion, then failed because the
+commit step unconditionally staged absent `docs/internships/FEEDBACK.md`.
+The follow-up makes both feedback report paths optional when staging state.
+The actual workflow staging block passes temporary Git fixtures with absent,
+main-only, and both feedback reports, retaining changed state and its detail
+shard. The regression also reproduces the original pathspec failure. Do not
+rerun that historical owner action to verify this: it already changed the
+external tracker. Owner checks, event routing, and retry policy are unchanged.
+The final local suite passed 768 tests / 3 skipped, with compilation, workflow
+shell syntax, targeted lint, and diff checks passing.
 
 The source-only Zero2Sudo adapter reads its public Notion collection (four live
 smoke-test leads); authenticated Instagram scraping is not configured. Headcount

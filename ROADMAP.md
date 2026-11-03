@@ -5,7 +5,7 @@ none block anything currently running.
 
 ## 2026-11-03 reliability and discovery overhaul
 
-**✅ SHIPPED in PRs #6566 and #6590 (DECISIONS #228–230).** The
+**✅ SHIPPED in PRs #6566, #6590, and #6625 (DECISIONS #228–231).** The
 current implementation makes the requested reliability and coverage changes
 without changing the Resume Studio tailoring contract:
 
@@ -39,9 +39,9 @@ without changing the Resume Studio tailoring contract:
    The primary is 83,166,228 bytes and both lanes pass score-health. The frontend
    dependency patch (Better Auth 1.7.7, Vite 7.3.7, Zod 4.6.6, Vitest 4.1.12)
    leaves zero high or critical audit findings. The full Python suite passes
-   764 tests with 3 skips on the final local release. Production CI, Vercel,
+   768 tests with 3 skips on the final local release. Production CI, Vercel,
    and the first crawl passed: 10,011 discoveries and 23 alert candidates.
-   The final production snapshot covers all 91,972 records at 76,563,974 bytes,
+   The final production snapshot covers all 91,972 records at 76,563,949 bytes,
    with about 23 MB below the existing guard. More than 50,000 actual records
    passed frontend/API behavior parity checks. Internship ingestion now shares
    canonical identity and employer-evidence handling, all scheduled snapshot

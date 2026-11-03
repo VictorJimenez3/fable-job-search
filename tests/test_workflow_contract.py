@@ -1,6 +1,8 @@
 import subprocess
 from pathlib import Path
 
+import yaml
+
 ROOT = Path(__file__).parents[1]
 
 
@@ -10,6 +12,49 @@ def test_tracker_sync_is_scheduled_and_serialized_with_application_writes():
     assert "group: applied-sync" in workflow
     assert "python -m radar.main tracker-sync" in workflow
     assert "NOTION_TOKEN" in workflow
+
+
+def test_applied_sync_stages_optional_feedback_reports_without_pathspec_failure(tmp_path):
+    workflow = yaml.safe_load((ROOT / ".github/workflows/applied.yml").read_text())
+    commit_step = next(step for step in workflow["jobs"]["sync"]["steps"]
+                       if step.get("name") == "Commit state")
+    # Execute the actual production staging block, stopping before its commit
+    # and network-push operations. This catches edits to the workflow itself.
+    staging_script = ("set -eu\n"
+                      + commit_step["run"].split("if git diff --cached --quiet;", 1)[0]
+                      + "\ngit diff --cached --name-only\n")
+    original_script = "git add state docs/FEEDBACK.md docs/internships/FEEDBACK.md"
+    for reports in ((), ("main",), ("main", "intern")):
+        repo = tmp_path / ("repo-" + ("none" if not reports else "-".join(reports)))
+        (repo / "state/jobs_details").mkdir(parents=True)
+        (repo / "docs/internships").mkdir(parents=True)
+        (repo / "state/jobs.json").write_text("{}\n")
+        (repo / "state/jobs_details/ab.json").write_text("{}\n")
+        if "main" in reports:
+            (repo / "docs/FEEDBACK.md").write_text("main\n")
+        if "intern" in reports:
+            (repo / "docs/internships/FEEDBACK.md").write_text("intern\n")
+        subprocess.run(["git", "init", "-q"], cwd=repo, check=True)
+        subprocess.run(["git", "config", "user.name", "test"], cwd=repo, check=True)
+        subprocess.run(["git", "config", "user.email", "test@example.test"], cwd=repo, check=True)
+        subprocess.run(["git", "add", "state"], cwd=repo, check=True)
+        subprocess.run(["git", "commit", "-qm", "fixture"], cwd=repo, check=True)
+        # Simulate the applied-sync process changing the primary state and its
+        # referenced detail shard after checkout.
+        (repo / "state/jobs.json").write_text('{"changed":true}\n')
+        (repo / "state/jobs_details/ab.json").write_text('{"changed":true}\n')
+
+        original = subprocess.run(["bash", "-c", original_script], cwd=repo,
+                                  text=True, capture_output=True)
+        assert (original.returncode != 0) is (reports != ("main", "intern")), reports
+        subprocess.run(["git", "reset", "-q"], cwd=repo, check=True)
+        fixed = subprocess.run(["bash", "-c", staging_script], cwd=repo,
+                               text=True, capture_output=True, check=True)
+        staged = set(fixed.stdout.splitlines())
+        assert "state/jobs.json" in staged
+        assert "state/jobs_details/ab.json" in staged
+        assert ("docs/FEEDBACK.md" in staged) is ("main" in reports)
+        assert ("docs/internships/FEEDBACK.md" in staged) is ("intern" in reports)
 
 
 def test_workflow_recovery_retries_once_and_gives_codex_handoff():
