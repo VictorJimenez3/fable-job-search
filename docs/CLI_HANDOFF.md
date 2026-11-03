@@ -125,7 +125,7 @@ That final guard is published in
 `2200b3526d2783a3633d6634a5f9c8ecde77c9ba`. Supported full rescores retained
 all 91,972 new-grad and 34,912 internship records, with 1,020 and 865 eligible
 for alerts respectively. All five malformed historical URLs are now
-non-alertable; internship contains none. Final primaries are 76,563,949 and
+non-alertable; internship contains none. That rescore's primaries are 76,563,949 and
 39,091,821 bytes, and both lanes pass score-health, complete signature-checked
 detail hydration, and a zero-duplicate-primary-key audit. The local full suite
 passed 767 tests / 3 skipped; the
@@ -145,7 +145,8 @@ The latest non-skipped applied-sync failure,
 [36966933508](https://github.com/VictorJimenez3/fable-job-search/actions/runs/36966933508),
 processed the owner action and synced it to Notion, then failed because the
 commit step unconditionally staged absent `docs/internships/FEEDBACK.md`.
-The follow-up makes both feedback report paths optional when staging state.
+The fix is published as `c0715fe41f416d8ec6c4b346d52a317ba03ed9e3`; it makes
+both feedback report paths optional when staging state.
 The actual workflow staging block passes temporary Git fixtures with absent,
 main-only, and both feedback reports, retaining changed state and its detail
 shard. The regression also reproduces the original pathspec failure. Do not
@@ -153,6 +154,14 @@ rerun that historical owner action to verify this: it already changed the
 external tracker. Owner checks, event routing, and retry policy are unchanged.
 The final local suite passed 768 tests / 3 skipped, with compilation, workflow
 shell syntax, targeted lint, and diff checks passing.
+Failure ticket #2838 is closed for this reproduced and corrected defect. The
+historical tracking event was not rerun. A concurrent cloud-enrichment commit
+(`c9b0f14e1`) was preserved by rebasing before publication, and the Mac companion
+clone is updated through the workflow fix.
+[Final production tests 41725713870](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41725713870)
+and [Vercel deployment 41726030448](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41726030448)
+passed. The friendly production URL serves build
+`c0715fe41f416d8ec6c4b346d52a317ba03ed9e3`.
 
 The source-only Zero2Sudo adapter reads its public Notion collection (four live
 smoke-test leads); authenticated Instagram scraping is not configured. Headcount

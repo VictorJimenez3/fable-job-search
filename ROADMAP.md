@@ -41,7 +41,7 @@ without changing the Resume Studio tailoring contract:
    leaves zero high or critical audit findings. The full Python suite passes
    768 tests with 3 skips on the final local release. Production CI, Vercel,
    and the first crawl passed: 10,011 discoveries and 23 alert candidates.
-   The final production snapshot covers all 91,972 records at 76,563,949 bytes,
+   The verified rescore snapshot covers 91,972 records at 76,563,949 bytes,
    with about 23 MB below the existing guard. More than 50,000 actual records
    passed frontend/API behavior parity checks. Internship ingestion now shares
    canonical identity and employer-evidence handling, all scheduled snapshot
