@@ -34,6 +34,29 @@ Generated state and dashboard files are outputs, not hand-edit surfaces. Change
 the crawler, scorer, or renderer and regenerate them with the documented CLI;
 keep the reason in [`DECISIONS.md`](DECISIONS.md) when a repair is deliberate.
 
+**Dot integration:** Dot inside ChatGPT is the preferred future companion for
+browser collection and other work that must continue while the Mac is asleep.
+The cloud crawler, website, trackers and notification workflows already run
+without the Mac. The [integration plan](ROADMAP.md#2026-11-04-dot-integration--portable-foundation-activation-pending)
+covers both job lanes, enrichment, worker health, owner controls, and later
+private Resume Studio/browser assistance. Dot activation is pending a verified
+host/browser/task connection; the [operational handoff](docs/CLI_HANDOFF.md#dot-integration-2026-11-04-activation-pending)
+records the actual access boundary and cutover procedure. Existing Mac jobs
+remain the live companion until that cutover is proven.
+
+From a checkout with a Python 3.12 environment, inspect the portable companion
+without starting a collector or publishing state:
+
+```bash
+python -m radar.companion doctor --json
+python -m radar.companion run social --runtime dot --dry-run --json
+python -m radar.companion run enrich --runtime dot --dry-run --json
+```
+
+These commands run on the machine where they are invoked; `--runtime dot`
+does not connect to a VM. Execution requires a separate explicit opt-in and
+the single-primary cutover described in the handoff.
+
 The friendly Vercel URL is the canonical production door. Production deploys
 run from `claude/newgrad-job-search-system-9gbj9k` and promote the newest build
 to `job-radar-newgrad.vercel.app`; users should never need a deployment-specific
@@ -49,12 +72,11 @@ no current capability is removed. vNext displays an objective evidence score,
 eligibility, and Victor's goal/recommended priority as separate signals instead
 of hiding personal priority inside one number.
 
-Current release status: the isolated pre-rebase migration replay and its
-identity/location-drift checks are recorded in [`ROADMAP.md`](ROADMAP.md).
-Final storage is being regenerated after the remote rebase; consult
-[`docs/CLI_HANDOFF.md`](docs/CLI_HANDOFF.md) for the parent-owned final
-measurements. Publication remains pending CI verification; this note is not a
-deployment claim.
+The Rules v17/v9 relevance release is published through
+[PR #6644](https://github.com/VictorJimenez3/fable-job-search/pull/6644).
+Final migration, CI, Vercel and companion runtime evidence is recorded in
+[`docs/CLI_HANDOFF.md`](docs/CLI_HANDOFF.md). Dot integration has a separate
+activation status and does not change that release evidence.
 
 The platform is now decision-first: filter by role family (including the
 Hardware / computer engineering lane), sponsorship,

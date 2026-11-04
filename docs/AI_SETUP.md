@@ -125,3 +125,25 @@ ollama ps                 # normally empty between calls
 ```
 
 CV-aware work and semantic/vector/RAG work remain intentionally deferred.
+
+## Dot companion direction
+
+Dot inside ChatGPT is the preferred future host for companion work when the
+Mac is unavailable. The cloud AI lane remains the default independent path.
+The [staged integration plan](../ROADMAP.md#2026-11-04-dot-integration--portable-foundation-activation-pending)
+and [current access evidence](CLI_HANDOFF.md#dot-integration-2026-11-04-activation-pending)
+distinguish implemented interfaces from a live Dot connection.
+
+The initial portable enrichment launcher reuses the existing Ollama runner;
+it does not turn a ChatGPT session into an API credential or automatically
+move repository secrets. Probe a real Dot host before selecting a provider or
+installing a model. In particular, the Mac's approximately 19 GB model is not
+a reasonable unverified VM default. Hosted-provider support in a future
+companion must keep the existing task budgets, evidence rules and deterministic
+fallback. Keep cloud secrets in their existing runtime unless a specific
+capability needs separately scoped authentication.
+
+Do not run Mac and Dot companion publishers simultaneously. The shared
+checkout lock only protects one filesystem. Start with an explicit primary
+companion cutover; automatic failover requires a shared transactional lease
+and fencing before either host may take over a still-running task.

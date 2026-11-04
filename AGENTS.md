@@ -58,6 +58,7 @@ Do not rename the default branch piecemeal. A coordinated rename must update:
   `web-actions.yml`;
 - the fallback branch in `webapp/api/_lib.js` and the deployed Vercel
   `RADAR_BRANCH` value;
+- the portable companion's `DEFAULT_BRANCH` in `radar/companion.py`;
 - raw GitHub links in `README.md` and the installer comment/fallback in
   `scripts/mac-companion/install.sh`;
 - the installed Mac companion clone/launch agent, then both platform doors.
