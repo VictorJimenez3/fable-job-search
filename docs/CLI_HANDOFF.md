@@ -41,13 +41,13 @@ Personal offer details and browser credentials are absent from public changes.
   installing the current Hatch project; a separate Python 3.12 environment has
   been provisioned, pending launch-agent activation with the released code.
 
-The preceding replay from production `40c2b698…` retains **96,376 new-grad** and **36,861
-internship** records. Primary sizes are **82,981,686** and **46,279,246 bytes**.
+The final replay from production `f229982d…` retains **96,376 new-grad** and **37,808
+internship** records. Primary sizes are **82,977,122** and **47,497,291 bytes**.
 Both lanes pass score-health at **v17/v9**, with **zero canonical posting-key
 duplicates** and **zero hydrated location-assessment drift**. Identity, URLs,
 titles, locations, posting dates/statuses/reasons, and all **316** saved main
 applications are unchanged; the internship application list remains empty.
-The fresh replay has 935 main-lane and 7,044 internship `alert_ok` records
+The fresh replay has 935 main-lane and 7,141 internship `alert_ok` records
 before score/term delivery thresholds. All upstream tracker, receipt, research,
 and notification metadata stays byte-identical. These are rescore figures, not
 a claim that new alerts were sent. No external
