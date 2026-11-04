@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-04 15:49 UTC** · companies polled directly: **2480** (registry 2855) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-04 18:09 UTC** · companies polled directly: **2480** (registry 2855) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -121,7 +121,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 74  | 25d | TikTok | [Research Scientist New Grad - Conversational AI](https://lifeattiktok.com/search/7670685496821713205) | San Jose, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 74  | 26d | TikTok | [Machine Learning Engineer New Grad - E-Commerce User Growth](https://lifeattiktok.com/search/7694352871949682997) | San Jose, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 74  | 28d | Shield AI | [Software Development Engineer New Grad](https://jobs.lever.co/shieldai/79c3b65f-ce0c-4868-bedf-4ddcc4cfe583/apply) | San Diego, CA | ai_lab | late-stage startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions)<br>[Ashby fallback](https://jobs.ashbyhq.com/f7d8749a-72d6-407c-bf98-292ea630c73a/c0735824-2b3c-46a2-a888-99e7376a9606) · [Lever fallback](https://jobs.lever.co/shieldai/79c3b65f-ce0c-4868-bedf-4ddcc4cfe583) |
-| 73  | 17h | Strada | [New Grad: Software Engineer](https://go.vansh.nyc/1f7) | San Francisco, CA | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 73  | 19h | Strada | [New Grad: Software Engineer](https://go.vansh.nyc/1f7) | San Francisco, CA | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 73  | ? | Military Spouse Jobs & VetJobs | [Software Engineer Acs Early Career - Fort Worth TX](https://sjobs.brassring.com/TGnewUI/Search/home/HomeWithPreLoad?partnerid=16030&amp;siteid=6090&amp;PageType=JobDetails&amp;jobid=3395582) | Fort Worth, TX | healthtech | unavailable | no-history | [Headcount Labs engineering jobs](https://raw.githubusercontent.com/HeadcountLabs/entry-level-jobs/main/README.md) |
 | 73  | ? | Ford Motor Company | [Supply Chain Program Management & AI Tool Creation - Early Career Prog](https://efds.fa.em5.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Ford-Model-e/job/72880) | 2 locations Long Beach, CA Allen Park, M | other | unavailable | likely | [Headcount Labs data / AI jobs](https://raw.githubusercontent.com/HeadcountLabs/entry-level-jobs/main/README.md) |
 | 73  | 1d | Shield | [New Grad: Software Engineer I](https://go.vansh.nyc/1bP) | Seattle, WA | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
