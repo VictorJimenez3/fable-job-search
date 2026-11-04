@@ -3,6 +3,135 @@
 The dream-system backlog. Each item is scoped enough to build on request;
 none block anything currently running.
 
+## 2026-11-04 Dot integration — portable foundation, activation pending
+
+Victor wants **Dot inside ChatGPT** to be the preferred companion because the
+Mac is not always available. This applies to the whole project, including both
+job lanes. Dot's uptime is user-reported; browser access, durable storage,
+command execution, scheduling, and authentication must each be verified.
+Current access evidence and the next-session procedure are in
+[`CLI_HANDOFF.md`](docs/CLI_HANDOFF.md#dot-integration-2026-11-04-activation-pending).
+This section is the implementation plan; do not create a separate handoff.
+
+**Architecture:** keep the cloud source of truth and existing delivery owners.
+Use capability-based companions for browser collection, enrichment, and later
+private application work. Dot is the preferred companion; Mac remains an
+explicit fallback. A Dot chat/browser connection alone cannot run a Python
+daemon. Use native Dot scheduling if actually exposed; install an OS service
+only if a persistent host and supported service manager are verified.
+
+Alternatives considered: moving every workflow to Dot would duplicate stable
+cloud delivery and require unverified capabilities; keeping the Mac as the
+only companion would not meet the availability goal. The selected direction
+adds Dot without making the deterministic radar depend on it.
+
+| Area | Current owner | Dot integration and completion evidence |
+| --- | --- | --- |
+| New-grad, technical internships, ChemE | GitHub Actions / distinct profiles | Same deterministic identity, eligibility, scoring and profile isolation; Dot can request bounded existing operations, never create a parallel scoring policy. |
+| Instagram and other approved public social feeds | Mac OpenCLI; cloud consumes source-only leads | Hourly Dot task using a verified browser/backend; retain exact public-content proof, bounded excerpts, cooldowns, provenance and post IDs. Verify real collection and a scheduled second run while Mac collection is stopped. LinkedIn remains search links only. |
+| Quality/company research | Cloud AI plus optional Mac Ollama | Portable companion runner; benchmark an actually available Dot provider before selection. Do not assume a 19 GB local model fits the VM or that a chat subscription provides API credentials. |
+| Application links / dedupe | Shared Python state and importer | Dot sightings feed existing canonical identities and URL promotion; repeat submissions and provider retries must not create jobs or alerts twice. |
+| Notion, Sheets, email, RSS and GitHub alerts | Existing cloud workflows / owner-authorized API | Reuse stable IDs, receipts and owner checks. Dot requests work through a bounded authenticated interface; it does not send duplicate notifications or get all cloud secrets. |
+| Jobs, Pipeline and owner controls | Vercel classic UI / vNext API | Show actual worker capabilities, last successful operation and stale/offline state. Dot reads the same results; no second website or datastore. |
+| Resume Studio / tailoring | Private local engine and ignored `CV/` | Later private storage/access design and supported provider/PDF tools. No automatic CV, session or credential copying. Tailoring quality work remains lower priority. |
+| Browser application assistance | Extension, worker leases, Mac native host | Preserve user confirmation before submission. The `osascript` Simplify shortcut is Mac-only; Dot needs a verified supported browser action, never a renamed Mac command. |
+| Reliability / release / recovery | GitHub CI, Vercel and companion logs | Capability report, per-operation outcomes, bounded retry, owner-visible stale status and explicit primary companion. Prove restart recovery and safe rollback before cutover. |
+
+### Phase 1 — portable entry point and honest capability report
+
+Files: `radar/companion.py`, `tests/test_portable_companion.py`; retain the
+existing `scripts/mac-companion/` runners and shared checkout lock.
+
+- [x] Add read-only `python -m radar.companion doctor --json`, reporting only
+  allowlisted checks. Installed binaries must not imply working login, model,
+  push credentials, or scheduler; never emit credentials, profile IDs or raw
+  environment values.
+- [x] Add explicit plan/execute modes for `social` and `enrich` only. An
+  ordinary invocation must not collect, mutate state, push, or send anything.
+  Execution needs an explicit dedicated clone, expected branch and primary
+  runtime assignment; validate under the shared checkout lock. Preserve dirty
+  work, unpublished commits and manual Git operations; propagate failures.
+- [ ] Verify read-only default, redaction, branch/worktree guards, lock
+  contention, child failure and supported action boundaries with isolated
+  test repositories. Local validation passes: 19 focused tests and 936 full
+  regression tests (3 skipped), compilation, lint and doctor/dry-run smoke
+  checks. Linux CI remains pending publication.
+
+### Phase 2 — connect Dot and prove one bounded social run
+
+First establish what Dot actually exposes. If it has a persistent shell and
+browser, use the portable runner and the existing OpenCLI/public-proof path.
+If it exposes only native browser tasks, build a separate observation adapter
+feeding the existing validated ingestion path; do not treat arbitrary pasted
+captions as verified public evidence. Files: `radar/social.py`,
+`tests/test_social.py`, and a transport adapter selected after that inspection.
+
+- [ ] Verify browser access, public Zero2Sudo content, persistent session,
+  task execution, durable private storage and scheduler independently.
+- [ ] Verify GitHub publication or a narrowly authorized ingestion endpoint;
+  redact session material and use existing stable posting identities.
+- [ ] Replay the same observed post twice and prove no duplicate lead/alert;
+  expire the browser session and prove a truthful failed/degraded result.
+- [ ] Register the hourly task through the actual supported scheduler;
+  record its identifier and observed run, not just the configured interval.
+
+### Phase 3 — one companion owner and reliable cutover
+
+The current `fcntl` lock is per checkout, **not distributed**. An environment
+label saying `dot` is operator configuration, not a lease. Initially use a
+controlled single-companion cutover: finish any Mac run, disable its matching
+schedule, sync the Dot clone, then run Dot. Re-enable Mac only after Dot is
+stopped. Never enable automatic takeover based on a stale heartbeat alone.
+
+- [ ] Publish private operation status with `attempted`, `succeeded`,
+  `skipped`, `failed` and `published` distinguished; a process exit of zero
+  or an installed binary alone does not establish success.
+- [ ] Prove two scheduled runs and restart recovery; retain the exact revision,
+  source counts, publication evidence and last-success timestamps.
+- [ ] If automatic Mac/Dot failover is needed, implement a shared transactional
+  lease with fencing before enabling it. Test expired-worker writes, double
+  claims, network partitions, push rejection and crash after publication.
+
+### Phase 4 — Dot controls across the product
+
+Reuse `webapp/api/_application-agent.js`, `webapp/api/resume-bank.js`,
+`radar/worker.py` and the existing database lease implementation. First verify
+which production datastore is active; do not activate the staged Postgres
+queue just to label Dot integrated. Add narrow capability-based operations and
+worker status through existing owner authentication, with bounded inputs and
+idempotency. No generic remote shell exposed through the web API.
+
+- [ ] Read job details, explain ranking/location, inspect saved applications
+  and request supported refreshes through the same contracts as the website.
+- [ ] Test unauthorized access, duplicate delivery, stale worker completion,
+  lane isolation and preservation of manual tracker edits.
+- [ ] Add owner-visible source/worker health in classic and vNext only once
+  backed by real telemetry. Warn once on meaningful failure/recovery; avoid
+  routine hourly notifications.
+
+### Phase 5 — private Resume Studio and browser assistance
+
+Files: `scripts/resume_studio.py`, `scripts/resume-studio-service/`,
+`browser-extension/native_host.py`, `webapp/api/_application-agent.js`, and
+their existing tests. Keep these separate from the initial public collector.
+
+- [ ] Establish private persistent storage, owner-authenticated access,
+  supported provider and PDF generation before moving any private artifacts.
+  Preserve canonical-resume locks and the existing quality/ownership rules.
+- [ ] Add a supported Dot browser action adapter; retain field review and
+  submission confirmation. Test disconnected browser, expired lease, partial
+  form completion and user cancellation without submitting a real application.
+- [ ] Demonstrate end-to-end owner use while the Mac is unavailable, and
+  document any feature still tied to Mac. Update `docs/RESUME_CLI.md` and
+  `docs/TUTORIAL.md` when those behaviors actually change.
+
+**Review focus:** local locks are not cross-host ownership; browser access is
+not scheduling; zero exit is not publication; public leads are not employer
+proof; an authenticated cloud page does not make a private local engine safely
+reachable. Each phase's acceptance checks must exercise its corresponding
+failure, not just its successful path. Do not mark the integration live until
+the operational evidence is recorded in `docs/CLI_HANDOFF.md`.
+
 ## 2026-11-03 opportunity quality and social discovery — published
 
 **SHIPPED in [PR #6644](https://github.com/VictorJimenez3/fable-job-search/pull/6644)**

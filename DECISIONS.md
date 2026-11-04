@@ -3922,3 +3922,31 @@ published its cached quality/scoring refresh. Both companions share one
 checkout lock, preserve unpublished local commits and manual merge/rebase
 work, and keep social publication limited to its own state file. Exact test,
 deployment, migration, and scheduled-run evidence belongs in `docs/CLI_HANDOFF.md`.
+
+## 236. Make Dot the preferred optional companion without duplicating cloud ownership (2026-11-04)
+
+Victor wants Dot inside ChatGPT to support the whole project because the Mac
+is not always available. Build toward capability-based companion operations:
+public browser collection first, then available enrichment, owner controls,
+private Resume Studio and browser application assistance. Keep GitHub Actions
+and Vercel as the established crawl, state, UI, tracking and notification
+owners. Dot must use the same posting identities, eligibility gates, URL
+promotion, delivery receipts and lane isolation. No LinkedIn scraping.
+
+A Dot browser connection is not proof of a persistent shell, scheduler,
+private filesystem, authenticated browser or model provider. Verify those
+capabilities individually and report unverified states honestly. The initial
+portable doctor and opt-in launcher reuse existing companion logic. They do
+not install a schedule, transfer credentials/CV files, expose Resume Studio,
+or establish remote access. Dot's actual connection and cutover evidence live
+in `docs/CLI_HANDOFF.md`; the phased project-wide plan lives in `ROADMAP.md`.
+
+The current checkout lock is local and cannot arbitrate Mac versus Dot.
+Begin with a controlled primary-companion cutover, preserving the working Mac
+schedule until Dot's read-only capability checks pass, then stopping the
+matching Mac task before enabling Dot writes. Explicit runtime configuration
+is not a distributed lease. Automatic failover needs transactional ownership
+and stale-writer fencing. Preserve cloud delivery ownership and notification
+receipts to avoid duplicate alerts. A zero process exit does not establish
+collection, model inference or publication success; actual outcomes must be
+verified before claiming a feature works while the Mac is unavailable.

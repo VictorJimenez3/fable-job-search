@@ -42,6 +42,12 @@ never hand-edit except a documented repair.
 - Never scrape LinkedIn — construct search URLs only (#16).
 - Vercel is the supported production platform door; the retired GitHub Pages
   mirror and its static copy must not be restored.
+- Dot inside ChatGPT is the preferred future companion for work that must
+  survive the Mac sleeping. Develop companion features against explicit host
+  capabilities, preserving the Mac adapter and cloud workflows. A reachable
+  browser is not proof of a persistent shell or scheduler. The staged plan and
+  cutover gates live in `ROADMAP.md`; actual connection status belongs in
+  `docs/CLI_HANDOFF.md`. Never describe Dot as active without a verified run.
 - Marquee list is duplicated in `profile.yaml` and `webapp` `S.marquee` —
   keep both in sync.
 

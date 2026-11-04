@@ -1,5 +1,95 @@
 # CLI handoff notes
 
+## Dot integration (2026-11-04; activation pending)
+
+Victor clarified that **Dot means Dot inside ChatGPT**, and authorized building
+a portable integration if this chat cannot access that VM. He may have Dot
+control/continue this chat. Dot is the preferred future companion for work
+that must survive the Mac sleeping. The project-wide implementation plan is
+in [`ROADMAP.md`](../ROADMAP.md#2026-11-04-dot-integration--portable-foundation-activation-pending),
+not a separate handoff document. This does not supersede the current live Mac
+runtime described below until a verified cutover.
+
+Observed access boundary in this session:
+
+- The shell is on the Mac. It is not a Dot VM shell.
+- Computer-use documentation supports a `dot` browser **when returned in the
+  browser inventory**. Inventory failed with `native pipe closed before
+  response`, including after a runtime reset. This proves a connection failure
+  in this session, not that the user's Dot VM is offline.
+- No Dot shell, scheduler, remote execution or automation-management tool was
+  exposed. Plugin discovery supplied no usable Dot runtime connector. Existing
+  local SSH configuration did not provide a Dot host.
+- No Dot installation, login, background schedule, credential transfer, CV
+  transfer or production runtime cutover has occurred. Do not claim otherwise.
+
+The portable foundation is implemented on `codex/dot-companion-20261104`, from
+the fetched production branch, with publication/CI pending. It wraps the existing social and enrichment
+runners rather than duplicating ingestion or notification logic. Its doctor
+is read-only and explicitly leaves browser authentication, model health,
+publication authority and scheduling unverified. Execution is opt-in and
+requires a dedicated clean production clone plus explicit primary assignment.
+The environment label does not coordinate different machines; the checkout
+lock remains local.
+
+Portable commands (from the checkout in its Python 3.12 environment):
+
+```bash
+python -m radar.companion doctor --json
+python -m radar.companion run social --runtime dot --dry-run --json
+python -m radar.companion run enrich --runtime dot --dry-run --json
+```
+
+They inspect/plan on the **current host**. `--runtime dot` is a requested
+worker identity, not remote execution. For a verified single-primary host,
+set `RADAR_DIR` to its dedicated production clone and
+`JOBRADAR_COMPANION_PRIMARY=dot`, then replace `--dry-run` with `--execute`.
+Use `RADAR_BRANCH` only for an intentional nondefault production branch.
+Social uses the selected Python and existing OpenCLI configuration; enrichment
+retains `JOBRADAR_VENV`, `OLLAMA_BIN`, `LLM_BASE_URL` and `LLM_MODEL` from the
+existing runner. A dry run does not verify those external dependencies.
+Doctor exits zero when inspection completes; readiness remains explicitly
+false. Execution preserves the child exit code and reports only command
+completion, with collection/publication outcome unverified. With `--json`,
+child diagnostics go to stderr and the result alone goes to stdout. No new
+task scheduler or heartbeat service is installed by this interface.
+
+Local validation: **19 focused tests passed; 936 full tests passed / 3 skipped**.
+Compilation, focused and package correctness lint, diff checks and the
+doctor/dry-run smoke checks pass. Independent review found no unresolved
+production-safety issue. The smoke run correctly identified the current host
+as Darwin and rejected this dirty feature checkout as an execution target;
+it did not claim a Dot connection. No generated state or current launch-agent
+configuration changed during this work.
+
+### When Dot continues this chat
+
+1. Read this section and the ROADMAP plan; inspect available tools on **Dot's
+   actual host**. Do not assume a browser tab provides a shell, SSH, durable
+   storage, a service manager or an hourly scheduler.
+2. If only the browser is exposed, verify the public Zero2Sudo page using the
+   native supported browser tools, retaining the existing public-proof and
+   privacy boundaries. Identify the supported task/ingestion bridge before
+   trying to run the local OpenCLI script. Do not send credentials here.
+3. If a persistent shell exists, prepare a separate production checkout with
+   Python 3.12 and frozen dependencies, then run the portable doctor and dry
+   run. Verify Node/OpenCLI and browser connection separately; use a native
+   Dot browser adapter if extension-backed OpenCLI is unavailable.
+4. Prove a bounded read-only collection before publishing. For a writing
+   cutover, stop the corresponding Mac schedule after its active run ends,
+   synchronize the Dot clone, and explicitly assign Dot as primary. Confirm
+   the publication and record the exact revision and collection result here.
+5. Use an actually exposed scheduler to register the hourly task. Observe
+   two scheduled runs plus restart recovery before claiming Mac-independent
+   coverage. Do not migrate cloud alerts, trackers or secrets to duplicate
+   workers. Keep private Resume Studio migration separate.
+
+Resume Studio's `osascript` native shortcut, launchd installers and ignored
+private CV tree are genuine Mac boundaries. The existing cloud worker
+heartbeats/leases are integration starting points, not proof Dot can already
+run those operations. The GitHub/Vercel crawler, UI, cloud enrichment, trackers
+and notifications already operate independently of the Mac.
+
 ## Opportunity quality, durable links, and social discovery (2026-11-03; complete and live)
 
 The follow-up uses `codex/relevance-links-social-20261103`, based on production
