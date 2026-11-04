@@ -1,6 +1,7 @@
 const crypto = require("crypto");
 const {BRANCH, REPO, httpUrl, normalizeProfile} = require("../_lib");
 const {configured, database, publicCache, serverError} = require("./_db");
+const {boundedScore, locationEvidence, eligibilityOf} = require("./_job-signals");
 
 const legacyCache = new Map();
 const LEGACY_TTL_MS = 60_000;
@@ -95,9 +96,11 @@ function publicLegacy(id, job, profile) {
     last_seen_at: Number(job.last_seen_at) || null,
     salary: String(job.salary || ""),
     sector: String(job.sector || ""),
-    evidence_score: Math.max(0, Math.min(100, Number(job.evidence_score ?? job.score ?? 0))),
-    personalized_score: Math.max(0, Math.min(100, Number(job.score || 0))),
-    eligibility: ["eligible", "review", "excluded"].includes(job.eligibility) ? job.eligibility : (job.alert_ok ? "eligible" : "review"),
+    evidence_score: boundedScore(job.evidence_score ?? job.score),
+    personalized_score: boundedScore(job.score ?? job.evidence_score),
+    ranking_score: boundedScore(job.score ?? job.evidence_score),
+    location_eligibility: locationEvidence(job),
+    eligibility: eligibilityOf(job),
     priority_tier: ["goal", "recommended", "explore"].includes(job.priority_tier) ? job.priority_tier : "explore",
     score_dimensions: job.score_dimensions && typeof job.score_dimensions === "object" ? job.score_dimensions : {},
     score_reasons: Array.isArray(job.score_reasons) ? job.score_reasons.slice(0, 80).map(String) : [],
@@ -158,6 +161,8 @@ async function postgresRecord(identifier, profile) {
       extract(epoch from p.posted_at)::bigint as posted_at,
       extract(epoch from p.last_seen_at)::bigint as last_seen_at,
       p.salary, p.sector, p.status, p.status_reason, p.posting_facts,
+      p.metadata->>'ranking_score' as ranking_score,
+      coalesce(p.metadata->'location_eligibility', '{}'::json) as location_eligibility,
       coalesce(s.evidence_score, 0) as evidence_score,
       coalesce(s.eligibility, 'review') as eligibility,
       coalesce(s.priority_tier, 'explore') as priority_tier,
@@ -178,7 +183,11 @@ async function postgresRecord(identifier, profile) {
     url: httpUrl(row.url) || "",
     posted_at: Number(row.posted_at) || null,
     last_seen_at: Number(row.last_seen_at) || null,
-    evidence_score: Number(row.evidence_score),
+    evidence_score: boundedScore(row.evidence_score),
+    ranking_score: boundedScore(row.ranking_score ?? row.evidence_score),
+    personalized_score: boundedScore(row.ranking_score ?? row.evidence_score),
+    location_eligibility: locationEvidence(row),
+    eligibility: eligibilityOf(row),
   };
 }
 

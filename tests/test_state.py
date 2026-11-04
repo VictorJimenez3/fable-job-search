@@ -241,7 +241,7 @@ def test_compact_index_preserves_hard_gate_reasons_for_ui_filtering(tmp_path, mo
         "score_reasons": [
             "base utility: 40",
             "senior+ title",
-            "re-gate v16: requires 5+ years (not new-grad)",
+            "re-gate v17: requires 5+ years (not new-grad)",
         ],
     }
 
@@ -250,7 +250,7 @@ def test_compact_index_preserves_hard_gate_reasons_for_ui_filtering(tmp_path, mo
     primary = json.loads((tmp_path / "jobs.json").read_text())[row["id"]]
     assert primary["gating_summary"]["reasons"] == [
         "senior+ title",
-        "re-gate v16: requires 5+ years (not new-grad)",
+        "re-gate v17: requires 5+ years (not new-grad)",
     ]
     detail = json.loads((tmp_path / primary["detail_ref"]["shard"]).read_text())
     assert detail["records"][row["id"]]["score_reasons"] == row["score_reasons"]
@@ -296,6 +296,10 @@ def test_drawer_audit_fields_are_sharded_with_filter_hints_in_primary(tmp_path, 
             "status": "resolved", "original_url": "https://aggregator.test/job",
         },
         "posting_identity": {"variant_count": 2, "family_id": "family-1"},
+        "location_eligibility": {
+            "status": "mixed", "evidence": ["New York, NY", "London, UK"],
+            "reason": "US and foreign location options are both listed",
+        },
         "source_variants": ["simplify", "jobright"],
         "source_board_variants": ["simplify:new-grad"],
         "source_url_variants": ["https://simplify.test/feed"],
@@ -320,6 +324,7 @@ def test_drawer_audit_fields_are_sharded_with_filter_hints_in_primary(tmp_path, 
     assert primary["sponsorship_history"] == {"status": "likely"}
     assert primary["link_resolution"] == {"status": "resolved"}
     assert primary["posting_identity"] == {"variant_count": 2}
+    assert primary["location_eligibility"] == {"status": "mixed"}
     assert primary["posting"] == {
         "sponsorship": "yes", "years_min": 4, "intern_counts": True,
     }
@@ -331,6 +336,8 @@ def test_drawer_audit_fields_are_sharded_with_filter_hints_in_primary(tmp_path, 
     assert detail["sponsorship_history"]["certified_cases"] == 3
     assert detail["link_resolution"]["original_url"] == "https://aggregator.test/job"
     assert detail["posting_identity"]["family_id"] == "family-1"
+    assert detail["location_eligibility"] == row["location_eligibility"]
+    assert state.load("jobs.json", {})["job-1"]["location_eligibility"] == row["location_eligibility"]
     assert detail["posting"] == row["posting"]
     assert detail["lifecycle_checked_at"] == 123
     assert detail["posting_status_reason"] == "source rechecked"

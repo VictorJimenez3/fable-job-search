@@ -14,6 +14,7 @@ from __future__ import annotations
 from . import lifecycle
 from .identity import canonical_url, posting_key
 from .link_resolver import is_aggregator_url
+from .location import assess_us_location
 from .models import norm
 
 _AGGREGATOR_SOURCES = {
@@ -98,6 +99,7 @@ def _winner_key(record: dict, key: str) -> tuple:
     # provenance than aggregator copies.  Active and evidence-rich records
     # should survive a cleanup over stale/closed twins.
     return (
+        0 if _is_source_only_record(record) else 1,
         1 if record.get("manual_added") else 0,
         1 if _is_direct_record(record) else 0,
         1 if str(record.get("posting_status", "open")).casefold() == "open" else 0,
@@ -161,7 +163,314 @@ def _is_aggregator_record(record: dict) -> bool:
     return is_aggregator_url(record.get("url"))
 
 
+def _is_source_only_record(record: dict | None) -> bool:
+    resolution = (record or {}).get("link_resolution") or {}
+    return resolution.get("status") == "source_only"
+
+
+def _explicit_requisition_tokens(record: dict) -> set[str]:
+    """Return only explicit cross-source requisition evidence.
+
+    A provider URL's own posting key is intentionally *not* included here:
+    ``greenhouse:acme:123`` proves that an ATS URL is specific, but says
+    nothing about which of several aggregator rows it replaces. Feed
+    adapters that receive a shared requisition identifier may persist it in
+    ``posting_identity``/``posting``; those are the only fallback tokens that
+    can independently link two otherwise different URLs.
+    """
+    tokens: set[str] = set()
+    for container in (record.get("posting_identity"), record.get("posting")):
+        if not isinstance(container, dict):
+            continue
+        for field in (
+            "requisition_id", "requisition_key", "requisition", "posting_id",
+            "posting_key", "external_job_id", "external_posting_id",
+        ):
+            value = container.get(field)
+            if value not in (None, "", [], {}):
+                tokens.add(f"{field}:{norm(str(value))}")
+    return tokens
+
+
+def _shared_requisition_proof(left: dict, right: dict) -> bool:
+    """Whether both rows carry the same explicit requisition token."""
+    return bool(_explicit_requisition_tokens(left)
+                & _explicit_requisition_tokens(right))
+
+
+def _has_specific_role_wording(record: dict) -> bool:
+    """Require title detail beyond a bare generic software-engineer label."""
+    generic = {
+        "software", "engineer", "developer", "programmer", "swe", "dev",
+        "technical", "technology", "full", "stack", "web", "application",
+        "applications", "systems", "product", "associate", "analyst",
+    }
+    family_words = set(title_family(record).split())
+    return bool(family_words - generic)
+
+
+def _posted_date_compatible(left: dict, right: dict) -> bool:
+    """Reject fallback matches whose two explicit posting dates conflict."""
+    left_posted = left.get("posted_at")
+    right_posted = right.get("posted_at")
+    if not left_posted or not right_posted:
+        return True
+    try:
+        return int(left_posted) // 86400 == int(right_posted) // 86400
+    except (TypeError, ValueError):
+        return False
+
+
+def _fallback_upgrade_compatible(incoming: dict, existing: dict) -> bool:
+    """Conservative non-URL evidence for an aggregator→official upgrade."""
+    if not _is_aggregator_record(existing) or _is_source_only_record(incoming):
+        return False
+    if is_aggregator_url(incoming.get("url")):
+        return False
+    if norm(incoming.get("company")) != norm(existing.get("company")):
+        return False
+    if not title_family(incoming) or title_family(incoming) != title_family(existing):
+        return False
+    if not _same_location_or_unknown(incoming, existing):
+        return False
+    if not _posted_date_compatible(incoming, existing):
+        return False
+    # Generic "Software Engineer" labels are not identity evidence. A marked
+    # hiring-program title, specific role wording, or an explicit shared
+    # requisition token is useful. An ATS URL's own key is deliberately not
+    # enough: it proves only that the incoming row is a real requisition, not
+    # that it is the one represented by this aggregator row.
+    return bool(
+        _has_title_variant_marker(incoming)
+        or _has_title_variant_marker(existing)
+        or _has_specific_role_wording(incoming)
+        or _has_specific_role_wording(existing)
+        or _shared_requisition_proof(incoming, existing)
+    )
+
+
+def _fallback_reverse_compatible(incoming: dict, official: dict) -> bool:
+    """Match a later aggregator sighting to one existing official record."""
+    if (not is_aggregator_url(incoming.get("url"))
+            or _is_source_only_record(incoming)
+            or _is_aggregator_record(official)
+            or _is_source_only_record(official)):
+        return False
+    if norm(incoming.get("company")) != norm(official.get("company")):
+        return False
+    if not title_family(incoming) or title_family(incoming) != title_family(official):
+        return False
+    if not _same_location_or_unknown(incoming, official):
+        return False
+    if not _posted_date_compatible(incoming, official):
+        return False
+    return bool(
+        _has_title_variant_marker(incoming)
+        or _has_title_variant_marker(official)
+        or _has_specific_role_wording(incoming)
+        or _has_specific_role_wording(official)
+        or _shared_requisition_proof(incoming, official)
+    )
+
+
+def _known_record_keys(record: dict) -> set[str]:
+    resolution = record.get("link_resolution") or {}
+    urls = [
+        record.get("url"),
+        *(record.get("alternate_urls") or []),
+        resolution.get("resolved_url"),
+        resolution.get("original_url"),
+    ]
+    return {posting_key(url) for url in urls if posting_key(url)}
+
+
+def build_official_match_index(snapshot: dict,
+                               incoming_batch: list[dict] | None = None) -> dict:
+    """Index URL and title-family candidates for one crawl batch.
+
+    ``find_existing_official_match`` is called once per fresh sighting.  A
+    full state scan there is quadratic for the production snapshot, so build
+    the immutable URL/family buckets once and let the matcher inspect only
+    the relevant company/title family.  Snapshot records remain references,
+    allowing a same-run URL promotion to make a candidate non-aggregator
+    without rebuilding the index.
+    """
+    by_key: dict[str, set[str]] = {}
+    snapshot_family: dict[tuple[str, str], list[tuple[str, dict]]] = {}
+    batch_family: dict[tuple[str, str], list[dict]] = {}
+
+    for key, record in snapshot.items():
+        if not isinstance(record, dict):
+            continue
+        key = str(key)
+        for posting in _known_record_keys(record):
+            by_key.setdefault(posting, set()).add(key)
+        family = (norm(record.get("company")), title_family(record))
+        if family[0] and family[1]:
+            snapshot_family.setdefault(family, []).append((key, record))
+
+    for record in incoming_batch or []:
+        if not isinstance(record, dict):
+            continue
+        family = (norm(record.get("company")), title_family(record))
+        if family[0] and family[1]:
+            batch_family.setdefault(family, []).append(record)
+
+    return {
+        "by_key": by_key,
+        "snapshot_family": snapshot_family,
+        "batch_family": batch_family,
+    }
+
+
+def _record_match_key(record: dict) -> str:
+    """Use a posting identity to deduplicate a batch candidate."""
+    return posting_key(record.get("url")) or canonical_url(record.get("url"))
+
+
+def _batch_record_id(record: dict) -> str:
+    """Return the caller-assigned stable ID for a fresh batch sighting."""
+    return str(record.get("_radar_id") or record.get("id") or "")
+
+
+def find_existing_official_match(incoming: dict, snapshot: dict,
+                                 incoming_batch: list[dict] | None = None,
+                                 *, index: dict | None = None,
+                                 existing_posting_ids: dict[str, str] | None = None) -> str | None:
+    """Find one safe existing aggregator row for a later official sighting.
+
+    Exact provider identity/known alternate URLs win immediately.  The
+    fallback is deliberately all-or-nothing: every compatible aggregator and
+    official candidate in the current snapshot plus incoming batch must point
+    to one unambiguous pair.  Otherwise the records remain separate for a
+    later verified URL resolution rather than risking a requisition merge.
+    """
+    if not isinstance(incoming, dict):
+        return None
+    index = index or build_official_match_index(snapshot, incoming_batch)
+    incoming_keys = _known_record_keys(incoming)
+    if not incoming_keys:
+        return None
+
+    # The common exact URL/alternate path should not touch the family buckets.
+    # A legacy single-value posting index is accepted only when the bucket
+    # confirms that no second state row owns that provider identity.
+    exact_ids: set[str] = set()
+    for key in incoming_keys:
+        bucket_ids = set(index.get("by_key", {}).get(key, set()))
+        fast_id = (existing_posting_ids or {}).get(key)
+        if fast_id and bucket_ids == {str(fast_id)}:
+            exact_ids.add(str(fast_id))
+        else:
+            exact_ids.update(bucket_ids)
+    if len(exact_ids) == 1:
+        return next(iter(exact_ids))
+    if exact_ids:
+        return None
+
+    family = (norm(incoming.get("company")), title_family(incoming))
+    snapshot_candidates = index.get("snapshot_family", {}).get(family, [])
+    batch_candidates = index.get("batch_family", {}).get(family, [])
+
+    # Reverse arrival (official row already stored, aggregator sighting later)
+    # must attach provenance to the official ID without downgrading its URL.
+    if is_aggregator_url(incoming.get("url")):
+        if _is_source_only_record(incoming):
+            return None
+        direct_candidates = [
+            (str(key), record) for key, record in snapshot_candidates
+            if _fallback_reverse_compatible(incoming, record)
+        ]
+        direct_keys = {_record_match_key(record) for _key, record in direct_candidates}
+        batch_direct: list[dict] = []
+        for record in batch_candidates:
+            if (isinstance(record, dict)
+                    and _record_match_key(record) != _record_match_key(incoming)
+                    and not _is_aggregator_record(record)
+                    and _fallback_reverse_compatible(incoming, record)):
+                batch_direct.append(record)
+                direct_keys.add(_record_match_key(record))
+        if len(direct_keys) != 1:
+            return None
+        if len(direct_candidates) == 1:
+            direct_id, direct = direct_candidates[0]
+        elif not direct_candidates and len(batch_direct) == 1:
+            direct = batch_direct[0]
+            direct_id = _batch_record_id(direct)
+        else:
+            return None
+        if not direct_id:
+            return None
+        possible_aggregator_keys = {_record_match_key(incoming)}
+        for _key, record in snapshot_candidates:
+            if (_is_aggregator_record(record)
+                    and _record_match_key(record) != _record_match_key(incoming)
+                    and _fallback_reverse_compatible(record, direct)):
+                possible_aggregator_keys.add(_record_match_key(record))
+        for record in batch_candidates:
+            if (isinstance(record, dict)
+                    and _is_aggregator_record(record)
+                    and _record_match_key(record) != _record_match_key(incoming)
+                    and _fallback_reverse_compatible(record, direct)):
+                possible_aggregator_keys.add(_record_match_key(record))
+        return direct_id if len(possible_aggregator_keys) == 1 else None
+
+    incoming_key = posting_key(incoming.get("url"))
+    if not incoming_key:
+        return None
+
+    existing_aggregators = [
+        (str(key), record) for key, record in snapshot_candidates
+        if _fallback_upgrade_compatible(incoming, record)
+    ]
+    aggregator_keys = {_record_match_key(record) for _key, record in existing_aggregators}
+    batch_aggregators: list[dict] = []
+    for record in batch_candidates:
+        if (isinstance(record, dict) and _is_aggregator_record(record)
+                and _fallback_upgrade_compatible(incoming, record)):
+            batch_aggregators.append(record)
+            aggregator_keys.add(_record_match_key(record))
+    if len(aggregator_keys) != 1:
+        return None
+    if len(existing_aggregators) == 1:
+        candidate_id, candidate = existing_aggregators[0]
+    elif not existing_aggregators and len(batch_aggregators) == 1:
+        candidate = batch_aggregators[0]
+        candidate_id = _batch_record_id(candidate)
+    else:
+        return None
+    if not candidate_id:
+        return None
+    possible_official_keys = {incoming_key}
+    for _key, record in snapshot_candidates:
+        if (not _is_aggregator_record(record)
+                and not _is_source_only_record(record)
+                and _fallback_upgrade_compatible(record, candidate)):
+            possible_official_keys.add(_record_match_key(record))
+    for record in batch_candidates:
+        if (isinstance(record, dict)
+                and _record_match_key(record) != incoming_key
+                and not _is_aggregator_record(record)
+                and not _is_source_only_record(record)
+                and _fallback_upgrade_compatible(record, candidate)):
+            possible_official_keys.add(_record_match_key(record))
+    # The current incoming row must be the only possible official counterpart;
+    # another direct requisition in either state or this batch makes identity
+    # ambiguous even when labels happen to match.
+    if len(possible_official_keys) != 1:
+        return None
+    return candidate_id
+
+
 def _same_location_or_unknown(left: dict, right: dict) -> bool:
+    left_assessment = assess_us_location(
+        left.get("locations") or [], remote=bool(left.get("remote")))
+    right_assessment = assess_us_location(
+        right.get("locations") or [], remote=bool(right.get("remote")))
+    left_status = left_assessment.get("status")
+    right_status = right_assessment.get("status")
+    if {left_status, right_status} == {"us", "non_us"}:
+        return False
     left_tokens = _location_tokens(left)
     right_tokens = _location_tokens(right)
     if not left_tokens or not right_tokens:
@@ -173,7 +482,8 @@ def _merge_record(winner: dict, loser: dict, reason: str = "") -> dict:
     """Merge non-conflicting evidence without replacing owner state."""
     merged = dict(winner)
     for key, value in loser.items():
-        if key in {"id", "url", "company", "title", "source", "ats"}:
+        if key in {"id", "url", "company", "title", "source", "ats",
+                   "link_resolution"}:
             continue
         if key not in merged or merged[key] in (None, "", [], {}):
             merged[key] = value
@@ -204,10 +514,44 @@ def _merge_record(winner: dict, loser: dict, reason: str = "") -> dict:
             _append_unique(alternate_urls, [url])
     merged["alternate_urls"] = alternate_urls
 
-    if (not merged.get("link_resolution") or
-            merged.get("link_resolution", {}).get("status") not in {"resolved"}):
-        if loser.get("link_resolution"):
-            merged["link_resolution"] = loser["link_resolution"]
+    winner_resolution = dict(winner.get("link_resolution") or {})
+    loser_resolution = dict(loser.get("link_resolution") or {})
+    if (not winner_resolution
+            and loser_resolution
+            and loser_resolution.get("status") != "source_only"):
+        merged["link_resolution"] = loser_resolution
+
+    # Curator/source-only notes are provenance, never a replacement for an
+    # official URL's resolution or eligibility state. Keep them in a bounded
+    # nested list even when the source-only row loses the winner comparison.
+    source_only_provenance = list(
+        winner_resolution.get("source_only_provenance") or []
+    )
+    source_only_provenance.extend(loser_resolution.get("source_only_provenance") or [])
+    for record in (winner, loser):
+        resolution = record.get("link_resolution") or {}
+        if resolution.get("status") != "source_only":
+            continue
+        payload = {
+            key: value for key, value in {
+                "source": record.get("source"),
+                "source_url": record.get("source_url"),
+                "source_board": record.get("source_board"),
+                "source_note": resolution.get("source_note"),
+                "reason": resolution.get("reason"),
+            }.items() if value
+        }
+        if payload:
+            source_only_provenance.append(payload)
+    deduped_provenance = []
+    for item in source_only_provenance:
+        if item not in deduped_provenance:
+            deduped_provenance.append(item)
+    source_only_provenance = deduped_provenance
+    if source_only_provenance:
+        resolution = dict(merged.get("link_resolution") or {})
+        resolution["source_only_provenance"] = source_only_provenance
+        merged["link_resolution"] = resolution
 
     for field in ("first_seen",):
         values = [v for v in (merged.get(field), loser.get(field)) if v]

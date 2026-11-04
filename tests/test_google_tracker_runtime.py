@@ -126,3 +126,66 @@ def test_optional_tracker_read_failure_degrades_without_a_boot_502():
         """
     )
     subprocess.run(["node", "-e", script], cwd=ROOT, check=True, capture_output=True, text=True)
+
+
+@pytest.mark.skipif(not shutil.which("node"), reason="Node is required for Vercel API runtime checks")
+def test_link_refresh_updates_only_the_existing_job_url_cell():
+    script = textwrap.dedent(
+        """
+        process.env.GOOGLE_AUTH_CLIENT_ID = "public-client";
+        process.env.GOOGLE_AUTH_CLIENT_SECRET = "public-secret";
+        const tracker = require("./webapp/api/_google-tracker");
+        const target = "https://boards.greenhouse.io/acme/jobs/123";
+        const old = "https://jobright.ai/jobs/info/123";
+        const row = ["job-1", "Acme", "saved", "Engineer", "", "", old,
+          "Remote", "2026-01-01T00:00:00Z", "2026-01-01T00:00:00Z", "jobright", "new_grad", "open"];
+        const puts = [];
+        global.fetch = async (url, options = {}) => {
+          const method = options.method || "GET";
+          if (String(url).includes("oauth2.googleapis.com/token")) {
+            return {ok: true, status: 200, json: async () => ({access_token: "user-token"})};
+          }
+          if (method === "GET" && String(url).includes("/values/")) {
+            return {ok: true, status: 200, json: async () => ({values: [tracker.PERSONAL_HEADERS, row]})};
+          }
+          if (method === "PUT") {
+            puts.push({url: String(url), body: JSON.parse(options.body)});
+            return {ok: true, status: 200, json: async () => ({})};
+          }
+          throw new Error(`unexpected request ${method} ${url}`);
+        };
+        (async () => {
+          const result = await tracker.updateUserTracker("victor", [], {
+            action: "link-refresh", id: "job-1", profile: "new_grad",
+            url: target, canonical_url: target, canonical_job_id: "job-1",
+            previous_url: old,
+          }, {r: "refresh", s: "sheet-1", sub: "google-sub"});
+          if (!result.changed || puts.length !== 1) throw new Error("refresh was not one-cell update");
+          if (!puts[0].url.includes("Applications!G2")) throw new Error(`wrong range ${puts[0].url}`);
+          if (JSON.stringify(puts[0].body.values) !== JSON.stringify([[target]])) throw new Error("wrong cell value");
+          const manualRow = row.slice();
+          manualRow[6] = "https://victor.example/manual-link";
+          global.fetch = async (url, options = {}) => {
+            const method = options.method || "GET";
+            if (String(url).includes("oauth2.googleapis.com/token")) {
+              return {ok: true, status: 200, json: async () => ({access_token: "user-token"})};
+            }
+            if (method === "GET" && String(url).includes("/values/")) {
+              return {ok: true, status: 200, json: async () => ({values: [tracker.PERSONAL_HEADERS, manualRow]})};
+            }
+            if (method === "PUT") throw new Error("manual URL was overwritten");
+            throw new Error(`unexpected request ${method} ${url}`);
+          };
+          let refused = false;
+          try {
+            await tracker.updateUserTracker("victor", [], {
+              action: "link-refresh", id: "job-1", profile: "new_grad",
+              url: target, canonical_url: target, canonical_job_id: "job-1",
+              previous_url: manualRow[6],
+            }, {r: "refresh", s: "sheet-1", sub: "google-sub"});
+          } catch (error) { refused = String(error.message).includes("owner URL"); }
+          if (!refused || puts.length !== 1) throw new Error("manual URL was not protected");
+        })().catch(error => { console.error(error); process.exit(1); });
+        """
+    )
+    subprocess.run(["node", "-e", script], cwd=ROOT, check=True, capture_output=True, text=True)

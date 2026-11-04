@@ -45,7 +45,8 @@ def test_gates_reject_non_us():
 
 def test_gates_accept_new_grad_us():
     keep, alert_ok, _ = gates(mk("Software Engineer, New Grad", locations=["Remote"]))
-    assert keep and alert_ok
+    # Bare Remote is not country evidence; keep for review without auto-alert.
+    assert keep and not alert_ok
 
 
 def test_malformed_primary_url_stays_visible_but_never_alertable():
@@ -845,6 +846,58 @@ def test_fintech_does_not_hide_behind_big_tech_or_legal_names():
     assert job.sector == "fintech"
     assert job.score_dimensions["mission"] < 0
     assert job.score_dimensions["company_quality"] >= 12
+
+
+def test_healthcare_employer_registry_recognizes_jnj_and_bms_without_prestige_bonus():
+    assert infer("Johnson & Johnson", {}) == "healthtech"
+    assert infer("Bristol Myers Squibb", {}) == "healthtech"
+    jnj = mk("Software Engineer, New Grad", company="Johnson & Johnson")
+    bms = mk("Software Engineer, New Grad", company="Bristol Myers Squibb")
+    score(jnj, FB, NOW)
+    score(bms, FB, NOW)
+    assert jnj.score_dimensions["mission"] == 3
+    assert bms.score_dimensions["mission"] == 3
+    assert jnj.score_dimensions["company_quality"] == 0
+    assert bms.score_dimensions["company_quality"] == 0
+
+
+def test_new_grad_prestige_led_fixture_keeps_healthcare_additive(monkeypatch):
+    monkeypatch.setenv("RADAR_PROFILE", "new_grad")
+    from radar import config
+    monkeypatch.setattr(config, "_profile_cache", {})
+    body = ("Responsibilities: You will build distributed systems and production services.\n"
+            "Qualifications: New graduates welcome.")
+    rows = {}
+    for company in ("Johnson & Johnson", "Google", "NVIDIA", "Stripe"):
+        row = mk("Software Engineer, New Grad", company=company, desc=body)
+        score(row, FB, NOW)
+        rows[company] = row
+    assert rows["Google"].score > rows["Stripe"].score > rows["Johnson & Johnson"].score
+    assert rows["Johnson & Johnson"].score_dimensions["mission"] == 3
+    assert rows["Johnson & Johnson"].evidence_score < rows["Johnson & Johnson"].score
+
+
+def test_location_verdict_downgrades_score_label_after_gate(monkeypatch):
+    unknown = mk("Software Engineer, New Grad", locations=["Remote"])
+    score(unknown, FB, NOW)
+    assert unknown.eligibility == "review"
+
+    non_us = mk("Software Engineer, New Grad", locations=["Toronto, Canada"])
+    score(non_us, FB, NOW)
+    assert non_us.eligibility == "excluded"
+
+    mixed = mk("Software Engineer, New Grad", locations=["New York, NY; Toronto, Canada"])
+    score(mixed, FB, NOW)
+    assert mixed.eligibility == "eligible"
+
+
+def test_ranking_key_uses_final_score_before_career_label():
+    from radar import score as scoring
+    explicit = {"id": "explicit", "score": 71, "career_priority": 2, "posted_at": NOW}
+    stronger = {"id": "stronger", "score": 99, "career_priority": 0, "posted_at": NOW}
+    helper = getattr(scoring, "ranking_key", None)
+    assert helper is not None
+    assert helper(stronger) < helper(explicit)
 
 
 def test_marketing_and_benefits_do_not_add_role_or_health_points():

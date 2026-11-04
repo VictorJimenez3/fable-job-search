@@ -50,7 +50,7 @@ const JobCard = memo(function JobCard({
   return (
     <article className={`job-card${selected ? " selected" : ""}`} aria-labelledby={`title-${job.public_id}`}>
       <button className="job-main" type="button" onClick={() => onSelect(job.public_id)} aria-expanded={selected}>
-        <span className="score" aria-label={`Evidence score ${job.evidence_score} out of 100`}>{job.evidence_score}</span>
+        <span className="score" aria-label={`Match score ${job.ranking_score ?? job.evidence_score} out of 100`}>{job.ranking_score ?? job.evidence_score}</span>
         <span className="job-copy">
           <span className="eyebrow">{job.company} · {ageLabel(job.posted_at)}</span>
           <strong id={`title-${job.public_id}`}>{job.title}</strong>
@@ -58,6 +58,7 @@ const JobCard = memo(function JobCard({
           <span className="badges">
             {job.priority_tier === "goal" && <span className="badge goal">goal company</span>}
             <span className={`badge ${job.eligibility}`}>{job.eligibility}</span>
+            <span className="badge">{["us", "mixed"].includes(job.location_eligibility.status) ? "US location confirmed" : "US location unverified"}</span>
             {job.remote && <span className="badge">remote</span>}
           </span>
         </span>
@@ -70,7 +71,7 @@ const JobCard = memo(function JobCard({
       {selected && (
         <div className="explanation">
           <h3>Why this is in the queue</h3>
-          <p>Evidence score measures the posting. Eligibility and your goal priority remain separate.</p>
+          <p>Match score ranks the opportunity, including your configured preferences. Evidence score: {job.evidence_score}. Goal labels do not change the order.</p>
           <ul>{job.score_reasons.slice(0, 12).map((reason) => <li key={reason}>{reason}</li>)}</ul>
         </div>
       )}
@@ -152,7 +153,7 @@ function JobsView({profile, setProfile}: {profile: JobFilters["profile"]; setPro
         <button className="filter-toggle" type="button" onClick={() => setFiltersOpen((value) => !value)} aria-expanded={filtersOpen}>Filters</button>
         <div className={`filter-fields${filtersOpen ? " open" : ""}`}>
           <label><span>Freshness</span><select value={filters.freshness} onChange={(event) => update("freshness", event.target.value as JobFilters["freshness"])}><option value="action">Action queue</option><option value="7d">Last 7 days</option><option value="30d">Last 30 days</option><option value="all">All time</option></select></label>
-          <label><span>Eligibility</span><select value={filters.eligibility} onChange={(event) => update("eligibility", event.target.value as JobFilters["eligibility"])}><option value="eligible">Eligible</option><option value="review">Needs review</option><option value="all">All</option></select></label>
+          <label><span>Eligibility</span><select value={filters.eligibility} onChange={(event) => {const eligibility = event.target.value as JobFilters["eligibility"]; setFilters((current) => ({...current, eligibility, freshness: eligibility === "eligible" ? current.freshness : "all"}));}}><option value="eligible">Eligible</option><option value="review">Needs review</option><option value="all">All</option></select></label>
         </div>
       </section>
       <div className="status" role="status" aria-live="polite">

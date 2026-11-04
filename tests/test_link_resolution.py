@@ -268,6 +268,7 @@ def test_source_only_lead_does_not_contaminate_fresh_verified_ats_sighting():
     official = Job(
         company="Acme", title="Software Engineer", url=direct,
         source="greenhouse", ats="greenhouse",
+        locations=["New York, NY"],
         description="This entry-level role welcomes recent graduates.",
     )
     lead = Job(
@@ -460,6 +461,46 @@ def test_curator_sighting_does_not_demote_persisted_employer_evidence():
         _merge_record_sighting(target, lead.to_record())
         assert target["link_resolution"].get("status") != "source_only"
         assert target["link_resolution"]["source_only_provenance"][0]["source_note"] == "curator note"
+
+
+def test_existing_sighting_refreshes_location_eligibility_after_foreign_location():
+    target = {
+        "url": "https://boards.greenhouse.io/acme/jobs/129",
+        "locations": ["New York, NY"],
+        "location_eligibility": {
+            "status": "us", "evidence": ["New York, NY"],
+        },
+    }
+    sighting = {
+        "url": target["url"], "locations": ["London, UK"],
+        "location_eligibility": {
+            "status": "non_us", "evidence": ["London, UK"],
+        },
+    }
+
+    _merge_record_sighting(target, sighting)
+
+    assert target["location_eligibility"]["status"] == "mixed"
+    assert "London, UK" in target["location_eligibility"]["evidence"]
+
+
+def test_existing_mixed_location_verdict_survives_unknown_sighting_metadata():
+    target = {
+        "url": "https://boards.greenhouse.io/acme/jobs/130",
+        "locations": ["New York, NY", "London, UK"],
+        "location_eligibility": {
+            "status": "mixed", "evidence": ["New York, NY", "London, UK"],
+        },
+    }
+    sighting = {
+        "url": target["url"], "location_eligibility": {
+            "status": "unknown", "evidence": [],
+        },
+    }
+
+    _merge_record_sighting(target, sighting)
+
+    assert target["location_eligibility"]["status"] == "mixed"
 
 
 def test_outputs_show_direct_and_fallback_links():

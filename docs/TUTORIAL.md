@@ -32,6 +32,12 @@ Jobs fall back to the current repository snapshot and private/Resume/Settings
 workflows link to the classic platform. Nothing in the existing workflow is
 removed during the cutover.
 
+Current release status: the isolated pre-rebase migration replay and its
+identity/location-drift checks are recorded in [`ROADMAP.md`](../ROADMAP.md).
+Final storage is being regenerated after the remote rebase; see
+[`docs/CLI_HANDOFF.md`](CLI_HANDOFF.md) for the parent-owned final measurements.
+Publication remains pending CI verification; this is not a deployment claim.
+
 vNext names three signals that the combined classic score can make easy to
 confuse: **evidence score** (what the posting proves), **eligibility** (whether
 deterministic gates allow it), and **priority** (Victor-specific
@@ -142,10 +148,17 @@ by YubHub** ([yubhub.co](https://yubhub.co)). The anonymous public
 zero2sudo Notion list contributes up to 25 **source-only** leads to both lanes
 for review; each lane keeps the appropriate roles.
 Those leads are intentionally not employer evidence: they need an employer
-posting, date, and liveness check before they can become alertable. Instagram
-login is unavailable, and the radar never automatically scrapes Instagram or
-LinkedIn. Optional public LinkedIn search links use the configured candidate
-graduation year (currently 2027), not a scraping dependency.
+posting, date, and liveness check before they can become alertable. An optional
+Mac-only OpenCLI Instagram collector starts with `zero2sudo`. The verified
+OpenCLI extension and signed-in Instagram browser are connected; the probe has
+captured public posts and career excerpts but found no actionable job URLs
+because available destinations were Story/bio links. Anonymous post-proof
+hardening and launchd-agent verification remain in progress, so do not count
+the hourly collector as live yet. Other researched accounts are not
+auto-enabled because they lack verified US technical direct-application links.
+The radar never scrapes LinkedIn. Optional public LinkedIn search links use the
+configured candidate graduation year (currently 2027), not a scraping
+dependency.
 
 The internship lane also reads Headcount Labs' engineering and data/AI lists,
 up to 160 rows each. Their dates and direct employer links are preserved, but
@@ -159,16 +172,24 @@ their eligibility; they do not have to be newly discovered that day. The same
 freshness, email-scope, and duplicate-delivery checks apply.
 
 The crawler uses provider-aware posting identities and conservative aliases.
-Distinct real requisitions remain separate when a title/company match is
-ambiguous, including same-label roles with different provider URLs. This
-avoids losing coverage, but fuzzy dedupe cannot guarantee zero duplicates.
+Stable IDs resolve regardless of whether the aggregator or employer URL is
+seen first. A URL-only upgrade retains the old URL and source, while preserving
+manual tracker stage, custom fields, notes, and dates; scheduled Notion sync
+and connected Google Sheets converge on the same canonical row. Distinct real
+requisitions remain separate when a title/company match is ambiguous, including
+same-label roles with different provider URLs. Old sent-email records and
+historical alert-issue bodies are not rewritten. This avoids losing coverage,
+but fuzzy dedupe cannot guarantee zero duplicates.
 
-Internship scores use a 0–100 ranking led by employer prestige. Pinterest,
+Internship Rules v9 use a 0–100 ranking led by employer prestige. Pinterest,
 Google, NVIDIA, Microsoft, OpenAI, Anthropic, and comparable employers receive
 the strongest reputation signal. Pay, employer research, mentorship, ownership,
 technical depth, user impact, student eligibility, and freshness make smaller
-adjustments. Healthcare receives +4; fintech and banks receive -4. Defense
-employers and clearly defense-focused postings receive a large auditable
+adjustments. Healthcare is +3 and finance is -2; healthcare comes from a
+recognized healthcare company or posting-scoped healthcare-team proof, while a
+general tech employer requires the team proof. J&J/BMS sector recognition is
+not a prestige exception. Defense employers and clearly defense-focused
+postings receive a large auditable
 deduction and a final score cap of 12. **Why it scored** shows the exact
 reasons behind each score.
 
@@ -178,6 +199,11 @@ into an internship. Past-term, required graduate-only, source-only, and ambiguou
 roles stay in **Review** with an explanation and do not alert. Prestige still
 leads the ranking among eligible internships.
 
+The shared location gate is explicit: `us`, `mixed`, `unknown`, or `non_us`.
+`us` and `mixed` can be eligible; `unknown` stays review-only and cannot alert;
+`non_us` is left out of the active board. A foreign-country remote label does
+not establish US eligibility.
+
 Internship batches are separate from new-grad batches and default to on. The
 owner can turn either batch off in **Settings**. Internship email is limited to
 explicit **Spring / Winter 2027** roles; Summer-only roles remain on the board.
@@ -185,6 +211,11 @@ Batch checks run hourly (with
 the internship check on a separate offset), while delivery still waits for
 three roles, 12 hours, or score 92 for an urgent send. The platform does not
 read your inbox, and Google OAuth does not request Gmail scope.
+
+Private offer information is owner-only. Never publish the existence of an
+offer, its role, or compensation numbers into public state, dashboards, alert
+issues, RSS, source records, or documentation; keep it in the private
+application workflow.
 
 Reading needs nothing. On Vercel, use **Tutorial → Accounts & login** to sign
 in with GitHub or Google. The memorable shortcut and the original Vercel URL
@@ -599,14 +630,20 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
   leadership programs are a dedicated exception. Eligible roles then use an
   auditable point rubric prioritizing AI/ML and data science above SWE/systems;
   PM-family rows have role weight `0`, remain dashboard-only, and never enter
-  alert email/RSS delivery. The new-grad implementation's Rules v16 use one
-  sourced company-reputation band,
-  not company size or a stack of favorite/culture/conference bonuses. Google
-  and NVIDIA can remain favorites without automatically earning perfect scores.
+  alert email/RSS delivery. Rules v17 sorts score-first: goal labels and
+  career-stage priority do not override the score. `evidence_score` is the
+  nonpersonal company/posting evidence score; the final personalized score applies only
+  bounded viewer preferences and learned signals. The implementation uses one
+  sourced company-reputation band, not company size or a stack of
+  favorite/culture/conference bonuses. Google and NVIDIA can remain favorites
+  without automatically earning perfect scores.
   Actual team responsibilities add bounded technical-depth, ownership, and
-  mentorship evidence; marketing and benefits do not. Healthcare adds a small
-  preference and fintech subtracts one, independently of company prestige.
-  Pay uses the published lower bound rather than its maximum. Open **Fit** to
+  mentorship evidence; marketing and benefits do not. Healthcare is +3 and
+  finance is -2 in both profiles; healthcare comes from a recognized healthcare
+  company or posting-scoped healthcare-team proof, while a general tech
+  employer requires the team proof. J&J/BMS sector recognition is not a
+  prestige exception. Missing pay is neutral, with no hard salary cutoff. Open
+  **Fit** to
   see these separate reasons. Missing team evidence means unverified, not a bad
   team. Best Match is the default; choose Newest when discovery time matters.
   Required experience and preferred experience are separate evidence fields;
@@ -650,6 +687,11 @@ follow-up nudges for week-old applications, and LinkedIn hiring-post leads.
 tail -f ~/.jobradar/logs/enrich.log        # watch the AI companion work
 launchctl kickstart -k gui/$(id -u)/com.jobradar.enrich   # force an enrichment cycle now
 ```
+
+Mac enrichment uses a separate Python 3.12 virtual environment and modern
+installer; the legacy Python 3.9/pip 21 environment caused the previous
+failure. A shared lock preserves unpushed manual work. Local validation is
+916 passed and 3 skipped; wait for CI before treating a release as published.
 
 ## 5-minute demo
 

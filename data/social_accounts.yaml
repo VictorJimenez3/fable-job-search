@@ -1,0 +1,20 @@
+# Public career-account allowlist for the optional Mac OpenCLI collector.
+# This is deliberately not a broad Instagram search.  An account becomes
+# "live" only after a successful collector run; configuration alone is not
+# evidence that Instagram access or login is available.
+version: 1
+
+defaults:
+  max_posts: 12
+  timeout_seconds: 20
+  failure_cooldown_seconds: 3600
+  max_stored_posts: 200
+  retention_days: 90
+  max_runtime_seconds: 120
+
+accounts:
+  - username: zero2sudo
+    label: Zero2Sudo
+    enabled: true
+    source_url: https://www.instagram.com/zero2sudo/
+    purpose: public career and internship leads

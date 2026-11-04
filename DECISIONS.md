@@ -3848,3 +3848,55 @@ also expires after the posting-age window. A successful employer-page check
 refreshes liveness without changing the original posting date, so a bounded
 curator feed cannot expire a directly verified live role. Exact validation and publication evidence are
 recorded in `docs/CLI_HANDOFF.md`.
+
+## 234. Keep score, identity, source, and privacy boundaries explicit during the current Rules v17/9 migration (2026-11-03)
+
+The current new-grad Rules v17 and internship Rules v9 keep list ordering
+score-first. A pre-rebase isolated generated replay contained 96,376 main-lane
+records and 36,861 internship records; primary outputs were 82,980,628 and
+46,279,246 bytes. Identity/location-drift checks reported zero duplicates or
+drift, and 316 application records were unchanged. Final storage is being
+regenerated after the remote rebase, so those are not final publication
+measurements. Goal labels and career-stage
+priority do not override the score. `evidence_score` is the nonpersonal
+company/posting evidence score; the final personalized score applies only bounded viewer
+preferences and learned signals. Both profiles use healthcare +3 and finance
+-2. Healthcare comes from a recognized healthcare company or posting-scoped
+healthcare-team proof; a general tech employer requires the team proof.
+Recognizing J&J or BMS as healthcare-sector employers is not a prestige
+exception. Missing pay is neutral and there is no hard salary cutoff.
+
+Posting identity remains conservative but order-independent. A stable ID can
+survive either the aggregator-first or employer-first sighting. A URL-only
+promotion retains the old URL and source, preserves manual tracker stage,
+custom fields, notes, and dates, and lets scheduled Notion sync or a connected
+Google Sheet converge on the canonical row. Existing sent-email records and
+historical alert-issue bodies are historical evidence and are not rewritten.
+Ambiguous same-label requisitions remain separate rather than being merged just
+to improve the count.
+
+The shared location gate uses `us`, `mixed`, `unknown`, and `non_us` statuses.
+`unknown` is review-only and cannot alert; `non_us` is excluded from the active
+board. Source-only and social/community leads remain review-only until current
+employer evidence clears the role, URL, lifecycle, and location gates.
+
+The public zero2sudo Notion feed remains enabled as a bounded review-only source.
+An optional Mac OpenCLI collector starts with zero2sudo. The verified extension
+and signed-in Instagram browser are connected; its probe observed 12 posts,
+extracted 8 career excerpts, and found 0 actionable job URLs because available
+destinations were Story/bio links. Anonymous post visibility is verified against actual caption evidence;
+hourly launchd activation is still pending publication, so this
+decision does not claim the collector is live. Other researched Instagram
+accounts are not auto-enabled without verified US technical direct-application
+links. LinkedIn remains unscraped; public search links are outbound references
+only.
+
+Private offer information must never enter public radar state: do not publish
+the existence of an offer, its role, or compensation numbers in generated
+snapshots, dashboards, alert issues, RSS, source records, or documentation.
+Keep it in the owner-only application workflow. Resume tailoring is deliberately
+out of scope for this migration. The Mac enrichment failure was traced to the
+legacy Python 3.9/pip 21 environment; the fix uses a separate Python 3.12
+virtual environment and modern installer, with a shared lock preserving all
+unpushed manual work. Local validation is 916 passed and 3 skipped; no deployed
+claim is made until CI completes and the parent release handoff is complete.

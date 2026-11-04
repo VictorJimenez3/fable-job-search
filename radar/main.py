@@ -17,24 +17,27 @@ from . import applied as applied_mod
 from . import discovery, lifecycle, link_resolver, sponsorship, state
 from .brief import rerank
 from .config import env, profile, profile_id, seeds
+from .dedupe import build_official_match_index, find_existing_official_match
 from .digest import write_outputs
 from .identity import canonical_url, posting_key
 from .internship import RULES_VERSION as INTERNSHIP_RULES_VERSION
+from .location import assess_us_location
 from .models import Job, norm
 from .score import (
     RULES_VERSION,
     apply_company_concentration,
     build_preference_profile,
-    career_priority,
     early_career_possible,
     explicit_new_grad,
     gates,
     load_score_preferences,
     normalize_score_preferences,
+    ranking_key,
     regate,
     score,
 )
 from .sector import infer
+from .social import fetch_social_leads
 from .sources import aggregators, hn, public_feeds
 from .sources.ats import FETCHERS, PM_SEARCH_QUERIES
 
@@ -47,6 +50,7 @@ AGG_SOURCES = {
     "zapply": aggregators.fetch_zapply,
     "zapply_pm": aggregators.fetch_zapply_pm,
     "hn": hn.fetch_hn,
+    "instagram": fetch_social_leads,
     **public_feeds.PUBLIC_FETCHERS,
 }
 
@@ -58,6 +62,7 @@ AGG_SOURCES_INTERNSHIP = {
     "applyguy_internship": aggregators.fetch_applyguy_internship,
     "aprameyak_offcycle": aggregators.fetch_aprameyak_offcycle,
     "zero2sudo_notion": public_feeds.fetch_zero2sudo_notion,
+    "instagram": fetch_social_leads,
     **public_feeds.PUBLIC_INTERNSHIP_FETCHERS,
 }
 
@@ -209,7 +214,7 @@ def _has_independent_employer_evidence(record: Job | dict | None) -> bool:
         "experience_conflict", "experience_alternative", "years_note",
     }
     return bool((ats or not aggregator) and source not in {
-        "zero2sudo_notion", "zero2sudo", "linkedin_posts",
+        "zero2sudo_notion", "zero2sudo", "instagram", "linkedin_posts",
     } and any(posting.get(key) not in (None, "", {}, []) for key in scraped_keys))
 
 
@@ -368,7 +373,22 @@ def _merge_record_sighting(target: dict, sighting: dict) -> bool:
     locations = target.setdefault("locations", [])
     before_locations = len(locations)
     _append_unique(locations, sighting.get("locations") or [])
-    changed |= len(locations) != before_locations
+    locations_changed = len(locations) != before_locations
+    changed |= locations_changed
+    fresh_location = sighting.get("location_eligibility")
+    if locations_changed:
+        target["location_eligibility"] = assess_us_location(
+            locations, remote=bool(target.get("remote")))
+        changed = True
+    elif isinstance(fresh_location, dict) and (
+            not target.get("location_eligibility")
+            or fresh_location.get("status") == "mixed"):
+        # A fresh mixed-US verdict is meaningful even when the provider did
+        # not add another location. Do not replace an explicit current
+        # verdict with a weaker unknown payload from a scrubbed sighting.
+        if target.get("location_eligibility") != fresh_location:
+            target["location_eligibility"] = dict(fresh_location)
+            changed = True
     for key in ("posting_family_id", "posting_identity"):
         if not target.get(key) and sighting.get(key):
             target[key] = sighting[key]
@@ -451,6 +471,69 @@ def _merge_record_sighting(target: dict, sighting: dict) -> bool:
         target["link_resolution"] = replacement_resolution
         changed = True
     return changed
+
+
+def _promote_existing_official_record(target: dict, sighting: dict) -> bool:
+    """Promote one existing aggregator row without changing its durable ID."""
+    incoming_url = str(sighting.get("url") or "")
+    old_url = str(target.get("url") or "")
+    if (not incoming_url or not old_url
+            or (sighting.get("link_resolution") or {}).get("status") == "source_only"
+            or link_resolver.is_aggregator_url(incoming_url)
+            or not link_resolver.is_aggregator_url(old_url)
+            or _posting_identity(incoming_url) == _posting_identity(old_url)):
+        return False
+    old_source = target.get("source")
+    old_resolution = dict(target.get("link_resolution") or {})
+    alternates = target.setdefault("alternate_urls", [])
+    _append_unique(alternates, [old_url, *target.get("alternate_urls", [])])
+    target["url"] = incoming_url
+    if sighting.get("ats"):
+        target["ats"] = sighting["ats"]
+    if old_source and old_source != sighting.get("source"):
+        _append_unique(target.setdefault("source_variants", []), [old_source])
+    if sighting.get("source") and old_source != sighting.get("source"):
+        target["source"] = sighting["source"]
+    for field in ("source_url", "source_board"):
+        old_value = target.get(field)
+        new_value = sighting.get(field)
+        if old_value and old_value != new_value:
+            variants = target.setdefault(f"{field}_variants", [])
+            _append_unique(variants, [old_value])
+        if new_value:
+            target[field] = new_value
+    resolution = dict(sighting.get("link_resolution") or {})
+    if resolution.get("status") != "resolved":
+        resolution = {
+            "status": "resolved",
+            "method": "official_source_upgrade",
+            "original_url": old_url,
+            "resolved_url": incoming_url,
+            "upgrade_reason": "official employer/ATS sighting replaced aggregator primary",
+            "ats": sighting.get("ats", ""),
+        }
+    else:
+        resolution.setdefault("original_url", old_url)
+        resolution.setdefault("resolved_url", incoming_url)
+        resolution.setdefault("method", "official_source_upgrade")
+        resolution.setdefault(
+            "upgrade_reason",
+            "official employer/ATS sighting replaced aggregator primary",
+        )
+    provenance = old_resolution.get("source_only_provenance")
+    if not provenance and old_resolution.get("status") == "source_only":
+        prior = _source_only_provenance(target)
+        provenance = [prior] if prior else None
+    if provenance and "source_only_provenance" not in resolution:
+        resolution["source_only_provenance"] = provenance
+    target["link_resolution"] = resolution
+    identity = dict(target.get("posting_identity") or {})
+    matched_by = list(identity.get("matched_by") or [])
+    _append_unique(matched_by, ["official employer URL upgrade"])
+    identity["variant_count"] = max(2, int(identity.get("variant_count") or 1))
+    identity["matched_by"] = matched_by[:6]
+    target["posting_identity"] = identity
+    return True
 
 
 def _unique_discovered_jobs(discovered: list[Job]) -> tuple[list[Job], int]:
@@ -838,7 +921,16 @@ def crawl() -> int:
     if resolved_feed_duplicates:
         print(f"hygiene: ignored {resolved_feed_duplicates} duplicate sighting(s) after link resolution")
     existing_url_ids = _existing_posting_ids(jobs_state)
+    incoming_batch = []
+    for job in discovered:
+        sighting = job.to_record()
+        # Ephemeral only: lets the matcher identify a same-run target when
+        # there is no prior state row. It is never persisted.
+        sighting["_radar_id"] = _job_identity(job)
+        incoming_batch.append(sighting)
+    match_index = build_official_match_index(jobs_state, incoming_batch)
     seen_this_run: set[str] = set()
+    pending_new_jobs: dict[str, Job] = {}
 
     def _prepared_existing_sighting(job: Job) -> tuple[dict, bool, bool, bool, list[str]]:
         """Evaluate fresh employer text before serializing an existing row.
@@ -872,7 +964,20 @@ def crawl() -> int:
     for j in discovered:
         if not j.company or not j.title or not j.url:
             continue
-        jid = _state_job_identity(j, jobs_state, existing_url_ids)
+        incoming_sighting = j.to_record()
+        upgrade_id = find_existing_official_match(
+            incoming_sighting, jobs_state, incoming_batch,
+            index=match_index, existing_posting_ids=existing_url_ids)
+        if upgrade_id:
+            j._radar_id = upgrade_id
+            incoming_key = _posting_identity(incoming_sighting.get("url"))
+            for batch_record in incoming_batch:
+                if _posting_identity(batch_record.get("url")) == incoming_key:
+                    batch_record["_radar_id"] = upgrade_id
+        if upgrade_id and upgrade_id in jobs_state:
+            _promote_existing_official_record(
+                jobs_state[upgrade_id], incoming_sighting)
+        jid = upgrade_id or _state_job_identity(j, jobs_state, existing_url_ids)
         link_result = j.link_resolution or {}
         if link_result.get("status") == "closed":
             # Do this before ``touch``: touch deliberately reopens any
@@ -914,6 +1019,8 @@ def crawl() -> int:
             # replacing an already-scored in-memory job with a raw sighting.
             if existing is not None:
                 _merge_record_sighting(existing, _prepared_existing_sighting(j)[0])
+            elif jid in pending_new_jobs:
+                _merge_job_sighting(pending_new_jobs[jid], j)
             continue
         seen_this_run.add(jid)
         if existing is not None:
@@ -955,6 +1062,7 @@ def crawl() -> int:
         if existing is not None:
             manual_upgrades[jid] = existing
         new_jobs.append(j)
+        pending_new_jobs[jid] = j
 
     # ---- posting scrape: real description text, no LLM needed ----
     from .posting import scrape_pass
@@ -972,7 +1080,7 @@ def crawl() -> int:
     thr = p["thresholds"]
     band = p["llm"]["rerank_band"]
     borderline = sorted((j for j in new_jobs if j.alert_ok and j.score >= thr["alert"] - band),
-                        key=lambda j: (-career_priority(j), -j.score))
+                        key=ranking_key)
     rerank(borderline)
 
     # ---- decide alerts ----
@@ -981,7 +1089,7 @@ def crawl() -> int:
                   if j.alert_ok and j.score >= thr["alert"]
                   and not lifecycle.is_terminal(j)
                   and (j.posted_at is None or now - j.posted_at <= max_age)]
-    candidates.sort(key=lambda j: (-career_priority(j), -j.score))
+    candidates.sort(key=ranking_key)
     max_alerts = int(env("RADAR_MAX_ALERTS", "25"))
     alerts = candidates[:max_alerts]
 
@@ -1012,6 +1120,7 @@ def crawl() -> int:
             rec["archive_reason"] = old_record.get("archive_reason", "owner archived")
         rec["rules_v"] = RULES_VERSION
         rec["eligibility_evidence"] = j.eligibility_evidence
+        rec["location_eligibility"] = j.location_eligibility
         rec["explicit_new_grad"] = explicit_new_grad(j.title, evidence=j.eligibility_evidence)
         rec["early_career_possible"] = early_career_possible(j, rec.get("posting"))
         if rec["early_career_possible"] and not rec.get("career_priority"):
@@ -1075,9 +1184,13 @@ def crawl() -> int:
     state.save("companies.json", registry)
     state.save("jobs.json", jobs_state)
     from .notion_sync import archive_terminal_pages
+    tracker_url_updates = applied_mod.refresh_application_urls(applied, jobs_state)
+    if tracker_url_updates:
+        print(f"tracker: promoted {tracker_url_updates} application URL(s)")
     archived_notion = archive_terminal_pages(applied, jobs_state)
-    if archived_notion:
+    if archived_notion or tracker_url_updates:
         state.save("applied.json", applied)
+    if archived_notion:
         print(f"lifecycle: archived {archived_notion} terminal tracked page(s) in Notion")
     state.save("alert_history.json", alert_history)
     state.save("runs.json", runs)
@@ -1172,11 +1285,13 @@ def notion_backfill() -> int:
     applied = state.applied()
     jobs = state.jobs()
     pulled = sync_from_notion(applied)
+    tracker_url_updates = applied_mod.refresh_application_urls(applied, jobs)
     n = sync_applied(applied)
     archived = archive_terminal_pages(applied, jobs)
     state.save("applied.json", applied)
     state.save("autopilot_choices.json", applied_mod.autopilot_choices(applied, jobs))
     print(f"notion-backfill: pulled {pulled} stage change(s), pushed {n}, "
+          f"refreshed {tracker_url_updates} URL(s), "
           f"archived {archived} terminal page(s)")
     return 0
 
@@ -1192,12 +1307,14 @@ def tracker_sync() -> int:
     applied = state.applied()
     jobs = state.jobs()
     pulled = sync_from_notion(applied)
+    tracker_url_updates = applied_mod.refresh_application_urls(applied, jobs)
     pushed = sync_applied(applied)
     archived = archive_terminal_pages(applied, jobs)
     state.save("applied.json", applied)
     state.save("autopilot_choices.json", applied_mod.autopilot_choices(applied, jobs))
     print(
         f"tracker-sync: pulled {pulled} stage change(s), pushed {pushed}, "
+        f"refreshed {tracker_url_updates} URL(s), "
         f"archived {archived} terminal/duplicate page(s)"
     )
     return 0
@@ -1290,13 +1407,15 @@ def resolve_links_cmd() -> int:
 
     applied = state.applied()
     jobs_state, repaired = _repair_duplicate_job_state(jobs_state, applied)
+    tracker_url_updates = applied_mod.refresh_application_urls(applied, jobs_state)
     state.save("jobs.json", jobs_state)
-    if repaired:
+    if repaired or tracker_url_updates:
         state.save("applied.json", applied)
     write_outputs(jobs_state, state.companies(), state.load("runs.json", []),
                   state.load("alert_history.json", []))
     print(f"link-resolve: checked {attempted}, promoted {resolved}, closed {closed}, kept {unchanged}, "
-          f"errors/not found {errors}; repair={'yes' if repaired else 'no'}")
+          f"errors/not found {errors}; repair={'yes' if repaired else 'no'}; "
+          f"tracker URLs={tracker_url_updates}")
     return 0
 
 
@@ -1410,6 +1529,7 @@ def enrich() -> int:
         rec["score_version"] = RULES_VERSION
         rec["score_reasons"] = j.score_reasons
         rec["eligibility_evidence"] = j.eligibility_evidence
+        rec["location_eligibility"] = j.location_eligibility
         rec["explicit_new_grad"] = explicit_new_grad(j.title, evidence=j.eligibility_evidence)
         if j.startup_stage == "unknown":
             for key in ("startup_stage", "startup_score", "startup_stage_evidence",
@@ -1708,6 +1828,7 @@ def _rebuild_scores(jobs_state: dict, fb: dict, now: int,
             rec.pop("career_priority", None)
         rec["alert_ok"] = bool(keep and alert_eligible)
         rec["eligibility_evidence"] = job.eligibility_evidence
+        rec["location_eligibility"] = job.location_eligibility
         rec["explicit_new_grad"] = explicit_new_grad(job.title, evidence=job.eligibility_evidence)
         rec["rules_v"] = RULES_VERSION
         rec["score_version"] = RULES_VERSION

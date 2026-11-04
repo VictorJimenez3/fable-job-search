@@ -29,7 +29,8 @@ vm.createContext(context);
 vm.runInContext(source, context);
 const job = (id, posted_at, first_seen, score = 60) => ({
   id, company: 'Example', title: 'Software Engineer', score,
-  posted_at, first_seen, career_priority: 2,
+  posted_at, first_seen, career_priority: 2, locations: ['United States'],
+  location_eligibility: {status: 'us'},
 });
 const jobs = [
   job('recent-post', now - 1800, now - 7200),

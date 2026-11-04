@@ -12,11 +12,12 @@ from datetime import UTC, date, datetime
 
 from .config import profile
 from .identity import canonical_url
+from .location import assess_us_location
 from .models import Job
-from .score import FOREIGN_HINTS, company_momentum_signal, role_bucket
+from .score import FOREIGN_HINTS, company_momentum_signal, posting_rank_evidence, role_bucket
 from .sector import infer as infer_sector
 
-RULES_VERSION = 8
+RULES_VERSION = 9
 
 # These locations occur in the internship ATS feed but are absent from the
 # older shared location hints. Remote within a named foreign country is not
@@ -228,17 +229,44 @@ def _sector_preference_signal(job: Job) -> tuple[int, list[str]]:
     if sector == "other" and job.sector and job.sector != "other":
         sector = job.sector
 
+    # Company sector is useful but incomplete for diversified employers. A
+    # bounded responsibilities excerpt can identify a healthcare team without
+    # turning generic benefits/customer boilerplate into a mission signal.
+    if _healthcare_team_evidence(job):
+        sector = "healthtech"
+
     healthcare_companies = cfg.get("healthcare_companies", []) or []
     finance_companies = cfg.get("financial_companies", []) or []
     if sector in {"healthtech", "healthcare"} or any(
             _matches_company(job.company, name) for name in healthcare_companies):
-        points = int(cfg.get("healthcare", 4))
+        points = int(cfg.get("healthcare", 3))
         return points, [f"healthcare preference {points:+d}"] if points else []
     if sector in {"fintech", "financial_services", "financial services"} or any(
             _matches_company(job.company, name) for name in finance_companies):
-        points = int(cfg.get("fintech_and_banks", -4))
+        points = int(cfg.get("fintech_and_banks", -2))
         return points, [f"fintech/bank preference {points:+d}"] if points else []
     return 0, []
+
+
+def _healthcare_team_evidence(job: Job) -> str:
+    """Return only role-scoped healthcare evidence, replayed safely.
+
+    Fresh descriptions replace persisted snippets. A description-less replay
+    may use only bounded v2 responsibility excerpts, reparsed through the
+    same role-scope filter; a prior boolean/verdict is never sufficient.
+    """
+    if job.description:
+        return posting_rank_evidence(job.description).get("healthtech", "")
+    stored = (job.internship_eligibility or {}).get("healthcare_team_evidence")
+    if isinstance(stored, str):
+        snippets = [stored]
+    elif isinstance(stored, (list, tuple)):
+        snippets = [str(value) for value in stored if str(value).strip()]
+    else:
+        snippets = []
+    if not snippets:
+        return ""
+    return posting_rank_evidence("Responsibilities:\n" + "\n".join(snippets[:2])).get("healthtech", "")
 
 
 def _defense_signal(job: Job) -> tuple[bool, str]:
@@ -297,6 +325,21 @@ def _work_quality_signal(job: Job) -> tuple[int, list[str]]:
         reasons.append(f"work-quality cap applied -{points - cap}")
         points = cap
     return points, reasons or ["work evidence not available +0"]
+
+
+def _apply_location_label(job: Job, eligibility: str, reasons: list[str]) -> str:
+    """Refresh location evidence for a score replay without changing gates."""
+    location = assess_us_location(job.locations, remote=bool(job.remote))
+    job.location_eligibility = location
+    status = location.get("status")
+    if status == "non_us":
+        if eligibility != "review":
+            reasons.append("location excluded: non-US-only internship")
+        return "excluded"
+    if status not in {"us", "mixed"} and eligibility == "eligible":
+        reasons.append(f"location unverified (review only): {location.get('reason', 'unknown')}")
+        return "review"
+    return eligibility
 
 
 def _eligibility_signal(job: Job) -> tuple[int, list[str]]:
@@ -629,8 +672,11 @@ def gates(job: Job, now: int | None = None) -> tuple[bool, bool, list[str]]:
     invalid_url = not canonical_url(job.url)
     if not job.profile:
         job.profile = "internship"
-    locations = " | ".join(job.locations or [])
-    if INTERNSHIP_FOREIGN_HINTS.search(locations) and not EXPLICIT_US_LOCATION.search(locations):
+    location = assess_us_location(job.locations, remote=bool(job.remote))
+    job.location_eligibility = location
+    location_review = (f"location unverified (review only): {location['reason']}"
+                       if location["status"] == "unknown" else "")
+    if location["status"] == "non_us":
         return False, False, ["non-US-only internship"]
     if EXPERIENCED_TITLE_RE.search(job.title):
         return False, False, ["experienced or doctoral internship title"]
@@ -643,12 +689,16 @@ def gates(job: Job, now: int | None = None) -> tuple[bool, bool, list[str]]:
         reasons = ["explicit full-time-only signal: review only"]
         if invalid_url:
             reasons.append("invalid posting URL (dashboard/review only)")
+        if location_review:
+            reasons.append(location_review)
         return True, False, reasons
     signal = (job.internship_eligibility or {}).get("internship_signal", "unknown")
     if signal in {"unknown", "source_only"}:
         reasons = ["internship signal review: no positive title or posting evidence"]
         if invalid_url:
             reasons.append("invalid posting URL (dashboard/review only)")
+        if location_review:
+            reasons.append(location_review)
         return True, False, reasons
     if signal == "title":
         reasons.append("internship title evidence")
@@ -656,16 +706,24 @@ def gates(job: Job, now: int | None = None) -> tuple[bool, bool, list[str]]:
         reasons.append("internship/student posting evidence")
     requirement = (job.internship_eligibility or {}).get("degree_requirement", "unknown")
     if requirement == "graduate_only":
+        if location_review:
+            reasons.append(location_review)
         return True, False, reasons + ["graduate-only requirement: review only"]
     current_term = term_status(job.internship_eligibility or {}, now)
     if current_term == "past":
+        if location_review:
+            reasons.append(location_review)
         return True, False, reasons + ["past internship term: review only"]
     if job.internship_eligibility.get("status") == "explicit":
         reasons.append("graduation/class-year eligibility evidence")
     elif job.internship_eligibility.get("status") == "unknown":
         reasons.append("internship eligibility not stated")
     if invalid_url:
-        return True, False, reasons + ["invalid posting URL (dashboard/review only)"]
+        reasons.append("invalid posting URL (dashboard/review only)")
+        return True, False, reasons
+    if location["status"] == "unknown":
+        reasons.append(f"location unverified (review only): {location['reason']}")
+        return True, False, reasons
     return True, True, reasons
 
 
@@ -734,28 +792,39 @@ def score(job: Job, now: int) -> None:
     value = raw_value
     if value > 100:
         reasons.append(f"internship score cap applied -{value - 100:g}")
+        value = 100
+
+    # Sector preference is Victor-specific mission context, not neutral
+    # evidence. Keep prestige, role quality, eligibility, pay, and work
+    # evidence visible to generic consumers without penalizing other sectors.
+    evidence_value = round(raw_value - dimensions["sector_preference"], 1)
+    evidence_value = min(evidence_value, 100)
     if (job.internship_eligibility or {}).get("employment_signal") == "full_time_only":
         review_cap = int(cfg.get("full_time_review_cap", 34))
         if value > review_cap:
             reasons.append(f"full-time review cap applied -{value - review_cap:g}")
             value = review_cap
+        evidence_value = min(evidence_value, review_cap)
     degree_requirement = (job.internship_eligibility or {}).get("degree_requirement", "unknown")
     current_term = term_status(job.internship_eligibility or {}, now)
     if degree_requirement == "graduate_only":
         reasons.append("graduate-only requirement: review cap applied")
         value = min(value, int(cfg.get("graduate_only_review_cap", 34)))
+        evidence_value = min(evidence_value, int(cfg.get("graduate_only_review_cap", 34)))
     if current_term == "past":
         reasons.append("past internship term: review cap applied")
         value = min(value, int(cfg.get("past_term_review_cap", 34)))
+        evidence_value = min(evidence_value, int(cfg.get("past_term_review_cap", 34)))
     if defense:
         defense_cap = max(0, int(cfg.get("defense_score_cap", 12)))
         if value > defense_cap:
             reasons.append(f"defense score cap applied -{value - defense_cap:g}")
             value = defense_cap
+        evidence_value = min(evidence_value, defense_cap)
     job.score_raw = raw_value
     job.score_calibrated = max(0, min(100, round(value)))
     job.score = job.score_calibrated
-    job.evidence_score = job.score_calibrated
+    job.evidence_score = max(0, min(100, round(evidence_value)))
     signal = (job.internship_eligibility or {}).get("internship_signal", "unknown")
     full_time_only = (
         (job.internship_eligibility or {}).get("employment_signal") == "full_time_only"
@@ -767,6 +836,7 @@ def score(job: Job, now: int) -> None:
         and degree_requirement != "graduate_only" and current_term != "past"
         else "review"
     )
+    job.eligibility = _apply_location_label(job, job.eligibility, reasons)
     job.priority_tier = "recommended" if job.evidence_score >= 60 else "explore"
     job.score_dimensions = dimensions
     job.score_dimensions_raw = dict(dimensions)
@@ -821,6 +891,12 @@ def annotate(job: Job) -> dict:
             parsed["status"] = "open"
     work_points, work_reasons = _work_quality_signal(job)
     parsed["work_quality"] = {"points": work_points, "reasons": work_reasons}
+    healthcare_evidence = []
+    excerpt = _healthcare_team_evidence(job)
+    if excerpt:
+        healthcare_evidence.append(excerpt)
+    if healthcare_evidence:
+        parsed["healthcare_team_evidence"] = list(dict.fromkeys(healthcare_evidence))[:2]
     # Employer-page enrichment uses these fields to enforce retry cooldowns.
     # Keep them through every annotate/rescore pass; dropping them causes the
     # crawler to refetch the same source on every run.

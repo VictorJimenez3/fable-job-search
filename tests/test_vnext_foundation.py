@@ -65,10 +65,13 @@ def test_cursor_api_filters_action_queue_and_blocks_unsafe_urls():
         const now = Math.floor(Date.now()/1000);
         global.fetch = async () => ({ok:true, json:async () => ({
           fresh:{company:"Fresh", title:"Engineer", url:"https://example.com/job", score:80,
+            location_eligibility:{status:"us"},
             alert_ok:true, posted_at:now-3600, last_seen_at:now, score_reasons:["role fit"]},
           hostile:{company:"Hostile", title:"Engineer", url:"javascript:alert(1)", score:90,
+            location_eligibility:{status:"us"},
             alert_ok:true, posted_at:now-3600, last_seen_at:now, score_reasons:[]},
           old:{company:"Old", title:"Engineer", url:"https://example.com/old", score:99,
+            location_eligibility:{status:"us"},
             alert_ok:true, posted_at:now-40*86400, last_seen_at:now, score_reasons:[]}
         })});
         const req = {
@@ -135,6 +138,56 @@ def test_legacy_closed_job_detail_reads_full_history_record():
           assert.deepEqual(res.body.data.score_reasons, ['role fit +20']);
           assert.equal(res.body.data.posting_facts.years_min, 0);
           assert.equal(calls.length, 2);
+        }).catch(error => {console.error(error);process.exitCode=1;});
+        """
+    )
+    completed = subprocess.run(["node", "-e", script], cwd=ROOT, capture_output=True, text=True)
+    assert completed.returncode == 0, completed.stdout + completed.stderr
+
+
+@pytest.mark.skipif(not shutil.which("node"), reason="Node is required for Vercel API runtime checks")
+def test_applications_list_prefers_safe_manual_urls_over_posting_fallbacks():
+    script = textwrap.dedent(
+        """
+        const assert = require("node:assert/strict");
+        const Module = require("module");
+        const originalLoad = Module._load;
+        const rows = [
+          {id:"manual", url:"https://victor.example/manual",
+            posting_url:"https://boards.greenhouse.io/acme/jobs/1", external_links:{}},
+          {id:"jobright", url:"https://jobright.ai/jobs/info/2",
+            posting_url:"https://jobs.lever.co/acme/2", external_links:{}},
+          {id:"simplify", url:"https://simplify.jobs/p/3",
+            posting_url:"https://jobs.lever.co/acme/3", external_links:{}},
+          {id:"direct", url:"https://victor.example/direct",
+            posting_url:"https://jobright.ai/jobs/info/3", external_links:{}},
+          {id:"unsafe", url:"javascript:alert(1)", posting_url:"https://jobs.lever.co/acme/4", external_links:{}},
+          {id:"both-unsafe", url:"javascript:alert(1)", posting_url:"javascript:alert(2)", external_links:{}},
+          {id:"known-alt", url:"https://careers.acme.example/old", posting_url:"https://jobs.lever.co/acme/6",
+            external_links:{alternate_urls:["https://careers.acme.example/old"]}},
+        ];
+        Module._load = function(request, parent, isMain) {
+          if (request === "./_auth") return {owner: () => true};
+          if (request === "./_db") return {
+            configured: () => true,
+            database: () => ({query: async () => ({rows})}),
+            serverError: (res, error) => res.status(500).json({error: String(error)}),
+          };
+          return originalLoad.call(this, request, parent, isMain);
+        };
+        const applications = require("./webapp/api/v1/_applications");
+        const res = {statusCode:0, body:null,
+          status(code){this.statusCode=code;return this;}, json(value){this.body=value;}};
+        applications({method:"GET", query:{profile:"new_grad"}}, res).then(() => {
+          assert.equal(res.statusCode, 200);
+          const byId = Object.fromEntries(res.body.data.map(row => [row.id, row.url]));
+          assert.equal(byId.manual, "https://victor.example/manual");
+          assert.equal(byId.jobright, "https://jobs.lever.co/acme/2");
+          assert.equal(byId.simplify, "https://jobs.lever.co/acme/3");
+          assert.equal(byId.direct, "https://victor.example/direct");
+          assert.equal(byId.unsafe, "https://jobs.lever.co/acme/4");
+          assert.equal(byId["both-unsafe"], "");
+          assert.equal(byId["known-alt"], "https://jobs.lever.co/acme/6");
         }).catch(error => {console.error(error);process.exitCode=1;});
         """
     )

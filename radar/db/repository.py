@@ -8,8 +8,10 @@ from collections.abc import Iterator
 from contextlib import contextmanager
 from datetime import UTC, datetime, timedelta
 
-from sqlalchemy import Engine, create_engine, func, select, text, update
+from sqlalchemy import Engine, case, create_engine, func, select, text, update
 from sqlalchemy.dialects.postgresql import insert
+
+from radar.identity import canonical_url
 
 from .schema import (
     application_events,
@@ -27,6 +29,55 @@ from .schema import (
 
 def database_url() -> str:
     return os.environ.get("DATABASE_URL", "").strip()
+
+
+def _merge_external_links(existing: dict | None, incoming: dict | None) -> dict:
+    """Merge application receipts without erasing tracker provenance."""
+    merged = dict(existing or {}) if isinstance(existing, dict) else {}
+    if not isinstance(incoming, dict):
+        return merged
+    for key, value in incoming.items():
+        if value in (None, "", [], {}):
+            continue
+        if key in {"alternate_urls", "urls"} and isinstance(value, list):
+            current = list(merged.get(key) or []) if isinstance(merged.get(key), list) else []
+            known = {canonical_url(url) or str(url).strip() for url in current}
+            for url in value:
+                if url in (None, ""):
+                    continue
+                marker = canonical_url(url) or str(url).strip()
+                if marker not in known:
+                    current.append(url)
+                    known.add(marker)
+            if current:
+                merged[key] = current
+            continue
+        merged[key] = value
+    return merged
+
+
+_AGGREGATOR_URL_RE = (
+    r"^https?://([^/]+\.)?"
+    r"(?:jobright\.ai|simplify\.jobs|indeed\.com|linkedin\.com)(?:/|$)"
+)
+
+
+def _application_url_update_expression(excluded_url):
+    """SQL upsert URL policy shared by Postgres application writes."""
+    existing_url = applications.c.url
+    return case(
+        (excluded_url.is_(None), existing_url),
+        (excluded_url == "", existing_url),
+        (
+            existing_url.op("~*")(_AGGREGATOR_URL_RE)
+            & excluded_url.op("~*")(r"^https?://")
+            & excluded_url.op("!~*")(_AGGREGATOR_URL_RE),
+            excluded_url,
+        ),
+        (existing_url.is_(None), excluded_url),
+        (existing_url == "", excluded_url),
+        else_=existing_url,
+    )
 
 
 class RadarRepository:
@@ -147,7 +198,23 @@ class RadarRepository:
     def record_application_event(self, application: dict, event: dict) -> uuid.UUID:
         application_id = application.get("id") or uuid.uuid4()
         with self.transaction() as connection:
-            app_statement = insert(applications).values(**{**application, "id": application_id})
+            identity_filter = (
+                (applications.c.profile_id == application.get("profile_id"))
+                & (applications.c.posting_id == application.get("posting_id"))
+                if application.get("posting_id") is not None
+                else applications.c.id == application_id
+            )
+            current_links = connection.execute(
+                select(applications.c.external_links).where(identity_filter)
+            ).scalar_one_or_none()
+            merged_links = _merge_external_links(
+                current_links, application.get("external_links")
+            )
+            app_statement = insert(applications).values(**{
+                **application,
+                "id": application_id,
+                "external_links": merged_links,
+            })
             conflict_target = (
                 {"constraint": "uq_application_posting_profile"}
                 if application.get("posting_id") is not None
@@ -159,6 +226,10 @@ class RadarRepository:
                     "current_stage": app_statement.excluded.current_stage,
                     "updated_at": app_statement.excluded.updated_at,
                     "external_links": app_statement.excluded.external_links,
+                    # A resolver refresh may replace a Jobright discovery URL,
+                    # but an owner-entered direct/manual link must remain the
+                    # primary URL.  Empty incoming values never erase one.
+                    "url": _application_url_update_expression(app_statement.excluded.url),
                 },
             ).returning(applications.c.id)
             application_id = connection.execute(upsert_statement).scalar_one()

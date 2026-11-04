@@ -9,7 +9,7 @@ from xml.sax.saxutils import escape
 from . import lifecycle
 from .config import DOCS_DIR, github_repo, profile, profile_id
 from .provenance import alternate_link_label, source_links
-from .score import career_priority
+from .score import ranking_key
 
 
 def _age(posted_at, now) -> str:
@@ -38,8 +38,7 @@ def render_dashboard(jobs: dict, registry: dict, runs: list) -> str:
     # Alert-eligible roles are the actual user-facing matches. Dashboard-only
     # roles remain available for audit/context, but raw score alone must not
     # let an off-field or experienced role outrank a qualified new-grad role.
-    rows.sort(key=lambda j: (0 if j.get("alert_ok") else 1,
-                             -career_priority(j), -j["score"], -(j.get("posted_at") or 0)))
+    rows.sort(key=lambda j: ((0 if j.get("alert_ok") else 1),) + ranking_key(j))
     rows = rows[:150]
 
     active = sum(1 for e in registry.values() if e["status"] == "active")

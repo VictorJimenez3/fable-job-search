@@ -9,14 +9,31 @@ import uuid
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlsplit
 
 from sqlalchemy import func, select
 
 from radar.config import ROOT
+from radar.identity import canonical_url
+from radar.link_resolver import is_aggregator_url
 from radar.state import load_job_snapshot
 
 from .repository import RadarRepository, repository
 from .schema import application_events, applications, postings
+
+_TRACKER_AGGREGATOR_HOSTS = frozenset({
+    "jobright.ai", "simplify.jobs", "indeed.com", "linkedin.com",
+})
+
+
+def _is_tracker_aggregator_url(url: str | None) -> bool:
+    try:
+        host = (urlsplit(str(url or "")).hostname or "").lower().rstrip(".")
+    except ValueError:
+        host = ""
+    return is_aggregator_url(url) or host in _TRACKER_AGGREGATOR_HOSTS or any(
+        host.endswith("." + base) for base in _TRACKER_AGGREGATOR_HOSTS
+    )
 
 
 def public_id(profile_id: str, record: dict[str, Any]) -> str:
@@ -31,6 +48,65 @@ def _at(value: Any, fallback: datetime) -> datetime:
         return datetime.fromtimestamp(int(value), tz=UTC)
     except (TypeError, ValueError, OverflowError):
         return fallback
+
+
+def _legacy_posting_links(record: dict[str, Any]) -> tuple[str, list[str]]:
+    """Normalize a legacy posting URL and retain resolver provenance."""
+    source_raw = str(record.get("url") or "").strip()
+    source_url = canonical_url(source_raw)
+    resolution = record.get("link_resolution") or {}
+    resolved_raw = str(resolution.get("resolved_url") or "").strip()
+    resolved_url = canonical_url(resolved_raw)
+    primary = (
+        resolved_url
+        if resolution.get("status") != "source_only"
+        and resolved_url
+        and not _is_tracker_aggregator_url(resolved_url)
+        else source_url
+    )
+    alternates = list(record.get("alternate_urls") or [])
+    alternate_keys = {canonical_url(value) for value in alternates if canonical_url(value)}
+    primary = primary or resolved_url
+    for candidate in (source_raw, resolved_raw, resolution.get("original_url")):
+        key = canonical_url(candidate)
+        if key and key != primary and key not in alternate_keys:
+            alternates.append(candidate)
+            alternate_keys.add(key)
+    return primary, alternates
+
+
+def _legacy_application_links(entry: dict[str, Any], resolved: dict | None) -> tuple[str, list[str]]:
+    """Choose a safe application URL and retain discovery/manual alternatives."""
+    resolved = resolved or {}
+    metadata = resolved.get("metadata") or {}
+    resolution = metadata.get("link_resolution") or resolved.get("link_resolution") or {}
+    resolved_record = {
+        "url": resolved.get("canonical_url"),
+        "link_resolution": resolution,
+        "alternate_urls": metadata.get("alternate_urls") or [],
+    }
+    resolved_url, resolved_alternates = _legacy_posting_links(resolved_record)
+    entry_raw = str(entry.get("url") or "").strip()
+    entry_key = canonical_url(entry_raw)
+    entry_alternates = list(entry.get("alternate_urls") or [])
+    entry_url = entry_key
+    if entry_key and _is_tracker_aggregator_url(entry_key):
+        entry_url, resolver_alternates = _legacy_posting_links(entry)
+        entry_alternates.extend(resolver_alternates)
+    # An owner-entered direct/manual URL remains primary. A legacy aggregator
+    # URL is replaced by the normalized resolved posting URL.
+    if resolved_url and (not entry_key or _is_tracker_aggregator_url(entry_key)):
+        primary = resolved_url
+    else:
+        primary = entry_url or resolved_url
+    alternates = list(entry_alternates)
+    alternate_keys = {canonical_url(value) for value in alternates if canonical_url(value)}
+    for candidate in [*resolved_alternates, resolved_url]:
+        key = canonical_url(candidate)
+        if key and key != primary and key not in alternate_keys:
+            alternates.append(candidate)
+            alternate_keys.add(key)
+    return primary, alternates
 
 
 def import_legacy(root: Path = ROOT, repo: RadarRepository | None = None) -> dict[str, Any]:
@@ -58,6 +134,27 @@ def import_legacy(root: Path = ROOT, repo: RadarRepository | None = None) -> dic
                     company_name,
                     {"sector": str(value.get("sector") or "")[:80]},
                 )
+                posting_metadata = dict(value.get("metadata") or {}) if isinstance(value.get("metadata"), dict) else {}
+                location_eligibility = value.get("location_eligibility")
+                posting_metadata["location_eligibility"] = (
+                    location_eligibility if isinstance(location_eligibility, dict) else {}
+                )
+                try:
+                    ranking_score = max(0.0, min(100.0, float(value.get("score") or 0)))
+                except (TypeError, ValueError):
+                    ranking_score = 0.0
+                posting_url, posting_alternates = _legacy_posting_links(value)
+                posting_metadata["ranking_score"] = ranking_score
+                if posting_alternates:
+                    posting_metadata["alternate_urls"] = posting_alternates
+                posting_metadata.update({
+                    "legacy_id": legacy_id,
+                    "source": value.get("source"),
+                    "source_board": value.get("source_board"),
+                    "source_board_variants": value.get("source_board_variants") or [],
+                    "ats": value.get("ats"),
+                    "link_resolution": value.get("link_resolution") or {},
+                })
                 posting_uuid = repo.upsert_posting(
                     {
                         "public_id": public_id(profile_id, {**value, "id": legacy_id}),
@@ -65,7 +162,7 @@ def import_legacy(root: Path = ROOT, repo: RadarRepository | None = None) -> dic
                         "company_id": company_id,
                         "company": company_name,
                         "title": str(value.get("title") or "Untitled")[:500],
-                        "canonical_url": str(value.get("url") or ""),
+                        "canonical_url": posting_url,
                         "locations": value.get("locations") or [],
                         "remote": bool(value.get("remote")),
                         "salary": str(value.get("salary") or ""),
@@ -83,14 +180,7 @@ def import_legacy(root: Path = ROOT, repo: RadarRepository | None = None) -> dic
                         else "archived",
                         "status_reason": str(value.get("posting_status_reason") or ""),
                         "posting_facts": value.get("posting") or {},
-                        "metadata": {
-                            "legacy_id": legacy_id,
-                            "source": value.get("source"),
-                            "source_board": value.get("source_board"),
-                            "source_board_variants": value.get("source_board_variants") or [],
-                            "ats": value.get("ats"),
-                            "link_resolution": value.get("link_resolution") or {},
-                        },
+                        "metadata": posting_metadata,
                     }
                 )
                 repo.add_alias(str(legacy_id), posting_uuid, "legacy_id")
@@ -161,6 +251,7 @@ def import_legacy(root: Path = ROOT, repo: RadarRepository | None = None) -> dic
                     "dimensions": value.get("score_dimensions"),
                     "reasons": reasons,
                     "alert_ok": value.get("alert_ok"),
+                    "location_eligibility": location_eligibility,
                 }
                 repo.upsert_score(
                     {
@@ -203,6 +294,12 @@ def import_legacy(root: Path = ROOT, repo: RadarRepository | None = None) -> dic
                 "not_pursuing",
             }:
                 stage = "saved"
+            application_url, alternate_urls = _legacy_application_links(entry, resolved)
+            external_links = {
+                key: entry.get(key) for key in ("notion_page_id", "sheet_row") if entry.get(key)
+            }
+            if alternate_urls:
+                external_links["alternate_urls"] = alternate_urls
             repo.record_application_event(
                 {
                     "id": app_id,
@@ -211,10 +308,8 @@ def import_legacy(root: Path = ROOT, repo: RadarRepository | None = None) -> dic
                     "current_stage": stage,
                     "company": str(entry.get("company") or (resolved or {}).get("company") or "Unknown")[:240],
                     "title": str(entry.get("title") or (resolved or {}).get("title") or "Untitled")[:500],
-                    "url": str(entry.get("url") or (resolved or {}).get("canonical_url") or ""),
-                    "external_links": {
-                        key: entry.get(key) for key in ("notion_page_id", "sheet_row") if entry.get(key)
-                    },
+                    "url": application_url,
+                    "external_links": external_links,
                     "created_at": occurred,
                     "updated_at": occurred,
                 },

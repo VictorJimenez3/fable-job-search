@@ -51,6 +51,9 @@ class Job:
     alternate_urls: list[str] = field(default_factory=list)
     link_resolution: dict = field(default_factory=dict)
     locations: list[str] = field(default_factory=list)
+    # Work-location evidence is separate from remote workplace type and from
+    # citizenship/visa eligibility. Unknown geography remains review-only.
+    location_eligibility: dict = field(default_factory=dict)
     posted_at: int | None = None     # unix epoch seconds, None if unknown
     description: str = ""            # plain text, may be empty; trimmed to 4000 chars
     salary: str = ""
@@ -126,7 +129,7 @@ class Job:
             del d["internship_eligibility"]
         for key in ("source_board", "source_board_variants", "source_variants",
                     "source_url_variants", "alternate_urls", "link_resolution",
-                    "posting_family_id", "posting_identity"):
+                    "posting_family_id", "posting_identity", "location_eligibility"):
             if not d.get(key):
                 d.pop(key, None)
         if d.get("startup_stage") == "unknown":

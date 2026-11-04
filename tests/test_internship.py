@@ -514,12 +514,66 @@ def test_internship_score_has_small_healthcare_preference_and_ignores_role_remot
     annotate(swe)
     score(ai, int(time.time()))
     score(swe, int(time.time()))
-    assert ai.score == swe.score + 4
-    assert ai.score_dimensions["sector_preference"] == 4
+    assert ai.score == swe.score + 3
+    assert ai.score_dimensions["sector_preference"] == 3
     assert swe.score_dimensions["sector_preference"] == 0
     assert ai.score_dimensions["role_fit"] == swe.score_dimensions["role_fit"]
-    assert any(reason == "healthcare preference +4" for reason in ai.score_reasons)
+    assert any(reason == "healthcare preference +3" for reason in ai.score_reasons)
     assert not any("remote" in reason.lower() for reason in ai.score_reasons)
+
+
+def test_internship_healthcare_team_evidence_adds_bounded_preference(monkeypatch):
+    monkeypatch.setenv("RADAR_PROFILE", "internship")
+    from radar import config
+    monkeypatch.setattr(config, "_profile_cache", {})
+    now = int(time.time())
+    posting = job(
+        company="Acme Systems",
+        title="Software Engineering Intern — Summer 2027",
+        description=("Responsibilities: Build clinical software for patients on our healthcare team.\n"
+                     "Qualifications: Current undergraduate students may apply."),
+    )
+    annotate(posting)
+    score(posting, now)
+    assert posting.score_dimensions["sector_preference"] == 3
+    assert any("healthcare preference +3" in reason for reason in posting.score_reasons)
+
+
+def test_internship_healthcare_evidence_replaces_stale_snippet_and_replays_boundedly(monkeypatch):
+    monkeypatch.setenv("RADAR_PROFILE", "internship")
+    from radar import config
+    monkeypatch.setattr(config, "_profile_cache", {})
+    health = job(
+        company="Acme Systems",
+        title="Software Engineering Intern — Summer 2027",
+        description=("Responsibilities: Build clinical software for patients on our healthcare team.\n"
+                     "Qualifications: Current undergraduate students may apply."),
+    )
+    annotate(health)
+    saved = dict(health.internship_eligibility)
+    assert saved["healthcare_team_evidence"]
+
+    changed = job(
+        company="Acme Systems",
+        title=health.title,
+        description=("Responsibilities: Build logistics software for warehouse operations.\n"
+                     "Qualifications: Current undergraduate students may apply."),
+        internship_eligibility=saved,
+    )
+    annotate(changed)
+    score(changed, int(time.time()))
+    assert "healthcare_team_evidence" not in changed.internship_eligibility
+    assert changed.score_dimensions["sector_preference"] == 0
+
+    replayed = job(
+        company="Acme Systems",
+        title=health.title,
+        description="",
+        internship_eligibility=saved,
+    )
+    annotate(replayed)
+    score(replayed, int(time.time()))
+    assert replayed.score_dimensions["sector_preference"] == 3
 
 
 def test_internship_score_rewards_pay_prestige_and_work_without_personal_signals(monkeypatch):
@@ -612,8 +666,8 @@ def test_internship_prestige_and_defense_policy(monkeypatch):
         annotate(posting)
         score(posting, now)
     assert pinterest.score_dimensions["prestige"] == 65
-    assert healthcare.score_dimensions["sector_preference"] == 4
-    assert bank.score_dimensions["sector_preference"] == -4
+    assert healthcare.score_dimensions["sector_preference"] == 3
+    assert bank.score_dimensions["sector_preference"] == -2
     assert defense.score <= 12
     assert defense.score_dimensions["defense_penalty"] == -70
     assert any("automatic low-priority penalty -70" in reason for reason in defense.score_reasons)

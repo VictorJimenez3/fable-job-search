@@ -21,10 +21,12 @@ from __future__ import annotations
 import json
 import re
 import time
+from urllib.parse import urlsplit
 
 from . import state
 from .config import env, profile_id
 from .identity import canonical_url
+from .link_resolver import is_aggregator_url
 from .models import norm
 from .notion_sync import sync_applied, sync_from_notion
 from .score import update_feedback_from_applied
@@ -51,6 +53,19 @@ TRACKER_STAGE_ORDER = {
 
 AUTOPILOT_CHOICE_STAGES = {"saved", "to_tailor"}
 AUTOPILOT_TERMINAL_POSTING_STATES = {"expired", "filled", "closed"}
+_TRACKER_AGGREGATOR_HOSTS = frozenset({
+    "jobright.ai", "simplify.jobs", "indeed.com", "linkedin.com",
+})
+
+
+def _is_tracker_aggregator_url(url: str | None) -> bool:
+    try:
+        host = (urlsplit(str(url or "")).hostname or "").lower().rstrip(".")
+    except ValueError:
+        host = ""
+    return is_aggregator_url(url) or host in _TRACKER_AGGREGATOR_HOSTS or any(
+        host.endswith("." + base) for base in _TRACKER_AGGREGATOR_HOSTS
+    )
 
 
 def autopilot_choices(applied: list, jobs: dict) -> list:
@@ -131,6 +146,80 @@ def _stage_rank(stage: str | None) -> int:
 def _tracker_key(entry: dict) -> tuple[str, str]:
     url = canonical_url(entry.get("url"))
     return ("url", url) if url else ("id", str(entry.get("id", "")))
+
+
+def _authoritative_job_url(job: dict) -> str:
+    """Return a verified direct posting URL, if link resolution found one.
+
+    A job's discovery URL can remain a Jobright fallback.  The resolver keeps
+    the employer URL in ``resolved_url`` and marks the result as resolved;
+    callers that already have a direct ``url`` need no extra metadata.
+    """
+    resolution = job.get("link_resolution") or {}
+    if resolution.get("status") == "source_only":
+        return ""
+    candidates = []
+    if resolution.get("status") == "resolved":
+        candidates.append(resolution.get("resolved_url"))
+    candidates.extend((job.get("canonical_url"), job.get("posting_url"), job.get("url")))
+    for candidate in candidates:
+        normalized = canonical_url(candidate)
+        if normalized and not _is_tracker_aggregator_url(normalized):
+            return normalized
+    return ""
+
+
+def promote_application_url(entry: dict, job: dict) -> bool:
+    """Promote a verified job URL into one tracker entry, preserving history.
+
+    Only a known aggregator URL or a URL explicitly carried by the current job
+    as an alternate may be replaced. This protects owner-entered/manual links
+    from an unrelated resolver result. The previous URL is retained exactly
+    once in ``alternate_urls`` for auditability and retry safety.
+    """
+    if not isinstance(entry, dict) or not isinstance(job, dict):
+        return False
+    current_raw = str(entry.get("url") or "").strip()
+    current = canonical_url(current_raw)
+    authoritative = _authoritative_job_url(job)
+    if not current or not authoritative or current == authoritative:
+        return False
+
+    resolution = job.get("link_resolution") or {}
+    known_alternates = [
+        *(job.get("alternate_urls") or []),
+        resolution.get("original_url"),
+        resolution.get("source_url"),
+    ]
+    known = {canonical_url(value) for value in known_alternates if canonical_url(value)}
+    if not _is_tracker_aggregator_url(current) and current not in known:
+        return False
+
+    # A legacy synced entry may predate the receipt field.  Preserve the old
+    # value as the Notion/sheet comparison baseline before replacing it so a
+    # subsequent sync performs exactly one URL-only patch.
+    if entry.get("notion_synced") and not entry.get("notion_url"):
+        entry["notion_url"] = current_raw
+
+    alternates = list(entry.get("alternate_urls") or [])
+    alternate_keys = {canonical_url(value) for value in alternates if canonical_url(value)}
+    if current_raw and current not in alternate_keys:
+        alternates.append(current_raw)
+    entry["alternate_urls"] = alternates
+    entry["url"] = authoritative
+    return True
+
+
+def refresh_application_urls(entries: list[dict], jobs: dict) -> int:
+    """Refresh tracker rows whose matching job has a verified direct URL."""
+    changed = 0
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+        job = jobs.get(str(entry.get("id") or ""))
+        if isinstance(job, dict) and promote_application_url(entry, job):
+            changed += 1
+    return changed
 
 
 def _tracker_winner_key(index: int, entry: dict) -> tuple:
@@ -273,6 +362,7 @@ def record_applied(job: dict, applied: list, fb: dict, via: str, stage: str = "a
                      or (job_url and canonical_url(a.get("url")) == job_url)), None)
     now = int(time.time())
     if existing:
+        url_changed = promote_application_url(existing, job)
         existing.setdefault("profile", job.get("profile") or profile_id())
         for key in ("company", "title", "url", "locations", "sector", "score", "source"):
             if existing.get(key) in (None, "", [], {}) and job.get(key) not in (None, "", [], {}):
@@ -296,7 +386,7 @@ def record_applied(job: dict, applied: list, fb: dict, via: str, stage: str = "a
             existing.pop("tracker_removed_at", None)
             existing.pop("notion_deleted_at", None)
             return True
-        return False
+        return url_changed
     entry = {
         "id": job["id"], "company": job["company"], "title": job["title"],
         "url": job.get("url", ""), "locations": job.get("locations", []),

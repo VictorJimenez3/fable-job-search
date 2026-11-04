@@ -6,9 +6,18 @@ import json
 import uuid
 
 import pytest
+from sqlalchemy.dialects import postgresql
+from sqlalchemy.dialects.postgresql import insert
 
 from radar import state
-from radar.db.import_legacy import import_legacy, public_id
+from radar.db.import_legacy import (
+    _legacy_application_links,
+    _legacy_posting_links,
+    import_legacy,
+    public_id,
+)
+from radar.db.repository import _application_url_update_expression
+from radar.db.schema import applications
 
 
 class CaptureRepository:
@@ -73,8 +82,68 @@ def _record(*, profile: str, legacy_id: str, status: str, score: int, source: st
         "score_version": 15,
         "score_dimensions": {"role_fit": 20, "mission": 6},
         "score_reasons": ["role:swe +20", "healthcare preference +6"],
+        "location_eligibility": {"status": "eligible", "reason": "remote"},
+        "metadata": {"owner_marker": "preserve"},
         "alert_ok": status == "open",
     }
+
+
+def test_legacy_import_promotes_metadata_resolved_url_and_keeps_aggregator_provenance():
+    record = {
+        "url": "https://jobright.ai/jobs/info/legacy",
+        "link_resolution": {
+            "status": "resolved",
+            "resolved_url": "https://jobs.lever.co/acme/legacy",
+        },
+    }
+    primary, alternates = _legacy_posting_links(record)
+    assert primary == "https://jobs.lever.co/acme/legacy"
+    assert alternates == ["https://jobright.ai/jobs/info/legacy"]
+
+    application_primary, application_alternates = _legacy_application_links(
+        {"url": "https://jobright.ai/jobs/info/legacy"},
+        {"canonical_url": "https://jobright.ai/jobs/info/legacy",
+         "metadata": {"link_resolution": record["link_resolution"]}},
+    )
+    assert application_primary == primary
+    assert "https://jobright.ai/jobs/info/legacy" in application_alternates
+
+
+def test_legacy_import_preserves_manual_application_url_when_resolved_url_differs():
+    primary, alternates = _legacy_application_links(
+        {"url": "https://victor.example/manual"},
+        {"canonical_url": "https://jobright.ai/jobs/info/legacy",
+         "metadata": {"link_resolution": {
+             "status": "resolved",
+             "resolved_url": "https://jobs.lever.co/acme/legacy",
+         }}},
+    )
+    assert primary == "https://victor.example/manual"
+    assert "https://jobs.lever.co/acme/legacy" in alternates
+
+
+def test_legacy_source_only_resolution_never_becomes_primary_direct_url():
+    primary, alternates = _legacy_posting_links({
+        "url": "https://jobright.ai/jobs/info/curator",
+        "link_resolution": {
+            "status": "source_only",
+            "resolved_url": "https://jobs.lever.co/acme/curator",
+        },
+    })
+    assert primary == "https://jobright.ai/jobs/info/curator"
+    assert "https://jobs.lever.co/acme/curator" in alternates
+
+
+def test_application_url_upsert_sql_has_direct_only_aggregator_promotion_guard():
+    statement = insert(applications).values(id=uuid.uuid4(), url="https://jobs.lever.co/acme/1")
+    upsert = statement.on_conflict_do_update(
+        index_elements=[applications.c.id],
+        set_={"url": _application_url_update_expression(statement.excluded.url)},
+    )
+    sql = str(upsert.compile(dialect=postgresql.dialect()))
+    assert "!~*" in sql
+    params = upsert.compile(dialect=postgresql.dialect()).params
+    assert any("simplify" in str(value) and "linkedin" in str(value) for value in params.values())
 
 
 @pytest.mark.parametrize(
@@ -121,6 +190,9 @@ def test_import_legacy_hydrates_history_for_both_job_lanes(
     assert closed_posting["posting_facts"] == closed["posting"]
     assert closed_posting["metadata"]["source"] == "greenhouse"
     assert closed_posting["metadata"]["ats"] == "greenhouse"
+    assert closed_posting["metadata"]["location_eligibility"]["status"] == "eligible"
+    assert closed_posting["metadata"]["owner_marker"] == "preserve"
+    assert closed_posting["metadata"]["ranking_score"] == closed["score"]
 
     reopened_posting = imported[reopened_id]
     assert reopened_posting["sector"] == "software"
