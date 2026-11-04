@@ -1,6 +1,6 @@
 # CLI handoff notes
 
-## Opportunity quality, durable links, and social discovery (2026-11-03; release validation)
+## Opportunity quality, durable links, and social discovery (2026-11-03; complete and live)
 
 The follow-up uses `codex/relevance-links-social-20261103`, based on production
 `4a84fba4743e01ed3133ab70b041d91116a29c98`, then rebased onto
@@ -36,10 +36,11 @@ Personal offer details and browser credentials are absent from public changes.
   Collection uses bounded public posts, conservative career
   links, post identity/age limits, cooldowns, and a shared companion checkout
   lock. Captions are source leads, not employer evidence. No LinkedIn scraping.
-- [ ] Publish through green CI, verify the Vercel build, update the Mac
-  companion, and activate the hourly social launch agent. The old enrichment environment uses Python 3.9/pip 21 and fails
-  installing the current Hatch project; a separate Python 3.12 environment has
-  been provisioned, pending launch-agent activation with the released code.
+- [x] Publish through green CI, verify the Vercel build, update the Mac
+  companion, and activate the hourly social launch agent. The legacy Python
+  3.9/pip 21 editable-install failure is fixed with a separate Python 3.12
+  environment; a real enrichment cycle has completed and published successfully.
+
 
 The final replay from production `f229982d…` retains **96,376 new-grad** and **37,808
 internship** records. Primary sizes are **82,977,122** and **47,497,291 bytes**.
@@ -56,13 +57,42 @@ archival or notification operations ran during replay.
 Independent identity/tracker review cleared the same-batch and receipt fixes.
 The latest full local run passes **917 tests / 3 skipped**; compile and
 correctness lint pass. Frontend typecheck, tests, lint, and build also pass.
-The final focused social/companion checks pass; deployment validation remains
-in progress. Classic desktop
+The final focused social/companion checks pass. Classic desktop
 and 390px mobile checks used real state in both lanes. vNext smoke checks used
 an explicitly identified local fixture API; both lane switches and viewports
 rendered without overflow. Live read-only Jobright probes for three existing
 listings returned `checked_no_direct` without errors, so retaining the aggregator
 and upgrading on a later verified sighting remains necessary.
+
+[PR #6644](https://github.com/VictorJimenez3/fable-job-search/pull/6644) merged as
+`04f089f2aabdabe48dfdb2b4dce85ceac23bc92b`. [Branch tests 41762653406](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41762653406),
+[production tests 41762991498](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41762991498),
+and [Vercel deployment 41763165342](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41763165342)
+passed; production Python CI reported **916 passed / 4 skipped**. The
+[friendly production URL](https://job-radar-newgrad.vercel.app/)
+serves the exact `04f089f2…` build marker and score-first label.
+Production browser checks at desktop and 390px mobile passed in both lanes,
+with no horizontal overflow. The observed main board showed 1,664 roles and
+the internship board 1,056, with visible location controls and score-first
+ordering. The SpaceX drawer showed confirmed US location evidence and a primary
+application action. No save, apply, or send action was performed. Both lanes
+still pass score-health after the actual Mac enrichment cycle.
+
+The actual hourly launch agent `com.jobradar.social` is loaded at a 3,600-second
+interval and completed its first run with exit 0: one successful account,
+12 posts, 12 newly observed post IDs, no errors, and no actionable employer
+URLs. It published `state/social.json` in `64c8ad59b18dac6ff9e26a9c244587ba55d0cd57`.
+Eight bounded career excerpts were retained; ordinary captions were omitted.
+Collection requires the Mac to be awake and its Chrome/OpenCLI connection to
+remain available. Browser profile identifiers remain local to the launch agent.
+
+The 7,200-second enrichment agent now uses `~/.jobradar/venv312` with Python
+3.12.13 and dependencies synchronized from the frozen lockfile. The formerly
+failing editable-install step passed. A real cycle exited 0, re-applied 3,721
+cached quality verdicts, rescored 18,547 recent jobs, and published
+`a1ed562cc805f76d8eefc2a022c528cbe2bc9e3f`. The companion checkout was clean
+and synchronized afterward. This validates the repaired runtime; it does not
+claim that new AI verdicts or company briefs were generated during that cycle.
 
 ## Internship quality follow-up (2026-11-03; complete and live)
 

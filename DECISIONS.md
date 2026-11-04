@@ -3900,3 +3900,25 @@ legacy Python 3.9/pip 21 environment; the fix uses a separate Python 3.12
 virtual environment and modern installer, with a shared lock preserving all
 unpushed manual work. Local validation is 916 passed and 3 skipped; no deployed
 claim is made until CI completes and the parent release handoff is complete.
+
+
+## 235. Verify the public social collector and repaired companion through actual scheduled runs (2026-11-03)
+
+The Rules v17/v9 follow-up in PR #6644 is published as
+`04f089f2aabdabe48dfdb2b4dce85ceac23bc92b`, with green branch/production CI and
+a verified Vercel build. This closes the pending runtime status recorded in
+DECISION #234. The hourly Zero2Sudo launch agent completed successfully and
+published its first 12 observed public posts, retaining eight bounded career
+excerpts. Those posts refer to Story/bio links, so they produced no invented
+jobs or alerts. Public-profile counts alone never establish public access:
+collection requires exact-account API proof or anonymously readable Instagram
+post content matching the observed caption. Unsafe links and emails are redacted.
+
+The existing enrichment companion failed because Python 3.9 and its old pip
+could not install the current project. A separate Python 3.12 environment
+preserves the old environment, honors installer overrides, and passes the
+actual install step. A real enrichment cycle completed with exit 0 and
+published its cached quality/scoring refresh. Both companions share one
+checkout lock, preserve unpublished local commits and manual merge/rebase
+work, and keep social publication limited to its own state file. Exact test,
+deployment, migration, and scheduled-run evidence belongs in `docs/CLI_HANDOFF.md`.

@@ -3,56 +3,32 @@
 The dream-system backlog. Each item is scoped enough to build on request;
 none block anything currently running.
 
-## 2026-11-03 current follow-up — in progress
+## 2026-11-03 opportunity quality and social discovery — published
 
-The current code uses new-grad **Rules v17** and internship **Rules v9**. The
-pre-rebase isolated replay contained 96,376 main-lane records and 36,861
-internship records, with primary outputs of 82,980,628 and 46,279,246 bytes
-respectively. Identity and location-drift checks reported zero duplicates or
-drift, and 316 application records were unchanged. Final storage is being
-regenerated after the remote rebase (the internship output is unchanged so far),
-so those replay values are not final publication metrics. Publication remains
-subject to CI and the parent release handoff. Resume tailoring remains
-deliberately out of scope.
+**SHIPPED in [PR #6644](https://github.com/VictorJimenez3/fable-job-search/pull/6644)**
+(DECISION #234), code `04f089f2aabdabe48dfdb2b4dce85ceac23bc92b`.
+New-grad Rules v17 and internship Rules v9 provide durable cross-source IDs,
+verified direct-link promotion, conservative US evidence, and consistent
+score-first ordering. Tracker edits and receipts are preserved. Ambiguous
+requisitions stay separate; historical sent emails and issue bodies stay historical.
 
-Stable IDs and URL promotion work in either sighting order. A URL-only upgrade
-retains the old URL/source and preserves manual tracker stage, custom fields,
-notes, and dates; scheduled Notion sync and connected Sheets converge on the
-canonical row. Existing sent emails and historical alert-issue bodies are not
-rewritten. Distinct real requisitions remain separate when a match is
-ambiguous, so fuzzy dedupe makes no 100% duplicate-free promise.
+Healthcare adds three points for company or actual team evidence. Missing pay
+is neutral. Unknown locations remain reviewable without alerts; foreign-only
+roles leave the active board. Nonpersonal evidence remains separate from
+personal ranking preferences.
 
-Current score ordering is score-first rather than a goal/career-priority
-override. Nonpersonal company/posting `evidence_score` is separate from the
-final personalized score. Healthcare is **+3** and finance is **-2** in both
-profiles. Healthcare comes from a recognized healthcare company or
-posting-scoped healthcare-team
-proof; a general tech employer requires the team proof. J&J/BMS sector
-recognition is not a prestige exception, and missing pay is neutral with no
-hard salary cutoff. Shared location status is `us`, `mixed`, `unknown`, or
-`non_us`; unknown is review-only/no-alert and non-US-only roles are excluded
-from the active board.
+The hourly Mac Instagram agent is active for Zero2Sudo. Its first scheduled-agent
+run read 12 posts and retained 8 career excerpts, with no actionable employer
+URLs and no invented jobs or alerts. Other researched accounts remain disabled.
+LinkedIn is search-links-only. The Mac enrichment environment now uses Python
+3.12, and both companions share a lock that preserves unpublished local work.
 
-The public zero2sudo Notion source remains a bounded review-only feed. The
-verified OpenCLI extension and signed-in Instagram browser are connected. The
-probe observed 12 posts, extracted 8 career excerpts, and found 0 actionable
-job URLs because the available destinations were Story/bio links; anonymous
-post visibility is verified against actual caption evidence. Hourly launchd activation is
-still pending publication, so no hourly-live claim is made. Other researched
-accounts are not auto-enabled without verified US technical direct links.
-LinkedIn scraping is not supported; public search links remain outbound only.
-Current final workflow, Vercel, crawl, migration, and social evidence belongs
-in `docs/CLI_HANDOFF.md`.
-
-The Mac enrichment failure was traced to the shared Python 3.9/pip 21
-environment. The fix uses a separate Python 3.12 virtual environment and a
-modern installer, with a shared lock that preserves all unpushed manual work.
-The latest local validation is 916 passed and 3 skipped; this section makes no
-deployed claim until CI completes.
-
-Private offer existence, role, and compensation numbers remain owner-only and
-must not enter public snapshots, dashboards, alert issues, RSS, source records,
-or documentation.
+The final migration replay retained 96,376 new-grad and 37,808 internship records,
+with zero canonical posting-key duplicates and zero location-assessment drift.
+All saved applications and upstream receipts were preserved. Local validation:
+917 tests passed, 3 skipped; production CI passed. Exact deployment, browser,
+and runtime evidence is maintained in `docs/CLI_HANDOFF.md`.
+Private offer details remain owner-only. Resume tailoring remains out of scope.
 
 ## 2026-11-03 reliability and discovery overhaul — historical verified release
 

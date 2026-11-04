@@ -149,13 +149,17 @@ zero2sudo Notion list contributes up to 25 **source-only** leads to both lanes
 for review; each lane keeps the appropriate roles.
 Those leads are intentionally not employer evidence: they need an employer
 posting, date, and liveness check before they can become alertable. An optional
-Mac-only OpenCLI Instagram collector starts with `zero2sudo`. The verified
-OpenCLI extension and signed-in Instagram browser are connected; the probe has
-captured public posts and career excerpts but found no actionable job URLs
-because available destinations were Story/bio links. Anonymous post-proof
-hardening and launchd-agent verification remain in progress, so do not count
-the hourly collector as live yet. Other researched accounts are not
-auto-enabled because they lack verified US technical direct-application links.
+Mac-only OpenCLI Instagram collector checks actual public `zero2sudo` posts
+hourly while the Mac is awake and Chrome is connected. Its first launch-agent
+run read 12 posts and retained 8 career excerpts, with zero actionable employer
+URLs because the posts refer to Story/bio links. Those observations do not
+become invented job listings or alerts. Public visibility is verified against
+anonymous post content. Other researched accounts remain disabled until their
+US technical coverage and direct application links are verified.
+Location and internship View filters combine. To inspect internships held for
+unclear geography, select **Location review · include unverified** and
+**past & review**; foreign-only postings remain excluded.
+
 The radar never scrapes LinkedIn. Optional public LinkedIn search links use the
 configured candidate graduation year (currently 2027), not a scraping
 dependency.

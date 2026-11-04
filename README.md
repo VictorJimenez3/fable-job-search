@@ -193,12 +193,12 @@ each) and YubHub's graduate-engineering feed (up to 100 rows, attributed to
 [zero2sudo Notion list](https://zero2sudo.notion.site/) remains enabled as a
 review-only, source-only lead feed in both lanes (up to 25 rows); each lane
 applies its own role gates, and curator notes are never employer evidence. An
-optional Mac-only OpenCLI collector is being hardened for public Instagram
-observation and starts with `zero2sudo`. The verified OpenCLI extension and
-signed-in Instagram browser are connected. The probe has captured public posts
-and career excerpts but found no actionable job URLs because the available
-destinations were Story/bio links; anonymous post visibility is verified against actual caption evidence. Hourly launchd activation remains pending publication, so this
-is not an hourly-live metrics claim. Other researched accounts are not
+optional Mac-only OpenCLI collector checks the actual public `zero2sudo`
+Instagram page hourly while the Mac is awake and Chrome is connected. Its first
+launch-agent run read 12 posts and retained 8 career excerpts. It found no
+usable employer URLs because those posts refer to Story/bio links, so no job
+records or alerts were invented. Anonymous post content verifies public access.
+Other researched accounts are not
 auto-enabled because they lack verified US technical direct-application links.
 The radar never scrapes LinkedIn. Every source listing URL is mined for ATS
 board tokens, so new companies expand direct monitoring automatically.
@@ -642,18 +642,19 @@ Mac (`brew install gh && gh auth login`). Logs: `~/.jobradar/logs/enrich.log`.
 The companion releases the model from memory after every request; confirm with
 `ollama ps` (it should show no loaded model between enrichment cycles).
 
-**Optional Instagram observation (hourly activation pending)**
+**Optional hourly Instagram observation**
 
-The Mac companion has an intended hourly, bounded OpenCLI collector for public
-career posts. It starts with the verified `zero2sudo` account and stores only
-allowlisted public post metadata as review-only source leads; it never treats
-an Instagram caption as employer evidence. The verified OpenCLI extension and
-signed-in Instagram browser are connected. The probe has captured public posts
-and career excerpts but found no actionable job URLs because the available
-destinations were Story/bio links; hourly launchd activation remains pending publication, so do not count the collector as
-live yet. It does not scrape LinkedIn,
-copy cookies, or enable the other researched accounts without verified US
-technical direct links.
+The Mac companion checks actual public `zero2sudo` posts every hour while the
+Mac is awake and its OpenCLI Chrome connection is available. The first live
+launch-agent run succeeded with 12 posts, 8 bounded career excerpts, and zero
+actionable employer links. Posts pointing only to Stories or a bio remain
+observations; they cannot generate invented jobs or alerts. Public access must
+be verified using exact-account evidence or anonymously readable post content.
+The collector redacts unsafe links and emails, deduplicates post IDs, applies
+failure cooldowns, and shares a checkout lock with enrichment. Logs are in
+`~/.jobradar/logs/social.log`; account status is in `state/social.json`.
+No cookies are copied and LinkedIn is not scraped. Other researched accounts
+stay disabled until their US technical job coverage and usable links are verified.
 
 Research watchlist (not enabled):
 
