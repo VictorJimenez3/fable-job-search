@@ -9,6 +9,8 @@ Victor wants **Dot inside ChatGPT** to be the preferred companion because the
 Mac is not always available. This applies to the whole project, including both
 job lanes. Dot's uptime is user-reported; browser access, durable storage,
 command execution, scheduling, and authentication must each be verified.
+The portable foundation shipped in [PR #6652](https://github.com/VictorJimenez3/fable-job-search/pull/6652)
+as `f92d5bb1a2292a912fb04e7a617611a584034f9b` (DECISION #236).
 Current access evidence and the next-session procedure are in
 [`CLI_HANDOFF.md`](docs/CLI_HANDOFF.md#dot-integration-2026-11-04-activation-pending).
 This section is the implementation plan; do not create a separate handoff.
@@ -51,11 +53,12 @@ existing `scripts/mac-companion/` runners and shared checkout lock.
   Execution needs an explicit dedicated clone, expected branch and primary
   runtime assignment; validate under the shared checkout lock. Preserve dirty
   work, unpublished commits and manual Git operations; propagate failures.
-- [ ] Verify read-only default, redaction, branch/worktree guards, lock
+- [x] Verify read-only default, redaction, branch/worktree guards, lock
   contention, child failure and supported action boundaries with isolated
   test repositories. Local validation passes: 19 focused tests and 936 full
   regression tests (3 skipped), compilation, lint and doctor/dry-run smoke
-  checks. Linux CI remains pending publication.
+  checks. [Linux CI 41888106962](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41888106962)
+  also passed Python, frontend, score-health and audit checks.
 
 ### Phase 2 — connect Dot and prove one bounded social run
 

@@ -23,8 +23,12 @@ Observed access boundary in this session:
 - No Dot installation, login, background schedule, credential transfer, CV
   transfer or production runtime cutover has occurred. Do not claim otherwise.
 
-The portable foundation is implemented on `codex/dot-companion-20261104`, from
-the fetched production branch, with publication/CI pending. It wraps the existing social and enrichment
+The portable foundation shipped through
+[PR #6652](https://github.com/VictorJimenez3/fable-job-search/pull/6652) as
+`f92d5bb1a2292a912fb04e7a617611a584034f9b`, after
+[Linux CI 41888106962](https://github.com/VictorJimenez3/fable-job-search/actions/runs/41888106962)
+passed Python, frontend, score-health and audit checks. The implementation
+branch is `codex/dot-companion-20261104`. It wraps the existing social and enrichment
 runners rather than duplicating ingestion or notification logic. Its doctor
 is read-only and explicitly leaves browser authentication, model health,
 publication authority and scheduling unverified. Execution is opt-in and
