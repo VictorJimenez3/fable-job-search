@@ -35,6 +35,7 @@ import requests
 
 from . import state
 from .config import env, profile
+from .identity import canonical_url
 from .score import role_bucket
 
 TRACKER_CLOSED_RETENTION_DAYS = 2
@@ -346,7 +347,8 @@ def sync_from_notion(applied: list) -> int:
     try:
         schema = resolve_database(token)
         stage_prop = _stage_property(schema)
-        if not stage_prop:
+        url_prop = "Job URL" if schema.get("properties", {}).get("Job URL") == "url" else None
+        if not stage_prop and not url_prop:
             return merged
         pages, cursor = [], None
         while True:
@@ -376,7 +378,29 @@ def sync_from_notion(applied: list) -> int:
         entry = by_page.get(page_key)
         if not entry:
             continue
-        prop = (page.get("properties") or {}).get(stage_prop) or {}
+        properties = page.get("properties") or {}
+        if url_prop:
+            remote_prop = properties.get(url_prop)
+            if isinstance(remote_prop, dict) and "url" in remote_prop:
+                remote_url = str(remote_prop.get("url") or "").strip()
+                has_receipt = "notion_url" in entry
+                previous_receipt = entry.get("notion_url")
+                baseline = previous_receipt if has_receipt else entry.get("url")
+                # A URL changed remotely since our last receipt. Treat it as
+                # an owner edit and never overwrite it with a resolver push.
+                # A legacy entry with no receipt and an empty Notion URL is
+                # not enough evidence of an intentional owner clear; let a
+                # later verified resolver promotion populate it normally.
+                if ((has_receipt and canonical_url(remote_url) != canonical_url(baseline))
+                        or (not has_receipt and remote_url
+                            and canonical_url(remote_url) != canonical_url(baseline))):
+                    entry["notion_url_owner_override"] = True
+                if remote_url != previous_receipt and (remote_url or has_receipt):
+                    entry["notion_url"] = remote_url
+                    changed += 1
+        if not stage_prop:
+            continue
+        prop = properties.get(stage_prop) or {}
         status = (prop.get("status") or {}).get("name")
         stage = _stage_key_from_status(status or "")
         if not stage:
@@ -414,6 +438,26 @@ def _needs_stage_patch(entry: dict) -> bool:
             and entry.get("stage") is not None
             and entry.get("stage") != entry.get("notion_stage")
             and stage_status_name(entry.get("stage")) is not None)
+
+
+def _needs_url_patch(entry: dict, schema: dict) -> bool:
+    """Whether a promoted URL needs one URL-only Notion update.
+
+    ``notion_url`` is a local last-synced receipt.  It is deliberately only
+    created when a promotion replaced a legacy URL (or when a new page is
+    created), so old rows are not all rewritten on their first sync.  A
+    database without a URL property is left untouched.
+    """
+    return bool(
+        entry.get("notion_synced")
+        and not entry.get("notion_archived")
+        and not entry.get("notion_url_owner_override")
+        and entry.get("notion_page")
+        and schema.get("properties", {}).get("Job URL") == "url"
+        and entry.get("url")
+        and entry.get("notion_url")
+        and entry.get("url") != entry.get("notion_url")
+    )
 
 
 def _sync_applied_notion(applied: list) -> int:
@@ -463,13 +507,21 @@ def _sync_applied_notion(applied: list) -> int:
                if not a.get("notion_synced") and not a.get("notion_archived")]
     promotions = [a for a in applied
                   if not a.get("notion_archived") and _needs_stage_patch(a)]
-    if not pending and not promotions:
+    url_candidates = [a for a in applied
+                      if (a.get("notion_synced") and not a.get("notion_archived")
+                          and a.get("notion_page") and a.get("notion_url")
+                          and a.get("url"))]
+    if not pending and not promotions and not url_candidates:
         return duplicate_archived
     try:
         schema = resolve_database(token)
     except Exception as e:
         print(f"notion: could not resolve Applications database, leaving entries queued: {e}")
         return 0
+
+    url_promotions = [a for a in url_candidates if _needs_url_patch(a, schema)]
+    if not pending and not promotions and not url_promotions:
+        return duplicate_archived
 
     headers = _headers(token)
     synced = duplicate_archived
@@ -480,6 +532,8 @@ def _sync_applied_notion(applied: list) -> int:
             entry["notion_synced"] = True
             entry["notion_stage"] = entry.get("stage", "applied")
             entry["notion_page"] = r.json().get("url", "")
+            if schema.get("properties", {}).get("Job URL") == "url" and entry.get("url"):
+                entry["notion_url"] = entry["url"]
             synced += 1
         except Exception as e:
             print(f"notion: failed to sync {entry.get('company')}: {e}")
@@ -513,6 +567,24 @@ def _sync_applied_notion(applied: list) -> int:
             synced += 1
         except Exception as e:
             print(f"notion: failed to set {entry.get('company')} -> {name}: {e}")
+
+    # URL promotion is intentionally isolated from stage/date updates.  A
+    # Notion URL property is optional, and no other page field is touched.
+    for entry in url_promotions:
+        page_id = page_id_from_url(entry.get("notion_page", ""))
+        if not page_id:
+            continue
+        try:
+            r = requests.patch(
+                f"{PAGES_API}/{page_id}", headers=headers,
+                json={"properties": {"Job URL": {"url": str(entry["url"])[:1900]}}},
+                timeout=20,
+            )
+            r.raise_for_status()
+            entry["notion_url"] = entry["url"]
+            synced += 1
+        except Exception as e:
+            print(f"notion: failed to refresh URL for {entry.get('company')}: {e}")
     return synced
 
 

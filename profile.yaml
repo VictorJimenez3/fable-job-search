@@ -86,14 +86,24 @@ company_reputation:
     Citadel Securities: Citadel
 
 sectors:
-  healthtech: 6
+  healthtech: 3
   sports: 3
   video_games: 3
   ai_lab: 0
   big_tech: 0
   edtech: 2
-  fintech: -5
+  fintech: -2
   other: 0
+
+# Sector recognition only (not a universal prestige league). Reviewed against
+# the employers' official public technology/career pages on 2026-11-03.
+healthcare_sector_sources:
+  Johnson & Johnson:
+    - https://www.careers.jnj.com/en/teams/technology-and-cybersecurity/
+    - https://www.careers.jnj.com/en/teams/data-science/
+  Bristol Myers Squibb:
+    - https://careers.bms.com/corporate/business-insights-technology/
+    - https://careers.bms.com/leadership-development-programs/technology-rdp/
 
 bonuses:
   explicit_new_grad_title: 45  # new-grad evidence is the dominant ranking dimension

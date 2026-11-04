@@ -30,10 +30,10 @@ vm.runInContext(`
   S.lane = 'internship';
   S.lanes.internship.expectedGraduation = '2027-05';
   S.jobs = {
-        future: {id:'future', company:'A', title:'Software Engineering Intern', score:70, explicit_new_grad:true, early_career_possible:true, posted_at:fixtureNow, internship_eligibility:{internship_signal:'title', term_options:['2027-01-01','2027-06-01'], class_years:['senior']}, source_board:'ats:a'},
-        past: {id:'past', company:'B', title:'Data Scientist Intern', score:80, posted_at:fixtureNow, internship_eligibility:{internship_signal:'title', term_options:['2026-06-01']}, source_board:'ats:b'},
-        unknown: {id:'unknown', company:'C', title:'ML Intern', score:80, posted_at:fixtureNow, internship_eligibility:{internship_signal:'body'}, source_board:'aggregator:c'},
-        review: {id:'review', company:'D', title:'Software Engineer', score:80, posted_at:fixtureNow, internship_eligibility:{internship_signal:'source_only', term_options:['2027-06-01']}, source_board:'aggregator:d'},
+        future: {id:'future', company:'A', title:'Software Engineering Intern', score:70, explicit_new_grad:true, early_career_possible:true, posted_at:fixtureNow, locations:['United States'], location_eligibility:{status:'us'}, internship_eligibility:{internship_signal:'title', term_options:['2027-01-01','2027-06-01'], class_years:['senior']}, source_board:'ats:a'},
+        past: {id:'past', company:'B', title:'Data Scientist Intern', score:80, posted_at:fixtureNow, locations:['United States'], location_eligibility:{status:'us'}, internship_eligibility:{internship_signal:'title', term_options:['2026-06-01']}, source_board:'ats:b'},
+        unknown: {id:'unknown', company:'C', title:'ML Intern', score:80, posted_at:fixtureNow, locations:['United States'], location_eligibility:{status:'us'}, internship_eligibility:{internship_signal:'body'}, source_board:'aggregator:c'},
+        review: {id:'review', company:'D', title:'Software Engineer', score:80, posted_at:fixtureNow, locations:['United States'], location_eligibility:{status:'us'}, internship_eligibility:{internship_signal:'source_only', term_options:['2027-06-01']}, source_board:'aggregator:d'},
   };
   S.lanes.internship.jobs = S.jobs;
   S.applied = []; S.web = {maybe:[], excluded:[], jobs:{}};

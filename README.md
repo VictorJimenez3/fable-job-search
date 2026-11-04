@@ -49,6 +49,13 @@ no current capability is removed. vNext displays an objective evidence score,
 eligibility, and Victor's goal/recommended priority as separate signals instead
 of hiding personal priority inside one number.
 
+Current release status: the isolated pre-rebase migration replay and its
+identity/location-drift checks are recorded in [`ROADMAP.md`](ROADMAP.md).
+Final storage is being regenerated after the remote rebase; consult
+[`docs/CLI_HANDOFF.md`](docs/CLI_HANDOFF.md) for the parent-owned final
+measurements. Publication remains pending CI verification; this note is not a
+deployment claim.
+
 The platform is now decision-first: filter by role family (including the
 Hardware / computer engineering lane), sponsorship,
 required experience, and minimum degree; see honest eligibility facts before opening a posting;
@@ -110,7 +117,7 @@ locations keeps every location visible in its detail drawer.
 
 ### Company and team ranking
 
-The new-grad implementation uses rules **v16**: one engineering-reputation
+The new-grad implementation uses rules **v17**: one engineering-reputation
 prior, then
 posting-specific work evidence. Company size is not prestige. The reviewed
 bands in `profile.yaml` recognize specialist employers such as Databricks,
@@ -128,30 +135,37 @@ excerpts survive rescoring; old postings without excerpts remain unverified
 until a fresh exact-URL sighting or posting fetch supplies them. Distinct team
 requisitions keep their own scores even when their titles match.
 
-Healthcare receives a **+6** mission preference and fintech/financial-services
-work a **-5** preference, separately from engineering reputation. A documented
-healthcare team inside a general tech employer can receive the healthcare
-preference. Other sector preferences are smaller; positive learned feedback is
-capped at five points and cannot relearn a disliked sector as a sector bonus.
-Published pay uses the lower bound, not the advertised maximum; unsupported
-currencies and upper-bound-only claims do not earn guessed pay points.
-These are utility points before the fixed 0–100 calibration, not percentages or
-predicted offer quality. Google and NVIDIA remain goal labels, not score
-exceptions. Eligibility gates and the separate neutral internship rubric stay
-unchanged. Best Match remains the default; an explicitly saved Newest sort is
-preserved. The Fit drawer explains the evidence and every adjustment.
+The current v17 list order is score-first; goal labels and career-stage
+priority no longer override the score. The nonpersonal `evidence_score`
+combines company and posting evidence, while the final personalized score applies only the
+bounded viewer preferences and learned signals. Both profiles use healthcare
+**+3** and finance **-2** preferences. The
+healthcare lift comes from a recognized healthcare company or posting-scoped
+healthcare-team proof; a general tech employer requires the team proof.
+Recognizing J&J or BMS as healthcare-sector employers is not a prestige
+exception. Missing pay is neutral, and there is no
+hard salary cutoff. Published pay uses the lower bound when it is usable, not
+the advertised maximum; unsupported currencies and upper-bound-only claims do
+not earn guessed pay points. These are utility points before the fixed 0–100
+calibration, not percentages or predicted offer quality. Google and NVIDIA
+remain goal labels, not score exceptions. Eligibility gates and the separate
+internship rubric stay authoritative. Best Match remains the default; an
+explicitly saved Newest sort is preserved. The Fit drawer explains the
+evidence and every adjustment.
 
-Rules v16 separates required experience from preferred experience. Explicit
+Rules v17 separates required experience from preferred experience. Explicit
 new-grad title wording or supported employer-description evidence can establish
 career-stage fit; incompatible cohorts and required experience still constrain
 alerts. Source-only social/community leads and generic technical titles without
-an employer description stay available for review, without alerting. Both job
-lanes also require a usable HTTP(S) application URL before alerting; malformed
-links retain an audit reason instead of a guessed replacement. Deterministic
-identity repair preserves distinct
-real requisitions and provider identities when a same-label match is
-ambiguous. No fuzzy system can promise zero duplicates, so uncertain roles
-remain separate rather than losing coverage.
+an employer description stay available for review, without alerting. Shared US
+location status is explicit: `us`, `mixed`, `unknown`, or `non_us`. `unknown`
+is review-only and cannot alert; `non_us` is excluded from the active board.
+Both job lanes also require a usable HTTP(S) application URL
+before alerting; malformed links retain an audit reason instead of a guessed
+replacement. Deterministic identity repair preserves distinct real
+requisitions and provider identities when a same-label match is ambiguous. No
+fuzzy system can promise zero duplicates, so uncertain roles remain separate
+rather than losing coverage.
 
 The ChemE internship board is intentionally separate from this new-grad
 AI/SWE/DS board. It reads the `claude/cheme-intern-radar` branch and keeps its
@@ -176,13 +190,20 @@ Employer-authored description text is excluded from that license. New-grad disco
 includes the public Headcount engineering and data/AI sections (up to 100 rows
 each) and YubHub's graduate-engineering feed (up to 100 rows, attributed to
 [Data by YubHub](https://yubhub.co)). The anonymous public
-[zero2sudo Notion list](https://zero2sudo.notion.site/) is enabled as a
+[zero2sudo Notion list](https://zero2sudo.notion.site/) remains enabled as a
 review-only, source-only lead feed in both lanes (up to 25 rows); each lane
-applies its own role gates, and curator notes are never employer evidence. Instagram login is inaccessible, and the radar does not automatically
-scrape Instagram or LinkedIn. Every source listing URL is mined for ATS board tokens,
-so new companies expand direct monitoring automatically.
+applies its own role gates, and curator notes are never employer evidence. An
+optional Mac-only OpenCLI collector is being hardened for public Instagram
+observation and starts with `zero2sudo`. The verified OpenCLI extension and
+signed-in Instagram browser are connected. The probe has captured public posts
+and career excerpts but found no actionable job URLs because the available
+destinations were Story/bio links; anonymous post visibility is verified against actual caption evidence. Hourly launchd activation remains pending publication, so this
+is not an hourly-live metrics claim. Other researched accounts are not
+auto-enabled because they lack verified US technical direct-application links.
+The radar never scrapes LinkedIn. Every source listing URL is mined for ATS
+board tokens, so new companies expand direct monitoring automatically.
 
-The internship Jobs board offers **Current / upcoming**, **All active**, and
+The internship Jobs board uses **Rules v9** and offers **Current / upcoming**, **All active**, and
 **Review** scopes. The default includes genuine internships with an unspecified
 term, and does not hide active roles merely because discovery was more than
 30 days ago. Term choices come from the listings, including fall and unknown
@@ -198,8 +219,11 @@ Internships use a 0–100 ranking led by employer prestige. Recognized employers
 such as Pinterest, Google, NVIDIA, Microsoft, OpenAI, and Anthropic receive a
 large reputation signal; published pay, employer evidence, mentorship,
 ownership, technical depth, user impact, student eligibility, and freshness
-make smaller adjustments. Healthcare employers receive +4, while fintech and
-banks receive -4. Defense employers and clearly defense-focused postings get a
+make smaller adjustments. Healthcare is **+3** and finance is **-2**. The
+healthcare lift comes from a recognized healthcare company or posting-scoped
+healthcare-team proof; a general tech employer requires the team proof. J&J/BMS
+sector recognition is not a prestige exception. Defense employers and clearly
+defense-focused postings get a
 large auditable deduction and a final score cap of 12, which places them at the
 bottom while keeping them in the board data. The drawer shows the dimensions
 and exact reasons behind each score.
@@ -210,7 +234,10 @@ ordinary full-time job. Past terms, required graduate-only degrees, source-only
 leads, and ambiguous records remain available in **Review** with explicit
 reasons and cannot alert. Genuine internship titles and trustworthy source
 terms survive rescoring. Role and US-location gates also affect the clean
-board; a foreign-country remote label does not establish US eligibility.
+board; a foreign-country remote label does not establish US eligibility. The
+same `us` / `mixed` / `unknown` / `non_us` location statuses are shown in the
+drawer; unknown roles remain review-only and non-US-only roles remain excluded
+rather than being treated as US opportunities.
 A legacy parser verdict alone is not evidence.
 Employer-page checks cover both new leads and the existing review backlog,
 with a bounded concurrent budget and a delay before retrying failed pages.
@@ -229,6 +256,11 @@ separate offset), but the policy is unchanged: wait for at least three roles,
 wait no longer than 12 hours, or send immediately at score 92. GitHub delivery
 does not read an inbox. Google OAuth does not request Gmail scope and the
 platform never reads internship emails.
+
+Private offer information is never public radar state. Do not publish the
+existence of a private offer, its role, or any compensation numbers in
+`state/`, generated dashboards, alert issues, RSS, source adapters, or public
+documentation. Keep that information in the owner-only application workflow.
 
 The shortcut and the original Vercel URL are two doors to the same platform.
 OAuth still uses the original callback host for provider compatibility, then a
@@ -342,15 +374,21 @@ and its ranking remain the priority whenever compute is constrained.
    Jobright-style aggregator pages are handled conservatively: each crawl
    follows a bounded number of new/high-value aggregator links, promotes an
    explicit employer/ATS application URL when one is verifiable, and keeps the
-   aggregator URL as a labeled fallback when it is not. Exact employer/title
-   matches with one compatible direct ATS row are merged; ambiguous same-title
-   roles remain separate so coverage is not lost. Alerts and the generated
-   dashboard list the discovery source(s) and fallback links.
+   aggregator URL as a labeled fallback when it is not. Stable posting IDs work
+   in either sighting order. A URL-only upgrade preserves the old URL and
+   source, and preserves manual tracker stage, custom fields, notes, and dates;
+   Notion scheduled sync and connected Google Sheets converge on that same
+   canonical row. Exact employer/title matches with one compatible direct ATS
+   row are merged; ambiguous same-title roles remain separate so coverage is
+   not lost. Alerts and the generated dashboard list the discovery source(s)
+   and fallback links.
    A separate pre-crawl repair job checks a bounded batch (100 in production)
    of still-open aggregator rows in parallel (16 bounded workers) and
    publishes closed-page verdicts before the expensive discovery crawl starts.
    This keeps stale Jobright pages moving into History even when a full crawl
-   reaches its execution limit.
+   reaches its execution limit. Old sent-email records and historical alert-
+   issue bodies are immutable evidence; a later canonical URL upgrade does not
+   rewrite them.
 2. **When you apply, the inbox becomes the source of truth.** When the optional
    email secrets are configured, the watcher reads application-lifecycle
    emails every 30 minutes and drives the tracker **Stage** for you:
@@ -603,6 +641,39 @@ just upgrades whatever it finds when awake. Requires `git push` auth on the
 Mac (`brew install gh && gh auth login`). Logs: `~/.jobradar/logs/enrich.log`.
 The companion releases the model from memory after every request; confirm with
 `ollama ps` (it should show no loaded model between enrichment cycles).
+
+**Optional Instagram observation (hourly activation pending)**
+
+The Mac companion has an intended hourly, bounded OpenCLI collector for public
+career posts. It starts with the verified `zero2sudo` account and stores only
+allowlisted public post metadata as review-only source leads; it never treats
+an Instagram caption as employer evidence. The verified OpenCLI extension and
+signed-in Instagram browser are connected. The probe has captured public posts
+and career excerpts but found no actionable job URLs because the available
+destinations were Story/bio links; hourly launchd activation remains pending publication, so do not count the collector as
+live yet. It does not scrape LinkedIn,
+copy cookies, or enable the other researched accounts without verified US
+technical direct links.
+
+Research watchlist (not enabled):
+
+- [`@devshree.17`](https://imginn.com/p/DYH09bzhQKb/) — public mirror of a
+  US research-lab hiring post covering AI/ML, SWE, data science, robotics, and
+  HCI. The list is DM/comment-gated, so it has no stable direct-application
+  feed.
+- [`@theskylerbasco`](https://skylerbasco.my.canva.site/) — the creator's own
+  site describes US Big Tech APM internship/new-grad coaching. It is a
+  product-management coaching source, not a technical-role feed.
+- [`@NVIDIAlife`](https://www.instagram.com/nvidialife/) — official recruiting
+  and employee-life announcements, referenced by this [NJIT SHPE recruiting
+  resource](https://www.shpenjit.org/resources/nvidia); a [public mirror of an
+  NVIDIA intern post](https://imginn.com/p/DcCECsaiTlx/) is clearly labeled as
+  a mirror. It is not a general open-role feed.
+
+Only Zero2Sudo is enabled because it has verified US technical opportunity
+coverage. None of these watchlist accounts is treated as immediate job capture:
+bio, Story, comment, and DM links still require a stable employer URL and
+independent evidence.
 
 ## Owner-only application queue and Simplify handoff
 
@@ -1402,6 +1473,9 @@ compatibility entry point. Production workflows share the repository's local
 setup action and frozen `uv.lock`. Optional maintained provider translation is
 installed with `uv sync --extra ai` and enabled with
 `RADAR_LLM_ADAPTER=litellm`; AI is still unnecessary for crawling or scoring.
+The Mac enrichment failure came from the legacy Python 3.9/pip 21 environment;
+the companion now uses a separate Python 3.12 virtual environment and modern
+installer, with a shared lock that preserves unpushed manual work.
 
 Useful env vars: `RADAR_DISABLE_SOURCES=ats,hn`, `RADAR_PROBE_BUDGET`,
 `RADAR_MAX_COMPANIES`, `RADAR_PM_BACKFILL_COMPANIES`, `RADAR_MAX_ALERTS`,

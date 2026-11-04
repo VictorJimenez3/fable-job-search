@@ -2,7 +2,7 @@ import pytest
 
 import radar.internship_radar as internship_radar
 from radar import main, state
-from radar.internship_radar import crawl
+from radar.internship_radar import _delivery_sort_key, crawl
 from radar.models import Job
 
 NOW = 1_793_725_200
@@ -58,6 +58,16 @@ def _official_job(url="https://jobs.example.com/nvidia/careers/software-engineer
                source="greenhouse", source_board="ats:greenhouse", ats="greenhouse",
                locations=["Santa Clara, CA"], description=_employer_text(),
                link_resolution={"status": "resolved", "resolved_url": url})
+
+
+def test_internship_delivery_cap_orders_final_score_before_career_label():
+    rows = [
+        {"id": "explicit", "score": 71, "career_priority": 2, "posted_at": NOW},
+        {"id": "stronger", "score": 99, "career_priority": 1, "posted_at": NOW},
+    ]
+    assert [row["id"] for row in sorted(rows, key=_delivery_sort_key)] == [
+        "stronger", "explicit"
+    ]
 
 
 def test_existing_employer_confirmation_creates_one_alert_and_second_crawl_is_quiet(tmp_path, monkeypatch):

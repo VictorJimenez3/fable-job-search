@@ -14,6 +14,18 @@ FINTECH = {
     "capital one", "goldman sachs", "jpmorgan chase", "jpmorgan", "bny",
 }
 
+# Public healthcare employers are a sector signal, not a prestige league.
+# The current entries are supported by official technology/career pages:
+# careers.jnj.com/en/teams/technology-and-cybersecurity/,
+# careers.jnj.com/en/teams/data-science/, careers.bms.com/corporate/
+# business-insights-technology/, and careers.bms.com/leadership-development-
+# programs/technology-rdp/ (reviewed 2026-11-03). Posting-specific team
+# evidence can still override a generic employer sector when the scorer has
+# responsibilities text.
+HEALTHCARE = {
+    "johnson johnson", "bristol myers squibb", "bms",
+}
+
 
 def company_key(company: str) -> str:
     return re.sub(r"(?:\s+(?:incorporated|inc|llc|ltd|limited|corporation|corp|plc))+$", "", norm(company))
@@ -63,6 +75,8 @@ def infer(company: str, seed_sectors: dict[str, str]) -> str:
         return "other"
     if n in FINTECH:
         return "fintech"
+    if n in HEALTHCARE:
+        return "healthtech"
     if n in seed_sectors or norm(company) in seed_sectors:
         return seed_sectors[n] if n in seed_sectors else seed_sectors[norm(company)]
     compact = n.replace(" ", "")

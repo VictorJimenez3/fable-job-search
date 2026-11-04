@@ -12,13 +12,14 @@ import time
 from .config import profile
 from .eligibility import TRUSTED_NEW_GRAD_SOURCES, compact_evidence, experience_evidence, new_grad_evidence
 from .identity import canonical_url
+from .location import assess_us_location
 from .models import Job, norm
 
 # ---------- hard gates ----------
 
 # Bumped whenever gate rules or the deterministic ranking equation changes;
 # stored jobs are rebuilt from source evidence under the new version.
-RULES_VERSION = 16
+RULES_VERSION = 17
 
 SENIOR_RE = re.compile(
     r"\b(senior|staff|principal|lead(er)?|director|head of|sr\.?|vp|chief|"
@@ -140,15 +141,7 @@ def role_bucket(title: str, description: str = "") -> str | None:
 
 
 def location_ok(job: Job) -> bool:
-    if job.remote:
-        return True
-    if not job.locations:
-        return True  # unknown — don't drop, scorer just won't reward it
-    blob = " | ".join(job.locations)
-    if FOREIGN_HINTS.search(blob):
-        # foreign city named — keep only if there's also a strong US signal
-        return bool(re.search(r"\b(usa?|u\.s\.|united states)\b|remote \(?us", blob, re.I))
-    return True
+    return assess_us_location(job.locations, remote=bool(job.remote))["status"] != "non_us"
 
 
 def _required_years(text: str) -> int | None:
@@ -261,6 +254,8 @@ def _eligibility_evidence(job: Job) -> dict:
 def gates(job: Job) -> tuple[bool, bool, list[str]]:
     """Returns (keep_at_all, alert_eligible, reasons)."""
     invalid_url = not canonical_url(job.url)
+    location = assess_us_location(job.locations, remote=bool(job.remote))
+    job.location_eligibility = location
     t = job.title
     text = f"{t}\n{job.description[:1500]}"
     bucket = role_bucket(t)
@@ -280,7 +275,7 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
         return False, False, ["PhD-targeted title"]
     if CLEARANCE_RE.search(text):
         return False, False, ["requires clearance"]
-    if not location_ok(job):
+    if location["status"] == "non_us":
         return False, False, ["non-US location"]
     years = evidence.get("required_floor")
     experience_conflict = bool(evidence.get("experience_conflict"))
@@ -348,6 +343,9 @@ def gates(job: Job) -> tuple[bool, bool, list[str]]:
     if invalid_url:
         alert_eligible = False
         reasons.append("invalid posting URL (dashboard/review only)")
+    if location["status"] == "unknown":
+        alert_eligible = False
+        reasons.append(f"location unverified (review only): {location['reason']}")
     return True, alert_eligible, reasons
 
 
@@ -687,6 +685,42 @@ def career_priority(job: Job | dict) -> int:
     if getattr(job, "career_priority", 0):
         return max(0, min(2, int(job.career_priority)))
     return 0
+
+
+def ranking_key(job: Job | dict, *, timestamp_key: str = "posted_at") -> tuple:
+    """Order already-gated rows by final score, then stable tie-breakers.
+
+    Eligibility is a filtering decision made by callers before this key is
+    used. Career-stage and goal labels remain auditable badges; neither
+    participates in ordering, so ties use recency and identity only.
+    """
+    if isinstance(job, dict):
+        final_score = job.get("score")
+        if final_score is None:
+            final_score = job.get("score_calibrated", job.get("evidence_score", 0))
+        timestamp = job.get(timestamp_key)
+        if timestamp is None:
+            timestamp = job.get("posted_at") or job.get("first_seen") or job.get("last_seen_at") or 0
+        identity = job.get("id") or job.get("public_id") or job.get("url") or ""
+    else:
+        final_score = getattr(job, "score", None)
+        if final_score is None:
+            final_score = getattr(job, "score_calibrated", getattr(job, "evidence_score", 0))
+        timestamp = getattr(job, timestamp_key, None)
+        if timestamp is None:
+            timestamp = (getattr(job, "posted_at", None)
+                         or getattr(job, "first_seen", None)
+                         or getattr(job, "last_seen_at", None) or 0)
+        identity = getattr(job, "id", None) or getattr(job, "url", "")
+    try:
+        final_score = float(final_score or 0)
+    except (TypeError, ValueError):
+        final_score = 0.0
+    try:
+        timestamp = float(timestamp or 0)
+    except (TypeError, ValueError):
+        timestamp = 0.0
+    return (-final_score, -timestamp, str(identity))
 
 
 # Tokens the taste model must never learn or reward: employment-shape noise,
@@ -1067,6 +1101,28 @@ def calibrate_score(raw_utility: float) -> int:
             ratio = (raw - x0) / (x1 - x0)
             return max(0, min(100, round(y0 + ratio * (y1 - y0))))
     return 100
+
+
+def _apply_location_label(job: Job, eligibility: str, reasons: list[str]) -> str:
+    """Apply fresh location evidence to the post-gate display label.
+
+    Scoring may be called without ``gates()`` during replay/tests, so refresh
+    the shared location assessment here. Unknown geography is review only;
+    mixed rows retain eligibility because they include a confirmed US option;
+    foreign-only postings are excluded. This never changes the hard gate
+    return value or deletes a row.
+    """
+    location = assess_us_location(job.locations, remote=bool(job.remote))
+    job.location_eligibility = location
+    status = location.get("status")
+    if status == "non_us":
+        if eligibility != "excluded":
+            reasons.append("location excluded: non-US-only posting")
+        return "excluded"
+    if status not in {"us", "mixed"} and eligibility == "eligible":
+        reasons.append(f"location unverified (review only): {location.get('reason', 'unknown')}")
+        return "review"
+    return eligibility
 
 
 def apply_company_concentration(jobs) -> int:
@@ -1519,16 +1575,25 @@ def score(job: Job, feedback: dict, now: int | None = None,
 
     raw_utility = round(sum(dimensions.values()), 1)
     display = calibrate_score(raw_utility)
+    # Evidence is objective posting/company evidence. Owner mission and
+    # learned/personal preference are intentionally omitted so API consumers
+    # can expose both a neutral signal and Victor's final personalized score.
+    evidence_dimensions = dict(raw_dimensions)
+    evidence_dimensions["mission"] = 0
+    evidence_dimensions["personal_signal"] = 0
+    evidence_raw = round(sum(evidence_dimensions.values()), 1)
+    evidence_display = calibrate_score(evidence_raw)
     if program:
         floor = int(p["thresholds"].get("alert", 66))
         if display < floor:
             reasons.append(f"technical program display floor +{floor - display}")
             display = floor
+        evidence_display = max(evidence_display, floor)
 
     # Evidence is frozen before personal goal-company overrides. The legacy
     # ``score`` remains personalized for compatibility, while vNext can show
     # objective evidence, eligibility, and user priority as distinct signals.
-    evidence_score = display
+    evidence_score = evidence_display
     if midlevel:
         eligibility = "excluded"
     elif (new_grad or program) and not experience_review:
@@ -1537,6 +1602,7 @@ def score(job: Job, feedback: dict, now: int | None = None,
         eligibility = "review"
     else:
         eligibility = "excluded"
+    eligibility = _apply_location_label(job, eligibility, reasons)
     priority_tier = "recommended" if evidence_score >= 66 else "explore"
 
     # Explicit, profile-driven favorites are data, not company-name branches
@@ -1618,6 +1684,7 @@ def regate(jobs_state: dict) -> int:
         keep, alert_eligible, reasons = gates(job)
         new_alert = keep and alert_eligible
         rec["eligibility_evidence"] = job.eligibility_evidence
+        rec["location_eligibility"] = job.location_eligibility
         rec["explicit_new_grad"] = explicit_new_grad(
             job.title, evidence=job.eligibility_evidence)
         rec["rules_v"] = RULES_VERSION

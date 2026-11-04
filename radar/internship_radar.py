@@ -11,12 +11,19 @@ import time
 from concurrent.futures import ThreadPoolExecutor, wait
 from urllib.parse import urlsplit
 
+from . import applied as applied_mod
 from . import discovery, lifecycle, state
 from .config import env, profile, seeds
 from .digest import write_outputs
 from .identity import canonical_url, posting_key
 from .internship import RULES_VERSION, analyze, annotate, gates, score, term_status
 from .models import Job, norm
+from .score import ranking_key
+
+
+def _delivery_sort_key(row: dict) -> tuple:
+    """Final-score-first ordering for the bounded internship alert cap."""
+    return ranking_key(row)
 
 
 def _job_from_record(record: dict) -> Job:
@@ -31,6 +38,7 @@ def _job_from_record(record: dict) -> Job:
         source_url_variants=record.get("source_url_variants", []) or [],
         alternate_urls=record.get("alternate_urls", []) or [],
         link_resolution=record.get("link_resolution", {}) or {},
+        location_eligibility=record.get("location_eligibility", {}) or {},
         posted_at=record.get("posted_at"), description=record.get("description", ""),
         salary=record.get("salary", ""), remote=bool(record.get("remote")),
         ats=record.get("ats", ""), sector=record.get("sector", ""),
@@ -410,6 +418,7 @@ def _internship_evidence_pass(new_jobs: list[Job], jobs_state: dict,
             lifecycle.touch(value, now, "employer page")
             value.update({
                 "internship_eligibility": record.internship_eligibility,
+                "location_eligibility": record.location_eligibility,
                 "score": record.score,
                 "evidence_score": record.evidence_score,
                 "eligibility": record.eligibility,
@@ -454,6 +463,7 @@ def rescore() -> int:
         record.update({
             "profile": "internship",
             "internship_eligibility": job.internship_eligibility,
+            "location_eligibility": job.location_eligibility,
             "score": job.score,
             "evidence_score": job.evidence_score,
             "eligibility": job.eligibility,
@@ -494,13 +504,17 @@ def regate() -> int:
 
 
 def crawl() -> int:
+    from .dedupe import build_official_match_index, find_existing_official_match
     from .main import (
         _existing_posting_ids,
         _fetch_aggregators,
         _fetch_ats,
         _has_independent_employer_evidence,
         _job_identity,
+        _merge_job_sighting,
         _merge_record_sighting,
+        _posting_identity,
+        _promote_existing_official_record,
         _repair_duplicate_job_state,
         _state_job_identity,
         _unique_discovered_jobs,
@@ -534,7 +548,6 @@ def crawl() -> int:
     activated, invalidated = discovery.probe_new(
         registry, budget=int(env("RADAR_INTERNSHIP_PROBE_BUDGET", "20")))
     ats_jobs, ats_stats, healthy_ats_boards = _fetch_ats(registry, disabled)
-    from .main import _merge_job_sighting
     discovered, feed_duplicates = _dedupe_internship_sightings(
         agg_jobs + ats_jobs, _merge_job_sighting)
     discovered, generic_duplicates = _unique_discovered_jobs(discovered)
@@ -552,13 +565,35 @@ def crawl() -> int:
     authoritative_existing_ids: set[str] = set()
     dropped = 0
     seen: set[str] = set()
+    pending_new_jobs: dict[str, Job] = {}
     existing_posting_ids = _existing_posting_ids(jobs_state)
+    incoming_batch = []
+    for job in discovered:
+        sighting = job.to_record()
+        sighting["_radar_id"] = _job_identity(job)
+        incoming_batch.append(sighting)
+    match_index = build_official_match_index(jobs_state, incoming_batch)
     for job in discovered:
         if not job.company or not job.title or not job.url:
             continue
         job.profile = "internship"
-        jid = _state_job_identity(job, jobs_state, existing_posting_ids)
+        incoming_sighting = job.to_record()
+        upgrade_id = find_existing_official_match(
+            incoming_sighting, jobs_state, incoming_batch,
+            index=match_index, existing_posting_ids=existing_posting_ids)
+        if upgrade_id:
+            job._radar_id = upgrade_id
+            incoming_key = _posting_identity(incoming_sighting.get("url"))
+            for batch_record in incoming_batch:
+                if _posting_identity(batch_record.get("url")) == incoming_key:
+                    batch_record["_radar_id"] = upgrade_id
+        if upgrade_id and upgrade_id in jobs_state:
+            _promote_existing_official_record(
+                jobs_state[upgrade_id], incoming_sighting)
+        jid = upgrade_id or _state_job_identity(job, jobs_state, existing_posting_ids)
         if jid in seen:
+            if jid in pending_new_jobs:
+                _merge_job_sighting(pending_new_jobs[jid], job)
             continue
         job._radar_id = jid
         seen.add(jid)
@@ -584,6 +619,7 @@ def crawl() -> int:
                 score(job, now)
                 job.score_reasons += reasons
                 existing["internship_eligibility"] = dict(job.internship_eligibility)
+                existing["location_eligibility"] = dict(job.location_eligibility)
                 existing.update({
                     "profile": "internship",
                     "score": job.score,
@@ -621,6 +657,7 @@ def crawl() -> int:
             manual_upgrades[jid] = existing
         job._radar_id = jid
         new_jobs.append(job)
+        pending_new_jobs[jid] = job
 
     # Internship discovery has a separate bounded employer-evidence pass.
     # Curated leads remain review-only until this pass obtains readable text;
@@ -704,9 +741,7 @@ def crawl() -> int:
         candidate["id"] = jid
         candidate["alerted_at"] = now
         alert_rows.append(candidate)
-    alert_rows.sort(key=lambda row: (-int(row.get("score", 0)),
-                                    -(int(row.get("posted_at") or row.get("first_seen") or 0)),
-                                    str(row.get("id", ""))))
+    alert_rows.sort(key=_delivery_sort_key)
     alert_rows = alert_rows[:int(env("RADAR_INTERNSHIP_MAX_ALERTS", "35"))]
     for row in alert_rows:
         jobs_state[row["id"]].pop("internship_alert_pending_at", None)
@@ -729,9 +764,13 @@ def crawl() -> int:
     state.save("companies.json", registry)
     state.save("jobs.json", jobs_state)
     from .notion_sync import archive_terminal_pages
+    tracker_url_updates = applied_mod.refresh_application_urls(applied, jobs_state)
+    if tracker_url_updates:
+        print(f"internship tracker: promoted {tracker_url_updates} application URL(s)")
     archived = archive_terminal_pages(applied, jobs_state)
-    if archived:
+    if archived or tracker_url_updates:
         state.save("applied.json", applied)
+    if archived:
         print(f"internship lifecycle: archived {archived} terminal tracked page(s) in Notion")
     state.save("alert_history.json", alert_history)
     state.save("runs.json", runs)

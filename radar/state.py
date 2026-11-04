@@ -35,13 +35,14 @@ _DETAIL_FIELDS = (
     "sponsorship_history", "link_resolution", "posting_identity",
     "lifecycle_events", "source_variants", "source_board_variants", "source_url_variants",
     "posting", "lifecycle_checked_at", "posting_status_reason",
-    "ranking_adjustment", "score_raw", "score_calibrated", "rules_v",
+    "ranking_adjustment", "score_raw", "score_calibrated", "rules_v", "location_eligibility",
 )
 _PRIMARY_DETAIL_HINTS = {
     "sponsorship_history": ("status",),
     "link_resolution": ("status",),
     "posting_identity": ("variant_count",),
     "posting": ("sponsorship", "years_min", "intern_counts"),
+    "location_eligibility": ("status",),
 }
 _HARD_GATE_REASON_RE = re.compile(
     r"^(?:intern/co-op/contract|senior\+ title|PhD-targeted title|"
@@ -74,6 +75,7 @@ _JOB_EMPTY_FIELDS = {
     "link_resolution",
     "posting_identity",
     "posting_family_id",
+    "location_eligibility",
 }
 
 # Startup-stage evidence is a projection of the company-level research cache,

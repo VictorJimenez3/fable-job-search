@@ -14,6 +14,12 @@ export const PostingSchema = z.object({
   salary: z.string().default(""),
   sector: z.string().default(""),
   evidence_score: z.number().min(0).max(100),
+  ranking_score: z.number().min(0).max(100).optional(),
+  location_eligibility: z.object({
+    status: z.enum(["us", "mixed", "non_us", "unknown"]),
+    reason: z.string().default(""),
+    evidence: z.array(z.string()).default([]),
+  }).default({status:"unknown", reason:"US location has not been verified", evidence:[]}),
   eligibility: z.enum(["eligible", "review", "excluded"]),
   priority_tier: z.enum(["goal", "recommended", "explore"]),
   score_reasons: z.array(z.string()).default([]),

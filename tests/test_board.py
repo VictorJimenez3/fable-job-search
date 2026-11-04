@@ -34,11 +34,11 @@ def test_open_rows_filters_and_sorts():
     assert [r["id"] for r in rows] == [JOB["id"]]
 
 
-def test_open_rows_prioritizes_explicit_new_grad_tier_before_raw_score():
+def test_open_rows_prioritizes_final_score_before_career_label():
     explicit = {**JOB, "id": "a" * 16, "score": 71, "career_priority": 2}
     high_score = {**JOB, "id": "e" * 16, "score": 99, "career_priority": 0}
     rows = _open_rows({j["id"]: j for j in (high_score, explicit)}, NOW)
-    assert [r["id"] for r in rows] == [explicit["id"], high_score["id"]]
+    assert [r["id"] for r in rows] == [high_score["id"], explicit["id"]]
 
 
 def test_paginate_respects_page_limit():

@@ -27,6 +27,10 @@ const ACCOUNT_HEADERS = ["Account ID", "GitHub ID", "GitHub Login", "Google Subj
   "Google Token Ciphertext", "Google Sheet ID", "Google Connected At"];
 const VALID_STAGES = new Set(["saved", "to_tailor", "applied", "oa", "interview", "rejected", "closed", "maybe", "archived"]);
 const VALID_POSTING_STATUSES = new Set(["open", "expired", "filled"]);
+const LINK_AGGREGATOR_HOSTS = new Set([
+  "jobright.ai", "www.jobright.ai", "simplify.jobs", "www.simplify.jobs",
+  "indeed.com", "www.indeed.com", "linkedin.com", "www.linkedin.com",
+]);
 
 // These credentials are the owner-only metadata registry credentials. They
 // are still required so the backend can persist account links safely.
@@ -345,6 +349,31 @@ async function ensurePersonalTracker(identity, oauth, currentPersonal = null) {
 
 function isoNow() { return new Date().toISOString().replace(/\.\d{3}Z$/, "Z"); }
 function clean(value, max = 500) { return String(value || "").trim().slice(0, max); }
+function httpTrackerUrl(value) {
+  try {
+    const parsed = new URL(String(value || "").trim());
+    if (!["http:", "https:"].includes(parsed.protocol) || !parsed.hostname) return "";
+    return parsed.toString();
+  } catch { return ""; }
+}
+function trackerUrlKey(value) {
+  const normalized = httpTrackerUrl(value);
+  if (!normalized) return "";
+  try {
+    const parsed = new URL(normalized);
+    parsed.hash = "";
+    return parsed.toString().replace(/\/$/, "");
+  } catch { return ""; }
+}
+function isTrackerAggregatorUrl(value) {
+  const normalized = httpTrackerUrl(value);
+  if (!normalized) return false;
+  try {
+    const host = new URL(normalized).hostname.toLowerCase();
+    return LINK_AGGREGATOR_HOSTS.has(host)
+      || [...LINK_AGGREGATOR_HOSTS].some(base => host.endsWith(`.${base}`));
+  } catch { return false; }
+}
 function stageOf(row, columns) { return String(row[columns.stage] || "").trim().toLowerCase(); }
 function columnMap(headers) {
   const map = {};
@@ -730,7 +759,7 @@ function rowValues(payload, existing = {}) {
 
 async function updateUserTracker(login, accountKeys, payload, personal = null) {
   const action = payload.action;
-  if (!["track", "applied", "maybe", "stage", "untrack", "posting-status", "preferences"].includes(action)) throw new Error("unsupported tracker action");
+  if (!["track", "applied", "maybe", "stage", "untrack", "posting-status", "link-refresh", "preferences"].includes(action)) throw new Error("unsupported tracker action");
   const profile = String(payload.profile || "new_grad").toLowerCase() === "internship" ? "internship" : "new_grad";
   if (action === "preferences") {
     const value = clean(payload.expected_graduation, 20);
@@ -744,6 +773,15 @@ async function updateUserTracker(login, accountKeys, payload, personal = null) {
   }
   const id = clean(payload.id, 100);
   if (action !== "preferences" && !id) throw new Error("missing job id");
+  if (action === "link-refresh") {
+    const target = clean(payload.canonical_url || payload.url, 1900);
+    const suppliedUrl = clean(payload.url, 1900);
+    if (!payload.canonical_job_id || clean(payload.canonical_job_id, 100) !== id
+      || !payload.canonical_url || !httpTrackerUrl(target)
+      || (suppliedUrl && trackerUrlKey(suppliedUrl) !== trackerUrlKey(target))) {
+      throw new Error("link refresh requires one verified HTTP application URL");
+    }
+  }
   let token;
   let spreadsheetId;
   if (hasPersonalSession(personal)) {
@@ -758,7 +796,9 @@ async function updateUserTracker(login, accountKeys, payload, personal = null) {
     token = await personalAccessToken(account);
     spreadsheetId = account.googleSheetId;
   }
-  await ensurePersonalTabs(token, spreadsheetId);
+  // A link refresh is deliberately a single-cell repair.  Running workbook
+  // migrations/formatting here could modify unrelated user-owned cells.
+  if (action !== "link-refresh") await ensurePersonalTabs(token, spreadsheetId);
   if (action === "preferences") {
     const rows = await readTab(token, spreadsheetId, preferencesTab(), `A:${columnName(PREFERENCE_HEADERS.length)}`);
     const headers = rows[0]?.length ? rows[0] : PREFERENCE_HEADERS;
@@ -781,6 +821,35 @@ async function updateUserTracker(login, accountKeys, payload, personal = null) {
   const laneRowIndex = laneRows.slice(1).findIndex(row => String(row[laneColumns["job radar id"]] || "") === id);
   const laneRowNumber = laneRowIndex + 2;
   const laneExistingRow = laneRowNumber > 1 ? laneRows[laneRowNumber - 1] : [];
+  if (action === "link-refresh") {
+    if (laneRowNumber <= 1) {
+      return {ok: true, changed: false, profile, sheet_url: sheetUrl(spreadsheetId)};
+    }
+    const currentUrl = at(laneExistingRow, laneColumns, "job url");
+    const previousUrl = clean(payload.previous_url || payload.expected_url, 1900);
+    const target = clean(payload.canonical_url || payload.url, 1900);
+    const alternateKeys = Array.isArray(payload.job_alternate_urls)
+      ? payload.job_alternate_urls.map(trackerUrlKey).filter(Boolean) : [];
+    const knownAlternate = alternateKeys.includes(trackerUrlKey(currentUrl));
+    if (!previousUrl || trackerUrlKey(previousUrl) !== trackerUrlKey(currentUrl)) {
+      throw new Error("tracker row URL changed; refusing link refresh");
+    }
+    if (!isTrackerAggregatorUrl(currentUrl) && !knownAlternate) {
+      throw new Error("tracker row has an owner URL; refusing link refresh");
+    }
+    if (knownAlternate && (!payload.canonical_job_id || !payload.canonical_url)) {
+      throw new Error("known-alternate refresh requires validated canonical job identity");
+    }
+    if (isTrackerAggregatorUrl(target)) throw new Error("link refresh target must be an official posting URL");
+    if (trackerUrlKey(currentUrl) === trackerUrlKey(target)) {
+      return {ok: true, changed: false, profile, sheet_url: sheetUrl(spreadsheetId)};
+    }
+    const urlColumn = laneColumns["job url"];
+    if (urlColumn == null) throw new Error("tracker workbook has no Job URL column");
+    const cell = `${columnName(urlColumn + 1)}${laneRowNumber}`;
+    await putRange(token, spreadsheetId, tab, cell, [[target]]);
+    return {ok: true, changed: true, url: target, profile, sheet_url: sheetUrl(spreadsheetId)};
+  }
   const laneExisting = {savedAt: at(laneExistingRow, laneColumns, "saved at"),
     applyDate: at(laneExistingRow, laneColumns, "apply date"),
     stage: stageOf(laneExistingRow, laneColumns),
@@ -806,4 +875,4 @@ async function updateUserTracker(login, accountKeys, payload, personal = null) {
 module.exports = { configured, personalConfigured, hasPersonalSession, userTracker,
   updateUserTracker, resolveAccount, PERSONAL_HEADERS, ACCOUNT_HEADERS, PREFERENCE_HEADERS,
   VALID_POSTING_STATUSES, tabForProfile, internshipTab, preferencesTab, optionalReadFailure,
-  resumeDriveAccess, resumeStorageAccess, ownerDriveConfigured };
+  resumeDriveAccess, resumeStorageAccess, ownerDriveConfigured, isTrackerAggregatorUrl };

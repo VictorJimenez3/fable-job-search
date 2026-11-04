@@ -112,7 +112,7 @@ def test_internship_crawl_reconciles_variants_and_updates_existing_source_only(
     assert surviving["link_resolution"]["source_only_provenance"]
     assert not surviving.get("alert_ok", False)
     assert any("experienced or doctoral" in reason for reason in surviving["score_reasons"])
-    assert surviving["score_version"] == 8
+    assert surviving["score_version"] == 9
     assert surviving["score_dimensions"]
     assert sum("role-123" in row["url"] for row in rows.values()) == 1
     assert sum("role-456" in row["url"] for row in rows.values()) == 1

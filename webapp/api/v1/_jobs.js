@@ -1,6 +1,11 @@
 const crypto = require("crypto");
 const {BRANCH, REPO, normalizeProfile, VALID_PROFILES, httpUrl} = require("../_lib");
 const {configured, database, publicCache, serverError} = require("./_db");
+const {boundedScore, locationEvidence, eligibilityOf} = require("./_job-signals");
+
+const LOCATION_SQL = "coalesce(p.metadata->'location_eligibility'->>'status', 'unknown')";
+const ELIGIBILITY_SQL = `case when ${LOCATION_SQL} = 'non_us' then 'excluded' when ${LOCATION_SQL} not in ('us', 'mixed') and coalesce(s.eligibility, 'review') = 'eligible' then 'review' else coalesce(s.eligibility, 'review') end`;
+const RANK_SQL = "case when p.metadata->>'ranking_score' ~ '^[0-9]+([.][0-9]+)?$' then least(100, greatest(0, (p.metadata->>'ranking_score')::numeric)) else coalesce(s.evidence_score, 0) end";
 
 const LEGACY_TTL_MS = 60_000;
 let legacyCache = new Map();
@@ -38,12 +43,6 @@ function nextCursor(offset, filterHash) {
   return Buffer.from(JSON.stringify({o: offset, f: filterHash})).toString("base64url");
 }
 
-function eligibilityOf(job) {
-  if (job.alert_ok) return "eligible";
-  if (job.early_career_possible || job.explicit_new_grad || Number(job.score || 0) >= 45) return "review";
-  return "excluded";
-}
-
 function priorityOf(job) {
   const reasons = Array.isArray(job.score_reasons) ? job.score_reasons.join(" ").toLowerCase() : "";
   if (reasons.includes("explicit goal company")) return "goal";
@@ -64,8 +63,10 @@ function publicJob(id, job, profile) {
     last_seen_at: Number(job.last_seen_at) || null,
     salary: String(job.salary || ""),
     sector: String(job.sector || ""),
-    evidence_score: Math.max(0, Math.min(100, Number(job.evidence_score ?? job.score ?? 0))),
-    eligibility: ["eligible", "review", "excluded"].includes(job.eligibility) ? job.eligibility : eligibilityOf(job),
+    ranking_score: boundedScore(job.score ?? job.evidence_score),
+    evidence_score: boundedScore(job.evidence_score ?? job.score),
+    location_eligibility: locationEvidence(job),
+    eligibility: eligibilityOf(job),
     priority_tier: ["goal", "recommended", "explore"].includes(job.priority_tier) ? job.priority_tier : priorityOf(job),
     score_reasons: Array.isArray(job.score_reasons) ? job.score_reasons.slice(0, 30).map(String) : [],
     status: ["open", "expired", "filled", "archived"].includes(job.posting_status) ? job.posting_status : "open",
@@ -86,6 +87,7 @@ async function legacyJobs(profile) {
 
 function visible(job, f, now) {
   if (job.status !== "open") return false;
+  if (job.location_eligibility.status === "non_us") return false;
   if (f.eligibility !== "all" && job.eligibility !== f.eligibility) return false;
   const text = `${job.company} ${job.title} ${job.locations.join(" ")}`.toLowerCase();
   if (f.q && !text.includes(f.q.toLowerCase())) return false;
@@ -104,23 +106,22 @@ function visible(job, f, now) {
 async function fromLegacy(f, offset) {
   const now = Math.floor(Date.now() / 1000);
   const all = (await legacyJobs(f.profile)).filter((job) => visible(job, f, now));
-  const tier = {goal: 3, recommended: 2, explore: 1};
-  all.sort((a, b) => tier[b.priority_tier] - tier[a.priority_tier] || b.evidence_score - a.evidence_score || (b.posted_at || b.last_seen_at || 0) - (a.posted_at || a.last_seen_at || 0) || a.public_id.localeCompare(b.public_id));
+  all.sort((a, b) => b.ranking_score - a.ranking_score || (b.posted_at || b.last_seen_at || 0) - (a.posted_at || a.last_seen_at || 0) || a.public_id.localeCompare(b.public_id));
   return {rows: all.slice(offset, offset + f.limit + 1), total: all.length};
 }
 
 async function fromPostgres(f, offset) {
   const values = [f.profile];
-  const where = ["p.profile_id = $1", "p.status = 'open'"];
+  const where = ["p.profile_id = $1", "p.status = 'open'", `${LOCATION_SQL} <> 'non_us'`];
   if (f.q) {
     values.push(`%${f.q}%`);
     where.push(`(p.company ilike $${values.length} or p.title ilike $${values.length} or cast(p.locations as text) ilike $${values.length})`);
   }
   if (f.eligibility !== "all") {
     values.push(f.eligibility);
-    where.push(`coalesce(s.eligibility, 'review') = $${values.length}`);
+    where.push(`(${ELIGIBILITY_SQL}) = $${values.length}`);
   }
-  if (f.freshness === "action") where.push("(p.posted_at >= now() - interval '7 days' or (p.posted_at is null and p.last_seen_at >= now() - interval '24 hours')) and coalesce(s.eligibility, 'review') = 'eligible'");
+  if (f.freshness === "action") where.push(`(p.posted_at >= now() - interval '7 days' or (p.posted_at is null and p.last_seen_at >= now() - interval '24 hours')) and (${ELIGIBILITY_SQL}) = 'eligible'`);
   if (f.freshness === "7d") where.push("p.posted_at >= now() - interval '7 days'");
   if (f.freshness === "30d") where.push("p.posted_at >= now() - interval '30 days'");
   values.push(f.limit + 1, offset);
@@ -130,7 +131,9 @@ async function fromPostgres(f, offset) {
       extract(epoch from p.posted_at)::bigint as posted_at,
       extract(epoch from p.last_seen_at)::bigint as last_seen_at,
       p.salary, p.sector, coalesce(s.evidence_score, 0) as evidence_score,
-      coalesce(s.eligibility, 'review') as eligibility,
+      ${RANK_SQL} as ranking_score,
+      coalesce(p.metadata->'location_eligibility', '{}'::json) as location_eligibility,
+      ${ELIGIBILITY_SQL} as eligibility,
       coalesce(s.priority_tier, 'explore') as priority_tier,
       coalesce(s.reasons, '[]'::json) as score_reasons, p.status
     from postings p
@@ -142,11 +145,10 @@ async function fromPostgres(f, offset) {
       select alias from posting_aliases where posting_id = p.id and kind = 'legacy_id' limit 1
     ) a on true
     where ${where.join(" and ")}
-    order by case coalesce(s.priority_tier, 'explore') when 'goal' then 3 when 'recommended' then 2 else 1 end desc,
-      coalesce(s.evidence_score, 0) desc, coalesce(p.posted_at, p.last_seen_at) desc, p.public_id
+    order by ranking_score desc, coalesce(p.posted_at, p.last_seen_at) desc, p.public_id
     limit $${values.length - 1} offset $${values.length}`;
   const result = await database().query(query, values);
-  return {rows: result.rows.map((job) => ({...job, url: httpUrl(job.url) || "", posted_at: Number(job.posted_at) || null, last_seen_at: Number(job.last_seen_at) || null, evidence_score: Number(job.evidence_score)}))};
+  return {rows: result.rows.map((job) => ({...job, url: httpUrl(job.url) || "", posted_at: Number(job.posted_at) || null, last_seen_at: Number(job.last_seen_at) || null, evidence_score: boundedScore(job.evidence_score), ranking_score: boundedScore(job.ranking_score), location_eligibility: locationEvidence(job), eligibility: eligibilityOf(job)}))};
 }
 
 module.exports = async (req, res) => {

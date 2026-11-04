@@ -1,5 +1,69 @@
 # CLI handoff notes
 
+## Opportunity quality, durable links, and social discovery (2026-11-03; release validation)
+
+The follow-up uses `codex/relevance-links-social-20261103`, based on production
+`4a84fba4743e01ed3133ab70b041d91116a29c98`, then rebased onto
+`f229982d7c8ea37ff6f89df5bd4b003e668df84a` to preserve newer enrichment, tracker,
+and delivery state. Both technical lanes are covered.
+The isolated worktree preserves unrelated changes in the original checkout;
+an initial UI edit made there was also transferred into this release worktree.
+Personal offer details and browser credentials are absent from public changes.
+
+- [x] Persistent identity handles aggregator-first, employer-first, and the
+  empty-state same-batch case. Verified direct links replace aggregator URLs
+  under the existing stable ID, retaining aliases and source provenance.
+  Generic same-title roles and ambiguous distinct requisitions stay separate.
+  Source-only claims cannot promote a supposedly verified application URL.
+- [x] Shared URL promotion updates applications, Notion, Sheets, and API/database
+  imports while preserving custom URLs, stages, notes, dates, and external-link
+  receipts. Historical sent emails and alert-issue bodies are not rewritten.
+- [x] Shared US evidence classifies `us`, `mixed`, `unknown`, and `non_us`.
+  Unknown locations are reviewable without alerts; foreign-only roles are
+  excluded from the active board. Explicit US city/state pairs win over foreign
+  city names, while bare country/state abbreviations and work-arrangement
+  labels do not establish US eligibility.
+- [x] Rules v17/v9 order the board, shortlists, digests, and capped delivery by
+  final score. Healthcare adds three points for company or actual team evidence;
+  missing pay is neutral. Nonpersonal evidence remains separately inspectable.
+- [x] Implement and verify actual public Instagram collection.
+  OpenCLI 2.0.2 and its Chrome extension are connected to an existing signed-in
+  browser, with explicit installation authorization. Zero2Sudo is the only
+  enabled account. The live probe read 12 posts and 8 career excerpts, with
+  zero actionable URLs because the destinations were Story/bio links. Public
+  visibility requires exact-account API proof or an anonymous Instagram post
+  with matching caption evidence; profile counts alone never qualify.
+  Collection uses bounded public posts, conservative career
+  links, post identity/age limits, cooldowns, and a shared companion checkout
+  lock. Captions are source leads, not employer evidence. No LinkedIn scraping.
+- [ ] Publish through green CI, verify the Vercel build, update the Mac
+  companion, and activate the hourly social launch agent. The old enrichment environment uses Python 3.9/pip 21 and fails
+  installing the current Hatch project; a separate Python 3.12 environment has
+  been provisioned, pending launch-agent activation with the released code.
+
+The preceding replay from production `40c2b698…` retains **96,376 new-grad** and **36,861
+internship** records. Primary sizes are **82,981,686** and **46,279,246 bytes**.
+Both lanes pass score-health at **v17/v9**, with **zero canonical posting-key
+duplicates** and **zero hydrated location-assessment drift**. Identity, URLs,
+titles, locations, posting dates/statuses/reasons, and all **316** saved main
+applications are unchanged; the internship application list remains empty.
+The fresh replay has 935 main-lane and 7,044 internship `alert_ok` records
+before score/term delivery thresholds. All upstream tracker, receipt, research,
+and notification metadata stays byte-identical. These are rescore figures, not
+a claim that new alerts were sent. No external
+archival or notification operations ran during replay.
+
+Independent identity/tracker review cleared the same-batch and receipt fixes.
+The latest full local run passes **917 tests / 3 skipped**; compile and
+correctness lint pass. Frontend typecheck, tests, lint, and build also pass.
+The final focused social/companion checks pass; deployment validation remains
+in progress. Classic desktop
+and 390px mobile checks used real state in both lanes. vNext smoke checks used
+an explicitly identified local fixture API; both lane switches and viewports
+rendered without overflow. Live read-only Jobright probes for three existing
+listings returned `checked_no_direct` without errors, so retaining the aggregator
+and upgrading on a later verified sighting remains necessary.
+
 ## Internship quality follow-up (2026-11-03; complete and live)
 
 Victor explicitly requested a deeper internship pass after the reliability
