@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-05 17:00 UTC** · companies polled directly: **2480** (registry 2855) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-05 18:05 UTC** · companies polled directly: **2480** (registry 2855) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -94,7 +94,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 75 ⭐ | 13d | Palantir | [New Grad 2027: Forward Deployed Software Engineer, Warp Speed](https://jobs.lever.co/palantir/66b495eb-aaf9-4bf9-a759-41854534add7/apply) | New York, NY | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) · [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions)<br>[go.vansh.nyc fallback](https://go.vansh.nyc/Bb) · [Lever fallback](https://jobs.lever.co/palantir/66b495eb-aaf9-4bf9-a759-41854534add7) |
 | 75 ⭐ | 17d | Applied Intuition | [New Grad 2027: Research Engineer (Master's)](https://go.vansh.nyc/Tp) | Sunnyvale, CA | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 75 ⭐ | 17d | Johns Hopkins Applied Physics Laborato | [New Grad 2027: Signal Processing/Computer Science/Algorithm Developmen](https://go.vansh.nyc/TN) | Laurel, MD | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
-| 75 ⭐ | 19d | Apptronik | [CoRL 2026 - Robotics & AI Talent ](https://boards.greenhouse.io/apptronik/jobs/6226572004?gh_jid=6226572004) | Austin, Texas & Sunnyvale, California  | other | early-stage startup | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/apptronik) |
 | 75 ⭐ | ? | General Motors | [Entry-Level – AI and Machine Learning for Automation Researcher](https://zapply.jobs/l/d/workday-generalmotors-careers-gm-JR-202621769?s=gh-new-grad-data-science-jobs-2027) | Warren, Michigan, United States... | other | not classified as startup | likely | [Zapply new-grad data science / ML board](https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027) |
 | 75 ⭐ | 27d | TikTok | [Machine Learning Engineer New Grad - E-Commerce User Growth](https://lifeattiktok.com/search/7694352871949682997) | San Jose, CA | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 74  | 4d | TikTok | [New Grad 2027: Software Engineer, Foundation Platform](https://go.vansh.nyc/177) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
@@ -156,5 +155,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 73  | 8d | Johns Hopkins APL | [New Grad 2027: Cybersecurity Engineer, Critical Infrastructure Protect](https://go.vansh.nyc/Wt) | Laurel, MD | other | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 73  | 9d | CrossCountry Consulting | [Forward Deployed Software Engineer (Recent Graduate) - DC Metro](https://jobs.lever.co/crosscountry-consulting/eb6ab6cf-6f93-486f-b4bf-6137bc67feb7) | McLean, VA | other | unavailable | likely | [posting](https://jobs.lever.co/crosscountry-consulting/eb6ab6cf-6f93-486f-b4bf-6137bc67feb7) |
 | 73  | 9d | CrossCountry Consulting | [Forward Deployed Software Engineer (Recent Graduate) - Chicago](https://jobs.lever.co/crosscountry-consulting/10ecb553-0393-4e7b-af5a-88a1947a0769) | Chicago, IL | other | unavailable | likely | [Direct company / ATS monitoring](https://github.com/SimplifyJobs/New-Grad-Positions) · [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad)<br>[Jobright fallback](https://jobright.ai/jobs/info/6ae0ae891f9d9308370a2e2d?utm_campaign=Software%20Engineering&utm_source=1103) · [Lever fallback](https://jobs.lever.co/crosscountry-consulting/10ecb553-0393-4e7b-af5a-88a1947a0769/apply) |
+| 73  | 9d | GE Vernova | [New Grad: AI Engineer](https://go.vansh.nyc/WH) | Greenville, SC | other | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
