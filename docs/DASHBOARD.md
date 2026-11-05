@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-05 12:55 UTC** · companies polled directly: **2480** (registry 2855) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-05 13:32 UTC** · companies polled directly: **2480** (registry 2855) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -154,7 +154,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 73  | 6d | Intel | [Software Application Development Engineer New Grad](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-Arizona-Phoenix/Software-Application-Development-Engineer_JR0288523) | Hillsboro, OR | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 73  | 6d | Intel | [New Grad: Software Application Development Engineer](https://go.vansh.nyc/11c) | Hillsboro, OR | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 73  | 8d | Johns Hopkins APL | [New Grad 2027: Cybersecurity Engineer, Critical Infrastructure Protect](https://go.vansh.nyc/Wt) | Laurel, MD | other | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
-| 73  | 8d | CrossCountry Consulting | [Forward Deployed Software Engineer (Recent Graduate) - DC Metro](https://jobs.lever.co/crosscountry-consulting/eb6ab6cf-6f93-486f-b4bf-6137bc67feb7) | McLean, VA | other | unavailable | likely | [posting](https://jobs.lever.co/crosscountry-consulting/eb6ab6cf-6f93-486f-b4bf-6137bc67feb7) |
-| 73  | 8d | CrossCountry Consulting | [Forward Deployed Software Engineer (Recent Graduate) - Chicago](https://jobs.lever.co/crosscountry-consulting/10ecb553-0393-4e7b-af5a-88a1947a0769) | Chicago, IL | other | unavailable | likely | [Direct company / ATS monitoring](https://github.com/SimplifyJobs/New-Grad-Positions) · [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad)<br>[Jobright fallback](https://jobright.ai/jobs/info/6ae0ae891f9d9308370a2e2d?utm_campaign=Software%20Engineering&utm_source=1103) · [Lever fallback](https://jobs.lever.co/crosscountry-consulting/10ecb553-0393-4e7b-af5a-88a1947a0769/apply) |
+| 73  | 9d | CrossCountry Consulting | [Forward Deployed Software Engineer (Recent Graduate) - DC Metro](https://jobs.lever.co/crosscountry-consulting/eb6ab6cf-6f93-486f-b4bf-6137bc67feb7) | McLean, VA | other | unavailable | likely | [posting](https://jobs.lever.co/crosscountry-consulting/eb6ab6cf-6f93-486f-b4bf-6137bc67feb7) |
+| 73  | 9d | CrossCountry Consulting | [Forward Deployed Software Engineer (Recent Graduate) - Chicago](https://jobs.lever.co/crosscountry-consulting/10ecb553-0393-4e7b-af5a-88a1947a0769) | Chicago, IL | other | unavailable | likely | [Direct company / ATS monitoring](https://github.com/SimplifyJobs/New-Grad-Positions) · [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad)<br>[Jobright fallback](https://jobright.ai/jobs/info/6ae0ae891f9d9308370a2e2d?utm_campaign=Software%20Engineering&utm_source=1103) · [Lever fallback](https://jobs.lever.co/crosscountry-consulting/10ecb553-0393-4e7b-af5a-88a1947a0769/apply) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
