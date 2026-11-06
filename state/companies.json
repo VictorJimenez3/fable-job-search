@@ -3054,6 +3054,19 @@
   "status": "active",
   "token": "niural"
  },
+ "ashby:nooks": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1793935523,
+  "last_ok": 1793935523,
+  "name": "Nooks",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "nooks"
+ },
  "ashby:normalcomputing": {
   "ats": "ashby",
   "extra": {},
@@ -4553,6 +4566,19 @@
   "status": "active",
   "token": "tracelabs"
  },
+ "ashby:trajectory": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1793935523,
+  "last_ok": 1793935523,
+  "name": "Trajectory",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "trajectory"
+ },
  "ashby:tryroam": {
   "ats": "ashby",
   "extra": {},
@@ -5550,7 +5576,7 @@
   "last_ok": 0,
   "name": "Baringa",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "baringa"
@@ -8330,6 +8356,19 @@
   "sector": "",
   "status": "active",
   "token": "lilasciences"
+ },
+ "greenhouse:lumbermens": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1793935523,
+  "last_ok": 1793935525,
+  "name": "Lumbermen's",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "lumbermens"
  },
  "greenhouse:lunarenergy": {
   "ats": "greenhouse",
@@ -11731,7 +11770,7 @@
   "last_ok": 0,
   "name": "Minerals Technologies",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "careers-mineralstech"
@@ -11801,7 +11840,7 @@
   "last_ok": 0,
   "name": "NRDC",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "careers-nrdc"
@@ -17197,6 +17236,19 @@
   "status": "active",
   "token": "RedBull"
  },
+ "smartrecruiters:RedWingShoeCompany": {
+  "ats": "smartrecruiters",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1793935523,
+  "last_ok": 1793935525,
+  "name": "Red Wing Shoe Company",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "RedWingShoeCompany"
+ },
  "smartrecruiters:RegDeskInc": {
   "ats": "smartrecruiters",
   "extra": {},
@@ -17735,7 +17787,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793919145,
+  "last_ok": 1793935546,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -18144,7 +18196,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1793919134,
+  "last_ok": 1793935533,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -18417,7 +18469,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793919147,
+  "last_ok": 1793935547,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -20787,7 +20839,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1793919132,
+  "last_ok": 1793935531,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -21523,6 +21575,22 @@
   "status": "active",
   "token": "criteo"
  },
+ "workday:crowdstrike:crowdstrikecareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "crowdstrikecareers"
+  },
+  "failures": 0,
+  "first_seen": 1793935523,
+  "last_ok": 1793935525,
+  "name": "CrowdStrike",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "crowdstrike"
+ },
  "workday:crowe:external_careers": {
   "ats": "workday",
   "extra": {
@@ -22003,7 +22071,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793919143,
+  "last_ok": 1793935545,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -22176,7 +22244,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793919136,
+  "last_ok": 1793935535,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -22230,6 +22298,22 @@
   "sector": "",
   "status": "active",
   "token": "elanco"
+ },
+ "workday:elementfleet:External_Career_Site": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd3",
+   "site": "External_Career_Site"
+  },
+  "failures": 0,
+  "first_seen": 1793935523,
+  "last_ok": 1793935524,
+  "name": "Element Fleet Management",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "elementfleet"
  },
  "workday:elevancehealth:ELV-ET": {
   "ats": "workday",
@@ -23327,7 +23411,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793919142,
+  "last_ok": 1793935540,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -25925,7 +26009,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793919136,
+  "last_ok": 1793935537,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -28885,7 +28969,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1793919140,
+  "last_ok": 1793935541,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
