@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-06 21:34 UTC** · companies polled directly: **2480** (registry 2855) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-06 21:42 UTC** · companies polled directly: **2480** (registry 2855) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -145,7 +145,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 73  | 7d | Rockwell Automation | [New Grad 2027: EDGE, Information Technology Rotational Program](https://go.vansh.nyc/13X) | Milwaukee, WI | other | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 73  | ? | Micron | [New College Grad - Data Scientist, AI for Business Functions](https://zapply.jobs/l/d/eightfold-micron-45096301?s=gh-new-grad-data-science-jobs-2027) | Boise, Idaho, United States of... | other | not classified as startup | likely | [Zapply new-grad data science / ML board](https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027) |
 | 73  | ? | Micron Technology | [New College Grad - Data Scientist, AI for Business Functions](https://zapply.jobs/l/d/workday-micron-external-JR115682?s=gh-new-grad-data-science-jobs-2027) | Boise, ID - Main Site | other | not classified as startup | likely | [Zapply new-grad data science / ML board](https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027) |
-| 73  | 9d | Johns Hopkins APL | [New Grad 2027: Cybersecurity Engineer, Critical Infrastructure Protect](https://go.vansh.nyc/Wt) | Laurel, MD | other | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 73  | 10d | Johns Hopkins APL | [New Grad 2027: Cybersecurity Engineer, Critical Infrastructure Protect](https://go.vansh.nyc/Wt) | Laurel, MD | other | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 73  | 10d | CrossCountry Consulting | [Forward Deployed Software Engineer (Recent Graduate) - DC Metro](https://jobs.lever.co/crosscountry-consulting/eb6ab6cf-6f93-486f-b4bf-6137bc67feb7) | McLean, VA | other | unavailable | likely | [posting](https://jobs.lever.co/crosscountry-consulting/eb6ab6cf-6f93-486f-b4bf-6137bc67feb7) |
 | 73  | 10d | CrossCountry Consulting | [Forward Deployed Software Engineer (Recent Graduate) - Chicago](https://jobs.lever.co/crosscountry-consulting/10ecb553-0393-4e7b-af5a-88a1947a0769) | Chicago, IL | other | unavailable | likely | [Direct company / ATS monitoring](https://github.com/SimplifyJobs/New-Grad-Positions) · [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad)<br>[Jobright fallback](https://jobright.ai/jobs/info/6ae0ae891f9d9308370a2e2d?utm_campaign=Software%20Engineering&utm_source=1103) · [Lever fallback](https://jobs.lever.co/crosscountry-consulting/10ecb553-0393-4e7b-af5a-88a1947a0769/apply) |
 | 73  | 10d | GE Vernova | [New Grad: AI Engineer](https://go.vansh.nyc/WH) | Greenville, SC | other | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
