@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-07 21:54 UTC** · companies polled directly: **2480** (registry 2855) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-07 22:01 UTC** · companies polled directly: **2480** (registry 2855) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -87,7 +87,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 74  | 5d | Equifax | [New Grad 2027: Data Analytics Rotational Development Associate](https://go.vansh.nyc/19F) | Alpharetta, GA | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 74  | 6d | TikTok | [New Grad 2027: ML Infra Engineer, Ads Infra](https://go.vansh.nyc/168) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 74  | 6d | TikTok | [New Grad 2027: AI Engineer (Client Arch)](https://go.vansh.nyc/16G) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
-| 74  | 8d | Northwood Space | [Software Engineer- Early Career (Platform)](https://jobs.ashbyhq.com/NorthwoodSpace/f7b9e8d5-7368-4a54-b445-ff647f12b1b6) | Torrance, CA | other | unavailable | no-history | [posting](https://jobs.ashbyhq.com/NorthwoodSpace/f7b9e8d5-7368-4a54-b445-ff647f12b1b6) |
+| 74  | 9d | Northwood Space | [Software Engineer- Early Career (Platform)](https://jobs.ashbyhq.com/NorthwoodSpace/f7b9e8d5-7368-4a54-b445-ff647f12b1b6) | Torrance, CA | other | unavailable | no-history | [posting](https://jobs.ashbyhq.com/NorthwoodSpace/f7b9e8d5-7368-4a54-b445-ff647f12b1b6) |
 | 74  | 12d | Anduril | [Early Career Software Engineer - Battlespace Awareness](https://boards.greenhouse.io/andurilindustries/jobs/5275431007) | Fort Collins, CO | big_tech | unavailable | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) · [Greenhouse](https://job-boards.greenhouse.io/andurilindustries)<br>[Greenhouse fallback](https://boards.greenhouse.io/andurilindustries/jobs/5275431007?gh_jid=5275431007) |
 | 74  | 16d | Brain Co. | [New Grad 2027: AI Platform Engineer](https://jobs.ashbyhq.com/brainco/4d39773e-f4c3-49c1-87c3-812a9804fb15/application) | San Francisco, CA | other | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) · [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions)<br>[go.vansh.nyc fallback](https://go.vansh.nyc/Av) · [Ashby fallback](https://jobs.ashbyhq.com/brainco/4d39773e-f4c3-49c1-87c3-812a9804fb15/application?embed=true) |
 | 74  | 19d | Applied Intuition | [New Grad 2027: Research Engineer (Master's)](https://go.vansh.nyc/Tp) | Sunnyvale, CA | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
