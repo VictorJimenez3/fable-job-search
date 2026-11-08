@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-08 13:30 UTC** · companies polled directly: **2480** (registry 2855) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-08 15:43 UTC** · companies polled directly: **2480** (registry 2855) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -109,7 +109,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 73  | 20d | Netic | [New Grad 2027: Software Engineer, Agent Platform](https://go.vansh.nyc/Ts) | San Francisco, CA | other | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 73  | 22d | Apptronik | [CoRL 2026 - Robotics & AI Talent ](https://boards.greenhouse.io/apptronik/jobs/6226572004?gh_jid=6226572004) | Austin, Texas & Sunnyvale, California  | other | early-stage startup | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/apptronik) |
 | 73  | 24d | CLEAR | [Software Development Engineer 1](https://job-boards.greenhouse.io/clear/jobs/8241829) | Austin, TX | other | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) · [Greenhouse](https://job-boards.greenhouse.io/clear) |
-| 73  | 25d | Axtria | [New Grad 2027: AI & Data Associate](https://go.vansh.nyc/Di) | Berkeley Heights, NJ | other | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 73  | 26d | Axtria | [New Grad 2027: AI & Data Associate](https://go.vansh.nyc/Di) | Berkeley Heights, NJ | other | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 73  | 29d | LSEG | [Business Graduate Programme (Data and Analytics)](https://lseg.wd3.myworkdayjobs.com/en-US/Graduate_Careers/job/New-York-City-United-States/Business-Graduate-Programme--Data-and-Analytics-_R0123714-2) | New York City, United States | other | not classified as startup | no-history | [posting](https://lseg.wd3.myworkdayjobs.com/en-US/Graduate_Careers/job/New-York-City-United-States/Business-Graduate-Programme--Data-and-Analytics-_R0123714-2) |
 | 72  | 5d | Shield | [New Grad 2027: Software Development Engineer](https://go.vansh.nyc/1bQ) | San Diego, CA | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 72  | 6d | Formlabs | [Embedded Software Engineer - Entry Level](https://jobright.ai/jobs/info/6a3ef7bc882f121f56a3c267?utm_campaign=Software%20Engineering&utm_source=1103) | Somerville, MA, United States | other | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
