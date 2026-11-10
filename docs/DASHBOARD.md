@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-10 13:49 UTC** · companies polled directly: **2480** (registry 2855) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-10 14:33 UTC** · companies polled directly: **2480** (registry 2855) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -65,7 +65,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 79 ⭐ | 22d | Palantir | [New Grad: Software Engineer, Infrastructure](https://go.vansh.nyc/U7) | Palo Alto, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 79 ⭐ | 22d | Palantir | [New Grad: Software Engineer, Production Infrastructure](https://go.vansh.nyc/U8) | Washington, DC | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 79 ⭐ | 25d | Mastercard | [New Grad 2027: AI Engineer 1 - Launch Program](https://go.vansh.nyc/DA) | O'Fallon, MO | fintech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
-| 78 ⭐ | 18d | Amazon | [New Grad 2027: Software Engineer](https://go.vansh.nyc/AD) | Madison, WI | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 78 ⭐ | 21d | Palantir | [Software Engineer, New Grad - Query Engines](https://jobs.lever.co/palantir/90329118-d9b7-4b96-acdf-13377e3196ac) | New York, NY | big_tech | not classified as startup | likely | [Direct company / ATS monitoring](https://github.com/SimplifyJobs/New-Grad-Positions) · [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026)<br>[Lever fallback](https://jobs.lever.co/palantir/90329118-d9b7-4b96-acdf-13377e3196ac/apply) |
 | 78 ⭐ | 22d | Palantir | [New Grad: Forward Deployed Infrastructure Engineer, US Government](https://go.vansh.nyc/U3) | New York, NY | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 78 ⭐ | 22d | Palantir | [New Grad: Forward Deployed Infrastructure Engineer, US Government](https://go.vansh.nyc/U2) | Washington, DC | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
@@ -142,7 +141,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 73  | 22d | Netic | [New Grad 2027: Software Engineer, Agent Platform](https://go.vansh.nyc/Ts) | San Francisco, CA | other | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 73  | 24d | Apptronik | [CoRL 2026 - Robotics & AI Talent ](https://boards.greenhouse.io/apptronik/jobs/6226572004?gh_jid=6226572004) | Austin, Texas & Sunnyvale, California  | other | early-stage startup | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/apptronik) |
 | 73  | 26d | CLEAR | [Software Development Engineer 1](https://job-boards.greenhouse.io/clear/jobs/8241829) | Austin, TX | other | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) · [Greenhouse](https://job-boards.greenhouse.io/clear) |
-| 73  | 27d | Axtria | [New Grad 2027: AI & Data Associate](https://go.vansh.nyc/Di) | Berkeley Heights, NJ | other | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 73  | 28d | Axtria | [New Grad 2027: AI & Data Associate](https://go.vansh.nyc/Di) | Berkeley Heights, NJ | other | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 72  | 9d | TikTok | [New Grad 2027: Software Engineer (Data Arch - E-commerce)](https://go.vansh.nyc/15Z) | Seattle, WA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026)<br>[go.vansh.nyc fallback](https://go.vansh.nyc/16Q) |
 | 72  | 9d | TikTok | [New Grad 2027: Software Engineer (Video-on-Demand Algorithm) (Master's](https://go.vansh.nyc/16R) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 72  | 9d | TikTok | [New Grad 2027: Software Engineer (Media Engine)](https://go.vansh.nyc/16w) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
@@ -156,5 +155,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 72  | 9d | TikTok | [New Grad 2027: Software Engineer, Business Integrity](https://go.vansh.nyc/17g) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 72  | 9d | TikTok | [New Grad 2027: Software Engineer/Mobile Engineer (Ads Core Demonstrati](https://go.vansh.nyc/15Y) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 72  | 9d | TikTok | [New Grad 2027: Software Engineer, Global CRM](https://go.vansh.nyc/16M) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 72  | 9d | TikTok | [New Grad 2027: Software Engineer (Global E-commerce-Search)](https://go.vansh.nyc/16s) | Seattle, WA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
