@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-10 04:10 UTC** · companies polled directly: **2480** (registry 2855) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-10 04:18 UTC** · companies polled directly: **2480** (registry 2855) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -60,7 +60,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 79 ⭐ | 22d | Applied Intuition | [New Grad 2027: Embedded Software Engineer](https://go.vansh.nyc/Tq) | Sunnyvale, CA | other | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 79 ⭐ | 25d | Mastercard | [New Grad 2027: AI Engineer 1 - Launch Program](https://go.vansh.nyc/DA) | O'Fallon, MO | fintech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 78 ⭐ | 8d | TikTok | [New Grad 2027: Machine Learning Engineer (App Ads and Gaming)](https://go.vansh.nyc/16S) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
-| 78 ⭐ | 8d | TikTok | [New Grad 2027: Machine Learning Engineer, Search-Basic Ranking](https://go.vansh.nyc/16I) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 78 ⭐ | 8d | TikTok | [New Grad 2027: Machine Learning Engineer, TikTok-Data-Search-Local Ser](https://go.vansh.nyc/179) | Seattle, WA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 78 ⭐ | 8d | TikTok | [New Grad 2027: Machine Learning Engineer, Ads Delivery](https://go.vansh.nyc/172) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 78 ⭐ | 8d | TikTok | [New Grad 2027: Machine Learning Engineer (Data-Global E-Commerce-Searc](https://go.vansh.nyc/17f) | Seattle, WA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
@@ -156,5 +155,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 72  | 8d | TikTok | [New Grad 2027: Software Engineer/Mobile Engineer (Ads Core Demonstrati](https://go.vansh.nyc/15Y) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 72  | 8d | TikTok | [New Grad 2027: Software Engineer, Global CRM](https://go.vansh.nyc/16M) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 72  | 8d | TikTok | [New Grad 2027: Software Engineer (Global E-commerce-Search)](https://go.vansh.nyc/16s) | Seattle, WA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 72  | 8d | TikTok | [New Grad 2027: Software Development Engineer (TikTok - Testing - Growt](https://go.vansh.nyc/178) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
