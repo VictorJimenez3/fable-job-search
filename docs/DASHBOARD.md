@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-12 09:53 UTC** · companies polled directly: **2480** (registry 2861) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-12 11:38 UTC** · companies polled directly: **2480** (registry 2861) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -109,9 +109,9 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 79 ⭐ | 20d | GlobalFoundries | [New Grad 2027: AI Software Engineer](https://go.vansh.nyc/AQ) | Santa Clara, CA | other | not classified as startup | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 79 ⭐ | 24d | Palantir | [New Grad: Software Engineer, Infrastructure](https://go.vansh.nyc/U7) | Palo Alto, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 79 ⭐ | 24d | Palantir | [New Grad: Software Engineer, Production Infrastructure](https://go.vansh.nyc/U8) | Washington, DC | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
-| 79 ⭐ | 26d | TikTok | [New Grad 2027: Backend Engineer, Account](https://go.vansh.nyc/DC) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 79 ⭐ | 27d | TikTok | [New Grad 2027: Backend Engineer, Account](https://go.vansh.nyc/DC) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 79 ⭐ | 27d | Mastercard | [New Grad 2027: AI Engineer 1 - Launch Program](https://go.vansh.nyc/DA) | O'Fallon, MO | fintech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
-| 79 ⭐ | 27d | TikTok | [New Grad 2027: Backend Engineer, Social Foundation](https://go.vansh.nyc/Dw) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 79 ⭐ | 28d | TikTok | [New Grad 2027: Backend Engineer, Social Foundation](https://go.vansh.nyc/Dw) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 78 ⭐ | 11d | TikTok | [New Grad 2027: Data Engineer, Monetization Data](https://go.vansh.nyc/160) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 78 ⭐ | 23d | Palantir | [Software Engineer, New Grad - Query Engines](https://jobs.lever.co/palantir/90329118-d9b7-4b96-acdf-13377e3196ac) | New York, NY | big_tech | not classified as startup | likely | [Direct company / ATS monitoring](https://github.com/SimplifyJobs/New-Grad-Positions) · [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026)<br>[Lever fallback](https://jobs.lever.co/palantir/90329118-d9b7-4b96-acdf-13377e3196ac/apply) |
 | 78 ⭐ | 24d | Palantir | [New Grad: Forward Deployed Infrastructure Engineer, US Government](https://go.vansh.nyc/U3) | New York, NY | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
