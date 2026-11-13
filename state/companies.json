@@ -737,6 +737,19 @@
   "status": "active",
   "token": "astronomer"
  },
+ "ashby:atalanta": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1794538525,
+  "last_ok": 1794538526,
+  "name": "Atalanta",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "atalanta"
+ },
  "ashby:aurora-operations-inc": {
   "ats": "ashby",
   "extra": {},
@@ -10371,6 +10384,19 @@
   "status": "active",
   "token": "stackadapt-confidential"
  },
+ "greenhouse:stackav": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1794538525,
+  "last_ok": 1794538526,
+  "name": "StackAV",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "stackav"
+ },
  "greenhouse:stateaffairs": {
   "ats": "greenhouse",
   "extra": {},
@@ -11728,6 +11754,20 @@
   "sector": "",
   "status": "invalid",
   "token": "careers-decisionpointcorp"
+ },
+ "icims:careers-e2": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1794538525,
+  "invalidated_at": 1794538528,
+  "last_ok": 0,
+  "name": "E2 Consulting Engineers",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "careers-e2"
  },
  "icims:careers-eastpennmanufacturing": {
   "ats": "icims",
@@ -16931,6 +16971,19 @@
   "status": "active",
   "token": "CapTechConsulting"
  },
+ "smartrecruiters:Carlisle": {
+  "ats": "smartrecruiters",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1794538525,
+  "last_ok": 1794538526,
+  "name": "Carlisle Companies",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "Carlisle"
+ },
  "smartrecruiters:CityAndCountyOfSanFrancisco1": {
   "ats": "smartrecruiters",
   "extra": {},
@@ -18116,7 +18169,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1794523419,
+  "last_ok": 1794538544,
   "name": "3M",
   "origin": "seed",
   "probe_attempts": 1,
@@ -18541,7 +18594,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1794523407,
+  "last_ok": 1794538533,
   "name": "Albemarle",
   "origin": "seed",
   "probe_attempts": 1,
@@ -18814,7 +18867,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1794523424,
+  "last_ok": 1794538549,
   "name": "Applied Materials",
   "origin": "seed",
   "probe_attempts": 1,
@@ -21248,7 +21301,7 @@
   "failures": 0,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
-  "last_ok": 1794523405,
+  "last_ok": 1794538531,
   "name": "Chevron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -22496,7 +22549,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1794523417,
+  "last_ok": 1794538542,
   "name": "Dow",
   "origin": "seed",
   "probe_attempts": 1,
@@ -22685,7 +22738,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1794523412,
+  "last_ok": 1794538537,
   "name": "Ecolab",
   "origin": "seed",
   "probe_attempts": 1,
@@ -23884,7 +23937,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1794523418,
+  "last_ok": 1794538539,
   "name": "GlobalFoundries",
   "origin": "seed",
   "probe_attempts": 1,
@@ -24883,6 +24936,22 @@
   "sector": "",
   "status": "active",
   "token": "ilitch"
+ },
+ "workday:imh:IntermountainCareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd108",
+   "site": "IntermountainCareers"
+  },
+  "failures": 0,
+  "first_seen": 1794538525,
+  "last_ok": 1794538527,
+  "name": "Intermountain Healthcare",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "imh"
  },
  "workday:ing:icsgblcor": {
   "ats": "workday",
@@ -26594,7 +26663,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1794523410,
+  "last_ok": 1794538535,
   "name": "Micron",
   "origin": "seed",
   "probe_attempts": 1,
@@ -27880,6 +27949,23 @@
   "sector": "",
   "status": "invalid",
   "token": "osv-cci"
+ },
+ "workday:osv-edf:Confidential": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "Confidential"
+  },
+  "failures": 0,
+  "first_seen": 1794538525,
+  "invalidated_at": 1794538527,
+  "last_ok": 0,
+  "name": "Environmental Defense Fund",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "osv-edf"
  },
  "workday:osv-rubicon:MagniteCareers": {
   "ats": "workday",
@@ -29618,7 +29704,7 @@
   },
   "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1794523414,
+  "last_ok": 1794538539,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
