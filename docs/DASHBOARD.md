@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-14 10:22 UTC** · companies polled directly: **2480** (registry 2861) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-14 12:25 UTC** · companies polled directly: **2480** (registry 2861) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -108,7 +108,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 79 ⭐ | 22d | GlobalFoundries | [New Grad 2027: AI Software Engineer](https://go.vansh.nyc/AQ) | Santa Clara, CA | other | not classified as startup | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 79 ⭐ | 26d | Palantir | [New Grad: Software Engineer, Infrastructure](https://go.vansh.nyc/U7) | Palo Alto, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 79 ⭐ | 26d | Palantir | [New Grad: Software Engineer, Production Infrastructure](https://go.vansh.nyc/U8) | Washington, DC | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
-| 79 ⭐ | 28d | TikTok | [New Grad 2027: Backend Engineer, Account](https://go.vansh.nyc/DC) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 79 ⭐ | 29d | TikTok | [New Grad 2027: Backend Engineer, Account](https://go.vansh.nyc/DC) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 79 ⭐ | 29d | Mastercard | [New Grad 2027: AI Engineer 1 - Launch Program](https://go.vansh.nyc/DA) | O'Fallon, MO | fintech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 78 ⭐ | 13d | TikTok | [New Grad 2027: Data Engineer, Monetization Data](https://go.vansh.nyc/160) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 78 ⭐ | 22d | Adobe | [2027 University Graduate - Software Engineer](https://jobright.ai/jobs/info/6ab56a72d85922de20ce0eba?utm_campaign=Software%20Engineering&utm_source=1103) | San Jose, CA, United States | big_tech | not classified as startup | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
