@@ -18232,7 +18232,7 @@
    "host": "wd1",
    "site": "Search"
   },
-  "failures": 1,
+  "failures": 2,
   "first_seen": 1784354642,
   "last_ok": 1794613979,
   "name": "3M",
@@ -18656,7 +18656,7 @@
    "host": "wd5",
    "site": "External"
   },
-  "failures": 2,
+  "failures": 3,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
   "last_ok": 1794594614,
@@ -18930,7 +18930,7 @@
    "host": "wd1",
    "site": "External"
   },
-  "failures": 1,
+  "failures": 2,
   "first_seen": 1784354642,
   "last_ok": 1794613982,
   "name": "Applied Materials",
@@ -21363,7 +21363,7 @@
    "host": "wd5",
    "site": "jobs"
   },
-  "failures": 2,
+  "failures": 3,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
   "last_ok": 1794594614,
@@ -21690,6 +21690,22 @@
   "sector": "",
   "status": "active",
   "token": "cmegroup"
+ },
+ "workday:cmu:SEI": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd115",
+   "site": "SEI"
+  },
+  "failures": 0,
+  "first_seen": 1794664062,
+  "last_ok": 1794664062,
+  "name": "Carnegie Mellon University",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "cmu"
  },
  "workday:cmu:cmu": {
   "ats": "workday",
@@ -22612,7 +22628,7 @@
    "host": "wd1",
    "site": "ExternalCareers"
   },
-  "failures": 1,
+  "failures": 2,
   "first_seen": 1784354642,
   "last_ok": 1794613977,
   "name": "Dow",
@@ -22801,7 +22817,7 @@
    "host": "wd1",
    "site": "Ecolab_External"
   },
-  "failures": 1,
+  "failures": 2,
   "first_seen": 1784354642,
   "last_ok": 1794613969,
   "name": "Ecolab",
@@ -24032,7 +24048,7 @@
    "host": "wd1",
    "site": "External"
   },
-  "failures": 1,
+  "failures": 2,
   "first_seen": 1784354642,
   "last_ok": 1794613974,
   "name": "GlobalFoundries",
@@ -26774,7 +26790,7 @@
    "host": "wd1",
    "site": "External"
   },
-  "failures": 1,
+  "failures": 2,
   "first_seen": 1784354642,
   "last_ok": 1794613970,
   "name": "Micron",
@@ -28521,6 +28537,22 @@
   "status": "active",
   "token": "polarsemi"
  },
+ "workday:postman:careers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd108",
+   "site": "careers"
+  },
+  "failures": 0,
+  "first_seen": 1794664062,
+  "last_ok": 1794664063,
+  "name": "Postman",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "postman"
+ },
  "workday:premierinc:external_professional": {
   "ats": "workday",
   "extra": {
@@ -29815,9 +29847,9 @@
    "host": "wd3",
    "site": "ShellCareers"
   },
-  "failures": 1,
+  "failures": 0,
   "first_seen": 1784354642,
-  "last_ok": 1794613974,
+  "last_ok": 1794664074,
   "name": "Shell",
   "origin": "seed",
   "probe_attempts": 1,
