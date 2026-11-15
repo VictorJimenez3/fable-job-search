@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-15 18:55 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-15 19:01 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -145,7 +145,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 74  | 23d | Brain Co. | [New Grad 2027: AI Platform Engineer](https://jobs.ashbyhq.com/brainco/4d39773e-f4c3-49c1-87c3-812a9804fb15/application) | San Francisco, CA | other | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) · [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions)<br>[go.vansh.nyc fallback](https://go.vansh.nyc/Av) · [Ashby fallback](https://jobs.ashbyhq.com/brainco/4d39773e-f4c3-49c1-87c3-812a9804fb15/application?embed=true) |
 | 74  | 27d | Johns Hopkins Applied Physics Laborato | [New Grad 2027: Junior AI Platform Engineer](https://go.vansh.nyc/TE) | Laurel, MD | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 73  | ? | Military Spouse Jobs & VetJobs | [Software Engineer Acs Early Career - Fort Worth TX](https://sjobs.brassring.com/TGnewUI/Search/home/HomeWithPreLoad?partnerid=16030&amp;siteid=6090&amp;PageType=JobDetails&amp;jobid=3395582) | Fort Worth, TX | healthtech | unavailable | no-history | [Headcount Labs engineering jobs](https://raw.githubusercontent.com/HeadcountLabs/entry-level-jobs/main/README.md) |
-| 73  | 12d | Verkada | [New Grad 2027: Backend Software Engineer](https://go.vansh.nyc/19H) | San Mateo, CA | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 73  | 13d | Verkada | [New Grad 2027: Backend Software Engineer](https://go.vansh.nyc/19H) | San Mateo, CA | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 73  | 13d | Equifax | [New Grad 2027: Data Analytics Rotational Development Associate](https://go.vansh.nyc/19F) | Alpharetta, GA | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 73  | 13d | Verkada | [Backend Software Engineer - University Graduate 2027](https://job-boards.greenhouse.io/verkada/jobs/5280545007) | San Mateo, CA United States | other | not classified as startup | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/verkada) · [Headcount Labs engineering jobs](https://github.com/HeadcountLabs/entry-level-jobs) · [raw.githubusercontent.com](https://raw.githubusercontent.com/HeadcountLabs/entry-level-jobs/main/README.md) |
 | 73  | 15d | LiveFlow | [Graduate Engineer - AI Agents](https://go.vansh.nyc/13R) | San Francisco, CA | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
