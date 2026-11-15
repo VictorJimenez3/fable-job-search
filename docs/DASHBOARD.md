@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-15 09:57 UTC** · companies polled directly: **2480** (registry 2861) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-15 12:00 UTC** · companies polled directly: **2480** (registry 2861) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -55,7 +55,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 81 ⭐ | 14d | TikTok | [New Grad 2027: Backend Software Engineer, Creation Platform](https://go.vansh.nyc/16T) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 81 ⭐ | 14d | TikTok | [New Grad 2027: Backend Software Engineer (Global E-commerce)](https://go.vansh.nyc/17b) | Seattle, WA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 81 ⭐ | 14d | TikTok | [New Grad 2027: Backend Software Engineer (Feed Safety)](https://go.vansh.nyc/15R) | Seattle, WA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
-| 81 ⭐ | 14d | TikTok | [New Grad 2027: Software Engineer, Foundation Platform (Master's)](https://go.vansh.nyc/175) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 81 ⭐ | 14d | TikTok | [New Grad 2027: Backend Engineer, User Growth](https://go.vansh.nyc/16u) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 81 ⭐ | 14d | TikTok | [New Grad 2027: Backend Software Engineer (Machine Moderation Platform)](https://go.vansh.nyc/16c) | Seattle, WA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 81 ⭐ | 14d | TikTok | [New Grad 2027: Software Engineer, Transaction Platform](https://go.vansh.nyc/15W) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
@@ -102,7 +101,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 79 ⭐ | 23d | GlobalFoundries | [New Grad 2027: AI Software Engineer](https://go.vansh.nyc/AQ) | Santa Clara, CA | other | not classified as startup | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 79 ⭐ | 27d | Palantir | [New Grad: Software Engineer, Infrastructure](https://go.vansh.nyc/U7) | Palo Alto, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 79 ⭐ | 27d | Palantir | [New Grad: Software Engineer, Production Infrastructure](https://go.vansh.nyc/U8) | Washington, DC | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
-| 79 ⭐ | 29d | TikTok | [New Grad 2027: Backend Engineer, Account](https://go.vansh.nyc/DC) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 78 ⭐ | 14d | TikTok | [New Grad 2027: Data Engineer, Monetization Data](https://go.vansh.nyc/160) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 78 ⭐ | 16d | Amazon | [Software Development Engineer (Database) Early Career- 2027 (US)](https://www.amazon.jobs/en/jobs/10593902/software-development-engineer-database-early-career-2027-us) | Seattle, Washington, USA | big_tech | unavailable | likely | [SpeedyApply college jobs](https://github.com/speedyapply/2027-SWE-College-Jobs) · [Headcount Labs engineering jobs](https://github.com/HeadcountLabs/entry-level-jobs) · [raw.githubusercontent.com](https://raw.githubusercontent.com/HeadcountLabs/entry-level-jobs/main/README.md)<br>[www.amazon.jobs fallback](https://www.amazon.jobs/jobs/10593902/apply) |
 | 78 ⭐ | 19d | Salesforce | [Software Engineer New Grad](https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/Indiana---Indianapolis/Software-Engineering-MTS_JR363598) | Indianapolis, IN | big_tech | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
@@ -156,5 +154,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 73  | 29d | Apptronik | [CoRL 2026 - Robotics & AI Talent ](https://boards.greenhouse.io/apptronik/jobs/6226572004?gh_jid=6226572004) | Austin, Texas & Sunnyvale, California  | other | early-stage startup | likely | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/apptronik) |
 | 72  | ? | Micron Technology | [New College Grad - Data Scientist, AI for Business Functions](https://zapply.jobs/l/d/workday-micron-external-JR115682?s=gh-new-grad-data-science-jobs-2027) | Boise, ID - Main Site | other | not classified as startup | likely | [Zapply new-grad data science / ML board](https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027) |
 | 72  | 16d | Intel | [Software Application Development Engineer New Grad](https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-Arizona-Phoenix/Software-Application-Development-Engineer_JR0288523) | Hillsboro, OR | big_tech | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 72  | 16d | Intel | [New Grad: Software Application Development Engineer](https://go.vansh.nyc/11c) | Hillsboro, OR | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 72  | 18d | Neon | [New Grad 2027: Software Engineer, Distributed Data Systems](https://go.vansh.nyc/YI) | Mountain View, CA | other | early-stage startup | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
