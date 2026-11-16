@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-16 10:32 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-16 11:09 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -71,7 +71,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 79 ⭐ | 15d | ByteDance | [New Grad 2027: Multi-Cloud CDN Scheduling Platform Engineer, CDN Platf](https://go.vansh.nyc/15d) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 79 ⭐ | 15d | ByteDance | [New Grad 2027: Multi-Cloud CDN Scheduling Platform Engineer, CDN Platf](https://go.vansh.nyc/15e) | Seattle, WA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 79 ⭐ | 17d | RTX | [Entry-Level Software Developer - Application Support & Sustainment](https://globalhr.wd5.myworkdayjobs.com/rec_rtx_ext_gateway/job/US-IA-CEDAR-RAPIDS-108--400-Collins-Rd-NE--BLDG-108/Entry-Level-Software-Developer---Application-Support---Sustainment--Remote-_01885356) | Remote in USA | other | unavailable | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions)<br>[Workday fallback](https://globalhr.wd5.myworkdayjobs.com/en-US/rec_rtx_ext_gateway/job/US-IA-CEDAR-RAPIDS-108--400-Collins-Rd-NE--BLDG-108/Entry-Level-Software-Developer---Application-Support---Sustainment--Remote-_01885356) |
-| 79 ⭐ | 17d | Thoughtworks | [Software Developer New Grad](https://www.thoughtworks.com/careers/jobs/8333235?gh_jid=8333235) | Chicago, IL | other | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 79 ⭐ | 18d | Thoughtworks | [Software Developer New Grad](https://www.thoughtworks.com/careers/jobs/8333235?gh_jid=8333235) | Chicago, IL | other | not classified as startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 79 ⭐ | 20d | Swarm Aero | [Software Engineer, Real-Time Systems (Early Career)](https://jobs.ashbyhq.com/swarmaero/7d3783c5-f98c-4def-8c33-6de907aab30e) | San Francisco | other | early-stage startup | no-history | [Direct company / ATS monitoring](https://github.com/SimplifyJobs/New-Grad-Positions)<br>[Ashby fallback](https://jobs.ashbyhq.com/swarmaero/7d3783c5-f98c-4def-8c33-6de907aab30e/application?embed=true) |
 | 79 ⭐ | 24d | GlobalFoundries | [New Grad 2027: AI Software Engineer](https://go.vansh.nyc/AQ) | Santa Clara, CA | other | not classified as startup | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 79 ⭐ | 28d | Palantir | [New Grad: Software Engineer, Infrastructure](https://go.vansh.nyc/U7) | Palo Alto, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
