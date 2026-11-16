@@ -2517,6 +2517,19 @@
   "status": "active",
   "token": "inherent"
  },
+ "ashby:instil": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1794855317,
+  "last_ok": 1794855319,
+  "name": "Instil Software Ltd",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "instil"
+ },
  "ashby:integrate": {
   "ats": "ashby",
   "extra": {},
@@ -9159,6 +9172,19 @@
   "status": "active",
   "token": "nyisointernships"
  },
+ "greenhouse:octaura": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1794855317,
+  "last_ok": 1794855319,
+  "name": "Octaura",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "octaura"
+ },
  "greenhouse:offerup": {
   "ats": "greenhouse",
   "extra": {},
@@ -11764,6 +11790,20 @@
   "status": "invalid",
   "token": "careers-e2"
  },
+ "icims:careers-eastpennmanufacturing": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1794855317,
+  "invalidated_at": 1794855318,
+  "last_ok": 0,
+  "name": "East Penn Manufacturing",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "careers-eastpennmanufacturing"
+ },
  "icims:careers-empiricalfoods": {
   "ats": "icims",
   "extra": {},
@@ -12142,6 +12182,20 @@
   "status": "invalid",
   "token": "careers-resonetics"
  },
+ "icims:careers-riversideresearch": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1794855317,
+  "invalidated_at": 1794855319,
+  "last_ok": 0,
+  "name": "Riverside Research",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "careers-riversideresearch"
+ },
  "icims:careers-rovisys": {
   "ats": "icims",
   "extra": {},
@@ -12379,6 +12433,20 @@
   "sector": "",
   "status": "invalid",
   "token": "careers-uscareers-idemia"
+ },
+ "icims:careers-uscareers-lennox": {
+  "ats": "icims",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1794855317,
+  "invalidated_at": 1794855317,
+  "last_ok": 0,
+  "name": "Lennox International",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "careers-uscareers-lennox"
  },
  "icims:careers-uscareers-willkie": {
   "ats": "icims",
@@ -18007,7 +18075,7 @@
    "host": "wd1",
    "site": "Search"
   },
-  "failures": 1,
+  "failures": 2,
   "first_seen": 1784354642,
   "last_ok": 1794792354,
   "name": "3M",
@@ -18431,7 +18499,7 @@
    "host": "wd5",
    "site": "External"
   },
-  "failures": 1,
+  "failures": 2,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
   "last_ok": 1794792343,
@@ -18502,7 +18570,7 @@
   "last_ok": 0,
   "name": "IPEX",
   "origin": "harvest:simplify",
-  "probe_attempts": 1,
+  "probe_attempts": 2,
   "sector": "",
   "status": "invalid",
   "token": "aliaxis"
@@ -18722,7 +18790,7 @@
    "host": "wd1",
    "site": "External"
   },
-  "failures": 1,
+  "failures": 2,
   "first_seen": 1784354642,
   "last_ok": 1794792355,
   "name": "Applied Materials",
@@ -21155,7 +21223,7 @@
    "host": "wd5",
    "site": "jobs"
   },
-  "failures": 1,
+  "failures": 2,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
   "last_ok": 1794792342,
@@ -22420,7 +22488,7 @@
    "host": "wd1",
    "site": "ExternalCareers"
   },
-  "failures": 1,
+  "failures": 2,
   "first_seen": 1784354642,
   "last_ok": 1794792353,
   "name": "Dow",
@@ -22609,7 +22677,7 @@
    "host": "wd1",
    "site": "Ecolab_External"
   },
-  "failures": 1,
+  "failures": 2,
   "first_seen": 1784354642,
   "last_ok": 1794792345,
   "name": "Ecolab",
@@ -23856,7 +23924,7 @@
    "host": "wd1",
    "site": "External"
   },
-  "failures": 1,
+  "failures": 2,
   "first_seen": 1784354642,
   "last_ok": 1794792350,
   "name": "GlobalFoundries",
@@ -26614,7 +26682,7 @@
    "host": "wd1",
    "site": "External"
   },
-  "failures": 1,
+  "failures": 2,
   "first_seen": 1784354642,
   "last_ok": 1794792346,
   "name": "Micron",
@@ -27917,6 +27985,23 @@
   "sector": "",
   "status": "active",
   "token": "osu"
+ },
+ "workday:osv-cci:CCICareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd1",
+   "site": "CCICareers"
+  },
+  "failures": 0,
+  "first_seen": 1794855317,
+  "invalidated_at": 1794855319,
+  "last_ok": 0,
+  "name": "Castleton Commodities International",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "osv-cci"
  },
  "workday:osv-edf:Confidential": {
   "ats": "workday",
@@ -29686,7 +29771,7 @@
    "host": "wd3",
    "site": "ShellCareers"
   },
-  "failures": 1,
+  "failures": 2,
   "first_seen": 1784354642,
   "last_ok": 1794792350,
   "name": "Shell",
