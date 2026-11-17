@@ -4045,6 +4045,19 @@
   "status": "active",
   "token": "relling"
  },
+ "ashby:remanence": {
+  "ats": "ashby",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1794913778,
+  "last_ok": 1794913778,
+  "name": "Remanence",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "remanence"
+ },
  "ashby:remarcable-inc": {
   "ats": "ashby",
   "extra": {},
@@ -7092,6 +7105,19 @@
   "status": "active",
   "token": "faire"
  },
+ "greenhouse:familyoffice": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1794913778,
+  "last_ok": 1794913778,
+  "name": "Soros Fund Management",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "familyoffice"
+ },
  "greenhouse:fanaticscollectibles": {
   "ats": "greenhouse",
   "extra": {},
@@ -7833,6 +7859,19 @@
   "sector": "",
   "status": "active",
   "token": "hevenaerotech"
+ },
+ "greenhouse:hexarmor": {
+  "ats": "greenhouse",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1794913778,
+  "last_ok": 1794913778,
+  "name": "HexArmor",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "active",
+  "token": "hexarmor"
  },
  "greenhouse:heygen": {
   "ats": "greenhouse",
@@ -11799,7 +11838,7 @@
   "last_ok": 0,
   "name": "East Penn Manufacturing",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "careers-eastpennmanufacturing"
@@ -12191,7 +12230,7 @@
   "last_ok": 0,
   "name": "Riverside Research",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "careers-riversideresearch"
@@ -12443,7 +12482,7 @@
   "last_ok": 0,
   "name": "Lennox International",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "careers-uscareers-lennox"
@@ -14461,6 +14500,20 @@
   "sector": "healthtech",
   "status": "active",
   "token": "swordhealth"
+ },
+ "lever:syntax": {
+  "ats": "lever",
+  "extra": {},
+  "failures": 0,
+  "first_seen": 1794913778,
+  "invalidated_at": 1794913819,
+  "last_ok": 0,
+  "name": "Syntax",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "syntax"
  },
  "lever:tandh": {
   "ats": "lever",
@@ -18101,7 +18154,7 @@
    "host": "wd1",
    "site": "Search"
   },
-  "failures": 3,
+  "failures": 4,
   "first_seen": 1784354642,
   "last_ok": 1794792354,
   "name": "3M",
@@ -18525,7 +18578,7 @@
    "host": "wd5",
    "site": "External"
   },
-  "failures": 3,
+  "failures": 4,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
   "last_ok": 1794792343,
@@ -18816,7 +18869,7 @@
    "host": "wd1",
    "site": "External"
   },
-  "failures": 3,
+  "failures": 4,
   "first_seen": 1784354642,
   "last_ok": 1794792355,
   "name": "Applied Materials",
@@ -21249,7 +21302,7 @@
    "host": "wd5",
    "site": "jobs"
   },
-  "failures": 3,
+  "failures": 4,
   "first_seen": 1784354642,
   "hygiene_retry_at": 1786955147,
   "last_ok": 1794792342,
@@ -22514,7 +22567,7 @@
    "host": "wd1",
    "site": "ExternalCareers"
   },
-  "failures": 3,
+  "failures": 4,
   "first_seen": 1784354642,
   "last_ok": 1794792353,
   "name": "Dow",
@@ -22703,7 +22756,7 @@
    "host": "wd1",
    "site": "Ecolab_External"
   },
-  "failures": 3,
+  "failures": 4,
   "first_seen": 1784354642,
   "last_ok": 1794792345,
   "name": "Ecolab",
@@ -23950,7 +24003,7 @@
    "host": "wd1",
    "site": "External"
   },
-  "failures": 3,
+  "failures": 4,
   "first_seen": 1784354642,
   "last_ok": 1794792350,
   "name": "GlobalFoundries",
@@ -26708,7 +26761,7 @@
    "host": "wd1",
    "site": "External"
   },
-  "failures": 3,
+  "failures": 4,
   "first_seen": 1784354642,
   "last_ok": 1794792346,
   "name": "Micron",
@@ -28024,7 +28077,7 @@
   "last_ok": 0,
   "name": "Castleton Commodities International",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "osv-cci"
@@ -29797,7 +29850,7 @@
    "host": "wd3",
    "site": "ShellCareers"
   },
-  "failures": 3,
+  "failures": 4,
   "first_seen": 1784354642,
   "last_ok": 1794792350,
   "name": "Shell",
