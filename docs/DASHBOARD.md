@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-17 13:30 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-17 17:23 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -51,7 +51,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 81 ⭐ | 16d | TikTok | [New Grad 2027: Backend Engineer, User Growth](https://go.vansh.nyc/16u) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 81 ⭐ | 16d | ByteDance | [New Grad 2027: Software Engineer (AML-Engine-Forge Platform)](https://go.vansh.nyc/15f) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 81 ⭐ | 25d | Amazon | [New Grad 2027: Software Development Engineer 1, Annapurna Labs](https://amazon.jobs/en/jobs/10558915/software-development-engineer-i-annapurna-labs-early-career-2027) | Seattle, WA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) · [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions)<br>[go.vansh.nyc fallback](https://go.vansh.nyc/Bg) |
-| 81 ⭐ | 29d | Johns Hopkins Applied Physics Laborato | [New Grad 2027: Junior AI Platform Engineer](https://go.vansh.nyc/TE) | Laurel, MD | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 81 ⭐ | 29d | Johns Hopkins Applied Physics Laborato | [New Grad 2027: Signal Processing/Computer Science/Algorithm Developmen](https://go.vansh.nyc/TN) | Laurel, MD | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 80 ⭐ | 16d | TikTok | [New Grad 2027: Data Scientist (Multimedia)](https://go.vansh.nyc/16V) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 80 ⭐ | 16d | ByteDance | [New Grad 2027: Software Engineer - AI Agent Infra (Security Engineerin](https://go.vansh.nyc/151) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
@@ -156,5 +155,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 74  | 25d | Brain Co. | [New Grad 2027: AI Platform Engineer](https://jobs.ashbyhq.com/brainco/4d39773e-f4c3-49c1-87c3-812a9804fb15/application) | San Francisco, CA | other | early-stage startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) · [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions)<br>[go.vansh.nyc fallback](https://go.vansh.nyc/Av) · [Ashby fallback](https://jobs.ashbyhq.com/brainco/4d39773e-f4c3-49c1-87c3-812a9804fb15/application?embed=true) |
 | 73  | ? | Military Spouse Jobs & VetJobs | [Software Engineer Acs Early Career - Fort Worth TX](https://sjobs.brassring.com/TGnewUI/Search/home/HomeWithPreLoad?partnerid=16030&amp;siteid=6090&amp;PageType=JobDetails&amp;jobid=3395582) | Fort Worth, TX | healthtech | unavailable | no-history | [Headcount Labs engineering jobs](https://raw.githubusercontent.com/HeadcountLabs/entry-level-jobs/main/README.md) |
 | 73  | 14d | Verkada | [New Grad 2027: Backend Software Engineer](https://go.vansh.nyc/19H) | San Mateo, CA | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 73  | 14d | Equifax | [New Grad 2027: Data Analytics Rotational Development Associate](https://go.vansh.nyc/19F) | Alpharetta, GA | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
