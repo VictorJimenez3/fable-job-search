@@ -1,22 +1,6 @@
 [
  {
   "aggregators": {
-   "simplify": 3458
-  },
-  "alerts": 0,
-  "ats": {
-   "companies_polled": 9,
-   "failed": 0,
-   "ok": 9
-  },
-  "dropped_by_gates": 3793,
-  "new_jobs": 12,
-  "registry_size": 1832,
-  "took_s": 23.0,
-  "ts": 1789690735
- },
- {
-  "aggregators": {
    "simplify": 3472
   },
   "alerts": 1,
@@ -4798,5 +4782,21 @@
   "registry_size": 2289,
   "took_s": 6.1,
   "ts": 1794855317
+ },
+ {
+  "aggregators": {
+   "simplify": 2566
+  },
+  "alerts": 1,
+  "ats": {
+   "companies_polled": 9,
+   "failed": 9,
+   "ok": 0
+  },
+  "dropped_by_gates": 2028,
+  "new_jobs": 5,
+  "registry_size": 2291,
+  "took_s": 5.6,
+  "ts": 1794882454
  }
 ]
