@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-17 17:23 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-17 19:26 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -150,11 +150,11 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 76 ⭐ | 21d | Northrop Grumman | [New Grad 2027: Associate Software Engineer](https://go.vansh.nyc/Wo) | Boulder, CO | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 76 ⭐ | 21d | Northrop Grumman | [New Grad 2027: Associate Software Engineer](https://go.vansh.nyc/Wn) | Azusa, CA | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 75 ⭐ | 17d | Rockwell Automation | [EDGE, Information Technology Rotational Program](https://rockwellautomation.wd1.myworkdayjobs.com/en-US/External_Rockwell_Automation/job/Milwaukee-Wisconsin-United-States/EDGE-Associate--Information-Technology-Rotational-Program_R26-5375-1) | Milwaukee, Wisconsin, United States | other | unavailable | likely | [posting](https://rockwellautomation.wd1.myworkdayjobs.com/en-US/External_Rockwell_Automation/job/Milwaukee-Wisconsin-United-States/EDGE-Associate--Information-Technology-Rotational-Program_R26-5375-1) |
-| 75 ⭐ | 20d | SambaNova Systems | [ML Infrastructure Engineer New Grad](https://sambanova.ai/sambanova-available-positions/?gh_jid=6224938004) | Austin, TX | other | late-stage startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
+| 75 ⭐ | 21d | SambaNova Systems | [ML Infrastructure Engineer New Grad](https://sambanova.ai/sambanova-available-positions/?gh_jid=6224938004) | Austin, TX | other | late-stage startup | likely | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 74  | 18d | Northwood Space | [Software Engineer- Early Career (Platform)](https://jobs.ashbyhq.com/NorthwoodSpace/f7b9e8d5-7368-4a54-b445-ff647f12b1b6) | Torrance, CA | other | early-stage startup | no-history | [posting](https://jobs.ashbyhq.com/NorthwoodSpace/f7b9e8d5-7368-4a54-b445-ff647f12b1b6) |
 | 74  | 25d | Brain Co. | [New Grad 2027: AI Platform Engineer](https://jobs.ashbyhq.com/brainco/4d39773e-f4c3-49c1-87c3-812a9804fb15/application) | San Francisco, CA | other | early-stage startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) · [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions)<br>[go.vansh.nyc fallback](https://go.vansh.nyc/Av) · [Ashby fallback](https://jobs.ashbyhq.com/brainco/4d39773e-f4c3-49c1-87c3-812a9804fb15/application?embed=true) |
 | 73  | ? | Military Spouse Jobs & VetJobs | [Software Engineer Acs Early Career - Fort Worth TX](https://sjobs.brassring.com/TGnewUI/Search/home/HomeWithPreLoad?partnerid=16030&amp;siteid=6090&amp;PageType=JobDetails&amp;jobid=3395582) | Fort Worth, TX | healthtech | unavailable | no-history | [Headcount Labs engineering jobs](https://raw.githubusercontent.com/HeadcountLabs/entry-level-jobs/main/README.md) |
-| 73  | 14d | Verkada | [New Grad 2027: Backend Software Engineer](https://go.vansh.nyc/19H) | San Mateo, CA | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
-| 73  | 14d | Equifax | [New Grad 2027: Data Analytics Rotational Development Associate](https://go.vansh.nyc/19F) | Alpharetta, GA | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 73  | 15d | Verkada | [New Grad 2027: Backend Software Engineer](https://go.vansh.nyc/19H) | San Mateo, CA | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 73  | 15d | Equifax | [New Grad 2027: Data Analytics Rotational Development Associate](https://go.vansh.nyc/19F) | Alpharetta, GA | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
