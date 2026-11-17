@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-17 02:57 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-17 03:21 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -55,7 +55,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 81 ⭐ | 29d | Johns Hopkins Applied Physics Laborato | [New Grad 2027: Signal Processing/Computer Science/Algorithm Developmen](https://go.vansh.nyc/TN) | Laurel, MD | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 80 ⭐ | 15d | TikTok | [New Grad 2027: Data Scientist (Multimedia)](https://go.vansh.nyc/16V) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 80 ⭐ | 15d | ByteDance | [New Grad 2027: Software Engineer - AI Agent Infra (Security Engineerin](https://go.vansh.nyc/151) | San Jose, CA | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
-| 80 ⭐ | 23d | Citi | [New Grad 2027: Software Developer, Application Development](https://go.vansh.nyc/Br) | Jacksonville, FL | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 80 ⭐ | 24d | Citi | [New Grad 2027: Software Developer, Application Development](https://go.vansh.nyc/Br) | Jacksonville, FL | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 80 ⭐ | 25d | Citi | [Software Developer New Grad - Application Development](https://citi.wd5.myworkdayjobs.com/2/job/Jacksonville-Florida-United-States/Technology--Application-Development--Full-Time-Analyst--Jacksonville---USA--2027_261004412) | Jacksonville, FL | other | unavailable | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) · [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) · [github.com](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad)<br>[Jobright fallback](https://jobright.ai/jobs/info/6adc1d8e0a4cc7090f97624c?utm_campaign=Software%20Engineering&utm_source=1103) · [Workday fallback](https://citi.wd5.myworkdayjobs.com/en-US/2/job/Jacksonville-Florida-United-States/Technology--Application-Development--Full-Time-Analyst--Jacksonville---USA--2027_261004412) |
 | 80 ⭐ | ? | Merck & Co. | [2027 Future Talent Program - Biostatistics and Research and Decision S](https://zapply.jobs/l/d/workday-msd-searchjobs-R413126?s=gh-new-grad-data-science-jobs-2027) | Pennsylvania West Point | other | not classified as startup | no-history | [Zapply new-grad data science / ML board](https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027) |
 | 80 ⭐ | 29d | Johns Hopkins Applied Physics Laborato | [New Grad 2027: Sensor Systems/Data Analytics](https://go.vansh.nyc/TO) | Laurel, MD | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
