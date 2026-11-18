@@ -1,11 +1,11 @@
 {
  "events": [
   {
-   "at": "2026-11-17T17:06:07+00:00",
+   "at": "2026-11-18T16:44:05+00:00",
    "completion_tokens": 900,
    "detail": "task schema validation failed",
    "endpoint": "nvidia:nemotron",
-   "latency_ms": 25751,
+   "latency_ms": 18049,
    "max_tokens": 900,
    "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "prompt_chars": 1871,
@@ -14,11 +14,11 @@
    "task": "company_research"
   },
   {
-   "at": "2026-11-17T17:06:07+00:00",
+   "at": "2026-11-18T16:44:05+00:00",
    "completion_tokens": 0,
    "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'z-ai/glm-5.2' has r",
    "endpoint": "nvidia:glm",
-   "latency_ms": 95,
+   "latency_ms": 66,
    "max_tokens": 900,
    "model": "z-ai/glm-5.2",
    "prompt_chars": 1871,
@@ -27,75 +27,34 @@
    "task": "company_research"
   },
   {
-   "at": "2026-11-17T17:06:07+00:00",
+   "at": "2026-11-18T16:44:05+00:00",
    "completion_tokens": 0,
    "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'deepseek-ai/deepsee",
    "endpoint": "nvidia:deepseek",
-   "latency_ms": 24,
+   "latency_ms": 75,
    "max_tokens": 900,
    "model": "deepseek-ai/deepseek-v4-pro",
-   "prompt_chars": 1660,
+   "prompt_chars": 1728,
    "prompt_tokens": 0,
    "status": "error",
    "task": "company_research"
   },
   {
-   "at": "2026-11-17T17:06:07+00:00",
+   "at": "2026-11-18T16:44:05+00:00",
    "completion_tokens": 0,
    "detail": "CallFailure: HTTP 410: {'type': 'about:blank', 'title': 'Gone', 'status': 410, 'detail': \"The model 'moonshotai/kimi-k2.",
    "endpoint": "nvidia:kimi",
-   "latency_ms": 22,
+   "latency_ms": 74,
    "max_tokens": 900,
    "model": "moonshotai/kimi-k2.6",
-   "prompt_chars": 1660,
+   "prompt_chars": 1728,
    "prompt_tokens": 0,
    "status": "error",
    "task": "company_research"
   }
  ],
- "generated_at": 1794935169,
+ "generated_at": 1795020248,
  "history": [
-  {
-   "generated_at": 1792422105,
-   "logical_calls": 7,
-   "models": {
-    "nvidia:deepseek": {
-     "errors": 1,
-     "model": "deepseek-ai/deepseek-v4-pro",
-     "ok": 0,
-     "requests": 1,
-     "tokens": 0
-    },
-    "nvidia:glm": {
-     "errors": 1,
-     "model": "z-ai/glm-5.2",
-     "ok": 0,
-     "requests": 1,
-     "tokens": 0
-    },
-    "nvidia:kimi": {
-     "errors": 1,
-     "model": "moonshotai/kimi-k2.6",
-     "ok": 0,
-     "requests": 1,
-     "tokens": 0
-    },
-    "nvidia:nemotron": {
-     "errors": 1,
-     "model": "nvidia/nemotron-3-ultra-550b-a55b",
-     "ok": 0,
-     "requests": 1,
-     "tokens": 1352
-    }
-   },
-   "provider": "nvidia-router",
-   "requests": 4,
-   "task_calls": {
-    "company_research": 3,
-    "discovery": 1,
-    "quality": 3
-   }
-  },
   {
    "generated_at": 1792501374,
    "logical_calls": 7,
@@ -1283,13 +1242,54 @@
     "discovery": 1,
     "quality": 1
    }
+  },
+  {
+   "generated_at": 1795020248,
+   "logical_calls": 7,
+   "models": {
+    "nvidia:deepseek": {
+     "errors": 1,
+     "model": "deepseek-ai/deepseek-v4-pro",
+     "ok": 0,
+     "requests": 1,
+     "tokens": 0
+    },
+    "nvidia:glm": {
+     "errors": 1,
+     "model": "z-ai/glm-5.2",
+     "ok": 0,
+     "requests": 1,
+     "tokens": 0
+    },
+    "nvidia:kimi": {
+     "errors": 1,
+     "model": "moonshotai/kimi-k2.6",
+     "ok": 0,
+     "requests": 1,
+     "tokens": 0
+    },
+    "nvidia:nemotron": {
+     "errors": 1,
+     "model": "nvidia/nemotron-3-ultra-550b-a55b",
+     "ok": 0,
+     "requests": 1,
+     "tokens": 1334
+    }
+   },
+   "provider": "nvidia-router",
+   "requests": 4,
+   "task_calls": {
+    "company_research": 3,
+    "discovery": 1,
+    "quality": 3
+   }
   }
  ],
  "limits": {
   "logical_calls": 8,
   "requests": 12
  },
- "logical_calls": 5,
+ "logical_calls": 7,
  "models": {
   "nvidia:deepseek": {
    "errors": 1,
@@ -1325,6 +1325,6 @@
  "task_calls": {
   "company_research": 3,
   "discovery": 1,
-  "quality": 1
+  "quality": 3
  }
 }
