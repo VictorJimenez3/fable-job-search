@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-19 01:22 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-19 01:58 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -67,7 +67,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 77 ⭐ | 27d | Lockheed Martin | [Software Engineer (Combat Systems DevSecOps) - Early Career](https://jobright.ai/jobs/info/6ada6a6303d2da7528914d50?utm_campaign=Software%20Engineering&utm_source=1103) | Mount Laurel, NJ, United States | other | not classified as startup | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 77 ⭐ | 28d | Lockheed Martin | [Software Engineer - Early Career](https://jobright.ai/jobs/info/6ae25cf0829a3bada160419f?utm_campaign=Software%20Engineering&utm_source=1103) | Sunnyvale, CA, United States | other | not classified as startup | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 77 ⭐ | 28d | Otis Elevator Co. | [Data Science & Analytics – Early Career Digital Technology Rising Lead](https://jobright.ai/jobs/info/6ada5551e4b94611ab85b5a2?utm_campaign=Data%20Analysis&utm_source=1103) | United States | other | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 77 ⭐ | 28d | CoStar Group | [New Grad 2027: Associate Security Engineer](https://go.vansh.nyc/Ux) | Arlington, VA | other | not classified as startup | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 77 ⭐ | 29d | CoStar Group | [New Grad 2027: Associate Security Engineer](https://go.vansh.nyc/Ux) | Arlington, VA | other | not classified as startup | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 76 ⭐ | 17d | TikTok | [New Grad 2027: Software Engineer (TikTok AI Search & Visual Search Inf](https://go.vansh.nyc/16A) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 76 ⭐ | 19d | Harvey | [Software Engineer, New Grad (2027)](https://jobright.ai/jobs/info/6ac006904ac55253f5d67242?utm_campaign=Software%20Engineering&utm_source=1103) | New York, NY, United States | other | early-stage startup | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 75 ⭐ | 17d | TikTok | [New Grad 2027: Software Development Engineer (Global E-Commerce-Qualit](https://go.vansh.nyc/16H) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
