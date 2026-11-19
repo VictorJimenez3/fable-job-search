@@ -1,6 +1,6 @@
 # 🎯 Job Radar — live dashboard
 
-_Last run: **2026-11-19 16:50 UTC** · companies polled directly: **0** (ChemE registry 9) · jobs tracked: **150 shown / 1464 stored** · new this run: **0** · alerts this run: **0**_
+_Last run: **2026-11-19 17:42 UTC** · companies polled directly: **0** (ChemE registry 9) · jobs tracked: **150 shown / 1463 stored** · new this run: **2** · alerts this run: **0**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -33,7 +33,9 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 77 ⭐ | 2d | Rivian | [ADAS HW Systems Validation Intern - ADAS HW Systems Validation](https://careers.rivian.com/jobs/36514?icims=1&lang=en-us) | Champaign, IL | other | simplify |
 | 77 ⭐ | 12d | Enovation Controls | [Manufacturing Engineering Test Intern](https://recruiting.paylocity.com/Recruiting/Jobs/Details/4648371) | Tulsa, OK | other | simplify |
 | 77 ⭐ | 28d | Oshkosh | [Digital Manufacturing Intern](https://oshkoshcorporation.wd5.myworkdayjobs.com/Oshkosh/job/Spartanburg-South-Carolina-United-States/Digital-Manufacturing-Intern_R51065) | Spartanburg, SC | other | simplify |
-| 76 ⭐ | 17h | Acuity | [Electrical Engineer Intern](https://careers.acuityinc.com/job/Decatur-Intern-Electrical-Engineer-GA-30035/1451786900/?ats=successfactors) | Decatur, GA | other | simplify |
+| 76 ⭐ | 2h | L3Harris Technologies | [Associate Optical Engineer Intern](https://jobs.l3harris.com/job/Rochester-Associate,-Optical-Engineer-NY-14606/1422807100/?ats=successfactors) | Rochester, NY | other | simplify |
+| 76 ⭐ | 3h | MSA Safety | [Electrical Engineering Intern/Co-op](https://careers.msasafety.com/jobs/10586?icims=1&lang=en-us) | Cranberry Township, PA | other | simplify |
+| 76 ⭐ | 18h | Acuity | [Electrical Engineer Intern](https://careers.acuityinc.com/job/Decatur-Intern-Electrical-Engineer-GA-30035/1451786900/?ats=successfactors) | Decatur, GA | other | simplify |
 | 76 ⭐ | 21h | Samsung | [Architecture Research Engineer Intern - MoE Placement for Serving at S](https://job-boards.greenhouse.io/samsungsemiconductor/jobs/8208494003) | San Jose, CA | other | simplify |
 | 76 ⭐ | 8d | Bloom Energy | [Remote Monitoring Control Center Systems Engineer Intern](https://bloomenergy.wd1.myworkdayjobs.com/bloomenergycareers/job/San-Jose-California/RMCC-Systems-Engineering-Intern_JR-25363) | San Jose, CA | energy | simplify |
 | 76 ⭐ | 20d | SmartFlower Solar | [Embedded Systems Engineering Intern](https://apply.workable.com/smartflower-solar-llc/j/240CCDA520/apply) | Woburn, MA | energy | simplify |
@@ -105,7 +107,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 70  | 1d | Anduril | [Business Systems Engineer Intern](https://boards.greenhouse.io/andurilindustries/jobs/5300647007) | Costa Mesa, CA | other | simplify |
 | 70  | 1d | Ecliptic Enterprises | [Engineering Intern](https://apply.workable.com/ecliptic-enterprises-corporation/j/45447E539A/apply) | San Luis Obispo, CA | other | simplify |
 | 70  | 1d | Starwood Capital Group | [Agentic Engineering Intern](https://jobs.jobvite.com/starwoodcapitalgroup/job/okzWAfw9?nl=1&nl=1&fr=false) | NYC | other | simplify |
-| 70  | 1d | Lightmatter | [Product & Test Engineering Intern](https://boards.greenhouse.io/lightmatter/jobs/5474690008) | Mountain View, CA | other | simplify |
+| 70  | 2d | Lightmatter | [Product & Test Engineering Intern](https://boards.greenhouse.io/lightmatter/jobs/5474690008) | Mountain View, CA | other | simplify |
 | 70  | 2d | Deeplocal | [Engineering Intern](https://job-boards.greenhouse.io/deeplocal/jobs/8395842) | Pittsburgh, PA | other | simplify |
 | 70  | 2d | Canyon AeroConnect | [Electrical Engineer Intern](https://canyonaeroconnect.bamboohr.com/careers/165/) | Prescott, AZ | other | simplify |
 | 70  | 2d | Canyon AeroConnect | [Test Engineer Intern](https://canyonaeroconnect.bamboohr.com/careers/166/) | Prescott, AZ | other | simplify |
@@ -154,7 +156,5 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 64  | 9d | NVIDIA | [Performance Engineering Intern - Platform Performance and Power](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Performance-Engineering-Intern--Platform-Performance-and-Power----Spring-2027_JR2029541) | Canada | other | simplify |
 | 64  | 9d | Rambus | [Product Engineer Intern](https://careers-rambus.icims.com/jobs/23119/job?mobile=true&needsRedirect=false) | San Jose, CA | other | simplify |
 | 64  | 9d | General Dynamics Mission Systems | [Ontology and Semantic Engineering Intern](https://careers-gdms.icims.com/jobs/76088/job?mobile=true&needsRedirect=false) | Chantilly, VA | other | simplify |
-| 64  | 9d | Rambus | [CAD Engineer Intern](https://careers-rambus.icims.com/jobs/23121/job?mobile=true&needsRedirect=false) | San Jose, CA | other | simplify |
-| 64  | 9d | Northrop Grumman | [Optics/Photonic Engineering Intern](https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site/job/United-States-Florida-Apopka/XMLNAME-2027-Optics-Photonic-Engineering-Intern---Apopka-FL_R10260049) | Apopka, FL | other | simplify |
 
 _150 roles shown (score ≥ 42, posted ≤30d)._
