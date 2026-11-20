@@ -315,10 +315,10 @@
  },
  "dell technologies": {
   "aliases": [],
-  "attempts": 5,
+  "attempts": 6,
   "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "14a504aad7021bab",
-  "last_attempt_at": 1794754771,
+  "last_attempt_at": 1795191892,
   "last_evidence_at": 1791328536,
   "name": "Dell Technologies",
   "schema_v": 1,
@@ -2009,10 +2009,10 @@
  },
  "renesas electronics": {
   "aliases": [],
-  "attempts": 20,
+  "attempts": 21,
   "error": "provider unavailable or response was not source-grounded",
   "evidence_sha": "8da16dc9e9b2158d",
-  "last_attempt_at": 1795107003,
+  "last_attempt_at": 1795191892,
   "last_evidence_at": 1794254983,
   "name": "Renesas Electronics",
   "schema_v": 1,
@@ -2052,13 +2052,58 @@
  },
  "rivian": {
   "aliases": [],
-  "attempts": 2,
-  "error": "provider unavailable or response was not source-grounded",
+  "attempts": 3,
+  "business_model": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "customers": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "error": "",
   "evidence_sha": "d89b53a567562a13",
-  "last_attempt_at": 1795107003,
+  "generated_at": 1795191892,
+  "generator": {
+   "endpoint": "nvidia:nemotron",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "task": "company_research"
+  },
+  "interview_focus": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "last_attempt_at": 1795191892,
   "last_evidence_at": 1794944996,
+  "locations": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "mission": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "name": "Rivian",
+  "products": {
+   "confidence": "medium",
+   "source_ids": [
+    "56d37a0f0d"
+   ],
+   "value": "R1T pickup truck, R1S SUV, Gear Shop accessories, Fleet commercial vehicles"
+  },
+  "prompt_v": 1,
+  "refresh_after": 1800375892,
   "schema_v": 1,
+  "size_stage": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
   "sources": [
    {
     "content_sha": "612272ba9272aa7e",
@@ -2071,7 +2116,30 @@
     "url": "https://careers.rivian.com/jobs/36514?icims=1&lang=en-us"
    }
   ],
-  "status": "evidence_only"
+  "sponsorship_context": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "status": "ready",
+  "summary": {
+   "confidence": "low",
+   "source_ids": [
+    "56d37a0f0d"
+   ],
+   "value": "Rivian is an electric vehicle company producing the R1T pickup truck and R1S SUV, with Gear Shop accessories and Fleet commercial vehicles. Limited factual detail available from provided source."
+  },
+  "synthesized_evidence_sha": "d89b53a567562a13",
+  "technical_work": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  },
+  "why_it_matters": {
+   "confidence": "unknown",
+   "source_ids": [],
+   "value": "Not confirmed"
+  }
  },
  "robert bosch venture capital": {
   "aliases": [],
