@@ -18764,6 +18764,23 @@
   "status": "active",
   "token": "adtran"
  },
+ "workday:advanceauto:advanceexternalcareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "advanceexternalcareers"
+  },
+  "failures": 0,
+  "first_seen": 1795329847,
+  "invalidated_at": 1795329847,
+  "last_ok": 0,
+  "name": "Advance Auto Parts",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "advanceauto"
+ },
  "workday:aep:AEPCareerSite": {
   "ats": "workday",
   "extra": {
@@ -26471,7 +26488,7 @@
   "last_ok": 0,
   "name": "Littelfuse",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "littelfuse"
@@ -30232,6 +30249,23 @@
   "status": "active",
   "token": "sbdinc"
  },
+ "workday:schnucks:SchnucksCareers": {
+  "ats": "workday",
+  "extra": {
+   "host": "wd5",
+   "site": "SchnucksCareers"
+  },
+  "failures": 0,
+  "first_seen": 1795329847,
+  "invalidated_at": 1795329847,
+  "last_ok": 0,
+  "name": "Schnucks",
+  "origin": "harvest:simplify",
+  "probe_attempts": 1,
+  "sector": "",
+  "status": "invalid",
+  "token": "schnucks"
+ },
  "workday:sec:Samsung_Careers": {
   "ats": "workday",
   "extra": {
@@ -32419,7 +32453,7 @@
   "last_ok": 0,
   "name": "Ribbon",
   "origin": "harvest:simplify",
-  "probe_attempts": 2,
+  "probe_attempts": 3,
   "sector": "",
   "status": "invalid",
   "token": "vhr-genband"
