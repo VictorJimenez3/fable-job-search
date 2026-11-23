@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-23 01:38 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-23 07:42 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -76,12 +76,11 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 72  | 24d | Intel | [New Grad: Software Application Development Engineer](https://go.vansh.nyc/11c) | Hillsboro, OR | big_tech | unavailable | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 72  | 25d | Neon | [New Grad 2027: Software Engineer, Distributed Data Systems](https://go.vansh.nyc/YI) | Mountain View, CA | other | early-stage startup | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 72  | 27d | Constructive Dialogue Institute | [Software Engineer (Early Career)](https://jobright.ai/jobs/info/6ace77e8ba99f15ef4124e4f?utm_campaign=Software%20Engineering&utm_source=1103) | United States | other | unavailable | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
-| 72  | 29d | Citi | [New Grad 2027: Software Developer, Application Development](https://go.vansh.nyc/Br) | Jacksonville, FL | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 71  | ? | Andrus Childrens Center | [Direct Support Professional Back End (Night)-Entry Level](https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=5e73afbe-c8c1-4dc3-875b-eeb71e6a710c&amp;ccId=19000101_000001&amp;lang=en_US&amp;jobId=9205574247083_1) | Yonkers, NY | other | unavailable | no-history | [Headcount Labs engineering jobs](https://raw.githubusercontent.com/HeadcountLabs/entry-level-jobs/main/README.md) |
 | 71  | ? | USAN | [Application Developer - Recent Graduate - Hybrid - Norcross, GA](https://usan.bamboohr.com/careers/204) | Norcross, GA | other | unavailable | no-history | [Headcount Labs engineering jobs](https://raw.githubusercontent.com/HeadcountLabs/entry-level-jobs/main/README.md) |
 | 71  | ? | Viasat, Inc. | [Embedded Software Engineer, Early Career](https://careers.viasat.com/jobs/6722) | 3 locations Marlborough, MA Tempe, AZ Ca | other | unavailable | likely | [Headcount Labs engineering jobs](https://raw.githubusercontent.com/HeadcountLabs/entry-level-jobs/main/README.md) |
-| 71  | 19d | Shield | [New Grad: Software Engineer I](https://go.vansh.nyc/1bP) | Seattle, WA | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
-| 71  | 19d | Shield | [New Grad 2027: Software Development Engineer](https://go.vansh.nyc/1bQ) | San Diego, CA | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 71  | 20d | Shield | [New Grad: Software Engineer I](https://go.vansh.nyc/1bP) | Seattle, WA | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
+| 71  | 20d | Shield | [New Grad 2027: Software Development Engineer](https://go.vansh.nyc/1bQ) | San Diego, CA | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 71  | 20d | Authentic | [New Grad Software Engineer](https://jobright.ai/jobs/info/6ab296748254c44790e55d39?utm_campaign=Software%20Engineering&utm_source=1103) | New York, NY, United States | other | unavailable | no-history | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 71  | 21d | Formlabs | [Embedded Software Engineer - Entry Level](https://jobright.ai/jobs/info/6a3ef7bc882f121f56a3c267?utm_campaign=Software%20Engineering&utm_source=1103) | Somerville, MA, United States | other | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
 | 71  | 21d | TikTok | [New Grad 2027: Software Engineer, Foundation Platform](https://go.vansh.nyc/177) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
@@ -156,5 +155,6 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 68  | 21d | TikTok | [New Grad 2027: Software Engineer (Ads Signal & Measurement)](https://go.vansh.nyc/16K) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 68  | 24d | mthree | [DevOps Engineer/ Production Support Analyst](https://job-boards.greenhouse.io/mthreerecruitingportal/jobs/4725832006) | USA | other | not classified as startup | no-history | [Direct company / ATS monitoring](https://job-boards.greenhouse.io/mthreerecruitingportal) |
 | 68  | 27d | CrossCountry Consulting | [Forward Deployed Software Engineer (Recent Graduate) - DC Metro](https://jobright.ai/jobs/info/6ae0aea6829a3bada15f5d54?utm_campaign=Software%20Engineering&utm_source=1103) | Chicago, IL, United States | other | unavailable | likely | [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad) |
+| 65  | ? | Boeing | [Entry-Level F-15 Flight Test Data Engineer](https://zapply.jobs/l/d/workday-boeing-external-careers-JR2026506850?s=gh-new-grad-data-science-jobs-2027) | USA - Eglin AFB, FL | other | unavailable | no-history | [Zapply new-grad data science / ML board](https://github.com/zapplyjobs/New-Grad-Data-Science-Jobs-2027) |
 
 _150 roles shown (score ≥ 45, posted ≤30d)._
