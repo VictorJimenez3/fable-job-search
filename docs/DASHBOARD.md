@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-26 21:38 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-26 22:10 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -51,7 +51,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 75 ⭐ | 26d | Rockwell Automation | [EDGE, Information Technology Rotational Program](https://rockwellautomation.wd1.myworkdayjobs.com/en-US/External_Rockwell_Automation/job/Milwaukee-Wisconsin-United-States/EDGE-Associate--Information-Technology-Rotational-Program_R26-5375-1) | Milwaukee, Wisconsin, United States | other | unavailable | likely | [posting](https://rockwellautomation.wd1.myworkdayjobs.com/en-US/External_Rockwell_Automation/job/Milwaukee-Wisconsin-United-States/EDGE-Associate--Information-Technology-Rotational-Program_R26-5375-1) |
 | 74  | 23d | RTX | [New Grad 2027: Leadership Development Program - Engineering - Software](https://go.vansh.nyc/1dJ) | Arlington, VA | other | early-stage startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 74  | 25d | TikTok | [New Grad 2027: AI Software Engineer (TikTok-PGC-OGC&Creator Strategy)](https://go.vansh.nyc/15P) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
-| 74  | 27d | Northwood Space | [Software Engineer- Early Career (Platform)](https://jobs.ashbyhq.com/NorthwoodSpace/f7b9e8d5-7368-4a54-b445-ff647f12b1b6) | Torrance, CA | other | early-stage startup | no-history | [posting](https://jobs.ashbyhq.com/NorthwoodSpace/f7b9e8d5-7368-4a54-b445-ff647f12b1b6) |
+| 74  | 28d | Northwood Space | [Software Engineer- Early Career (Platform)](https://jobs.ashbyhq.com/NorthwoodSpace/f7b9e8d5-7368-4a54-b445-ff647f12b1b6) | Torrance, CA | other | early-stage startup | no-history | [posting](https://jobs.ashbyhq.com/NorthwoodSpace/f7b9e8d5-7368-4a54-b445-ff647f12b1b6) |
 | 73  | ? | Military Spouse Jobs & VetJobs | [Software Engineer Acs Early Career - Fort Worth TX](https://sjobs.brassring.com/TGnewUI/Search/home/HomeWithPreLoad?partnerid=16030&amp;siteid=6090&amp;PageType=JobDetails&amp;jobid=3395582) | Fort Worth, TX | healthtech | unavailable | no-history | [Headcount Labs engineering jobs](https://raw.githubusercontent.com/HeadcountLabs/entry-level-jobs/main/README.md) |
 | 73  | 24d | Verkada | [New Grad 2027: Backend Software Engineer](https://go.vansh.nyc/19H) | San Mateo, CA | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 73  | 24d | Equifax | [New Grad 2027: Data Analytics Rotational Development Associate](https://go.vansh.nyc/19F) | Alpharetta, GA | other | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
