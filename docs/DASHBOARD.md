@@ -1,6 +1,6 @@
 # 🎯 Job Radar — new-grad dashboard
 
-_Last run: **2026-11-26 11:57 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
+_Last run: **2026-11-26 12:34 UTC** · companies polled directly: **2479** (registry 2764) · jobs tracked: **96376** · new this run: **4404** · alerts this run: **5**_
 
 Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alerts) after applying — it logs to Notion automatically.
 
@@ -93,7 +93,7 @@ Check the box on the [alert issue](../../issues?q=is%3Aissue+label%3Aradar-alert
 | 71  | 27d | The Aerospace Corporation | [Software Integration Engineer New Grad](https://aero.wd5.myworkdayjobs.com/external/job/Chantilly-VA/IC-2027-Software-Integration-Engineer_R017007) | Chantilly, VA | other | unavailable | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) |
 | 71  | 27d | SOSi | [Entry-Level PeopleSoft Software Developer](https://go.vansh.nyc/Zn) | Charleston, SC | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 71  | 28d | Northrop Grumman | [New Grad 2027: Associate Cyber Software Engineer](https://go.vansh.nyc/Zv) | Aurora, CO | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
-| 71  | 28d | USAA | [Software Engineer - Entry Level](https://usaa.wd1.myworkdayjobs.com/en-US/USAAJOBSWD/job/San-Antonio-Home-Office-I/Software-Engineer---Entry-Level_R0121057-1) | 2 Locations | other | not classified as startup | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) · [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad)<br>[Jobright fallback](https://jobright.ai/jobs/info/6ae1eaf8de23f466ec8c0ce4?utm_campaign=Software%20Engineering&utm_source=1103) |
+| 71  | 29d | USAA | [Software Engineer - Entry Level](https://usaa.wd1.myworkdayjobs.com/en-US/USAAJOBSWD/job/San-Antonio-Home-Office-I/Software-Engineer---Entry-Level_R0121057-1) | 2 Locations | other | not classified as startup | no-history | [SimplifyJobs New-Grad-Positions](https://github.com/SimplifyJobs/New-Grad-Positions) · [Jobright new-grad GitHub board](https://github.com/jobright-ai/2026-Software-Engineer-New-Grad)<br>[Jobright fallback](https://jobright.ai/jobs/info/6ae1eaf8de23f466ec8c0ce4?utm_campaign=Software%20Engineering&utm_source=1103) |
 | 71  | 29d | Northrop Grumman | [New Grad 2027: Associate Software Engineer / Software Engineer](https://go.vansh.nyc/Xs) | Huntsville, AL | other | unavailable | no-history | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
 | 70  | 25d | TikTok | [New Grad 2027: Software Engineer (Data Arch - E-commerce)](https://go.vansh.nyc/15Z) | Seattle, WA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026)<br>[go.vansh.nyc fallback](https://go.vansh.nyc/16Q) |
 | 70  | 25d | TikTok | [New Grad 2027: Software Engineer (Video-on-Demand Algorithm) (Master's](https://go.vansh.nyc/16R) | San Jose, CA | big_tech | not classified as startup | likely | [Vansh New-Grad-2026](https://github.com/vanshb03/New-Grad-2026) |
